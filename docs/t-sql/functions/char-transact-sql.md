@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Converte um **int** código ASCII em um caractere.
+Converte um código ASCII **int** em um caractere.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,15 +55,15 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *integer_expression*  
-É um número inteiro de 0 a 255. `NULL`é retornado se a expressão de inteiro não estiver nesse intervalo.
+É um número inteiro de 0 a 255. `NULL` é retornado se a expressão de inteiro não está nesse intervalo.
   
 ## <a name="return-types"></a>Tipos de retorno
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-`CHAR`pode ser usado para inserir caracteres de controle em cadeias de caracteres. A tabela a seguir mostra alguns caracteres de controle usados com frequência.
+`CHAR` pode ser usado para inserir caracteres de controle em cadeias de caracteres. A tabela a seguir mostra alguns caracteres de controle usados com frequência.
   
-|Caractere de controle|Value|  
+|Caractere de controle|Valor|  
 |---|---|
 |Tab|**char(9)**|  
 |Alimentação de linha|**char(10)**|  
@@ -132,10 +132,10 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. Usando ASCII e CHAR para imprimir valores ASCII de uma cadeia de caracteres  
-O exemplo a seguir pressupõe um caractere ASCII conjunto e retorna o valor de caractere para 6 números de caracteres ASCII.
+O exemplo a seguir pressupõe um conjunto de caracteres ASCII e retorna o valor de caractere para 6 números de caracteres ASCII.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +152,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. Usando CHAR para inserir um caractere de controle  
-O exemplo a seguir usa `CHAR(13)` para retornar informações sobre os bancos de dados em linhas separadas quando os resultados são retornados no texto.
+O exemplo a seguir usa `CHAR(13)` para retornar informações sobre os bancos de dados em linhas separadas quando os resultados são retornados em texto.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   
@@ -177,8 +177,8 @@ AdventureWorksPDW2012    is currently  ONLINE
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [+ &#40;Concatenação de cadeias de caracteres&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

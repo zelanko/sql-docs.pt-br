@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geometry-data-type"></a>STCurveN (Tipo de Dados de geometria)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna a curva especificada de um **geometria** instância que é um **LineString**, **CircularString**, **CompoundCurve**, ou  **MultiLineString**.
+Retorna a curva especificada de uma instância de **geometry** que é uma **LineString**, uma **CircularString**, uma **CompoundCurve** ou uma **MultiLineString**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,26 +42,26 @@ Retorna a curva especificada de um **geometria** instância que é um **LineStri
   
 ## <a name="arguments"></a>Argumentos  
  *curve_index*  
- É um **int** expressão entre 1 e o número de curvas no **geometria** instância.  
+ É uma expressão **int** entre 1 e o número de curvas na instância de **geometry**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
- Se *curve_index* < 1, em seguida, um `ArgumentOutOfRangeException` é gerada.  
+ Se *curve_index* < 1, uma `ArgumentOutOfRangeException` será gerada.  
   
 ## <a name="remarks"></a>Remarks  
- **NULO** é retornado quando ocorrer qualquer uma das seguintes opções:  
+ **NULL** é retornado quando ocorre uma das seguintes opções:  
   
--   o **geometria** instância é declarada, mas não criar uma instância  
+-   a instância de **geometry** é declarada, mas não é criada uma instância dela  
   
--   o **geometria** instância está vazia  
+-   a instância de **geometry** está vazia  
   
--   *curve_index* excede o número de curvas no **geometria** instância  
+-   *curve_index* excede o número de curvas na instância de **geometry**  
   
--   o **geometria** instância é um **ponto**, **MultiPoint**, **polígono**, **CurvePolygon**, ou  **MultiPolygon**  
+-   a instância de **geometry** é um **Point**, um **MultiPoint**, um **Pplygon**, um **CurvePolygon** ou um **MultiPolygon**  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -104,7 +104,7 @@ Retorna a curva especificada de um **geometria** instância que é um **LineStri
  Note que os resultados são os mesmos para os três exemplos anteriores. Qualquer que seja o formato WKT (Well-known Text) usado para inserir a mesma sequência de curva, os resultados retornados por `STCurveN()` serão os mesmos quando uma instância de `CompoundCurve` for usada.  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. Validando o parâmetro antes de chamar STCurveN()  
- O exemplo a seguir mostra como verificar se `@n` é válido antes de chamar o `STCurveN()`método:  
+ O exemplo a seguir mostra como verificar se `@n` é válido antes de chamar o método `STCurveN()`:  
   
 ```
  DECLARE @g geometry;  
@@ -117,8 +117,8 @@ Retorna a curva especificada de um **geometria** instância que é um **LineStri
  END
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [STNumCurves &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [STNumCurves &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -53,27 +53,27 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>Argumentos  
  *test_expression*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  *subquery*  
- É uma subconsulta que tem um conjunto de resultados de uma coluna. Essa coluna deve ter os mesmos dados de tipo como *test_expression*.  
+ É uma subconsulta que tem um conjunto de resultados de uma coluna. Essa coluna deve ter o mesmo tipo de dados que *test_expression*.  
   
- *expressão*[ **,**... *n* ]  
- É uma lista de expressões que testa uma correspondência. Todas as expressões devem ser do mesmo tipo como *test_expression*.  
+ *expression*[ **,**... *n* ]  
+ É uma lista de expressões que testa uma correspondência. Todas as expressões devem ser do mesmo tipo que *test_expression*.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- Se o valor de *test_expression* é igual a qualquer valor retornado por *subconsulta* ou é igual a qualquer *expressão* na lista separada por vírgulas, o valor do resultado for TRUE; Caso contrário, o valor do resultado será FALSE.  
+ Se o valor de *test_expression* for igual a qualquer valor retornado por *subquery* ou igual a qualquer *expression* da lista separada por vírgula, o valor do resultado será TRUE, caso contrário, será FALSE.  
   
- Usar NOT IN nega o *subconsulta* valor ou *expressão*.  
+ O uso de NOT IN nega o valor de *subquery* ou *expression*.  
   
 > [!CAUTION]  
->  Qualquer valor nulo retornado por *subconsulta* ou *expressão* que são comparados aos *test_expression* usando IN ou NOT IN retornará UNKNOWN. Usar valores nulos junto com IN ou NOT IN pode produzir resultados inesperados.  
+>  Os valores nulos retornados por *subquery* ou *expression* que são comparados com *test_expression* usando IN ou NOT IN retornam UNKNOWN. Usar valores nulos junto com IN ou NOT IN pode produzir resultados inesperados.  
   
 ## <a name="remarks"></a>Remarks  
- Incluir explicitamente um número muito grande de valores (muitos milhares de valores separados por vírgulas) dentro dos parênteses, em uma cláusula IN pode consumir recursos e retornar erros 8623 ou 8632. Para contornar esse problema, armazene os itens na lista em uma tabela e use uma subconsulta SELECT dentro de uma cláusula IN.  
+ A inclusão explícita de um número muito grande de valores (muitos milhares de valores separados por vírgula) dentro dos parênteses, em uma cláusula IN, pode consumir recursos e retornar os erros 8623 ou 8632. Para resolver esse problema, armazene os itens na lista IN em uma tabela e use uma subconsulta SELECT dentro de uma cláusula IN.  
   
  Erro 8623:  
   
@@ -177,10 +177,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>D. Usando em e não no  
- O exemplo a seguir localiza todas as entradas na `FactInternetSales` correspondentes da tabela `SalesReasonKey` valores no `DimSalesReason` tabela.  
+### <a name="d-using-in-and-not-in"></a>D. Usando IN e NOT IN  
+ O exemplo a seguir localiza todas as entradas na tabela `FactInternetSales` correspondentes aos valores `SalesReasonKey` na tabela `DimSalesReason`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -190,7 +190,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- O exemplo a seguir localiza todas as entradas na `FactInternetSalesReason` tabela que não correspondem a `SalesReasonKey` valores no `DimSalesReason` tabela.  
+ O exemplo a seguir localiza todas as entradas na tabela `FactInternetSalesReason` não correspondentes aos valores `SalesReasonKey` na tabela `DimSalesReason`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -200,8 +200,8 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>E. Usando com uma lista de expressões  
- O exemplo a seguir localiza todas as IDs para os vendedores no `DimEmployee` da tabela de funcionários que têm o primeiro nome que é o `Mike` ou `Michael`.  
+### <a name="e-using-in-with-an-expression-list"></a>E. Usando IN com uma lista de expressões  
+ O exemplo a seguir localiza todas as IDs para os vendedores na tabela `DimEmployee` de funcionários que têm o nome `Mike` ou `Michael`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -211,11 +211,11 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   

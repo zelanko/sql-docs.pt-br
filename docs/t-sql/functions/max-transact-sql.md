@@ -55,17 +55,17 @@ MAX ( [ ALL | DISTINCT ] expression )
  Especifica que cada valor exclusivo é considerado. DISTINCT não é significativo com MAX e está disponível somente para compatibilidade com ISO.  
   
  *expressão*  
- É uma constante, nome de coluna ou função e qualquer combinação de operadores aritméticos, bit a bit e de cadeia de caracteres. MAX pode ser usado com **numérico**, **caracteres**, **uniqueidentifier**, e **datetime** colunas, mas não com **bits**  colunas. Funções de agregação e subconsultas não são permitidas.  
+ É uma constante, nome de coluna ou função e qualquer combinação de operadores aritméticos, bit a bit e de cadeia de caracteres. MAX pode ser usado com colunas **numeric**, **character**, **uniqueidentifier** e **datetime**, mas não com colunas **bits**. Funções de agregação e subconsultas não são permitidas.  
   
  Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições para o qual a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é necessário. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna um valor igual a *expressão*.  
+ Retorna um valor igual a *expression*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  MAX ignora quaisquer valores nulos.  
   
  Para colunas de caracteres, MAX localiza o valor mais alto na sequência de agrupamento.  
@@ -94,7 +94,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. Usando a cláusula OVER  
- O exemplo a seguir usa as funções MIN, MAX, AVG e COUNT com a cláusula OVER para fornecer valores agregados para cada departamento no `HumanResources.Department` tabela o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
+ O exemplo a seguir usa as funções MIN, MAX, AVG e COUNT com a cláusula OVER para fornecer valores agregados para cada departamento na tabela `HumanResources.Department` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -136,16 +136,16 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-### <a name="c-using-max-with-character-data"></a>C. Usando o máximo com dados de caracteres   
-O exemplo a seguir retorna o nome do banco de dados que classifica como o último nome em ordem alfabética. O exemplo usa `WHERE database_id < 5`, considerar somente os bancos de dados do sistema.  
+### <a name="c-using-max-with-character-data"></a>C. Usando MAX com os dados de caractere   
+O exemplo a seguir retorna o nome do banco de dados que classifica como o último nome em ordem alfabética. O exemplo usa `WHERE database_id < 5`, para considerar somente os bancos de dados do sistema.  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
-O último banco de dados do sistema `tempdb`.  
+O último banco de dados do sistema é `tempdb`.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções de agregação &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

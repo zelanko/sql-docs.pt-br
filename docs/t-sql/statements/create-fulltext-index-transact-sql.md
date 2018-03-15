@@ -1,5 +1,5 @@
 ---
-title: "CRIAR um índice de texto completo (Transact-SQL) | Microsoft Docs"
+title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/05/2017
 ms.prod: sql-non-specified
@@ -77,79 +77,79 @@ CREATE FULLTEXT INDEX ON table_name
  *table_name*  
  É o nome da tabela ou exibição indexada que contém a coluna ou colunas incluídas no índice de texto completo.  
   
- *nome da coluna*  
- É o nome da coluna incluída no índice de texto completo. Somente colunas do tipo **char**, **varchar**, **nchar**, **nvarchar**, **texto**,  **ntext**, **imagem**, **xml**, e **varbinary (max)** podem ser indexadas para pesquisa de texto completo. Para especificar várias colunas, repita o *column_name* cláusula da seguinte maneira:  
+ *column_name*  
+ É o nome da coluna incluída no índice de texto completo. Somente colunas do **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** e **varbinary(max)**podem ser indexadas para pesquisa de texto completo. Para especificar várias colunas, repita a cláusula *column_name* da seguinte forma:  
   
- CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […] *column_name2* [...])...  
+ CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
   
- COLUNA de tipo *type_column_name*  
- Especifica o nome de uma coluna de tabela, *type_column_name*, que é usado para manter o tipo de documento para uma **varbinary (max)** ou **imagem** documento. Essa coluna, conhecida como coluna de tipo, contém uma extensão de arquivo fornecida pelo usuário (.doc, .pdf, .xls e assim por diante). A coluna de tipo deve ser do tipo **char**, **nchar**, **varchar**, ou **nvarchar**.  
+ TYPE COLUMN *type_column_name*  
+ Especifica o nome de uma coluna de tabela, *type_column_name*, usada para manter o tipo de um documento para um documento **varbinary(max)** ou **image** . Essa coluna, conhecida como coluna de tipo, contém uma extensão de arquivo fornecida pelo usuário (.doc, .pdf, .xls e assim por diante). A coluna de tipo deve ser do tipo **char**, **nchar**, **varchar**, ou **nvarchar**.  
   
- Especifique TYPE COLUMN *type_column_name* somente se *column_name* Especifica um **varbinary (max)** ou **imagem** coluna, na qual os dados são armazenados como dados binários. Caso contrário, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro.  
+ Especifique TYPE COLUMN *type_column_name* somente se *column_name* especificar uma coluna **varbinary(max)** ou **image** na qual os dados são armazenados como dados binários. Caso contrário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro.  
   
 > [!NOTE]  
->  No momento da indexação, o mecanismo de texto completo usa a abreviação na coluna de tipo de cada linha da tabela para identificar o filtro de pesquisa de texto completo a ser usado para o documento em *column_name*. O filtro carrega o documento como um fluxo binário, remove as informações de formatação e envia o texto do documento para o componente do separador de palavras. Para obter mais informações, veja [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+>  No momento da indexação, o Mecanismo de Texto Completo usa a abreviação na coluna de tipo de cada linha da tabela para identificar o filtro de pesquisa de texto completo que deve ser usado para o documento no *column_name*. O filtro carrega o documento como um fluxo binário, remove as informações de formatação e envia o texto do documento para o componente do separador de palavras. Para obter mais informações, veja [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
- IDIOMA *language_term*  
+ LANGUAGE *language_term*  
  É o idioma dos dados armazenados em *column_name*.  
   
- *language_term* é opcional e pode ser especificado como uma cadeia de caracteres, inteiro ou valor hexadecimal que corresponda ao identificador de localidade (LCID) de um idioma. Se nenhum valor for especificado, o idioma padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado.  
+ *language_term* é opcional e pode ser especificado como uma cadeia de caracteres, um inteiro ou um valor hexadecimal que corresponda ao LCID (identificador de localidade) de um idioma. Se nenhum valor for especificado, o idioma padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado.  
   
- Se *language_term* for especificado, o idioma que ele representa será usado para indexar dados armazenados em **char**, **nchar**, **varchar**, **nvarchar**, **texto**, e **ntext** colunas. Esse idioma é o idioma padrão usado no momento da consulta se *language_term* não é especificado como parte de um predicado de texto completo em relação à coluna.  
+ Se *language_term* for especificado, o idioma que ele representa será usado para indexar dados armazenados nas colunas **char**, **nchar**, **varchar**, **nvarchar**, **text** e **ntext**. Esse será o idioma padrão usado na hora da consulta se *language_term* não estiver especificado como parte de um predicado de texto completo em relação à coluna.  
   
- Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna alias na tabela do sistema syslanguages. A cadeia de caracteres deve ser colocada entre aspas, como em **'***language_term***'**. Quando especificado como um inteiro, *language_term* é o LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal do LCID. O valor hexadecimal não deve exceder oito dígitos, incluindo zeros à esquerda.  
+ Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna alias na tabela do sistema syslanguages. A cadeia de caracteres precisa ser colocada entre aspas, como em **'***language_term***'**. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, incluindo zeros à esquerda.  
   
  Se o valor estiver no formato DBCS (conjunto de caracteres de dois bytes), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o converterá em Unicode.  
   
- Recursos, como separadores de palavras e lematizadores, devem estar habilitados para o idioma especificado como *language_term*. Se tais recursos não aceitarem o idioma especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro.  
+ Os recursos, como separadores e lematizadores de palavras, devem estar habilitados para o idioma especificado como *language_term*. Se tais recursos não aceitarem o idioma especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro.  
   
  Use o procedimento armazenado sp_configure para acessar informações sobre o idioma de texto completo da instância [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- Para colunas não BLOB e não XML que contêm dados de texto em vários idiomas ou casos em que o idioma do texto armazenado na coluna é desconhecido, talvez seja necessário usar o recurso de idioma neutro (0x0). Porém, primeiro você deve compreender as possíveis consequências de usar o recurso de idioma neutro (0x0). Para obter informações sobre as possíveis soluções e consequências de usar o recurso neutro de idioma (0x0), consulte [escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
+ Para colunas não BLOB e não XML que contêm dados de texto em vários idiomas ou casos em que o idioma do texto armazenado na coluna é desconhecido, talvez seja necessário usar o recurso de idioma neutro (0x0). Porém, primeiro você deve compreender as possíveis consequências de usar o recurso de idioma neutro (0x0). Para obter informações sobre as possíveis soluções e consequências de usar o recurso neutro de idioma (0x0), veja [Escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
- Para documentos armazenados em colunas do tipo XML ou BLOB, a codificação de idioma do documento será usada no momento da indexação. Por exemplo, em colunas XML, o **XML: lang** atributo em documentos XML identificará o idioma. No momento da consulta, o valor especificado anteriormente *language_term* torna-se o idioma padrão usado para consultas de texto completo, a menos que *language_term* é especificado como parte de uma consulta de texto completo.  
+ Para documentos armazenados em colunas do tipo XML ou BLOB, a codificação de idioma do documento será usada no momento da indexação. Por exemplo, em colunas XML, o atributo **xml:lang** em documentos XML identificará o idioma. No momento da consulta, o valor especificado anteriormente em *language_term* se torna o idioma padrão usado para consultas de texto completo, a menos que *language_term* seja especificado como parte de uma consulta de texto completo.  
   
  STATISTICAL_SEMANTICS  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Cria a frase-chave adicional e índices de similaridade de documentos que fazem parte da indexação semântica estatística. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- ÍNDICE de chave *index_name*  
- É o nome do índice de chave exclusiva na *table_name*. O KEY INDEX deve ser uma coluna exclusiva de chave única, não anulável. Selecione o menor índice de chave exclusiva para a chave exclusiva de texto completo.  Para obter o melhor desempenho, recomendamos um tipo de dados de inteiro para a chave de texto completo.  
+ KEY INDEX *index_name*  
+ É o nome do índice de chave exclusiva no *table_name*. O KEY INDEX deve ser uma coluna exclusiva de chave única, não anulável. Selecione o menor índice de chave exclusiva para a chave exclusiva de texto completo.  Para obter o melhor desempenho, recomendamos um tipo de dados de inteiro para a chave de texto completo.  
   
  *fulltext_catalog_name*  
  É o catálogo de texto completo usado para o índice de texto completo. O catálogo já deve existir no banco de dados. Esta cláusula é opcional. Se não estiver especificado, um catálogo padrão será usado. Se não existir nenhum catálogo padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro.  
   
- Grupo de arquivos *filegroup_name*  
+ FILEGROUP *filegroup_name*  
  Cria o índice de texto completo especificado no grupo de arquivos especificado. O grupo de arquivos já deve existir. Se a cláusula FILEGROUP não for especificada, o índice de texto completo será colocado no mesmo grupo de arquivos que a tabela base, na exibição de uma tabela não particionada ou em um grupo de arquivos primário de uma tabela particionada.  
   
- CHANGE_TRACKING [=] {MANUAL | **AUTOMÁTICA** | DESATIVAR [, NENHUMA POPULAÇÃO]}  
+ CHANGE_TRACKING [ = ] { MANUAL | **AUTO** | OFF [ , NO POPULATION ] }  
  Especifica se as alterações (atualizações, exclusões ou inserções) feitas nas colunas da tabela que estão cobertas pelo índice de texto completo serão propagadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o índice de texto completo. As alterações de dados por meio de WRITETEXT e UPDATETEXT não são refletidas no índice de texto completo e não são coletadas com o controle de alterações.  
   
  MANUAL  
- Especifica que as alterações controladas devem ser propagadas manualmente chamando-se a instrução ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução (*população manual*). É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
+ Especifica que as alterações controladas devem ser propagadas manualmente chamando-se a instrução ALTER FULLTEXT INDEX … Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] START UPDATE POPULATION (*preenchimento manual*). É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
   
- **AUTOMÁTICO**  
- Especifica que as alterações controladas serão propagadas automaticamente conforme os dados são modificados na tabela base (*população automática*). Embora sejam propagadas automaticamente, talvez essas alterações não se reflitam imediatamente no índice de texto completo. AUTO é o padrão.  
+ **AUTO**  
+ Especifica que as alterações controladas serão propagadas automaticamente conforme os dados forem modificados na tabela base (*preenchimento automático*). Embora sejam propagadas automaticamente, talvez essas alterações não se reflitam imediatamente no índice de texto completo. AUTO é o padrão.  
   
  OFF [ `,` NO POPULATION]  
  Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não mantém uma lista de alterações nos dados indexados. Quando a opção NO POPULATION não está especificada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula o índice completamente depois que ele é criado.  
   
  A opção NO POPULATION pode ser usada apenas quando CHANGE_TRACKING está OFF. Quando a opção NO POPULATION está especificada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não popula um índice depois que ele é criado. O índice somente será preenchido depois que o usuário executar o comando ALTER FULLTEXT INDEX com a cláusula START FULL POPULATION ou START INCREMENTAL POPULATION.  
   
- LISTA DE PALAVRAS IRRELEVANTES [=] {OFF | **Sistema** | *stoplist_name* }  
+ STOPLIST [ = ] { OFF | **SYSTEM** | *stoplist_name* }  
  Associa uma lista de palavras irrelevantes de texto completo ao índice. O índice não é populado com nenhum token que faça parte da lista de palavras irrelevantes especificada. Se STOPLIST não estiver especificada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associará a lista de palavras irrelevantes de texto completo ao índice.  
   
  OFF  
  Especifica que nenhuma lista de palavras irrelevantes seja associada ao índice de texto completo.  
   
- **SISTEMA**  
+ **SYSTEM**  
  Especifica que a lista de palavras irrelevantes do sistema de texto completo padrão deve ser usada para esse índice de texto completo.  
   
  *stoplist_name*  
  Especifica o nome da lista de palavras irrelevantes que deve ser associada ao índice de texto completo.  
   
- LISTA de propriedades de pesquisa [=] *property_list_name*  
+ SEARCH PROPERTY LIST [ = ] *property_list_name*  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Associa uma lista de propriedades de pesquisa ao índice.  
@@ -160,10 +160,10 @@ CREATE FULLTEXT INDEX ON table_name
  *property_list_name*  
  Especifica o nome da lista de propriedades de pesquisa para associar ao índice de texto completo.  
   
-## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre índices de texto completo, consulte [criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
+## <a name="remarks"></a>Remarks  
+ Para obter mais informações sobre índices de texto completo, veja [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
- Em **xml** colunas, você pode criar um índice de texto completo que indexa o conteúdo dos elementos XML, mas ignora a marcação XML. Os valores de atributos são indexados como texto completo, a menos que sejam valores numéricos. Marcas de elemento são usadas como limites do token. Há suporte a fragmentos e documentos XML ou HTML bem formados que contêm vários idiomas. Para obter mais informações, veja [Usar a pesquisa de texto completo com colunas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
+ Em colunas **xml**, você pode criar um índice de texto completo que indexa o conteúdo dos elementos XML, mas ignora a marcação XML. Os valores de atributos são indexados como texto completo, a menos que sejam valores numéricos. Marcas de elemento são usadas como limites do token. Há suporte a fragmentos e documentos XML ou HTML bem formados que contêm vários idiomas. Para obter mais informações, veja [Usar a pesquisa de texto completo com colunas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
  Recomendamos que a coluna de chave de índice seja de um tipo de dados inteiro. Isso otimiza o tempo de execução da consulta.  
   
@@ -174,10 +174,10 @@ CREATE FULLTEXT INDEX ON table_name
 |---------------------|------------------------|------------|  
 |Não habilitado|Não especificado|Uma população completa é executada no índice.|  
 |Não habilitado|Especificado|Não ocorre nenhuma população do índice até que uma instrução ALTER FULLTEXT INDEX...START POPULATION seja emitida.|  
-|Ativado|Specified|É gerado um erro e o índice não é alterado.|  
-|Ativado|Não especificado|Uma população completa é executada no índice.|  
+|Habilitado|Specified|É gerado um erro e o índice não é alterado.|  
+|Habilitado|Não especificado|Uma população completa é executada no índice.|  
   
- Para obter mais informações sobre a população de índices de texto completo, consulte [popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
+ Para obter mais informações sobre o preenchimento de índices de texto completo, veja [Preencher índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
 ## <a name="permissions"></a>Permissões  
  O usuário deve ter a permissão REFERENCES no catálogo de texto completo e a permissão ALTER na tabela ou exibição indexada ou ser membro da função de servidor fixa sysadmin ou das funções fixas de banco de dados db_owner ou db_ddladmin.  
@@ -224,7 +224,7 @@ GO
 ### <a name="c-creating-a-full-text-index-with-a-search-property-list-without-populating-it"></a>C. Criando um índice de texto completo com uma lista de propriedades de pesquisa sem populá-lo  
  O índice de texto completo está nas colunas `Title`, `DocumentSummary` e `Document` da tabela `Production.Document`. O exemplo especifica o LCID de inglês, `1033`, que é o idioma dos dados nas colunas. Esse índice de texto completo usa o catálogo de texto completo padrão e um índice de chave exclusiva existente, `PK_Document_DocumentID`. Conforme recomendado, essa chave de índice está em uma coluna de inteiros, `DocumentID`.  
   
- O exemplo especifica a lista de palavras irrelevantes do sistema. Ela também especifica uma lista de propriedades de pesquisa, `DocumentPropertyList`; para obter um exemplo que cria esta lista de propriedades, consulte [CREATE SEARCH PROPERTY LIST &#40; Transact-SQL &#41; ](../../t-sql/statements/create-search-property-list-transact-sql.md).  
+ O exemplo especifica a lista de palavras irrelevantes do sistema. Também especifica uma lista de propriedades de pesquisa, `DocumentPropertyList`; para obter um exemplo que crie esta lista de propriedades, veja [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
  O exemplo especifica que o controle de alterações está desativado sem nenhuma população. Posteriormente, fora do horário de pico, o exemplo usa uma instrução ALTER FULLTEXT INDEX para iniciar uma população completa no novo índice e habilitar o controle de alterações automático.  
   
@@ -251,13 +251,13 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [fulltext_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

@@ -49,13 +49,13 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="arguments"></a>Argumentos  
  *binary_str*  
- É um **binário** constante ou uma constante que é implicitamente conversível em **binário**, para associar a sessão atual ou a conexão.  
+ É uma constante **binary**, ou uma constante que pode ser convertida implicitamente em **binary**, a ser associada à sessão ou conexão atual.  
   
- **@***binary_var*  
- É um **varbinary** ou **binário** variável que contém um valor de contexto para associar a sessão atual ou a conexão.  
+ **@** *binary_var*  
+ É uma variável **varbinary** ou **binary** que mantém um valor de contexto a ser associado à sessão ou conexão atual.  
   
-## <a name="remarks"></a>Comentários  
- O modo preferido de recuperar as informações de contexto para a sessão atual é usar a função CONTEXT_INFO. Informações de contexto de sessão também são armazenadas no **context_info** colunas nas exibições do sistema a seguir:  
+## <a name="remarks"></a>Remarks  
+ O modo preferido de recuperar as informações de contexto para a sessão atual é usar a função CONTEXT_INFO. As informações de contexto de sessão também são armazenadas nas colunas **context_info** nas seguintes exibições de sistema:  
   
 -   **sys.dm_exec_requests**  
   
@@ -65,7 +65,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  SET CONTEXT_INFO não pode ser especificado em uma função definida pelo usuário. Não é possível fornecer um valor nulo para SET CONTEXT_INFO porque as exibições que mantêm os valores não permitem valores nulos.  
   
- SET CONTEXT_INFO não aceita expressões diferentes de constantes ou nomes de variável. Para definir as informações de contexto para o resultado de uma chamada de função, você primeiro deve incluir o resultado da chamada de função em um **binário** ou **varbinary** variável.  
+ SET CONTEXT_INFO não aceita expressões diferentes de constantes ou nomes de variável. Para definir as informações de contexto para o resultado de uma chamada de função, é necessário primeiro incluir o resultado da chamada de função em uma variável **binary** ou **varbinary**.  
   
  Ao emitir SET CONTEXT_INFO em um procedimento armazenado ou disparador, diferentemente de outras instruções SET, o novo valor definido para as informações de contexto persiste depois que o procedimento armazenado ou disparador é concluído.  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. Definindo informações de contexto com o uso de uma função  
- O exemplo a seguir demonstra como usar a saída de uma função para definir o valor de contexto, onde o valor da função deve primeiro ser colocado em um **binário** variável.  
+ O exemplo a seguir demonstra o uso da saída de uma função para definir o valor de contexto, em que o valor da função deve ser colocado primeiro em uma variável **binary**.  
   
 ```  
 DECLARE @BinVar varbinary(128);  
@@ -95,10 +95,10 @@ SELECT CONTEXT_INFO() AS MyContextInfo;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.DM exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
   
   

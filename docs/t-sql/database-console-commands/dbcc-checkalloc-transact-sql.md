@@ -69,15 +69,15 @@ DBCC CHECKALLOC
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* | *database_id* | 0   
- O nome ou a ID do banco de dados para o qual verificar o uso de alocação e página.
+ O nome ou a ID do banco de dados cuja alocação e o uso de página serão verificados.
 Se não for especificado ou se 0 for especificado, o banco de dados atual será usado.
-Nomes de banco de dados devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).
+Os nomes de banco de dados precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).
 
  NOINDEX  
  Especifica que os índices não clusterizados para tabelas de usuário não devem ser verificados.<br>NOINDEX é mantido somente para compatibilidade com versões anteriores e não afeta DBCC CHECKALLOC.
 
  REPAIR_ALLOW_DATA_LOSS \| REPAIR_FAST \| REPAIR_REBUILD  
- Especifica que DBCC CHECKALLOC repara os erros encontrados. *Database_Name* deve estar no modo de usuário único.
+ Especifica que DBCC CHECKALLOC repara os erros encontrados. *database_name* precisa estar no modo de usuário único.
 
  REPAIR_ALLOW_DATA_LOSS  
  Tenta reparar qualquer erro encontrado. Esses reparos podem provocar alguma perda de dados. REPAIR_ALLOW_DATA_LOSS é a única opção que permite que erros de alocação sejam reparados.
@@ -102,23 +102,23 @@ Nomes de banco de dados devem seguir as regras para [identificadores](../../rela
  Faz o comando DBCC obter um bloqueio de banco de dados exclusivo.
 
  ESTIMATE ONLY  
- Exibe a quantidade estimada de espaço em tempdb necessária para executar DBCC CHECKALLOC quando todas as outras opções são especificadas.
+ Exibe a quantidade estimada de espaço no tempdb necessária para executar DBCC CHECKALLOC quando todas as outras opções são especificadas.
   
 ## <a name="remarks"></a>Remarks  
 DBCC CHECKALLOC verifica a alocação de todas as páginas no banco de dados, independentemente do tipo de página ou do tipo de objeto ao qual elas pertencem. Isso também valida as diversas estruturas internas usadas para manter o controle dessas páginas e das relações entre elas.
-Se NO_INFOMSGS não for especificado, DBCC CHECKALLOC coletará informações sobre uso de espaço para todos os objetos no banco de dados. Essas informações são impressos junto com os erros encontrados.
+Se NO_INFOMSGS não for especificado, DBCC CHECKALLOC coletará informações sobre uso de espaço para todos os objetos no banco de dados. Essas informações são impressas juntamente com os erros encontrados.
   
 > [!NOTE]  
-> A funcionalidade DBCC CHECKALLOC está incluída no [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Isso significa que não é preciso executar DBCC CHECKALLOC separadamente dessas instruções.   DBCC CHECKALLOC não verifica dados FILESTREAM. FILESTREAM armazena BLOBS (objetos binários grandes) no sistema de arquivos.  
+> A funcionalidade DBCC CHECKALLOC está incluída no [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e no [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Isso significa que não é preciso executar DBCC CHECKALLOC separadamente dessas instruções.   DBCC CHECKALLOC não verifica dados FILESTREAM. FILESTREAM armazena BLOBS (objetos binários grandes) no sistema de arquivos.  
   
 ## <a name="internal-database-snapshot"></a>Instantâneo de banco de dados interno  
 DBCC CHECKALLOC usa um instantâneo de banco de dados interno para fornecer a consistência transacional necessária ao executar essas verificações. Se não for possível criar um instantâneo ou se TABLOCK for especificado, DBCC CHECKALLOC tentará adquirir um bloqueio exclusivo (X) no banco de dados para obter a consistência necessária.
   
 > [!NOTE]  
-> A execução de DBCC CHECKALLOC em relação a tempdb não executa nenhuma verificação. Isso porque, por razões de desempenho, instantâneos do banco de dados não estão disponíveis em tempdb. Isso significa que não é possível obter a consistência transacional exigida. Parar e iniciar o serviço MSSQLSERVER para resolver quaisquer problemas de alocação de tempdb. Essa ação descarta e recria o banco de dados tempdb.  
+> A execução de DBCC CHECKALLOC no tempdb não realiza nenhuma verificação. Isso porque, por razões de desempenho, instantâneos do banco de dados não estão disponíveis em tempdb. Isso significa que não é possível obter a consistência transacional exigida. Pare e inicie o serviço MSSQLSERVER para resolver problemas de alocação do tempdb. Essa ação descarta e recria o banco de dados tempdb.  
   
 ## <a name="understanding-dbcc-error-messages"></a>Compreendendo mensagens de erro DBCC  
-Depois que o comando DBCC CHECKALLOC é encerrado, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indica que o comando foi finalizado, um valor de estado e a quantidade de tempo de execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
+Depois que o comando DBCC CHECKALLOC é encerrado, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indicará que o comando foi finalizado, um valor de estado e a duração da execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
   
 |Estado|Description|  
 |---|---|  
@@ -130,8 +130,8 @@ Depois que o comando DBCC CHECKALLOC é encerrado, uma mensagem é gravada no lo
 |5|Ocorreu um erro desconhecido que finalizou o comando DBCC.|  
   
 ## <a name="error-reporting"></a>Relatório de Erros  
-Um arquivo de minidespejo (SQLDUMP*nnnn*. txt) é criado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de LOG sempre que DBCC CHECKALLOC detecta um erro de dano. Quando os recursos de coleta de dados Uso de Recursos e Relatório de Erros são habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo é encaminhado automaticamente à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Os dados coletados são usados para aprimorar a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-O arquivo de despejo contém os resultados do comando DBCC CHECKALLOC e saídas de diagnóstico adicionais. O arquivo tem DACLs (listas de controle de acesso discricionário) restritas. O acesso é limitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] membros da função sysadmin e conta de serviço. Por padrão, a função de sysadmin contém todos os membros do grupo BUILTIN\Administradores do Windows e o grupo de administradores locais. O comando DBCC não falhará se o processo de coleta de dados falhar.
+Um arquivo de minidespejo (SQLDUMP*nnnn*.txt) é criado no diretório de LOG do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre que DBCC CHECKALLOC detecta um erro de corrupção. Quando os recursos de coleta de dados Uso de Recursos e Relatório de Erros são habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo é encaminhado automaticamente à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Os dados coletados são usados para aprimorar a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+O arquivo de despejo contém os resultados do comando DBCC CHECKALLOC e saídas de diagnóstico adicionais. O arquivo tem DACLs (listas de controle de acesso discricionário) restritas. O acesso é limitado à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aos membros da função sysadmin. Por padrão, a função sysadmin contém todos os membros do grupo BUILTIN\Administradores do Windows e do grupo do administrador local. O comando DBCC não falhará se o processo de coleta de dados falhar.
   
 ## <a name="resolving-errors"></a>Resolvendo erros  
 Se qualquer erro for relatado pelo DBCC CHECKALLOC, é recomendável restaurar o banco de dados do backup em vez de executar um reparo. Se não existir um backup, executar um reparo pode corrigir os erros relatados, entretanto, a correção dos erros pode exigir que algumas páginas e, portanto, dados sejam excluídos.
@@ -157,7 +157,7 @@ DBCC CHECKALLOC também relata um resumo de alocação para cada índice e parti
 |Partition ID|Somente para uso interno.|  
 |Alloc unit ID|Somente para uso interno.|  
 |Dados em linha|As páginas contêm dados de índice ou de heap.|  
-|Dados LOB|As páginas contêm **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **texto**, **ntext**, **xml**, e **imagem** dados.|  
+|Dados LOB|As páginas contêm dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **XML** e **image**.|  
 |Dados do estouro de linha|As páginas contêm dados de coluna do comprimento de variável que foram enviados por push para fora da linha.|  
   
 DBCC CHECKALLOC retorna o conjunto de resultados a seguir (os valores podem variar), exceto quando ESTIMATEONLY ou NO_INFOMSGS é especificado.
@@ -235,7 +235,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Permissões  
-Requer associação na função de servidor fixa sysadmin ou da função de banco de dados fixa db_owner.
+Requer associação à função de servidor fixa sysadmin ou à função de banco de dados fixa db_owner.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir executa `DBCC CHECKALLOC` para o banco de dados atual e o banco de dados `AdventureWorks2012`.
@@ -249,7 +249,7 @@ DBCC CHECKALLOC (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

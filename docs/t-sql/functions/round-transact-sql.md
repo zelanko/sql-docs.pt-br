@@ -48,13 +48,13 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de exato dados numéricos aproximados ou categoria de tipo, exceto para o **bit** tipo de dados.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**.  
   
  *length*  
- É a precisão para o qual *numeric_expression* deve ser arredondada. *comprimento* deve ser uma expressão de tipo **tinyint**, **smallint**, ou **int**. Quando *comprimento* é um número positivo, *numeric_expression* é arredondado para o número de posições decimais especificado por *comprimento*. Quando *comprimento* é um número negativo, *numeric_expression* será arredondado à esquerda da vírgula decimal, conforme especificado por *comprimento*.  
+ É a precisão para a qual *numeric_expression* deve ser arredondada. *length* deve ser uma expressão do tipo **tinyint**, **smallint** ou **int**. Quando *length* é um número positivo, *numeric_expression* é arredondado para o número de posições decimais especificado por *length*. Quando *length* é um número negativo, *numeric_expression* é arredondado à esquerda da vírgula decimal, conforme especificado por *length*.  
   
  *função*  
- É o tipo de operação a ser executada. *função* devem ser **tinyint**, **smallint**, ou **int**. Quando *função* for omitido ou tem um valor de 0 (padrão), *numeric_expression* é arredondado. Quando um valor diferente de 0 for especificado, *numeric_expression* será truncado.  
+ É o tipo de operação a ser executada. *function* deve ser **tinyint**, **smallint** ou **int**. Quando *function* é omitido ou tem um valor igual a 0 (padrão), *numeric_expression* é arredondado. Quando um valor diferente de 0 é especificado, *numeric_expression* é truncado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna os tipos de dados a seguir.  
@@ -65,23 +65,23 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** e **numérico** categoria (p, s)|**decimal (p, s)**|  
-|**Money** e **smallmoney** categoria|**money**|  
-|**float** e **real** categoria|**float**|  
+|Categorias **decimal** e **numeric** (p, s)|**decimal(p, s)**|  
+|Categorias **money** e **smallmoney**|**money**|  
+|Categorias **float** e **real**|**float**|  
   
 ## <a name="remarks"></a>Remarks  
- ROUND sempre retorna um valor. Se *comprimento* é negativo e maior que o número de dígitos antes do ponto decimal, ROUND retorna 0.  
+ ROUND sempre retorna um valor. Se *length* for negativo e maior que o número de dígitos antes do ponto decimal, ROUND retornará 0.  
   
 |Exemplo|Resultado|  
 |-------------|------------|  
-|ROUND (748.58, -4)|0|  
+|ROUND(748.58, -4)|0|  
   
- ROUND retornará um arredondado *numeric_expression*, independentemente do tipo de dados, quando *comprimento* for um número negativo.  
+ ROUND retornará uma *numeric_expression* arredondada, seja qual for o tipo de dados, quando *length* for um número negativo.  
   
 |Exemplos|Resultado|  
 |--------------|------------|  
-|ROUND (748.58, -1)|750.00|  
-|ROUND (748.58, -2)|700.00|  
+|ROUND(748.58, -1)|750.00|  
+|ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|Os resultados em um estouro aritmético porque o valor padrão de 748.58 é o decimal(5,2), que não pode retornar 1000.00.|  
 |Para arredondar até 4 dígitos, altere o tipo de dados da entrada. Por exemplo:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
@@ -141,8 +141,8 @@ GO
 ```
   
 ## <a name="see-also"></a>Consulte Também  
- [Teto &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   
+ [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FLOOR &#40; Transact-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR &#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

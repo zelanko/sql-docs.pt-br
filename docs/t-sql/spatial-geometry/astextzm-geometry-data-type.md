@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna a representação de texto do Open Geospatial Consortium (OGC) conhecido (WKT) de uma instância de geometria, aumentada com qualquer **Z** (elevação) e **M** (medida) transportado pela instância.
+Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) de uma instância de geometria, aumentada com um valor **Z** (elevação) e **M** (medida) presente na instância.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,14 +46,14 @@ Retorna a representação de texto do Open Geospatial Consortium (OGC) conhecido
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **nvarchar (max)**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Tipo de retorno CLR: **SqlChars**  
+ Tipo de retorno do CLR: **SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um `Point` instância que contém **Z** (elevação) e **M** valores (medida). `STAsText()`Seleciona os valores WKT, (1, 2); `AsTextZM()` seleciona os mesmos valores WKT e também retorna os valores para **Z** e **M**, produzindo (1 2 3 4).  
+ O exemplo a seguir cria uma instância de `Point` que contém valores de **Z** (elevação) e **M** (medida). `STAsText()` seleciona os valores WKT, (1 2); `AsTextZM()` seleciona os mesmos valores WKT e também retorna os valores de **Z** e **M**, com um resultado (1 2 3 4).  
   
 ```  
 DECLARE @g geometry;  
@@ -62,10 +62,10 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias de geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [M &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [M &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

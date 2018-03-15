@@ -80,11 +80,11 @@ CREATE QUEUE <object>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* (object)  
- É o nome do banco de dados no qual criar a nova fila. *Database_Name* deve especificar o nome do banco de dados existente. Quando *database_name* não for fornecido, a fila é criada no banco de dados atual.  
+ *database_name* (object)  
+ É o nome do banco de dados no qual criar a nova fila. *database_name* precisa especificar o nome de um banco de dados existente. Quando *database_name* não é fornecido, a fila é criada no banco de dados atual.  
   
  *schema_name* (object)  
- É o nome do esquema ao qual a nova fila pertence. O esquema considera como padrão o esquema padrão para o usuário que executa a instrução. Se a instrução CREATE QUEUE for executada por um membro da função de servidor fixa sysadmin ou um membro do db_dbowner ou db_ddladmin banco de dados fixa no banco de dados especificado por *database_name*, *schema_name* pode especificar um esquema diferente daquele que está associado ao logon da conexão atual. Caso contrário, *schema_name* deve ser o esquema padrão do usuário que executa a instrução.  
+ É o nome do esquema ao qual a nova fila pertence. O esquema considera como padrão o esquema padrão para o usuário que executa a instrução. Se a instrução CREATE QUEUE for executada por um membro da função de servidor fixa sysadmin ou por um membro das funções de banco de dados fixas db_dbowner ou db_ddladmin no banco de dados especificado por *database_name*, *schema_name* poderá especificar um esquema diferente do que está associado ao logon da conexão atual. Caso contrário, o *schema_name* deverá ser o esquema padrão do usuário que executa a instrução.  
   
  *queue_name*  
  É o nome da fila a ser criada. Esse nome deve satisfazer as diretrizes para identificadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -110,14 +110,14 @@ CREATE QUEUE <object>
  *database_name*(procedure)  
  É o nome do banco de dados que contém o procedimento armazenado.  
   
- *schema_name*(procedure)  
+ *schema_name* (procedimento)  
  É o nome do esquema que contém o procedimento armazenado.  
   
  *procedure_name*  
  É o nome do procedimento armazenado.  
   
  MAX_QUEUE_READERS =*max_readers*  
- Especifica o número máximo de instâncias do procedimento armazenado de ativação que a fila inicia ao mesmo tempo. O valor de *max_readers* deve ser um número entre **0** e **32767**.  
+ Especifica o número máximo de instâncias do procedimento armazenado de ativação que a fila inicia ao mesmo tempo. O valor de *max_readers* precisa ser um número entre **0** e **32767**.  
   
  EXECUTE AS  
  Especifica a conta do usuário do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob a qual é executado o procedimento armazenado de ativação. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve poder verificar as permissões deste usuário no momento em que a fila inicia o procedimento armazenado. Para um usuário de domínio, o servidor deverá estar conectado ao domínio quando o procedimento armazenado for iniciado ou a ativação falhará. Para um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o servidor sempre pode verificar as permissões.  
@@ -126,7 +126,7 @@ CREATE QUEUE <object>
  Especifica que o procedimento armazenado é executado como o usuário atual. (O principal do banco de dados que executa esta instrução CREATE QUEUE.)  
   
  '*user_name*'  
- É o nome do usuário que o procedimento armazenado usa para ser executado. O *user_name* parâmetro deve ser um válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado pelo usuário como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. O usuário atual deve ter a permissão IMPERSONATE para o *user_name* especificado.  
+ É o nome do usuário que o procedimento armazenado usa para ser executado. O parâmetro *user_name* deve ser um usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido especificado como um identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O usuário atual precisa ter a permissão IMPERSONATE para o *user_name* especificado.  
   
  OWNER  
  Especifica que o procedimento armazenado é executado como o proprietário da fila.  
@@ -136,13 +136,13 @@ CREATE QUEUE <object>
   
  A fila que tiver a manipulação de mensagens suspeitas definida como OFF, não será desabilitada após cinco reversões consecutivas de transações. Isso permite que um sistema personalizado de manipulação de mensagens suspeitas seja definido pelo aplicativo.  
   
- ON *arquivos |* [**Padrão**]  
- Especifica o grupo de arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual criar esta fila. Você pode usar o *arquivos* parâmetro para identificar um grupo de arquivos, ou use o identificador padrão para usar o grupo de arquivos padrão para o banco de dados do service broker. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. Quando nenhum grupo de arquivos for especificado, a fila usará o grupo de arquivos padrão para o banco de dados.  
+ ON *filegroup |* [**DEFAULT**]  
+ Especifica o grupo de arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual criar esta fila. Use o parâmetro *filegroup* para identificar um grupo de arquivos ou o identificador DEFAULT para usar o grupo de arquivos padrão para o banco de dados do Service Broker. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. Quando nenhum grupo de arquivos for especificado, a fila usará o grupo de arquivos padrão para o banco de dados.  
   
 ## <a name="remarks"></a>Remarks  
  Uma fila pode ser o destino de uma instrução SELECT. Entretanto, os conteúdos de uma fila só podem ser modificados usando instruções que operam em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)], tais como SEND, RECEIVE e END CONVERSATION. Uma fila não pode ser o destino de uma instrução INSERT, UPDATE, DELETE ou TRUNCATE.  
   
- Uma fila pode não ser um objeto temporário. Portanto, a fila de nomes que começam com  **#**  não são válidos.  
+ Uma fila pode não ser um objeto temporário. Portanto, nomes de fila que começam com **#** não são válidos.  
   
  Criando uma fila em um estado inativo lhe permite ter a infraestrutura pronta para um serviço antes de permitir que as mensagens sejam recebidas na fila.  
   
@@ -158,20 +158,20 @@ CREATE QUEUE <object>
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|status|**tinyint**|Status da mensagem. A instrução RECEIVE retornará todas as mensagens que têm um status de **1**. Se a retenção de mensagens estiver ativada, o status será definido como 0. Se a retenção de mensagens estiver desativada, a mensagem será excluída da fila. As mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0**= mensagem recebida retida<br /><br /> **1**= pronto para receber<br /><br /> **2**= ainda não concluída<br /><br /> **3**= mensagem enviada retida|  
+|status|**tinyint**|Status da mensagem. A instrução RECEIVE retorna todas as mensagens que têm um status igual a **1**. Se a retenção de mensagens estiver ativada, o status será definido como 0. Se a retenção de mensagens estiver desativada, a mensagem será excluída da fila. As mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0** = Mensagem recebida retida<br /><br /> **1** = Pronta para receber<br /><br /> **2** = Ainda não concluída<br /><br /> **3** = Mensagem enviada retida|  
 |priority|**tinyint**|O nível de prioridade atribuído a essa mensagem.|  
 |queuing_order|**bigint**|Número da ordem da mensagem na fila.|  
 |conversation_group_id|**uniqueidentifier**|O identificador do grupo de conversa a que pertence essa mensagem.|  
 |conversation_handle|**uniqueidentifier**|Tratamento para a conversa da qual essa mensagem faz parte.|  
 |message_sequence_number|**bigint**|Número de sequência da mensagem na conversa.|  
 |service_name|**nvarchar(512)**|O nome do serviço a que se destina a conversa.|  
-|service_id|**Int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do serviço para o qual a conversa é destinada.|  
+|service_id|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do serviço para o qual a conversa é destinada.|  
 |service_contract_name|**nvarchar(256)**|O nome do contrato que a conversa segue.|  
-|service_contract_id|**Int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do contrato que a conversa segue.|  
+|service_contract_id|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do contrato que a conversa segue.|  
 |message_type_name|**nvarchar(256)**|O nome do tipo de mensagem a que descreve a mensagem.|  
-|message_type_id|**Int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do tipo de mensagem que descreve a mensagem.|  
-|validation|**nchar(2)**|Validação usada para a mensagem.<br /><br /> E = Vazio<br /><br /> N = Nenhum<br /><br /> X=XML|  
-|message_body|**varbinary(max)**|Conteúdo da mensagem.|  
+|message_type_id|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do tipo de mensagem que descreve a mensagem.|  
+|validation|**nchar(2)**|Validação usada para a mensagem.<br /><br /> E = Vazio<br /><br /> N=None<br /><br /> X=XML|  
+|message_body|**varbinary(max)**|O conteúdo da mensagem.|  
 |message_id|**uniqueidentifier**|Identificador exclusivo para a mensagem.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -218,7 +218,7 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Criando uma fila com vários parâmetros  
- O exemplo a seguir cria uma fila no `DEFAULT` grupo de arquivos. A fila está indisponível. As mensagens são retidas na fila até que a conversa a que elas pertençam termine. Quando a fila for deixada disponível por ALTER QUEUE, a fila inicia o procedimento armazenado `2008R2.dbo.expense_procedure` para processar as mensagens. O procedimento armazenado executa como o usuário que executou a instrução `CREATE QUEUE`. A fila inicia um máximo de `10` instâncias do procedimento armazenado.  
+ O exemplo a seguir cria uma fila no grupo de arquivos `DEFAULT`. A fila está indisponível. As mensagens são retidas na fila até que a conversa a que elas pertençam termine. Quando a fila for deixada disponível por ALTER QUEUE, a fila inicia o procedimento armazenado `2008R2.dbo.expense_procedure` para processar as mensagens. O procedimento armazenado executa como o usuário que executou a instrução `CREATE QUEUE`. A fila inicia um máximo de `10` instâncias do procedimento armazenado.  
   
 ```  
 CREATE QUEUE ExpenseQueue  
@@ -231,7 +231,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   

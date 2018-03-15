@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o último valor de identidade inserido em uma coluna de identidade no mesmo escopo. Um escopo é um módulo: um procedimento armazenado, gatilho, função ou lote. Portanto, se duas instruções estarão no mesmo procedimento armazenado, função ou lote, elas estão no mesmo escopo.  
+  Retorna o último valor de identidade inserido em uma coluna de identidade no mesmo escopo. Um escopo é um módulo: um procedimento armazenado, gatilho, função ou lote. Portanto, se duas instruções forem estar no mesmo procedimento armazenado, função ou lote, elas estarão no mesmo escopo.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,22 +50,22 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Tipos de retorno  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Comentários  
- SCOPE_IDENTITY, IDENT_CURRENT e @@IDENTITY são funções semelhantes porque retornam valores que são inseridos em colunas de identidade.  
+## <a name="remarks"></a>Remarks  
+ SCOPE_IDENTITY, IDENT_CURRENT, e @@IDENTITY são funções semelhantes porque retornam valores inseridos em colunas de identidade.  
   
- IDENT_CURRENT não é limitado por escopo e sessão, mas a uma tabela especificada. IDENT_CURRENT retorna o valor gerado para uma tabela específica em qualquer sessão e escopo. Para obter mais informações, consulte [IDENT_CURRENT &#40; Transact-SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT não é limitado por escopo e sessão, mas a uma tabela especificada. IDENT_CURRENT retorna o valor gerado para uma tabela específica em qualquer sessão e escopo. Para obter mais informações, consulte [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
- SCOPE_IDENTITY e @@IDENTITY retornar o último valor de identidade gerado em qualquer tabela na sessão atual. Entretanto, SCOPE_IDENTITY retorna valores inseridos somente dentro do escopo atual; @@IDENTITY não está limitado a um escopo específico.  
+ SCOPE_IDENTITY e @@IDENTITY retornam o último valor de identidade gerado em qualquer tabela da sessão atual. Entretanto, SCOPE_IDENTITY só retornará valores inseridos no escopo atual; @@IDENTITY não está limitado a um escopo específico.  
   
  Por exemplo, há duas tabelas, T1 e T2e um gatilho INSERT é definido em T1. Quando uma linha é inserida em T1, o gatilho é acionado e insere uma linha em T2. Esse cenário ilustra dois escopos: a inserção em T1e a inserção em T2 pelo gatilho.  
   
- Supondo que T1 e T2 tenham colunas de identidade, @@IDENTITY e SCOPE_IDENTITY retornam valores diferentes no final de uma instrução INSERT em T1. @@IDENTITY retorna o último valor da coluna de identidade inserido em qualquer escopo na sessão atual. É o valor inserido em T2. SCOPE_IDENTITY () retorna o valor de identidade inserido em T1. Foi a última inserção que ocorreu no mesmo escopo. A função SCOPE_IDENTITY () retorna o valor nulo se a função é invocada antes de qualquer instrução INSERT em uma coluna de identidade ocorrerem no escopo.  
+ Supondo que T1 e T2 tenham colunas de identidade, @@IDENTITY e SCOPE_IDENTITY retornem valores diferentes no fim de uma instrução INSERT em T1. @@IDENTITY retorna o último valor de coluna de identidade inserido em qualquer escopo na sessão atual. É o valor inserido em T2. SCOPE_IDENTITY() retorna o valor IDENTITY inserido em T1. Foi a última inserção que ocorreu no mesmo escopo. A função SCOPE_IDENTITY() retornará o valor nulo se for invocada antes que qualquer instrução INSERT em uma coluna de identidade ocorra no escopo.  
   
  Instruções e transações com falha podem alterar a identidade atual de uma tabela e criar lacunas nos valores da coluna de identidade. O valor de identidade nunca é revertido, mesmo que a transação que tentou inserir o valor na tabela não seja confirmada. Por exemplo, se uma instrução INSERT falhar por causa de uma violação IGNORE_DUP_KEY, o valor de identidade atual para a tabela ainda será incrementado.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Usando@IDENTITY e SCOPE_IDENTITY com gatilhos  
+### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Usando @@IDENTITY e SCOPE_IDENTITY com gatilhos  
  O exemplo a seguir cria duas tabelas, `TZ` e `TY`, e um gatilho INSERT em `TZ`. Quando uma linha é inserida na tabela `TZ`, o gatilho (`Ztrig`) é acionado e insere uma linha em `TY`.  
   
 ```sql  
@@ -80,7 +80,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Conjunto de resultados: aparência de tabela TZ.  
+Conjunto de resultados: esta é a aparência da tabela TZ.  
   
 ```  
 Z_id   Z_name  
@@ -99,7 +99,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Conjunto de resultados: aparência TY:  
+Conjunto de resultados: esta é a aparência da TY:  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -117,7 +117,7 @@ FOR INSERT AS
    INSERT TY VALUES ('')  
    END;  
 ```  
-ACIONAR o gatilho e determinar quais valores de identidade que você obter com o @@IDENTITY e SCOPE_IDENTITY funções.   
+Dispara o gatilho com FIRE e determina quais valores de identidade você obtém com as funções @@IDENTITY e SCOPE_IDENTITY.   
 ```sql
 INSERT TZ VALUES ('Rosalie');  
   
@@ -139,10 +139,10 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Usando@IDENTITY e SCOPE_IDENTITY () com replicação  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Usando @@IDENTITY e SCOPE_IDENTITY() com replicação  
  Os exemplos a seguir mostram como usar `@@IDENTITY` e `SCOPE_IDENTITY()` para inserções em um banco de dados publicado para replicação de mesclagem. As duas tabelas dos exemplos estão no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: `Person.ContactType` não é publicado e `Sales.Customer` é publicado. A replicação de mesclagem adiciona gatilhos a tabelas que são publicadas. Portanto, `@@IDENTITY` pode retornar o valor da inserção em uma tabela do sistema de replicação em vez da inserção em uma tabela de usuário.  
   
- O `Person.ContactType` tabela tem um valor de identidade máximo de 20. Se você inserir uma linha na tabela, `@@IDENTITY` e `SCOPE_IDENTITY()` retornarão o mesmo valor.  
+ A tabela `Person.ContactType` tem um valor de identidade máximo de 20. Se você inserir uma linha na tabela, `@@IDENTITY` e `SCOPE_IDENTITY()` retornarão o mesmo valor.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -182,7 +182,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

@@ -92,11 +92,11 @@ WITH
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* (object)  
- É o nome do banco de dados que contém a fila a ser alterada. Quando nenhum *database_name* for fornecido, o padrão é o banco de dados atual.  
+ *database_name* (object)  
+ É o nome do banco de dados que contém a fila a ser alterada. Quando nenhum *database_name* for fornecido, o padrão será o banco de dados atual.  
   
  *schema_name* (object)  
- É o nome do esquema ao qual a nova fila pertence. Quando nenhum *schema_name* for fornecido, o padrão é o esquema padrão para o usuário atual.  
+ É o nome do esquema ao qual a nova fila pertence. Quando nenhum *schema_name* for fornecido, o padrão será o esquema padrão do usuário atual.  
   
  *queue_name*  
  É o nome da fila a ser alterada.  
@@ -116,39 +116,39 @@ WITH
  STATUS (Ativação)  
  Especifica se a fila ativa ou não o procedimento armazenado. Quando o STATUS = ON, a fila começa o procedimento armazenado especificado com PROCEDURE_NAME quando o número de procedimentos atualmente sendo executados for menos que MAX_QUEUE_READERS e quando as mensagens chegarem à fila mais rápido do que os procedimentos armazenados recebam as mensagens. Quando o STATUS = OFF, a fila não ativa o procedimento armazenado.  
   
- RECRIAR [WITH \<queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Recria todos os índices na tabela interna de fila. Use esse recurso quando você estiver tendo problemas de fragmentação devido à alta carga. MAXDOP é a opção de rebuild de fila única com suporte. RECONSTRUÇÃO sempre é uma operação offline.  
+ Recompila todos os índices na tabela interna da fila. Use esse recurso quando estiver com problemas de fragmentação devido à alta carga. MAXDOP é a única opção de recompilação de fila com suporte. REBUILD sempre é uma operação offline.  
   
- REORGANIZAR [COM (LOB_COMPACTION = {ON | OFF})]  
+ REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Reorganize todos os índices na tabela interna de fila.   
-Ao contrário de REORGANIZAÇÃO em tabelas de usuário, REORGANIZE em uma fila sempre é executada como uma operação offline porque bloqueios de nível de página são desabilitados explicitamente em filas.  
+ Reorganize todos os índices na tabela interna da fila.   
+Ao contrário de REORGANIZE em tabelas de usuário, REORGANIZE em uma fila sempre é executada como uma operação offline porque os bloqueios no nível da página são desabilitados explicitamente nas filas.  
   
 > [!TIP]  
->  Para obter diretrizes gerais sobre a fragmentação de índice, quando a fragmentação entre 5% e 30%, reorganize o índice. Quando a fragmentação é acima de 30%, recrie o índice. No entanto, esses números são apenas para diretrizes gerais como ponto de partida para o seu ambiente. Para determinar a quantidade de fragmentação de índice, use [db_index_physical_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -consulte o exemplo G nesse artigo para obter exemplos.  
+>  Para obter as diretrizes gerais sobre a fragmentação de índice, quando a fragmentação estiver entre 5% e 30%, reorganize o índice. Quando a fragmentação estiver acima de 30%, recompile o índice. No entanto, esses números são apenas para diretrizes gerais como um ponto inicial para o seu ambiente. Para determinar a quantidade de fragmentação de índice, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) – confira o exemplo G neste artigo para obter exemplos.  
   
- Mover para { *file_group* | "default"}  
+ MOVE TO { *file_group* | "default" }  
  **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Move a tabela interna de fila (com seus índices) para um grupo de arquivos especificado pelo usuário.  O novo grupo de arquivos não deve ser somente leitura.  
+ Move a tabela interna da fila (com seus índices) para um grupo de arquivos especificado pelo usuário.  O novo grupo de arquivos não pode ser somente leitura.  
   
  PROCEDURE_NAME = \<procedure>  
  Especifica o nome do procedimento armazenado a ser ativado quando a fila contiver mensagens a serem processadas. Esse valor deve ser um identificador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *Database_Name* (procedimento)  
+ *database_name* (procedimento)  
  É o nome do banco de dados que contém o procedimento armazenado.  
   
- *schema_name* (procedure)  
+ *schema_name* (procedimento)  
  É o nome do esquema que é proprietário do procedimento armazenado.  
   
  *stored_procedure_name*  
  É o nome do procedimento armazenado.  
   
  MAX_QUEUE_READERS =*max_reader*  
- Especifica o número máximo de instâncias do procedimento armazenado de ativação que a fila inicia simultaneamente. O valor de *max_readers* deve ser um número entre 0 e 32767.  
+ Especifica o número máximo de instâncias do procedimento armazenado de ativação que a fila inicia simultaneamente. O valor de *max_readers* precisa ser um número entre 0 e 32767.  
   
  EXECUTE AS  
  Especifica a conta do usuário do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob a qual é executado o procedimento armazenado de ativação. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve poder verificar as permissões deste usuário no momento em que a fila ativa o procedimento armazenado. Para um usuário de domínio do Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve estar conectado ao domínio e ser capaz de validar as permissões do usuário especificado quando o procedimento for iniciado, caso contrário, a ativação falhará. Para um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o servidor sempre pode verificar as permissões.  
@@ -157,7 +157,7 @@ Ao contrário de REORGANIZAÇÃO em tabelas de usuário, REORGANIZE em uma fila 
  Especifica que o procedimento armazenado é executado como o usuário atual. (O principal do banco de dados que executa essa instrução ALTER QUEUE.)  
   
  '*user_name*'  
- É o nome do usuário com o qual o procedimento armazenado é executado. *user_name* deve ser um válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado pelo usuário como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. O usuário atual deve ter a permissão IMPERSONATE para o *user_name* especificado.  
+ É o nome do usuário com o qual o procedimento armazenado é executado. *user_name* precisa ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido especificado pelo usuário como um identificador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O usuário atual precisa ter a permissão IMPERSONATE para o *user_name* especificado.  
   
  OWNER  
  Especifica que o procedimento armazenado é executado como o proprietário da fila.  
@@ -177,7 +177,7 @@ Ao contrário de REORGANIZAÇÃO em tabelas de usuário, REORGANIZE em uma fila 
   
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] verifica o número máximo de leitores de fila para uma fila como parte do processo de ativação. Portanto, alterar uma fila para aumentar o número de máximo de leitores de fila permite que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicie imediatamente mais instâncias do procedimento armazenado de ativação. A alteração de uma fila para diminuir o número de máximo de leitores de fila não afeta as instâncias do procedimento armazenado de ativação em execução atualmente. Entretanto, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] não inicia uma nova instância do procedimento armazenado até que o número de instâncias para o procedimento armazenado de ativação seja menor que o número máximo configurado.  
   
- Quando uma fila não está disponível, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] mantém as mensagens para os serviços que usam a fila na transmissão para o banco de dados. O [transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) exibição de catálogo fornece uma exibição da fila de transmissão.  
+ Quando uma fila não está disponível, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] mantém as mensagens para os serviços que usam a fila na transmissão para o banco de dados. A exibição de catálogo [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) fornece uma exibição da fila de transmissão.  
   
  Se uma instrução RECEIVE ou GET CONVERSATION GROUP especificar uma fila não disponível, ela falhará com um erro [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -234,11 +234,11 @@ ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;  
 ```  
   
-### <a name="g-rebuilding-queue-indexes"></a>G. A recompilação de índices de fila  
+### <a name="g-rebuilding-queue-indexes"></a>G. Recompilando índices de fila  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- O exemplo a seguir recria índices de fila  
+ O exemplo a seguir recompila índices de fila  
   
 ```  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
@@ -254,7 +254,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: Mover tabela interna de fila para outro grupo de arquivos  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: movendo a tabela interna da fila para outro grupo de arquivos  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -262,7 +262,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

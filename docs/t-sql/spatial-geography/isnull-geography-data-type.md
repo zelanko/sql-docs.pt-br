@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geography-data-type"></a>IsNull (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Uma propriedade que especifica se o **geografia** instância é nula. Retornará 'TRUE' se a instância for nula ou 0 se a instância não for nula.  
+  Uma propriedade que especifica se a instância de **geography** é nula. Retornará 'TRUE' se a instância for nula ou 0 se a instância não for nula.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **bits**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo CLR: **SqlBoolean**  
+ Tipo do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- `IsNull`pode ser usado para testar se um **geografia** instância é nula. O resultado pode ser um pouco confuso, retornando 0 se a instância não for nula, mas null se a instância for nula.  
+ `IsNull` pode ser usado para testar se uma instância de **geography** é nula. O resultado pode ser um pouco confuso, retornando 0 se a instância não for nula, mas null se a instância for nula.  
   
- Esse método é usado principalmente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infraestrutura; é recomendável que você use o predicado T-SQL IS NULL para testar se um **geografia** instância é nula. Para obter mais informações sobre o T-SQL de predicado IS NULL, consulte [IS NULL &#40; Transact-SQL &#41; ](../../t-sql/queries/is-null-transact-sql.md).  
+ Esse método é usado principalmente pela infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; é recomendável o uso do predicado T-SQL IS NULL para testar se uma instância de **geography** é nula. Para obter mais informações sobre o predicado T-SQL IS NULL, consulte [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

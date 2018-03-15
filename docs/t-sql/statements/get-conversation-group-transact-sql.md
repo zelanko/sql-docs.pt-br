@@ -66,27 +66,27 @@ ms.lasthandoff: 01/25/2018
  Especifica que a instrução GET CONVERSATION GROUP aguarde a chegada de uma mensagem na fila se nenhuma mensagem estiver presente.  
   
  *@conversation_group_id*  
- É uma variável usada para armazenar a ID de grupo de conversa retornada pela instrução GET CONVERSATION GROUP. A variável deve ser do tipo **uniqueidentifier**. Se não houver grupos de conversa disponíveis, a variável será definida como NULL.  
+ É uma variável usada para armazenar a ID de grupo de conversa retornada pela instrução GET CONVERSATION GROUP. A variável precisa ser do tipo **uniqueidentifier**. Se não houver grupos de conversa disponíveis, a variável será definida como NULL.  
   
  FROM  
  Especifica a fila na qual o grupo de conversa deve ser obtido.  
   
  *database_name*  
- É o nome do banco de dados que contém a fila na qual o grupo de conversa deve ser obtido. Quando nenhum *database_name* for fornecido, o padrão é o banco de dados atual.  
+ É o nome do banco de dados que contém a fila na qual o grupo de conversa deve ser obtido. Quando não for fornecido nenhum *database_name*, o padrão será o banco de dados atual.  
   
  *schema_name*  
- É o nome do esquema proprietário da fila na qual o grupo de conversa deve ser obtido. Quando nenhum *schema_name* for fornecido, o padrão é o esquema padrão para o usuário atual.  
+ É o nome do esquema proprietário da fila na qual o grupo de conversa deve ser obtido. Quando nenhum *schema_name* for fornecido, ele usará como padrão o esquema padrão do usuário atual.  
   
  *queue_name*  
  É o nome da fila na qual o grupo de conversa deve ser obtido.  
   
- Tempo limite *tempo limite*  
- Especifica o intervalo de tempo, em milissegundos, que o Service Broker aguarda a chegada de uma mensagem na fila. Essa cláusula só pode ser usada com a cláusula WAITFOR. Se uma instrução que usa WAITFOR não incluir essa cláusula ou *tempo limite* é -1, o tempo de espera é ilimitado. Se o tempo limite expirar, GET CONVERSATION GROUP definirá a  *@conversation_group_id*  variáveis como NULL.  
+ TIMEOUT *timeout*  
+ Especifica o intervalo de tempo, em milissegundos, que o Service Broker aguarda a chegada de uma mensagem na fila. Essa cláusula só pode ser usada com a cláusula WAITFOR. Se uma instrução que usa WAITFOR não incluir essa cláusula ou se *timeout* for -1, o tempo de espera será ilimitado. Se o tempo limite expirar, GET CONVERSATION GROUP definirá a variável *@conversation_group_id* como NULL.  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Se a instrução GET CONVERSATION GROUP não é a primeira instrução em um lote ou procedimento armazenado, a instrução anterior deverá ser encerrada com um ponto e vírgula (**;**), o [!INCLUDE[tsql](../../includes/tsql-md.md)] terminador de instrução.  
+>  Se a instrução GET CONVERSATION GROUP não for a primeira instrução em um lote ou em um procedimento armazenado, a instrução anterior precisará terminar com ponto e vírgula (**;**), o terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Se a fila especificada na instrução GET CONVERSATION GROUP não estiver disponível, a instrução falhará com um erro [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -143,7 +143,7 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   

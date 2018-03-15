@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geometry-data-type"></a>STDifference (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um objeto que representa o conjunto de pontos de um **geometria** que não residem dentro de outra instância **geometria** instância.
+Retorna um objeto que representa os conjuntos de pontos de uma instância de **geometry** que não estão dentro de outra instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ Retorna um objeto que representa o conjunto de pontos de um **geometria** que n�
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância que indica quais pontos devem ser removidos da instância na qual `STDifference()` está sendo invocado.  
+ É outra instância de **geography** que indica quais pontos devem ser removidos da instância na qual `STDifference()` está sendo invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.   O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.   O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -78,7 +78,7 @@ SELECT @g.STDifference(@h).ToString();
  SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

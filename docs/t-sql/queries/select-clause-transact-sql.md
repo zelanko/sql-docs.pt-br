@@ -77,27 +77,27 @@ SELECT [ ALL | DISTINCT ]
  DISTINCT  
  Especifica que só linhas exclusivas podem aparecer no conjunto de resultados. Valores nulos são considerados iguais para os propósitos da palavra-chave DISTINCT.  
   
- Parte superior (*expressão* ) [%] [WITH TIES]  
+ TOP (*expression* ) [ PERCENT ] [ WITH TIES ]  
  Indica que apenas um primeiro conjunto ou porcentagem de linhas especificado será retornado de um conjunto de resultados de consulta. *expression* pode ser um número ou uma porcentagem das linhas.  
   
- Para compatibilidade com versões anteriores, usando a parte superior *expressão* sem parênteses em SELECT instruções tem suporte, mas não é recomendável. Para obter mais informações, consulte [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ Para compatibilidade com versões anteriores, há suporte para o uso de TOP *expression* sem parênteses em instruções SELECT, mas isso não é recomendável. Para obter mais informações, confira [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
-\<select_list > as colunas a serem selecionadas para o conjunto de resultados. A lista de seleções é uma série de lista de expressões separadas por vírgulas. O número máximo de expressões que pode ser especificado na lista de seleção é 4096.  
+\< select_list > As colunas a serem selecionadas para o conjunto de resultados. A lista de seleções é uma série de lista de expressões separadas por vírgulas. O número máximo de expressões que pode ser especificado na lista de seleção é 4096.  
   
  \*  
  Especifica que todas as colunas de todas as tabelas e exibições na cláusula FROM devem ser retornadas. As colunas são retornadas por tabela ou exibição, conforme especificado na cláusula FROM, e na ordem em que existem na tabela ou exibição.  
   
- *table_name* | *view_name* | *tabela*_*alias*. *  
- Limita o escopo do \* para a tabela ou exibição especificada.  
+ *table_name* | *view_name* | *table*_*alias*.*  
+ Limita o escopo de \* à tabela ou exibição especificada.  
   
  *column_name*  
- É o nome de uma coluna a ser retornada. Qualificar *column_name* para impedir uma referência ambígua, como ocorre quando duas tabelas na cláusula FROM têm colunas com nomes duplicados. Por exemplo, as tabelas SalesOrderHeader e SalesOrderDetail no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados tanto têm uma coluna denominada ModifiedDate. Se as duas tabelas estão unidas em uma consulta, a data modificada das entradas de SalesOrderDetail pode ser especificada na lista de seleção como SalesOrderDetail.ModifiedDate.  
+ É o nome de uma coluna a ser retornada. Qualifica *column_name* para impedir uma referência ambígua, como ocorre quando duas tabelas na cláusula FROM têm colunas com nomes duplicados. Por exemplo, as tabelas SalesOrderHeader e SalesOrderDetail no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] têm uma coluna chamada ModifiedDate. Se as duas tabelas estão unidas em uma consulta, a data modificada das entradas de SalesOrderDetail pode ser especificada na lista de seleção como SalesOrderDetail.ModifiedDate.  
   
  *expressão*  
  É uma constante, função, qualquer combinação de nomes de coluna, constantes e funções conectadas por um operador ou operadores, ou uma subconsulta.  
   
  $IDENTITY  
- Retorna a coluna de identidade. Para obter mais informações, consulte [identidade &#40; Propriedade &#41; &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql-identity-property.md), [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md), e [criar tabela &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+ Retorna a coluna de identidade. Para obter mais informações, consulte [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md), [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  Se mais de uma tabela na cláusula FROM tiver uma coluna com a propriedade IDENTITY, $IDENTITY deverá ser qualificada com o nome específico da tabela, como T1.$IDENTITY.  
   
@@ -110,19 +110,19 @@ SELECT [ ALL | DISTINCT ]
  É o nome de uma coluna de tipo CLR (common language runtime) definida pelo usuário a ser retornada.  
   
 > [!NOTE]  
->  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] retorna valores de tipo definidos pelo usuário em representação binária. Para retornar valores de tipo definido pelo usuário na cadeia de caracteres ou formato XML, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) ou [converter](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+>  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] retorna valores de tipo definidos pelo usuário em representação binária. Para retornar valores de tipo definidos pelo usuário em um formato de cadeia de caracteres ou XML, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) ou [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
  { . | :: }  
- Especifica um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário. Use. para um método de instância (não estático), propriedade ou campo. Use :: para um método estático, propriedade ou campo. Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
+ Especifica um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário. Use . para um método de instância (não estático), propriedade ou campo. Use :: para um método estático, propriedade ou campo. Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
   
  *property_name*  
  É uma propriedade pública de *udt_column_name*.  
   
  *field_name*  
- É um membro de dados público *udt_column_name*.  
+ É um membro de dados público de *udt_column_name*.  
   
- *nome_do_método*  
- É um método público de *udt_column_name* que usa um ou mais argumentos. *nome_do_método* não pode ser um método modificador.  
+ *method_name*  
+ É um método público de *udt_column_name* que usa um ou mais argumentos. *method_name* não pode ser um método modificador.  
   
  O exemplo a seguir seleciona os valores para a coluna `Location`, definida como tipo `point`, da tabela `Cities`, invocando um método de tipo denominado `Distance`:  
   
@@ -138,7 +138,7 @@ SELECT Location.Distance (@p)
 FROM Cities;  
 ```  
   
- *alias de column_*  
+ *column_ alias*  
  Um nome alternativo para substituir o nome da coluna no conjunto de resultados da consulta. Por exemplo, um alias como Quantidade ou Quantidade até a Data ou Qtd pode ser especificado para uma coluna denominada quantidade.  
   
  Aliases também são usados para especificar nomes para os resultados de expressões, por exemplo:  
@@ -150,10 +150,10 @@ FROM Cities;
  FROM Sales.SalesOrderDetail;
  ```  
   
- *column_alias* pode ser usado em uma cláusula ORDER BY. Porém, não pode ser usado em uma cláusula WHERE, GROUP BY nem HAVING. Se a expressão de consulta faz parte de uma instrução DECLARE CURSOR, *column_alias* não pode ser usado na cláusula FOR UPDATE.  
+ *column_alias* pode ser usado em uma cláusula ORDER BY. Porém, não pode ser usado em uma cláusula WHERE, GROUP BY nem HAVING. Se a expressão de consulta fizer parte de uma instrução DECLARE CURSOR, *column_alias* não poderá ser usado na cláusula FOR UPDATE.  
   
 ## <a name="remarks"></a>Remarks  
- O comprimento dos dados retornados para **texto** ou **ntext** colunas incluídas na lista de seleção é definido para o menor valor dos seguintes: o tamanho real do **texto** coluna, a configuração de sessão TEXTSIZE padrão ou o limite de aplicativo codificado. Para alterar o comprimento do texto retornado para a sessão, use a instrução SET. Por padrão, o limite no comprimento de dados de texto retornados com uma instrução SELECT é 4.000 bytes.  
+ O tamanho dos dados retornados para as colunas **text** ou **ntext**, incluídas na lista de seleção é definido com o menor valor dos seguintes: o tamanho real da coluna **text**, a configuração padrão de sessão de TEXTSIZE ou o limite do aplicativo embutido em código. Para alterar o comprimento do texto retornado para a sessão, use a instrução SET. Por padrão, o limite no comprimento de dados de texto retornados com uma instrução SELECT é 4.000 bytes.  
   
  O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gerará a exceção 511 e reverterá a instrução atualmente em execução, se algum dos seguintes comportamentos ocorrer:  
   
@@ -163,9 +163,9 @@ FROM Cities;
   
  Ocorrerá um erro se nenhum nome de coluna for especificado para uma coluna criada por uma instrução SELECT INTO ou CREATE VIEW.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplos de SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

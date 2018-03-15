@@ -1,5 +1,5 @@
 ---
-title: "PADRÃO de DROP (Transact-SQL) | Microsoft Docs"
+title: DROP DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   Remove um ou mais padrões definidos pelo usuário do banco de dados atual.  
   
 > [!IMPORTANT]  
->  DROP DEFAULT será removido na próxima versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use DROP DEFAULT em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente a utilizam. Em vez disso, use definições padrão que você pode criar usando a palavra-chave DEFAULT de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
+>  DROP DEFAULT será removido na próxima versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use DROP DEFAULT em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente a utilizam. Em vez disso, use as definições padrão que você pode criar com a palavra-chave DEFAULT de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,19 +49,19 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Condicionalmente descarta o padrão somente se ele já existe.  
+ Remove condicionalmente o padrão somente se ele já existe.  
   
  *schema_name*  
  É o nome do esquema ao qual o padrão pertence.  
   
  *default_name*  
- É o nome de um padrão existente. Para ver uma lista dos padrões existentes, execute **sp_help**. Os padrões devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do esquema padrão é opcional.  
+ É o nome de um padrão existente. Para ver uma lista dos padrões existentes, execute **sp_help**. Os padrões devem seguir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do esquema padrão é opcional.  
   
-## <a name="remarks"></a>Comentários  
- Antes de remover um padrão, desassocie-o executando **sp_unbindefault** se o padrão estiver atualmente associado a uma coluna ou um tipo de dados de alias.  
+## <a name="remarks"></a>Remarks  
+ Antes de remover um padrão, desassocie-o executando **sp_unbindefault** se ele estiver atualmente associado a uma coluna ou a um tipo de dados de alias.  
   
  Depois que um padrão é descartado de uma coluna que permite valores nulos, NULL é inserido nessa posição quando as linhas são adicionadas e nenhum valor é explicitamente fornecido. Depois que um padrão é descartado de uma coluna NOT NULL, uma mensagem de erro é retornada quando as linhas são adicionadas e nenhum valor é explicitamente fornecido. Estas linhas são adicionadas posteriormente como parte do comportamento da instrução INSERT típica.  
   
@@ -83,7 +83,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] você pode usar a sintaxe a seguir.  
+ Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode usar a sintaxe a seguir.  
   
 ```  
 DROP DEFAULT IF EXISTS datedflt;  
@@ -103,10 +103,10 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

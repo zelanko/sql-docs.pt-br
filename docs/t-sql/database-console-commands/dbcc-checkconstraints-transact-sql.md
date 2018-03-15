@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>Argumentos  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- É a tabela ou restrição que será verificada. Quando *table_name* ou *table_id* é especificado, todas as restrições habilitadas na tabela são verificadas. Quando *constraint_name* ou *constraint_id* for especificado, somente essa restrição será verificada. Se nem um identificador de tabela ou um identificador de restrição for especificado, todas as restrições habilitadas em todas as tabelas no banco de dados atual serão verificadas.  
+ É a tabela ou restrição que será verificada. Quando *table_name* ou *table_id* for especificado, todas as restrições habilitadas na tabela serão verificadas. Quando *constraint_name* ou *constraint_id* for especificado, somente essa restrição será verificada. Se nem um identificador de tabela ou um identificador de restrição for especificado, todas as restrições habilitadas em todas as tabelas no banco de dados atual serão verificadas.  
  Um nome de restrição identifica exclusivamente a tabela à qual ela pertence. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  com  
@@ -95,19 +95,19 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 Os dados de consulta são armazenados em uma tabela temporária. Depois que todas as tabelas e restrições solicitadas forem verificadas, o conjunto de resultados será retornado.
 DBCC CHECKCONSTRAINTS verifica a integridade das restrições FOREIGN KEY e CHECK, mas não verifica a integridade das estruturas de dados em disco de uma tabela. Essas verificações de estrutura de dados podem ser executadas usando [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Se *table_name* ou *table_id* é especificada e ela está habilitada para controle de versão do sistema, DBCC CHECKCONSTRAINTS também executa as verificações de consistência de dados temporais na tabela especificada. Quando *NO_INFOMSGS* não for especificado, esse comando retornará cada violação de consistência na saída em uma linha separada. O formato da saída será ([pkcol1], [pkcol2]...) = (\<pkcol1_value >, \<pkcol2_value >...) E \<o que há de errado com o registro da tabela temporal >.
+Se *table_name* ou *table_id* for especificado e estiver habilitado para controle de versão do sistema, DBCC CHECKCONSTRAINTS também executará as verificações de consistência de dados temporais na tabela especificada. Quando *NO_INFOMSGS* não for especificado, esse comando retornará cada violação de consistência na saída em uma linha separada. O formato da saída será ([pkcol1], [pkcol2]..) = (\<pkcol1_value >, \<pkcol2_value>…) AND \<o que há de errado com o registro da tabela temporal>.
   
-|Verificar|Informações adicionais na saída se a falha na verificação|  
+|Verificar|Informações adicionais na saída se a verificação falhar|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (atual, histórico)|[sys_start] = '{0}' AND [sys_end] = '\\{1 \\}'|  
-|PeriodStartColumn < current_utc_time (atual)|[sys_start] = '{0}' e SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' e SYSUTCTIME|  
-|Sobreposições|(sys_start1, sys_end1), (sys_start2, sys_end2) para dois registros de sobreposição.<br /><br /> Se houver mais de 2 registros de sobreposição, saída terá várias linhas cada mostrando um par de sobreposições.|  
+|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|Sobreposições|(sys_start1, sys_end1) , (sys_start2, sys_end2) para dois registros sobrepostos.<br /><br /> Se houver mais de 2 registros sobrepostos, a saída terá várias linhas e cada uma mostrará um par de sobreposições.|  
   
-Não é possível especificar constraint_name ou constraint_id para executar verificações de consistência temporais somente.
+Não é possível especificar constraint_name ou constraint_id para executar somente verificações de consistência temporal.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC CHECKCONSTRAINTS retornam um conjunto de linhas com as colunas a seguir.
@@ -157,7 +157,7 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)

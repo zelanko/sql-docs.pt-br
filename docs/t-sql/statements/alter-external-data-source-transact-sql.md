@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifica uma fonte de dados externa usada para criar uma tabela externa. Fonte de dados externa pode ser o armazenamento de BLOBs do Azure ou Hadoop (WASB).
+  Modifica uma fonte de dados externa usada para criar uma tabela externa. A fonte de dados externa pode ser o Hadoop ou o Armazenamento de Blobs do Azure (WASB).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,30 +63,30 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumentos  
  data_source_name Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo.
   
- LOCAL = 'server_name_or_IP' especifica o nome do servidor ou endereço IP.
+ LOCATION = ‘server_name_or_IP’ especifica o nome do servidor ou um endereço IP.
   
- RESOURCE_MANAGER_LOCATION = '\<endereço IP; Porta >' especifica o local do Gerenciador de recursos do Hadoop. Quando especificado, o otimizador de consulta pode escolher pré-processar dados para uma consulta do PolyBase usando recursos de computação do Hadoop. Isso é uma decisão baseada em custo. Chamado a aplicação de predicado, isso pode reduzir significativamente o volume de dados transferidos entre Hadoop e SQL e, portanto, melhorar o desempenho da consulta.
+ RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port> especifica o local do Gerenciador de Recursos do Hadoop. Quando especificado, o otimizador de consulta pode escolher pré-processar os dados para uma consulta do PolyBase usando os recursos de computação do Hadoop. Essa é uma decisão baseada em custo. Chamado de pushdown de predicado, isso pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL e, portanto, melhorar o desempenho da consulta.
   
- CREDENCIAL = Credential_Name Especifica a credencial nomeada. Consulte [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ CREDENTIAL = Credential_Name Especifica a credencial nomeada. Confira [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 TYPE = BLOB_STORAGE   
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Para as operações em massa, `LOCATION` devem ser válidas a URL para o armazenamento de BLOBs do Azure. Não coloque  **/** , nome de arquivo ou compartilhado parâmetros de assinatura de acesso no final de `LOCATION` URL.
-A credencial usada, deve ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+Somente para operações em massa, `LOCATION` precisa ser a URL válida para o Armazenamento de Blobs do Azure. Não coloque **/**, nome de arquivo ou parâmetros de Assinatura de Acesso Compartilhado no final da URL de `LOCATION`.
+A credencial usada precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
   
 ## <a name="remarks"></a>Remarks
- Somente a única fonte pode ser modificado por vez. Solicitações simultâneas para modificar a mesma fonte de fazer com que uma instrução de espera. No entanto, as fontes diferentes podem ser modificados ao mesmo tempo. Essa instrução pode executar simultaneamente com outras instruções.
+ Somente uma única fonte pode ser modificada de cada vez. Solicitações simultâneas para modificar a mesma fonte fazem com que uma instrução precise esperar. No entanto, fontes diferentes podem ser modificados ao mesmo tempo. Essa instrução pode ser executada simultaneamente com outras instruções.
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY EXTERNAL DATA SOURCE.
  > [!IMPORTANT]  
- >  A permissão ALTER ANY EXTERNAL DATA SOURCE concede qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa e, portanto, isso também concede a capacidade de acessar todas as credenciais de banco de dados com escopo no banco de dados. Essa permissão deve ser considerada como altamente privilegiada e, portanto, deve ser concedida somente para entidades confiáveis no sistema.
+ >  A permissão ALTER ANY EXTERNAL DATA SOURCE concede a qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa e, portanto, isso também concede a capacidade de acessar todas as credenciais no escopo do banco de dados no banco de dados. Essa permissão precisa ser considerada como altamente privilegiada e, portanto, ser concedida somente para entidades de segurança confiáveis no sistema.
 
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir altera o local e o local do Gerenciador de recursos de uma fonte de dados existente.
+ O exemplo a seguir altera o local e o local do Gerenciador de Recursos de uma fonte de dados existente.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
@@ -96,7 +96,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
   
 ```  
 
- O exemplo a seguir altera a credencial para se conectar a uma fonte de dados existente.
+ O exemplo a seguir altera a credencial para conectar-se a uma fonte de dados existente.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET

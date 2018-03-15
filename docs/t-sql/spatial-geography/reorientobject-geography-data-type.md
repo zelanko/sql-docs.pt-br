@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna um **geografia** instância com intercambiadas regiões interiores e exteriores.  
+  Retorna uma instância de **geography** com regiões interiores e exteriores intercambiadas.  
   
- Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *geografia*  
- É outra **geografia** instância na qual `ReorientObject()` é invocado.  
+ É outra instância de **geography** na qual `ReorientObject()` é invocado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método altera a orientação do anel de todos os **polígonos** em uma **GeometryCollection** , mas não remover ou alterar qualquer **pontos** ou **Linestrings** na determinada coleção.  
+ Esse método altera a orientação do anel de todos os **Polygons** em uma **GeometryCollection**, mas não remove nem altera **Points** ou **Linestrings** na coleção especificada.  
   
- Se um **GeometryCollection** é passado para este método, cada instância na coleção é orientada novamente, mas a coleção como um todo não será orientada novamente.  
+ Se uma **GeometryCollection** for passada para esse método, cada instância na coleção será orientada novamente, mas a coleção como um todo não será orientada novamente.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -67,7 +67,7 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geography-data-type"></a>STLength (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna o comprimento total dos elementos em uma **geografia** instância ou o **geografia** instâncias em um **GeometryCollection**.  
+  Retorna o comprimento total dos elementos em uma instância de **geography** ou nas instâncias de **geografia** em uma **GeometryCollection**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **float**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Se um **geografia** instância está fechada, seu comprimento será calculado como o comprimento total ao redor da instância; o comprimento de qualquer polígono é seu perímetro e o comprimento de um ponto é 0. O comprimento de uma **GeometryCollection** for encontrado, calculando a soma dos comprimentos de todas a **geografia** contidas dentro da coleção de instâncias.  
+ Se uma instância de **geography** for fechada, seu comprimento será calculado como o comprimento total em torno da instância. O comprimento de qualquer polígono é seu perímetro, e o comprimento de um ponto é 0. O comprimento de uma **GeometryCollection** é encontrado calculando a soma dos comprimentos de todas as instâncias de **geografia** contidas dentro da coleção.  
   
  STLength () funciona em LineStrings válidos e inválidos. Em geral, um LineString é inválido devido aos segmentos sobrepostos, que podem ser causados por anomalias como rastreamentos de GPS imprecisos. STLength () não remove segmentos sobrepostos ou inválidos. Ele inclui segmentos sobrepostos e inválidos no valor de comprimento que ele retorna. O método MakeValid () pode remover segmentos sobrepostos de um LineString.  
   
@@ -62,7 +62,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STLength();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

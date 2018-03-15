@@ -52,21 +52,21 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>Argumentos  
  *key_GUID*  
- É o GUID da chave a ser usada para criptografar o *texto não criptografado*. **uniqueidentifier**.  
+ É o GUID da chave a ser usado para criptografar o *cleartext*. **uniqueidentifier**.  
   
- '*texto não criptografado*'  
+ '*cleartext*'  
  São os dados que serão criptografados com a chave.  
   
  @cleartext  
- É uma variável do tipo **nvarchar**, **char**, **varchar**, **binário**, **varbinary**, ou **nchar** que contém dados a serem criptografados com a chave.  
+ É uma variável do tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** que contém dados a serem criptografados com a chave.  
   
  *add_authenticator*  
- Indica se um autenticador será criptografado junto com o *texto não criptografado*. Deve ser 1 ao usar um autenticador. **int**.  
+ Indica se um autenticador será criptografado junto com o *cleartext*. Deve ser 1 ao usar um autenticador. **int**.  
   
  @add_authenticator  
- Indica se um autenticador será criptografado junto com o *texto não criptografado*. Deve ser 1 ao usar um autenticador. **int**.  
+ Indica se um autenticador será criptografado junto com o *cleartext*. Deve ser 1 ao usar um autenticador. **int**.  
   
- *autenticador*  
+ *authenticator*  
  São os dados dos quais será derivado um autenticador. **sysname**.  
   
  @authenticator  
@@ -77,7 +77,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
  Retorna o NULL se a chave não estiver aberta, se a chave não existir ou se a chave for uma chave de RC4 preterida e o banco de dados não estiver no nível de compatibilidade 110 ou superior.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  EncryptByKey usa uma chave simétrica. Essa chave deve estar aberta. Se a chave simétrica já estiver aberta na sessão atual, não será necessário abri-la novamente no contexto da consulta.  
   
  O autenticador ajuda a impedir a substituição do valor inteiro de campos criptografados. Por exemplo, considere a tabela de dados de folha de pagamento a seguir.  
@@ -97,10 +97,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  A criptografia e a descriptografia simétricas são relativamente rápidas e adequadas para trabalhar com grandes quantidades de dados.  
   
 > [!IMPORTANT]  
->  O uso das funções de criptografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a configuração ANSI_PADDING OFF pode provocar perda de dados devido a conversões implícitas. Para obter mais informações sobre ANSI_PADDING, consulte [SET ANSI_PADDING &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  O uso das funções de criptografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a configuração ANSI_PADDING OFF pode provocar perda de dados devido a conversões implícitas. Para obter mais informações sobre ANSI_PADDING, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
- A funcionalidade ilustrada nos exemplos a seguir se baseia em chaves e certificados criados em [How To: criptografar uma coluna de dados](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ A funcionalidade ilustrada nos exemplos a seguir se baseia em chaves e certificados criados em [Como criptografar uma coluna de dados](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Criptografando uma cadeia de caracteres com uma chave simétrica  
  O exemplo a seguir adiciona uma coluna à tabela `Employee` e, em seguida, criptografa o valor do número de Social Security que é armazenado na coluna `NationalIDNumber`.  
@@ -149,12 +149,12 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

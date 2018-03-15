@@ -1,7 +1,7 @@
 ---
 title: "Visão geral do Assistente de migração de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/07/2018
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Visão geral do Assistente de migração de dados
 
@@ -45,27 +45,20 @@ O Assistente de migração do dados (DMA) permite que você faça a atualizaçã
 - Descubra os problemas que podem afetar uma atualização para um SQL Server local. Esses são descritas como problemas de compatibilidade e são organizados nas seguintes categorias:
 
   - Alterações mais recentes
-
   - Alterações de comportamento
-
   - Recursos preteridos
 
 - Descubra novos recursos na plataforma do SQL Server de destino que pode se beneficiar do banco de dados após uma atualização. Esses são descritas como recomendações do recurso e são organizados nas seguintes categorias:
 
   - Desempenho
-
   - Segurança
-
   - Armazenamento
 
 - Migre uma instância do SQL Server local para uma instância do SQL Server moderna, hospedada no local ou em uma máquina virtual do Azure (VM) que é acessível a partir de sua rede local. A VM do Azure podem ser acessada usando VPN ou outras tecnologias. O fluxo de trabalho de migração ajuda a migrar os seguintes componentes:
 
   - Esquema de bancos de dados
-
   - Dados e usuários
-
   - Funções de servidor
-
   - Logons do SQL Server e do Windows
 
 - Após a migração bem-sucedida, aplicativos podem se conectar a bancos de dados do servidor SQL de destino diretamente.
@@ -89,6 +82,9 @@ DMA substitui todas as versões anteriores do Supervisor de atualização do SQL
 - SQL Server 2016
 - SQL Server 2017 no Windows e Linux
 - Azure SQL Database
+
+> [!NOTE] 
+> DMA atualmente não dá suporte gerenciado instância do banco de dados do SQL Azure como um destino.
 
 ## <a name="installation"></a>Instalação
 

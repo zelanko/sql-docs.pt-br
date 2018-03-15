@@ -1,5 +1,5 @@
 ---
-title: "CRIAR um sinônimo (Transact-SQL) | Microsoft Docs"
+title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,7 +70,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>Argumentos  
  *schema_name_1*  
- Especifica o esquema no qual o sinônimo é criado. Se *esquema* não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o esquema padrão do usuário atual.  
+ Especifica o esquema no qual o sinônimo é criado. Se *schema* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o esquema padrão do usuário atual.  
   
  *synonym_name*  
  É o nome do novo sinônimo.  
@@ -84,28 +84,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  É o nome do banco de dados no qual o objeto base está localizado. Se *database_name* não for especificado, o nome do banco de dados atual será usado.  
   
  *schema_name_2*  
- É o nome do esquema do objeto base. Se *schema_name* não for especificado o esquema padrão do usuário atual será usado.  
+ É o nome do esquema do objeto base. Se *schema_name* não for especificado, o esquema padrão do usuário atual será usado.  
   
  *object_name*  
  É o nome do objeto base que o sinônimo referencia.  
   
  O Banco de Dados SQL do Windows Azure oferece suporte ao formato de nome de três partes database_name.[schema_name].object_name quando o database_name é o banco de dados atual ou o database_name é tempdb e o object_name começa com #.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O objeto base não precisa existir no momento da criação do sinônimo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica a existência do objeto base em tempo de execução.  
   
  Podem ser criados sinônimos para os seguintes tipos de objetos:  
   
 |||  
 |-|-|  
-|Procedimento armazenado de assembly (CLR)|Função com valor de tabela do assembly (CLR)|  
-|Função escalar de assembly (CLR)|Funções de agregação de agregação (CLR) do assembly|  
+|Procedimento armazenado de assembly (CLR)|Função com valor de tabela de assembly (CLR)|  
+|Função escalar de assembly (CLR)|Funções de agregação de assembly (CLR)|  
 |Procedimento de filtro de replicação|Procedimento armazenado estendido|  
 |Função escalar SQL|Função com valor de tabela SQL|  
 |Função com valor de tabela embutida SQL|Procedimento armazenado SQL|  
-|Exibição|Tabela<sup>1</sup> (definido pelo usuário)|  
+|Exibição|Tabela<sup>1</sup> (definida pelo usuário)|  
   
- <sup>1 inclui tabelas temporárias locais e globais</sup>  
+ <sup>1 Inclui tabelas temporárias locais e globais</sup>  
   
  Não há suporte para nomes de quatro partes para objetos base de função.  
   
@@ -199,8 +199,8 @@ SET @Amt = 15;
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Remover sinônimo &#40; Transact-SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

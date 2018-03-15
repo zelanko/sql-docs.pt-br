@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de grupo de disponibilidade (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de grupo de disponibilidade (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="deny-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Nega permissões em um grupo de disponibilidade AlwaysOn em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Nega permissões em um Grupo de Disponibilidade AlwaysOn no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,13 +55,13 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em um grupo de disponibilidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- NO grupo de disponibilidade **::***availability_group_name*  
- Especifica o grupo de disponibilidade no qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária.  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
+ Especifica o grupo de disponibilidade no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
- PARA \<server_principal >  
+ TO \<server_principal>  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual a permissão está sendo negada.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
   
-## <a name="remarks"></a>Comentários  
- As permissões no escopo do servidor podem ser negadas somente quando o banco de dados atual é **mestre**.  
+## <a name="remarks"></a>Remarks  
+ As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é **mestre**.  
   
- Informações sobre grupos de disponibilidade estão visíveis no [availability_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) exibição do catálogo. Informações sobre permissões de servidor são visíveis no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição de catálogo e obter informações sobre as entidades de servidor é visível no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ Informações sobre grupos de disponibilidade são visíveis na exibição do catálogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Um grupo de disponibilidade é um nível de servidor protegível. As permissões mais específicas e limitadas que podem ser negadas em um grupo de disponibilidade são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -121,11 +121,11 @@ DENY TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Permissões de grupo de disponibilidade REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
- [Permissões de grupo de disponibilidade GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões REVOKE do grupo de disponibilidade &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
+ [Permissões GRANT de grupo de disponibilidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys. availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Exibições de catálogo de grupos de disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

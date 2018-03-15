@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **geometria** instância de uma representação de texto do Open Geospatial Consortium (OGC) conhecido (WKT) aumentada com qualquer valor Z (elevação) e m (medida) transportados pela instância.
+Retorna uma instância de **geometry** de uma representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) aumentada com valores Z (elevação) e M (medida) presentes na instância.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,18 +45,18 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geometrycollection_tagged_text*  
- É a representação WKT do **geometria** instância que você deseja retornar. *geometry_tagged_text* é um **nvarchar (max)** expressão.  
+ É a representação WKT da instância de **geometry** que você deseja retornar. *geometry_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **geometria** instância que você deseja retornar.  
+ É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometry** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- O tipo OGC do **geometria** instância retornada por `STGeomCollFromText()` é definido como a entrada WKT correspondente.  
+ O tipo do OGC da instância de **geometry** retornado por `STGeomCollFromText()` é definido como a entrada de WKT correspondente.  
   
  Esse método lançará uma exceção se a entrada não for válida.  
   
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

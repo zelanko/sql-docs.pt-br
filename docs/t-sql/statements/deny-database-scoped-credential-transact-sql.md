@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) de credencial no escopo do banco de dados | Microsoft Docs
+title: Credencial DENY no escopo do banco de dados (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-database-scoped-credential-transact-sql"></a>DENY (Transact-SQL) de credencial no escopo do banco de dados
+# <a name="deny-database-scoped-credential-transact-sql"></a>Credencial no escopo do banco de dados DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Nega permissões em uma credencial no escopo do banco de dados.  
@@ -52,11 +52,11 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em uma credencial no escopo do banco de dados. Listada abaixo.  
   
- NA CREDENCIAL no escopo do banco de dados **::***credential_name*  
- Especifica a credencial no escopo do banco de dados no qual a permissão está sendo negada. O qualificador de escopo "::" é obrigatório.  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ Especifica a credencial no escopo do banco de dados na qual a permissão está sendo negada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  
  Especifica a entidade à qual a permissão está sendo negada. Um dos seguintes:  
@@ -99,10 +99,10 @@ DENY permission  [ ,...n ]
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
- Uma credencial no escopo do banco de dados é um banco de dados-nível protegível contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em uma credencial no escopo do banco de dados estão listadas abaixo, junto com as permissões mais gerais que as incluem implicitamente.  
+## <a name="remarks"></a>Remarks  
+ Uma credencial no escopo do banco de dados é um item protegível no nível do banco de dados contido pelo banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em uma credencial no escopo do banco de dados estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
-|Permissão de credencial no escopo do banco de dados|Indicado pela permissão de credencial no escopo do banco de dados|Implícito na permissão de banco de dados|  
+|Permissão de credencial no escopo do banco de dados|Implícito pela permissão de credencial no escopo do banco de dados|Implícito na permissão de banco de dados|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -111,12 +111,12 @@ DENY permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão CONTROL na credencial no escopo do banco de dados. Se a cláusula as for usada, o principal especificado deverá ser proprietário da credencial no escopo do banco de dados.  
+ Requer permissão CONTROL na credencial no escopo do banco de dados. Se a cláusula AS for usada, a entidade de segurança especificada deverá ser proprietária da credencial no escopo do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Escopo do banco de dados GRANT credencial (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [REVOGAR credencial no escopo do banco de dados (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
+ [Credencial GRANT no escopo do banco de dados (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [Credencial REVOKE no escopo do banco de dados (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  

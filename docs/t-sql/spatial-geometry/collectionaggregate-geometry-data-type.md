@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (Tipo de Dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Cria um **GeometryCollection** instância de um conjunto de **geometria** tipos.
+Cria uma instância de **GeometryCollection** de um conjunto de tipos de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,21 +42,21 @@ CollectionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_operand*  
- É um **geometria** coluna da tabela de tipo que representa um conjunto de **geometria** objetos a ser listado no **GeometryCollection** instância.  
+ É uma coluna da tabela do tipo **geometria** que representa um conjunto de objetos **geometria** a ser listado na instância de **GeometryCollection**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
 ## <a name="exceptions"></a>Exceções  
- Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Gera uma `FormatException` quando há valores de entrada que não são válidos. Confira [STIsValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>Remarks  
- Método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ O método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Confira [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Método ignora **nulo** entradas.  
+ O método ignora entradas **nulas**.  
   
 > [!NOTE]  
->  Método retornará **nulo** se todos os valores inseridos forem **nulo**.  
+>  O método retornará **nulo** se todos os valores inseridos forem **nulos**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma instância `GeometryCollection` que contém um `CurvePolygon` e um `Polygon`.  
@@ -75,7 +75,7 @@ CollectionAggregate ( geometry_operand )
  FROM @Geom;
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

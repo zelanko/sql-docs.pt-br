@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um envoltório convexo para um determinado conjunto de **geografia** objetos.
+Retorna uma envoltória convexa para um determinado conjunto de objetos de **geografia**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,24 +45,24 @@ ConvexHullAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Argumentos  
  *geography_operand*  
- É um **geografia** coluna da tabela de tipo que representa um conjunto de **geografia** objetos.  
+ É uma coluna da tabela do tipo **geografia** que representa um conjunto de objetos de **geografia**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 ## <a name="exception"></a>Exceção  
- Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 ## <a name="remarks"></a>Remarks  
- Método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ O método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Confira [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Método ignora **nulo** entradas.  
+ O método ignora entradas **nulas**.  
   
 > [!NOTE]  
->  Método retornará **nulo** se todos os valores inseridos forem **nulo**.  
+>  O método retornará **nulo** se todos os valores inseridos forem **nulos**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna uma forma convexa do conjunto de **geografia** objetos.  
+ O exemplo a seguir retorna uma envoltória convexa do conjunto de objetos de **geografia**.  
   
  ```
  USE AdventureWorks2012  
@@ -72,7 +72,7 @@ ConvexHullAggregate ( geography_operand )
  WHERE City LIKE ('Bothell')
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Altere a política de segurança (Transact-SQL) | Microsoft Docs"
+title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/02/2018
 ---
-# <a name="alter-security-policy-transact-sql"></a>Altere a política de segurança (Transact-SQL)
+# <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Altera uma política de segurança.  
@@ -67,10 +67,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  O nome da política de segurança. Nomes de políticas de segurança devem obedecer às regras de identificadores e devem ser exclusivos dentro do banco de dados e em seu esquema.  
   
  schema_name  
- É o nome do esquema ao qual a política de segurança pertence. *schema_name* é necessária devido a associação de esquema.  
+ É o nome do esquema ao qual a política de segurança pertence. *schema_name* é obrigatório devido à associação de esquema.  
   
- [FILTRO | BLOCO]  
- O tipo de predicado de segurança para a função que está sendo associada à tabela de destino. Os predicados de filtro filtram silenciosamente as linhas que estão disponíveis para operações de leitura. Predicados de bloco explicitamente as operações de gravação de blocos que violam a função de predicado.  
+ [ FILTER | BLOCK ]  
+ O tipo de predicado de segurança para a função que está sendo associada à tabela de destino. Os predicados FILTER filtram silenciosamente as linhas que estão disponíveis para operações de leitura. Os predicados BLOCK bloqueiam explicitamente as operações de gravação que violam a função de predicado.  
   
  tvf_schema_name.security_predicate_function_name  
  É a função de valor de tabela embutida que será usada como um predicado e que serão aplicadas em consultas em uma tabela de destino. No máximo um predicado de segurança pode ser definido para uma determinada operação DML em uma tabela específica. A função de valor de tabela embutida deve ter sido criada usando a opção SCHEMABINDING.  
@@ -79,12 +79,12 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  O nome da coluna ou expressão usada como parâmetros para a função de predicado de segurança. As colunas na tabela de destino podem ser usadas como argumentos para a função de predicado. Expressões que incluem literais, internos e expressões que usam operadores aritméticos podem ser usadas.  
   
  *table_schema_name.table_name*  
- É a tabela de destino a qual o predicado de segurança será aplicado. Várias políticas de segurança desabilitadas podem direcionar uma única tabela para uma determinada operação DML, mas apenas uma pode ser habilitada em um determinado momento.  
+ É a tabela de destino a qual o predicado de segurança será aplicado. Várias políticas de segurança desabilitadas podem ser direcionadas a uma operação DML específica, mas apenas uma pode ser habilitada em determinado momento.  
   
- *\<block_dml_operation >*  
- A operação DML específica para o qual o predicado de bloco será aplicado. Depois, especifica que o predicado será avaliado nos valores das linhas após a operação DML foi executada (INSERT ou UPDATE). ANTES, especifica que o predicado será avaliado nos valores das linhas antes que a operação DML seja executada (UPDATE ou DELETE). Se nenhuma operação for especificada, o predicado será aplicada a todas as operações.  
+ *\<block_dml_operation>*  
+ A operação DML específica para à qual o predicado de bloqueio será aplicado. AFTER especifica que o predicado será avaliado nos valores das linhas após a execução da operação DML (INSERT ou UPDATE). BEFORE especifica que o predicado será avaliado nos valores das linhas antes que a operação DML seja executada (UPDATE ou DELETE). Se nenhuma operação for especificada, o predicado será aplicado a todas as operações.  
   
- Você não pode alterar a operação para o qual um predicado de bloco será aplicado, porque a operação é usada para identificar exclusivamente o predicado. Em vez disso, você deve remover o predicado e adicionar um novo para a operação de novo.  
+ Você não pode usar ALTER para alterar a operação para a qual um predicado de bloqueio será aplicado, porque a operação é usada para identificar exclusivamente o predicado. Em vez disso, deve remover o predicado e adicionar um novo para a nova operação.  
   
  WITH ( STATE = { ON | OFF } )  
  Habilita ou desabilita a política de segurança ao impor seus predicados de segurança nas tabelas de destino. Se não especificado, a política de segurança que está sendo criada é desabilitada.  
@@ -98,9 +98,9 @@ ALTER SECURITY POLICY schema_name.security_policy_name
 ## <a name="remarks"></a>Remarks  
  A instrução ALTER SECURITY POLICY está no escopo de uma transação. Se a transação for revertida, a instrução também será revertida.  
   
- Ao usar funções de predicado com tabelas com otimização de memória, as políticas de segurança devem incluir **SCHEMABINDING** e usar o **WITH NATIVE_COMPILATION** dica de compilação. O argumento SCHEMABINDING não pode ser alterado com a instrução ALTER porque ela se aplica a todos os predicados. Para alterar a associação de esquema, você deve descartar e recriar a política de segurança.  
+ Ao usar funções de predicado com tabelas com otimização de memória, as políticas de segurança devem incluir **SCHEMABINDING** e usar a dica de compilação **WITH NATIVE_COMPILATION**. O argumento SCHEMABINDING não podem ser alterados com a instrução ALTER porque ela se aplica a todos os predicados. Para alterar a associação de esquema, você deve remover e recriar a política de segurança.  
   
- Os predicados de bloqueio são avaliados depois que a operação DML correspondente é executada. Portanto, uma consulta READ UNCOMMITTED pode ver valores transitórios que serão revertidos.  
+ Os predicados de bloqueio são avaliados depois que a operação DML correspondente é executada. Portanto, uma consulta READ UNCOMMITTED pode exibir valores transitórios que serão revertidos.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY SECURITY POLICY.  
@@ -112,7 +112,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
 -   Permissão REFERENCES em todas as colunas da tabela de destino usada como argumentos.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir demonstram o uso do **ALTER SECURITY POLICY** sintaxe. Para obter um exemplo de um cenário de política de segurança completa, consulte [segurança em nível de linha](../../relational-databases/security/row-level-security.md).  
+ Os exemplos a seguir demonstram o uso da sintaxe **ALTER SECURITY POLICY** . Para obter um exemplo de um cenário de política de segurança completo, consulte [Segurança em nível de linha](../../relational-databases/security/row-level-security.md).  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. Adicionando um predicado extra a uma política  
  A sintaxe a seguir altera uma política de segurança, adicionando um predicado de filtro na tabela `mytable`.  
@@ -152,8 +152,8 @@ ALTER SECURITY POLICY pol1
         ON myschema.mytable;  
 ```  
   
-### <a name="e-changing-a-block-predicate"></a>E. Alterando um predicado de bloco  
- Alterar a função de predicado de bloco para uma operação em uma tabela.  
+### <a name="e-changing-a-block-predicate"></a>E. Alterando um predicado de bloqueio  
+ Alterar a função de predicado de bloqueio para uma operação em uma tabela.  
   
 ```  
 ALTER SECURITY POLICY rls.SecPol  
@@ -166,6 +166,6 @@ ALTER SECURITY POLICY rls.SecPol
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

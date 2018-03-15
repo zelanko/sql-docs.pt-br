@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 
   Calcula um percentil baseado em uma distribuição contínua do valor da coluna em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O resultado é interpolado e talvez não seja igual a qualquer um dos valores específicos da coluna.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,11 +51,11 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  O percentil a ser computado. O valor deve variar entre 0,0 e 1,0.  
   
- NO grupo **(** ORDER BY *order_by_expression* [ **ASC** | DESC]**)**  
- Especifica uma lista de valores numéricos sobre os quais classificar e computar o percentil. Apenas uma *order_by_expression* é permitido. A expressão deve ser avaliada como um tipo numérico exato (**int**, **bigint**, **smallint**, **tinyint**, **numérico**, **bit**, **decimal**, **smallmoney**, **money**) ou um tipo numérico aproximado ( **float**, **real**). Outros tipos de dados não são permitidos. A ordem de classificação padrão é crescente.  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ Especifica uma lista de valores numéricos sobre os quais classificar e computar o percentil. Apenas uma *order_by_expression* é permitida. A expressão deve ser avaliada como um tipo numérico exato (**int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, **money**) ou um tipo numérico aproximado ( **float**, **real**). Outros tipos de dados não são permitidos. A ordem de classificação padrão é crescente.  
   
- SOBRE **(** \<partition_by_clause > **)**  
- Divide o conjunto de resultados produzido pela cláusula FROM nas partições às quais a função de percentil é aplicada. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md). O \<cláusula ORDER BY > e \<cláusula rows ou range > da OVER sintaxe não pode ser especificada em uma função PERCENTILE_CONT.  
+ OVER **(** \<partition_by_clause> **)**  
+ Divide o conjunto de resultados produzido pela cláusula FROM nas partições às quais a função de percentil é aplicada. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). A \<cláusula ORDER BY> e a \<cláusula rows ou range> da sintaxe OVER não podem ser especificadas em uma função PERCENTILE_CONT.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float(53)**  
@@ -100,7 +100,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-basic-syntax-example"></a>B. Exemplo de sintaxe básica  
  O exemplo a seguir usa PERCENTILE_CONT e PERCENTILE_DISC para localizar o salário médio dos funcionários de cada departamento. Observe que essas funções podem não retornar o mesmo valor. Isso é porque PERCENTILE_CONT interpola o valor apropriado, quer ele exista ou não no conjunto de dados, enquanto PERCENTILE_DISC sempre retorna um valor real do conjunto.  
@@ -128,8 +128,8 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving 9.250000      9.0000
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [PERCENTILE_DISC &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
   
 

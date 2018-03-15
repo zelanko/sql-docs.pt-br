@@ -50,16 +50,16 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>Argumentos  
 **'** *database_principal* **'**  
-É o usuário, a função ou a função de aplicativo que pode receber permissões para objetos no banco de dados. O chamador da função deve ser um membro do *database_principal*, **dbo**, ou o **db_owner** função de banco de dados fixa para chamar a função com êxito.
+É o usuário, a função ou a função de aplicativo que pode receber permissões para objetos no banco de dados. O chamador da função deve ser membro da função de banco de dados fixa *database_principal*, **dbo** ou **db_owner** para chamar a função com êxito.
   
 **'** *resource_name* **'**  
-É um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir que o recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name*é **nvarchar (255)** sem nenhum padrão. *resource_name* é binário comparado e diferencia maiusculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.
+É um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir que o recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* é **nvarchar(255)** sem nenhum padrão. *resource_name* é comparado com binário comparado e diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.
   
 **'** *lock_mode* **'**  
-É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar (32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **compartilhado**, **atualização**, **IntentShared**, **IntentExclusive**, **exclusivo** .
+É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
-É o proprietário do bloqueio, que é o *lock_owner* valor quando o bloqueio foi solicitado. *lock_owner* é **nvarchar (32)**. O valor pode ser **transação** (o padrão) ou **sessão**. Se padrão ou **transação** for especificado explicitamente, APPLOCK_TEST deverá ser executado de dentro de uma transação.
+É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Se o padrão ou **Transaction** for especificado explicitamente, APPLOCK_TEST deverá ser executado de uma transação.
   
 ## <a name="return-types"></a>Tipos de retorno
 **smallint**
@@ -67,17 +67,17 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 ## <a name="return-value"></a>Valor de retorno
 Retorna 0 quando o bloqueio não puder ser concedido ao proprietário especificado e retorna 1 se o bloqueio puder ser concedido.
   
-## <a name="function-properties"></a>Propriedades de função
+## <a name="function-properties"></a>Propriedades da função
 **Não determinístico**
   
 **Não indexável**
   
-**Não Paralelizável**
+**Não paralelizável**
   
 ## <a name="examples"></a>Exemplos  
-No exemplo a seguir, dois usuários (**usuário** e **usuário B**) com sessões separadas executam a seguinte sequência de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções.
+No exemplo a seguir, dois usuários (**Usuário A** e **Usuário B**) com sessões separadas executam a seguinte sequência de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-**O usuário A** executa:
+**Usuário A** executa:
   
 ```sql
 USE AdventureWorks2012;  
@@ -93,7 +93,7 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
-**O usuário B** executa:
+O **Usuário B** então executa:
   
 ```sql
 Use AdventureWorks2012;  
@@ -110,14 +110,14 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**O usuário A** executa:
+Então, o **Usuário A** executa:
   
 ```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
-**O usuário B** executa:
+O **Usuário B** então executa:
   
 ```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
@@ -125,7 +125,7 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**O usuário A** e **usuário B** e executam a ambas:
+**Usuário A** e **Usuário B** executam:
   
 ```sql
 COMMIT TRAN;  
@@ -133,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[APPLOCK_MODE &#40; Transact-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
-[sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

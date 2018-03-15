@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcontains-geometry-data-type"></a>STContains (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retornará 1 se uma **geometria** instância contiver completamente outra **geometria** instância. Retornará 0 se isso não ocorrer.
+Retornará 1 se uma instância de **geometry** contiver completamente outra instância de **geometry**. Retornará 0 se isso não ocorrer.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ Retornará 1 se uma **geometria** instância contiver completamente outra **geom
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância a ser comparada com a instância na qual `STContains()` é invocado.  
+ É outra instância de **geometry** a ser comparada com a instância na qual `STContains()` é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- `STContains()`sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.  
+ `STContains()` sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STContains()` para testar duas instâncias de `geometry` a fim de verificar se a primeira instância contém a segunda.  
@@ -66,7 +66,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STContains(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

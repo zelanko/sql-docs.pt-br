@@ -38,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Constrói uma mensagem a partir de uma mensagem existente em sys. messages ou uma cadeia de caracteres fornecida. A funcionalidade de FORMATMESSAGE se assemelha à da instrução RAISERROR. Entretanto, RAISERROR imprime a mensagem imediatamente, enquanto FORMATMESSAGE retorna a mensagem formatada para processamento posterior.  
+  Constrói uma mensagem com base em uma mensagem existente em sys.messages ou em uma cadeia de caracteres fornecida. A funcionalidade de FORMATMESSAGE se assemelha à da instrução RAISERROR. Entretanto, RAISERROR imprime a mensagem imediatamente, enquanto FORMATMESSAGE retorna a mensagem formatada para processamento posterior.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,12 +50,12 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="arguments"></a>Argumentos  
  *msg_number*  
- É a ID da mensagem armazenada em sys. messages. Se *msg_number* é < = 13000 ou se a mensagem não existir em sys. messages, NULL será retornado.  
+ É a ID da mensagem armazenada em sys.messages. Se *msg_number* for <= 13.000 ou se a mensagem não existir em sys.messages, NULL será retornado.  
   
  *msg_string*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- É uma cadeia de caracteres entre aspas simples e o valor do parâmetro que contém espaços reservados. A mensagem de erro pode ter no máximo 2.047 caracteres. Se a mensagem tiver 2.048 caracteres ou mais, somente os primeiros 2.044 serão exibidos e um sinal de reticências será adicionado para indicar que a mensagem foi truncada. Observe que os parâmetros de substituição consomem mais caracteres que a saída mostra por causa de comportamento de armazenamento interno.  Para obter informações sobre a estrutura de uma cadeia de caracteres de mensagem e o uso de parâmetros na cadeia de caracteres, consulte a descrição do *msg_str* argumento [RAISERROR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/raiserror-transact-sql.md).  
+ É uma cadeia de caracteres entre aspas simples e que contém espaços reservados de valor do parâmetro. A mensagem de erro pode ter no máximo 2.047 caracteres. Se a mensagem tiver 2.048 caracteres ou mais, somente os primeiros 2.044 serão exibidos e um sinal de reticências será adicionado para indicar que a mensagem foi truncada. Observe que os parâmetros de substituição consomem mais caracteres que a saída mostra por causa de comportamento de armazenamento interno.  Para obter informações sobre a estrutura de uma cadeia de caracteres de mensagem e o uso de parâmetros na cadeia de caracteres, consulte a descrição do argumento *msg_str* em [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  *param_value*  
  É um valor de parâmetro para uso na mensagem. Pode ser mais de um valor de parâmetro. Os valores devem ser especificados na ordem em que as variáveis de espaço reservado aparecem na mensagem. O número máximo de valores é 20.  
@@ -64,7 +64,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
- Da mesma forma que a instrução RAISERROR, FORMATMESSAGE edita a mensagem substituindo os valores de parâmetros fornecidos nas variáveis de espaço reservado da mensagem. Para obter mais informações sobre os espaços reservados permitidos em mensagens de erro e o processo de edição, consulte [RAISERROR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/raiserror-transact-sql.md).  
+ Da mesma forma que a instrução RAISERROR, FORMATMESSAGE edita a mensagem substituindo os valores de parâmetros fornecidos nas variáveis de espaço reservado da mensagem. Para obter mais informações sobre os espaços reservados permitidos em mensagens de erro e o processo de edição, consulte [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  FORMATMESSAGE pesquisa a mensagem no idioma atual do usuário. Se não houver nenhuma versão localizada da mensagem, a versão em inglês dos EUA será usada.  
   
@@ -73,7 +73,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-example-with-a-message-number"></a>A. Exemplo com um número de mensagem  
- O exemplo a seguir usa uma mensagem de replicação `20009` armazenados em sys. messages como, "o artigo '%s' pode não ser adicionado à publicação '%s''." FORMATMESSAGE substitui os valores `First Variable` e `Second Variable` para os espaços reservados de parâmetro. A cadeia de caracteres resultante, "adicionar o artigo 'First Variable' pode não ser para a publicação 'Second Variable'.", é armazenado na variável local `@var1`.  
+ O exemplo a seguir usa uma mensagem de replicação `20009` armazenada em sys.messages como "Não foi possível adicionar o artigo '%s' à publicação '%s'". FORMATMESSAGE substitui os valores `First Variable` e `Second Variable` para os espaços reservados de parâmetro. A cadeia de caracteres resultante, "Não foi possível adicionar o artigo 'First Variable' à publicação 'Second Variable'", é armazenada na variável local `@var1`.  
   
 ```  
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
@@ -92,9 +92,9 @@ SELECT @var1;
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
 ```  
   
- Retorna:`This is the first variable and this is the second variable.`  
+ Retorna: `This is the first variable and this is the second variable.`  
   
-### <a name="c-additional-message-string-formatting-examples"></a>C. Cadeia de caracteres de mensagem adicional formatação exemplos  
+### <a name="c-additional-message-string-formatting-examples"></a>C. Exemplos adicionais de formatação da cadeia de caracteres de mensagem  
  Os exemplos a seguir mostram uma variedade de opções de formatação.  
   
 ```  
@@ -112,8 +112,8 @@ SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');
 SELECT FORMATMESSAGE('Hello %20s!', 'TEST');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
@@ -126,6 +126,6 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
   
   

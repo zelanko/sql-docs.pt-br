@@ -1,5 +1,5 @@
 ---
-title: "Precedência de agrupamento (Transact-SQL) | Microsoft Docs"
+title: "Precedência do agrupamento (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 -   O agrupamento usado pelos operadores que diferenciam agrupamentos e que usam entradas de cadeia de caracteres, mas não retornam uma cadeia de caracteres, como LIKE e IN.  
   
- As regras de precedência de agrupamento se aplicam somente a tipos de dados de cadeia de caracteres: **char**, **varchar**, **texto**, **nchar**, **nvarchar**, e **ntext**. Os objetos que têm outros tipos de dados não participam de avaliações de agrupamento.  
+ As regras de precedência de agrupamento se aplicam somente a tipos de dados de cadeia de caracteres: **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Os objetos que têm outros tipos de dados não participam de avaliações de agrupamento.  
   
 ## <a name="collation-labels"></a>Rótulos de agrupamento  
  A tabela a seguir lista e descreve as quatro categorias nas quais são identificados os agrupamentos de todos os objetos. O nome de cada categoria é chamado de rótulo de agrupamento.  
@@ -93,8 +93,8 @@ ms.lasthandoff: 11/21/2017
 |----------------------------|----------------|----------------|------------------------|-------------------|  
 |**Y explícito**|Gera erro|O resultado é Y explícito|O resultado é Y explícito|O resultado é Y explícito|  
 |**Y implícito**|O resultado é X explícito|O resultado é Sem-agrupamento|O resultado é Y implícito|O resultado é Sem-agrupamento|  
-|**Padrão Coercível**|O resultado é X explícito|O resultado é X implícito|O resultado é Padrão coercível|O resultado é Sem-agrupamento|  
-|**Sem-agrupamento**|O resultado é X explícito|O resultado é Sem-agrupamento|O resultado é Sem-agrupamento|O resultado é Sem-agrupamento|  
+|**Coercible-default**|O resultado é X explícito|O resultado é X implícito|O resultado é Padrão coercível|O resultado é Sem-agrupamento|  
+|**Sem agrupamento**|O resultado é X explícito|O resultado é Sem-agrupamento|O resultado é Sem-agrupamento|O resultado é Sem-agrupamento|  
   
  As regras adicionais a seguir também são aplicadas à precedência de agrupamento:  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   Conversões de página de código **texto** tipos de dados não são permitidos. Você não pode converter um **texto** expressão de um agrupamento para outro se eles tiverem páginas de código diferentes. O operador de atribuição não pode atribuir valores quando o agrupamento do operando de texto da direita tiver uma página de código diferente que a do operando de texto da esquerda.  
+-   Não são permitidas conversões de página de código em tipos de dados **text**. Você não pode converter uma expressão **text** de um agrupamento em outro se eles tiverem páginas de código diferentes. O operador de atribuição não pode atribuir valores quando o agrupamento do operando de texto da direita tiver uma página de código diferente que a do operando de texto da esquerda.  
   
  A precedência de agrupamento é determinada após a conversão de tipo de dados. O operando a partir do qual o agrupamento resultante é obtido pode ser diferente do operando que fornece o tipo de dados do resultado final. Por exemplo, considere o seguinte lote:  
   
@@ -228,7 +228,7 @@ a
  O operador de concatenação de cadeias de caracteres não diferencia agrupamentos, e os dois operandos de cadeias de caracteres e o resultado recebem o rótulo de agrupamento do operando com a precedência de agrupamento mais alta. O operador UNION ALL e CASE não diferenciam agrupamentos, e todos os operandos de cadeias de caracteres, além dos resultados finais, recebem o rótulo do agrupamento do operando com a precedência mais alta. A precedência de agrupamento dos operandos UNION ALL e do resultado é avaliada a cada coluna.  
   
 ### <a name="functions-and-collation"></a>Funções e agrupamento  
- AS funções CAST, CONVERT e COLLATE são diferenciam agrupamentos para **char**, **varchar**, e **texto** tipos de dados. Se a entrada e a saída das funções CAST e CONVERT forem cadeias de caracteres, a cadeia de saída terá o rótulo de agrupamento da cadeia de caracteres de entrada. Se a entrada não for uma cadeia de caracteres, a cadeia de saída será Padrão coercível e receberá o agrupamento do banco de dados atual da conexão, ou o banco de dados que contém a função definida pelo usuário, o procedimento armazenado ou o gatilho no qual CAST ou CONVERT é referenciado.  
+ As funções CAST, CONVERT e COLLATE diferenciam agrupamento para os tipos de dados **char**, **varchar** e **text**. Se a entrada e a saída das funções CAST e CONVERT forem cadeias de caracteres, a cadeia de saída terá o rótulo de agrupamento da cadeia de caracteres de entrada. Se a entrada não for uma cadeia de caracteres, a cadeia de saída será Padrão coercível e receberá o agrupamento do banco de dados atual da conexão, ou o banco de dados que contém a função definida pelo usuário, o procedimento armazenado ou o gatilho no qual CAST ou CONVERT é referenciado.  
   
  Para as funções internas que retornam uma cadeia de caracteres, mas não obtêm uma entrada de cadeia, a cadeia resultante será Padrão coercível e receberá o agrupamento do banco de dados atual ou o agrupamento do banco de dados que contém a função definida pelo usuário, o procedimento armazenado ou o gatilho no qual a função é referenciada.  
   
@@ -244,10 +244,10 @@ a
 |LOWER|SUBSTRING|  
 |PATINDEX|UPPER|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

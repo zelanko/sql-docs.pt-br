@@ -1,5 +1,5 @@
 ---
-title: "CONCEDER permissões de banco de dados Principal (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT de entidade de segurança do banco de dados (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
@@ -71,23 +71,23 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida na entidade do banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- USUÁRIO::*database_user*  
+ USER ::*database_user*  
  Especifica a classe e o nome do usuário no qual a permissão está sendo concedida. O qualificador de escopo (::) é necessário.  
   
- FUNÇÃO::*database_role*  
+ ROLE ::*database_role*  
  Especifica a classe e o nome da função na qual a permissão está sendo concedida. O qualificador de escopo (::) é necessário.  
   
- FUNÇÃO de aplicativo::*application_role*  
+ APPLICATION ROLE ::*application_role*  
    
  Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo concedida. O qualificador de escopo (::) é necessário.  
   
  WITH GRANT OPTION  
  Indica que o principal também terá a capacidade de conceder a permissão especificada a outros principais.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica uma entidade de segurança da qual a entidade de segurança que executa esta consulta deriva seu direito de conceder a permissão.  
   
  *Database_user*  
@@ -97,12 +97,12 @@ GRANT permission [ ,...n ]
  Especifica uma função de banco de dados.  
   
  *Application_role*  
- **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica uma função de aplicativo.  
   
  *Database_user_mapped_to_Windows_User*  
- Especifica um usuário de banco de dados mapeado para um usuário do Windows.  
+ Especifica um usuário do banco de dados mapeado para um usuário do Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
   
@@ -119,8 +119,8 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
- Informações sobre entidades de segurança do banco de dados são visíveis no [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) exibição do catálogo. Informações sobre permissões de nível de banco de dados são visíveis no [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) exibição do catálogo.  
+## <a name="remarks"></a>Remarks  
+ Informações sobre as entidades de banco de dados estão visíveis na exibição do catálogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Informações sobre permissões do nível de banco de dados estão visíveis na exibição do catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md).  
   
 ## <a name="database-user-permissions"></a>Permissões do usuário do banco de dados  
  Um usuário do banco de dados é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um usuário de banco de dados estão listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -162,9 +162,9 @@ GRANT permission [ ,...n ]
 |Usuário de banco de dados mapeado para um usuário do Windows|Permissão IMPERSONATE no usuário, associação na função de banco de dados fixa db_securityadmin, associação na função de banco de dados fixa db_owner ou associação na função de servidor fixa sysadmin.|  
 |Usuário de banco de dados mapeado para um grupo do Windows|Associação no grupo do Windows, associação na função de banco de dados fixa db_securityadmin, associação na função de banco de dados fixa db_owner ou associação na função de servidor fixa sysadmin.|  
 |Usuário de banco de dados mapeado para um certificado|Associação na função de banco de dados fixa db_securityadmin, associação na função de banco de dados fixa db_owner ou associação na função de servidor fixa sysadmin.|  
-|Usuário de banco de dados mapeado para uma chave assimétrica|Associação na função de banco de dados de db_securityadminfixed, associação db_owner fixo de função de banco de dados ou associação na função de servidor fixa sysadmin.|  
+|Usuário de banco de dados mapeado para uma chave assimétrica|Associação à função de banco de dados fixa db_securityadminfixed, associação à função de banco de dados fixa db_owner ou associação à função de servidor fixa sysadmin.|  
 |Usuário de banco de dados não mapeado para nenhuma entidade de segurança de servidor|Permissão IMPERSONATE no usuário, associação na função de banco de dados fixa db_securityadmin, associação na função de banco de dados fixa db_owner ou associação na função de servidor fixa sysadmin.|  
-|Função de banco de dados|Permissão ALTER na função, associação na função de banco de dados de db_securityadminfixed, associação na função de banco de dados fixa db_owner ou associação na função de servidor fixa sysadmin.|  
+|Função de banco de dados|Permissão ALTER na função, associação na função de banco de dados fixa db_securityadminfixed, associação na função de banco de dados fixa db_owner ou associação na função de servidor fixa sysadmin.|  
 |Função de aplicativo|Permissão ALTER na função, associação na função de banco de dados fixa db_securityadmin, associação na função de banco de dados fixa db_owner ou associação na função de servidor fixa sysadmin.|  
   
  As entidades que têm a permissão CONTROL em um protegível podem conceder a permissão nesse protegível.  
@@ -193,21 +193,21 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Concessão da permissão IMPERSONATE em um usuário para uma função de aplicativo  
  O exemplo a seguir concede permissão no usuário `IMPERSONATE` `HamithaL` para `AdventureWorks2012` função de aplicativo `AccountsPayable17`.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Negar permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
- [REVOGAR permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões DENY da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+ [Permissões REVOKE da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Modifica a definição de um gatilho DML, DDL ou de logon que foi criado anteriormente pela instrução CREATE TRIGGER. Os gatilhos são criados com o uso de CREATE TRIGGER. Eles podem ser criados diretamente no [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções ou de métodos de assemblies que são criados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) e carregados em uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre os parâmetros que são usados na instrução ALTER TRIGGER, consulte [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+  Modifica a definição de um gatilho DML, DDL ou de logon que foi criado anteriormente pela instrução CREATE TRIGGER. Os gatilhos são criados com o uso de CREATE TRIGGER. Eles podem ser criados diretamente com base em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou em métodos de assemblies criados no CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e carregados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre os parâmetros usados na instrução ALTER TRIGGER, consulte [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -144,44 +144,44 @@ AS { sql_statement
   
 ## <a name="arguments"></a>Argumentos  
  *schema_name*  
- É o nome do esquema ao qual o gatilho DML pertence. Os gatilhos DML são definidos no escopo do esquema da tabela ou na exibição na qual são criados. *esquema**name* é opcional somente se o gatilho DML e sua tabela correspondente ou exibição pertence ao esquema padrão. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
+ É o nome do esquema ao qual o gatilho DML pertence. Os gatilhos DML são definidos no escopo do esquema da tabela ou na exibição na qual são criados. *schema**_name* será opcional apenas se o gatilho DML e sua tabela ou exibição correspondente pertencerem ao esquema padrão. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
   
  *trigger_name*  
  É o gatilho existente a ser modificado.  
   
- *tabela* | *exibição*  
+ *table* | *view*  
  É a tabela ou a exibição na qual o gatilho DML é executado. A especificação do nome totalmente qualificado da tabela ou da exibição é opcional.  
   
  DATABASE  
- Aplica o escopo de um gatilho DDL ao banco de dados atual. Se especificado, o gatilho é acionado sempre que *event_type* ou *event_group* ocorre no banco de dados atual.  
+ Aplica o escopo de um gatilho DDL ao banco de dados atual. Se especificado, o gatilho será disparado sempre que *event_type* ou *event_group* ocorrer no banco de dados atual.  
   
  ALL SERVER  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Aplica o escopo de um gatilho DDL ou de logon ao servidor atual. Se especificado, o gatilho é acionado sempre que *event_type* ou *event_group* ocorrer em qualquer lugar no servidor atual.  
+ Aplica o escopo de um gatilho DDL ou de logon ao servidor atual. Se for especificado, o gatilho será disparado sempre que *event_type* ou *event_group* ocorrer em qualquer local no servidor atual.  
   
  WITH ENCRYPTION  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Criptografa as entradas de sys.syscommentssys.sql_modules que contêm o texto da instrução ALTER TRIGGER. O uso de WITH ENCRYPTION impede que o gatilho seja publicado como parte da replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION não pode ser especificado para gatilhos CLR.  
+ Criptografa as entradas sys.syscommentssys.sql_modules que contêm o texto da instrução ALTER TRIGGER. O uso de WITH ENCRYPTION impede que o gatilho seja publicado como parte da replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION não pode ser especificado para gatilhos CLR.  
   
 > [!NOTE]  
 >  Se um gatilho for criado com o uso de WITH ENCRYPTION, ele deverá ser especificado novamente na instrução ALTER TRIGGER para que essa opção permaneça ativada.  
   
  EXECUTE AS  
- Especifica o contexto de segurança no qual o gatilho é executado. Permite controlar a conta de usuário do que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para validar permissões em quaisquer objetos de banco de dados que são referenciadas pelo gatilho.  
+ Especifica o contexto de segurança no qual o gatilho é executado. Permite controlar a conta de usuário que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para validar permissões em objetos de banco de dados referenciados pelo gatilho.  
   
  Para obter mais informações, veja [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
- Indica que o gatilho é compilado nativamente.  
+ Indica que o gatilho foi compilado nativamente.  
   
  Essa opção é necessária para os gatilhos em tabelas com otimização de memória.  
   
  SCHEMABINDING  
- Garante que as tabelas referenciadas por um gatilho não podem ser descartadas ou alteradas.  
+ Garante que as tabelas referenciadas por um gatilho não possam ser removidas nem alteradas.  
   
- Essa opção é necessária para os gatilhos em tabelas com otimização de memória e não há suporte para gatilhos em tabelas tradicionais.  
+ Essa opção é obrigatória para gatilhos em tabelas com otimização de memória e não é compatível com gatilhos em tabelas tradicionais.  
   
  AFTER  
  Especifica que o gatilho será acionado apenas depois que a instrução SQL disparadora for executada com êxito. Todas as verificações de restrição e ações referenciais em cascata também devem ter obtido êxito antes que este gatilho seja acionado.  
@@ -203,10 +203,10 @@ AS { sql_statement
  Para gatilhos INSTEAD OF, a opção DELETE não é permitida em tabelas que tenham um relacionamento referencial que especifique uma ação ON DELETE em cascata. Da mesma maneira, a opção UPDATE não é permitida em tabelas que tenham um relacionamento referencial que especifique uma ação ON UPDATE em cascata. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  *event_type*  
- É o nome de um evento da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] que, após a execução, faz com que um gatilho DDL seja acionado. Os eventos válidos para gatilhos DDL estão listados no [eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+ É o nome de um evento da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] que, após a execução, faz com que um gatilho DDL seja acionado. Os eventos válidos para gatilhos DDL são listados em [Eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
  *event_group*  
- É o nome de um agrupamento predefinido de eventos da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)]. O gatilho DDL será acionado após a execução de qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de linguagem que pertence a *event_group*. Grupos de eventos válidos para gatilhos DDL são listados na [grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md). Após a conclusão da execução, ALTER TRIGGER *event_group* também atuará como uma macro adicionando os tipos de evento abrangidos por ele à exibição de catálogo trigger_events.  
+ É o nome de um agrupamento predefinido de eventos da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)]. O gatilho DDL é disparado após a execução de qualquer evento de linguagem do [!INCLUDE[tsql](../../includes/tsql-md.md)] que pertence a *event_group*. Os grupos de eventos válidos para gatilhos DDL são listados em [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md). Após a conclusão da execução de ALTER TRIGGER, *event_group* também atuará como uma macro, adicionando os tipos de evento abrangidos por ele à exibição do catálogo sys.trigger_events.  
   
  NOT FOR REPLICATION  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -216,15 +216,15 @@ AS { sql_statement
  *sql_statement*  
  São as condições e as ações do gatilho.  
   
- Para gatilhos em tabelas com otimização de memória, o único *sql_statement* permitido no nível superior é um bloco ATÔMICO. O T-SQL permitido dentro do bloco ATÔMICO é limitado pelo T-SQL permitido dentro de PROC. nativos.  
+ Para gatilhos em tabelas com otimização de memória, a única *sql_statement* permitida no nível superior é um bloco ATOMIC. O T-SQL permitido dentro do bloco ATOMIC é limitado pelo T-SQL permitido dentro de procedimentos nativos.  
   
- NOME externo \<method_specifier >  
+ EXTERNAL NAME \<method_specifier>  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica o método de um assembly a ser associado ao gatilho. O método não deve usar nenhum argumento e deve retornar nulo. *class_name* deve ser um válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador e deve existir como uma classe no assembly com visibilidade do assembly. A classe não pode ser aninhada.  
+ Especifica o método de um assembly a ser associado ao gatilho. O método não deve usar nenhum argumento e deve retornar nulo. *class_name* deve ser um identificador válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve existir como uma classe no assembly com visibilidade do assembly. A classe não pode ser aninhada.  
   
-## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre ALTER TRIGGER, consulte comentários em [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Para obter mais informações sobre ALTER TRIGGER, consulte Comentários em [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  
 >  As opções EXTERNAL_NAME e ON_ALL_SERVER não estão disponíveis em um banco de dados independente.  
@@ -241,7 +241,7 @@ AS { sql_statement
  Quando uma ação DELETE para uma tabela filha ou de referência for o resultado de CASCADE em DELETE da tabela pai e um gatilho INSTEAD OF em DELETE estiver definido nessa tabela filha, o gatilho será ignorado e a ação DELETE será executada.  
   
 ## <a name="ddl-triggers"></a>Gatilhos DDL  
- Diferentemente dos gatilhos DML, os gatilhos DDL não têm seu escopo definido para esquemas. Portanto, não é possível usar OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY e OBJECTPROPERTY(EX) ao consultar metadados sobre gatilhos DDL. Use as exibições do catálogo em vez disso. Para obter mais informações, consulte [obter informações sobre gatilhos DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ Diferentemente dos gatilhos DML, os gatilhos DDL não têm seu escopo definido para esquemas. Portanto, não é possível usar OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY e OBJECTPROPERTY(EX) ao consultar metadados sobre gatilhos DDL. Use as exibições do catálogo em vez disso. Para obter mais informações, veja [Obter informações sobre gatilhos DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 ## <a name="logon-triggers"></a>Gatilhos de logon  
  O [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não oferece suporte a gatilhos em eventos de logon.  
@@ -252,7 +252,7 @@ AS { sql_statement
  A alteração de um gatilho DDL definido com escopo no servidor (ON ALL SERVER) ou de um gatilho de logon exige permissão CONTROL SERVER no servidor. A alteração de um gatilho DDL definido com escopo no banco de dados (ON DATABASE) exige permissão ALTER ANY DATABASE DDL TRIGGER no banco de dados atual.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um gatilho DML no banco de dados AdventureWorks 2012, que imprime uma mensagem definida pelo usuário para o cliente quando um usuário tenta adicionar ou alterar dados no `SalesPersonQuotaHistory` tabela. Em seguida, o gatilho é modificado usando `ALTER TRIGGER` para aplicar o gatilho apenas em atividades `INSERT`. Esse gatilho é útil porque lembra ao usuário que atualiza ou insere linhas nessa tabela que também notifique o departamento `Compensation` .  
+ O exemplo a seguir cria um gatilho DML no banco de dados AdventureWorks 2012, que imprime uma mensagem definida pelo usuário para o cliente quando um usuário tenta adicionar ou alterar dados na tabela `SalesPersonQuotaHistory`. Em seguida, o gatilho é modificado usando `ALTER TRIGGER` para aplicar o gatilho apenas em atividades `INSERT`. Esse gatilho é útil porque lembra ao usuário que atualiza ou insere linhas nessa tabela que também notifique o departamento `Compensation` .  
   
 ```  
 CREATE TRIGGER Sales.bonus_reminder  
@@ -270,14 +270,14 @@ AS RAISERROR ('Notify Compensation', 16, 10);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [Transações](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Obter informações sobre gatilhos DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [Obter informações sobre gatilhos DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   

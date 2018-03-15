@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna um especificado **geografia** elemento em um **GeometryCollection** ou um de seus subtipos. Quando STGeometryN() é usado em um subtipo de uma **GeometryCollection**, como **MultiPoint** ou **MultiLineString**, esse método retorna o **geografia**  instância se for chamado com N = 1.  
+  Retorna um elemento **geography** especificado em uma **GeometryCollection** ou um de seus subtipos. Quando STGeometryN() é usado em um subtipo de uma **GeometryCollection**, como **MultiPoint** ou **MultiLineString**, esse método retorna a instância de **geography** se é chamado com N=1.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É um **int** expressão entre 1 e o número de **geografia** instâncias de **GeometryCollection**.  
+ Uma expressão **int** entre 1 e o número de instâncias de **geography** na **GeometryCollection**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método retornará nulo se o parâmetro for maior do que o resultado de [stnumgeometries ()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) e lançará um **ArgumentOutOfRangeException** se o *expressão* parâmetro é menor que 1.  
+ Esse método retornará nulo se o parâmetro for maior que o resultado de [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) e gerará uma **ArgumentOutOfRangeException** se o parâmetro *expression* for menor que 1.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um `MultiPoint``geography` instância e usa `STGeometryN()` para localizar a segunda `geography` instância o **GeometryCollection**.  
+ O exemplo a seguir cria uma instância de `MultiPoint``geography` e usa `STGeometryN()` para localizar a segunda instância de `geography` da **GeometryCollection**.  
   
 ```  
 DECLARE @g geography;  
@@ -63,7 +63,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

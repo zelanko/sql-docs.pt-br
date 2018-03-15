@@ -1,5 +1,5 @@
 ---
-title: INFERIOR (Transact-SQL) | Microsoft Docs
+title: LOWER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ LOWER ( character_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de caractere ou dados binários. *character_expression* pode ser uma constante, variável ou coluna. *character_expression* deve ser de um tipo de dados que é implicitamente conversível em **varchar**. Caso contrário, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para converter explicitamente *character_expression*.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de dados binários ou de caracteres. *character_expression* pode ser uma constante, variável ou coluna. *character_expression* deve ser um tipo de dados implicitamente conversível em **varchar**. Caso contrário, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para converter *character_expression* explicitamente.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varchar** ou **nvarchar**  
@@ -79,9 +79,9 @@ minipump              MINIPUMP               minipump
 taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [UPPER &#40;Transact-SQL&#41;](../../t-sql/functions/upper-transact-sql.md)  
   
   

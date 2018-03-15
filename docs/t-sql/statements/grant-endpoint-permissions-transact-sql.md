@@ -1,5 +1,5 @@
 ---
-title: "Permissões de ponto de extremidade GRANT (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT de ponto de extremidade (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um ponto de extremidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- NO ponto de EXTREMIDADE **::***endpoint_name*  
- Especifica o ponto de extremidade no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é necessária.  
+ ON ENDPOINT **::***endpoint_name*  
+ Especifica o ponto de extremidade no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório.  
   
- PARA \<server_principal >  
+ TO \<server_principal>  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual a permissão está sendo concedida.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de conceder a permissão.  
   
-## <a name="remarks"></a>Comentários  
- Permissões no escopo do servidor podem ser concedidas somente quando o banco de dados atual é **mestre**.  
+## <a name="remarks"></a>Remarks  
+ As permissões no escopo de servidor podem ser concedidas somente quando o banco de dados atual for **mestre**.  
   
- Informações sobre pontos de extremidade são visíveis no [Endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) exibição do catálogo. Informações sobre permissões de servidor são visíveis no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição de catálogo e obter informações sobre as entidades de servidor é visível no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ As informações sobre pontos de extremidade são visíveis na exibição do catálogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Um ponto de extremidade é um protegível em nível de servidor. As permissões mais específicas e limitadas que podem ser concedias em um ponto de extremidade são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -121,12 +121,12 @@ GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Negar permissões de ponto de extremidade &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [REVOGAR permissões de ponto de extremidade &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões DENY de ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [Permissões REVOKE do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Exibições do catálogo de pontos de extremidade &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys. Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Exibições do catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

@@ -55,7 +55,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>Argumentos  
  *scalar_expression*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  É qualquer operador de comparação válido.  
@@ -64,16 +64,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  Especifica que uma comparação deve ser feita.  
   
  *subquery*  
- É uma subconsulta que tem um conjunto de resultados de uma coluna. O tipo de dados da coluna retornada deve ser o mesmo tipo de dados *scalar_expression*.  
+ É uma subconsulta que tem um conjunto de resultados de uma coluna. O tipo de dados da coluna retornada deve ser o mesmo da *scalar_expression*.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para qualquer par (*scalar_expression***,***x*) onde *x* é um valor na conjunto de coluna única. Caso contrário, retornará **FALSE**.  
+ SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (*scalar_expression***,***x*) e quando *x* for um valor no conjunto de uma única coluna; caso contrário retornará **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
- SOME exige o *scalar_expression* seja comparada positivamente com pelo menos um valor retornado pela subconsulta. Para instruções que requerem o *scalar_expression* seja comparada positivamente a cada valor que é retornado pela subconsulta, consulte [todos os &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = algumas (a subconsulta) será avaliada como TRUE para um *scalar_express* de 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (a subconsulta) seria avaliada como FALSE, porque alguns dos valores da subconsulta (o valor de 3) não atende aos critérios da expressão.  
+ SOME exige que a *scalar_expression* seja comparada positivamente com, pelo menos, um valor retornado pela subconsulta. Para obter instruções que exigem que *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = SOME (subconsulta) será avaliada como TRUE para um *scalar_express* igual a 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (subconsulta) será avaliada como FALSE, porque alguns dos valores da subconsulta (o valor 3) não atenderão aos critérios da expressão.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -109,7 +109,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>B. Executando um exemplo prático  
- O exemplo a seguir cria um procedimento armazenado que determina se todos os componentes de determinado `SalesOrderID` no `AdventureWorks2012` banco de dados pode ser fabricado no número especificado de dias. O exemplo usa uma subconsulta para criar uma lista do número do valor de `DaysToManufacture` para todos os componentes do `SalesOrderID` específico e, em seguida, testa se algum dos valores retornados pela subconsulta é maior que o número de dias especificado. Se todo valor de `DaysToManufacture` retornado for menor que o número fornecido, a condição será TRUE e a primeira mensagem será impressa.  
+ O exemplo a seguir cria um procedimento armazenado que determina se todos os componentes de um `SalesOrderID` especificado no banco de dados `AdventureWorks2012` podem ser fabricados no número de dias especificado. O exemplo usa uma subconsulta para criar uma lista do número do valor de `DaysToManufacture` para todos os componentes do `SalesOrderID` específico e, em seguida, testa se algum dos valores retornados pela subconsulta é maior que o número de dias especificado. Se todo valor de `DaysToManufacture` retornado for menor que o número fornecido, a condição será TRUE e a primeira mensagem será impressa.  
   
 ```  
 -- Uses AdventureWorks  
@@ -131,7 +131,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- Para testar o procedimento, execute o procedimento usando o `SalesOrderID``49080`, que tem um componente que requer `2` dias e dois componentes que requerem 0 dia. A primeira instrução atende aos critérios. A segunda consulta não.  
+ Para testar o procedimento, execute-o usando o `SalesOrderID``49080`, que tem um componente que exige `2` dias e dois componentes que exigem 0 dia. A primeira instrução atende aos critérios. A segunda consulta não.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -149,11 +149,11 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

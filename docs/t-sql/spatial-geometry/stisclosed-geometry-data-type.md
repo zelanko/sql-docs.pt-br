@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retornará 1 se os pontos inicial e final da determinado **geometria** instância são os mesmos. Retorna 1 para **geometrycollection** tipos se cada contido **geometria** instância está fechada. Retornará 0 se a instância não for fechada.
+Retornará 1 se os pontos inicial e final da instância de **geometry** fornecida forem o mesmo. Retornará 1 para os tipos **geometrycollection** se cada instância de **geometry** contida estiver fechada. Retornará 0 se a instância não for fechada.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,14 +44,14 @@ Retornará 1 se os pontos inicial e final da determinado **geometria** instânci
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método retornará 0 se nenhuma figuras de um **geometria** instância for um ponto ou se a instância estiver vazia.  
+ Esse método retornará 0 se alguma figura de uma instância de **geometry** for um ponto ou se a instância estiver vazia.  
   
- Todos os **polígono** instâncias são consideradas fechadas.  
+ As instâncias de **polígono** são consideradas fechadas.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `LineString` e usa `STIsClosed()` para testar se `LineString` está fechada.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

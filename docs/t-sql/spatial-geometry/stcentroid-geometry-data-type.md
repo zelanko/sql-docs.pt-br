@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna o centro Geométrico de uma **geometria** instância que consiste em um ou mais polígonos.
+Retorna o centro geométrico de uma instância de **geometry** que consiste em um ou mais polígonos.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,19 +44,19 @@ Retorna o centro Geométrico de uma **geometria** instância que consiste em um 
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Abra o tipo Geospatial Consortium (OGC): **ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- `STCentroid()`retornará nulo se o **geometria** instância não é um **Polygon, CurvePolygon**, ou **MultiPolygon** tipo.  
+ `STCentroid()` retorna nulo se a instância de **geometry** não é um tipo **Polygon, CurvePolygon** ou **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Calculando o centroide de uma instância de Polígono  
- O exemplo a seguir usa `STCentroid()` para calcular o centroide de uma `polygon``geometry` instância:  
+ O seguinte exemplo usa `STCentroid()` para calcular o centroide de uma instância de `polygon``geometry`:  
   
 ```  
 DECLARE @g geometry;  
@@ -72,7 +72,7 @@ SELECT @g.STCentroid().ToString();
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

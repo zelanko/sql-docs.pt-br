@@ -1,5 +1,5 @@
 ---
-title: RECEBER (Transact-SQL) | Microsoft Docs
+title: RECEIVE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -74,13 +74,13 @@ ms.lasthandoff: 11/21/2017
  WAITFOR  
  Especifica que a instrução RECEIVE aguardará a chegada de uma mensagem na fila, se não houver nenhuma mensagem no momento.  
   
- PARTE SUPERIOR (  *n*  )  
+ TOP( *n* )  
  Especifica o número máximo de mensagens a serem retornadas. Se essa cláusula não estiver especificada, todas as mensagens que atenderem aos critérios da instrução serão retornadas.  
   
  \*  
  Especifica que o conjunto de resultados contém todas as colunas na fila.  
   
- *nome da coluna*  
+ *column_name*  
  O nome de uma coluna a ser incluído no conjunto de resultados.  
   
  *expressão*  
@@ -93,55 +93,55 @@ ms.lasthandoff: 11/21/2017
  Especifica a fila que contém as mensagens a serem recuperadas.  
   
  *database_name*  
- O nome do banco de dados que contém a fila da qual receber mensagens. Quando nenhum *nome do banco de dados* for fornecido, o padrão é o banco de dados atual.  
+ O nome do banco de dados que contém a fila da qual receber mensagens. Quando nenhum *database name* é fornecido, o padrão é o banco de dados atual.  
   
  *schema_name*  
- O nome do esquema que possui a fila da qual receber mensagens. Quando nenhum *nome do esquema* for fornecido, o padrão é o esquema padrão para o usuário atual.  
+ O nome do esquema que possui a fila da qual receber mensagens. Quando nenhum *schema name* é fornecido, o padrão é o nome de esquema padrão do usuário atual.  
   
- *nome_da_fila*  
+ *queue_name*  
  O nome da fila da qual receber mensagens.  
   
- EM *table_variable*  
+ INTO *table_variable*  
  Especifica a variável de tabela na qual a instrução RECEIVE coloca mensagens. A variável de tabela deve ter o mesmo número de colunas que as mensagens. O tipo de dados de cada coluna na variável de tabela deve poder ser convertido implicitamente no tipo de dados da coluna correspondente nas mensagens. Se INTO não estiver especificado, as mensagens serão retornadas como um conjunto de resultados.  
   
  WHERE  
  Especifica a conversa ou grupo de conversa das mensagens recebidas. Se omitido, as mensagens serão retornadas do próximo grupo de conversa disponível.  
   
  conversation_handle = *conversation_handle*  
- Especifica a conversa para mensagens recebidas. O *identificador de conversação* fornecido deve ser um **uniqueidentifer**, ou um tipo que pode ser convertido em **uniqueidentifier**.  
+ Especifica a conversa para mensagens recebidas. O *conversation handle* fornecido deve ser um **uniqueidentifer**, ou um tipo que possa ser convertido em **uniqueidentifier**.  
   
  conversation_group_id = *conversation_group_id*  
- Especifica o grupo de conversa das mensagens recebidas. O *ID de grupo de conversa é* fornecido deve ser um **uniqueidentifier**, ou um tipo conversível em **uniqueidentifier**.  
+ Especifica o grupo de conversa das mensagens recebidas. A *conversation group ID* fornecida deve ser um **uniqueidentifier** ou um tipo que possa ser convertido em **uniqueidentifier**.  
   
- Tempo limite *tempo limite*  
- Especifica o período de tempo, em milissegundos, durante o qual a instrução aguarda uma mensagem. Essa cláusula pode ser usada apenas com a cláusula WAITFOR. Se essa cláusula não for especificada, ou o tempo limite é -**1**, o tempo de espera é ilimitado. Se o tempo limite expirar, RECEIVE retornará um conjunto de resultados vazio.  
+ TIMEOUT *timeout*  
+ Especifica o período de tempo, em milissegundos, durante o qual a instrução aguarda uma mensagem. Essa cláusula pode ser usada apenas com a cláusula WAITFOR. Se essa cláusula não estiver especificada ou se o tempo limite for -**1**, o tempo de espera será ilimitado. Se o tempo limite expirar, RECEIVE retornará um conjunto de resultados vazio.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se a instrução RECEIVE não for a primeira instrução em um lote ou procedimento armazenado, a instrução anterior deverá ser encerrada com um ponto-e-vírgula (;).  
   
- A instrução RECEIVE lê mensagens de uma fila e retorna um conjunto de resultados. O conjunto de resultados consiste em zero ou mais linhas, cada uma das quais contêm uma mensagem. Se a cláusula INTO não for usada, e *column_specifier* não atribui valores a variáveis locais, a instrução retorna um conjunto de resultados para o programa de chamada.  
+ A instrução RECEIVE lê mensagens de uma fila e retorna um conjunto de resultados. O conjunto de resultados consiste em zero ou mais linhas, cada uma das quais contêm uma mensagem. Se a instrução INTO não for usada e *column_specifier* não atribuir os valores a variáveis locais, a instrução retornará um conjunto de resultados ao programa de chamada.  
   
- As mensagens retornadas pela instrução RECEIVE podem ser de tipos de mensagem diferentes. Os aplicativos podem usar o **message_type_name** coluna para rotear cada mensagem para código que lida com o tipo de mensagem associado. Há duas classes de tipos de mensagem:  
+ As mensagens retornadas pela instrução RECEIVE podem ser de tipos de mensagem diferentes. Os aplicativos podem usar a coluna **message_type_name** para rotear cada mensagem para código que controla o tipo de mensagem associado. Há duas classes de tipos de mensagem:  
   
 -   Tipos de mensagem definidos pelo aplicativo que são criados com a instrução CREATE MESSAGE TYPE. O conjunto de tipos de mensagem definidos pelo aplicativo que são permitidos em uma conversa são definidos pelo contrato do [!INCLUDE[ssSB](../../includes/sssb-md.md)] especificado para a conversa.  
   
 -   Mensagens do sistema [!INCLUDE[ssSB](../../includes/sssb-md.md)] que retornam informações de status ou de erro.  
   
- A instrução RECEIVE remove mensagens recebidas da fila a menos que a fila especifique retenção de mensagem. Quando a configuração de retenção para a fila for ON, a instrução RECEIVE atualizará o **status** coluna **0** e deixa as mensagens na fila. Quando uma transação que contém uma instrução RECEIVE é revertida, todas as alterações feitas na fila na transação também são revertidas, retornando mensagens para a fila.  
+ A instrução RECEIVE remove mensagens recebidas da fila a menos que a fila especifique retenção de mensagem. Quando a configuração de RETENTION da fila estiver ON, a instrução RECEIVE atualizará a coluna **status** para **0** e deixará as mensagens na fila. Quando uma transação que contém uma instrução RECEIVE é revertida, todas as alterações feitas na fila na transação também são revertidas, retornando mensagens para a fila.  
   
  Todas as mensagens retornadas por uma instrução RECEIVE pertencem ao mesmo grupo de conversa. A instrução RECEIVE bloqueia o grupo de conversa das mensagens retornadas até que a transação que contém a instrução termine. Uma instrução RECEIVE retorna mensagens que têm um **status** de **1.** O conjunto de resultados retornado por uma instrução RECEIVE é ordenado implicitamente:  
   
 -   Se mensagens de vários grupos de conversa atenderem às condições da cláusula WHERE, a instrução RECEIVE retornará todas as mensagens de uma conversa antes de retornar mensagens para qualquer outra conversa. As conversas são processadas em ordem decrescente de nível de prioridade.  
   
--   Para uma determinada conversa, uma instrução RECEIVE retorna mensagens em crescente **message_sequence_number** ordem.  
+-   Para uma determinada conversa, uma instrução RECEIVE retorna mensagens em ordem crescente de **message_sequence_number**.  
   
- A cláusula WHERE da instrução RECEIVE só pode conter uma condição de pesquisa que usa o **conversation_handle** ou **conversation_group_id**. O critério de pesquisa não pode conter uma ou mais das outras colunas na fila. O **conversation_handle** ou **conversation_group_id** não pode ser uma expressão. O conjunto de mensagens retornado depende das condições especificadas na cláusula WHERE:  
+ A cláusula WHERE da instrução RECEIVE pode conter apenas um critério de pesquisa que usa **conversation_handle** ou **conversation_group_id**. O critério de pesquisa não pode conter uma ou mais das outras colunas na fila. O **conversation_handle** ou a **conversation_group_id** não pode ser uma expressão. O conjunto de mensagens retornado depende das condições especificadas na cláusula WHERE:  
   
--   Se **conversation_handle** for especificado, RECEIVE retornará todas as mensagens da conversa especificada que estão disponíveis na fila.  
+-   Se **conversation_handle** estiver especificado, RECEIVE retornará todas as mensagens da conversa especificada disponíveis na fila.  
   
--   Se **conversation_group_id** for especificado, RECEIVE retornará todas as mensagens que estão disponíveis na fila de qualquer conversa que seja membro do grupo de conversa especificado.  
+-   Se **conversation_group_id** estiver especificado, RECEIVE retornará todas as mensagens disponíveis na fila de qualquer conversa membro do grupo de conversa especificado.  
   
 -   Se não houver nenhuma cláusula WHERE, RECEIVE determinará qual grupo de conversa:  
   
@@ -168,20 +168,20 @@ ms.lasthandoff: 11/21/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|Status da mensagem. Para mensagens retornadas pelo comando RECEIVE, o status é sempre **0**. Mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0**= pronto**1**= recebeu mensagem**2**= ainda não concluída**3**= mensagem enviada retida|  
-|**prioridade**|**tinyint**|O nível de prioridade de conversa aplicado à mensagem.|  
+|**status**|**tinyint**|Status da mensagem. Para mensagens retornadas pelo comando RECEIVE, o status é sempre **0**. Mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0**=Pronto**1**=Mensagem recebida**2**=Ainda não concluído**3**=Mensagem enviada retida|  
+|**priority**|**tinyint**|O nível de prioridade de conversa aplicado à mensagem.|  
 |**queuing_order**|**bigint**|Número da ordem da mensagem na fila.|  
 |**conversation_group_id**|**uniqueidentifier**|O identificador do grupo de conversa a que pertence essa mensagem.|  
 |**conversation_handle**|**uniqueidentifier**|Tratamento para a conversa da qual essa mensagem faz parte.|  
 |**message_sequence_number**|**bigint**|Número de sequência da mensagem na conversa.|  
-|**SERVICE_NAME**|**nvarchar(512)**|O nome do serviço a que se destina a conversa.|  
+|**service_name**|**nvarchar(512)**|O nome do serviço a que se destina a conversa.|  
 |**service_id**|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do serviço para o qual a conversa é destinada.|  
 |**service_contract_name**|**nvarchar(256)**|O nome do contrato que a conversa segue.|  
 |**service_contract_id**|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do contrato que a conversa segue.|  
 |**message_type_name**|**nvarchar(256)**|O nome do tipo de mensagem que descreve o formato da mensagem. Mensagens podem ser do tipo de mensagem de aplicativo ou mensagens de sistema de Agente.|  
 |**message_type_id**|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do tipo de mensagem que descreve a mensagem.|  
-|**validação**|**nchar(2)**|Validação usada para a mensagem.<br /><br /> **E**= vazio**N**= None**X**= XML|  
-|**message_body**|**varbinary (max)**|Conteúdo da mensagem.|  
+|**validation**|**nchar(2)**|Validação usada para a mensagem.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**message_body**|**varbinary(MAX)**|O conteúdo da mensagem.|  
   
 ## <a name="permissions"></a>Permissões  
  Para receber uma mensagem, o usuário atual deve ter permissão RECEIVE na fila.  
@@ -338,15 +338,15 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [Instrução END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [CRIAR contrato &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [Criar tipo de mensagem &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [Enviar &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
- [REMOVER fila &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
   
   

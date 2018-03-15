@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geometry-data-type"></a>STPointN (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um ponto especificado em uma **geometria** instância.
+Retorna um ponto especificado em uma instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,21 +45,21 @@ Retorna um ponto especificado em uma **geometria** instância.
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É um **int** expressão entre 1 e o número de pontos de **geometria** instância.  
+ É uma expressão **int** entre 1 e o número de pontos na instância de **geometry**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Abra o tipo Geospatial Consortium (OGC): **ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- Se um **geometria** instância é criado, `STPointN()` retorna o ponto especificado por *expressão* ordenando os pontos na ordem em que eles foram originalmente de entrada.  
+ Se uma instância de **geometry** for criada pelo usuário, `STPointN()` retornará o ponto especificado pela *expressão* ordenando os pontos pela ordem de entrada original.  
   
- Se um **geometria** instância foi criada pelo sistema, `STPointN()` retorna o ponto especificado por *expressão* ordenando todos os pontos na mesma ordem, eles seriam saída: primeiro por geometria, em seguida, pelo anel na geometria (se apropriado) e, em seguida, pelo ponto dentro do anel. Essa ordem é determinística.  
+ Se uma instância de **geometry** for construída pelo sistema, `STPointN()` retornará o ponto especificado por *expressão* ordenando os pontos na mesma ordem em que eles seriam emitidos: primeiro pela geometria, depois pelo anel na geometria (se apropriado) e, em seguida, pelo ponto dentro do anel. Essa ordem é determinística.  
   
- Se esse método for chamado com um valor menor que 1, ele lança uma **ArgumentOutOfRangeException**.  
+ Se esse método for chamado com um valor menor que 1, ele gerará uma **ArgumentOutOfRangeException**.  
   
  Se esse método for chamado com um valor maior que o número de pontos na instância, retornará nulo.  
   
@@ -72,7 +72,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

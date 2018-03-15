@@ -72,22 +72,22 @@ FETCH
  LAST  
  Retorna a última linha no cursor e a torna a linha atual.  
   
- ABSOLUTO {  *n* | @*nvar*}  
- Se  *n*  ou @*nvar* for positivo, retornará a linha  *n*  linhas a partir do início do cursor e tornará a linha retornada a nova linha atual. Se  *n*  ou @*nvar* for negativo, retornará a linha  *n*  linhas antes do final do cursor e tornará a linha retornada a nova linha atual. Se  *n*  ou @*nvar* for 0, nenhuma linha será retornada. *n*deve ser uma constante inteira e @*nvar* devem ser **smallint**, **tinyint**, ou **int**.  
+ ABSOLUTE { *n*| @*nvar*}  
+ Se *n* ou @*nvar* é positivo, retorna a linha *n* linhas do início do cursor e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é negativo, retorna a linha *n* linhas antes do final do cursor e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é 0, nenhuma linha é retornada. *n* deve ser uma constante de inteiro e @*nvar* deve ser **smallint**, **tinyint** ou **int**.  
   
- RELATIVO {  *n* | @*nvar*}  
- Se  *n*  ou @*nvar* for positivo, retornará a linha  *n*  linhas após a linha atual e tornará a linha retornada a nova linha atual. Se  *n*  ou @*nvar* for negativo, retornará a linha  *n*  linhas antes da linha atual e tornará a linha retornada a nova linha atual. Se  *n*  ou @*nvar* for 0, retornará a linha atual. Se FETCH RELATIVE for especificado com  *n*  ou @*nvar* definido como números negativos ou 0 na primeira busca feita em um cursor, nenhuma linha será retornada. *n*deve ser uma constante inteira e @*nvar* devem ser **smallint**, **tinyint**, ou **int**.  
+ RELATIVE { *n*| @*nvar*}  
+ Se *n* ou @*nvar* é positivo, retorna a linha *n* linhas após a linha atual e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é negativo, retorna a linha *n* linhas antes da linha atual e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é 0, retorna a linha atual. Se FETCH RELATIVE for especificado com *n* ou @*nvar* definido como números negativos ou 0 na primeira busca feita em um cursor, nenhuma linha será retornada. *n* deve ser uma constante de inteiro e @*nvar* deve ser **smallint**, **tinyint** ou **int**.  
   
  GLOBAL  
- Especifica que *cursor_name* refere-se a um cursor global.  
+ Especifica que *cursor_name* se refere a um cursor global.  
   
  *cursor_name*  
- É o nome do cursor aberto a partir do qual a busca deve ser feita. Se uma global e um cursor local existirem com *cursor_name* como seu nome, *cursor_name* ao cursor global se GLOBAL for especificado e ao cursor local, se GLOBAL não for especificado.  
+ É o nome do cursor aberto a partir do qual a busca deve ser feita. Se um cursor global e um cursor local existirem com *cursor_name* como seu nome, *cursor_name* se referirá ao cursor global, caso GLOBAL seja especificado, e ao cursor local, caso GLOBAL não seja especificado.  
   
  @*cursor_variable_name*  
  É o nome de uma variável de cursor que faz referência ao cursor aberto a partir do qual a busca deve ser feita.  
   
- INTO @*variable_name*[,... *n*]  
+ INTO @*variable_name*[ ,...*n*]  
  Permite que os dados das colunas de uma busca sejam colocados em variáveis locais. Cada variável na lista, da esquerda para a direita, está associada à coluna correspondente no conjunto de resultados do cursor. O tipo de dados de cada variável deve corresponder ou ser uma conversão implícita com suporte do tipo de dados da coluna do conjunto de resultados correspondente. O número de variáveis deve corresponder ao número de colunas na lista de seleção do cursor.  
   
 ## <a name="remarks"></a>Remarks  
@@ -101,7 +101,7 @@ FETCH
   
 -   Cursores DYNAMIC SCROLL oferecem suporte a todas as opções de FETCH, exceto ABSOLUTE.  
   
- O @@FETCH_STATUS função relata o status da última instrução FETCH. As mesmas informações são registradas na coluna fetch_status do cursor retornado por sp_describe_cursor. Essas informações de status devem ser usadas para determinar a validade dos dados retornados por uma instrução FETCH antes de tentar qualquer operação nesses dados. Para obter mais informações, consulte [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
+ A função @@FETCH_STATUS relata o status da última instrução FETCH. As mesmas informações são registradas na coluna fetch_status do cursor retornado por sp_describe_cursor. Essas informações de status devem ser usadas para determinar a validade dos dados retornados por uma instrução FETCH antes de tentar qualquer operação nesses dados. Para obter mais informações, consulte [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  As permissões FETCH assumem como padrão qualquer usuário válido.  
@@ -214,7 +214,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

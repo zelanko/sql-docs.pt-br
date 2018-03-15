@@ -1,7 +1,7 @@
 ---
 title: Comando (TMSL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 03/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2bd9ea464b69e1b62ada91fbdee23f790080f86
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Sincronizar comando (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Sincroniza um banco de dados do Analysis Services com outro banco de dados existente.  
   
@@ -50,13 +50,13 @@ ms.lasthandoff: 01/08/2018
 |Banco de Dados||O nome do objeto de banco de dados a serem sincronizados.|  
 |origem||A cadeia de caracteres de conexão para usar para se conectar ao servidor de origem.|  
 |synchronizeSecurity|skipMembership|Um valor de enumeração que especifica como restaurar definições de segurança, incluindo funções e permissões. Os valores válidos incluem skipMembership, copyAll, ignoreSecurity.|  
-|applyCompression|True|Um booliano que, quando for verdadeiro, indica que a compactação será aplicado durante a operação de sincronização. Caso contrário, false.|  
+|applyCompression|Verdadeiro|Um booliano que, quando for verdadeiro, indica que a compactação será aplicado durante a operação de sincronização. Caso contrário, false.|  
   
 ## <a name="response"></a>Resposta  
  Retorna um resultado vazio quando o comando terá êxito. Caso contrário, uma exceção XMLA é retornada.  
   
 ## <a name="usage-endpoints"></a>Uso (pontos de extremidade)  
- Esse elemento de comando é usado em uma instrução do [executar método &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada por um ponto de extremidade do XMLA, exposto das seguintes maneiras:  
+ Esse elemento de comando é usado em uma instrução do [executar método &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada por um ponto de extremidade do XMLA, exposto das seguintes maneiras:  
   
 -   Como uma janela de XMLA no SQL Server Management Studio (SSMS)  
   
@@ -66,9 +66,9 @@ ms.lasthandoff: 01/08/2018
   
  Você pode gerar um script pronto para este comando do SSMS, clique no botão de Script na caixa de diálogo Sincronizar banco de dados.  
   
- O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico [linguagem de script de modelo de tabela &#40; TMSL &#41; Referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para fins de esclarecimento sobre o que tem suporte  
+ O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico [linguagem de script de modelo de tabela &#40;TMSL&#41; referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para fins de esclarecimento sobre o que tem suporte  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

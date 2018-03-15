@@ -1,5 +1,5 @@
 ---
-title: exist () Method (xml Data Type) | Microsoft Docs
+title: "Método exist() (tipo de dados xml) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 -   0, representando Falso, se retornar um resultado vazio.  
   
--   NULO se o **xml** instância de tipo de dados no qual a consulta foi executada contiver NULL.  
+-   NULL se a instância de tipo de dados **xml** na qual a consulta foi executada contiver NULL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ exist (XQuery)
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  O **exist ()** método retorna 1 para a expressão XQuery que retorna um resultado não vazio. Se você especificar o **verdadeiro ()** ou **False ()** funções dentro de **exist ()** método, o **exist ()** método retornará 1, porque o funções **verdadeiro ()** e **False ()** retornar booliano True e False, respectivamente. Quer dizer, elas retornam um resultado nonempty. Portanto, **exist ()** retornará 1 (verdadeiro), conforme mostrado no exemplo a seguir:  
+>  O método **exist()** retorna 1 para a expressão XQuery que retorna um resultado não vazio. Se você especificar as funções **true()** ou **false()** no método **exist()**, o método **exist()** retornará 1, porque as funções **true()** e **false()** retornam Boolean True e False, respectivamente. Quer dizer, elas retornam um resultado nonempty. Portanto, **exist()** retornará 1 (True), conforme mostrado no seguinte exemplo:  
   
 ```  
 declare @x xml;  
@@ -63,10 +63,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir mostram como especificar o **exist ()** método.  
+ Os exemplos a seguir mostram como especificar o método **exist()**.  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Exemplo: Especificando o método exist() em uma variável de tipo xml  
- No exemplo a seguir, @x é um **xml** variável de tipo (xml não tipado) e @f é uma variável de tipo de inteiro que armazena o valor retornado pelo **exist ()** método. O **exist ()** método retornará verdadeiro (1) se o valor de data armazenado na instância XML é `2002-01-01`.  
+ No exemplo a seguir, @xé uma variável de tipo **xml** (xml não tipado) e @f é uma variável de tipo inteiro que armazena o valor retornado pelo método **exist()**. O método **exist()** retorna True (1) se o valor de data armazenado na instância de XML é `2002-01-01`.  
   
 ```  
 declare @x xml;  
@@ -76,13 +76,13 @@ set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]
 select @f;  
 ```  
   
- Comparando as datas no **exist ()** método, observe o seguinte:  
+ Comparando as datas no método **exist()**, observe o seguinte:  
   
--   O código `cast as xs:date?` é usado para converter o valor **xs: Date** tipo para fins de comparação.  
+-   O código `cast as xs:date?` é usado para converter o valor no tipo **xs:date** para fins de comparação.  
   
--   O valor de  **@Somedate**  atributo é digitado. Comparando esse valor, ela será convertida implicitamente para o tipo do lado direito da comparação, o **xs: Date** tipo.  
+-   O valor do atributo **@Somedate** é não tipado. Comparando esse valor, ele é implicitamente convertido no tipo do lado direito da comparação, o tipo **xs:date**.  
   
--   Em vez de **convertida como xs:date()**, você pode usar o **xs:date()** função de construtor. Para obter mais informações, consulte [funções de construtor &#40; XQuery &#41; ](../../xquery/constructor-functions-xquery.md).  
+-   Em vez de **cast as xs:date()**, use a função de construtor **xs:date()**. Para obter mais informações, consulte [Funções de construtor &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   
  O exemplo a seguir é semelhante ao anterior, com a exceção de que tem um elemento <`Somedate`>.  
   
@@ -96,14 +96,14 @@ SELECT @f;
   
  Observe o seguinte na consulta anterior:  
   
--   O **Text ()** método retorna um nó de texto que contém o valor não digitado `2002-01-01`. (O tipo XQuery é **XDT: untypedatomic**.) É necessário converter explicitamente esse valor digitado de **x** para **xsd: Date**, porque a conversão implícita não é suportada nesse caso.  
+-   O método **text()** retorna um nó de texto que contém o valor não tipado `2002-01-01`. (O tipo XQuery é **xdt:untypedAtomic**.) É necessário converter explicitamente esse valor tipado de **x** para **xsd:date**, porque a conversão implícita não é compatível, nesse caso.  
   
 ### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>Exemplo: Especificando o método exist() em uma variável xml digitada  
- O exemplo a seguir ilustra o uso do **exist ()** método em relação a um **xml** variável de tipo. É uma variável XML digitada, porque especifica o nome de coleção de namespace do esquema, `ManuInstructionsSchemaCollection`.  
+ O exemplo a seguir ilustra o uso do método **exist()** em uma variável do tipo **xml**. É uma variável XML digitada, porque especifica o nome de coleção de namespace do esquema, `ManuInstructionsSchemaCollection`.  
   
- No exemplo, um documento é atribuído primeiro a esta variável de instruções de fabricação e, em seguida, o **exist ()** método é usado para localizar se o documento inclui um <`Location`> elemento cujo **LocationID**  valor de atributo é 50.  
+ No exemplo, um documento de instruções de fabricação é atribuído primeiro a essa variável e, em seguida, o método **exist()** é usado para descobrir se o documento inclui um elemento <`Location`> cujo valor do atributo **LocationID** é 50.  
   
- O **exist ()** método especificado em relação a @x variável retorna 1 (verdadeiro) se as instruções de fabricação documento inclui um <`Location`> elemento que tem `LocationID=50`. Caso contrário, o método retornará 0 (Falso).  
+ O método **exist()** especificado na variável @x retornará 1 (Verdadeiro) se o documento de instruções de fabricação inclui um elemento <`Location`> que tem `LocationID=50`. Caso contrário, o método retornará 0 (Falso).  
   
 ```  
 DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
@@ -137,15 +137,15 @@ WHERE CatalogDescription.exist('
   
  Observe o seguinte na consulta anterior:  
   
--   A cláusula WHERE seleciona somente as linhas do **ProductDescription** table que satisfazem a condição especificada em relação a **CatalogDescription xml** coluna de tipo.  
+-   A cláusula WHERE seleciona somente as linhas da tabela **ProductDescription** que atendem à condição especificada na coluna do tipo **CatalogDescription xml**.  
   
--   O **exist ()** método na cláusula WHERE retornará 1 (verdadeiro) se o XML não incluir nenhum <`Specifications`> elemento. Observe o uso do [not () function (XQuery)](../../xquery/functions-on-boolean-values-not-function.md).  
+-   O método **exist()** na cláusula WHERE retorna 1 (Verdadeiro) se o XML não inclui nenhum elemento <`Specifications`>. Observe o uso da [função not() (XQuery)](../../xquery/functions-on-boolean-values-not-function.md).  
   
--   O [função SQL: Column (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) função é usada para exibir o valor de uma coluna não XML.  
+-   A função [sql:column() (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) é usada para obter o valor de uma coluna não XML.  
   
 -   Essa consulta retorna um conjunto de linhas vazias.  
   
- A consulta especifica **Query ()** e **exist ()** métodos de tipo de dados xml e esses dois métodos declaram os mesmos namespaces no prólogo da consulta. Nesse caso, é possível usar WITH XMLNAMESPACES para declarar o prefixo e usá-lo na consulta.  
+ A consulta especifica os métodos **query()** e **exist()** do tipo de dados xml e os dois métodos declaram os mesmos namespaces no prólogo da consulta. Nesse caso, é possível usar WITH XMLNAMESPACES para declarar o prefixo e usá-lo na consulta.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -160,11 +160,11 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML DML &#40;linguagem de manipulação de dados XML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Permissões de banco de dados GRANT (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT do banco de dados (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,7 +63,7 @@ permission | ALL [ PRIVILEGES ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  ALL  
@@ -75,7 +75,7 @@ permission | ALL [ PRIVILEGES ]
  WITH GRANT OPTION  
  Indica que o principal também terá a capacidade de conceder a permissão especificada a outros principais.  
   
- AS \<database_principal > especifica uma entidade da qual o principal que executa esta consulta deriva seu direito de conceder a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de conceder a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  
@@ -84,34 +84,34 @@ permission | ALL [ PRIVILEGES ]
  Especifica uma função de banco de dados.  
   
  *Application_role*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Especifica uma função de aplicativo.  
   
  *Database_user_mapped_to_Windows_User*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um usuário do Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um grupo do Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um certificado.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para uma chave assimétrica.  
   
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
@@ -133,11 +133,11 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br />**Aplica-se a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
-|ALTERAR ALGUMA BIBLIOTECA EXTERNA <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
+|ALTERAR QUALQUER BIBLIOTECA EXTERNA <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|  
 |ALTER ANY MASK|CONTROL|CONTROL SERVER|  
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|  
@@ -181,7 +181,7 @@ permission | ALL [ PRIVILEGES ]
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
-|DELETE|CONTROL|CONTROL SERVER|  
+|Delete (excluir)|CONTROL|CONTROL SERVER|  
 |Execute|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|   
 |INSERT|CONTROL|CONTROL SERVER|  
@@ -221,7 +221,7 @@ permission | ALL [ PRIVILEGES ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-granting-permission-to-create-tables"></a>A. Concedendo permissão para criar tabelas  
- O exemplo a seguir concede `CREATE TABLE` permissão a `AdventureWorks` banco de dados para o usuário `MelanieK`.  
+ O exemplo a seguir concede a permissão `CREATE TABLE` no banco de dados `AdventureWorks` ao usuário `MelanieK`.  
   
 ```  
 USE AdventureWorks;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-granting-showplan-permission-to-an-application-role"></a>B. Concedendo a permissão SHOWPLAN a uma função de aplicativo  
  O exemplo a seguir concede a permissão `SHOWPLAN` no banco de dados `AdventureWorks2012` à função de aplicativo `AuditMonitor`.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  
@@ -249,8 +249,8 @@ GRANT CREATE VIEW TO CarmineEs WITH GRANT OPTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="lat-geography-data-type"></a>Lat (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  A propriedade de latitude do **geografia** instância.  
+  A propriedade de latitude da instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- No modelo OpenGIS, Lat só é definido em **geografia** instâncias composto de um único ponto. Essa propriedade retornará NULL se **geografia** instâncias contêm mais de um único ponto. Essa propriedade é exata e somente leitura.  
+ No modelo OpenGIS, Lat só é definida nas instâncias de **geografia** compostas por um único ponto. Essa propriedade retornará NULL se instâncias de **geography** contiverem mais de um ponto. Essa propriedade é exata e somente leitura.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo cria um ponto e retorna a latitude do ponto.  
@@ -59,7 +59,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Lat;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

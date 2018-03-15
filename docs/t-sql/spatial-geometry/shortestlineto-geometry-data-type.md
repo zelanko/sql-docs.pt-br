@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna um **LineString** instância com dois pontos que representam a distância mais curta entre as duas **geometria** instâncias. O comprimento do **LineString** instância retornada é a distância entre os dois **geometria** instâncias.
+Retorna uma instância de **LineString** com dois pontos que representam a distância mais curta entre as duas instâncias de **geometria**. O comprimento da instância de **LineString** retornado é a distância entre as duas instâncias de **geometria**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,15 +42,15 @@ Retorna um **LineString** instância com dois pontos que representam a distânci
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_other*  
- A segunda **geometria** instância chamada **geometria** instância está tentando determinar a distância mais curta.  
+ A segunda instância de **geometry** para a qual a instância de **geometry** de chamada está tentando determinar a distância mais curta.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- O método retorna um **LineString** instância com pontos de extremidade nas bordas dos dois sem interseção **geometria** instâncias que estão sendo comparadas. O comprimento do **LineString** é igual a distância mais curta entre as duas **geometria** instâncias. Vazio **LineString** instância é retornada quando as duas **geometria** instâncias se cruzam entre si.  
+ O método retorna uma instância de **LineString** com pontos de extremidade nas bordas das duas instâncias de **geometria** sem intersecção que estão sendo comparadas. O comprimento de **LineString** retornado é igual à distância mais curta entre as duas instâncias de **geometria**. Uma instância de **LineString** vazia é retornada quando as duas instâncias de **geometria** se interseccionam.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -72,8 +72,8 @@ Retorna um **LineString** instância com dois pontos que representam a distânci
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [ShortestLineTo &#40;geography Data Type&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [ShortestLineTo &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

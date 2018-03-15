@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de ponto de extremidade (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de ponto de extremidade (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em um ponto de extremidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- NO ponto de EXTREMIDADE **::***endpoint_name*  
- Especifica o ponto de extremidade no qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária.  
+ ON ENDPOINT **::***endpoint_name*  
+ Especifica o ponto de extremidade no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
- PARA \<server_principal >  
+ TO \<server_principal>  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual a permissão está sendo negada.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
   
-## <a name="remarks"></a>Comentários  
- As permissões no escopo do servidor podem ser negadas somente quando o banco de dados atual é **mestre**.  
+## <a name="remarks"></a>Remarks  
+ As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é **mestre**.  
   
- Informações sobre pontos de extremidade são visíveis no [Endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) exibição do catálogo. Informações sobre permissões de servidor são visíveis no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição de catálogo e obter informações sobre as entidades de servidor é visível no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ As informações sobre pontos de extremidade são visíveis na exibição do catálogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Um ponto de extremidade é um protegível em nível de servidor. As permissões mais específicas e limitadas que podem ser negadas em um ponto de extremidade são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -103,7 +103,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Negando a permissão VIEW DEFINITION em um ponto de extremidade  
- O exemplo a seguir nega `VIEW DEFINITION` permissão no ponto de extremidade `Mirror7` para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon `ZArifin`.  
+ O exemplo a seguir nega permissão `VIEW DEFINITION` no ponto de extremidade `Mirror7` ao logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
   
 ```  
 USE master;  
@@ -121,12 +121,12 @@ DENY TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [REVOGAR permissões de ponto de extremidade &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [Permissões REVOKE do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Exibições do catálogo de pontos de extremidade &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys. Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Exibições do catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

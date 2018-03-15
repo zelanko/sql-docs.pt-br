@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-table-transact-sql-identity-property"></a>Criar tabela (Transact-SQL) IDENTITY (propriedade)
+# <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Propriedade)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Cria uma coluna de identidade em uma tabela. Esta propriedade é usada com as instruções CREATE TABLE e ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  A propriedade IDENTITY é diferente do SQL-DMO **identidade** propriedade que expõe a propriedade de identidade de linha de uma coluna.  
+>  A propriedade IDENTITY é diferente da propriedade**Identity** de SQL-DMO que expõe a propriedade de identidade de linha de uma coluna.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,15 +52,15 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *semente*  
+ *seed*  
  É o valor usado para a primeira linha carregada na tabela.  
   
- *incremento*  
+ *increment*  
  É o valor de incremento adicionado ao valor de identidade da linha anterior que foi carregada.  
   
  Você deve especificar seed e increment, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As colunas de identidade podem ser usadas para gerar valores de chave. A propriedade de identidade em uma coluna garante o seguinte:  
   
 -   Cada novo valor é gerado com base nos valores de seed e increment atuais.  
@@ -69,13 +69,13 @@ IDENTITY [ (seed , increment) ]
   
  A propriedade de identidade em uma coluna não garante o seguinte:  
   
--   **Exclusividade do valor** – a exclusividade deve ser imposta usando um **chave primária** ou **UNIQUE** restrição ou **UNIQUE** índice.  
+-   **Exclusividade do valor** – a exclusividade deve ser imposta usando um **PRIMARY KEY** ou restrição **UNIQUE** ou índice **UNIQUE**.  
   
--   **Valores consecutivos em uma transação** – uma transação inserindo várias linhas não é garantida para obter valores consecutivos para as linhas, porque as demais inserções simultâneas podem ocorrer na tabela. Se os valores devem ser consecutivos, em seguida, a transação deve usar um bloqueio exclusivo na tabela ou usar o **SERIALIZABLE** nível de isolamento.  
+-   **Valores consecutivos em uma transação** – não é garantido que uma transação que insere várias linhas vá obter valores consecutivos para as linhas porque as demais inserções simultâneas podem ocorrer na tabela. Se os valores precisarem ser consecutivos, a transação deverá usar um bloqueio exclusivo na tabela ou usar o nível de isolamento **SERIALIZABLE**.  
   
--   **Valores consecutivos após a reinicialização do servidor ou outras falhas** –[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar em cache os valores de identidade por motivos de desempenho e alguns dos valores atribuídos podem ser perdidas durante uma reinicialização de falha ou o servidor de banco de dados. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usando um gerador de sequência com a **NOCACHE** opção pode limitar os intervalos de transações que nunca são confirmadas.  
+-   **Valores consecutivos após o reinício do servidor ou outras falhas** – o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar em cache valores de identidade por questões de desempenho e alguns dos valores atribuídos podem ser perdidos durante uma falha de banco de dados ou uma reinicialização do servidor. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usar um gerador de sequência com a opção **NOCACHE** pode limitar os intervalos de transações que nunca são confirmadas.  
   
--   **Reutilização de valores** – para uma determinada propriedade de identidade com seed/increment específicos, a identidade de valores não são reutilizados pelo mecanismo. Se uma instrução de inserção específica falhar ou se a instrução de inserção for revertida, os valores de identidade consumidos serão perdidos e não serão gerados novamente. Isso pode resultar em intervalos quando os valores de identidade subsequentes são gerados.  
+-   **Reutilização de valores** – para determinada propriedade de identidade com seed/increment específicos, os valores de identidade não são reutilizados pelo mecanismo. Se uma instrução de inserção específica falhar ou se a instrução de inserção for revertida, os valores de identidade consumidos serão perdidos e não serão gerados novamente. Isso pode resultar em intervalos quando os valores de identidade subsequentes são gerados.  
   
  Essas restrições são parte do design para melhorar o desempenho, e por serem aceitáveis em muitas situações comuns. Se você não pode usar valores de identidade devido a essas restrições, crie uma tabela separada contendo um valor atual e gerencie o acesso à tabela e a atribuição de número com seu aplicativo.  
   
@@ -83,7 +83,7 @@ IDENTITY [ (seed , increment) ]
   
  Apenas uma coluna de identidade pode ser criada por tabela.  
   
- Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Definir o incremento ou semente com um valor diferente de 1 resultados no seguinte erro: O uso de semente e incremento valores diferentes de 1 não há suporte para tabelas com otimização de memória.  
+ Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Configurar seed ou increment como um valor diferente de 1 resulta no seguinte erro: o uso de valores seed e increment diferentes de 1 não é compatível com tabelas com otimização de memória.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -173,16 +173,16 @@ SELECT @minidentval = MIN($IDENTITY) FROM img
 SET IDENTITY_INSERT img OFF;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [IDENTIDADE &#40; Função &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENTITY &#40;função&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET IDENTITY_INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
+ [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
  [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o anel exterior de uma **geometria** instância que é um polígono.
+Retorna o anel exterior de uma instância de **geometry**, que é um polígono.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,17 +44,17 @@ Retorna o anel exterior de uma **geometria** instância que é um polígono.
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Abra o tipo Geospatial Consortium (OGC): **LineString**  
+ Tipo do OGC (Open Geospatial Consortium): **LineString**  
   
 ## <a name="remarks"></a>Remarks  
- Este método retorna **nulo** se o **geometria** instância não é um polígono.  
+ Esse método retorna **nulo** se a instância de **geometry** não é um polígono.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um `Polygon` instância e usa `STExteriorRing()` para retornar o anel exterior do polígono como uma **LineString**.  
+ O exemplo a seguir cria uma instância de `Polygon` e usa `STExteriorRing()` para retornar o anel exterior do polígono como uma **LineString**.  
   
 ```  
 DECLARE @g geometry;  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STExteriorRing().ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

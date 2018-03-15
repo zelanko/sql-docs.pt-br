@@ -42,24 +42,24 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_operand*  
- É um **geometria** coluna de tipo de tabela que contém o conjunto de **geometria** objetos no qual executar uma operação de união.  
+ É uma coluna de tabela do tipo **geometria** que contém o conjunto de objetos de **geometria** no qual uma operação de união deve ser executada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
 ## <a name="exceptions"></a>Exceções  
- Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Gera uma `FormatException` quando há valores de entrada que não são válidos. Confira [STIsValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>Remarks  
- Método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ O método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Confira [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Método ignora **nulo** entradas.  
+ O método ignora entradas **nulas**.  
   
 > [!NOTE]  
->  Método retornará **nulo** se todos os valores inseridos forem **nulo**.  
+>  O método retornará **nulo** se todos os valores inseridos forem **nulos**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a união de um conjunto de **geometria** objetos em uma variável de tabela.  
+ O exemplo a seguir retorna a união de um conjunto de objetos de **geometria** em uma variável de tabela.  
  ```
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 
@@ -75,7 +75,7 @@ UnionAggregate ( geometry_operand )
  FROM @Geom;
 ``` 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

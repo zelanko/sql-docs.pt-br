@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna a representação do Open Geospatial Consortium (OGC) Well-Known Binary (WKB) de um **geografia** instância.  
+  Retorna a representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium) de uma instância de **geography**.  
   
- Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,15 +46,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **varbinary (max)**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Tipo de retorno CLR: **SqlBytes**  
+ Tipo de retorno do CLR: **SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
- O tipo OGC de uma **geografia** instância pode ser determinada invocando [stgeometrytype ()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
+ O tipo OGC de uma instância de **geography** pode ser determinado com a invocação de [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `STAsBinary()` para criar um `LineString``geography` da instância de (-122.360, 47.656) a (-122.343, -47.656) de texto. Retorna, então, o resultado em WKB.  
+ O exemplo a seguir usa `STAsBinary()` para criar uma instância de `LineString``geography` de (-122.360, 47.656) a (-122.343, -47.656) com base no texto. Retorna, então, o resultado em WKB.  
   
 ```  
 DECLARE @g geography;  
@@ -62,7 +62,7 @@ SET @g = geography::STGeomFromText('LINESTRING( -122.360 47.656, -122.343 47.656
 SELECT @g.STAsBinary();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="numrings-geography-data-type"></a>NumRings (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o número total de anéis em uma **polígono** instância. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geografia** digite, externo e internos anéis não são diferenciados, pois qualquer anel pode ser usado como anel externo.  
+  Retorna o número total de anéis em uma instância de **polígono**. No tipo de **geografia** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os anéis externos e internos não são diferenciados, pois qualquer anel pode ser considerado como externo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>Tipo de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **int**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método retornará NULL se não for um **polígono** instância e retornará 0 se a instância está vazia. Esse método é preciso.  
+ Esse método retornará NULL se essa não for uma instância de **polígono** e retornará 0 se a instância estiver vazia. Esse método é preciso.  
   
 ## <a name="examples"></a>Exemplos  
  Esse exemplo cria uma instância `Polygon` com dois anéis e confirma que tem dois anéis.  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.NumRings();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

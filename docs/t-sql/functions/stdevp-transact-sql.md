@@ -67,22 +67,22 @@ STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  Especifica que cada valor exclusivo é considerado.  
   
  *expressão*  
- É um numérico [expressão](../../t-sql/language-elements/expressions-transact-sql.md). Funções de agregação e subconsultas não são permitidas. *expressão* é uma expressão da categoria de tipo de dados numéricos exatos de ou aproximado, exceto para o **bit** tipo de dados.  
+ É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) numérica. Funções de agregação e subconsultas não são permitidas. *expression* é uma expressão da categoria de tipo de dados numérico exato ou numérico aproximado, com exceção do tipo de dados **bit**.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições para o qual a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é necessário. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se STDEVP for usado em todos os itens de uma instrução SELECT, cada valor do conjunto de resultados será incluído no cálculo. STDEVP pode ser usado exclusivamente com colunas numéricas. Valores nulos são ignorados.  
   
  STDEVP é uma função determinística quando usada sem as cláusulas OVER e ORDER BY. É não determinística quando especificada com as cláusulas OVER e ORDER BY. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stdevp"></a>R: usando STDEVP  
+### <a name="a-using-stdevp"></a>A: Usando STDEVP  
  O exemplo a seguir retorna o desvio padrão para a população de todos os valores de gratificação da tabela `SalesPerson` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -91,9 +91,9 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>B: usando STDEVP  
+### <a name="b-using-stdevp"></a>B: Usando STDEVP  
  O exemplo a seguir retorna o `STDEVP` dos valores de cota de vendas na tabela `dbo.FactSalesQuota`. A primeira coluna contém o desvio padrão de todos os valores distintos e a segunda coluna contém o desvio padrão de todos os valores, incluindo valores duplicados.  
   
 ```  
@@ -112,8 +112,8 @@ Distinct_Values   All_Values
 397676.79         397226.44
 ```  
   
-### <a name="c-using-stdevp-with-over"></a>C. Usando STDEVP com failover  
- O exemplo a seguir retorna o `STDEVP` dos valores de cota de vendas para cada trimestre em um ano calendário. Observe que `ORDER BY` na cláusula `OVER` ordena `STDEVP`, e que `ORDER BY` da instrução `SELECT` ordena o conjunto de resultados.  
+### <a name="c-using-stdevp-with-over"></a>C. Usando STDEVP com OVER  
+ O exemplo a seguir retorna o `STDEVP` dos valores de cota de vendas para cada trimestre em um ano civil. Observe que `ORDER BY` na cláusula `OVER` ordena `STDEVP`, e que `ORDER BY` da instrução `SELECT` ordena o conjunto de resultados.  
   
 ```  
 -- Uses AdventureWorks  
@@ -136,9 +136,9 @@ Year  Quarter  SalesQuota              StdDeviation
 2002  4        154000.0000             34426.55
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções de agregação &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

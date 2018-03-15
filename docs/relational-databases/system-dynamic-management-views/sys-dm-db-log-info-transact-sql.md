@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/16/2017
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,11 +27,11 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 661647715d2fcff3a4821250dfaa65e0fea07d6e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 56064f19713bf3e5da29109520045762474d4539
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sys.dm_db_log_info ( database_id )
 
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|ID do banco de dados.|
+|database_id|**Int**|ID do banco de dados.|
 |file_id|**smallint**|Id do arquivo de log de transações.|  
 |vlf_begin_offset|**bigint** |Deslocamento local do [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) desde o início do arquivo de log de transações.|
 |vlf_size_mb |**float** |[arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) tamanho em MB, arredondado para 2 casas decimais.|     
 |vlf_sequence_number|**bigint** |[arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) número na ordem de criação de sequência. Usado para identificar exclusivamente VLFs no arquivo de log.|
 |vlf_active|**bit** |Indica se [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) está em uso ou não. <br />0 - VLF não está em uso.<br />1 - VLF está ativa.|
-|vlf_status|**int** |Status de [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Os valores possíveis incluem <br />0 - VLF está inativo <br />1 - VLF é inicializado, mas não utilizado <br /> 2 - VLF está ativa.|
+|vlf_status|**Int** |Status de [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Os valores possíveis incluem <br />0 - VLF está inativo <br />1 - VLF é inicializado, mas não utilizado <br /> 2 - VLF está ativa.|
 |vlf_parity|**tinyint** |Paridade de [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Usada internamente para determinar o final do log em um VLF.|
 |vlf_first_lsn|**nvarchar(48)** |[Log (LSN) do número de sequência](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) do primeiro registro de log no [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar(48)** |[Log (LSN) do número de sequência](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) do log de eventos que criou o [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
@@ -85,23 +85,37 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-status-of-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Determinando o status da última `VLF` no log de transações antes de reduzir o arquivo de log
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Determinando a posição da última `VLF` no log de transações antes de reduzir o arquivo de log
 
-A consulta a seguir pode ser usada para determinar o status do último VLF antes de executar shrinkfile no log de transações para determinar se o log de transações pode ser reduzido.
+A consulta a seguir pode ser usada para determinar a posição do último VLF ativo antes de executar shrinkfile no log de transações para determinar se o log de transações pode ser reduzido.
 
 ```sql
 USE AdventureWorks2016
 GO
 
-SELECT TOP 1 DB_NAME(database_id) AS "Database Name", file_id, vlf_size_mb, vlf_sequence_number, vlf_active, vlf_status
-FROM sys.dm_db_log_info(DEFAULT)
-ORDER BY vlf_sequence_number DESC
+;WITH cte_vlf AS (
+SELECT ROW_NUMBER() OVER(ORDER BY vlf_begin_offset) AS vlfid, DB_NAME(database_id) AS [Database Name], vlf_sequence_number, vlf_active, vlf_begin_offset, vlf_size_mb
+    FROM sys.dm_db_log_info(DEFAULT)),
+cte_vlf_cnt AS (SELECT [Database Name], COUNT(vlf_sequence_number) AS vlf_count,
+    (SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 0) AS vlf_count_inactive,
+    (SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS vlf_count_active,
+    (SELECT MIN(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_min_vlf_active,
+    (SELECT MIN(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS min_vlf_active,
+    (SELECT MAX(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_max_vlf_active,
+    (SELECT MAX(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS max_vlf_active
+    FROM cte_vlf
+    GROUP BY [Database Name])
+SELECT [Database Name], vlf_count, min_vlf_active, ordinal_min_vlf_active, max_vlf_active, ordinal_max_vlf_active,
+((ordinal_min_vlf_active-1)*100.00/vlf_count) AS free_log_pct_before_active_log,
+((ordinal_max_vlf_active-(ordinal_min_vlf_active-1))*100.00/vlf_count) AS active_log_pct,
+((vlf_count-ordinal_max_vlf_active)*100.00/vlf_count) AS free_log_pct_after_active_log
+FROM cte_vlf_cnt
+GO
 ```
 
-
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

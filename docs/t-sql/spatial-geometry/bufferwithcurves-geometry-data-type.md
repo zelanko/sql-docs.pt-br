@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de dados geometria)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Retorna um **geometria** instância que representa o conjunto de todos os pontos cuja distância da chamada **geometria** instância é menor que ou igual a *distância* parâmetro.  
+  Retorna uma instância de **geometry** que representa o conjunto de todos os pontos cuja distância da instância de **geometry** de chamada é menor ou igual ao parâmetro *distance*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,21 +42,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *distance*  
- É um **float** indicando a distância máxima em que os pontos que formam o buffer pode ser do **geometria** instância.  
+ É um **float** que indica a distância máxima em que os pontos que formam o buffer podem estar da instância de **geometry**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
 Tipo de retorno do SQL Server: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
- Os critérios a seguir lançará um **ArgumentException**.  
+ Os critérios a seguir gerarão uma **ArgumentException**.  
   
--   Nenhum parâmetro é transmitido ao método, como`@g.BufferWithCurves()`  
+-   Nenhum parâmetro é passado ao método, como `@g.BufferWithCurves()`  
   
--   Um parâmetro não numérico é transmitido ao método, como`@g.BufferWithCurves('a')`  
+-   Um parâmetro não numérico é passado para o método, como `@g.BufferWithCurves('a')`  
   
--   **NULO** é transmitido ao método, como`@g.BufferWithCurves(NULL)`  
+-   **NULL** é passado ao método, como `@g.BufferWithCurves(NULL)`  
   
 ## <a name="remarks"></a>Remarks  
  A ilustração a seguir mostra um exemplo de uma instância de geometria retornado por este método.  
@@ -67,17 +67,17 @@ Tipo de retorno do SQL Server: **geometry**
   
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
 |--------------------|---------------------|---------------------------|  
-|distância < 0|Zero ou um|Vazio **GeometryCollection** instância|  
-|distância < 0|Dois ou mais|Um **CurvePolygon** ou **GeometryCollection** instância com um buffer negativo. **Observação:** um buffer negativo pode criar vazio **GeometryCollection**|  
-|distância = 0|Todas as dimensões|Cópia de invocando **geometria** instância|  
-|distância > 0|Todas as dimensões|**CurvePolygon** ou **GeometryCollection** instância|  
+|distância < 0|Zero ou um|Instância de **GeometryCollection** vazia|  
+|distância < 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo. **Observação:** um buffer negativo pode criar uma **GeometryCollection** vazia|  
+|distância = 0|Todas as dimensões|Cópia da instância de **geometry** de invocação|  
+|distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   
 > [!NOTE]  
->  Como *distância* é um **float**, um valor muito pequeno pode equivaler a zero nos cálculos. Quando isso ocorre, uma cópia da chamada **geometria** instância será retornada. Consulte [float e real &#40; Transact-SQL &#41; ](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Como *distance* é um **float**, um valor muito pequeno pode ser igualado a zero nos cálculos. Quando isto ocorre, uma cópia da instância de **geometry** de chamada é retornada. Consulte [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
- Um buffer negativo remove todos os pontos entre a distância determinada do limite da geometria. A ilustração a seguir mostra um buffer negativo como a área sombreada mais clara do círculo. A linha pontilhada é o limite do polígono original e a linha sólida é o limite do polígono resultante.  
+ Um buffer negativo remove todos os pontos incluídos na distância especificada do limite da geometria. A ilustração a seguir mostra um buffer negativo como a área sombreada mais clara do círculo. A linha pontilhada é o limite do polígono original e a linha sólida é o limite do polígono resultante.  
   
- Se um **cadeia de caracteres** parâmetro é passado para o método, em seguida, ele será convertido em um **float** ou lançará um `ArgumentException`.  
+ Se um parâmetro **string** for passado ao método, ele será convertido em um **float** ou gerará uma `ArgumentException`.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -98,17 +98,17 @@ Tipo de retorno do SQL Server: **geometry**
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Chamando BufferWithCurves() com um valor de parâmetro < 0 que retorna uma GeometryCollection vazia  
- O exemplo a seguir mostra o que ocorre quando o *distância* parâmetro for igual a -2:  
+ O seguinte exemplo mostra o que ocorre quando o parâmetro *distance* é igual a -2:  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- Isso **selecione** instrução retorna`GEOMETRYCOLLECTION EMPTY`  
+ Esta instrução **SELECT** retorna `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Chamando BufferWithCurves() com um valor de parâmetro = 0  
- O exemplo a seguir retorna uma cópia da chamada **geometria** instância:  
+ O seguinte exemplo retorna uma cópia da instância de **geometry** de chamada:  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -116,7 +116,7 @@ Tipo de retorno do SQL Server: **geometry**
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. Chamando BufferWithCurves() com um valor de parâmetro diferente de zero que é extremamente pequeno  
- O exemplo a seguir também retorna uma cópia da chamada **geometria** instância:  
+ O seguinte exemplo também retorna uma cópia da instância de **geometry** de chamada:  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -160,8 +160,8 @@ Tipo de retorno do SQL Server: **geometry**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- Os dois primeiros **selecione** instruções retornam uma `GeometryCollection` instância porque o parâmetro *distância* é menor ou igual a 1/2 a distância entre os dois pontos (1 1) e (1 4). O terceiro **selecione** instrução retorna um `CurvePolygon` instância porque as instâncias armazenadas em buffer dos dois pontos (1 1) e (1 4) se sobrepõem.  
+ As duas primeiras instruções **SELECT** retornam uma instância de `GeometryCollection` porque o parâmetro *distance* é menor ou igual a 1/2 da distância entre os dois pontos, (1 1) e (1 4). A terceira instrução **SELECT** retorna uma instância de `CurvePolygon` porque as instâncias armazenadas em buffer dos dois pontos, (1 1) e (1 4), se sobrepõem.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

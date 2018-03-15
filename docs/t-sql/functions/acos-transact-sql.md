@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Uma função matemática que retorna o ângulo em radianos, cujo cosseno é especificado **float** expressão; também chamada de arco-cosseno.
+Uma função matemática que retorna o ângulo, em radianos, cujo cosseno é a expressão **float** especificada; também chamada de arco cosseno.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,7 +48,7 @@ ACOS ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *float_expression*  
-É uma expressão do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**, com um valor de -1 a 1. Valores fora deste intervalo retornam NULL e relatam um erro de domínio.
+É uma expression do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**, com um valor de -1 a 1. Valores fora deste intervalo retornam NULL e relatam um erro de domínio.
   
 ## <a name="return-types"></a>Tipos de retorno  
 **float**
@@ -72,7 +72,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 O exemplo a seguir retorna o ACOS do número especificado.
   
@@ -92,7 +92,7 @@ The ACOS of the number is: 3.14159
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Funções](../../t-sql/functions/functions.md)
   
   

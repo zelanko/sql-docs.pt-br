@@ -48,7 +48,7 @@ FLOOR ( numeric_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- É uma expressão da categoria de tipo de dados numéricos exatos de ou aproximado, exceto para o **bit** tipo de dados.  
+ É uma expression da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o mesmo tipo que *numeric_expression*.  
@@ -60,21 +60,21 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- O resultado é a parte do valor calculado no mesmo tipo de dados como inteiro *numeric_expression*.  
+ O resultado é a parte inteira do valor calculado no mesmo tipo de dados que *numeric_expression*.  
   
 ```  
 ---------      ---------     -----------  
 123            -124          123.0000     
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir mostra positivo negativo numérico, numéricos e valores com o `FLOOR` função.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir mostra valores numéricos positivos, numéricos negativos e valores com a função `FLOOR`.  
   
 ```  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- O resultado é a parte do valor calculado no mesmo tipo de dados como inteiro *numeric_expression*.  
+ O resultado é a parte inteira do valor calculado no mesmo tipo de dados que *numeric_expression*.  
   
  ```
  -----   ---------    -----------  
@@ -82,8 +82,8 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
  123     -124         123
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

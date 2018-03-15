@@ -1,5 +1,5 @@
 ---
-title: Filtro (tipo de dados geometry) | Microsoft Docs
+title: Filter (tipo de dados geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geometry-data-type"></a>Filter (tipo de dados de geometria)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Um método que oferece um método de interseção rápido, somente de índice para determinar se um **geometria** instância intercepta outra **geometria** instância, supondo que um índice está disponível.
+Um método que oferece um maneira de interseção rápida e somente de índice para determinar se uma instância de **geometry** intersecciona outra instância de **geometry**, considerando que um índice esteja disponível.
   
-Retornará 1 se uma **geometria** instância intercepta potencialmente outra **geometria** instância. Esse método pode gerar um retorno de falso positivo e o resultado exato poderá depender do plano. Retorna um valor 0 preciso (retorno verdadeiro negativo) se não houver nenhuma intersecção de **geometria** instâncias encontradas.
+Retornará 1 se uma instância de **geometry** possivelmente interseccionar outra instância de **geometry**. Esse método pode gerar um retorno falso positivo e o resultado exato poderá depender do plano. Retornará um valor 0 preciso (retorno verdadeiro negativo) se não for localizada nenhuma intersecção de instâncias de **geometria**.
   
-Em casos em que um índice não está disponível ou não é usado, o método retornará os mesmos valores **stintersects ()** quando chamado com os mesmos parâmetros.
+Nos casos em que um índice não estiver disponível ou não for usado, o método retornará os mesmos valores que **STIntersects()** quando for chamado com os mesmos parâmetros.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,12 +50,12 @@ Em casos em que um índice não está disponível ou não é usado, o método re
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância a ser comparada com a instância na qual Filter() é invocado.  
+ É outra instância de **geometry** a ser comparada com a instância na qual Filter() é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método não é determinista e não é preciso.  
@@ -81,7 +81,7 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias de geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   

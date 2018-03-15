@@ -57,28 +57,28 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  SET ANSI_WARNINGS afeta as seguintes condições:  
   
 -   Quando definida como ON, se forem exibidos valores nulos em funções de agregação, como SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT, será gerada uma mensagem de aviso. Quando definido como OFF, nenhum aviso é emitido.  
   
--   Quando definida como ON, os erros de estouro aritmético e de divisão por zero fazem a instrução ser retornada e uma mensagem de erro é gerada. Quando definida como OFF, os erros de estouro aritmético e de divisão por zero fazem com que valores nulos sejam retornados. O comportamento em que um erro de estouro aritmético e de divisão por zero faz com que valores nulos sejam retornados ocorre se uma inserção ou atualização é tentada um **caracteres**, Unicode, ou **binário** coluna na qual o comprimento novo valor excede o tamanho máximo da coluna. Se SET ANSI_WARNINGS é ON, o INSERT ou UPDATE é cancelada conforme especificado pelo padrão ISO. Espaços em branco à direita são ignorados em colunas de caracteres e valores nulos à direita são ignorados em colunas binárias. Quando OFF, os dados são truncados para o tamanho da coluna e a instrução obtém êxito.  
+-   Quando definida como ON, os erros de estouro aritmético e de divisão por zero fazem a instrução ser retornada e uma mensagem de erro é gerada. Quando definida como OFF, os erros de estouro aritmético e de divisão por zero fazem com que valores nulos sejam retornados. O comportamento em que um erro de estouro aritmético e ou divisão por zero faz valores nulos serem retornados ocorrerá se houver uma tentativa de INSERT ou UPDATE em uma coluna **character**, Unicode ou **binary** na qual a extensão do novo valor exceda o tamanho máximo da coluna. Se SET ANSI_WARNINGS está ON, INSERT ou UPDATE é cancelada, como especificado pelo padrão ISO. Espaços em branco à direita são ignorados em colunas de caracteres e valores nulos à direita são ignorados em colunas binárias. Quando OFF, os dados são truncados para o tamanho da coluna e a instrução obtém êxito.  
   
     > [!NOTE]  
-    >  Quando o truncamento ocorre em qualquer conversão para ou do **binário** ou **varbinary** dados, nenhum aviso ou erro são emitidos, independentemente das opções SET.  
+    >  Quando o truncamento ocorre em qualquer conversão de ou para dados **binary** ou **varbinary**, nenhum aviso ou erro é emitido, independentemente das opções SET.  
   
     > [!NOTE]  
-    >  O ANSI_WARNINGS não é cumprido quando os parâmetros passam no procedimento armazenado, em uma função definida pelo usuário ou quando declaram ou definem variáveis em uma instrução de lote. Por exemplo, se a variável é definida como **caractere (3)**e definido como um valor maior do que três caracteres, os dados são truncados para o tamanho definido e a inserção ou atualização instrução tem sucesso.  
+    >  O ANSI_WARNINGS não é cumprido quando os parâmetros passam no procedimento armazenado, em uma função definida pelo usuário ou quando declaram ou definem variáveis em uma instrução de lote. Por exemplo, se a variável for definida como **char(3)** e, em seguida, configurada com um valor maior que três caracteres, os dados serão truncados até o tamanho definido e a instrução INSERT ou UPDATE terá êxito.  
   
  É possível usar a opção user options desp_configure para definir a configuração padrão para ANSI_WARNINGS em todas as conexões com o servidor. Para obter mais informações, consulte [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- SET ANSI_WARNINGS também deve ser ON quando você estiver criando ou manipulando índices em colunas computadas ou exibições indexadas. Se SET ANSI_WARNINGS for OFF, as instruções CREATE, UPDATE, INSERT e DELETE nas tabelas com índices em colunas computadas ou exibições indexadas falharão. Para obter mais informações sobre as configurações de opção SET com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre quando você uso das instruções SET" em [instruções SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ SET ANSI_WARNINGS também deve ser ON quando você estiver criando ou manipulando índices em colunas computadas ou exibições indexadas. Se SET ANSI_WARNINGS for OFF, as instruções CREATE, UPDATE, INSERT e DELETE nas tabelas com índices em colunas computadas ou exibições indexadas falharão. Para obter mais informações sobre as configurações da opção SET com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre o uso das instruções SET" em [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui a opção de banco de dados ANSI_WARNINGS. Ela é equivalente a SET ANSI_WARNINGS. Quando SET ANSI_WARNINGS é ON, são gerados erros ou avisos em erros de divisão por zero, erros de cadeia de caracteres muito longa para a coluna de banco de dados e outros erros semelhantes. Quando SET ANSI_WARNINGS é OFF, esses erros e avisos não estão gerados. O valor padrão no banco de dados modelo para SET ANSI_WARNINGS é OFF. Se não for especificado, a configuração ANSI_WARNINGS será aplicada. Se SET ANSI_WARNINGS for OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o valor da coluna is_ansi_warnings_on no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui a opção de banco de dados ANSI_WARNINGS. Ela é equivalente a SET ANSI_WARNINGS. Quando SET ANSI_WARNINGS é ON, são gerados erros ou avisos em erros de divisão por zero, erros de cadeia de caracteres muito longa para a coluna de banco de dados e outros erros semelhantes. Quando SET ANSI_WARNINGS é OFF, esses erros e avisos não estão gerados. O valor padrão no banco de dados modelo para SET ANSI_WARNINGS é OFF. Se não for especificado, a configuração ANSI_WARNINGS será aplicada. Se SET ANSI_WARNINGS for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o valor da coluna is_ansi_warnings_on na exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  SET ANSI_WARNINGS deve ser definido como ON para executar consultas distribuídas.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_WARNINGS como ON ao conectar-se. Isso pode ser configurado em fontes de dados ODBC, em atributos de conexão ODBC, definidas no aplicativo antes de conectar. O padrão para SET ANSI_WARNINGS é OFF para conexões de aplicativos DB-Library.  
+ O driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC e o Provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_WARNINGS como ON ao conectar. Isso pode ser configurado em fontes de dados ODBC, em atributos de conexão ODBC, definidas no aplicativo antes de conectar. O padrão para SET ANSI_WARNINGS é OFF para conexões de aplicativos DB-Library.  
   
  Quando SET ANSI_DEFAULTS é ON, SET ANSI_WARNINGS está habilitado.  
   
@@ -179,11 +179,11 @@ GO
 DROP TABLE T1  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

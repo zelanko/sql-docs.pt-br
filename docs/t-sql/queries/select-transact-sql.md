@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Recupera linhas do banco de dados e permite a seleção de uma ou várias linhas ou colunas de uma ou várias tabelas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A sintaxe completa da instrução SELECT é complexa, mas as cláusulas principais podem ser assim resumidas:  
+  Recupera linhas do banco de dados e permite a seleção de uma ou várias linhas ou colunas de uma ou várias tabelas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A sintaxe completa da instrução SELECT é complexa, mas as cláusulas principais podem ser assim resumidas:  
   
-[Com {[WITH XMLNAMESPACES,] [ \<common_table_expression >]}]
+[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
  SELECT *select_list* [ INTO *new_table* ]  
   
@@ -51,11 +51,11 @@ ms.lasthandoff: 01/25/2018
   
  [ GROUP BY *group_by_expression* ]  
   
- [Tendo *search_condition* ]  
+ [ HAVING *search_condition* ]  
   
- [ORDER BY *order_expression* [ASC | DESC]]  
+ [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
- A UNION, EXCEPT e INTERSECT operadores podem ser usados entre consultas para combinar ou comparar os resultados em um conjunto de resultados.  
+ Os operadores UNION, EXCEPT e INTERSECT podem ser usados entre consultas para combinar ou comparar os resultados em um único conjunto de resultados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -111,23 +111,23 @@ SELECT <select_criteria>
   
 |||  
 |-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[TENDO](../../t-sql/queries/select-having-transact-sql.md)|  
-|[Cláusula SELECT](../../t-sql/queries/select-clause-transact-sql.md)|[UNIÃO](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
+|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
+|[Cláusula SELECT](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[Cláusula INTO](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT e INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDENAR POR](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
+|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
 |[WHERE](../../t-sql/queries/where-transact-sql.md)|[Cláusula FOR](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[AGRUPAR POR](../../t-sql/queries/select-group-by-transact-sql.md)|[Cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md)|  
+|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[Cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md)|  
   
  A ordem das cláusulas na instrução SELECT é significativa. Qualquer uma das cláusulas opcionais pode ser omitida, mas quando elas são usadas devem aparecer na ordem apropriada.  
   
  As instruções SELECT serão permitidas em funções definidas pelo usuário apenas se as listas de seleção dessas instruções contiverem expressões que atribuam valores a variáveis que são locais a essas funções.  
   
- Um nome de quatro partes construído com a função OPENDATASOURCE como a parte do nome do servidor pode ser usado como uma origem de tabela sempre que um nome de tabela puder aparecer em uma instrução SELECT. Não é possível especificar um nome de quatro partes [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Um nome de quatro partes construído com a função OPENDATASOURCE como a parte do nome do servidor pode ser usado como uma origem de tabela sempre que um nome de tabela puder aparecer em uma instrução SELECT. Um nome de quatro partes não pode ser especificado para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Algumas restrições de sintaxe se aplicam a instruções SELECT que envolvem tabelas remotas.  
   
 ## <a name="logical-processing-order-of-the-select-statement"></a>Ordem de processamento lógico da instrução SELECT  
- As etapas a seguir mostram a ordem de processamento lógico ou a ordem de associação de uma instrução SELECT. Essa ordem determina quando os objetos definidos em uma etapa são disponibilizados para as cláusulas em etapas subsequentes. Por exemplo, se o processador de consulta puder ser associado (acessar) a tabelas ou exibições definidas na cláusula FROM, esses objetos e suas colunas serão disponibilizados para todas as etapas subsequentes. De modo oposto, como a cláusula SELECT é a etapa 8, qualquer alias de coluna ou coluna derivada definida naquela cláusula não poderá ser referenciada por cláusulas precedentes. Porém, poderão ser referenciadas por cláusulas subsequentes, como a cláusula ORDER BY. A execução física real da instrução é determinada pelo processador de consulta e a ordem pode variar desta lista.  
+ As etapas a seguir mostram a ordem de processamento lógico ou a ordem de associação de uma instrução SELECT. Essa ordem determina quando os objetos definidos em uma etapa são disponibilizados para as cláusulas em etapas subsequentes. Por exemplo, se o processador de consulta puder ser associado (acessar) a tabelas ou exibições definidas na cláusula FROM, esses objetos e suas colunas serão disponibilizados para todas as etapas subsequentes. De modo oposto, como a cláusula SELECT é a etapa 8, qualquer alias de coluna ou coluna derivada definida naquela cláusula não poderá ser referenciada por cláusulas precedentes. Porém, poderão ser referenciadas por cláusulas subsequentes, como a cláusula ORDER BY. A execução física real da instrução é determinada pelo processador de consulta e a ordem pode variar com base nesta lista.  
   
 1.  FROM  
 2.  ON  
@@ -144,16 +144,16 @@ SELECT <select_criteria>
 > [!WARNING]
 > A sequência anterior geralmente é verdadeira. No entanto, há casos incomuns em que a sequência pode ser diferente.
 >
-> Por exemplo, suponha que você tem um índice clusterizado em uma exibição e o modo de exibição exclui algumas linhas de tabela e lista de colunas SELECT da exibição usa uma CONVERSÃO de um tipo de dados é alterado *varchar* para *inteiro*. Nessa situação, CONVERT pode ser executada antes da cláusula WHERE executa. Incomum de fato. Geralmente, há uma maneira de modificar sua exibição para evitar a sequência diferente, se for importante em seu caso. 
+> Por exemplo, suponha que você tenha um índice clusterizado em uma exibição e a exibição exclui algumas linhas de tabela e lista de colunas SELECT da exibição usa um CONVERT que altera um tipo de dados de *varchar* para *integer*. Nessa situação, CONVERT pode ser executado antes da execução da cláusula WHERE. Isso é um tanto incomum. Geralmente, há uma maneira de modificar a exibição para evitar a sequência diferente, se isso é importante em seu caso. 
 
 ## <a name="permissions"></a>Permissões  
- A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação no **db_datareader** ou **db_owner** funções de banco de dados fixas ou **sysadmin** função de servidor fixa. Criar uma nova tabela usando **SELECTINTO** também requer o **CREATETABLE** permissão e o **ALTERSCHEMA** permissão no esquema que possui a nova tabela.  
+ A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação à função de banco de dados fixa **db_datareader** ou **db_owner** ou à função de servidor fixa **sysadmin**. A criação de uma nova tabela com **SELECTINTO** também exige a permissão **CREATETABLE** e a permissão **ALTERSCHEMA** no esquema que possui a nova tabela.  
   
 ## <a name="examples"></a>Exemplos:   
-Os exemplos a seguir usam o [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] banco de dados.
+O exemplo a seguir usa o banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Usando SELECT para recuperar linhas e colunas  
- Esta seção mostra três exemplos de código. Este primeiro exemplo de código retorna todas as linhas (nenhuma cláusula WHERE é especificada) e todas as colunas (usando o `*`) da `DimEmployee` tabela.  
+ Esta seção mostra três exemplos de código. Este primeiro exemplo de código retorna todas as linhas (nenhuma cláusula WHERE foi especificada) e todas as colunas (usando o `*`) da tabela `DimEmployee`.  
   
 ```sql  
 SELECT *  
@@ -161,7 +161,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- Este próximo exemplo usando o alias de tabela para obter o mesmo resultado.  
+ Este próximo exemplo usa a definição de alias da tabela para obter o mesmo resultado.  
   
 ```sql  
 SELECT e.*  
@@ -169,7 +169,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- Este exemplo retorna todas as linhas (nenhuma cláusula WHERE é especificada) e um subconjunto das colunas (`FirstName`, `LastName`, `StartDate`) da `DimEmployee` tabela o `AdventureWorksPDW2012` banco de dados. Título da terceiro coluna é renomeado para `FirstDay`.  
+ Este exemplo retorna todas as linhas (nenhuma cláusula WHERE foi especificada) e um subconjunto das colunas (`FirstName`, `LastName`, `StartDate`) da tabela `DimEmployee` no banco de dados `AdventureWorksPDW2012`. O terceiro título de coluna é renomeado como `FirstDay`.  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -177,7 +177,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- Este exemplo retorna somente as linhas de `DimEmployee` que têm um `EndDate` que não seja NULL e uma `MaritalStatus` de estou ' (casado).  
+ Este exemplo retorna somente as linhas de `DimEmployee` que têm uma `EndDate` que não é NULL e um `MaritalStatus` igual a 'M' (married, casado).  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -188,7 +188,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="b-using-select-with-column-headings-and-calculations"></a>B. Usando SELECT com títulos de coluna e cálculos  
- O exemplo a seguir retorna todas as linhas do `DimEmployee` da tabela e calcula o pagamento bruto para cada funcionário com base em seus `BaseRate` e 40 horas por semana.  
+ O exemplo a seguir retorna todas as linhas da tabela `DimEmployee` e calcula o pagamento bruto de cada funcionário com base em sua `BaseRate` e em uma semana de trabalho de 40 horas.  
   
 ```sql  
 SELECT FirstName, LastName, BaseRate, BaseRate * 40 AS GrossPay  
@@ -197,7 +197,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="c-using-distinct-with-select"></a>C. Usando DISTINCT com SELECT  
- O exemplo a seguir usa `DISTINCT` para gerar uma lista de todos os títulos exclusivos a `DimEmployee` tabela.  
+ O exemplo a seguir usa `DISTINCT` para gerar uma lista de todos os títulos exclusivos na tabela `DimEmployee`.  
   
 ```sql  
 SELECT DISTINCT Title  
@@ -215,10 +215,10 @@ GROUP BY OrderDateKey
 ORDER BY OrderDateKey;  
 ```  
   
- Devido a `GROUP BY` cláusula, somente uma linha que contém a soma de todas as vendas é retornada para cada dia.  
+ Devido à cláusula `GROUP BY`, somente uma linha que contém a soma de todas as vendas é retornada para cada dia.  
   
 ### <a name="e-using-group-by-with-multiple-groups"></a>E. Usando GROUP BY com vários grupos  
- O exemplo a seguir localiza o preço médio e a soma de vendas pela Internet para cada dia, agrupados por data do pedido e a chave de promoção.  
+ O exemplo a seguir localiza o preço médio e a soma de vendas pela Internet de cada dia, agrupados por data do pedido e código promocional.  
   
 ```sql  
 
@@ -229,7 +229,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="f-using-group-by-and-where"></a>F. Usando GROUP BY e WHERE  
- O exemplo a seguir coloca os resultados em grupos depois de recuperar somente as linhas com datas de pedido posterior a 1º de agosto de 2002.  
+ O exemplo a seguir põe os resultados em grupos depois de recuperar apenas as linhas com datas de pedido posteriores a 1º de agosto de 2002.  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -249,7 +249,7 @@ GROUP BY (OrderDateKey * 10);
 ```  
   
 ### <a name="h-using-group-by-with-order-by"></a>H. Usando GROUP BY com ORDER BY  
- O exemplo a seguir localiza a soma das vendas por dia e pedidos por dia.  
+ O exemplo a seguir localiza a soma de vendas por dia e os pedidos por dia.  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -259,7 +259,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="i-using-the-having-clause"></a>I. Usando a cláusula HAVING  
- Essa consulta usa o `HAVING` cláusula para restringir os resultados.  
+ Essa consulta usa a cláusula `HAVING` para restringir os resultados.  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -269,8 +269,8 @@ HAVING OrderDateKey > 20010000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exemplos de SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
 

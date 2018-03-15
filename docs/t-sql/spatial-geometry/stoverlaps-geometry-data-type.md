@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retornará 1 se uma **geometria** instância sobrepõe outra **geometria** instância. Retornará 0 se isso não ocorrer.
+Retornará 1 se uma instância de **geometry** se sobrepuser a outra instância de **geometry**. Retornará 0 se isso não ocorrer.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,22 +45,22 @@ Retornará 1 se uma **geometria** instância sobrepõe outra **geometria** inst�
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância a ser comparada com a instância na qual `STOverlaps()` é invocado.  
+ É outra instância de **geometry** a ser comparada com a instância na qual `STOverlaps()` é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Dois **geometria** instâncias se sobrepõem se a região que representa a interseção entre elas tiver a mesma dimensão que as instâncias e a região não é igual a qualquer instância.  
+ Duas instâncias de **geometria** serão sobrepostas se a região que representa a interseção entre elas tiver a mesma dimensão que as instâncias têm e se região não for igual a nenhuma das instâncias.  
   
- `STOverlaps()`sempre retorna 0 se os pontos onde o **geometria** instâncias se cruzam não são da mesma dimensão.  
+ `STOverlaps()` sempre retornará 0 se os pontos em que as instâncias de **geometria** interseccionam não forem da mesma dimensão.  
   
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `STOverlaps()` para testar duas **geometria** instâncias de sobreposição.  
+ O exemplo a seguir usa `STOverlaps()` para testar duas instâncias de **geometria** quanto à sobreposição.  
   
 ```  
 DECLARE @g geometry;  
@@ -70,7 +70,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

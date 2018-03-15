@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Remove todas as linhas de uma tabela ou as partições especificadas de uma tabela sem registrar as exclusões de linha individual. TRUNCATE TABLE é semelhante à instrução DELETE sem nenhuma cláusula WHERE; entretanto, TRUNCATE TABLE é mais rápida e utiliza menos recursos de sistema e log de transações.  
+  Remove todas as linhas de uma tabela ou partições especificadas de uma tabela sem registrar as exclusões de linha individual. TRUNCATE TABLE é semelhante à instrução DELETE sem nenhuma cláusula WHERE; entretanto, TRUNCATE TABLE é mais rápida e utiliza menos recursos de sistema e log de transações.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,24 +76,24 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  É o nome do esquema ao qual a tabela pertence.  
   
  *table_name*  
- É o nome da tabela a ser truncada ou da qual todas as linhas são removidas. *table_name* deve ser um literal. *table_name* não pode ser o **object_id ()** função ou variável.  
+ É o nome da tabela a ser truncada ou da qual todas as linhas são removidas. *table_name* deve ser um literal. *table_name* não pode ser a função **OBJECT_ID()** nem uma variável.  
   
- COM (partições ({ \< *partition_number_expression*> | \< *intervalo*>} [,... n]))  
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Especifica as partições para truncar ou das quais todas as linhas são removidas. Se a tabela não for particionada, o **com partições** argumento gerará um erro. Se o **com partições** cláusula não for fornecida, a tabela inteira será truncada.  
+ Especifica as partições para truncar ou das quais todas as linhas são removidas. Se a tabela não for particionada, o argumento **WITH PARTITIONS** gerará um erro. Se a cláusula **WITH PARTITIONS** não for fornecida, a tabela inteira será truncada.  
   
- *\<partition_number_expression >* pode ser especificado das seguintes maneiras: 
+ *\<partition_number_expression>* pode ser especificado das seguintes maneiras: 
   
--   Forneça o número de uma partição, por exemplo:`WITH (PARTITIONS (2))`  
+-   Forneça o número de uma partição, por exemplo: `WITH (PARTITIONS (2))`  
   
--   Forneça os números de várias partições individuais separadas por vírgulas, por exemplo:`WITH (PARTITIONS (1, 5))`  
+-   Forneça os números de várias partições individuais separados por vírgulas, por exemplo: `WITH (PARTITIONS (1, 5))`  
   
--   Forneça os intervalos e as partições individuais, por exemplo:`WITH (PARTITIONS (2, 4, 6 TO 8))`  
+-   Forneça os intervalos e as partições individuais, por exemplo: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<intervalo >* pode ser especificado como números de partição separados pela palavra **para**, por exemplo:`WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* pode ser especificado como números de partição separados pela palavra **TO**, por exemplo: `WITH (PARTITIONS (6 TO 8))`  
   
- Para truncar uma tabela particionada, tabela e os índices devem estar alinhados (particionados na mesma função de partição).  
+ Para truncar uma tabela particionada, a tabela e os índices deverão estar alinhados (particionados na mesma função de partição).  
   
 ## <a name="remarks"></a>Remarks  
  Em comparação com a instrução DELETE, TRUNCATE TABLE possui as seguintes vantagens:  
@@ -129,12 +129,12 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  
  Em [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
 
-- TRUNCATE TABLE não é permitida dentro da instrução EXPLICAR.
+- TRUNCATE TABLE não é permitida dentro da instrução EXPLAIN.
 
-- TRUNCATE TABLE não pode ser executado dentro de uma transação.
+- TRUNCATE TABLE não pode ser executada dentro de uma transação.
   
 ## <a name="truncating-large-tables"></a>Truncando tabelas grandes  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a capacidade de descartar ou truncar tabelas que têm mais de 128 extensões sem manter bloqueios simultâneos em todas as extensões necessárias para o descarte.  
+ O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a capacidade de remover ou truncar tabelas com mais de 128 extensões sem manter bloqueios simultâneos em todas as extensões necessárias para a remoção.  
   
 ## <a name="permissions"></a>Permissões  
  A permissão mínima necessária é ALTER em *table_name*. As permissões TRUNCATE TABLE assumem como padrão o proprietário da tabela, membros da função de servidor fixa sysadmin, e das funções de banco de dados fixas db_owner e db_ddladmin, e não são transferíveis. Entretanto, você pode incorporar a instrução TRUNCATE TABLE dentro de um módulo, como um procedimento armazenado, e conceder permissões adequadas ao módulo por meio da cláusula EXECUTE AS.  
@@ -159,7 +159,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. Truncar a tabela de partições  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  O exemplo a seguir trunca as partições especificadas de uma tabela particionada. A sintaxe `WITH (PARTITIONS (2, 4, 6 TO 8))` faz com que os número de partição 2, 4, 6, 7 e 8 sejam truncados.  
   
@@ -171,7 +171,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Remover tabela &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

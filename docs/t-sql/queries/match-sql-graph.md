@@ -1,5 +1,5 @@
 ---
-title: "CORRESPONDÊNCIA (gráfico SQL) | Microsoft Docs"
+title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  Especifica um critério de pesquisa para um gráfico. CORRESPONDÊNCIA pode ser usada apenas com as tabelas de nó e borda gráfico, na instrução SELECT como parte da cláusula WHERE. 
+  Especifica um critério de pesquisa para um gráfico. MATCH pode ser usado apenas com tabelas de nó de gráfico e borda, na instrução SELECT como parte da cláusula WHERE. 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +63,7 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>Argumentos  
 *graph_search_pattern*  
-Especifica o padrão para pesquisar ou o caminho para percorrer o gráfico. Esse padrão usa a sintaxe de arte ASCII Transpor um caminho no gráfico. O padrão varia de um nó para outro por meio de uma borda, na direção da seta fornecida. Borda nomes ou aliases são fornecidos em parantheses. Nomes de nó ou aliases aparecem nas duas extremidades da seta. A seta pode ficar em qualquer direção no padrão.
+Especifica o padrão a ser pesquisado ou o caminho a ser percorrido no gráfico. Esse padrão usa a sintaxe de arte ASCII para percorrer um caminho no gráfico. O padrão varia de um nó para outro por meio de uma borda, na direção da seta fornecida. Os nomes de borda ou aliases são fornecidos em parênteses. Os nomes de nó ou os aliases são exibidos nas duas extremidades da seta. A seta pode apontar para qualquer direção no padrão.
 
 *node_alias*  
 Nome ou alias de uma tabela de nó fornecida na cláusula FROM.
@@ -73,14 +73,14 @@ Nome ou alias de uma tabela de borda fornecida na cláusula FROM.
 
 
 ## <a name="remarks"></a>Remarks  
-Os nomes de nó dentro de correspondência podem ser repetidos.  Em outras palavras, um nó pode ser percorridos um número arbitrário de vezes na mesma consulta.  
-Um nome de borda não pode ser repetido dentro de correspondência.  
-Uma borda pode apontar em qualquer direção, mas deve ter uma direção explícita.  
-OU e não os operadores não são suportados no padrão de correspondência. CORRESPONDÊNCIA pode ser combinada com outras expressões usando e na cláusula WHERE. No entanto, a combinação com outras expressões usando OR ou não, não é suportado. 
+Os nomes de nó dentro de MATCH podem ser repetidos.  Em outras palavras, um nó pode ser percorrido um número arbitrário de vezes na mesma consulta.  
+Um nome de borda não pode ser repetido dentro de MATCH.  
+Uma borda pode apontar para qualquer direção, mas deve ter uma direção explícita.  
+Os operadores OR ou NOT não são compatíveis com o padrão MATCH. MATCH pode ser combinado com outras expressões usando AND na cláusula WHERE. No entanto, não há suporte para a combinação dele com outras expressões usando OR ou NOT. 
 
 ## <a name="examples"></a>Exemplos  
-### <a name="a--find-a-friend"></a>A.  Localize um amigo 
- O exemplo a seguir cria uma tabela de nó e a tabela de borda de amigos, insere alguns dados e, em seguida, usa a correspondência localizar amigos de Alice, uma pessoa no gráfico.
+### <a name="a--find-a-friend"></a>A.  Encontrar um amigo 
+ O exemplo a seguir cria uma tabela de nó Person e a tabela de Borda friends, insere alguns dados e, em seguida, usa MATCH para encontrar amigos de Alice, uma pessoa no gráfico.
 
  ```
  -- Create person node table
@@ -110,8 +110,8 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  Localizar friend de um amigo
- O exemplo a seguir tenta encontrar friend de um amigo de Alice. 
+ ### <a name="b--find-friend-of-a-friend"></a>B.  Encontrar um amigo de um amigo
+ O exemplo a seguir tenta encontrar um amigo de um amigo de Alice. 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  Mais `MATCH` padrões
- Estas são algumas maneiras de mais que um padrão pode ser especificado dentro de correspondência.
+### <a name="c--more-match-patterns"></a>C.  Mais padrões de `MATCH`
+ Estas são algumas outras maneiras pelas quais um padrão pode ser especificado dentro de MATCH.
 
  ```
  -- Find a friend
@@ -152,7 +152,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>Consulte também  
- [Criar tabela &#40; Gráfico SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [Gráfico de processamento com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+ [Processamento de grafo com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  

@@ -51,13 +51,13 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>Argumentos  
  *scalar_expression*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  É um operador de comparação.  
   
  *subquery*  
- É uma subconsulta que retorna um conjunto de resultados com uma coluna. O tipo de dados da coluna retornada deve ser o mesmo tipo de dados como o tipo de dados de *scalar_expression*.  
+ É uma subconsulta que retorna um conjunto de resultados com uma coluna. O tipo de dados da coluna retornada precisa ser o mesmo tipo de dados que o da *scalar_expression*.  
   
  É uma instrução SELECT restrita, na qual a cláusula ORDER BY e a palavra-chave INTO não são permitidas.  
   
@@ -65,17 +65,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- Retorna verdadeiro quando a comparação especificada é verdadeiro para todos os pares (*scalar_expression***,***x)*, quando *x* é um valor no conjunto de coluna única; caso contrário, retorna FALSE.  
+ Retornará TRUE quando a comparação especificada for TRUE para todos os pares (*scalar_expression***,***x)* e quando *x* for um valor no conjunto de uma única coluna, caso contrário retornará FALSE.  
   
 ## <a name="remarks"></a>Remarks  
- ALL requer o *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta. Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* < = ALL (a subconsulta) será avaliada como TRUE para um *scalar_expression* de 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (a subconsulta) seria avaliada como FALSE, porque alguns dos valores da subconsulta (o valor de 3) não atende aos critérios da expressão.  
+ ALL requer que a *scalar_expression* seja comparada positivamente com todos os valores retornados pela subconsulta. Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* <= ALL (a subconsulta) será avaliada como TRUE para uma *scalar_expression* igual a 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (subconsulta) será avaliada como FALSE, porque alguns dos valores da subconsulta (o valor 3) não atenderão aos critérios da expressão.  
   
- Para instruções que requerem o *scalar_expression* seja comparada positivamente a somente um valor que é retornado pela subconsulta, consulte [alguns &#124; QUALQUER &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Para instruções que requerem que a *scalar_expression* seja comparada positivamente somente a um valor retornado pela subconsulta, confira [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Este tópico se refere a ALL quando for usado com uma subconsulta. ALL também pode ser usado com [união](../../t-sql/language-elements/set-operators-union-transact-sql.md) e [selecione](../../t-sql/queries/select-transact-sql.md).  
+ Este tópico se refere a ALL quando for usado com uma subconsulta. ALL também pode ser usado com [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) e [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um procedimento armazenado que determina se todos os componentes de determinado `SalesOrderID` no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados pode ser fabricado no número especificado de dias. O exemplo usa uma subconsulta para criar uma lista do número de valores de `DaysToManufacture` para todos os componentes do `SalesOrderID` específico e depois confirma se todos os `DaysToManufacture` estão dentro do número de dias especificado.  
+ O exemplo a seguir cria um procedimento armazenado que determina se todos os componentes de um `SalesOrderID` especificado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] podem ser fabricados no número de dias especificado. O exemplo usa uma subconsulta para criar uma lista do número de valores de `DaysToManufacture` para todos os componentes do `SalesOrderID` específico e depois confirma se todos os `DaysToManufacture` estão dentro do número de dias especificado.  
   
 ```  
 -- Uses AdventureWorks  
@@ -115,12 +115,12 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

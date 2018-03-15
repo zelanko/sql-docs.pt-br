@@ -1,5 +1,5 @@
 ---
-title: Excluir (XML DML) | Microsoft Docs
+title: delete (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -44,13 +44,13 @@ delete Expression
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão*  
- É uma expressão XQuery que identifica os nós a serem excluídos. Todos os nós selecionados pela expressão, e também todos os nós ou valores que estão contidos nos nós selecionados, são excluídos. Conforme descrito em [inserir (XML DML)](../../t-sql/xml/insert-xml-dml.md), isso deve ser uma referência a um nó existente no documento. Não pode ser um nó construído. A expressão não pode ser o nó de raiz (/). Se a expressão retornar uma sequência vazia, nenhuma exclusão ocorrerá e nenhum erro será retornado.  
+ *Expression*  
+ É uma expressão XQuery que identifica os nós a serem excluídos. Todos os nós selecionados pela expressão, e também todos os nós ou valores que estão contidos nos nós selecionados, são excluídos. Conforme descrito em [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), essa referência deve ser a um nó existente no documento. Não pode ser um nó construído. A expressão não pode ser o nó de raiz (/). Se a expressão retornar uma sequência vazia, nenhuma exclusão ocorrerá e nenhum erro será retornado.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. Excluindo nós de um documento armazenado em uma variável xml sem tipo  
- O exemplo a seguir ilustra como excluir vários nós de um documento. Primeiro, uma instância XML é atribuída à variável de **xml** tipo. Depois, as instruções delete XML DML subsequentes excluem vários nós do documento.  
+ O exemplo a seguir ilustra como excluir vários nós de um documento. Primeiro, uma instância de XML é atribuída à variável do tipo **xml**. Depois, as instruções delete XML DML subsequentes excluem vários nós do documento.  
   
 ```  
 DECLARE @myDoc xml  
@@ -92,7 +92,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Excluindo nós de um documento armazenado em uma coluna xml sem tipo  
- No exemplo a seguir, uma **excluir** instrução XML DML remove o segundo elemento filho de <`Features`> do documento armazenado na coluna.  
+ No exemplo a seguir, uma instrução **delete** XML DML remove o segundo elemento filho de <`Features`> do documento armazenado na coluna.  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -119,14 +119,14 @@ FROM T
   
  Observe o seguinte na consulta anterior:  
   
--   O [Modify () Method (xml Data Type)](../../t-sql/xml/modify-method-xml-data-type.md) é usado para especificar o **excluir** palavra-chave do XML DML.  
+-   O [Método modify() (tipo de dados xml)](../../t-sql/xml/modify-method-xml-data-type.md) é usado para especificar a palavra-chave **delete** de XML DML.  
   
--   O [Query () Method (xml Data Type)](../../t-sql/xml/query-method-xml-data-type.md) é usado para consultar o documento.  
+-   O [Método query() (tipo de dados xml)](../../t-sql/xml/query-method-xml-data-type.md) é usado para consultar o documento.  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. Excluindo nós de uma coluna xml com tipo  
- Este exemplo exclui nós de um instruções de fabricação no documento XML armazenado em um tipo **xml** coluna.  
+ Este exemplo exclui nós de um documento XML de instruções de fabricação armazenado em uma coluna **xml** tipada.  
   
- No exemplo, você primeiro crie uma tabela (T) com um tipo **xml** coluna no banco de dados AdventureWorks. Depois, você copia a instância XML de instruções de fabricação da coluna Instructions na tabela ProductModel para a tabela T e exclui um ou mais nós do documento.  
+ No exemplo, primeiro você cria uma tabela (T) com uma coluna **xml** tipada no banco de dados AdventureWorks. Depois, você copia a instância XML de instruções de fabricação da coluna Instructions na tabela ProductModel para a tabela T e exclui um ou mais nós do documento.  
   
 ```  
 use AdventureWorks  
@@ -192,10 +192,10 @@ drop table T
 go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML DML &#40;linguagem de manipulação de dados XML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

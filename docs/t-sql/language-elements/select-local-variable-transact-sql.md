@@ -1,5 +1,5 @@
 ---
-title: Selecione @local_variable (Transact-SQL) | Microsoft Docs
+title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -38,12 +38,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select-localvariable-transact-sql"></a>Selecione @local_variable (Transact-SQL)
+# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Define uma variável local para o valor de uma expressão.  
+  Define uma variável local com o valor de uma expressão.  
   
- Para atribuir variáveis, é recomendável que você use [definir @local_variable ](../../t-sql/language-elements/set-local-variable-transact-sql.md) em vez de SELECT @*local_variable*.  
+ Para atribuir variáveis, recomendamos o uso de [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md), em vez de SELECT @*local_variable*.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,23 +64,23 @@ Atribui o valor à direita à variável da esquerda.
 Operador de atribuição composto:  
   |operador |action |   
   |-----|-----|  
-  | = | Atribui a expressão a seguir, a variável. |  
+  | = | Atribui a expressão a seguir à variável. |  
   | += | Adicionar e atribuir |   
   | -= | Subtrair e atribuir |  
   | \*= | Multiplicar e atribuir |  
   | /= | Dividir e atribuir |  
   | %= | Módulo e atribuir |  
   | &= | AND bit a bit e atribuir |  
-  | ^= | XOR de bit a bit e atribuir |  
+  | ^= | XOR bit a bit e atribuir |  
   | \|= | OR bit a bit e atribuir |  
   
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md). Isso inclui uma subconsulta escalar.  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Isso inclui uma subconsulta escalar.  
   
 ## <a name="remarks"></a>Remarks  
- Selecione @*local_variable* normalmente é usado para retornar um único valor para a variável. No entanto, quando *expressão* é o nome de uma coluna, ele pode retornar vários valores. Se a instrução SELECT retornar mais de um valor, à variável será atribuído o último valor retornado.  
+ SELECT @*local_variable* normalmente é usado para retornar um único valor na variável. No entanto, quando *expression* é o nome de uma coluna, ela pode retornar vários valores. Se a instrução SELECT retornar mais de um valor, à variável será atribuído o último valor retornado.  
   
- Se a instrução SELECT não retornar nenhuma linha, a variável reterá seu valor atual. Se *expressão* for uma subconsulta escalar que não retorna nenhum valor, a variável é definido como NULL.  
+ Se a instrução SELECT não retornar nenhuma linha, a variável reterá seu valor atual. Se *expression* for uma subconsulta escalar que não retorna nenhum valor, a variável será definida como NULL.  
   
  Uma instrução SELECT pode inicializar várias variáveis locais.  
   
@@ -133,10 +133,10 @@ Company Name
 NULL  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

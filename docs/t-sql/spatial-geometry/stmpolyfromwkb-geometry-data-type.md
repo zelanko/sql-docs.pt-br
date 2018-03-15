@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **geometryMultiPolygon** instância de uma representação do Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Retorna uma instância de **geometryMultiPolygon** de uma representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,17 +45,17 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipolygon*  
- É a representação WKB do **geometryMultiPolygon** instância que você deseja retornar. *WKB_multipolygon* é um **varbinary (max)** expressão.  
+ É a representação WKB da instância de **geometryMultiPolygon** que você deseja retornar. *WKB_multipolygon* é uma expressão **varbinary(max)**.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **geometryMultiPolygon** instância que você deseja retornar.  
+ É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryMultiPolygon** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC: **MultiPolygon**  
+ Tipo do OGC: **MultiPolygon**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -68,7 +68,7 @@ SET @g = geometry::STMPolyFromWKB(0x01060000000200000001030000000100000004000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

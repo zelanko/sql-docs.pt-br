@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna a representação do Open Geospatial Consortium (OGC) Well-Known Binary (WKB) de um **geometria** instância aumentada com qualquer **Z** (elevação) e **M** (medida) valores transportados pela instância.  
+  Retorna a representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium) de uma instância de **geometry** aumentada com os valores de **Z** (elevação) e **M** (medida) presentes na instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,9 +45,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **varbinary (max)**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Tipo de retorno CLR: **SqlBytes**  
+ Tipo de retorno do CLR: **SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -63,9 +63,9 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Z &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;Tipo de dados geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Z &#40;Tipo de dados de geografia&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

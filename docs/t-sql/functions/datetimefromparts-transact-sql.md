@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retorna um **datetime** valor para a data e hora especificadas.
+Retorna um valor de **datetime** para a data e a hora especificadas.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,32 +45,32 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*ano*  
+*year*  
 Expressão de inteiro que especifica um ano.
   
-*mês*  
+*month*  
 Expressão de inteiro que especifica um mês.
   
-*dia*  
+*day*  
 Expressão de inteiro que especifica um dia.
   
-*hora*  
+*hour*  
 Expressão de inteiro que especifica horas.
   
-*minuto*  
+*minute*  
 Expressão de inteiro que especifica minutos.
   
 *segundos*  
 Expressão de inteiro que especifica segundos.
   
-*milissegundos*  
+*milliseconds*  
 Expressão de inteiro que especifica milissegundos.
   
 ## <a name="return-types"></a>Tipos de retorno
 **datetime**
   
-## <a name="remarks"></a>Comentários  
-**DATETIMEFROMPARTS** retorna um completamente inicializado **datetime** valor. Se os argumentos não são válidos, um erro é gerado. Se os argumentos necessários forem nulos, null é retornado.
+## <a name="remarks"></a>Remarks  
+**DATETIMEFROMPARTS** retorna um valor **datetime** totalmente inicializado. Se os argumentos não forem válidos, um erro será gerado. Se os argumentos obrigatórios forem nulos, nulo será retornado.
   
 Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não será remota para servidores que têm uma versão anterior ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -91,7 +91,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Data e hora &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

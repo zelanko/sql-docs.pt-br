@@ -49,16 +49,16 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>Argumentos  
 '*database_principal*'  
-É o usuário, a função ou a função de aplicativo que pode receber permissões para objetos no banco de dados. O chamador da função deve ser um membro do *database_principal*, dbo, ou a função fixa db_owner banco de dados para chamar a função com êxito.
+É o usuário, a função ou a função de aplicativo que pode receber permissões para objetos no banco de dados. O chamador da função deve ser membro da função de banco de dados fixa *database_principal*, dbo ou db_owner para chamar a função com êxito.
   
 '*resource_name*'  
-É um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir que o nome do recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name*é **nvarchar (255)** sem nenhum padrão. *resource_name* é binário comparado e diferencia maiusculas e minúsculas independentemente das configurações de agrupamento do banco de dados atual.
+É um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir que o nome do recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* é **nvarchar(255)** sem nenhum padrão. *resource_name* é comparado com binário comparado e diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.
   
 '*lock_owner*'  
-É o proprietário do bloqueio, que é o *lock_owner* valor quando o bloqueio foi solicitado. *lock_owner* é **nvarchar (32)**, e o valor pode ser **transação** (o padrão) ou **sessão**.
+É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)** e o valor pode ser **Transaction** (o padrão) ou **Session**.
   
 ## <a name="return-types"></a>Tipos de retorno
-**nvarchar (32)**
+**nvarchar(32)**
   
 ## <a name="return-value"></a>Valor de retorno
 Retorna o modo de bloqueio mantido pelo proprietário de bloqueio em um determinado recurso de aplicativo. O modo de bloqueio pode ser qualquer um destes valores:
@@ -66,22 +66,22 @@ Retorna o modo de bloqueio mantido pelo proprietário de bloqueio em um determin
 ||||  
 |-|-|-|  
 |**NoLock**|**Update (atualizar)**|**\*SharedIntentExclusive**|  
-|**Tentativa compartilhada**|**Exclusivo da tentativa**|**\*UpdateIntentExclusive**|  
+|**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Compartilhado**|**Exclusive**||  
   
 *Este modo de bloqueio é uma combinação de outros modos de bloqueio e não é adquirido explicitamente usando sp_getapplock.
   
-## <a name="function-properties"></a>Propriedades de função
+## <a name="function-properties"></a>Propriedades da função
 **Não determinístico**
   
 **Não indexável**
   
-**Não Paralelizável**
+**Não paralelizável**
   
 ## <a name="examples"></a>Exemplos  
 Dois usuários (Usuário A e Usuário B) com sessões separadas executam a seguinte sequência de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-O usuário A executa:
+Usuário A executa:
   
 ```sql
 USE AdventureWorks2012;  
@@ -137,8 +137,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

@@ -41,7 +41,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Recupera o espaço de colunas de comprimento variável descartadas em tabelas ou exibições indexadas.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Recupera o espaço das colunas de comprimento variável descartadas em tabelas ou em exibições indexadas.
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
@@ -59,7 +59,7 @@ DBCC CLEANTABLE
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* | *database_id* | 0  
- É o banco de dados ao qual pertence a tabela a ser limpa. Se 0 for especificado, será usado o banco de dados atual. Nomes de banco de dados devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ É o banco de dados ao qual pertence a tabela a ser limpa. Se 0 for especificado, será usado o banco de dados atual. Os nomes de banco de dados precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name*| *view_id*  
  É a tabela ou exibição indexada a ser limpa.  
@@ -71,7 +71,7 @@ DBCC CLEANTABLE
  Suprime todas as mensagens informativas.  
   
 ## <a name="remarks"></a>Remarks  
-DBCC CLEANTABLE recupera espaço depois que uma coluna de comprimento variável é descartada. Uma coluna de comprimento variável pode ser um dos seguintes tipos de dados: **varchar**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **varbinary**, **varbinary (max)**, **texto**, **ntext**, **imagem**,  **sql_variant**, e **xml**. O comando não recupera espaço depois que uma coluna de comprimento fixo é descartada.
+DBCC CLEANTABLE recupera espaço depois que uma coluna de comprimento variável é descartada. Uma coluna de comprimento variável pode ser de um dos seguintes tipos de dados: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** e **xml**. O comando não recupera espaço depois que uma coluna de comprimento fixo é descartada.
 Se as colunas descartadas forem armazenadas em linha, DBCC CLEANTABLE recuperará espaço da unidade de alocação IN_ROW_DATA da tabela. Se as colunas forem armazenadas fora de linha, o espaço será recuperado da unidade de alocação LOB_DATA ou ROW_OVERFLOW_DATA, dependendo do tipo de dados da coluna descartada. Se o espaço recuperado de uma página ROW_OVERFLOW_DATA ou LOB_DATA resultar em uma página vazia, DBCC CLEANTABLE removerá a página.
 DBCC CLEANTABLE executa como uma ou mais transações. Se não for especificado um tamanho de lote, o comando processará a tabela inteira em uma transação e a tabela será bloqueada exclusivamente durante a operação. Para algumas tabelas grandes, o comprimento da única transação e o espaço do log requeridos podem ser muito grandes. Se um tamanho de lote for especificado, o comando executará em uma série de transações, cada qual incluindo o número especificado de linhas. DBCC CLEANTABLE não pode ser executado como uma transação dentro de outra transação.
 Essa operação é totalmente registrada.
@@ -88,7 +88,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Permissões  
- Chamador deve possuir a tabela ou exibição indexada ou ser um membro do **sysadmin** função fixa de servidor a **db_owner** função de banco de dados fixa ou **db_ddladmin** função fixa de banco de dados.  
+ O chamador precisa ter a tabela ou a exibição indexada ou ser membro da função de servidor fixa **sysadmin**, da função de banco de dados fixa **db_owner** ou da função de banco de dados fixa **db_ddladmin**.  
   
 ## <a name="examples"></a>Exemplos  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. Usando DBCC CLEANTABLE para recuperar espaço  
@@ -165,7 +165,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "CONFIRMAÇÃO de transação (Transact-SQL) | Microsoft Docs"
+title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Marca o término de uma transação implícita ou explícita bem-sucedida. Se @@TRANCOUNT é 1, COMMIT TRANSACTION torna todas as modificações de dados efetuadas desde o início da transação uma parte permanente do banco de dados, libera os recursos mantidos pela transação e diminui @@TRANCOUNT como 0. Se @@TRANCOUNT é maior que 1, COMMIT TRANSACTION reduz @@TRANCOUNT somente por 1 e a transação permanece ativa.  
+  Marca o término de uma transação implícita ou explícita bem-sucedida. Se @@TRANCOUNT for 1, COMMIT TRANSACTION fará com que todas as modificações de dados executadas desde o início da transação sejam uma parte permanente do banco de dados, liberará os recursos mantidos pela transação e decrementará @@TRANCOUNT para 0. Se @@TRANCOUNT for maior que 1, COMMIT TRANSACTION decrementará @@TRANCOUNT somente em 1 e a transação permanecerá ativa.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,28 +68,28 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>Argumentos  
  *transaction_name*  
- **Aplica-se a:** do SQL Server e banco de dados SQL do Azure
+ **APLICA-SE A:** SQL Server e Banco de Dados SQL do Azure
  
- É ignorado pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* Especifica um nome de transação atribuído por um BEGIN TRANSACTION anterior. *transaction_name*devem estar em conformidade com as regras para identificadores, mas não pode exceder 32 caracteres. *transaction_name* pode ser usado como um auxílio à legibilidade, indicando aos programadores a qual aninhada BEGIN TRANSACTION, COMMIT TRANSACTION está associado.  
+ É ignorado pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* especifica um nome de transação atribuído por um BEGIN TRANSACTION anterior. *transaction_name* precisa estar em conformidade com as regras para identificadores, mas não pode exceder 32 caracteres. *transaction_name* pode ser usado para facilitar a leitura, indicando aos programadores a qual BEGIN TRANSACTION aninhada o COMMIT TRANSACTION está associado.  
   
  *@tran_name_variable*  
- **Aplica-se a:** do SQL Server e banco de dados SQL do Azure  
+ **APLICA-SE A:** SQL Server e Banco de Dados SQL do Azure  
  
-É o nome de uma variável definida pelo usuário que contém um nome de transação válido. A variável deve ser declarada com um tipo de dados char, varchar, nchar ou nvarchar. Se mais de 32 caracteres forem transmitidos à variável, apenas 32 caracteres serão usados; os demais serão truncados.  
+É o nome de uma variável definida pelo usuário que contém um nome de transação válido. A variável precisa ser declarada com o tipo de dados char, varchar, nchar ou nvarchar. Se mais de 32 caracteres forem transmitidos à variável, apenas 32 caracteres serão usados; os demais serão truncados.  
   
  DELAYED_DURABILITY  
- **Aplica-se a:** do SQL Server e banco de dados SQL do Azure   
+ **APLICA-SE A:** SQL Server e Banco de Dados SQL do Azure   
 
- Opção que solicita que esta transação seja confirmada com durabilidade atrasada. A solicitação será ignorada se o banco de dados for alterado com `DELAYED_DURABILITY = DISABLED` ou `DELAYED_DURABILITY = FORCED`. Consulte o tópico [controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
+ Opção que solicita que esta transação seja confirmada com durabilidade atrasada. A solicitação será ignorada se o banco de dados for alterado com `DELAYED_DURABILITY = DISABLED` ou `DELAYED_DURABILITY = FORCED`. Confira o tópico [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
   
 ## <a name="remarks"></a>Remarks  
  É responsabilidade do programador do [!INCLUDE[tsql](../../includes/tsql-md.md)] emitir COMMIT TRANSACTION apenas no ponto em que todos os dados referidos pela transação estejam logicamente corretos.  
   
  Se a transação confirmada for uma transação distribuída de [!INCLUDE[tsql](../../includes/tsql-md.md)], COMMIT TRANSACTION irá disparar MS DTC para usar um protocolo 2PC para confirmar todos os servidores envolvidos na transação. Se uma transação local atingir dois ou mais bancos de dados na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], essa instância usará um protocolo 2PC interno para confirmar todos os bancos de dados envolvidos na transação.  
   
- Quando usadas em transações aninhadas, as confirmações das transações internas não liberam recursos, nem lhes fazem modificações permanentes. As modificações de dados se tornam permanentes, com liberação dos recursos, apenas quando a transação externa é confirmada. Cada COMMIT TRANSACTION emitida quando @@TRANCOUNT é maior que 1 diminui simplesmente @@TRANCOUNT em 1. Quando @@TRANCOUNT é, finalmente, decrementado para 0, toda a transação externa for confirmada. Porque *transaction_name* é ignorado pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)], emitir uma COMMIT TRANSACTION referenciando o nome de uma transação externa quando há transações internas pendentes apenas decrementa @@TRANCOUNT em 1.  
+ Quando usadas em transações aninhadas, as confirmações das transações internas não liberam recursos, nem lhes fazem modificações permanentes. As modificações de dados se tornam permanentes, com liberação dos recursos, apenas quando a transação externa é confirmada. Cada COMMIT TRANSACTION emitido quando @@TRANCOUNT é maior que 1 simplesmente decrementa @@TRANCOUNT em 1. Quando @@TRANCOUNT é, finalmente, decrementado para 0, toda a transação externa é confirmada. Como *transaction_name* é ignorado pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)], emitir um COMMIT TRANSACTION referenciando o nome de uma transação externa quando há transações internas pendentes apenas decrementa @@TRANCOUNT em 1.  
   
- Emitir uma COMMIT TRANSACTION quando @@TRANCOUNT é 0 resulta em erro; não há BEGIN TRANSACTION correspondente.  
+ Emitir um COMMIT TRANSACTION quando @@TRANCOUNT é 0 resulta em erro. Não há um BEGIN TRANSACTION correspondente.  
   
  Não é possível reverter uma transação após a emissão de uma instrução COMMIT TRANSACTION, porque as modificações de dados se tornam parte permanente do banco de dados.  
   
@@ -100,8 +100,8 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-committing-a-transaction"></a>A. Confirmar uma transação  
-**Aplica-se a:** do SQL Server, banco de dados SQL do Azure, Azure SQL Data Warehouse e Parallel Data Warehouse   
+### <a name="a-committing-a-transaction"></a>A. Confirmando uma transação  
+**Aplica-se a:** SQL Server, Banco de Dados SQL do Azure, SQL Data Warehouse do Azure e Parallel Data Warehouse   
 
 O exemplo a seguir exclui um candidato a emprego. Ele usa o AdventureWorks. 
   
@@ -113,9 +113,9 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. Confirmando uma transação aninhada  
-**Aplica-se a:** do SQL Server e banco de dados SQL do Azure    
+**APLICA-SE A:** SQL Server e Banco de Dados SQL do Azure    
 
-O exemplo a seguir cria uma tabela, gera três níveis de transações aninhadas e, em seguida, confirma a transação aninhada. Embora cada `COMMIT TRANSACTION` instrução possui um *transaction_name* parâmetro, não há nenhuma relação entre o `COMMIT TRANSACTION` e `BEGIN TRANSACTION` instruções. O *transaction_name* parâmetros são simplesmente à legibilidade, para ajudar o programador certifique-se de que o número adequado de confirmações esteja codificado para decrementar `@@TRANCOUNT` como 0 e, assim, confirmar a transação externa. 
+O exemplo a seguir cria uma tabela, gera três níveis de transações aninhadas e, em seguida, confirma a transação aninhada. Embora cada instrução `COMMIT TRANSACTION` tenha um parâmetro *transaction_name*, não há nenhuma relação entre as instruções `COMMIT TRANSACTION` e `BEGIN TRANSACTION`. Os parâmetros *transaction_name* são simplesmente auxílios para facilitar a leitura, ajudando o programador a assegurar que o número adequado de confirmações seja codificado para decrementar `@@TRANCOUNT` para 0 e, assim, confirmar a transação externa. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -169,7 +169,7 @@ PRINT N'Transaction count after COMMIT OuterTran = '
     + CAST(@@TRANCOUNT AS nvarchar(10));  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

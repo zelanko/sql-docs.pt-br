@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões do tipo (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de tipo (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -58,19 +58,19 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em um tipo. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- NO tipo **::** [ *schema_name***.** ] *type_name*  
- Especifica o tipo no qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (**.**) é necessária.  
+ ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ Especifica o tipo no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (**.**) será obrigatório.  
   
- PARA \<database_principal >  
+ TO \<database_principal>  
  Especifica a entidade à qual a permissão está sendo negada.  
   
  CASCADE  
  Indica que a permissão que está sendo negada também é negada a outros principais aos quais ela foi concedida por esse principal.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica uma entidade de segurança da qual a entidade de segurança que executa essa consulta deriva seu direito de negar a permissão.  
   
  *Database_user*  
@@ -102,11 +102,11 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um tipo é um protegível no nível de esquema contido no esquema pai na hierarquia de permissões.  
   
 > [!IMPORTANT]  
->  **GRANT**, **DENY,** e **REVOGAR** permissões não se aplicam a tipos de sistema. Podem ser concedidas permissões a tipos definidos pelo usuário. Para obter mais informações sobre tipos definidos pelo usuário, consulte [trabalhando com tipos definidos pelo usuário no SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
+>  As permissões **GRANT**, **DENY,** e **REVOKE** não se aplicam a tipos de sistema. Podem ser concedidas permissões a tipos definidos pelo usuário. Para obter mais informações sobre tipos definidos pelo usuário, veja [Trabalhando com tipos definidos pelo usuário no SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
   
  As permissões mais específicas e limitadas que podem ser negadas em um tipo são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -130,9 +130,9 @@ DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tipo de concessão de permissões &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [Permissões do tipo REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT de tipo &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [Permissões REVOKE de tipo &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   

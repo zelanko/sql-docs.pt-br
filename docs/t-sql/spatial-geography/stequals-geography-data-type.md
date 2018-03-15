@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stequals-geography-data-type"></a>STEquals (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retornará 1 se uma **geografia** instância representa o mesmo ponto definido como outro **geografia** instância. Retornará 0 se isso não ocorrer.  
+  Retornará 1 se uma instância de **geography** representar o mesmo conjunto de pontos que outra instância de **geography**. Retornará 0 se isso não ocorrer.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- É outra **geografia** instância a ser comparada com a instância na qual `STEquals()` é invocado.  
+ É outra instância de **geography** a ser comparada com a instância na qual `STEquals()` é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geografia** instâncias não coincidem.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geography** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria dois `geography` instâncias com `STGeomFromText()` que são iguais, mas não superficialmente iguais e usa `STEquals()` para testar sua igualdade. As instâncias são iguais porque `LINESTRING` e `POINT` estão contidos no `POLYGON`.  
+ O exemplo a seguir cria duas instâncias de `geography` com `STGeomFromText()` que são iguais, mas não superficialmente iguais, e usa `STEquals()` para testar a igualdade entre elas. As instâncias são iguais porque `LINESTRING` e `POINT` estão contidos no `POLYGON`.  
   
 ```  
 DECLARE @g geography;  
@@ -66,7 +66,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.368 47.658, -122.338 47.649, -
 SELECT @g.STEquals(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

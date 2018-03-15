@@ -133,14 +133,14 @@ ALTER LOGIN login_name
  Especifica o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. Logons no domínio devem ser colocados entre colchetes no formato [domínio\usuário].  
   
  ENABLE | DISABLE  
- Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use o `KILL` instrução encerrar as conexões existentes.) Logons desabilitados retêm suas permissões e ainda podem ser representados.  
+ Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Logons desabilitados retêm suas permissões e ainda podem ser representados.  
   
- SENHA **='***senha***'**  
+ PASSWORD **='***password***'**  
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.  
   
- Continuamente as conexões ativas para banco de dados SQL exigem autorização (executada pelo mecanismo de banco de dados) pelo menos a cada 10 horas. O mecanismo de banco de dados de tentativas de autorização usando a senha originalmente enviada e nenhuma entrada do usuário é necessária. Por motivos de desempenho, quando uma senha é redefinida no banco de dados SQL, a conexão não será autenticado novamente, mesmo se a conexão for redefinida devido ao pooling de conexão. Isso é diferente do comportamento do SQL Server no local. Se a senha foi alterada desde que a conexão foi autorizado inicialmente, a conexão deve ser terminada e uma nova conexão feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION explicitamente pode encerrar uma conexão ao banco de dados SQL usando o comando KILL. Para obter mais informações, consulte [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Conexões continuamente ativas para banco de dados SQL exigem nova autorização (executada pelo mecanismo de banco de dados) pelo menos a cada 10 horas. O Mecanismo de Banco de Dados tenta a nova autorização usando a senha enviada originalmente e não é necessária nenhuma entrada do usuário. Por motivos de desempenho, quando uma senha for redefinida no Banco de Dados SQL, a conexão não será autenticada novamente, mesmo que ela seja redefinida devido ao pool de conexões. Isso é diferente do comportamento do SQL Server local. Se a senha for alterada depois que a conexão for autorizada inicialmente, a conexão precisará ser terminada e uma nova conexão deverá ser feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION pode terminar explicitamente uma conexão com o Banco de Dados SQL usando o comando KILL. Para obter mais informações, consulte [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
- SENHA  **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Só se aplica à palavra-chave HASHED. Especifica o valor com hash da senha para o logon que está sendo criado.  
@@ -152,9 +152,9 @@ ALTER LOGIN login_name
    
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Aplica-se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] somente de logons. Especifica que a senha digitada depois do argumento PASSWORD já esteja com hash. Se esta opção não for selecionada, a senha terá hash antes de ser armazenada no banco de dados. Essa opção deve ser usada somente para sincronização de logon entre dois servidores. Não use a opção HASHED para alterar senhas rotineiramente.  
+ Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Especifica que a senha digitada depois do argumento PASSWORD já esteja com hash. Se esta opção não for selecionada, a senha terá hash antes de ser armazenada no banco de dados. Essa opção deve ser usada somente para sincronização de logon entre dois servidores. Não use a opção HASHED para alterar senhas rotineiramente.  
   
- OLD_PASSWORD **='***senha_atual***'**  
+ OLD_PASSWORD **='***oldpassword***'**  
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.  
   
  MUST_CHANGE  
@@ -162,39 +162,39 @@ ALTER LOGIN login_name
   
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção estiver incluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitará uma senha atualizada quando o logon alterado for usado pela primeira vez.  
   
- DEFAULT_DATABASE  **=**  *banco de dados*  
+ DEFAULT_DATABASE **=***database*  
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica um banco de dados padrão a ser atribuído ao logon.  
   
- DEFAULT_LANGUAGE  **=**  *idioma*  
+ DEFAULT_LANGUAGE **=***language*  
  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica um idioma padrão a ser atribuído ao logon. O idioma padrão para todos os logons de banco de dados SQL está em inglês e não pode ser alterado. O idioma padrão do `sa` logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Linux, é o inglês, mas pode ser alterada.  
+ Especifica um idioma padrão a ser atribuído ao logon. O idioma padrão para todos os logons de Banco de Dados SQL é o inglês e não pode ser alterado. O idioma padrão do logon `sa` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Linux, é o inglês, mas pode ser alterado.  
   
- NOME = *login_name*  
- O nome novo do logon que está sendo renomeado. Se este for um logon do Windows, o SID do administrador do Windows correspondente ao novo nome deverá corresponder ao SID associado ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O novo nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon não pode conter um caractere de barra invertida (\\).  
+ NAME = *login_name*  
+ O nome novo do logon que está sendo renomeado. Se este for um logon do Windows, o SID do administrador do Windows correspondente ao novo nome deverá corresponder ao SID associado ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome novo de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode conter um caractere de barra invertida (\\).  
   
- CHECK_EXPIRATION = {ON | **OFF** }  
+ CHECK_EXPIRATION = { ON | **OFF** }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica se a política de expiração de senha deve ser aplicada neste logon. O valor padrão é OFF.  
   
- CHECK_POLICY  **=**  { **ON** | OFF}  
+ CHECK_POLICY **=** { **ON** | OFF }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica se as políticas de senha do Windows do computador em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução devem ser aplicadas neste logon. O valor padrão é ON.  
   
- CREDENCIAL = *credential_name*  
+ CREDENTIAL = *credential_name*  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- O nome de uma credencial a ser mapeada para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A credencial já deve existir no servidor. Para obter mais informações, consulte [credenciais &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Uma credencial não pode ser mapeada para o logon de sa.  
+ O nome de uma credencial a ser mapeada para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A credencial já deve existir no servidor. Para obter mais informações, veja [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Não é possível mapear uma credencial para logon do sa.  
   
  NO CREDENTIAL  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Remove qualquer mapeamento existente do logon para uma credencial de servidor. Para obter mais informações, consulte [credenciais &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Remove qualquer mapeamento existente do logon para uma credencial de servidor. Para obter mais informações, veja [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -204,12 +204,12 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Adiciona uma credencial de provedor EKM (gerenciamento de chave extensível) ao logon. Para obter mais informações, consulte [gerenciamento extensível de chaves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Adiciona uma credencial de provedor EKM (gerenciamento de chave extensível) ao logon. Para obter mais informações, veja [EKM &#40;Gerenciamento de Chave Extensível&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Remove uma credencial do provedor de gerenciamento de chave extensível (EKM) do logon. Para obter mais informações, consulte [gerenciamento extensível de chaves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+Remove uma credencial do provedor de EKM (Gerenciamento de Chave Extensível) do logon. Para obter mais informações, veja [Gerenciamento de Chave Extensível &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Remarks  
  Quando CHECK_POLICY estiver definido como ON, o argumento HASHED não poderá ser usado.  
@@ -234,18 +234,18 @@ Você não pode usar ALTER_LOGIN com o argumento DISABLE para negar acesso a um 
   
  “Msg 15151, Nível 16, Estado 1, Linha 1  
   
- "Não é possível alterar o logon '*Domain\Group*', porque ele não existe ou você não tem permissão."  
+ "Não é possível alterar o logon '*Domain\Group*' porque ele não existe ou você não tem permissão."  
   
  Isso ocorre por design.  
   
-Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessárias para autenticar uma conexão e as regras de firewall de nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e certifique-se de que um banco de dados tem a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY LOGIN.  
   
  Se a opção CREDENTIAL for usada, também será necessária a permissão ALTER ANY CREDENTIAL.  
   
- Se o logon que está sendo alterado for um membro do **sysadmin** função fixa de servidor ou um usuário autorizado da permissão CONTROL SERVER, também exige permissão CONTROL SERVER ao fazer as seguintes alterações:  
+ Se o logon sendo alterado for membro da função de servidor fixa **sysadmin** ou tiver a permissão CONTROL SERVER, a permissão CONTROL SERVER também será exigida quando as seguintes alterações forem efetuadas:  
   
 -   Redefinição de senha sem fornecimento da senha antiga.  
   
@@ -333,9 +333,9 @@ GO
  
   
 ## <a name="see-also"></a>Consulte Também  
- [Credenciais &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [Remover logon &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Altera uma chave de criptografia de coluna em um banco de dados, adicionando ou removendo um valor criptografado. Uma CEK pode ter até dois valores que permite a rotação de chave mestra de coluna correspondente. Uma CEK é usada ao criptografar colunas usando o [sempre criptografado &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) recurso. Antes de adicionar um valor CEK, você deve definir a chave mestra de coluna que foi usada para criptografar o valor usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instrução.  
+  Altera uma chave de criptografia de coluna em um banco de dados, adicionando ou removendo um valor criptografado. Uma CEK pode ter até dois valores que permite a rotação de chave mestra de coluna correspondente. Uma CEK é usada ao criptografar colunas com o recurso [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Antes de adicionar um valor CEK, é necessário definir a chave mestra de coluna que foi usada para criptografar o valor usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou a instrução [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,27 +54,27 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 ## <a name="arguments"></a>Argumentos  
  *key_name*  
- A chave de criptografia de coluna que você está alterando.  
+ A chave de criptografia de coluna que está sendo alterada.  
   
  *column_master_key_name*  
- Especifica o nome da chave mestra de coluna (CMK) usada para criptografar a chave de criptografia de coluna (CEK).  
+ Especifica o nome da CMK (chave mestra de coluna) usada para criptografar a CEK (chave de criptografia de coluna).  
   
  *algorithm_name*  
- Nome do algoritmo de criptografia usado para criptografar o valor. O algoritmo para os provedores de sistema deve ser **RSA_OAEP**. Esse argumento não é válido durante a remoção de um valor de chave de criptografia de coluna.  
+ Nome do algoritmo de criptografia usado para criptografar o valor. O algoritmo para os provedores do sistema deve ser **RSA_OAEP**. Esse argumento não é válido durante a remoção de um valor de chave de criptografia de coluna.  
   
  *varbinary_literal*  
- O BLOB de CEK criptografada com o mestre especificado chave de criptografia. . Esse argumento não é válido durante a remoção de um valor de chave de criptografia de coluna.  
+ O BLOB de CEK criptografado com a chave mestra de criptografia especificada. para obter informações sobre a ferramenta de configuração e recursos adicionais. Esse argumento não é válido durante a remoção de um valor de chave de criptografia de coluna.  
   
 > [!WARNING]  
->  Nunca passe em texto sem formatação valores CEK nesta instrução. Isso representará a vantagem desse recurso.  
+>  Nunca passe valores de CEK de texto não criptografado nesta instrução. Fazer isso comprometerá o benefício desse recurso.  
   
-## <a name="remarks"></a>Comentários  
- Normalmente, uma chave de criptografia de coluna é criada com um valor criptografado. Quando precisar de uma chave mestra de coluna a ser girada (as coluna chave mestra necessidades atuais a serem substituídos com a nova chave mestra de coluna), você pode adicionar um novo valor da chave de criptografia de coluna, criptografadas com a nova chave mestra de coluna. Isso permitirá que você certifique-se de que os aplicativos cliente podem acessar dados criptografados com a chave de criptografia de coluna, enquanto a nova chave mestra de coluna está sendo disponibilizada para aplicativos cliente. Um sempre criptografado habilitado driver em um aplicativo cliente que não tem acesso para a nova chave mestra, poderá usar o valor de chave de criptografia do coluna criptografado com a chave mestra de coluna antiga para acessar dados confidenciais. Os algoritmos de criptografia sempre criptografado dá suporte, exigem o valor de texto sem formatação para ter 256 bits. Um valor criptografado deve ser gerado usando um provedor de repositório de chaves que encapsula o repositório de chaves que contém a chave mestra de coluna.  
+## <a name="remarks"></a>Remarks  
+ Normalmente, uma chave de criptografia de coluna é criada com apenas um valor criptografado. Quando uma chave mestra de coluna precisar ser girada (a chave mestra de coluna atual precisa ser substituída pela nova chave mestra de coluna), adicione um novo valor da chave de criptografia de coluna, criptografado com a nova chave mestra de coluna. Isso permitirá que você garanta que os aplicativos cliente possam acessar dados criptografados com a chave de criptografia de coluna enquanto a nova chave mestra de coluna está sendo disponibilizada para os aplicativos cliente. Um driver habilitado para Always Encrypted em um aplicativo cliente que não tem acesso à nova chave mestra poderá usar o valor de chave de criptografia de coluna criptografado com a chave mestra de coluna antiga para acessar dados confidenciais. Os algoritmos de criptografia, compatíveis com o Always Encrypted, exigem que o valor de texto sem formatação tenha 256 bits. Um valor criptografado deve ser gerado com um provedor de repositório de chaves que encapsula o repositório de chaves que contém a chave mestra de coluna.  
   
- Use [Columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys. column_encryption_keys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys. column_encryption_key_values &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para exibir informações sobre chaves de criptografia de coluna.  
+ Use [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para exibir informações sobre chaves de criptografia de coluna.  
   
 ## <a name="permissions"></a>Permissões  
- Requer **ALTER ANY COLUMN ENCRYPTION KEY** no banco de dados.  
+ Exige a permissão **ALTER ANY COLUMN ENCRYPTION KEY** no banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -93,8 +93,8 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>B. Descartando um valor de chave de criptografia de coluna  
- O exemplo a seguir altera uma chave de criptografia de coluna chamada `MyCEK` soltando um valor.  
+### <a name="b-dropping-a-column-encryption-key-value"></a>B. Removendo um valor de chave de criptografia de coluna  
+ O exemplo a seguir altera uma chave de criptografia de coluna chamada `MyCEK` removendo um valor.  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -105,9 +105,9 @@ DROP VALUE
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

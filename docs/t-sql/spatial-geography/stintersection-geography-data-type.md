@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geography-data-type"></a>STIntersection (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna um objeto que representa os pontos onde uma **geografia** instância intercepta outra **geografia** instância.  
+  Retorna um objeto que representa os pontos em que uma instância de **geography** intersecciona outra instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- É outra **geografia** instância a ser comparado com a instância na qual stintersection () está sendo invocado.  
+ É outra instância de **geography** a ser comparada com a instância na qual STIntersection() está sendo invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  A interseção de duas instâncias de geografia é retornada.  
   
- Stintersection () sempre retornará nulo se os identificadores de referência espaciais (SRIDs) do **geografia** instâncias não coincidem.  
+ STIntersection() sempre retornará nulo se os SRIDs (identificadores de referência espacial) das instâncias de **geografia** não corresponderem.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a instâncias espaciais maiores do que um hemisfério. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pode incluir **FullGlobe** instâncias no conjunto de possíveis resultados retornados no servidor.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a instâncias espaciais maiores do que um hemisfério. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode incluir instâncias de **FullGlobe** no conjunto de possíveis resultados retornados no servidor.  
   
  O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
   
@@ -93,7 +93,7 @@ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.6
 SELECT @g.STIntersection('FULLGLOBE').ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

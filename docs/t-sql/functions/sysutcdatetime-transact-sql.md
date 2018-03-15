@@ -40,12 +40,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna um **datetime2** valor que contém a data e hora do computador no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução. A data e hora é retornada como hora UTC (Coordinated Universal Time). A especificação de precisão de segundo fracionária tem um intervalo de 1 a 7 dígitos. A precisão padrão é 7 dígitos.  
+  Retorna um valor de **datetime2** que contém a data e a hora do computador no qual a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada. A data e hora são retornadas como hora UTC (Tempo Universal Coordenado). A especificação de precisão de segundo fracionária tem um intervalo de 1 a 7 dígitos. A precisão padrão é 7 dígitos.  
   
 > [!NOTE]  
 >  SYSDATETIME e SYSUTCDATE têm mais precisão de segundos fracionários que GETDATE e GETUTCDATE. SYSDATETIMEOFFSET inclui o deslocamento de fuso horário do sistema. SYSDATETIME, SYSUTCDATE e SYSDATETIMEOFFSET podem ser atribuídos a uma variável de qualquer um dos tipos de data e hora.  
   
- Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de dados de data e hora e funções, consulte [funções de data e hora tipos de dados e](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,13 +58,13 @@ SYSUTCDATETIME ( )
 ## <a name="return-type"></a>Tipo de retorno  
  **datetime2**  
   
-## <a name="remarks"></a>Comentários  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]instruções podem fazer referência a SYSUTCDATETIME em qualquer lugar, eles podem consultar um **datetime2** expressão.  
+## <a name="remarks"></a>Remarks  
+ As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] podem fazer referência a SYSUTCDATETIME em qualquer lugar em que possam fazer referência a uma expressão **datetime2**.  
   
  SYSUTCDATETIME é uma função não determinística. Exibições e expressões que fazem referência a essa função em uma coluna não podem ser indexadas.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Obtém os valores de data e hora usando a API do Windows GetSystemTimeAsFileTime(). A precisão depende do hardware do computador e da versão do Windows no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada. A precisão desta API está fixada em 100 nanosegundos. A precisão pode ser determinada usando a API do Windows GetSystemTimeAdjustment().  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obtém os valores de data e hora usando a API do Windows GetSystemTimeAsFileTime(). A precisão depende do hardware do computador e da versão do Windows no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada. A precisão desta API está fixada em 100 nanosegundos. A precisão pode ser determinada usando a API do Windows GetSystemTimeAdjustment().  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir usam as seis funções de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que retornam a data e a hora atuais para retornar a data, a hora ou ambas. Os valores são retornados em série; portanto, seus segundos fracionários podem ser diferentes.  
@@ -132,10 +132,10 @@ Time             Date Time
 13:49:33.6330000 2009-04-22 13:49:33.633
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Dados de data e hora tipos e funções &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

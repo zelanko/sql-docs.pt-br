@@ -1,7 +1,7 @@
 ---
 title: Instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 03/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f8b7e34ae99042012b88f9d83c0ee3af0ad18be
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 4b5371302206f87f19632c55f90917de189b303a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalando o Microsoft ODBC Driver for SQL Server no Linux e no macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,9 @@ ms.lasthandoff: 03/09/2018
 Este artigo explica como instalar o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Linux e macOS, bem como as ferramentas de linha de comando opcionais para o SQL Server (`bcp` e `sqlcmd`) e o unixODBC cabeçalhos de desenvolvimento.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 para SQL Server 
+
+> [!IMPORTANT]
+> Se você tiver instalado o v17 `msodbcsql` pacote que estava disponível brevemente, você deve removê-lo antes de instalar o `msodbcsql17` pacote. Isso pode evitar conflitos. O `msodbcsql17` pacote pode ser instalado lado a lado com o `msodbcsql` v13 pacote.
 
 ### <a name="debian-8-and-9"></a>Debian 8 e 9
 ```
@@ -405,7 +408,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-linux"></a>Microsoft ODBC Driver 11 para SQL Server no Linux
 
-Antes de usar o driver, instale o Gerenciador de driver unixODBC. Consulte [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) para obter mais informações.  
+Antes de usar o driver, instale o Gerenciador de driver unixODBC. Para obter mais informações, consulte [instalando o Gerenciador de Driver](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
 
 **Etapas da instalação**  
 
@@ -494,7 +497,7 @@ Para obter mais informações sobre como resolver falhas de conexão, consulte:
   
 -   [Solução de problemas de autenticação do SQL Server](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Detalhes do erro (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [(De detalhes do errohttp://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     O número do erro especificado na URL (11001) deve ser alterado para coincidir com o erro que você vê.  
   

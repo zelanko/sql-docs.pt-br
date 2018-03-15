@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geometry-data-type"></a>MakeValid (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Converte um inválido **geometria** instância em uma **geometria** instância com um tipo válido do Open Geospatial Consortium (OGC).
+Converte uma instância de **geometry** inválida em uma instância de **geometry** com um tipo válido do OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ Converte um inválido **geometria** instância em uma **geometria** instância c
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método pode causar uma alteração no tipo do **geometria** instância, bem como fazer com que os pontos de um **geometria** instância sejam levemente deslocados.  
+ Esse método causa uma alteração no tipo de instância de **geometry** e faz com que os pontos de uma instância de **geometry** sejam um pouco deslocados.  
   
 ## <a name="examples"></a>Exemplos  
  O primeiro exemplo cria uma instância inválida de `LineString` que se sobrepõe e usa `STIsValid()` para confirmar que é uma instância inválida. `STIsValid()` retorna o valor 0 para uma instância inválida.  
@@ -86,7 +86,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 1 1, 1 1)';
 SELECT @g.MakeValid().ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STIsValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

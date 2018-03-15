@@ -33,12 +33,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-#  <a name="asgml---geography-data-type"></a>AsGml - tipo de dados geography
+#  <a name="asgml---geography-data-type"></a>AsGml – tipo de dados geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna a representação GML Geography Markup Language () de um **geografia** instância.  
+  Retorna a representação GML (Geography Markup Language) de uma instância de **geography**.  
   
- Para obter mais informações sobre Geography Markup Language, consulte as especificações do Open Geospatial Consortium: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Para obter mais informações sobre Geography Markup Language, confira as especificações do Open Geospatial Consortium: [Especificações do OGC, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **xml**  
+ Tipo de retorno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **XML**  
   
- Tipo de retorno CLR: **SqlXml**  
+ Tipo de retorno do CLR: **SqlXml**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -69,7 +69,7 @@ SELECT @g.AsGml();
 <LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

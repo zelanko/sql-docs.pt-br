@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de entidade de banco de dados (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de entidade de segurança do banco de dados (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -73,24 +73,24 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada no principal de banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- USUÁRIO::*database_user*  
- Especifica a classe e o nome do usuário no qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária.  
+ USER ::*database_user*  
+ Especifica a classe e o nome do usuário no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
- FUNÇÃO::*database_role*  
- Especifica a classe e o nome da função na qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária.  
+ ROLE ::*database_role*  
+ Especifica a classe e o nome da função na qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
- FUNÇÃO de aplicativo::*application_role*  
- **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ APPLICATION ROLE ::*application_role*  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária.  
+ Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
  CASCADE  
  Indica que a permissão que está sendo negada também é negada a outros principais aos quais ela foi concedida por esse principal.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica uma entidade de segurança da qual a entidade de segurança que está executando essa consulta deriva seu direito de revogar a permissão.  
   
  *Database_user*  
@@ -100,7 +100,7 @@ DENY permission [ ,...n ]
  Especifica uma função de banco de dados.  
   
  *Application_role*  
- **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica uma função de aplicativo.  
   
@@ -119,7 +119,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>Permissões do usuário do banco de dados  
  Um usuário do banco de dados é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em um usuário do banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Negando a permissão IMPERSONATE em um usuário para uma função de aplicativo  
  O exemplo a seguir nega a permissão `IMPERSONATE` para o usuário `HamithaL` na função de aplicativo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -187,14 +187,14 @@ DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CONCEDER permissões de entidade de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [REVOGAR permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT de entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [Permissões REVOKE da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

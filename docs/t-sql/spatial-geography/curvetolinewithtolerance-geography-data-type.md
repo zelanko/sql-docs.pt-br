@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma aproximação poligonal de uma **geografia** instância que contém segmentos de arco circular.  
+  Retorna uma aproximação poligonal de uma instância de **geography** que contém segmentos de arco circulares.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,28 +45,28 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *tolerance*  
- É um **duplo** expressão que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
+ É uma expressão **double** que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
   
  *relative*  
- É um **bool** indicando se deve usar um máximo relativo para o desvio de expressão. Quando o relativo é definido como falso (0), um máximo absoluto é definido para o desvio que um aproximado linear poderá ter.  Quando o relativo é definido como verdadeiro (1), a tolerância é calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
+ É uma expressão**booliana** que indica se um máximo relativo para o desvio deverá ser usado. Quando o relativo é definido como falso (0), um máximo absoluto é definido para o desvio que um aproximado linear poderá ter.  Quando o relativo é definido como verdadeiro (1), a tolerância é calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
- Definição da tolerância < = 0 lança um **ArgumentOutOfRange** exceção.  
+ A definição de tolerância <= 0 gera uma exceção **ArgumentOutOfRange**.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método permite uma quantidade de tolerância de erro deve ser especificado para o resultante **LineString**.  
+ Esse método permite uma quantidade de tolerância de erro a ser especificada para a **LineString** resultante.  
   
- **CurveToLineWithTolerance** método retornará um **LineString** instância para uma **CircularString** ou **CompoundCurve** instância e **Polígono** instância para uma **CurvePolygon** instância.  
+ O método **CurveToLineWithTolerance** retornará uma instância de **LineString** para uma instância de **CircularString** ou de **CompoundCurve** e uma instância de  **Polígono** para uma instância de **CurvePolygon**.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Usando valores de tolerância diferentes em uma instância de CircularString  
- O exemplo a seguir mostra como a definição da tolerância afeta a `LineString`instância retornada de um `CircularString` instância:  
+ O seguinte exemplo mostra como a definição da tolerância afeta a instância de `LineString` retornada de uma instância de `CircularString`:  
   
  ```
  DECLARE @g geography;  
@@ -93,14 +93,14 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Definindo o relativo como true para uma instância de CurvePolygon de invocação  
- O exemplo a seguir usa uma `CurvePolygon` instância para chamar `CurveToLineWithTolerance()` com *relativo* definido como true:  
+ O exemplo a seguir usa uma instância de `CurvePolygon` para chamar `CurveToLineWithTolerance()` com *relativo* definido como true:  
   
  ```
  DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
  SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

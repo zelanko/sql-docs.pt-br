@@ -43,23 +43,23 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
   
 ## <a name="arguments"></a>Argumentos  
  *external_data_source_name*  
- O nome da fonte de dados externa para descartar.  
+ O nome da fonte de dados externa a ser removida.  
   
 ## <a name="metadata"></a>Metadados  
- Para exibir uma lista de dados externos fontes usam a exibição do sistema sys.external_data_sources.  
+ Para exibir uma lista de fontes de dados externas, use a exibição do sistema sys.external_data_sources.  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
 ## <a name="permissions"></a>Permissões  
- Requer ALTER qualquer fonte de dados externa.  
+ Exige ALTER ANY EXTERNAL DATA SOURCE.  
   
 ## <a name="locking"></a>Bloqueio  
- Leva um bloqueio compartilhado no objeto de fonte de dados externa.  
+ Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Descartar uma fonte de dados externa não remove os dados externos.  
+ A remoção de uma fonte de dados externa não remove os dados externos.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -69,7 +69,7 @@ SELECT * FROM sys.external_data_sources;
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   

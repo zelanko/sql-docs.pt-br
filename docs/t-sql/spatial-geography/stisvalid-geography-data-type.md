@@ -31,9 +31,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisvalid-geography-data-type"></a>STIsValid (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retornará true se um **geografia** instância está bem formada e reconhecida como um objeto de Geografia válido baseado em seu tipo Open Geospatial Consortium (OGC). Retornará false se um **geografia** instância não está bem formada. Esse método é preciso.  
+  Retornará true se uma instância de **geography** estiver bem formada e for reconhecida como um objeto de geografia válido baseado em seu tipo do OGC (Open Geospatial Consortium). Retornará false se uma instância de **geography** não estiver bem formada. Esse método é preciso.  
   
- Esses dados de Geografia digite método dá suporte a **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de geography é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,14 +43,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- O tipo OGC de uma **geografia** instância pode ser determinada invocando [stgeometrytype ()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
+ O tipo OGC de uma instância de **geography** pode ser determinado com a invocação de [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]produz somente válido **geografia** instâncias, mas permite o armazenamento e recuperação de instâncias inválidas. Uma instância válida que representa o mesmo conjunto de pontos de uma instância inválida pode ser recuperada por meio do método `MakeValid()`.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produz somente instâncias de **geografia** válidas, mas permite o armazenamento e a recuperação de instâncias inválidas. Uma instância válida que representa o mesmo conjunto de pontos de uma instância inválida pode ser recuperada por meio do método `MakeValid()`.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geography` e usa `STIsValid()` para testar se a instância é válida.  
@@ -61,8 +61,8 @@ SELECT @g.STIsValid();
 DECLARE @g geography  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [STGeometryType &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [STGeometryType &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
  [MakeValid &#40;tipos de dados geography&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

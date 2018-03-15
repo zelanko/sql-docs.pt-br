@@ -32,9 +32,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="parse-geography-data-type"></a>Parse (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **geografia** instância de uma representação de texto do Open Geospatial Consortium (OGC) conhecido (WKT). Parse é equivalente a [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), exceto que ele assume um SRID (ID) de 4326 como um parâmetro de referência espacial. A entrada pode transportar valores opcionais Z (elevação) e M (medida).
+Retorna uma instância de **geography** de uma representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium). Parse() é equivalente a [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), exceto que ele assume uma SRID (ID de referência espacial) igual a 4326 como um parâmetro. A entrada pode transportar valores opcionais Z (elevação) e M (medida).
   
-Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.
+Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,19 +45,19 @@ Parse ( 'geography_tagged_text' )
   
 ## <a name="arguments"></a>Argumentos  
  *geography_tagged_text*  
- É a representação WKT do **geografia** instância a ser retornada. *geography_tagged_text* é um **nvarchar** expressão.  
+ É a representação WKT da instância de **geography** a ser retornada. *geography_tagged_text* é uma expressão **nvarchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- O tipo OGC do **geografia** instância retornada por `Parse()` é definido como a entrada WKT correspondente.  
+ O tipo do OGC da instância de **geography** retornado por `Parse()` é definido como a entrada de WKT correspondente.  
   
- A cadeia de caracteres 'Nulo' será interpretado como um valor nulo **geografia** instância.  
+ A cadeia de caracteres 'Null' será interpretada como uma instância de **geography** nula.  
   
- Este método gerará **ArgumentException** se a entrada contém uma borda oposta.  
+ Este método gerará **ArgumentException** se a entrada contiver uma borda oposta.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `Parse()` para criar uma instância `geography`.  
@@ -68,8 +68,8 @@ SET @g = geography::Parse('LINESTRING(-122.360 47.656, -122.343 47.656)');
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática estendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Métodos de geografia estática estendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
  [STGeomFromText &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   
   

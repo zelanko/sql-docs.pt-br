@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Testa se o **geografia** instância é o mesmo que o tipo especificado.  
+  Testa se a instância de **geography** é a mesma que o tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *geography_type*  
- É um **nvarchar (4000)** cadeia de caracteres especificando um dos 16 tipos expostos no **geografia** hierarquia de tipo.  
+ É uma cadeia de caracteres **nvarchar(4000)** que especifica um dos 16 tipos expostos na hierarquia de tipos de **geografia**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Retornará 1 se o tipo de um **geografia** instância é o mesmo que o tipo especificado ou se o tipo especificado for um ancestral do tipo de instância; caso contrário, retornará 0.  
+ Retornará 1 se o tipo de uma instância de **geography** for o mesmo que o tipo especificado ou se o tipo especificado for um ancestral do tipo de instância, caso contrário, retornará 0.  
   
- Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
- A entrada para o método deve ser um dos seguintes: Geometry, Point, curva, LineString, CircularString, superfície, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**,  **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint**, ou **FullGlobe**.  
+ A entrada para o método precisa ser uma dos seguintes: geometria, ponto, curva, LineString, CircularString, superfície, polígono, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** ou **FullGlobe**.  
   
  Esse método lançará uma `ArgumentException` se qualquer outra cadeia de caracteres for usada na entrada.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

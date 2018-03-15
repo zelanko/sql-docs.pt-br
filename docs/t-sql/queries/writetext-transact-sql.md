@@ -40,10 +40,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Permite a atualização interativa minimamente registrada de um objeto existente **texto**, **ntext**, ou **imagem** coluna. WRITETEXT substitui quaisquer dados existentes na coluna afetada. WRITETEXT não pode ser usado em **texto**, **ntext**, e **imagem** colunas nos modos de exibição.  
+  Permite a atualização interativa minimamente registrada de uma coluna de **text**, **ntext** ou **image** existente. WRITETEXT substitui quaisquer dados existentes na coluna afetada. WRITETEXT não pode ser usado em colunas de **text**, **ntext** e **image** em exibições.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use os tipos de dados de valor grande e o **.** A cláusula de gravação a [atualização](../../t-sql/queries/update-transact-sql.md) instrução em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use os tipos de dados de valor grande e a cláusula **.**WRITE da instrução [UPDATE](../../t-sql/queries/update-transact-sql.md) nesse caso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,34 +64,34 @@ WRITETEXT [BULK]
 >  Nós recomendamos que a opção de BULK não seja usada em aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser alterada ou removida em uma futura versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *table* **.column**  
- É o nome da tabela e **texto**, **ntext**, ou **imagem** coluna para atualizar. Nomes de tabela e coluna devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
+ É o nome da tabela e da coluna de **text**, **ntext** ou **image** a ser atualizado. Os nomes de tabela e de coluna precisam estar de acordo com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
   
  *text_ptr*  
- É um valor que armazena o ponteiro para o **texto**, **ntext**, ou **imagem** dados. *text_ptr* devem ser **binário (16)**. Para criar um ponteiro de texto, execute uma [inserir](../../t-sql/statements/insert-transact-sql.md) ou [atualização](../../t-sql/queries/update-transact-sql.md) instrução com dados que não sejam nulos para o **texto**, **ntext**, ou **imagem** coluna.  
+ É um valor que armazena o ponteiro para os dados de **text**, **ntext** ou **image**. *text_ptr* precisa ser **binary(16)**. Para criar um ponteiro de texto, execute uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) com os dados não nulos para a coluna **text**, **ntext** ou **image**.  
   
  WITH LOG  
  Ignorado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A criação de log é determinada pelo modelo de recuperação em vigor para o banco de dados.  
   
  *data*  
- É o valor real **texto**, **ntext** ou **imagem** dados serão armazenados. *dados* pode ser um literal ou um parâmetro. O comprimento máximo do texto que pode ser inserido interativamente com WRITETEXT é aproximadamente 120 KB para **texto**, **ntext**, e **imagem** dados.  
+ São os dados reais de **text**, **ntext** ou **image** a serem armazenados. *data* pode ser um literal ou um parâmetro. O comprimento máximo do texto que pode ser inserido de forma interativa com WRITETEXT é de aproximadamente 120 KB para dados de **text**, **ntext** e **image**.  
   
 ## <a name="remarks"></a>Remarks  
- Use WRITETEXT para substituir **texto**, **ntext**, e **imagem** dados e UPDATETEXT para modificar **texto**, **ntext**, e **imagem** dados. UPDATETEXT é mais flexível porque altera somente uma parte de um **texto**, **ntext**, ou **imagem** coluna em vez da coluna inteira.  
+ Use WRITETEXT para substituir dados de **text**, **ntext** e **image** e UPDATETEXT para modificar dados de **text**, **ntext** e **image**. UPDATETEXT é mais flexível porque altera somente uma parte de uma coluna de **text**, **ntext** ou **image** e não a coluna inteira.  
   
- Para melhor desempenho, recomendamos que **texto**, **ntext**, e **imagem** dados sejam inseridos ou atualizados em tamanhos de bloco que sejam múltiplos de 8040 bytes.  
+ Para obter o melhor desempenho possível, recomenda-se que os dados de **text**, **ntext** e **image** sejam inseridos ou atualizados em partes com tamanhos que sejam múltiplos de 8040 bytes.  
   
- Se o modelo de recuperação do banco de dados for simples ou bulk-logged, **texto**, **ntext**, e **imagem** operações que usem WRITETEXT serão operações minimamente registradas quando novos dados inseridos ou anexados.  
+ Se o modelo de recuperação do banco de dados for simples ou bulk-logged, as operações de **text**, **ntext** e **image** que usam WRITETEXT serão registradas minimamente quando novos dados forem inseridos ou anexados.  
   
 > [!NOTE]  
 >  A criação mínima de log não é usada quando valores existentes são atualizados.  
   
  Para que WRITETEXT funcione corretamente, a coluna já deve conter um ponteiro de texto válido.  
   
- Se a tabela não tiver texto em linha, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] economiza espaço por não inicializar **texto** colunas quando valores nulos explícitos ou implícitos forem adicionados em **texto** colunas com INSERT e nenhum ponteiro de texto podem ser obtido para tais nulos. Para inicializar **texto** colunas como NULL, use a instrução UPDATE. Se a tabela tiver texto em linha, não será necessário inicializar a coluna de texto para nulos e sempre será possível obter um ponteiro de texto.  
+ Se a tabela não tiver texto em linha, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] economizará espaço com a não inicialização de colunas de **text** quando valores nulos explícitos ou implícitos forem adicionados em colunas de **text** com INSERT e quando nenhum ponteiro de texto puder ser obtido para esses nulos. Para inicializar colunas de **text** como NULL, use a instrução UPDATE. Se a tabela tiver texto em linha, não será necessário inicializar a coluna de texto para nulos e sempre será possível obter um ponteiro de texto.  
   
- A função SQLPutData ODBC é mais rápida e usa menos memória dinâmica que WRITETEXT. Esta função pode inserir até 2 gigabytes de **texto**, **ntext**, ou **imagem** dados.  
+ A função ODBC SQLPutData é mais rápida e usa menos memória dinâmica que WRITETEXT. Esta função pode inserir até 2 gigabytes de dados de **text**, **ntext** ou **image**.  
   
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], na linha ponteiros de texto **texto**, **ntext**, ou **imagem** dados podem existir mas talvez não sejam válidos. Para obter informações sobre a opção text in row, consulte [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter informações sobre como invalidar ponteiros de texto, consulte [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podem existir ponteiros de texto em linha para os dados de **text**, **ntext** ou **image**, mas talvez eles não sejam válidos. Para obter informações sobre a opção text in row, consulte [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter informações sobre como invalidar ponteiros de texto, consulte [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão UPDATE na tabela especificada. A permissão será transferível quando a permissão UPDATE for transferida.  
@@ -118,12 +118,12 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [UPDATETEXT &#40; Transact-SQL &#41;](../../t-sql/queries/updatetext-transact-sql.md)  
+ [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)  
   
   

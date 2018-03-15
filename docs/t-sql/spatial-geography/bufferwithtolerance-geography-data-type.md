@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna valores de um objeto geométrico que representa a união de todos os pontos cuja distância de uma **geografia** instância é menor ou igual ao valor especificado, permitindo uma tolerância especificada.  
+  Retorna um objeto geométrico que representa a união de todos os valores de pontos cuja distância em relação a uma instância de **geography** é menor ou igual a um valor especificado, permitindo uma tolerância especificada.  
   
- Esses dados de Geografia digite método dá suporte a **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de geography é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,37 +47,37 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *distance*  
- É um **float** expressão que especifica a distância entre o **geografia** instância em torno da qual calcular o buffer.  
+ É uma expressão **float** que especifica a distância da instância de **geography** ao redor da qual calcular o buffer.  
   
- A distância máxima do buffer não pode exceder 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 circunferência da Terra) ou o globo inteiro.  
+ A distância máxima do buffer não pode exceder 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferência da Terra) ou o globo inteiro.  
   
  *tolerance*  
- É um **float** expressão que especifica a tolerância da distância do buffer.  
+ É uma expressão **float** que especifica a tolerância da distância do buffer.  
   
- O *tolerância* valor refere-se à variação máxima na distância ideal do buffer para a aproximação linear retornada.  
+ O valor de *tolerance* refere-se à variação máxima na distância ideal do buffer para a aproximação linear retornada.  
   
  Por exemplo, a distância ideal de buffer de um ponto é um círculo, mas deve ser aproximado por um polígono. Quanto menor a tolerância, mais pontos o polígono terá, o que aumenta a complexidade do resultado, mas diminui o erro.  
   
  O limite mínimo é 0,1 por cento da distância; qualquer tolerância menor que isso será arredondada até o limite mínimo.  
   
  *relative*  
- É um **bit** especificando se o *tolerância* valor é relativo ou absoluto. Se 'TRUE' ou 1, tolerância será relativa e calculada como o produto do *tolerância* parâmetro e da extensão angular \* raio equatorial do elipsoide. Se 'FALSE' ou 0, tolerância será absoluta e o *tolerância* valor é a variação máxima absoluta na distância ideal do buffer para a aproximação linear retornada.  
+ É um **bit** que especifica se o valor de *tolerance* é relativo ou absoluto. Se for 'TRUE' ou 1, a tolerância será relativa e será calculada como o produto do parâmetro *tolerance* e da extensão angular \* o raio equatorial do elipsoide. Se for 'FALSE' ou 0, a tolerância será absoluta e o valor de *tolerance* será a variação máxima absoluta na distância ideal do buffer para a aproximação linear retornada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método lançará um **ArgumentException** se o *distância* não é um número (NAN), ou se *distância* é infinito positivo ou negativo.  Esse método também lançará um **ArgumentException** se *tolerância* é zero (0), e não um número (NaN), infinito negativo, ou positivo ou negativo.  
+ Esse método gerará uma **ArgumentException** se a *distance* for NaN (não é um número) ou se *distance* for um infinito positivo ou negativo.  Este método também gerará uma **ArgumentException** se *tolerance* for zero (0), NaN (não é um número), negativo ou infinito positivo ou negativo.  
   
- `STBuffer()`retornará um **FullGlobe** instância em certos casos; por exemplo, `STBuffer()` retorna um **FullGlobe** instância em dois polos quando a distância do buffer é maior que a distância do Equador para os polos.  
+ `STBuffer()` retornará uma instância de **FullGlobe** em alguns casos; por exemplo, `STBuffer()` retorna uma instância de **FullGlobe** em dois pólos quando a distância do buffer é maior que a distância do Equador para os pólos.  
   
- Esse método lançará um **ArgumentException** na **FullGlobe** instâncias onde a distância do buffer excede a seguinte limitação:  
+ Esse método gerará uma **ArgumentException** em instâncias de **FullGlobe** nas quais a distância do buffer exceder a seguinte limitação:  
   
- 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 circunferência da Terra)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 da circunferência da Terra)  
   
- O erro entre o buffer teórico e calculado é max (tolerância, extensões \* 1. e-7) onde a tolerância é o valor da *tolerância* parâmetro. Para obter mais informações sobre extensões, consulte [referência de método do tipo de dados geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ O erro entre o buffer teórico e o calculado é max(tolerance, extents \* 1.E-7), em que a tolerância é o valor do parâmetro *tolerance*. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
  Esse método não é preciso.  
   
@@ -90,8 +90,8 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [STBuffer &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [STBuffer &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

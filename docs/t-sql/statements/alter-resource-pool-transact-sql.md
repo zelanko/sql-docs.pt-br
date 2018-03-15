@@ -1,5 +1,5 @@
 ---
-title: ALTERAR o POOL de recursos (Transact-SQL) | Microsoft Docs
+title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   Altera uma configuração do pool de recursos do Administrador de Recursos existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,34 +66,34 @@ ALTER RESOURCE POOL { pool_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- { *nome_do_pool* | **"padrão"** }  
+ { *pool_name* | **"default"** }  
  É o nome de um pool de recursos definido pelo usuário existente ou do pool de recursos padrão criado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.  
   
  "default" deve estar entre aspas duplas ("") ou colchetes ([]) quando usado com ALTER RESOURCE POOL para evitar conflito com DEFAULT, que é uma palavra reservada de sistema. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Grupos de cargas de trabalho predefinidos e pools de recursos usam nomes de letras minúsculas, como "padrão". Isso deve ser levado em consideração nos servidores que usam agrupamento com diferenciação de maiúsculas e minúsculas. Os servidores com agrupamento sem diferenciação de maiúsculas e minúsculas, como SQL_Latin1_General_CP1_CI_AS, tratarão "default" e "Default" da mesma maneira.  
+>  Os grupos de carga de trabalho predefinidos e os pools de recursos usam nomes de letras minúsculas, como "padrão". Isso deve ser levado em consideração nos servidores que usam agrupamento com diferenciação de maiúsculas e minúsculas. Os servidores com agrupamento sem diferenciação de maiúsculas e minúsculas, como SQL_Latin1_General_CP1_CI_AS, tratarão "default" e "Default" da mesma maneira.  
   
  MIN_CPU_PERCENT =*value*  
- Especifica a média de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *valor* é de 0 a 100.  
+ Especifica a média de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. *value* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *value* é de 0 a 100.  
   
  MAX_CPU_PERCENT =*value*  
- Especifica a média máxima de largura de banda de CPU que todas as solicitações do pool de recursos receberão quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
+ Especifica a média máxima de largura de banda de CPU que todas as solicitações do pool de recursos receberão quando houver contenção de CPU. *value* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *value* é de 1 a 100.  
   
  CAP_CPU_PERCENT =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica a capacidade de CPU máxima do destino para solicitações no pool de recursos. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
+ Especifica a capacidade máxima da de CPU de destino para solicitações no pool de recursos. *value* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *value* é de 1 a 100.  
   
 > [!NOTE]  
->  Devido à natureza estatística de governança de CPU, você pode perceber picos ocasionais exceder o valor especificado em CAP_CPU_PERCENT.  
+>  Devido à natureza estatística da governança de CPU, você poderá notar picos ocasionais que excedem o valor especificado em CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Anexe o pool de recursos a agendadores específicos. O valor padrão é AUTO.  
   
- AFFINITY SCHEDULER = (Scheduler_range_spec) mapeia o pool de recursos para as agendas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas pelos IDs especificados. Essas IDs são mapeadas para os valores na coluna de scheduler_id em [sys.DM os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
+ AFFINITY SCHEDULER = (Scheduler_range_spec) mapeia o pool de recursos para as agendas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas pelos IDs especificados. Essas IDs são mapeadas para os valores na coluna scheduler_id em [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
   
  Quando você usar AFFINITY NAMANODE = (NUMA_node_range_spec), o pool de recursos terá uma afinidade com os agendadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeados para CPUs físicas que correspondem ao nó NUMA especificado ou ao intervalo de nós. Você pode usar a seguinte consulta Transact-SQL para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -106,40 +106,40 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ```  
   
  MIN_MEMORY_PERCENT =*value*  
- Especifica a quantidade mínima de memória reservada para esse pool de recursos que não pode ser compartilhada com outros pools de recursos. *valor* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *valor* é de 0 a 100.  
+ Especifica a quantidade mínima de memória reservada para esse pool de recursos que não pode ser compartilhada com outros pools de recursos. *value* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *value* é de 0 a 100.  
   
  MAX_MEMORY_PERCENT =*value*  
- Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
+ Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos. *value* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *value* é de 1 a 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica o mínimo de operações de E/S por segundo (IOPS) por volume de disco para reservar para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para indicar nenhum limite mínimo para o pool.  
+ Especifica o mínimo de operações de E/S por segundo (IOPS) por volume de disco para reservar para o pool de recursos. O intervalo permitido para *value* é de 0 a 2^31-1 (2.147.483.647). Especifique 0 para indicar nenhum limite mínimo para o pool.  
   
  MAX_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica o máximo de operações de E/S por segundo (IOPS) por volume de disco para permitir para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para definir um limite ilimitado para o pool. O padrão é 0.  
+ Especifica o máximo de operações de E/S por segundo (IOPS) por volume de disco para permitir para o pool de recursos. O intervalo permitido para *value* é de 0 a 2^31-1 (2.147.483.647). Especifique 0 para definir um limite ilimitado para o pool. O padrão é 0.  
   
  Se o MAX_IOPS_PER_VOLUME para um pool for definido como 0, o pool não será controlado e pode utilizar todos os IOPS no sistema mesmo se outros pools tiverem MIN_IOPS_PER_VOLUME definido. Para esses casos, é recomendável definir o valor de MAX_IOPS_PER_VOLUME para esse pool para um número alto (por exemplo, o valor máximo 2^31-1) se você quiser que esse pool seja controlado para E/S.  
   
 ## <a name="remarks"></a>Remarks  
  MAX_CPU_PERCENT e MAX_MEMORY_PERCENT devem ser maior que ou igual a MIN_CPU_PERCENT e MIN_MEMORY_PERCENT, respectivamente.  
   
- MAX_CPU_PERCENT pode usar a capacidade da CPU acima do valor de MAX_CPU_PERCENT quando ela está disponível. Embora possa haver picos periódicos acima CAP_CPU_PERCENT, cargas de trabalho não devem exceder CAP_CPU_PERCENT por longos períodos de tempo, mesmo quando a capacidade de CPU adicional está disponível.  
+ MAX_CPU_PERCENT poderá usar a capacidade da CPU acima do valor de MAX_CPU_PERCENT, se essa capacidade estiver disponível. Embora possa haver picos periódicos acima de CAP_CPU_PERCENT, as cargas de trabalho não devem exceder CAP_CPU_PERCENT por longos períodos de tempo, mesmo quando a capacidade de CPU adicional está disponível.  
   
  A porcentagem total de CPU para cada componente de afinidade (agendador(es) ou nó(s) NUMA) não deve exceder 100%.  
   
  Ao executar instruções DDL, é recomendável estar familiarizado com os estados do Administrador de Recursos. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- Ao alterar um plano que afetam a configuração, a nova configuração só terão efeito em planos em cache anteriormente após a execução de DBCC FREEPROCCACHE (*nome_do_pool*), onde *nome_do_pool* é o nome de um recurso Pool de recursos do administrador.  
+ Ao alterar um plano que afeta a configuração, a nova configuração só terá efeito nos planos armazenados em cache anteriormente após a execução de DBCC FREEPROCCACHE (*pool_name*), em que *pool_name* é o nome de um pool de recursos do Resource Governor.  
   
--   Se você estiver alterando a AFINIDADE de agendadores vários para um único Agendador, execução de DBCC FREEPROCCACHE não é necessária porque planos paralelos podem executar em modo serial. No entanto, não é tão eficiente quanto um plano compilado como um plano serial.  
+-   Se você estiver alterando a AFFINITY de vários agendadores para um único agendador, a execução de DBCC FREEPROCCACHE não será necessária porque os planos paralelos podem ser executados em modo serial. No entanto, isso pode não ser tão eficiente quanto um plano compilado como um plano serial.  
   
--   Se você estiver alterando a AFINIDADE de um agendador único a vários agendadores, a execução de DBCC FREEPROCCACHE não é necessária. No entanto, os planos seriais não pode ser executado em paralelo, para que limpar o cache do respectivo permitirá novos planos para potencialmente ser compilado usando paralelismo.  
+-   Se você estiver alterando a AFFINITY de um único agendador para vários agendadores, a execução de DBCC FREEPROCCACHE não será necessária. No entanto, os planos seriais não podem ser executados em paralelo, portanto, limpar o respectivo cache permitirá que novos planos sejam possivelmente compilados usando paralelismo.  
   
 > [!CAUTION]  
->  Planos em cache de um pool de recursos que está associado a mais de um grupo de carga de trabalho de limpeza afetará todos os grupos de cargas de trabalho com o pool de recursos definidos pelo usuário identificado pelo *nome_do_pool*.  
+>  A limpeza de planos armazenados em cache de um pool de recursos que está associado a mais de um grupo de carga de trabalho afetará todos os grupos de cargas de trabalho com o pool de recursos definido pelo usuário identificado por *pool_name*.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL SERVER.  
@@ -177,7 +177,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

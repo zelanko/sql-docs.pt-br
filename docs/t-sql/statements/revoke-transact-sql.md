@@ -98,7 +98,7 @@ REVOKE
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
  ALL  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Esta opção não revoga todas as permissões possíveis. A revogação ALL é equivalente a revogar as seguintes permissões.  
   
@@ -120,20 +120,20 @@ REVOKE
  PRIVILEGES  
  Incluído para conformidade com ISO. Não altera o comportamento de ALL.  
   
- *permissão*  
- É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos nos tópicos listados em [sintaxe específica a protegível](#securable) mais adiante neste tópico.  
+ *permission*  
+ É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos nos tópicos listados em [Sintaxe específica a protegível](#securable) mais adiante neste tópico.  
   
- *coluna*  
+ *column*  
  Especifica o nome de uma coluna em uma tabela na qual estão sendo revogadas permissões. Os parênteses são necessários.  
   
- *classe*  
- Especifica a classe do protegível na qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ *class*  
+ Especifica a classe do protegível na qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- *protegível*  
+ *securable*  
  Especifica o protegível no qual a permissão está sendo revogada.  
   
- PARA | DE *principal*  
- É o nome de uma entidade. As entidades das quais permissões em um protegível podem ser revogadas variam, dependendo do protegível. Para obter mais informações sobre as combinações válidas, consulte os tópicos listados em [sintaxe específica a protegível](#securable) mais adiante neste tópico.  
+ TO | FROM *principal*  
+ É o nome de uma entidade. As entidades das quais permissões em um protegível podem ser revogadas variam, dependendo do protegível. Para obter mais informações sobre combinações válidas, veja os tópicos listados em [Sintaxe específica a protegível](#securable) mais adiante neste tópico.  
   
  CASCADE  
  Indica que a permissão que está sendo revogada também será revogada de outras entidades para as quais ela foi concedida por essa entidade. Ao usar o argumento CASCADE, você também deve incluir o argumento GRANT OPTION FOR.  
@@ -142,12 +142,12 @@ REVOKE
 >  A revogação em cascata de uma permissão WITH GRANT OPTION concedida revogará as opções GRANT e DENY dessa permissão.  
   
  AS *principal*  
- Use a cláusula principal para indicar que você está revogando uma permissão que foi concedida por uma entidade que não seja você. Por exemplo, suponha que o usuário Mary é principal_id 12 e usuário Raul é 15 principal. Mary e Raul concedem a que um usuário nomeado Steven a mesma permissão. A tabela database_permissions indicará as permissões duas vezes, mas tenha um valor de grantor_prinicpal_id diferente. Mary pode revogar a permissão usando o `AS RAUL` cláusula para remover a concessão de Raul da permissão.
+ Use a cláusula de entidade de segurança AS para indicar que você está revogando uma permissão que foi concedida por uma entidade de segurança que não você. Por exemplo, suponha que o usuário Maria seja a principal_id 12 e o usuário Ricardo seja a entidade de segurança 15. Tanto Maria quanto Ricardo concedem a um usuário chamado Estevão a mesma permissão. A tabela database_permissions indicará as permissões duas vezes, mas elas terão, cada uma, um valor de grantor_prinicpal_id diferente. Maria pode revogar a permissão usando o `AS RAUL` cláusula para remover a concessão de Ricardo da permissão.
  
-O uso de como esta instrução não implica a capacidade de representar outro usuário.  
+O uso de AS nessa instrução não implica a capacidade de representar outro usuário.  
   
-## <a name="remarks"></a>Comentários  
- A sintaxe completa da instrução REVOKE é complexa. O diagrama de sintaxe acima foi simplificado para chamar atenção para sua estrutura. A sintaxe completa para revogação de permissões em protegíveis específicos é descrita nos tópicos listados em [sintaxe específica a protegível](#securable) mais adiante neste tópico.  
+## <a name="remarks"></a>Remarks  
+ A sintaxe completa da instrução REVOKE é complexa. O diagrama de sintaxe acima foi simplificado para chamar atenção para sua estrutura. A sintaxe completa para revogação de permissões em protegíveis específicos é descrita nos tópicos listados em [Sintaxe específica a protegível](#securable) mais adiante neste tópico.  
   
  A instrução REVOKE pode ser usada para remover permissões concedidas, e a instrução DENY pode ser usada para evitar que uma entidade ganhe uma permissão específica por meio de um GRANT.  
   
@@ -165,53 +165,53 @@ O uso de como esta instrução não implica a capacidade de representar outro us
   
  Os usuários autorizados da permissão CONTROL SERVER, como os membros da função de servidor fixa sysadmin, podem revogar qualquer permissão em qualquer protegível do servidor. Os usuários autorizados da permissão CONTROL em um banco de dados, como os membros da função de banco de dados fixa db_owner, podem revogar qualquer permissão para qualquer item de segurança do banco de dados. Os usuários autorizados da permissão CONTROL em um esquema podem revogar qualquer permissão em qualquer objeto dentro do esquema.  
   
-##  <a name="securable"></a>Sintaxe específica de protegíveis  
- A tabela a seguir lista os protegíveis e os tópicos que descrevem a sintaxe específica de protegíveis.  
+##  <a name="securable"></a> Sintaxe específica de protegível  
+ A tabela a seguir lista os protegíveis e os tópicos que descrevem a sintaxe específica a protegíveis.  
   
 |Protegível|Tópico|  
 |---------------|-----------|  
-|Função de aplicativo|[REVOGAR permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Assembly|[REVOGAR permissões de Assembly &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
-|Chave assimétrica|[Permissões de chave assimétrica REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
-|Grupo de disponibilidade|[Permissões de grupo de disponibilidade REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
-|Certificado|[Permissões de certificado REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
-|Contrato|[REVOGAR permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Banco de Dados|[REVOGAR permissões de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
-|Ponto de extremidade|[REVOGAR permissões de ponto de extremidade &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
-|Credencial com escopo de banco de dados|[Credencial (Transact-SQL) no escopo do banco de dados REVOKE](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
-|Catálogo de texto completo|[REVOGAR permissões de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|Lista de palavras irrelevantes de texto completo|[REVOGAR permissões de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|Função|[REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Logon|[REVOGAR permissões de entidade do servidor &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
-|Tipo de mensagem|[REVOGAR permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Objeto|[REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Fila|[REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Associação de serviço remoto|[REVOGAR permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Função|[REVOGAR permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Rota|[REVOGAR permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|esquema|[Permissões de esquema REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
-|Lista de propriedades de pesquisa|[REVOGAR permissões Search Property List &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|Servidor|[REVOGAR permissões de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
-|Serviço|[REVOGAR permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Procedimento armazenado|[REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Chave simétrica|[Permissões de chave simétrica REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
-|Sinônimo|[REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Objetos do sistema|[REVOGAR permissões de objeto do sistema &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
-|Table|[REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Tipo|[Permissões do tipo REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
-|Usuário|[REVOGAR permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Exibição|[REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Coleção de esquema XML|[REVOGAR permissões de coleção de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
+|Função de aplicativo|[Permissões REVOKE da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Assembly|[Permissões REVOKE de assembly &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
+|Chave assimétrica|[Permissões REVOKE de chave assimétrica &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
+|Grupo de disponibilidade|[Permissões REVOKE do grupo de disponibilidade &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
+|Certificado|[Permissões REVOKE de certificado &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
+|Contrato|[Permissões REVOKE do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|banco de dados|[Permissões REVOKE do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
+|Ponto de extremidade|[Permissões REVOKE do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
+|Credencial no escopo do banco de dados|[Credencial REVOKE no escopo do banco de dados (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
+|Catálogo de texto completo|[Permissões REVOKE de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
+|Lista de palavras irrelevantes de texto completo|[Permissões REVOKE de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
+|Função|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Logon|[Permissões REVOKE de entidade de segurança do servidor &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Tipo de mensagem|[Permissões REVOKE do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Object|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Fila|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Associação de serviço remoto|[Permissões REVOKE do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Role|[Permissões REVOKE da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Rota|[Permissões REVOKE do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|esquema|[Permissões REVOKE de esquema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
+|Lista de propriedades de pesquisa|[Permissões REVOKE de lista de propriedades de pesquisa &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
+|Servidor|[Permissões de servidor REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|Serviço|[Permissões REVOKE do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Procedimento armazenado|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Chave simétrica|[Permissões REVOKE de chave simétrica &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
+|Sinônimo|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Objetos do sistema|[Permissões REVOKE do objeto do sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
+|Table|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Tipo|[Permissões REVOKE de tipo &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|Usuário|[Permissões REVOKE da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Exibição|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Coleção de esquema XML|[Permissões REVOKE de coleção de esquemas XML &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

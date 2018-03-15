@@ -36,7 +36,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements---rewindonly-transact-sql"></a>RESTAURAR instruções - REWINDONLY (Transact-SQL)
+# <a name="restore-statements---rewindonly-transact-sql"></a>Instruções RESTORE – REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retrocede e fecha os dispositivos de fita especificados deixados abertos pelas instruções BACKUP ou RESTORE com a opção NOREWIND. Só há suporte para este comando em dispositivos de fita.  
@@ -67,16 +67,16 @@ FROM <backup_device> [ ,...n ]
   
  Especifica os dispositivos de backup lógicos ou físicos a serem usados na operação de restauração.  
   
- { *logical_backup_device_name* | **@ * logical_backup_device_name_var* } é o nome lógico, que deve seguir as regras para identificadores de dispositivos de backup criado por **sp_addumpdevice** dos quais o banco de dados é restaurado. Se fornecido como uma variável (**@***logical_backup_device_name_var*), o nome de dispositivo de backup pode ser especificado como uma constante de cadeia de caracteres (**@ * logical_backup_device_name_var*  =   *logical_backup_device_name*) ou como uma variável do tipo de dados de cadeia de caracteres, exceto para o **ntext** ou **texto** tipos de dados.  
+ { *logical_backup_device_name* | **@***logical_backup_device_name_var* } é o nome lógico, que precisa seguir as regras para identificadores, dos dispositivos de backup criados por **sp_addumpdevice** dos quais o banco de dados é restaurado. Se for fornecido como uma variável (**@***logical_backup_device_name_var*), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres (**@***logical_backup_device_name_var* = *logical_backup_device_name*) ou como uma variável do tipo de dados de cadeia de caracteres, exceto os tipos de dados **ntext** ou **text**.  
   
- {DISK | FITA}  **=**  { **'***physical_backup_device_name***'** | **@ * physical_backup_device_name_var*  } Permite que os backups a serem restaurados do dispositivo de disco ou fita nomeado. Os tipos de dispositivo de disco e fita devem ser especificados com o nome real (por exemplo, caminho e nome completo) do dispositivo: DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\. \TAPE0'. Se for especificado como uma variável (**@***physical_backup_device_name_var*), o nome do dispositivo pode ser especificado como uma constante de cadeia de caracteres (**@ * physical_backup_device_name_var* = '* physcial_backup_device_name *') ou como uma variável do tipo de dados de cadeia de caracteres, exceto para o **ntext** ou **texto** tipos de dados.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Permite que os backups sejam restaurados do dispositivo de disco ou de fita nomeado. Os tipos de dispositivo de disco e de fita devem ser especificados com o nome real (por exemplo, o caminho e o nome do arquivo completos) do dispositivo: DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\.\TAPE0'. Se for especificado como uma variável (**@***physical_backup_device_name_var*), o nome do dispositivo poderá ser especificado como uma constante de cadeia de caracteres (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') ou como uma variável do tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
   
- Se usando um servidor de rede com um nome de UNC (que deve conter o nome de máquina), especifique um tipo de dispositivo de disco. Para obter mais informações sobre como usar os nomes UNC, consulte [dispositivos de Backup &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Se usando um servidor de rede com um nome de UNC (que deve conter o nome de máquina), especifique um tipo de dispositivo de disco. Para obter mais informações de como usar os nomes UNC, confira [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- A conta sob a qual você está executando o Microsoft SQL Server deve ter acesso de leitura para o computador remoto ou o servidor de rede para executar uma operação de restauração.  
+ A conta com a qual você está executando o Microsoft SQL Server precisa ter acesso READ ao computador remoto ou ao servidor de rede para executar uma operação RESTORE.  
   
  *n*  
- É um espaço reservado que indica vários dispositivos de backup e dispositivos de backup lógicos podem ser especificados. O número máximo de dispositivos de backup ou dispositivos de backup lógicos é **64**.  
+ É um espaço reservado que indica vários dispositivos de backup e dispositivos de backup lógicos podem ser especificados. O número máximo de dispositivos de backup ou de dispositivos de backup lógicos é **64**.  
   
  Se uma sequência de restauração irá requerer tantos dispositivos de backup quantos foram usados para criar o conjunto de mídia ao qual o backup pertence depende de se a restauração é off-line ou on-line. A restauração off-line permite que um backup seja restaurado usando menos dispositivos que os usados para criar o backup. A restauração on-line requer todos os dispositivos de backup. Uma tentativa de restaurar com menos dispositivos falhará.  
   
@@ -85,7 +85,7 @@ FROM <backup_device> [ ,...n ]
 > [!NOTE]  
 >  Ao restaurar um backup de um conjunto de mídia espelhado, você pode especificar apenas um único espelho para cada família de mídia. Na presença de erros, entretanto, ter os outros espelhos permite a solução rápida de alguns problemas de restauração. Você pode substituir um volume de mídia danificado pelo volume correspondente de outro espelho. Observe que, para restaurações off-line, você pode restaurar a partir de menos dispositivos que as famílias de mídia, mas cada família é processada apenas uma vez.  
   
- **COM opções**  
+ **Opções WITH**  
   
  UNLOAD  
  Especifica que a fita é retrocedida e descarregada automaticamente quando RESTORE for concluído. UNLOAD é definido por padrão quando uma nova sessão de usuário é iniciada. Ele permanece definido até que NOUNLOAD seja especificado. Esta opção só é usada para dispositivos de fita. Se um dispositivo que não seja de fita estiver sendo usado para RESTORE, esta opção será ignorada.  
@@ -96,14 +96,14 @@ FROM <backup_device> [ ,...n ]
  Especifica que a fita não descarregada automaticamente da unidade de fita após RESTORE. NOUNLOAD permanece definido até que UNLOAD seja especificado.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- RESTORE REWINDONLY é uma alternativa a RESTORE LABELONLY FROM TAPE = \<nome > WITH REWIND. Você pode obter uma lista de unidades de fita abertas do [sys.DM io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) exibição de gerenciamento dinâmico.  
+ RESTORE REWINDONLY é uma alternativa a RESTORE LABELONLY FROM TAPE = \<nome > WITH REWIND. Você pode obter uma lista de unidades de fita abertas na exibição de gerenciamento dinâmico [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
   
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
  Qualquer usuário pode usar RESTORE REWINDONLY.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

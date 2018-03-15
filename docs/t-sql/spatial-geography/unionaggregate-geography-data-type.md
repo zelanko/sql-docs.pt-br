@@ -45,21 +45,21 @@ UnionAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Argumentos  
  *geography_operand*  
- É um **geografia** coluna de tipo de tabela que contém o conjunto de **geografia** objetos no qual executar uma operação de união.  
+ É uma coluna de tabela do tipo **geografia** que contém o conjunto de objetos de **geografia** no qual uma operação de união deve ser executada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 ## <a name="remarks"></a>Remarks  
- Método retornará **nulo** se a entrada tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+ O método retornará **nulo** se a entrada tiver SRIDs diferentes. Confira [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Método ignora **nulo** entradas.  
+ O método ignora entradas **nulas**.  
   
 > [!NOTE]  
->  Método retornará **nulo** se todos os valores inseridos forem **nulo**.  
+>  O método retornará **nulo** se todos os valores inseridos forem **nulos**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir executa um `UnionAggregate` em um conjunto de **geografia** pontos local dentro de uma cidade.  
+ O exemplo a seguir executa um `UnionAggregate` em um conjunto de pontos de localização de **geografia** dentro de uma cidade.  
   
  ```
  USE AdventureWorks2012  
@@ -71,7 +71,7 @@ UnionAggregate ( geography_operand )
  GROUP BY City;
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

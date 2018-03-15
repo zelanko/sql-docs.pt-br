@@ -66,16 +66,16 @@ ON ALL SERVER
 
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Condicionalmente descarta o gatilho apenas se ele já existe.  
+ Remove condicionalmente o gatilho somente se ele já existe.  
   
  *schema_name*  
  É o nome do esquema ao qual o gatilho DML pertence. Os gatilhos DML são definidos no escopo do esquema da tabela ou na exibição na qual são criados. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
   
  *trigger_name*  
- É o nome do gatilho a ser removido. Para ver uma lista dos gatilhos atualmente criados, use [server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) ou [server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ É o nome do gatilho a ser removido. Para consultar uma lista dos gatilhos atualmente criados, use [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) ou [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
  DATABASE  
  Indica que o escopo do gatilho DDL é aplicado ao banco de dados atual. DATABASE deverá ser especificado se também foi especificado quando o gatilho foi criado ou modificado.  
@@ -88,20 +88,20 @@ ON ALL SERVER
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode remover um gatilho DML descartando-o ou descartando a tabela do gatilho. Quando uma tabela é descartada, todos os gatilhos associados também são descartados.  
   
- Quando um gatilho é descartado, informações sobre o gatilho são removidas o **sys. Objects**, **Triggers** e **sql_modules** exibições do catálogo.  
+ Quando um gatilho é descartado, as informações sobre o gatilho são removidas das exibições de catálogo **sys.objects**, **sys.triggers** e **sys.sql_modules**.  
   
  Somente será possível descartar vários gatilhos DDL por instrução DROP TRIGGER caso todos os gatilhos foram criados usando cláusulas ON idênticas.  
   
  Para renomear um gatilho, use DROP TRIGGER e CREATE TRIGGER. Para alterar a definição de um gatilho, use ALTER TRIGGER.  
   
- Para obter mais informações sobre como determinar as dependências de um gatilho específico, consulte [sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sql_referenced_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md), e [sql_referencing_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
+ Para obter mais informações sobre como determinar as dependências de um gatilho específico, veja [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) e [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- Para obter mais informações sobre como exibir o texto do gatilho, consulte [sp_helptext &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) e [sys. sql_modules &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+ Para obter mais informações sobre como exibir o texto do gatilho, veja [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) e [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Para obter mais informações sobre como exibir uma lista dos gatilhos existentes, consulte [Triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [server_triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Para obter mais informações sobre como exibir uma lista dos gatilhos existentes, veja [Gatilhos &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  O descarte de um gatilho DML requer permissão ALTER na tabela ou exibição na qual o gatilho está definido.  
@@ -111,7 +111,7 @@ ON ALL SERVER
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. Descartando um gatilho DML  
- O exemplo a seguir remove o gatilho `employee_insupd` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] você pode usar a sintaxe DROP TRIGGER IF EXISTS.)  
+ O exemplo a seguir remove o gatilho `employee_insupd` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível usar a sintaxe DROP TRIGGER IF EXISTS.)  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
@@ -122,14 +122,14 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  O exemplo a seguir descarta o gatilho DDL `safety`.  
   
 > [!IMPORTANT]  
->  Como gatilhos DDL não estão no escopo do esquema e, portanto não aparecem no **sys. Objects** exibição do catálogo a função OBJECT_ID não pode ser usada para consultar se eles existem no banco de dados. Os objetos que não tenham seu escopo definido para o esquema devem ser consultados usando a exibição de catálogo apropriada. Para gatilhos DDL, use **Triggers**.  
+>  Uma vez que os gatilhos DDL não têm seu escopo definido para o esquema e, portanto, não aparecem na exibição de catálogo **sys.objects**, a função OBJECT_ID não pode ser usada para consultar se eles existem no banco de dados. Os objetos que não tenham seu escopo definido para o esquema devem ser consultados usando a exibição de catálogo apropriada. Para gatilhos DDL, use **sys.triggers**.  
   
 ```  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

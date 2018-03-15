@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<partition_by_clause >  
- Divide o conjunto de resultados produzido pelo [FROM](../../t-sql/queries/from-transact-sql.md) cláusula em partições às quais a função DENSE_RANK é aplicada. Para obter a sintaxe PARTITION BY, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Divide o conjunto de resultados produzido pela cláusula [FROM](../../t-sql/queries/from-transact-sql.md) nas partições às quais a função DENSE_RANK é aplicada. Para obter a sintaxe de PARTITION BY, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  Determina a ordem na qual a função DENSE_RANK é aplicada às linhas em uma partição.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se duas ou mais linhas empatarem em uma classificação na mesma partição, cada linha empatada receberá a mesma classificação. Por exemplo, se os dois melhores vendedores tiverem o mesmo valor SalesYTD, ambos serão classificados com o número um. O vendedor com o próximo SalesYTD mais alto será classificado com o número dois. Esse será um número maior que o número de linhas distintas que vêm antes dessa linha. Portanto, os números retornados pela função DENSE_RANK não têm lacunas e sempre têm classificações consecutivas.  
   
  A ordem de classificação usada para a consulta inteira determina a ordem na qual as linhas são exibidas em um resultado. Isso significa que uma linha classificada com o número um não precisa ser a primeira linha da partição.  
@@ -132,7 +132,7 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Quatro funções de classificação usadas na mesma consulta  
- A seguir, mostramos as quatro funções de classificação usadas na mesma consulta. Para obter exemplos específicos de função, consulte cada função de classificação.  
+ A seguir, mostramos as quatro funções de classificação usadas na mesma consulta. Para obter exemplos específicos a uma função, veja cada função de classificação.  
   
 ```  
 USE AdventureWorks2012;  
@@ -171,10 +171,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D: classificando linhas dentro de uma partição  
- O exemplo a seguir classifica os representantes de vendas de acordo com o total de vendas de cada região de vendas. O conjunto de linhas é particionado por `SalesTerritoryGroup` e ordenado por `SalesAmountQuota`.  
+### <a name="d-ranking-rows-within-a-partition"></a>D: Classificando linhas dentro de uma partição  
+ O exemplo a seguir classifica os representantes de vendas em cada região de vendas de acordo com seu total de vendas. O conjunto de linhas é particionado por `SalesTerritoryGroup` e ordenado por `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -209,11 +209,11 @@ Mensa-Annan        2753000.0000  North America        10
 Tsoflias           1687000.0000  Pacific              1 
 ```  
 
-## <a name="see-also"></a>Consulte também  
- [Classificação &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Classificação de funções &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Funções de classificação &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Funções](../../t-sql/functions/functions.md)  
   
   

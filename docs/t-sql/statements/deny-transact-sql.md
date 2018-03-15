@@ -43,8 +43,8 @@ ms.lasthandoff: 11/21/2017
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Nega uma permissão a uma entidade de segurança. Impede a entidade de segurança de herdar a permissão através das suas associações de grupo ou de função. NEGA tem precedência sobre todas as permissões, exceto que DENY não se aplicam a proprietários de objetos ou os membros da função de servidor fixa sysadmin.
-  **Observação de segurança** função de servidor fixa de membros do sysadmin e proprietários de objeto não podem ser negados permissões. "
+  Nega uma permissão a uma entidade de segurança. Impede a entidade de segurança de herdar a permissão através das suas associações de grupo ou de função. DENY tem precedência sobre todas as permissões, exceto que DENY não se aplica a proprietários do objeto nem a membros da função de servidor fixa sysadmin.
+  **Observação de segurança** Membros da função de servidor fixa sysadmin e proprietários do objeto não podem ter permissões negadas.
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -114,30 +114,30 @@ DENY
  PRIVILEGES  
  Incluído para conformidade com ISO. Não altera o comportamento de ALL.  
   
- *permissão*  
+ *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos nos subtópicos listados a seguir.  
   
- *coluna*  
+ *column*  
  Especifica o nome de uma coluna em uma tabela na qual as permissões estão sendo negadas. Os parênteses () são necessários.  
   
- *classe*  
- Especifica a classe do protegível em que a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
+ *class*  
+ Especifica a classe do protegível em que a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
- *protegível*  
+ *securable*  
  Especifica o protegível no qual a permissão está sendo negada.  
   
- PARA *principal*  
+ TO *principal*  
  É o nome de uma entidade. Os principais para os quais as permissões em um protegível podem ser negadas variam, dependendo do protegível. Consulte os tópicos específicos sobre protegíveis listados a seguir para obter as combinações válidas.  
   
  CASCADE  
  Indica que a permissão está sendo negada para o principal especificado e todos os outros principais aos quais o principal concedeu a permissão. Necessário quando o principal tem a permissão com GRANT OPTION.  
   
  AS *principal*  
-  Use a cláusula principal para indicar que a entidade de segurança registrada como denier da permissão deve ser uma entidade de segurança diferente da pessoa que executa a instrução. Por exemplo, suponha que o usuário Mary é principal_id 12 e usuário Raul é 15 principal. Mary executa `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` agora a tabela database_permissions indicará que grantor_prinicpal_id da instrução deny foi 15 (Raul), embora na verdade, a instrução foi executada pelo usuário 13 (Mary).
+  Use a cláusula de entidade de segurança AS para indicar que a entidade de segurança registrada como o negador da permissão deve ser uma entidade de segurança diferente da pessoa que executa a instrução. Por exemplo, suponha que o usuário Maria seja a principal_id 12 e o usuário Ricardo seja a entidade de segurança 15. Melissa executa `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Agora a tabela sys.database_permissions indicará que a grantor_principal_id da instrução de negação era 15 (Ricardo), embora na verdade, a instrução tenha sido executada pelo usuário 13 (Melissa).
   
-O uso de como esta instrução não implica a capacidade de representar outro usuário.  
+O uso de AS nessa instrução não implica a capacidade de representar outro usuário.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A sintaxe completa da instrução DENY é complexa. O diagrama de sintaxe acima foi simplificado para chamar atenção para sua estrutura. A sintaxe completa para negar permissões em protegíveis específicos é descrita nos tópicos listados a seguir.  
   
  DENY falhará se CASCADE não for especificado ao negar uma permissão a uma entidade de segurança à qual ela foi concedida com GRANT OPTION especificado.  
@@ -159,50 +159,50 @@ O uso de como esta instrução não implica a capacidade de representar outro us
  Os usuários autorizados da permissão CONTROL SERVER, como os membros da função de servidor fixa sysadmin, podem negar qualquer permissão em qualquer protegível do servidor. Os usuários autorizados da permissão CONTROL no banco de dados, como os membros da função de banco de dados fixa db_owner, podem negar qualquer permissão em qualquer protegível no banco de dados. Os usuários autorizados da permissão CONTROL em um esquema podem negar qualquer permissão no esquema. Se a cláusula AS for usada, o principal especificado deverá ser proprietário do protegível no qual as permissões estão sendo negadas.  
   
 ## <a name="examples"></a>Exemplos  
- A tabela a seguir lista os protegíveis e os tópicos que descrevem a sintaxe específica de protegíveis.  
+ A tabela a seguir lista os protegíveis e os tópicos que descrevem a sintaxe específica a protegíveis.  
   
 |||  
 |-|-|  
-|Função de aplicativo|[Negar permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Assembly|[Negar permissões de Assembly &#40; Transact-SQL &#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
-|Chave assimétrica|[Negar permissões de chave assimétrica &#40; Transact-SQL &#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
-|Grupo de disponibilidade|[Negar permissões de grupo de disponibilidade &#40; Transact-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
-|Certificado|[Negar permissões de certificado &#40; Transact-SQL &#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
-|Contrato|[Negar permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Banco de Dados|[Negar permissões de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
-|Credencial com escopo de banco de dados|[DENY (Transact-SQL) de credencial no escopo do banco de dados](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
-|Ponto de extremidade|[Negar permissões de ponto de extremidade &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
-|Catálogo de texto completo|[Negar permissões de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|Lista de palavras irrelevantes de texto completo|[Negar permissões de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|Função|[Negar permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Logon|[Negar permissões de entidade do servidor &#40; Transact-SQL &#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
-|Tipo de mensagem|[Negar permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Objeto|[Negar permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Fila|[Negar permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Associação de serviço remoto|[Negar permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Função|[Negar permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Rota|[Negar permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|esquema|[Negar permissões de esquema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
-|Lista de propriedades de pesquisa|[Negar permissões Search Property List &#40; Transact-SQL &#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
-|Servidor|[Negar permissões de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
-|Serviço|[Negar permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Procedimento armazenado|[Negar permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Chave simétrica|[Negar permissões de chave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
-|Sinônimo|[Negar permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Objetos do sistema|[Negar permissões de objeto do sistema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
-|Table|[Negar permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Tipo|[Negar permissões do tipo &#40; Transact-SQL &#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
-|Usuário|[Negar permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Exibição|[Negar permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Coleção de esquema XML|[Negar permissões de coleção de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
+|Função de aplicativo|[Permissões DENY da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|Assembly|[Permissões DENY de assembly &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
+|Chave assimétrica|[Permissões DENY de chave assimétrica &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
+|Grupo de disponibilidade|[Permissões DENY de grupo de disponibilidade &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
+|Certificado|[Permissões DENY de certificado &#40;Transact-SQL&#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
+|Contrato|[Permissões DENY do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|banco de dados|[Permissões DENY de banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
+|Credencial no escopo do banco de dados|[Credencial no escopo do banco de dados DENY (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
+|Ponto de extremidade|[Permissões DENY de ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
+|Catálogo de texto completo|[Permissões DENY de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
+|Lista de palavras irrelevantes de texto completo|[Permissões DENY de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
+|Função|[Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Logon|[Permissões DENY de entidade de segurança do servidor &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
+|Tipo de mensagem|[Permissões DENY do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|Object|[Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Fila|[Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Associação de serviço remoto|[Permissões DENY do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|Role|[Permissões DENY da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|Rota|[Permissões DENY do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|esquema|[Permissões DENY de esquema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
+|Lista de propriedades de pesquisa|[Permissões DENY de lista de propriedades de pesquisa &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
+|Servidor|[Permissões DENY de servidor &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
+|Serviço|[Permissões DENY do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|Procedimento armazenado|[Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Chave simétrica|[Permissões DENY de chave simétrica &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
+|Sinônimo|[Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Objetos do sistema|[Permissões DENY de objeto do sistema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
+|Table|[Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Tipo|[Permissões DENY de tipo &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
+|Usuário|[Permissões DENY da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|Exibição|[Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Coleção de esquema XML|[Permissões DENY de coleção de esquemas XML &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

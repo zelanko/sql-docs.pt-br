@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de objeto do sistema (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY do objeto do sistema (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -46,19 +46,19 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **sys.** ]  
- O **sys** qualificador é necessário somente quando você está referenciando exibições do catálogo e exibições de gerenciamento dinâmico.  
+ [ **sys.**]  
+ O qualificador **sys** só é necessário quando você está referenciando exibições do catálogo e exibições de gerenciamento dinâmico.  
   
  *system_object*  
  Especifica o objeto no qual a permissão está sendo negada.  
   
- *entidade de segurança*  
+ *principal*  
  Especifica a entidade a partir da qual a permissão está sendo revogada.  
   
-## <a name="remarks"></a>Comentários  
- Essa instrução pode ser usada para negar permissões em determinados procedimentos armazenados, procedimentos armazenados estendidos, funções com valor de tabela, funções escalares, exibições, exibições do catálogo, exibições de compatibilidade, exibições INFORMATION_SCHEMA, exibições de gerenciamento dinâmico e tabelas do sistema instaladas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada um desses objetos de sistema existe como um registro exclusivo no banco de dados de recursos (**mssqlsystemresource**). O banco de dados de recursos é somente leitura. Um link para o objeto é exposto como um registro no **sys** esquema de cada banco de dados.  
+## <a name="remarks"></a>Remarks  
+ Essa instrução pode ser usada para negar permissões em determinados procedimentos armazenados, procedimentos armazenados estendidos, funções com valor de tabela, funções escalares, exibições, exibições do catálogo, exibições de compatibilidade, exibições INFORMATION_SCHEMA, exibições de gerenciamento dinâmico e tabelas do sistema instaladas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para cada um desses objetos de sistema, existe como um registro exclusivo no banco de dados de recursos (**mssqlsystemresource**). O banco de dados de recursos é somente leitura. Um link para o objeto é exposto como um registro no esquema **sys** de todo banco de dados.  
   
- A resolução de nome padrão resolve nomes de procedimento não qualificados para o banco de dados de recursos. Portanto, o **sys** qualificador só é necessário quando você está especificando exibições do catálogo e exibições de gerenciamento dinâmico.  
+ A resolução de nome padrão resolve nomes de procedimento não qualificados para o banco de dados de recursos. Portanto, o qualificador **sys** é necessário somente ao especificar exibições do catálogo e exibições de gerenciamento dinâmico.  
   
 > [!CAUTION]  
 >  A negação de permissões em objetos do sistema provocará falha nos aplicativos que dependem deles. O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa exibições do catálogo e pode não funcionar como o esperado se você alterar as permissões padrão em exibições do catálogo.  
@@ -90,10 +90,10 @@ DENY EXECUTE ON sys.xp_cmdshell TO public;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Convenções de sintaxe Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)   
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [CONCEDER permissões de objeto do sistema &#40; Transact-SQL &#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [REVOGAR permissões de objeto do sistema &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Convenções de sintaxe do Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [Permissões GRANT do Objeto do Sistema &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
+ [Permissões REVOKE do objeto do sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
   
   

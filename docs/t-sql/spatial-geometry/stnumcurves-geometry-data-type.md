@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Esse método retorna o número de curvas em uma **geometria** instância quando a instância é um tipo de dados espacial unidimensional. Os tipos de dados espaciais unidimensionais incluem **LineString**, **CircularString**, e **CompoundCurve**. `STNumCurves`() funciona somente em tipos simples; ele não funciona com **geometria** coleções como **MultiLineString**.
+Esse método retorna o número de curvas em uma instância de **geometry** quando a instância é um tipo de dados espacial unidimensional. Os tipos de dados espaciais unidimensionais incluem **LineString**, **CircularString** e **CompoundCurve**. `STNumCurves`() funciona somente em tipos simples. Ele não funciona com coleções de **geometrias** como **MultiLineString**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,12 +41,12 @@ Esse método retorna o número de curvas em uma **geometria** instância quando 
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Vazio unidimensional **geometria** instância retorna 0. **NULO** é retornado quando o **geometria** instância não é uma instância unidimensional ou é uma instância não inicializada.  
+ Uma instância de **geometry** unidimensional vazia retorna 0. **NULL** é retornado quando a instância de **geometry** não é uma instância unidimensional ou é uma instância não inicializada.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -68,7 +68,7 @@ Esse método retorna o número de curvas em uma **geometria** instância quando 
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

@@ -39,49 +39,49 @@ ms.lasthandoff: 11/21/2017
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Esses tipos de dados são de comprimento fixo ou comprimento variável.  
+Esses tipos de dados são de comprimento variável ou fixo.  
   
 ## <a name="arguments"></a>Argumentos  
-**char** [(  *n*  )] comprimento fixo, dados de cadeia de caracteres não Unicode. *n*Define o comprimento da cadeia de caracteres e deve ser um valor de 1 a 8.000. O tamanho de armazenamento é  *n*  bytes. O sinônimo ISO para **char** é **caracteres**.
+**char** [ ( *n* ) ] Dados de cadeia de caracteres não Unicode de comprimento fixo. *n* define o comprimento da cadeia de caracteres e deve ser um valor de 1 a 8.000. O tamanho do armazenamento é *n* bytes. O sinônimo ISO para **char** é **character**.
   
-**varchar** [(  *n*   |  **max** )] comprimento variável, dados de cadeia de caracteres não Unicode. *n*Define o comprimento da cadeia de caracteres e pode ser um valor de 1 a 8.000. **Max** indica que o tamanho máximo de armazenamento é 2 ^ 31-1 bytes (2 GB). O tamanho de armazenamento é o comprimento real dos dados inseridos + 2 bytes. Os sinônimos ISO para **varchar** são **charvarying** ou **charactervarying**.
+**varchar** [ ( *n* | **max** ) ] Dados de cadeia de caracteres não Unicode de comprimento variável. *n* define o comprimento da cadeia de caracteres e pode ser um valor de 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). O tamanho do armazenamento é o tamanho real dos dados inseridos + 2 bytes. Os sinônimos ISO para **varchar** são **charvarying** ou **charactervarying**.
   
-## <a name="remarks"></a>Comentários  
-Quando  *n*  não for especificado em uma definição de dados ou uma instrução de declaração de variável, o comprimento padrão é 1. Quando  *n*  não for especificado ao usar as funções CAST e CONVERT, o comprimento padrão é 30.
+## <a name="remarks"></a>Remarks  
+Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado ao usar as funções CAST e CONVERT, o comprimento padrão é 30.
   
-Objetos que usam **char** ou **varchar** recebem o agrupamento padrão do banco de dados, a menos que um agrupamento específico é atribuído usando a cláusula COLLATE. O agrupamento controla a página de código que é usada para armazenar os dados de caractere.
+Os objetos que usam **char** ou **varchar** são atribuídos ao agrupamento padrão do banco de dados, a menos que um agrupamento específico seja atribuído usando da cláusula COLLATE. O agrupamento controla a página de código que é usada para armazenar os dados de caractere.
   
-Se você tiver sites que dão suporte a vários idiomas, considere usar o Unicode **nchar** ou **nvarchar** tipos de dados para minimizar problemas de conversão de caracteres. Se você usar **char** ou **varchar**, recomendamos o seguinte:
-- Use **char** quando os tamanhos das entradas de dados de coluna são consistentes.  
+Se você tiver sites compatíveis com vários idiomas, considere usar tipos de dados Unicode **nchar** ou **nvarchar** para minimizar problemas de conversão de caracteres. Se você usar **char** ou **varchar**, recomendamos o seguinte:
+- Use **char** quando os tamanhos das entradas de dados de coluna forem consistentes.  
 - Use **varchar** quando os tamanhos das entradas de dados de coluna variarem consideravelmente.  
-- Use **varchar (max)** quando os tamanhos das entradas de dados de coluna variarem consideravelmente e o tamanho puder exceder 8.000 bytes.  
+- Use **varchar(max)** quando os tamanhos das entradas de dados de coluna variarem consideravelmente e o tamanho puder exceder 8.000 bytes.  
   
-Se SET ANSI_PADDING é OFF quando CREATE TABLE ou ALTER TABLE é executada, uma **char** coluna definida como NULL é tratado como **varchar**.
+Se SET ANSI_PADDING for OFF quando CREATE TABLE ou ALTER TABLE for executada, uma coluna **char** definida como NULL será tratada como **varchar**.
   
-Quando a página de código do agrupamento usa caracteres de byte duplo, o tamanho de armazenamento ainda será  *n*  bytes. Dependendo da cadeia de caracteres, o tamanho do armazenamento de  *n*  bytes pode ser menor que  *n*  caracteres.
+Quando a página de código de agrupamento usar caracteres de dois bytes, o tamanho do armazenamento ainda será *n* bytes. Dependendo da cadeia de caracteres, o tamanho de armazenamento de *n* bytes pode ser menor que *n* caracteres.
 
 > [!WARNING]
-> Cada nulos varchar (max) ou uma coluna nvarchar (max) requer 24 bytes de alocação fixa adicional que conta em relação ao limite de linha de 8.060 bytes durante uma operação de classificação. Isso pode criar um limite implícito para o número de colunas de nvarchar (max) que podem ser criadas em uma tabela ou não nulos varchar (max).  
+> Cada coluna varchar(max) ou nvarchar(max) não nula requer 24 bytes de alocação fixa adicional que conta para o limite de linha de 8.060 bytes durante uma operação de classificação. Isso pode criar um limite implícito para o número de colunas varchar(max) ou nvarchar(max) não nulas que podem ser criadas em uma tabela.  
 Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8060 bytes) ou no momento da inserção de dados. Esse tamanho de linha pode causar erros (por exemplo, o erro 512) durante algumas operações normais, como uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo, que os usuários não podem prever até que uma operação seja executada.
   
-##  <a name="_character"></a>Converter dados de caracteres  
-Quando são convertidas expressões character a um tipo de dados character de um tamanho diferente, os valores muito longos para o novo tipo de dados são truncados. O **uniqueidentifier** tipo é considerado um tipo de caractere para fins de conversão de uma expressão de caractere e, portanto, está sujeito às regras de truncamento para conversão em um tipo de caractere. Consulte a seção de Exemplos a seguir.
+##  <a name="_character"></a> Convertendo dados de caractere  
+Quando são convertidas expressões character a um tipo de dados character de um tamanho diferente, os valores muito longos para o novo tipo de dados são truncados. O tipo **uniqueidentifier** é considerado um tipo de caractere para fins de conversão de uma expressão de caractere e, portanto, está sujeito às regras de truncamento para conversão em um tipo de caractere. Consulte a seção de Exemplos a seguir.
   
-Quando uma expressão de caractere é convertida em uma expressão de caractere de um tipo de dados diferente ou o tamanho, como de **char (5)** para **varchar(5)**, ou **char(20)** para **char(15)**, o agrupamento do valor de entrada é atribuído ao valor convertido. Se uma expressão noncharacter for convertida em um tipo de dados character, o agrupamento padrão do banco de dados atual será atribuído ao valor convertido. Em ambos os casos, você pode atribuir um agrupamento específico usando o [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) cláusula.
+Quando uma expressão character é convertida em uma expressão character de um tipo de dados ou tamanho diferente, como de **char(5)** em **varchar(5)** ou **char(20)** para **char(15)**, o agrupamento do valor de entrada é atribuído ao valor convertido. Se uma expressão noncharacter for convertida em um tipo de dados character, o agrupamento padrão do banco de dados atual será atribuído ao valor convertido. Em qualquer caso, você pode atribuir um agrupamento específico usando a cláusula [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 > [!NOTE]  
->  Conversões de página de código têm suporte para **char** e **varchar** tipos de dados, mas não para **texto** tipo de dados. Como em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a perda de dados não é informada durante as conversões de página de código.  
+>  Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. Como em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a perda de dados não é informada durante as conversões de página de código.  
   
-Expressões Character que estão sendo convertidas a um aproximado **numérico** tipo de dados pode incluir notação exponencial opcional (um e minúsculo ou um E maiusculo seguido por um sinal de adição opcional (+) ou menos (-) e, depois, um número).
+As expressões character que estão sendo convertidas em um tipo de dados **numeric** aproximado podem incluir notação exponencial opcional (um e minúsculo ou um E maiúsculo seguido por um sinal de mais (+) ou menos (-) opcional e, depois, um número).
   
-Expressões Character que estão sendo convertidas a um exata **numérico** tipo de dados deve consistir em dígitos, um ponto decimal e um sinal de adição (+) ou menos (-). Os espaços em branco à esquerda são ignorados. Na cadeia de caracteres não são permitidos separadores de vírgula, como o separador de milhar em 123,456.00.
+As expressões character que estão sendo convertidas a um tipo de dados **numeric** exato devem consistir em dígitos, um ponto decimal e um sinal opcional de mais (+) ou menos (-). Os espaços em branco à esquerda são ignorados. Na cadeia de caracteres não são permitidos separadores de vírgula, como o separador de milhar em 123,456.00.
   
-Expressões Character convertidas para **money** ou **smallmoney** tipos de dados também podem incluir um ponto decimal opcional e um sinal de cifrão ($). São permitidos separadores de vírgula, como em $123,456.00.
+As expressões character que estão sendo convertidas em tipo de dados **money** ou **smallmoney** também podem incluir um separador decimal opcional e o sinal monetário ($). São permitidos separadores de vírgula, como em $123,456.00.
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. Mostrando o valor padrão de n quando usado em declaração variável.  
-O exemplo a seguir mostra o valor padrão de  *n*  é 1 para o `char` e `varchar` tipos de dados quando eles são usados na declaração de variável.
+O exemplo a seguir mostra que o valor padrão de *n* é 1 para os tipos de dados `char` e `varchar` são usados em uma declaração variável.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -92,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. Mostrando o valor padrão de n quando varchar é usado com CAST e CONVERT.  
-O exemplo a seguir mostra que o valor padrão de  *n*  é 30 quando o `char` ou `varchar` tipos de dados são usados com o `CAST` e `CONVERT` funções.
+O exemplo a seguir mostra que o valor padrão de *n* é 30 quando os tipos de dados `char` ou `varchar` são usados com as funções `CAST` e `CONVERT`.
   
 ```sql
 DECLARE @myVariable AS varchar(40);  
@@ -104,7 +104,7 @@ SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
 ```  
   
 ### <a name="c-converting-data-for-display-purposes"></a>C. Convertendo dados para fins de exibição  
-O exemplo a seguir converte duas colunas em tipos de caracteres e aplica um estilo que se aplica a um formato específico aos dados exibidos. Um **money** tipo é convertido em dados de caractere e estilo 1 é aplicado, que exibe os valores com vírgulas a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita da vírgula decimal. Um **datetime** tipo é convertido em dados de caractere e estilo 3 é aplicado, que exibe os dados no formato dd/mm/aa. Na cláusula WHERE, uma **money** tipo é convertido em um tipo de caractere para executar uma operação de comparação de cadeia de caracteres.
+O exemplo a seguir converte duas colunas em tipos de caracteres e aplica um estilo que se aplica a um formato específico aos dados exibidos. Um tipo **money** é convertido em dados de caractere e o estilo 1 é aplicado, o que exibe os valores com vírgulas a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal. Um tipo **datatime** é convertido em dados de caractere e o estilo 3 é aplicado, o que exibe os dados no formato dd/mm/aa. Na cláusula WHERE, um tipo **money** é convertido em um tipo de caractere para executar uma operação de comparação de cadeia de caracteres.
   
 ```sql
 USE AdventureWorks2012;  
@@ -140,7 +140,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-O exemplo a seguir demonstra o truncamento de dados quando o valor é muito longo para o tipo de dados da conversão. Porque o **uniqueidentifier** tipo é limitado a 36 caracteres, os caracteres que excedem esse comprimento ficam truncados.
+O exemplo a seguir demonstra o truncamento de dados quando o valor é muito longo para o tipo de dados da conversão. Como o tipo **uniqueidentifier** é limitado a 36 caracteres, os caracteres que excedem esse comprimento ficam truncados.
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -160,8 +160,8 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>Consulte também
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
-[Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Estimar o tamanho de um banco de dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)
   

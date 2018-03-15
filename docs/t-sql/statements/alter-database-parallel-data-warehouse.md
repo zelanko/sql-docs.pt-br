@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-parallel-data-warehouse"></a>ALTERAR o banco de dados (Parallel Data Warehouse)
+# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Modifica as opções de tamanho máximo do banco de dados para tabelas replicadas, tabelas distribuídas e o log de transações em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use esta instrução para gerenciar as alocações de espaço em disco para um banco de dados, pois ele aumenta ou diminui de tamanho.  
+  Modifica as opções de tamanho máximo do banco de dados para tabelas replicadas, tabelas distribuídas e para o log de transações no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use esta instrução para gerenciar as alocações de espaço em disco para um banco de dados à medida que ele aumenta ou diminui de tamanho.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,42 +53,42 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- O nome do banco de dados a ser modificado. Para exibir uma lista de bancos de dados no dispositivo, use [sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ O nome do banco de dados a ser modificado. Para exibir uma lista de bancos de dados no dispositivo, use [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- AUMENTO AUTOMÁTICO = {ON | OFF}  
- A opção de aumento automático de atualizações. Quando o crescimento automático for ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automaticamente aumenta o espaço alocado para tabelas replicadas, tabelas distribuídas e o log de transações conforme necessário para acomodar o crescimento dos requisitos de armazenamento. Quando o crescimento automático for OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retorna um erro se tabelas, replicadas distribuídas tabelas, ou o log de transações excede o tamanho máximo.  
+ AUTOGROW = { ON | OFF }  
+ Atualiza a opção AUTOGROW. Quando AUTOGROW for ON, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] aumentará automaticamente o espaço alocado para tabelas replicadas, tabelas distribuídas e log de transações, conforme o necessário, para acomodar o crescimento dos requisitos de armazenamento. Quando o crescimento automático for OFF, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retornará um erro se as tabelas, replicadas, as tabelas distribuída ou o log de transações exceder o tamanho máximo.  
   
  REPLICATED_SIZE = *size* [GB]  
- Especifica os novo gigabytes máxima por nó de computação para armazenar todas as tabelas replicadas no banco de dados que está sendo alterado. Se você estiver planejando para espaço de armazenamento do dispositivo, você precisará multiplicar REPLICATED_SIZE pelo número de nós de computação no dispositivo.  
+ Especifica o novo máximo de gigabytes por nó de computação para armazenar todas as tabelas replicadas no banco de dados que está sendo alterado. Se você estiver planejando o espaço de armazenamento do dispositivo, multiplique REPLICATED_SIZE pelo número de nós de computação no dispositivo.  
   
  DISTRIBUTED_SIZE = *size* [GB]  
- Especifica os novo gigabytes máximo por banco de dados para armazenar todas as tabelas distribuídas no banco de dados que está sendo alterado. O tamanho é distribuído por todos os nós de computação no dispositivo.  
+ Especifica o novo máximo de gigabytes por banco de dados para armazenar todas as tabelas distribuídas no banco de dados que está sendo alterado. O tamanho é distribuído entre todos os nós de computação no dispositivo.  
   
  LOG_SIZE = *size* [GB]  
- Especifica os novo gigabytes máximo por banco de dados para armazenar todos os logs de transação no banco de dados que está sendo alterado. O tamanho é distribuído por todos os nós de computação no dispositivo.  
+ Especifica o novo máximo de gigabytes por banco de dados para armazenar todos os logs de transações no banco de dados que está sendo alterado. O tamanho é distribuído entre todos os nós de computação no dispositivo.  
   
- CRIPTOGRAFIA {ON | OFF}  
- Define o banco de dados a ser criptografado (ON) ou não criptografado (OFF). Criptografia só pode ser configurada para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] quando [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) foi definida como **1**. Uma chave de criptografia do banco de dados deve ser criada antes de criptografia transparente de dados pode ser configurada. Para obter mais informações sobre criptografia de banco de dados, consulte [Transparent Data Encryption &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ ENCRYPTION { ON | OFF }  
+ Define o banco de dados a ser criptografado (ON) ou não criptografado (OFF). A criptografia poderá ser configurada para o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] somente quando [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) tiver sido definido como **1**. Uma chave de criptografia do banco de dados precisa ser criada para que a Transparent Data Encryption possa ser configurada. Para obter mais informações sobre a criptografia do banco de dados, confira [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER no banco de dados.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Os valores para REPLICATED_SIZE, DISTRIBUTED_SIZE e LOG_SIZE podem ser maior que, igual ou menor do que os valores atuais para o banco de dados.  
+ Os valores de REPLICATED_SIZE, DISTRIBUTED_SIZE e LOG_SIZE podem ser maiores, iguais ou menores que os valores atuais do banco de dados.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- Crescimento e operações de redução são aproximadas. Os tamanhos reais resultantes podem variar com os parâmetros de tamanho.  
+ As operações de crescimento e redução são aproximadas. Os tamanhos reais resultantes podem variar em relação aos parâmetros de tamanho.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]não execute a instrução ALTER DATABASE como uma operação atômica. Se a instrução é interrompida durante a execução, as alterações que já tenham ocorrido permanecerá.  
+ O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] não executa a instrução ALTER DATABASE como uma operação atômica. Se a instrução for anulada durante a execução, as alterações já feitas permanecerão.  
   
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
- Leva um bloqueio compartilhado no objeto de banco de dados. Não é possível alterar um banco de dados está em uso por outro usuário para leitura ou gravação. Isso inclui sessões que emitiram um [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) instrução no banco de dados.  
+ Usa um bloqueio compartilhado no objeto DATABASE. Não é possível alterar um banco de dados que esteja sendo usado por outro usuário para leitura ou gravação. Isso inclui as sessões que emitiram uma instrução [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) no banco de dados.  
   
 ## <a name="performance"></a>Desempenho  
- Reduzindo um banco de dados pode levar a uma grande quantidade de tempo e recursos do sistema, dependendo do tamanho dos dados reais no banco de dados e a quantidade de fragmentação no disco. Por exemplo, a redução de um banco de dados pode levar várias horas ou mais.  
+ A redução de um banco de dados pode demorar bastante e usar uma grande quantidade de recursos do sistema, dependendo do tamanho dos dados reais no banco de dados e da quantidade de fragmentação no disco. Por exemplo, a redução de um banco de dados pode levar várias horas ou mais.  
   
-## <a name="determining-encryption-progress"></a>Determinando o andamento de criptografia  
- Use a consulta a seguir para determinar o progresso da criptografia transparente de dados de banco de dados como uma porcentagem:  
+## <a name="determining-encryption-progress"></a>Determinando o andamento da criptografia  
+ Use a consulta a seguir para determinar o andamento da Transparent Data Encryption do banco de dados como um percentual:  
   
 ```  
 WITH  
@@ -132,28 +132,28 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- Para um exemplo completo que demonstra todas as etapas na TDE de implementação, consulte [Transparent Data Encryption &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Para obter um exemplo abrangente que demonstra todas as etapas da implementação de TDE, confira [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. Alterando a configuração de aumento automático  
- Defina o crescimento automático como ON para o banco de dados `CustomerSales`.  
+### <a name="a-altering-the-autogrow-setting"></a>A. Alterando a configuração AUTOGROW  
+ Defina AUTOGROW como ON para o banco de dados `CustomerSales`.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Alterando o máximo de armazenamento para tabelas replicadas  
- O exemplo a seguir define o limite de armazenamento de tabela replicada a 1 GB para o banco de dados `CustomerSales`. Este é o limite de armazenamento por nó de computação.  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Alterando o armazenamento máximo para tabelas replicadas  
+ O exemplo a seguir define o limite de armazenamento de tabela replicada em 1 GB para o banco de dados `CustomerSales`. Este é o limite de armazenamento por nó de computação.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Alterando o máximo de armazenamento para tabelas distribuídas  
- O exemplo a seguir define o limite de armazenamento de tabela distribuída para 1000 GB (um terabyte) para o banco de dados `CustomerSales`. Este é o limite de armazenamento combinado de dispositivo para todos os nós de computação, não o limite de armazenamento por nó de computação.  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Alterando o armazenamento máximo para tabelas distribuídas  
+ O exemplo a seguir define o limite de armazenamento de tabela distribuída para 1000 GB (um terabyte) para o banco de dados `CustomerSales`. Este é o limite de armazenamento combinado no dispositivo para todos os nós de computação, não o limite de armazenamento por nó de computação.  
   
 ```  
 ALTER DATABASE CustomerSales  
@@ -161,15 +161,15 @@ ALTER DATABASE CustomerSales
 ```  
   
 ### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. Alterando o armazenamento máximo para o log de transações  
- O exemplo a seguir atualiza o banco de dados `CustomerSales` para ter no máximo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tamanho do log de transações de 10 GB para o dispositivo.  
+ O exemplo a seguir atualiza o banco de dados `CustomerSales` para que o tamanho máximo do log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja de 10 GB para o dispositivo.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Criar banco de dados &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

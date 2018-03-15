@@ -35,9 +35,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Computa um percentil específico para obter valores classificados em um conjunto de linhas inteiro ou dentro de partições distintas de um conjunto de linhas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para um determinado valor de percentil *P*, PERCENTILE_DISC classifica os valores da expressão na cláusula ORDER BY e retorna o valor com o menor valor CUME_DIST (com respeito à mesma especificação de classificação) que é maior que ou igual a *P*. Por exemplo, PERCENTILE_DISC (0.5) computará os 50º percentil (isto é, o mediano) de uma expressão. PERCENTILE_DISC calcula o percentil baseado em uma distribuição discreta dos valores da coluna; o resultado é igual a um valor específico na coluna.  
+  Computa um percentil específico para obter valores classificados em um conjunto de linhas inteiro ou dentro de partições distintas de um conjunto de linhas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para um determinado valor de percentil *P*, PERCENTILE_DISC classifica os valores da expressão na cláusula ORDER BY e retorna o valor com o menor valor de CUME_DIST (com relação à mesma especificação de classificação) que é maior que ou igual a *P*. Por exemplo, PERCENTILE_DISC (0.5) computará os 50º percentil (isto é, o mediano) de uma expressão. PERCENTILE_DISC calcula o percentil baseado em uma distribuição discreta dos valores da coluna; o resultado é igual a um valor específico na coluna.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,14 +50,14 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  *literal*  
  O percentil a ser computado. O valor deve variar entre 0,0 e 1,0.  
   
- NO grupo **(** ORDER BY *order_by_expression* [ **ASC** | DESC]**)**  
- Especifica uma lista de valores para classificar e computar o percentil em. Apenas uma *order_by_expression* é permitido. A ordem de classificação padrão é crescente. A lista de valores pode ser de qualquer um dos tipos de dados que são válidos para a operação de classificação.  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ Especifica uma lista de valores sobre os quais classificar e calcular o percentil. Apenas uma *order_by_expression* é permitida. A ordem de classificação padrão é crescente. A lista de valores pode ser de qualquer um dos tipos de dados válidos para a operação de classificação.  
   
- SOBRE **(** \<partition_by_clause > **)**  
- Divide o conjunto de resultados produzido pela cláusula FROM nas partições às quais a função de percentil é aplicada. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md). O \<cláusula ORDER BY > e \<cláusula rows ou range > não pode ser especificado em uma função PERCENTILE_DISC.  
+ OVER **(** \<partition_by_clause> **)**  
+ Divide o conjunto de resultados produzido pela cláusula FROM nas partições às quais a função de percentil é aplicada. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). A \<cláusula ORDER BY> e a \<cláusula rows ou range> não podem ser especificadas em uma função PERCENTILE_DISC.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- O tipo de retorno é determinado pelo *order_by_expression* tipo.  
+ O tipo de retorno é determinado pelo tipo *order_by_expression*.  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
  Sob o nível de compatibilidade 110 e superior, WITHIN GROUP é uma palavra-chave reservada. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -99,7 +99,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-basic-syntax-example"></a>B. Exemplo de sintaxe básica  
  O exemplo a seguir usa PERCENTILE_CONT e PERCENTILE_DISC para localizar o salário médio dos funcionários de cada departamento. Observe que essas funções podem não retornar o mesmo valor. Isso é porque PERCENTILE_CONT interpola o valor apropriado, quer ele exista ou não no conjunto de dados, enquanto PERCENTILE_DISC sempre retorna um valor real do conjunto.  
@@ -127,8 +127,8 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving  9.250000     9.0000
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [PERCENTILE_CONT &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   
 

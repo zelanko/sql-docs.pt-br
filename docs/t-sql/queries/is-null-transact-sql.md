@@ -1,5 +1,5 @@
 ---
-title: "É nulo (Transact-SQL) | Microsoft Docs"
+title: IS NULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="is-null-transact-sql"></a>É nulo (Transact-SQL)
+# <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Determina se uma expressão especificada é NULL.  
@@ -60,7 +60,7 @@ expression IS [ NOT ] NULL
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  NOT  
  Especifica que o resultado booliano deve ser negado. O predicado reverte seus valores de retorno, retornando TRUE se o valor não for NULL e FALSE se o valor for NULL.  
@@ -69,9 +69,9 @@ expression IS [ NOT ] NULL
  **Booliano**  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Se o valor de *expressão* for NULL, IS NULL retornará TRUE; caso contrário, retornará FALSE.  
+ Se o valor de *expression* for NULL, IS NULL retornará TRUE; caso contrário, retornará FALSE.  
   
- Se o valor de *expressão* é NULL, IS NOT NULL retornará FALSE; caso contrário, retornará TRUE.  
+ Se o valor de *expression* for NULL, IS NOT NULL retornará FALSE; caso contrário, retornará TRUE.  
   
 ## <a name="remarks"></a>Remarks  
  Para determinar se uma expressão é NULL, use IS NULL ou IS NOT NULL em vez de operadores de comparação (como = ou !=). Operadores de comparação retornam UNKOWN quando um ou os dois argumentos são NULL.  
@@ -89,8 +89,8 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir retorna os nomes completos de todos os funcionários com iniciais centrais.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir retorna os nomes completos de todos os funcionários com iniciais no nome do meio.  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,16 +101,16 @@ WHERE MiddleName IS NOT NULL
 ORDER BY LastName DESC;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operadores lógicos &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores lógicos &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

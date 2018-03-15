@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Adiciona uma nova rota à tabela de roteamento para o banco de dados atual. Por mensagens de saída, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina o roteamento verificando a tabela de roteamento no banco de dados local. Para mensagens em conversas que se originam em outra instância, incluindo mensagens a serem encaminhadas, [!INCLUDE[ssSB](../../includes/sssb-md.md)] verifica as rotas em **msdb**.  
+  Adiciona uma nova rota à tabela de roteamento para o banco de dados atual. Por mensagens de saída, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina o roteamento verificando a tabela de roteamento no banco de dados local. Para mensagens sobre conversas que se originam em outra instância, incluindo mensagens a serem encaminhadas, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] verifica as rotas em **msdb**.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,19 +64,19 @@ WITH
   
 ## <a name="arguments"></a>Argumentos  
  *route_name*  
- É o nome da rota a ser criada. Uma rota nova é criada no banco de dados atual e é de propriedade do principal especificado na cláusula AUTHORIZATION. Os nomes de servidor, banco de dados e esquema não podem ser especificados. O *route_name* deve ser um válido **sysname**.  
+ É o nome da rota a ser criada. Uma rota nova é criada no banco de dados atual e é de propriedade do principal especificado na cláusula AUTHORIZATION. Os nomes de servidor, banco de dados e esquema não podem ser especificados. O *route_name* deve ser um **sysname** válido.  
   
- AUTORIZAÇÃO *owner_name*  
- Define o proprietário da rota para o usuário ou função de banco de dados especificados. O *owner_name* pode ser o nome de qualquer usuário ou função válida quando o usuário atual é um membro do **db_owner** função de banco de dados fixa ou **sysadmin** função de servidor fixa. Caso contrário, *owner_name* deve ser o nome do usuário atual, o nome de um usuário que o usuário atual tenha a permissão IMPERSONATE ou o nome de uma função ao qual pertence o usuário atual. Quando esta cláusula é omitida, a rota pertence ao usuário atual.  
+ AUTHORIZATION *owner_name*  
+ Define o proprietário da rota para o usuário ou função de banco de dados especificados. O *owner_name* pode ser o nome de qualquer usuário ou função válida quando o usuário atual é um membro da função de banco de dados fixa **db_owner** ou da função de servidor fixa **sysadmin**. Caso contrário, *owner_name* deve ser o nome do usuário atual, o nome de um usuário para o qual o usuário atual tenha a permissão IMPERSONATE ou o nome de uma função à qual o usuário atual pertença. Quando esta cláusula é omitida, a rota pertence ao usuário atual.  
   
  com  
  Introduz as cláusulas que definem a rota que é criada.  
   
  SERVICE_NAME = **'***service_name***'**  
- Especifica o nome do serviço remoto ao qual essa rota aponta. O *service_name* deve corresponder exatamente ao nome de serviço remoto utiliza. [!INCLUDE[ssSB](../../includes/sssb-md.md)]usa uma comparação byte por byte para corresponder a *service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não considera o agrupamento atual. Se o SERVICE_NAME for omitido, essa rota corresponderá a qualquer nome de serviço, mas terá uma prioridade menor para correspondência que uma rota que especifique um SERVICE_NAME. Uma rota com um nome de serviço de **' SQL/ServiceBroker/BrokerConfiguration'** é uma rota para um serviço Broker Configuration Notice. Uma rota para esse serviço pode não especificar uma instância do agente.  
+ Especifica o nome do serviço remoto ao qual essa rota aponta. O *service_name* precisa corresponder exatamente ao nome que o serviço remoto usa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder ao *service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não considera o agrupamento atual. Se o SERVICE_NAME for omitido, essa rota corresponderá a qualquer nome de serviço, mas terá uma prioridade menor para correspondência que uma rota que especifique um SERVICE_NAME. Uma rota com o nome de serviço **'SQL/ServiceBroker/BrokerConfiguration'** é uma rota para um serviço Broker Configuration Notice. Uma rota para esse serviço pode não especificar uma instância do agente.  
   
  BROKER_INSTANCE = **'***broker_instance_identifier***'**  
- Especifica o banco de dados que hospeda o serviço de destino. O *broker_instance_identifier* parâmetro deve ser o identificador de instância do agente para o banco de dados remoto, o que pode ser obtido executando a consulta a seguir no banco de dados selecionado:  
+ Especifica o banco de dados que hospeda o serviço de destino. O parâmetro *broker_instance_identifier* deve ser o identificador de instância do agente para o banco de dados remoto, que pode ser obtido com a execução ad seguinte consulta no banco de dados selecionado:  
   
 ```  
 SELECT service_broker_guid  
@@ -86,15 +86,15 @@ WHERE database_id = DB_ID()
   
  Quando a cláusula BROKER_INSTANCE é omitida, essa rota corresponde a qualquer instância do agente. Uma rota que corresponde a qualquer instância do agente tem prioridade maior para correspondência do que rotas com uma instância do agente explícita quando a conversa não especifica a instância. Para conversas que especificam uma instância do agente, uma rota com uma instância do agente tem prioridade maior do que uma rota que corresponde a qualquer instância do agente.  
   
- Tempo de vida **= * route_lifetime*  
- Especifica a hora, em segundos, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retém a rota na tabela de roteamento. No fim do tempo de vida, a rota expira e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não a considera mais ao escolher uma rota para uma nova conversa. Se essa cláusula for omitida, o *route_lifetime* for NULL e a rota nunca expira.  
+ LIFETIME **=***route_lifetime*  
+ Especifica a hora, em segundos, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retém a rota na tabela de roteamento. No fim do tempo de vida, a rota expira e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não a considera mais ao escolher uma rota para uma nova conversa. Se essa cláusula for omitida, a *route_lifetime* será NULL e a rota nunca expirará.  
   
  ADDRESS **='***next_hop_address***'**  
- Especifica o endereço de rede para essa rota. O *next_hop_address* Especifica um endereço TCP/IP no seguinte formato:  
+ Especifica o endereço de rede para essa rota. O *next_hop_address* especifica um endereço TCP/IP no seguinte formato:  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *endereço_IP* } **: * port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
- Especificado *port_number* deve corresponder ao número de porta para o [!INCLUDE[ssSB](../../includes/sssb-md.md)] ponto de extremidade de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
+ O *port_number* especificado precisa corresponder ao número da porta do ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
 ```  
 SELECT tcpe.port  
@@ -108,14 +108,14 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Quando uma rota especifica **'LOCAL'** para o *next_hop_address*, a mensagem é entregue a um serviço na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando uma rota especifica **'TRANSPORT'** para o *next_hop_address*, o endereço de rede é determinado com base no endereço de rede no nome do serviço. Uma rota que especifica **'TRANSPORT'** pode não especificar uma instância do nome ou o agente de serviço.  
+ Quando uma rota especifica **'TRANSPORT'** para o *next_hop_address*, o endereço de rede é determinado com base no endereço de rede no nome do serviço. Uma rota que especifica **'TRANSPORT'** pode não especificar um nome de serviço ou uma instância de agente.  
   
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
- Especifica o endereço de rede para um banco de dados espelhado com um banco de dados espelho hospedado no *next_hop_address*. O *next_hop_mirror_address* Especifica um endereço TCP/IP no seguinte formato:  
+ Especifica o endereço de rede para um banco de dados espelhado com um banco de dados espelhado hospedado no *next_hop_address*. O *next_hop_mirror_address* especifica um endereço TCP/IP no seguinte formato:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- Especificado *port_number* deve corresponder ao número de porta para o [!INCLUDE[ssSB](../../includes/sssb-md.md)] ponto de extremidade de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
+ O *port_number* especificado precisa corresponder ao número da porta do ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
 ```  
 SELECT tcpe.port  
@@ -125,23 +125,23 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Quando MIRROR_ADDRESS é especificado, a rota deve especificar as cláusulas SERVICE_NAME e BROKER_INSTANCE. Uma rota que especifica **'LOCAL'** ou **'TRANSPORT'** para o *next_hop_address* pode não especificar um endereço de espelho.  
+ Quando MIRROR_ADDRESS é especificado, a rota deve especificar as cláusulas SERVICE_NAME e BROKER_INSTANCE. Uma rota que especifica **'LOCAL'** ou **'TRANSPORT'** para o *next_hop_address* pode não especificar um endereço espelho.  
   
 ## <a name="remarks"></a>Remarks  
- A tabela de roteamento que armazena as rotas é uma tabela de metadados que pode ser lidos por meio de **routes** exibição do catálogo. Essa exibição do catálogo pode ser atualizada somente pelas instruções CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
+ A tabela de roteamento que armazena as rotas é uma tabela de metadados que pode ser lida por meio da exibição do catálogo **sys.routes**. Essa exibição do catálogo pode ser atualizada somente pelas instruções CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
- Por padrão, a tabela de roteamento em cada banco de dados de usuário contém uma rota. Essa rota é chamada **AutoCreatedLocal**. A rota especifica **'LOCAL'** para o *next_hop_address* e corresponde a qualquer identificador de instância de nome e o agente de serviço.  
+ Por padrão, a tabela de roteamento em cada banco de dados de usuário contém uma rota. Essa rota é chamada **AutoCreatedLocal**. A rota especifica **'LOCAL'** para o *next_hop_address* e faz a correspondência de qualquer nome de serviço e o identificador de instância do agente.  
   
- Quando uma rota especifica **'TRANSPORT'** para o *next_hop_address*, o endereço de rede é determinado com base no nome do serviço. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pode processar com sucesso os nomes de serviço que começam com um endereço de rede em um formato válido para um *next_hop_address*.  
+ Quando uma rota especifica **'TRANSPORT'** para o *next_hop_address*, o endereço de rede é determinado com base no nome do serviço. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode processar com êxito nomes de serviço que começam com um endereço de rede em um formato válido para um *next_hop_address*.  
   
  A tabela de roteamento pode conter qualquer quantidade de rotas que especifiquem o mesmo serviço, endereço de rede e identificador de instância do agente. Nesse caso, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] escolhe uma rota usando um procedimento criado para encontrar a correspondência mais exata entre as informações especificadas na conversa e as informações da tabela de roteamento.  
   
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] não remove rotas expiradas da tabela de roteamento. Uma rota expirada pode se tornar ativa usando a instrução ALTER ROUTE.  
   
- Uma rota não pode ser um objeto temporário. Nomes de rotas que começam com  **#**  são permitidos, mas são objetos permanentes.  
+ Uma rota não pode ser um objeto temporário. Nomes de rotas que começam com **#** são permitidos, mas são objetos permanentes.  
   
 ## <a name="permissions"></a>Permissões  
- Permissão para criar uma rota assume como padrão membros do **db_ddladmin** ou **db_owner** funções de banco de dados fixas e **sysadmin** função de servidor fixa.  
+ A permissão para criar uma rota usa como padrão os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner** e da função de servidor fixa **sysadmin**.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -228,7 +228,7 @@ CREATE ROUTE TransportRoute
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

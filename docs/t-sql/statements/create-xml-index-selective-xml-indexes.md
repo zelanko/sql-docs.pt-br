@@ -1,5 +1,5 @@
 ---
-title: "Criar ÍNDICES XML (índices XML seletivos) | Microsoft Docs"
+title: "CREATE XML INDEX (índices XML seletivos) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (índices XML seletivos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Cria um novo índice XML seletivo secundário em um único caminho que já foi indexado por um índice XML seletivo existente. Também é possível criar índices XML seletivos primários. Para obter informações, consulte [Create, Alter e Drop os índices XML seletivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
+  Cria um novo índice XML seletivo secundário em um único caminho que já foi indexado por um índice XML seletivo existente. Também é possível criar índices XML seletivos primários. Para obter informações, consulte [Criar, alterar e remover índices XML seletivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,9 +74,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
 ##  <a name="Arguments"></a> Argumentos  
  *index_name*  
- Nome do novo índice a ser criado. Os nomes de índice devem ser exclusivos dentro de uma tabela, mas não precisam ser exclusivos dentro de um banco de dados. Os nomes de índice devem seguir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Nome do novo índice a ser criado. Os nomes de índice precisam ser exclusivos dentro de uma tabela, mas não precisam ser exclusivos dentro de um banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- ON  *\<table_object >* é a tabela que contém a coluna XML para indexação. Você também pode usar os seguintes formatos:  
+ ON *\<table_object>* É a tabela que contém a coluna XML a ser indexada. Você também pode usar os seguintes formatos:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -90,9 +90,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  Nome do índice XML seletivo existente.  
   
- PARA **(** \<xquery_or_sql_values_path > **)** é o nome do caminho indexado no qual criar o índice XML seletivo secundário. O caminho a ser indexado é o nome atribuído da instrução CREATE SELECTIVE XML INDEX. Para obter mais informações, veja [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ FOR **(** \<xquery_or_sql_values_path> **)** É o nome do caminho indexado no qual criar o índice XML seletivo secundário. O caminho a ser indexado é o nome atribuído da instrução CREATE SELECTIVE XML INDEX. Para obter mais informações, veja [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
- COM \<index_options > para obter informações sobre as opções de índice, consulte [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH \<index_options> Para obter informações sobre as opções de índice, consulte [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Remarks  
  Pode haver vários índices XML seletivos secundários em cada coluna XML na tabela base.  
@@ -106,7 +106,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um índice XML seletivo secundário no caminho `pathabc`. O caminho para o índice é o nome atribuído a partir de [CREATE SELECTIVE XML INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ O exemplo a seguir cria um índice XML seletivo secundário no caminho `pathabc`. O caminho a ser indexado é o nome atribuído da instrução [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
 ```  
 CREATE XML INDEX filt_sxi_index_c  
@@ -115,7 +115,7 @@ USING XML INDEX sxi_index
 FOR ( pathabc );  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML Seletivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Criar, alterar e remover índices XML seletivos secundários](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)  
   

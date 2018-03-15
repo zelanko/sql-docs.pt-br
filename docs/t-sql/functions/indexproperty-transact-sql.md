@@ -47,17 +47,17 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *object_id*  
- É uma expressão que contém o número de identificação do objeto da tabela ou exibição indexada para o qual fornecer as informações de propriedade de índice. *object_id* é **int**.  
+ *object_ID*  
+ É uma expressão que contém o número de identificação do objeto da tabela ou exibição indexada para o qual fornecer as informações de propriedade de índice. *object_ID* é **int**.  
   
  *index_or_statistics_name*  
- É uma expressão que contém o nome do índice ou estatísticas para o qual retornar as informações de propriedade. *index_or_statistics_name* é **nvarchar (128)**.  
+ É uma expressão que contém o nome do índice ou estatísticas para o qual retornar as informações de propriedade. *index_or_statistics_name* é **nvarchar(128)**.  
   
- *propriedade*  
- É uma expressão que contém o nome da propriedade do banco de dados a ser retornada. *propriedade* é **varchar (128)**, e pode ser um destes valores.  
+ *property*  
+ É uma expressão que contém o nome da propriedade do banco de dados a ser retornada. *property* é **varchar(128)** e pode ter um destes valores.  
   
 > [!NOTE]  
->  A menos que indicado em contrário, NULL é retornado quando *propriedade* não é um nome de propriedade válido, *object_ID* não é uma ID de objeto válido, *object_ID* é um tipo de objeto sem suporte para a propriedade especificada ou o chamador não tem permissão para exibir os metadados do objeto.  
+>  A menos que indicado o contrário, NULL é retornado quando *property* não é um nome de propriedade válido, *object_ID* não é uma ID de objeto válida, *object_ID* é um tipo de objeto sem suporte para a propriedade especificada ou o chamador não tem permissão para exibir os metadados do objeto.  
   
 |Propriedade|Description|Valor|  
 |--------------|-----------------|-----------|  
@@ -72,7 +72,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|O índice especifica o espaço a ser deixado aberto em cada nó interior.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False ou índice XML.|  
 |**IsPageLockDisallowed**|Valor de bloqueio de página definido pela opção ALLOW_PAGE_LOCKS de ALTER INDEX.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = O bloqueio de página não é permitido.<br /><br /> 0 = O bloqueio de página é permitido.<br /><br /> NULL = A entrada não é válida.|  
 |**IsRowLockDisallowed**|Valor de bloqueio de linha definido pela opção ALLOW_ROW_LOCKS de ALTER INDEX.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = O bloqueio de linha não é permitido.<br /><br /> 0 = O bloqueio de linha é permitido.<br /><br /> NULL = A entrada não é válida.|  
-|**IsStatistics**|*index_or_statistics_name* é estatísticas criadas pela instrução CREATE STATISTICS ou pela opção AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = False ou índice XML.|  
+|**IsStatistics**|*index_or_statistics_name* são as estatísticas criadas pela instrução CREATE STATISTICS ou pela opção AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = False ou índice XML.|  
 |**IsUnique**|O índice é exclusivo.|1 = True<br /><br /> 0 = False ou índice XML.|  
 |**IsColumnstore**|Índice é um índice columnstore xVelocity de memória otimizada.|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -85,7 +85,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que as funções internas emissoras de metadados, como INDEXPROPERTY, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna os valores para o **IsClustered**, **IndexDepth**, e **IndexFillFactor** propriedades para o `PK_Employee_BusinessEntityID` índice do `Employee`tabela o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
+ O exemplo a seguir retorna os valores das propriedades **IsClustered**, **IndexDepth** e **IndexFillFactor** para o índice `PK_Employee_BusinessEntityID` da tabela `Employee` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 SELECT   
@@ -108,8 +108,8 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir examina as propriedades de um dos índices no `FactResellerSales` tabela.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir examina as propriedades de um dos índices na tabela `FactResellerSales`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -124,13 +124,13 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [Estatísticas](../../relational-databases/statistics/statistics.md)   
+ [Estatística](../../relational-databases/statistics/statistics.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

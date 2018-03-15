@@ -58,10 +58,10 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- O nome do banco de dados que contém a fila a ser descartada. Quando nenhum *database_name* for fornecido, o padrão é o banco de dados atual.  
+ O nome do banco de dados que contém a fila a ser descartada. Quando não for fornecido nenhum *database_name*, o padrão será o banco de dados atual.  
   
  *schema_name (object)*  
- O nome do esquema que possui a fila a ser descartada. Quando nenhum *schema_name* for fornecido, o padrão é o esquema padrão para o usuário atual.  
+ O nome do esquema que possui a fila a ser descartada. Quando nenhum *schema_name* for fornecido, ele usará como padrão o esquema padrão do usuário atual.  
   
  *queue_name*  
  O nome da fila a ser descartada.  
@@ -70,17 +70,17 @@ DROP QUEUE <object>
  Não é possível descartar uma fila se qualquer serviço se referir a ela.  
   
 ## <a name="permissions"></a>Permissões  
- Permissão para descartar uma fila padrão é o proprietário da fila, os membros do **db_ddladmin** ou **db_owner** fixa de funções de banco de dados e os membros do **sysadmin** fixa função de servidor.  
+ A permissão para remover uma fila usa como padrão o proprietário da fila, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner** e os membros da função de servidor fixa **sysadmin**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir descarta o **ExpenseQueue** fila do banco de dados atual.  
+ O exemplo a seguir remove a fila **ExpenseQueue** do banco de dados atual.  
   
 ```  
 DROP QUEUE ExpenseQueue ;  
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

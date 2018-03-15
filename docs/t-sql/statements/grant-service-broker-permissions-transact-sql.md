@@ -1,5 +1,5 @@
 ---
-title: "Permissões do serviço de concessão Broker (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT do Service Broker (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -62,19 +62,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser concedida em um Service Broker protegível.  Listada abaixo.  
   
- CONTRATO **:: * contract_name*  
- Especifica o contrato no qual a permissão está sendo concedida. O qualificador de escopo "::" é necessária.  
+ CONTRACT **::***contract_name*  
+ Especifica o contrato no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- TIPO de mensagem **:: * message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Especifica o tipo de mensagem no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- A associação de serviço remoto **:: * remote_binding_name*  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
  Especifica a associação de serviço remoto na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- ROTA **:: * route_name*  
+ ROUTE **::***route_name*  
  Especifica a rota na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- SERVIÇO **:: * service_name*  
+ SERVICE **::***service_name*  
  Especifica o serviço no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  
@@ -180,20 +180,20 @@ GRANT permission  [ ,...n ] ON
   
 |AS *granting_principal*|Permissão adicional necessária|  
 |------------------------------|------------------------------------|  
-|Usuário de banco de dados|Permissão IMPERSONATE no usuário, associação a **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados ou associação no **sysadmin** função de servidor fixa.|  
-|Usuário de banco de dados mapeado para um logon do Windows|Permissão IMPERSONATE no usuário, associação a **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados ou associação no **sysadmin** função de servidor fixa.|  
-|Usuário de banco de dados mapeado para um grupo do Windows|Associação no grupo do Windows, associação a **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados ou associação no **sysadmin**função de servidor fixa.|  
-|Usuário de banco de dados mapeado para um certificado|Associação a **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados ou associação no **sysadmin** função de servidor fixa.|  
-|Usuário de banco de dados mapeado para uma chave assimétrica|Associação a **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados ou associação no **sysadmin** função de servidor fixa.|  
-|Usuário de banco de dados não mapeado para nenhuma entidade de segurança de servidor|Permissão IMPERSONATE no usuário, associação a **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados ou associação no **sysadmin** função de servidor fixa.|  
-|Função de banco de dados|A permissão ALTER na função, associação no **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados, ou a associação a **sysadmin**função de servidor fixa.|  
-|Função de aplicativo|A permissão ALTER na função, associação no **db_securityadmin** função fixa de banco de dados, associação ao **db_owner** fixo de função de banco de dados, ou a associação a **sysadmin**função de servidor fixa.|  
+|Usuário de banco de dados|A permissão IMPERSONATE no usuário, associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
+|Usuário de banco de dados mapeado para um logon do Windows|A permissão IMPERSONATE no usuário, associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
+|Usuário de banco de dados mapeado para um grupo do Windows|Associação no grupo do Windows, associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
+|Usuário de banco de dados mapeado para um certificado|Associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
+|Usuário de banco de dados mapeado para uma chave assimétrica|Associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
+|Usuário de banco de dados não mapeado para nenhuma entidade de segurança de servidor|A permissão IMPERSONATE no usuário, associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
+|Função de banco de dados|Permissão ALTER na função, associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
+|Função de aplicativo|Permissão ALTER na função, associação na função de banco de dados fixa **db_securityadmin**, associação na função de banco de dados fixa **db_owner** ou associação na função de servidor fixa **sysadmin**.|  
   
  Os proprietários de objetos podem conceder permissões nos objetos de sua propriedade. Principais com a permissão CONTROL em um item protegível podem conceder permissão nesse item.  
   
- Os usuários autorizados da permissão CONTROL SERVER, como os membros do **sysadmin** função de servidor fixa, podem conceder qualquer permissão em qualquer protegível do servidor. Os usuários autorizados da permissão CONTROL em um banco de dados, como os membros do **db_owner** função de banco de dados fixa, podem conceder qualquer permissão em qualquer protegível no banco de dados. Os usuários autorizados da permissão CONTROL em um esquema podem conceder qualquer permissão em qualquer objeto dentro do esquema.  
+ As entidades autorizadas com a permissão CONTROL SERVER, como os membros da função de servidor fixa **sysadmin**, podem conceder qualquer permissão em qualquer protegível do servidor. As entidades autorizadas com a permissão CONTROL em um banco de dados, como os membros da função de banco de dados fixa **db_owner**, podem conceder qualquer permissão para qualquer protegível do banco de dados. Os usuários autorizados da permissão CONTROL em um esquema podem conceder qualquer permissão em qualquer objeto dentro do esquema.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   

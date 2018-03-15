@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um objeto que representa a superfície convexa de uma **geometria** instância.
+Retorna um objeto que representa a envoltória convexa de uma instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ Retorna um objeto que representa a superfície convexa de uma **geometria** inst
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- `STConvexHull()`Retorna o menor polígono convexo que contém o determinado **geometria** instância. **Pontos de** ou **LineString** instâncias produzirá uma instância do mesmo tipo que o da entrada.  
+ `STConvexHull()` retorna o polígono convexo menor que contém a instância de **geometry** especificada. As instâncias de **Points** ou **LineString** colineares gerarão uma instância do mesmo tipo da entrada.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STConvexHull()` para localizar a superfície convexa de uma instância `Polygon``geometry` não convexa.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);
 SELECT @g.STConvexHull().ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

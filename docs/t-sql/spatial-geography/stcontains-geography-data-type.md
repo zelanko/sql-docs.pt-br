@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcontains--geography-data-type"></a>STContains (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Especifica se a chamada **geografia** instância contém espacialmente a **geografia** instância passada para o método.  
+  Especifica se a instância de **geography** de chamada contém espacialmente a instância de **geography** passada para o método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- É outra **geografia** instância a ser comparada com a instância na qual `STContains()` é invocado.  
+ É outra instância de **geography** a ser comparada com a instância na qual `STContains()` é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Retornará 1 se a chamada **geografia** instância contém espacialmente a **geografia** instância passada para o método e retorna 0 se não estiver. Retorna **nulo** se o SRID das duas **geografia** instâncias não são iguais.  
+ Retorna 1 se a instância de **geography** de chamada contém espacialmente a instância de **geography** passada ao método; caso contrário, retorna 0. Retorna **null** se o SRID das duas instâncias de **geography** não são iguais.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STContains()` para testar duas instâncias de `geography` a fim de verificar se a primeira instância contém a segunda.  

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retornará 1 se uma **geometria** instância está relacionada a outro **geometria** instância, em que a relação é definida por um valor de matriz de padrão de modelo de interseção de 9 dimensionalmente estendido (DE-9IM); caso contrário , retornará 0.  
+  Retornará 1 se uma instância de **geometry** tiver relação com outra instância de **geometry**, e a relação for definida por um valor de matriz do padrão DE-9IM (Dimensionally Extended 9 Intersection Model), caso contrário, retornará 0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância a ser comparada com a instância na qual `STRelate()` é invocado.  
+ É outra instância de **geometry** a ser comparada com a instância na qual `STRelate()` é invocado.  
   
  *intersection_pattern_matrix*  
- É uma cadeia de caracteres do tipo **nchar(9)** codifica os valores aceitáveis para o dispositivo de matriz de padrão DE-9IM entre as duas **geometria** instâncias.  
+ É uma cadeia de caracteres do tipo **nchar(9)** que codifica os valores aceitáveis do dispositivo da matriz do padrão DE-9IM entre as duas instâncias de **geometria**.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem. Esse método lançará um **ArgumentException** se a matriz não está bem formada.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. Esse método vai gerar uma **ArgumentException** se a matriz não estiver bem formada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `STRelate()` para testar duas **geometria** instâncias para separação espacial usando um padrão DE-9IM explícito.  
+ O exemplo a seguir usa `STRelate()` para testar duas instâncias de **geometria** quanto à separação espacial usando um padrão DE-9IM explícito.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
 SELECT @g.STRelate(@h, 'FF*FF****');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

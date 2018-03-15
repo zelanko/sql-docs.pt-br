@@ -1,5 +1,5 @@
 ---
-title: "Barra de estrela (bloco de comentário) (Transact-SQL) | Microsoft Docs"
+title: "Barra estrela (comentário de bloco) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-block-comment-transact-sql"></a>Barra de estrela (bloco de comentário) (Transact-SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>Barra estrela (comentário de bloco) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  Indica texto fornecido pelo usuário. O texto entre o / * e \*/ não é avaliado pelo servidor.  
+  Indica texto fornecido pelo usuário. O texto entre /* e \*/ não é avaliado pelo servidor.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +57,11 @@ text_of_comment
  É o texto do comentário. É composto de uma ou mais cadeias de caracteres.  
   
 ## <a name="remarks"></a>Remarks  
- Os comentários podem ser inseridos em uma linha separada ou dentro de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Comentários de várias linhas devem ser indicados por / * e \*/. Uma convenção de estilo frequentemente usada para comentários de várias linhas é começar a primeira linha com /\*, subsequentes linhas com \* \*e terminar com \*/.  
+ Os comentários podem ser inseridos em uma linha separada ou dentro de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os comentários de várias linhas precisam ser indicados por /* e \*/. Uma convenção de estilo geralmente usada para comentários de várias linhas é começar a primeira linha com /\*, as próximas linhas com \*\* e terminar com \*/.  
   
  Não há comprimento máximo para comentários.  
   
- É oferecido suporte a comentários aninhados. Se o / * padrão de caracteres ocorre em qualquer lugar dentro de um comentário existente, ele será tratado como o início de um comentário aninhado e, portanto, requer um fechamento \*/ marca de comentário. Se a marca de comentário de fechamento não existir, um erro será gerado.  
+ É oferecido suporte a comentários aninhados. Se o padrão de caracteres /* ocorrer em qualquer lugar dentro de um comentário existente, ele será tratado como o início de um comentário aninhado e, portanto, exigirá uma marca de comentário \*/ de fechamento. Se a marca de comentário de fechamento não existir, um erro será gerado.  
   
  Por exemplo, o código a seguir gera um erro.  
   
@@ -108,9 +108,9 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

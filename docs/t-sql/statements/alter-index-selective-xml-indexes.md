@@ -1,5 +1,5 @@
 ---
-title: "Instrução ALTER INDEX (índices XML seletivos) | Microsoft Docs"
+title: "ALTER INDEX (índices XML seletivos) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   
 -   As opções de índice (cláusula WITH).  
   
- Você não pode alterar índices XML seletivos secundários. Para obter mais informações, consulte [Create, Alter e Drop índices XML seletivos secundários](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
+ Você não pode alterar índices XML seletivos secundários. Para obter mais informações, veja [Criar, alterar e remover índices XML seletivos secundários](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ identifier
  *index_name*  
  Nome do índice existente a ser alterado.  
   
- *\<table_object >*  
+ *\<table_object>*  
  Tabela que contém a coluna XML a ser indexada. Use um destes formatos:  
   
 -   `database_name.schema_name.table_name`  
@@ -131,18 +131,18 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- Lista de namespaces usados pelos caminhos a serem indexados. Para obter informações sobre a sintaxe da cláusula WITH XMLNAMESPACES, consulte [WITH XMLNAMESPACES &#40; Transact-SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ Lista de namespaces usados pelos caminhos a serem indexados. Para obter informações sobre a sintaxe da cláusula WITH XMLNAMESPACES, veja [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- PARA **(** \<promoted_node_path_action_list > **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  Lista de caminhos indexados a serem adicionados ou removidos.  
   
--   **Adicione um caminho.** Ao usar ADD para adicionar um caminho, use a mesma sintaxe usada para criar caminhos com a instrução CREATE SELECTIVE XML INDEX. Para obter informações sobre os caminhos que você pode especificar na instrução CREATE ou ALTER, consulte [especificar caminhos e dicas de otimização para índices XML seletivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+-   **Use ADD para adicionar um caminho.** Ao usar ADD para adicionar um caminho, use a mesma sintaxe usada para criar caminhos com a instrução CREATE SELECTIVE XML INDEX. Para obter informações sobre os caminhos que você pode especificar na instrução CREATE ou ALTER, veja [Especificar caminhos e dicas de otimização para índices XML seletivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
--   **Remova um caminho.** Ao usar REMOVE para remover um caminho, forneça o nome que foi atribuído ao caminho quando ele foi criado.  
+-   **Use REMOVE para remover um caminho.** Ao usar REMOVE para remover um caminho, forneça o nome que foi atribuído ao caminho quando ele foi criado.  
   
- [Com **(** \<index_options > **)**]  
- Você só pode especificar \<index_options > quando você usar ALTER INDEX sem a cláusula FOR. Quando você usar ALTER INDEX para adicionar ou remover caminhos no índice, as opções de índice não serão argumentos válidos. Para obter informações sobre as opções de índice, consulte [CREATE XML INDEX &#40; Índices XML seletivos &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ Você só pode especificar \<index_options> quando usar ALTER INDEX sem a cláusula FOR. Quando você usar ALTER INDEX para adicionar ou remover caminhos no índice, as opções de índice não serão argumentos válidos. Para obter informações sobre as opções de índice, veja [CREATE XML INDEX &#40;índices XML seletivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Remarks  
   

@@ -31,11 +31,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geography-data-type"></a>MakeValid (tipos de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Converte um **geografia** instância que não é válida em uma opção válida **geografia** instância com um tipo válido do Open Geospatial Consortium (OGC).  
+  Converte uma instância de**geografia** que não é válida em uma instância de **geography** válida com um tipo do OGC (Open Geospatial Consortium) válido.  
   
- Se um objeto de entrada retornar False para stisvalid (), `MakeValid()` converterá a instância que não é válida para uma instância válida.  
+ Se um objeto de entrada retornar False para STIsValid(), `MakeValid()` converterá a instância que não é válida em uma instância válida.  
   
- Esses dados de Geografia digite método dá suporte a **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de geography é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método pode alterar o tipo do **geografia** instância. Além disso, os pontos de um **geografia** instância pode mudar ligeiramente. Resultados de alguns métodos como NumPoint() podem ser alteradas.  
+ Esse método pode alterar o tipo de instância de **geography**. Além disso, os pontos de uma instância de **geography** podem mudar um pouco. Os resultados de alguns métodos como NumPoint() podem ser alterados.  
   
- Em casos onde a instância espacial inválida cruza o equador e tem um EnvelopeAngle() = 180, uma **FullGlobe** instância será retornada. O `MakeValid()` **geografia** método de tipo de dados fará com que a melhor tentativa no retorno de instâncias válidas, mas não há garantia que os resultados precisos.  
+ Nos casos em que a instância espacial inválida interseccionar o equador e tiver um EnvelopeAngle() = 180, uma instância de **FullGlobe** será retornada. O método do tipo de dados de `MakeValid()`**geography** fará a melhor tentativa possível de retornar instâncias válidas, mas não há garantias de que os resultados serão precisos.  
   
 > [!NOTE]  
->  Os objetos que não são válidos podem ser armazenados no banco de dados. Os métodos que podem ser executados em instâncias inválidas (instâncias para as quais stisvalid () retornam False) são métodos que verificam a validade ou permitem exportação: stisvalid (), makevalid (), stastext (), STAsBinary(), ToString (), AsTextZM() e AsGml().  
+>  Os objetos que não são válidos podem ser armazenados no banco de dados. Os métodos que podem ser executados em instâncias inválidas (instâncias para as quais STIsValid() retorna False) são métodos que verificam a validade ou permitem a exportação: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() e AsGml().  
   
  Esse método não é preciso.  
   
@@ -87,7 +87,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STIsValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

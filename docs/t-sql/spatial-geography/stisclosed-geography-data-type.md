@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retornará 1 se os pontos inicial e final da determinado **geografia** instância são os mesmos. Retorna 1 para **geografia** tipos de coleção, se cada contido **geografia** instância está fechada. Retornará 0 se a instância não for fechada.  
+  Retornará 1 se os pontos inicial e final da instância de **geography** fornecida forem o mesmo. Retornará 1 para tipos de coleção de **geografia**, se cada instância de **geography** contida estiver fechada. Retornará 0 se a instância não for fechada.  
   
- Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método retornará 0 se nenhuma figuras de um **geografia** instância são pontos, ou se a instância estiver vazia.  
+ Esse método retornará 0 se alguma figura de uma instância de **geography** for um ponto ou se a instância estiver vazia.  
   
- Esse método retornará true se um **FullGlobe** instância é um **polígono** ou outro tipo de instância.  
+ Esse método retornará true se uma instância de **FullGlobe** for um **polígono** ou outro tipo de instância.  
   
- Todos os **polígono** instâncias são consideradas fechadas.  
+ As instâncias de **polígono** são consideradas fechadas.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `Polygon` e usa `STIsClosed()` para testar se `Polygon` está fechada.  
@@ -66,7 +66,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

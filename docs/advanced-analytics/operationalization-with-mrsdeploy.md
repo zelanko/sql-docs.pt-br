@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>Implantar e consumir análises usando mrsdeploy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ Esse recurso de implantação de R Server oferece estes benefícios:
   
   Você pode usar em tempo real com um objeto de modelo de R com suporte de pontuação para melhorar a velocidade de operações de pontuação.
 
-+ Publicar o código Python como um serviço web
-
-  Para obter exemplos, consulte [publicar e consumir o código Python](./python/publish-consume-python-code.md).
-
 + Consumo assíncrona em lotes
 
   Serviços Web que chamam para dados de entrada grandes agora podem ser consumidos assíncrona por meio da execução do lote.
@@ -88,7 +84,7 @@ No entanto, se você precisa instalá-los juntos, siga estas etapas adicionais p
 
 3. Após concluir a instalação do **Microsoft Server de aprendizado de máquina**, manualmente adicione a seguinte chave do registro para **mrsdeploy**, que especifica a pasta base para os arquivos R_SERVER. 
 
-    + Crie uma nova chave de registro`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + Crie uma nova chave de registro `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + Defina o valor da chave `"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`.
 
 4. Quando terminar, abra o [utilitário Administrador](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility).

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retornará 1 se uma **geometria** instância é simples, conforme definido pelo Open geoespaciais Consortium (OGC). Retorna 0 se uma **geometria** instância não é simple.
+Retorna 1 se uma instância de **geometry** é simples, conforme definido pelo OGC (Open Geospatial Consortium). Retorna 0 se uma instância de **geometry** não é simples.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ Retornará 1 se uma **geometria** instância é simples, conforme definido pelo 
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Para ser simples, um **geometria** instância deve atender aos seguintes requisitos:  
+ Para ser simples, uma instância de **geometry** deve atender aos seguintes requisitos:  
   
 -   Não deve haver interseção de nenhuma figura da instância consigo mesma, exceto em seus pontos de extremidade.  
   
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
 SELECT @g.STIsSimple();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

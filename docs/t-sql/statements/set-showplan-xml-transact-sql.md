@@ -1,20 +1,22 @@
 ---
 title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 02/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET SHOWPLAN_XML
 - SET_SHOWPLAN_XML_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statements [SQL Server], estimates
 - SET SHOWPLAN_XML statement
@@ -24,25 +26,25 @@ helpviewer_keywords:
 - SHOWPLAN_XML option
 - estimated execution information [SQL Server]
 ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd4e6309f65bea4a71cc9e2de7d5bb5b806ab005
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 80a04971bb82b1d4857eb08e7ff65083855ed7b3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não execute instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna informações detalhadas sobre como as instruções serão executadas no formulário de um documento XML bem-definido.  
  
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
 ```  
   
@@ -52,12 +54,12 @@ SET SHOWPLAN_XML { ON | OFF }
 ## <a name="remarks"></a>Remarks  
  A configuração de SHOWPLAN_XML é definida durante a execução ou o tempo de execução, e não no momento da análise.  
   
- Quando SET SHOWPLAN_XML for ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna informações de plano de execução para cada instrução sem executá-la, e [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções não são executadas. Depois que essa opção estiver definida como ON, as informações do plano de execução sobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes serão retornadas, até que a opção esteja definida como OFF. Por exemplo, se uma instrução CREATE TABLE for executada enquanto SET SHOWPLAN_XML estiver definido como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro de uma instrução SELECT subsequente, envolvendo essa mesma tabela. A tabela especificada não existe. Portanto, haverá falha nas referências subsequentes para essa tabela. Quando SET SHOWPLAN_XML for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará as instruções sem gerar relatório.  
+ Quando SET SHOWPLAN_XML for ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará informações de plano de execução para cada instrução sem executá-la, e as instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)] não serão executadas. Depois que essa opção estiver definida como ON, as informações do plano de execução sobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes serão retornadas, até que a opção esteja definida como OFF. Por exemplo, se uma instrução CREATE TABLE for executada enquanto SET SHOWPLAN_XML estiver definido como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro de uma instrução SELECT subsequente, envolvendo essa mesma tabela. A tabela especificada não existe. Portanto, haverá falha nas referências subsequentes para essa tabela. Quando SET SHOWPLAN_XML for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará as instruções sem gerar relatório.  
   
- SET SHOWPLAN_XML deve retornar a saída como **nvarchar (max)** para aplicativos, como o **sqlcmd** utilitário, onde a saída XML é subsequentemente usada por outras ferramentas para exibir e processar a consulta informações do plano.  
+ SET SHOWPLAN_XML deve retornar uma saída como **nvarchar(max)** para aplicativos como o utilitário **sqlcmd**, em que a saída XML será usada em seguida por outras ferramentas para exibir e processar as informações do plano de consulta.  
   
 > [!NOTE]  
->  A exibição de gerenciamento dinâmico **sys.DM exec_query_plan**, retorna as mesmas informações que SET SHOWPLAN XML o **xml** tipo de dados. Essas informações são retornadas do **query_plan** coluna **sys.DM exec_query_plan**. Para obter mais informações, consulte [sys.DM exec_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>  A exibição de gerenciamento dinâmico **sys.dm_exec_query_plan** retorna as mesmas informações que SET SHOWPLAN XML para o tipo de dados **XML**. Essas informações são retornadas da coluna **query_plan** de **sys.dm_exec_query_plan**. Para obter mais informações, confira [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
  SET SHOWPLAN_XML não pode ser especificado em um procedimento armazenado. Ele precisa ser a única instrução em um lote.  
   
@@ -67,26 +69,26 @@ SET SHOWPLAN_XML { ON | OFF }
   
  \Microsoft SQL Server\130\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- O esquema do plano de execução também podem ser encontrado em [este site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ O esquema do plano de execução também pode ser encontrado [neste site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
 > [!NOTE]  
->  Se **incluir plano de execução real** está selecionado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], essa opção SET produz saída de Showplan XML. Limpar o **incluir plano de execução real** botão antes de usar essa opção SET.  
+>  Se **Incluir Plano de Execução Real** estiver selecionado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], essa opção SET não produzirá a saída do plano de execução XML. Desmarque o botão **Incluir Plano de Execução Real** antes de usar esta opção SET.  
   
 ## <a name="permissions"></a>Permissões  
  Para usar SET SHOWPLAN_XML, é preciso ter permissões suficientes para executar as instruções nas quais SET SHOWPLAN_XML é executado e é preciso ter a permissão SHOWPLAN para todos os bancos de dados que contenham objetos referenciados.  
   
- Para SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure*e EXEC *user_defined_function* instruções para produzir um plano de execução que o usuário deve:  
+ Para instruções SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* e EXEC *user_defined_function*, para produzir um Plano de Execução, o usuário precisa:  
   
 -   Ter as permissões apropriadas para executar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Ter permissão SHOWPLAN em todos os bancos de dados que contenham objetos referenciados pelas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], como tabelas, exibições e assim por diante.  
   
- Para todas as outras instruções, como DDL, USE *database_name*, SET, DECLARE, dinâmico SQL e assim por diante, somente as permissões apropriadas para executar o [!INCLUDE[tsql](../../includes/tsql-md.md)] declarações são necessárias.  
+ Para todas as outras instruções, como DDL, USE *database_name*, SET, DECLARE, SQL dinâmico, e assim por diante, são necessárias apenas as permissões adequadas para executar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  As duas instruções a seguir usam as configurações SET SHOWPLAN_XML para mostrar o modo pelo qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analisa e otimiza o uso de índices em consultas.  
   
- A primeira consulta usa o operador de comparação Igual (=) na cláusula WHERE em uma coluna indexada. A segunda consulta usa o operador LIKE na cláusula WHERE. Isso força o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar uma verificação de índice clusterizado e a localizar os dados que satisfazem a condição da cláusula WHERE. Os valores de **EstimateRows** e o **EstimatedTotalSubtreeCost** atributos são menores para a primeira consulta indexada, indicando que ela é processada muito mais rapidamente e usa menos recursos do que o consulta não indexada.  
+ A primeira consulta usa o operador de comparação Igual (=) na cláusula WHERE em uma coluna indexada. A segunda consulta usa o operador LIKE na cláusula WHERE. Isso força o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar uma verificação de índice clusterizado e a localizar os dados que satisfazem a condição da cláusula WHERE. Os valores nos atributos **EstimateRows** e **EstimatedTotalSubtreeCost** são menores na primeira consulta indexada, indicando que ela é processada com mais rapidez e usa menos recursos que a consulta não indexada.  
   
 ```  
 USE AdventureWorks2012;  
@@ -106,7 +108,7 @@ GO
 SET SHOWPLAN_XML OFF;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

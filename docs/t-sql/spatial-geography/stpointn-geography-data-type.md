@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o ponto especificado em uma **geografia** instância.  
+  Retorna o ponto especificado em uma instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É um **int** expressão entre 1 e o número de pontos de **geografia** instância.  
+ É uma expressão **int** entre 1 e o número de pontos na instância de **geography**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Abra o tipo Geospatial Consortium (OGC): **ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- Se um **geografia** instância é criada pelo usuário, STPointN() retorna o ponto especificado por *expressão* ordenando os pontos na ordem em que eles foram originalmente de entrada.  
+ Se uma instância de **geography** for criada pelo usuário, STPointN() retornará o ponto especificado pela *expressão* ordenando os pontos pela ordem de entrada original.  
   
- Se um **geografia** instância é criada pelo sistema, STPointN() retorna o ponto especificado por *expressão* ordenando todos os pontos na mesma ordem, eles seriam saída: primeiro por  **Geografia** instância, depois pelo anel dentro da instância (se apropriado) e, em seguida, pelo ponto dentro do anel. Essa ordem é determinística.  
+ Se uma instância de **geography** for construída pelo sistema, STPointN() retornará o ponto especificado pela *expressão* ordenando os pontos na mesma ordem em que eles seriam emitidos: primeiro pela instância de **geography**, depois pelo anel na instância (se apropriado) e, em seguida, pelo ponto dentro do anel. Essa ordem é determinística.  
   
- Se esse método for chamado com um valor menor que 1, ele lança uma **ArgumentOutOfRangeException**.  
+ Se esse método for chamado com um valor menor que 1, ele gerará uma **ArgumentOutOfRangeException**.  
   
  Se esse método for chamado com um valor maior que o número de pontos na instância, retornará nulo.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

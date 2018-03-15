@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geography-data-type"></a>STCurveN (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna a curva especificada de um **geografia** instância que é um **LineString**, **CircularString**, ou **CompoundCurve**.  
+  Retorna a curva especificada de um instância de **geography** que é uma **LineString**, uma **CircularString** ou uma **CompoundCurve**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,31 +45,31 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *n*  
- É um **int** expressão entre 1 e o número de curvas no **geografia** instância.  
+ É uma expressão **int** entre 1 e o número de curvas na instância de **geography**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
- Se n < 1, em seguida, uma **ArgumentOutOfRangeException** é gerada.  
+ Se n < 1, uma **ArgumentOutOfRangeException** será gerada.  
   
 ## <a name="remarks"></a>Remarks  
- **NULO** é retornado quando ocorre o seguinte critério.  
+ **NULL** será retornado quando o seguinte critério ocorrer.  
   
--   O **geografia** instância é declarada, mas não é instanciada  
+-   A instância de **geography** for declarada, mas não for criada uma instância dela  
   
--   O **geografia** instância está vazia  
+-   A instância de **geography** estiver vazia  
   
--   n excede o número de curvas no **geografia** instância (consulte [STNumCurves &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
+-   n exceder o número de curvas na instância de **geography** (confira [STNumCurves &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
   
--   A dimensão para a **geografia** instância não é igual a (consulte [STDimension &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
+-   A dimensão da instância de **geography** não for igual a (confira [STDimension &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stcurven-on-a-circularstring"></a>A. Usando stcurven () em um CircularString  
- O exemplo a seguir retorna a segunda curva em uma **CircularString** instância:  
+### <a name="a-using-stcurven-on-a-circularstring"></a>A. Usando STCurveN() em uma CircularString  
+ O exemplo a seguir retorna a segunda curva em uma instância de **CircularString**:  
   
 ```
  DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>B. Usando STCurveN() em uma instância de CompoundCurve  
- O exemplo a seguir retorna a segunda curva em uma **CompoundCurve** instância:  
+ O exemplo a seguir retorna a segunda curva em uma instância de **CompoundCurve**:  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>C. Usando STCurveN() em um CompoundCurve que contém três CircularStrings  
- O exemplo a seguir usa uma **CompoundCurve** instância que combina três separado **CircularString** instâncias na mesma sequência de curva como no exemplo anterior:  
+ O exemplo a seguir usa uma instância de **CompoundCurve** que combina três instâncias de **CircularString** separadas na mesma sequência de curva, como no exemplo anterior:  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/25/2018
  `STCurveN()` retorna os mesmos resultados independentemente do formato de texto Conhecido (WKT) usado.  
   
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. Testando a validade antes de chamar STCurve()  
- O exemplo a seguir mostra como certificar-se de que  *n*  é válido antes de chamar o método stcurven ():  
+ O exemplo a seguir mostra como ter certeza de que *n* é válido antes de chamar o método STCurveN():  
   
 ```
  DECLARE @g geography;  
@@ -120,7 +120,7 @@ ms.lasthandoff: 01/25/2018
  END
   ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

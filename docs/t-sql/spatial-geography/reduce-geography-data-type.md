@@ -1,5 +1,5 @@
 ---
-title: Reduzir (tipo de dados geography) | Microsoft Docs
+title: Reduce (tipo de dados geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geography-data-type-"></a>Reduce (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma aproximação do determinado **geografia** instância produzido pela execução do algoritmo de Douglas-Peucker na instância com a tolerância especificada.  
+  Retorna uma aproximação da instância de **geography** fornecida produzida pela execução do algoritmo de Douglas-Peucker na instância com a tolerância indicada.  
   
- Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  
+ Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |Termo|Definição|  
-|*tolerance*|É um valor do tipo **float**. *tolerância* é a tolerância de entrada para o algoritmo de Douglas-Peucker. *tolerância* deve ser um número positivo.|  
+|*tolerance*|É um valor do tipo **float**. *tolerance* é a tolerância de entrada para o algoritmo de Douglas-Peucker. *tolerance* precisa ser um número positivo.|  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Para tipos de coleção, esse algoritmo funciona independentemente em cada **geografia** contidos na instância. Esse algoritmo não modifica **ponto** instâncias.  
+ Para tipos de coleção, esse algoritmo funciona de forma independente em cada **geografia** contida na instância. Esse algoritmo não modifica as instâncias de **Point**.  
   
- Esse método tentará preservar os pontos de extremidade de **LineString** instâncias, mas pode falhar ao fazer isso para preservar um resultado válido.  
+ Esse método tentará preservar os pontos de extremidade das instâncias de **LineString**, mas talvez não consiga fazer isso para assegurar que o resultado seja válido.  
   
- Se `Reduce()` é chamado com um valor negativo, esse método gerará uma **ArgumentException**. As tolerâncias usadas em `Reduce()` devem ser números positivos.  
+ Se `Reduce()` for chamado com um valor negativo, esse método gerará uma **ArgumentException**. As tolerâncias usadas em `Reduce()` devem ser números positivos.  
   
- O algoritmo de Douglas-Peucker funciona em cada curva ou anel no **geografia** instância, removendo todos os pontos, exceto o ponto inicial e o ponto de extremidade. Cada ponto removido é adicionado novamente, começando com o ponto mais externo, até que nenhum ponto seja mais de *tolerância* do resultado. O resultado é então validado, se necessário, pois um resultado válido é garantido.  
+ O algoritmo de Douglas-Peucker funciona em cada curva ou anel na instância de **geography**, removendo todos os pontos, exceto o ponto inicial e o ponto de final. Cada ponto removido é adicionado novamente, começando com o ponto mais distante, até que nenhum ponto esteja a mais do que a *tolerância* do resultado. O resultado é então validado, se necessário, pois um resultado válido é garantido.  
   
- Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esse método foi estendido para **FullGlobe** instâncias.  
+ No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esse método foi estendido para as instâncias de **FullGlobe**.  
   
  Esse método não é preciso.  
   
@@ -78,7 +78,7 @@ DECLARE @g geography = 'LineString(120 45, 120.1 45.1, 199.9 45.2, 120 46)'
 SELECT @g.Reduce(10000).ToString()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cliente potencial (Transact-SQL) | Microsoft Docs
+title: LEAD (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Acessa os dados de uma linha subsequente do mesmo conjunto de resultados sem o uso de uma autojunção começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD fornece acesso a uma linha a um determinado deslocamento físico que segue a linha atual. Use essa função analítica em uma instrução SELECT para comparar valores na linha atual com valores em uma linha seguinte.  
+  Acessa os dados de uma linha seguinte no mesmo conjunto de resultados sem o uso de uma autojunção começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD fornece acesso a uma linha a um determinado deslocamento físico que segue a linha atual. Use essa função analítica em uma instrução SELECT para comparar valores na linha atual com valores em uma linha seguinte.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,17 +50,17 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *scalar_expression*  
  O valor a ser retornado com base no deslocamento especificado. É uma expressão de qualquer tipo que retorna um único valor (escalar). *scalar_expression* não pode ser uma função analítica.  
   
- *deslocamento*  
- O número de linhas à frente da linha atual da qual obter um valor. Se não for especificado, o padrão será 1. *deslocamento* pode ser uma coluna, subconsulta ou outra expressão que é avaliada como um número inteiro positivo ou pode ser convertido implicitamente em **bigint**. *deslocamento* não pode ser um valor negativo ou uma função analítica.  
+ *offset*  
+ O número de linhas à frente da linha atual da qual obter um valor. Se não for especificado, o padrão será 1. *offset* pode ser uma coluna, subconsulta ou outra expressão avaliada para um inteiro positivo ou pode ser convertida implicitamente em **bigint**. *offset* não pode ser um valor negativo nem uma função analítica.  
   
- *padrão*  
- O valor a ser retornado quando *scalar_expression* em *deslocamento* é NULL. Se um valor padrão não for especificado, NULL será retornado. *padrão* pode ser uma coluna, subconsulta ou outra expressão, mas ele não pode ser uma função analítica. *padrão* devem ser do tipo compatível com *scalar_expression*.  
+ *default*  
+ O valor a ser retornado quando *scalar_expression* em *offset* for NULL. Se um valor padrão não for especificado, NULL será retornado. *default* pode ser uma coluna, subconsulta ou outra expressão, mas não pode ser uma função analítica. *default* deve ter o tipo compatível com *scalar_expression*.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições para o qual a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem dos dados antes da função é aplicada. Quando *partition_by_clause* for especificado, ele determina a ordem dos dados em cada partição. O *order_by_clause* é necessário. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem dos dados antes de a função ser aplicada. Quando *partition_by_clause* é especificado, ela determina a ordem dos dados em cada partição. *order_by_clause* é obrigatória. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
- O tipo de dados especificada *scalar_expression*. NULL será retornado se *scalar_expression* é anulável ou *padrão* é definido como NULL.  
+ O tipo de dados da *scalar_expression* especificada. NULL será retornado se *scalar_expression* não permitir valor nulo ou *default* for definido como NULL.  
   
  LEAD é não determinística. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
@@ -143,10 +143,10 @@ b           c           i
 1           5           -2  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>Unidade d: comparar valores entre trimestres  
- O exemplo a seguir demonstra a função LEAD. A consulta obtém a diferença em valores de cota de vendas para um funcionário especificado nos trimestres do calendário subsequentes. Observe que, porque não há nenhum valor inicial disponível após a última linha, o padrão de zero (0) é usado.  
+### <a name="d-compare-values-between-quarters"></a>D: Comparar valores entre trimestres  
+ O exemplo a seguir demonstra o uso da função LEAD. A consulta obtém a diferença em valores de cota de vendas para um funcionário especificado nos trimestres do calendário seguintes. Observe que, como não há um valor inicial disponível após a última linha, o padrão de zero (0) é usado.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -173,7 +173,7 @@ Year Quarter  SalesQuota  NextQuota  Diff
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [LATÊNCIA &#40; Transact-SQL &#41;](../../t-sql/functions/lag-transact-sql.md)  
+ [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
 

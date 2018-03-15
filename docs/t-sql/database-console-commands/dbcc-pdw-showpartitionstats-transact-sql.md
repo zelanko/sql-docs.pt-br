@@ -28,9 +28,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Exibe o tamanho e o número de linhas para cada partição de uma tabela em uma [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] banco de dados.
+Exibe o tamanho e o número de linhas de cada partição de uma tabela em um banco de dados do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,27 +41,27 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
- A uma, duas ou três partes de nome da tabela a ser exibida.  Para duas ou nomes de tabela de três partes, o nome devem ser colocados entre aspas duplas (""). O uso de aspas ao redor de um nome de parte de uma tabela é opcional.  
+ [ *database_name* . [ *schema_name* ]. | *schema_name*. ] *table_name*  
+ O nome de uma, duas ou três partes da tabela a ser exibido.  Para nomes de tabela de duas partes, o nome precisa ser colocado entre aspas duplas (""). O uso de aspas para um nome de tabela de uma única parte é opcional.  
   
 ## <a name="permissions"></a>Permissões
-Requer **VIEW SERVER STATE** permissão.
+Requer a permissão **VIEW SERVER STATE**.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Isso é que os resultados do comando DBCC PDW_SHOWPARTITIONSTATS.
+Estes são os resultados do comando DBCC PDW_SHOWPARTITIONSTATS.
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|partition_number|int|Número da partição.|  
-|used_page_count|bigint|Número de páginas usadas para os dados.|  
-|reserved_page_count|bigint|Número de páginas alocadas para a partição.|  
-|row_count|bigint|Número de linhas na partição.|  
-|pdw_node_id|int|Compute o nó para os dados.|  
-|distribution_id|int|Id de distribuição para os dados.|  
+|partition_number|INT|Número da partição.|  
+|used_page_count|BIGINT|Número de páginas usadas para os dados.|  
+|reserved_page_count|BIGINT|Número de páginas alocadas para a partição.|  
+|row_count|BIGINT|Número de linhas na partição.|  
+|pdw_node_id|INT|Nó de computação dos dados.|  
+|distribution_id|INT|Id de distribuição dos dados.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Exemplos de sintaxe básica de DBCC PDW_SHOWPARTITIONSTATS  
-Os exemplos a seguir exibem o espaço usado e o número de linhas por partição da tabela FactInternetSales o [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] banco de dados.
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Exemplos de sintaxe básica do DBCC PDW_SHOWPARTITIONSTATS  
+Os exemplos a seguir exibem o espaço usado e o número de linhas por partição da tabela FactInternetSales no banco de dados do [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql
 DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");  

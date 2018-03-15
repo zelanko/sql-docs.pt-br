@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geometry-data-type"></a>STLength (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o comprimento total dos elementos em uma **geometria** instância.
+Retorna o comprimento total dos elementos em uma instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ Retorna o comprimento total dos elementos em uma **geometria** instância.
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **float**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Se um **geometria** instância está fechada, seu comprimento será calculado como o comprimento total ao redor da instância; o comprimento de qualquer polígono é seu perímetro e o comprimento de um ponto é 0. O comprimento de qualquer **geometrycollection** tipo é a soma dos comprimentos de suas independente **geometria** instâncias.  
+ Se uma instância de **geometry** for fechada, seu comprimento será calculado como o comprimento total ao redor da instância. O comprimento de qualquer polígono é seu perímetro e o comprimento de um ponto é 0. O comprimento de qualquer tipo de **geometrycollection** é a soma dos comprimentos de suas instâncias de **geometry** independentes.  
   
  STLength () funciona em LineStrings válidos e inválidos. Em geral, um LineString é inválido devido aos segmentos sobrepostos, que podem ser causados por anomalias como rastreamentos de GPS imprecisos. STLength () não remove segmentos sobrepostos ou inválidos. Ele inclui segmentos sobrepostos e inválidos no valor de comprimento que ele retorna. O método MakeValid () pode remover segmentos sobrepostos de um LineString.  
   
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STLength();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

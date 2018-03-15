@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geometry-data-type"></a>STDimension (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna a dimensão máxima de um **geometria** instância.
+Retorna a dimensão máxima de uma instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,15 +44,15 @@ Retorna a dimensão máxima de um **geometria** instância.
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **int**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- `STDimension()`retornará -1 se o **geometria** instância está vazia.  
+ `STDimension()` retornará -1 se a instância de **geometry** estiver vazia.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma variável de tabela para manter **geometria** instâncias e insere um `Point`, um `LineString`e um `Polygon`.  Ele então usa `STDimension()` para retornar as dimensões de cada **geometria** instância.  
+ O exemplo a seguir cria uma variável de tabela para manter as instâncias de **geometry** e insere um `Point`, um `LineString` e um `Polygon`.  Em seguida, ele usa `STDimension()` para retornar as dimensões de cada instância de **geometry**.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geometry);  
@@ -65,13 +65,13 @@ FROM @temp;
   
  O exemplo, então, retorna as dimensões de cada instância de `geometry`.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Ponto|0|  
 |LineString|1|  
-|Polígono|2|  
+|Polygon|2|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

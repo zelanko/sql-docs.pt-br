@@ -48,25 +48,25 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ## <a name="arguments"></a>Argumentos 
 
 *separator*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de `NVARCHAR` ou `VARCHAR` concatenados de tipo que é usado como separador de cadeias de caracteres. Ele pode ser literal ou variável. 
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo `NVARCHAR` ou `VARCHAR` que é usada como separador de cadeias de caracteres concatenadas. Pode ser um literal ou uma variável. 
 
 *expressão*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo. Expressões são convertidas em `NVARCHAR` ou `VARCHAR` tipos durante a concatenação. Tipos de cadeia de caracteres não são convertidos em `NVARCHAR` tipo.
+É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo. As expressões são convertidas em tipos `NVARCHAR` ou `VARCHAR` durante a concatenação. Tipos que não são uma cadeia de caracteres são convertidos no tipo `NVARCHAR`.
 
 
 <order_clause>   
-Opcionalmente, especificar a ordem dos resultados concatenados usando `WITHIN GROUP` cláusula:
+Opcionalmente, especifique a ordem dos resultados concatenados usando a cláusula `WITHIN GROUP`:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
  
-  Uma lista de não constante [expressões](../../t-sql/language-elements/expressions-transact-sql.md) que pode ser usada para classificar os resultados. Apenas um `order_by_expression` é permitida por consulta. A ordem de classificação padrão é crescente.   
+  Uma lista de [expressions](../../t-sql/language-elements/expressions-transact-sql.md) de não constante que pode ser usada para classificar os resultados. Apenas uma `order_by_expression` é permitida por consulta. A ordem de classificação padrão é crescente.   
   
 
 ## <a name="return-types"></a>Tipos de retorno 
 
-Tipo de retorno é depende do primeiro argumento (expressão). Se o argumento de entrada é o tipo de cadeia de caracteres (`NVARCHAR`, `VARCHAR`), tipo de resultado será o mesmo como o tipo de entrada. A tabela a seguir lista as conversões automáticas:  
+O tipo de retorno depende do primeiro argumento (expressão). Se o argumento de entrada for um tipo de cadeia de caracteres (`NVARCHAR`, `VARCHAR`), o tipo de resultado será o mesmo do tipo de entrada. A seguinte tabela lista as conversões automáticas:  
 
 |Tipo de expressão de entrada |Resultado | 
 |-------|-------|
@@ -74,24 +74,24 @@ Tipo de retorno é depende do primeiro argumento (expressão). Se o argumento de
 |VARCHAR(MAX) |VARCHAR(MAX) |
 |NVARCHAR(1…4000) |NVARCHAR(4000) |
 |VARCHAR(1…8000) |VARCHAR(8000) |
-|int, bigint, smallint, tinyint, numérico, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
+|int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime e datetime2 |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>Remarks  
  
-`STRING_AGG`é uma função de agregação que usa todas as expressões de linhas e os concatena em uma única cadeia de caracteres. Valores de expressão são implicitamente convertidos em tipos de cadeia de caracteres e depois concatenados. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG` é uma função de agregação que usa todas as expressões de linhas e concatena-as em uma única cadeia de caracteres. Os valores de expressão são convertidos implicitamente em tipos de cadeia de caracteres e depois concatenados. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
-Se a expressão de entrada é o tipo `VARCHAR`, o separador não pode ser um tipo `NVARCHAR`. 
+Se a expressão de entrada for um tipo `VARCHAR`, o separador não poderá ser um tipo `NVARCHAR`. 
 
-Valores nulos são ignorados e o separador correspondente não será adicionado. Para retornar um espaço reservado para valores nulos, use o `ISNULL` funcione conforme demonstrado no exemplo B.
+Valores nulos são ignorados e o separador correspondente não é adicionado. Para retornar um espaço reservado para valores nulos, use a função `ISNULL`, conforme demonstrado no exemplo B.
 
-`STRING_AGG`está disponível em qualquer nível de compatibilidade.
+`STRING_AGG` está disponível em qualquer nível de compatibilidade.
 
 
 ## <a name="examples"></a>Exemplos 
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Gerar a lista de nomes separados em novas linhas 
-O exemplo a seguir produz uma lista de nomes em uma célula de resultado único, separados com retornos de carro.
+O exemplo a seguir gera uma lista de nomes em uma única célula de resultados, separados com retornos de carro.
 ```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
@@ -100,15 +100,15 @@ FROM Person.Person;
 
 |csv | 
 |--- |
-|Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
+|Davi <br />Catherine <br />Kim <br />Kim <br />Kim <br />Humberto <br />... | 
 
-`NULL`os valores encontrados em `name` células não são retornadas no resultado.   
+Os valores de `NULL` encontrados nas células `name` não são retornados no resultado.   
 > [!NOTE]  
->  Se usar o Editor de consulta do Management Studio, o **resultados em grade** opção não pode implementar o retorno de carro. Alternar para **resultados em texto** ver o resultado definido corretamente.   
+>  Se você estiver usando o Editor de Consultas do Management Studio, a opção **Resultados em Grade** não poderá implementar o retorno de carro. Alterne para **Resultados em Texto** para ver o conjunto de resultados corretamente.   
 
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Gerar a lista de nomes separados por vírgula sem valores nulos   
-O exemplo a seguir substitui valores nulos com n '/' e retorna os nomes separados por vírgulas em uma célula de resultado.  
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Gerar uma lista de nomes separados por vírgula sem valores NULL   
+O exemplo a seguir substitui valores nulos por 'N/A' e retorna os nomes separados por vírgulas em uma única célula de resultados.  
 ```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
@@ -119,7 +119,7 @@ FROM Person.Person;
 
 |Csv | 
 |--- |
-|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
+|Julio, N/A, Marco, Pedro, N/A, N/A, Alice, Diogo |  
 
 
 ### <a name="c-generate-comma-separated-values"></a>C. Gerar valores separados por vírgula 
@@ -134,15 +134,15 @@ FROM Person.Person;
 
 |nomes | 
 |--- |
-|Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (24 de fevereiro de 2002 12:00 AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (29 de dez de 2001 12:00 AM) <br />... |
+|Ken Sánchez (Feb 8 2003 12:00AM) <br />Manuela Ribeiro (24 de fev de 2002 24h) <br />Henrique Cunha (5 de dez de 2001 24h) <br />Fábio Pena (29 de dez de 2001 24h) <br />... |
 
 > [!NOTE]  
->  Se usar o Editor de consulta do Management Studio, o **resultados em grade** opção não pode implementar o retorno de carro. Alternar para **resultados em texto** ver o resultado definido corretamente.   
+>  Se você estiver usando o Editor de Consultas do Management Studio, a opção **Resultados em Grade** não poderá implementar o retorno de carro. Alterne para **Resultados em Texto** para ver o conjunto de resultados corretamente.   
  
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. Retorno de artigos de notícias com marcas relacionadas 
+### <a name="d-return-news-articles-with-related-tags"></a>D. Retornar artigos de notícias com marcas relacionadas 
 
-Artigo e suas marcas são separadas em tabelas diferentes. Desenvolvedor quer retornar uma linha por cada artigo com todas as marcas associadas. Usando a seguinte consulta: 
+O artigo e suas marcas são separados em tabelas diferentes. O desenvolvedor deseja retornar uma linha por artigo com todas as marcas associadas. Usando a seguinte consulta: 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
@@ -155,13 +155,13 @@ GROUP BY a.articleId, title;
 
 |articleId |title |marcas |
 |--- |--- |--- |
-|172 |Pesquisas indicam os resultados de eleição fechar |política, votações, cidade conselho | 
-|176 |Novo estrada esperada para reduzir o congestionamento |NULL |
-|177 |Cachorros continuam a ser mais populares que gatos |pesquisas, animais| 
+|172 |Pesquisas indicam resultados aproximados da eleição |política, pesquisas, câmara municipal | 
+|176 |Previsão de construção de nova estrada para reduzir o congestionamento |NULL |
+|177 |Cachorros continuam sendo mais populares do que gatos |pesquisas, animais| 
 
-### <a name="e-generate-list-of-emails-per-towns"></a>E. Gerar a lista de endereços de email por cidades
+### <a name="e-generate-list-of-emails-per-towns"></a>E. Gerar uma lista de emails por cidades
 
-A consulta a seguir localiza os endereços de email dos funcionários e os agrupa por cidades: 
+A seguinte consulta localiza os endereços de email de funcionários e agrupa-os por cidades: 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
@@ -170,16 +170,16 @@ GROUP BY town;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Cidade |emails |
+|cidade |emails |
 |--- |--- |
 |Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
 |LA |sam1@adventure-works.com;hazem0@adventure-works.com |
 
-Emails retornado nos emails de coluna pode ser usada para enviar emails ao grupo de pessoas que trabalham em algumas cidades específicas diretamente. 
+Os emails retornados na coluna de emails podem ser usados diretamente para enviar emails ao grupo de pessoas que trabalham em algumas cidades específicas. 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Gerar uma lista classificada de emails por cidades   
    
-Semelhante ao exemplo anterior, a consulta a seguir localiza os endereços de email de funcionários, agrupa por cidade e classifica os emails em ordem alfabética:   
+Semelhante ao exemplo anterior, a seguinte consulta localiza os endereços de email de funcionários, agrupa-os por cidade e classifica os emails em ordem alfabética:   
 ```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
@@ -189,13 +189,13 @@ GROUP BY town;
    
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Cidade |emails |
+|cidade |emails |
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -205,6 +205,6 @@ GROUP BY town;
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de agregação &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

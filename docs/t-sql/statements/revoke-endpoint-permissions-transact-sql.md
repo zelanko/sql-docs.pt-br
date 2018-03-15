@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de ponto de extremidade (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de ponto de extremidade (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um ponto de extremidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- NO ponto de EXTREMIDADE **::***endpoint_name*  
- Especifica o ponto de extremidade no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é necessária.  
+ ON ENDPOINT **::***endpoint_name*  
+ Especifica o ponto de extremidade no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório.  
   
- {DO | PARA} \<server_principal > especifica o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon a partir do qual a permissão está sendo revogada.  
+ { FROM | TO } \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do qual a permissão está sendo revogada.  
   
  *SQL_Server_login*  
  Especifica o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,10 +90,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
   
-## <a name="remarks"></a>Comentários  
- As permissões no escopo do servidor podem ser revogadas somente quando o banco de dados atual é **mestre**.  
+## <a name="remarks"></a>Remarks  
+ As permissões no escopo de servidor podem ser revogadas somente quando o banco de dados atual é **master**.  
   
- Informações sobre pontos de extremidade são visíveis no [Endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) exibição do catálogo. Informações sobre permissões de servidor são visíveis no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição de catálogo e obter informações sobre as entidades de servidor é visível no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ As informações sobre pontos de extremidade são visíveis na exibição do catálogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Um ponto de extremidade é um protegível em nível de servidor. As permissões mais específicas e limitadas que podem ser revogadas em um ponto de extremidade são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revogando a permissão TAKE OWNERSHIP com a opção CASCADE  
- O exemplo a seguir revoga `TAKE OWNERSHIP` permissão no ponto de extremidade `Shipping83` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuário `PKomosinski` e de todas as entidades às quais `PKomosinski` concedidas `TAKE OWNERSHIP` em `Shipping83`.  
+ O exemplo a seguir revoga a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` do usuário `PKomosinski` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de todas as entidades de segurança às quais `PKomosinski` concedeu `TAKE OWNERSHIP` em `Shipping83`.  
   
 ```  
 USE master;  
@@ -129,12 +129,12 @@ REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [Negar permissões de ponto de extremidade &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [Permissões DENY de ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Exibições do catálogo de pontos de extremidade &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys. Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Exibições do catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

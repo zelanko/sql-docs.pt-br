@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **geometria** instância de uma representação de texto do Open Geospatial Consortium (OGC) conhecido (WKT) aumentada com qualquer valor Z (elevação) e m (medida) transportados pela instância.
+Retorna uma instância de **geometry** de uma representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) aumentada com valores Z (elevação) e M (medida) presentes na instância.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +45,20 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *point_tagged_text*  
- É a representação WKT do **geometryPoint** instância que você deseja retornar. *point_tagged_text* é um **nvarchar (max)** expressão.  
+ É a representação WKT da instância de **geometryPoint** que você deseja retornar. *point_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **geometryPoint** instância que você deseja retornar.  
+ É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryPoint** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC: **ponto**  
+ Tipo do OGC: **Point**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método lançará um **FormatException** se a entrada não for bem formatada.  
+ Esse método gerará uma **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STPointFromText()` para criar uma instância `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STPointFromText('POINT (100 100)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

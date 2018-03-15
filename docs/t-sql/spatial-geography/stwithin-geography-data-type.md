@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stwithin-geography-data-type"></a>STWithin (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retornará 1 se uma **geografia** instância está espacialmente dentro de outra **geografia** instância; caso contrário, retornará 0.  
+  Retornará 1 se uma instância de **geography** estiver espacialmente dentro de outra instância de **geography**, caso contrário, retornará 0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- É outra **geografia** instância a ser comparada com a instância na qual `STWithin()` é invocado.  
+ É outra instância de **geography** a ser comparada com a instância na qual `STWithin()` é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geografia** instâncias não coincidem.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geography** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STWithin()` para testar duas instâncias  `geography` para verificar se a primeira instância está completamente dentro da segunda.  

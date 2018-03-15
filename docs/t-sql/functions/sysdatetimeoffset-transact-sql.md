@@ -46,9 +46,9 @@ ms.lasthandoff: 12/16/2017
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna um **datetimeoffset(7)** valor que contém a data e hora do computador no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução. O deslocamento de fuso horário está incluído.  
+  Retorna um valor de **datetimeoffset(7)** que contém a data e a hora do computador no qual a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada. O deslocamento de fuso horário está incluído.  
   
- Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de dados de data e hora e funções, consulte [data e hora tipos de dados e funções &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,12 +62,12 @@ SYSDATETIMEOFFSET ( )
  **datetimeoffset(7)**  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]instruções podem se referir a SYSDATETIMEOFFSET em qualquer lugar, eles podem consultar um **datetimeoffset** expressão.  
+ Instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] podem se referir a SYSDATETIMEOFFSET em qualquer lugar em que possam referenciar uma expressão **datetimeoffset**.  
   
  SYSDATETIMEOFFSET é uma função não determinística. Exibições e expressões que fazem referência a essa função em uma coluna não podem ser indexadas.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Obtém os valores de data e hora usando a API do Windows GetSystemTimeAsFileTime(). A precisão depende do hardware do computador e da versão do Windows no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada. A precisão desta API está fixada em 100 nanosegundos. A precisão pode ser determinada usando a API do Windows GetSystemTimeAdjustment().  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obtém os valores de data e hora usando a API do Windows GetSystemTimeAsFileTime(). A precisão depende do hardware do computador e da versão do Windows no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada. A precisão desta API está fixada em 100 nanosegundos. A precisão pode ser determinada usando a API do Windows GetSystemTimeAdjustment().  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir usam as seis funções de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que retornam a data e a hora atuais para retornar a data, a hora ou ambas. Os valores são retornados em série; portanto, seus segundos fracionários podem ser diferentes.  
@@ -142,8 +142,8 @@ GETUTCDATE()       20:18:45.3470000
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Dados de data e hora tipos e funções &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 

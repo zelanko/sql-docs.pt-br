@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **geografia** instância de uma representação de texto do Open Geospatial Consortium (OGC) conhecido (WKT) aumentada com qualquer valor Z (elevação) e m (medida) transportados pela instância.
+Retorna uma instância de **geography** de uma representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) aumentada com valores Z (elevação) e M (medida) presentes na instância.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +45,20 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *polygon_tagged_text*  
- É a representação WKT do **geographyPolygon** instância que você deseja retornar. *polygon_tagged_text* é um **nvarchar (max)** expressão.  
+ É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **geographyPolygon** instância que você deseja retornar.  
+ É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyPolygon** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Tipo OGC: **polígono**  
+ Tipo do OGC: **Polygon**  
   
 ## <a name="remarks"></a>Remarks  
- Este método lança um **FormatException** se a entrada não for bem formatada.  
+ Esse método gera uma **FormatException** se a entrada não está bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STPolyFromText()` para criar uma instância `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STPolyFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

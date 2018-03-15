@@ -1,5 +1,5 @@
 ---
-title: "Criar modo de exibição (Transact-SQL) | Microsoft Docs"
+title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -95,10 +95,10 @@ AS <select_statement>
 ```  
   
 ## <a name="arguments"></a>Argumentos
-OU ALTER  
+OR ALTER  
  **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
   
- Condicionalmente altera o modo de exibição somente se ele já existe. 
+ Altera condicionalmente a exibição somente se ela já existe. 
  
  *schema_name*  
  É o nome do esquema ao qual a exibição pertence.  
@@ -106,13 +106,13 @@ OU ALTER
  *view_name*  
  É o nome da exibição. Os nomes de exibição devem seguir as regras para identificadores. A especificação do nome do proprietário da exibição é opcional.  
   
- *coluna*  
+ *column*  
  É o nome a ser usado para uma coluna em uma exibição. O nome de coluna é necessário somente quando uma coluna é derivada de uma expressão aritmética, função ou constante, quando duas ou mais colunas puderem ter o mesmo nome, normalmente por causa de uma união, ou quando uma coluna em uma exibição tiver um nome especificado diferente daquele da coluna da qual ela é derivada. Nomes de coluna também podem ser atribuídos na instrução SELECT.  
   
- Se *coluna* não for especificado, as colunas da exibição adquirirão os mesmos nomes que as colunas na instrução SELECT.  
+ Se *column* não for especificado, as colunas de exibição adquirirão os mesmos nomes que as colunas na instrução SELECT.  
   
 > [!NOTE]  
->  Nas colunas da exibição, as permissões de um nome de coluna são aplicadas por uma instrução CREATE VIEW ou ALTER VIEW, independentemente da fonte dos dados subjacentes. Por exemplo, se as permissões são concedidas no **SalesOrderID** coluna em uma instrução CREATE VIEW, uma instrução ALTER VIEW poderá nomear o **SalesOrderID** coluna com um nome de coluna diferente, como **OrderRef**e ainda terá as permissões associadas à exibição usando **SalesOrderID**.  
+>  Nas colunas da exibição, as permissões de um nome de coluna são aplicadas por uma instrução CREATE VIEW ou ALTER VIEW, independentemente da fonte dos dados subjacentes. Por exemplo, se forem concedidas permissões na coluna **SalesOrderID** em uma instrução CREATE VIEW, uma instrução ALTER VIEW poderá nomear a coluna **SalesOrderID** com um nome de coluna diferente, como **OrderRef**, e ainda terá as permissões associadas à exibição usando **SalesOrderID**.  
   
  AS  
  Especifica as ações que a exibição deve executar.  
@@ -137,45 +137,45 @@ OU ALTER
   
 -   Uma referência para uma tabela temporária ou uma variável de tabela.  
   
- Porque *select_statement* usa a instrução SELECT, é válido usar \<as dicas join_hint > e \<table_hint > dicas conforme especificado na cláusula FROM. Para obter mais informações, consulte [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md) e [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md). 
+ Como *select_statement* usa a instrução SELECT, é válido usar as dicas \<join_hint> e \<table_hint> conforme especificado na cláusula FROM. Para obter mais informações, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
  Funções e várias instruções SELECT separadas por UNION ou UNION ALL podem ser usadas em *select_statement*.  
   
  CHECK OPTION  
- Força todas as instruções de modificação de dados executadas em relação à exibição sigam os conjunto de critérios de *select_statement*. Quando uma linha é modificada através de uma exibição, WITH CHECK OPTION verifica se os dados permanecem visíveis na exibição depois que a modificação é confirmada.  
+ Força que todas as instruções de modificação de dados sejam executadas em relação à exibição para seguir o conjunto de critérios dentro da *select_statement*. Quando uma linha é modificada através de uma exibição, WITH CHECK OPTION verifica se os dados permanecem visíveis na exibição depois que a modificação é confirmada.  
   
 > [!NOTE]  
 >  Qualquer atualização executada diretamente em tabelas subjacentes de uma exibição não são verificadas na exibição, mesmo que CHECK OPTION seja especificada.  
   
  ENCRYPTION  
- **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Criptografa as entradas em [sys. syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contêm o texto da instrução CREATE VIEW. Usando WITH ENCRYPTION impede que a exibição seja publicada como parte da replicação do SQL Server.  
+ Criptografa as entradas em [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contêm o texto da instrução CREATE VIEW. Usar WITH ENCRYPTION impede que a exibição seja publicada como parte da Replicação do SQL Server.  
   
  SCHEMABINDING  
- Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, a tabela ou tabelas base não poderão ser modificadas de um modo que possam afetar a definição da exibição. A própria definição da exibição, primeiro, deve ser modificada ou descartada para remover as dependências na tabela a ser modificada. Quando você usar SCHEMABINDING, o *select_statement* deve incluir os nomes de duas partes (*esquema***.** *objeto*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
+ Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, a tabela ou tabelas base não poderão ser modificadas de um modo que possam afetar a definição da exibição. A própria definição da exibição, primeiro, deve ser modificada ou descartada para remover as dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, o *select_statement* deve incluir os nomes de duas partes (*esquema***.***objeto*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
   
- Exibições ou tabelas que participam de uma exibição criada com a cláusula SCHEMABINDING não podem ser descartadas, a menos que a exibição seja descartada ou alterada para que ele não tem mais associação de esquema. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro. Além disso, haverá falha na execução de instruções ALTER TABLE nas tabelas que participam de exibições com associação de esquema quando essas instruções afetarem a definição da exibição.  
+ As exibições ou tabelas que participam de uma exibição criada com a cláusula SCHEMABINDING não podem ser descartadas, a menos que a exibição seja descartada ou alterada de modo a não ter mais associação de esquema. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro. Além disso, haverá falha na execução de instruções ALTER TABLE nas tabelas que participam de exibições com associação de esquema quando essas instruções afetarem a definição da exibição.  
   
  VIEW_METADATA  
  Especifica que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará às APIs DB-Library, ODBC e OLE DB as informações de metadados sobre a exibição, em vez da tabela ou tabelas base, quando metadados do modo de procura forem solicitados para uma consulta que faz referência à exibição. Metadados do modo de procura são metadados adicionais que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna para essas APIs do lado do cliente. Esses metadados permitem que as APIs do lado do cliente implementem cursores atualizáveis do lado do cliente. Os metadados do modo de procura incluem informações sobre a tabela base às quais as colunas do conjunto de resultados pertencem.  
   
  Para exibições criadas com VIEW_METADATA, os metadados do modo de procura retornam o nome da exibição e não os nomes de tabela base quando descreverem colunas da exibição no conjunto de resultados.  
   
- Quando uma exibição é criada com WITH VIEW_METADATA, todas as suas colunas, exceto um **timestamp** coluna, serão atualizáveis se a exibição tiver INSTEAD OF INSERT ou gatilhos INSTEAD OF UPDATE. Para obter mais informações sobre exibições atualizáveis, consulte Comentários.  
+ Quando uma exibição é criada usando WITH VIEW_METADATA, todas as suas colunas, com exceção de uma coluna **timestamp**, serão atualizáveis se a exibição tiver gatilhos INSTEAD OF INSERT ou INSTEAD OF UPDATE. Para obter mais informações sobre exibições atualizáveis, consulte Comentários.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A exibição só pode ser criada no banco de dados atual. O CREATE VIEW deve ser a primeira instrução em um lote de consulta. Uma exibição pode ter, no máximo, 1.024 partições.  
   
  Ao fazer uma consulta através de uma exibição, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se todos os objetos de banco de dados referenciados em algum lugar da instrução existem, se são válidos no contexto da instrução e se as instruções de modificação de dados não violam nenhuma regra de integridade de dados. Uma verificação que falha retorna uma mensagem de erro. Uma verificação com êxito traduz a ação em uma ação na tabela ou tabelas subjacentes.  
   
  Se uma exibição depender de uma tabela ou exibição descartada, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] produzirá uma mensagem de erro quando alguém tentar usá-la. Se uma nova tabela ou exibição for criada e a estrutura da tabela não for alterada na tabela base anterior para substituir a descartada, a exibição se tornará utilizável novamente. Se a nova tabela ou estrutura de exibição for alterada, a exibição deverá ser descartada e recriada.  
   
- Se um modo de exibição não for criado com a cláusula SCHEMABINDING, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) devem ser executados quando alterações são feitas nos objetos subjacentes à exibição que afetam a definição da exibição. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
+ Se uma exibição não for criada com a cláusula SCHEMABINDING, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) deverá ser executado quando forem feitas alterações aos objetos subjacentes à exibição que afetam a definição desta. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
   
- Quando uma exibição é criada, informações sobre o modo de exibição são armazenadas nas seguintes exibições do catálogo: [sys. Views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [Columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), e [sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). O texto da instrução CREATE VIEW é armazenado no [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo.  
+ Quando uma exibição é criada, as informações sobre ela são armazenadas nas seguintes exibições do catálogo: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) e [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). O texto da instrução CREATE VIEW é armazenado na exibição do catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Uma consulta que usa um índice em uma exibição definida com **numérico** ou **float** expressões podem ter um resultado diferente de uma consulta semelhante que não usa o índice na exibição. Essa diferença pode ser causada por erros de arredondamento durante as ações INSERT, DELETE ou UPDATE em tabelas subjacentes.  
+ Uma consulta que usa um índice em uma exibição definida com expressões **numeric** ou **float** pode ter um resultado diferente de uma consulta semelhante que não usa o índice ou a exibição. Essa diferença pode ser causada por erros de arredondamento durante as ações INSERT, DELETE ou UPDATE em tabelas subjacentes.  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] salva as configurações de QUOTED_IDENTIFIER Fixo e ANSI_NULLS quando uma exibição é criada. Essas configurações originais são usadas para analisar a exibição quando a ela é usada. Portanto, qualquer configuração de sessão de cliente para SET QUOTED_IDENTIFIER e SET ANSI_NULLS não afeta a definição da exibição quando a exibição é acessada.  
   
@@ -192,15 +192,15 @@ OU ALTER
   
 -   As colunas modificadas não são afetadas pelas cláusulas GROUP BY, HAVING ou DISTINCT.  
   
--   TOP não é usado em qualquer lugar no *select_statement* da exibição junto com a cláusula WITH CHECK OPTION.  
+-   TOP não é usado em nenhum lugar na *select_statement* da exibição junto com a cláusula WITH CHECK OPTION.  
   
- As restrições anteriores aplicam-se a todas as subconsultas da cláusula FROM da exibição, exatamente como se aplicam à própria exibição. Em geral, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser capaz de rastrear precisamente as modificações da definição da exibição em uma tabela base. Para obter mais informações, consulte [modificar dados por meio de um modo de exibição](../../relational-databases/views/modify-data-through-a-view.md).  
+ As restrições anteriores aplicam-se a todas as subconsultas da cláusula FROM da exibição, exatamente como se aplicam à própria exibição. Em geral, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser capaz de rastrear sem ambiguidade as modificações da definição da exibição em uma tabela base. Para obter mais informações, confira [Modificar dados por meio de uma exibição](../../relational-databases/views/modify-data-through-a-view.md).  
   
  Se as restrições anteriores impediram a modificação de dados direta através de uma exibição, considere as seguintes opções:  
   
--   **Gatilhos INSTEAD of**  
+-   **Gatilhos INSTEAD OF**  
   
-     Os gatilhos INSTEAD OF podem ser criados em uma exibição para torná-la atualizável. O gatilho INSTEAD OF é executado em vez da instrução de modificação de dados na qual ele é definido. Esse gatilho deixa o usuário especificar o conjunto de ações que devem acontecer para processar a instrução de modificação de dados. Portanto, se um gatilho INSTEAD OF existir para uma exibição em uma instrução de modificação de dados específica (INSERT, UPDATE ou DELETE), a exibição correspondente será atualizável através dessa instrução. Para obter mais informações sobre gatilhos INSTEAD of, consulte [gatilhos DML](../../relational-databases/triggers/dml-triggers.md).  
+     Os gatilhos INSTEAD OF podem ser criados em uma exibição para torná-la atualizável. O gatilho INSTEAD OF é executado em vez da instrução de modificação de dados na qual ele é definido. Esse gatilho deixa o usuário especificar o conjunto de ações que devem acontecer para processar a instrução de modificação de dados. Portanto, se um gatilho INSTEAD OF existir para uma exibição em uma instrução de modificação de dados específica (INSERT, UPDATE ou DELETE), a exibição correspondente será atualizável através dessa instrução. Para obter mais informações sobre gatilhos INSTEAD OF, veja [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md).  
   
 -   **Exibições particionadas**  
   
@@ -269,7 +269,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   As restrições devem ser de uma forma que qualquer valor especificado de `<col>` possa satisfazer, no máximo, uma das restrições `C1, ..., Cn` para que as restrições não formem um conjunto de intervalos desunidos ou não sobrepostos. A coluna `<col>` na qual as restrições desunidas são definidas é chamada de coluna de particionamento. Observe que a coluna de particionamento pode ter nomes diferentes nas tabelas subjacentes. As restrições devem estar em um estado habilitado e confiável para que atendam às condições de coluna de particionamento mencionadas anteriormente. Se as restrições são desabilitadas, reabilitar a restrição de verificação usando a restrição de verificação *constraint_name* opção de ALTER TABLE e usando a opção WITH CHECK para validá-los.  
+    -   As restrições devem ser de uma forma que qualquer valor especificado de `<col>` possa satisfazer, no máximo, uma das restrições `C1, ..., Cn` para que as restrições não formem um conjunto de intervalos desunidos ou não sobrepostos. A coluna `<col>` na qual as restrições desunidas são definidas é chamada de coluna de particionamento. Observe que a coluna de particionamento pode ter nomes diferentes nas tabelas subjacentes. As restrições devem estar em um estado habilitado e confiável para que atendam às condições de coluna de particionamento mencionadas anteriormente. Se as restrições forem desabilitadas, reabilite a verificação de restrição usando a opção CHECK CONSTRAINT *constraint_name* de ALTER TABLE e a opção WITH CHECK para validá-las.  
   
          Os exemplos a seguir mostram conjuntos válidos de restrições:  
   
@@ -284,7 +284,7 @@ FROM Tn;
   
     -   A coluna de particionamento faz parte da PRIMARY KEY da tabela.  
   
-    -   Ele não pode ser uma computada, identidade, padrão, ou **timestamp** coluna.  
+    -   Ela não pode ser uma coluna computada, de identidade, padrão nem **timestamp**.  
   
     -   Se houver mais de uma restrição na mesma coluna em uma tabela membro, o Mecanismo de Banco de Dados irá ignorar todas as restrições e não irá considerá-las ao determinar se a exibição é particionada. Para conhecer as condições da exibição particionada, deve haver somente uma restrição de particionamento na coluna de particionamento.  
   
@@ -292,7 +292,7 @@ FROM Tn;
   
 3.  Tabelas membro ou tabelas subjacentes `T1, ..., Tn`  
   
-    -   As tabelas podem ser tabelas locais ou tabelas de outros computadores que executam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referenciadas através de um nome de quatro partes ou um nome baseado em OPENDATASOURCE ou OPENROWSET. A sintaxe OPENDATASOURCE e OPENROWSET pode especificar um nome de tabela, mas não uma consulta de passagem. Para obter mais informações, consulte [OPENDATASOURCE &#40; Transact-SQL &#41; ](../../t-sql/functions/opendatasource-transact-sql.md) e [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
+    -   As tabelas podem ser tabelas locais ou tabelas de outros computadores que executam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referenciadas através de um nome de quatro partes ou um nome baseado em OPENDATASOURCE ou OPENROWSET. A sintaxe OPENDATASOURCE e OPENROWSET pode especificar um nome de tabela, mas não uma consulta de passagem. Para obter mais informações, veja [OPENDATASOURCE &#40;Transact-SQL&#41; ](../../t-sql/functions/opendatasource-transact-sql.md) e [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
          Se uma ou mais das tabelas membro forem remotas, a exibição será chamada de exibição particionada distribuída, e as condições adicionais serão aplicadas. Elas são descritas posteriormente nesta seção.  
   
@@ -300,9 +300,9 @@ FROM Tn;
   
     -   As tabelas membro não podem ter índices criados em qualquer coluna computada na tabela.  
   
-    -   As tabelas membro devem ter todas as restrições de chave primária no mesmo número de colunas.  
+    -   As tabelas membro devem ter todas as restrições PRIMARY KEY no mesmo número de colunas.  
   
-    -   Todas as tabelas de membro na exibição devem ter a mesma configuração de preenchimento ANSI. Isso pode ser definido usando o **opções de usuário** opção **sp_configure** ou a instrução SET.  
+    -   Todas as tabelas de membro na exibição devem ter a mesma configuração de preenchimento ANSI. Isso pode ser definido usando a opção **user options** em **sp_configure** ou a instrução SET.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Condições para modificar dados em exibições particionadas  
  As seguintes restrições se aplicam a instruções que modificam dados nas exibições particionadas:  
@@ -315,13 +315,13 @@ FROM Tn;
   
 -   As colunas na exibição que estiverem em uma coluna de identidade de uma ou mais tabelas membro não poderão ser modificadas através de uma instrução INSERT ou UPDATE.  
   
--   Se uma das tabelas membro tiver uma **timestamp** coluna, os dados não podem ser modificados usando uma instrução INSERT ou UPDATE.  
+-   Se uma das tabelas membro tiver uma coluna **timestamp**, os dados não poderão ser modificados por meio de uma instrução INSERT ou UPDATE.  
   
 -   Se uma das tabelas membro tiver um gatilho ou uma restrição ON UPDATE CASCADE/SET NULL/SET DEFAULT ou ON DELETE CASCADE/SET NULL/SET DEFAULT, a exibição não poderá ser modificada.  
   
 -   As ações INSERT, UPDATE e DELETE em uma exibição particionada não são permitidas quando há uma autojunção com a mesma exibição ou com qualquer uma das tabelas membro na instrução.  
   
--   Importação em massa dados em uma exibição particionada não é suportada por **bcp** ou BULK INSERT e INSERT... SELECT * FROM OPENROWSET(BULK...). No entanto, você pode inserir várias linhas em uma exibição particionada usando o [inserir](../../t-sql/statements/insert-transact-sql.md) instrução.  
+-   Não há compatibilidade com a importação de dados em uma exibição particionada por **bcp** ou pelas instruções BULK INSERT e INSERT... SELECT * FROM OPENROWSET(BULK...). Entretanto, é possível inserir várias linhas em uma exibição particionada usando uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md).  
   
     > [!NOTE]  
     >  Para atualizar uma exibição particionada, o usuário deve ter as permissões INSERT, UPDATE e DELETE nas tabelas membro.  
@@ -333,9 +333,9 @@ FROM Tn;
   
 -   Para funcionar, a opção XACT_ABORT SET deve ser definida como instruções ON para INSERT, UPDATE ou DELETE.  
   
--   As colunas em tabelas remotas do tipo **smallmoney** referenciadas em uma exibição particionada são mapeadas como **money**. Portanto, as colunas correspondentes (na mesma posição ordinal na lista de seleção) nas tabelas locais também devem ser do tipo **money**.  
+-   Qualquer coluna nas tabelas remotas do tipo **smallmoney** referenciadas em uma exibição particionada são mapeadas como **money**. Portanto, as colunas correspondentes (na mesma posição ordinal na lista de seleção) nas tabelas locais também devem ser do tipo **money**.  
   
--   Banco de dados o nível de compatibilidade 110 e superior, as colunas em tabelas remotas do tipo **smalldatetime** referenciadas em uma exibição particionada são mapeadas como **smalldatetime**. As colunas correspondentes (na mesma posição ordinal na lista de seleção) nas tabelas locais devem ser **smalldatetime**. Essa é uma alteração no comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nas quais qualquer coluna em tabelas remotas do tipo **smalldatetime** referenciadas em uma exibição particionada são mapeadas como **datetime** e as colunas correspondentes em tabelas locais devem ser do tipo **datetime**. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+-   No nível de compatibilidade de banco de dados 110 e superiores, as colunas em tabelas remotas do tipo **smalldatatime** referenciadas em uma exibição particionada são mapeadas como **smalldatetime**. As colunas correspondentes (na mesma posição ordinal na lista de seleção) nas tabelas locais devem ser **smalldatetime**. Essa é uma alteração no comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nas quais qualquer coluna em tabelas remotas do tipo **smalldatetime** referenciadas em uma exibição particionada são mapeadas como **datetime** e as colunas correspondentes em tabelas locais devem ser do tipo **datetime**. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 -   Qualquer servidor vinculado na exibição particionada não pode ser um servidor vinculado de loopback. Este é um servidor vinculado que aponta para a mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -346,9 +346,9 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Considerações sobre replicação  
  Para criar exibições particionadas em tabelas membro envolvidas em replicação, as seguintes considerações são aplicáveis:  
   
--   Se as tabelas subjacentes estiverem envolvidas em replicação de mesclagem ou replicação transacional com assinaturas de atualização de **uniqueidentifier** coluna também deve ser incluída na lista de seleção.  
+-   Se as tabelas subjacentes estiverem envolvidas em replicação de mesclagem ou replicação transacional com assinaturas de atualização, a coluna **uniqueidentifier** também deverá ser incluída na lista de seleção.  
   
-     Toda ação INSERT na exibição particionada deve fornecer um valor de NEWID () para o **uniqueidentifier** coluna. As ações de atualização em relação a **uniqueidentifier** coluna deve fornecer NEWID () como o valor porque a palavra-chave DEFAULT não pode ser usado.  
+     Toda ação INSERT na exibição particionada deve fornecer um valor NEWID() para a coluna **uniqueidentifier**. As ações UPDATE na coluna **uniqueidentifier** devem fornecer NEWID() como o valor, pois a palavra-chave DEFAULT não pode ser usada.  
   
 -   A replicação de atualizações feita usando a exibição é a mesma de quando as tabelas são replicadas em dois bancos de dados diferentes: as tabelas são atendidas por agentes de replicação diferentes e a ordem das atualizações não é garantida.  
   
@@ -375,7 +375,7 @@ GO
 ### <a name="b-using-with-encryption"></a>B. Usando WITH ENCRYPTION  
  O exemplo a seguir usa a opção `WITH ENCRYPTION` e mostra colunas computadas, colunas renomeadas e várias colunas.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -469,10 +469,10 @@ SELECT supplyID, supplier
   FROM dbo.SUPPLY4;  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-creating-a-simple-view"></a>F. Criar um modo de exibição simple  
- O exemplo a seguir cria um modo de exibição selecionando apenas algumas das colunas da tabela de origem.  
+### <a name="f-creating-a-simple-view"></a>F. Criando uma exibição simples  
+ O exemplo a seguir cria uma exibição selecionando apenas algumas das colunas da tabela de origem.  
   
 ```  
 CREATE VIEW DimEmployeeBirthDates AS  
@@ -480,8 +480,8 @@ SELECT FirstName, LastName, BirthDate
 FROM DimEmployee;  
 ```  
   
-### <a name="g-create-a-view-by-joining-two-tables"></a>G. Criar um modo de exibição ao unir duas tabelas  
- O exemplo a seguir cria um modo de exibição usando um `SELECT` instrução com um `OUTER JOIN`. Os resultados da consulta de junção popular a exibição.  
+### <a name="g-create-a-view-by-joining-two-tables"></a>G. Criar um modo de exibição unindo duas tabelas  
+ O exemplo a seguir cria uma exibição usando uma instrução `SELECT` com um `OUTER JOIN`. Os resultados da consulta de junção preenchem a exibição.  
   
 ```  
 CREATE VIEW view1  
@@ -493,20 +493,20 @@ LEFT OUTER JOIN DimSalesTerritory AS dst
 ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP VIEW &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_refreshview &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sys. Views &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

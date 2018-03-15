@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna um envoltório convexo para um determinado conjunto de **geometria** objetos.
+Retorna uma envoltória convexa para um determinado conjunto de objetos de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,21 +42,21 @@ ConvexHullAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_operand*  
- É um **geometria** coluna da tabela de tipo que representa um conjunto de objetos de geometria.  
+ É uma coluna de tabela do tipo **geometry** que representa um conjunto de objetos de geometria.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
 ## <a name="exception"></a>Exceção  
- Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Gera uma `FormatException` quando há valores de entrada que não são válidos. Confira [STIsValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>Remarks  
- Método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ O método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Confira [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Método ignora **nulo** entradas.  
+ O método ignora entradas **nulas**.  
   
 > [!NOTE]  
->  Método retornará **nulo** se todos os valores inseridos forem **nulo**.  
+>  O método retornará **nulo** se todos os valores inseridos forem **nulos**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma forma convexa do conjunto de objetos geometry em uma coluna de variável de tabela.  
@@ -75,7 +75,7 @@ ConvexHullAggregate ( geometry_operand )
  FROM @Geom;
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

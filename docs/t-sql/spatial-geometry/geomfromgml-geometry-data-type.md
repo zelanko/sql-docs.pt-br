@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Construir um **geometria** instância dada uma representação no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subconjunto do GML Geography Markup Language ().
+Construa uma instância de **geometry**, considerando uma representação no subconjunto da GML (Geography Markup Language) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-Para obter mais informações sobre Geography Markup Language, consulte as seguintes especificações:
+Para obter mais informações sobre Geography Markup Language, consulte as seguintes Especificações do Open Geospatial Consortium:
   
-[OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+[Especificações OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,15 +52,15 @@ GeomFromGml ( GML_input, SRID )
  É uma entrada XML a partir da qual o GML retornará um valor.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **geometria** instância que você deseja retornar.  
+ É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometry** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método lançará um **FormatException** se a entrada não for bem formatada.  
+ Esse método gerará uma **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `GeomFromGml()` para criar uma instância `geometry`.  
@@ -73,7 +73,7 @@ SET @g = geometry::GeomFromGml(@x, 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

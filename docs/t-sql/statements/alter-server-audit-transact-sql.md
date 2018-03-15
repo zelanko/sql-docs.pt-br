@@ -1,5 +1,5 @@
 ---
-title: ALTERAR a auditoria de servidor (Transact-SQL) | Microsoft Docs
+title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -87,36 +87,36 @@ ALTER SERVER AUDIT audit_name
  FILEPATH **= '***os_file_path***'**  
  O caminho da trilha de auditoria. O nome do arquivo é gerado com base no nome da auditoria e no GUID da auditoria.  
   
- MAXSIZE  **=**  *max_size*  
- Especifica o tamanho máximo até o qual o arquivo de auditoria pode crescer. O *max_size* valor deve ser um inteiro seguido por **MB**, **GB**, **TB**, ou **UNLIMITED**. O tamanho mínimo que você pode especificar para *max_size* é 2 **MB** e o máximo é 2.147.483.647 **TB**. Quando **UNLIMITED** for especificado, o arquivo cresce até que o disco está cheio. Especificar um valor menor que 2 MB gera MSG_MAXSIZE_TOO_SMALL o erro. O valor padrão é **UNLIMITED**.  
+ MAXSIZE **=***max_size*  
+ Especifica o tamanho máximo até o qual o arquivo de auditoria pode crescer. O valor de *max_size* deve ser um inteiro seguido de **MB**, **GB**, **TB** ou **UNLIMITED**. O tamanho mínimo que você pode especificar para *max_size* é 2 **MB** e o máximo é 2.147.483.647 **TB**. Quando **UNLIMITED** for especificado, o arquivo aumentará até que o disco esteja cheio. Especificar um valor inferior a 2 MB gera o erro MSG_MAXSIZE_TOO_SMALL. O valor padrão é **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES  **=**  *inteiro* | **ILIMITADO**  
- Especifica o número máximo de arquivos a serem retidos no sistema de arquivos. Ao configurar MAX_ROLLOVER_FILES = 0, não há nenhum limite imposto para o número de arquivos de substituição que são criados. O valor padrão é 0. O número máximo de arquivos que pode ser especificado é 2.147.483.647.  
+ MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ Especifica o número máximo de arquivos a serem retidos no sistema de arquivos. Ao configurar MAX_ROLLOVER_FILES=0 não haverá nenhum limite ao número de arquivos de substituição a serem criados. O valor padrão é 0. O número máximo de arquivos que pode ser especificado é 2.147.483.647.  
   
- MAX_FILES =*inteiro*  
- Especifica o número máximo de arquivos de auditoria que pode ser criado. Não passam para o primeiro arquivo quando o limite for atingido. Quando o limite MAX_FILES é atingido, qualquer ação que faz com que os eventos de auditoria adicionais a serem gerados falhará com um erro.  
+ MAX_FILES =*integer*  
+ Especifica o número máximo de arquivos de auditoria que pode ser criado. Não substitui o primeiro arquivo quando o limite é atingido. Quando o limite de MAX_FILES é atingido, qualquer ação que provoque eventos de auditoria adicionais falhará com um erro.  
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- RESERVE_DISK_SPACE  **=**  {ON | OFF}  
+ RESERVE_DISK_SPACE **=** { ON | OFF }  
  Essa opção pré-aloca o arquivo no disco para o valor MAXSIZE. Só será aplicável se MAXSIZE não for igual a UNLIMITED. O valor padrão é OFF.  
   
- QUEUE_DELAY  **=**  *inteiro*  
- Determina a hora, em milissegundos, que pode decorrer antes que o processamento das ações de auditoria seja forçado. Um valor 0 indica entrega síncrona. O valor mínimo de atraso de consulta configurável é 1000 (1 segundo), que é o padrão. O máximo é 2.147.483.647 (2.147.483.647 segundos ou 24 dias, 20 horas, 31 minutos, 23.647 segundos). Especificar um número inválido, gera o erro MSG_INVALID_QUEUE_DELAY.  
+ QUEUE_DELAY **=***integer*  
+ Determina a hora, em milissegundos, que pode decorrer antes que o processamento das ações de auditoria seja forçado. Um valor 0 indica entrega síncrona. O valor mínimo de atraso de consulta configurável é 1000 (1 segundo), que é o padrão. O máximo é 2.147.483.647 (2.147.483.647 segundos ou 24 dias, 20 horas, 31 minutos, 23.647 segundos). A especificação de um número inválido gera o erro MSG_INVALID_QUEUE_DELAY.  
   
- ON_FAILURE  **=**  {CONTINUAR | DESLIGAMENTO | FAIL_OPERATION}  
+ ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
  Indica se a instância que grava no destino deverá falhar, continuar ou parar se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não puder gravar no log de auditoria.  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As operações continuam. Os registros de auditoria não são retidos. A auditoria continua tentando registrar o log de eventos e retomada se a condição de falha for resolvida. Selecionando a opção de continuar pode permitir atividade não auditada, o que pode violar suas políticas de segurança. Use essa opção, quando continuar a operação do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é mais importante do que manter uma auditoria completa.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As operações continuam. Os registros de auditoria não são retidos. A auditoria continua tentando registrar eventos em log e retoma se a condição de falha é resolvida. A seleção da opção Continuar pode permitir atividades não auditadas, o que pode violar as políticas de segurança. Use essa opção, quando continuar a operação do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é mais importante do que manter uma auditoria completa.  
   
 SHUTDOWN  
-Força a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para desligar, se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não consegue gravar dados no destino de auditoria por qualquer motivo. O logon que executa o `ALTER` instrução deve ter o `SHUTDOWN` permissão em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O problema persiste mesmo se o `SHUTDOWN` permissão é revogada posteriormente do logon em execução. Se o usuário não tiver essa permissão, em seguida, a instrução falhará e a auditoria não será modificada. Use a opção quando uma falha de auditoria puder comprometer a segurança ou a integridade do sistema. Para obter mais informações, consulte [desligamento](../../t-sql/language-elements/shutdown-transact-sql.md). 
+Força a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser desligada, caso o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não possa gravar dados no destino de auditoria por qualquer motivo. O logon que executa a instrução `ALTER` deve ter a permissão `SHUTDOWN` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O comportamento de desligamento persiste mesmo se a permissão `SHUTDOWN` é revogada posteriormente do logon em execução. Se o usuário não tiver essa permissão, a instrução falhará e a auditoria não será modificada. Use a opção quando uma falha de auditoria puder comprometer a segurança ou a integridade do sistema. Para obter mais informações, consulte [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md). 
   
  FAIL_OPERATION  
- Haverá falha nas ações do banco de dados se elas provocarem eventos auditados. As ações, que não provocam eventos auditados podem continuar, mas não pode ocorrer nenhum evento auditado. A auditoria continua tentando registrar o log de eventos e retomada se a condição de falha for resolvida. Use essa opção, quando manter uma auditoria completa for mais importante do que o acesso total ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Haverá falha nas ações do banco de dados se elas provocarem eventos auditados. As ações que não causam eventos auditados podem continuar, mas nenhum evento auditado pode ocorrer. A auditoria continua tentando registrar eventos em log e retoma se a condição de falha é resolvida. Use essa opção, quando manter uma auditoria completa for mais importante do que o acesso total ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
   
- ESTADO  **=**  {ON | OFF}  
+ STATE **=** { ON | OFF }  
  Permite ou não que a auditoria colete registros. A alteração do estado de uma auditoria em execução (de ON para OFF) cria uma entrada de auditoria indicando que a auditoria foi interrompida, a entidade que interrompeu a auditoria e a hora da interrupção.  
   
  MODIFY NAME = *new_audit_name*  
@@ -127,11 +127,11 @@ Força a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  event_field_name  
- É o nome do campo de evento que identifica a origem do predicado. Campos de auditoria são descritos em [sys. fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos os campos podem ser auditados menos `file_name` e `audit_file_offset`.  
+ É o nome do campo de evento que identifica a origem do predicado. Campos de auditoria são descritos em [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos os campos podem ser auditados menos `file_name` e `audit_file_offset`.  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  number  
- É qualquer tipo numérico, inclusive **decimal**. Limitações são a falta de memória física disponível ou um número que é muito grande para ser representado como um inteiro de 64 bits.  
+ É qualquer tipo numérico, incluindo **decimal**. Limitações são a falta de memória física disponível ou um número que é muito grande para ser representado como um inteiro de 64 bits.  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ' string '  
@@ -141,7 +141,7 @@ Força a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## <a name="remarks"></a>Remarks  
  Você deve especificar pelo menos uma das cláusulas TO, WITH ou MODIFY NAME ao chamar ALTER AUDIT.  
   
- Você deve definir o estado de uma auditoria para a opção OFF para fazer alterações em uma auditoria. Se ALTER AUDIT for executada quando uma auditoria estiver habilitada com qualquer opção diferente de STATE = OFF, você recebe uma erro msg_need_audit_disabled.  
+ Você deve definir o estado de uma auditoria para a opção OFF para fazer alterações em uma auditoria. Se ALTER AUDIT for executada quando uma auditoria estiver habilitada com qualquer opção diferente de STATE=OFF, você receberá uma mensagem de erro MSG_NEED_AUDIT_DISABLED.  
   
  Você pode adicionar, alterar e remover especificações de auditoria sem parar uma auditoria.  
   
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. Alterando uma cláusula WHERE de auditoria de servidor  
- O exemplo a seguir modifica o onde cláusula criada no exemplo de [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). A nova cláusula WHERE filtra o evento definido pelo usuário se de 27.  
+ O exemplo a seguir modifica o cláusula where criada no exemplo C de [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md). A nova cláusula WHERE filtra o evento definido pelo usuário se de 27.  
   
 ```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
@@ -230,23 +230,23 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [Criar especificação de auditoria de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTERAR a especificação de auditoria de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [Remova a especificação de auditoria de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys. fn_get_audit_file &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys. server_file_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys. database_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [database_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.DM server_audit_status &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.DM audit_actions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

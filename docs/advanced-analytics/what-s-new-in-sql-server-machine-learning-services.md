@@ -1,6 +1,6 @@
 ---
-title: "O que &#39; s novo nos serviços de aprendizado de máquina | Microsoft Docs"
-ms.date: 01/08/2018
+title: "O que&#39;novo nos serviços de aprendizado de máquina do SQL Server | Microsoft Docs"
+ms.date: 03/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -10,125 +10,60 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
+ms.assetid: 
 caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4a3b7c8c389d471abe932faea64b44a14ac034ab
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="whats-new-in-machine-learning-services-in-sql-server"></a>O que há de novo nos serviços de aprendizado de máquina no SQL Server
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>O que há de novo nos serviços de aprendizado de máquina do SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-No SQL Server 2016, a Microsoft introduziu o SQL Server R Services, um recurso que oferece suporte a ciência de dados de grande porte, integrando a linguagem R com o mecanismo de banco de dados do SQL Server.
+Recursos de aprendizado de máquina são adicionados ao SQL Server em cada versão conforme continuamos a expandir, estender e aprofundar a integração entre a plataforma de dados e a ciência de dados, análise e supervisionado aprendizado sobre os dados que você deseja implementar. 
 
-No SQL Server de 2017, aprendizado de máquina integrado de banco de dados ficou ainda mais potente, com a adição de suporte para a linguagem Python popular. Com o suporte para novos idiomas é fornecido um novo nome: **serviços de aprendizado de máquina (no banco de dados)**.
+## <a name="new-in-sql-server-2017"></a>Novo no SQL Server de 2017
 
-Pegue o lançamento mais recente aqui! [Python no SQL Server 2017: aprimorada de aprendizado de máquina no banco de dados](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+Esta versão adicionado algoritmos de aprendizado de máquina de setor e suporte de Python. Renomeado para refletir o novo escopo, SQL Server 2017 marcado a introdução dos serviços de aprendizado de máquina do SQL Server (no banco de dados), com o suporte de linguagem Python e R. 
 
-## <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
+Esta versão também introduziu Machine Learning servidor do SQL Server (autônomo), totalmente independentes do SQL Server, para R e Python cargas de trabalho que você deseja executar em um sistema dedicado. Com o servidor autônomo, você pode distribuir e dimensionar o código de R ou Python sem usar o SQL Server.
 
-Servidor de aprendizado de máquina no SQL Server fornece suporte abrangente para criar e implantar soluções de aprendizado de máquina em R ou Python. Aqui estão os destaques desta versão:
+| Versão | Atualização de recurso |
+|---------|---------------|
+| CU 4 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. |
+| CU 3 | 1. Serialização no revoscalepy, de modelo do Python usando a [rx_serialize_model função](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>2. [Pontuação nativo](sql-native-scoring.md) mais aprimoramentos [em tempo real de pontuação](real-time-scoring.md). Com a pontuação no banco de dados, taxa de transferência é um milhão de linhas por segundo usando modelos de R. Nesta atualização, em tempo real de pontuação e pontuação nativo oferecem melhor desempenho em uma linha e a pontuação do lote. Nativo pontuação usa uma função de T-SQL para pontuação rápida que pode ser executada em qualquer edição do SQL Server, mesmo em Linux. A função não requer nenhuma instalação de R ou configuração adicional. Isso significa que você pode treinar um modelo em outro lugar, salvá-lo no SQL Server e, em seguida, executar pontuação sem nunca chamar R. Para obter mais informações sobre as metodologias de pontuação, consulte [como realizar em tempo real de pontuação ou pontuação nativo](r/how-to-do-realtime-scoring.md). |
+| ATUALIZAÇÃO CUMULATIVA 2 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. |
+| CU 1 | 1. Revoscalepy, adiciona rx_create_col_info para retornar informações de esquema de uma fonte de dados do SQL Server, semelhante a [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) r. <br/><br/>2. Aprimoramentos para [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) para dar suporte a cenários paralelos usando o `RxLocalParallel` contexto de computação.|
+| Versão inicial |[**Suporte do Python para análise no banco de dados**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>O [revoscalepy](python/what-is-revoscalepy.md) pacote é o equivalente de Python de RevoScaleR. Você pode criar modelos de Python para árvores de decisão, regressão linear e logística, árvores aumentadas e florestas aleatórias, todos os paralelizáveis e é capazes de está sendo executado em contextos de computação remota. Este pacote dá suporte ao uso de várias fontes de dados e contextos de computação remota. O cientista de dados ou o desenvolvedor pode executar o código Python em um servidor SQL remoto, para explorar dados ou criar modelos sem mover os dados. <br/><br/>O [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) pacote é o equivalente de Python do pacote MicrosoftML R.<br/><br/>Integração do T-SQL e Python por meio de [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Você pode chamar qualquer código Python usando esse procedimento armazenado. Essa infraestrutura segura permite a implantação de nível empresarial de scripts que podem ser chamados a partir de um aplicativo usando um procedimento armazenado simples e modelos de Python. São obtidos ganhos de desempenho adicionais por streaming de dados do SQL para paralelização do anel MPI e processos de Python. |
+| Versão inicial | [**MicrosoftML (R)** ](using-the-microsoftml-package.md) contém algoritmos e transformação de dados que pode ser contextos de computação remota dimensionado ou executados em de aprendizado de máquina de última geração. Algoritmos incluem redes neurais profundas personalizáveis, árvores de decisão rápida e florestas de decisão, regressão linear e regressão logística. |
+| Versão inicial | [**Modelos previamente treinados** ](r/install-pretrained-models-sql-server.md) de reconhecimento de imagem e análise de sentimento positivo negativo. Use esses modelos para gerar previsões em seus próprios dados. |
+| Versão inicial | [**Pacote de gerenciamento**](r/r-package-management-for-sql-server-r-services.md), incluindo os seguintes destaques: funções para ajudar a gerenciar pacotes e atribuir permissões ao instalar pacotes, o DBA do banco de dados [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução T-SQL para ajuda os DBAs gerenciar pacotes sem precisar saber o R e um conjunto avançado de R funções em [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) ajudar a instalar, remover ou listar pacotes pertencentes a usuários. |
+| Versão inicial | [**Operacionalização por meio de mrsdeploy** ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package) para a implantação e o script de R como um serviço web de hospedagem. Aplica-se a somente script R (nenhum equivalente de Python). Deve ser a opção de servidor (autônomo) evitar a competição do recurso com outras operações do SQL Server. |
 
-### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>Novidades na atualização cumulativa 3 para SQL Server 2017
 
-Esta versão contém atualizações para componentes do Python e R. 
+## <a name="new-in-sql-server-2016"></a>Novo no SQL Server 2016
 
-+ Adicionado suporte para a serialização de modelo do Python em revoscalepy, usando a função rx_serialize_model
+Esse recursos no SQL Server por meio de aprendizado de máquina de versão introduzido **SQL Server 2016 R Services**, um mecanismo de análise no banco de dados para o script de processamento de R em dados residentes em uma instância do mecanismo de banco de dados.
 
-### <a name="in-database-python-integration"></a>Integração de Python no banco de dados
+Além disso, **servidor de R (autônomo) do SQL Server 2016** foi lançado como uma maneira de instalar o R Server em um servidor Windows. Instalação do SQL Server fornecidas inicialmente, a única maneira de instalar o R Server para Windows. Em versões posteriores, os desenvolvedores e cientistas de dados que desejavam R Server no Windows podem usar o instalador autônomo do outro para alcançar o mesmo objetivo. O servidor autônomo no SQL Server é funcionalmente equivalente ao produto de servidor autônomo, [Microsoft R Server para Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-Você pode executar o Python em procedimentos armazenados ou executar remotamente usando o computador do SQL Server como o contexto de computação de Python. Essa integração abre novos caminhos para a grande comunidade de desenvolvedores de Python e os cientistas de dados, use o poder do SQL Server.
+| Versão |Atualização de recurso |
+|---------|----------------|
+| CU | [Em tempo real de pontuação](real-time-scoring.md). A pontuação em tempo real depende de bibliotecas nativas C++ para ler um modelo armazenado em um formato binário otimizado e, em seguida, gerar previsões sem a necessidade de chamar o tempo de execução de R. Isso torna muito mais rápido de operações de pontuação. Com a pontuação em tempo real, você pode executar um procedimento armazenado ou realizar em tempo real de pontuação do código R. Em tempo real de pontuação também está disponível para o SQL Server 2016, se a instância for atualizada para a versão mais recente do [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
+| Versão inicial | Funções de pacotes de R e o interpretador de R chamada no T-SQL e vice-versa.<br/>Funções de RevoScaleR fornecem análises de R em escala por agrupamento de dados em partes do componente, coordenação e gerenciamento distribuído de processamento e agregar os resultados. No SQL Server 2016 R Services (no banco de dados), o mecanismo de RevoScaleR é integrado com uma instância do mecanismo de banco de dados, brining dados e análise junto no mesmo contexto de processamento. |
 
-Os desenvolvedores do SQL Server acessar as bibliotecas Python abrangentes do ecossistema de software livre, incluindo estruturas conhecidas, como scikit-saiba, TensorFlow, Caffe e Theano/Keras. E certifique-se de explorar as inovações da Microsoft, como **revoscalepy** e **microsoftml**!
-
-Python em execução no banco de dados não envolve apenas de aprendizado de máquina, a propósito. Há uma grande variedade de outros aplicativos potenciais para integrar o Python com SQL e usando a capacidade de cada linguagem para fornecer soluções mais inteligentes e eficientes.
-
-+ **revoscalepy**
-
-    Esta versão inclui a versão final do **revoscalepy**, que fornece os equivalentes de Python dos algoritmos em RevoScaleR. Você pode criar modelos de Python para árvores de decisão, regressão linear e logística, árvores aumentadas e florestas aleatórias, todos os paralelizáveis e é capazes de está sendo executado em contextos de computação remota.
-
-    Para obter mais informações, consulte [novidades revoscalepy](python/what-is-revoscalepy.md).
-
-+ Contextos de computação remota para Python
-
-    Esta versão dá suporte ao uso de várias fontes de dados e contextos de computação remota. O cientista de dados ou o desenvolvedor pode executar o código Python em um servidor SQL remoto, para explorar dados ou criar modelos sem mover os dados. O uso de contextos de computação remota requer **revoscalepy**.
-
-+ Suporte a Python no aprendizado de máquina do Microsoft Server (autônomo)
-
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] inclui a opção para instalar uma versão autônoma do servidor de aprendizado de máquina do Microsoft. Usando o servidor de aprendizado de máquina, você pode distribuir e dimensionar o código de R ou Python sem usar o SQL Server.
-
-### <a name="linux-support"></a>Suporte para Linux
+## <a name="linux-support-roadmap"></a>Roteiro de suporte do Linux
 
 Aprendizado de máquina usando o R ou Python no banco de dados não é suportado atualmente no SQL Server no Linux. Procure os anúncios em uma versão posterior.
 
 No entanto, no Linux você pode executar [pontuação nativo](sql-native-scoring.md) usando a função PREVER T-SQL. Pontuação nativo permite a pontuação de um modelo pré-treinado muito rápido, sem chamar ou até mesmo exigir um tempo de execução de R. Isso significa que você pode usar o SQL Server no Linux para gerar previsões muito rápidos, para atender a aplicativos cliente.
 
-### <a name="new-algorithms"></a>Novos algoritmos
+### <a name="next-steps"></a>Próximas etapas
 
-O **MicrosoftML** pacote de R e Python contém algoritmos de aprendizado de máquina de última geração e transformação de dados que pode ser remoto dimensionado ou executado em contextos de computação. Algoritmos incluem redes neurais profundas personalizáveis, árvores de decisão rápida e florestas de decisão, regressão linear e regressão logística. O pacote MicrosoftML vem com interfaces de R e Python.
-
-Para obter mais informações, consulte [Introdução ao MicrosoftML](using-the-microsoftml-package.md) e [microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package).
-
-### <a name="operationalization"></a>Operacionalização
-
-Esta versão contém várias opções e recursos para ajudá-lo a implantar e distribuir as tarefas de aprendizado de máquina:
-
-+ Implantar e integrar soluções de Python de máquina, usando o T-SQL
-
-    A integração do Python com T-SQL significa que você pode chamar qualquer código Python usando `sp_execute_external_script`. Essa infraestrutura segura permite a implantação de nível empresarial de scripts que podem ser chamados a partir de um aplicativo usando um procedimento armazenado simples e modelos de Python. Desempenho adicional é por streaming de dados do SQL para paralelização do anel MPI e processos de Python.
-
-+ **mrsdeploy** para Python
-
-    O **mrsdeploy** do pacote para [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)] e [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] dá suporte à implantação de modelos de Python e scripts, como serviços da web. Para obter um exemplo de como isso funciona, consulte [publicar e consumir o código Python](python/publish-consume-python-code.md).
-
-+ Desempenho
-
-    Microsoft estende os limites de desempenho para pontuação. Com a pontuação no banco de dados, que processamos um milhão de linhas por segundo usando modelos de R. Nesta versão, novos recursos para **em tempo real de pontuação** e **pontuação nativo** dar suporte a melhor desempenho em linha única e pontuação de lote.
-
-### <a name="realtime-scoring-and-native-scoring"></a>Em tempo real de pontuação e pontuação nativo
-
-A pontuação em tempo real depende de bibliotecas nativas C++ para ler um modelo armazenado em um formato binário otimizado e, em seguida, gerar previsões sem a necessidade de chamar o tempo de execução de R. Isso torna muito mais rápido de operações de pontuação.
-
-Além disso, esta versão do [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] inclui uma função nativa do T-SQL para fast pontuação que pode ser executado em qualquer edição do SQL Server, mesmo em Linux. A função não requer nenhuma instalação de R ou configuração adicional. Isso significa que você pode treinar um modelo em outro lugar, salvá-lo no SQL Server e, em seguida, executar pontuação sem nunca chamar R. Esse recurso é conhecido como _pontuação nativo_.
-
-  - Pontuação nativo está disponível apenas no [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]. Ele usa uma função de T-SQL que pode ser executados em qualquer edição do SQL Server, incluindo Linux.
- - Em tempo real de pontuação é suportada em [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]e no servidor de aprendizado de máquina do Microsoft. Você pode executar um procedimento armazenado ou realizar em tempo real de pontuação do código R.
- - Em tempo real de pontuação também está disponível para o SQL Server 2016, se a instância for atualizada para a versão mais recente do [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)].
-
-Para obter mais informações, consulte estes tópicos:
-
- + [Em tempo real de pontuação](real-time-scoring.md)
- + [Pontuação nativa](sql-native-scoring.md)
- + [Como realizar em tempo real de pontuação ou pontuação nativo](r/how-to-do-realtime-scoring.md)
-
-### <a name="upgrade-your-machine-learning-experience-and-get-pre-trained-models"></a>Atualizar sua experiência de aprendizado de máquina e obter modelos previamente treinados
-
-Se você instalou uma versão anterior do SQL Server 2016 R Services, você pode atualizar agora para a versão mais recente, alternando o servidor para usar a política de ciclo de vida do Software moderno. Fazendo isso, você pode tirar proveito de um ciclo de lançamento mais rápido para R e atualizar automaticamente todos os componentes de R. Para obter mais informações, consulte [o que há de novo no servidor de aprendizado de máquina](https://docs.microsoft.com/machine-learning-server/whats-new-in-machine-learning-server).
-
-O instalador também oferece a opção para instalar uma coleção de modelos previamente treinados em formato binário. Esses modelos dão suporte a aprendizado de máquina em cenários como reconhecimento de imagem, onde podem ser difíceis de encontrar grandes conjuntos de dados para treinar um modelo. Depois de instalar um dos modelos previamente treinados, você pode usá-lo para previsão em seus próprios dados sem o tempo e as despesas envolvidas no treinamento esse modelo grande e complexo.
-
-Para obter mais informações, consulte [instalar previamente treinados modelos no SQL Server](r/install-pretrained-models-sql-server.md)
-
-### <a name="package-management"></a>Gerenciamento de pacotes
-
-Esta versão inclui vários aprimoramentos no gerenciamento de pacotes do SQL Server. Eles incluem:
-
-- Funções de banco de dados para ajudar o DBA gerenciar pacotes e atribuir permissões aos pacotes de instalação
-- A instrução Criar biblioteca externa no T-SQL, para ajudar a gerenciar pacotes sem precisar saber R DBAs
-- Um conjunto avançado de funções de R para ajudar a instalar, remover ou listar pacotes pertencentes a usuários
-
-Para obter mais informações, consulte [pacote de gerenciamento](r/r-package-management-for-sql-server-r-services.md).
-
-### <a name="get-started"></a>Introdução
-
-+ [Configurar o Python nos serviços de aprendizado de máquina do SQL Server](../advanced-analytics/python/setup-python-machine-learning-services.md)
-
-+ [Configurar o R nos serviços de aprendizado de máquina do SQL Server](r/set-up-sql-server-r-services-in-database.md)
-
++ [Instalar serviços de aprendizado de máquina do SQL Server](../advanced-analytics/python/setup-python-machine-learning-services.md)
 + [Exemplos e tutoriais de aprendizado de máquina](tutorials/machine-learning-services-tutorials.md)

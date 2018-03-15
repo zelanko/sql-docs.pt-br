@@ -57,13 +57,13 @@ DISTINCT
 Especifica que AVG será executado apenas uma vez em cada instância exclusiva de um valor, por mais que esse valor ocorra.
   
 *expressão*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de exato dados numéricos aproximados ou categoria de tipo, exceto para o **bit** tipo de dados. Funções de agregação e subconsultas não são permitidas.
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**. Funções de agregação e subconsultas não são permitidas.
   
-SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições para o qual a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é necessário. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de retorno
-O tipo de retorno é determinado pelo tipo de resultado avaliado da *expressão*.
+O tipo de retorno é determinado pelo tipo do resultado avaliado da *expression*.
   
 |Resultado da expressão|Tipo de retorno|  
 |---|---|
@@ -71,12 +71,12 @@ O tipo de retorno é determinado pelo tipo de resultado avaliado da *expressão*
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** categoria (p, s)|**decimal (38, s)** dividido por **decimal (10, 0)**|  
-|**Money** e **smallmoney** categoria|**money**|  
-|**float** e **real** categoria|**float**|  
+|Categoria **decimal** (p, s)|**decimal(38, s)** dividido por **decimal(10, 0)**|  
+|Categorias **money** e **smallmoney**|**money**|  
+|Categorias **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Comentários  
-Se o tipo de dados *expressão* é um alias de dados tipo, o tipo de retorno também é do tipo de dados de alias. No entanto, se o tipo de dados básicos do tipo de dados de alias for promovido, por exemplo, de **tinyint** para **int**, é o valor de retorno dos dados promovidos tipo e não o tipo de dados de alias.
+## <a name="remarks"></a>Remarks  
+Se o tipo de dados de *expression* for um tipo de dados de alias, o tipo de retorno também será do tipo de dados de alias. Entretanto, se o tipo de dados base do tipo de dados de alias for promovido, por exemplo, de **tinyint** para **int**, o valor retornado será do tipo de dados promovido, e não do tipo de dados de alias.
   
 AVG () computa a média de um conjunto de valores, dividindo a soma desses valores pela contagem de valores não nulos. Se a soma exceder o valor máximo para o tipo de dados de valor de retorno, será retornado um erro.
   
@@ -240,7 +240,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Funções de agregação &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

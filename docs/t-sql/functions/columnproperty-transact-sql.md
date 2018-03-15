@@ -48,19 +48,19 @@ COLUMNPROPERTY ( id , column , property )
   
 ## <a name="arguments"></a>Argumentos  
 *id*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que contém o identificador (ID) da tabela ou procedimento.
+É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que contém o ID (identificador) da tabela ou do procedimento.
   
-*coluna*  
+*column*  
 É uma expressão que contém o nome da coluna ou parâmetro.
   
-*propriedade*  
-É uma expressão que contém as informações a serem retornadas para *id*, e pode ser qualquer um dos valores a seguir.
+*property*  
+É uma expressão que contém as informações a serem retornadas para *id* e pode ser um dos valores a seguir.
   
 |Valor|Description|Valor retornado|  
 |---|---|---|
 |**AllowsNull**|Permite valores nulos.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
-|**ColumnId**|Valor de ID de coluna correspondente ao **column_id**.|ID da coluna<br /><br /> **Observação:** ao consultar várias colunas, podem aparecer intervalos na sequência de valores de ID de coluna.|  
-|**FullTextTypeColumn**|A coluna de tipo na tabela que contém as informações de tipo de documento o *coluna*.|ID de TYPE COLUMN de texto completo da coluna passada como segundo parâmetro dessa propriedade.|  
+|**ColumnId**|Valor de ID da coluna que corresponde a **sys.columns.column_id**.|ID da coluna<br /><br /> **Observação:** ao consultar várias colunas, podem aparecer intervalos na sequência de valores de ID da coluna.|  
+|**FullTextTypeColumn**|A TYPE COLUMN na tabela que contém as informações de tipo de documento da *coluna*.|ID de TYPE COLUMN de texto completo da coluna passada como segundo parâmetro dessa propriedade.|  
 |**IsComputed**|É uma coluna computada.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**IsCursorType**|O parâmetro de procedimento é do tipo CURSOR.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**IsDeterministic**|A coluna é determinística. Essa propriedade só se aplica a colunas computadas e colunas de exibição.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida. Não é uma coluna computada nem uma coluna de exibição.|  
@@ -70,7 +70,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsIndexable**|A coluna pode ser indexada.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**IsOutParam**|O parâmetro do procedimento é um parâmetro de saída.|1 = TRUE<br /><br /> 0 = FALSE NULL = Entrada inválida.|  
 |**IsPrecise**|A coluna é precisa. Essa propriedade só se aplica a colunas determinísticas.|1 = TRUE<br /><br /> 0 = FALSE NULL = Entrada inválida. Não é uma coluna determinística|  
-|**IsRowGuidCol**|A coluna tem o **uniqueidentifier** tipo de dados e é definido com a propriedade ROWGUIDCOL.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
+|**IsRowGuidCol**|A coluna tem o tipo de dados **uniqueidentifier** e está definida com a propriedade ROWGUIDCOL.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**IsSystemVerified**|As propriedades de precisão e determinismo da coluna podem ser verificadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Essa propriedade só se aplica a colunas computadas e colunas de exibições.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**IsXmlIndexable**|A coluna XML pode ser usada em um índice XML.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**Precisão**|Comprimento do tipo de dados da coluna ou parâmetro.|Comprimento do tipo de dados de coluna especificado<br /><br /> -1 = **xml** ou tipos de valor grande<br /><br /> NULL = A entrada não é válida.|  
@@ -78,11 +78,11 @@ COLUMNPROPERTY ( id , column , property )
 |**StatisticalSemantics**|A coluna está habilitada para indexação semântica.|1 = TRUE<br /><br /> 0 = FALSE|  
 |**SystemDataAccess**|A coluna é derivada de uma função que acessa dados nos catálogos do sistema ou tabelas do sistema virtuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade só se aplica a colunas computadas e colunas de exibições.|1 = TRUE (Indica acesso somente leitura.)<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**UserDataAccess**|A coluna é derivada de uma função que acessa dados em tabelas de usuário, incluindo exibições e tabelas temporárias, armazenadas na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade só se aplica a colunas computadas e colunas de exibições.|1 = TRUE (Indica acesso somente leitura.)<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
-|**UsesAnsiTrim**|ANSI_PADDING foi definido como ON quando a tabela foi criada pela primeira vez. Essa propriedade se aplica apenas a colunas ou parâmetros de tipo **char** ou **varchar**.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
+|**UsesAnsiTrim**|ANSI_PADDING foi definido como ON quando a tabela foi criada pela primeira vez. Essa propriedade aplica-se apenas a colunas ou parâmetros do tipo **char** ou **varchar**.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**IsSparse**|A coluna é esparsa. Para obter mais informações, veja [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
 |**IsColumnSet**|A coluna é um conjunto de colunas. Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = A entrada não é válida.|  
-|**GeneratedAlwaysType**|O valor da coluna é gerado pelo sistema. Corresponde à **sys.columns.generated_always_type**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = não é gerado sempre<br /><br /> 1 = gerada sempre como início de linha<br /><br /> 2 – gerada sempre como linha final|  
-|**IsHidden**|O valor da coluna é gerado pelo sistema. Corresponde à **sys.columns.is_hidden**|**Aplica-se a**: do [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = não ocultos<br /><br /> 1 = oculto|  
+|**GeneratedAlwaysType**|O valor da coluna Is gerado pelo sistema. Corresponde a **sys.columns.generated_always_type**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = não é gerado sempre<br /><br /> 1 = gerado sempre como início de linha<br /><br /> 2 – gerado sempre como fim de linha|  
+|**IsHidden**|O valor da coluna Is gerado pelo sistema. Corresponde a **sys.columns.is_hidden**|**Aplica-se a**: do [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = não oculto<br /><br /> 1 = oculto|  
   
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
@@ -92,7 +92,7 @@ Retornará NULL em caso de erro ou se um chamador não tiver permissão para exi
   
 Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que as funções internas emissoras de metadados, como COLUMNPROPERTY, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Ao verificar a propriedade determinística de uma coluna, teste primeiro se a coluna é uma coluna computada. **IsDeterministic** retorna NULL para colunas não computadas. Colunas computadas podem ser especificadas como colunas de índice.
   
 ## <a name="examples"></a>Exemplos  
@@ -114,7 +114,7 @@ Column Length
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
+[Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   

@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Impõe condições na execução de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução (*sql_statement*) seguir o *Boolean_expression*será executada se a *Boolean_expression* for avaliada como TRUE. A palavra-chave ELSE opcional é uma alternativa [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução é executada quando *Boolean_expression* é avaliada como FALSE ou NULL.  
+  Impõe condições na execução de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) após a *Boolean_expression* será executada se a *Boolean_expression* for avaliada como TRUE. A palavra-chave opcional ELSE é uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] alternativa que é executada quando a *Boolean_expression* é avaliada como FALSE ou NULL.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ IF Boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *Boolean_expression*  
- É uma expressão que retorna TRUE ou FALSE. Se o *Boolean_expression* contém uma instrução SELECT, a instrução SELECT deve ser colocada entre parênteses.  
+ É uma expressão que retorna TRUE ou FALSE. Se a *Boolean_expression* contiver uma instrução SELECT, a instrução SELECT deverá ser incluída entre parênteses.  
   
  { *sql_statement* | *statement_block* }  
  É qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou agrupamento de instruções válido, conforme definido com um bloco de instruções. Para definir um bloco de instruções (lote), use as palavras-chave BEGIN e END da linguagem de controle de fluxo. Embora todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam válidas em um bloco BEGIN...END, certas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não devem ser agrupadas no mesmo lote (bloco de instrução).  
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>D. Usando instruções IF...ELSE aninhadas  
- O exemplo a seguir mostra como uma instrução IF... Instrução ELSE pode ser aninhada em outra. Defina a variável `@Number` como `5`, `50` e `500` para testar cada instrução.  
+ O exemplo a seguir mostra como uma instrução IF … ELSE pode ser aninhada dentro de outra. Defina a variável `@Number` como `5`, `50` e `500` para testar cada instrução.  
   
 ```  
 DECLARE @Number int;  
@@ -140,10 +140,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: usando uma consulta como parte de uma expressão booliana  
- O exemplo a seguir usa `IF…ELSE` determinar qual das duas respostas para mostrar ao usuário, com base no peso de um item de `DimProduct` tabela.  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: Usando uma consulta como parte de uma expressão booliana  
+ O exemplo a seguir usa `IF…ELSE` para determinar qual das duas respostas será mostrada ao usuário, com base no peso de um item na tabela `DimProduct`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -157,9 +157,9 @@ ELSE
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

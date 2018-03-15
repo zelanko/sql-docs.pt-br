@@ -52,19 +52,19 @@ STUFF ( character_expression , start , length , replaceWith_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de dados de caracteres. *character_expression* pode ser uma constante, variável ou coluna de caracteres ou dados binários.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de dados de caractere. *character_expression* pode ser uma constante, uma variável ou uma coluna de dados binários ou de caracteres.  
   
  *start*  
- É um valor de inteiro que especifica o local para iniciar a exclusão e a inserção. Se *iniciar* for negativo ou zero, uma cadeia de caracteres nula será retornada. Se *iniciar* é maior do que o primeiro *character_expression*, uma cadeia de caracteres nula será retornada. *Iniciar* pode ser do tipo **bigint**.  
+ É um valor de inteiro que especifica o local para iniciar a exclusão e a inserção. Se *start* for negativo ou zero, uma cadeia de caracteres nula será retornada. Se *start* for maior que a primeira *character_expression*, uma cadeia de caracteres nula será retornada. *start* pode ser do tipo **bigint**.  
   
- *comprimento*  
- É um inteiro que especifica o número de caracteres a serem excluídos. Se *comprimento* é negativo, uma cadeia de caracteres nula será retornada. Se *comprimento* é maior do que o primeiro *character_expression*, exclusão ocorrerá até para o último caractere na última *character_expression*.  Se *comprimento* for zero, a inserção ocorre antes do primeiro caractere na cadeia de caracteres. *comprimento* pode ser do tipo **bigint**.
+ *length*  
+ É um inteiro que especifica o número de caracteres a serem excluídos. Se *length* for negativo, uma cadeia de caracteres nula será retornada. Se *length* for maior que a primeira *character_expression*, a exclusão ocorrerá até o último caractere da última *character_expression*.  Se *length* for zero, a inserção ocorrerá antes do primeiro caractere na cadeia de caracteres. *length* pode ser do tipo **bigint**.
 
  *replaceWith_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de dados de caracteres. *character_expression* pode ser uma constante, variável ou coluna de caracteres ou dados binários. Essa expressão substitui *comprimento* caracteres de *character_expression* começando no *iniciar*. Fornecendo `NULL` como o *replaceWith_expression*, remove os caracteres sem inserir nada.   
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de dados de caractere. *character_expression* pode ser uma constante, uma variável ou uma coluna de dados binários ou de caracteres. Essa expressão substitui os caracteres de *length* da *character_expression* começando em *start*. Fornecer `NULL` como a *replaceWith_expression* remove os caracteres sem inserir nada.   
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna dados de caractere se *character_expression* é um dos tipos de dados de caracteres com suporte. Retorna dados binários se *character_expression* é um dos tipos de dados binários com suporte.  
+ Retorna dados de caractere se *character_expression* é um dos tipos de dados de caractere compatíveis. Retorna dados binários se *character_expression* é um dos tipos de dados binários compatíveis.  
   
 ## <a name="remarks"></a>Remarks  
  Se a posição inicial ou o comprimento forem negativos, ou se a posição inicial for maior do que o comprimento da primeira cadeia de caracteres, uma cadeia nula será retornada. Se a posição de início for 0, um valor nulo será retornado. Se o comprimento a ser excluído for maior que a primeira cadeia de caracteres, a exclusão ocorrerá no primeiro caractere da primeira cadeia.  
@@ -72,7 +72,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 Um erro será gerado se o valor resultante for maior que o máximo suportado pelo tipo de retorno.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos SC, ambos *character_expression* e *replaceWith_expression* podem incluir pares substitutos. O parâmetro de comprimento contará cada substituto *character_expression* como um único caractere.  
+ Ao usar agrupamentos SC, *character_expression* e *replaceWith_expression* podem incluir pares alternativos. O parâmetro de comprimento contará cada par alternativo na *character_expression* como um único caractere.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma cadeia de caracteres criada ao excluir três caracteres da primeira cadeia, `abcdef`, começando na posição `2`, em `b`, e ao inserir a segunda cadeia de caracteres no ponto de exclusão.  
@@ -91,7 +91,7 @@ aijklmnef
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -102,4 +102,4 @@ aijklmnef
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

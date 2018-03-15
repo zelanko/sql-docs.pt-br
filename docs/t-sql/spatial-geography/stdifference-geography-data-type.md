@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geography-data-type"></a>STDifference (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna um objeto que representa o conjunto de pontos de um **geografia** instância que está fora de outra **geografia** instância.  
+  Retorna um objeto que representa o conjunto de pontos de uma instância de **geography** que reside fora de outra instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- É outra **geografia** instância que indica quais pontos devem ser removidos da instância em que está sendo invocado stdifference ().  
+ É outra instância de **geography** que indica quais pontos devem ser removidos da instância na qual STDifference() está sendo invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
- Este método lança um **ArgumentException** se a instância contiver uma borda oposta.  
+ Esse método gera uma **ArgumentException** se a instância contém uma borda oposta.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método sempre retornará nulo se os identificadores de referência espaciais (SRIDs) do **geografia** instâncias não coincidem.  
+ Esse método sempre retorna nulo se os SRIDs (identificadores de referência espacial) das instâncias de **geography** não são correspondentes.  
   
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o conjunto de possíveis resultados retornados no servidor foi estendido para **FullGlobe** instâncias. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a instâncias espaciais maiores do que um hemisfério. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares. Esse método não é preciso.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o conjunto de possíveis resultados retornado no servidor foi estendido para instâncias **FullGlobe**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a instâncias espaciais maiores do que um hemisfério. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares. Esse método não é preciso.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. Computando a diferença entre duas instâncias de geografia  
- O exemplo a seguir usa `STDifference()` para computar a diferença entre dois **geografia** instâncias.  
+ O exemplo a seguir usa `STDifference()` para calcular a diferença entre duas instâncias de **geography**.  
   
 ```  
 DECLARE @g geography;  
@@ -83,7 +83,7 @@ SELECT @g.STDifference(@h).ToString();
  @h.STDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

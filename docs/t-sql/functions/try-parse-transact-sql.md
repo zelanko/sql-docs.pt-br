@@ -46,63 +46,63 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *String_value*  
- **nvarchar (4000)** valor que representa o valor formatado para analisar no tipo de dados especificado.  
+ *string_value*  
+ Valor **nvarchar(4000)** que representa o valor formatado a ser analisado no tipo de dados especificado.  
   
- *String_value* deve ser uma representação válida do tipo de dados solicitado, ou TRY_PARSE retorna nulo.  
+ *string_value* deverá ser uma representação válida do tipo de dados solicitado ou TRY_PARSE retornará nulo.  
   
  *data_type*  
  Literal que representa o tipo de dados solicitado para o resultado.  
   
- *cultura*  
+ *culture*  
  Cadeia de caracteres opcional que identifica a cultura na qual *string_value* é formatado.  
   
- Se o *cultura* argumento não for fornecido, será usado o idioma da sessão atual. Esse idioma é definido implicitamente ou explicitamente usando a instrução SET LANGUAGE. *cultura* aceita qualquer cultura com suporte do .NET Framework; ele não está limitado aos idiomas com suporte explícito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o *cultura* argumento não é válido, PARSE gerará um erro.  
+ Se o argumento *culture* não for fornecido, o idioma da sessão atual será usado. Esse idioma é definido implícita ou explicitamente com o uso da instrução SET LANGUAGE. *culture* aceita qualquer cultura compatível com o .NET Framework; não se limita aos idiomas explicitamente compatíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o argumento *culture* não for válido, PARSE gerará um erro.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o resultado da expressão, convertido no tipo de dados solicitado, ou nulo se a conversão falhar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use TRY_PARSE somente para converter da cadeia de caracteres em data/hora e tipos numéricos. Para conversões de tipos gerais, continue a usar CAST ou CONVERT. Lembre-se de que há uma certa sobrecarga de desempenho na análise do valor da cadeia de caracteres.  
   
  TRY_PARSE depende da presença do CLR (Common Language Runtime) do .NET Framework.  
   
  Essa função não será remota uma vez que ela depende da presença do CLR. Uma função remota que exige o CLR provocará um erro no servidor remoto.  
   
- **Para obter mais informações sobre o parâmetro data_type**  
+ **Mais informações sobre o parâmetro data_type**  
   
- Os valores para o *data_type* parâmetro são restritos aos tipos mostrados na tabela a seguir, junto com estilos. As informações de estilo são fornecidas para ajudar a determinar que tipos de padrões são permitidos. Para obter mais informações sobre estilos, consulte a documentação do .NET Framework para o **System.Globalization.NumberStyles** e **DateTimeStyles** enumerações.  
+ Os valores para o parâmetro *data_type* serão restritos aos tipos mostrados na tabela a seguir, juntamente com estilos. As informações de estilo são fornecidas para ajudar a determinar que tipos de padrões são permitidos. Para obter mais informações sobre estilos, veja a documentação do .NET Framework para as enumerações **System.Globalization.NumberStyles** e **DateTimeStyles**.  
   
 |Categoria|Tipo|Tipo .NET|Estilos usados|  
 |--------------|----------|---------------|-----------------|  
 |Numérico|bigint|Int64|NumberStyles.Number|  
-|Numérico|int|Int32|NumberStyles.Number|  
-|Numérico|smallint|Int16|NumberStyles.Number|  
-|Numérico|tinyint|Byte|NumberStyles.Number|  
-|Numérico|decimal|Decimal|NumberStyles.Number|  
-|Numérico|numeric|Decimal|NumberStyles.Number|  
-|Numérico|float|Double|NumberStyles.Float|  
-|Numérico|real|Single|NumberStyles.Float|  
-|Numérico|smallmoney|Decimal|NumberStyles.Currency|  
+|Numérico|INT|Int32|NumberStyles.Number|  
+|Numérico|SMALLINT|Int16|NumberStyles.Number|  
+|Numérico|TINYINT|Byte|NumberStyles.Number|  
+|Numérico|Decimal|Decimal|NumberStyles.Number|  
+|Numérico|NUMERIC|Decimal|NumberStyles.Number|  
+|Numérico|FLOAT|Double|NumberStyles.Float|  
+|Numérico|REAL|Single|NumberStyles.Float|  
+|Numérico|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |Numérico|money|Decimal|NumberStyles.Currency|  
-|Data e hora|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e hora|Data|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e hora|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Data e hora|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e hora|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e hora|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e hora|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e hora|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **Para obter mais informações sobre o parâmetro de cultura**  
+ **Mais informações sobre o parâmetro culture**  
   
  A tabela a seguir mostra os mapeamentos de idiomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para culturas do .NET Framework.  
   
 |Nome completo|Alias|LCID|Cultura específica|  
 |---------------|-----------|----------|----------------------|  
 |us_english|Inglês|1046|pt-BR|  
-|Deutsch|Alemão|1031|de-DE|  
+|Deutsch|German|1031|de-DE|  
 |Français|Francês|1036|fr-FR|  
 |日本語|Japonês|1041|ja-JP|  
-|Dansk|Dinamarquês|1030|da-DK|  
+|Dansk|Danish|1030|da-DK|  
 |Español|Espanhol|3082|es-ES|  
 |Italiano|Italiano|1040|it-IT|  
 |Nederlands|Holandês|1043|nl-NL|  
@@ -110,22 +110,22 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Português|2070|pt-PT|  
 |Suomi|Finlandês|1035|fi|  
 |Svenska|Sueco|1053|sv-SE|  
-|Čeština|Tcheco|1029|Cs-CZ|  
+|čeština|Czech|1029|Cs-CZ|  
 |magyar|Húngaro|1038|Hu-HU|  
 |polski|Polonês|1045|Pl-PL|  
 |română|Romeno|1048|Ro-RO|  
 |hrvatski|Croata|1050|hr-HR|  
 |slovenčina|Eslovaco|1051|Sk-SK|  
 |slovenski|Esloveno|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|Grego|1032|El-GR|  
-|БЪЛГАРСКИ|Búlgaro|1026|bg-BG|  
-|РУССКИЙ|Russo|1049|Ru-RU|  
+|ελληνικά|Greek|1032|El-GR|  
+|български|Búlgaro|1026|bg-BG|  
+|русский|Russo|1049|Ru-RU|  
 |Türkçe|Turco|1055|Tr-TR|  
 |British|British English|2057|en-GB|  
 |eesti|Estoniano|1061|Et-EE|  
 |latviešu|Letão|1062|lv-LV|  
 |lietuvių|Lituano|1063|lt-LT|  
-|Português (Brasil)|Português do Brasil|1046|pt-BR|  
+|Português (Brasil)|Brasileiro|1046|pt-BR|  
 |繁體中文|Chinês tradicional|1028|zh-TW|  
 |한국어|Coreano|1042|Ko-KR|  
 |简体中文|Chinês simplificado|2052|zh-CN|  
@@ -189,10 +189,10 @@ False
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)   
- [Funções de conversão &#40; Transact-SQL &#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)   
+ [Funções de conversão &#40;Transact-SQL&#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

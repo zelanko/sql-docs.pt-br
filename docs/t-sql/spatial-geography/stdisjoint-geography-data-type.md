@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retornará 1 se uma **geografia** instância está espacialmente separada de outra **geografia** instância. Retornará 0 se não estiver.  
+  Retornará 1 se uma instância de **geography** estiver espacialmente separada de outra instância de **geography**. Retornará 0 se não estiver.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- É outra **geografia** instância a ser comparada com a instância na qual STDisjoint() é invocado.  
+ É outra instância de **geography** a ser comparada com a instância na qual STDisjoint() é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Dois **geografia** instâncias são não contíguas se a interseção de seus conjuntos de pontos estiver vazia.  
+ Duas instâncias de **geografia** estarão separadas se a interseção de seus conjuntos de pontos estiver vazia.  
   
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geografia** instâncias não coincidem.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geography** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STDisjoint()` para testar duas instâncias `geography` a fim de confirmar se elas estão espacialmente separadas.  
@@ -68,7 +68,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

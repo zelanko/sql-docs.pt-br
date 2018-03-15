@@ -70,18 +70,18 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
 ## <a name="arguments"></a>Argumentos  
  **@** *dialog_handle*  
- É uma variável usada para armazenar o identificador da caixa de diálogo gerada pelo sistema para a nova caixa de diálogo que é retornada pela instrução BEGIN DIALOG CONVERSATION. A variável deve ser do tipo **uniqueidentifier**.  
+ É uma variável usada para armazenar o identificador da caixa de diálogo gerada pelo sistema para a nova caixa de diálogo que é retornada pela instrução BEGIN DIALOG CONVERSATION. A variável precisa ser do tipo **uniqueidentifier**.  
   
- DO serviço *initiator_service_name*  
+ FROM SERVICE *initiator_service_name*  
  Especifica o serviço que inicia a caixa de diálogo. O nome especificado deve ser o nome de um serviço no banco de dados atual. A fila especificada para o serviço iniciador recebe mensagens retornadas pelo serviço de destino e mensagens criadas pelo Service Broker para essa conversa.  
   
- SERVIÇO **'***target_service_name***'**  
- Especifica o serviço de destino com o qual iniciar a caixa de diálogo. O *target_service_name* é do tipo **nvarchar (256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]usa uma comparação byte por byte para corresponder a *target_service_name* cadeia de caracteres. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não leva em conta o agrupamento atual.  
+ TO SERVICE **'***target_service_name***'**  
+ Especifica o serviço de destino com o qual iniciar a caixa de diálogo. O *target_service_name* é do tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para correspondência com a cadeia de caracteres *target_service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não leva em conta o agrupamento atual.  
   
  *service_broker_guid*  
- Especifica o banco de dados que hospeda o serviço de destino. Quando mais de um banco de dados hospeda uma instância do serviço de destino, você pode se comunicar com um banco de dados específico, fornecendo um *service_broker_guid*.  
+ Especifica o banco de dados que hospeda o serviço de destino. Quando mais de um banco de dados hospeda uma instância do serviço de destino, é possível se comunicar com um banco de dados específico fornecendo um *service_broker_guid*.  
   
- O *service_broker_guid* é do tipo **nvarchar (128)**. Para localizar o *service_broker_guid* para um banco de dados, execute a seguinte consulta no banco de dados:  
+ O *service_broker_guid* é do tipo **nvarchar(128)**. Para localizar o *service_broker_guid* de um banco de dados, execute a seguinte consulta no banco de dados:  
   
 ```  
 SELECT service_broker_guid  
@@ -92,23 +92,23 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- **'**BANCO DE DADOS ATUAL**'**  
+ **'**CURRENT DATABASE**'**  
  Especifica que a conversa usa o *service_broker_guid* para o banco de dados atual.  
   
  ON CONTRACT *contract_name*  
- Especifica o contrato que essa conversa segue. O contrato deve existir no banco de dados atual. Se o serviço de destino não aceitar novas conversas no contrato especificado, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retornará uma mensagem de erro na conversa. Quando esta cláusula é omitida, a conversa segue o contrato denominado **padrão**.  
+ Especifica o contrato que essa conversa segue. O contrato deve existir no banco de dados atual. Se o serviço de destino não aceitar novas conversas no contrato especificado, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retornará uma mensagem de erro na conversa. Quando essa cláusula é omitida, a conversa segue o contrato chamado **DEFAULT**.  
   
  RELATED_CONVERSATION **=***related_conversation_handle*  
- Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a caixa de diálogo Novo pertence ao mesmo grupo de conversa como o diálogo especificado por *related_conversation_handle*. O *related_conversation_handle*devem ser do tipo implicitamente conversível para o tipo **uniqueidentifier**. A instrução falhará se o *related_conversation_handle* não faz referência a uma caixa de diálogo existente.  
+ Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a caixa de diálogo pertencerá ao mesmo grupo de conversa que a caixa de diálogo especificada por *related_conversation_handle*. O *related_conversation_handle* deve ser do tipo implicitamente conversível no tipo **uniqueidentifier**. A instrução falhará se o *related_conversation_handle* não referenciar uma caixa de diálogo existente.  
   
- RELATED_CONVERSATION_GROUP **= * related_conversation_group_id*  
- Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a caixa de diálogo Novo será adicionada ao grupo de conversa especificado por *related_conversation_group_id*. O *related_conversation_group_id*devem ser do tipo implicitamente conversível para o tipo **uniqueidentifier**. Se *related_conversation_group_id*referência um grupo de conversa existente, o service broker cria um novo grupo de conversa com especificado *related_conversation_group_id* e se relaciona a caixa de diálogo Novo a esse grupo de conversa.  
+ RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
+ Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a nova caixa de diálogo será adicionada ao grupo de conversa especificado por *related_conversation_group_id*. O *related_conversation_group_id* deve ser do tipo implicitamente conversível no tipo **uniqueidentifier**. Se *related_conversation_group_id* não referenciar um grupo de conversa existente, o Service Broker criará um novo grupo de conversa com a *related_conversation_group_id* especificada e relacionará a nova caixa de diálogo a esse grupo de conversa.  
   
- Tempo de vida **= * dialog_lifetime*  
- Especifica o limite máximo de tempo que a caixa de diálogo permanecerá aberta. Para a caixa de diálogo ser concluída com êxito, os pontos de extremidade devem finalizar explicitamente a caixa de diálogo antes que seu tempo de vida expire. O *dialog_lifetime* valor deve ser expresso em segundos. Tempo de vida é do tipo **int**. Quando nenhuma cláusula LIFETIME é especificada, o tempo de vida da caixa de diálogo é o valor máximo de **int** tipo de dados.  
+ LIFETIME **=***dialog_lifetime*  
+ Especifica o limite máximo de tempo que a caixa de diálogo permanecerá aberta. Para a caixa de diálogo ser concluída com êxito, os pontos de extremidade devem finalizar explicitamente a caixa de diálogo antes que seu tempo de vida expire. O valor de *dialog_lifetime* deve ser expresso em segundos. O tempo de vida é do tipo **int**. Quando nenhuma cláusula LIFETIME é especificada, o tempo de vida da caixa de diálogo é o valor máximo do tipo de dados **int**.  
   
  ENCRYPTION  
- Especifica se as mensagens enviadas e recebidas nessa caixa de diálogo devem ser criptografadas quando forem enviadas para fora de uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma caixa de diálogo que deve ser criptografada é uma *caixa de diálogo protegida*. Quando ENCRYPTION = ON e os certificados necessários para oferecer suporte à criptografia não estão configurados, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retorna uma mensagem de erro na conversa. Se ENCRYPTION = OFF, criptografia será usada se uma associação de serviço remoto estiver configurada para o *target_service_name*; caso contrário, as mensagens são enviadas descriptografadas. Se esta cláusula não estiver presente, o valor padrão será ON.  
+ Especifica se as mensagens enviadas e recebidas nessa caixa de diálogo deverão ou não ser criptografadas quando forem enviadas para fora de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma caixa de diálogo que deve ser criptografada é uma *caixa de diálogo protegida*. Quando ENCRYPTION = ON e os certificados necessários para oferecer suporte à criptografia não estão configurados, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retorna uma mensagem de erro na conversa. Se ENCRYPTION = OFF, a criptografia será usada quando uma associação de serviço remoto for configurada para o *target_service_name*; caso contrário, as mensagens serão enviadas descriptografadas. Se esta cláusula não estiver presente, o valor padrão será ON.  
   
 > [!NOTE]  
 >  As mensagens trocadas com serviços na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nunca são criptografadas. Entretanto, uma chave de banco de dados mestre e os certificados para a criptografia ainda serão necessários para as conversas que usam criptografia se os serviços para a conversa estiverem em bancos de dados diferentes. Isso permite que as conversas continuem caso um dos bancos de dados seja movido para uma instância enquanto a conversa estiver em andamento.  
@@ -124,7 +124,7 @@ WHERE database_id = DB_ID() ;
   
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] não permite agrupamentos arbitrários de conversas. Todas as conversas em um grupo de conversa devem ter o serviço especificado na cláusula FROM como o iniciador ou o destino da conversa.  
   
- O comando BEGIN DIALOG CONVERSATION bloqueia o grupo de conversa que contém o *dialog_handle* retornado. Quando o comando inclui uma cláusula RELATED_CONVERSATION_GROUP, o grupo de conversa para *dialog_handle* é o grupo de conversa especificado no *related_conversation_group_id* parâmetro. Quando o comando inclui uma cláusula RELATED_CONVERSATION, o grupo de conversa para *dialog_handle* o grupo de conversa é associado a *related_conversation_handle* especificado.  
+ O comando BEGIN DIALOG CONVERSATION bloqueia o grupo de conversa que contém o *dialog_handle* retornado. Quando o comando inclui uma cláusula RELATED_CONVERSATION_GROUP, o grupo de conversa para *dialog_handle* é aquele especificado no parâmetro *related_conversation_group_id*. Quando o comando inclui uma cláusula RELATED_CONVERSATION, o grupo de conversa para *dialog_handle* é aquele associado ao *related_conversation_handle* especificado.  
   
  BEGIN DIALOG CONVERSATION não é válido em uma função definida pelo usuário.  
   
@@ -217,7 +217,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH ENCRYPTION = OFF ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   

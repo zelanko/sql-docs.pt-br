@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Exibe a última instrução enviada de um cliente para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Exibe a última instrução enviada de um cliente a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -75,9 +75,9 @@ DBCC INPUTBUFFER retorna um conjunto de linhas com as seguintes colunas.
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|Tipo de evento. Isso pode ser **evento RPC** ou **eventos de linguagem**. A saída será **nenhum evento** quando nenhum último evento foi detectado.|  
-|**Parâmetros**|**smallint**|0 = Texto<br /><br /> 1 -  *n*  = parâmetros|  
-|**EventInfo**|**nvarchar(4000)**|Para uma **EventType** de RPC, **EventInfo** contém apenas o nome do procedimento. Para uma **EventType** de idioma, somente os primeiros 4000 caracteres do evento são exibidos.|  
+|**EventType**|**nvarchar(30)**|Tipo de evento. Pode ser **Evento de RPC** ou **Evento de Linguagem**. A saída será **Nenhum Evento** quando não for detectado nenhum último evento.|  
+|**Parâmetros**|**smallint**|0 = Texto<br /><br /> 1- *n* = parâmetros|  
+|**EventInfo**|**nvarchar(4000)**|Para um **EventType** de RPC, **EventInfo** contém apenas o nome do procedimento. Para um **EventType** de Language, são exibidos apenas os primeiros 4.000 caracteres do evento.|  
   
 Por exemplo, DBCC INPUTBUFFER retorna o conjunto de resultados a seguir quando o último evento no buffer é DBCC INPUTBUFFER(11).
   
@@ -92,11 +92,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> Começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use [sys.DM exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) para retornar informações sobre instruções enviadas a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) para retornar informações sobre as instruções enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="permissions"></a>Permissões  
-Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer um dos seguintes:
--   Usuário deve ser um membro do **sysadmin** função de servidor fixa.  
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessário um dos seguintes:
+-   O usuário deve ser membro da função de servidor fixa **sysadmin**.  
 -   O usuário deve ter a permissão VIEW SERVER STATE.  
 -   *session_id* deve ser igual à ID de sessão na qual o comando está sendo executado. Para determinar a ID de sessão, execute a seguinte consulta:  
   
@@ -104,7 +104,7 @@ Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer um dos segui
 SELECT @@spid;  
 ```
   
-Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.
+Em Camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], é necessária a permissão VIEW DATABASE STATE no banco de dados. Nas camadas Standard e Básica do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a conta do administrador do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] é necessária.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir executa `DBCC INPUTBUFFER` em uma segunda conexão enquanto uma transação longa é executada em uma conexão anterior.
@@ -125,7 +125,7 @@ COMMIT TRAN;
 DBCC INPUTBUFFER (52);  
 ```  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)

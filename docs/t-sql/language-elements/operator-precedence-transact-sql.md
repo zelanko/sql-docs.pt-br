@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 |Nível|Operadores|  
 |-----------|---------------|  
 |1|~ (Não de bit a bit)|  
-|2|* (Multiplicação), / (divisão), % (módulo)|  
-|3|+ (Positivo), - (negativo), + (adição) (+ concatenação),-(subtração) & (AND bit a bit), ^ (bit a bit exclusivo), &#124; (OR bit a bit)|  
-|4|=, >, \<, > =, < =, <>,! =,! >,! < (operadores de comparação)|  
+|2|* (Multiplicação), / (Divisão), % (Módulo)|  
+|3|+ (Positivo), – (Negativo), + (Adição), (+ Concatenação), – (Subtração), & (AND bit a bit), ^ (OR exclusivo bit a bit), &#124; (OR bit a bit)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (Operadores de comparação)|  
 |5|NOT|  
 |6|AND|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
@@ -88,9 +88,9 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores lógicos &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Operadores lógicos &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

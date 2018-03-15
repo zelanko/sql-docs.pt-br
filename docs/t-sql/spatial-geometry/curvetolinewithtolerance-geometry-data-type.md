@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna uma aproximação poligonal de uma **geometria** instância que contém segmentos de arco circular.
+Retorna uma aproximação poligonal de uma instância de **geometry** que contém segmentos de arco circulares.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,44 +42,44 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
   
 ## <a name="arguments"></a>Argumentos  
  *tolerance*  
- É um **duplo** expressão que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
+ É uma expressão **double** que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
   
  *relative*  
- É um **bool** expressão que indica se deve usar um máximo relativo para o desvio. Quando o relativo é definido como falso (0), um máximo absoluto é definido para o desvio que um aproximado linear poderá ter. Quando o relativo é definido como verdadeiro (1), a tolerância é calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
+ É uma expressão **bool** que indica se um máximo relativo para o desvio deve ser usado. Quando o relativo é definido como falso (0), um máximo absoluto é definido para o desvio que um aproximado linear poderá ter. Quando o relativo é definido como verdadeiro (1), a tolerância é calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  A definição da tolerância <= 0 lança uma exceção `ArgumentOutOfRange`.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método pode especificar um valor de tolerância de erro para o resultante **LineString**.  
+ Esse método pode especificar uma quantidade de tolerância de erro para a **LineString** resultante.  
   
  A tabela a seguir mostra o tipo de instância retornado por `CurveToLineWithTolerance()`para vários tipos.  
   
 |Invocando tipo de instância|Tipo espacial retornado|  
 |----------------------------|---------------------------|  
-|instância de geometry vazia|Vazio **GeometryCollection** instância|  
-|**Ponto** e **MultiPoint**|**Ponto** instância|  
-|**MultiPoint**|**Ponto** ou **MultiPoint** instância|  
-|**CircularString**, **CompoundCurve**, ou **LineString**|**LineString** instância|  
-|**MultiLineString**|**LineString** ou **MultiLineString** instância|  
-|**CurvePolygon** e **polígono**|**Polígono** instância|  
-|**MultiPolygon**|**Polígono** ou **MultiPolygon** instância|  
-|**GeometryCollection** com uma única instância que não contém um segmento de arco circular|A instância que está contida no **GeometryCollection** determina o tipo de instância retornada.|  
-|**GeometryCollection** com uma instância de segmento único arco circular unidimensional (**CircularString**, **CompoundCurve**)|**LineString** instância|  
-|**GeometryCollection** com uma instância de segmento único arco circular bidimensional (**CurvePolygon**)|**Polígono** instância|  
-|**GeometryCollection** com várias instâncias unidimensionais|**MultiLineString** instância|  
-|**GeometryCollection** com várias instâncias bidimensionais|**MultiPolygon** instância|  
-|**GeometryCollection** com várias instâncias de dimensões diferentes|**GeometryCollection** instância|  
+|instância de geometry vazia|Instância de **GeometryCollection** vazia|  
+|**Point** e **MultiPoint**|Instância de **Point**|  
+|**MultiPoint**|Instância de **Point** ou **MultiPoint**|  
+|**CircularString**, **CompoundCurve** ou **LineString**|Instância de **LineString**|  
+|**MultiLineString**|Instância de **LineString** ou **MultiLineString**|  
+|**CurvePolygon** e **Polygon**|Instância de **Polygon**|  
+|**MultiPolygon**|Instância de **Polygon** ou **MultiPolygon**|  
+|**GeometryCollection** com uma única instância que não contém um segmento de arco circular|A instância contida na **GeometryCollection** determina o tipo de instância retornada.|  
+|**GeometryCollection** com uma instância de segmento único de arco circular unidimensional (**CircularString**, **CompoundCurve**)|Instância de **LineString**|  
+|**GeometryCollection** com uma instância de segmento único de arco circular bidimensional (**CurvePolygon**)|Instância de **Polygon**|  
+|**GeometryCollection** com várias instâncias unidimensionais|Instância de **MultiLineString**|  
+|**GeometryCollection** com várias instâncias bidimensionais|Instância de **MultiPolygon**|  
+|**GeometryCollection** com várias instâncias de dimensões diferentes|Instância de **GeometryCollection**|  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Usando valores de tolerância diferentes em uma instância de CircularString  
- O exemplo a seguir mostra como a definição da tolerância afeta a `LineString`instância retornada de um `CircularString` instância:  
+ O seguinte exemplo mostra como a definição da tolerância afeta a instância de `LineString` retornada de uma instância de `CircularString`:  
   
 ```
  DECLARE @g geometry; 
@@ -106,7 +106,7 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Definindo o relativo como true para uma instância de CurvePolygon de invocação  
- O exemplo a seguir usa uma `CurvePolygon` instância para chamar `CurveToLineWithTolerance()` com *relativo* definido como true:  
+ O exemplo a seguir usa uma instância de `CurvePolygon` para chamar `CurveToLineWithTolerance()` com *relativo* definido como true:  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -122,9 +122,9 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [CurveToLineWithTolerance &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [CurveToLineWithTolerance &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

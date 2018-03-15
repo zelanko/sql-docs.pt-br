@@ -1,5 +1,5 @@
 ---
-title: "AsBinaryZM (DataType Geométrico) | Microsoft Docs"
+title: AsBinaryZM (DataType geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (DataType geométrico)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna a representação do Open Geospatial Consortium (OGC) Well-Known Binary (WKB) de um **geometria** instância aumentada com qualquer **Z** (elevação) e **M** (medida) valores transportados pela instância.
+Retorna a representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium) de uma instância de **geometry** aumentada com os valores de **Z** (elevação) e **M** (medida) presentes na instância.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,9 +41,9 @@ Retorna a representação do Open Geospatial Consortium (OGC) Well-Known Binary 
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **varbinary (max)**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Tipo de retorno CLR: **SqlBytes**  
+ Tipo de retorno do CLR: **SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -59,10 +59,10 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias de geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [M &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [M &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

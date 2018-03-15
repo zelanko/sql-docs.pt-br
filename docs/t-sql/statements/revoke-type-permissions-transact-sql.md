@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de tipo (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de tipo (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,13 +59,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um tipo. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- NO tipo **::** [ *schema_name* ] **.** *type_name*  
- Especifica o tipo no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é necessária. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (**.**) é necessária.  
+ ON TYPE **::** [ *schema_name* ] **.** *type_name*  
+ Especifica o tipo no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (**.**) será obrigatório.  
   
- {DO | PARA} \<database_principal > especifica a entidade da qual a permissão está sendo revogada.  
+ { FROM | TO } \<database_principal> Especifica a entidade de segurança da qual a permissão está sendo revogada.  
   
  GRANT OPTION  
  Indica que o direito de conceder a permissão especificada a outros principais será revogado. A permissão em si não será revogada.  
@@ -79,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  A revogação em cascata de uma permissão WITH GRANT OPTION concedida revogará as opções GRANT e DENY dessa permissão.  
   
- AS \<database_principal > especifica uma entidade da qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de revogar a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  
@@ -88,38 +88,38 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Especifica uma função de banco de dados.  
   
  *Application_role*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Especifica uma função de aplicativo.  
   
  *Database_user_mapped_to_Windows_User*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um usuário do Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um grupo do Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um certificado.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para uma chave assimétrica.  
   
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um tipo é um protegível no nível de esquema contido no esquema pai na hierarquia de permissões.  
   
 > [!IMPORTANT]  
->  **GRANT**, **DENY,** e **REVOGAR** permissões não se aplicam a tipos de sistema. Podem ser concedidas permissões a tipos definidos pelo usuário. Para obter mais informações sobre tipos definidos pelo usuário, consulte [trabalhando com tipos definidos pelo usuário no SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
+>  As permissões **GRANT**, **DENY,** e **REVOKE** não se aplicam a tipos de sistema. Podem ser concedidas permissões a tipos definidos pelo usuário. Para obter mais informações sobre tipos definidos pelo usuário, veja [Trabalhando com tipos definidos pelo usuário no SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
   
  As permissões mais específicas e limitadas que podem ser revogadas em um tipo são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -143,9 +143,9 @@ REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tipo de concessão de permissões &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [Negar permissões do tipo &#40; Transact-SQL &#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT de tipo &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [Permissões DENY de tipo &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textptr-transact-sql"></a>Funções de texto e imagem - TEXTPTR (Transact-SQL)
+# <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o ponteiro de texto valor que corresponde a um **texto**, **ntext**, ou **imagem** coluna **varbinary** formato. O valor do ponteiro de texto recuperado pode ser usado nas instruções READTEXT, WRITETEXT e UPDATETEXT.  
+  Retorna o valor do ponteiro de texto correspondente a uma coluna **text**, **ntext** ou **image** em um formato **varbinary**. O valor do ponteiro de texto recuperado pode ser usado nas instruções READTEXT, WRITETEXT e UPDATETEXT.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] A funcionalidade alternativa não está disponível.  
@@ -52,35 +52,35 @@ TEXTPTR ( column )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *coluna*  
- É o **texto**, **ntext**, ou **imagem** coluna que será usada.  
+ *column*  
+ É a coluna **text**, **ntext** ou **image** que será usada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para tabelas com texto em linha, TEXTPTR retorna um identificador para que o texto seja processado. É possível obter um ponteiro de texto válido mesmo que o valor de texto seja nulo.  
   
- Não é possível usar a função TEXTPTR em colunas de exibições. Ela só pode ser usada em colunas de tabelas. Para usar a função TEXTPTR em uma coluna de uma exibição, você deve definir o nível de compatibilidade como 80 usando [nível de compatibilidade do banco de dados ALTER](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se a tabela não tiver texto em linha e se um **texto**, **ntext**, ou **imagem** coluna não foi inicializada por uma instrução UPDATETEXT, TEXTPTR retorna um ponteiro nulo.  
+ Não é possível usar a função TEXTPTR em colunas de exibições. Ela só pode ser usada em colunas de tabelas. Para usar a função TEXTPTR em uma coluna de uma exibição, é necessário definir o nível de compatibilidade como 80 usando [Nível de compatibilidade ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se a tabela não tiver um texto em linha, e se uma coluna **text**, **ntext** ou **image** não foi inicializada por uma instrução UPDATETEXT, TEXTPTR retornará um ponteiro nulo.  
   
  Use TEXTVALID para testar se um ponteiro de texto existe. Não é possível usar UPDATETEXT, WRITETEXT ou READTEXT sem um ponteiro de texto válido.  
   
- Essas funções e instruções também são úteis quando você trabalha com **texto**, **ntext**, e **imagem** dados.  
+ Essas funções e instruções também são úteis quando você trabalha com os dados **text**, **ntext** e **image**.  
   
 |Função ou instrução|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**('***padrão %***',** *expressão***)**|Retorna a posição do caractere de uma cadeia de caracteres especificada em **texto** ou **ntext** colunas.|  
-|DATALENGTH**(***expressão***)**|Retorna o comprimento dos dados em **texto**, **ntext**, e **imagem** colunas.|  
-|SET TEXTSIZE|Retorna o limite, em bytes, do **texto**, **ntext**, ou **imagem** dados a serem retornados com uma instrução SELECT.|  
-|Subcadeia de caracteres**(***text_column*, *iniciar*, *comprimento***)**|Retorna um **varchar** cadeia de caracteres especificada pelo especificado *iniciar* deslocamento e *comprimento*. O comprimento deve ser menor que 8 KB.|  
+|PATINDEX**('***%pattern%***' ,** *expression***)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
+|DATALENGTH**(***expression***)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
+|SET TEXTSIZE|Retorna o limite, em bytes, dos dados **text**, **ntext** ou **image** a serem retornados com uma instrução SELECT.|  
+|SUBSTRING**(***text_column*, *start*, *length***)**|Retorna uma cadeia de caracteres **varchar** especificada pelo deslocamento *start* e o *length* especificados. O comprimento deve ser menor que 8 KB.|  
   
 ## <a name="examples"></a>Exemplos  
   
 > [!NOTE]  
->  Para executar os exemplos a seguir, você deve instalar o **pubs** banco de dados.  
+>  Para executar os exemplos a seguir, é necessário instalar o banco de dados **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Usando TEXTPTR  
- O exemplo a seguir usa o `TEXTPTR` função para localizar o **imagem** coluna `logo` associado `New Moon Books` no `pub_info` tabela do `pubs` banco de dados. O ponteiro de texto é colocado em uma variável local `@ptrval.`  
+ O exemplo a seguir usa a função `TEXTPTR` para localizar a coluna **image** `logo` associada a `New Moon Books` na tabela `pub_info` do banco de dados `pubs`. O ponteiro de texto é colocado em uma variável local `@ptrval.`  
   
 ```  
 USE pubs;  
@@ -170,7 +170,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. Retornando dados de texto específicos  
- O exemplo a seguir localiza o `text` coluna (`pr_info`) associado `pub_id``0736` no `pub_info` tabela do `pubs` banco de dados. Primeiro, ele declara a variável local `@val`. O ponteiro de texto (uma longa cadeia de caracteres binários) é colocado em `@val` e fornecido como parâmetro para a instrução `READTEXT`. Isto retorna 10 bytes, iniciando no quinto byte (deslocamento de 4).  
+ O exemplo a seguir localiza a coluna `text` (`pr_info`) associada a `pub_id``0736` na tabela `pub_info`do banco de dados `pubs`. Primeiro, ele declara a variável local `@val`. O ponteiro de texto (uma longa cadeia de caracteres binários) é colocado em `@val` e fornecido como parâmetro para a instrução `READTEXT`. Isto retorna 10 bytes, iniciando no quinto byte (deslocamento de 4).  
   
 ```  
 USE pubs;  
@@ -192,12 +192,12 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [Definir tamanho do texto &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Funções de imagem e texto &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+## <a name="see-also"></a>Consulte Também  
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Funções de texto e imagem &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

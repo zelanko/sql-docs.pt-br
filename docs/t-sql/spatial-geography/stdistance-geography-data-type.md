@@ -34,10 +34,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geography-data-type"></a>STDistance (Tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna a distância mais curta entre um ponto em um **geografia** instância e um ponto em outra **geografia** instância.  
+  Retorna a distância mais curta entre um ponto em uma instância de **geography** e um ponto em outra instância de **geography**.  
   
 > [!NOTE]  
->  `STDistance()`Retorna o menor **LineString** entre dois tipos de Geografia. Trata-se de uma aproximação para a distância geodésica. O desvio de `STDistance()` em modelos terrestres comuns da distância geodésica exata não mais do que. 25%. Isso evita confusão quanto às diferenças mínimas entre o comprimento e a distância em tipos geodésicos.  
+>  `STDistance()` retorna a **LineString** mais curta entre dois tipos de geografia. Trata-se de uma aproximação para a distância geodésica. O desvio de `STDistance()` em modelos terrestres comuns da distância geodésica exata não é maior que 0,25%. Isso evita confusão quanto às diferenças mínimas entre o comprimento e a distância em tipos geodésicos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,21 +48,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- É outra **geografia** instância da qual medir a distância entre a instância na qual stdistance () é invocado. Se *other_geography* vazio for definido, stdistance () retorna nulo.  
+ É outra instância de **geography** da qual medir a distância entre a instância na qual STDistance() é invocado. Se *other_geography* for um conjunto vazio, STDistance() retornará nulo.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **float**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Stdistance () sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geografia** instâncias não coincidem.  
+ STDistance() sempre retornará nulo se os SRIDs (IDs de referência espacial) das instâncias de **geography** não forem correspondentes.  
   
 > [!NOTE]  
->  Métodos de **geografia** tipo de dados que calculam uma área ou distância retornarão resultados diferentes com base na SRID da instância usada no método.   Para obter mais informações sobre SRIDs, consulte [Spatial Reference Identifiers &#40; SRIDs &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  Métodos no tipo de dados **geography** que calculam uma área ou distância retornarão resultados diferentes com base no SRID da instância usado no método.   Para obter mais informações sobre SRIDs, confira [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir localiza a distância entre dois **geografia** instâncias.  
+ O exemplo a seguir localiza a distância entre duas instâncias de **geography**.  
   
 ```  
 DECLARE @g geography;  
@@ -72,7 +72,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

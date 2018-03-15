@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements---labelonly-transact-sql"></a>Instruções - de RESTORE LABELONLY (Transact-SQL)
+# <a name="restore-statements---labelonly-transact-sql"></a>Instruções RESTORE – LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna um conjunto de resultados que contém informações sobre as mídias de backup identificadas pelo dispositivo de backup designado.  
   
 > [!NOTE]  
->  Para obter as descrições dos argumentos, consulte [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  Para obter as descrições dos argumentos, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,7 +78,7 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Para obter descrições dos argumentos RESTORE LABELONLY, consulte [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ Para obter descrições dos argumentos de RESTORE LABELONLY, confira [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O conjunto de resultados de RESTORE LABELONLY consiste em uma única linha com essas informações.  
@@ -87,16 +87,16 @@ FROM <backup_device>
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Nome da mídia.|  
 |**MediaSetId**|**uniqueidentifier**|Número de identificação exclusivo do conjunto de mídias.|  
-|**FamilyCount**|**Int**|Número de famílias de mídias no conjunto de mídias.|  
-|**FamilySequenceNumber**|**Int**|Número de sequência desta família.|  
+|**FamilyCount**|**int**|Número de famílias de mídias no conjunto de mídias.|  
+|**FamilySequenceNumber**|**int**|Número de sequência desta família.|  
 |**MediaFamilyId**|**uniqueidentifier**|Número de identificação exclusivo da família de mídia.|  
-|**MediaSequenceNumber**|**Int**|Número de sequência dessa mídia na família de mídias.|  
-|**MediaLabelPresent**|**tinyint**|Se a descrição de mídia contiver:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] rótulo de mídia do formato de fita<br /><br /> **0** = descrição de mídia|  
+|**MediaSequenceNumber**|**int**|Número de sequência dessa mídia na família de mídias.|  
+|**MediaLabelPresent**|**tinyint**|Se a descrição de mídia contiver:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Rótulo da mídia de formato de fita<br /><br /> **0** = descrição da mídia|  
 |**MediaDescription**|**nvarchar(255)**|Descrição da mídia, em texto de formato livre, ou rótulo de mídia de formato de fita.|  
 |**SoftwareName**|**nvarchar(128)**|Nome do software de backup que gravou o rótulo.|  
-|**SoftwareVendorId**|**Int**|Número exclusivo de identificação do fornecedor do software que gravou o backup.|  
+|**SoftwareVendorId**|**int**|Número exclusivo de identificação do fornecedor do software que gravou o backup.|  
 |**MediaDate**|**datetime**|Data e hora em que o rótulo foi gravado.|  
-|**Mirror_Count**|**Int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: Os rótulos gravados para espelhos diferentes em um conjunto são idênticos.|  
+|**Mirror_Count**|**int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: os rótulos gravados para espelhos diferentes em um conjunto são idênticos.|  
 |**IsCompressed**|**bit**|Se o backup é compactado:<br /><br /> 0 = não compactado<br /><br /> 1 = compactado|  
   
 > [!NOTE]  
@@ -106,15 +106,15 @@ FROM <backup_device>
  A execução de RESTORE LABELONLY é um modo rápido de descobrir o que a mídia de backup contém. Como RESTORE LABELONLY lê só o cabeçalho da mídia, essa instrução terminará rapidamente mesmo quando estiverem sendo usados dispositivos de fita de alta capacidade.  
   
 ## <a name="security"></a>Segurança  
- Uma operação de backup pode opcionalmente especificar senhas para um conjunto de mídias. Quando uma senha tiver sido definida em um conjunto de mídias, será preciso especificar a senha correta na instrução RESTORE. A senha impede que as operações de restauração não autorizadas e Anexações não autorizadas de conjuntos de backup à mídia usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramentas. Porém, uma senha não impede a substituição da mídia usando a opção FORMAT da instrução BACKUP.  
+ Uma operação de backup pode opcionalmente especificar senhas para um conjunto de mídias. Quando uma senha tiver sido definida em um conjunto de mídias, será preciso especificar a senha correta na instrução RESTORE. A senha impede operações de restauração não autorizadas e acréscimos não autorizados de conjuntos de backup na mídia usando as ferramentas do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, uma senha não impede a substituição da mídia usando a opção FORMAT da instrução BACKUP.  
   
 > [!IMPORTANT]  
->  A proteção fornecida por esta senha é fraca. Destina-se a evitar uma restauração incorreta com o uso de ferramentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por usuários autorizados ou não autorizados. Não impede a leitura dos dados de backup por outros meios ou a substituição da senha. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]A prática recomendada para proteger backups é armazenar as fitas de backup em um local seguro ou fazer backup de arquivos de disco que são protegidos por listas de controle de acesso adequadas (ACLs). As ACLs devem ser definidas no diretório raiz em que os backups são criados.  
+>  A proteção fornecida por esta senha é fraca. Destina-se a evitar uma restauração incorreta com o uso de ferramentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por usuários autorizados ou não autorizados. Não impede a leitura dos dados de backup por outros meios ou a substituição da senha. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]A melhor prática para proteger backups é armazenar as fitas de backup em um local seguro ou fazer backup em arquivos de disco protegidos por ACLs (listas de controle de acesso) adequadas. As ACLs devem ser definidas no diretório raiz em que os backups são criados.  
   
 ### <a name="permissions"></a>Permissões  
  No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, a obtenção de informações sobre um conjunto ou dispositivo de backup exige a permissão CREATE DATABASE. Para obter mais informações, veja [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   

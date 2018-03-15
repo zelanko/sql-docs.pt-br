@@ -1,5 +1,5 @@
 ---
-title: REMOVER o formato de arquivo externo (Transact-SQL) | Microsoft Docs
+title: DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -43,23 +43,23 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>Argumentos  
  *external_file_format_name*  
- O nome do formato de arquivo externo para descartar.  
+ O nome do formato de arquivo externo a ser descartado.  
   
 ## <a name="metadata"></a>Metadados  
- Para exibir uma lista de uso de formatos de arquivo externo a [sys.external_file_formats &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) exibição do sistema.  
+ Para exibir uma lista de formatos de arquivo externos use a exibição do sistema [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) system view.  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
 ## <a name="permissions"></a>Permissões  
- Requer ALTER qualquer formato de arquivo externo.  
+ Requer ALTER ANY EXTERNAL FILE FORMAT.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Descartar um formato de arquivo externo não remove os dados externos.  
   
 ## <a name="locking"></a>Bloqueio  
- Leva um bloqueio compartilhado no objeto de formato de arquivo externo.  
+ Coloca um bloqueio compartilhado no objeto EXTERNAL FILE FORMAT.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -69,7 +69,7 @@ SELECT * FROM sys.external_file_formats;
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

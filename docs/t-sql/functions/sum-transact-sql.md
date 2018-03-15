@@ -68,13 +68,13 @@ SUM ( [ ALL | DISTINCT ] expression )
  Especifica que SUM retorna a soma de valores exclusivos.  
   
  *expressão*  
- É uma constante, coluna ou função e qualquer combinação de operadores aritméticos, bit a bit e de cadeia de caracteres. *expressão* é uma expressão da categoria de tipo de dados numéricos exatos de ou aproximado, exceto para o **bit** tipo de dados. Funções de agregação e subconsultas não são permitidas. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É uma constante, coluna ou função e qualquer combinação de operadores aritméticos, bit a bit e de cadeia de caracteres. *expression* é uma expressão da categoria de tipo de dados numérico exato ou numérico aproximado, com exceção do tipo de dados **bit**. Funções de agregação e subconsultas não são permitidas. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições para o qual a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é necessário. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna a soma de todos os *expressão* valores mais precisos *expressão* tipo de dados.  
+ Retorna o somatório de todos os valores de *expression* no tipo de dados de *expression* mais preciso.  
   
 |Resultado da expressão|Tipo de retorno|  
 |-----------------------|-----------------|  
@@ -82,11 +82,11 @@ SUM ( [ ALL | DISTINCT ] expression )
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** categoria (p, s)|**decimal (38, s)**|  
-|**Money** e **smallmoney** categoria|**money**|  
-|**float** e **real** categoria|**float**|  
+|Categoria **decimal** (p, s)|**decimal(38, s)**|  
+|Categorias **money** e **smallmoney**|**money**|  
+|Categorias **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  SUM é uma função determinística quando usada sem as cláusulas OVER e ORDER BY. É não determinística quando especificada com as cláusulas OVER e ORDER BY. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Exemplos  
@@ -189,9 +189,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-a-simple-sum-example"></a>C. Um exemplo simples de soma  
+### <a name="c-a-simple-sum-example"></a>C. Um exemplo simples de SUM  
  O exemplo a seguir retorna o número total de cada produto vendido no ano de 2003.  
   
 ```  
@@ -217,7 +217,7 @@ ProductKey  TotalPerProduct
 225          7956.1500
  ```
   
-### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. Calculando totais de grupo com mais de uma coluna  
+### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. Calculando totais de grupos com mais de uma coluna  
  O exemplo a seguir calcula a soma do `ListPrice` e do `StandardCost` para cada cor listada na tabela `Product`.  
   
 ```  
@@ -242,9 +242,9 @@ Multi          880.7468      526.4095
 NA            3162.3564     1360.6185
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções de agregação &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

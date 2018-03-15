@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Constrói um **geografia** instância dada uma representação no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subconjunto do GML Geography Markup Language ().
+Constrói uma instância de **geography** dada uma representação no subconjunto de GML (Geography Markup Language) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-Para obter mais informações sobre GML, consulte as seguintes especificações: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+Para obter mais informações sobre o GML, consulte as seguintes especificações do Open Geospatial Consortium: [Especificações do OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
   
-Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.
+Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,17 +53,17 @@ GeomFromGml ( GML_input, SRID )
  É uma entrada XML a partir da qual o GML retornará um valor.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **geografia** instância a ser retornada.  
+ É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geography** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Este método lança um **FormatException** se a entrada não for bem formatada.  
+ Esse método gera uma **FormatException** se a entrada não está bem formatada.  
   
- Este método gerará **ArgumentException** se a entrada contiver uma borda oposta.  
+ Este método gerará uma **ArgumentException** se a entrada contiver uma borda oposta.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `GeomFromGml()` para criar uma instância `geography`.  
@@ -86,7 +86,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

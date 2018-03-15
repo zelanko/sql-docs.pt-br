@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (tipo de dados de geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **geometryMultiPoint** instância de uma representação do Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Retorna uma instância de **geometryMultiPoint** de uma representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +45,20 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipoint*  
- É a representação WKB do **geometryMultiPoint** instância que você deseja retornar. *WKB_multipoint* é um **varbinary (max)** expressão.  
+ É a representação WKB da instância de **geometryMultiPoint** que você deseja retornar. *WKB_multipoint* é uma expressão **varbinary(max)**.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **geometryMultiPoint** instância que você deseja retornar.  
+ É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryMultiPoint** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC: **MultiPoint**  
+ Tipo do OGC: **MultiPoint**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método lançará um **FormatException** se a entrada não for bem formatada.  
+ Esse método gerará uma **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STMPointFromWKB()` para criar uma instância `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STMPointFromWKB(0x0104000000020000000101000000000000000000594
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

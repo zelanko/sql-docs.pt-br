@@ -1,5 +1,5 @@
 ---
-title: "FUNÇÃO ALTER (Transact-SQL) | Microsoft Docs"
+title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Adiciona ou remove membros de uma função de banco de dados ou altera o nome de uma função de banco de dados definido pelo usuário.  
+  Adiciona membros a uma função de banco de dados ou remove membros dela, ou altera o nome de uma função de banco de dados definida pelo usuário.  
   
 > [!NOTE]  
->  Para alterar as funções em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_addrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  Para alterar as funções no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,52 +70,52 @@ ALTER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_da_função*  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o 2008)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ *role_name*  
+ **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica a função de banco de dados para alterar.  
+ Especifica a função de banco de dados a ser alterada.  
   
- Adicionar membro *database_principal*l  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o 2012)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER *database_principal*l  
+ **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica para adicionar o banco de dados principal para a associação de uma função de banco de dados.  
+ Especifica para adicionar a entidade de segurança do banco de dados à associação de uma função de banco de dados.  
   
--   *database_principal* é um usuário de banco de dados ou uma função de banco de dados definido pelo usuário.  
+-   *database_principal* é um usuário ou uma função de banco de dados definida pelo usuário.  
   
--   *database_principal* não pode ser uma função de banco de dados fixa ou uma entidade de servidor.  
+-   *database_principal* não pode ser uma função de banco de dados fixa ou uma entidade de segurança do servidor.  
   
-Remover membro *database_principal*  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o 2012)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+DROP MEMBER *database_principal*  
+ **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica para remover um banco de dados principal da associação de uma função de banco de dados.  
+ Especifica para remover uma entidade de segurança do banco de dados da associação a uma função de banco de dados.  
   
--   *database_principal* é um usuário de banco de dados ou uma função de banco de dados definido pelo usuário.  
+-   *database_principal* é um usuário ou uma função de banco de dados definida pelo usuário.  
   
--   *database_principal* não pode ser uma função de banco de dados fixa ou uma entidade de servidor.  
+-   *database_principal* não pode ser uma função de banco de dados fixa ou uma entidade de segurança do servidor.  
   
-COM nome = *novo_nome*  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o 2008)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+WITH NAME = *new_name*  
+ **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica para alterar o nome de uma função de banco de dados definido pelo usuário. O novo nome não deve existir no banco de dados.  
+ Especifica para alterar o nome de uma função de banco de dados definida pelo usuário. O novo nome ainda não deve existir no banco de dados.  
   
  A alteração do nome de uma função de banco de dados não altera o número da ID, o proprietário ou as permissões da função.  
   
 ## <a name="permissions"></a>Permissões  
- Para executar esse comando, é necessário um ou mais dessas permissões ou associações:  
+ Para executar esse comando, é necessário ter uma ou mais destas permissões ou associações:  
   
--   **ALTER** permissão na função  
--   **ALTER ANY ROLE** no banco de dados  
--   Associação de **db_securityadmin** função de banco de dados fixa  
+-   Permissão **ALTER** na função  
+-   Permissão **ALTER ANY ROLE** no banco de dados  
+-   Associação à função de banco de dados fixa **db_securityadmin**  
   
 Além disso, para alterar a associação em uma função de banco de dados fixa, você precisa:  
   
--   Associação de **db_owner** função de banco de dados fixa  
+-   Associação à função de banco de dados fixa **db_owner**  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Não é possível alterar o nome de uma função de banco de dados fixa.  
   
 ## <a name="metadata"></a>Metadados  
- Essas exibições do sistema contêm informações sobre as funções de banco de dados e objetos de banco de dados.  
+ Essas exibições do sistema contêm informações sobre as funções do banco de dados e entidades de segurança do banco de dados.  
   
 -   [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)  
   
@@ -124,7 +124,7 @@ Além disso, para alterar a associação em uma função de banco de dados fixa,
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Alterar o nome de uma função de banco de dados  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o 2008)  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  O exemplo a seguir altera o nome da função `buyers` para `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
@@ -133,9 +133,9 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. Adicionar ou remover membros da função  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o 2012)  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- Este exemplo cria uma função de banco de dados denominada `Sales`. Ele adiciona um usuário de banco de dados chamado Barry para a associação e, em seguida, mostra como remover o membro Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ Esse exemplo cria uma função de banco de dados chamada `Sales`. Ele adiciona um usuário de banco de dados chamado Carlos à associação e, em seguida, mostra como remover o membro Carlos. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
 ```sql  
 CREATE ROLE Sales;  
@@ -144,9 +144,9 @@ ALTER ROLE Sales DROP MEMBER Barry;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Remover função &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

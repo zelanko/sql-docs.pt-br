@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- O valor dessa propriedade é null se o **geografia** instância não é um ponto para qualquer **ponto** instância para que ele não está definido.  
+ O valor dessa propriedade será nulo se a instância de **geography** não for um Point e também será nulo para as instâncias de **Point** para as quais ele não for definido.  
   
  Esta propriedade é somente leitura.  
   
@@ -64,9 +64,9 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;Tipo de dados geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

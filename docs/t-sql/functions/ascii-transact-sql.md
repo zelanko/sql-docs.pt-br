@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *character_expression*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **char** ou **varchar**.
+É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **char** ou **varchar**.
   
 ## <a name="return-types"></a>Tipos de retorno
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks
-ASCII é uma abreviação de código padrão americano para intercâmbio de informações. É um padrão usado por computadores de codificação de caracteres. Para obter uma lista de caracteres ASCII, consulte o **caracteres imprimíveis** seção [ASCII](https://www.wikipedia.org/wiki/ASCII).
+ASCII é uma abreviação de American Standard Code for Information Interchange. É um padrão de codificação de caracteres usado por computadores. Para obter uma lista de caracteres ASCII, consulte a seção **Caracteres imprimíveis** do [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir supõe um conjunto de caracteres ASCII e retorna o `ASCII` valor de 6 caracteres.
+O exemplo a seguir supõe um conjunto de caracteres ASCII e retorna o `ASCII` valor para 6 caracteres.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -78,7 +78,7 @@ A           B           a           b           1           2
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de servidor (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE do servidor (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,12 +62,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um servidor. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- {PARA | FROM} \<grantee_principal > especifica a entidade da qual a permissão está sendo revogada.  
+ { TO | FROM } \<grantee_principal> Especifica a entidade da qual a permissão está sendo revogada.  
   
- AS \<grantor_principal > especifica a entidade da qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
+ AS \<grantor_principal> Especifica a entidade de segurança da qual a entidade de segurança que executa essa consulta obtém seu direito de revogar a permissão.  
   
  GRANT OPTION FOR  
  Indica que o direito de conceder a permissão especificada a outros principais será revogado. A permissão em si não será revogada.  
@@ -99,14 +99,14 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  Especifica uma função de servidor definida pelo usuário.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As permissões no escopo de servidor podem ser revogadas somente quando o banco de dados atual é mestre.  
   
  REVOKE remove as permissões GRANT e DENY.  
   
  Use REVOKE GRANT OPTION FOR revogar o direito de conceder novamente a permissão especificada. Se o principal tiver a permissão com o direito de concedê-la, o direito de conceder a permissão será revogado, mas a permissão em si não será. Entretanto, se o principal tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- Informações sobre permissões de servidor podem ser exibidas no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição de catálogo e obter informações sobre as entidades de servidor podem ser exibidos no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo. Informações sobre associação de funções de servidor podem ser exibidas no [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) exibição do catálogo.  
+ As informações sobre permissões do servidor podem ser vistas na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor podem ser vistas na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). As informações sobre a associação de funções de servidor podem ser vistas na exibição do catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
  Um servidor é o nível mais alto da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um servidor são listadas na tabela a seguir.  
   
@@ -133,7 +133,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
+|Criar grupo de disponibilidade<br /><br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
 |CREATE SERVER ROLE<br /><br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
@@ -172,14 +172,14 @@ GO
   
  O logon ainda tem a permissão CONNECT SQL, mas já não pode concedê-la a outros principais.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Negar permissões de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOGAR permissões de servidor (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [Permissões DENY de servidor &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [Permissões REVOKE de servidor (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

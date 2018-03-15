@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna informações sobre objetos no escopo do esquema no banco de dados atual. Para obter uma lista de objetos no escopo do esquema, consulte [sys. Objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Essa função não pode ser usada por objetos que não sejam de escopo de esquema, como gatilhos DDL (linguagem de definição de dados) e notificações de eventos.  
+  Retorna informações sobre objetos no escopo do esquema no banco de dados atual. Para obter uma lista de objetos no escopo do esquema, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Essa função não pode ser usada por objetos que não sejam de escopo de esquema, como gatilhos DDL (linguagem de definição de dados) e notificações de eventos.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ OBJECTPROPERTY ( id , property )
   
 ## <a name="arguments"></a>Argumentos  
  *id*  
- É uma expressão que representa a ID do objeto no banco de dados atual. *ID* é **int** e é considerado como um objeto no escopo do esquema no contexto do banco de dados atual.  
+ É uma expressão que representa a ID do objeto no banco de dados atual. *id* é **int** e é considerado um objeto no escopo do esquema no contexto do banco de dados atual.  
   
- *propriedade*  
- É uma expressão que representa as informações a serem retornadas para o objeto especificado pelo *id*. *propriedade* pode ser um dos valores a seguir.  
+ *property*  
+ É uma expressão que representa as informações a serem retornadas para o objeto especificado por *id*. *property* pode ser um dos valores a seguir.  
   
 > [!NOTE]  
->  A menos que indicado em contrário, NULL é retornado quando *propriedade* não é um nome de propriedade válido, *id* não é uma ID de objeto válido, *id* é um tipo de objeto sem suporte especificado *propriedade*, ou o chamador não tem permissão para exibir os metadados do objeto.  
+>  A menos que indicado o contrário, NULL é retornado quando *property* não é um nome de propriedade válido, *id* não é uma ID de objeto válida, *id* é um tipo de objeto sem suporte para a *property* especificada ou o chamador não tem permissão para exibir os metadados do objeto.  
   
 |Nome da propriedade|Tipo de objeto|Descrição e valores retornados|  
 |-------------------|-----------------|-------------------------------------|  
@@ -96,7 +96,7 @@ OBJECTPROPERTY ( id , property )
 |IsDefault|Qualquer objeto no escopo do esquema|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Padrão associado.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|Qualquer objeto no escopo do esquema|Restrição DEFAULT.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|Função, exibição|A propriedade determinista da função ou exibição.<br /><br /> 1 = Determinista<br /><br /> 0 = Não determinista|  
-|IsEncrypted|Função [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)], tabela, gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)], exibição|Indica que o texto original da instrução de módulo foi convertido para um formato ofuscado. A saída do ofuscamento não é diretamente visível em quaisquer exibições de catálogo no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Os usuários que não tiverem acesso a tabelas do sistema ou arquivos do banco de dados não poderão recuperar o texto ofuscado. No entanto, o texto está disponível para os usuários que puderem acessar as tabelas do sistema sobre a [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou acessar diretamente os arquivos de banco de dados. Além disso, os usuários que podem anexar um depurador ao processo de servidor também podem recuperar o procedimento original da memória em tempo de execução.<br /><br /> 1 = Criptografado<br /><br /> 0 = não criptografado<br /><br /> Tipo de dados base: **int**|  
+|IsEncrypted|Função [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)], tabela, gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)], exibição|Indica que o texto original da instrução de módulo foi convertido para um formato ofuscado. A saída do ofuscamento não é diretamente visível em quaisquer exibições de catálogo no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Os usuários que não tiverem acesso a tabelas do sistema ou arquivos do banco de dados não poderão recuperar o texto ofuscado. Entretanto, o texto está disponível para usuários que podem acessar as tabelas do sistema na [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou diretamente os arquivos do banco de dados. Além disso, os usuários que podem anexar um depurador ao processo de servidor também podem recuperar o procedimento original da memória em tempo de execução.<br /><br /> 1 = Criptografado<br /><br /> 0 = não criptografado<br /><br /> Tipo de dados base: **int**|  
 |IsExecuted|Qualquer objeto no escopo do esquema|O objeto pode ser executado (exibição, procedimento, função ou gatilho).<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsExtendedProc|Qualquer objeto no escopo do esquema|Procedimento estendido.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsForeignKey|Qualquer objeto no escopo do esquema|Restrição FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -119,15 +119,15 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|Qualquer objeto no escopo do esquema|Restrição UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|Tabela definida pelo usuário.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Exibição|Exibição.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Qualquer objeto no escopo do esquema|Proprietário do objeto.<br /><br /> **Observação:** proprietário do esquema não é necessariamente o proprietário do objeto. Por exemplo, os objetos filho (aqueles em que *parent_object_id* for não nulo) sempre retornará a mesma ID de proprietário que o pai.<br /><br /> Não nula = A ID de usuário do banco de dados do proprietário do objeto.|  
-|TableDeleteTrigger|Table|A tabela tem um gatilho DELETE.<br /><br /> > 1 = ID do primeiro gatilho com o tipo especificado.|  
+|OwnerId|Qualquer objeto no escopo do esquema|Proprietário do objeto.<br /><br /> **Observação:** o proprietário do esquema não é necessariamente o proprietário do objeto. Por exemplo, objetos filho (aqueles em que *parent_object_id* é nonnull) sempre retornarão a mesma ID do proprietário como o pai.<br /><br /> Não nula = A ID de usuário do banco de dados do proprietário do objeto.|  
+|TableDeleteTrigger|Table|A tabela tem um gatilho DELETE.<br /><br /> >1 = ID do primeiro gatilho com o tipo especificado.|  
 |TableDeleteTriggerCount|Table|A tabela tem o número especificado de gatilhos DELETE.<br /><br /> >0 = O número de gatilhos DELETE.|  
 |TableFullTextMergeStatus|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Se uma tabela que tem um índice de texto completo está atualmente em mesclagem.<br /><br /> 0 = A tabela não tem um índice de texto completo ou o índice de texto completo não está sendo mesclado.<br /><br /> 1 = O índice de texto completo está em mesclagem.|  
 |TableFullTextBackgroundUpdateIndexOn|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A tabela tem índice de atualização em segundo plano de texto completo (controle de alteração automática) habilitado.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID do catálogo de texto completo no qual residem os dados do índice de texto completo para a tabela.<br /><br /> Diferente de zero = ID de catálogo de texto completo associado ao índice exclusivo que identifica as linhas em uma tabela indexada de texto completo.<br /><br /> 0 = A tabela não tem um índice de texto completo.|  
 |TableFulltextChangeTrackingOn|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O controle de alterações de texto completo da tabela está habilitado.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas processadas desde o início da indexação de texto completo. Em uma tabela que está sendo indexada para pesquisa de texto completo, todas as colunas de uma linha são consideradas parte de um documento a ser indexado.<br /><br /> 0 = Nenhum rastreamento ativo ou indexação de texto completo está concluído.<br /><br /> > 0 = uma das opções a seguir (A ou B): A) o número de documentos processados pelas inserir ou atualizar operações desde o início do completo, Incremental ou Manual de população de controle de alterações. B) o número de linhas processadas pelo insert ou operações de atualização desde a habilitação do controle de alterações com população de índice de atualização em segundo plano, o esquema de índice de texto completo alterado, o catálogo de texto completo recriado ou a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciado e assim por diante.<br /><br /> NULL = A tabela não tem um índice de texto completo.<br /><br /> Essa propriedade não monitora nem conta linhas excluídas.|  
-|TableFulltextFailCount|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas que a Pesquisa de Texto Completo não indexou.<br /><br /> 0 = A população foi concluída.<br /><br /> > 0 = uma das opções a seguir (A ou B): A) o número de documentos que não foram indexados desde o início da população de controle de alterações completo, Incremental ou Manual. B) índice, o número de linhas que não foram indexados desde o início da população ou o reinício da população de atualização para o controle de alterações com o plano de fundo. Isso pode ter sido causado por uma alteração de esquema, recriação do catálogo, reinicialização de servidor, etc.<br /><br /> NULL = A tabela não tem um índice de texto completo.|  
+|TableFulltextDocsProcessed|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas processadas desde o início da indexação de texto completo. Em uma tabela que está sendo indexada para pesquisa de texto completo, todas as colunas de uma linha são consideradas parte de um documento a ser indexado.<br /><br /> 0 = Nenhum rastreamento ativo ou indexação de texto completo está concluído.<br /><br /> > 0 = um dos seguintes (A ou B): A) O número de documentos processados pelas operações de inserção ou atualização desde o início da população de controle de alterações Completa, Incremental ou Manual. B) O número de linhas processadas pelas operações de inserção ou atualização desde que o controle de alterações com população de índice de atualização em segundo plano foi habilitado, o esquema de índice de texto completo alterado, o catálogo de texto completo recriado ou a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciada, e assim por diante.<br /><br /> NULL = A tabela não tem um índice de texto completo.<br /><br /> Essa propriedade não monitora nem conta linhas excluídas.|  
+|TableFulltextFailCount|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas que a Pesquisa de Texto Completo não indexou.<br /><br /> 0 = A população foi concluída.<br /><br /> > 0 = um dos seguintes (A ou B): A) O número de documentos que não foram indexados desde o início da população de controle de alterações Completa, Incremental ou Atualização Manual. B) Para o controle de alterações com índice de atualização em segundo plano, o número de linhas que não foram indexadas desde o início ou reinício da população. Isso pode ter sido causado por uma alteração de esquema, recriação do catálogo, reinicialização de servidor, etc.<br /><br /> NULL = A tabela não tem um índice de texto completo.|  
 |TableFulltextItemCount|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas que foram indexadas com texto completo com êxito.|  
 |TableFulltextKeyColumn|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID da coluna associada ao índice exclusivo de coluna única que participa da definição do índice de texto completo.<br /><br /> 0 = A tabela não tem um índice de texto completo.|  
 |TableFulltextPendingChanges|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de entradas de controle de alterações pendentes a serem processadas.<br /><br /> 0 = o controle de alterações não está habilitado.<br /><br /> NULL = A tabela não tem um índice de texto completo.|  
@@ -144,23 +144,23 @@ OBJECTPROPERTY ( id , property )
 |TableHasInsertTrigger|Table|O objeto tem um gatilho INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasNonclustIndex|Table|A tabela tem um índice não clusterizado.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasPrimaryKey|Table|A tabela tem uma chave primária.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasRowGuidCol|Table|Tabela possui um ROWGUIDCOL para uma **uniqueidentifier** coluna.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTextImage|Table|A tabela tem um **texto**, **ntext**, ou **imagem** coluna.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTimestamp|Table|A tabela tem um **timestamp** coluna.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasRowGuidCol|Table|A tabela contém um ROWGUIDCOL para uma coluna **uniqueidentifier**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTextImage|Table|A tabela contém uma coluna **text**, **ntext** ou **image**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTimestamp|Table|A tabela contém uma coluna **timestamp**.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasUniqueCnst|Table|A tabela tem uma restrição UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasUpdateTrigger|Table|Objeto tem um gatilho de atualização.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasVarDecimalStorageFormat|Table|Tabela está habilitada para **vardecimal** o formato de armazenamento.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableInsertTrigger|Table|A tabela tem um gatilho INSERT.<br /><br /> > 1 = ID do primeiro gatilho com o tipo especificado.|  
-|TableInsertTriggerCount|Table|Tabela tem o número especificado de gatilhos de inserção.<br /><br /> >0 = O número de gatilhos INSERT.|  
+|TableHasUpdateTrigger|Table|O objeto tem um gatilho UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasVarDecimalStorageFormat|Table|A tabela é habilitada para o formato de armazenamento **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableInsertTrigger|Table|A tabela tem um gatilho INSERT.<br /><br /> >1 = ID do primeiro gatilho com o tipo especificado.|  
+|TableInsertTriggerCount|Table|A tabela tem o número especificado de gatilhos INSERT.<br /><br /> >0 = O número de gatilhos INSERT.|  
 |TableIsFake|Table|A tabela não é real. Ela é materializada internamente sob demanda pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsLockedOnBulkLoad|Table|Tabela é bloqueada devido a um **bcp** ou trabalho de inserção em MASSA.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableIsLockedOnBulkLoad|Table|A tabela está bloqueada devido a um trabalho de **bcp** ou BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsMemoryOptimized|Table|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A tabela tem otimização de memória<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo de dados base: **int**<br /><br /> Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Table|A tabela está fixada para ser mantida no cache de dados.<br /><br /> 0 = False<br /><br /> Esse recurso não tem suporte no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores.|  
 |TableTextInRowLimit|Table|Máximo de bytes permitidos para text in row.<br /><br /> 0 se a opção text in row não estiver definida.|  
 |TableUpdateTrigger|Table|A tabela tem um gatilho UPDATE.<br /><br /> > 1 = ID do primeiro gatilho com o tipo especificado.|  
 |TableUpdateTriggerCount|Table|A tabela tem o número especificado de gatilhos UPDATE.<br /><br /> > 0 = O número de gatilhos UPDATE.|  
 |TableHasColumnSet|Table|A tabela tem um conjunto de colunas.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Table|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Especifica o tipo de tabela.<br /><br /> 0 = a tabela não temporal<br /><br /> 1 = a tabela de histórico para tabela com versão do sistema<br /><br /> 2 = a tabela temporal com versão do sistema|  
+|TableTemporalType|Table|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Especifica o tipo de tabela.<br /><br /> 0 = tabela não temporal<br /><br /> 1 = tabela de histórico para tabela com controle de versão do sistema<br /><br /> 2 = tabela temporal com controle de versão do sistema|  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
@@ -170,8 +170,8 @@ OBJECTPROPERTY ( id , property )
   
  Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que as funções internas emissoras de metadados, como OBJECTPROPERTY, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentários  
- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] supõe que *object_id* está no contexto do banco de dados atual. Uma consulta que faz referência a um *object_id* em outro banco de dados retornará NULL ou resultados incorretos. Por exemplo, na consulta a seguir, o contexto do banco de dados atual é o banco de dados mestre. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentará retornar o valor da propriedade especificado *object_id* no banco de dados em vez de banco de dados especificado na consulta. A consulta retorna resultados incorretos, pois o modo de exibição `vEmployee` não está no banco de dados mestre.  
+## <a name="remarks"></a>Remarks  
+ O [!INCLUDE[ssDE](../../includes/ssde-md.md)] supõe que *object_id* esteja no contexto do banco de dados atual. Uma consulta que referencia uma *object_id* em outro banco de dados retornará NULL ou resultados incorretos. Por exemplo, na consulta a seguir, o contexto do banco de dados atual é o banco de dados mestre. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentará retornar o valor de propriedade da *object_id* especificada nesse banco de dados, em vez do banco de dados especificado na consulta. A consulta retorna resultados incorretos porque a exibição `vEmployee` não está no banco de dados mestre.  
   
 ```  
 USE master;  
@@ -180,11 +180,11 @@ SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'),
 GO  
 ```  
   
- OBJECTPROPERTY (*view_id*, 'IsIndexable') pode consumir recursos significativos do computador porque a avaliação da propriedade IsIndexable requer a análise da definição da exibição, normalização e otimização parcial. Embora a propriedade IsIndexable identifique tabelas ou exibições que podem ser indexadas, a criação atual do índice ainda poderá falhar se certos requisitos de chave de índice não forem atendidos. Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ OBJECTPROPERTY(*view_id*, 'IsIndexable') pode consumir recursos significativos do computador porque a avaliação da propriedade IsIndexable exige a análise da definição, normalização e otimização parcial da exibição. Embora a propriedade IsIndexable identifique tabelas ou exibições que podem ser indexadas, a criação atual do índice ainda poderá falhar se certos requisitos de chave de índice não forem atendidos. Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- OBJECTPROPERTY (*table_id*, 'TableHasActiveFulltextIndex') retornará um valor de 1 (verdadeiro) quando pelo menos uma coluna de uma tabela for adicionada para indexação. A indexação de texto completo será ativada automaticamente para população assim que a primeira coluna for adicionada para indexação.  
+ OBJECTPROPERTY(*table_id*, 'TableHasActiveFulltextIndex') retornará um valor igual a 1 (verdadeiro) quando, pelo menos, uma coluna de uma tabela for adicionada para indexação. A indexação de texto completo será ativada automaticamente para população assim que a primeira coluna for adicionada para indexação.  
   
- Quando uma tabela é criada, a opção QUOTED IDENTIFIER sempre é armazenada como ON nos metadados da tabela, mesmo que a opção esteja definida como OFF quando a tabela é criada. Portanto, OBJECTPROPERTY (*table_id*, 'IsQuotedIdentOn') sempre retornará um valor de 1 (verdadeiro).  
+ Quando uma tabela é criada, a opção QUOTED IDENTIFIER sempre é armazenada como ON nos metadados da tabela, mesmo que a opção esteja definida como OFF quando a tabela é criada. Portanto, OBJECTPROPERTY(*table_id*, 'IsQuotedIdentOn') sempre retornará o valor 1 (verdadeiro).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -205,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Verificando se uma função definida pelo usuário de valor escalar é determinística  
- A exemplo a seguir testa se a função de valor escalar definida pelo usuário `ufnGetProductDealerPrice`, que retorna um **money** valor, é determinística.  
+ O exemplo a seguir testa se a função `ufnGetProductDealerPrice` de valor escalar definida pelo usuário, que retorna um valor de **money** é determinística.  
   
 ```  
 USE AdventureWorks2012;  
@@ -221,7 +221,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: Localizando tabelas que pertencem a um esquema específico  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: Localizando objetos que pertencem a um esquema específico  
  O exemplo a seguir retorna todas as tabelas no esquema dbo.  
   
 ```  
@@ -234,9 +234,9 @@ ORDER BY type_desc, name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>Verificando se um objeto é uma tabela de unidade d:  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D: Verificando se um objeto é uma tabela  
  O exemplo a seguir testa se `dbo.DimReseller` é uma tabela no banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  
@@ -249,13 +249,13 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECTPROPERTYEX &#40; Transact-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
- [sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

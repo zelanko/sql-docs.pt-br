@@ -1,5 +1,5 @@
 ---
-title: "Criar índice XML SELETIVO (Transact-SQL) | Microsoft Docs"
+title: CREATE SELECTIVE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Cria um novo índice XML seletivo na tabela especificada e na coluna XML. Os índices XML seletivos melhoram o desempenho da indexação e consulta XML indexando somente o subconjunto de nós normalmente consultado. Também é possível criar índices XML seletivos secundários. Para obter informações, consulte [Create, Alter e Drop índices XML seletivos secundários](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
+  Cria um novo índice XML seletivo na tabela especificada e na coluna XML. Os índices XML seletivos melhoram o desempenho da indexação e consulta XML indexando somente o subconjunto de nós normalmente consultado. Também é possível criar índices XML seletivos secundários. Para obter informações, confira [Criar, alterar e remover índices XML seletivos secundários](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -103,9 +103,9 @@ identifier
   
 ##  <a name="Arguments"></a> Argumentos  
  *index_name*  
- Nome do novo índice a ser criado. Os nomes de índice devem ser exclusivos dentro de uma tabela, mas não precisam ser exclusivos dentro de um banco de dados. Os nomes de índice devem seguir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Nome do novo índice a ser criado. Os nomes de índice precisam ser exclusivos dentro de uma tabela, mas não precisam ser exclusivos dentro de um banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- *\<table_object >* é a tabela que contém a coluna XML para indexação. Use um destes formatos:  
+ *\<table_object>* é a tabela que contém a coluna XML a ser indexada. Use um destes formatos:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -118,11 +118,11 @@ identifier
  *xml_column_name*  
  Nome da coluna XML que contém os caminhos a serem indexados.  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list >**)**] é a lista de namespaces usados pelos caminhos a serem indexados. Para obter informações sobre a sintaxe da cláusula WITH XMLNAMESPACES, consulte [WITH XMLNAMESPACES &#40; Transact-SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] É a lista de namespaces usados pelos caminhos a serem indexados. Para obter informações sobre a sintaxe da cláusula WITH XMLNAMESPACES, veja [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- PARA **(**\<promoted_node_path_list >**)** é a lista de caminhos a serem indexados com dicas de otimização opcionais. Para obter informações sobre os caminhos e as dicas de otimização que você pode especificar na instrução CREATE ou ALTER, consulte [especificar caminhos e dicas de otimização para índices XML seletivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(**\<promoted_node_path_list>**)** É a lista de caminhos a serem indexados com dicas de otimização opcionais. Para obter informações sobre os caminhos e as dicas de otimização que você pode especificar na instrução CREATE ou ALTER, consulte [Especificar caminhos e dicas de otimização para índices XML seletivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
- COM  *\<index_options >* para obter informações sobre as opções de índice, consulte [CREATE XML INDEX &#40; Índices XML seletivos &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH *\<index_options>* Para obter informações sobre as opções de índice, confira [CREATE XML INDEX &#40;índices XML seletivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
  Na maioria das vezes, crie um índice XML seletivo, em vez de um índice XML comum, para obter melhor desempenho e um armazenamento mais eficiente. Entretanto, um índice XML seletivo não é recomendado quando uma das seguintes condições é verdadeira:  
@@ -132,7 +132,7 @@ identifier
 -   É necessário dar suporte a consultas de elementos desconhecidos ou elementos em um local desconhecido.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- Para obter informações sobre limitações e restrições, consulte [índices XML seletivos &#40; SXI &#41; ](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
+ Para obter informações sobre limitações e restrições, confira [SXI &#40;índices XML seletivos&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ## <a name="security"></a>Segurança  
   
@@ -163,7 +163,7 @@ WITH XMLNAMESPACES ('http://www.tempuri.org/' as myns)
 FOR ( path1 = '/myns:book/myns:author/text()' );  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML Seletivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Criar, alterar e remover índices XML seletivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [Especificar caminhos e dicas de otimização para índices XML seletivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  

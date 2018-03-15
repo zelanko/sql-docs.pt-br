@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna o logaritmo natural de especificado **float** expressão em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Retorna o logaritmo natural da expressão **float** especificada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,27 +56,27 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**.  
   
  *base*  
  Argumento de inteiro opcional que define a base para o logaritmo.  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Comentários  
- Por padrão, **log ()** retorna o logaritmo natural. Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode alterar a base do logaritmo para outro valor usando opcional *base* parâmetro.  
+## <a name="remarks"></a>Remarks  
+ Por padrão, **LOG()** retorna o logaritmo natural. Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], é possível alterar a base do logaritmo para outro valor usando o parâmetro *base* opcional.  
   
- O logaritmo natural é o logaritmo na Base de **e**, onde **e** é uma constante irracional aproximadamente igual a 2,718281828.  
+ O logaritmo natural é o logaritmo na base **e**, em que **e** é uma constante irracional aproximadamente igual a 2,718281828.  
   
- O logaritmo natural do exponencial de um número é o número em si: LOG (EXP (  *n*  )) =  *n* . E o exponencial do logaritmo natural de um número é o número em si: EXP (LOG (  *n*  )) =  *n* .  
+ O logaritmo natural do exponencial de um número é o próprio número: LOG( EXP( *n* ) ) = *n*. E o exponencial do logaritmo natural de um número é o próprio número: EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. Calculando o logaritmo de um número.  
- O exemplo a seguir calcula o `LOG` especificado **float** expressão.  
+ O exemplo a seguir calcula o `LOG` para a expressão **float** especificada.  
   
 ```  
 DECLARE @var float = 10;  
@@ -109,10 +109,10 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. Calculando o logaritmo de um número  
- O exemplo a seguir calcula o `LOG` especificado **float** expressão.  
+ O exemplo a seguir calcula o `LOG` para a expressão **float** especificada.  
   
 ```  
 SELECT LOG(10);  
@@ -126,10 +126,10 @@ SELECT LOG(10);
  2.30
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [EXP &#40; Transact-SQL &#41;](../../t-sql/functions/exp-transact-sql.md)   
- [LOG10 &#40; Transact-SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   
+ [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

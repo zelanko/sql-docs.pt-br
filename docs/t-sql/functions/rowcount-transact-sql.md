@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40rowcount-transact-sql"></a>& #x 40; & #x 40. Número de linhas (Transact-SQL)
+# <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o número de linhas afetadas pela última instrução. Se o número de linhas for maior que 2 bilhões, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
@@ -51,28 +51,28 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]instruções podem definir o valor de @@ROWCOUNT das seguintes maneiras:  
+## <a name="remarks"></a>Remarks  
+ As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] podem definir o valor de @@ROWCOUNT das seguintes maneiras:  
   
--   Defina@ROWCOUNT para o número de linhas afetadas ou lidas. As linhas podem ou não ser enviadas ao cliente.  
+-   Defina @@ROWCOUNT como o número de linhas afetadas ou lidas. As linhas podem ou não ser enviadas ao cliente.  
   
--   Preservar@ROWCOUNT da execução da instrução anterior.  
+-   Preservar @@ROWCOUNT da execução da instrução anterior.  
   
--   Redefinir@ROWCOUNT como 0, mas não retornam o valor para o cliente.  
+-   Redefina @@ROWCOUNT como 0, mas não retorne o valor ao cliente.  
   
- Instruções que fazem uma atribuição simples sempre defina o @@ROWCOUNT valor como 1. Nenhuma linha é enviada ao cliente. Exemplos dessas instruções são: definir*local_variable*, RETURN, READTEXT e select sem consulta instruções como SELECT getDate () ou selecione **'***texto genérico* **'**.  
+ Instruções que fazem uma atribuição simples sempre definem o valor de @@ROWCOUNT como 1. Nenhuma linha é enviada ao cliente. Exemplos dessas instruções são: @*local_variable*, RETURN, READTEXT e select sem instruções de consulta, como SELECT GETDATE() ou SELECT **'***Generic Text***'**.  
   
- As instruções que fazem uma atribuição em uma consulta ou usam RETURN em um conjunto de consultas a @@ROWCOUNT valor para o número de linhas afetadas ou lidas pela consulta, por exemplo: selecione*local_variable* = c1 FROM t1.  
+ Instruções que fazem uma atribuição em uma consulta ou usam RETURN em uma consulta definem o valor de @@ROWCOUNT como o número de linhas afetadas ou lidas pela consulta, por exemplo: SELECT @*local_variable* = c1 FROM t1.  
   
- Conjunto de instruções de DML (linguagem) de manipulação de dados de @@ROWCOUNT valor para o número de linhas afetadas pela consulta e retornará o valor para o cliente. As instruções DML podem não enviar nenhuma linha ao cliente.  
+ As instruções DML (linguagem de manipulação de dados) definem o valor de @@ROWCOUNT como o número de linhas afetadas ou lidas pela consulta e retornam esse valor ao cliente. As instruções DML podem não enviar nenhuma linha ao cliente.  
   
- DECLARE CURSOR e FETCH defina o @@ROWCOUNT valor como 1.  
+ DECLARE CURSOR e FETCH definem o valor @@ROWCOUNT como 1.  
   
- As instruções EXECUTE preservam o @ anterior@ROWCOUNT.  
+ As instruções EXECUTE preservam o @@ROWCOUNT anterior.  
   
- Instruções de como usar, defina \<opção >, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION ou COMMIT TRANSACTION redefinir o valor de ROWCOUNT para 0.  
+ Instruções como USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION ou COMMIT TRANSACTION redefinem o valor ROWCOUNT como 0.  
   
- Procedimentos armazenados compilados nativamente preservam o @ anterior@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)]as instruções dentro de procedimentos armazenados compilados nativamente não definem@ROWCOUNT. Para obter mais informações, consulte [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Os procedimentos armazenados compilados nativamente preservam a função @@ROWCOUNT anterior. As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] dentro de procedimentos armazenados compilados nativamente não definem @@ROWCOUNT. Para saber mais, veja [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir executa uma instrução `UPDATE` e usa `@@ROWCOUNT` para detectar se quaisquer linhas foram alteradas.  
@@ -88,8 +88,8 @@ PRINT 'Warning: No rows were updated';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [Número de linhas do conjunto de &#40; Transact-SQL &#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
+ [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

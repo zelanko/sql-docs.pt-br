@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geography-data-type"></a>M (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  O **M** (medida) valor da **geografia** instância. As semânticas do valor de medida são definidas pelo usuário mas, geralmente, descrevem a distância ao longo de um linestring. Por exemplo, o valor de medida poderia ser usado para monitorar as placas de quilometragem ao longo de uma estrada.  
+  O valor **M** (medida) da instância de **geography**. As semânticas do valor de medida são definidas pelo usuário mas, geralmente, descrevem a distância ao longo de um linestring. Por exemplo, o valor de medida poderia ser usado para monitorar as placas de quilometragem ao longo de uma estrada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- O valor dessa propriedade é null se o **geografia** instância não é um **ponto**, bem como para qualquer **ponto** instância para que ele não está definido.  
+ O valor dessa propriedade será nulo se a instância de **geography** não for um **Point** e também será nulo para as instâncias de **Point** para as quais ele não for definido.  
   
  Esta propriedade é somente leitura.  
   
- Os valores de M não são usados nos cálculos feitos pela biblioteca e não serão executados em qualquer cálculo de biblioteca.  
+ Os valores de M não são usados nos cálculos feitos pela biblioteca e não serão usados em nenhum cálculo de biblioteca.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `Point` com valores Z (elevação) e M (medida) e usa `M` para buscar o valor `M` da instância.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.M;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Z &#40;Tipo de dados de geografia&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

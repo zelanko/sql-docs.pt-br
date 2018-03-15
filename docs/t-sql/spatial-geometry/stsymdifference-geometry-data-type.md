@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna um objeto que representa todos os pontos que estão em uma **geometria** instância ou outro **geometria** instância, mas não os pontos que residem em ambas as instâncias.  
+  Retorna um objeto que representa todos os pontos que estão em uma instância de **geometry** ou em outra instância de **geometry**, mas não os pontos que estão em ambas as instâncias.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância além da instância na qual `STSymDistance()` está sendo invocado.  
+ É outra instância de **geometry** além da instância na qual `STSymDistance()` está sendo invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -86,7 +86,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @h.STSymDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

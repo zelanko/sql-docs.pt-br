@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 
  Extrai um objeto ou uma matriz de uma cadeia de caracteres JSON.  
   
- Para extrair um valor escalar de uma cadeia de caracteres JSON em vez de um objeto ou uma matriz, consulte [JSON_VALUE &#40; Transact-SQL &#41; ](../../t-sql/functions/json-value-transact-sql.md). Para obter informações sobre as diferenças entre **JSON_VALUE** e **JSON_QUERY**, consulte [comparar JSON_VALUE e JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
+ Para extrair um valor escalar de uma cadeia de caracteres JSON em vez de um objeto ou uma matriz, confira [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). Para obter informações sobre as diferenças entre **JSON_VALUE** e **JSON_QUERY**, confira [Comparar JSON_VALUE e JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,31 +48,31 @@ JSON_QUERY ( expression [ , path ] )
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- Uma expressão. Normalmente, o nome de uma variável ou uma coluna que contém o texto JSON.  
+ Uma expressão. Normalmente, o nome de uma variável ou de uma coluna que contém o texto JSON.  
   
- Se **JSON_QUERY** localiza JSON não é válido em *expressão* antes de encontrar o valor identificado por *caminho*, a função retornará um erro. Se **JSON_QUERY** não encontrar o valor identificado por *caminho*, ele examina todo o texto e retorna um erro se ele encontrar JSON que não é válido em qualquer lugar na *expressão*.  
+ Se **JSON_QUERY** localizar um JSON que não seja válido na *expressão* antes de encontrar o valor identificado por *path*, a função retornará um erro. Se **JSON_QUERY** não encontrar o valor identificado por *path*, ele verificará todo o texto e retornará um erro se encontrar um JSON que não seja válido em algum lugar na *expressão*.  
   
- *caminho*  
- Um caminho JSON que especifica o objeto ou matriz para extrair.
+ *path*  
+ Um demarcador JSON que especifica o objeto ou a matriz a ser extraída.
 
-Em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e em [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], você pode fornecer uma variável como o valor de *caminho*.
+No [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e no [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], você pode fornecer uma variável como o valor de *path*.
 
-O caminho JSON pode especificar o modo lax ou strict para análise. Se você não especificar o modo de análise, o modo incerto é o padrão. Para obter mais informações, consulte [expressões de caminho JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+O demarcador JSON pode especificar o modo incerto ou estrito para análise. Se você não especificar o modo de análise, o modo incerto será o padrão. Para obter mais informações, confira [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
 
-O valor padrão para *caminho* é '$'. Como resultado, se você não fornecer um valor para *caminho*, **JSON_QUERY** retorna a entrada *expressão*.
+O valor padrão para *path* é '$'. Como resultado, se você não fornecer um valor para *path*, **JSON_QUERY** retornará a *expressão* de entrada.
 
-Se o formato de *caminho* não é válido, **JSON_QUERY** retornará um erro.  
+Se o formato de *path* não for válido, **JSON_QUERY** retornará um erro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna um fragmento JSON do tipo nvarchar (max). O agrupamento do valor retornado é o mesmo que o agrupamento da expressão de entrada.  
+ Retorna um fragmento JSON do tipo nvarchar(max). O agrupamento do valor retornado é o mesmo que o agrupamento da expressão de entrada.  
   
- Se o valor não é um objeto ou uma matriz:  
+ Se o valor não for um objeto nem uma matriz:  
   
--   No modo de lax **JSON_QUERY** retorna nulo.  
+-   No modo incerto **JSON_QUERY** retornará nulo.  
   
 -   No modo estrito, **JSON_QUERY** retornará um erro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 
 ### <a name="lax-mode-and-strict-mode"></a>Modo incerto e modo estrito
 
@@ -93,28 +93,28 @@ Se o formato de *caminho* não é válido, **JSON_QUERY** retornará um erro.
 } 
 ```  
   
- A tabela a seguir compara o comportamento de **JSON_QUERY** no modo incerto e no modo estrito. Para obter mais informações sobre a especificação de modo de demarcador opcional (lax ou strict), consulte [expressões de caminho JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ A tabela a seguir compara o comportamento de **JSON_QUERY** no modo incerto e no modo estrito. Para obter mais informações sobre a especificação de modo de demarcador opcional (incerto ou estrito), confira [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Caminho|Valor de retorno no modo incerto|Valor de retorno no modo estrito|Obter mais informações|  
+|Caminho|Valor retornado no modo incerto|Valor retornado no modo estrito|Obter mais informações|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|Retorna todo o texto JSON.|Retorna todo o texto JSON.|N/A|  
-|$. info.type|NULL|Erro|Não um objeto ou matriz.<br /><br /> Use **JSON_VALUE** em vez disso.|  
-|$. info.address.town|NULL|Erro|Não um objeto ou matriz.<br /><br /> Use **JSON_VALUE** em vez disso.|  
-|$. Info." endereço"|N'{"cidade": "Bristol", "região": "Avon", "país": "Inglaterra"}'|N'{"cidade": "Bristol", "região": "Avon", "país": "Inglaterra"}'|N/A|  
-|$. info.tags|N '["esporte", "Polo aquático"]'|N '["esporte", "Polo aquático"]'|N/A|  
-|$. info.type[0]|NULL|Erro|Não é uma matriz.|  
-|$. info.none|NULL|Erro|Propriedade não existe.|  
+|$|Retorna o texto JSON inteiro.|Retorna o texto JSON inteiro.|N/A|  
+|$.info.type|NULL|Erro|Não é um objeto nem uma matriz.<br /><br /> Use **JSON_VALUE** nesse caso.|  
+|$.info.address.town|NULL|Erro|Não é um objeto nem uma matriz.<br /><br /> Use **JSON_VALUE** nesse caso.|  
+|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N/A|  
+|$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|N/A|  
+|$.info.type[0]|NULL|Erro|Não é uma matriz.|  
+|$.info.none|NULL|Erro|A propriedade não existe.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Usando JSON_QUERY com o FOR JSON
+### <a name="using-jsonquery-with-for-json"></a>Usando JSON_QUERY com FOR JSON
 
-**JSON_QUERY** retorna um fragmento JSON válido. Como resultado, **FOR JSON** não escapar caracteres especiais no **JSON_QUERY** valor de retorno.
+**JSON_QUERY** retorna um fragmento JSON válido. Como resultado, **FOR JSON** não usa escape para caracteres especiais no valor retornado de **JSON_QUERY**.
 
-Se você estiver retornando resultados com o FOR JSON e você estiver incluindo dados que já está no formato JSON (em uma coluna ou como resultado de uma expressão), encapsule os dados JSON com **JSON_QUERY** sem o *caminho* parâmetro.
+Se você estiver retornando resultados com FOR JSON e estiver incluindo dados que já estejam no formato JSON (em uma coluna ou como resultado de uma expressão), encapsule os dados JSON com **JSON_QUERY** sem o parâmetro *path*.
 
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="example-1"></a>Exemplo 1  
- O exemplo a seguir mostra como retornar um fragmento JSON de um `CustomFields` coluna nos resultados da consulta.  
+ O exemplo a seguir mostra como retornar um fragmento JSON de uma coluna `CustomFields` nos resultados da consulta.  
   
 ```sql  
 SELECT PersonID,FullName,
@@ -133,6 +133,6 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões de caminho JSON &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Dados JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

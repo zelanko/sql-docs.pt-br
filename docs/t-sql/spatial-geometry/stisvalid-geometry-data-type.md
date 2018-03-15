@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retornará true se um **geometria** instância está bem formada, com base em seu tipo Open Geospatial Consortium (OGC). Retornará false se um **geometria** instância não está bem formada.
+Retornará true se uma instância de **geometry** estiver bem formada, com base em seu tipo do OGC (Open Geospatial Consortium). Retornará false se uma instância de **geometry** não estiver bem formada.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,14 +44,14 @@ Retornará true se um **geometria** instância está bem formada, com base em se
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- O tipo OGC de uma **geometria** instância pode ser determinada invocando [stgeometrytype ()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
+ O tipo do OGC de uma instância de **geometry** pode ser determinado com a invocação de [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]produz somente válido **geometria** instâncias, mas permite o armazenamento e recuperação de instâncias inválidas. Uma instância válida que representa o mesmo conjunto de pontos de qualquer instância inválida pode ser recuperada usando o método `MakeValid()`.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produz somente instâncias de **geometry** válidas, mas permite o armazenamento e a recuperação de instâncias inválidas. Uma instância válida que representa o mesmo conjunto de pontos de qualquer instância inválida pode ser recuperada usando o método `MakeValid()`.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geometry` e usa `STIsValid()` para testar se a instância é válida.  
@@ -62,8 +62,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsValid();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [STGeometryType &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [STGeometryType &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
  [MakeValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

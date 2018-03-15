@@ -1,5 +1,5 @@
 ---
-title: Criar POOL de recursos (Transact-SQL) | Microsoft Docs
+title: CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 
   Cria um pool de recursos do Administrador de Recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um pool de recursos representa um subconjunto dos recursos físicos (memória, CPUs e E/S) de uma instância do Mecanismo de Banco de Dados. O Administrador de Recursos permite que um administrador de banco de dados distribua recursos de servidor entre pools de recursos, até um máximo de 64 pools. O Administrador de Recursos não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,26 +71,26 @@ CREATE RESOURCE POOL pool_name
   
 ## <a name="arguments"></a>Argumentos  
  *pool_name*  
- É o nome definido pelo usuário para o pool de recursos. *nome_do_pool* é alfanumérico, pode ter até 128 caracteres, deve ser exclusivo dentro de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e deve estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ É o nome definido pelo usuário para o pool de recursos. *pool_name* é alfanumérico, pode ter até 128 caracteres, deve ser exclusivo dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  MIN_CPU_PERCENT =*value*  
- Especifica a média de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *valor* é de 0 a 100.  
+ Especifica a média de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. *value* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *value* é de 0 a 100.  
   
  MAX_CPU_PERCENT =*value*  
- Especifica a média máxima de largura de banda de CPU que todas as solicitações desse pool de recursos receberão quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
+ Especifica a média máxima de largura de banda de CPU que todas as solicitações desse pool de recursos receberão quando houver contenção de CPU. *value* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *value* é de 1 a 100.  
   
  CAP_CPU_PERCENT =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica uma extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão. Limita o nível de largura de banda de CPU máxima para que ele seja igual ao valor especificado. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
+ Especifica uma extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão. Limita o nível de largura de banda de CPU máxima para que ele seja igual ao valor especificado. *value* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *value* é de 1 a 100.  
   
- AFINIDADE {AGENDADOR = AUTO | ( \<scheduler_range_spec >) | NUMANODE = (\<NUMA_node_range_spec >)} **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Anexe o pool de recursos a agendadores específicos. O valor padrão é AUTO.  
   
- AFFINITY SCHEDULER = **(** \<scheduler_range_spec > **)** mapeia o pool de recursos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agendas identificadas pelos IDs especificados. Essas IDs são mapeadas para os valores na coluna de scheduler_id em [sys.DM os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
+ AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** mapeia o pool de recursos para os agendamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificados pelos IDs especificados. Essas IDs são mapeadas para os valores na coluna scheduler_id em [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
- Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec > **)**, o pool de recursos terá uma afinidade com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agendadores que mapeiam para as CPUs físicas que correspondem aos o nó NUMA ou ao intervalo de nós. Você pode usar a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, o pool de recursos é agrupado com os agendadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são mapeados para as CPUs físicas que correspondem ao nó NUMA ou ao intervalo de nós fornecido. Você pode usar a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 ```  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
@@ -101,20 +101,20 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ```  
   
  MIN_MEMORY_PERCENT =*value*  
- Especifica a quantidade mínima de memória reservada para esse pool de recursos que não pode ser compartilhada com outros pools de recursos. *valor* é um inteiro com uma configuração padrão de 0 o intervalo permitido para *valor* é de 0 a 100.  
+ Especifica a quantidade mínima de memória reservada para esse pool de recursos que não pode ser compartilhada com outros pools de recursos. *value* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *value* é de 0 a 100.  
   
  MAX_MEMORY_PERCENT =*value*  
- Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
+ Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos. *value* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *value* é de 1 a 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica o mínimo de operações de E/S por segundo (IOPS) por volume de disco para reservar para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para indicar nenhum limite mínimo para o pool. O padrão é 0.  
+ Especifica o mínimo de operações de E/S por segundo (IOPS) por volume de disco para reservar para o pool de recursos. O intervalo permitido para *value* é de 0 a 2^31-1 (2.147.483.647). Especifique 0 para indicar nenhum limite mínimo para o pool. O padrão é 0.  
   
  MAX_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica o máximo de operações de E/S por segundo (IOPS) por volume de disco para permitir para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para definir um limite ilimitado para o pool. O padrão é 0.  
+ Especifica o máximo de operações de E/S por segundo (IOPS) por volume de disco para permitir para o pool de recursos. O intervalo permitido para *value* é de 0 a 2^31-1 (2.147.483.647). Especifique 0 para definir um limite ilimitado para o pool. O padrão é 0.  
   
  Se o MAX_IOPS_PER_VOLUME para um pool for definido como 0, o pool não será controlado e pode utilizar todos os IOPS no sistema mesmo se outros pools tiverem MIN_IOPS_PER_VOLUME definido. Para esses casos, é recomendável definir o valor de MAX_IOPS_PER_VOLUME para esse pool para um número alto (por exemplo, o valor máximo 2^31-1) se você quiser que esse pool seja controlado para E/S.  
   
@@ -157,7 +157,7 @@ WITH (
   
 ```  
   
- O exemplo a seguir define `MIN_IOPS_PER_VOLUME` para \<algum valor > e `MAX_IOPS_PER_VOLUME` para \<algum valor >. Esses valores controlam as operações de leitura e gravação de E/S física que estão disponíveis para o pool de recursos.  
+ O exemplo a seguir define `MIN_IOPS_PER_VOLUME` como \<some value> e `MAX_IOPS_PER_VOLUME` como \<some value>. Esses valores controlam as operações de leitura e gravação de E/S física que estão disponíveis para o pool de recursos.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -170,14 +170,14 @@ WITH (
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
- [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
   

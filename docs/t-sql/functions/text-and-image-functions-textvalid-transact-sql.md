@@ -36,10 +36,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textvalid-transact-sql"></a>Funções de texto e imagem - TEXTVALID (Transact-SQL)
+# <a name="text-and-image-functions---textvalid-transact-sql"></a>Funções de texto e imagem – TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Um **texto**, **ntext**, ou **imagem** função que verifica se um ponteiro de texto específico é válido.  
+  Uma função **text**, **ntext** ou **image** que verifica se um ponteiro de texto específico é válido.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] A funcionalidade alternativa não está disponível.  
@@ -57,7 +57,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *table*  
  É o nome da tabela que será usada.  
   
- *coluna*  
+ *column*  
  É o nome da coluna que será usada.  
   
  *text_ptr*  
@@ -66,22 +66,22 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
- Retorna 1 se o ponteiro for válido e 0 se o ponteiro não for válido. Observe que o identificador para o **texto** coluna deve incluir o nome da tabela. Não é possível usar UPDATETEXT, WRITETEXT ou READTEXT sem um ponteiro de texto válido.  
+## <a name="remarks"></a>Remarks  
+ Retorna 1 se o ponteiro for válido e 0 se o ponteiro não for válido. Observe que o identificador para a coluna **text** deve incluir o nome da tabela. Não é possível usar UPDATETEXT, WRITETEXT ou READTEXT sem um ponteiro de texto válido.  
   
- As instruções e funções a seguir também são úteis quando você trabalha com **texto**, **ntext**, e **imagem** dados.  
+ As seguintes funções e instruções também são úteis quando você trabalha com os dados **text**, **ntext** e **image**.  
   
 |Função ou instrução|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'*padrão %**'***,** *expressão***)**|Retorna a posição do caractere de uma cadeia de caracteres especificada em **texto** e **ntext** colunas.|  
-|DATALENGTH**(***expressão***)**|Retorna o comprimento dos dados em **texto**, **ntext**, e **imagem** colunas.|  
-|SET TEXTSIZE|Retorna o limite, em bytes, do **texto**, **ntext**, ou **imagem** dados a serem retornados com uma instrução SELECT.|  
+|PATINDEX**(**'*%pattern%**'***,** *expression***)**|Retorna a posição de caractere de uma cadeia de caracteres especificada nas colunas **text** e **ntext**.|  
+|DATALENGTH**(***expression***)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
+|SET TEXTSIZE|Retorna o limite, em bytes, dos dados **text**, **ntext** ou **image** a serem retornados com uma instrução SELECT.|  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir informa se um ponteiro de texto válido existe para cada valor na coluna `logo` da tabela `pub_info`.  
   
 > [!NOTE]  
->  Para executar este exemplo, você deve instalar o **pubs** banco de dados.  
+>  Para executar este exemplo, é necessário instalar o banco de dados **pubs**.  
   
 ```  
 USE pubs;  
@@ -110,11 +110,11 @@ pub_id Valid (if 1) Text data
 (8 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [Definir tamanho do texto &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Funções de imagem e texto &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
- [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Funções de texto e imagem &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
   
   

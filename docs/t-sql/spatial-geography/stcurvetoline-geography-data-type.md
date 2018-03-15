@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma aproximação poligonal de uma **geografia** instância que contém segmentos de arco circular.  
+  Retorna uma aproximação poligonal de uma instância de **geography** que contém segmentos de arco circulares.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Retorna um **LineString** instância para uma **CircularString** ou **CompoundCurve** instância.  
+ Retorna uma instância de **LineString** para uma instância de **CircularString** ou de **CompoundCurve**.  
   
- Retorna um **polígono** instância para uma **CurvePolygon** instância.  
+ Retorna uma instância de **Polygon** para uma instância de **CurvePolygon**.  
   
- Retornar uma cópia do **geografia** instâncias que não contêm **CircularString**, **CompoundCurve**, ou **CurvePolygon** instâncias.  
+ Retornar uma cópia das instâncias de **geografia** que não contêm instâncias de **CircularString**, **CompoundCurve** ou **CurvePolygon**.  
   
- Ao contrário da especificação SQL MM, esse método não usa valores de coordenada z para calcular a aproximação poligonal. Quaisquer valores de coordenada z presente na chamada **geografia** instância são ignorados.  
+ Ao contrário da especificação SQL MM, esse método não usa valores de coordenada z para calcular a aproximação poligonal. Os valores de coordenada z que estiverem presentes na chamada da instância de **geography** serão ignorados.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma instância de `LineString` que é uma aproximação poligonal de uma instância de `CircularString`:  
@@ -67,9 +67,9 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [STLength &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [STLength &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
+ [STNumPoints &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [Visão geral de tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

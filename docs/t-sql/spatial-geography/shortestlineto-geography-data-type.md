@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna um **LineString** instância com dois pontos que representam a distância mais curta entre as duas **geografia** instâncias. O comprimento do **LineString** instância retornada é a distância entre os dois **geografia** instâncias.  
+  Retorna uma instância de **LineString** com dois pontos que representam a distância mais curta entre as duas instâncias de **geografia**. O comprimento da instância de **LineString** retornado é a distância entre as duas instâncias de **geografia**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *geography_other*  
- Especifica o segundo **geografia** instância chamada **geografia** instância está tentando determinar a distância mais curta.  
+ Especifica a segunda instância de **geography** para a qual a instância de **geography** de chamada está tentando determinar a distância mais curta.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- O método retorna um **LineString** instância com pontos de extremidade nas bordas dos dois sem interseção **geografia** instâncias que estão sendo comparadas. O comprimento do **LineString** é igual a distância mais curta entre as duas **geografia** instâncias. Vazio **LineString** instância é retornada quando as duas **geografia** instâncias se cruzam entre si.  
+ O método retorna uma instância de **LineString** com pontos de extremidade nas bordas das duas instâncias de **geografia** sem intersecção que estão sendo comparadas. O comprimento de **LineString** retornado é igual à distância mais curta entre as duas instâncias de **geografia**. Uma instância de **LineString** vazia é retornada quando as duas instâncias de **geografia** se interseccionam.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.ShortestLineTo(@g2).ToString();
 ``` 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

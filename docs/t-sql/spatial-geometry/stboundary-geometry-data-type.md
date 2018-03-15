@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o limite de uma **geometria** instância.  
+  Retorna o limite de uma instância de **geometry**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- `STBoundary()`Retorna vazio **GeometryCollection** quando os pontos de extremidade para uma **LineString**, **CircularString**, ou **CompoundCurve** instância são os mesmos.  
+ `STBoundary()` retorna uma **GeometryCollection** vazia quando os pontos de extremidade de uma instância de **LineString**, **CircularString** ou **CompoundCurve** são os mesmos.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Usando STBoundary() em uma instância de LineString com pontos de extremidade diferentes  
- O exemplo a seguir cria um `LineString``geometry` instância. `STBoundary()`Retorna o limite do `LineString`.  
+ O exemplo a seguir cria uma instância de `LineString``geometry`. `STBoundary()` retorna o limite de `LineString`.  
   
 ```  
 DECLARE @g geometry;  
@@ -80,7 +80,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

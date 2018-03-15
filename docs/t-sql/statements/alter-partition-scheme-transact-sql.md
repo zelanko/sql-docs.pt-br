@@ -1,5 +1,5 @@
 ---
-title: "ALTERAR o esquema de partição (Transact-SQL) | Microsoft Docs"
+title: ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 12/07/2017
   Adiciona um grupo de arquivos a um esquema de partição ou altera a designação do grupo de arquivos NEXT USED para o esquema de partição. 
 
 >[!NOTE]
->Banco de dados do SQL Azure têm suporte apenas grupos de arquivos primários.  
+>No Banco de Dados SQL do Azure, há suporte apenas para grupos de arquivos primários.  
   
- ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do artigo") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,15 +59,15 @@ NEXT USED [ filegroup_name ] [ ; ]
  É o nome do esquema de partição a ser alterado.  
   
  *filegroup_name*  
- Especifica o grupo de arquivos a ser marcado pelo esquema de partição como NEXT USED. Isso significa que o grupo de arquivos aceitará uma nova partição é criada usando um [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) instrução.  
+ Especifica o grupo de arquivos a ser marcado pelo esquema de partição como NEXT USED. Isso significa que o grupo de arquivos aceitará uma nova partição que for criada usando uma instrução [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md).  
   
- Em um esquema de partição, somente um grupo de arquivos pode ser designado como NEXT USED. Um grupo de arquivos que não está vazio pode ser especificado. Se *filegroup_name* for especificado e atualmente não há nenhum grupo de arquivos marcado como NEXT USED *filegroup_name* é marcado como NEXT USED. Se *filegroup_name* for especificado e um grupo de arquivos com a propriedade NEXT USED já existe, a propriedade NEXT USED transfere do grupo de arquivos existente para *filegroup_name*.  
+ Em um esquema de partição, somente um grupo de arquivos pode ser designado como NEXT USED. Um grupo de arquivos que não está vazio pode ser especificado. Se *filegroup_name* for especificado e atualmente não houver nenhum grupo de arquivos marcado como NEXT USED *filegroup_name* será marcado como NEXT USED. Se *filegroup_name* for especificado, e um grupo de arquivos com a propriedade NEXT USED já existir, a propriedade NEXT USED será transferida do grupo de arquivos existente para *filegroup_name*.  
   
- Se *filegroup_name* não for especificado e um grupo de arquivos com a propriedade NEXT USED já existe, o grupo de arquivos perderá seu estado NEXT USED para que não haja nenhum grupo de arquivos NEXT USED em *partition_scheme_name*.  
+ Se *filegroup_name* não for especificado e um grupo de arquivos com a propriedade NEXT USED já existir, o grupo de arquivos perderá seu estado NEXT USED para que não haja nenhum grupo de arquivos NEXT USED em *partition_scheme_name*.  
   
- Se *filegroup_name* não for especificado e não há nenhum grupo de arquivos marcado como NEXT USED, ALTER PARTITION SCHEME retornará um aviso.  
+ Se *filegroup_name* não for especificado e houver nenhum grupo de arquivos marcado como NEXT USED, ALTER PARTITION SCHEME retornará um aviso.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Qualquer grupo de arquivos afetado por ALTER PARTITION SCHEME deve estar online.  
   
 ## <a name="permissions"></a>Permissões  
@@ -89,19 +89,19 @@ NEXT USED test5fg;
   
  O grupo de arquivos `test5fg` receberá qualquer partição adicional de uma tabela ou índice particionado como resultado de uma instrução ALTER PARTITION FUNCTION.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [REMOVER o esquema de partição &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys. partition_schemes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys. Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

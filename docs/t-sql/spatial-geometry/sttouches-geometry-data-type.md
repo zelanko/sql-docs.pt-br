@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sttouches-geometry-data-type"></a>STTouches (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retornará 1 se uma **geometria** instância toca espacialmente outra **geometria** instância. Retornará 0 se isso não ocorrer.
+Retornará 1 se uma instância de **geometry** tocar espacialmente outra instância de **geometry**. Retornará 0 se isso não ocorrer.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,17 +45,17 @@ Retornará 1 se uma **geometria** instância toca espacialmente outra **geometri
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância a ser comparada com a instância na qual `STTouches()` é invocado.  
+ É outra instância de **geometry** a ser comparada com a instância na qual `STTouches()` é invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Dois **geometria** instâncias touch se interseção de seus conjuntos de pontos, mas não se cruzam seus interiores.  
+ Duas instâncias de **geometry** se encontrarão se houver interseção de seus conjuntos de pontos, mas não de seus interiores.  
   
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STTouches()` para testar duas instâncias `geometry` e consultar se elas se encontram.  
@@ -68,7 +68,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STTouches(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

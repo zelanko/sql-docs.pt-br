@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna uma aproximação poligonal de uma **geometria** instância que contém segmentos de arco circular.
+Retorna uma aproximação poligonal de uma instância de **geometry** que contém segmentos de arco circulares.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,27 +41,27 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Retorna vazio **GeometryCollection**instância vazia **geometria** instância variáveis e retorna **nulo** para não inicializado **geometria** variáveis.  
+ Retorna uma instância de **GeometryCollection** vazia para variáveis da instância de **geometry** vazia e retorna **NULL** para variáveis de **geometry** não inicializadas.  
   
- A aproximação poligonal que o método retorna depende de **geometria** instância que você usa para chamar o método:  
+ A aproximação poligonal que o método retorna depende da instância de **geometry** que você usa para chamar o método:  
   
--   Retorna um **LineString** instância para uma **CircularString** ou **CompoundCurve** instância.  
+-   Retorna uma instância de **LineString** para uma instância de **CircularString** ou de **CompoundCurve**.  
   
--   Retorna um **polígono** instância para uma **CurvePolygon** instância.  
+-   Retorna uma instância de **Polygon** para uma instância de **CurvePolygon**.  
   
--   Retorna uma cópia do **geometria** instância se essa instância não é um **CircularString**, **CompoundCurve**, ou **CurvePolygon** instância . Por exemplo, o `STCurveToLine` método retorna um **ponto** instância para uma **geometria** instância que é um **ponto** instância.  
+-   Retorna uma cópia da instância de **geometry** se essa instância não é uma instância de **CircularString**, **CompoundCurve** ou **CurvePolygon**. Por exemplo, o método `STCurveToLine` retorna uma instância de **Point** para uma instância de **geometry** que é uma instância de **Point**.  
   
- Ao contrário da especificação SQL/MM, o `STCurveToLine` método não usa valores de coordenada z para calcular a aproximação poligonal. O método ignora quaisquer valores de coordenada z presentes na chamada **geometria** instância.  
+ Ao contrário da especificação SQL/MM, o método `STCurveToLine` não usa valores da coordenada Z para calcular a aproximação poligonal. O método ignora os valores da coordenada Z presentes na instância de **geometry** de chamada.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Usando uma variável de geometria não inicializada e instância vazia  
- No exemplo a seguir, a primeira **selecione** instrução usa um não inicializada **geometria** instância para chamar o `STCurveToLine` método e o segundo **selecione** instrução usa vazio **geometria** instância. Assim, o método retorna **nulo** para a primeira instrução e um **GeometryCollection** coleção para a segunda instrução.  
+ No exemplo a seguir, a primeira instrução **SELECT** usa uma instância de **geometry** não inicializada para chamar o método `STCurveToLine` e a segunda instrução **SELECT** usa uma instância de **geometry** vazia. Portanto, o método retorna **NULL** para a primeira instrução e uma coleção **GeometryCollection** para a segunda.  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +72,7 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. Usando uma instância de LineString  
- O **selecione** instrução no exemplo a seguir usa uma **LineString** instância para chamar o método STCurveToLine. Assim, o método retorna um **LineString** instância.  
+ A instrução **SELECT** no exemplo a seguir usa uma instância de **LineString** para chamar o método STCurveToLine. Portanto, o método retorna uma instância de **LineString**.  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +82,7 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. Usando uma instância de CircularString  
- A primeira **selecione** instrução no exemplo a seguir usa uma **CircularString** instância para chamar o método STCurveToLine. Assim, o método retorna um **LineString** instância. Isso **selecione** instrução também compara os comprimentos das duas instâncias, que são aproximadamente os mesmos.  Por fim, a segunda **selecione** instrução retorna o número de pontos para cada instância.  Ele retorna apenas 5 pontos para a **CircularString** instância, mas 65 pontos para a **LineString**instância.  
+ A primeira instrução **SELECT** no exemplo a seguir usa uma instância de **CircularString** para chamar o método STCurveToLine. Portanto, o método retorna uma instância de **LineString**. Esta instrução **SELECT** também compara os tamanhos das duas instâncias, que são aproximadamente os mesmos.  Finalmente, a segunda instrução **SELECT** retorna o número de pontos para cada instância.  Retorna apenas 5 pontos para a instância de **CircularString**, mas 65 pontos para a instância de **LineString**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +93,7 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. Usando uma instância de CurvePolygon  
- O **selecione** instrução no exemplo a seguir usa uma **CurvePolygon** instância para chamar o método STCurveToLine. Assim, o método retorna um **polígono** instância.  
+ A instrução **SELECT** no exemplo a seguir usa uma instância de **CurvePolygon** para chamar o método STCurveToLine. Portanto, o método retorna uma instância de **Polygon**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -102,7 +102,7 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [STLength &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STNumPoints &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geometry-data-type"></a>STDistance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna a distância mais curta entre um ponto em um **geometria** instância e um ponto em outra **geometria** instância.  
+  Retorna a distância mais curta entre um ponto em uma instância de **geometry** e um ponto em outra instância de **geometry**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância da qual medir a distância entre a instância na qual `STDistance()` é invocado. Se *other_geometry* é um conjunto vazio, `STDistance()` retorna nulo.  
+ É outra instância de **geometry** da qual medir a distância entre a instância na qual `STDistance()` é invocado. Se *other_geometry* é um conjunto vazio, `STDistance()` retorna nulo.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **float**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- `STDistance()`sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.  
+ `STDistance()` sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -65,7 +65,7 @@ SET @h = geometry::STGeomFromText('POINT(10 10)', 0);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

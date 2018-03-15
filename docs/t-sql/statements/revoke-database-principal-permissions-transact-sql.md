@@ -1,5 +1,5 @@
 ---
-title: "Permissões de banco de dados Principal REVOKE (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de entidade de segurança do banco de dados (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -65,19 +65,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada no principal de banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- USUÁRIO::*database_user*  
- Especifica a classe e o nome do usuário no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é necessária.  
+ USER ::*database_user*  
+ Especifica a classe e o nome do usuário no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
   
- FUNÇÃO::*database_role*  
- Especifica a classe e o nome da função na qual a permissão está sendo revogada. O qualificador de escopo (**::**) é necessária.  
+ ROLE ::*database_role*  
+ Especifica a classe e o nome da função na qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
   
- FUNÇÃO de aplicativo::*application_role*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+ APPLICATION ROLE ::*application_role*  
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo revogada. O qualificador de escopo (**::**) é necessária.  
+ Especifica a classe e o nome da função de aplicativo na qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
   
  GRANT OPTION  
  Indica que o direito de conceder a permissão especificada a outros principais será revogado. A permissão em si não será revogada.  
@@ -91,7 +91,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  A revogação em cascata de uma permissão WITH GRANT OPTION concedida revogará as opções GRANT e DENY dessa permissão.  
   
- AS \<database_principal > especifica uma entidade da qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de revogar a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  
@@ -100,34 +100,34 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Especifica uma função de banco de dados.  
   
  *Application_role*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Especifica uma função de aplicativo.  
   
  *Database_user_mapped_to_Windows_User*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um usuário do Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um grupo do Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para um certificado.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica um usuário do banco de dados mapeado para uma chave assimétrica.  
   
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>Permissões do usuário do banco de dados  
  Um usuário do banco de dados é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um usuário de banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -161,7 +161,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL no principal especificado ou uma permissão mais alta que implica a permissão CONTROL.  
   
- Os usuários autorizados da permissão CONTROL em um banco de dados, como os membros do **db_owner** função de banco de dados fixa, podem conceder qualquer permissão em qualquer protegível no banco de dados.  
+ As entidades autorizadas com a permissão CONTROL em um banco de dados, como os membros da função de banco de dados fixa **db_owner**, podem conceder qualquer permissão para qualquer protegível do banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -187,7 +187,7 @@ GO
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revogando a permissão PERSONATE em um usuário de uma função de aplicativo  
  O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo `AccountsPayable17` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  
@@ -195,14 +195,14 @@ REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CONCEDER permissões de entidade de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [Negar permissões de Principal de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT de entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [Permissões DENY da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

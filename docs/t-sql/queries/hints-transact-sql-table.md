@@ -1,5 +1,5 @@
 ---
-title: Tabela dicas (Transact-SQL) | Microsoft Docs
+title: Dicas de tabela (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) - tabela
+# <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Dicas de tabela substituem o comportamento padrão do otimizador de consulta para a duração da instrução DML (linguagem) de manipulação de dados especificando um método de bloqueio, um ou mais índices, uma operação de processamento de consulta como uma busca de índice ou de exame de tabela ou outras opções. As dicas da tabela são especificadas na cláusula FROM da instrução DML e afetam apenas a tabela ou exibição referenciada nessa cláusula.  
+  As dicas de tabela substituem o comportamento padrão do otimizador de consulta durante a instrução DML (linguagem de manipulação de dados) ao especificar um método de bloqueio, um ou mais índices, uma operação de processamento de consulta, como uma verificação de tabela ou busca de índice, ou outras opções. As dicas da tabela são especificadas na cláusula FROM da instrução DML e afetam apenas a tabela ou exibição referenciada nessa cláusula.  
   
 > [!CAUTION]  
 >  Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente seleciona o melhor plano de execução para uma consulta, é recomendável que desenvolvedores e administradores de banco de dados experientes usem as dicas apenas como um último recurso.  
@@ -129,7 +129,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- COM **(** \<table_hint > **)** [[**,** ]... *n* ]  
+ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
  Com algumas exceções, há suporte para dicas de tabela na cláusula FROM somente quando elas são especificadas com a palavra-chave WITH. Dicas de tabela também devem ser especificadas com parênteses.  
   
 > [!IMPORTANT]  
@@ -155,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, consulte Comentários.  
   
- INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+ INDEX **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A alternativa INDEX = sintaxe especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
   
  Se existir um índice clusterizado, INDEX(0) forçará uma verificação de índice clusterizado e INDEX(1) forçará uma verificação ou busca de índice clusterizado. Na ausência de índices clusterizados, INDEX(0) forçará uma verificação de tabela e INDEX(1) será interpretado como um erro.  
@@ -168,29 +168,29 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  O número máximo de índices na dica de tabela é de 250 índices não clusterizados.  
   
  KEEPIDENTITY  
- É aplicável apenas em uma instrução INSERT quando a opção BULK for usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ É aplicável apenas em uma instrução INSERT quando a opção BULK é usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
  Especifica que o valor, ou valores, de identidade no arquivo de dados importado deve ser usado para a coluna de identidade. Se KEPIDENTITY não estiver especificado, os valores de identidade dessa coluna serão verificados, mas não importados, e o otimizador de consulta atribuirá automaticamente os valores com base nos valores de semente e de incremento especificados durante a criação da tabela.  
   
 > [!IMPORTANT]  
->  Se o arquivo de dados não contiver valores para a coluna de identidade na tabela ou na exibição e a coluna de identidade não for a última coluna da tabela, a coluna de identidade deverá ser ignorada. Para obter mais informações, consulte [usar um arquivo de formato para ignorar um campo de dados &#40; SQL Server &#41; ](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Se uma coluna de identidade for ignorada com êxito, o otimizador de consulta atribui automaticamente valores exclusivos para a coluna de identidade em linhas da tabela importada.  
+>  Se o arquivo de dados não contiver valores para a coluna de identidade na tabela ou na exibição e a coluna de identidade não for a última coluna da tabela, a coluna de identidade deverá ser ignorada. Para obter mais informações, confira [Usar um arquivo de formato para ignorar um campo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Se uma coluna de identidade for ignorada com êxito, o otimizador de consulta atribuirá valores exclusivos automaticamente para a coluna de identidade nas linhas da tabela importada.  
   
- Para obter um exemplo que usa essa dica em uma instrução INSERT... Selecione * FROM OPENROWSET, consulte [manter identidade valores quando dados em massa importando &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+ Para obter um exemplo que usa essa dica em uma instrução INSERT... SELECT * FROM OPENROWSET(BULK...), confira [Manter valores de identidade ao importar dados em massa &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
- Para obter informações sobre como verificar o valor de identidade para uma tabela, consulte [DBCC CHECKIDENT &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ Para obter informações de como verificar o valor de identidade de uma tabela, confira [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
  KEEPDEFAULTS  
- É aplicável apenas em uma instrução INSERT quando a opção BULK for usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ É aplicável apenas em uma instrução INSERT quando a opção BULK é usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
  Especifica a inserção de um valor padrão da coluna de tabela, se houver algum, em vez de NULL, se o registro de dados não tiver um valor para a coluna.  
   
- Para obter um exemplo que usa essa dica em uma instrução INSERT... Selecione * FROM OPENROWSET, consulte [manter valores nulos ou Use padrão valores de durante a importação em massa &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+ Para obter um exemplo que usa essa dica em uma instrução INSERT... SELECT * FROM OPENROWSET(BULK...), confira [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  Especifica que o otimizador de consulta usará apenas uma operação de busca de índice como o caminho de acesso aos dados na tabela ou exibição. A partir do SQL Server 2008 R2 SP1, parâmetros de índice também podem ser especificados. Nesse caso, o otimizador de consulta considera apenas as operações de busca de índice através do índice especificado, usando pelo menos as colunas de índice especificadas.  
   
  *index_value*  
- É o valor do nome ou ID do índice. A ID do índice 0 (heap) não pode ser especificada. Para retornar a ID ou o nome do índice, consulte o **sys. Indexes** exibição do catálogo.  
+ É o valor do nome ou ID do índice. A ID do índice 0 (heap) não pode ser especificada. Para retornar a ID ou o nome do índice, confira a exibição de catálogo **sys.indexes**.  
   
  *index_column_name*  
  É o nome da coluna de índice a ser incluída na operação de busca. Especificar FORCESEEK com parâmetros de índice é semelhante a usar FORCESEEK com uma dica INDEX. Entretanto, você pode adquirir maior controle sobre o caminho de acesso usado pelo otimizador de consulta especificando o índice a ser pesquisado e as colunas de índice a serem consideradas na operação de busca. O otimizador pode considerar colunas adicionais, caso necessário. Por exemplo, se um índice não clusterizado for especificado, o otimizador poderá optar por usar colunas de chave de índice clusterizado além das colunas especificadas.  
@@ -205,7 +205,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Ao usar a dica FORCESEEK (com ou sem parâmetros de índice), considere as diretrizes a seguir.  
   
--   A dica pode ser especificada como uma dica de tabela ou como uma dica de consulta. Para obter mais informações sobre dicas de consulta, consulte [dicas de consulta &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+-   A dica pode ser especificada como uma dica de tabela ou como uma dica de consulta. Para obter mais informações sobre dicas de consulta, confira [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 -   Para aplicar FORCESEEK a uma exibição indexada, a dica NOEXPAND também deve ser especificada.  
   
@@ -229,7 +229,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   As colunas que não constam na definição de chave de índice não podem ser especificadas. Por exemplo, em um índice não clusterizado, apenas as colunas de chave de índice definidas podem ser especificadas. As colunas de chave clusterizadas que são incluídas automaticamente no índice não podem ser especificadas, mas podem ser usadas pelo otimizador.  
   
--   Um índice columnstore xVelocity com otimização de memória não pode ser especificado como parâmetro de índice. Erro 366 será retornado.  
+-   Um índice columnstore xVelocity com otimização de memória não pode ser especificado como parâmetro de índice. O erro 366 é retornado.  
   
 -   A modificação da definição de índice (por exemplo, adicionando ou removendo colunas) talvez exija modificações nas consultas que fazem referência a esse índice.  
   
@@ -265,16 +265,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  É equivalente a SERIALIZABLE. Para obter mais informações, consulte SERIALIZABLE posteriormente neste tópico. HOLDLOCK aplica-se apenas à tabela ou exibição para a qual está especificada e somente durante a transação definida pela instrução usada. HOLDLOCK não pode ser usada em uma instrução SELECT que inclua a opção FOR BROWSE.  
   
  IGNORE_CONSTRAINTS  
- É aplicável apenas em uma instrução INSERT quando a opção BULK for usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ É aplicável apenas em uma instrução INSERT quando a opção BULK é usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
- Especifica que qualquer restrição da tabela é ignorada pela operação de importação em massa. Por padrão, INSERT verifica [restrições Unique e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md) e [primária e restrições de chave estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md). Quando a opção IGNORE_CONSTRAINTS for especificada para uma operação de importação em massa, INSERT deverá ignorar essas restrições em uma tabela de destino. Observe que não é possível desabilitar restrições UNIQUE, PRIMARY KEY ou NOT NULL.  
+ Especifica que qualquer restrição da tabela é ignorada pela operação de importação em massa. Por padrão, INSERT verifica [Restrições exclusivas e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md) e [Restrições primárias e de chave estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md). Quando a opção IGNORE_CONSTRAINTS for especificada para uma operação de importação em massa, INSERT deverá ignorar essas restrições em uma tabela de destino. Observe que não é possível desabilitar restrições UNIQUE, PRIMARY KEY ou NOT NULL.  
   
  Convém desabilitar restrições CHECK e FOREIGN KEY se os dados de entrada contiverem linhas que violam restrições. Ao desabilitar as restrições CHECK e FOREIGN KEY, será possível importar os dados e usar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para limpar os dados.  
   
- No entanto, quando as restrições CHECK e FOREIGN KEY são ignoradas, cada restrição ignorada na tabela é marcada como **is_not_trusted** no [sys. CHECK_CONSTRAINTS](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) ou [foreign_keys ](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) exibição do catálogo após a operação. Em algum ponto, verifique as restrições de toda a tabela. Se a tabela não estiver vazia antes da operação de importação em massa, o custo de revalidação da restrição poderá exceder o custo da aplicação das restrições CHECK e FOREIGN KEY aos dados incrementais.  
+ No entanto, quando as restrições FOREIGN KEY e CHECK são ignoradas, cada restrição ignorada na tabela é marcada como **is_not_trusted** na exibição de catálogo [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) ou [sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) após a operação. Em algum ponto, verifique as restrições de toda a tabela. Se a tabela não estiver vazia antes da operação de importação em massa, o custo de revalidação da restrição poderá exceder o custo da aplicação das restrições CHECK e FOREIGN KEY aos dados incrementais.  
   
  IGNORE_TRIGGERS  
- É aplicável apenas em uma instrução INSERT quando a opção BULK for usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ É aplicável apenas em uma instrução INSERT quando a opção BULK é usada com [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
  Especifica que qualquer gatilho definido na tabela será ignorado pela operação de importação em massa. Por padrão, INSERT aplica gatilhos.  
   
@@ -293,16 +293,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Usa bloqueios de página onde bloqueios individuais são usados normalmente em linhas ou chaves ou onde um único bloqueio de tabela é usado normalmente. Por padrão, usa o modo de bloqueio adequado para a operação. Quando especificados em transações que operam no nível de isolamento de SNAPSHOT, os bloqueios de página não são usados a menos que PAGLOCK seja combinado com outras dicas de tabela que requerem bloqueios, como UPDLOCK e HOLDLOCK.  
   
  READCOMMITTED  
- Especifica que as operações de leitura obedecem a regras do nível de isolamento READ COMMITTED usando bloqueio ou controle de versão de linha. Se a opção READ_COMMITTED_SNAPSHOT do banco de dados for OFF, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá adquirir bloqueios compartilhados conforme os dados forem lidos e liberará esses bloqueios quando a operação de leitura estiver concluída. Se a opção READ_COMMITTED_SNAPSHOT do banco de dados for ON, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não adquirirá bloqueios e usará controle de versão de linha. Para obter mais informações sobre níveis de isolamento, consulte [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Especifica que as operações de leitura obedecem a regras do nível de isolamento READ COMMITTED usando bloqueio ou controle de versão de linha. Se a opção READ_COMMITTED_SNAPSHOT do banco de dados for OFF, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá adquirir bloqueios compartilhados conforme os dados forem lidos e liberará esses bloqueios quando a operação de leitura estiver concluída. Se a opção READ_COMMITTED_SNAPSHOT do banco de dados for ON, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não adquirirá bloqueios e usará controle de versão de linha. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
 >  Para instruções UPDATE ou DELETE: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  READCOMMITTEDLOCK  
- Especifica que operações de leitura obedecem às regras do nível de isolamento READ COMMITTED usando bloqueio. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] adquire bloqueios compartilhados conforme os dados são lidos e libera esses bloqueios quando a operação de leitura é concluída, independentemente da configuração da opção READ_COMMITTED_SNAPSHOT do banco de dados. Para obter mais informações sobre níveis de isolamento, consulte [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Esta dica não pode ser especificada na tabela de destino de uma instrução INSERT; o erro 4140 é retornado.  
+ Especifica que operações de leitura obedecem às regras do nível de isolamento READ COMMITTED usando bloqueio. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] adquire bloqueios compartilhados conforme os dados são lidos e libera esses bloqueios quando a operação de leitura é concluída, independentemente da configuração da opção READ_COMMITTED_SNAPSHOT do banco de dados. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Esta dica não pode ser especificada na tabela de destino de uma instrução INSERT; o erro 4140 é retornado.  
   
  READPAST  
- Especifica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não lê linhas bloqueadas por outras transações. Quando READPAST for especificado, os bloqueios de nível de linha são ignorados, mas bloqueios em nível de página não serão ignorados. Ou seja, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] ignorará as linhas em vez de bloquear a transação atual até que os bloqueios sejam liberados. Por exemplo, suponhamos que a tabela `T1` contenha uma única coluna de inteiros com os valores 1, 2, 3, 4, 5. Se a transação A alterar o valor de 3 para 8, mas ainda não foi confirmada, SELECT * FROM T1 (READPAST) produzirá os valores 1, 2, 4, 5. READPAST é usado principalmente para reduzir a contenção de bloqueio ao implementar uma fila de trabalho que usa um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. Um queue reader usando READPAST ignora entradas da fila bloqueadas por outras transações, passando para a próxima entrada da fila, sem precisar esperar até que outras transações liberem seus bloqueios.  
+ Especifica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não lê linhas bloqueadas por outras transações. Quando READPAST é especificado, os bloqueios no nível da linha são ignorados, mas os bloqueios no nível da página não são. Ou seja, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] ignorará as linhas em vez de bloquear a transação atual até que os bloqueios sejam liberados. Por exemplo, suponhamos que a tabela `T1` contenha uma única coluna de inteiros com os valores 1, 2, 3, 4, 5. Se a transação A alterar o valor de 3 para 8, mas ainda não foi confirmada, SELECT * FROM T1 (READPAST) produzirá os valores 1, 2, 4, 5. READPAST é usado principalmente para reduzir a contenção de bloqueio ao implementar uma fila de trabalho que usa uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um queue reader usando READPAST ignora entradas da fila bloqueadas por outras transações, passando para a próxima entrada da fila, sem precisar esperar até que outras transações liberem seus bloqueios.  
   
  READPAST pode ser especificado para qualquer tabela referenciada em uma instrução UPDATE ou DELETE e em qualquer tabela referenciada em uma cláusula FROM. Quando especificado em uma instrução UPDATE, READPAST será aplicado apenas ao ler dados para identificar quais registros atualizar, independentemente de onde na instrução ele foi especificado. READPAST não pode ser especificado para tabelas na cláusula INTO de uma instrução INSERT. Operações de atualização ou de exclusão que usam READPAST podem ser bloqueadas ao ler chaves estrangeiras ou exibições indexadas ou ao modificar índices secundários.  
   
@@ -332,24 +332,24 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   O nível de isolamento SNAPSHOT.  
   
- Para obter mais informações sobre níveis de isolamento, consulte [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
 >  Se você receber a mensagem de erro 601 ao especificar READUNCOMMITTED, resolva-a como se fosse um erro de deadlock (1205) e envie novamente a instrução.  
   
  REPEATABLEREAD  
- Especifica que um exame é executado com a mesma semântica de bloqueio de uma transação que está sendo executada no nível de isolamento SERIALIZABLE. Para obter mais informações sobre níveis de isolamento, consulte [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Especifica que um exame é executado com a mesma semântica de bloqueio de uma transação que está sendo executada no nível de isolamento SERIALIZABLE. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  ROWLOCK  
  Especifica que bloqueios de linha serão usados quando os bloqueios de página ou de tabela forem usados normalmente. Quando especificados em transações que operam no nível de isolamento SNAPSHOT, os bloqueios de linha não serão usados a menos que ROWLOCK seja combinado com outras dicas de tabela que requerem bloqueios, como UPDLOCK e HOLDLOCK.  
   
  SERIALIZABLE  
- É equivalente a HOLDLOCK. Torna bloqueios compartilhados mais restritivos ao mantê-los até que uma transação seja concluída, em vez de liberar o bloqueio compartilhado assim que a tabela ou página de dados requerida não seja mais necessária, quer a transação tenha sido concluída ou não. A verificação é executada com a mesma semântica da transação que está sendo executada no nível de isolamento SERIALIZABLE. Para obter mais informações sobre níveis de isolamento, consulte [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ É equivalente a HOLDLOCK. Torna bloqueios compartilhados mais restritivos ao mantê-los até que uma transação seja concluída, em vez de liberar o bloqueio compartilhado assim que a tabela ou página de dados requerida não seja mais necessária, quer a transação tenha sido concluída ou não. A verificação é executada com a mesma semântica da transação que está sendo executada no nível de isolamento SERIALIZABLE. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  SNAPSHOT  
 **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- A tabela com otimização de memória é acessada no isolamento SNAPSHOT. O SNAPSHOT pode ser usado apenas com tabelas com otimização de memória (não com tabelas com base em disco). Para obter mais informações, consulte [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+ A tabela com otimização de memória é acessada no isolamento SNAPSHOT. O SNAPSHOT pode ser usado apenas com tabelas com otimização de memória (não com tabelas com base em disco). Para obter mais informações, confira [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 ```  
 SELECT * FROM dbo.Customers AS c   
@@ -361,7 +361,7 @@ LEFT JOIN dbo.[Order History] AS oh
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica o número máximo de células para usar para fazer um mosaico de geometria ou objeto de geografia. *número* é um valor entre 1 e 8192.  
+ Especifica o número máximo de células para usar para fazer um mosaico de geometria ou objeto de geografia. *number* é um valor entre 1 e 8192.  
   
  Esta opção permite ajustar o tempo de execução de consulta ajustando o intercâmbio entre o tempo de execução de filtro primário e secundário. Um número maior reduz o tempo de execução de filtro secundário, mas aumenta hora de filtro de execução primária e um número menor diminui tempo de execução de filtro primário, mas aumenta a execução de filtro secundária. Para dados espaciais mais densos, um número mais alto deve gerar um tempo de execução mais rápido dando uma aproximação melhor com o filtro primário e reduzindo o tempo de execução de filtro secundário. Para dados mais esparsos, um número inferior diminuirá o tempo de execução de filtro primário.  
   
@@ -370,9 +370,9 @@ LEFT JOIN dbo.[Order History] AS oh
  TABLOCK  
  Especifica que o bloqueio adquirido seja aplicado no nível de tabela. O tipo de bloqueio que é adquirido depende da instrução que está sendo executada. Por exemplo, uma instrução SELECT pode adquirir um bloqueio compartilhado. Ao especificar TABLOCK, o bloqueio compartilhado é aplicado à tabela inteira, e não no nível de linha ou página. Se HOLDLOCK também for especificado, o bloqueio de tabela será mantido até o final da transação.  
   
- Ao importar dados para um heap usando INSERT INTO \<target_table > selecione \<colunas > FROM \<source_table > instrução, você pode habilitar log otimizado e bloqueio da instrução, especificando o Dica TABLOCK para a tabela de destino. Além disso, o modelo de recuperação do banco de dados deve ser definido como simples ou bulk-logged. Para obter mais informações, consulte [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+ Ao importar dados para um heap usando a instrução \<target_table> SELECT \<columns> FROM \<source_table>, você pode habilitar o registro em log e o bloqueio otimizados da instrução, especificando a dica TABLOCK para a tabela de destino. Além disso, o modelo de recuperação do banco de dados deve ser definido como simples ou bulk-logged. Para obter mais informações, consulte [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
- Quando usado com o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) provedor de conjunto de linhas em massa para importar dados para uma tabela, TABLOCK permitirá que vários clientes carreguem dados simultaneamente na tabela de destino com log otimizado e bloqueio. Para obter mais informações, consulte [pré-requisitos para log mínimo em importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+ Quando usado com o provedor de conjuntos de linhas em massa [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) para importar dados em uma tabela, TABLOCK permite que vários clientes carreguem dados simultaneamente na tabela de destino com o registro em log e o bloqueio otimizados. Para obter mais informações, confira [Pré-requisitos para registro em log mínimo em importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
  TABLOCKX  
  Especifica que um bloqueio exclusivo será usado na tabela.  
@@ -423,26 +423,26 @@ GO
  O otimizador de consulta não considerará uma dica de índice se as opções SET não tiverem os valores necessários para índices filtrados. Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Usando NOEXPAND  
- NOEXPAND aplica-se somente ao *exibições indexadas*. Uma exibição indexada é uma exibição com um índice clusterizado exclusivo criado nela. Se uma consulta tiver referências a colunas presentes em uma exibição indexada e em tabelas base, e o otimizador de consulta determinar que o uso da exibição indexada oferece o melhor método para a execução da consulta, o otimizador de consulta usará o índice na exibição. Essa funcionalidade é chamada *correspondência de exibição indexada*. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, o uso automático de uma exibição indexada pelo otimizador de consulta tem suporte apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ NOEXPAND aplica-se somente a *exibições indexadas*. Uma exibição indexada é uma exibição com um índice clusterizado exclusivo criado nela. Se uma consulta tiver referências a colunas presentes em uma exibição indexada e em tabelas base, e o otimizador de consulta determinar que o uso da exibição indexada oferece o melhor método para a execução da consulta, o otimizador de consulta usará o índice na exibição. Essa funcionalidade é chamada de *correspondência de exibição indexada*. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, o uso automático de uma exibição indexada pelo otimizador de consulta era compatível apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  No entanto, para que o otimizador considere exibições indexadas para correspondência ou uso de uma exibição indexada que é referenciada com a dica NOEXPAND, as seguintes opções SET devem ser definidas como ON.  
  
 > [!NOTE]  
->  Banco de dados do SQL Azure oferece suporte ao uso automático de exibições indexadas sem especificar a dica NOEXPAND.
+>  O Banco de Dados SQL do Azure é compatível com o automático de exibições indexadas sem especificar a dica NOEXPAND.
   
 ||||  
 |-|-|-|  
 |ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
 |ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
   
- <sup>1</sup> ARITHABORT é definido implicitamente como ON quando ANSI_WARNINGS for definido como ON. Portanto, você não precisa ajustar essa configuração manualmente.  
+ <sup>1</sup> ARITHABORT é definido implicitamente como ON quando ANSI_WARNINGS é definido como ON. Portanto, você não precisa ajustar essa configuração manualmente.  
   
  Além disso, a opção NUMERIC_ROUNDABORT deve ser definida como OFF.  
   
  Para forçar o otimizador a usar um índice para uma exibição indexada, especifique a opção NOEXPAND. Essa dica poderá ser usada apenas se a exibição também estiver nomeada na consulta. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma dica para forçar o uso de uma exibição indexada específica em uma consulta que não nomeie a exibição diretamente na cláusula FROM. No entanto, o otimizador de consulta considera o uso de exibições indexadas, mesmo que elas não sejam referenciadas diretamente na consulta.  
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Usando uma dica de tabela como uma dica de consulta  
- *Dicas de tabela* também pode ser especificado como uma dica de consulta usando a cláusula OPTION (dica de tabela). É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md). Para consultas ad hoc, especifique essas dicas apenas como dicas de tabela. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ As *dicas de tabela* também podem ser especificadas como dicas de consulta usando a cláusula OPTION (TABLE HINT). É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md). Para consultas ad hoc, especifique essas dicas apenas como dicas de tabela. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Permissões  
  As dicas KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS requerem permissões ALTER na tabela.  
@@ -501,7 +501,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Query Hints &#40;Transact-SQL&#41; [Dicas de consulta (Transact-SQL)]](../../t-sql/queries/hints-transact-sql-query.md)  

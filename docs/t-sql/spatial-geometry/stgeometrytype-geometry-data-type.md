@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o nome do tipo Open Geospatial Consortium (OGC) representado por um **geometria** instância.
+Retorna o nome do tipo do OGC (Open Geospatial Consortium) representado por uma instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ Retorna o nome do tipo Open Geospatial Consortium (OGC) representado por um **ge
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **nvarchar (4000)**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(4000)**  
   
- Tipo de retorno CLR: **SqlString**  
+ Tipo de retorno do CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
- Os nomes de tipo OGC que podem ser retornados por `STGeometryType()` são **ponto**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon, CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, e  **MultiPolygon**.  
+ Os nomes de tipo do OGC que podem ser retornados por `STGeometryType()` são **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polígono, CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString** e  **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `Polygon` e usa `STGeometryType()` para confirmar que este é um polígono.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))', 0);
 SELECT @g.STGeometryType();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

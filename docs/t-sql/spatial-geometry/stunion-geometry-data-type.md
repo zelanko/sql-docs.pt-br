@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna um objeto que representa a união de uma **geometria** instância com outra **geometria** instância.
+Retorna um objeto que representa a união de uma instância de **geometry** com outra instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ Retorna um objeto que representa a união de uma **geometria** instância com ou
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- É outra **geometria** instância para formar uma união com a instância na qual `STUnion()` está sendo invocado.  
+ É outra instância de **geometry** para formar uma união com a instância na qual `STUnion()` está sendo invocado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
+ Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -79,7 +79,7 @@ SELECT @g.STUnion(@h).ToString();
   
  `STUnion()` retorna um resultado que contém um segmento de arco circular porque a instância que invocou `STUnion()` contém um segmento de arco circular.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

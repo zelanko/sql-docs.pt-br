@@ -54,7 +54,7 @@ SET STATISTICS XML { ON | OFF }
   
  Quando SET STATISTICS XML estiver ON (acionado), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna informações de execução para cada instrução, depois de executá-las. Depois que essa opção estiver definida como ON, as informações sobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes serão retornadas até que a opção esteja definida como OFF. Note que SET STATISTICS XML não precisa ser a única instrução em um lote.  
   
- SET STATISTICS XML Retorna a saída como **nvarchar (max)** para aplicativos, como o **sqlcmd** utilitário, onde a saída XML é subsequentemente usada por outras ferramentas para exibir e processar o plano de consulta informações.  
+ SET STATISTICS XML retorna a saída como **nvarchar(max)** para aplicativos, como o utilitário **sqlcmd**, em que a saída XML é posteriormente usada por outras ferramentas para exibir e processar as informações do plano de consulta.  
   
  SET STATISTICS XML retorna informações como um conjunto de documentos XML. Todas as instruções depois da instrução STATISTICS XML ON serão refletidas na saída por um único documento. Cada documento conterá o texto das instruções, seguido dos detalhes das etapas da execução. A saída mostra informações de tempo de execução como os custos, índices acessados e tipos de operações executadas, ordem de junção, o número de horas de execução de uma operação física, o número de linhas que cada operador físico produziu, e mais.  
   
@@ -62,12 +62,12 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- O esquema do plano de execução também podem ser encontrado em [este site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ O esquema do plano de execução também pode ser encontrado [neste site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  SET STATISTICS PROFILE e SET STATISTICS XML são contrapartes um do outro. O primeiro produz saída textual; o último produz saída XML. Em versões futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], novas informações do plano de execução de consultas serão exibidas apenas com a instrução SET STATISTICS XML, e não com a instrução SET STATISTICS PROFILE.  
   
 > [!NOTE]  
->  Se **incluir plano de execução real** está selecionado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], essa opção SET produz saída de Showplan XML. Limpar o **incluir plano de execução real** botão antes de usar essa opção SET.  
+>  Se **Incluir Plano de Execução Real** estiver selecionado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], essa opção SET não produzirá a saída do plano de execução XML. Desmarque o botão **Incluir Plano de Execução Real** antes de usar esta opção SET.  
   
 ## <a name="permissions"></a>Permissões  
  Para usar SET STATISTICS XML e exibir a saída, os usuários devem ter as seguintes permissões:  
@@ -79,7 +79,7 @@ SET STATISTICS XML { ON | OFF }
  Para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que não produzem conjuntos de resultados STATISTICS XML, somente serão necessárias as permissões apropriadas para executar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que produzem conjuntos de resultados STATISTICS XML, certifique-se de que ambas, a permissão de execução de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] e a permissão SHOWPLAN sejam bem-sucedidas, ou a instrução de execução [!INCLUDE[tsql](../../includes/tsql-md.md)] será anulada e nenhuma informação Showplan será gerada.  
   
 ## <a name="examples"></a>Exemplos  
- As duas instruções a seguir usam as configurações SET STATISTICS XML para mostrar o modo como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analisa e otimiza o uso de índices em consultas. A primeira consulta usa o operador de comparação Igual a (=), na cláusula WHERE, em uma coluna indexada. A segunda consulta usa o operador LIKE na cláusula WHERE. Isto força o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar uma verificação de índice clusterizado para localizar os dados que atendem à condição da cláusula WHERE. Os valores de **EstimateRows** e o **EstimatedTotalSubtreeCost** atributos são menores para a primeira consulta indexada, indicando que ela foi processada muito mais rapidez e usou menos recursos que o consulta não indexada.  
+ As duas instruções a seguir usam as configurações SET STATISTICS XML para mostrar o modo como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analisa e otimiza o uso de índices em consultas. A primeira consulta usa o operador de comparação Igual a (=), na cláusula WHERE, em uma coluna indexada. A segunda consulta usa o operador LIKE na cláusula WHERE. Isto força o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar uma verificação de índice clusterizado para localizar os dados que atendem à condição da cláusula WHERE. Os valores nos atributos **EstimateRows** e **EstimatedTotalSubtreeCost** são menores para a primeira consulta indexada, indicando que ela foi processada com maior rapidez e usou menos recursos que a consulta não indexada.  
   
 ```  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ SET STATISTICS XML OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)  
   

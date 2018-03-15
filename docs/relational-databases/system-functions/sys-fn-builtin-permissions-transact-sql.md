@@ -34,16 +34,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma descrição da hierarquia de permissões interna do servidor. `sys.fn_builtin_permissions`só pode ser chamado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e ela retorna todas as permissões, independentemente de se eles tiverem suporte na plataforma atual. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo permissões em nível de servidor não podem ser concedidas no banco de dados SQL. Para obter informações sobre quais plataformas oferecem suporte a cada permissão, consulte [permissões &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Retorna uma descrição da hierarquia de permissões interna do servidor. `sys.fn_builtin_permissions` só pode ser chamado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e ela retorna todas as permissões, independentemente de se eles tiverem suporte na plataforma atual. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo permissões em nível de servidor não podem ser concedidas no banco de dados SQL. Para obter informações sobre quais plataformas oferecem suporte a cada permissão, consulte [permissões &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -340,7 +340,7 @@ O gráfico a seguir mostra as permissões e as relações entre elas. Algumas da
 ![Permissões do Mecanismo de Banco de Dados](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> Como parte deste tópico, o cartaz é pequeno demais para ser lido. Baixe o Database Engine Permissions Poster (Cartaz de Permissões de Mecanismo de Banco de Dados) em [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+> Como parte deste tópico, o cartaz é pequeno demais para ser lido. Baixe o pôster de permissões de mecanismo de banco de dados de [ https://aka.ms/sql-permissions-poster ](https://aka.ms/sql-permissions-poster).  
    
   
 ## <a name="permissions"></a>Permissões  

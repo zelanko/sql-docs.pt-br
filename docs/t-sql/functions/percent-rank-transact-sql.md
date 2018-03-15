@@ -46,8 +46,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições para o qual a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. O *order_by_clause* é necessário. O \<cláusula rows ou range > da OVER sintaxe não pode ser especificada em uma função PERCENT_RANK.  Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatória. A \<cláusula rows ou range> da sintaxe OVER não pode ser especificada em uma função PERCENT_RANK.  Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float(53)**  
@@ -97,7 +97,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CUME_DIST &#40; Transact-SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [CUME_DIST &#40;Transact-SQL&#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
   
   

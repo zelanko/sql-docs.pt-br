@@ -43,34 +43,34 @@ DROP EXTERNAL LIBRARY library_name
 
 **library_name**
 
-Especifica o nome de uma biblioteca de pacote existente.
+Especifica o nome de uma biblioteca de pacotes existente.
 
-Bibliotecas de escopo serão o usuário. Ou seja, nomes de biblioteca são considerados exclusivos dentro do contexto de um usuário específico ou um proprietário.
+As bibliotecas estão no escopo do usuário. Ou seja, os nomes de biblioteca são considerados exclusivos no contexto de um usuário ou um proprietário específico.
 
 **owner_name**
 
-Especifica o nome do usuário ou função que possui a biblioteca externa.
+Especifica o nome do usuário ou da função que é a proprietária da biblioteca externa.
 
 Os proprietários de banco de dados podem excluir bibliotecas criadas por outros usuários.
 
-### <a name="return-values"></a>Valores de retorno
+### <a name="return-values"></a>Valores retornados
 
-Uma mensagem informativa será retornada se a instrução foi bem-sucedida.
+Uma mensagem informativa é retornada se a instrução foi bem-sucedida.
 
 ## <a name="remarks"></a>Remarks
 
-Ao contrário de outras `DROP` instruções no SQL Server, essa instrução oferece suporte à especificação de uma cláusula de autorização opcional. Isso permite que **dbo** ou os usuários a **db_owner** função para remover uma biblioteca de pacote carregado por um usuário regular no banco de dados.
+Ao contrário de outras instruções `DROP` no SQL Server, essa instrução dá suporte à especificação de uma cláusula de autorização opcional. Isso permite que o **dbo** ou os usuários na função **db_owner** removam uma biblioteca de pacote carregada por um usuário normal no banco de dados.
 
 ## <a name="examples"></a>Exemplos
 
-Adicionar um pacote R personalizado, chamado `customPackage`, um banco de dados:
+Adicione um pacote do R personalizado, chamado `customPackage`, a um banco de dados:
 
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
 FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Excluir o `customPackage` biblioteca.
+Exclua a biblioteca `customPackage`.
 
 ```sql
 DROP EXTERNAL LIBRARY customPackage <user_name>;

@@ -40,35 +40,35 @@ ms.lasthandoff: 11/21/2017
 
 Tipos de dados fixos e de comprimento variável para armazenar dados binários e de caracteres não Unicode e Unicode grandes. Dados Unicode usam o conjunto de caracteres UNICODE UCS-2.
   
->**IMPORTANTE:**  **ntext**, **texto**, e **imagem** tipos de dados serão removidos em uma versão futura do SQL Server. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
+>**IMPORTANTE:**  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do SQL Server. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
   
 ## <a name="arguments"></a>Argumentos  
 **ntext**  
-Dados Unicode de comprimento variável com um comprimento máximo de cadeia de caracteres de 2^30 - 1 (1.073.741.823) bytes. O tamanho de armazenamento, em bytes, é duas vezes o comprimento da cadeia de caracteres inserido. O sinônimo ISO para **ntext** é **texto national**.
+Dados Unicode de comprimento variável com um comprimento máximo de cadeia de caracteres de 2^30 - 1 (1.073.741.823) bytes. O tamanho de armazenamento, em bytes, é duas vezes o comprimento da cadeia de caracteres inserido. O sinônimo ISO de **ntext** é **national text**.
   
-**texto**  
+**text**  
 Dados não Unicode de comprimento variável na página de código do servidor e com um comprimento máximo de cadeia de caracteres de 2^31-1 (2.147.483.647). Quando a página de código de servidor usar caracteres de dois bytes, o armazenamento ainda será de 2.147.483.647 bytes. Dependendo da cadeia de caracteres, o tamanho do armazenamento pode ser menor que 2.147.483.647 bytes.
   
 **imagem**  
 Dados binários do comprimento variável de 0 a 2^31-1 (2.147.483.647) bytes.
   
-## <a name="remarks"></a>Comentários  
-As funções e instruções a seguir podem ser usadas com **ntext**, **texto**, ou **imagem** dados.
+## <a name="remarks"></a>Remarks  
+As funções e instruções a seguir podem ser usadas com os dados **ntext**, **text** ou **image**.
   
 |Funções|Instruções|  
 |---|---|
-|[DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)|  
-|[PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)|[Definir tamanho do texto &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)|  
-|[Subcadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)|[UPDATETEXT &#40; Transact-SQL &#41;](../../t-sql/queries/updatetext-transact-sql.md)|  
-|[TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)|  
-|[TEXTVALID &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
+|[DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)|  
+|[PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)|[SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)|  
+|[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)|[UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)|  
+|[TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)|  
+|[TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
   
 ## <a name="see-also"></a>Consulte também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)  
+[LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
 

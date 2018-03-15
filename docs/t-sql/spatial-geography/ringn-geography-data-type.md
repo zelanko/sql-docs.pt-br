@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o anel especificado do **geografia** instância: `1 ≤ n ≤ NumRings()`.  
+  Retorna o anel especificado da instância de **geography**: `1 ≤ n ≤ NumRings()`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É um **int** expressão entre 1 e o número de anéis em uma **polígono** instância.  
+ É uma expressão **int** entre 1 e o número de anéis em uma instância de **polygon**.  
   
 ## <a name="return-value"></a>Valor de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Se o valor do índice de anéis  **n**  é menor que 1, este método lança um **ArgumentOutOfRangeException.** O valor de índice de anéis deve ser maior que ou igual a 1 e deve ser menor ou igual ao número retornado por `NumRings()`.  
+ Se o valor do índice de anéis **n** é menor que 1, esse método gera uma **ArgumentOutOfRangeException.** O valor do índice de anéis deve ser maior ou igual a 1 e deve ser menor ou igual ao número retornado por `NumRings()`.  
   
 ## <a name="examples"></a>Exemplos  
  Esse exemplo cria uma instância de `Polygon` com dois anéis e retorna o segundo anel.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   

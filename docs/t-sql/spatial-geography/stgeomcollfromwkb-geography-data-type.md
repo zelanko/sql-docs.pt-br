@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **GeometryCollection**instância de uma representação do Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Retorna uma instância de **GeometryCollection** de uma representação WKB (Well-Known Binary) do OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +45,20 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_geometrycollection*  
- É a representação WKB do **GeometryCollection** instância que você deseja retornar. *WKB_geometrycollection* é um **varbinary (max)** expressão.  
+ É a representação WKB da instância de **GeometryCollection** que você deseja retornar. *WKB_geometrycollection* é uma expressão **varbinary(max)**.  
   
  *SRID*  
- É um **int** SRID (ID) de fazer referência a expressão que representa o espaciais a **GeometryCollection** instância que você deseja retornar.  
+ É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **GeometryCollection** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- O tipo OGC do **geografia** instância retornada por STGeomCollFromWKB() é definida como **GeometryCollection**, **MultiPolygon**, **MultiLineString**, ou **MultiPoint**, dependendo da entrada WKB correspondente.  
+ O tipo do OGC da instância de **geography** retornado por STGeomCollFromWKB() é definido como **GeometryCollection**, **MultiPolygon**, **MultiLineString** ou **MultiPoint**, dependendo da entrada WKB correspondente.  
   
- Este método lança um **FormatException** exceção se a entrada não for bem formatada.  
+ Esse método gerará uma **FormatException** se a entrada não estiver bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STGeomCollFromWKB()` para criar uma instância `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STGeomCollFromWKB(0x0107000000020000000101000000759318045696
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

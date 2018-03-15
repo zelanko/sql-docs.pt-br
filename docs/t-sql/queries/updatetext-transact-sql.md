@@ -37,10 +37,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Atualiza uma existente **texto**, **ntext**, ou **imagem** campo. Use UPDATETEXT para alterar apenas uma parte de um **texto**, **ntext**, ou **imagem** coluna em vigor. Use WRITETEXT para atualizar e substituir um todo **texto**, **ntext**, ou **imagem** campo.  
+  Atualiza um campo **text**, **ntext** ou **image** existente. Use UPDATETEXT para alterar apenas uma parte de uma coluna **text**, **ntext** ou **image** em vigor. Use WRITETEXT para atualizar e substituir todo um campo **text**, **ntext** ou **image**.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use os tipos de dados de valor grande e o **.** A cláusula de gravação a [atualização](../../t-sql/queries/update-transact-sql.md) instrução em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use os tipos de dados de valor grande e a cláusula **.**WRITE da instrução [UPDATE](../../t-sql/queries/update-transact-sql.md) nesse caso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,46 +64,46 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 >  Nós recomendamos que a opção de BULK não seja usada em aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser alterada ou removida em uma futura versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *table_name* **.** *dest_column_name*  
- É o nome da tabela e **texto**, **ntext**, ou **imagem** coluna a ser atualizada. Nomes de tabela e nomes de coluna devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
+ É o nome da tabela e da coluna **text**, **ntext** ou **image** a ser atualizado. Os nomes de tabela e de coluna devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
   
  *dest_text_ptr*  
- Um ponteiro de texto valor (retornado pela função TEXTPTR) que aponta para o **texto**, **ntext**, ou **imagem** dados a serem atualizados. *dest_text_ptr* devem ser **binário (**16**)**.  
+ É um valor de ponteiro de texto (retornado pela função TEXTPTR) que aponta para os dados **text**, **ntext** ou **image** a serem atualizados. *dest_text_ptr* deve ser **binary(**16**)**.  
   
  *insert_offset*  
- É a posição inicial baseada em zero para a atualização. Para **texto** ou **imagem** colunas, *insert_offset* é o número de bytes a serem ignorados desde o início da coluna existente antes de inserir novos dados. Para **ntext** colunas, *insert_offset*é o número de caracteres (cada **ntext** caractere usa 2 bytes). Existente **texto**, **ntext**, ou **imagem** dados que começam nessa posição inicial com base em zero são deslocados à direita para liberar espaço para novos dados. Um valor de 0 insere os novos dados no início dos dados existentes. Um valor NULL acrescenta os novos dados ao valor dos dados existentes.  
+ É a posição inicial baseada em zero para a atualização. Para colunas **text** ou **image**, *insert_offset* é o número de bytes a ser ignorado do início da coluna existente antes de inserir novos dados. Para colunas **ntext**, *insert_offset* é o número de caracteres (cada caractere **ntext** usa 2 bytes). Os dados **text**, **ntext** ou **image** existentes que começam nessa posição inicial baseada em zero são deslocados para a direita, dando lugar aos novos dados. Um valor de 0 insere os novos dados no início dos dados existentes. Um valor NULL acrescenta os novos dados ao valor dos dados existentes.  
   
  *delete_length*  
- É o comprimento dos dados a serem excluídos do existente **texto**, **ntext**, ou **imagem** coluna, iniciando no *insert_offset* posição. O *delete_length*valor é especificado em bytes para **texto** e **imagem** colunas e em caracteres para **ntext** colunas. Cada **ntext** caractere usa 2 bytes. Um valor de 0 não exclui nenhum dado. Um valor NULL exclui todos os dados do *insert_offset* posição final da existente **texto** ou **imagem** coluna.  
+ É o tamanho dos dados a serem excluídos da coluna **text**, **ntext** ou **image** existente, começando na posição *insert_offset*. O valor de *delete_length* é especificado em bytes para colunas **text** e **image** e em caracteres para colunas **ntext**. Cada caractere **ntext** usa 2 bytes. Um valor de 0 não exclui nenhum dado. Um valor NULL exclui todos os dados da posição *insert_offset* até o final da coluna **text** ou **image** existente.  
   
  WITH LOG  
  A criação de log é determinada pelo modelo de recuperação em vigor para o banco de dados.  
   
  *inserted_data*  
- Os dados a serem inseridos na existente **texto**, **ntext**, ou **imagem** coluna no *insert_offset* local. Este é um único **char**, **nchar**, **varchar**, **nvarchar**, **binário**,  **varbinary**, **texto**, **ntext**, ou **imagem** valor. *inserted_data* pode ser um literal ou uma variável.  
+ São os dados a serem inseridos na coluna **text**, **ntext** ou **image** existente no local *insert_offset*. Esse é um único valor **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** ou **image**. *inserted_data* pode ser um literal ou uma variável.  
   
  *table_name.src_column_name*  
- É o nome da tabela e **texto**, **ntext**, ou **imagem** coluna usada como a fonte de dados inseridos. Os nomes de tabela e de coluna devem estar em conformidade com as regras para identificadores.  
+ É o nome da tabela e da coluna **text**, **ntext** ou **image** usada como a origem dos dados inseridos. Os nomes de tabela e de coluna devem estar em conformidade com as regras para identificadores.  
   
  *src_text_ptr*  
- Um ponteiro de texto valor (retornado pela função TEXTPTR) que aponta para um **texto**, **ntext**, ou **imagem** coluna usada como a fonte de dados inseridos.  
+ É um valor de ponteiro de texto (retornado pela função TEXTPTR) que aponta para uma coluna **text**, **ntext** ou **image** usada como a origem dos dados inseridos.  
   
 > [!NOTE]  
->  *scr_text_ptr* valor não deve ser o mesmo que *dest_text_ptr*valor.  
+>  O valor de *scr_text_ptr* não deve ser o mesmo que o valor *dest_text_ptr*.  
   
 ## <a name="remarks"></a>Remarks  
- Os dados recém-inseridos podem ser um único *inserted_data* constante, o nome da tabela, o nome da coluna ou o ponteiro de texto.  
+ Os dados recém-inseridos podem ser uma única constante *inserted_data*, um nome de tabela, um nome de coluna ou um ponteiro de texto.  
   
 |Ação de atualizar|Parâmetros UPDATETEXT|  
 |-------------------|---------------------------|  
-|Para substituir dados existentes|Especifique um nonnull *insert_offset* valor, uma diferente de zero *delete_length* valor e os novos dados a ser inserido.|  
-|Para excluir dados existentes|Especifique um nonnull *insert_offset* valor e um diferente de zero *delete_length*. Não especifique novos dados a serem inseridos.|  
-|Para inserir novos dados|Especifique o *insert_offset* valor, uma *delete_length* 0 e os novos dados a ser inserido.|  
+|Para substituir dados existentes|Especifique um valor de *insert_offset* não nulo, um valor de *delete_length* diferente de zero e os novos dados a serem inseridos.|  
+|Para excluir dados existentes|Especifique um valor não nulo de *insert_offset* e um *delete_length* diferente de zero. Não especifique novos dados a serem inseridos.|  
+|Para inserir novos dados|Especifique o valor de *insert_offset*, um *delete_length* igual a 0 e os novos dados a serem inseridos.|  
   
- Para melhor desempenho, recomendamos que **texto**, **ntext** e **imagem** dados sejam inseridos ou atualizados em tamanhos de blocos que sejam múltiplos de 8.040 bytes.  
+ Para obter um melhor desempenho, recomendamos que os dados **text**, **ntext** e **image** sejam inseridos ou atualizados em tamanhos de partes que sejam múltiplos de 8.040 bytes.  
   
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ponteiros de texto em linha **texto**, **ntext**, ou **imagem** dados podem existir mas talvez não sejam válidos. Para obter informações sobre a opção text in row, consulte [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter informações sobre como invalidar ponteiros de texto, consulte [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os ponteiros de texto em linha para os dados **text**, **ntext** ou **image** podem existir, mas podem não ser válidos. Para obter informações sobre a opção text in row, consulte [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter informações sobre como invalidar ponteiros de texto, consulte [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- Para inicializar **texto** colunas como NULL, use WRITETEXT; UPDATETEXT inicializa **texto** colunas em uma cadeia de caracteres vazia.  
+ Para inicializar colunas **text** com NULL, use WRITETEXT; UPDATETEXT inicializa colunas **text** com uma cadeia de caracteres vazia.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão UPDATE na tabela especificada.  
@@ -130,8 +130,8 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

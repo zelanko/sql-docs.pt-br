@@ -52,22 +52,22 @@ Um valor de cadeia de caracteres para concatenação com outros valores.
 Cadeia de caracteres, comprimento e tipo dos quais a entrada depende.
   
 ## <a name="remarks"></a>Remarks  
-**CONCAT** usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Exige um mínimo de dois valores de entrada; caso contrário, é gerado um erro. Todos os argumentos são convertidos implicitamente em tipos de cadeia de caracteres e depois concatenados. Os valores nulos são convertidos implicitamente em uma cadeia de caracteres vazia. Se todos os argumentos são null, uma cadeia de caracteres vazia do tipo **varchar**(1) será retornado. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
+**CONCAT** usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Exige um mínimo de dois valores de entrada; caso contrário, é gerado um erro. Todos os argumentos são convertidos implicitamente em tipos de cadeia de caracteres e depois concatenados. Os valores nulos são convertidos implicitamente em uma cadeia de caracteres vazia. Se todos os argumentos forem nulos, uma cadeia de caracteres vazia do tipo **varchar**(1) será retornada. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 O tipo de retorno depende do tipo dos argumentos. A tabela a seguir ilustra o mapeamento.
   
 |Tipo de entrada|Tipo e comprimento da saída|  
 |---|---|
 |Se qualquer argumento for um tipo do sistema SQL-CLR, um SQL-CLR UDT ou um `nvarchar(max)`|**nvarchar(max)**|  
-|Caso contrário, se qualquer argumento for **varbinary (max)** ou **varchar (max)**|**varchar (max)** , a menos que um dos parâmetros é um **nvarchar** de qualquer comprimento. Se assim, em seguida, o resultado é **nvarchar (max)**.|  
-|Caso contrário, se qualquer argumento for **nvarchar**(< = 4000)|**nvarchar**(<= 4000)|  
-|Caso contrário, em todos os outros casos|**varchar**(< = 8000), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Se assim, em seguida, o resultado é **nvarchar (max)**.|  
+|Caso contrário, se qualquer argumento for **varbinary(max)** ou **varchar(max)**|**varchar(max)**, a menos que um dos parâmetros seja um **nvarchar** de qualquer comprimento. Nesse caso, o resultado será **nvarchar(max)**.|  
+|Caso contrário, se qualquer argumento for **nvarchar**(<= 4000)|**nvarchar**(<= 4000)|  
+|Caso contrário, em todos os outros casos|**varchar**(<= 8000), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Nesse caso, o resultado será **nvarchar(max)**.|  
   
-Quando os argumentos forem < = 4000 para **nvarchar**, ou < = 8000 para **varchar**, conversões implícitas poderão afetar o comprimento do resultado. Outros tipos de dados têm comprimentos diferentes quando eles são convertidos implicitamente em cadeias de caracteres. Por exemplo, um **int** (14) tem um comprimento de cadeia de caracteres de 12, enquanto um **float** tem um comprimento de 32. Portanto, o resultado da concatenação de dois inteiros tem um comprimento não menor que 24.
+Quando os argumentos forem <= 4000 para **nvarchar** ou <= 8000 para **varchar**, as conversões implícitas poderão afetar o comprimento do resultado. Outros tipos de dados têm comprimentos diferentes quando eles são convertidos implicitamente em cadeias de caracteres. Por exemplo, um **int** (14) tem um comprimento de cadeia de caracteres de 12, enquanto um **float** tem um comprimento de 32. Portanto, o resultado da concatenação de dois inteiros tem um comprimento não menor que 24.
   
 Se nenhum dos argumentos de entrada for de um tipo LOB (large object, objeto grande) com suporte, o tipo de retorno será truncado para 8000 de comprimento, independentemente do tipo de retorno. Esse truncamento preserva espaço e dá suporte à eficiência na geração do plano.
   
-A função CONCAT pode ser executada remotamente em um servidor vinculado que é a versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e acima. Para servidores vinculados mais antigos, a operação CONCAT será executada localmente depois que os valores concatenados não são retornados do servidor vinculado.
+A função CONCAT pode ser executada remotamente em um servidor vinculado que seja da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e superiores. Para servidores vinculados mais antigos, a operação CONCAT será executada localmente depois que os valores não concatenados forem retornados do servidor vinculado.
   
 ## <a name="examples"></a>Exemplos  
   
@@ -120,7 +120,7 @@ NameLastname
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

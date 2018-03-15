@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *protegível*  
- É o nome do protegível. Se o protegível for o próprio servidor, esse valor deverá ser definido como NULL. *protegível* é uma expressão escalar do tipo **sysname**. Não há nenhum padrão.  
+ *securable*  
+ É o nome do protegível. Se o protegível for o próprio servidor, esse valor deverá ser definido como NULL. *securable* é uma expressão escalar do tipo **sysname**. Não há nenhum padrão.  
   
  *securable_class*  
- É o nome da classe do protegível na qual a permissão é testada. *securable_class* é uma expressão escalar do tipo **nvarchar (60)**.  
+ É o nome da classe do protegível na qual a permissão é testada. *securable_class* é uma expressão escalar do tipo **nvarchar(60)**.  
   
- Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento securable_class deve ser definido como um dos seguintes: **banco de dados**, **objeto**, **função**, **esquema**, ou **usuário**.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento securable_class deve ser definido com um dos seguintes valores: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
   
- *permissão*  
- Uma expressão escalar não nula do tipo **sysname** que representa o nome da permissão a ser verificada. Não há nenhum padrão. O nome da permissão ANY é um curinga.  
+ *permission*  
+ Uma expressão escalar não nula do tipo **sysname** que representa o nome da permissão a ser verificado. Não há nenhum padrão. O nome da permissão ANY é um curinga.  
   
- *subtipo protegível*  
+ *sub-securable*  
  Uma expressão escalar opcional do tipo **sysname** que representa o nome da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
   
 > [!NOTE]  
->  Em versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os subprotegíveis não podem usar colchetes no formato **' [***nome do sub***]'**. Use **'***nome do sub***'** em vez disso.  
+>  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os subprotegíveis não podem usar colchetes no formato **'[***sub name***]'**. Em vez disso, use **'***sub name***'**.  
   
- *sub-securable*  
- Uma expressão escalar opcional do tipo **nvarchar (60)** que representa a classe da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
+ *sub-securable_class*  
+ Uma expressão escalar opcional do tipo **nvarchar(60)** que representa a classe da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
   
- Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento sub-securable é válido somente se o argumento securable_class for definido como **objeto**. Se o argumento securable_class for definido como **objeto**, o argumento sub-securable deve ser definido como **coluna**.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento sub-securable_class apenas é válido se o argumento securable_class é definido como **OBJECT**. Se o argumento securable_class for definido como **OBJECT**, o argumento sub-securable_class deverá ser definido como **COLUMN**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
  Retorna NULL quando a consulta falha.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta função interna testa se a entidade de segurança atual tem uma permissão efetiva específica em um protegível especificado. HAS_PERMS_BY_NAME retorna 1 quando o usuário tem permissão efetiva no protegível, 0 quando o usuário não tem nenhuma permissão efetiva no protegível e NULL quando a classe protegível ou permissão não é válida. Uma permissão efetiva é qualquer uma das permissões a seguir:  
   
 -   Uma permissão concedida diretamente à entidade de segurança, e não negada.  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Tenho a permissão VIEW SERVER STATE em nível de servidor?  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Posso executar IMPERSONATE na entidade de segurança do servidor Ps?  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -186,7 +186,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Constrói um **geografia** instância representando um **ponto** instância de seus valores de latitude e longitude e um SRID (ID) de referência espacial.
+Constrói uma instância de **geography** que representa uma instância de **Point** de seus valores de latitude e de longitude e uma SRID (ID de referência espacial).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,18 +46,18 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *Lat*  
- É um **float** expressão que representa a coordenada x do **ponto** que está sendo gerado.  
+ É uma expressão **float** que representa a coordenada X do **Point** que está sendo gerado.  
   
- *Longo*  
- É um **float** expressão que representa a coordenada y do **ponto** que está sendo gerado. Para obter mais informações sobre valores de longitude e latitude válido, consulte [ponto](../../relational-databases/spatial/point.md).  
+ *Long*  
+ É uma expressão **float** que representa a coordenada Y do **Point** gerado. Para obter mais informações sobre os valores válidos de longitude e latitude, confira [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- É um **int** expressão que representa a SRID do **geografia** instância que você deseja retornar.  
+ É uma expressão **int** que representa a SRID da instância de **geography** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 > [!NOTE]  
 >  Argumentos para o método Point (tipo de dados geography) têm coordenadas em ordem inversa se comparados a WKT.  
@@ -71,7 +71,7 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

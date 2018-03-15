@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de servidor (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de servidor (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -62,16 +62,16 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em um servidor. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  CASCADE  
  Indica que a permissão que está sendo negada também é negada a outros principais aos quais ela foi concedida por esse principal.  
   
- PARA \<server_principal >  
+ TO \<server_principal>  
  Especifica o principal ao qual a permissão é negada.  
   
- AS \<grantor_principal >  
+ AS \<grantor_principal>  
  Especifica o principal do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
   
  *SQL_Server_login*  
@@ -92,10 +92,10 @@ DENY permission [ ,...n ]
  *server_role*  
  Especifica uma função de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é mestre.  
   
- Informações sobre permissões de servidor podem ser exibidas no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição de catálogo e obter informações sobre as entidades de servidor podem ser exibidos no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo. Informações sobre associação de funções de servidor podem ser exibidas no [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) exibição do catálogo.  
+ As informações sobre permissões do servidor podem ser vistas na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor podem ser vistas na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). As informações sobre a associação de funções de servidor podem ser vistas na exibição do catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
  Um servidor é o nível mais alto da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em um servidor são listadas na tabela a seguir.  
   
@@ -122,7 +122,7 @@ DENY permission [ ,...n ]
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
+|Criar grupo de disponibilidade<br /><br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
 |CREATE SERVER ROLE<br /><br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
@@ -136,20 +136,20 @@ DENY permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As três permissões de servidor a seguir foram adicionadas ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- **CONECTAR a qualquer banco de dados** permissão  
- Conceda **CONNECT ANY DATABASE** a um logon que deve se conectar a todos os bancos de dados que existem atualmente e a quaisquer novos bancos de dados que possam ser criados no futuro. Não concede nenhuma permissão em qualquer banco de dados além da conexão. Combinar com **SELECT ALL USER SECURABLES** ou **VIEW SERVER STATE** para permitir que um processo de auditoria exibir todos os dados ou todos os estados de banco de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Permissão **CONNECT ANY DATABASE**  
+ Conceda **CONNECT ANY DATABASE** a um logon que deve se conectar a todos os bancos de dados que existem atualmente e a quaisquer novos bancos de dados que possam ser criados no futuro. Não concede nenhuma permissão em qualquer banco de dados além da conexão. Combine com **SELECT ALL USER SECURABLES** ou **VIEW SERVER STATE** para permitir que um processo de auditoria exiba todos os dados ou todos os estados do banco de dados na instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **REPRESENTAR qualquer logon** permissão  
+ Permissão **IMPERSONATE ANY LOGIN**  
  Quando concedida, permite que um processo de camada intermediária represente a conta de clientes que se conecta a ela, uma vez que ela se conecta aos bancos de dados. Quando negada, um logon com altos privilégios pode ser impedido de representar outros logons. Por exemplo, um logon com a permissão **CONTROL SERVER** pode ser impedido de representar outros logons.  
   
- **Selecione todos os PROTEGÍVEIS de usuário** permissão  
- Quando concedida, um logon, como um auditor, pode exibir dados em todos os bancos de dados aos quais o usuário pode se conectar. Quando negada, impede o acesso a objetos, a menos que o **sys** esquema.  
+ Permissão **SELECT ALL USER SECURABLES**  
+ Quando concedida, um logon, como um auditor, pode exibir dados em todos os bancos de dados aos quais o usuário pode se conectar. Quando negada, impede o acesso a objetos, a menos que eles estejam no esquema **sys**.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão CONTROL SERVER ou a propriedade do protegível. Se você usar a cláusula as, o principal especificado deve ser proprietário do protegível no qual as permissões estão sendo negadas.  
+ Requer a permissão CONTROL SERVER ou a propriedade do protegível. Se você usar a cláusula AS, a entidade especificada deverá ser proprietária do protegível no qual as permissões estão sendo negadas.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -171,14 +171,14 @@ DENY CREATE ENDPOINT TO ArifS AS MandarP;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Negar permissões de servidor (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOGAR permissões de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [Permissões DENY de servidor (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [Permissões de servidor REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

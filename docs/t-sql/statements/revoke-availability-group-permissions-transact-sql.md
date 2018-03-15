@@ -1,5 +1,5 @@
 ---
-title: "Permissões de grupo de disponibilidade REVOKE (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de grupo de disponibilidade (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Revoga permissões em um grupo de disponibilidade AlwaysOn. 
+  Revoga permissões em um Grupo de Disponibilidade AlwaysOn. 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,13 +56,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um grupo de disponibilidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- NO grupo de disponibilidade **::***availability_group_name*  
- Especifica o grupo de disponibilidade no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é necessária.  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
+ Especifica o grupo de disponibilidade no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
   
- {DO | PARA} \<server_principal > especifica o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon para o qual a permissão está sendo revogada.  
+ { FROM | TO } \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual a permissão está sendo revogada.  
   
  *SQL_Server_login*  
  Especifica o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -91,10 +91,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
   
-## <a name="remarks"></a>Comentários  
- As permissões no escopo do servidor podem ser revogadas somente quando o banco de dados atual é **mestre**.  
+## <a name="remarks"></a>Remarks  
+ As permissões no escopo de servidor podem ser revogadas somente quando o banco de dados atual é **master**.  
   
- Informações sobre grupos de disponibilidade estão visíveis no [availability_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) exibição do catálogo. Informações sobre permissões de servidor são visíveis no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição de catálogo e obter informações sobre as entidades de servidor é visível no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ Informações sobre grupos de disponibilidade são visíveis na exibição do catálogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Um grupo de disponibilidade é um nível de servidor protegível. As permissões mais específicas e limitadas que podem ser revogadas em um grupo de disponibilidade são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. Revogando uma cláusula WITH GRANT OPTION previamente concedida  
- Se uma permissão foi concedida usando WITH GRANT OPTION, use REVOKE GRANT OPTION FOR... Para remover WITH GRANT OPTION. O exemplo a seguir concede a permissão e remove a parte de WITH GRANT da permissão.  
+ Se uma permissão foi concedida usando WITH GRANT OPTION, use REVOKE GRANT OPTION FOR… para remover WITH GRANT OPTION. O exemplo a seguir concede a permissão e remove a parte de WITH GRANT da permissão.  
   
 ```  
 USE master;  
@@ -143,11 +143,11 @@ CASCADE
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Permissões de grupo de disponibilidade GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
- [Negar permissões de grupo de disponibilidade &#40; Transact-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT de grupo de disponibilidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+ [Permissões DENY de grupo de disponibilidade &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys. availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Exibições de catálogo de grupos de disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

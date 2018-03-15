@@ -50,13 +50,13 @@ DATALENGTH ( expression )
   
 ## <a name="arguments"></a>Argumentos  
 *expressão*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo de dados.
+É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo de dados.
   
 ## <a name="return-types"></a>Tipos de retorno
-**bigint** se *expressão* é o **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** tipos de dados. Caso contrário, **int**.
+**bigint** se *expression* for dos tipos de dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**; caso contrário, **int**.
   
-## <a name="remarks"></a>Comentários  
-DATALENGTH é especialmente útil com **varchar**, **varbinary**, **texto**, **imagem**, **nvarchar**, e **ntext** tipos de dados, pois esses tipos de dados podem armazenar dados de comprimento variável.
+## <a name="remarks"></a>Remarks  
+DATALENGTH é especialmente útil com os tipos de dados **varchar**, **varbinary**, **text**, **image**, **nvarchar** e **ntext**, pois esses tipos de dados podem armazenar dados de tamanho variável.
   
 O DATALENGTH de NULL é NULL.
   
@@ -76,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+[LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 
