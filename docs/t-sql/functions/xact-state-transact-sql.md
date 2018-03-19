@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f8b63625f4e0af0e1f6c55b2d85ae8bb10d53b02
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
 |------------------|-------------|  
 |1|A solicitação atual tem uma transação de usuário ativa. A solicitação pode executar qualquer ação, inclusive escrever dados e confirmar a transação.|  
 |0|Não há transação de usuário ativa para a solicitação atual.|  
-|-1|A solicitação atual tem uma transação de usuário ativa, mas ocorreu um erro que fez a transação ser classificada como não confirmável. A solicitação não pode confirmar a transação ou reverter para um ponto de salvamento; ela só pode solicitar uma reversão completa da transação. A solicitação não pode executar nenhuma operação de gravação reverter a transação. A solicitação só pode executar operações de leitura até reverter a transação. Depois que a transação é revertida, a solicitação pode executar operações de leitura e gravação e pode começar uma nova transação.<br /><br /> Quando um lote termina sua execução, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reverte automaticamente qualquer transação ativa não confirmável. Se nenhuma mensagem de erro foi enviada quando a transação entrou em um estado não confirmável, quando o lote terminar, uma mensagem de erro será enviada ao aplicativo cliente. Essa mensagem indica que uma transação não confirmável foi detectada e revertida.|  
+|-1|A solicitação atual tem uma transação de usuário ativa, mas ocorreu um erro que fez a transação ser classificada como não confirmável. A solicitação não pode confirmar a transação ou reverter para um ponto de salvamento; ela só pode solicitar uma reversão completa da transação. A solicitação não pode executar nenhuma operação de gravação reverter a transação. A solicitação só pode executar operações de leitura até reverter a transação. Depois que a transação é revertida, a solicitação pode executar operações de leitura e gravação e pode começar uma nova transação.<br /><br /> Quando um lote externo conclui a execução, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reverte automaticamente todas as transações ativas não confirmáveis. Se nenhuma mensagem de erro foi enviada quando a transação entrou em um estado não confirmável, quando o lote terminar, uma mensagem de erro será enviada ao aplicativo cliente. Essa mensagem indica que uma transação não confirmável foi detectada e revertida.|  
   
  As funções XACT_STATE e @@TRANCOUNT podem ambas ser usadas para detectar se a solicitação atual tem uma transação de usuário ativa. @@TRANCOUNT não pode ser usado para determinar se essa transação foi classificada como uma transação não confirmável. XACT_STATE não pode ser usado para determinar se há transações aninhadas.  
   

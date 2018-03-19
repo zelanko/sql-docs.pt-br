@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -23,11 +23,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: a8c77b86fac722d43b1634ea7dc5052655bf560d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -67,7 +67,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-As bibliotecas são adicionadas ao banco de dados no escopo do usuário. Ou seja, os nomes de biblioteca são considerados exclusivos no contexto de um usuário ou de um proprietário específico e devem ser exclusivos por usuário. Por exemplo, dois usuários **RUser1** e **RUser2** podem individual e separadamente carregar a biblioteca do R `ggplot2`.
+As bibliotecas são adicionadas ao banco de dados no escopo do usuário. Os nomes de bibliotecas devem ser exclusivos no contexto de um usuário ou proprietário específico. Por exemplo, dois usuários **RUser1** e **RUser2** podem individual e separadamente carregar a biblioteca do R `ggplot2`. No entanto, se **RUser1** quiser carregar uma versão mais recente do `ggplot2`, a segunda instância deve ter um nome diferente ou deve substituir a biblioteca existente. 
 
 Os nomes de biblioteca não podem ser atribuídos arbitrariamente; o nome da biblioteca deve ter o mesmo nome necessário para carregar a biblioteca do R por meio do R.
 
@@ -107,11 +107,9 @@ A instrução `CREATE EXTERNAL LIBRARY` carrega os bits de biblioteca no banco d
 
 As bibliotecas carregadas na instância podem ser públicas ou particulares. Se a biblioteca for criada por um membro de `dbo`, a biblioteca será pública e poderá ser compartilhada com todos os usuários. Caso contrário, a biblioteca será particular somente para esse usuário.
 
-Não é possível usar blobs como uma fonte de dados na versão SQL Server 2017.
-
 ## <a name="permissions"></a>Permissões
 
-Requer a permissão `CREATE ANY EXTERNAL LIBRARY`.
+Requer a permissão `CREATE EXTERNAL LIBRARY`. Por padrão, todos os usuários que tenham o **dbo** ou que sejam membros da função **db_owner** têm permissões para criar uma biblioteca externa. Para todos os outros usuários, você deve conceder permissão explicitamente com uma instrução [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql), especificando CREATE EXTERNAL LIBRARY como privilégio.
 
 Para modificar uma biblioteca, é necessário ter a permissão separada, `ALTER ANY EXTERNAL LIBRARY`.
 
@@ -124,7 +122,7 @@ O exemplo a seguir adiciona uma biblioteca externa chamada `customPackage` a um 
 ```sql
 CREATE EXTERNAL LIBRARY customPackage
 FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
-```  
+```
 
 Depois que a biblioteca é carregada com êxito na instância, um usuário executa o procedimento `sp_execute_external_script` para instalar a biblioteca.
 
@@ -145,9 +143,9 @@ Por exemplo, suponha que você deseje instalar um novo pacote, `packageA`:
 
 Para instalar o `packageA` com êxito, você precisa criar bibliotecas para o `packageB` e `packageC`, ao mesmo tempo adicionar `packageA` ao SQL Server. Lembre-se de verificar as versões de pacote também.
 
-Na prática, as dependências do pacote para pacotes populares são geralmente muito mais complicadas do que esse exemplo simples. Por exemplo, ggplot2 pode exigir mais de 30 pacotes, e esses pacotes podem exigir pacotes adicionais que não estão disponíveis no servidor. Um pacote ausente ou uma versão de pacote incorreta pode causar falha na instalação.
+Na prática, as dependências do pacote para pacotes populares são geralmente muito mais complicadas do que esse exemplo simples. Por exemplo, **ggplot2** pode exigir mais de 30 pacotes e esses pacotes podem exigir pacotes adicionais que não estão disponíveis no servidor. Um pacote ausente ou uma versão de pacote incorreta pode causar falha na instalação.
 
-Como pode ser difícil determinar todas as dependências apenas examinando o manifesto do pacote, recomendamos o uso de um pacote como [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) ou [iGraph](http://igraph.org/redirect.html) para identificar todos os pacotes que podem ser necessários para concluir a instalação com êxito.
+Como pode ser difícil determinar todas as dependências apenas examinando o manifesto do pacote, recomendamos usar um pacote, como o [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html), para identificar todos os pacotes que podem ser necessários para concluir a instalação com êxito.
 
 + Carregue o pacote de destino e suas dependências. Todos os arquivos devem estar em uma pasta que seja acessível ao servidor.
 
@@ -180,38 +178,26 @@ Como pode ser difícil determinar todas as dependências apenas examinando o man
     @script=N'
     # load the desired package packageA
     library(packageA)
-    # call function from package
-    OutputDataSet <- packageA.function()
+    print(packageVersion("packageA"))
     '
-    with result sets (([result] int));    
     ```
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. Criar uma biblioteca com base em um fluxo de bytes
 
-Se você não tem a capacidade de salvar os arquivos de pacote em um local no servidor, também pode passar o conteúdo do pacote em uma variável. O exemplo a seguir cria uma biblioteca, passando os bits como um literal hexadecimal.
+Se você não tem a capacidade de salvar os arquivos de pacote em um local no servidor, pode passar o conteúdo do pacote em uma variável. O exemplo a seguir cria uma biblioteca, passando os bits como um literal hexadecimal.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-Aqui, os valores hexadecimais foram truncados para facilitar a leitura.
+> [!NOTE]
+> Este exemplo de código demonstra apenas a sintaxe; o valor binário em `CONTENT =` foi truncado para facilitar a leitura e não cria uma biblioteca de trabalho. O conteúdo real da variável binária deveria ser maior.
 
 ### <a name="d-change-an-existing-package-library"></a>D. Alterar uma biblioteca de pacote existente
 
 A instrução DDL `ALTER EXTERNAL LIBRARY` pode ser usada para adicionar um novo conteúdo da biblioteca ou modificar o conteúdo da biblioteca existente. Para modificar uma biblioteca existente, é necessário ter a permissão `ALTER ANY EXTERNAL LIBRARY`.
 
 Para obter mais informações, consulte [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
-
-### <a name="e-delete-a-package-library"></a>E. Excluir uma biblioteca de pacote
-
-Para excluir uma biblioteca de pacote do banco de dados, execute a instrução:
-
-```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
-```
-
-> [!NOTE]
-> Ao contrário de outras instruções `DROP` no [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], essa instrução é compatível com um parâmetro opcional que especifica a autoridade do usuário. Essa opção permite que os usuários com funções de propriedade excluam as bibliotecas carregadas por usuários normais.
 
 ## <a name="see-also"></a>Consulte também
 

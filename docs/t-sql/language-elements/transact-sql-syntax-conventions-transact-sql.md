@@ -1,7 +1,7 @@
 ---
 title: "Convenções da sintaxe Transact-SQL (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -35,11 +35,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7c4eb67190b5123296fbcffb3fac3f09e9ec2000
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e829518825abe3b4b6da589513d085161eddcb0
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,32 +63,32 @@ ms.lasthandoff: 01/25/2018
 ## <a name="multipart-names"></a>Nomes de partes múltiplas  
  A menos que especificado de outra forma, todas as referências [!INCLUDE[tsql](../../includes/tsql-md.md)] ao nome de um objeto de banco de dados podem ser um nome de quatro partes, do seguinte modo:  
   
- *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
+*server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
  | *database_name***.**[*schema_name*]**.***object_name*  
   
  | *schema_name***.***object_name*  
   
- *| object_name*  
+ | *object_name*  
   
- *server_name*  
- Especifica um nome de servidor vinculado ou remoto.  
+*server_name*  
+Especifica um nome de servidor vinculado ou remoto.  
   
- *database_name*  
- Especifica o nome de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o objeto reside em uma instância local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *database_name* especifica um catálogo OLE DB.  
+*database_name*  
+Especifica o nome de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o objeto reside em uma instância local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *database_name* especifica um catálogo OLE DB.  
   
- *schema_name*  
- Especifica o nome do esquema que contém o objeto, se o objeto estiver em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *schema_name* especifica um nome de esquema OLE DB.  
+*schema_name*  
+Especifica o nome do esquema que contém o objeto, se o objeto estiver em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *schema_name* especifica um nome de esquema OLE DB.  
   
- *object_name*  
- Refere-se ao nome do objeto.  
+*object_name*  
+Refere-se ao nome do objeto.  
   
- Quando se refere a um objeto específico, nem sempre é preciso especificar o servidor, o banco de dados e o esquema para que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] identifique o objeto. Porém, se o objeto não puder ser encontrado, um erro será retornado.  
+Quando se refere a um objeto específico, nem sempre é preciso especificar o servidor, o banco de dados e o esquema para que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] identifique o objeto. Porém, se o objeto não puder ser encontrado, um erro será retornado.  
   
 > [!NOTE]  
->  Para evitar erros de resolução de nome, recomendamos especificar o nome de esquema sempre que você especificar um objeto no escopo do esquema.  
+> Para evitar erros de resolução de nome, recomendamos especificar o nome de esquema sempre que você especificar um objeto no escopo do esquema.  
   
- Para omitir nós intermediários, use pontos para indicar essas posições. A tabela a seguir mostra os formatos válidos de nomes de objetos.  
+Para omitir nós intermediários, use pontos para indicar essas posições. A tabela a seguir mostra os formatos válidos de nomes de objetos.  
   
 |Formato de referência de objeto|Description|  
 |-----------------------------|-----------------|  
@@ -102,32 +102,31 @@ ms.lasthandoff: 01/25/2018
 |*object*|Os nomes do servidor, do banco de dados e do esquema são omitidos.|  
   
 ## <a name="code-example-conventions"></a>Convenções de exemplo de código  
- Salvo indicação em contrário, os exemplos fornecidos na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)] foram testados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e suas configurações padrão para as seguintes opções:  
+Salvo indicação em contrário, os exemplos fornecidos na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)] foram testados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e suas configurações padrão para as seguintes opções:  
   
 -   ANSI_NULLS  
-  
 -   ANSI_NULL_DFLT_ON  
-  
 -   ANSI_PADDING  
-  
 -   ANSI_WARNINGS  
-  
 -   CONCAT_NULL_YIELDS_NULL  
-  
 -   QUOTED_IDENTIFIER  
   
- A maioria dos exemplos de código na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)] foi testada em servidores executando uma ordem de classificação com diferenciação de maiúsculas e minúsculas. Os servidores de teste executaram, normalmente, a página de código ANSI/ISO 1252.  
+A maioria dos exemplos de código na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)] foi testada em servidores executando uma ordem de classificação com diferenciação de maiúsculas e minúsculas. Os servidores de teste executaram, normalmente, a página de código ANSI/ISO 1252.  
   
- Muitos exemplos de código incluem um prefixo em constantes de cadeia de caracteres Unicode com a letra **N**. Sem o prefixo **N**, a cadeia de caracteres é convertida na página de código padrão do banco de dados. Essa página de código padrão pode não reconhecer certos caracteres.  
+Muitos exemplos de código incluem um prefixo em constantes de cadeia de caracteres Unicode com a letra **N**. Sem o prefixo **N**, a cadeia de caracteres é convertida na página de código padrão do banco de dados. Essa página de código padrão pode não reconhecer certos caracteres.  
   
 ## <a name="applies-to-references"></a>Referências de "Aplica-se a"  
- A referência [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui artigos relacionados ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Na parte superior de cada artigo, há uma seção indicando quais produtos se referem ao assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não estará disponível no produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O artigo **CREATE AVAILABILITY GROUP** indica que ele se aplica ao **SQL Server (SQL Server 2012 à versão atual)** porque ele não se aplica ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] nem ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+A referência [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui artigos relacionados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+
+Na parte superior de cada artigo, há uma seção indicando quais produtos se referem ao assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não estará disponível no produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O artigo **CREATE AVAILABILITY GROUP** indica que ele se aplica ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e não se aplica ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e nem ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Em alguns casos, o assunto geral do artigo pode ser usado em um produto, mas não há suporte para todos os argumentos. Por exemplo, os usuários do banco de dados independente foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A instrução **CREATE USER** pode ser usada em qualquer produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, a sintaxe **WITH PASSWORD** não pode ser usada com versões anteriores. Nesse caso, seções **Aplica-se a** adicionais são inseridas em descrições de argumento apropriadas no corpo do artigo.  
+Em alguns casos, o assunto geral do artigo pode ser usado em um produto, mas não há suporte para todos os argumentos. Por exemplo, os usuários do banco de dados independente foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A instrução **CREATE USER** pode ser usada em qualquer produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, a sintaxe **WITH PASSWORD** não pode ser usada com versões anteriores. Nesse caso, seções **Aplica-se a** adicionais são inseridas em descrições de argumento apropriadas no corpo do artigo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
-  
-  
+[Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
+[Palavras-chave reservadas &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
+[Problemas de design do Transact-SQL](http://msdn.microsoft.com/library/dd193411.aspx)    
+[Problemas de nomenclatura do Transact-SQL](http://msdn.microsoft.com/library/dd193246.aspx)        
+[Problemas de desempenho do Transact-SQL](http://msdn.microsoft.com/library/dd172117.aspx)    
 
 

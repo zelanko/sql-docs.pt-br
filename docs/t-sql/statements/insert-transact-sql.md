@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -398,7 +398,9 @@ Essas otimizações são semelhantes àquelas disponíveis com o comando BULK IN
   
  Quando TOP é usado com INSERT, as linhas referenciadas não são organizadas em nenhuma ordem e a cláusula ORDER BY não pode ser especificada diretamente nessas instruções. Se você precisar usar TOP para inserir linhas em uma ordem cronológica significativa, deverá usar TOP junto com uma cláusula ORDER BY especificada em uma instrução de subseleção. Consulte a seção Exemplos a seguir neste tópico.
  
-Consultas INSERT que usam SELECT com ORDER BY para popular linhas garantem a forma como os valores de identidade são calculados, mas não a ordem na qual as linhas são inseridas.    
+Consultas INSERT que usam SELECT com ORDER BY para popular linhas garantem a forma como os valores de identidade são calculados, mas não a ordem na qual as linhas são inseridas.
+
+No Parallel Data Warehouse, a cláusula ORDER BY será inválida em VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, funções embutidas, tabelas derivadas, subconsultas e expressões de tabela comuns, a menos que TOP também esteja especificado.
   
 ## <a name="logging-behavior"></a>Comportamento de log  
  A instrução INSERT é sempre totalmente registrada em log, exceto ao usar a função OPENROWSET com a palavra-chave BULK ou ao usar `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. Essas operações podem ser registradas minimamente. Para obter mais informações, consulte a seção "Práticas recomendadas para o carregamento de dados em massa" anteriormente neste tópico.  
