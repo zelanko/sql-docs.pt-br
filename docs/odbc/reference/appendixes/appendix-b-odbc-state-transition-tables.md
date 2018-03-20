@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apêndice b: tabelas de transição de estado de ODBC
 As tabelas neste apêndice mostram como funções ODBC causam transições do ambiente, conexão, instrução e estados do descritor. O estado do ambiente, conexão, instrução ou descritor geralmente determina quando as funções que usam o tipo de identificador (ambiente, conexão, instrução ou descritor) correspondente podem ser chamadas. Os estados de ambiente, conexão, instrução e descritor se sobrepor aproximadamente conforme mostrado nas ilustrações a seguir. Por exemplo, a sobreposição exata de conexão estados C5 e C6 e estados de instrução que S1 por meio de /s12 é – dependente, da fonte de dados, pois transações começam em momentos diferentes com diferentes fontes de dados, e depende do estado de descritor D1i (descritor alocado implicitamente) sobre o estado da instrução ao qual o descritor está associado, ao estado D1e (explicitamente alocados descritor) é independente do estado de qualquer instrução. Para obter uma descrição de cada estado, consulte [ambiente transições](../../../odbc/reference/appendixes/environment-transitions.md), [Conexão transições](../../../odbc/reference/appendixes/connection-transitions.md), [transições de instrução](../../../odbc/reference/appendixes/statement-transitions.md), e [transições do descritor ](../../../odbc/reference/appendixes/descriptor-transitions.md), mais adiante neste apêndice.  
@@ -52,7 +52,7 @@ As tabelas neste apêndice mostram como funções ODBC causam transições do am
 -   **--** – O estado é alterado depois de executar a função.  
   
 -   **E**  
-     ***n*** , **C*n * **S*n***, ou **D * n***  — o estado do ambiente, conexão, instrução ou descritor move para o estado especificado.  
+     ***n*** , **C*n * **S*n * **, ou **D * n***  — o estado do ambiente, conexão, instrução ou descritor move para o estado especificado.  
   
 -   **(IH)**  — Um identificador inválido foi passado para a função. Se o identificador de um identificador nulo ou um identificador válido do tipo errado — por exemplo, um identificador de conexão foi passado quando um identificador de instrução era necessário, a função retorna SQL_INVALID_HANDLE; Caso contrário, o comportamento é indefinido e provavelmente fatal. Esse erro é mostrado apenas quando ele é o resultado só é possível chamar a função no estado especificado. Esse erro não altera o estado e sempre é detectado pelo Gerenciador de Driver, conforme indicado por parênteses.  
   
