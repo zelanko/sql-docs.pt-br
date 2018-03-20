@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados de WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]O banco de dados de WideWorldImporters contém todas as a informações de transações e dados diário para compras e vendas, bem como dados de sensor de veículos e salas frios.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+O banco de dados de WideWorldImporters contém todas as a informações de transações e dados diário para compras e vendas, bem como dados de sensor de veículos e salas frios.
 
 ## <a name="schemas"></a>Esquemas
 
@@ -35,7 +37,7 @@ WideWorldImporters usa esquemas para finalidades diferentes, como armazenamento 
 
 Esses esquemas contenham os dados. Um número de tabelas é necessárias para todos os outros esquemas e está localizado no esquema do aplicativo.
 
-|esquema|Description|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Aplicativo|Todo o aplicativo usuários, contatos e parâmetros. Isso também contém tabelas de referência com dados que são usados por vários esquemas|
 |Purchasing|Item de estoque de compras de fornecedores e detalhes sobre fornecedores.|  
@@ -46,11 +48,11 @@ Esses esquemas contenham os dados. Um número de tabelas é necessárias para to
 
 Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Elas contêm exibições e procedimentos armazenados usados por aplicativos externos.
 
-|esquema|Description|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Site|Todo o acesso ao banco de dados do site da empresa é a este esquema.|
 |Relatórios|Todo o acesso ao banco de dados de relatórios do Reporting Services é a este esquema.|
-|Power BI|Todo o acesso ao banco de dados de painéis do Power BI por meio do Gateway corporativo é por este esquema.|
+|PowerBI|Todo o acesso ao banco de dados de painéis do Power BI por meio do Gateway corporativo é por este esquema.|
 
 Observe que os relatórios e PowerBI esquemas não são usadas na versão inicial do banco de dados de exemplo. No entanto, os exemplos do Reporting Services e o Power BI criados sobre esse banco de dados são incentivados a usar esses esquemas.
 
@@ -58,7 +60,7 @@ Observe que os relatórios e PowerBI esquemas não são usadas na versão inicia
 
 Esquemas de finalidade especial
 
-|esquema|Description|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Integração|Objetos e procedimentos necessários para a integração do data warehouse (ou seja, migrando os dados para o banco de dados WideWorldImportersDW).|
 |Sequências|Contém sequências usadas por todas as tabelas no aplicativo.|

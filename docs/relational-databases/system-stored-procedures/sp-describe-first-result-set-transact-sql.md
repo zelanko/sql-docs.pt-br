@@ -1,7 +1,7 @@
 ---
 title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -25,16 +25,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Retorna os metadados para o primeiro resultado possíveis do conjunto do [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Retorna um conjunto de resultados vazio quando o lote não retorna resultados. Gera um erro se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não é possível determinar os metadados para a primeira consulta que será executada por meio de uma análise estática. O modo de exibição de gerenciamento dinâmico [sys.DM exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retorna as mesmas informações.  
+  Retorna os metadados para o primeiro resultado possíveis do conjunto do [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Retorna um conjunto de resultados vazio quando o lote não retorna resultados. Gera um erro se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não é possível determinar os metadados para a primeira consulta que será executada por meio de uma análise estática. O modo de exibição de gerenciamento dinâmico [sys.DM exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retorna as mesmas informações.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +48,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tsql =** ] **'***SQL_batch transact***'**  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* podem ser **nvarchar (***n***)** ou **nvarchar (max)**.  
   
  [  **@params =** ] **N'***parâmetros***'**  
- @paramsFornece uma cadeia de caracteres de declaração para os parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar** ou **nvarchar (max)**.  
+ @params Fornece uma cadeia de caracteres de declaração para os parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar** ou **nvarchar (max)**.  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n*é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em @params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiver parâmetros, @params não é necessária. NULL é o valor padrão para esse parâmetro.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em @params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiver parâmetros, @params não é necessária. NULL é o valor padrão para esse parâmetro.  
   
- [  **@browse_information_mode =** ] *tinyint*  
+ [ **@browse_information_mode =** ] *tinyint*  
  Especifica se colunas de chave adicionais e informações de tabela de origem são retornadas. Se definido como 1, cada consulta será analisada como se incluísse uma opção FOR BROWSE na consulta. Colunas de chave adicionais e informações de tabela de origem são retornadas.  
   
 -   Se for definido como 0, nenhuma informação será retornada.  
@@ -74,14 +74,14 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit não NULL**|Indica que a coluna é uma coluna extra adicionada para fins de informações de navegação e que ela não é exibida realmente no conjunto de resultados.|  
-|**column_ordinal**|**int não NULL**|Contém a posição ordinal da coluna no conjunto de resultados. A posição da primeira coluna será especificada como 1.|  
+|**column_ordinal**|**int NOT NULL**|Contém a posição ordinal da coluna no conjunto de resultados. A posição da primeira coluna será especificada como 1.|  
 |**name**|**sysname NULL**|Conterá o nome da coluna se um nome puder ser determinado. Caso contrário, conterá NULL.|  
 |**is_nullable**|**bit não NULL**|Conterá o valor 1 se a coluna permitir NULLs, 0 se a coluna não permitir NULLs e 1 caso não seja possível determinar se a coluna permite NULLs.|  
-|**system_type_id**|**int não NULL**|Contém o system_type_id do tipo de dados da coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
-|**system_type_name**|**nvarchar (256) NULL**|Contém o nome e argumentos (como comprimento, precisão, escala), especificados para o tipo de dados da coluna. Se o tipo de dados for um tipo de alias definido pelo usuário, o tipo de sistema subjacente será especificado aqui. Se for um tipo de CLR definido pelo usuário, NULL será retornado nessa coluna.|  
-|**max_length**|**smallint não NULL**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna de tipo de dados é **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido por **sp_tableoption 'text in row'**.|  
-|**precisão**|**tinyint não NULL**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
-|**escala**|**tinyint não NULL**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
+|**system_type_id**|**int NOT NULL**|Contém o system_type_id do tipo de dados da coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
+|**system_type_name**|**nvarchar(256) NULL**|Contém o nome e argumentos (como comprimento, precisão, escala), especificados para o tipo de dados da coluna. Se o tipo de dados for um tipo de alias definido pelo usuário, o tipo de sistema subjacente será especificado aqui. Se for um tipo de CLR definido pelo usuário, NULL será retornado nessa coluna.|  
+|**max_length**|**smallint NOT NULL**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna de tipo de dados é **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido por **sp_tableoption 'text in row'**.|  
+|**precisão**|**tinyint NOT NULL**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
+|**scale**|**tinyint NOT NULL**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
 |**collation_name**|**sysname NULL**|Nome do agrupamento da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
 |**user_type_id**|**int NULL**|Para tipos de CLR e alias, contém o user_type_id do tipo de dados da coluna como especificado em sys.types. Caso contrário, é NULL.|  
 |**user_type_database**|**sysname NULL**|Para tipos de CLR e de alias, contém o nome do banco de dados no qual o tipo é definido. Caso contrário, é NULL.|  
@@ -108,8 +108,8 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**ordinal_in_order_by_list**|**smallint NULL**|Posição desta coluna na lista ORDER BY. Retornará NULL se a coluna não aparecer na lista ORDER BY ou se a lista ORDER BY não puder ser determinada exclusivamente.|  
 |**order_by_list_length**|**smallint NULL**|Comprimento da lista ORDER BY. Retornará NULL se não houver uma lista ORDER BY ou se a lista ORDER BY não puder ser determinada exclusivamente. Observe que esse valor será o mesmo para todas as linhas retornadas por **sp_describe_first_result_set.**|  
 |**order_by_is_descending**|**smallint NULL**|Se o ordinal_in_order_by_list não for NULL, o **order_by_is_descending** coluna relatará a direção da cláusula ORDER BY para essa coluna. Caso contrário, relatará NULL.|  
-|**tds_type_id**|**int não NULL**|Para uso interno.|  
-|**tds_length**|**int não NULL**|Para uso interno.|  
+|**tds_type_id**|**int NOT NULL**|Para uso interno.|  
+|**tds_length**|**int NOT NULL**|Para uso interno.|  
 |**tds_collation_id**|**int NULL**|Para uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Para uso interno.|  
   
@@ -148,15 +148,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)** para **varchar(a')** onde um ' > um.  
   
-    -   **varchar(a)** para **varchar (max)**  
+    -   **varchar(a)** to **varchar(max)**  
   
     -   **nvarchar(a)** para **nvarchar(a')** onde um ' > um.  
   
-    -   **nvarchar(a)** para **nvarchar (max)**  
+    -   **nvarchar(a)** to **nvarchar(max)**  
   
     -   **varbinary(a)** para **varbinary(a')** onde um ' > um.  
   
-    -   **varbinary(a)** para **varbinary (max)**  
+    -   **varbinary(a)** to **varbinary(max)**  
   
  **sp_describe_first_result_set** não oferece suporte a recursão indireta.  
   
@@ -199,7 +199,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|nome|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -212,7 +212,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|nome|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -225,7 +225,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|nome|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -292,7 +292,7 @@ ELSE
     SELECT d AS b FROM t2;'  
 ```  
   
- Resultado: b **varchar (20) nulo**  
+ Result: b **varchar(20)NULL**  
   
 #### <a name="error-because-column-types-cannot-be-matched"></a>Erro porque os tipos de coluna não podem ser correspondidos  
  Os tipos de coluna diferem nos primeiros possíveis conjuntos de resultados diferentes.  
@@ -407,9 +407,8 @@ N'
   
  Resultado: um **int NULL** como DBO e S1 s1.t1.a tem tipo **int** e nulidade diferente.  
   
-## <a name="see-also"></a>Consulte Também  
- [sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.DM exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.DM exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Consulte também  
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ 

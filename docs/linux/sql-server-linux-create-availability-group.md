@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 97ec3cd688f69995f4d907d305ce4d14d4724efc
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para o SQL Server no Linux
 
@@ -426,7 +426,7 @@ Este exemplo mostra como criar um grupo de disponibilidade de duas réplicas que
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
-    ```
+   ```
 
 #### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas de duas a três de exemplo com o roteamento somente leitura (tipo de cluster externo)
 
@@ -628,7 +628,7 @@ O recurso de grupo de disponibilidade que é criado é um tipo especial de recur
     sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
     ```
 
-    SLES
+    **SLES**
     
     ```bash
     crm configure \
@@ -648,7 +648,7 @@ O recurso de grupo de disponibilidade que é criado é um tipo especial de recur
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
 
-    SLES
+    **SLES**
     
     ```bash
     crm configure <NameForConstraint> inf: \
@@ -666,7 +666,7 @@ O recurso de grupo de disponibilidade que é criado é um tipo especial de recur
     sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>
     ```
     
-    SLES
+    **SLES**
     
     ```bash
     crm configure \

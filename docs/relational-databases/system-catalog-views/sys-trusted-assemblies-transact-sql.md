@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: tmullaney
-ms.author: thmullan;rickbyh
+ms.author: thmullan
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 827e0d356114bf2254ebd265ca7ee29e0a00f595
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 71d13ae733551a3c475176343250f9ee671756f3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

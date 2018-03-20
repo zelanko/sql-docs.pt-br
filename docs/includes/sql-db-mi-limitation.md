@@ -1,0 +1,2 @@
+> [!IMPORTANT]  
+> Em [gerenciados instância do banco de dados do SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), esse recurso de T-SQL tem determinadas alterações de comportamento. Consulte [diferenças do Azure SQL Database gerenciados instância T-SQL do SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information) para obter detalhes de todas as alterações de comportamento de T-SQL.

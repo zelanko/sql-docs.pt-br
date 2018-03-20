@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetServiceAccountPassword method
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9cb68738ef2fc288f7b0f60c5e631b1e48b9673
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6275f67695c326ec1045ba63fefed9e25627e5ec
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>Método SetServiceAccountPassword (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Modifica a senha para a conta com a qual o serviço referenciado é executado.  
+  Modifica a senha para a conta com a qual o serviço referenciado é executado.  
   
 ## <a name="syntax"></a>Sintaxe  
   

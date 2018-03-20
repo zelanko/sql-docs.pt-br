@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1dffb89ed6d2e299c79a1b4d1bdf33b0ad58ae
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3c588e0be321f576d4d45fc3c659c34ef09da2d8
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbstoptracing-function"></a>Função LocalDBStopTracing
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Desabilita o rastreamento de chamadas de API para todas as instâncias LocalDB do SQL Server Express de propriedade do usuário atual do Windows.  
+  Desabilita o rastreamento de chamadas de API para todas as instâncias LocalDB do SQL Server Express de propriedade do usuário atual do Windows.  
   
  **Arquivo de cabeçalho:** sqlncli.h  
   
