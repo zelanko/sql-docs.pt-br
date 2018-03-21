@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0e9f4351e74e73453182ff8e8f840f50f0085537
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conhecidos nos serviços de aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Esse problema é corrigido na versão de lançamento. Além disso, essa limitaç
 
 **Aplica-se a:** SQL Server 2017 com Python
 
-### <a name="bkmk_sqlbindr"></a>Quando você conecta a uma versão mais antiga do SQL Server R Services de um cliente por meio de aviso de versão incompatível[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> Quando você conecta a uma versão mais antiga do SQL Server R Services de um cliente por meio de aviso de versão incompatível [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 Quando você executar o código R contexto de computação de um SQL Server 2016, você poderá ver o seguinte erro:
 
@@ -117,7 +117,7 @@ Como alternativa, você pode instalar a versão de serviço usando a linha de co
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-Para obter os instaladores mais recentes, consulte [instalar componentes de aprendizado de máquina sem acesso à internet](r/installing-ml-components-without-internet-access.md).
+Para obter os instaladores mais recentes, consulte [instalar componentes de aprendizado de máquina sem acesso à internet](install/sql-ml-component-install-without-internet-access.md).
 
 **Aplica-se a:** SQL Server 2016 R Services, com R Server versão 9.0.0 ou anterior
 
@@ -155,7 +155,7 @@ Se não for viável, como alternativa, use um logon do SQL para executar trabalh
 
 Por exemplo, mesmo se você estiver usando a Enterprise Edition do SQL Server, R é executado no modo de thread único, quando você executa o código de R usando ferramentas externas. Para obter os benefícios de desempenho no SQL Server, iniciar uma conexão do SQL Server e usar [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para chamar o tempo de execução do script externo.
 
-Em geral, evite chamar a bibliotecas que são usadas pelo SQL Server de ferramentas externas de aprendizado de máquina. Se você precisar depurar R ou o código Python, é normalmente mais fácil de fazer isso fora do SQL Server. Para obter as mesmas bibliotecas que estejam no SQL Server, você pode instalar o cliente do Microsoft R ou [Server de aprendizado de máquina](r/create-a-standalone-r-server.md).
+Em geral, evite chamar a bibliotecas que são usadas pelo SQL Server de ferramentas externas de aprendizado de máquina. Se você precisar depurar R ou o código Python, é normalmente mais fácil de fazer isso fora do SQL Server. Para obter as mesmas bibliotecas que estejam no SQL Server, você pode instalar o cliente do Microsoft R, [servidor do aprendizado de máquina 2017 SQL Server (autônomo)](install/sql-machine-learning-standalone-windows-install.md), ou [servidor do SQL Server 2016 R (autônomo)](install/sql-r-standalone-windows-install.md).
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools não suporta permissões exigidas para scripts externos
 
@@ -264,7 +264,7 @@ O`revoScriptConnection` é um objeto no espaço de trabalho do R que contém inf
 
 Como alternativa, evite limpando indiscriminado de variáveis e outros objetos enquanto você estiver executando o R no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Embora limpar o espaço de trabalho é comum quando trabalha no console de R, ele pode ter consequências não intencionais.
 
-* Para excluir variáveis específicas, use o R `remove` função: por exemplo,`remove('name1', 'name2', ...)`
+* Para excluir variáveis específicas, use o R `remove` função: por exemplo, `remove('name1', 'name2', ...)`
 * Se houver várias variáveis a serem excluídas, salve os nomes das variáveis temporárias em uma lista e execute a coleta de lixo periódica.
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>Restrições sobre dados que podem ser fornecidos como entrada para um script R
@@ -305,7 +305,7 @@ Ao enviar dados de cadeia de caracteres para R, converta-o em uma representaçã
 
 Essa limitação aplica-se a dados transmitidos entre o SQL Server e Python também. Caracteres multibyte devem ser passados como UTF-8 e armazenados como Unicode.
 
-### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>Apenas um valor do tipo `raw` pode ser retornado de`sp_execute_external_script`
+### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>Apenas um valor do tipo `raw` pode ser retornado de `sp_execute_external_script`
 
 Quando um tipo de dados binários (R **bruto** tipo de dados) é retornado de R, o valor deve ser enviado no quadro de dados de saída.
 
@@ -436,7 +436,7 @@ A partir do SQL Server de 2017 CU2, a seguinte mensagem pode aparecer mesmo se o
 
 > *Mensagem (NS) STDERR do script externo:*
 > **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
-> *SyntaxWarning: telemetry_state é usada antes da declaração global*
+> *SyntaxWarning: telemetry_state é usado antes da declaração global*
 
 
 Esse problema foi corrigido no SQL Server de 2017 atualização cumulativa 3 (CU3). 

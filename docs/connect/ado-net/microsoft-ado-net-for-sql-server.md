@@ -4,24 +4,24 @@ ms.custom:
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: ado-net
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54a5cdcd7341972d2f2e5b2e4e3e5fe3e3fe2531
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d43cb61fc711624a4989d37565e1a6575ccfcb17
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/18/2017
 
 O ADO.NET é a principal tecnologia de acesso de dados para linguagens .NET. Use o namespace System.Data.SqlClient para acessar o SQL Server ou provedores de outros fornecedores para acessar seus armazenamentos. Use System.Data.Odbc ou System.Data.Oledb em linguagens .NET para acessar dados usando outras tecnologias de acesso a dados. Use System.Data.Dataset quando precisar de um cache de dados offline em aplicativos cliente. Ele também fornece recursos XML e de persistência local que podem ser úteis em serviços Web.  
   
-## <a name="getting-started"></a>Guia de Introdução  
+## <a name="getting-started"></a>Introdução  
 * [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento ADO.NET](step-1-configure-development-environment-for-ado-net-development.md)  
 * [Etapa 2: Criar um banco de dados SQL para o desenvolvimento ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
 * [Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
@@ -38,7 +38,7 @@ O ADO.NET é a principal tecnologia de acesso de dados para linguagens .NET. Use
 ## <a name="documentation"></a>Documentação  
 * [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
 * [SQL Server e ADO.NET](https://msdn.microsoft.com/library/kb9s9ks0.aspx)  
-* [Namespace do SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
+* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>Comunidade  
 * [Fórum de provedores gerenciados do ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  

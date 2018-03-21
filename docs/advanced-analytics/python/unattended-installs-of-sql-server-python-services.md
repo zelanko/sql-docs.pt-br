@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Instalação autônoma dos serviços de aprendizado de máquina do Python (no banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ A exemplo a seguir mostra o **mínimo** necessários recursos a serem especifica
 
     > [!NOTE]
     > 
-    > Há novos sinalizadores de instalação da Python: `SQL_INST_MPY` e`IACCEPTPYTHONLICENSETERMS`
+    > Há novos sinalizadores de instalação da Python: `SQL_INST_MPY` e `IACCEPTPYTHONLICENSETERMS`
 
 2. Reinicie o servidor conforme indicado.
 3. Execute as etapas de configuração após a instalação, conforme descrito em [nesta seção](#bkmk_PostInstall). Será necessário reiniciar outro dos serviços do SQL Server.

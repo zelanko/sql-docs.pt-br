@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Instalar o servidor de aprendizado de máquina (autônomo) ou Microsoft R Server (autônomo) na linha de comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ Para obter mais informações, consulte [instalar o SQL Server a partir do promp
 Se você instalar o servidor de aprendizado de máquina ou Microsoft R Server (autônomo) em um computador que tenha sem acesso à Internet, você deve baixar os componentes de R (ou Python) necessários com antecedência e copiá-los para uma pasta local. Para locais de download, consulte [instalação de componentes de aprendizado de máquina sem acesso à internet](installing-ml-components-without-internet-access.md).
 
 
-## <a name="bkmk_mls2017"></a>Instalar o Microsoft Server (autônomo) de aprendizado de máquina
+## <a name="bkmk_mls2017"></a> Instalar o Microsoft Server (autônomo) de aprendizado de máquina
 
 **Aplica-se a: SQL Server de 2017**
 

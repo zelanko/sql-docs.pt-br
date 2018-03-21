@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Configurar um cliente de ciência de dados para uso com o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ Para obter essas bibliotecas, instale qualquer um dos seguintes:
 
 + Microsoft R Server (for SQL Server 2016)
 
-    - Para instalar o programa de instalação do SQL Server, consulte [criar um R Server autônomo](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Para instalar o programa de instalação do SQL Server, consulte [instalar o SQL Server 2016 R Server (autônomo)](../install/sql-r-standalone-windows-install.md)
 
     - Para usar o instalador separado baseado no Windows, consulte [instalar Machine Learning Server para Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + Máquina de aprendizagem do servidor (SQL Server 2017)
 
-    - Para instalar o programa de instalação do SQL Server, consulte [criar um R Server autônomo](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Para instalar o programa de instalação do SQL Server, consulte [instalar 2017 Machine Learning servidor do SQL Server (autônomo)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - Para usar o instalador separado baseado no Windows, consulte [instalar o R Server 9.1 para Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 

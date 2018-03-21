@@ -18,11 +18,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 3cff0d963dc365b60404893c1b15eb7733dbdfeb
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="run-python-using-t-sql"></a>Executar Python usando o T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Este tutorial explica como você pode executar o código Python no SQL Server 20
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Para concluir este tutorial, você deve primeiro instalar o SQL Server 2017 e habilitar serviços de aprendizado de máquina da instância, conforme descrito em [neste artigo](../python/setup-python-machine-learning-services.md). 
+Para concluir este tutorial, você deve primeiro instalar o SQL Server 2017 e habilitar serviços de aprendizado de máquina da instância, conforme descrito em [instalar o SQL Server 2017 Machine Learning Services (no banco de dados)](../install/sql-machine-learning-services-windows-install.md). 
 
 Você também deve instalar [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Como alternativa, você pode usar a ferramenta de outro de banco de dados gerenciamento ou consulta, desde que ele pode se conectar a um servidor e banco de dados e executar uma consulta T-SQL ou procedimento armazenado.
 
@@ -388,7 +388,7 @@ Este exercício foi destinado para dar uma ideia de como trabalhar com estrutura
 
 + Não é possível encontrar o procedimento armazenado, `sp_execute_external_script`? Isso significa que você provavelmente ainda não terminou de configurar a instância para dar suporte à execução do script externo. Depois de executar a instalação do SQL Server 2017 e selecionar Python como a idioma de aprendizado de máquina, você deve habilitar explicitamente o recurso usando `sp_configure`e, em seguida, reinicie a instância. 
 
-    Para obter detalhes, consulte [instalação serviços de aprendizado de máquina com Python](../python/setup-python-machine-learning-services.md).
+    Para obter detalhes, consulte [instalar o SQL Server 2017 Machine Learning Services (no banco de dados)](../install/sql-machine-learning-services-windows-install.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -1,7 +1,7 @@
 ---
-title: "Atualizar os componentes de aprendizado de máquina em uma instância do SQL Server | Microsoft Docs"
+title: "Vincular componentes de aprendizado de máquina no SQL Server para o servidor de aprendizado de máquina do Microsoft | Microsoft Docs"
 ms.custom: 
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,19 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Atualizar os componentes de aprendizado de máquina em uma instância do SQL Server
+# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Vincular componentes de aprendizado de máquina no SQL Server para Microsoft Server de aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo explica o processo de _associação_, que pode ser usado para atualizar a componentes usados no SQL Server de aprendizado de máquina. O processo de ligação de bloqueios do servidor em um ritmo de atualização com base em versões do servidor de aprendizado de máquina, em vez de usar o SQL Server de versão e agenda de atualização.
@@ -106,7 +106,7 @@ Se você não quiser usar o assistente, você pode instalar o servidor de aprend
 > 
 > Não é possível localizar SqlBindR.exe? Você provavelmente não baixou os componentes listados acima. Este utilitário está disponível somente com o Windows installer para o servidor de aprendizado de máquina.
 
-1. Abra um prompt de comando como administrador e navegue até a pasta que contém sqlbindr.exe. O local padrão é`C:\Program Files\Microsoft\MLServer\Setup`
+1. Abra um prompt de comando como administrador e navegue até a pasta que contém sqlbindr.exe. O local padrão é `C:\Program Files\Microsoft\MLServer\Setup`
 
 2. Digite o seguinte comando para exibir uma lista das instâncias disponíveis: `SqlBindR.exe /list`
   
@@ -114,7 +114,7 @@ Se você não quiser usar o assistente, você pode instalar o servidor de aprend
 
 3. Execute o **SqlBindR.exe** com o */associar* argumento e especifique o nome da instância para atualizar, usando o nome de instância que foi retornado na etapa anterior.
 
-   Por exemplo, para atualizar a instância padrão, digite:`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+   Por exemplo, para atualizar a instância padrão, digite:  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
 4. Quando a atualização for concluída, reinicie o serviço de barra inicial associado a qualquer instância que foi modificada.
 
@@ -135,7 +135,7 @@ Se você decidir que não deseja atualizar a componentes usando o servidor de ap
 
     Para obter instruções, consulte [desinstalar Machine Learning Server para Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall). 
 
-### <a name="bkmk_wizunbind"></a>Desassocie usando o Assistente
+### <a name="bkmk_wizunbind"></a> Desassocie usando o Assistente
 
 1. Localize o instalador para o servidor de aprendizado de máquina. Se você tiver removido o instalador, talvez seja necessário baixá-lo novamente, ou copie-o de outro computador.
 2. Certifique-se de executar o instalador no computador que tem a instância que você deseja desassociar.
@@ -144,7 +144,7 @@ Se você decidir que não deseja atualizar a componentes usando o servidor de ap
 4. Aceite o contrato de licença. Você deve indicar a aceitação dos termos de licenciamento mesmo durante a instalação.
 5. Clique em **Concluir**. O processo leva algum tempo.
 
-### <a name="bkmk_cmdunbind"></a>Desassocie usando a linha de comando
+### <a name="bkmk_cmdunbind"></a> Desassocie usando a linha de comando
 
 1. Abra um prompt de comando e navegue até a pasta que contém **sqlbindr.exe**, conforme descrito na seção anterior.
 
@@ -178,7 +178,7 @@ Como alternativa, você pode modificar a instalação existente do servidor de R
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>Associação ou desvincular deixa várias pastas temporárias
 
 Às vezes, a associação e operações de desvinculação falharem Limpar pastas temporárias.
-Se você encontrar pastas com um nome assim, você pode removê-lo após a conclusão da instalação:`R_SERVICES_<guid>`
+Se você encontrar pastas com um nome assim, você pode removê-lo após a conclusão da instalação: `R_SERVICES_<guid>`
 
 > [!NOTE]
 > Certifique-se de aguardar até que a instalação for concluída. Ele pode levar muito tempo para remover bibliotecas de R associados com uma versão e, em seguida, adicionar novas bibliotecas de R. Quando a operação for concluída, as pastas temporárias são removidas.

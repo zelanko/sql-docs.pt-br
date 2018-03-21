@@ -4,24 +4,24 @@ ms.custom:
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 231aeea7b69585b01df5064b62707a85ec016ff7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver para SQL Server
 
@@ -31,7 +31,7 @@ Em nosso compromisso contínuo com a interoperabilidade, a Microsoft fornece um 
 
 O Microsoft JDBC Driver para SQL Server foi testado com os principais servidores de aplicativos, como IBM WebSphere e SAP NetWeaver.
   
-## <a name="getting-started"></a>Guia de Introdução  
+## <a name="getting-started"></a>Introdução  
 * [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Java](step-1-configure-development-environment-for-java-development.md)  
 * [Etapa 2: Criar um banco de dados SQL para o desenvolvimento Java](step-2-create-a-sql-database-for-java-development.md)  
 * [Etapa 3: Prova de conceito da conexão ao SQL usando Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  

@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemas comuns com a execução do script externo no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ Se o grupo do Windows para usuários de R (também usada para Python) não pode 
 
     * *Logs de segurança indicam que a conta de serviço do NT não pôde fazer logon*
 
-Para obter informações sobre como conceder as permissões necessárias a este grupo de usuário, consulte [configurar o SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
+Para obter informações sobre como conceder as permissões necessárias a este grupo de usuário, consulte [instalar o SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Essa limitação não se aplicará se você usar logons SQL para executar scripts do R em uma estação de trabalho remota.
@@ -233,7 +233,7 @@ Essa duplicação se torna um problema quando você tentar executar um script de
 
 Embora seja comum limpar o espaço de trabalho, quando você trabalha no console de R, ele pode ter consequências não intencionais em um SQL contexto de computação.
 
-`revoScriptConnection`é um objeto no espaço de trabalho R que contém informações sobre uma sessão de R chamado a partir do SQL Server. No entanto, se seu código R inclui um comando para limpar o espaço de trabalho (como `rm(list=ls())`), todas as informações sobre a sessão e outros objetos no espaço de trabalho de R são desmarcadas também.
+`revoScriptConnection` é um objeto no espaço de trabalho R que contém informações sobre uma sessão de R chamado a partir do SQL Server. No entanto, se seu código R inclui um comando para limpar o espaço de trabalho (como `rm(list=ls())`), todas as informações sobre a sessão e outros objetos no espaço de trabalho de R são desmarcadas também.
 
 Como alternativa, evite limpando indiscriminado de variáveis e outros objetos durante a execução do R no SQL Server. Você pode excluir variáveis específicas usando o **remover** função:
 

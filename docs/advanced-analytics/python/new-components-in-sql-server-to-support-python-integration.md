@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6f948473c51d6212d432ddb179d7a61fcfdef117
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Componentes do SQL Server para dar suporte à integração do Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ Para configurar o SQL Server 2017 para permitir a execução de script de Python
 
 Podem ser necessárias etapas adicionais para permitir a execução de script remoto.
 
-Para obter mais informações, consulte [configurar serviços de aprendizado de máquina](setup-python-machine-learning-services.md)
+Para obter mais informações, consulte [instalar o SQL Server 2017 Machine Learning Services (no banco de dados)](../install/sql-machine-learning-services-windows-install.md).
 
 ### <a name="launchpad"></a>Launchpad
 
@@ -105,7 +105,7 @@ O satélite de SQL pode ser monitorado usando estendidos (xEvents) de eventos do
   + Gravar dados em tabelas: por exemplo, quando salvar resultados em uma tabela
   + Criar objetos de banco de dados: por exemplo, se for salvar o script externo como parte de um novo procedimento armazenado.
 
-  Quando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] é usado como o contexto de computação para execução de script de Python de um cliente remoto e o executável do Python deve recuperar dados de uma fonte externa, o ODBC é usado para write-back. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]mapeia a identidade do usuário que emite o comando remoto para a identidade do usuário na instância atual e executa o comando ODBC usando as credenciais do usuário. A cadeia de conexão necessária para executar essa chamada ODBC é obtida do código cliente.
+  Quando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] é usado como o contexto de computação para execução de script de Python de um cliente remoto e o executável do Python deve recuperar dados de uma fonte externa, o ODBC é usado para write-back. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] mapeia a identidade do usuário que emite o comando remoto para a identidade do usuário na instância atual e executa o comando ODBC usando as credenciais do usuário. A cadeia de conexão necessária para executar essa chamada ODBC é obtida do código cliente.
 
 ## <a name="interaction-of-components"></a>Interação de componentes
 
@@ -125,7 +125,7 @@ Depois que o script foi incorporado no procedimento armazenado, qualquer aplicat
 4. BxlServer coordena com o tempo de execução do Python para gerenciar a troca de dados e o armazenamento de resultados de trabalho.
 5. Satélite de SQL gerencia comunicações sobre tarefas relacionadas e processa a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. O BxlServer usa Satélite SQL para comunicar o status e os resultados para o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtém resultados e fecha a processos e tarefas relacionadas.
+7. O [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtém resultados e fecha os processos e tarefas relacionados.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Scripts de Python executados a partir de um cliente remoto
 
@@ -146,7 +146,7 @@ O diagrama a seguir resume o fluxo de trabalho geral quando os scripts forem env
 6. PythonLauncher faz uma chamada para a instância do Python que está instalado no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computador.
 7. Os resultados são retornados ao BxlServer.
 8. O Satélite SQL gerencia a comunicação com o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e a limpeza dos objetos de trabalho relacionados.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passa os resultados ao cliente.
+9. O [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passa os resultados de volta para o cliente.
 
 ## <a name="next-steps"></a>Próximas etapas
 

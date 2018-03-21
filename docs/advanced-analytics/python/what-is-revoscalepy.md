@@ -13,11 +13,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2649596abecfd92d40a860e743c867e0ff80ed26
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="introducing-revoscalepy"></a>Introdução ao revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,12 +84,12 @@ Os seguintes algoritmos de aprendizado de máquina e o resumo de funções de Re
 
 | Função| Description|Observações|
 | ------ | ------ |------ |
-|`rx_btrees` | Ajustar as árvores de decisão ampliada de gradiente estocástico|`rx_btrees_ex`No CTP 2.0|
-|`rx_dforest` | Ajustar a classificação e regressão florestas de decisão|`rx_dforest_ex`No CTP 2.0|
-|`rx_dtree` | Árvores de classificação e regressão de ajuste |`rx_dtree_ex`No CTP 2.0|
-|`rx_lin_mod` | Criar um modelo linear|`rx_lin_mod_ex`No CTP 2.0|
-|`rx_logit` | Criar um modelo de regressão logística|`rx_logit_ex`No CTP 2.0|
-|`rx_predict` | Gerar previsões de um modelo treinado|`rx_predict_ex`No CTP 2.0|
+|`rx_btrees` | Ajustar as árvores de decisão ampliada de gradiente estocástico|`rx_btrees_ex` No CTP 2.0|
+|`rx_dforest` | Ajustar a classificação e regressão florestas de decisão|`rx_dforest_ex` No CTP 2.0|
+|`rx_dtree` | Árvores de classificação e regressão de ajuste |`rx_dtree_ex` No CTP 2.0|
+|`rx_lin_mod` | Criar um modelo linear|`rx_lin_mod_ex` No CTP 2.0|
+|`rx_logit` | Criar um modelo de regressão logística|`rx_logit_ex` No CTP 2.0|
+|`rx_predict` | Gerar previsões de um modelo treinado|`rx_predict_ex` No CTP 2.0|
 |`rx_summary` | Gerar um resumo do modelo||
 
 Novos algoritmos de aprendizado de máquina também são fornecidos pela versão do Python [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
@@ -108,7 +108,7 @@ Novos algoritmos de aprendizado de máquina também são fornecidos pela versão
 
 MicrosoftML para Python também inclui uma variedade de transformações e funções auxiliares, como:
 
-+ `rx_predict`gera previsões de um modelo treinado e pode ser usado para pontuação em tempo real
++ `rx_predict` gera previsões de um modelo treinado e pode ser usado para pontuação em tempo real
 + funções de personalização de imagem
 + funções para extração de sensibilidade e processamento de texto
 
@@ -157,7 +157,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 Para executar o código Python no SQL Server, você deve ter instalado o SQL Server 2017 junto com o recurso **serviços de aprendizado de máquina**e habilitado a linguagem Python. Versões anteriores do SQL Server não dão suporte a integração do Python.
 
 > [!NOTE]
-> Distribuições de código aberto do Python não dão suporte para contextos de computação do SQL Server. No entanto, se você precisar publicar e consumir aplicativos Python do Windows, você pode instalar o servidor de aprendizado de máquina do Microsoft sem instalar o SQL Server. Para obter mais informações, consulte [criar um Standalone R Server](../r/create-a-standalone-r-server.md)
+> Distribuições de código aberto do Python não dão suporte para contextos de computação do SQL Server. No entanto, se você precisar publicar e consumir aplicativos Python do Windows, você pode instalar o servidor de aprendizado de máquina do Microsoft sem instalar o SQL Server. Para obter mais informações, consulte [instalar 2017 Machine Learning servidor do SQL Server (autônomo)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ## <a name="get-more-help"></a>Obter mais ajuda
 

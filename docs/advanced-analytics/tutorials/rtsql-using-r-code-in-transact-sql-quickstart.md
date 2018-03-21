@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Usando o código R no Transact-SQL (R no início rápido do SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ Para este tutorial, para mostrar como é fácil executar R dentro do SQL Server,
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-+ Se você receber erros dessa consulta, a instalação pode estar incompleta. Depois de adicionar o recurso usando o Assistente de instalação do SQL Server, você deve executar algumas etapas adicionais para habilitar o uso de bibliotecas de código externo.  Consulte [Configurar o SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md).
++ Se você receber erros dessa consulta, a instalação pode estar incompleta. Depois de adicionar o recurso usando o Assistente de instalação do SQL Server, você deve executar algumas etapas adicionais para habilitar o uso de bibliotecas de código externo.  Consulte [instalar serviços de aprendizado de máquina do SQL Server de 2017](../install/sql-machine-learning-services-windows-install.md) ou [instalar o SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 + Certifique-se de que o serviço Launchpad está sendo executado. Dependendo do seu ambiente, você pode precisar habilitar as contas de trabalho R para se conectar ao SQL Server, instalar bibliotecas de rede adicional, habilitar a execução remota de código ou reiniciar a instância depois que tudo estiver configurado. Consulte [Perguntas frequentes sobre a instalação e a atualização dos R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 

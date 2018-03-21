@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurar serviços de aprendizado de máquina do SQL Server (no banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Este artigo descreve o processo de instalação que usa o [!INCLUDE[ssNoVersion]
 
 **Aplica-se a:** do SQL Server 2016, SQL Server de 2017
 
-## <a name="bkmk_prereqs"></a> Pré-instalação
+## <a name="bkmk_prereqs"> </a> Lista de verificação de pré-instalação
 
 + Machine learning no banco de dados requer o SQL Server 2016 ou posterior. 
 
@@ -77,7 +77,7 @@ Este artigo descreve o processo de instalação que usa o [!INCLUDE[ssNoVersion]
 
 + A estrutura de aprendizado de máquina requer configuração adicional após a conclusão da instalação. As etapas exatas dependem de sua organização e políticas de segurança, configuração do servidor e os usuários pretendidos. É recomendável que você examine todas as etapas e determinar a configuração adicional que pode ser necessário em seu ambiente.
 
-## <a name="bkmk2016top"></a>Instalar o SQL Server 2016 R Services (no banco de dados)
+## <a name="bkmk2016top"></a> Instalar o SQL Server 2016 R Services (no banco de dados)
 
 > [!div class="checklist"]
 > * Instalar o mecanismo de banco de dados e recursos de aprendizado de máquina
@@ -119,7 +119,7 @@ Este artigo descreve o processo de instalação que usa o [!INCLUDE[ssNoVersion]
 7. Quando a instalação for concluída, reinicie o computador.
 
 
-## <a name="bkmk2017top"></a>Instale os serviços de aprendizado de máquina do SQL Server de 2017 (no banco de dados)
+## <a name="bkmk2017top"></a> Instale os serviços de aprendizado de máquina do SQL Server de 2017 (no banco de dados)
 
 > [!div class="checklist"]
 > * Instalar o mecanismo de banco de dados e recursos de aprendizado de máquina
@@ -240,7 +240,7 @@ Esta seção descreve como reconfigurar a instância para o aprendizado de máqu
     + [Etapas de pós-instalação opcionais: configurar o serviço e permissões](#bkmk_FollowUp) 
     + [Solucionando problemas de aprendizado de máquina no SQL Server](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>Etapas de pós-instalação opcionais
+## <a name="bkmk_FollowUp"></a> Etapas de pós-instalação opcionais
 
 Dependendo de seu caso de uso para o aprendizado de máquina, você precisará fazer alterações adicionais para o servidor, o firewall, as contas usadas pelo serviço ou permissões de banco de dados. As alterações que você deve fazer variam de acordo com o caso.
 

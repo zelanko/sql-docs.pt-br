@@ -19,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 35738101548f3b0790131c8106bb37e482cc7316
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>Pré-requisitos para o passo a passo do ciência de dados do SQL Server e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Você deve ter acesso a uma instância do SQL Server com suporte para R instalad
 + Serviços (no banco de dados) de aprendizado de máquina do SQL Server de 2017
 + SQL Server 2016 R Services
 
-Para obter mais informações, consulte [configurar o SQL Server R Services (no banco de dados](../r/set-up-sql-server-r-services-in-database.md).
+Para obter mais informações, consulte [instalar serviços aprendizado de máquina do SQL Server de 2017](../install/sql-machine-learning-services-windows-install.md) ou [instalar o SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 > [!IMPORTANT]
 > Versões do SQL Server anterior de 2016 não dá suporte a integração com R. No entanto, você pode usar mais antigos bancos de dados SQL como uma fonte de dados ODBC.
@@ -52,7 +52,7 @@ Para este passo a passo, é recomendável que você use um ambiente de desenvolv
 
 - **O cliente do Microsoft R** é uma ferramenta de desenvolvimento leve que dá suporte ao desenvolvimento em R usando o pacote RevoScaleR. Para fazer isso, veja [Começar a usar o cliente do Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).
 
-- O**RStudio** é um dos ambientes mais populares para desenvolvimento do R. Para obter mais informações, visite [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
+- O**RStudio** é um dos ambientes mais populares para desenvolvimento do R. Para obter mais informações, consulte [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
 
     Você não pode concluir este tutorial usando uma instalação genérica de RStudio ou outro ambiente. Você também deve instalar os pacotes de R e bibliotecas de conectividade para o Microsoft R Open. Para obter mais informações, consulte [Configurar um cliente de ciência de dados](../r/set-up-a-data-science-client.md).
 

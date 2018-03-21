@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Configurar os serviços de aprendizado de máquina do Python (no banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ Depois que a instalação for concluída, reconfigure a instância para permitir
 
 Para executar uma instalação autônoma, use as opções de linha de comando para instalação do SQL Server e os argumentos específicos para Python. Para obter mais informações, consulte [autônomo instalado do SQL Server com serviços de aprendizado de máquina do Python](unattended-installs-of-sql-server-python-services.md).
 
-##  <a name="bkmk_installPythonInDatabase"></a>Etapa 1: Instalar os serviços (no banco de dados) no SQL Server de aprendizado de máquina
+##  <a name="bkmk_installPythonInDatabase"></a> Etapa 1: Instalar os serviços (no banco de dados) no SQL Server de aprendizado de máquina
 
 1. Execute o Assistente de instalação para SQL Server 2017.
   
@@ -105,7 +105,7 @@ Para executar uma instalação autônoma, use as opções de linha de comando pa
 
 6. Quando a instalação for concluída, reinicie o computador.
 
-##  <a name="bkmk_enableFeature"></a>Etapa 2: Habilitar a execução do script Python
+##  <a name="bkmk_enableFeature"></a> Etapa 2: Habilitar a execução do script Python
 
 1. Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -168,7 +168,7 @@ Dedique alguns momentos para verificar se todos os componentes usados para inici
 > [!NOTE]
 > Títulos usados no script Python ou colunas não são retornados, por design. Para adicionar nomes de coluna de saída, você deve especificar o esquema para o conjunto de dados retornado. Faça isso usando o parâmetro com resultados do procedimento armazenado, nomear as colunas e especificando o tipo de dados SQL.
 > 
-> Por exemplo, você pode adicionar a linha a seguir para gerar um nome arbitrário de coluna:`WITH RESULT SETS ((Col1 AS int))`
+> Por exemplo, você pode adicionar a linha a seguir para gerar um nome arbitrário de coluna: `WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>Etapa 4: Configuração adicional
 
@@ -180,7 +180,7 @@ Se você receber um erro ao executar o comando, examine a lista a seguir. Talvez
 > 
 > Nem todas as alterações listadas são necessárias, e nenhum pode ser necessária. Requisitos dependem de seu esquema de segurança, onde você instalou o SQL Server e como você espera que os usuários a se conectar ao banco de dados e executar scripts externos.
 
-###  <a name="bkmk_configureAccounts"></a>Habilitar autenticação implícita para o grupo de contas da barra inicial
+###  <a name="bkmk_configureAccounts"></a> Habilitar autenticação implícita para o grupo de contas da barra inicial
 
 Durante a instalação, um número de novas contas de usuário do Windows são criadas com a finalidade de executar tarefas no token de segurança do serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. Quando um usuário envia um script Python ou R de um cliente externo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ativa uma conta de trabalho disponíveis. Em seguida, ele mapeia para a identidade do usuário da chamada e executa o script em nome do usuário.
 

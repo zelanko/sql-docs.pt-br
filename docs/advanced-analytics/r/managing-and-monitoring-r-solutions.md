@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 65398ab522f7a39aae08b1f438d2fa59291e4e8f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Gerenciando e monitorando soluções de aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,5 @@ Os administradores de banco de dados devem integrar projetos e prioridades conco
 Para obter mais informações, consulte estes recursos:
 
 + [Governança de recursos para serviços de R](../r/resource-governance-for-r-services.md)
-
-+ [Monitorar os serviços R](../r/monitoring-r-services.md)
 
 + [Configurar e gerenciar extensões de análise avançada](../r/configure-and-manage-advanced-analytics-extensions.md)
