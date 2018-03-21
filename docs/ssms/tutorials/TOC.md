@@ -1,4 +1,5 @@
 # [Tutoriais: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+## [Conectar-se ao SQL Server e consultá-lo usando SSMS](connect-query-sql-server.md)
 
 # Lições
 ## [Lição 1: Navegação básica no SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
