@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>Lista de permissões  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] tem 230 permissões. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tem 219 permissões. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tem 214 permissões. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tem 195 permissões. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] têm menos permissões, pois expõem apenas uma parte do mecanismo de banco de dados, mas cada um tem algumas permissões que não se aplicam a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Neste tópico, o cartaz é pequeno demais para ser lido. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
   
-[![Permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
  
  Para conferir um gráfico mostrando as relações entre as entidades [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o servidor e objetos de banco de dados, consulte [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   

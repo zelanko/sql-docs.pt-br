@@ -30,16 +30,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4b00485c741857f1e3438c3e50995886900fe29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c66da357e43d1a43b3b97c7047d223751ecbe2ba
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="suserid-transact-sql"></a>SUSER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Retorna o número de identificação de logon do usuário.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
 >  Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID retorna o valor listado como **principal_id** na exibição do catálogo **sys.server_principals**.  
@@ -54,7 +56,7 @@ SUSER_ID ( [ 'login' ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *logon* **'**  
+ **'** *login* **'**  
  É o nome de logon do usuário. o *logon* é **nchar**. Se o *logon* for especificado como **char**, o *logon* será convertido implicitamente em **nchar**. o *logon* pode ser qualquer logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usuário ou grupo do Windows que tenha permissão para conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o *logon* não for especificado, o número de identificação de logon do usuário atual será retornado. Se o parâmetro contiver a palavra NULL, retornará NULL.  
   
 ## <a name="return-types"></a>Tipos de retorno  

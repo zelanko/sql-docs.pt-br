@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: eb13a7b90d1e84a57a5c989058dd32ebd2b8eeb3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Suporte de alta disponibilidade para bancos de dados OLTP na memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Os bancos de dados que contêm tabelas com otimização de memória, com ou sem procedimentos armazenados compilados nativos, são totalmente compatíveis com Grupos de Disponibilidade AlwaysOn.  Não há nenhuma diferença na configuração e no suporte para bancos de dados que contêm objetos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] em comparação a aqueles sem.  
+  Os bancos de dados que contêm tabelas com otimização de memória, com ou sem procedimentos armazenados compilados nativos, são totalmente compatíveis com Grupos de Disponibilidade AlwaysOn.  Não há nenhuma diferença na configuração e no suporte para bancos de dados que contêm objetos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] em comparação a aqueles sem.  
   
  Quando um banco de dados OLTP in-memory for implantado em uma configuração de Grupo de Disponibilidade AlwaysOn, as alterações nas tabelas com otimização de memória na réplica primária serão aplicadas à memória para as tabelas nas réplicas secundárias, quando REDO for aplicado. Isso significa que o failover para uma réplica secundária pode ser muito rápido, pois os dados já estão na memória. Além disso, as tabelas estão disponíveis para consultas em réplicas secundárias que foram configuradas para acesso de leitura.  
   

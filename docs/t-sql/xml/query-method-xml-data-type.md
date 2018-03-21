@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4ec43116cf548df0a6f3541ab882635331f1b395
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 07ffca5e9c5a3d80ccd5e9a61ffb035ec718f805
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="query-method-xml-data-type"></a>Método consulta() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,15 +109,16 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
  Observe que os métodos query() e exist() devem declarar o prefixo PD. Nesses casos, você pode usar WITH XMLNAMESPACES para definir primeiro os prefixos e usá-los na consulta.  
   
 ```  
-WITH XMLNAMESPACES (  
+WITH XMLNAMESPACES 
+(  
    'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
-SELECT CatalogDescription.query('  
-<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
-') as Result  
+   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM
+)  
+SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />')
+       AS Result  
 FROM Production.ProductModel  
-where CatalogDescription.exist('  
-     /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
+WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
+
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

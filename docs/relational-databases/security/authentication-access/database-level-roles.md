@@ -45,11 +45,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fe700c3dc23125b21b24a749ca5ae5238d6a02c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Para adicionar e remover usuários de uma função de banco de dados, use as op�
 
 As permissões de funções de banco de dados definidas pelo usuário podem ser personalizadas com instruções GRANT, DENY e REVOKE. Para obter mais informações, consulte [Permissões (Mecanismo de Banco de Dados)](../../../relational-databases/security/permissions-database-engine.md).
 
-Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do Mecanismo de Banco de Dados](http://go.microsoft.com/fwlink/?LinkId=229142) . (As permissões em nível de servidor não podem ser concedidas às funções de banco de dados. Logons e outras entidades em nível de servidor – como funções de servidor – não podem ser adicionados às funções de banco de dados. Para a segurança em nível de servidor no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [funções de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md) . As permissões em nível de servidor não podem ser concedidas por meio das funções no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do Mecanismo de Banco de Dados](https://aka.ms/sql-permissions-poster) . (As permissões em nível de servidor não podem ser concedidas às funções de banco de dados. Logons e outras entidades em nível de servidor – como funções de servidor – não podem ser adicionados às funções de banco de dados. Para a segurança em nível de servidor no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [funções de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md) . As permissões em nível de servidor não podem ser concedidas por meio das funções no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
 
 ## <a name="fixed-database-roles"></a>funções de banco de dados fixas
   
@@ -145,7 +145,7 @@ Quando o R Services está instalado, as funções adicionais de banco de dados f
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Comando|Remove uma função do banco de dados.|  
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Comando|Cria uma nova função de banco de dados no banco de dados atual.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Comando|Remove uma função de banco de dados do banco de dados atual.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Adiciona um usuário de banco de dados, uma função de banco de dados, o logon do Windows ou um grupo do Windows em uma função de banco de dados no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)], devem usar o `ALTER ROLE` em vez disso.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Adiciona um usuário de banco de dados, uma função de banco de dados, o logon do Windows ou um grupo do Windows em uma função de banco de dados no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , devem usar o `ALTER ROLE` em vez disso.|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Remove uma conta de segurança de uma função do SQL Server no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , devem usar o `ALTER ROLE` em vez disso.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissões | Adiciona a permissão a uma função.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissões | Nega uma permissão a uma função.

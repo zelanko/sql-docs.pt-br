@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 15f07a9dd757fe2cb392a42ab7ab726ccac1f8d1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="application-level-partitioning"></a>Particionamento de nível de aplicativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Esse aplicativo processa ordens. Há muito processamento em ordens recentes. Não há muito processamento em ordens antigas. As ordens recentes estão em uma tabela com otimização de memória. As ordens antigas estão em uma tabela baseada em disco. Todas as ordens depois do *hotDate* estão na tabela com otimização de memória. Todas as ordens antes do *hotDate* estão na tabela baseada em disco. Suponha uma carga de trabalho OLTP extrema com várias transações simultâneas. Essa regra de negócio (ordens recentes em uma tabela com otimização de memória) deve ser imposta mesmo que várias transações simultâneas estejam tentando alterar o *hotDate*.  
+  Esse aplicativo processa ordens. Há muito processamento em ordens recentes. Não há muito processamento em ordens antigas. As ordens recentes estão em uma tabela com otimização de memória. As ordens antigas estão em uma tabela baseada em disco. Todas as ordens depois do *hotDate* estão na tabela com otimização de memória. Todas as ordens antes do *hotDate* estão na tabela baseada em disco. Suponha uma carga de trabalho OLTP extrema com várias transações simultâneas. Essa regra de negócio (ordens recentes em uma tabela com otimização de memória) deve ser imposta mesmo que várias transações simultâneas estejam tentando alterar o *hotDate*.  
   
  Este exemplo não usa uma tabela particionada para a tabela com base em disco, mas acompanha um ponto explícito de divisão entre as duas tabelas, usando uma terceira tabela. O ponto de divisão pode ser usado para garantir que os dados recém-inseridos sejam sempre inseridos na tabela apropriada com base na data. Ele também pode ser usado para determinar onde procurar dados. Os dados tardios ainda entram na tabela apropriada.  
   
