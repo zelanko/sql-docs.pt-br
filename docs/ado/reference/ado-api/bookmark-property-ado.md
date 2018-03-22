@@ -2,15 +2,15 @@
 title: Marcador de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>Propriedade Bookmark (ADO)
 Indica um marcador que identifica exclusivamente o registro atual em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto ou define o registro atual em um **Recordset** objeto para o registro identificado por um indicador válido.  
@@ -40,7 +40,7 @@ Indica um marcador que identifica exclusivamente o registro atual em um [registr
   
  Quando você abre um **registros** do objeto, cada um dos seus registros possui um indicador exclusivo. Para salvar o indicador para o registro atual, atribuir o valor de **indicador** propriedade a uma variável. Para retornar rapidamente a esse registro a qualquer momento depois de mover para um registro diferente, defina o **registros** do objeto **indicador** propriedade para o valor da variável.  
   
- O usuário pode não ser capaz de exibir o valor do indicador. Além disso, os usuários não devem ter indicadores para ser diretamente comparáveis??? dois indicadores que se referem ao mesmo registro podem ter valores diferentes.  
+ O usuário pode não ser capaz de exibir o valor do indicador. Além disso, os usuários não devem ter indicadores para ser diretamente comparáveis, porque os dois indicadores que se referem ao mesmo registro podem ter valores diferentes.  
   
  Se você usar o [Clone](../../../ado/reference/ado-api/clone-method-ado.md) método para criar uma cópia de um **registros** objeto, o **indicador** as configurações de propriedade para o original e a duplicata **conjunto de registros**  objetos são idênticos e podem ser usados alternadamente. No entanto, você não pode usar indicadores de diferentes **registros** objetos alternadamente, mesmo se elas foram criadas da mesma fonte ou do comando.  
   

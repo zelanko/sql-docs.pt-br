@@ -1,16 +1,16 @@
 ---
-title: "Método NextRecordset (ADO) | Microsoft Docs"
+title: Método NextRecordset (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b4e0e38fc9c01a65916d7979fddfae929d43acf1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Limpa atual [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de objeto e retorna o próximo **registros** pelo adiantamento por meio de uma série de comandos.  
@@ -54,7 +54,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="remarks"></a>Remarks  
  Use o **NextRecordset** método para retornar os resultados do próximo comando em uma instrução composta de comando ou de um procedimento armazenado que retorna vários resultados. Se você abrir um **registros** objeto com base em uma instrução composta de comando (por exemplo, "selecionar \* de table1; Selecione \* de table2 ") usando o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método em um [comando](../../../ado/reference/ado-api/command-object-ado.md) ou o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método em um **Recordset**, ADO executa somente o primeiro comando e retorna os resultados para *registros*. Para acessar os resultados dos comandos subsequentes na instrução, chame o **NextRecordset** método.  
   
- Como há resultados adicionais e o **registros** que contém as declarações compostas é desconectado ou realizar marshaling nos limites de processo, não o **NextRecordset** método continuarão a retornar **registros** objetos. Se um comando de retorno de linha é executado com êxito, mas não retornou nenhum registro retornado **registros** objeto será aberto, mas vazio. Teste para este caso, verificando se o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades estiverem **True**. Se um não??? retorno de linha comando for executado com êxito, retornado **Recordset** objeto será fechado, que você pode verificar Testando o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade no **Recordset**. Quando não há mais nenhum resultado *registros* será definida como *nada*.  
+ Como há resultados adicionais e o **registros** que contém as declarações compostas é desconectado ou realizar marshaling nos limites de processo, não o **NextRecordset** método continuarão a retornar **registros** objetos. Se um comando de retorno de linha é executado com êxito, mas não retornou nenhum registro retornado **registros** objeto será aberto, mas vazio. Teste para este caso, verificando se o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades estiverem **True**. Se um comando não retornam linhas for executado com êxito, retornado **Recordset** objeto será fechado, que você pode verificar Testando o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade no **registros**. Quando não há mais nenhum resultado *registros* será definida como *nada*.  
   
  O **NextRecordset** método não está disponível em um desconectada **registros** objeto, onde [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) foi definida como **nada**(no Microsoft Visual Basic) ou nulo (em outras linguagens).  
   
