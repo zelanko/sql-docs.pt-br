@@ -1,16 +1,16 @@
 ---
-title: "Contêiner do Loop Foreach | Microsoft Docs"
-ms.custom: 
+title: Contêiner do Loop Foreach | Microsoft Docs
+ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -33,14 +33,14 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/20/2018
 ---
@@ -442,7 +442,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Especifique o nome do diretório de HDFS contém os arquivos HDFS a serem enumerados.  
   
  **Filtro de nome do arquivo**  
- Especifique um filtro de nome para enumerar arquivos com um determinado padrão de nome. Por exemplo, MySheet*.xls\* inclui arquivos como MySheet001.xls e MySheetABC.xlsx.  
+ Especifique um filtro de nome para enumerar arquivos com um determinado padrão de nome. Por exemplo, MySheet\*.xls\* inclui arquivos como MySheet001.xls e MySheetABC.xlsx.  
   
  **Recuperar o nome do arquivo**  
  Especifique o tipo de nome do arquivo recuperado pelo SSIS.  
