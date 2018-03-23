@@ -1,33 +1,33 @@
 ---
 title: Driver do Node.js para SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85c5c9f1fe80893c9d778c6e1cfb7ce889aa1c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Driver do Node.js para SQL Server
 
 ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver SQL do Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-O módulo entediante é uma implementação de javascript do protocolo TDS, que é suportado por todos os versão moderno do SQL Server. O driver é um projeto de código-fonte aberto, disponível no Github.  
+O módulo entediante é uma implementação de javascript do protocolo TDS, que tem suporte em todas as versões atuais do SQL Server. O driver é um projeto de código-fonte aberto, disponível no Github.  
   
 Você pode se conectar a um banco de dados SQL usando o Node.js no Windows, Linux ou Mac.  
   

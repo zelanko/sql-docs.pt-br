@@ -1,25 +1,25 @@
 ---
-title: "Diretrizes de instalação para SQL Server 2017 no Linux | Microsoft Docs"
-description: "Instalar, atualizar e desinstalar o SQL Server no Linux. Este artigo aborda cenários autônomos online e offline."
+title: Diretrizes de instalação para SQL Server 2017 no Linux | Microsoft Docs
+description: Instalar, atualizar e desinstalar o SQL Server no Linux. Este artigo aborda cenários autônomos online e offline.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
@@ -47,12 +47,10 @@ Há suporte para o SQL Server 2017 no Red Hat Enterprise Linux (RHEL), SUSE Linu
 | **Ubuntu** | 16.04 | [Obter Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Mecanismo do docker** | 1.8+ | [Obter o Docker](http://www.docker.com/products/overview)
 
+A Microsoft também suporta a implantar e gerenciar contêineres do SQL Server usando OpenShift e Kubernetes.
+
 > [!NOTE]
-> Às vezes, é possível instalar e executar o SQL Server em outras plataformas Linux intimamente relacionado, mas o SQL Server somente é testado e suportado em plataformas listadas na tabela anterior.
-
-A Microsoft oferece suporte a implantar e gerenciar contêineres do SQL Server usando OpenShift e Kubernetes.
-
-Para a política de suporte mais recente para o SQL Server 2017, consulte [política de suporte técnico para o Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> SQL Server é testado e suportado no Linux para as distribuições listadas anteriormente. Se você optar por instalar o SQL Server em um sistema operacional sem suporte, examine o **política de suporte** seção o [política de suporte técnico para o Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) a entender o suporte implicações.
 
 ## <a id="system"></a> Requisitos do sistema
 
@@ -170,7 +168,7 @@ Para um script de exemplo mais detalhado, consulte os exemplos a seguir:
 
 ## <a id="offline"></a> Instalação offline
 
-Se o computador Linux não tem acesso aos repositórios online usados no [inícios rápidos](#platforms), você pode baixar os arquivos de pacote diretamente. Esses pacotes estão localizados no repositório da Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
+Se o computador Linux não tem acesso aos repositórios online usados no [inícios rápidos](#platforms), você pode baixar os arquivos de pacote diretamente. Esses pacotes estão localizados no repositório Microsoft, [ https://packages.microsoft.com ](https://packages.microsoft.com).
 
 > [!TIP]
 > Se você instalou com êxito com as etapas de início rápido, você não precisa baixar ou instalar manualmente os pacotes do SQL Server. Esta seção é apenas para o cenário offline.

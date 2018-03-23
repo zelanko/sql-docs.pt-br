@@ -1,0 +1,1 @@
+<Token>**Este tópico aplica-se a:** ![Sim](media/yes.png)SQL Server (começando com o 2008)![Sim](media/yes.png)Azure SQL Database (somente gerenciado instância)![sem](media/no.png) doAzureSQLDataWarehouse![Sim](media/yes.png)Parallel Data Warehouse </Token>
