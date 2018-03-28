@@ -1,26 +1,26 @@
 ---
-title: "Ferramentas de R incluídas com a instalação do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Ferramentas de R incluídas com a instalação do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 8178f4a1347ef58fd7ee143fbe843e3525ac4cf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="r-tools-included-with-sql-server-setup"></a>Ferramentas de R incluídas com a instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,9 +50,9 @@ As seguintes ferramentas de R padrão são incluídas em um *base instalação* 
 Para localizar essas ferramentas, determine a biblioteca de R instalado quando você configurar o SQL Server ou a recurso de aprendizado de máquina autônomo. Por exemplo, em uma instalação padrão, as ferramentas de R estão localizadas nessas pastas:
 
 + SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
-+ Microsoft R Server autônomo:`~\Program Files\Microsoft R\R_SERVER\bin\x64`
-+ SQL Server 2017 aprendizado de máquina serviços:`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
-+ Server (autônomo) de aprendizado de máquina:`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
++ Microsoft R Server autônomo: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 2017 aprendizado de máquina serviços: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Server (autônomo) de aprendizado de máquina: `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
 
 Se você precisar de ajuda com as ferramentas de R, basta abrir **RGui**, clique em **ajuda**e selecione uma das opções.
 
