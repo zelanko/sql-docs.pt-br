@@ -1,31 +1,31 @@
 ---
-title: "Criar um pool de recursos para o aprendizado de máquina | Microsoft Docs"
-ms.custom: 
+title: Criar um pool de recursos para o aprendizado de máquina | Microsoft Docs
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Criar um pool de recursos para o aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tópico descreve como você pode criar um pool de recursos especificamente para gerenciar cargas de trabalho de aprendizado de máquina no SQL Server. Ele pressupõe que você já tiver instalado e habilitado a recursos de aprendizado de máquina e deseja reconfigurar a instância para dar suporte a mais gerenciamento refinado dos recursos usados por um processo externo, como R ou Python.
+Este artigo descreve como você pode criar um pool de recursos especificamente para gerenciar cargas de trabalho de aprendizado de máquina no SQL Server. Ele pressupõe que você já tiver instalado e habilitado a recursos de aprendizado de máquina e deseja reconfigurar a instância para dar suporte a mais gerenciamento refinado dos recursos usados por um processo externo, como R ou Python.
 
 O processo inclui várias etapas:
 
@@ -47,7 +47,7 @@ O processo inclui várias etapas:
 
     **Resultados de exemplo**
 
-    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|nome|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|padrão|0|100|0|100|100|0|0|
 
@@ -59,7 +59,7 @@ O processo inclui várias etapas:
 
     **Resultados de exemplo**
 
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|nome|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|padrão|100|20|0|2|
  
@@ -169,13 +169,13 @@ Para verificar se as alterações foram feitas, você deve verificar a configura
 
     **Resultados de exemplo**
 
-    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|nome|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|internal|Média|25|0|0|0|0|1|2|
     |2|padrão|Média|25|0|0|0|0|2|2|
     |256|ds_wg|Média|25|0|0|0|0|2|256|
   
-2.  Use o novo modo de exibição de catálogo, [sys. resource_governor_external_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), para exibir todos os pools de recursos externos.
+2.  Use o novo modo de exibição de catálogo, [sys. resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), para exibir todos os pools de recursos externos.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -183,7 +183,7 @@ Para verificar se as alterações foram feitas, você deve verificar a configura
 
     **Resultados de exemplo**
     
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|nome|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|padrão|100|20|0|2|
     |256|ds_ep|100|40|0|1|
@@ -203,7 +203,7 @@ Para verificar se as alterações foram feitas, você deve verificar a configura
 Para obter mais informações sobre como gerenciar recursos do servidor, consulte:
 
 +  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Administrador de recursos relacionados a exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Administrador de recursos relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Para obter uma visão geral do controle de recursos de aprendizado de máquina, consulte:
 

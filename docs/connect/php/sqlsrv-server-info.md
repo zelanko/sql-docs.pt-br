@@ -1,32 +1,34 @@
 ---
 title: sqlsrv_server_info | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_server_info
+apiname:
+- sqlsrv_server_info
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_server_info
 - sqlsrv_server_info
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27c25d930ece1e744dcee3386555c8a709fa90d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b919fd8f5278fc176e4397ffb2b9a646d6d89bcd
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Valor de retorno  
 Uma matriz associativa com as seguintes chaves:  
   
-|Chave|Descrição|  
+|Chave|Description|  
 |-------|---------------|  
 |CurrentDatabase|O banco de dados de destino no momento.|  
 |SQLServerVersion|A versão do SQL Server.|  
@@ -86,6 +88,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-[Referência da API do driver JDBC](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
   

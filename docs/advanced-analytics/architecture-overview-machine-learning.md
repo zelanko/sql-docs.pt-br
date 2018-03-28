@@ -1,34 +1,34 @@
 ---
-title: "Visão geral da arquitetura de serviços de aprendizado de máquina do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Visão geral da arquitetura de serviços de aprendizado de máquina do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Visão geral da arquitetura de serviços de aprendizado de máquina do SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tópico descreve as metas da estrutura de extensibilidade que dá suporte à execução de script de Python e R no SQL Server.
+Este artigo descreve as metas da estrutura de extensibilidade que dá suporte à execução de script de Python e R no SQL Server.
 
 Ele também fornece uma visão geral de como a arquitetura é projetada para atender a essas metas, como R Python com suporte e é executado pelo SQL Server e os benefícios da integração.
 
-Em geral, a estrutura de extensibilidade é quase idêntica para R e Python, com algumas pequenas diferenças na detalhes dos iniciadores que são chamados, opções de configuração e assim por diante. Para obter mais informações sobre a implementação para um idioma específico, consulte estes tópicos:
+Em geral, a estrutura de extensibilidade é quase idêntica para R e Python, com algumas pequenas diferenças na detalhes dos iniciadores que são chamados, opções de configuração e assim por diante. Para obter mais informações sobre a implementação para um idioma específico, consulte estes artigos:
 
 - [Visão geral da arquitetura do SQL Server R Services](r/architecture-overview-sql-server-r.md)
 - [Visão geral da arquitetura de Python no SQL Server](python/architecture-overview-sql-server-python.md)

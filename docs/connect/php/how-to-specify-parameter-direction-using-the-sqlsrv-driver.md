@@ -1,33 +1,35 @@
 ---
-title: "Como: especificar a direção de parâmetro usando o Driver SQLSRV | Microsoft Docs"
-ms.custom: 
+title: 'Como: especificar a direção de parâmetro usando o Driver SQLSRV | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Como especificar a direção do parâmetro com o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Este tópico descreve como usar o driver SQLSRV para especificar a direção do parâmetro ao chamar um procedimento armazenado. Observe que a direção do parâmetro é especificada ao construir um parâmetro de matriz (etapa 3) que é passado para [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+Este tópico descreve como usar o driver SQLSRV para especificar a direção do parâmetro ao chamar um procedimento armazenado. A direção do parâmetro é especificado quando você cria uma matriz de parâmetros (etapa 3) que é passada para [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Para especificar a direção do parâmetro  
   
@@ -38,7 +40,7 @@ Este tópico descreve como usar o driver SQLSRV para especificar a direção do 
     ```  
   
     > [!NOTE]  
-    > Chamar os procedimentos armazenados usando a sintaxe canônica é a prática recomendada. Para obter mais informações sobre a sintaxe canônica, consulte [Chamando um procedimento armazenado](http://go.microsoft.com/fwlink/?linkid=119517).  
+    > Chamar os procedimentos armazenados usando a sintaxe canônica é a prática recomendada. Para obter mais informações sobre a sintaxe canônica, consulte [chamando um procedimento armazenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Inicialize ou atualize as variáveis do PHP correspondentes aos espaços reservados na consulta Transact-SQL. Por exemplo, o código a seguir inicializa os dois parâmetros para o procedimento armazenado UpdateVacationHours:  
   
@@ -88,6 +90,7 @@ Este tópico descreve como usar o driver SQLSRV para especificar a direção do 
     ```  
   
 ## <a name="see-also"></a>Consulte também  
-[Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

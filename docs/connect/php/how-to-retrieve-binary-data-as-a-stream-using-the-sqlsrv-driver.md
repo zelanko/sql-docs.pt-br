@@ -1,30 +1,31 @@
 ---
-title: "Como: recuperar dados binários como um fluxo usando o Driver SQLSRV | Microsoft Docs"
-ms.custom: 
+title: 'Como: recuperar dados binários como um fluxo usando o Driver SQLSRV | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fcc77b9da09f1cc59afb06cbd4a562213479251f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f992cf6f54469da63d910e2fb1d53be4b026e06b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Como recuperar dados binários como um fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,9 +39,9 @@ O uso de fluxos para recuperar dados binários, como imagens, evita o uso de gra
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir recupera dados binários (neste caso, uma imagem) da tabela *Production.ProductPhoto* do banco de dados AdventureWorks. A imagem é recuperada como um fluxo e exibida no navegador.  
   
-A recuperação de dados de imagem como um fluxo é efetuada usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) com o tipo de retorno especificado como um fluxo binário. O tipo de retorno é especificado usando a constante **SQLSRV_PHPTYPE_STREAM**. Para obter informações sobre **sqlsrv** constantes, consulte [constantes &#40; Drivers da Microsoft para PHP para SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+A recuperação de dados de imagem como um fluxo é efetuada usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) com o tipo de retorno especificado como um fluxo binário. O tipo de retorno é especificado usando a constante **SQLSRV_PHPTYPE_STREAM**. Para obter informações sobre **sqlsrv** constantes, consulte [constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado a partir do navegador.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado a partir do navegador.  
   
 ```  
 <?php  
@@ -96,7 +97,9 @@ sqlsrv_close( $conn);
 A especificação do tipo de retorno no exemplo demonstra como especificar o tipo de retorno do PHP como um fluxo binário. Tecnicamente, ele não é necessário no exemplo porque o *LargePhoto* campo tem varbinary (max) de tipo do SQL Server e, portanto, é retornado como um fluxo binário por padrão. Para obter informações sobre os tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre como especificar tipos de retorno do PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Recuperando dados](../../connect/php/retrieving-data.md)  
-[Recuperando dados como um fluxo usando o driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[Recuperando dados](../../connect/php/retrieving-data.md)
+
+[Recuperando dados como um fluxo usando o driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
   

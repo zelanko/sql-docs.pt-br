@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: Query | Microsoft Docs'
-ms.custom: 
+title: PDO::query | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42c24102f31df86ebf76d855d80487f5bba15e82
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,18 +47,18 @@ Se a chamada for bem-sucedida, o PDO::query retornará um objeto PDOStatement. S
 ## <a name="exceptions"></a>Exceções  
 PDOException.  
   
-## <a name="remarks"></a>Comentários  
-Uma consulta executada com PDO:: Query pode executar uma instrução preparada ou diretamente, dependendo da configuração de PDO:: sqlsrv_attr_direct_query; consulte [execução de instrução direta e execução de instrução preparada no Driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) para obter mais informações.  
+## <a name="remarks"></a>Remarks  
+Uma consulta executada com PDO:: Query pode executar uma instrução preparada ou diretamente, dependendo da configuração de PDO:: sqlsrv_attr_direct_query. Para obter mais informações, consulte [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO:: sqlsrv_attr_query_timeout também afeta o comportamento de PDO; consulte [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) para obter mais informações.  
+PDO:: sqlsrv_attr_query_timeout também afeta o comportamento de PDO; Para obter mais informações, consulte [PDO:: setAttribute](../../connect/php/pdo-setattribute.md).  
   
 Você pode especificar as seguintes opções para $*fetch_style*.  
   
 |style|Description|  
 |---------|---------------|  
-|PDO:: fetch_column, *num*|Consultas de dados na coluna especificada. A primeira coluna na tabela é a coluna 0.|  
-|Fetch_class, '*classname*', matriz ( *arglist* )|Cria uma instância de uma classe e atribui nomes de coluna a propriedades da classe. Se o construtor de classe aceitar um ou mais parâmetros, você poderá passar também uma *arglist*.|  
-|Fetch_class, '*classname*'|Atribui nomes de coluna a propriedades de uma classe existente.|  
+|PDO::FETCH_COLUMN, *num*|Consultas de dados na coluna especificada. A primeira coluna na tabela é a coluna 0.|  
+|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Cria uma instância de uma classe e atribui nomes de coluna a propriedades da classe. Se o construtor de classe aceitar um ou mais parâmetros, você poderá passar também uma *arglist*.|  
+|PDO::FETCH_CLASS, '*classname*'|Atribui nomes de coluna a propriedades de uma classe existente.|  
   
 Chame PDOStatement::closeCursor para liberar os recursos de banco de dados associados ao objeto PDOStatement antes de chamar PDO::query novamente.  
   
@@ -124,6 +125,7 @@ $stmt = null;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-[Classe PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

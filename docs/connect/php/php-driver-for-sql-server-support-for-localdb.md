@@ -1,38 +1,39 @@
 ---
-title: Driver do PHP para SQL Server Support for LocalDB | Microsoft Docs
-ms.custom: 
-ms.date: 02/03/2017
+title: Suporte para o LocalDB | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: drivers
 ms.component: php
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9315847a8e36520b360d16681ffe5b00f08d6975
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-localdb"></a>Driver do PHP para o suporte do SQL Server para LocalDB
+# <a name="support-for-localdb"></a>Suporte para o LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-A partir do [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], uma versão leve do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], denominada LocalDB, estarão disponíveis. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.
+O LocalDB é uma versão leve do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que está disponível desde o [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.
 
 ## <a name="remarks"></a>Remarks
 
 Para obter mais informações sobre o LocalDB, inclusive como instalá-lo e configurar sua instância LocalDB, consulte o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tópico dos Manuais Online em [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
-Para resumir, o LocalDB permite:
+Em suma, o LocalDB permite:
 
 -   Usar **sqllocaldb.exe i** para descobrir o nome da instância padrão.
 
@@ -81,8 +82,8 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Você pode baixar o LocalDB do [página do SQL Server 2012 feature pack](http://go.microsoft.com/fwlink/?LinkID=236805), ou o [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express edition. Se você usar sqlcmd.exe para modificar dados em sua instância de LocalDB, será necessário sqlcmd de [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], que pode ser obtido do download Utilitários de linha de comando no [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] página Feature Pack.
+Para obter instruções sobre como instalar o LocalDB, consulte o [LocalDB documentação](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Se você usar sqlcmd.exe para modificar dados em sua instância de LocalDB, será necessário o [utilitário sqlcmd](../../tools/sqlcmd-utility.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)

@@ -1,27 +1,28 @@
 ---
-title: "Etapa 3: Prova de conceito da conexão ao SQL usando PHP | Microsoft Docs"
-ms.custom: 
+title: 'Etapa 3: Prova de conceito da conexão ao SQL usando PHP | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: deb18077283a1512c09aa223f9790079bdae5855
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3ea9f1bce66da904f5587a9c21bd672818bc4423
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Etapa 3: prova de conceito da conexão ao SQL usando PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -171,4 +172,5 @@ Este exemplo de código demonstra o uso de transações em que você:
 ## <a name="additional-examples"></a>Exemplos adicionais  
   
 [Aplicativo de exemplo (driver SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [Aplicativo de exemplo (driver PDO_SQLSRV)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

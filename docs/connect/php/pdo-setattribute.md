@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: setAttribute | Microsoft Docs'
-ms.custom: 
+title: PDO::setAttribute | Microsoft Docs
+ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07659d23732d78958ea8db6258a9fe836ca0b883
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 42b4e2ec06b52a3fa7548013f9fac82440d22b4e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ bool PDO::setAttribute ( $attribute, $value );
 ## <a name="return-value"></a>Valor de retorno  
 Retorna true se for bem-sucedido; caso contrário, false.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 |Atributo|Processado por|Valores com suporte|Description|  
 |-------------|----------------|--------------------|---------------|  
@@ -53,12 +54,12 @@ Retorna true se for bem-sucedido; caso contrário, false.
 |PDO::ATTR_ORACLE_NULLS|PDO|Consulte a documentação do PDO.|Especifica como os valores nulos devem ser retornados.<br /><br />PDO::NULL_NATURAL não faz nenhuma conversão.<br /><br />PDO::NULL_EMPTY_STRING converte uma cadeia de caracteres vazia em nulo.<br /><br />PDO::NULL_TO_STRING converte nulo em uma cadeia de caracteres vazia.|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|Consulte a documentação do PDO.|Define a classe de instrução que o usuário forneceu derivada de PDOStatement.<br /><br />Requer `array(string classname, array(mixed constructor_args))`.<br /><br />Para obter mais informações, consulte a documentação do PDO.|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|true ou false|Converte valores numéricos em cadeias de caracteres ao recuperar dados.|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para o limite de memória do PHP.|Configura o tamanho do buffer que contém o conjunto de resultados.<br /><br />O padrão é 10.240 KB (10 MB).<br /><br />Para obter mais informações sobre consultas que criam um cursor do lado do cliente, consulte [tipos de Cursor &#40; Driver PDO_SQLSRV &#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para o limite de memória do PHP.|Configura o tamanho do buffer que contém o conjunto de resultados.<br /><br />O padrão é 10.240 KB (10 MB).<br /><br />Para obter mais informações sobre consultas que criam um cursor do lado do cliente, consulte [tipos de Cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Especifica a execução direta ou preparada da consulta. Para obter mais informações, consulte [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Define a codificação do conjunto de caracteres usada pelo driver para se comunicar com o servidor.<br /><br />Não há suporte para PDO::SQLSRV_ENCODING_BINARY.<br /><br />O padrão é PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Manipula numéricas buscas de colunas com tipos numéricos do SQL (bit, inteiro, smallint, tinyint, float ou real).<br /><br />Quando o sinalizador de opção de conexão ATTR_STRINGIFY_FETCHES está ativado, o valor de retorno é uma cadeia de caracteres até mesmo quando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está ativado.<br /><br />Quando o tipo PDO retornado na coluna de associação for PDO_PARAM_INT, o valor de retorno de uma coluna de inteiros é um int, mesmo se SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está desativado.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tempo limite da consulta em segundos.<br /><br />O padrão é 0, o que significa que o driver aguardará resultados indefinidamente.<br /><br />Números negativos não são permitidos.|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tamanho do buffer de consulta.<br /><br />O padrão é 0, que indica um tamanho do buffer ilimitado.<br /><br />Números negativos não são permitidos.<br /><br />Para obter mais informações sobre consultas que criam um cursor do lado do cliente, consulte [tipos de Cursor &#40; Driver PDO_SQLSRV &#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tamanho do buffer de consulta.<br /><br />O padrão é 0, que indica um tamanho do buffer ilimitado.<br /><br />Números negativos não são permitidos.<br /><br />Para obter mais informações sobre consultas que criam um cursor do lado do cliente, consulte [tipos de Cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
   
 O PDO processa alguns atributos predefinidos e requer que o driver processe outros. Todos os atributos personalizados e opções de conexão são processados pelo driver. Um atributo sem suporte, opção de conexão ou valor sem suporte será relatado de acordo com a configuração de PDO:: attr_errmode.  
   
@@ -89,6 +90,7 @@ Este exemplo mostra como definir o atributo PDO::ATTR_ERRMODE.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-[Classe PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

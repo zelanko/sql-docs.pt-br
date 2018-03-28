@@ -1,28 +1,30 @@
 ---
 title: Registrando atividades | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: logging activity
+helpviewer_keywords:
+- logging activity
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c62afd5a581469af070b5a9d2c59f14264e1cf7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 66e8f95354ac5353070cf312313282dfa97f9577
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="logging-activity"></a>Registrando atividades em log
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,26 +43,26 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** pode ser um dos seguintes valores:  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |---------|---------------|  
 |0|O registro em log está desabilitado (é o padrão se nada estiver definido).|  
-|-1|Especifica que erros, avisos e notificações serão registrados em log.|  
-|1|Especifica que os erros serão registrados em log.|  
-|2|Especifica que os avisos serão registrados em log.|  
-|4|Especifica que as notificações serão registradas em log.|  
+|-1|Especifica que erros, avisos e notificações serão registradas.|  
+|1|Especifica que os erros são registrados.|  
+|2|Especifica que os avisos serão registrados.|  
+|4|Especifica que os avisos serão registrados.|  
   
-Informações de registro em log serão adicionadas ao arquivo phperrors.log.  
+As informações de log são adicionadas ao arquivo phperrors.log.  
   
 O PHP lê o arquivo de configuração na inicialização e armazena os dados em um cache. Ele também fornece uma API para atualizar essas configurações e usar imediatamente, e é gravado no arquivo de configuração. Essa API permite que os scripts de aplicativo alterem as configurações, mesmo após a inicialização do PHP.  
   
 ## <a name="logging-activity-using-the-sqlsrv-driver"></a>Registrando a  atividade em log usando o driver SQLSRV  
-Para ativar o registro em log, você pode usar a função [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) ou alterar o arquivo php.ini. Você pode registrar em log a atividade de inicializações, conexões, instruções ou funções de erro. Você também pode especificar se deseja registrar em log erros, avisos, notificações ou todos os três.  
+Para ativar o registro em log, você pode usar o [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) função, ou você pode alterar o arquivo php.ini. Você pode registrar em log a atividade de inicializações, conexões, instruções ou funções de erro. Você também pode especificar se deseja registrar em log erros, avisos, notificações ou todos os três.  
   
 > [!NOTE]  
 > Você pode configurar o local do arquivo de log no arquivo php.ini.  
   
 ### <a name="turning-logging-on"></a>Ativando o registro em log  
-Você pode ativar o registro em log usando a função [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) para especificar um valor para a configuração **LogSubsystems** . Por exemplo, a seguinte linha de código configura o driver para registrar em log a atividade de conexões:  
+Você pode ativar o registro em log usando o [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) função para especificar um valor para o **LogSubsystems** configuração. Por exemplo, a seguinte linha de código configura o driver para registrar em log a atividade de conexões:  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN);`  
   
@@ -79,16 +81,16 @@ Você pode definir mais de um valor de uma vez para o **LogSubsystems** configur
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN | SQLSRV_LOG_SYSTEM_STMT);`  
   
-Você também pode ativar o registro em log especificando um valor inteiro para a configuração **LogSubsystems** no arquivo php.ini. Por exemplo, se adicionar a seguinte linha à seção `[sqlsrv]` do arquivo php.ini, você ativará o registro em log da atividade de conexão:  
+Você também pode ativar registro em log especificando um valor inteiro para o **LogSubsystems** no arquivo php.ini. Por exemplo, adicionando a seguinte linha ao `[sqlsrv]` seção do arquivo ini ativará o log de atividade de conexão:  
   
 `sqlsrv.LogSubsystems = 2`  
   
-Adicionando valores inteiros juntos, você pode especificar mais de uma opção por vez. Por exemplo, se adicionar a seguinte linha à seção `[sqlsrv]` do arquivo php.ini, você ativará o registro em log da atividade de conexão e de instrução:  
+Adicionando valores inteiros juntos, você pode especificar mais de uma opção por vez. Por exemplo, adicionando a seguinte linha ao `[sqlsrv]` seção do arquivo ini ativará o log da atividade de conexão e instrução:  
   
 `sqlsrv.LogSubsystems = 6`  
   
 ### <a name="logging-errors-warnings-and-notices"></a>Registrando erros, avisos e notificações em log  
-Depois de ativar o registro em log, você deve especificar o que registrar. Você pode registrar um ou mais dos seguintes: erros, avisos e notificações. Por exemplo, a linha de código a seguir especifica que somente os avisos serão registrados em log:  
+Depois de ativar o registro em log, você deve especificar o que registrar. Você pode registrar um ou mais dos seguintes: erros, avisos e notificações. Por exemplo, a linha de código a seguir especifica que somente os avisos são registrados:  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_WARNING);`  
   
@@ -99,30 +101,34 @@ A tabela a seguir descreve as constantes que podem ser usadas como o valor para 
   
 |Valor (inteiro equivalente entre parênteses)|Description|  
 |-----------------------------------------------|---------------|  
-|SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que erros, avisos e notificações serão registrados em log.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log. Esse é o padrão.|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que os avisos serão registrados em log.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que as notificações serão registradas em log.|  
+|SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que erros, avisos e notificações serão registradas.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros são registrados. Esse é o padrão.|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que os avisos serão registrados.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que os avisos serão registrados.|  
   
 Você pode definir mais de um valor de uma vez para o **LogSeverity** configuração usando o operador lógico OR (|). Por exemplo, a linha de código a seguir especifica que erros e avisos devem ser registrados em log:  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_ERROR | SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> Especificar um valor para a configuração **LogSeverity** não ativa o registro em log. Você deve ativar o registro em log especificando um valor para a configuração **LogSubsystems** e depois especificar a severidade do que é registrado em log definindo um valor para **LogSeverity**.  
+> Especificar um valor para o **LogSeverity** não ativa o registro em log. Você deve ativar o registro em log especificando um valor para o **LogSubsystems** configuração, especifique a severidade do que é registrado em log definindo um valor para **LogSeverity**.  
   
 Você também pode especificar uma configuração para a configuração **LogSeverity** usando valores inteiros no arquivo php.ini. Por exemplo, se adicionar a seguinte linha à seção `[sqlsrv]` do arquivo php.ini, você habilitará o registro em log apenas de avisos:  
   
 `sqlsrv.LogSeverity = 2`  
   
-Adicionando valores inteiros juntos, você pode especificar mais de uma opção por vez. Por exemplo, se adicionar a seguinte linha à seção `[sqlsrv]` do arquivo php.ini, você habilitará o registro em log de erros e de avisos:  
+Adicionando valores inteiros juntos, você pode especificar mais de uma opção por vez. Por exemplo, adicionando a seguinte linha ao `[sqlsrv]` seção do arquivo ini habilita o log de erros e avisos:  
   
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>Consulte também  
-[Guia de programação para o Driver SQL de PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[constantes &#40; Drivers da Microsoft para PHP para SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
-[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
-[Referência da API do driver JDBC](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)
+
+[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)
+
+[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

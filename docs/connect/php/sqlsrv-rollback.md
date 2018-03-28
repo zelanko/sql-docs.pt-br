@@ -1,33 +1,35 @@
 ---
 title: sqlsrv_rollback | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_rollback
+apiname:
+- sqlsrv_rollback
 apitype: NA
 helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_rollback
 - sqlsrv_rollback
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ce3939c990113302c82d744b82874647811e611
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fbc323ab197fdcba01048289d25650ff17baeffa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvrollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ O exemplo a seguir executa duas consultas como parte de uma transação. Se amba
   
 A primeira consulta no exemplo insere uma nova ordem de venda na tabela *Sales.SalesOrderDetail* do banco de dados AdventureWorks. A ordem é de cinco unidades do produto com a identificação 709. A segunda consulta reduz a quantidade de estoque do produto com a identificação do produto 709 em cinco unidades. Essas consultas estão incluídas em uma transação porque ambas devem ter êxito para que o banco de dados reflita com precisão o estado dos pedidos e a disponibilidade do produto.  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo é executado a partir da linha de comando.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -129,7 +131,9 @@ Com a finalidade de nos concentrarmos no comportamento transacional, alguns trat
 > Não use o Transact-SQL inserido para executar transações. Por exemplo, não execute uma instrução com "BEGIN TRANSACTION" como a consulta Transact-SQL para iniciar uma transação. O comportamento transacional esperado não pode ser garantido ao usar o Transact-SQL inserido para executar transações.  
   
 ## <a name="see-also"></a>Consulte também  
-[Referência da API do driver JDBC](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Como executar transações](../../connect/php/how-to-perform-transactions.md)  
-[Visão geral do driver SQL de PHP](../../connect/php/overview-of-the-php-sql-driver.md) 
+[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Como executar transações](../../connect/php/how-to-perform-transactions.md)
+
+[Visão geral dos Drivers da Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   

@@ -1,27 +1,28 @@
 ---
-title: 'Pdostatement:: RowCount | Microsoft Docs'
-ms.custom: 
+title: PDOStatement::rowCount | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d81d8b06eefa893e6b286159465719f408fce7f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e1554f4b4922fbef6b5579a13a9644b7731926d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ int PDOStatement::rowCount ();
 ## <a name="return-value"></a>Valor de retorno  
 O número de linhas adicionadas, excluídas ou alteradas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Se a última instrução SQL executada pelo PDOStatement associado foi uma instrução SELECT, um cursor PDO::CURSOR_FWDONLY retornará -1. Um cursor PDO::CURSOR_SCROLLABLE retorna o número de linhas no conjunto de resultados.  
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -74,6 +75,7 @@ print $stmt->rowCount();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-[Classe PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement Class](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

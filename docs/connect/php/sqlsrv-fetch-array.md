@@ -1,33 +1,35 @@
 ---
 title: sqlsrv_fetch_array | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_array
+apiname:
+- sqlsrv_fetch_array
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_array
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fd8fa0274ed5e83774d6d9929023fe58ad6553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 087d26284d99ee0021acded71b7bb5a2ff3e2cd6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [opcional]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
   
-|Valor|Description|  
+|Value|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|A próxima linha de dados é retornada como uma matriz numérica.|  
 |SQLSRV_FETCH_ASSOC|A próxima linha de dados é retornada como uma matriz associativa. As chaves da matriz são os nomes das colunas no conjunto de resultados.|  
@@ -70,7 +72,7 @@ Se uma linha de dados for recuperada, uma **matriz** será retornada. Se não ho
   
 Com base no valor do parâmetro *$fetchType* retornado, a **matriz** retornada poderá ser uma **matriz**indexada numericamente, uma **matriz**associativa ou ambas. Por padrão, uma **matriz** com chaves numéricas e associativas é retornada. O tipo de dados de um valor na matriz retornada será o tipo de dados do PHP padrão. Para obter informações sobre os tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Se uma coluna sem nome for retornada, a chave associativa do elemento da matriz será uma cadeia de caracteres vazia (""). Por exemplo, considere esta instrução Transact-SQL que insere um valor em uma tabela de banco de dados e recupera a chave primária gerada pelo servidor:  
   
 ```
@@ -87,7 +89,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Se um conjunto de resultados contiver várias colunas sem nome, o valor da última coluna sem nome será atribuído à chave da cadeia de caracteres vazia ("").  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir recupera cada linha de um conjunto de resultados como uma **matriz**associativa. O exemplo supõe que o SQL Server e o banco de dados do [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir recupera cada linha de um conjunto de resultados como uma **matriz**associativa. O exemplo supõe que o SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -130,7 +132,7 @@ O exemplo a seguir recupera cada linha de um conjunto de resultados como uma mat
   
 O exemplo recupera informações de produtos de *Purchasing. PurchaseOrderDetail* tabela do banco de dados AdventureWorks para produtos que tenham uma data especificada e uma quantidade em estoque (*StockQty*) menor que um valor especificado.  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -186,8 +188,11 @@ A função **sqlsrv_fetch_array** sempre retorna dados de acordo com os [Default
 Se um campo sem nome for recuperado, a chave associativa do elemento da matriz será uma cadeia de caracteres vazia (""). Para obter mais informações, consulte [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Referência da API do driver JDBC](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Recuperando dados](../../connect/php/retrieving-data.md)  
-[Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Guia de programação para o driver SQL de PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Recuperando dados](../../connect/php/retrieving-data.md)
+
+[Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

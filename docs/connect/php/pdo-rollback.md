@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: Rollback | Microsoft Docs'
-ms.custom: 
+title: PDO::rollback | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fdfac0f52c12e92eb000ab82b47940313dd6c75d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: bdb5d1e59e1b2d29225568abf53d3f6bf90d03d0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>Valor de retorno  
 true se a chamada do método for bem-sucedida; caso contrário, false.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 PDO::rollback não é afetado pelo valor de PDO::ATTR_AUTOCOMMIT, nem o afeta.  
   
 Consulte [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) para ver um exemplo que usa PDO::rollback.  
@@ -46,6 +47,7 @@ Consulte [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) para
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
-[Classe PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

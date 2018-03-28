@@ -1,28 +1,28 @@
 ---
 title: Usando o sempre criptografado com o driver JDBC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Usando o sempre criptografado com o driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ O **sendTimeAsDatetime** propriedade de conexão é usada para configurar como o
 Para obter mais informações sobre essa propriedade, consulte [Java.SQL. time configurando como os valores são enviados para o servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Configurar como os valores de cadeia de caracteres são enviados para o servidor
-O **sendStringParametersAsUnicode** propriedade de conexão é usada para configurar como os valores de cadeia de caracteres são enviados para o SQL Server. Se definido como true, parâmetros de cadeia de caracteres é enviado para o servidor no formato Unicode. Se definido como false, parâmetros de cadeia de caracteres é enviado em formato não Unicode, como ASCII ou MBCS, em vez de Unicode. O valor padrão desta propriedade é true. Quando sempre criptografado está habilitado e uma coluna char/varchar/varchar(max) é criptografado, o valor de **sendStringParametersAsUnicode** deve ser definida como true (ou ser deixado como o padrão). Se essa propriedade for definida como false, o driver lançará uma exceção ao inserir dados em uma coluna criptografada char/varchar/varchar(max). Para obter mais informações sobre essa propriedade, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).
+O **sendStringParametersAsUnicode** propriedade de conexão é usada para configurar como os valores de cadeia de caracteres são enviados para o SQL Server. Se definido como true, parâmetros de cadeia de caracteres é enviado para o servidor no formato Unicode. Se definido como false, parâmetros de cadeia de caracteres é enviado em formato não Unicode, como ASCII ou MBCS, em vez de Unicode. O valor padrão desta propriedade é true. Quando sempre criptografado está habilitado e uma coluna char/varchar/varchar(max) é criptografado, o valor de **sendStringParametersAsUnicode** deve ser definido como false. Se essa propriedade é definida como true, o driver lançará uma exceção ao descriptografar dados de uma coluna criptografada char/varchar/varchar(max) com caracteres Unicode. Para obter mais informações sobre essa propriedade, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperando e modificando dados em colunas criptografadas
 Depois de habilitar o sempre criptografado para consultas de aplicativo, você pode usar APIs padrão do JDBC para recuperar ou modificar dados em colunas de banco de dados criptografado. Se seu aplicativo tem as permissões de banco de dados necessários e pode acessar a chave mestra de coluna, o driver criptografará quaisquer parâmetros de consulta que se destinam a colunas criptografadas e descriptografar dados são recuperados de colunas criptografadas.

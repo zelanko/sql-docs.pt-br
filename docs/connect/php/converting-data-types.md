@@ -1,33 +1,33 @@
 ---
 title: Convertendo tipos de dados | Microsoft Docs
-ms.custom: 
-ms.date: 01/16/2018
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 177f4cc6c28a231fe37df65a46976c4c8836e912
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5caf6c4e807b734bae6705a1777f6889f571be9d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="converting-data-types"></a>Convertendo tipos de dados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permite que você especifique os tipos de dados ao enviar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ou recuperar dados dele. A especificação dos tipos de dados é opcional. Se os tipos de dados não forem especificados, os tipos padrão serão usados. Os tópicos nesta seção descrevem como especificar tipos de dados e fornecem detalhes sobre os tipos de dados padrão.  
+O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permite que você especifique os tipos de dados ao enviar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ou recuperar dados dele. A especificação dos tipos de dados é opcional. Se os tipos de dados não forem especificados, os tipos padrão são usados. Os tópicos nesta seção descrevem como especificar tipos de dados e fornecem detalhes sobre os tipos de dados padrão.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -41,8 +41,11 @@ O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permite que você es
 |[Como enviar e recuperar dados ASCII em Linux e macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Demonstra como usar [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]do suporte para dados de ASCII em Linux ou macOS.<br /><br />Foi adicionado suporte para caracteres ASCII em ambientes não Windows versão 5.2 a [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
 ## <a name="see-also"></a>Consulte também  
-[Guia de programação para o driver SQL de PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Aplicativo de exemplo &#40;driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

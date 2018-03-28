@@ -1,32 +1,37 @@
 ---
-title: "Função SQLBrowseConnect | Microsoft Docs"
-ms.custom: 
+title: Função SQLBrowseConnect | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLBrowseConnect
-apilocation: sqlsrv32.dll
+apiname:
+- SQLBrowseConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBrowseConnect
-helpviewer_keywords: SQLBrowseConnect function [ODBC]
+f1_keywords:
+- SQLBrowseConnect
+helpviewer_keywords:
+- SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Função SQLBrowseConnect
 **Conformidade**  
@@ -49,7 +54,7 @@ SQLRETURN SQLBrowseConnect(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador da conexão*  
+ *ConnectionHandle*  
  [Entrada] Identificador de Conexão.  
   
  *InConnectionString*  
@@ -70,7 +75,7 @@ SQLRETURN SQLBrowseConnect(
  [Saída] O número total de caracteres (exceto null de terminação) disponíveis para retornar em \* *OutConnectionString*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, a cadeia de caracteres de conexão em \* *OutConnectionString* será truncado para  *BufferLength* menos o comprimento de um caractere null de terminação.  
   
 ## <a name="returns"></a>Retorna  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>diagnóstico  
  Quando **SQLBrowseConnect** retorna SQL_ERROR, SQL_SUCCESS_WITH_INFO ou SQL_NEED_DATA, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* sql_handle_stmt e um *identificador do identificador da conexão*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLBrowseConnect** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições de SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado em contrário.  
@@ -113,7 +118,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argumento InConnectionString  
  Uma cadeia de caracteres de conexão de solicitação de navegação tem a seguinte sintaxe:  
   
- *cadeia de caracteres de conexão* :: = *atributo*[;] &#124; *atributo*; *conexão stringattribute* :: = *palavra-chave de atributo*=*atributo-valor* &#124; DRIVER = [{}]*valor de atributo [*}]*palavra-chave de atributo* :: = DSN &#124; UID &#124; PWD &#124; *driver-definido--keywordattribute-valor do atributo* :: = *caractere-stringdriver-definido-atributo-palavra-chave* :: = *identificador*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
+ *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  onde *cadeia de caracteres* tem zero ou mais caracteres; *identificador* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; *atributo-valor* pode diferenciar maiusculas de minúsculas; e o valor da **DSN** palavra-chave não ser formado apenas por espaços em branco. Devido à conexão cadeia de caracteres e inicialização gramática, palavras-chave e atributo valores do arquivo que contenha os caracteres **[] {} (),? \*=! @** devem ser evitadas. Devido a gramática nas informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres. Para ODBC 2. *x* driver, chaves são necessárias ao redor do valor de atributo para a palavra-chave DRIVER.  
   
@@ -124,7 +133,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Argumento OutConnectionString  
  A cadeia de caracteres de conexão de resultado de procura é uma lista de atributos de conexão. Um atributo de conexão consiste em uma palavra-chave do atributo e um valor de atributo correspondente. A cadeia de caracteres de conexão de resultado de procurar tem a seguinte sintaxe:  
   
- *cadeia de caracteres de conexão* :: = *atributo*[;] &#124; *atributo*; *conexão stringattribute* :: = [\*]*palavra-chave de atributo = atributo-atributovalor-palavra-chave* :: = *ODBC-atributo-palavra-chave* &#124; *driver-defined-attribute-keywordODBC-attribute-keyword* = {UID &#124; PWD} [:*identificador localizado*]*-definido-atributo-palavra-chave driver* :: = *identificador*[:*localizado-identificador*]*atributo-valor* :: = {*lista de valores de atributo*} &#124;? (As chaves são literais; eles são retornados pelo driver.) *lista de valores de atributo* :: = *cadeia de caracteres* [:*cadeia de caracteres localizada*] &#124; *cadeia de caracteres* [:*cadeia de caracteres localizada*], *lista de valores de atributo*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
+ *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  onde *cadeia de caracteres* e *cadeia de caracteres localizada* ter zero ou mais caracteres; *identificador* e *identificador localizado* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; e *atributo-valor* pode diferenciar maiusculas de minúsculas. Devido à conexão cadeia de caracteres de inicialização gramática, palavras-chave, localizados identificadores de arquivo e valores de atributo que contém os caracteres **[] {} (),? \*=! @** devem ser evitadas. Devido a gramática nas informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
   
@@ -286,6 +299,6 @@ int main() {
 |Retornando atributos e descrições de driver|[Função SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Liberando um identificador de conexão|[Função SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

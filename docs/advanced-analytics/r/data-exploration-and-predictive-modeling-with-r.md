@@ -1,32 +1,32 @@
 ---
-title: "Exploração e Dados e Modelagem Preditiva com R | Microsoft Docs"
+title: Exploração e Dados e Modelagem Preditiva com R | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 09f3ec8f5171050082ab4bc5ede085387682a33e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Exploração e Dados e Modelagem Preditiva com R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tópico descreve os aprimoramentos para o processo de ciência de dados que são possíveis por meio da integração com o SQL Server.
+Este artigo descreve melhorias para o processo de ciência de dados que são possíveis por meio da integração com o SQL Server.
 
 Aplica-se a: SQL Server 2016 R Services, serviços de Learnign de máquina do SQL Server de 2017
 

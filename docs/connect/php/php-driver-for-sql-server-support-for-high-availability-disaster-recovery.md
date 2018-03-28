@@ -1,29 +1,30 @@
 ---
-title: Driver do PHP para SQL Server High Availability, Disaster Recovery | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+title: Suporte para alta disponibilidade, recuperação de desastres para os Drivers da Microsoft para PHP para SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Driver do PHP para o suporte do SQL Server para alta disponibilidade e recuperação de desastre
+# <a name="support-for-high-availability-disaster-recovery"></a>Suporte a alta disponibilidade e recuperação de desastres
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Este tópico discute [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] suporte (adicionado na versão 3.0) para alta disponibilidade, recuperação de desastres – [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  O suporte ao [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] foi adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Para obter mais informações sobre o [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
@@ -38,7 +39,7 @@ Se você não estiver se conectando a um ouvinte de grupo de disponibilidade, e 
 ## <a name="connecting-with-multisubnetfailover"></a>Conectando-se ao MultiSubnetFailover  
 O **MultiSubnetFailover** propriedade de conexão indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de Cluster de Failover e que o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] tentará se conectar ao banco de dados na réplica primária [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância tentando se conectar a todos os IPs de endereços. Quando **MultiSubnetFailover = true** é especificado para uma conexão, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão de TCP do sistema operacional padrão. Isto permite uma reconexão mais rápida depois de failover de um Grupo de disponibilidade AlwaysOn ou uma Instância de Cluster de Failover AlwaysOn e é aplicável a Grupos de disponibilidade único e de várias sub-redes e Instâncias de Cluster de Failover.  
   
-Sempre especifique **MultiSubnetFailover = True** ao se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou instância de Cluster de Failover do SQL Server 2012. **MultiSubnetFailover** permite o failover mais rápido para todos os grupos de disponibilidade e as instâncias de cluster de failover do SQL Server 2012 e reduz significativamente o tempo de failover para topologias AlwaysOn de uma ou várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] repetirá agressivamente a conexão TCP.  
+Sempre especifique **MultiSubnetFailover = True** ao se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou instância de Cluster de Failover do SQL Server 2012. **MultiSubnetFailover** permite failover mais rápido para todos os grupos de disponibilidade e instância de cluster de failover do SQL Server 2012 e reduz significativamente o tempo de failover para topologias AlwaysOn únicas e de várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] repetirá agressivamente a conexão TCP.  
   
 Para obter mais informações sobre palavras-chave de cadeia de caracteres de conexão em [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], consulte [opções de Conexão](../../connect/php/connection-options.md).  
   
@@ -83,7 +84,7 @@ Um banco de dados pode permitir ou não cargas de trabalho de leitura no banco d
 A palavra-chave **ApplicationIntent** é usada para habilitar o roteamento somente leitura.  
   
 ## <a name="read-only-routing"></a>Roteamento somente leitura  
-O roteamento somente leitura é um recurso que pode assegurar a disponibilidade de uma réplica somente leitura de um banco de dados. Para habilitar roteamento somente leitura:  
+O roteamento somente leitura é um recurso que pode garantir a disponibilidade de uma réplica somente leitura de um banco de dados. Para habilitar roteamento somente leitura:  
   
 1.  Você deve conectar-se a um ouvinte de grupo de disponibilidade AlwaysOn.  
   
@@ -93,7 +94,7 @@ O roteamento somente leitura é um recurso que pode assegurar a disponibilidade 
   
 É possível que nem todas as várias conexões que usam roteamento somente leitura se conectem à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Para garantir que todas as solicitações somente leitura conectem-se à mesma réplica somente leitura, não transmita um ouvinte de grupo de disponibilidade à palavra-chave de cadeia de conexão **Server**. Em vez disso, especifique o nome da instância somente leitura.  
   
-O roteamento somente leitura pode demorar mais tempo do que a conexão ao primário porque o roteamento somente leitura conecta-se primeiramente ao primário e depois procura o melhor secundário legível disponível. Por isso, você deve aumentar seu tempo limite de logon.  
+O roteamento somente leitura pode demorar mais do que a conexão com a réplica primária, pois o roteamento somente leitura se conecta primeiro à réplica primária para, depois, procurar a melhor réplica secundária legível disponível. Nesse caso, o tempo limite de logon deve ser aumentado.  
   
 ## <a name="see-also"></a>Consulte também  
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)  

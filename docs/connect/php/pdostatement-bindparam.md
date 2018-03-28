@@ -1,27 +1,28 @@
 ---
-title: 'Pdostatement:: Bindparam | Microsoft Docs'
-ms.custom: 
+title: PDOStatement::bindParam | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61cecbcd76ba7c28135cd4ed306dad1c0ea0830c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +50,7 @@ $*driver_options*: as opções específicas do driver (mistas) opcionais. Por ex
 ## <a name="return-value"></a>Valor de retorno  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Ao associar dados nulos a colunas do servidor do tipo varbinary, binary ou varbinary (max) você deve especificar a codificação binária (PDO:: sqlsrv_encoding_binary) usando $*driver_options*. Para obter mais informações sobre codificação de constantes, consulte [constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -146,6 +147,7 @@ $stmt->execute();
 
 
 ## <a name="see-also"></a>Consulte também  
-[Classe PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement Class](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -1,39 +1,39 @@
 ---
 title: Como criar um procedimento armazenado usando sqlrutils | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/16/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fe1e05ee854fb6a094a66d88981d74287aa96beb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Criar um procedimento armazenado usando sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tópico descreve as etapas para converter seu código R para ser executado como um procedimento armazenado T-SQL. Para obter os melhores resultados possíveis, seu código poderá precisar ser um pouco modificado, para garantir que todas as entradas possam ser parametrizadas.
+Este artigo descreve as etapas para converter seu código R para ser executado como um procedimento armazenado T-SQL. Para obter os melhores resultados possíveis, seu código poderá precisar ser um pouco modificado, para garantir que todas as entradas possam ser parametrizadas.
 
 ## <a name="bkmk_rewrite"></a>Etapa 1. Reescreva o Script R
 
 Para obter melhores resultados, você deve reescrever o código R para encapsulá-lo como uma única função.
 
-Todas as variáveis usadas pela função devem ser definidas dentro da função, ou devem ser definidas como parâmetros de entrada. Consulte o [código de exemplo](#samples) neste tópico.
+Todas as variáveis usadas pela função devem ser definidas dentro da função, ou devem ser definidas como parâmetros de entrada. Consulte o [código de exemplo](#samples) neste artigo.
 
 Além disso, como os parâmetros de entrada para a função R tornará procedimento armazenado de parâmetros de entrada do SQL, certifique-se de que suas entradas e saídas em conformidade com os seguintes requisitos de tipo:
 
@@ -69,8 +69,8 @@ Depois que seu código R foi limpo e pode ser chamado como uma única função, 
 
 Se sua função usa entradas, para cada entrada, chame as funções a seguir:
 
-- `setInputData`Se a entrada é um quadro de dados
-- `setInputParameter`para todos os outros tipos de entrada
+- `setInputData` Se a entrada é um quadro de dados
+- `setInputParameter` para todos os outros tipos de entrada
 
 Quando você faz com que cada função de chamada, será criado um objeto de R que posteriormente seja aprovado como um argumento para `StoredProcedure`, para criar o procedimento armazenado concluído.
 
@@ -82,8 +82,8 @@ Você também pode ignorar a conversão esta etapa se a função retorna NULL.
 
 Ao converter uma lista ou obter um item específico de uma lista, escolha estas funções:
 
-- `setOutputData`Se a variável para obter a lista é um quadro de dados
-- `setOutputParameter`para todos os outros membros da lista
+- `setOutputData` Se a variável para obter a lista é um quadro de dados
+- `setOutputParameter` para todos os outros membros da lista
 
 Quando você faz com que cada função de chamada, será criado um objeto de R que posteriormente seja aprovado como um argumento para `StoredProcedure`, para criar o procedimento armazenado concluído.
 

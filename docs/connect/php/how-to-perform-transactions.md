@@ -1,28 +1,30 @@
 ---
-title: "Como: executar transações | Microsoft Docs"
-ms.custom: 
+title: 'Como: executar transações | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: transaction support
+helpviewer_keywords:
+- transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a759dbf523ff275f20436919b5f093225b2693e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 15f4ba792e7657125c6964f098c6c1f7a9fe83f0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-transactions"></a>Como executar transações
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +49,7 @@ Para obter um exemplo, consulte [PDO::beginTransaction](../../connect/php/pdo-be
   
 O restante deste tópico explica e demonstra como usar o driver SQLSRV para executar transações.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 As etapas para executar uma transação podem ser resumidas da seguinte forma:  
   
 1.  Inicie a transação com **sqlsrv_begin_transaction**.  
@@ -66,7 +68,7 @@ As etapas para executar uma transação podem ser resumidas da seguinte forma:
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>Description  
 O exemplo a seguir executa várias consultas como parte de uma transação. Se todas as consultas forem bem-sucedidas, a transação será confirmada. Se uma das consultas falhar, a transação será revertida.  
   
 O exemplo tenta excluir uma ordem de venda da tabela *Sales.SalesOrderDetail* e ajustar os níveis de estoque de produto na tabela *Product.ProductInventory* para cada produto na ordem de venda. Essas consultas estão incluídas em uma transação porque todas as consultas devem ter êxito para que o banco de dados reflita com precisão o estado dos pedidos e a disponibilidade do produto.  
@@ -75,7 +77,7 @@ A primeira consulta no exemplo recupera identificações e quantidades de produt
   
 As consultas resultantes (exclusão da ordem de venda e atualização das quantidades de estoque do produto) são parte da transação.  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado a partir da linha de comando.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ### <a name="code"></a>Código  
   
@@ -155,10 +157,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Comentários  
-Com a finalidade de nos concentrarmos no comportamento da transação, alguns tratamentos de erro recomendados não estão incluídos no exemplo anterior. Para um aplicativo de produção é recomendável que qualquer chamada para uma função **sqlsrv** passe por verificação de erros e seja tratada de acordo com as necessidades do aplicativo.  
+Com a finalidade de nos concentrarmos no comportamento da transação, alguns tratamentos de erro recomendados não estão incluídos no exemplo anterior. Para um aplicativo de produção, é recomendável verificar qualquer chamada para um **sqlsrv** de função para erros e tratamento de acordo.
   
 ## <a name="see-also"></a>Consulte também  
-[Atualizando dados &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Transações (mecanismo de banco de dados)](http://go.microsoft.com/fwlink/?LinkId=105862)  
+[Atualizando dados &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Transações (mecanismo de banco de dados)](https://msdn.microsoft.com/library/ms190612.aspx)
+
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
   

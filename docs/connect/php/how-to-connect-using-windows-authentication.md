@@ -1,33 +1,35 @@
 ---
-title: "Como: conectar-se usando a autenticação do Windows | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Como: conectar-se usando a autenticação do Windows | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, Windows Authentication
+helpviewer_keywords:
+- connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7032726897facd93e88007a879e94c40dda809c2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7b82c96b78bb81e1b8749f6a0d3899662c54d780
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Como se conectar usando a Autenticação do Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Por padrão, os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usam a Autenticação do Windows para se conectar ao SQL Server. É importante observar que, na maioria dos cenários, isso significa que a identidade do processo ou do thread do servidor Web (se o servidor Web estiver usando representação) será usada para a conexão ao servidor e não a identidade de um usuário final.  
+Por padrão, os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usam a Autenticação do Windows para se conectar ao SQL Server. É importante observar que na maioria dos cenários, isso significa que o identidade de processo do servidor Web ou a identidade do thread (se o servidor Web estiver usando representação) é usada para se conectar ao servidor, não a identidade de um usuário final.  
   
 Os seguintes pontos devem ser considerados ao usar a Autenticação do Windows para se conectar ao SQL Server:  
   
@@ -49,7 +51,7 @@ Se a Autenticação do Windows não é uma opção prática, consulte [How to: C
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir usa o driver SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]com Autenticação do Windows para se conectar a uma instância local do SQL Server. Depois que a conexão tiver sido estabelecida, o servidor será consultado para o logon do usuário que está acessando o banco de dados.  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado do navegador.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado do navegador.  
   
 ```  
 <?php  
@@ -110,12 +112,19 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Guia de programação para o driver SQL de PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Como criar um logon do SQL Server](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[Como criar um usuário de banco de dados](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Gerenciando usuários, funções e logons](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[Separação do esquema de usuário](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Conceder permissões de objeto (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[Como se conectar usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Como: criar um logon do SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[Como: criar um usuário de banco de dados](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Gerenciando usuários, funções e logons](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Separação do esquema de usuário](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Conceder permissões de objeto (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

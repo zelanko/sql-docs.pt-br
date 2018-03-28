@@ -1,24 +1,24 @@
 ---
-title: "Governança de recursos para Python | Microsoft Docs"
-ms.custom: 
+title: Governança de recursos para Python | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c1bf3fb84629310c09f0dc181f6b7eaa6707fa88
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="resource-governance-for-python"></a>Governança de recursos para Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ Para obter uma boa introdução à terminologia e a conceitos gerais, consulte [
 
 ## <a name="resource-management-using-resource-governor"></a>Gerenciamento de recursos usando o Resource Governor
 
-Se você for novato no uso do Resource Governor, consulte este tópico para uma rápida explicação passo a passo de como modificar os recursos padrão da instância e criar um novo pool de recursos externo: [Como criar um pool de recursos para o R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+Se você for novo para o administrador de recursos, consulte este artigo para obter uma rápida explicação de como modificar os recursos de instância padrão e criar um novo pool de recursos externos: [como: criar um Pool de recursos para R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 Você pode usar o *pool de recursos externos* mecanismo para gerenciar os recursos usados pelos executáveis com suporte a seguir:
 

@@ -1,28 +1,30 @@
 ---
-title: "(Drivers da Microsoft para PHP para SQL Server) do pool de Conexão | Microsoft Docs"
-ms.custom: 
+title: (Drivers da Microsoft para PHP para SQL Server) do pool de Conexão | Microsoft Docs
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connection pooling support
+helpviewer_keywords:
+- connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5edf501c5a3a46fd30d21c4c5fdad81711c539d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 287cba2cbca687ef5006ae0410b2cd6a0f2598b7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Pool de conexões (Drivers da Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +39,13 @@ Veja a seguir pontos importantes a serem observados sobre o pool de conexões no
   
 -   O fechamento da conexão retorna a conexão ao pool.  
   
-Para obter mais informações sobre o pool de conexão, consulte [Driver Manager Connection Pooling](http://go.microsoft.com/fwlink/?linkid=119622).  
+Para obter mais informações sobre o pool de conexão, consulte [Pooling de Conexão do Gerenciador de Driver](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## <a name="enablingdisabling-connection-pooling"></a>Pooling de conexão habilitando/desabilitando
 ### <a name="windows"></a>Windows
 Você pode forçar o driver a criar uma nova conexão (em vez de procurar uma conexão equivalente no pool de conexão), definindo o valor da *ConnectionPooling* atributo na cadeia de conexão para **false**  (ou 0).  
   
-Se o *ConnectionPooling* atributo for omitido da cadeia de conexão ou se ele é definido como **true** (ou 1), o driver criará uma nova conexão somente se não existir uma conexão equivalente do pool de conexão.  
+Se o *ConnectionPooling* atributo for omitido da cadeia de conexão ou se ele é definido como **true** (ou 1), o driver cria uma nova conexão somente se não existir uma conexão equivalente do pool de conexão.  
   
 Para obter mais informações sobre outros atributos de conexão, consulte [Connection Options](../../connect/php/connection-options.md).  
 ### <a name="linux-and-mac-os-x"></a>Linux e Mac OS X
@@ -66,6 +68,7 @@ Pooling=No
 ```
   
 ## <a name="see-also"></a>Consulte também  
-[Como se conectar usando a Autenticação do Windows](../../connect/php/how-to-connect-using-windows-authentication.md)  
+[Como se conectar usando a Autenticação do Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+
 [Como se conectar usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

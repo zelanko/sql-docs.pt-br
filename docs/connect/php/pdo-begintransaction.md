@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: BeginTransaction | Microsoft Docs'
-ms.custom: 
+title: PDO::beginTransaction | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 131edab231009e63c32a3c5b7a4d6ffccfc7d407
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 51a04874f23dcae77347d85ad0ebd284a1e3b03c
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,8 +39,8 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>Valor de retorno  
 true se a chamada do método for bem-sucedida; caso contrário, false.  
   
-## <a name="remarks"></a>Comentários  
-A transação iniciada com PDO::beginTransaction terminará quando [PDO::commit](../../connect/php/pdo-commit.md) ou [PDO::rollback](../../connect/php/pdo-rollback.md) for chamado.  
+## <a name="remarks"></a>Remarks  
+A transação iniciada com PDO:: BeginTransaction termina quando [PDO:: Commit](../../connect/php/pdo-commit.md) ou [PDO:: Rollback](../../connect/php/pdo-rollback.md) é chamado.  
   
 PDO::beginTransaction não é afetado pelo valor de PDO::ATTR_AUTOCOMMIT (e não o afeta).  
   
@@ -66,6 +67,7 @@ O exemplo a seguir usa um banco de dados chamado Test e uma tabela chamada Table
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-[Classe PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

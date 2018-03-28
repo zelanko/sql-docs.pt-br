@@ -1,33 +1,35 @@
 ---
 title: sqlsrv_fetch_object | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_object
+apiname:
+- sqlsrv_fetch_object
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_object
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68c6e32e4aa090dc76d80e176f7653815c80335b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 87477c1d30607d71e49729f73105905a2f64767a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +73,7 @@ Um objeto do PHP com propriedades que correspondem aos nomes de campo do conjunt
   
 O tipo de dados de um valor no objeto retornado será o tipo de dados do PHP padrão. Para obter informações sobre tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Se um nome de classe for especificado com o parâmetro *$className* opcional, será criada uma instância de um objeto desse tipo de classe. Se a classe tiver propriedades cujos nomes correspondam aos nomes de campo do conjunto de resultados, os valores correspondentes do conjunto de resultados serão aplicados às propriedades. Se um nome de campo do conjunto de resultados não corresponder a uma propriedade de classe, uma propriedade com o nome de campo do conjunto de resultados será adicionada ao objeto, e o valor do conjunto de resultados será aplicado à propriedade.  
   
 As seguintes regras se aplicam ao especificar uma classe com o parâmetro *$className* :  
@@ -94,7 +96,7 @@ Se os resultados retornados por essa consulta forem recuperados com **sqlsrv_fet
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir recupera cada linha de um conjunto de resultados como um objeto do PHP. O exemplo supõe que o SQL Server e o banco de dados do [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir recupera cada linha de um conjunto de resultados como um objeto do PHP. O exemplo supõe que o SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -143,7 +145,7 @@ O exemplo a seguir recupera cada linha de um conjunto de resultados como uma ins
   
 -   A propriedade privada *UnitPrice* é preenchida com o valor do campo *UnitPrice* .  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -248,6 +250,8 @@ Se os resultados retornados por essa consulta forem recuperados com **sqlsrv_fet
   
 ## <a name="see-also"></a>Consulte também  
 [Recuperando dados](../../connect/php/retrieving-data.md)  
+
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Referência da API do driver JDBC](../../connect/php/sqlsrv-driver-api-reference.md)  
+
+[Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

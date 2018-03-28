@@ -1,31 +1,31 @@
 ---
 title: Instalar o SQL Server 2016 R Services (no banco de dados) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - instalando o SQL Server R Services
-- "Instalando serviços de aprendizado de máquina do SQL Server"
-- "Configurar os serviços de R"
-- "instalar o aprendizado de máquina do SQL"
-ms.assetid: 
-caps.latest.revision: 
+- Instalando serviços de aprendizado de máquina do SQL Server
+- Configurar os serviços de R
+- instalar o aprendizado de máquina do SQL
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0012b48101085b7ccb18695fbda1f25c10a6b90b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>Instalar o SQL Server 2016 R Services (no banco de dados) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ Este artigo explica como instalar e configurar **SQL Server 2016 R Services (no 
 
 ## <a name="bkmk_prereqs"> </a> Lista de verificação de pré-instalação
 
-+ SQL Server 2016 é necessária. Se você tiver o SQL Server 2016, instale o [serviços do aprendizado de máquina 2017 SQL Server (no banco de dados)](sql-machine-learning-services-windows-install.md) em vez disso.
++ A instalação do SQL Server 2016 é necessária se você quiser instalar o R Services. Se, em vez disso, você tem a mídia de instalação do SQL Server 2017, você deve instalar [serviços do aprendizado de máquina 2017 SQL Server (no banco de dados)](sql-machine-learning-services-windows-install.md) para obter a integração do R para essa versão do SQL Server.
 
 + Uma instância do mecanismo de banco de dados é necessária. Você não pode instalar apenas R, embora você pode adicioná-lo incrementalmente para uma instância existente.
 

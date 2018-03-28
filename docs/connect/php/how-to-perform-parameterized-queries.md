@@ -1,30 +1,31 @@
 ---
 title: 'Como: executar consultas parametrizadas | Microsoft Docs'
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Como executar consultas parametrizadas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ As etapas para executar uma consulta parametrizada podem ser resumidas em quatro
   
 2.  Inicialize ou atualize as variáveis do PHP correspondentes aos espaços reservados na consulta Transact-SQL.  
   
-3.  Use as variáveis do PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros na mesma ordem dos espaços reservados de parâmetros na cadeia de caracteres Transact-SQL.  
+3.  Use variáveis PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetro que correspondem aos espaços reservados de parâmetros na cadeia de caracteres Transact-SQL. Os valores de parâmetro na matriz devem ser na mesma ordem que os espaços reservados deve representá-los.
   
 4.  Execute a consulta:  
   
@@ -55,7 +56,7 @@ O exemplo a seguir atualiza a quantidade de uma identificação de produto espec
   
 O exemplo, então, consulta o banco de dados para verificar se a quantidade foi atualizada corretamente. A identificação do produto é um parâmetro na consulta SELECT.  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ O exemplo anterior usa a função **sqlsrv_query** para executar consultas. Essa
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir demonstra a associação implícita de variáveis ao usar a função **sqlsrv_prepare** . O exemplo insere várias ordens de venda na tabela *Sales.SalesOrderDetail* . O *$params* matriz está associada à instrução (*$stmt*) quando **sqlsrv_prepare** é chamado. Antes de cada execução de uma consulta que insere uma nova ordem de venda na tabela, a matriz *$params* é atualizada com novos valores correspondentes aos detalhes da ordem de venda. A próxima execução da consulta usa os novos valores de parâmetro.  
   
-O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -194,8 +195,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-[Convertendo tipos de dados](../../connect/php/converting-data-types.md)  
-[Considerações de segurança para o driver SQL do PHP](../../connect/php/security-considerations-for-php-sql-driver.md)
-[Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
+[Convertendo tipos de dados](../../connect/php/converting-data-types.md)
+
+[Considerações de segurança para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

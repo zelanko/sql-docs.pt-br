@@ -1,16 +1,16 @@
 ---
 title: FileTableRootPath (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dd6d1b54d92142f3089b6323127257341ffe4d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8ec947c95930b1f705465e8dfd8b815dad2b2419
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  O nome da FileTable. *FileTable_name* é do tipo **nvarchar**. Esse é um parâmetro opcional. O valor padrão é o banco de dados atual. Especificando *schema_name* também é opcional. É possível passar NULL *FileTable_name* para usar o valor de parâmetro padrão  
   
  *@option*  
- Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. *@option*pode ter um dos seguintes valores:  
+ Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. *@option* Pode ter um dos seguintes valores:  
   
 |Value|Descrição|  
 |-----------|-----------------|  
-|**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> Este é o valor padrão.|  
-|**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
-|**2**|Retorna o caminho completo do servidor, por exemplo:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
+|**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Este é o valor padrão.|  
+|**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
+|**2**|Retorna o caminho completo do servidor, por exemplo:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **nvarchar(4000)**  
@@ -76,7 +76,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando o **FileTableRootPath** e **GetFileNamespacePath** funções juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
 ```sql  
-USE MyDocumentDB;  
+USE MyDocumentDatabase;  
   
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
@@ -100,14 +100,14 @@ WHERE Name = N’document.docx’;
  Os exemplos a seguir mostram como chamar o **FileTableRootPath** função.  
   
 ```  
-USE MyDocumentDB;  
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB”  
+USE MyDocumentDatabase;  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase”  
 SELECT FileTableRootPath();  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB\MyFileTable”  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
 SELECT FileTableRootPath(N'dbo.MyFileTable');  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB\MyFileTable”  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   

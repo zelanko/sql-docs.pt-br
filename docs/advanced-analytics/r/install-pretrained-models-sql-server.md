@@ -1,65 +1,66 @@
 ---
-title: "Instalar os modelos de aprendizado de máquina pré-treinado no SQL Server | Microsoft Docs"
+title: Instalar os modelos de aprendizado de máquina previamente treinado no SQL Server | Microsoft Docs
 ms.date: 03/14/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: fd02766e4020e6f522d50bbd471c5f84c66a998b
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Instalar pré-treinado modelos no SQL Server de aprendizado de máquina
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar os modelos no SQL Server de aprendizado de máquina previamente treinada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve como adicionar modelos previamente treinados para uma instância do SQL Server que já tem o R Services ou serviços de aprendizado de máquina instalado.
+Este artigo descreve como adicionar modelos previamente treinados para uma instância do SQL Server que já tem o R Services ou serviços de aprendizado de máquina do SQL Server instalado. 
 
-Os modelos previamente treinados incluídos no MicrosoftML foram criados para ajudar os clientes que precisam para executar tarefas como a personalização de imagem ou de análise de sentimento, mas que não possuem os recursos para obter os conjuntos de dados grandes ou treinar um modelo complexo. A equipe de servidor de aprendizado de máquina criado e treinar esses modelos para ajudá-lo a começar em texto e imagem, processamento de forma eficiente. Para obter mais informações, consulte o [recursos](#bkmk_resources) deste artigo.
+Existem modelos previamente treinados para ajudar os clientes que precisam para executar tarefas como a personalização de imagem ou de análise de sentimento, mas que não possuem os recursos para obter os conjuntos de dados grandes ou treinar um modelo complexo. A equipe de servidor de aprendizado de máquina criado e treinar esses modelos para ajudá-lo a começar em texto e imagem, processamento de forma eficiente. Para obter mais informações, consulte o [recursos](#bkmk_resources) deste artigo.
 
-Para obter um exemplo de como usar os modelos previamente treinados com dados do SQL Server, consulte este blog pela equipe de aprendizado de máquina do SQL Server:
+Para obter um exemplo de como usar os modelos previamente treinados com dados do SQL Server, consulte este blog pela equipe de aprendizado de máquina do SQL Server: [análise de sentimento com Python nos serviços de aprendizado de máquina do SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-+ [Análise de sentimento com Python nos serviços de aprendizado de máquina do SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
+## <a name="pre-trained-model-availability"></a>Disponibilidade do modelo previamente treinado
 
-## <a name="install-the-pre-trained-models"></a>Instalar os modelos previamente treinados
+Modelos previamente treinados são instalados usando a mídia de instalação do servidor de aprendizado de máquina do Microsoft (ou Microsoft R Server, se você estiver adicionando modelos a uma instalação do SQL Server 2016). Você pode usar a edição de desenvolvedor gratuita para instalar os modelos. Não há nenhum extra custo associado à instalação do modelo. 
 
-Você pode usar os modelos previamente treinados com os seguintes produtos:
+Modelos previamente treinados funcionam com os seguintes produtos e idiomas. O programa de instalação detecta a biblioteca de integração, MicrosoftML ou microsoftml de idioma e, em seguida, insere os modelos treinados previamente na biblioteca do respectiva. Quando o modelo de instalação for concluído, pode acessar os modelos por meio de funções de biblioteca.
 
-+ SQL Server 2016 R Services (no banco de dados)
-+ Serviços de aprendizado de máquina do SQL Server de 2017 (no banco de dados)
-+ Servidor do Machine Learning (Autônomo)
++ SQL Server 2016 R Services (no banco de dados) - R somente com o [MicrosoftML biblioteca](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R Server (autônomo) - R somente com o [MicrosoftML biblioteca](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning Services (no banco de dados) - R com a [MicrosoftML biblioteca] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python com o [microsoftml biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ 2017 Machine Learning servidor do SQL Server (autônomo) - R com a [MicrosoftML biblioteca] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python com o [microsoftml biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 O processo de instalação difere ligeiramente dependendo de sua versão do SQL Server. Consulte as seções a seguir para obter instruções para cada versão.
 
 > [!NOTE]
-> Não é possível ler ou modificar os modelos previamente treinados, como eles são compactados usando um formato nativo, para melhorar o desempenho.
+> Não é possível ler ou modificar os modelos treinados previamente. Eles são compactados usando um formato nativo para melhorar o desempenho.
 
-### <a name="obtain-files-for-an-offline-installation"></a>Obter arquivos para uma instalação offline
+## <a name="obtain-files-for-an-offline-installation"></a>Obter arquivos para uma instalação offline
 
 Para instalar os modelos previamente treinados em um servidor que não tem acesso à internet, baixe os instaladores apropriados antecipadamente e copie o instalador para uma pasta local no servidor. 
 
 Consulte esta página para os links de download para todos os instaladores de R Server e o servidor de aprendizado de máquina: [instalação Offline](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
-### <a name="install-pretrained-models-with-sql-server-2016-r-services"></a>Instalar pré-treinado modelos com o SQL Server 2016 R Services
+## <a name="install-pre-trained-models-on-sql-server-2016-r-services"></a>Instalar previamente treinados modelos no SQL Server 2016 R Services
 
 Com o SQL Server 2016, você poderá instalar e usar os modelos R previamente treinados somente se você atualizar primeiro a componentes, em um processo chamado de aprendizado de máquina **associação**. 
 
-Você pode fazer isso executando o Windows installer separado para Microsoft R Server ou servidor de aprendizado de máquina e, em seguida, selecionando uma instância ou instâncias **associar**. Um meio de instância que a política de suporte associada à instância de associação é alterado para permitir que as atualizações mais frequentes R. 
+Para fazer isso, executando o Windows installer separado para Microsoft R Server ou servidor de aprendizado de máquina em um computador com uma instalação do SQL Server 2016 R Services e, em seguida, selecionando uma instância ou instâncias **associar**. Um meio de instância que a política de suporte associada à instância de associação é alterado para permitir que as atualizações mais frequentes R. 
 
 1. Inicie o instalador baseado no Windows separado para cada uma [R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) ou [Server de aprendizado de máquina](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. Selecione a instância para atualização e, em seguida, selecione a opção para obter os modelos pré-treinado.
+2. Selecione a instância para atualização e, em seguida, selecione a opção para obter os modelos treinados previamente.
 
     Para obter mais informações, consulte [atualizar os componentes de aprendizado de máquina usadas pelo SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
@@ -113,18 +114,18 @@ Com o SQL Server 2016, você deve executar algumas etapas adicionais para regist
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-### <a name="install-pretrained-models-on-sql-server-2017"></a>Instalar modelos pré-treinado no SQL Server 2017
+## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>Instalar modelos previamente treinados nos serviços de aprendizado de máquina do SQL Server (no banco de dados)
 
-Se você já tiver instalado o SQL Server 2017, você pode obter os modelos pré-treinado de duas maneiras:
+Se você já tiver instalado o SQL Server 2017, você pode obter os modelos treinados previamente de duas maneiras:
 
-+ Atualizar os componentes do Python e R por meio de associação e instalar os modelos pré-treinado ao mesmo tempo
++ Atualizar os componentes do Python e R por meio de associação e instalar os modelos treinados previamente ao mesmo tempo
 + Instalar apenas os modelos previamente treinados
 
 As instruções a seguir descrevem o processo para atualizar os componentes de aprendizado de máquina e obter os modelos treinados previamente ao mesmo tempo.
 
 1. Execute o instalador baseado no Windows para o servidor de aprendizado de máquina. Você pode baixar o instalador dos links nesta página: [instalar machine Learning Server para Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. Se você estiver instalando os modelos para um servidor que não tem acesso à internet, certifique-se de também baixar o instalador para os modelos pré-treinado nesta página: [instalação Offline para o servidor de aprendizado de máquina](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
+2. Se você estiver instalando os modelos para um servidor que não tem acesso à internet, certifique-se de também baixar o instalador para os modelos treinados previamente nesta página: [instalação Offline para o servidor de aprendizado de máquina](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
 
 3. Execute o instalador.
 
@@ -140,11 +141,11 @@ Com o SQL Server 2017, nenhuma configuração adicional é necessária.
 > 
 > Para modelos de Python, você poderá receber um erro ao chamar o arquivo de modelo de código Python. Isso é devido a uma limitação na implementação atual do Python, que limitam o tamanho do caminho para o arquivo de modelo. Esse problema foi corrigido e estarão disponível em uma versão futura do serviço.
 
-### <a name="installing-pretrained-models-with-r-server-standalone"></a>Instalando modelos pré-treinado com R Server (autônomo)
+## <a name="install-pre-trained-models-with-sql-server-standalone-r-server"></a>Instalar modelos previamente treinados com R autônomo do SQL server
 
 Se você instalou uma versão anterior do R Server (autônomo) usando a instalação do SQL Server 2016, você pode adicionar a capacidade de usar os modelos treinados previamente atualizando R Server usando o instalador de baseados em Windows mais recente. 
 
-Os modelos pré-treinado foram primeiramente disponibilizados como uma opção com [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), mas as atualizações foram adicionadas a cada versão. É recomendável obter a versão mais recente possível, mas versões anteriores são listadas aqui [libera R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
+Os modelos treinados previamente foram primeiramente disponibilizados como uma opção com [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), mas as atualizações foram adicionadas a cada versão. É recomendável obter a versão mais recente possível, mas versões anteriores são listadas aqui [libera R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
 
 As instruções a seguir descrevem como atualizar os componentes de R e, ao mesmo tempo, adicionar os modelos treinados previamente.
 
@@ -179,11 +180,11 @@ Após a conclusão da instalação, você deve executar algumas etapas adicionai
     + A atualização cumulativa 1: **9.2.0.24**
     + Atualização cumulativa 4: **9.3.0**
 
-    Por exemplo, para habilitar o uso da versão mais recente dos modelos de pré-treinado para R, em uma instalação padrão do R Server (autônomo), você executaria esta instrução:
+    Por exemplo, para habilitar o uso da versão mais recente dos modelos previamente treinados para R, em uma instalação padrão do R Server (autônomo), você executaria esta instrução:
 
     `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
 
-### <a name="installing-pretrained-models-with-machine-learning-server-standalone"></a>Instalando modelos pré-treinado ao servidor de aprendizado de máquina (autônomo)
+## <a name="install-pre-trained-models-with-sql-server-2017-standalone-server"></a>Instalar os modelos treinados previamente com o servidor do SQL Server 2017 autônomo
 
 Se você instalou o servidor de aprendizado de máquina usando a instalação do SQL Server 2017, você adicionar os modelos treinados previamente ao executar o instalador baseado no Windows. Você pode selecionar a opção para atualizar os componentes de R ou Python e ao mesmo tempo, adicionar os modelos treinados previamente. 
 
@@ -200,19 +201,19 @@ A configuração de cada rede baseia as implementações de referência a seguir
 + ResNet-101
 + AlexNet
 
-Para obter mais informações sobre os algoritmos usados nesses modelos, e como eles ere implementado e treinado usando CNTK de aprendizado de profundidade, consulte estes artigos:
+Para obter mais informações sobre os algoritmos usados nesses modelos de aprendizado e como eles são implementados e treinado usando CNTK, consulte estes artigos:
 
 + [Algoritmo os pesquisadores da Microsoft define marco ImageNet desafio](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [Kit de ferramentas de rede computacional Microsoft oferece mais eficiente profundo distribuído desempenho computacional de aprendizado](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-### <a name="how-to-use-pre-trained-models-for-text-analysis"></a>Como usar modelos previamente treinados para análise de texto
+## <a name="how-to-use-pre-trained-models-for-text-analysis"></a>Como usar modelos previamente treinados para análise de texto
 
-Consulte o exemplo a seguir para ver uma demonstração de como usar o modelo de personalização de texto pré-treinado para classificação de texto:
+Consulte o exemplo a seguir para ver uma demonstração de como usar o modelo de personalização do texto previamente treinado para classificação de texto:
 
 [Análise de sentimento usando o recurso de texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
-### <a name="how-to-use-pretrained-models-for-image-detection"></a>Como usar modelos pré-treinado para detecção de imagem
+## <a name="how-to-use-pre-trained-models-for-image-detection"></a>Como usar modelos previamente treinados para detecção de imagem
 
 O modelo previamente treinado para imagens dá suporte a personalização de imagens que você fornecer. Para usar o modelo, você deve chamar o **featurizeImage** transformação. A imagem é carregada, redimensionadas e featurized pelo modelo treinado. A saída do recurso de DNN, em seguida, é usada para treinar um modelo linear para classificação de imagem.
 

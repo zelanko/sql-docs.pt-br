@@ -1,26 +1,26 @@
 ---
-title: "SQL Server Machine Learning Services - disponibilidade de recursos entre edições | Microsoft Docs"
-ms.custom: 
+title: SQL Server Machine Learning Services - disponibilidade de recursos entre edições | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>Disponibilidade de recursos em edições de serviços de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  Recursos de aprendizagem de máquina estão disponíveis no SQL Server 2016 e 2017 do SQL Server. Este artigo lista as edições fornecendo o recurso, descreve as limitações que se aplicam em edições específicas e lista os recursos disponíveis apenas em algumas edições.
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>Recursos de aprendizagem de máquina do SQL Server de 2017
+## <a name="sql-server-2017-features"></a>Recursos do SQL Server 2017
 
-Edições Enterprise e Developer têm a mesma cobertura de recurso para que você possa criar soluções para uma instalação corporativa sem incorrer no custo mesmo. Embora as edições são funcionalmente equivlanet, o uso da edição de desenvolvedor não há suporte para ambientes de produção.
+Edições Enterprise e Developer têm a mesma cobertura de recurso para que você possa criar soluções para uma instalação corporativa sem incorrer no custo mesmo. Embora as edições são funcionalmente equivalentes, o uso da edição de desenvolvedor não há suporte para ambientes de produção.
 
 A diferença entre a integração básica e avançada é a escala. Integração avançada pode usar todos os núcleos disponíveis para o processamento paralelo de conjuntos de dados de qualquer tamanho de que seu computador pode acomodar. A integração básica é limitada a 2 núcleos e conjuntos de dados ajuste na memória. 
 

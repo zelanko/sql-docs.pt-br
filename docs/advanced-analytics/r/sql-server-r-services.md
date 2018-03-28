@@ -1,32 +1,32 @@
 ---
-title: "R Services (no banco de dados) e aprendizado de máquina do SQL Server | Microsoft Docs"
+title: R Services (no banco de dados) e aprendizado de máquina do SQL Server | Microsoft Docs
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>R Services (no banco de dados) e aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Uma instalação no banco de dados de aprendizado de máquina opera dentro do contexto de uma instância do mecanismo de banco de dados do SQL Server, fornecendo suporte a script externo R e Python para dados residentes em sua instância do SQL Server. Como o aprendizado de máquina está integrado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode manter a análise próxima aos dados e eliminar os custos e os riscos de segurança associados à movimentação de dados.
 
-Como o mecanismo de banco de dados é de várias instâncias, você pode instalar mais de uma instância de análise no banco de dados, ou ainda mais antigas e mais recentes versões lado a lado. As opções incluem o [serviços do aprendizado de máquina 2017 SQL Server (no banco de dados)](../install/sql-machine-learning-standalone-windows-install.md) com R e Python, ou [serviços de R (de dados) do SQL Server 2016](../install/sql-r-standalone-windows-install.md) com apenas R. 
+Como o mecanismo de banco de dados é de várias instâncias, você pode instalar mais de uma instância de análise no banco de dados, ou ainda mais antigas e mais recentes versões lado a lado. As opções incluem o [serviços do aprendizado de máquina 2017 SQL Server (no banco de dados)](../install/sql-machine-learning-standalone-windows-install.md) com R e Python, ou [serviços de R (no banco de dados) do SQL Server 2016](../install/sql-r-standalone-windows-install.md) com apenas R. 
 
 Componentes de aprendizado de máquina também podem ser instalados como instância independente [servidores autônomos](r-server-standalone.md). Em geral, recomendamos que você trate (autônomo) e (no banco de dados) instalações como mutuamente exclusivos para evitar contenção de recursos, mas se houver recursos suficientes, não há nenhuma das proibições contra instalando-no mesmo computador físico.
 

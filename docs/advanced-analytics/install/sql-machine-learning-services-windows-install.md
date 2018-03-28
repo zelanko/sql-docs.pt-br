@@ -1,24 +1,24 @@
 ---
-title: "Instalar o SQL Server 2017 máquina Learning Services (no banco de dados) no Windows | Microsoft Docs"
-ms.custom: 
+title: Instalar o SQL Server 2017 máquina Learning Services (no banco de dados) no Windows | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Instalar o SQL Server 2017 máquina Learning Services (no banco de dados) no Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Este artigo explica como instalar o componente de aprendizado de máquina execut
 
 ## <a name="bkmk_prereqs"> </a> Lista de verificação de pré-instalação
 
-+ 2017 do SQL Server é necessária. Se você tiver o SQL Server 2016, instale o [SQL Server 2016 R Services (no banco de dados)](sql-r-services-windows-install.md) em vez disso.
++ A instalação do SQL Server 2017 é necessária se você deseja instalar os serviços de aprendizado de máquina com suporte a linguagem R, Python ou ambos. Se, em vez disso, você tem a mídia de instalação do SQL Server 2016, você pode instalar [SQL Server 2016 R Services (no banco de dados)](sql-r-services-windows-install.md) para obter suporte de linguagem R.
 
 + Uma instância do mecanismo de banco de dados é necessária. Você não pode instalar apenas R ou recursos de Python, embora você pode adicioná-los incrementalmente para uma instância existente.
 
@@ -67,7 +67,7 @@ Para instalações locais, você deve executar a Instalação como um administra
   
          Para usar o R e Python com o SQL Server, você deve instalar uma instância do mecanismo de banco de dados. Você pode usar um padrão ou uma instância nomeada.
   
-    -   **Serviços (no banco de dados) de aprendizado de máquina**
+    -   **Serviços de Machine Learning (no banco de dados)**
   
          Esta opção instala os serviços de banco de dados que oferecem suporte a R e execução do script de Python.
 

@@ -1,31 +1,31 @@
 ---
-title: "DMVs para serviços de aprendizado de máquina do SQL Server | Microsoft Docs"
-ms.custom: 
+title: DMVs para serviços de aprendizado de máquina do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>DMVs para serviços de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-O tópico lista as exibições de catálogo do sistema e DMVs relacionados ao aprendizado de máquina no SQL Server.
+O artigo lista as exibições de catálogo do sistema e DMVs relacionados ao aprendizado de máquina no SQL Server.
 
 Para obter informações sobre eventos estendidos, consulte [eventos estendidos do aprendizado de máquina](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
@@ -53,7 +53,7 @@ Você pode monitorar e analisar os recursos usados pelos scripts externos usando
   Os contadores a seguir são relatados por esta DMV para scripts externos, por instância:
 
   + **Total de execuções**: número de processos externos iniciadas por chamadas locais ou remotas
-  + **Paralelo execuções**: número de vezes que um script incluiu a  _@parallel_  especificação e que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] foi capaz de gerar e usar um plano de consulta paralela
+  + **Paralelo execuções**: número de vezes que um script incluiu a _@parallel_ especificação e que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] foi capaz de gerar e usar um plano de consulta paralela
   + **Execuções de streaming**: número de vezes que o recurso de streaming foi chamado
   + **Execuções de CC do SQL**: número de externos scripts de execução em que a chamada foi instanciada remotamente e do SQL Server foi usado como o contexto de computação
   + **Logons de Autenticação Implícita**: número de vezes que foi feita uma chamada de loopback de ODBC usando a autenticação implícita, ou seja, o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executou a chamada em nome do usuário que estava enviando a solicitação de script
