@@ -1,27 +1,28 @@
 ---
-title: "Importar domínios de um arquivo do Excel na descoberta de conhecimento | Microsoft Docs"
-ms.custom: 
+title: Importar domínios de um arquivo do Excel na descoberta de conhecimento | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9070b4ea757325e2f037140383bc525be75e1fe2
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 3bf3c6cad727ffb358dacfd2f2f401ca1902e806
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importar domínios de um arquivo do Excel na descoberta da base de dados de conhecimento
   Este tópico descreve como importar um ou mais domínios de um arquivo do Excel na atividade de descoberta da base de dados de conhecimento do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de importação simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que as pessoas que têm dados em um arquivo do Excel ou arquivo de texto criem uma base de dados de conhecimento com esses dados. (Consulte [Importar valores de um arquivo do Excel para um domínio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) para obter mais informações sobre como importar valores para um domínio de uma base de dados de conhecimento existente.) Não há suporte para a exportação para um arquivo do Excel.  
