@@ -1,27 +1,27 @@
 ---
-title: "Preparar dados do Excel para relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Preparar dados do Excel para relatórios móveis do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 57440dd767e421cb1448d8d365ebf894edbd065a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparar dados do Excel para relatórios móveis do Reporting Services
   
@@ -56,7 +56,7 @@ Ao preparar um arquivo do Excel como um conjunto de dados para um relatório mó
   
 Como você pode ver no exemplo acima, a primeira linha contém o nome da métrica na coluna em questão. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] preserva esses cabeçalhos de coluna para facilitar a referência nas configurações de elemento da galeria. No entanto, os cabeçalhos de coluna não são necessários. Se ausentes, o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] vai gerar cabeçalhos usando a convenção A,B,C,...,AA,BB,... do Excel.  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]detecta automaticamente os cabeçalhos da primeira linha na importação das planilhas do Excel comparando os tipos de dados das primeiras duas células em cada coluna. Se os tipos de dados das duas primeiras células em qualquer coluna não corresponderem, a primeira linha será determinada para conter cabeçalhos de coluna. Portanto, se uma tabela tiver cabeçalhos de coluna numérica, coloque uma cadeia de caracteres antes dos nomes de cabeçalho para que eles sejam detectados como cabeçalhos no processo de importação.  
+O [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] detecta automaticamente os cabeçalhos da primeira linha na importação das planilhas do Excel comparando os tipos de dados das primeiras duas células em cada coluna. Se os tipos de dados das duas primeiras células em qualquer coluna não corresponderem, a primeira linha será determinada para conter cabeçalhos de coluna. Portanto, se uma tabela tiver cabeçalhos de coluna numérica, coloque uma cadeia de caracteres antes dos nomes de cabeçalho para que eles sejam detectados como cabeçalhos no processo de importação.  
   
 ## <a name="cells"></a>Células  
   

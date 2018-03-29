@@ -1,29 +1,29 @@
 ---
-title: "TDE – BYOK (Bring Your Own Key) – SQL do Azure | Microsoft Docs"
-description: "Suporte a BYOK (Bring Your Own Key) na TDE (Transparent Data Encryption) com o Azure Key Vault para o Banco de Dados SQL e Data Warehouse. Visão geral da TDE com BYOK, benefícios, modo de funcionamento, considerações e recomendações."
-keywords: 
+title: TDE – BYOK (Bring Your Own Key) – SQL do Azure | Microsoft Docs
+description: Suporte a BYOK (Bring Your Own Key) na TDE (Transparent Data Encryption) com o Azure Key Vault para o Banco de Dados SQL e Data Warehouse. Visão geral da TDE com BYOK, benefícios, modo de funcionamento, considerações e recomendações.
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: aliceku
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 01/31/2018
+ms.date: 03/16/2018
 ms.author: aliceku
-ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption com suporte a Bring Your Own Key (VERSÃO PRÉVIA) para o Banco de Dados SQL do Azure e Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -69,10 +69,10 @@ Quando a primeira TDE está configurada para usar um protetor de TDE do Key Vaul
 - Use um cofre de chaves com [exclusão reversível](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) habilitada para proteger contra a perda de dados no caso da exclusão acidental da chave ou do cofre de chaves:  
   - Os recursos excluídos com a exclusão reversível são retidos por um determinado período, 90 dias a menos que eles sejam recuperados ou limpos.
   - As ações de **recuperação** e **limpeza** têm suas próprias permissões associadas em uma política de acesso do cofre de chaves. 
-- Conceda ao servidor lógico o acesso ao cofre de chaves usando sua identidade do AAD (Azure Active Directory).  Ao usar a interface do usuário do Portal, a identidade do AAD é criada automaticamente e as permissões de acesso do cofre de chaves são concedidas ao servidor.  Usando o PowerShell para configurar a TDE com BYOK, a identidade do AAD deve ser criada e a conclusão deve ser verificada. Consulte [Configurar a TDE com BYOK](transparent-data-encryption-byok-azure-sql-configure.md) para obter instruções passo a passo detalhadas ao usar o PowerShell.
+- Conceda ao servidor lógico o acesso ao cofre de chaves usando sua identidade do Microsoft Azure AD (Azure Active Directory).  Ao usar a interface do usuário do Portal, a identidade do Microsoft Azure AD é criada automaticamente e as permissões de acesso do cofre de chaves são concedidas ao servidor.  Usando o PowerShell para configurar a TDE com BYOK, é necessário criar a identidade do Microsoft Azure AD e verificar a conclusão. Consulte [Configurar a TDE com BYOK](transparent-data-encryption-byok-azure-sql-configure.md) para obter instruções passo a passo detalhadas ao usar o PowerShell.
 
   >[!NOTE]
-  >Se a identidade do AAD **for acidentalmente excluída ou as permissões do servidor forem revogadas** usando a política de acesso do cofre de chaves, o servidor perderá o acesso ao cofre de chaves.
+  >Se a identidade do Microsoft Azure AD **for acidentalmente excluída ou as permissões do servidor forem revogadas** usando a política de acesso do cofre de chaves, o servidor perderá o acesso ao cofre de chaves.
   >
   
 - Habilite a auditoria e os relatórios em todas as chaves de criptografia: o Key Vault fornece logs que são fáceis de injetar em outras ferramentas de SIEM (gerenciamento de eventos e informações de segurança). O [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) do OMS (Operations Management Suite) é um exemplo de serviço que já está integrado.
@@ -115,6 +115,12 @@ No segundo caso, é necessário configurar Azure Key Vaults redundantes com base
 
 Para assegurar que o acesso contínuo ao protetor de TDE no Azure Key Vault seja garantido durante um failover, ele deve ser configurado antes de um banco de dados ser replicado ou fazer o failover para um servidor secundário. Os servidores primário e secundário precisam armazenar cópias de protetores de TDE em todos os outros Azure Key Vaults, o que significa que nesse exemplo as mesmas chaves são armazenadas nos dois cofres de chaves.
 
+Um banco de dados secundário com um cofre da chave secundário é necessário para a redundância no cenário geo-dr, com suporte a até quatro secundários.  Encadeamento, que significa que não há suporte para a criação de um secundário para um secundário.  Durante o tempo de preparação inicial, o serviço confirma que as permissões são configuradas corretamente para o cofre de chaves primário e secundário.  É importante manter essas permissões e testar se elas ainda estão ocorrendo regularmente.
+
+>[!NOTE]
+>Ao atribuir a identidade do servidor para um servidor primário e secundário, a identidade precisa ser atribuída primeiro para o servidor secundário.
+>
+
 Para adicionar uma chave existente de um cofre de chaves a outro Cofre de chaves, use o cmdlet [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey).
 
  ```powershell
@@ -149,4 +155,7 @@ Para atenuar isso, execute o cmdlet [Get-AzureRmSqlServerKeyVaultKey](/powershel
    ```
 Para saber mais sobre a recuperação de backup do Banco de Dados SQL, consulte [Recuperar um Banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Para saber mais sobre a recuperação de backup do SQL Data Warehouse, consulte [Recuperar um SQL Data Warehouse do Azure](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
 
-Consideração adicional para backup de arquivos de log: o resultado do backup de arquivos de log permanece criptografado com o Criptografador TDE original, mesmo se houve rodízio do protetor de TDE e o banco de dados agora usa um novo protetor de TDE.  No momento da restauração, as duas chaves serão necessárias para restaurar o banco de dados.  Se o arquivo de log estiver usando um protetor de TDE armazenado no Azure Key Vault, essa chave será necessária no momento da restauração mesmo se, durante esse intervalo de tempo, o banco de dados tiver sido alterado para usar o TDE gerenciado por serviços.   
+
+Consideração adicional para backup de arquivos de log: o resultado do backup de arquivos de log permanece criptografado com o Criptografador TDE original, mesmo se houve rodízio do protetor de TDE e o banco de dados agora usa um novo protetor de TDE.  No momento da restauração, as duas chaves serão necessárias para restaurar o banco de dados.  Se o arquivo de log estiver usando um protetor de TDE armazenado no Azure Key Vault, essa chave será necessária no momento da restauração mesmo se, durante esse intervalo de tempo, o banco de dados tiver sido alterado para usar o TDE gerenciado por serviços.
+
+

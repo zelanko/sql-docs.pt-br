@@ -1,16 +1,16 @@
 ---
-title: "Permissões (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: 
+title: Permissões (Mecanismo de Banco de Dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 0932d368e23c01e181dbe94e3d27ce71e8c1b0f4
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/19/2018
   
 O número total de permissões para o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] é 237. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, permissões de nível de servidor não podem ser concedidas no banco de dados SQL, e algumas permissões só fazem sentido no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expôs 230 permissões. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expôs 219 permissões. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expôs 214 permissões. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expôs 195 permissões. O tópico [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica os tópicos que são novos em versões recentes. O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
   
-[![Permissões do Mecanismo de Banco de Dados](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Permissões do Mecanismo de Banco de Dados](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 Depois de compreender as permissões, aplique permissões em nível de servidor a logons e a usuários de permissões no nível de banco de dados com as instruções [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Por exemplo:   
 ```sql
@@ -102,7 +102,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
      A permissão REFERENCES é necessária em um objeto para criar uma FUNCTION ou VIEW com a cláusula `WITH SCHEMABINDING` que faz referência àquele objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
- Para obter um cartaz gráfico dimensionado de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, veja [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para obter um gráfico com tamanho de um cartaz de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, consulte [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ##  <a name="_securables"></a> Permissões Aplicáveis a Protegíveis Específicos  
  A tabela a seguir lista classes principais de permissões e os tipos de protegíveis aos quais elas podem ser aplicadas.  
@@ -115,7 +115,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |Execute|Tipos de CLR, scripts externos, procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinônimos|  
 |IMPERSONATE|Logons e usuários|  
 |INSERT|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] filas|  
+|RECEIVE|Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW e<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
 |TAKE OWNERSHIP|Todas as classes de objetos, exceto DATABASE SCOPED CONFIGURATION, LOGIN, SERVER e USER.|  

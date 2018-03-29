@@ -1,16 +1,16 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f619623b90b784d9d44bc76c99daf3d9802cb8a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna informações de propriedade sobre a instância de servidor.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -83,7 +85,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ProcessID|ID do processo do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ProcessID é útil para identificar qual Sqlservr.exe pertence a esta instância.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **int**|  
 |ProductBuild|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a partir de outubro de 2015.<br /><br /> O número de build.|  
 |ProductBuildType|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Tipo de build do build atual.<br /><br /> Retorna uma destas opções:<br /><br /> OD = versão Sob Demanda por meio de um cliente específico.<br /><br /> GDR = versão de Distribuição Geral lançada pelo Windows Update.<br /><br /> NULL<br />= não aplicável.|  
-|ProductLevel|Nível da versão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Retorna uma destas opções:<br /><br /> 'RTM' = Versão original<br /><br /> 'SP*n*' = versão service pack<br /><br /> 'CTP*n*', = versão Community Technology Preview<br /><br /> Tipo de dados base: **nvarchar(128)**|  
+|ProductLevel|Nível da versão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Retorna uma destas opções:<br /><br /> 'RTM' = Versão original<br /><br /> 'SP*n*' = versão Service pack<br /><br /> 'CTP*n*', = versão Community Technology Preview<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |ProductMajorVersion|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> A versão principal.|  
 |ProductMinorVersion|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> A versão secundária.|  
 |ProductUpdateLevel|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Atualize o nível do build atual. CU indica uma atualização cumulativa.<br /><br /> Retorna uma destas opções:<br /><br /> CU*n* = Atualização Cumulativa<br /><br /> NULL<br />= não aplicável.|  

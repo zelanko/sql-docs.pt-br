@@ -1,16 +1,16 @@
 ---
 title: Dicas de consulta (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   As dicas de consulta especificam que as dicas indicadas devem ser usadas em toda a consulta. Elas afetam todos os operadores na instrução. Se UNION estiver envolvida na consulta principal, só a última consulta envolvendo uma operação UNION poderá ter a cláusula OPTION. As dicas de consulta são especificadas como parte da [cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md). Se uma ou mais dicas de consulta fizerem com que o otimizador de consulta não gere um plano válido, será emitido o erro 8622.  
   
 > [!CAUTION]  
->  Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleciona, normalmente, o melhor plano de execução para uma consulta, recomendamos usar dicas apenas como último recurso para desenvolvedores e administradores de banco de dados experientes.  
+> Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleciona, normalmente, o melhor plano de execução para uma consulta, recomendamos usar dicas apenas como último recurso para desenvolvedores e administradores de banco de dados experientes.  
   
  **Aplica-se a:**  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
  Especifica que a ordem de junção indicada pela sintaxe de consulta é preservada durante a otimização da consulta. Usar FORCE ORDER não afeta o possível comportamento de reversão de função do otimizador de consulta.  
   
 > [!NOTE]  
->  Em uma instrução MERGE, a tabela de origem é acessada antes da tabela de destino como a ordem de junção padrão, a menos que a cláusula WHEN SOURCE NOT MATCHED seja especificada. Especificar FORCE ORDER preserva esse comportamento padrão.  
+> Em uma instrução MERGE, a tabela de origem é acessada antes da tabela de destino como a ordem de junção padrão, a menos que a cláusula WHEN SOURCE NOT MATCHED seja especificada. Especificar FORCE ORDER preserva esse comportamento padrão.  
   
  { FORCE | DISABLE } EXTERNALPUSHDOWN  
  Forçar ou desabilitar o pushdown da computação de expressões qualificadas no Hadoop. Aplica-se somente a consultas que usam PolyBase. Não efetuará pushdown para o armazenamento do Azure.  
@@ -202,34 +202,34 @@ ms.lasthandoff: 01/25/2018
   
  Substitui a opção de configuração **max degree of parallelism** de **sp_configure** e do Resource Governor da consulta que especifica essa opção. A dica de consulta MAXDOP pode exceder o valor configurado com sp_configure. Se MAXDOP exceder o valor configurado com o Resource Governor, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o valor de MAXDOP do Resource Governor, descrito em [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Todas as regras semânticas usadas com a opção de configuração **max degree of parallelism** são aplicáveis ao usar a dica de consulta MAXDOP. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
-> [!WARNING]  
-> Se MAXDOP estiver definido como 0, o servidor escolherá o max degree of parallelism.  
+> [!WARNING]     
+> Se MAXDOP estiver definido como 0, o servidor escolherá o máximo grau de paralelismo.  
   
- MAXRECURSION *number*  
- Especifica o número máximo de recursões permitidas para esta consulta. *number* é um inteiro não negativo entre 0 e 32767. Quando 0 é especificado, nenhum limite é aplicado. Se essa opção não for especificada, o limite padrão para o servidor será de 100.  
+ MAXRECURSION *number*     
+ Especifica o número máximo de recursões permitidas para esta consulta. *number* é um inteiro não negativo entre 0 e 32.767. Quando 0 é especificado, nenhum limite é aplicado. Se essa opção não for especificada, o limite padrão para o servidor será de 100.  
   
  Quando o número especificado ou padrão de limite de MAXRECURSION é atingido durante a execução da consulta, a consulta é encerrada e um erro é retornado.  
   
  Por causa desse erro, todos os efeitos da instrução são revertidos. Se a instrução for do tipo SELECT, poderão ser retornados resultados parciais ou nenhum resultado. Eventuais resultados parciais retornados podem não incluir todas as linhas em níveis de recursão acima do nível de recursão máximo especificado.  
   
- Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
- NO_PERFORMANCE_SPOOL  
+ NO_PERFORMANCE_SPOOL    
  **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Impede que um operador de spool seja adicionado aos planos de consulta (exceto para os planos em que o spool é necessário para assegurar uma semântica de atualização válida). Em alguns cenários, o operador de spool pode reduzir o desempenho. Por exemplo, quando o spool usar o tempdb, e a contenção do tempdb puder ocorrer se houver várias consultas simultâneas em execução com as operações de spool.  
+ Impede que um operador de spool seja adicionado aos planos de consulta (exceto para os planos em que o spool é necessário para assegurar uma semântica de atualização válida). Em alguns cenários, o operador de spool pode reduzir o desempenho. Por exemplo, o spool usa o tempdb e a contenção do tempdb pode ocorrer se houver várias consultas simultâneas em execução com as operações de spool.  
   
- OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )  
+ OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )     
  Instrui o otimizador de consulta a usar um valor específico para uma variável local quando a consulta é compilada e otimizada. O valor é usado somente durante a otimização da consulta e não durante sua execução.  
   
  *@variable_name*  
  É o nome de uma variável local usada em uma consulta para a qual um valor pode ser atribuído para uso com a dica de consulta OPTIMIZE FOR.  
   
  *UNKNOWN*  
- Especifica que o otimizador de consulta usa dados estatísticos e não o valor inicial para determinar o valor de uma variável local durante a otimização da consulta.  
+ Especifica que o otimizador de consulta usa dados estatísticos em vez do valor inicial para determinar o valor de uma variável local durante a otimização da consulta.  
   
  *literal_constant*  
- É um valor constante literal ao qual o  *@variable_name*  será atribuído para ser usado com a dica de consulta OPTIMIZE FOR. *literal_constant* é usado somente durante a otimização de consulta e não como o valor de  *@variable_name*  durante a execução da consulta. *literal_constant* pode ser de um dos tipos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode ser expresso como uma constante literal. O tipo de dados de *literal_constant* precisa ser implicitamente conversível no tipo de dados que o  *@variable_name*  referencia na consulta.  
+ É um valor constante literal ao qual o *@variable_name* será atribuído para ser usado com a dica de consulta OPTIMIZE FOR. *literal_constant* é usado somente durante a otimização de consulta e não como o valor de *@variable_name* durante a execução da consulta. *literal_constant* pode ser de um dos tipos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode ser expresso como uma constante literal. O tipo de dados de *literal_constant* precisa ser implicitamente conversível no tipo de dados que o *@variable_name* referencia na consulta.  
   
  OPTIMIZE FOR pode anular o comportamento de detecção de parâmetro padrão do otimizador ou pode ser usado na criação de guias de plano. Para obter mais informações, confira [Recompilar um procedimento armazenado](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
@@ -238,13 +238,14 @@ ms.lasthandoff: 01/25/2018
   
  Se OPTIMIZE FOR @variable_name = *literal_constant* e OPTIMIZE FOR UNKNOWN forem usados na mesma dica de consulta, o otimizador de consulta usará a *literal_constant* especificada para um valor específico e UNKNOWN para os valores das variáveis restantes. Os valores só são usados durante a otimização de consulta e não durante a execução das consultas.  
   
- PARAMETERIZATION { SIMPLE | FORCED }  
+ PARAMETERIZATION { SIMPLE | FORCED }     
  Especifica as regras de parametrização que o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica à consulta quando ela é compilada.  
   
 > [!IMPORTANT]  
-> A dica de consulta PARAMETERIZATION só pode ser especificada dentro de um guia de plano. Ela não pode ser especificada diretamente dentro de uma consulta.  
+> A dica de consulta PARAMETERIZATION só pode ser especificada dentro de um guia de plano para substituir a configuração atual da opção SET do banco de dados PARAMETERIZATION. Ela não pode ser especificada diretamente dentro de uma consulta.    
+> Para obter mais informações, confira [Especificar comportamento de parametrização de consulta usando guias de plano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
- SIMPLE instrui o otimizador de consulta a tentar parametrização simples. FORCED instrui o otimizador de consulta a tentar parametrização forçada. A dica de consulta PARAMETERIZATION é usada para substituir a configuração atual da opção SET do banco de dados PARAMETERIZATION dentro de um guia de plano. Para obter mais informações, confira [Especificar comportamento de parametrização de consulta usando guias de plano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ SIMPLE instrui o otimizador de consulta a tentar parametrização simples. FORCED instrui o otimizador de consulta a tentar a parametrização forçada. Para obter mais informações, consulte [Parametrização forçada no Guia de arquitetura de processamento de consulta](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) e [Parametrização simples no Guia de arquitetura de processamento de consulta](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
  Instrui o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a descartar o plano gerado para a consulta depois de sua execução, forçando o otimizador de consulta a recompilar um plano de consulta da próxima vez que a mesma consulta for executada. Sem especificar RECOMPILE, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena em cache os planos de consulta e reutiliza-os. Ao compilar planos de consulta, a dica de consulta RECOMPILE usa os valores atuais de todas as variáveis locais na consulta e, se a consulta estiver dentro de um procedimento armazenado, os valores atuais serão passados para quaisquer parâmetros.  
@@ -256,12 +257,12 @@ ms.lasthandoff: 01/25/2018
   
  Se tal plano não for possível, o otimizador de consulta retornará um erro, em vez de adiar a detecção de erros para a execução da consulta. Linhas podem conter colunas de tamanho variável. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite definir linhas com o tamanho potencial máximo para além da capacidade de processamento do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Geralmente, apesar do tamanho potencial máximo, um aplicativo armazena linhas cujos tamanhos reais estão dentro dos limites de processamento do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] encontrar uma linha longa demais, será retornado um erro de execução.  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **Aplica-se a**: aplica-se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+ **Aplica-se a**: aplica-se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
- Fornece uma ou mais dicas adicionais para o processador de consulta conforme a especificação de um nome de dica **dentro de aspas simples**. 
+ Fornece uma ou mais dicas adicionais para o processador de consulta conforme a especificação de um nome de dica **dentro de aspas simples**.   
 
- Os seguintes nomes de dica são compatíveis:
+ Os seguintes nomes de dica são compatíveis:    
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  Instrui o processador de consultas a não usar uma operação de classificação (classificação em lote) para junções otimizadas de loops aninhados ao gerar um plano de consulta. É equivalente ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
@@ -285,11 +286,12 @@ ms.lasthandoff: 01/25/2018
 > [!TIP]
 > Os nomes de dica diferenciam maiúsculas de minúsculas.
   
-  A lista de todos os nomes de USE HINT compatíveis pode ser consultada usando a exibição de gerenciamento dinâmico [sys.dm_exec_valid_use_hints ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).
+  A lista de todos os nomes de USE HINT compatíveis pode ser consultada usando a exibição de gerenciamento dinâmico [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+  
 > [!IMPORTANT] 
-> Algumas dicas USE HINT podem entrar em conflito com os sinalizadores de rastreamento habilitados no nível global ou no nível da sessão, ou com as definições de configurações de escopo do banco de dados. Nesse caso, a dica no nível da consulta (USE HINT) sempre terá precedência. Se uma USE HINT estiver em conflito com outra dica de consulta ou com um sinalizador de rastreamento habilitado no nível da consulta (como por QUERYTRACEON), o SQL Server vai gerar um erro ao tentar executar a consulta. 
+> Algumas dicas USE HINT podem entrar em conflito com os sinalizadores de rastreamento habilitados no nível global ou no nível da sessão, ou com as definições de configurações de escopo do banco de dados. Nesse caso, a dica no nível da consulta (USE HINT) sempre terá precedência. Se um USE HINT estiver em conflito com outra dica de consulta ou com um sinalizador de rastreamento habilitado no nível da consulta (como por QUERYTRACEON), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro ao tentar executar a consulta. 
 
- USE PLAN N**'***xml_plan***'**  
+ USE PLAN N**'***xml_plan***'**     
  Força o otimizador de consulta a usar um plano de consulta existente para uma consulta especificada por **'***xml_plan***'**. USE PLAN não pode ser especificado com instruções INSERT, UPDATE, MERGE ou DELETE.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Aplica a dica de tabela especificada à tabela ou à exibição que corresponde ao *exposed_object_name*. É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md).  
@@ -310,7 +312,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 > A especificação de FORCESEEK com parâmetros limita o número de planos que podem ser considerados pelo otimizador mais do que a especificação de FORCESEEK sem parâmetros. Isso pode resultar em um erro "Não é possível gerar o plano" em mais casos. Em uma versão futura, as modificações internas no otimizador talvez permitam a consideração de mais planos.  
   
 ## <a name="remarks"></a>Remarks  
- Não podem ser especificadas dicas de consulta em uma instrução INSERT, exceto quando uma cláusula SELECT for usada dentro da instrução.  
+ Dicas de consultas não podem ser especificadas em uma instrução INSERT, exceto quando uma cláusula SELECT for usada dentro da instrução.  
   
  Só podem ser especificadas dicas de consulta na consulta de nível superior, e não em subconsultas. Quando uma dica de tabela é especificada como uma dica de consulta, a dica pode ser especificada na consulta de nível superior ou em uma subconsulta. No entanto, o valor especificado para *exposed_object_name* na cláusula TABLE HINT precisa corresponder exatamente ao nome exposto na consulta ou subconsulta.  
   
@@ -320,25 +322,20 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
  Quando especificadas como uma dica de consulta, as dicas de tabela INDEX, FORCESCAN e FORCESEEK são válidas para os objetos a seguir:  
   
 -   Tabelas  
-  
 -   exibições  
-  
 -   Exibições indexadas  
-  
 -   Expressões de tabela comuns (a dica deve ser especificada na instrução SELECT cujo conjunto de resultados popula a expressão de tabela comum)  
-  
 -   Exibições de gerenciamento dinâmico  
-  
 -   Subconsultas nomeadas  
   
- As dicas de tabela INDEX, FORCESCAN e FORCESEEK podem ser especificadas como dicas de consulta para uma consulta que não tem dicas de tabela existentes ou podem ser usadas para substituir dicas INDEX, FORCESCAN ou FORCESEEK existentes na consulta, respectivamente. Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Nesse caso, será necessário especificar também uma dica correspondente como dica de consulta usando TABLE HIT na cláusula OPTION para preservar a semântica da consulta. Por exemplo, se a consulta contiver a dica de tabela NOLOCK, a cláusula OPTION no parâmetro  **@hints**  do guia de plano também precisará conter a dica NOLOCK. Consulte o exemplo K. Quando uma dica de tabela diferente de INDEX, FORCESCAN ou FORCESEEK é especificada usando TABLE HINT na cláusula OPTION sem uma dica de consulta correspondente ou vice-versa, o erro 8702 é gerado (indicando que a cláusula OPTION pode modificar a semântica da consulta) e a consulta falha.  
+ As dicas de tabela INDEX, FORCESCAN e FORCESEEK podem ser especificadas como dicas de consulta para uma consulta que não tem dicas de tabela existentes ou podem ser usadas para substituir dicas INDEX, FORCESCAN ou FORCESEEK existentes na consulta, respectivamente. Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Nesse caso, será necessário especificar também uma dica correspondente como dica de consulta usando TABLE HIT na cláusula OPTION para preservar a semântica da consulta. Por exemplo, se a consulta contiver a dica de tabela NOLOCK, a cláusula OPTION no parâmetro **@hints** do guia de plano também precisará conter a dica NOLOCK. Consulte o exemplo K. Quando uma dica de tabela diferente de INDEX, FORCESCAN ou FORCESEEK é especificada usando TABLE HINT na cláusula OPTION sem uma dica de consulta correspondente ou vice-versa, o erro 8702 é gerado (indicando que a cláusula OPTION pode modificar a semântica da consulta) e a consulta falha.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-merge-join"></a>A. Usando MERGE JOIN  
  O exemplo a seguir especifica que a operação JOIN na consulta é executada por MERGE JOIN. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *   
 FROM Sales.Customer AS c  
 INNER JOIN Sales.CustomerAddress AS ca ON c.CustomerID = ca.CustomerID  
@@ -350,7 +347,7 @@ GO
 ### <a name="b-using-optimize-for"></a>B. Usando OPTIMIZE FOR  
  O exemplo a seguir instrui o otimizador de consulta a usar o valor `'Seattle'` para a variável local `@city_name` e a usar dados estatísticos para determinar o valor da variável local `@postal_code` ao otimizar a consulta. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 DECLARE @city_name nvarchar(30);  
 DECLARE @postal_code nvarchar(15);  
 SET @city_name = 'Ascheim';  
@@ -389,7 +386,7 @@ GO
 ### <a name="d-using-merge-union"></a>D. Usando MERGE UNION  
  O exemplo a seguir usa a dica de consulta MERGE UNION. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *  
 FROM HumanResources.Employee AS e1  
 UNION  
@@ -402,7 +399,7 @@ GO
 ### <a name="e-using-hash-group-and-fast"></a>E. Usando HASH GROUP e FAST  
  O exemplo a seguir usa as dicas de consulta HASH GROUP e FAST. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -417,7 +414,7 @@ GO
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -430,7 +427,7 @@ GO
 ### <a name="g-using-index"></a>G. Usando INDEX  
  O exemplo a seguir usa a dica INDEX. O primeiro exemplo especifica um único índice. O segundo exemplo especifica vários índices para uma única referência de tabela. Nos dois exemplos, uma vez que a dica INDEX é aplicada em uma tabela que usa um alias, a cláusula TABLE HINT também deve especificar o mesmo alias como nome do objeto exposto. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide1',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -458,7 +455,7 @@ GO
 ### <a name="h-using-forceseek"></a>H. Usando FORCESEEK  
  O exemplo a seguir usa a dica de tabela FORCESEEK. Como a dica INDEX é aplicada em uma tabela que usa um nome de duas partes, a cláusula TABLE HINT também deve especificar o mesmo nome de duas partes como nome do objeto exposto. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide3',   
     @stmt = N'SELECT c.LastName, c.FirstName, HumanResources.Employee.Title  
@@ -476,7 +473,7 @@ GO
 ### <a name="i-using-multiple-table-hints"></a>I. Usando várias dicas de tabela  
  O exemplo a seguir aplica a dica INDEX a uma tabela e a dica FORCESEEK a outra. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide4',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -494,7 +491,7 @@ GO
 ### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>J. Usando TABLE HINT para substituir uma dica de tabela existente  
  O exemplo a seguir mostra como usar a dica TABLE HINT sem especificar uma dica para substituir o comportamento da dica de tabela INDEX especificada na cláusula FROM da consulta. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide5',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -511,7 +508,7 @@ GO
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Especificando dicas de tabela que afetam a semântica  
  O exemplo a seguir contém duas dicas de tabela na consulta: NOLOCK, que afeta a semântica, e INDEX, que não afeta a semântica. Para preservar a semântica da consulta, a dica NOLOCK é especificada na cláusula OPTIONS do guia de plano. Além da dica NOLOCK, as dicas INDEX e FORCESEEK são especificadas e substituem a dica INDEX, que não afeta a semântica, na consulta, quando a instrução é compilada e otimizada. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide6',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -528,7 +525,7 @@ GO
   
  O exemplo a seguir mostra um método alternativo para preservar a semântica da consulta e permitir que o otimizador escolha um índice diferente do índice especificado na dica de tabela. Isso é feito especificando-se a dica NOLOCK na cláusula OPTIONS (porque afeta a semântica) e a palavra-chave TABLE HINT com apenas uma referência de tabela e nenhuma dica INDEX. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide7',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -547,7 +544,7 @@ GO
   
 **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 SELECT * FROM Person.Address  
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 

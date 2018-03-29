@@ -1,29 +1,29 @@
 ---
 title: Suporte a SQL Server Management Objects para OLTP in-memory | Microsoft Docs
-description: "Descreve os itens no SQL Server Management Objects (SMO) que dão suporte a OLTP in-memory."
-ms.custom: 
+description: Descreve os itens no SQL Server Management Objects (SMO) que dão suporte a OLTP in-memory.
+ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-caps.latest.revision: 
-author: JennieHubbard
+caps.latest.revision: ''
+author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 723de25c649545751bda5ddd79db47c5c367f478
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e1dd179fee8f797d42231f65dc8600508e6c7c67
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Objects para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Os seguintes tipos e membros estão no namespace **Microsoft.SqlServer.Managemen
 - FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (construtor)
 - **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (enumeração)
 - Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (propriedade)
-- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (membro de enumeração)
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (membro da enumeração)
 - Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (propriedade)
 - Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (propriedade)
 - StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (propriedade)

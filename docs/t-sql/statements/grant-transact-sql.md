@@ -1,16 +1,16 @@
 ---
 title: GRANT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b470e1247c98d35aff96e19216d0cec36650749
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concede permissões em um protegível a uma entidade.  O conceito geral é usar GRANT para conceder \<some permission> ON \<some object> TO \<some user, login, or group>. Para obter uma discussão geral sobre permissões, consulte [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,7 +83,7 @@ GRANT
   
 ## <a name="arguments"></a>Argumentos  
  ALL  
- Esta opção está preterida e é mantida apenas para compatibilidade com versões anteriores. Ela não concede todas as permissões possíveis. A concessão de ALL é equivalente a conceder as seguintes permissões.  
+ Esta opção está preterida e é mantida apenas para compatibilidade com versões anteriores. Ela não concede todas as permissões possíveis. A concessão ALL é equivalente a conceder as seguintes permissões: 
   
 -   Se o protegível for um banco de dados, ALL será equivalente a BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.  
   
@@ -113,7 +113,7 @@ PRIVILEGES
  Especifica o protegível no qual a permissão está sendo concedida.  
   
 TO *principal*  
- É o nome de uma entidade. As entidades para as quais permissões em um protegível podem ser concedidas variam, dependendo do protegível. Consulte os subtópicos listados a seguir para obter combinações válidas.  
+ É o nome de uma entidade. As entidades para as quais permissões em um protegível podem ser concedidas variam, dependendo do protegível. Consulte os subtópicos listados a seguir para ver as combinações válidas.  
   
 GRANT OPTION  
  Indica que o usuário autorizado também poderá conceder a permissão especificada a outras entidades.  
@@ -126,7 +126,7 @@ O uso da cláusula AS geralmente não é recomendado, a menos que você precise 
 O uso de AS nessa instrução não implica a capacidade de representar outro usuário. 
   
 ## <a name="remarks"></a>Remarks  
- A sintaxe completa da instrução GRANT é complexa. O diagrama de sintaxe acima foi simplificado para chamar atenção para sua estrutura. A sintaxe completa para conceder permissões em protegíveis específicos é descrita nos tópicos listados a seguir.  
+ A sintaxe completa da instrução GRANT é complexa. O diagrama de sintaxe acima foi simplificado para chamar atenção para sua estrutura. A sintaxe completa para conceder permissões em protegíveis específicos é descrita nos artigos listados a seguir.  
   
  A instrução REVOKE pode ser usada para remover permissões concedidas, e a instrução DENY pode ser usada para evitar que uma entidade ganhe uma permissão específica por meio de um GRANT.  
   
@@ -154,17 +154,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
- Para obter um cartaz gráfico dimensionado de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, veja [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para obter um gráfico com tamanho de um cartaz de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, consulte [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## <a name="permissions"></a>Permissões  
- O concessor (ou a entidade de segurança especificada com a opção AS) deve ter a própria permissão com GRANT OPTION ou uma permissão superior que tenha a permissão que está sendo concedida implícita. Se a opção AS for usada, requisitos adicionais se aplicarão. Consulte o tópico específico sobre protegíveis para obter detalhes.  
+ O concessor (ou a entidade de segurança especificada com a opção AS) deve ter a própria permissão com GRANT OPTION ou uma permissão superior que tenha a permissão que está sendo concedida implícita. Se a opção AS for usada, requisitos adicionais se aplicarão. Consulte o artigo específico do protegível para ver os detalhes.  
   
  Os proprietários de objetos podem conceder permissões nos objetos de sua propriedade. Principais com a permissão CONTROL em um item protegível podem conceder permissão nesse item.  
   
  Os usuários autorizados da permissão CONTROL SERVER, como os membros da função de servidor fixa sysadmin, podem conceder qualquer permissão em qualquer protegível do servidor. Os usuários autorizados da permissão CONTROL em um banco de dados, como os membros da função de banco de dados fixa db_owner, podem conceder qualquer permissão para qualquer item de segurança do banco de dados. Os usuários autorizados da permissão CONTROL em um esquema podem conceder qualquer permissão em qualquer objeto dentro do esquema.  
   
 ## <a name="examples"></a>Exemplos  
- A tabela a seguir lista os protegíveis e os tópicos que descrevem a sintaxe específica a protegíveis.  
+ A tabela a seguir lista os protegíveis e os artigos que descrevem a sintaxe específica do protegível.  
   
 |||  
 |-|-|  

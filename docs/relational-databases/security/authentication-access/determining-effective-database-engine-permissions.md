@@ -1,42 +1,42 @@
 ---
-title: "Determinando permissões de mecanismo de banco de dados eficiente | Microsoft Docs"
-ms.custom: 
+title: Determinando permissões de mecanismo de banco de dados eficiente | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Este tópico descreve como determinar quem tem permissões para vários objetos no mecanismo de banco de dados do SQL Server. O SQL Server implementa dois sistemas de permissão para o mecanismo de banco de dados. Um sistema mais antigo de funções fixas tem permissões pré-configuradas. Está disponível, a partir do SQL Server 2005, um sistema mais flexível e preciso. (As informações neste tópico se aplicam ao SQL Server, a partir do 2005. Alguns tipos de permissões não estão disponíveis em algumas versões do SQL Server.)
+Este artigo descreve como determinar quem tem permissões para vários objetos no Mecanismo de Banco de Dados do SQL Server. O SQL Server implementa dois sistemas de permissão para o mecanismo de banco de dados. Um sistema mais antigo de funções fixas tem permissões pré-configuradas. Está disponível, a partir do SQL Server 2005, um sistema mais flexível e preciso. (As informações neste artigo se aplicam ao SQL Server, a partir do 2005. Alguns tipos de permissões não estão disponíveis em algumas versões do SQL Server.)
 
 >  [!IMPORTANT] 
 >  * As permissões efetivas são a agregação dos dois sistemas de permissão. 
 >  * Uma negação de permissões substitui uma concessão de permissões. 
 >  * Se um usuário é um membro da função de servidor fixa sysadmin, permissões não são verificadas e, portanto, negações não são impostas. 
->  * O sistema antigo e o novo têm semelhanças. Por exemplo, associação à função fixa de servidor `sysadmin` é semelhante a ter permissão `CONTROL SERVER`. Mas os sistemas não são idênticos. Por exemplo, se um logon só tem a permissão `CONTROL SERVER` e verificações de procedimentos armazenados da associação para a função de servidor fixa `sysadmin`, haverá falha na verificação de permissão. O inverso também é verdadeiro. 
+>  * O sistema antigo e o novo têm semelhanças. Por exemplo, associação à função fixa de servidor `sysadmin` é semelhante a ter permissão `CONTROL SERVER`. Mas os sistemas não são idênticos. Por exemplo, se um logon só tem a permissão `CONTROL SERVER` e os procedimentos armazenados verificarem a associação na função de servidor fixa `sysadmin`, a verificação de permissão falhará. O inverso também é verdadeiro. 
 
 
 ## <a name="summary"></a>Resumo   
@@ -51,13 +51,13 @@ Este tópico descreve como determinar quem tem permissões para vários objetos 
 * As permissões podem ser adquiridas com logons ou usuários com a permissão `IMPERSONATE`.   
 * Os membros do grupo administrador do computador local sempre podem elevar seus privilégios para `sysadmin`. (Não se aplica ao Banco de Dados SQL.)  
 * Os membros da função de servidor fixa `securityadmin` podem elevar muitos de seus privilégios e, em alguns casos, podem elevar os privilégios para `sysadmin`. (Não se aplica ao Banco de Dados SQL.)   
-* Os administradores do SQL Server podem ver informações sobre todos os logons e usuários. Usuários menos privilegiados geralmente veem informações apenas de suas próprias identidades.
+* Os administradores do SQL Server podem ver as informações sobre todos os logons e usuários. Usuários com menos privilégios geralmente veem apenas as informações de suas próprias identidades.
 
 ## <a name="older-fixed-role-permission-system"></a>Sistema de permissão de função fixa anterior
 
-As funções de servidor fixas e as funções de banco de dados fixas têm permissões pré-configuradas que não podem ser alteradas. Para determinar quem é membro de uma função de servidor fixa, execute a consulta a seguir.    
+As funções de servidor fixas e as funções de banco de dados fixas têm permissões pré-configuradas que não podem ser alteradas. Para determinar quem é um membro de uma função de servidor fixa, execute a consulta a seguir:    
 >  [!NOTE] 
->  Não se aplica ao Banco de Dados SQL ou SQL Data Warehouse em que a permissão de nível de servidor não está disponível. A coluna `is_fixed_role` de `sys.server_principals` foi adicionada no SQL Server 2012. Ela não é necessária para versões anteriores do SQL Server.  
+>  Não se aplica ao Banco de Dados SQL ou ao SQL Data Warehouse, em que a permissão de nível de servidor não está disponível. A coluna `is_fixed_role` de `sys.server_principals` foi adicionada no SQL Server 2012. Ela não é necessária para versões anteriores do SQL Server.  
 ```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
@@ -89,11 +89,11 @@ Para entender as permissões concedidas a cada função, consulte as descriçõe
 
 ## <a name="newer-granular-permission-system"></a>Novo sistema de permissão granular
 
-Esse sistema é extremamente flexível, o que significa que ele poderá ser complicado se as pessoas que estiverem fazendo a configuração forem muito precisas. Isso não é necessariamente ruim. Eu espero que minha instituição financeira seja precisa. Para simplificar, ele ajuda a criar funções, atribuir permissões a funções e adicionar grupos de pessoas para as funções. E é mais fácil se a equipe de desenvolvimento de banco de dados separar atividades por esquema e, em seguida, conceder permissões de função para um esquema inteiro em vez de tabelas individuais ou procedimentos. Mas o cenário real é complexo e devemos presumir que as necessidades de negócios criam requisitos de segurança inesperados.   
+Esse sistema é flexível, o que significa que ele poderá ser complicado se as pessoas que estão definindo a configuração buscarem precisão. Para simplificar, ele ajuda a criar funções, atribuir permissões a funções e adicionar grupos de pessoas para as funções. E é mais fácil se a equipe de desenvolvimento de banco de dados separar atividades por esquema e, em seguida, conceder permissões de função para um esquema inteiro em vez de tabelas individuais ou procedimentos. Cenários do mundo real são complexos e as necessidades de negócios podem criar requisitos de segurança inesperados.   
 
-O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Neste tópico, o cartaz é pequeno demais para ser lido. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
+O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Neste artigo, o cartaz é pequeno demais para ser lido. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
   
- [![Permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>Classes de segurança
 
@@ -105,7 +105,7 @@ As permissões são concedidas a entidades de segurança. Entidades de seguranç
 
 Quando um usuário do Windows se conecta usando um logon baseado em um grupo do Windows, algumas atividades podem exigir que o SQL Server crie um logon ou usuário para representar o usuário do Windows individual. Por exemplo, um grupo do Windows (Engenheiros) contém os usuários (Mary, Todd, Pat) e o grupo de engenheiros têm uma conta de usuário de banco de dados. Se Mary tem permissão e cria uma tabela, um usuário (Mary) pode ser criado para ser o proprietário da tabela. Ou, se Todd tiver uma permissão negada que o restante do grupo de engenheiros tem, então, o usuário Todd deverá ser criado para acompanhar a negação de permissão.
 
-Lembre-se de que um usuário do Windows pode ser membro de mais de um grupo do Windows (por exemplo, engenheiros e gerentes). As permissões concedidas ou negadas ao logon de engenheiros, ao logon de gerentes, concedidas ou negadas ao usuário individualmente e concedidas ou negadas a funções das quais o usuário é membro, serão agregadas e avaliadas para as permissões efetivas. A função `HAS_PERMS_BY_NAME` pode revelar se um usuário ou logon tem uma permissão específica. No entanto, não há nenhuma maneira óbvia de determinar a origem da concessão ou negação de permissão. Você deve estudar a lista de permissões e, talvez, testar usando tentativa e erro.
+Lembre-se de que um usuário do Windows pode ser membro de mais de um grupo do Windows (por exemplo, engenheiros e gerentes). As permissões concedidas ou negadas ao logon de engenheiros, ao logon de gerentes, concedidas ou negadas ao usuário individualmente e concedidas ou negadas a funções das quais o usuário é membro, serão agregadas e avaliadas para as permissões efetivas. A função `HAS_PERMS_BY_NAME` pode revelar se um usuário ou logon tem uma permissão específica. No entanto, não há nenhuma maneira óbvia de determinar a origem da concessão ou negação de permissão. Estude a lista de permissões e, talvez, realize testes de tentativa e erro.
 
 ## <a name="useful-queries"></a>Consultas úteis
 

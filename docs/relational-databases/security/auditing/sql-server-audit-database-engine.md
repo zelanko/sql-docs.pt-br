@@ -1,16 +1,16 @@
 ---
 title: Auditoria do SQL Server (Mecanismo de Banco de Dados) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   A*auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  Dependendo dos requisitos ou padrões governamentais de sua instalação, ha vários níveis de auditoria no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece as ferramentas e os processos necessários para habilitar, armazenar e exibir auditorias em vários objetos de servidor e de banco de dados.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  Grupos de ação de auditoria no nível do banco de dados e ações de auditoria são descritos no tópico [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
-### <a name="target"></a>Target (destino)  
+### <a name="target"></a>Destino  
  Os resultados de uma auditoria são enviados a um destino que pode ser um arquivo, o log de eventos de Segurança do Windows ou o log de eventos de Aplicativo do Windows. É necessário verificar e arquivar os logs periodicamente para certificar-se de que o destino tenha espaço suficiente para gravar mais registros.  
   
 > [!IMPORTANT]  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>Espelhamento de Banco de Dados e o SQL Server Audit  
  Um banco de dados com uma especificação de auditoria de banco de dados definida e que usa espelhamento de banco de dados incluirá a especificação de auditoria de banco de dados. Para funcionar corretamente na instância de SQL espelhada, é necessário configurar os seguintes itens:  
   
--   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado com o uso do comando CREATE AUDIT WITH GUID**=***\<GUID da Auditoria de Servidor de origem*>.  
+-   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID**=***\<<GUID da Auditoria de Servidor de origem*>.  
   
 -   Para destinos de arquivos binários, é necessário que a conta do serviço de servidor espelho tenha as permissões apropriadas onde a trilha de auditoria começou a ser gravada.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  Entidades na função sysadmin podem violar qualquer componente de auditoria e aqueles na função db_owner podem violar quaisquer especificações em um banco de dados. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valida esse logon que cria ou altera uma especificação de auditoria que tenha pelo menos a permissão ALTER ANY DATABASE AUDIT. No entanto, ela não faz nenhuma validação quando você anexa um banco de dados. Você deve considerar que todas as Especificações de Auditoria de Banco de Dados são seguras somente para as entidades nas funções sysadmin ou db_owner.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Criar uma especificação de auditoria de banco de dados e de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -216,7 +218,7 @@ ms.lasthandoff: 11/21/2017
  [Microsoft TechNet: TechCenter do SQL Server: Segurança e proteção do SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=101152)  
  Fornece informações atualizadas sobre a segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [Registros de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   

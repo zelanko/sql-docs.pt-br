@@ -1,16 +1,16 @@
 ---
 title: nchar e nvarchar (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: de099c00e160e212ff309abf74d5411687a82532
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ Os tipos de dados de caractere que são dados Unicode de comprimento fixo, **nch
   
 ## <a name="arguments"></a>Argumentos  
 **nchar** [ ( n ) ]  
-Dados de cadeia de caracteres Unicode de comprimento fixo. *n* define o comprimento da cadeia de caracteres e deve ser um valor de 1 a 4.000. O tamanho do armazenamento é duas vezes *n* bytes. Quando a página de código de agrupamento usar caracteres de dois bytes, o tamanho do armazenamento ainda será *n* bytes. Dependendo da cadeia de caracteres, o tamanho do armazenamento de *n* bytes pode ser inferior ao valor especificado para *n*. Os sinônimos ISO para **nchar** são **national char** e **national character**.
+Dados de cadeia de caracteres Unicode de comprimento fixo. *n* define o tamanho da cadeia de caracteres e deve ser um valor de 1 a 4.000. O tamanho do armazenamento é duas vezes *n* bytes. Quando a página de código de agrupamento usar caracteres de dois bytes, o tamanho do armazenamento ainda será *n* bytes. Dependendo da cadeia de caracteres, o tamanho do armazenamento de *n* bytes pode ser inferior ao valor especificado para *n*. Os sinônimos ISO para **nchar** são **char nacional** e **caractere nacional**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Dados de cadeia de caracteres Unicode de comprimento variável. *n* define o comprimento da cadeia de caracteres e pode ser um valor de 1 a 4.000. **max** indica que o tamanho de armazenamento máximo é de 2^31-1 caracteres (2 GB). O tamanho de armazenamento, em bytes, é duas vezes o comprimento real dos dados digitados + 2 bytes. Os sinônimos ISO para **nvarchar** são **national char varying** e **national character varying**.
+Dados de cadeia de caracteres Unicode de comprimento variável. *n* define o tamanho da cadeia de caracteres e pode ser um valor de 1 a 4.000. **max** indica que o tamanho de armazenamento máximo é de 2^30-1 caracteres.  O tamanho de armazenamento máximo em bytes é 2 GB. O tamanho de armazenamento real, em bytes, é duas vezes o número de caracteres digitados + 2 bytes. Os sinônimos ISO para **nvarchar** são **national char varying** e **national character varying**.
   
 ## <a name="remarks"></a>Remarks  
 Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado com a função CAST, o tamanho padrão é 30.
@@ -60,7 +60,7 @@ Prefixe constantes de cadeia de caracteres Unicode com a letra N. Sem o prefixo 
 >  Ao prefixar uma constante de cadeia de caracteres com a letra N, a conversão implícita resultará em uma cadeia de caracteres Unicode, caso a constante a ser convertida não exceda o tamanho máximo para um tipo de dados de cadeia de caracteres Unicode (4.000). Caso contrário, a conversão implícita resultará em um valor grande Unicode (max).
   
 > [!WARNING]  
->  Cada coluna **varchar(max)** ou **nvarchar(max)** não nula exige 24 bytes de alocação fixa adicional, que conta para o limite de linha de 8.060 bytes durante uma operação de classificação. Isso pode criar um limite implícito para o número de colunas **varchar(max)** ou **nvarchar(max)** não nulas que podem ser criadas em uma tabela. Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8060 bytes) ou no momento da inserção de dados. Esse tamanho de linha pode causar erros (por exemplo, o erro 512) durante algumas operações normais, como uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo, que os usuários não podem prever até que uma operação seja executada.  
+>  Cada coluna **varchar(max)** ou **nvarchar(max)** não nula requer 24 bytes de alocação fixa adicional, que conta para o limite de linhas de 8.060 bytes durante uma operação de classificação. Esses bytes adicionais podem criar um limite implícito para o número de colunas **varchar(max)** ou **nvarchar(max)** não nulas em uma tabela. Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8060 bytes) ou no momento da inserção de dados. Esse grande tamanho de linha pode causar erros (como o erro 512) imprevistos pelos usuários durante algumas operações normais.  Dois exemplos de operações são uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo.
   
 ## <a name="converting-character-data"></a>Convertendo dados character  
 Para obter informações sobre como converter dados de caractere, consulte [char e varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).

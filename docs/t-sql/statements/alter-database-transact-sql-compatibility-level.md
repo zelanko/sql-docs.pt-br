@@ -1,16 +1,16 @@
 ---
-title: "Nível de compatibilidade de ALTER DATABASE (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Nível de compatibilidade de ALTER DATABASE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -26,22 +26,24 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 750578d028077079b051a08cc2a0ed4276983cda
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Define certos comportamentos de banco de dados como sendo compatíveis com a versão especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter outras opções de ALTER DATABASE, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -155,7 +157,7 @@ Esta seção descreve os novos comportamentos introduzidos com o nível de compa
 | Para o nível 120, são coletadas amostras das estatísticas por um processo *single*-thread. | Para o nível 130, são coletadas amostras das estatísticas por um processo de *vários* threads. |  
 | 253 chaves estrangeiras de entrada é o limite. | Uma tabela especificada pode ser referenciada por até 10.000 chaves estrangeiras de entrada ou referências semelhantes. Para restrições, consulte [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md). |  
 |Os algoritmos de hash MD2, MD4, MD5, SHA e SHA1 preteridos são permitidos.|Apenas os algoritmos de hash SHA2_256 e SHA2_512 são permitidos.|
-||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] inclui melhorias em algumas conversões de tipos de dados e outras operações (principalmente incomuns). Para obter detalhes, consulte [Melhorias do SQL Server 2016 no tratamento de alguns tipos de dados e operações incomuns](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
+||O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] inclui melhorias em algumas conversões de tipos de dados e outras operações (normalmente incomuns). Para obter detalhes, consulte [Melhorias do SQL Server 2016 no tratamento de alguns tipos de dados e operações incomuns](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
   
 As correções que estavam sob o sinalizador de rastreamento 4199 em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] agora estão habilitadas por padrão. Com o modo de compatibilidade 130. O sinalizador de rastreamento 4199 ainda será aplicável para novas correções do otimizador de consulta que são liberadas após [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Para usar o otimizador de consulta mais antigo no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], é necessário selecionar o nível de compatibilidade 110. Para obter informações sobre o Sinalizador de Rastreamento 4199, consulte [Sinalizador de rastreamento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  
   
@@ -164,7 +166,7 @@ As correções que estavam sob o sinalizador de rastreamento 4199 em versões an
   
 |Configuração de nível de compatibilidade 110 ou inferior|Configuração de nível de compatibilidade 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|O otimizador de consulta mais antigo é usado.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclui melhorias significativas no componente que cria e otimiza planos de consulta. Esse novo recurso do otimizador de consulta depende do uso do nível de compatibilidade de banco de dados 120. Novos aplicativos de banco de dados devem ser desenvolvidos usando o nível de compatibilidade de banco de dados 120 para tirar proveito dessas melhorias. Os aplicativos migrados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser cuidadosamente testados para confirmar que o bom desempenho será mantido ou melhorado. Se o desempenho diminuir, você poderá definir o nível de compatibilidade de banco de dados como 110 ou menos, a fim de usar a metodologia de otimizador de consulta mais antiga.<br /><br /> A compatibilidade do banco de dados nível 120 usa um novo avaliador de cardinalidade que é ajustado para moderno data warehouse e cargas de trabalho OLTP. Antes de definir o nível de compatibilidade do banco de dados como 110 devido a problemas de desempenho, consulte as recomendações na seção Planos de consulta do tópico [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][Novidades do Mecanismo de Banco de Dados](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).|  
+|O otimizador de consulta mais antigo é usado.|O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclui melhorias significativas no componente que cria e otimiza planos de consulta. Esse novo recurso do otimizador de consulta depende do uso do nível de compatibilidade de banco de dados 120. Novos aplicativos de banco de dados devem ser desenvolvidos usando o nível de compatibilidade de banco de dados 120 para tirar proveito dessas melhorias. Os aplicativos migrados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser cuidadosamente testados para confirmar que o bom desempenho será mantido ou melhorado. Se o desempenho diminuir, você poderá definir o nível de compatibilidade de banco de dados como 110 ou menos, a fim de usar a metodologia de otimizador de consulta mais antiga.<br /><br /> A compatibilidade do banco de dados nível 120 usa um novo avaliador de cardinalidade que é ajustado para moderno data warehouse e cargas de trabalho OLTP. Antes de definir o nível de compatibilidade do banco de dados como 110 devido a problemas de desempenho, consulte as recomendações na seção Planos de consulta do tópico [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][Novidades do Mecanismo de Banco de Dados](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).|  
 |Em níveis de compatibilidade abaixo de 120, a configuração de idioma é ignorada durante a conversão de um valor de **date** em um valor de cadeia de caracteres. Observe que esse comportamento é específico apenas ao tipo **date**. Veja o exemplo B na seção Exemplos abaixo.|A configuração de idioma não é ignorada durante a conversão de um valor de **date** em um valor de cadeia de caracteres.|  
 |As referências recursivas no lado direito de uma cláusula `EXCEPT` criam um loop infinito. O exemplo C na seção Exemplos abaixo demonstra esse comportamento.|As referências recursivas em uma cláusula `EXCEPT` geram um erro em conformidade com o padrão ANSI SQL.|  
 |A CTE (expressão de tabela comum) recursiva permite nomes de coluna duplicados.|Uma CTE recursiva não permite nomes de coluna duplicados.|  

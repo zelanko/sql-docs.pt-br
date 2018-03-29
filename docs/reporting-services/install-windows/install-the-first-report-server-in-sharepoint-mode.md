@@ -1,25 +1,25 @@
 ---
-title: "Instalar o primeiro servidor de relatório no modo do SharePoint | Microsoft Docs"
-ms.custom: 
+title: Instalar o primeiro servidor de relatório no modo do SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Instalar o primeiro servidor de relatório no modo do SharePoint
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
  **Criando aplicativos do serviço Reporting Services**  
   
--   Após a instalação e registro do serviço Reporting Services, crie um ou mais aplicativos do serviço Reporting Services. A “conta de serviço do farm do SharePoint “ precisa ser temporariamente um membro do grupo de administradores local para que o aplicativo de serviço do Reporting Services possa ser criado. Para obter mais informações sobre as permissões de conta do SharePoint 2013, veja [Permissões de conta e configurações de segurança no SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx) ou para o SharePoint 2016, veja [Permissões de conta e configurações de segurança no SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Após a instalação e registro do serviço Reporting Services, crie um ou mais aplicativos do serviço Reporting Services. A “conta de serviço do farm do SharePoint “ precisa ser temporariamente um membro do grupo de administradores local para que o aplicativo de serviço do Reporting Services possa ser criado. Para obter mais informações sobre as permissões de conta do SharePoint 2013, veja [Permissões de conta e configurações de segurança no SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx) ou para o SharePoint 2016, consulte [Permissões de conta e configurações de segurança no SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      É prática recomendada de segurança que as contas de administrador do farm do SharePoint também não sejam contas locais de administrador do sistema operacional. Se você adicionar uma conta de administrador do farm ao grupo de administradores local como parte do processo de instalação, é recomendável remover a conta do grupo de administradores local depois que a instalação for concluída.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > Para o SharePoint 2016, o servidor do SharePoint no qual o Reporting Services será instalado precisa ter a função de servidor **Custom**. A implantação do Reporting Services terá êxito em um servidor do SharePoint que não está na função **Custom**, mas durante a próxima janela de manutenção do SharePoint, MinRole interromperá o serviço Reporting Services, pois detecta que o Reporting Services no modo integrado do SharePoint não indica suporte para nenhuma das outras funções de servidor do SharePoint. O aplicativo do serviço Reporting Services dá suporte somente à função **Custom**.
  
  > [!NOTE]
- > Se você planeja instalar o serviço do Power Pivot também, no SharePoint 2016, instale-o antes de instalar o Reporting Services. O serviço do Power Pivot não pode ser instalado em um servidor do SharePoint na função **Custom** . Isso evitará a necessidade de várias trocas de funções.
+ > Se você planeja instalar o serviço do Power Pivot também, no SharePoint 2016, instale-o antes de instalar o Reporting Services. O serviço do Power Pivot não pode ser instalado em um servidor do SharePoint na função **Personalizada**.
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>Aplicar a função de servidor personalizada a um servidor do SharePoint 2016
  
@@ -420,7 +420,7 @@ Além disso, a conta de segurança do pool de aplicativos usada pelo aplicativo 
  O Reporting Services fornece tipos de conteúdo predefinidos usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatório (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo. Para obter mais informações, veja [Adicionar os tipos de conteúdo do Reporting Services à sua biblioteca do SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Ativar o recurso de sincronização de arquivo do Servidor de Relatório.  
- Se os usuários forem carregar com frequência itens de relatório publicados diretamente nas bibliotecas de documentos do SharePoint, o recurso no nível de site **Sincronização de arquivos do Servidor de Relatório** será útil. O recurso de sincronização de arquivo sincronizará o catálogo do servidor de relatório com itens nas bibliotecas de documentos mais frequentemente. Para obter mais informações, consulte [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Se os usuários forem carregar com frequência itens de relatório publicados diretamente nas bibliotecas de documentos do SharePoint, o recurso no nível de site **Sincronização de arquivos do Servidor de Relatório** será útil. O recurso de sincronização de arquivo sincronizará o catálogo do servidor de relatório com itens nas bibliotecas de documentos mais frequentemente. Para obter mais informações, consulte [Ativar o recurso de sincronização de relatório do Servidor de Relatório na Administração Central do SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Verificar a instalação  
  Veja a seguir as etapas e os procedimentos sugeridos para verificar a implantação do modo do SharePoint do Reporting Services.  

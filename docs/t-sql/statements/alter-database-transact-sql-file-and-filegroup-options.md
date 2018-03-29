@@ -1,16 +1,16 @@
 ---
-title: "Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -44,21 +44,23 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ef66eef5192d18cb2a443f0ed45f2b29a018c883
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Modifica os arquivos e grupos de arquivos associados ao banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Adiciona ou remove arquivos e grupos de arquivos de um banco de dados e altera os atributos de um banco de dados ou seus arquivos e grupos de arquivos. Para obter outras opções de ALTER DATABASE, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+  Modifica os arquivos e grupos de arquivos associados ao banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Adiciona ou remove arquivos e grupos de arquivos de um banco de dados e altera os atributos de um banco de dados ou seus arquivos e grupos de arquivos. Para obter outras opções de ALTER DATABASE, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
