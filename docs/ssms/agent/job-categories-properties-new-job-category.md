@@ -1,31 +1,38 @@
 ---
-title: "Propriedades de categorias de trabalho – Nova categoria de trabalho | Microsoft Docs"
-ms.custom: 
+title: Propriedades de categorias de trabalho – Nova categoria de trabalho | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.ag.job.categoriesproperties
+f1_keywords:
+- sql13.ag.job.categoriesproperties
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4bbd74c2a547238305034ab9e4c9067762997c2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 393ed4e8ae1df7eda77a8b708e391016bcc8b233
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="job-categories-properties---new-job-category"></a>Propriedades de categorias de trabalho – Nova categoria de trabalho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lista os trabalhos em uma ou em todas as categorias de trabalho e permite que você adicione uma nova categoria de trabalho.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
+
+Lista os trabalhos em uma ou em todas as categorias de trabalho e permite que você adicione uma nova categoria de trabalho.  
   
 ## <a name="options"></a>Opções  
 **Nome**  

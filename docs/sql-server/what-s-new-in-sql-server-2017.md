@@ -1,30 +1,32 @@
 ---
 title: Novidades no SQL Server 2017 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: "71"
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 47d6f056dce4ad26a10e082d27119523fde303d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma plataforma que oferece opções de linguagens de desenvolvimento, de tipos de dados, de implantação local ou em nuvem e de sistemas operacionais, aproveitando a capacidade do SQL Server no Linux, em contêineres do Docker baseados em Linux e no Windows. Este tópico resume o que há de novo para áreas de recurso específico e inclui links para obter detalhes adicionais. Para obter mais informações relacionadas ao SQL Server no Linux, consulte [Documentação do SQL Server no Linux](https://docs.microsoft.com/sql/linux/)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma plataforma que oferece opções de linguagens de desenvolvimento, tipos de dados, locais ou nuvens e sistemas operacionais, utilizando a capacidade do SQL Server no Linux, em contêineres do Docker baseados em Linux e no Windows. Este tópico resume o que há de novo para áreas de recurso específico e inclui links para obter detalhes adicionais. Para obter mais informações relacionadas ao SQL Server no Linux, consulte [Documentação do SQL Server no Linux](https://docs.microsoft.com/sql/linux/)
 
 [![Baixar do Centro de Avaliação](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [Baixar a versão do SQL Server 2017, agosto de 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 
@@ -79,7 +81,7 @@ Para obter mais informações, consulte [Novidades do Integration Services no SQ
 - A experiência e o desempenho são melhorados ao atualizar do SQL Server 2012, do SQL Server 2014 e do SQL Server 2016 para o SQL Server 2017 Master Data Services. 
 - Agora você pode exibir as listas classificadas de entidades, coleções e hierarquias na página **Explorer** do aplicativo Web.
 - O desempenho foi melhorado para o preparo de milhões de registros usando o procedimento armazenado de preparo.
-- O desempenho foi aprimorado ao expandir a pasta **Entidades** na página **Gerenciar Grupos** para atribuir permissões de modelo. A página **Gerenciar Grupos** está localizada na seção **Segurança** do aplicativo Web. Para saber mais sobre o aprimoramento de desempenho, veja [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Para saber mais sobre como atribuir permissões, confira [Atribuir permissões de objeto do modelo (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
+- O desempenho foi aprimorado ao expandir a pasta **Entidades** na página **Gerenciar Grupos** para atribuir permissões de modelo. A página **Gerenciar Grupos** está localizada na seção **Segurança** do aplicativo Web. Para obter mais informações sobre a melhoria de desempenho, consulte [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Para saber mais sobre como atribuir permissões, confira [Atribuir permissões de objeto do modelo (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SSAS (SQL Server 2017 Analysis Services) 
 O SQL Server Analysis Services 2017 apresenta vários aprimoramentos para modelos de tabela. Eles incluem:
@@ -128,5 +130,7 @@ Para obter mais informações, consulte [Novidades do Serviços do SQL Server Ma
 - Descubra as [Novidades do SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
