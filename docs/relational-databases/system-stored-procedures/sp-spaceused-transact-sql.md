@@ -25,18 +25,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef8781d5c6ab68b90aefcc9c7d01e0cb9f070a02
-ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
+ms.openlocfilehash: de4b451166e7b17b92ae996eddeef87b4dd8722b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Exibe o número de linhas, o espaço em disco reservado e o espaço em disco usado por uma tabela, exibição indexada ou fila [!INCLUDE[ssSB](../../includes/sssb-md.md)] no banco de dados atual ou exibe o espaço em disco reservado e usado pelo banco de dados inteiro.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -87,7 +87,7 @@ Se *objname* não for especificado, os resultados são retornados para o banco d
  *oneresultset* é **bit**, com um padrão de **0**.  
 
 [ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
-**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+**Aplica-se a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  Quando @oneresultset= 1, o parâmetro @include_total_xtp_storage determina se o conjunto de resultados único inclui as colunas de armazenamento MEMORY_OPTIMIZED_DATA. O valor padrão é 0, isto é, por padrão (se o parâmetro é omitido) as colunas XTP não são incluídas no conjunto de resultados.  
 

@@ -1,33 +1,36 @@
 ---
-title: Fontes de dados com suporte em modelos de tabela do SQL Server Analysis Services | Microsoft Docs
-ms.custom: 
-ms.date: 02/22/2018
+title: Fontes de dados com suporte em modelos de tabela 1200 SQL Server Analysis Services | Microsoft Docs
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 14aa6597e533000c259f513c503825e7993da77c
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>Fontes de dados com suporte em modelos de tabela
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Para serviços de análise do Azure, consulte [fontes de dados com suporte no Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+  
+Este artigo descreve os tipos de fontes de dados que podem ser usados com modelos de tabela do SQL Server Analysis Services na 1200 e nível de compatibilidade inferior. 
 
-  Este artigo descreve os tipos de fontes de dados que podem ser usados com modelos de tabela.  
+Para modelos nos níveis de compatibilidade 1400, consulte [fontes de dados com suporte em modelos do SQL Server Analysis Services tabulares 1400](data-sources-supported-ssas-tabular-1400.md).
+
+Para serviços de análise do Azure, consulte [fontes de dados com suporte no Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
 ##  <a name="bkmk_supported_ds"></a> Fontes de dados com suporte para modelos de tabela na memória  
 Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a instalação não instala os provedores listados para cada fonte de dados. Alguns provedores podem ser instalados com outros aplicativos no seu computador. Em outros casos, talvez seja necessário baixar e instalar o provedor.  
@@ -73,3 +76,9 @@ Você também pode eliminar etapas com a importação de várias tabelas e a exc
 Colunas que contêm dados semelhantes em fontes de dados diferentes são a base para criar relações dentro do designer de modelos. Ao usar fontes de dados heterogêneos, escolha tabelas com colunas que possam ser mapeadas para tabelas em outras fontes de dados que contêm dados idênticos ou semelhantes.  
   
 Provedores OLE DB às vezes podem oferecer desempenho mais rápido para dados em larga escala. Ao escolher entre diferentes provedores para a mesma fonte de dados, experimente primeiro o provedor OLE DB.  
+
+## <a name="see-also"></a>Consulte também
+
+[Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1400](data-sources-supported-ssas-tabular-1400.md)
+
+[Fontes de dados com suporte no Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   
