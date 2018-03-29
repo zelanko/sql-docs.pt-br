@@ -1,8 +1,8 @@
 ---
-title: Reporting Services (SSRS) | Microsoft Docs
-description: Saiba mais sobre as ferramentas e os serviços para relatórios móveis e paginados do Reporting Services e relatórios do Power BI localmente.
+title: O que é o SQL Server Reporting Services (SSRS) | Microsoft Docs
+description: Saiba mais sobre as ferramentas e os serviços para relatórios móveis e paginados do Reporting Services no local.
 ms.custom: ''
-ms.date: 07/01/2017
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: ''
@@ -24,17 +24,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 8f7c8f1fb8e72ba3861df9b4ac015468dc143459
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>O que é o SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Procurando o Servidor de Relatórios do Power BI? Consulte [Introdução ao Servidor de Relatórios do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 Crie, implante e gerencie relatórios móveis e paginados do Reporting Services localmente com a variedade de ferramentas e serviços prontos para usar fornecidos pelo SSRS (SQL Server Reporting Services).
 
@@ -51,9 +51,6 @@ Para o SQL Server 2016, o Reporting Services oferece um pacote atualizado de pro
 * **Um portal da Web moderno** que você pode exibir em qualquer navegador moderno. No novo portal, organize e exiba relatórios e KPIs móveis e paginados do Reporting Services. Também armazene pastas de trabalho do Excel no portal.
 
 Continue lendo para obter mais informações sobre cada produto.
-
-> [!NOTE]
-> Procurando o Servidor de Relatórios do Power BI? Consulte [Introdução ao Servidor de Relatórios do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ### <a name="whats-new-in-reporting-services"></a>Novidades no Reporting Services
 

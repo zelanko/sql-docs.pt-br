@@ -104,7 +104,9 @@
 
 # [Importar e exportar dados](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [Alterar captura de dados](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [Carregar dados do ou para o Excel](load-data-to-from-excel-with-ssis.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector para SAP BW](microsoft-connector-for-sap-bw.md)
 ## [Instalar o Microsoft Connector para SAP BW](installing-the-microsoft-connector-for-sap-bw.md)

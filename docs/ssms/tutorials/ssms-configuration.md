@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: componentes e configuração do SQL Server Management Studio
 Este Tutorial descreve os diferentes componentes de janela no SSMS (SQL Server Management Studio) e algumas opções de configuração básicas para seu espaço de trabalho. Neste artigo, você aprenderá sobre como: 
-- Os diferentes componentes que formam o ambiente de SSMS
-- Alterar o layout do ambiente e redefini-lo para o padrão
-- Maximizar o editor de consultas
-- Alterar algumas configurações básicas, como
-    - Alterar a fonte
-    - Configurar as opções de inicialização
-    - Redefinir a configuração de volta ao padrão
+
+> [!div class="checklist"]
+> * Os diferentes componentes que formam o ambiente de SSMS
+> * Alterar o layout do ambiente e redefini-lo para o padrão
+> * Maximizar o editor de consultas
+> * Alterar a fonte 
+> * Configurar as opções de inicialização 
+> * Redefinir a configuração de volta ao padrão 
 
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este Tutorial, você precisará do SQL Server Management Studio.  
@@ -60,7 +61,7 @@ Esta seção aborda os diferentes componentes de janela disponíveis no espaço 
 
     
 
-## <a name="changing-the-environmental-layout"></a>Alterando o layout do ambiente 
+## <a name="change-the-environmental-layout"></a>Alterar o layout do ambiente 
 Esta seção aborda como manipular o layout do ambiente, tal como mover as diversas janelas. 
 
 -  Cada componente da janela pode ser movido mantendo pressionado o título e arrastando a janela. 
@@ -90,7 +91,7 @@ Esta seção aborda como manipular o layout do ambiente, tal como mover as diver
  
     ![Restaurar Layout de Janela](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>Maximizando o Editor de Consultas
+## <a name="maximize-query-editor"></a>Maximizar o Editor de Consultas
 O editor de consultas pode ser maximizado para o modo de tela inteira.
 
 1. Clique em qualquer lugar na Janela do Editor de Consultas.
@@ -100,7 +101,7 @@ Esse atalho de teclado funciona com qualquer janela de documentos.
 
 
 
-## <a name="changing-basic-settings"></a>Alterar as configurações básicas
+## <a name="change-basic-settings"></a>Alterar as configurações básicas
 Esta seção descreve como modificar algumas configurações básicas no SSMS. Essas opções encontram-se a opções do menu **Ferramentas**:
 
   ![Menu Ferramentas](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ Esta seção descreve como modificar algumas configurações básicas no SSMS. E
 
     ![Personalizar Barra de Ferramentas](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>Alterar fonte
 - A fonte pode ser alterada no menu: **Ferramentas** > **Opções** > **Fontes e Cores**:
 
      ![Fontes e Cores](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>Alterar as opções de inicialização
 - As opções de inicialização determinam como seu espaço de trabalho aparece ao abrir o SSMS pela primeira vez. Elas podem ser configuradas no menu: **Ferramentas** > **Opções** > **Inicialização**:
  
     ![Opções de inicialização](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>Redefinir as configurações como o padrão
 - Todas essas configurações podem ser exportadas e importadas no menu: **Ferramentas** > **Importar e Exportar Configurações** 
 
     ![Importar + Exportar Configurações](media/ssms-configuration/settings.png)
     - Também é aqui que você pode redefinir todas as suas configurações para o padrão. 
+
+
+## <a name="next-steps"></a>Próximas etapas
+O próximo artigo apresentará dicas e truques adicionais para usar o SSMS, como localizar o log de erros do SQL Server e o nome da instância SQL. 
+
+Prossiga para o próximo artigo para saber mais
+> [!div class="nextstepaction"]
+> [Botão Próximas etapas](ssms-tricks.md)
+ 
+ 
+
 
 
 

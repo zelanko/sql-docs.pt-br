@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: gerar script de objetos no SQL Server Management Studio
 Este tutorial ensinará como gerar scripts T-SQL (Transact-SQL) para vários objetos encontrados no SQL Server Management Studio.  Neste tutorial, você encontrará exemplos de como gerar script para os seguintes objetos: 
- - Consultas ao executar ações na GUI
- - Bancos de dados de duas maneiras diferentes (“Escrever script como” e “Gerar Script”)
- - Tabelas
- - Procedimentos armazenados
- - Eventos estendidos
+
+> [!div class="checklist"]
+> * Consultas ao executar ações na GUI
+> * Bancos de dados de duas maneiras diferentes (“Escrever script como” e “Gerar Script”)
+> * Tabelas
+> * Procedimentos armazenados
+> * Eventos estendidos
 
 O resumo deste tutorial indica que é possível gerar o script de qualquer objeto no **Pesquisador de Objetos** clicando com o botão direito do mouse nele e selecionando a opção **Gerar script de objeto como**. 
 
@@ -40,15 +42,14 @@ O resumo deste tutorial indica que é possível gerar o script de qualquer objet
 Para concluir este Tutorial, você precisará do SQL Server Management Studio, bem como acesso a um SQL Server e um banco de dados do AdventureWorks. 
 
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- Baixar [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). 
-    - As instruções para restaurar bancos de dados no SSMS podem ser encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Baixar [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). As instruções para restaurar bancos de dados no SSMS podem ser encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-gui"></a>Gerar script de consultas da GUI
 Sempre que você executar uma tarefa usando a GUI no SSMS, também será possível gerar o código T-SQL associado à tarefa. Os exemplos a seguir mostram como fazer isso ao fazer um backup de um banco de dados e reduzir o log de transações.  Essas mesmas etapas podem ser aplicadas a qualquer ação que é concluída por meio da GUI. 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>Gerar script de T-SQL ao fazer backup de um banco de dados
+### <a name="script-t-sql-when-backing-up-a-database"></a>Gerar script de T-SQL ao fazer backup de um banco de dados
 1. Conecte-se ao SQL Server.
 2. Expanda o nó **Bancos de Dados** .
 3. Clique com o botão direito do mouse no banco de dados > **Tarefas** > **Fazer backup**:
@@ -124,7 +125,7 @@ Esta seção aborda como gerar o script de tabelas do banco de dados.
 2. Expanda o nó **Bancos de Dados**.
 3. Expanda o nó **AdventureWorks** do banco de dados. 
 4. Expanda o nó **Tabelas**.
-5. Clique com o botão direito do mouse na tabela para a qual você deseja gerar o script > **Criar script de tabela como**
+5. Clique com o botão direito do mouse na tabela para a qual você deseja gerar o script > **Criar script de tabela como**:
     - Há várias opções aqui, como criar a tabela ou inserir dados nela: 
     
     ![Tabela de script](media/scripting-ssms/scripttable.png)
@@ -136,7 +137,7 @@ Esta seção aborda como gerar o script de procedimentos armazenados.
 2. Expanda o nó **Bancos de Dados**.
 3. Expanda o nó **Programação**. 
 4. Expanda o nó **Procedimento Armazenado**.
-5. Clique com o botão direito do mouse no procedimento armazenado de seu interesse > **Criar script de procedimento armazenado como**
+5. Clique com o botão direito do mouse no procedimento armazenado de seu interesse > **Criar script de procedimento armazenado como**:
     
     ![Gerar script de procedimentos armazenados](media/scripting-ssms/scriptstoredprocedure.PNG)
 

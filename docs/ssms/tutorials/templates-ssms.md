@@ -18,25 +18,27 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 05a9883ff436991e5ee830ce1561ecced0fa9b60
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a01586f4ab3d002e33b7679f6fe2e5a165f260e1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>Tutorial: usando Modelos no SQL Server Management Studio
 Este tutorial apresentará a você os modelos predefinidos do T-SQL (Transact-SQL) que estão disponíveis no SSMS (SQL Server Management Studio). Neste artigo, você aprenderá como:
-    - Usar o Navegador de Modelos para gerar scripts T-SQL
-    - Editar um Modelo existente 
-    - Localizar os modelos no disco
-    - Criar um novo Modelo
+
+> [!div class="checklist"]
+> * Usar o Navegador de Modelos para gerar scripts T-SQL
+> * Editar um Modelo existente 
+> * Localizar os modelos no disco
+> * Criar um novo Modelo
    
 
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este Tutorial, você precisará do SQL Server Management Studio, bem como acesso a um SQL Server. 
 
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 
  
 
@@ -47,7 +49,7 @@ Nesta seção, você aprenderá como localizar e usar o **Navegador de Modelos**
 2. No Menu **Exibir** > **Navegador de Modelos** (Ctrl + Alt + T): 
 
     ![Navegador de Modelos](media/templates-ssms/templatebrowser.png)
-    - Também é possível ver os modelos recém-usados na parte inferior do **Navegador de Modelos**
+    - Também é possível ver os modelos recém-usados na parte inferior do **Navegador de Modelos**.
 
 3. Expanda o nó de seu interesse > clique com botão direito do mouse no Modelo > Abrir:
 
@@ -63,13 +65,13 @@ Nesta seção, você aprenderá como localizar e usar o **Navegador de Modelos**
 ## <a name="edit-an-existing-template"></a>Editar um Modelo existente
 Você também pode editar os modelos existentes em **Navegador de Modelo**.  
 
-1. Localize o modelo de seu interesse no **Navegador de Modelos**
-2. Clique com o botão direito do mouse no modelo > **Editar**
+1. Localize o modelo de seu interesse no **Navegador de Modelos**.
+2. Clique com o botão direito do mouse no modelo > **Editar**:
 
     ![Editar Modelo](media/templates-ssms/edittemplate.png)
 
 3. Faça as alterações desejadas na janela de consulta que se abre.
-4. Salve o modelo acessando **Arquivo** > **Salvar** (Ctrl + S)
+4. Salve o modelo acessando **Arquivo** > **Salvar** (Ctrl+S).
 5. Fechar a janela de consulta.
 6. Reabra o Modelo que você salvou e suas novas edições deverão aparecer nele.
  
@@ -83,22 +85,22 @@ Quando um modelo é aberto, é possível localizá-lo no disco.
     ![Modelos em disco](media/templates-ssms/templatesondisk.png)
   
 
-## <a name="create-a-new-template"></a>Criar um novo Modelo
+## <a name="create-a-new-template"></a>Criar um novo modelo
 Dentro do **Navegador de Modelos**, também é possível criar novos modelos. Essas etapas ensinarão você a criar uma nova pasta e um novo modelo dentro dessa pasta. No entanto, com estas etapas, você também pode criar um modelo personalizado dentro das pastas existentes. 
 
-1. Abra o **Navegador de Modelos**
-2. Clique com o botão direito do mouse em Modelos do SQL Server > **Novo** > **Pasta** 
-3. Nomeie esta pasta como **Modelos Personalizados**
+1. Abra o **Navegador de Modelos**.
+2. Clique com o botão direito do mouse em Modelos do SQL Server > **Novo** > **Pasta**.
+3. Nomeie esta pasta como **Modelos Personalizados**:
 
     ![Criando modelos personalizados](media/templates-ssms/creatingcustomtemplate.png)
 
-4. Clique com o botão direito do mouse na pasta **Modelos Personalizados** recém-criada > **Novo** > **Modelo** > nome do seu modelo. 
+4. Clique com o botão direito do mouse na pasta **Modelos Personalizados** recém-criada > **Novo** > **Modelo** > nomeie seu modelo:
  
     ![Criar modelo personalizado](media/templates-ssms/createnewtemplate.png)
    
 5. Clique com o botão direito do mouse no modelo que você acabou de criar > **Editar**. Isso abrirá uma **Nova Janela de Consulta**.
 6. Digite o texto de T-SQL que você deseja salvar. 
-7. Salve o arquivo acessando o menu **Arquivo** > **Salvar**
+7. Salve o arquivo acessando o menu **Arquivo** > **Salvar**.
 8. Feche a **Janela de Consulta** existente e abra seu novo modelo personalizado. 
 
     
@@ -108,4 +110,4 @@ O próximo artigo fornecerá algumas outras dicas e truques para usar o SQL Serv
 
 Prossiga para o próximo artigo para saber mais
 > [!div class="nextstepaction"]
-> [Botão Próximas etapas](ssms-tricks.md))
+> [Botão Próximas etapas](ssms-tricks.md)

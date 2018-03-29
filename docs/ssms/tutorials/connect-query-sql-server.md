@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Tutorial: conectar-se consultar o SQL Server usando o SQL Server Management Studio
+# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Tutorial: Conectar-se e consultar o SQL Server usando o SQL Server Management Studio
 Este Tutorial ensina como usar o SSMS (SQL Server Management Studio) para se conectar à instância do SQL Server e executar alguns comandos básicos do T-SQL (Transact-SQL). Este artigo demonstra como fazer o seguinte:
-    - [Conectar a um SQL Server](#connect-to-a-sql-server)
-    - [Criar um novo banco de dados (**TutorialDB**)](#create-a-database)
-    - [Criar uma tabela (**Clientes**) no seu novo banco de dados](#create-a-table)
-    - [Inserir linhas na sua nova tabela **Clientes**](#insert-rows)
-    - [Consultar a tabela **Clientes** e exibir os resultados](#view-query-results)
-    - [Usar a tabela da janela de consulta para verificar suas propriedades de conexão](#verify-your-query-window-connection-properties)
-    - [Alterar a qual servidor sua janela de consulta está conectada](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [Conectar a um SQL Server](#connect-to-a-sql-server)
+> * [Criar um novo banco de dados (**TutorialDB**)](#create-a-database)
+> * [Criar uma tabela (**Clientes**) no seu novo banco de dados](#create-a-table)
+> * [Inserir linhas na sua nova tabela **Clientes**](#insert-rows)
+> * [Consultar a tabela **Clientes** e exibir os resultados](#view-query-results)
+> * [Usar a tabela da janela de consulta para verificar suas propriedades de conexão](#verify-your-query-window-connection-properties)
+> * [Alterar a qual servidor sua janela de consulta está conectada](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>Prerequisites
