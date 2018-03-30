@@ -1,6 +1,7 @@
 # [Visão geral](tabular-models-ssas.md)  
 
 # [Criar modelos de tabela](tabular-model-solutions-ssas-tabular.md)  
+## [Fontes de dados com suporte em modelos de tabela 1400](data-sources-supported-ssas-tabular-1400.md)  
 ## [Fontes de dados com suporte em modelos de tabela 1200](data-sources-supported-ssas-tabular.md)  
 ## [Tipos de dados com suporte](data-types-supported-ssas-tabular.md)  
 ## [Designer de modelos de tabela](tabular-model-designer-ssas.md)  
@@ -23,6 +24,8 @@
 ### [Configurar propriedades de implantação e modelagem de dados padrão](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## Importar dados
+
+### [Fontes de dados com suporte em modelos de tabela 1400](data-sources-supported-ssas-tabular-1400.md)  
 ### [Fontes de dados com suporte em modelos de tabela 1200](data-sources-supported-ssas-tabular.md)  
 ### [Tipos de dados com suporte](data-types-supported-ssas-tabular.md)  
 ### [Representação](impersonation-ssas-tabular.md)  
