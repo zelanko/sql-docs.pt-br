@@ -1,28 +1,28 @@
 ---
 title: RENAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/20/2017
-ms.prod: 
+ms.custom: ''
+ms.date: 03/21/2018
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1766a9e1dbe040ed120aaaf5d35fe0ab858c4e7a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/25/2018
   Renomeia uma tabela criada pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renomeia uma tabela ou um banco de dados criado pelo usuário em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Para renomear um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Para renomear um banco de dados no Banco de Dados SQL do Azure, use a instrução [ALTER DATABASE (Banco de Dados SQL do Azure)](/statements/alter-database-azure-sql-database.md). 
+>  Para renomear um banco de dados no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (SQL Data Warehouse do Azure](alter-database-azure-sql-data-warehouse.md).  Para renomear um banco de dados no Banco de Dados SQL do Azure, use a instrução [ALTER DATABASE (Banco de Dados SQL do Azure)](alter-database-azure-sql-database.md). Para renomear um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 -- Syntax for Azure SQL Data Warehouse  
   
 -- Rename a table.  
-RENAME OBJECT [ :: ]  [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
+RENAME OBJECT [::] [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
 [;]  
   
 ```  
@@ -56,17 +56,15 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- RENAME OBJECT [::]   
-          [ [*database_name* . [ *schema_name* ]. ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
+ RENAME OBJECT [::] [ [*database_name*. [ *schema_name* ]. ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **APLICA-SE A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Altere o nome de uma tabela definida pelo usuário. Especifique a tabela a ser renomeada com um nome de uma, duas ou três partes.    Especifique a nova tabela *new_table_name* como um nome de uma parte.  
   
- RENAME DATABASE [::]   
-          [ *database_name* TO *new_database_name*  
+ RENAME DATABASE [::] [ *database_name* TO *new_database_name*  
  **APLICA-SE A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Altere o nome de um banco de dados definido pelo usuário de *database_name* para *new_database_name*.  Não é possível renomear um banco de dados com um destes nomes de banco de dados reservados do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+ Altere o nome de um banco de dados definido pelo usuário de *database_name* para *new_database_name*.  Não é possível renomear um banco de dados para qualquer um destes nomes de banco de dados reservados[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
 -   master  
   
@@ -98,12 +96,12 @@ RENAME DATABASE [::] database_name TO new_database_name
 Não é possível renomear uma tabela externa, índices ou exibições. Em vez de renomeá-la, você pode remover a tabela externa, o índice ou a exibição e, em seguida, recriá-la com o novo nome.
 
 ### <a name="cannot-rename-a-table-in-use"></a>Não é possível renomear uma tabela em uso  
- Não é possível renomear uma tabela ou um banco de dados enquanto ele está em uso. A renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar as sessões que usam a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no SQL Data Warehouse são prefixadas com 'SID'. Você precisará incluir isso e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.  
+ Não é possível renomear uma tabela ou um banco de dados enquanto ele está em uso. A renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar as sessões que usam a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no SQL Data Warehouse são prefixadas com 'SID'. Inclua o ‘SID’ e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.  
   
 ### <a name="views-are-not-updated"></a>As exibições não são atualizadas  
- Ao renomear um banco de dados, todas as exibições que usam o nome antigo do banco de dados se tornarão inválidas. Isso se aplica a exibições dentro e fora do banco de dados. Por exemplo, se o banco de dados Sales for renomeado, uma exibição que contém `SELECT * FROM Sales.dbo.table1` se tornará inválida. Para resolver isso, evite usar nomes de três partes em exibições ou atualizar as exibições para que elas referenciem o novo nome de banco de dados.  
+ Ao renomear um banco de dados, todas as exibições que usam o nome antigo do banco de dados se tornarão inválidas. Esse comportamento se aplica às exibições dentro e fora do banco de dados. Por exemplo, se o banco de dados Sales for renomeado, uma exibição que contém `SELECT * FROM Sales.dbo.table1` se tornará inválida. Para resolver esse problema, evite usar nomes de três partes em exibições ou atualizar as exibições para elas referenciarem o novo nome de banco de dados.  
   
- Ao renomear uma tabela, as exibições não são atualizadas para referenciar o novo nome da tabela. Toda exibição, dentro ou fora do banco de dados, que referencia o nome da tabela antiga se tornará inválida. Para resolver isso, atualize cada exibição para que ela referencie o novo nome da tabela.  
+ Ao renomear uma tabela, as exibições não são atualizadas para referenciar o novo nome da tabela. Toda exibição, dentro ou fora do banco de dados, que referencia o nome da tabela antiga se tornará inválida. Para resolver esse problema, atualize cada exibição para ela referenciar o novo nome da tabela.  
   
 ## <a name="locking"></a>Bloqueio  
  A renomeação de uma tabela usa um bloqueio compartilhado no objeto DATABASE, um bloqueio compartilhado no objeto SCHEMA e um bloqueio exclusivo na tabela.  
@@ -141,7 +139,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. Mover uma tabela para outro esquema  
  **APLICA-SE A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Se sua intenção for mover o objeto para outro esquema, use [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). Por exemplo, isso move o item de tabela do esquema de produto ao esquema de dbo.  
+ Se sua intenção for mover o objeto para outro esquema, use [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). Por exemplo, a instrução a seguir move o item de tabela do esquema de produto ao esquema de dbo.  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
@@ -150,7 +148,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. Encerrar sessões antes de renomear uma tabela  
  **APLICA-SE A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- É importante se lembrar de que não é possível renomear uma tabela enquanto ela está em uso. Uma renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar a sessão usando a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no SQL Data Warehouse são prefixadas com 'SID'. Você precisará incluir isso e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.  
+ É importante se lembrar de que não é possível renomear uma tabela enquanto ela está em uso. Uma renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar a sessão usando a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no SQL Data Warehouse são prefixadas com 'SID'. Será necessário incluir o ‘SID’ e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.  
   
 ```  
 -- View a list of the current sessions  

@@ -1,42 +1,43 @@
 ---
-title: "Configurações de informações de dispositivo PDF | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: Configurações de informações de dispositivo PDF | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dccc67734b6cf54758ec14b326b171a6effef30b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0bd2635a54003fd663dadcf6d3bc5991c1841988
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pdf-device-information-settings"></a>Configurações de informações do dispositivo PDF
   A tabela a seguir lista as configurações de informações de dispositivo para a renderização de relatórios no formato PDF.  
   
 |Configuração|Valor|  
 |-------------|-----------|  
+| **AccessiblePDF** | Indica se é necessário renderizar um PDF acessível/marcado, que é maior em tamanho, mas permite uma leitura e navegação mais fácil em leitores de tela e outras tecnologias adaptativas. O valor padrão é **false**. [Disponível no Servidor de Relatórios do Power BI (março de 2018) e mais recente] |
 |**Colunas**|O número de colunas a ser definido para o relatório. Esse valor substitui as configurações originais do relatório.|  
 |**ColumnSpacing**|O espaçamento entre colunas a ser definido para o relatório. Esse valor substitui as configurações originais do relatório.|  
 |**DpiX**|A resolução do dispositivo de saída em direção de x.|  
 |**DpiY**|A resolução do dispositivo de saída em direção de y.|  
 |**EndPage**|A última página do relatório a ser renderizado. O valor padrão é o valor de **StartPage**.|  
-|**HumanReadablePDF**|Indica se o PDF deve ser compactado, permitindo que a origem fique mais legível. O valor padrão é **false.**|  
+|**HumanReadablePDF**|Indica se um arquivo PDF descompactado deve ser renderizado; esse PDF é maior em tamanho, porém mais legível por humanos em um editor de texto sem formatação. O valor padrão é **false.**|  
 |**MarginBottom**|O valor da margem inferior, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, 1in). Esse valor substitui as configurações originais do relatório.|  
 |**MarginLeft**|O valor da margem esquerda, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, 1in). Esse valor substitui as configurações originais do relatório.|  
 |**MarginRight**|O valor da margem direita, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, 1in). Esse valor substitui as configurações originais do relatório.|  
