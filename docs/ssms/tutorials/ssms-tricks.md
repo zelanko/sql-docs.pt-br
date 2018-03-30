@@ -16,30 +16,30 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 0613d9352e7be20de52fb771fb8e28823556304b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: mais dicas e truques para usar o SSMS
 Este tutorial fornecerá algumas outras dicas e truques para usar o SQL Server Management Studio. Este artigo ensinará como: 
 
-   - Comentar/remover marca de comentário do texto do T-SQL (Transact-SQL)
-   - Recuar o texto
-   - Filtrar objetos no Pesquisador de Objetos
-   - Acessar o log de erros do SQL Server
-   - Encontrar o nome da sua instância do SQL Server
+> [!div class="checklist"]
+> * Comentar/remover marca de comentário do texto do T-SQL (Transact-SQL)
+> * Recuar o texto
+> * Filtrar objetos no Pesquisador de Objetos
+> * Acessar o log de erros do SQL Server
+> * Encontrar o nome da sua instância do SQL Server
 
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este Tutorial, você precisará do SQL Server Management Studio, bem como acesso a um SQL Server e um banco de dados do AdventureWorks. 
 
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- Baixar [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). 
-    - As instruções para restaurar bancos de dados no SSMS podem ser encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Baixar [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). As instruções para restaurar bancos de dados no SSMS podem ser encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
-## <a name="commenting--uncommenting-your-t-sql"></a>Comentar/remover marca de comentário do seu T-SQL
+## <a name="comment--uncomment-your-t-sql-code"></a>Comentar/remover marca de comentário no código T-SQL
 Partes do texto podem ser comentadas ou ter a marca de comentário removida delas usando o botão de comentário na barra de ferramentas. Texto comentado não será executado. 
 
 1. Abra o SQL Server Management Studio. 
@@ -48,37 +48,40 @@ Partes do texto podem ser comentadas ou ter a marca de comentário removida dela
 4. Cole o seguinte trecho de código T-SQL na janela de texto: 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. Selecione a parte do texto de **Alterar Banco de Dados** e clique em **Comentar** na barra de ferramentas: 
+
+
+5. Selecione a parte do texto de **Alterar Banco de Dados** e clique em **Comentar** na barra de ferramentas: 
 
     ![Comentário](media/ssms-tricks/comment.png)
-3. Clique em **Executar** para executar a parte cuja marca de comentário foi removida do texto. 
-4. Selecione tudo o que não for o comando **Alterar Banco de Dados** e clique em **Comentar** na barra de ferramentas:
+6. Clique em **Executar** para executar a parte cuja marca de comentário foi removida do texto. 
+7. Selecione tudo o que não for o comando **Alterar Banco de Dados** e clique em **Comentar** na barra de ferramentas:
 
     ![Comentar tudo](media/ssms-tricks/commenteverything.png)
 
-5. Selecione a parte de **Alterar Banco de Dados** e clique em **Remover marca de comentário** para fazer isso:
+8. Selecione a parte de **Alterar Banco de Dados** e clique em **Remover marca de comentário** para fazer isso:
 
     ![Remover marca de comentário](media/ssms-tricks/uncomment.png)
     
-6. Clique em **Executar** para executar a parte cuja marca de comentário foi removida do texto 
+9. Clique em **Executar** para executar a parte cuja marca de comentário foi removida do texto. 
 
 ## <a name="indent-your-text"></a>Recuar o texto
 Os botões de recuo permitem aumentar e diminuir o recuo do texto. 
@@ -87,33 +90,35 @@ Os botões de recuo permitem aumentar e diminuir o recuo do texto.
 2. Cole o seguinte trecho de código T-SQL na janela de texto: 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. Selecione a parte do texto **Alterar Banco de Dados** e pressione **Aumentar Recuo** na barra de ferramentas para mover este texto para a frente
+ 
+3. Selecione a parte **Alterar Banco de Dados** do texto e pressione **Aumentar Recuo** na barra de ferramentas para mover este texto para a frente:
 
     ![Aumentar Recuo](media/ssms-tricks/increaseindent.png)
 
-3. Selecione a parte do texto **Alterar Banco de Dados** novamente e, dessa vez, clique em **Diminuir Recuo** para mover o texto para trás. 
+4. Selecione a parte do texto **Alterar Banco de Dados** novamente e, dessa vez, clique em **Diminuir Recuo** para mover o texto para trás. 
     ![Diminuir Recuo](media/ssms-tricks/decreaseindent.png)
 
 
-## <a name="filtering-objects-in-object-explorer"></a>Filtrando objetos no Pesquisador de Objetos
+## <a name="filter-objects-in-object-explorer"></a>Filtrar objetos no Pesquisador de Objetos
 Quando um banco de dados tem muitos objetos, pode ser difícil localizar um objeto específico. Para facilitar essa tarefa, é possível filtrar objetos. Esta seção explica como filtrar tabelas, mas as mesmas etapas podem ser aplicadas a qualquer outro nó no **Pesquisador de Objetos**
 
 1. Conecte-se ao SQL Server.
@@ -135,10 +140,10 @@ Quando um banco de dados tem muitos objetos, pode ser difícil localizar um obje
     
 
 
-## <a name="accessing-your-sql-server-error-log"></a>Acessar o log de erros do SQL Server
+## <a name="access-your-sql-server-error-log"></a>Acessar o log de erros do SQL Server
 O log de erros é um arquivo que contém os detalhes sobre as coisas que ocorrem dentro do SQL Server. Ele pode ser pesquisado e consultado no SSMS. Ele também pode ser encontrado como um arquivo .log no disco.
 
-### <a name="finding-your-error-log-if-you-cannot-connect-to-sql"></a>Localizando o log de erros se não for possível se conectar ao SQL
+### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>Localizar o log de erros se não for possível se conectar ao SQL
 1. Abra o SQL Server Configuration Manager. 
 2. Expanda o nó **Serviços**.
 3. Clique com o botão direito do mouse na instância do SQL Server > **Propriedades**:
@@ -152,9 +157,9 @@ O log de erros é um arquivo que contém os detalhes sobre as coisas que ocorrem
     - Você observará que há vários errorlog.* neste local. Aquele que termina com *.log é o atual. Os que terminam com números são logs anteriores, visto que um novo log é criado sempre que o SQL Server for reiniciado. 
 6. Abra esse arquivo no Bloco de Notas. 
 
-### <a name="finding-your-error-log-if-youre-connected-to-sql"></a>Localizando o log de erros se você não estiver conectado ao SQL
-1. Conectar ao SQL Server
-2. Abrir uma janela **Nova Consulta** 
+### <a name="find-your-error-log-if-youre-connected-to-sql"></a>Localizar o log de erros se estiver conectado ao SQL
+1. Conecte-se ao SQL Server.
+2. Abra uma janela **Nova Consulta**.
 3. Cole o seguinte trecho de código T-SQL na janela de consulta e clique em **Executar**:
 
 
@@ -174,8 +179,8 @@ O log de erros é um arquivo que contém os detalhes sobre as coisas que ocorrem
     ![Exibir o Log de erros no SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
 ### <a name="query-error-log-within-ssms"></a>Consultar o Log de erros no SSMS
-1. Conectar-se ao SQL Server
-2. Abrir uma janela **Nova Consulta**
+1. Conecte-se ao SQL Server.
+2. Abra uma janela **Nova Consulta**.
 3. Cole o seguinte trecho de código T-SQL na janela de consulta:
 
  ```sql
@@ -190,22 +195,22 @@ O log de erros é um arquivo que contém os detalhes sobre as coisas que ocorrem
 Há diferentes maneiras de determinar o nome da sua instância de antes e depois de se conectar ao SQL Server.  
 
 ### <a name="when-you-dont-know-it"></a>...Quando você não a conhece
-1. Siga as etapas para localizar o [Log de erros do SQL Server em disco.](#finding-your-error-log-if-you-cannot-connect-to-sql) 
+1. Siga as etapas para localizar o [Log de erros do SQL Server em disco](#finding-your-error-log-if-you-cannot-connect-to-sql). 
 2. Abra o errorlog.log no Bloco de Notas. 
-3. Navegue por ele até encontrar o texto “Server name is” (“O nome do servidor é”, em inglês)
+3. Navegue por ele até encontrar o texto em inglês "Server name is" ("O nome do servidor é"):
   - Tudo o que está listado entre as aspas simples é o nome da instância e ao que você vai se conectar ![Nome do servidor no Log de erros](media/ssms-tricks/servernameinlog.png)
 
-### <a name="once-youre-connected"></a>...Quando você estiver conectado
+### <a name="once-youre-connected-to-sql"></a>...Quando estiver conectado ao SQL 
 Há três locais para descobrir a qual instância você está conectado. 
 
-1. O nome do servidor será listado no **Pesquisador de Objetos**
+1. O nome do servidor será listado no **Pesquisador de Objetos**:
 
     ![Nome da instância no Pesquisador de Objetos](media/ssms-tricks/nameinobjectexplorer.png)
 2. O nome do servidor será listado na janela de consulta:
 
     ![Nome na Janela de Consulta](media/ssms-tricks/nameinquerywindow.png)
 3. para obter informações sobre a ferramenta de configuração e recursos adicionais. O nome do servidor também será listado na **janela Propriedades**.
-    - Para acessá-lo, abra o Menu **Exibir** > **Janela Propriedades**
+    - Para acessá-lo, abra o Menu **Exibir** > **Janela Propriedades**:
 
     ![Nome em Propriedades](media/ssms-tricks/nameinproperties.png)
 
