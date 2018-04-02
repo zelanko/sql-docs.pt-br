@@ -1,5 +1,5 @@
 ---
-title: "Arquitetura do gráfico SQL | Microsoft Docs"
+title: "Arquitetura do Graph SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -30,10 +30,10 @@ ms.lasthandoff: 03/19/2018
 # <a name="sql-graph-architecture"></a>Arquitetura do gráfico do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Saiba como o gráfico de SQL foi projetado. Conhecer os conceitos básicos tornará mais fácil de entender outros artigos de gráfico de SQL.
+Saiba como o SQL Graph foi projetado. Conhecer os conceitos básicos tornará mais fácil de entender outros artigos de gráfico de SQL.
  
-## <a name="sql-graph-database"></a>Banco de dados de gráfico SQL
-Os usuários podem criar um gráfico por banco de dados. Um gráfico é uma coleção de tabelas de nó e borda. Tabelas de borda ou nó podem ser criadas em qualquer esquema no banco de dados, mas pertencerem a um gráfico lógico. Uma tabela de nó é a coleção de tipo semelhante de nós. Por exemplo, uma tabela de nó da pessoa que contém todos os nós da pessoa que pertencem a um gráfico. Da mesma forma, uma tabela de borda é uma coleção de tipo semelhante de bordas. Por exemplo, uma tabela de borda de amigos contém todas as bordas que se conectam a uma pessoa para outra pessoa. Nós e bordas são armazenadas em tabelas, a maioria das operações com suporte em tabelas regulares é suportada em tabelas de nó ou borda. 
+## <a name="sql-graph-database"></a>Banco de dados SQL Graph
+Os usuários podem criar um banco de dados de grafo. Um grafo é uma coleção de tabelas de nó e borda. Tabelas de borda ou nó podem ser criadas em qualquer esquema no banco de dados, mas pertencerem a um gráfico lógico. Uma tabela de nó é a coleção de tipo semelhante de nós. Por exemplo, uma tabela de nó da pessoa que contém todos os nós da pessoa que pertencem a um gráfico. Da mesma forma, uma tabela de borda é uma coleção de tipo semelhante de bordas. Por exemplo, uma tabela de borda de amigos contém todas as bordas que se conectam a uma pessoa para outra pessoa. Nós e bordas são armazenadas em tabelas, a maioria das operações com suporte em tabelas regulares é suportada em tabelas de nó ou borda. 
  
  
 ![arquitetura do gráfico de SQL](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitetura de banco de dados do gráfico de Sql")   
@@ -174,6 +174,6 @@ Há algumas limitações em tabelas de nó e borda nesta versão:
 
 
 ## <a name="next-steps"></a>Próximas etapas
-Para começar a usar a nova sintaxe, consulte [banco de dados de gráfico de SQL - exemplo](./sql-graph-sample.md)
+Para começar a usar a nova sintaxe, consulte [Exemplo de banco de dados utilizando SQL Graph](./sql-graph-sample.md)
  
 
