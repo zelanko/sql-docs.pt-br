@@ -1,31 +1,31 @@
 ---
-title: "Projetos relacionados para soluções de mineração de dados | Microsoft Docs"
-ms.custom: 
+title: Projetos relacionados para soluções de mineração de dados | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-O mínimo que é necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
+  O mínimo que é necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
   
 -   Preparação e seleção de dados e variáveis. Inclui limpeza de dados, gerenciamento de metadados e integração de várias fontes de dados e a conversão, fusão e carregamento de dados em um data warehouse.  
   
@@ -48,7 +48,7 @@ O mínimo que é necessário para uma solução de mineração de dados é o pro
  [Indexação semântica](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece componentes e recursos que são necessários para a preparação de dados e o treinamento de fases de um projeto de mineração de dados. Embora você possa executar muitas limpezas de dados ou tarefas de preparação usando outras ferramentas, como scripts, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tem numerosas vantagens para a mineração de dados:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fornece componentes e recursos que são necessários para a preparação de dados e o treinamento de fases de um projeto de mineração de dados. Embora você possa executar muitas limpezas de dados ou tarefas de preparação usando outras ferramentas, como scripts, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tem numerosas vantagens para a mineração de dados:  
   
 -   Representa tarefas como parte de um fluxo de trabalho que pode ser repetido, automatizado, ramificado e estendido.  
   
@@ -209,6 +209,6 @@ O mínimo que é necessário para uma solução de mineração de dados é o pro
   
 ## <a name="see-also"></a>Consulte também  
  [Soluções de modelo multidimensional ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluções de modelo tabular](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Soluções de modelo tabular](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

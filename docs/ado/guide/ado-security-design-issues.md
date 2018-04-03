@@ -1,29 +1,29 @@
 ---
-title: "Problemas de Design de segurança do ADO | Microsoft Docs"
-ms.custom: 
+title: Problemas de Design de segurança do ADO | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9345a48ff39fe4c2a6cd9af03778ef8904986958
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 21fa5dbf11649f350a9d5d2614d83d6b45011147
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-security-design-features"></a>Recursos de Design de segurança do ADO
 As seções a seguir descrevem os recursos de design de segurança no ActiveX Data Objects (ADO) 2.8 e posterior. Essas alterações foram feitas no ADO 2.8 para melhorar a segurança. ADO 6.0, que está incluído no Windows DAC 6.0 no Windows Vista, é funcionalmente equivalente ao ADO 2.8, que foi incluído no MDAC 2.8 no Windows XP e Windows Server 2003. Este tópico fornece informações sobre como proteger melhor seus aplicativos no ADO 2.8 ou posterior.

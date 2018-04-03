@@ -1,31 +1,32 @@
 ---
-title: "Matrizes de parâmetros de associação | Microsoft Docs"
-ms.custom: 
+title: Matrizes de parâmetros de associação | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>Matrizes de parâmetros de associação
 Aplicativos que usam matrizes de parâmetros de associar as matrizes de parâmetros na instrução SQL. Há dois estilos de associação:  
@@ -41,7 +42,7 @@ Aplicativos que usam matrizes de parâmetros de associar as matrizes de parâmet
   
  A associação é o padrão. O aplicativo também pode mudar da associação para a associação, definindo o atributo de instrução SQL_ATTR_PARAM_BIND_TYPE. A ilustração a seguir mostra como a associação funciona.  
   
- ![Mostra como coluna &#45; ligação aconselhável funciona](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Mostra como coluna&#45;aconselhável associação funciona](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  Por exemplo, o código a seguir associa o elemento 10 matrizes aos parâmetros para as colunas PartID, a descrição e o preço e executa uma instrução para inserir 10 linhas. Ele usa a associação.  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  em que as linhas são numeradas de 1 para o tamanho do conjunto de parâmetros. O deslocamento, se definida, é o valor apontado pelo atributo de instrução SQL_ATTR_PARAM_BIND_OFFSET_PTR. A ilustração a seguir mostra como a associação funciona. Os parâmetros podem ser colocados na estrutura em qualquer ordem, mas são mostrados em ordem sequencial para maior clareza.  
   
- ![Mostra como a linha &#45; ligação aconselhável funciona](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Mostra como a linha&#45;aconselhável associação funciona](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  O código a seguir cria uma estrutura com elementos para os valores a serem armazenados nas colunas PartID, descrição e preço. Em seguida, ele aloca uma matriz de elementos de 10 dessas estruturas e o associa a parâmetros para as colunas PartID, descrição e preço, usando a associação. Em seguida, ele executa uma instrução para inserir 10 linhas.  
   

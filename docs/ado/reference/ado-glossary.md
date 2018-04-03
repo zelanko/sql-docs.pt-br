@@ -1,28 +1,28 @@
 ---
-title: "Glossário do ADO | Microsoft Docs"
-ms.custom: 
+title: Glossário do ADO | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>Glossário do ADO
 Este tópico define condições relevantes para ADO.  
@@ -54,7 +54,7 @@ Este tópico define condições relevantes para ADO.
  Um mapeamento entre um campo em uma tabela e uma variável. Nas extensões do Visual C++ de ADO, **registros** campos são mapeados para variáveis de C/C++.  
   
  bitmask  
- Um valor numérico pretende para uma comparação de valor de bit a bit com outros valores numéricos, normalmente opções em valores de retorno ou parâmetro de sinalizador. Normalmente essa comparação é feita com operadores lógicos, como **e** e **ou** no Visual Basic,  **&**  e **&#124;** em C++.  
+ Um valor numérico pretende para uma comparação de valor de bit a bit com outros valores numéricos, normalmente opções em valores de retorno ou parâmetro de sinalizador. Normalmente essa comparação é feita com operadores lógicos, como **e** e **ou** no Visual Basic, **&** e **&#124;** em C++.  
   
  Por exemplo, o ADO **FieldAttributeEnum** valores podem ser usados como bitmasks para determinar os atributos de um campo. Suponha que você desejava determinar se um campo foi atualizável. Você pode testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ Este tópico define condições relevantes para ADO.
   
 ## <a name="e"></a>E  
  Enumeração  
- Uma lista de constantes nomeadas. Valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração está definida. No ADO, enumerações são usadas para o parâmetro numérico em valores de retorno, adicionar significado para código ADO e protegem o desenvolvedor contra os valores numéricos (que podem ser alterados de versão para versão). Por exemplo, para abrir um estático **registros**, use o **adOpenStatic** enumerados valor:`Recordset.Open ,,adOpenStatic`  
+ Uma lista de constantes nomeadas. Valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração está definida. No ADO, enumerações são usadas para o parâmetro numérico em valores de retorno, adicionar significado para código ADO e protegem o desenvolvedor contra os valores numéricos (que podem ser alterados de versão para versão). Por exemplo, para abrir um estático **registros**, use o **adOpenStatic** enumerados valor: `Recordset.Open ,,adOpenStatic`  
   
  Também conhecido como *constante enumerada*. Consulte também *constante*.  
   

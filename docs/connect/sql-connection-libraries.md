@@ -11,13 +11,13 @@ ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 08/09/2017
+ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de Conexão para bancos de dados do Microsoft SQL
 
@@ -27,7 +27,6 @@ Este artigo fornece links de download para os módulos de conexão ou *drivers* 
 - MacOS
 - Windows
 
-
 #### <a name="oop-to-relational-mismatch"></a>Incompatibilidade de OOP para relacional
 
 *Relacional*: programas de cliente que são escritos em uma linguagem de (OOP) programação orientada a objeto geralmente usam drivers SQL que retornam dados consultados em um formato que seja mais relacional que orientada a objeto. C# usando o ADO.NET é um exemplo. Incompatibilidade de formato OOP relacional torna, às vezes, o código OOP mais difícil de escrever e entender.
@@ -35,7 +34,6 @@ Este artigo fornece links de download para os módulos de conexão ou *drivers* 
 *ORM*: outros drivers ou estruturas retornarem dados consultados no formato do OOP, evitando a incompatibilidade. Esses drivers funcionam esperando classes foram definidas para corresponder às colunas de dados de determinadas tabelas SQL. O driver executa a *mapeamento relacional de objeto* (ORM) para retornar dados consultados como uma instância de uma classe. Entity Framework (EF da Microsoft) para c# e hibernação para Java, são dois exemplos.
 
 O presente artigo dedica seções separadas para esses dois tipos de drivers de conexão.
-
 
 <a name="anchor-20-drivers-relational-access" />
 
@@ -53,18 +51,16 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-
 | Idioma | Baixar o driver do SQL |
 | :------- | :---------------------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo do .NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo do .NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core para Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
-| Node.js  | [Driver do Node. js, instruções de instalação](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Sistema Operacional:*<br /><br />[Driver do PHP do Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Driver do PHP Linux ou macOS do Github](http://github.com/Microsoft/msphpsql/) |
-| Python   | [pyodbc, instruções de instalação](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Baixe o ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Ruby     | [Driver Ruby, instruções de instalação](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Página de download Ruby](https://rubyinstaller.org/downloads/) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo do .NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo do .NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core para Windows](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Node.js | [Driver do Node. js, instruções de instalação](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| PHP | *Sistema Operacional:*<br /><br />[Driver do PHP do Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Driver do PHP Linux ou macOS do Github](http://github.com/Microsoft/msphpsql/) |
+| Python | [pyodbc, instruções de instalação](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Baixe o ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Driver Ruby, instruções de instalação](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de download Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
-
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -82,14 +78,11 @@ A tabela a seguir lista exemplos de estruturas de mapeamento relacional objeto (
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
 | Ruby | [Ruby nos trilhos](http://rubyonrails.org/) |
-| &nbsp; | <br /> |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Construir um aplicativo páginas da Web
-
-
 [http://aka.ms/sqldev](http://aka.ms/sqldev) leva para um conjunto de *construir um aplicativo* páginas da Web. Páginas da Web que fornecem informações sobre várias combinações de programação de idioma, o sistema operacional e o driver de conexão de SQL. Entre as informações fornecidas por páginas da Web para construir um aplicativo são os seguintes itens:
 
 - Detalhes sobre como começar do começo, para cada combinação de idioma, o sistema operacional + o driver.
@@ -99,24 +92,16 @@ A tabela a seguir lista exemplos de estruturas de mapeamento relacional objeto (
     - Exemplos de código do ORM.
     - Demonstrações do índice ColumnStore para um desempenho muito mais rápido.
 
-
 #### <a name="first-page-of-build-an-app-webpages"></a>Primeira página das páginas de construir um aplicativo da Web
-
 ![Construir um aplicativo páginas da Web, primeiro captura de tela de página][image-ref-163-buildanapp-webpages-first-page]
 
-
 #### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menu de Java - Ubuntu das páginas de construir um aplicativo da Web
-
 ![Construir um aplicativo páginas da Web, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-
 
 &nbsp;
 
-
 ## <a name="related-links"></a>Links relacionados
-
 - [Exemplos para se conectar ao banco de dados SQL Azure na nuvem, com o Java e outras linguagens de código](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
-
 
 <!-- Image references -->
 
