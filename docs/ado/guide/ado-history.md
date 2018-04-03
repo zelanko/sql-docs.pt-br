@@ -1,29 +1,29 @@
 ---
-title: "Histórico de ADO | Microsoft Docs"
-ms.custom: 
+title: Histórico de ADO | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-features-for-each-release"></a>Recursos do ADO para cada versão.
 Este tópico lista os novos recursos introduzidos por cada versão do ADO MD, ADO e ADOX.
@@ -37,7 +37,7 @@ Este tópico lista os novos recursos introduzidos por cada versão do ADO MD, AD
  *Acesso de unidade de disco rígido não é permitido fora de uma zona confiável.*
 No domínio cruzado script envolvendo sites não confiáveis, as operações a seguir estão desabilitadas: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, e **Recordset.Open**, usado em conjunto com o **adCmdFile** sinalizador ou com o Microsoft OLE DB provedor de persistência (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *e* **Stream.LoadFromFile***operar somente arquivos físicos.* 
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, e* **Stream.LoadFromFile***operar somente arquivos físicos.* 
 Esses métodos agora verificar o ponto de identificadores de arquivo para arquivos físicos apenas.
 
  **Recordset.ActiveCommand***retorna um erro quando chamado a partir de uma página HTML/ASP.* 
@@ -50,24 +50,24 @@ Um comando de forma aninhada agora retorna um máximo de 512 **conjuntos de regi
  *suporte a plataformas de 64 bits* ADO 2.7 introduz suporte para processadores de 64 bits.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***método* começando com o ADO 2.6, objetos do ADO MD podem ser recuperados usando nomes exclusivos, conforme especificado pelo [propriedade UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Os nomes de objetos pai não precisam ser conhecidos e coleções pai não precisam ser preenchidos para recuperar um objeto de esquema. Consulte [GetSchemaObject método (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***método* começando com o ADO 2.6, objetos do ADO MD podem ser recuperados usando nomes exclusivos, conforme especificado pelo [propriedade UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Os nomes de objetos pai não precisam ser conhecidos e coleções pai não precisam ser preenchidos para recuperar um objeto de esquema. Consulte [GetSchemaObject método (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Comando fluxos* o **comando** objeto dá suporte a comandos no formato de fluxo como uma alternativa ao uso de **CommandText** propriedade. O [propriedade CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) pode ser usado para especificar modelos XML ou diagramas de atualização como o **comando** de entrada com o Microsoft OLE DB Provider para SQL Server.
 
- **Dialeto***propriedade* [dialeto](../../ado/reference/ado-api/dialect-property.md) é uma nova propriedade que define a sintaxe e geral de regras que o provedor usa para analisar a cadeia de caracteres ou fluxo.
+ **Dialeto***propriedade* [dialeto](../../ado/reference/ado-api/dialect-property.md) é uma nova propriedade que define a sintaxe e geral de regras que o provedor usa para analisar a cadeia de caracteres ou fluxo.  
 
- **Command.Execute***método* o [executar o método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto foi aprimorado para usar fluxos de entrada e saída.
+ **Command.Execute***método* o [executar o método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto foi aprimorado para usar fluxos de entrada e saída.  
 
  *Campo statusvalues* se o usuário encontra um erro DB_E_ERRORSOCCURRED ao modificar um **campo** de um **registros**, ADO preencherá o **Field.Status**propriedade com as informações de status apropriado para que o usuário tenha mais informações sobre o que deu errado. Consulte [a propriedade de Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***propriedade* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) é uma nova propriedade do **comando** chamado de objeto que indica que o provedor deve usar parâmetros.
+ **NamedParameters***propriedade* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) é uma nova propriedade do **comando** chamado de objeto que indica que o provedor deve usar parâmetros.  
 
  *Conjuntos de resultados em fluxos* ADO pode retornar conjuntos de resultados de uma fonte de dados em um **fluxo**, em vez de **registros** objeto. Usando a versão mais recente do Microsoft OLE DB Provider para SQL Server, você pode obter resultados XML do provedor executando uma consulta de "Para XML". Um **fluxo** que recebe o conjunto de resultados pode ser aberto com um comando "Para XML" como a origem. Consulte [recuperar conjuntos de resultados em fluxos](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
  *Conjunto de resultados de linha única* o ADO **registro** objeto agora pode ser aberto em uma cadeia de caracteres de comando ou **comando** objeto que retorna uma linha de dados do provedor. Isso resulta em desempenho aprimorado com provedores MDAC 2.6. Consulte [(registro de ADO) do método Open](../../ado/reference/ado-api/open-method-ado-record.md).
 
 ## <a name="ado-25"></a>ADO 2.5
- **Registro** *objeto* ADO 2.5 apresenta o **registro** objeto para representar e gerenciar uma linha de um **registros** ou um provedor de dados ou um objeto encapsula um dados estruturados, como um arquivo ou diretório.
+ **Registro** *objeto* ADO 2.5 apresenta o **registro** objeto para representar e gerenciar uma linha de um **registros** ou um provedor de dados ou um objeto que encapsula um dados estruturados, como um arquivo ou diretório.
 
  **Fluxo** *objeto* ADO 2.5 também apresenta o **fluxo** objeto para representar um fluxo de dados binários ou de texto.
 

@@ -1,0 +1,11 @@
+# [Aprimoramentos de data e hora (OLE DB)](date-and-time-improvements-ole-db.md)
+
+# [Alterações de cópia em massa para tipos de data e horas aprimorados (OLE DB)](bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md)
+# [Comparações de IRowsetFind](comparability-for-irowsetfind.md)
+# [Conversões (OLE DB)](conversions-ole-db.md)
+# [Conversões executadas do cliente para o servidor](conversions-performed-from-client-to-server.md)
+# [Conversões executadas do servidor para o cliente](conversions-performed-from-server-to-client.md)
+# [Suporte a tipos de dados para melhorias de data e hora do OLE DB](data-type-support-for-ole-db-date-and-time-improvements.md)
+# [Metadados – Data e hora e conjuntos de linhas de esquema](metadata-date-and-time-and-schema-rowsets.md)
+# [Metadados – Parâmetro e conjunto de linhas](metadata-parameter-and-rowset.md)
+# [Suporte da API do OLE DB para aprimoramentos de data e hora](ole-db-api-support-for-date-and-time-enhancements.md)
