@@ -1,7 +1,7 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "Documentação do Microsoft SQL | Microsoft Docs"
+hide_bc: true
+title: Documentação do Microsoft SQL | Microsoft Docs
 description: Aprenda sobre o SQL
 author: barbkess
 ms.author: barbkess
