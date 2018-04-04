@@ -1,29 +1,27 @@
 ---
 title: Usando o pacote de MicrosoftML com o SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Usando o pacote de MicrosoftML com o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ MicrosoftML contém uma variedade de transformações que foi otimizadas para de
 
 - Modelos de floresta de decisão e de árvore de decisão: `rxFastTree` é um algoritmo de árvore de decisão impulsionada originalmente conhecido como FastRank, que foi desenvolvido para uso no Bing. É um dos aprendizes mais rápidos e mais populares. Dá suporte a regressão e classificação binária.
 
-  `rxFastForest`um modelo de regressão logística com base no método aleatória de floresta. É semelhante à função `rxLogit` do RevoScaleR, mas dá suporte à regularização L1 e L2. Dá suporte a regressão e classificação binária.
+  `rxFastForest` um modelo de regressão logística com base no método aleatória de floresta. É semelhante à função `rxLogit` do RevoScaleR, mas dá suporte à regularização L1 e L2. Dá suporte a regressão e classificação binária.
 
 - Regressão logística: `rxLogisticRegression` é um modelo de regressão logística semelhante para o `rxLogit` função em RevoScaleR, com suporte adicional para regularização L1 e L2. Oferece suporte à classificação binária ou multiclasse.
 

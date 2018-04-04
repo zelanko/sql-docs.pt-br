@@ -1,24 +1,24 @@
 ---
-title: "Pontuação nativo | Microsoft Docs"
-ms.custom: 
+title: Pontuação nativo | Microsoft Docs
+ms.custom: ''
 ms.date: 09/19/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 449773e8ca4f2e396dca4f8aed5299effb7aa49a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-scoring"></a>Nativo de pontuação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ Plataformas com suporte são os seguintes:
 + O modelo deve ser treinado com antecedência usando um com suporte **rx** algoritmos. Para obter detalhes, consulte [suporte para algoritmos](#bkmk_native_supported_algos).
 + O modelo deve ser salvo usando a nova função de serialização fornecida no Microsoft R Server 9.1.0. A função de serialização é otimizada para oferecer suporte a pontuação rápida.
 
-### <a name="bkmk_native_supported_algos"></a>Algoritmos que oferecem suporte nativo de pontuação
+### <a name="bkmk_native_supported_algos"></a> Algoritmos que oferecem suporte nativo de pontuação
 
 + Modelos de RevoScaleR
 

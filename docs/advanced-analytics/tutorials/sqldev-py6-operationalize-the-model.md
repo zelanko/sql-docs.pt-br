@@ -1,30 +1,28 @@
 ---
 title: 'Etapa 6: Colocar o modelo de Python usando o SQL Server | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Etapa 6: Colocar o modelo de Python usando o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -354,16 +352,16 @@ Depois que os procedimentos armazenados foram criados, é fácil de gerar uma po
 
 A saída de ambos os procedimentos é uma probabilidade de uma dica que está sendo paga para a viagem táxi com os parâmetros especificados ou recursos.
 
-### <a name="changes"></a>Alterações
+### <a name="changes"></a> Alterações
 
 Esta seção lista as alterações no código usado neste tutorial. Essas alterações foram feitas para refletir a versão mais recente **revoscalepy** versão. Para obter ajuda da API, consulte [Python função referência da biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 
 | Alterar detalhes | Observações|
 | ----|----|
 | excluído `import pandas` em todas as amostras| pandas agora carregados por padrão|
-| função `rx_predict_ex` alterado para`rx_predict`| As versões RTM e pré-lançamento exigem`rx_predict_ex`|
-| função `rx_logit_ex` alterado para`rx_logit`| As versões RTM e pré-lançamento exigem`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`alterado para`prob_list = prob_array["tipped_Pred"].values`| atualizações à API|
+| função `rx_predict_ex` alterado para `rx_predict`| As versões RTM e pré-lançamento exigem `rx_predict_ex`|
+| função `rx_logit_ex` alterado para `rx_logit`| As versões RTM e pré-lançamento exigem `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` alterado para `prob_list = prob_array["tipped_Pred"].values`| atualizações à API|
 
 Se você instalou os serviços de Python usando uma versão de pré-lançamento do SQL Server 2017, recomendamos que você atualize. Você também pode atualizar apenas os componentes de Python e R usando a versão mais recente do servidor de aprendizado de máquina. Para obter mais informações, consulte [usando a associação para atualizar uma instância do SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 

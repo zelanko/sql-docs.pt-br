@@ -1,30 +1,28 @@
 ---
 title: Criar recursos de dados usando R e SQL (passo a passo) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Criar recursos de dados usando R e SQL (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +240,7 @@ Você pode tentar usar o suplemento com o exemplo de função personalizada do S
 Os horários podem variar significativamente, dependendo da velocidade da sua rede e sua configuração de hardware. Nas configurações testamos, o [!INCLUDE[tsql](../../includes/tsql-md.md)] abordagem de função era mais rápida que usar uma função personalizada de R. Portanto, temos que use o [!INCLUDE[tsql](../../includes/tsql-md.md)] função para esses cálculos nas etapas subsequentes.
 
 > [!TIP]
-> Frequentemente, recursos de engenharia usando [!INCLUDE[tsql](../../includes/tsql-md.md)] será mais rápido do que R. Por exemplo, o T-SQL inclui janelas rápida e as funções de classificação que podem ser aplicadas para cálculos de ciência de dados comuns como reverter as médias de movimentação e  *n* -lado a lado. Escolha o método mais eficiente com base em seus dados e tarefas.
+> Frequentemente, recursos de engenharia usando [!INCLUDE[tsql](../../includes/tsql-md.md)] será mais rápido do que R. Por exemplo, o T-SQL inclui janelas rápida e as funções de classificação que podem ser aplicadas para cálculos de ciência de dados comuns como reverter as médias de movimentação e *n*-lado a lado. Escolha o método mais eficiente com base em seus dados e tarefas.
 
 ## <a name="next-lesson"></a>Próxima lição
 

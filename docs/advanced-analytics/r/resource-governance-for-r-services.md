@@ -1,26 +1,24 @@
 ---
-title: "Governança de recursos para o aprendizado de máquina no SQL Server | Microsoft Docs"
-ms.custom: 
+title: Governança de recursos para o aprendizado de máquina no SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 11cfaba5f645824158e0c25103ec355e513fa075
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Governança de recursos para o aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/11/2018
 Este artigo fornece uma visão geral do controle de recursos de recursos do SQL Server que ajudam a alocar e equilibrar os recursos usados pelos scripts de R e Python.
 
 **Aplica-se a:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>Objetivos de controle de recursos de aprendizado de máquina
 
@@ -90,7 +88,7 @@ Se você for novo para o administrador de recursos, consulte este tópico para u
 
 O suporte para scripts externos é opcional na instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mesmo depois de instalar a recursos de aprendizado de máquina, a capacidade de executar scripts externos é desativado por padrão, e você deve reconfigurar a propriedade manualmente e reinicie a instância para habilitar a execução do script.
 
-Portanto, se houver um problema de recurso que precisa ser reduzidos imediatamente, ou um problema de segurança, um administrador pode desabilitar imediatamente qualquer execução de script externo usando [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e definir a propriedade `external scripts enabled` como FALSE ou 0.
+Portanto, se houver um problema de recurso que precisa ser reduzidos imediatamente, ou um problema de segurança, um administrador pode desabilitar imediatamente qualquer execução de script externo usando [sp_configure &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e definindo a propriedade `external scripts enabled` como FALSE ou 0.
   
 ## <a name="see-also"></a>Consulte também
 

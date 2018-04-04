@@ -1,16 +1,16 @@
 ---
 title: sys.routes (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 06/10/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - routes
@@ -22,21 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.routes catalog view
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06cefdc92f1d38fc0289e80549798d855509793
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 21420e923b4120f547026c6a6a0d96d86deac782
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Esta exibição do catálogo contém uma linha por rota. O Service Broker usa rotas para localizar o endereço de rede para um serviço.   
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |**remote_service_name**|**nvarchar(256)**|Nome do serviço remoto. É NULLABLE.|  
 |**broker_instance**|**nvarchar(128)**|Identificador do agente que hospeda o serviço remoto. É NULLABLE.|  
 |**lifetime**|**datetime**|A data e hora em que a rota expira. Observe que esse valor não usa o fuso horário local. Em vez disso, o valor mostra a hora de expiração para UTC. É NULLABLE.|  
-|**address**|**nvarchar(256)**|Endereço de rede para o qual o Service Broker envia mensagens ao serviço remoto. É NULLABLE.|  
+|**address**|**nvarchar(256)**|Endereço de rede para o qual o Service Broker envia mensagens ao serviço remoto. É NULLABLE. Para a instância da gerenciados de banco de dados SQL, o endereço deve ser local.|  
 |**mirror_address**|**nvarchar(256)**|Endereço de rede do parceiro de espelhamento para o servidor especificado no endereço. É NULLABLE.|  
   
 ## <a name="permissions"></a>Permissões  

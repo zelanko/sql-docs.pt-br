@@ -1,26 +1,24 @@
 ---
-title: "Eventos estendidos para serviços de aprendizado de máquina do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Eventos estendidos para serviços de aprendizado de máquina do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 12/21/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e16c8c468b4e82847e65e808f357e6eefb811f7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventos estendidos para serviços de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +51,7 @@ Eventos estendidos adicionais estão disponíveis para os componentes que estão
 
 Para obter mais informações sobre como fazer isso, consulte a seção [coleta de eventos a partir de processos externos](#bkmk_externalevents).
 
-##  <a name="bkmk_xeventtable"></a>Tabela de eventos estendidos
+##  <a name="bkmk_xeventtable"></a> Tabela de eventos estendidos
 
 |Evento|Description|Observações|  
 |-----------|-----------------|---------|  
@@ -88,7 +86,7 @@ Para obter mais informações sobre como fazer isso, consulte a seção [coleta 
 |satellite_data_chunk_sent|Acionado quando a conexão por satélite conclui o envio de uma única parte de dados.|Contém informações sobre o número de colunas, de linhas, de pacotes e o tempo decorrido com o envio das partes.|  
 |satellite_sessionId_mismatch|ID de sessão da mensagem não é esperada||  
   
-###  <a name="bkmk_externalevents"></a>Coleta de eventos a partir de processos externos
+###  <a name="bkmk_externalevents"></a> Coleta de eventos a partir de processos externos
 
 Serviços de aprendizado de máquina do SQL Server inicia alguns serviços que são executados fora do processo do SQL Server. Para captar eventos relacionados a esses processos externos, você deve criar um arquivo de configuração de rastreamento de eventos e coloque o arquivo no mesmo diretório que o executável do processo.  
   

@@ -1,26 +1,24 @@
 ---
-title: "Configuração do SQL Server (R Services) | Microsoft Docs"
-ms.custom: 
+title: Configuração do SQL Server (R Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 794a15c6673a06ea261f66129035ea62ea31cb0e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuração do SQL Server para uso com R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,7 +96,7 @@ Para obter mais informações, consulte os seguintes documentos:
 
 + [Habilitar a compactação em uma tabela ou índice](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Guia de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)
++ [Guia de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### <a name="memory-optimized-tables"></a>Tabelas com otimização de memória
 
@@ -126,7 +124,7 @@ Governança de recursos no SQL Server permite que você centralize o monitoramen
 
 O valor padrão para o consumo de memória por scripts externos é limitado a 20% do total de memória disponível para o próprio SQL Server. Esse limite é aplicado por padrão para garantir que todas as tarefas que dependem do servidor de banco de dados não são gravemente afetadas por trabalhos de longa execução R. Entretanto, esses limites podem ser alterados pelo administrador de banco de dados. Em muitos casos, o limite de 20% não é suficiente dar suporte a cargas de trabalho do aprendizado de máquina grave.
 
-As opções de configuração com suporte são **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, e **MAX_PROCESSES**. Para exibir as configurações atuais, use esta instrução:`SELECT * FROM sys.resource_governor_external_resource_pools`
+As opções de configuração com suporte são **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, e **MAX_PROCESSES**. Para exibir as configurações atuais, use esta instrução: `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  Se o servidor é usado principalmente para serviços de R, pode ser útil aumentar MAX_CPU_PERCENT para 40% ou 60%.
 
@@ -134,11 +132,11 @@ As opções de configuração com suporte são **MAX_CPU_PERCENT**, **MAX_MEMORY
 
 Para alterar os valores de recursos alocados, use instruções T-SQL.
 
-+ Essa instrução define o uso de memória para 40%:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ Essa instrução define o uso de memória para 40%: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ Essa instrução define todos os três valores configuráveis:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ Essa instrução define todos os três valores configuráveis: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ Se você altera uma memória, CPU ou configuração de processo máximo e, em seguida, deseja aplicar as configurações imediatamente, execute esta instrução:`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ Se você altera uma memória, CPU ou configuração de processo máximo e, em seguida, deseja aplicar as configurações imediatamente, execute esta instrução: `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>Afinidade de de software, hardware NUMA e da CPU
 

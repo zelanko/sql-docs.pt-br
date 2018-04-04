@@ -1,29 +1,27 @@
 ---
-title: "R e SQL dados e tipos de objetos de dados (R no início rápido do SQL) | Microsoft Docs"
-ms.custom: 
+title: R e SQL dados e tipos de objetos de dados (R no início rápido do SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: b0b0f8bd5502dfd70c690dc64d1881c057a97962
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: b763fd5b7c5707d5cc4f49c1ec93b10a0b53c321
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R e SQL dados e tipos de objetos de dados (R no início rápido do SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +66,7 @@ Por que os resultados são tão diferentes?
 
 A resposta geralmente pode ser encontrada usando o comando `str()` de R. Adicione a função `str(object_name)` em qualquer ponto do script R para fazer com que o esquema de dados do objeto R especificado seja retornado como uma mensagem informativa. Para exibir mensagens, consulte o painel **Mensagens** do código do Visual Studio ou a guia **Mensagens** no SSMS.
 
-Para descobrir por que os exemplos 1 e 2 demonstram resultados tão diferentes, insira a linha `str(OutputDataSet)` no final da definição de variável  _@script_  em cada instrução, dessa forma:
+Para descobrir por que os exemplos 1 e 2 demonstram resultados tão diferentes, insira a linha `str(OutputDataSet)` no final da definição de variável _@script_ em cada instrução, dessa forma:
 
 **Exemplo 1 com a função str adicionado**
 

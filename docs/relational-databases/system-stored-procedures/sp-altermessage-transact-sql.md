@@ -1,16 +1,16 @@
 ---
 title: sp_altermessage (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_altermessage_TSQL
@@ -20,7 +20,7 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -52,13 +52,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  É o número do erro da mensagem a ser alterada de **messages**. *message_number* é **int** sem nenhum valor padrão.  
   
  [ **@parameter =** ] **'***write_to_log*'  
- É usado com  **@parameter_value**  para indicar que a mensagem a ser gravado para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows. *write_to_log* é **sysname** sem nenhum valor padrão. *write_to_log* deve ser definido como WITH_LOG ou NULL. Se *write_to_log* é definido como WITH_LOG ou NULL e o valor de  **@parameter_value**  é **true**, a mensagem é gravada no log de aplicativo do Windows. Se *write_to_log* é definido como WITH_LOG ou NULL e o valor de  **@parameter_value**  é **false**, a mensagem nem sempre será gravada no log de aplicativo do Windows, mas pode ser gravado dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor de  **@parameter_value**  também deve ser especificado.  
+ É usado com **@parameter_value** para indicar que a mensagem a ser gravado para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows. *write_to_log* é **sysname** sem nenhum valor padrão. *write_to_log* deve ser definido como WITH_LOG ou NULL. Se *write_to_log* é definido como WITH_LOG ou NULL e o valor de **@parameter_value** é **true**, a mensagem é gravada no log de aplicativo do Windows. Se *write_to_log* é definido como WITH_LOG ou NULL e o valor de **@parameter_value** é **false**, a mensagem nem sempre será gravada no log de aplicativo do Windows, mas pode ser gravado dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor de **@parameter_value** também deve ser especificado.  
   
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **@parameter_value =** ] **' * valor*'  
- É usado com  **@parameter**  para indicar que o erro deve ser gravado para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows. *valor* é **varchar(5)**, sem nenhum valor padrão. Se **true**, o erro sempre será gravado no log de aplicativo do Windows. Se **false**, o erro nem sempre será gravado no log de aplicativo do Windows, mas pode ser gravado dependendo de como o erro foi gerado. Se *valor* for especificado, *write_to_log* para  **@parameter**  também deve ser especificado.  
+ [ **@parameter_value =** ]**'***valor*'  
+ É usado com **@parameter** para indicar que o erro deve ser gravado para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows. *valor* é **varchar(5)**, sem nenhum valor padrão. Se **true**, o erro sempre será gravado no log de aplicativo do Windows. Se **false**, o erro nem sempre será gravado no log de aplicativo do Windows, mas pode ser gravado dependendo de como o erro foi gerado. Se *valor* for especificado, *write_to_log* para **@parameter** também deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
