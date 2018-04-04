@@ -49,16 +49,16 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: ''
+caps.latest.revision: 256
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: e2018a6e0975c739a3d796cb1f0bdf6a0b392584
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/16/2018
 > [!NOTE]   
 >  Para sintaxe [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], veja [CREATE TABLE (SQL Data Warehouse do Azure)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="simple-syntax"></a>Sintaxe simples  
   
@@ -1561,7 +1561,7 @@ CREATE SCHEMA History
 GO  
 CREATE TABLE dbo.Department   
 (  
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
+    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,   
     DepartmentName varchar(50) NOT NULL,   
     ManagerID int  NULL,   
     ParentDepartmentNumber char(10) NULL,   

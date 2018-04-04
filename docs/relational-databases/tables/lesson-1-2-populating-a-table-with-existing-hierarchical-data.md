@@ -1,35 +1,36 @@
 ---
-title: "Populando uma tabela com os dados hierárquicos existentes | Microsoft Docs"
-ms.custom: 
+title: Populando uma tabela com os dados hierárquicos existentes | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09e5072fb37f7791f3f597ab3d2a6e382e302e47
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: e2582323d122a3b8cd8042fc028d8da73fb8a1a1
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>Lição 1-2 – Populando uma tabela com os dados hierárquicos existentes
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo**. Essa tarefa tem as seguintes etapas:  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo** . Essa tarefa tem as seguintes etapas:  
   
 -   Crie uma nova tabela que contém uma coluna **hierarchyid** . Essa coluna pode substituir as colunas **EmployeeID** e **ManagerID** existentes. Entretanto, você manterá essas colunas. Isso porque os aplicativos existentes podem se referir a essas colunas e, também, para ajudar a compreender os dados depois da transferência. A definição da tabela especifica que **OrgNode** é a chave primária, exigindo que a coluna contenha valores exclusivos. O índice clusterizado da coluna **OrgNode** armazenará a data na sequência **OrgNode** .  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 -   Em uma janela do Editor de Consultas, execute o seguinte código para criar uma tabela chamada **HumanResources.NewOrg**:  
   
     ```  
-    CREATE TABLE NewOrg  
+    CREATE TABLE HumanResources.NewOrg  
     (  
       OrgNode hierarchyid,  
       EmployeeID int,  
@@ -83,9 +84,8 @@ ms.lasthandoff: 01/18/2018
     INSERT #Children (EmployeeID, ManagerID, Num)  
     SELECT EmployeeID, ManagerID,  
       ROW_NUMBER() OVER (PARTITION BY ManagerID ORDER BY ManagerID)   
-    FROM EmployeeDemo  
-    GO  
-  
+    FROM HumanResources.EmployeeDemo  
+    GO 
     ```  
   
 2.  Examine a tabela **#Children** . Observe como a coluna **Num** contém números sequenciais para cada gerenciador.  
@@ -97,31 +97,24 @@ ms.lasthandoff: 01/18/2018
     ```  
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-    `EmployeeID ManagerID Num`  
-  
-    `---------- --------- ---`  
-  
-    `1        NULL       1`  
-  
-    `2         1         1`  
-  
-    `3         1         2`  
-  
-    `4         2         1`  
-  
-    `5         2         2`  
-  
-    `6         2         3`  
-  
-    `7         3         1`  
-  
-    `8         3         2`  
-  
-    `9         4         1`  
-  
-    `10        4         2`  
-  
+
+    ```
+    EmployeeID  ManagerID   Num
+    1   NULL    1
+    2   1   1
+    16  1   2
+    25  1   3
+    234 1   4
+    263 1   5
+    273 1   6
+    3   2   1
+    4   3   1
+    5   3   2
+    6   3   3
+    7   3   4
+    ```
+
+
 3.  Popule a tabela **NewOrg** . Use os métodos GetRoot e ToString para concatenar os valores **Num** no formato **hierarchyid** e atualize a coluna **OrgNode** com os valores hierárquicos resultantes:  
   
     ```  
@@ -131,7 +124,7 @@ ms.lasthandoff: 01/18/2018
     SELECT hierarchyid::GetRoot() AS OrgNode, EmployeeID   
     FROM #Children AS C   
     WHERE ManagerID IS NULL   
-  
+
     UNION ALL   
     -- This section provides values for all nodes except the root  
     SELECT   
@@ -141,23 +134,21 @@ ms.lasthandoff: 01/18/2018
     JOIN paths AS p   
        ON C.ManagerID = P.EmployeeID   
     )  
-    INSERT NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
+    INSERT HumanResources.NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
     SELECT P.path, O.EmployeeID, O.LoginID, O.ManagerID  
-    FROM EmployeeDemo AS O   
+    FROM HumanResources.EmployeeDemo AS O   
     JOIN Paths AS P   
        ON O.EmployeeID = P.EmployeeID  
-    GO  
-  
+    GO 
     ```  
   
 4.  Uma coluna **hierarchyid** fica mais fácil de entender quando você a converte no formato de caractere. Examine os dados da tabela **NewOrg** executando o seguinte código, que contém duas representações da coluna **OrgNode** :  
   
     ```  
     SELECT OrgNode.ToString() AS LogicalNode, *   
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY LogicalNode;  
     GO  
-  
     ```  
   
     A coluna **LogicalNode** converte a coluna **hierarchyid** em um formulário de texto mais legível que representa a hierarquia. Nas tarefas restantes, você usará o método `ToString()` para mostrar o formato lógico das colunas **hierarchyid** .  

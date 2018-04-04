@@ -29,16 +29,16 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -136,6 +136,7 @@ Especifica o agrupamento padrão do catálogo de metadados. *DATABASE_DEFAULT* e
 |De 1024 GB até 4096 GB em incrementos de 256 GB* |N/A|N/A|N/A|N/A|√|√|  
   
  \* P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB sendo o tamanho padrão.  P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, MAXSIZE maior do que 1 TB está disponível no momento nas seguintes regiões: Leste dos EUA2, Oeste dos EUA, Gov. EUA – Virgínia, Europa Ocidental, Alemanha Central, Sudeste Asiático, Leste do Japão, Leste da Austrália, Canadá Central e Leste do Canadá. Para ver as limitações atuais, consulte [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources) (Bancos de dados únicos).  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  As regras a seguir se aplicam aos argumentos MAXSIZE e EDITION:  
   
@@ -286,7 +287,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 
 -  [sys.dm_database_copies &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 

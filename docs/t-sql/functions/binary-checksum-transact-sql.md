@@ -1,16 +1,16 @@
 ---
 title: BINARY_CHECKSUM (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BINARY_CHECKSUM
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c5fd777c7ce4ecc4530c47a2e8eb8bb1e14ce2d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ff8368877b3fb2153685554f1484b5fbbcc7c3a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Retorna o valor binário da soma de verificação calculado em uma linha de tabela ou em uma lista de expressões.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,6 +51,9 @@ Especifica que o cálculo é feito em todas as colunas da tabela. BINARY_CHECKSU
   
 *expressão*  
 É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo. BINARY_CHECKSUM ignora expressões de tipos de dados não comparáveis em sua computação.
+
+## <a name="return-types"></a>Tipos de retorno  
+ **int**
   
 ## <a name="remarks"></a>Remarks  
 BINARY_CHECKSUM(*), calculado em qualquer linha de uma tabela, retorna o mesmo valor enquanto a linha não for modificada subsequentemente. BINARY_CHECKSUM satisfaz as propriedades de uma função de hash: BINARY_CHECKSUM aplicado em quaisquer duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e forem iguais quando comparados com o operador de igualdade (=). Para essa definição, os valores nulos de um tipo especificado são considerados para serem comparados como iguais. Se um dos valores da lista de expressão for alterado, em geral, a soma de verificação da lista também será alterada. Entretanto, há uma pequena chance de que a soma de verificação não seja alterada. Por esse motivo, não recomendamos o uso de BINARY_CHECKSUM para detectar se os valores foram alterados, a não ser que o aplicativo possa tolerar ocasionalmente a ausência de uma alteração. Considere a possibilidade de usar HashBytes. Quando um algoritmo de hash MD5 é especificado, a probabilidade de HashBytes retornar o mesmo resultado para duas entradas diferentes é muito menor que a de BINARY_CHECKSUM.
@@ -81,7 +84,7 @@ SELECT BINARY_CHECKSUM(*) from myTable;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Funções de agregação &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
