@@ -1,16 +1,16 @@
 ---
-title: "Recuperação de bancos de dados relacionados que contêm uma transação marcada | Microsoft Docs"
-ms.custom: 
+title: Recuperação de bancos de dados relacionados que contêm uma transação marcada | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
@@ -25,7 +25,7 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/23/2018
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico é relevante apenas para os bancos de dados que contêm transações marcadas e que usam modelos de recuperação bulk-logged ou completos.  
   
- Para obter informações sobre os requisitos de restauração para um ponto de recuperação específico, veja [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+ Para obter informações sobre os requisitos de restauração para um ponto de recuperação específico, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à inserção de marcas nomeadas no log de transações, permitindo a recuperação nessa marca específica. As marcas de log são transações específicas e são inseridas apenas se as suas transações associadas forem confirmadas. Desse modo, as marcas podem ser ligadas ao trabalho específico e você pode recuperá-las em um ponto que inclua ou exclua esse trabalho.  
   
