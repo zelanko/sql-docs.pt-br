@@ -1,19 +1,20 @@
 ---
-title: "Colunas de dados de auditoria de segurança | Microsoft Docs"
-ms.custom: 
+title: Colunas de dados de auditoria de segurança | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: Security Audit event category [SQL Server]
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
