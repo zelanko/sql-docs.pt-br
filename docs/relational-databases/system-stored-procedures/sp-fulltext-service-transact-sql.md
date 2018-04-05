@@ -1,16 +1,16 @@
 ---
 title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -50,7 +50,7 @@ sp_fulltext_service [ [@action=] 'action'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@action=**] **'***ação***'**  
- É a propriedade a ser alterada ou redefinida. *ação* é **nvarchar (100),** sem nenhum padrão. Para obter uma lista de um*c*ção propriedades, suas descrições e os valores que podem ser definidos, consulte a tabela sob o *valor* argumento. Esse argumento retorna as seguintes propriedades: tipo de dados, valor em execução atual, valor mínimo ou máximo e status da reprovação, se aplicável.  
+ É a propriedade a ser alterada ou redefinida. *ação* é **nvarchar(100),** sem nenhum padrão. Para obter uma lista de um*c*ção propriedades, suas descrições e os valores que podem ser definidos, consulte a tabela sob o *valor* argumento. Esse argumento retorna as seguintes propriedades: tipo de dados, valor em execução atual, valor mínimo ou máximo e status da reprovação, se aplicável.  
   
  [ **@value=**] *value*  
  É o valor da propriedade especificada. *valor* é **sql_variant**, com um valor padrão de NULL. Se @value for nulo, **sp_fulltext_service** retorna a configuração atual. Essa tabela lista propriedades de ação, suas descrições e os valores que podem ser definidos.  
@@ -67,7 +67,7 @@ sp_fulltext_service [ [@action=] 'action'
 |**master_merge_dop**|**Int**|Especifica o número de threads a ser usado pelo processo de mesclagem mestre. Esse valor não deve exceder o número de CPUs disponíveis ou núcleos de CPU.<br /><br /> Quando este argumento não é especificado, o serviço usa o menor de 4, ou o número de CPUs disponíveis ou núcleos de CPU.|  
 |**pause_indexing**|**Int**|Especifica se a indexação de texto completo deve ser pausada, se estiver em execução no momento, ou retomada, se estiver pausada no momento.<br /><br /> 0 = Retoma as atividades de indexação de texto completo para a instância do servidor.<br /><br /> 1 = Pausa as atividades de indexação de texto completo para a instância do servidor.|  
 |**resource_usage**|**Int**|Não tem nenhuma função no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores e é ignorado.|  
-|**update_languages**|NULL|Atualiza a lista de idiomas e filtros que estão registrados com pesquisa de texto completo. Os idiomas são especificados ao configurar indexação e em consultas de texto completo. Filtros são usados pelo host do daemon de filtro para extrair informações textuais de formatos de arquivo correspondentes, como. docx armazenado em tipos de dados, como **varbinary**, **varbinary (max)**, **imagem** , ou **xml**, para indexação de texto completo.<br /><br /> Para obter mais informações, consulte [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
+|**update_languages**|NULL|Atualiza a lista de idiomas e filtros que estão registrados com pesquisa de texto completo. Os idiomas são especificados ao configurar indexação e em consultas de texto completo. Filtros são usados pelo host do daemon de filtro para extrair informações textuais de formatos de arquivo correspondentes, como. docx armazenado em tipos de dados, como **varbinary**, **varbinary (max)**, **imagem** , ou **xml**, para indexação de texto completo.<br /><br /> Para obter mais informações, consulte [Exibir ou alterar filtros registrados e separadores de palavras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
 |**upgrade_option**|**Int**|Controla como são migrados índices de texto completo ao atualizar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para uma versão posterior. Essa propriedade se aplica à atualização anexando um banco de dados, restaurando um backup do banco de dados, restaurando um backup de arquivo ou copiando o banco de dados usando o Assistente para Copiar Banco de Dados.<br /><br /> Um dos seguintes:<br /><br /> 0 = os catálogos de texto completo são recompilados usando-se os separadores de palavras novos e aprimorados. A recompilação de índices pode demorar um pouco, e uma quantidade significativa de memória e CPU pode ser necessária após a atualização.<br /><br /> 1 = Os catálogos de texto completo são redefinidos. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] os arquivos de catálogos de texto completo são removidos, mas os metadados dos catálogos e dos índices de texto completo são preservados. Depois de serem atualizados, todos os índices de texto completo são desabilitados para o controle de alteração e os rastreamentos não são iniciados automaticamente. O catálogo permanecerá vazio até você executar uma população completa manualmente, depois que a atualização for concluída.<br /><br /> 2 = os catálogos de texto completo são importados. A importação costuma ser consideravelmente mais rápida do que a recompilação. Por exemplo, quando é usada apenas uma CPU, a importação é executada cerca de 10 vezes mais rápido do que a recompilação. Contudo, um catálogo de texto completo importado não usa os separadores de palavras novos e aprimorados, por isso pode ser necessário recompilar o catálogo de texto completo no futuro.<br /><br /> Observação: Recompilação pode ser executada no modo multi-threaded e, se houver mais de 10 CPUs disponíveis, ela poderá ser executada mais rapidamente do que a importação se você permitir que a recompilação use todas as CPUs.<br /><br /> Se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recompilados. Essa opção está disponível apenas para bancos de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> Para obter informações sobre como escolher uma opção de atualização de texto completo, consulte[Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).<br /><br /> Observação: Para definir essa propriedade na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], use o **Full-Text Upgrade Option** propriedade. Para obter informações, consulte [Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).|  
 |**verify_signature**|**Int**|Indica se apenas binários assinados são carregados pelo Mecanismo de Texto Completo. Por padrão, somente binários assinados confiáveis são carregados.<br /><br /> 1 = Verifica se somente binários assinados confiáveis são carregados (padrão).<br /><br /> 0 = Não verifica se binários são assinados.|  
   
