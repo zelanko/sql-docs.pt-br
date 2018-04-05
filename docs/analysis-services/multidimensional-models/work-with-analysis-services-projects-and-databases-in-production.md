@@ -1,19 +1,20 @@
 ---
-title: "Trabalhar com projetos e bancos de dados de produção do Analysis Services | Microsoft Docs"
-ms.custom: 
+title: Trabalhar com projetos e bancos de dados de produção do Analysis Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Analysis Services, projects
+helpviewer_keywords:
+- Analysis Services, projects
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

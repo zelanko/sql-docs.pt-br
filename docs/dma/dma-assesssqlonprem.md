@@ -1,20 +1,22 @@
 ---
-title: "Realizar uma avaliação de migração do SQL Server (Assistente de migração de dados) | Microsoft Docs"
-ms.custom: 
+title: Realizar uma avaliação de migração do SQL Server (Assistente de migração de dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-dma
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, Assess
-ms.assetid: 
-caps.latest.revision: 
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Assess
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg

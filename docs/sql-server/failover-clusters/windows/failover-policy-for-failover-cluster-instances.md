@@ -1,28 +1,30 @@
 ---
-title: "Política de failover para instâncias de cluster de failover | Microsoft Docs"
-ms.custom: 
+title: Política de failover para instâncias de cluster de failover | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: flexible failover policy
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 70117aaa0f1e936fff8c8d78f82636d4e77c460b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], somente um nó pode ter o grupo de recursos de cluster do WSFC (Cluster de Failover do Windows Server) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  

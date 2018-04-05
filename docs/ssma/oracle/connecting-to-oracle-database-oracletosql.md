@@ -2,18 +2,20 @@
 title: Conectar-se ao banco de dados Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Refreshing Oracle Metadata
+helpviewer_keywords:
+- Refreshing Oracle Metadata
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro

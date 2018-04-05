@@ -2,21 +2,23 @@
 title: Localizar o Assistente de bancos de dados (selecionados locais) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Find Databases Wizard
+helpviewer_keywords:
+- Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
