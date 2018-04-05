@@ -16,11 +16,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 792d6c7fe69a1b8ec77c70d0fbfa6ceaa92d808a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: mais dicas e truques para usar o SSMS
 Este tutorial fornecerá algumas outras dicas e truques para usar o SQL Server Management Studio. Este artigo ensinará como: 
@@ -143,33 +143,6 @@ Quando um banco de dados tem muitos objetos, pode ser difícil localizar um obje
 ## <a name="access-your-sql-server-error-log"></a>Acessar o log de erros do SQL Server
 O log de erros é um arquivo que contém os detalhes sobre as coisas que ocorrem dentro do SQL Server. Ele pode ser pesquisado e consultado no SSMS. Ele também pode ser encontrado como um arquivo .log no disco.
 
-### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>Localizar o log de erros se não for possível se conectar ao SQL
-1. Abra o SQL Server Configuration Manager. 
-2. Expanda o nó **Serviços**.
-3. Clique com o botão direito do mouse na instância do SQL Server > **Propriedades**:
-
-    ![Propriedades de Servidor do Gerenciador de Configurações](media/ssms-tricks/serverproperties.PNG)
-
-4. Selecione a guia **Parâmetros de Inicialização**.
-5. Na área **Parâmetros Existentes**, o caminho após o “-e” é a localização do log de erros: 
-    
-    ![Log de erros](media/ssms-tricks/errorlog.png)
-    - Você observará que há vários errorlog.* neste local. Aquele que termina com *.log é o atual. Os que terminam com números são logs anteriores, visto que um novo log é criado sempre que o SQL Server for reiniciado. 
-6. Abra esse arquivo no Bloco de Notas. 
-
-### <a name="find-your-error-log-if-youre-connected-to-sql"></a>Localizar o log de erros se estiver conectado ao SQL
-1. Conecte-se ao SQL Server.
-2. Abra uma janela **Nova Consulta**.
-3. Cole o seguinte trecho de código T-SQL na janela de consulta e clique em **Executar**:
-
-
-  ```sql
-   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
-  ```
-3. Os resultados mostram o local do log de erros no sistema de arquivos: 
-
-![Localizar o Log de erros por consulta](media/ssms-tricks/finderrorlogquery.png)
-
 ### <a name="open-error-log-within-ssms"></a>Abra o Log de erros no SSMS
 1. Conecte-se ao SQL Server.
 2. Expanda o nó **Gerenciamento** . 
@@ -191,17 +164,45 @@ O log de erros é um arquivo que contém os detalhes sobre as coisas que ocorrem
    
     ![Consultar Log de erros](media/ssms-tricks/queryerrorlog.png)
 
-## <a name="determine-sql-server-instance-name"></a>Determinar o nome da instância do SQL Server...
-Há diferentes maneiras de determinar o nome da sua instância de antes e depois de se conectar ao SQL Server.  
+
+### <a name="find-error-log-location-if-youre-connected-to-sql"></a>Localizar o local do log de erros se você estiver conectado ao SQL
+1. Conecte-se ao SQL Server.
+2. Abra uma janela **Nova Consulta**.
+3. Cole o seguinte trecho de código T-SQL na janela de consulta e clique em **Executar**:
+
+ ```sql
+    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
+  ``` 
+
+4. Os resultados mostram o local do log de erros no sistema de arquivos: 
+
+    ![Localizar o log de erros por consulta](media/ssms-tricks/finderrorlogquery.png)
+
+### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>Localizar o local do log de erros se você não puder se conectar ao SQL
+1. Abra o SQL Server Configuration Manager. 
+2. Expanda o nó **Serviços**.
+3. Clique com o botão direito do mouse na instância do SQL Server > **Propriedades**:
+
+    ![Propriedades de Servidor do Gerenciador de Configurações](media/ssms-tricks/serverproperties.PNG)
+
+4. Selecione a guia **Parâmetros de Inicialização**.
+5. Na área **Parâmetros Existentes**, o caminho após o “-e” é a localização do log de erros: 
+    
+    ![Log de erros](media/ssms-tricks/errorlog.png)
+    - Você observará que há vários errorlog.* neste local. Aquele que termina com *.log é o atual. Os que terminam com números são logs anteriores, visto que um novo log é criado sempre que o SQL Server for reiniciado. 
+6. Abra esse arquivo no Bloco de Notas. 
+
+## <a name="determine-sql-server-name"></a>Determine o nome do SQL Server...
+Há diferentes maneiras de determinar o nome do SQL Server antes e depois de conectar-se a ele.  
 
 ### <a name="when-you-dont-know-it"></a>...Quando você não a conhece
 1. Siga as etapas para localizar o [Log de erros do SQL Server em disco](#finding-your-error-log-if-you-cannot-connect-to-sql). 
 2. Abra o errorlog.log no Bloco de Notas. 
 3. Navegue por ele até encontrar o texto em inglês "Server name is" ("O nome do servidor é"):
-  - Tudo o que está listado entre as aspas simples é o nome da instância e ao que você vai se conectar ![Nome do servidor no Log de erros](media/ssms-tricks/servernameinlog.png)
+  - Tudo o que está listado entre as aspas simples é o nome do SQL Server, ou seja, o nome ao qual você se conectará: ![Nome do Servidor no Log de Erros](media/ssms-tricks/servernameinlog.png) O formato do nome é 'HOSTNAME\INSTANCENAME'. Se aparecer apenas o nome do host, a instância padrão estará instalada, e o nome da instância será 'MSSQLSERVER'. Ao conectar-se a uma instância padrão, basta digitar o nome do host para conectar-se ao SQL Server.  
 
 ### <a name="once-youre-connected-to-sql"></a>...Quando estiver conectado ao SQL 
-Há três locais para descobrir a qual instância você está conectado. 
+Há três locais para identificar a qual SQL Server você está se conectado. 
 
 1. O nome do servidor será listado no **Pesquisador de Objetos**:
 
@@ -209,7 +210,7 @@ Há três locais para descobrir a qual instância você está conectado.
 2. O nome do servidor será listado na janela de consulta:
 
     ![Nome na Janela de Consulta](media/ssms-tricks/nameinquerywindow.png)
-3. para obter informações sobre a ferramenta de configuração e recursos adicionais. O nome do servidor também será listado na **janela Propriedades**.
+3. O nome do servidor também será listado na **janela Propriedades**.
     - Para acessá-lo, abra o Menu **Exibir** > **Janela Propriedades**:
 
     ![Nome em Propriedades](media/ssms-tricks/nameinproperties.png)

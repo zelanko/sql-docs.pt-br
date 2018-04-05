@@ -1,6 +1,6 @@
 ---
-Title: 'Tutorial: Connect and Query SQL Server using SQL Server Management Studio'
-description: Um Tutorial para se conectar ao SQL Server usando o SQL Server Management Studio e executar consultas T-SQL básicas.
+Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+description: Um tutorial para conectar-se a uma instância do SQL Server usando o SQL Server Management Studio e executando consultas T-SQL básicas.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
@@ -10,67 +10,68 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Tutorial: Conectar-se e consultar o SQL Server usando o SQL Server Management Studio
-Este Tutorial ensina como usar o SSMS (SQL Server Management Studio) para se conectar à instância do SQL Server e executar alguns comandos básicos do T-SQL (Transact-SQL). Este artigo demonstra como fazer o seguinte:
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
+Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-se à instância do SQL Server e executar alguns comandos T-SQL (Transact-SQL) básicos. O artigo demonstra como fazer o seguinte:
 
-> [!div class="checklist"]
-> * [Conectar a um SQL Server](#connect-to-a-sql-server)
-> * [Criar um novo banco de dados (**TutorialDB**)](#create-a-database)
-> * [Criar uma tabela (**Clientes**) no seu novo banco de dados](#create-a-table)
-> * [Inserir linhas na sua nova tabela **Clientes**](#insert-rows)
-> * [Consultar a tabela **Clientes** e exibir os resultados](#view-query-results)
-> * [Usar a tabela da janela de consulta para verificar suas propriedades de conexão](#verify-your-query-window-connection-properties)
-> * [Alterar a qual servidor sua janela de consulta está conectada](#change-server-connection-within-query-window)
-
+> [!div class="checklist"]  
+> * Conectar a uma instância do SQL Server    
+> * Criar um banco de dados ("TutorialDB")    
+> * Criar uma tabela ("Clientes") no novo banco de dados   
+> * Inserir linhas na nova tabela 
+> * Consultar a nova tabela e exibir os resultados    
+> * Usar a tabela da janela de consulta para verificar as propriedades da conexão 
+> * Alterar o servidor ao qual a janela de consulta está conectada
 
 ## <a name="prerequisites"></a>Prerequisites
-Para concluir este Tutorial, você precisa do SQL Server Management Studio e acesso a um SQL Server. 
+Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
-Se você não tiver acesso a um SQL Server, selecione a plataforma dentre os links a seguir (lembre-se do Login e da Senha do SQL se escolher a Autenticação SQL):
-- [Windows – Baixar o SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS – Baixar o SQL Server 2017 no Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
+- **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
 
 
-## <a name="connect-to-a-sql-server"></a>Conectar a um SQL Server
+## <a name="connect-to-a-sql-server-instance"></a>Conectar a uma instância do SQL Server
 
-1. Inicie o SSMS (Start SQL Server Management Studio).
-1. Na primeira vez que você executar o SSMS, a caixa de diálogo **Conectar ao Servidor** é aberta. 
-      - Se a caixa de diálogo **Conectar ao Servidor** não abrir, ela poderá ser aberta manualmente em **Pesquisador de Objetos** > **Conectar** (ou ícone ao lado dele) > **Mecanismo de Banco de Dados**.
+1. Inicie o SQL Server Management Studio.  
+    Na primeira vez em que você executar o SSMS, a janela **Conectar-se ao Servidor** será aberta. Se ela não for aberta, você poderá abri-la manualmente selecionando **Pesquisador de Objetos** > **Conectar** > **Mecanismo de Banco de Dados**.
 
-        ![Conectar ao Pesquisador de Objetos](media/connect-query-sql-server/connectobjexp.png)
+    ![O link de conexão no Pesquisador de Objetos](media/connect-query-sql-server/connectobjexp.png)
 
-1. Na caixa de diálogo **Conectar ao Servidor**, preencha as opções de conexão: 
+2. Na janela **Conectar ao Servidor**, faça o seguinte: 
 
-    - **Tipo de servidor**: Mecanismo de Banco de Dados (normalmente é o selecionado por padrão)
-    - **Autenticação**: Autenticação do Windows (este artigo usa a Autenticação do Windows, mas o Logon do SQL tem suporte e solicita um nome de usuário/senha se selecionado)
+    - Para **Tipo de servidor**, selecione **Mecanismo de Banco de Dados** (geralmente a opção padrão).
+    - Para **Nome do servidor**, insira o nome da instância do SQL Server. [Este artigo usa o nome da instância SQL2016ST no nome do host NODE5 (NODE5\SQL2016ST)]. Se você não tiver certeza de como determinar o nome da instância do SQL Server, confira [Mais dicas e truques para usar o SSMS](ssms-tricks.md#determine-sql-server-name).  
 
-      ![Conexão](media/connect-query-sql-server/connection.png)
+    ![Campo "Nome do servidor" com o nome da instância de exemplo](media/connect-query-sql-server/connection.png)
 
-        Também é possível modificar as opções de conexão adicionais (como o banco de dados ao qual você está se conectando, o valor de tempo limite de conexão e o protocolo de rede) clicando no botão **Opções**. Para a finalidade deste artigo, tudo foi deixado nos valores padrão. 
+    ![Campo "Nome do servidor" com a opção de usar a instância do SQL Server](media/connect-query-sql-server/connection2.png)
 
-1. Depois que os campos foram preenchidos, clique em **Conectar**. 
+    - Para **Autenticação**, selecione **Autenticação do Windows**. Este artigo usa a Autenticação do Windows, mas também é possível fazer o logon do SQL Server. Se você selecionar **Logon do SQL**, você deverá inserir um nome de usuário e uma senha. Para obter mais informações sobre os tipos de autenticação, confira [Conectar ao servidor (mecanismo de banco de dados)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
 
-1. Você pode verificar se a conexão foi bem-sucedida para o SQL Server explorando os objetos no **Pesquisador de Objetos**: 
+    Você também pode modificar as opções de conexão adicionais selecionando **Opções**. Exemplos de opções de conexão são o banco de dados ao qual você está se conectando, o valor do tempo limite de conexão e o protocolo de rede. Este artigo usa os valores padrão para todas as opções. 
+
+3. Depois de preencher todos os campos, selecione **Conectar**. 
+
+4. Verifique se a conexão com a instância do SQL Server foi bem-sucedida explorando os objetos no Pesquisador de Objetos, conforme é mostrado aqui: 
 
    ![Conexão bem-sucedida](media/connect-query-sql-server/successfulconnection.png)
 
-
 ## <a name="create-a-database"></a>Criar um banco de dados
-As etapas a seguir criam outro banco de dados denominado TutorialDB. 
+Crie um banco de dados chamado TutorialDB fazendo o seguinte: 
 
-1. Clique com o botão direito do mouse no servidor no **Pesquisador de Objetos** e selecione **Nova Consulta**:
+1. Clique com o botão direito do mouse na instância do servidor no Pesquisador de Objetos e selecione **Nova Consulta**:
 
-   ![Nova Consulta](media/connect-query-sql-server/newquery.png)
+   ![O link de nova consulta](media/connect-query-sql-server/newquery.png)
    
-1. Cole o seguinte trecho de código T-SQL na janela de consulta: 
+2. Cole o seguinte trecho de código T-SQL na janela de consulta: 
    ```sql
    USE master
    GO
@@ -82,23 +83,22 @@ As etapas a seguir criam outro banco de dados denominado TutorialDB.
    CREATE DATABASE [TutorialDB]
    GO
    ```
-2. Para executar a consulta, clique em **Executar** (ou pressione F5 no teclado). 
+2. Para executar a consulta, selecione **Executar** (ou F5 no teclado). 
 
-   ![Executar Consulta](media/connect-query-sql-server/execute.png)
+   ![O comando Executar](media/connect-query-sql-server/execute.png)
   
- 
-Depois que a consulta for concluída, o novo **TutorialDB** aparece na lista de bancos de dados no **Pesquisador de Objetos**. Se ele não aparecer, clique com botão direito do mouse no nó Banco de Dados e selecione **Atualizar**.  
+    Depois que a consulta for concluída, o novo banco de dados TutorialDB aparecerá na lista de bancos de dados no Pesquisador de Objetos. Se ele não for exibido, clique com o botão direito do mouse no nó **Bancos de Dados** e selecione **Atualizar**.  
 
 
-## <a name="create-a-table"></a>Criar uma Tabela
-As etapas a seguir criarão uma tabela no banco de dados **TutorialDB** recém-criado. No entanto, o editor de consultas ainda está no contexto do banco de dados *mestre* e você deseja criar uma tabela no banco de dados *TutorialDB*. 
+## <a name="create-a-table-in-the-new-database"></a>Criar uma tabela no novo banco de dados
+Nesta seção, você criará uma tabela no banco de dados TutorialDB recém-criado. Como o editor de consultas ainda está no contexto do banco de dados *mestre*, mude o contexto de conexão para o banco de dados *TutorialDB* fazendo o seguinte: 
 
-1. Altere o contexto de conexão da sua consulta de banco de dados mestre para **TutorialDB** selecionando o banco de dados desejado na lista suspensa de banco de dados. 
+1. Selecione o banco de dados desejado na lista suspensa de bancos de dados, conforme é mostrado aqui: 
 
    ![Alterar banco de dados](media/connect-query-sql-server/changedb.png)
 
-1. Cole o seguinte trecho de código T-SQL na janela de consulta, selecione-o e clique em **Executar** (ou pressione F5 no seu teclado): 
-    - Você pode substituir o texto existente na janela de consulta ou acrescentá-lo no final. Se você quiser executar tudo na janela de consulta, clique em **Executar**. Se você quiser executar uma parte do texto, selecione essa parte e clique em **Executar**.  
+2. Cole o seguinte trecho de código T-SQL na janela de consulta, selecione-o e, em seguida, escolha **Executar** (ou F5 no teclado).  
+   Você pode substituir o texto existente na janela de consulta ou acrescentá-lo no final. Para executar tudo na janela de consulta, selecione **Executar**. Para executar uma parte do texto, realce essa parte e, em seguida, selecione **Executar**.  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -116,12 +116,11 @@ As etapas a seguir criarão uma tabela no banco de dados **TutorialDB** recém-c
    );
    GO
    ```
-Depois que a consulta for concluída, a nova tabela **Clientes** aparece na lista de tabelas no **Pesquisador de Objetos**. Se a tabela não estiver visível, clique com botão direito do mouse no nó **TutorialDB > Tabelas** no **Pesquisador de Objetos** e selecione **Atualizar**.
 
-## <a name="insert-rows"></a>Inserir linhas
-A etapa a seguir inserirá algumas linhas na tabela **Clientes** criada anteriormente. 
+Depois que a consulta for concluída, a nova tabela Clientes será exibida na lista de tabelas no Pesquisador de Objetos. Se a tabela não for exibida, clique com o botão direito do mouse no nó **TutorialDB** > **Tabelas** no Pesquisador de Objetos e selecione **Atualizar**.
 
-Cole o seguinte trecho de código T-SQL na janela de consulta e clique em **Executar**: 
+## <a name="insert-rows-into-the-new-table"></a>Inserir linhas na nova tabela
+Insira algumas linhas na tabela Clientes que você já criou. Para fazer isso, cole o seguinte trecho de código T-SQL na janela de consulta e, em seguida, selecione **Executar**: 
 
 
    ```sql
@@ -136,44 +135,49 @@ Cole o seguinte trecho de código T-SQL na janela de consulta e clique em **Exec
    GO
    ```
 
-## <a name="view-query-results"></a>Exibir Resultados da Consulta
-Os resultados de uma consulta são visíveis sob a janela de texto de consulta. As etapas a seguir permitirão consultar a tabela **Clientes** e exibir as linhas que foram inseridas anteriormente.  
+## <a name="query-the-table-and-view-the-results"></a>Consultar a tabela e exibir os resultados
+Os resultados de uma consulta são exibidos abaixo da janela de texto de consulta. Para consultar a tabela Clientes e exibir as linhas que já foram inseridas, faça o seguinte:  
 
-1. Cole o seguinte trecho de código T-SQL na janela de consulta e clique em **Executar**: 
+1. Cole o seguinte trecho de código T-SQL na janela de consulta e, em seguida, selecione **Executar**: 
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
-1. Os resultados da consulta são exibidos na área onde o texto foi inserido: 
 
-   ![Resultados da consulta](media/connect-query-sql-server/queryresults.png)
+    Os resultados da consulta são exibidos na área onde o texto foi inserido: 
 
+   ![A lista de resultados](media/connect-query-sql-server/queryresults.png)
 
-1.  Você pode modificar a maneira como os resultados são apresentados selecionando uma destas opções:
+2. Modifique a maneira em que os resultados são apresentados selecionando uma das seguintes opções:
 
-     ![resultados](media/connect-query-sql-server/results.png)
+     ![Três opções para exibir os resultados da consulta](media/connect-query-sql-server/results.png)
 
-    - Por padrão, os resultados estarão em **Exibição em Grade**, que é o botão do meio e mostra os resultados em uma tabela. 
-    - O primeiro botão exibirá os resultados em **Exibição de Texto**, conforme mostrado na imagem na próxima seção.
-    - O terceiro botão permitirá salvar os resultados em um arquivo com extensão *.rpt por padrão.
+    - O botão do meio exibe os resultados na **Exibição em Grade**, que é a opção padrão. 
+    - O primeiro botão exibe os resultados na **Exibição de Texto**, conforme é mostrado na imagem na próxima seção.
+    - O terceiro botão permite salvar os resultados em um arquivo cuja extensão é .rpt por padrão.
 
-## <a name="verify-your-query-window-connection-properties"></a>Verifique as propriedades de conexão da janela de consulta
-Você pode encontrar informações sobre as propriedades de conexão nos resultados da sua consulta. 
-- Depois de executar a consulta mencionados acima da etapa anterior, revise as propriedades de conexão na parte inferior da janela de consulta.
-    - Você pode determinar a qual servidor e banco de dados você está conectado e o usuário com o qual você fez logon.
-    - Você também pode ver a duração da consulta e o número de linhas retornado pela consulta executada anteriormente.
+## <a name="verify-your-connection-properties-by-using-the-query-window-table"></a>Verificar as propriedades da conexão usando a tabela da janela de consulta
+Você pode encontrar informações sobre as propriedades de conexão nos resultados da sua consulta. Depois de executar na etapa anterior a consulta já mencionada, examine as propriedades de conexão na parte inferior da janela de consulta.
+
+- É possível determinar o servidor e o banco de dados aos quais você está conectado e o nome de usuário com o qual você está conectado.
+- Também é possível exibir a duração da consulta e o número de linhas retornadas pela consulta executada anteriormente.
+
+    ![Propriedades da conexão](media/connect-query-sql-server/connectionproperties.png)
     
-    ![Propriedades da Conexão](media/connect-query-sql-server/connectionproperties.png)  
-    Nesta imagem, os resultados são exibidos em **Exibição de Texto**.  
+    Na imagem, observe que os resultados são exibidos na **Exibição de Texto**. 
 
-## <a name="change-server-connection-within-query-window"></a>Alterar a conexão de servidor na Janela de Consulta
-Você pode alterar a qual servidor sua janela de consulta atual está conectada seguindo estas etapas.
-1. Clique com o botão direito do mouse na janela de consulta > Conexão > Alterar conexão.
-2. Isso abrirá a caixa de diálogo **Conectar ao Servidor** novamente, permitindo que você altere o servidor ao qual sua consulta está conectado. 
+## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Alterar o servidor ao qual a janela de consulta está conectada
+É possível alterar o servidor ao qual a janela de consulta atual está conectada, fazendo o seguinte:
+
+1. Clique com o botão direito do mouse na janela de consulta e, em seguida, selecione **Conexão** > **Alterar conexão**.  
+    A janela **Conectar-se ao servidor** será aberta novamente.
+2. Altere o servidor ao qual a consulta está conectada. 
  
-   ![Alterar Conexão](media/connect-query-sql-server/changeconnection.png)
-   - Observe que isso não altera a qual servidor o **Pesquisador de Objetos** está conectado, apenas a janela de consulta atual. 
+   ![O comando Alterar Conexão](media/connect-query-sql-server/changeconnection.png)
+
+    > [!NOTE]
+    > Esta ação altera apenas o servidor ao qual a janela de consulta está conectada, não o servidor ao qual o Pesquisador de Objetos está conectado. 
 
 
 
