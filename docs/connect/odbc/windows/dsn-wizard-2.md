@@ -1,27 +1,28 @@
 ---
 title: Tela 2 (Driver ODBC para SQL Server) do Assistente de fonte de dados | Microsoft Docs
-ms.custom: 
-ms.date: 09/27/2017
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Tela 2 do Assistente de Fonte de Dados
 
@@ -47,9 +48,13 @@ Especifica que o driver se autenticar ao SQL Server usando uma ID de logon e sen
 
 Especifica que o driver autenticar usando uma ID de logon do Active Directory do Azure e a senha do SQL Server.
 
+### <a name="with-active-directory-interactive-authentication"></a>Com a autenticação do Active Directory interativo
+
+Especifica que o driver autenticar para o SQL Server usando o modo interativo do Active Directory do Azure, fornecendo a ID de logon. Isso vai disparar a caixa de diálogo de aviso de autenticação do Windows Azure.
+
 ### <a name="login-id"></a>ID de Logon
 
-Especifica a ID de logon que o driver usa ao se conectar ao SQL Server se **com autenticação do SQL Server usando uma ID de logon e senha inseridos pelo usuário** ou **autenticação com senha do Active Directory usando uma ID de logon e a senha inserida pelo usuário** está selecionado. Isso se aplica apenas à conexão estabelecida para determinar as configurações padrão do servidor; não se aplica às conexões seguintes feitas com o uso da fonte de dados após sua criação.
+Especifica a ID de logon que o driver usa ao se conectar ao SQL Server se **com autenticação do SQL Server usando uma ID de logon e senha inseridos pelo usuário** ou **autenticação com senha do Active Directory usando uma ID de logon e a senha inserida pelo usuário** ou **usando uma ID de logon de autenticação com o Active Directory interativo inserida pelo usuário** está selecionado. Isso se aplica apenas à conexão estabelecida para determinar as configurações padrão do servidor; não se aplica às conexões seguintes feitas com o uso da fonte de dados após sua criação.
 
 ### <a name="password"></a>Senha
 

@@ -1,29 +1,45 @@
 ---
 title: Notas - Microsoft ODBC Driver for SQL Server no Linux e macOS | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: f193f7e58fa2cf24d02a345d60ca6c74e211fc7e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de versão para o Microsoft ODBC Driver for SQL Server no Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>O que há de novo no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC 17.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Windows
+
+**Recursos adicionados**:
+
+Suporte para `SQL_COPT_SS_CEKCACHETTL` e `SQL_COPT_SS_TRUSTEDCMKPATHS` atributos de conexão (para obter mais informações, consulte [usando sempre criptografado com o Driver ODBC para SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` Permite controlando a hora em que o cache local das chaves de criptografia de coluna existe, bem como liberar a ele
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Permite que o aplicativo restringir as operações de AE para usar somente a lista especificada de chaves mestras de coluna
+
+
+
+Suporte para o carregamento de `.rll` de local padrão (para obter mais informações, consulte [seção do documento de instalação 'Carregamento de arquivo de recurso'](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))
+
+[Correções de bugs](../bug-fixes.md)
+
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>O que há de novo no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17 do Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em Linux e macOS
 

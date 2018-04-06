@@ -1,16 +1,16 @@
 ---
 title: sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_index_population
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0cfb07b67f17deeba2c0995ceace90335082cccb
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 |**is_clustered_index_scan**|**bit**|Indica se a população envolve uma verificação do índice clusterizado.|  
 |**range_count**|**Int**|Número de subintervalos nos quais esta população foi paralelizada.|  
 |**completed_range_count**|**Int**|Número de intervalos para os quais o processamento está concluído.|  
-|**outstanding_batch_count**|**Int**|Número atual de lotes pendentes para esta população. Para obter mais informações, consulte [sys.DM fts_outstanding_batches &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**outstanding_batch_count**|**Int**|Número atual de lotes pendentes para esta população. Para obter mais informações, consulte [sys.DM fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
 |**status**|**Int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Status desta população. Observação: alguns dos estados são transitórios. Um dos seguintes:<br /><br /> 3 = Iniciando<br /><br /> 5 = Processando normalmente<br /><br /> 7 = Parou de processar<br /><br /> Por exemplo, esse status ocorre quando uma mesclagem automática estiver em andamento.<br /><br /> 11 = População anulada<br /><br /> 12 = processando uma extração de semelhança semântica|  
 |**status_description**|**nvarchar(120)**|Descrição do status da população.|  
 |**completion_type**|**Int**|Status de como esta população foi concluída.|  
@@ -64,9 +64,10 @@ ms.lasthandoff: 02/03/2018
  Quando a indexação semântica estatística está habilitada além da indexação de texto completo, a extração semântica e a população de frases-chave, além da extração de dados de semelhança de documento, ocorrem simultaneamente com a indexação de texto completo. A população do índice de semelhança de documento ocorre posteriormente, em uma segunda fase. Para obter mais informações, consulte [gerenciar e monitorar a pesquisa semântica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="permissions"></a>Permissões  
+
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, requer o **administrador do servidor** ou um **administrador do Active Directory do Azure** conta.  
- 
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+  
 ## <a name="physical-joins"></a>Junções físicas  
  ![Junções significativas dessa exibição de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "junções significativas dessa exibição de gerenciamento dinâmico")  
   
@@ -80,7 +81,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Pesquisa de texto completo e exibições de gerenciamento dinâmico de pesquisa semântica e funções &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Pesquisa de texto completo e funções e exibições de gerenciamento dinâmico de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

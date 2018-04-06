@@ -24,11 +24,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 776562d89a12b544d6edbe475358067b39b58988
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 7917f0c1344ff8e79250791d1b262cece9ca3c4c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>Usando palavras-chave de cadeia de caracteres de Conexão com o Driver do OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,6 +94,7 @@ ms.lasthandoff: 03/30/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|O SPN do parceiro de failover. O valor padrão é uma cadeia de caracteres vazia. Uma cadeia de caracteres vazia faz com que o OLE DB Driver para SQL Server usar o padrão, o SPN gerado pelo provedor.|  
 |**Idioma**|SSPROPT_INIT_CURRENTLANGUAGE|O idioma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Habilita ou desabilita MARS na conexão caso o servidor seja [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior. Os valores possíveis são "sim" e "não". O valor padrão é "não".|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Sempre especifique **MultiSubnetFailover = Yes** ao se conectar ao ouvinte do grupo de disponibilidade de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o grupo de disponibilidade ou uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância de Cluster de Failover. **MultiSubnetFailover = Yes** configura OLE DB Driver para SQL Server fornecer detecção mais rápida e conexão ao servidor ativo (atualmente). Os valores possíveis são **Sim** e **Não**. O padrão é **não**. Por exemplo:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Para obter mais informações sobre o Driver do OLE DB para o suporte do SQL Server para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [OLE DB Driver para SQL Server oferecem suporte para alta disponibilidade, recuperação de desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|Sinônimo de "Rede".|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|A biblioteca de rede usada para estabelecer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na organização.|  
 |**Biblioteca de rede**|SSPROP_INIT_NETWORKLIBRARY|Sinônimo de "Rede".|  
@@ -149,6 +150,7 @@ ms.lasthandoff: 03/30/2018
 |**Nome do arquivo**|SSPROP_INIT_FILENAME|O nome do arquivo primário (com o nome do caminho completo incluído) de um banco de dados anexável. Para usar **AttachDBFileName**, você também deve especificar o nome do banco de dados com a palavra-chave do provedor cadeia banco de dados. Caso o banco de dados já tenha sido anexado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não o anexa novamente (ele usa o banco de dados anexado como sendo o padrão da conexão).|  
 |**Segurança Integrada**|DBPROP_AUTH_INTEGRATED|Aceita o valor o "SSPI" para a Autenticação do Windows.|  
 |**Conexão do MARS**|SSPROP_INIT_MARSCONNECTION|Habilita ou desabilita MARS (Multiple Active Result Sets) na conexão. Os valores reconhecidos são "verdadeiro" e "falso". O padrão é "falso".|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Sempre especifique **MultiSubnetFailover = True** ao se conectar ao ouvinte do grupo de disponibilidade de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o grupo de disponibilidade ou uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância de Cluster de Failover. **MultiSubnetFailover = True** configura OLE DB Driver para SQL Server fornecer detecção mais rápida e conexão ao servidor ativo (atualmente). Os valores possíveis são **True** e **False**. O padrão é **False**. Por exemplo:<br /><br /> `MultiSubnetFailover=True`<br /><br /> Para obter mais informações sobre o Driver do OLE DB para o suporte do SQL Server para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [OLE DB Driver para SQL Server oferecem suporte para alta disponibilidade, recuperação de desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Endereço de rede**|SSPROP_INIT_NETWORKADDRESS|O endereço de rede de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na organização.<br /><br /> Para obter mais informações sobre sintaxe de endereço válida, consulte a descrição do **endereço** palavra-chave, neste tópico.|  
 |**Biblioteca de rede**|SSPROP_INIT_NETWORKLIBRARY|A biblioteca de rede usada para estabelecer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na organização.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Tamanho do pacote de rede. O padrão é 4096.|  
@@ -200,6 +202,7 @@ ms.lasthandoff: 03/30/2018
 |**Nome do arquivo**|SSPROP_INIT_FILENAME|O nome do arquivo primário (com o nome do caminho completo incluído) de um banco de dados anexável. Para usar **AttachDBFileName**, você também deve especificar o nome do banco de dados com a palavra-chave do provedor cadeia banco de dados. Caso o banco de dados já tenha sido anexado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não o anexa novamente (ele usa o banco de dados anexado como sendo o padrão da conexão).|  
 |**Segurança Integrada**|DBPROP_AUTH_INTEGRATED|Aceita o valor o "SSPI" para a Autenticação do Windows.|  
 |**Conexão do MARS**|SSPROP_INIT_MARSCONNECTION|Habilita ou desabilita MARS na conexão caso o servidor seja [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior. Os valores reconhecidos são "verdadeiro" e "falso".O padrão é "falso".|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Sempre especifique **MultiSubnetFailover = True** ao se conectar ao ouvinte do grupo de disponibilidade de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o grupo de disponibilidade ou uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância de Cluster de Failover. **MultiSubnetFailover = True** configura OLE DB Driver para SQL Server fornecer detecção mais rápida e conexão ao servidor ativo (atualmente). Os valores possíveis são **True** e **False**. O padrão é **False**. Por exemplo:<br /><br /> `MultiSubnetFailover=True`<br /><br /> Para obter mais informações sobre o Driver do OLE DB para o suporte do SQL Server para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [OLE DB Driver para SQL Server oferecem suporte para alta disponibilidade, recuperação de desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Endereço de rede**|SSPROP_INIT_NETWORKADDRESS|O endereço de rede de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na organização.<br /><br /> Para obter mais informações sobre sintaxe de endereço válida, consulte a descrição do **endereço** palavra-chave, neste tópico.|  
 |**Biblioteca de rede**|SSPROP_INIT_NETWORKLIBRARY|A biblioteca de rede usada para estabelecer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na organização.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Tamanho do pacote de rede. O padrão é 4096.|  
@@ -215,6 +218,6 @@ ms.lasthandoff: 03/30/2018
  **Observação** na cadeia de conexão, a propriedade "Old Password" define SSPROP_AUTH_OLD_PASSWORD, que é a senha atual (provavelmente expirada) que não está disponível por meio de uma propriedade de cadeia de caracteres do provedor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando aplicativos com o Driver do OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Criação de aplicativos com o Driver do OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

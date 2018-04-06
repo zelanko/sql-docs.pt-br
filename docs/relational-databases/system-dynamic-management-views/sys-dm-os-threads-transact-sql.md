@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_threads (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_threads_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41727f804fb31ed6773c671a40b63cb02ca6793b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ebecbd762d9c689d5564772c377001d69a1941b2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,17 +64,18 @@ ms.lasthandoff: 02/03/2018
 |fiber_data|**varbinary(8)**|Fibra do Win32 atual sendo executada no thread. Só é aplicável quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para lightweight pooling.|  
 |thread_handle|**varbinary(8)**|Somente para uso interno.|  
 |event_handle|**varbinary(8)**|Somente para uso interno.|  
-|scheduler_address|**varbinary(8)**|Endereço de memória do agendador associado a esse thread. Para obter mais informações, consulte [sys.DM os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
-|worker_address|**varbinary(8)**|Endereço de memória do trabalhador ligado a esse thread. Para obter mais informações, consulte [sys.DM os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Endereço de memória do agendador associado a esse thread. Para obter mais informações, consulte [sys.DM os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|worker_address|**varbinary(8)**|Endereço de memória do trabalhador ligado a esse thread. Para obter mais informações, consulte [sys.DM os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8)**|Endereço de contexto de fibra interno. Só é aplicável quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para lightweight pooling.|  
 |self_address|**varbinary(8)**|Ponteiro de consistência interno.|  
 |processor_group|**smallint**|**Aplica-se a**: do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID do grupo de processadores.|  
 |pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
+
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, requer o **administrador do servidor** ou um **administrador do Active Directory do Azure** conta.  
-  
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+
 ## <a name="examples"></a>Exemplos  
  Na inicialização, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia threads e associa os trabalhadores a esses threads. Porém, componentes externos, como um procedimento armazenado estendido, podem iniciar threads sob o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem nenhum controle desses threads. os_threads pode fornecer informações sobre threads não autorizados que consomem recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo.  
   
@@ -91,7 +92,7 @@ SELECT *
   
 ## <a name="see-also"></a>Consulte também  
   [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

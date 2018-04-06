@@ -1,33 +1,33 @@
 ---
 title: sys.database_service_objectives (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "Pool Elástico"
-- "pool Elástico, gerenciamento"
+- Pool Elástico
+- pool Elástico, gerenciamento
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: 
+caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 40f4d0d98cd33a57d6ab1e6f9c46ebd2174c9a15
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ Retorna a edição (camada de serviço), o objetivo de serviço (preço) e o nom
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|A ID do banco de dados, exclusivo em uma instância do servidor de banco de dados SQL. Junções com [sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edição|sysname|A camada de serviço para o banco de dados ou de data warehouse: **básica**, **padrão**, **Premium** ou **Data Warehouse**.|  
-|service_objective|sysname|A camada de preços do banco de dados. Retorna se o banco de dados em um pool Elástico, **ElasticPool**.<br /><br /> Sobre o **básica** camada, retorna **básica**.<br /><br /> **Banco de dados único em uma camada de serviço padrão** retorna um dos seguintes: S0, S1, S2 ou S3.<br /><br /> **Banco de dados único em uma camada premium** retorna o seguinte: P1, P2, P4, P6/P3 ou P11.<br /><br /> **SQL Data Warehouse** retorna DW100 por meio de DW2000.|  
+|database_id|int|A ID do banco de dados, exclusivo em uma instância do servidor de banco de dados SQL. Junções com [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|edição|sysname|A camada de serviço para o banco de dados ou de data warehouse: **básica**, **padrão**, **Premium**, **geral**,  **Negócios críticos**, ou **do Data Warehouse**.|  
+|service_objective|sysname|A camada de preços do banco de dados. Retorna se o banco de dados em um pool Elástico, **ElasticPool**.<br /><br /> Sobre o **básica** camada, retorna **básica**.<br /><br /> Banco de dados único em uma camada de serviço padrão retorna os valores atuais válidos para esta camada.<br /><br /> Banco de dados único em uma camada premium retorna os valores atuais válidos para esta camada de serviço.<br /><br />Único banco de dados na camada de serviço de uso geral retorna os valores atuais válidos para esta camada de serviço.<br /><br />Único banco de dados na camada de serviço de negócios críticos retorna os valores atuais válidos para esta camada de serviço.<br /><br /> SQL Data Warehouse retorna os valores válidos atuais para SQL Data Warehouse.|  
 |elastic_pool_name|sysname|O nome do [pool Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que o banco de dados pertence. Retorna **nulo** se o banco de dados é um banco de dados ou um warehoue de dados.|  
   
 ## <a name="permissions"></a>Permissões  

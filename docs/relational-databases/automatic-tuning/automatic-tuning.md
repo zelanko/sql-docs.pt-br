@@ -1,31 +1,31 @@
 ---
-title: "Ajuste automático | Microsoft Docs"
-description: "Saiba mais sobre o ajuste automático no SQL Server e banco de dados do SQL Azure"
-ms.custom: 
+title: Ajuste automático | Microsoft Docs
+description: Saiba mais sobre o ajuste automático no SQL Server e banco de dados do SQL Azure
+ms.custom: ''
 ms.date: 08/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: automatic-tuning
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance tuning [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Quando o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] aplica-se a última conh
 
 Habilite o ajuste automático por banco de dados e especifique que o último bom plano deve ser forçado sempre que uma regressão da alteração do plano for detectada. O ajuste automático é habilitado com o seguinte comando:
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -92,7 +92,7 @@ Planos forçados manualmente não devem ser forçados para sempre, porque o [!IN
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece todas as exibições necessárias e procedimentos necessários para monitorar o desempenho e corrigir problemas no repositório de consultas.
 
-Em [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], você pode encontrar regressões de escolha do plano usando exibições de sistema do repositório de consultas. Em [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra as regressões de escolha do plano potencial e as ações recomendadas que devem ser aplicadas no [sys.dm_db_tuning_recommendations &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) exibição. O modo de exibição mostra informações sobre o problema, a importância do problema e detalhes de como a consulta identificada, a ID do plano retornada, a ID do plano que foi usada como linha de base para comparação e o [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instrução que pode ser executada para corrigir o problema.
+Em [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], você pode encontrar regressões de escolha do plano usando exibições de sistema do repositório de consultas. Em [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra as regressões de escolha do plano potencial e as ações recomendadas que devem ser aplicadas no [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) exibição. O modo de exibição mostra informações sobre o problema, a importância do problema e detalhes de como a consulta identificada, a ID do plano retornada, a ID do plano que foi usada como linha de base para comparação e o [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instrução que pode ser executada para corrigir o problema.
 
 | tipo | descrição | datetime | score | detalhes | … |
 | --- | --- | --- | --- | --- | --- |
@@ -104,11 +104,12 @@ Algumas colunas nessa exibição são descritas na lista a seguir:
  - Descrição que contém informações sobre por que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] considera que essa alteração de plano é uma regressão de desempenho potencial.
  - Data e hora a regressão potencial é detectada.
  - Pontuação dessa recomendação. 
- - Detalhes sobre os problemas, como ID do plano detectado, a ID do plano retornado, ID do plano que deve ser forçado para corrigir o problema, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que pode ser aplicada para corrigir o problema, etc. Os detalhes estão armazenados [formato JSON](../../relational-databases/json/index.md).
+ - Detalhes sobre os problemas, como ID do plano detectado, a ID do plano retornado, ID do plano que deve ser forçado para corrigir o problema [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ script que pode ser aplicado para corrigir o problema, etc. Os detalhes estão armazenados [formato JSON](../../relational-databases/json/index.md).
 
 Use a consulta a seguir para obter um script que corrige o problema e obter informações adicionais sobre o estimado obter:
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -171,7 +172,7 @@ Ações necessárias para criar índices necessários no [!INCLUDE[ssazure_md](.
 
 ### <a name="alternative---manual-index-management"></a>Alternativa - gerenciamento de índice manual
 
-Sem o gerenciamento automático de índice, usuário precisa consultar manualmente [sys.DM db_missing_index_details &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) para localizar os índices que podem melhorar o desempenho, criar índices usando os detalhes fornecidos neste modo de exibição e monitorar o desempenho da consulta manualmente. Para localizar os índices devem ser descartados, os usuários devem monitorar estatísticas de uso operacional dos índices para índices de localizar raramente usada.
+Sem o gerenciamento automático de índice, usuário precisa consultar manualmente [sys.DM db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) para localizar os índices que podem melhorar o desempenho, criar índices usando os detalhes fornecido neste modo de exibição e manualmente monitorar o desempenho da consulta. Para localizar os índices devem ser descartados, os usuários devem monitorar estatísticas de uso operacional dos índices para índices de localizar raramente usada.
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifica o processo. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analisa a carga de trabalho, identifica as consultas que podem ser executadas mais rapidamente com um novo índice e identifica os índices duplicados ou não utilizados. Encontre mais informações sobre a identificação de índices que devem ser alteradas em [encontrar recomendações de índice no portal do Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
 

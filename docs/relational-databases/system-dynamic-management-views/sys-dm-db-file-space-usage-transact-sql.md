@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_file_space_usage
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e4e6cfa5fd274a9a3bc3e7a9e3a0f981be8e2b46
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 65be93c18aed0f9c03ea781ee7de3069c4e99698
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 |total_page_count|**bigint**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número total de páginas no arquivo.|  
 |allocated_extent_page_count|**bigint**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número total de páginas nas extensões alocadas no arquivo.|  
 |unallocated_extent_page_count|**bigint**|Número total de páginas nas extensões não alocadas no arquivo.<br /><br /> Páginas não utilizadas em extensões alocadas não são incluídas.|  
-|version_store_reserved_page_count|**bigint**|Número total de páginas nas extensões uniformes alocadas para o repositório de versão. As páginas do repositório de versão nunca são alocadas de eventos mistos.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Para obter mais informações, consulte [tran_version_store &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
+|version_store_reserved_page_count|**bigint**|Número total de páginas nas extensões uniformes alocadas para o repositório de versão. As páginas do repositório de versão nunca são alocadas de eventos mistos.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Para obter mais informações, consulte [tran_version_store & #40; Transact-SQL & #41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
 |user_object_reserved_page_count|**bigint**|Número total de páginas alocadas de extensões uniformes para objetos de usuário no banco de dados. Páginas não usadas de uma extensão alocada são incluídas na contagem.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Você pode usar a coluna total_pages no [allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) exibição para retornar a contagem de páginas reservadas de cada unidade de alocação no objeto de usuário do catálogo. No entanto, observe que a coluna total_pages inclui páginas IAM.|  
 |internal_object_reserved_page_count|**bigint**|Número total de páginas nas extensões uniformes alocadas para objetos internos no arquivo. Páginas não usadas de uma extensão alocada são incluídas na contagem.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Não há exibição do catálogo ou objeto de gerenciamento dinâmico que retorne a contagem de páginas de cada objeto interno.|  
 |mixed_extent_page_count|**bigint**|Número total de páginas alocadas e não alocadas nas extensões mistas alocadas no arquivo. As extensões mistas contêm páginas alocadas a objetos diferentes. Essa contagem inclui todas as páginas IAM no arquivo.|
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
   
  O conteúdo do repositório de versão atual está no [tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). As páginas de repositório de versão são controladas no nível de arquivo, em vez de no nível de sessão e tarefa, porque são recursos globais. Uma sessão pode gerar versões, mas as versões não podem ser removidas quando a sessão terminar. A limpeza total do repositório de versão deve considerar a transação mais longa em execução que exige acesso à versão particular. A transação de execução mais longa relacionada à versão repositório de limpeza pode ser descoberta visualizando a coluna elapsed_time_seconds em [sys.DM tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   
- Mudanças frequentes na coluna mixed_extent_page_count podem indicar uso pesado de páginas SGAM. Quando isso ocorrer, você poderá ver muitas esperas de PAGELATCH_UP nas quais o recurso de espera é uma página SGAM. Para obter mais informações, consulte [sys.DM os_waiting_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys.DM os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), e [sys.DM os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
+ Mudanças frequentes na coluna mixed_extent_page_count podem indicar uso pesado de páginas SGAM. Quando isso ocorrer, você poderá ver muitas esperas de PAGELATCH_UP nas quais o recurso de espera é uma página SGAM. Para obter mais informações, consulte [sys.DM os_waiting_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys.DM os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), e [sys.dm_os_latch_ estatísticas &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
   
 ## <a name="user-objects"></a>Objetos do usuário  
  Os objetos a seguir são incluídos nos contadores de páginas de objeto do usuário:  
@@ -94,11 +94,11 @@ ms.lasthandoff: 02/03/2018
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Um para um|  
   
-## <a name="permissions"></a>Permissões  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  
-  
- Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.  
-  
+## <a name="permissions"></a>Permissões
+
+Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>Determinando a quantidade de espaço livre em tempdb  
@@ -125,6 +125,6 @@ FROM sys.dm_db_file_space_usage;
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

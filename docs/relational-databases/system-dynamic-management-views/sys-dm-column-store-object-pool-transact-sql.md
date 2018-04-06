@@ -1,30 +1,30 @@
 ---
 title: sys.dm_column_store_object_pool (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c77d44fd04f328cad314b50c16e6f70970c5e9d8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6c9ce143112a96856879fa90a1b29d2a9a451b58
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ ms.lasthandoff: 02/03/2018
 |`column_id`|`int`|ID da coluna columnstore. Isso é NULL para DELETE_BITMAP.| 
 |`row_group_id`|`int`|ID do rowgroup.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – um segmento de coluna. `object_id`é a ID do segmento. Um segmento armazena todos os valores para uma coluna dentro de um grupo de linhas. Por exemplo, se uma tabela tiver 10 colunas, há 10 segmentos de coluna por grupo de linhas. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – um dicionário global que contém informações de pesquisa para todos os segmentos de coluna na tabela.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - um dicionário local associado a uma coluna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – outra representação do dicionário global. Isso fornece uma pesquisa inversa de valor para dictionary_id. Usado para criar segmentos compactados como parte do motor de tupla ou de carregamento em massa.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – um bitmap que controla o segmento exclui. Há um bitmap de exclusão por partição.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – um segmento de coluna. `object_id` é a ID do segmento. Um segmento armazena todos os valores para uma coluna dentro de um grupo de linhas. Por exemplo, se uma tabela tiver 10 colunas, há 10 segmentos de coluna por grupo de linhas. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – um dicionário global que contém informações de pesquisa para todos os segmentos de coluna na tabela.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - um dicionário local associado a uma coluna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – outra representação do dicionário global. Isso fornece uma pesquisa inversa de valor para dictionary_id. Usado para criar segmentos compactados como parte do motor de tupla ou de carregamento em massa.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – um bitmap que controla o segmento exclui. Há um bitmap de exclusão por partição.|  
 |`access_count`|`int`|Número de leitura ou gravação acessa a este objeto.|  
 |`memory_used_in_bytes`|`bigint`|Memória usada por este objeto no pool de objeto.|  
 |`object_load_time`|`datetime`|Hora de quando object_id foi colocado no pool de objetos.|  
   
 ## <a name="permissions"></a>Permissões  
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, requer o **administrador do servidor** ou um **administrador do Active Directory do Azure** conta.  
 
+Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
  
 ## <a name="see-also"></a>Consulte também  
   

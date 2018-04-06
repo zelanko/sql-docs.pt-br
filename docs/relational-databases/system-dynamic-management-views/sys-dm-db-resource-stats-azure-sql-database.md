@@ -1,16 +1,16 @@
 ---
 title: sys.DM db_resource_stats (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,20 +58,17 @@ ms.lasthandoff: 02/03/2018
  Essa exibição exige a permissão VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Remarks  
- Os dados retornados por **sys.DM db_resource_stats** é expresso como uma porcentagem do máximo permitido de limites DTU para o nível de desempenho/da camada de serviço que você está executando para bancos de dados Basic, Standard e Premium. Para as camadas Web e Negócios, esses números indicam as percentagens em termos da camada de desempenho Standard S2. Por exemplo, ao executar com relação a um banco de dados Web ou Business, se avg_cpu_percent retornar 70%, isso indica 70% do limite da camada S2. Além disso, para camadas Web e Negócios, as percentagens podem refletir um número além de 100%, o que também é baseado no limite da camada S2.  
-  
+ Os dados retornados por **sys.DM db_resource_stats** é expresso como uma porcentagem do máximo permitido de limites DTU para o nível de desempenho/da camada de serviço que você está executando para bancos de dados Basic, Standard e Premium.
+ 
  Se o banco de dados fez failover para outro servidor nos últimos 60 minutos, a exibição retornará apenas dados para o tempo pelo qual ele foi o banco de dados primário desde esse failover.  
   
- Para obter uma exibição menos detalhada desses dados, use **sys. resource_stats** exibição do catálogo de **mestre** banco de dados. Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [sys. resource_stats &#40; Banco de dados SQL do Azure &#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Para obter uma exibição menos detalhada desses dados, use **sys. resource_stats** exibição do catálogo de **mestre** banco de dados. Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [sys. resource_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Quando um banco de dados é um membro de um pool Elástico, as estatísticas de recursos apresentadas como valores de porcentagem são expressos como o percentual do limite máximo de DTU de bancos de dados conforme definido na configuração do pool Elástico.  
   
 ## <a name="example"></a>Exemplo  
   
-> [!NOTE]  
->  Para as camadas Web e Negócios, esses números indicam as percentagens em termos da camada de desempenho Standard S2. Por exemplo, ao executar com relação a um banco de dados Web ou Business, se avg_cpu_percent retornar 70%, isso indica 70% do limite da camada S2. Além disso, para camadas Web e Negócios, as percentagens podem refletir um número além de 100%, o que também é baseado no limite da camada S2.  
-  
- O exemplo a seguir retorna os dados de utilização de recursos ordenados pelo tempo mais recente do banco de dados conectado no momento.  
+O exemplo a seguir retorna os dados de utilização de recursos ordenados pelo tempo mais recente do banco de dados conectado no momento.  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  
@@ -106,7 +103,7 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys. resource_stats &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys. resource_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Limites e recursos de nível de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

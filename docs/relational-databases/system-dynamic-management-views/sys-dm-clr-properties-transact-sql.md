@@ -1,16 +1,16 @@
 ---
 title: sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_clr_properties
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f26f5870db7794bb52da665a17a3f70198fc341
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/03/2018
   
  O **Mscoree não carregado** e **Mscoree está carregado** estados mostra a progressão da inicialização de CLR hospedado na inicialização do servidor e não devem ser vistos.  
   
- O **versão de CLR bloqueada com mscoree** estado pode ser visto em que o CLR hospedado não está sendo usado e, assim, ele ainda não foi inicializado. O CLR hospedado é inicializado na primeira vez em uma instrução DDL (como [CREATE ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md)) ou um objeto de banco de dados gerenciado é executado.  
+ O **versão de CLR bloqueada com mscoree** estado pode ser visto em que o CLR hospedado não está sendo usado e, assim, ele ainda não foi inicializado. O CLR hospedado é inicializado na primeira vez em uma instrução DDL (como [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) ou um objeto de banco de dados gerenciado é executado.  
   
  O **CLR é inicializado** estado indica que o CLR hospedado foi inicializado com êxito. Observe que isso não indica se a execução do código CLR do usuário foi habilitada. Se a execução de código CLR do usuário for o primeira habilitada e, em seguida, desabilitada usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimento armazenado, o valor de estado ainda será **CLR é inicializado**.  
   
@@ -78,10 +78,10 @@ ms.lasthandoff: 02/03/2018
  As propriedades e os valores deste modo de exibição podem ser alterado em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devido a aprimoramentos da funcionalidade da integração CLR.  
   
 ## <a name="permissions"></a>Permissões  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  
   
- Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.  
-  
+Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir recupera informações sobre o CLR hospedado:  
   
@@ -92,6 +92,6 @@ FROM sys.dm_clr_properties;
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Common Language Runtime relacionados exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de relacionados do Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_tran_locks
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c54a97a7b84dcb4d9873ee2537e31714b6f62172
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,22 +53,23 @@ ms.lasthandoff: 02/20/2018
 |**resource_lock_partition**|**Int**|ID da partição de bloqueio de um recurso de bloqueio particionado. O valor para recursos de bloqueio sem-partição é 0.|  
 |**request_mode**|**nvarchar(60)**|Modo da solicitação. Para solicitações concedidas, esse é o modo concedido; para solicitações em espera, esse é o modo sendo solicitado.|  
 |**request_type**|**nvarchar(60)**|Tipo de solicitação. O valor é LOCK.|  
-|**request_status**|**nvarchar(60)**|Status atual desta solicitação. Os valores possíveis GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT ou ABORT_BLOCKERS. Para obter mais informações sobre as esperas de baixa prioridade e bloqueadores de anulação, consulte o *low_priority_lock_wait* seção [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_status**|**nvarchar(60)**|Status atual desta solicitação. Os valores possíveis GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT ou ABORT_BLOCKERS. Para obter mais informações sobre as esperas de baixa prioridade e bloqueadores de anulação, consulte o *low_priority_lock_wait* seção [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Retorna um número aproximado de vezes que o mesmo solicitante solicitou o recurso.|  
 |**request_lifetime**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**Int**|ID da sessão que atualmente possui esta solicitação. A ID da sessão pode ser alterada para transações distribuídas e associadas. Um valor de -2 indica que a solicitação pertence a uma transação distribuída órfã. Um valor de -3 indica que a solicitação pertence a uma transação de recuperação adiada, como uma reversão de transação adiada na recuperação porque a reversão não pôde ser concluída corretamente.|  
 |**request_exec_context_id**|**Int**|ID do contexto de execução do processo que atualmente possui esta solicitação.|  
 |**request_request_id**|**Int**|ID de solicitação (ID lote) do processo que atualmente possui esta solicitação. Esse valor será alterado sempre que a conexão ativa MARS (Vários Conjuntos de Resultados Ativos) de uma transação for alterada.|  
 |**request_owner_type**|**nvarchar(60)**|Tipo de entidade que é proprietária da solicitação. Solicitações de gerenciador de bloqueio podem ser de propriedade de várias entidades. Os valores possíveis são:<br /><br /> TRANSACTION = A solicitação que é propriedade de uma transação.<br /><br /> CURSOR = A solicitação que é propriedade de um cursor.<br /><br /> SESSION = A solicitação que é propriedade para uma sessão de usuário.<br /><br /> SHARED_TRANSACTION_WORKSPACE = A solicitação que é propriedade de uma parte compartilhada da área de trabalho da transação.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = A solicitação é de propriedade de uma parte exclusiva da área de trabalho da transação.<br /><br /> NOTIFICATION_OBJECT = A solicitação é de propriedade de um componente interno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse componente solicitou que o gerenciador de bloqueio o notifique quando outro componente estiver esperando para obter o bloqueio. O recurso FileTable é um componente que usa esse valor.<br /><br /> **Observação:** espaços de trabalho são usados internamente para manter bloqueios para sessões inscritas.|  
-|**request_owner_id**|**bigint**|ID do proprietário específico desta solicitação.<br /><br /> Quando uma transação for a proprietária da solicitação, esse valor conterá a ID da transação.<br /><br /> Quando uma FileTable for a proprietária da solicitação, **request_owner_id** tem um dos valores a seguir.<br /><br /> <br /><br /> -4: uma FileTable obteve um bloqueio de banco de dados.<br /><br /> -3: uma FileTable obteve um bloqueio de tabela.<br /><br /> Outro valor: O valor representa um identificador de arquivo. Esse valor também aparece como **fcb_id** no modo de exibição de gerenciamento dinâmico [sys.DM filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_id**|**bigint**|ID do proprietário específico desta solicitação.<br /><br /> Quando uma transação for a proprietária da solicitação, esse valor conterá a ID da transação.<br /><br /> Quando uma FileTable for a proprietária da solicitação, **request_owner_id** tem um dos valores a seguir.<br /><br /> <br /><br /> -4: uma FileTable obteve um bloqueio de banco de dados.<br /><br /> -3: uma FileTable obteve um bloqueio de tabela.<br /><br /> Outro valor: O valor representa um identificador de arquivo. Esse valor também aparece como **fcb_id** no modo de exibição de gerenciamento dinâmico [sys.DM filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID do proprietário específico desta solicitação. Esse valor é usado apenas uma transação distribuída em que o valor corresponde ao GUID de MS DTC da transação.|  
-|**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Esse valor representa a ID de lockspace do solicitante. Essa ID determina se dois solicitantes são compatíveis entre si e podem receber bloqueios nos modos que de outra forma entrariam em conflito entre si.|  
+|**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Este valor representa a ID de lockspace do solicitante. Essa ID determina se dois solicitantes são compatíveis entre si e podem receber bloqueios nos modos que de outra forma entrariam em conflito entre si.|  
 |**lock_owner_address**|**varbinary(8)**|Endereço de memória da estrutura de dados interna que é usada para rastrear esta solicitação. Esta coluna pode ser unida a com **resource_address** coluna **sys.DM os_waiting_tasks**.|  
 |**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> O identificador para o nó que essa distribuição é no.|  
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
+
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, requer o **administrador do servidor** ou um **administrador do Active Directory do Azure** conta.  
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
  
 ## <a name="remarks"></a>Remarks  
  Um status de solicitação concedida indica que um bloqueio foi concedido em um recurso ao solicitante. Uma solicitação de espera indica que a solicitação ainda não foi concedida. Os seguintes tipos de solicitação de espera são retornados pelo **request_status** coluna:  
@@ -85,7 +86,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
   
 -   Use SET TRANSACTION ISOLATION LEVEL para especificar o nível de bloqueio de uma sessão. Para obter mais informações, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
--   Use dicas de tabela de bloqueio para especificar o nível de bloqueio de uma referência individual de uma tabela em uma cláusula FROM. Para sintaxe e restrições, consulte [dicas de tabela &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Use dicas de tabela de bloqueio para especificar o nível de bloqueio de uma referência individual de uma tabela em uma cláusula FROM. Para sintaxe e restrições, consulte [dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Um recurso em execução em uma ID de sessão pode ter mais de um bloqueio concedido. Diferentes entidades que estão executando em uma sessão podem ter um bloqueio no mesmo recurso e as informações são exibidas no **request_owner_type** e **request_owner_id** colunas retornado por **sys.DM tran_locks**. Se várias instâncias do mesmo **request_owner_type** existir, o **request_owner_id** coluna é usada para diferenciar cada instância. Para transações distribuídas, o **request_owner_type** e **request_owner_guid** colunas mostrará as informações de entidade diferente.  
   
@@ -278,7 +279,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- Os XEvents a seguir estão relacionados a partição **SWITCH** e recompilação de índice online. Para obter informações sobre a sintaxe, consulte [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).  
+ Os XEvents a seguir estão relacionados a partição **SWITCH** e recompilação de índice online. Para obter informações sobre a sintaxe, consulte [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   

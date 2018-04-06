@@ -1,27 +1,28 @@
 ---
-title: "Caixa de diálogo de logon do SQL Server (ODBC) | Microsoft Docs"
-ms.custom: 
-ms.date: 09/27/2017
+title: Caixa de diálogo de logon do SQL Server (ODBC) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Caixa de diálogo Logon do SQL Server (ODBC)
 
@@ -44,6 +45,7 @@ Seleciona o modo de autenticação de um dos seguintes:
 - **Integrada do Windows** autenticação usando a conta do usuário conectado no momento
 - **Senha do Active Directory** com ID de logon e senha
 - **Integrado ao Active Directory** autenticação usando a conta do usuário conectado no momento
+- **Active Directory interativo** autenticação com a ID de logon
 
 Consulte [dados fonte Assistente tela 2](../../../connect/odbc/windows/dsn-wizard-2.md) para obter mais informações sobre os modos de autenticação.
 
@@ -53,7 +55,7 @@ Se você usar uma conexão confiável, poderá especificar um SPN (nome de entid
 
 ### <a name="login-id"></a>ID de Logon
 
-Especifica a ID de logon do SQL Server ou do Active Directory do Azure a ser usado para a conexão se **modo de autenticação** é definido como **do SQL Server** ou **senha do Active Directory**. Caso contrário, o **ID de logon** caixa está desabilitada.
+Especifica a ID de logon do SQL Server ou do Active Directory do Azure a ser usado para a conexão se **modo de autenticação** é definido como **do SQL Server** ou **senha do Active Directory** ou **Do active Directory interativo**. Caso contrário, o **ID de logon** caixa está desabilitada.
 
 ### <a name="password"></a>Senha
 
@@ -75,7 +77,7 @@ Especifica a nova senha.
 
 Especifica a nova senha uma segunda vez, para confirmação.
 
-### <a name="database"></a>Banco de Dados
+### <a name="database"></a>banco de dados
 
 Especifica o banco de dados padrão a ser usado na conexão. Essa configuração substitui o banco de dados padrão especificado para o logon no servidor. Se nenhum banco de dados for especificado, a conexão usará o banco de dados padrão especificado para o logon no servidor.
 
