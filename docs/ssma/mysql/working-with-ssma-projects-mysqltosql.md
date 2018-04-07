@@ -2,14 +2,15 @@
 title: Trabalhando com projetos do SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7fd7677d8194938fdc11dc364de8ceea9fe1414
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04c7be6a8dd46d0f35b14eb66eb1c244a5abe5cc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Trabalhando com projetos do SSMA (MySQLToSQL)
 Para migrar bancos de dados MySQL para o SQL Server ou SQL Azure, primeiro você deve criar um projeto SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -42,7 +43,7 @@ Para migrar bancos de dados MySQL para o SQL Server ou SQL Azure, primeiro você
   
 -   Configurações de projeto.  
   
-Quando você abre um projeto, ele é desconectado do MySQL e SQL Server ou SQL Azure. Que lhe permite trabalhar offline. Para obter mais informações sobre reconectar-se ao SQL Server, consulte [se conectar ao SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+Quando você abre um projeto, ele é desconectado do MySQL e SQL Server ou SQL Azure. Que lhe permite trabalhar offline. Para obter mais informações sobre reconectar-se ao SQL Server, consulte [conectando ao SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="reviewing-default-project-settings"></a>Revisando parâmetros de projeto padrão  
 O SSMA contém várias configurações para converter e carregamento de banco de dados, migração de dados e sincronizando SSMA com o MySQL e SQL Server ou SQL Azure. As configurações padrão são apropriadas para vários usuários. No entanto, antes de criar um novo projeto SSMA, você deve examinar as configurações. Se necessário, você pode alterar as configurações padrão que serão usadas para todos os seus projetos novos.  
@@ -55,19 +56,19 @@ O SSMA contém várias configurações para converter e carregamento de banco de
   
 3.  No painel esquerdo, clique em **conversão**.  
   
-4.  No painel direito, revise e altere as configurações conforme necessário. Para obter mais informações sobre essas configurações, consulte [configurações de projeto &#40; Conversão de &#41; &#40; MySQLToSQL &#41; ](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
+4.  No painel direito, revise e altere as configurações conforme necessário. Para obter mais informações sobre essas configurações, consulte [configurações de projeto &#40;conversão&#41; &#40;MySQLToSQL&#41; ](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
   
 5.  Repita as etapas 1 a 3 para as páginas de migração, sincronização, o SQL Azure, GUI e mapeamento de tipo.  
   
--   Para obter informações sobre as configurações de migração, consulte [configurações de projeto &#40; Migração de &#41; &#40; MySQLToSQL &#41; ](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
+-   Para obter informações sobre as configurações de migração, consulte [configurações de projeto &#40;migração&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
   
--   Para obter informações sobre configurações de sincronização para o SQL Server, consulte [configurações de projeto &#40; Sincronização &#41; &#40; MySQLToSQL &#41; ](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
+-   Para obter informações sobre configurações de sincronização para o SQL Server, consulte [configurações de projeto &#40;sincronização&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
 -   Para obter informações sobre configurações de interface gráfica do usuário, consulte [projeto configurações (GUI) (SSMA comum)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
--   Para obter informações sobre configurações de mapeamento de tipo de dados, consulte [configurações de projeto &#40; Mapeamento de tipo de &#41; &#40; MySQLToSQL &#41; ](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+-   Para obter informações sobre configurações de mapeamento de tipo de dados, consulte [configurações de projeto &#40;mapeamento de tipo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
--   Para obter informações sobre as configurações do SQL Azure, consulte [configurações de projeto &#40; Banco de dados SQL do Azure &#41; &#40; MySQLToSQL &#41; ](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   Para obter informações sobre as configurações do SQL Azure, consulte [configurações de projeto &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
   
 > [!NOTE]  
 > As configurações do SQL Azure serão exibidas apenas quando você seleciona **migração para o SQL Azure** durante a criação de um projeto.  
@@ -93,16 +94,16 @@ Para migrar dados de bancos de dados MySQL para o SQL Server ou SQL Azure, você
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
   
-    -   Banco de dados SQL do Azure  
+    -   Azure SQL DB  
   
 E, em seguida, clique em **Okey**  
   
 O SSMA cria o arquivo de projeto.  
   
 ## <a name="customizing-project-settings"></a>Personalizando configurações de projeto  
-Além de definir o padrão configurações de projeto que se aplicam a todos os novos projetos do SSMA, você também podem personalizar as configurações para cada projeto. Para obter mais informações, consulte [definindo opções de projeto &#40; MySQLToSQL &#41; ](../../ssma/mysql/setting-project-options-mysqltosql.md).  
+Além de definir o padrão configurações de projeto que se aplicam a todos os novos projetos do SSMA, você também podem personalizar as configurações para cada projeto. Para obter mais informações, consulte [definindo opções de projeto &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).  
   
-Quando você personalizar mapeamentos de tipo de dados entre os bancos de dados de origem e de destino, você pode definir mapeamentos no projeto, no banco de dados ou no nível de objeto. Para obter mais informações, consulte [mapeamento MySQL e tipos de dados do SQL Server &#40; MySQLToSQL &#41; ](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
+Quando você personalizar mapeamentos de tipo de dados entre os bancos de dados de origem e de destino, você pode definir mapeamentos no projeto, no banco de dados ou no nível de objeto. Para obter mais informações, consulte [mapeamento MySQL e tipos de dados do SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
   
 ## <a name="saving-projects"></a>Salvando projetos  
 O recurso de salvar projetos permite ao usuário salvar essencialmente as configurações do projeto e, opcionalmente, os metadados do banco de dados para o arquivo de projeto SSMA.  
@@ -139,11 +140,11 @@ Quando você abre um projeto, ele é desconectado do MySQL e do SQL Server ou SQ
 4.  Para reconectar-se ao SQL Azure, no **arquivo** menu, selecione **reconectar-se ao SQL Azure.**  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no processo de migração é [se conectar ao MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+A próxima etapa no processo de migração é [conectando ao MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Conectando ao MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[Migrando bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-[Conectar-se ao SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Conectar-se ao banco de dados SQL do Azure &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Conectando ao MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+[Bancos de dados MySQL migrando para o SQL Server - banco de dados SQL do Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Conectando ao SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+[Conectar-se ao banco de dados SQL do Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

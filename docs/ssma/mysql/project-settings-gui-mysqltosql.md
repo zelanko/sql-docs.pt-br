@@ -1,32 +1,33 @@
 ---
-title: "Configurações (GUI) (MySQLToSQL) do projeto | Microsoft Docs"
+title: Configurações (GUI) (MySQLToSQL) do projeto | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3631366693d295e11b740a5ae1a27850d07cc365
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d4c48e3eb9694ece504067ed248b63e5feaabe73
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="project-settings-gui--mysqltosql"></a>Configurações de projeto (GUI) (MySQLToSQL)
+# <a name="project-settings-gui--mysqltosql"></a>Project Settings (GUI)  (MySQLToSQL)
 As configurações de projeto de GUI permitem que você configure como os dados aparecem no **dados** guia e se é preciso incluir dados de relatórios com relatórios de avaliação.  
   
 O painel de interface gráfica do usuário está disponível na **configurações de projeto** e **configurações de projeto padrão** caixas de diálogo.  

@@ -21,13 +21,13 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Concluindo a preparação do caso de teste (SybaseToSQL)
 A página final do assistente exibe a descrição do caso de teste e informações sobre os objetos envolvidos no teste. Além disso, nessa página você pode definir o teste de opções de execução.  
@@ -56,7 +56,7 @@ Habilite a reversão automática de dados após a execução de teste.
 -   Se você escolher **não**, todas as alterações de dados serão salvas a execução de teste.  
   
 ### <a name="auxiliary-tables-saving-mode"></a>Modo de economia de tabelas auxiliares  
-Define o modo de gravação para tabelas auxiliares criados durante a execução de teste. Consulte a descrição de tabelas auxiliares do [casos de teste em execução &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) tópico.  
+Define o modo de gravação para tabelas auxiliares criados durante a execução de teste. Consulte a descrição de tabelas auxiliares do [casos de teste em execução &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) tópico.  
   
 -   Se você selecionar **sempre salvar**, dados de tabela auxiliar sempre serão armazenados para uso posterior.  
   
@@ -66,10 +66,10 @@ Define o modo de gravação para tabelas auxiliares criados durante a execução
   
 -   Se você selecionar **peça ao usuário se a falha na comparação de tabela**, o usuário pode selecionar a ação necessária, se ocorrer um erro.  
   
-Clique o **concluir** botão para salvar o caso de teste preparado em [repositórios de teste usando &#40; SybaseToSQL &#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Clique o **concluir** botão para salvar o caso de teste preparado em [repositórios de teste usando &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
-## <a name="see-also"></a>Consulte Também  
-[Uso de repositórios de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[Executar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Usando o teste repositórios &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[Casos de teste de execução &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Teste de objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

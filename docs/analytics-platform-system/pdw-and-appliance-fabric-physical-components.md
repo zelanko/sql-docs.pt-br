@@ -1,26 +1,26 @@
 ---
-title: "Malha de dispositivo e PDW componentes físicos (Analytics Platform System)"
+title: Malha de dispositivo e PDW componentes físicos (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>Componentes físicos de malha de dispositivo e PDW
 Nomes e descrições para os componentes físicos de malha do PDW e dispositivo. A região PDW contém todos esses componentes.  
@@ -56,12 +56,12 @@ Uma máquina virtual que executa o nó de computação. Neste diagrama de nó de
 Esses componentes são parte da malha de dispositivo.  
   
 ### <a name="virtual-machines"></a>Máquinas virtuais  
-*appliance_domain*- WDS  
+*appliance_domain*-WDS  
 Este hosts de máquina virtual Windows implantação WDS (serviços), que usa o Analytics Platform System implantar sistemas operacionais Windows na rede do dispositivo. Ele também hospeda o serviço DHCP, que permite que os hosts de dispositivo ingressar na rede do dispositivo sem ter um endereço IP previamente configurado.  
   
 O *appliance_domain*máquina de virtual - WDS é executado em HST01 e pode fazer failover para HST02. A máquina virtual WDS e a máquina virtual do VMM, implantar o Windows em hosts físicos durante a instalação do dispositivo. Durante o ciclo de vida do dispositivo, o WDS e o VMM executam operações como substituição de um host.  
   
-*appliance_domain*- VMM  
+*appliance_domain*-VMM  
 O Virtual Machine Manager (VMM) é executado em uma máquina virtual e pode fazer failover para HST02. O VMM hospeda System Center para implantar o sistema operacional nos hosts físicos. O VMM também fornece o Windows Server Update Services (WSUS) para aplicar ou remover as atualizações do Windows em todos os hosts e máquinas virtuais.  
   
 *appliance_domain*-AD01, *appliance_domain*-AD02  
@@ -70,7 +70,7 @@ Active Directory Domain Services, que contém o sistema de nome de domínio (DNS
 *appliance_domain*-ISCSI01  
 Uma máquina virtual ISCSI é executado em cada um dos hosts com o armazenamento anexado (HSA01 HSA06). Essa VM não não failover.  
   
-### <a name="hosts"></a>hosts  
+### <a name="hosts"></a>Hosts  
 *appliance_domain*-HST01 por meio de *appliance_domain*-HST06  
 Os hosts para PDW controle nó e o dispositivo malha máquinas virtuais. HST03 é um host passivo opcional.  
   
@@ -85,8 +85,8 @@ O cluster PDW é denominado WFOHST01. Ele gerencia todos os hosts físicos e má
 *appliance_domain*-DAS01 por meio de *appliance_domain*-DAS03  
 Este é o armazenamento com conexão direta que está conectado a nós de computação. HP tiver uma para todos os dois nós de computação. Dell e Quanta têm um para todos os três nós de computação.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[Configuração de dispositivo &#40; Analytics Platform System &#41;](appliance-configuration.md)  
-[Tarefas de gerenciamento de dispositivo &#40; Analytics Platform System &#41;](appliance-management-tasks.md)  
+[Configuração de dispositivo &#40;Analytics Platform System&#41;](appliance-configuration.md)  
+[Tarefas de gerenciamento de dispositivo &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

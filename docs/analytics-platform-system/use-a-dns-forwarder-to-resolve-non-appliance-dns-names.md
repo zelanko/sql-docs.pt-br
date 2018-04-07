@@ -1,36 +1,36 @@
 ---
-title: "Use um encaminhador DNS para resolver nomes DNS não seja de aplicação (APS)"
+title: Use um encaminhador DNS para resolver nomes DNS não seja de aplicação (APS)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: "21"
-ms.openlocfilehash: 6538ec32f141592b6cf21a325b74f3e451e73092
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 21
+ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>Use um encaminhador DNS para resolver nomes DNS não seja de aplicação
-Um encaminhador DNS pode ser configurado em nós de serviços de domínio Active Directory (***appliance_domain*-AD01** e  ***appliance_domain*-AD02**) do seu dispositivo Analytics Platform System para permitir que scripts e aplicativos de software para acessar servidores externos.  
+Um encaminhador DNS pode ser configurado em nós do Active Directory Domain Services (***appliance_domain *-AD01** e ***appliance_domain *-AD02**) do seu dispositivo Analytics Platform System para permitir scripts e aplicativos de software para acessar servidores externos.  
   
 ## <a name="ResolveDNS"></a>Usando um encaminhador do DNS  
 O dispositivo Analytics Platform System está configurado para impedir a resolução de nomes DNS de servidores que não estão no dispositivo. Alguns processos, como o Windows Software Update Services (WSUS), serão necessário acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso do sistema de plataforma de análise de DNS pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá Analytics Platform System hosts e máquinas virtuais (VMs) usar servidores DNS externos para resolver nomes fora do dispositivo. Configuração personalizada de sufixos de DNS não tem suporte, o que significa que você deve usar nomes de domínio totalmente qualificado para resolver um nome de servidor não seja de aplicação.  
   
 **Para criar um encaminhador DNS com a GUI do DNS**  
   
-1.  Faça logon na  ***appliance_domain*-AD01** nó.  
+1.  Faça logon na ***appliance_domain *-AD01** nó.  
   
 2.  Abra o Gerenciador de DNS (**dnsmgmt.msc**).  
   
@@ -42,13 +42,13 @@ O dispositivo Analytics Platform System está configurado para impedir a resolu�
   
 6.  Insira o endereço IP para o servidor DNS externo que fornecerá a resolução de nome. As VMs e servidores (hosts) em que o dispositivo se conectará a servidores externos usando nomes de domínio totalmente qualificado.  
   
-7.  Repita as etapas de 1 a 6 no  ***appliance_domain*-AD02** nó  
+7.  Repita as etapas de 1 a 6 no ***appliance_domain *-AD02** nó  
   
 **Para criar um encaminhador do DNS por meio do Windows PowerShell**  
   
-1.  Faça logon na  ***appliance_domain*-AD01**nó.  
+1.  Faça logon na ***appliance_domain *-AD01**nó.  
   
-2.  Execute o seguinte script do Windows PowerShell do  ***appliance_domain*-AD01** nó. Antes de executar o script do Windows PowerShell, substitua os endereços IP com os endereços IP dos servidores DNS não seja de aplicação.  
+2.  Execute o seguinte script do Windows PowerShell do ***appliance_domain *-AD01** nó. Antes de executar o script do Windows PowerShell, substitua os endereços IP com os endereços IP dos servidores DNS não seja de aplicação.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -56,7 +56,7 @@ O dispositivo Analytics Platform System está configurado para impedir a resolu�
     $DNS.put()  
     ```  
   
-3.  Execute o comando mesmo no  ***appliance_domain*-AD02** nó.  
+3.  Execute o comando mesmo no ***appliance_domain *-AD02** nó.  
   
 ## <a name="configuring-dns-resolution-for-wsus"></a>Configurando a resolução de DNS para o WSUS  
 PDW do SQL Server 2012 fornece funcionalidade de aplicação de patch e manutenção integrado. SQL Server PDW usa o Microsoft Update e outra tecnologias de serviço da Microsoft. Para habilitar atualizações do que dispositivo deve ser capaz de se conectar ou para um repositório WSUS corporativo ou no repositório do WSUS pública do Microsoft.  

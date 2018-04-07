@@ -21,13 +21,13 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f105882bee69488970c986e77cd61db4f0844b0d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 915cc8c97e05489fb72a7193ce764faf55ed0b62
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Localizar o Assistente de bancos de dados (Verifique se a seleção) (AccessToSQL)
 A página verificar a seleção do Assistente para localizar os bancos de dados lista os arquivos a serem adicionadas ao SSMA. Se a lista de arquivos estiver incorreta, clique em **novamente** para modificar a lista. Caso contrário, clique em **concluir** para adicionar os arquivos.  
@@ -44,6 +44,6 @@ Mostra o caminho do arquivo de banco de dados do Access.
 **Proprietário**  
 Mostra o proprietário do arquivo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

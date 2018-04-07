@@ -1,15 +1,16 @@
 ---
 title: Criando arquivos de Script (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c1d881b13dccecbe7d8fb66f8ea47376895f04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9639d7527d910e61cd799ab616f10eb20b5262e4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-sybasetosql"></a>Criando arquivos de Script (SybaseToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -353,7 +354,7 @@ A opção não configurável é:
 -   **Número máximo de tentativas de reconexão:** quando uma conexão estabelecida expira ou quebras devido à falha de rede, o servidor é necessário ser reconectado. As tentativas de reconexão são permitidas para um máximo de **5** tentativas após o qual o console executa automaticamente a reconexão. O recurso de reconexão automática reduz o esforço de executar novamente o script.  
   
 ## <a name="server-connection-parameters"></a>Parâmetros de Conexão de servidor  
-Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte o [criar os arquivos de Conexão do servidor &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) seção para obter mais detalhes  
+Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte o [criar os arquivos de Conexão de servidor &#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) seção para obter mais detalhes  
   
 ## <a name="script-commands"></a>Comandos de script  
 O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console SSMA processa a migração na ordem os comandos que aparecem no arquivo de script.  
@@ -401,14 +402,14 @@ Modelos que consiste em 3 de arquivos de script (para executar vários cenários
   
 Você pode executar os modelos (arquivos) depois de alterar os parâmetros exibidos para relevância.  
   
-Lista completa de comandos de script pode ser encontrada no [executando o Console SSMA &#40; SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+Lista completa de comandos de script pode ser encontrada em [executando o Console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="script-file-validation"></a>Validação de arquivo de script  
 O usuário pode facilmente validar seu arquivo de script no arquivo de definição de esquema **'S2SSConsoleScriptSchema.xsd'** disponíveis na pasta 'Esquemas'  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [criando arquivos de valor variável &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+A próxima etapa no operando o console é [criando arquivos de valor variável &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
-## <a name="see-also"></a>Consulte Também  
-[Criando arquivos do valor da variável &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Criando arquivos do valor da variável &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

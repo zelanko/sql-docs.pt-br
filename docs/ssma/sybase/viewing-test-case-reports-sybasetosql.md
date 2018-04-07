@@ -21,13 +21,13 @@ ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7f9b549716ed85abe6e2fdfbc7e3b5739286afe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe87892c50992968da7ada9b5a3b33a34442fbe6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Exibindo relatórios de caso de teste (SybaseToSQL)
 O relatório de caso de teste mostra os resultados da verificação de teste e as informações de teste geral. Em caso de falha de teste, informações sobre quaisquer dados incompatíveis em objetos verificados também são exibidas.  
@@ -55,7 +55,7 @@ Uma comparação de resultados (sucesso ou falha) e as incompatibilidades SSMA T
 **Finalização**  
 Mostra o status de execução como **êxito** ou **falha**.  
   
-## <a name="see-also"></a>Consulte Também  
-[Executar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Casos de teste de execução &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Teste de objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

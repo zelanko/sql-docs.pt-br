@@ -2,29 +2,30 @@
 title: Comandos de menu e outras teclas de atalho (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b55ad469f71c1ac0a0b5a0e0c4f5f908b831bae0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd4c36f8542331615e6d711f6780d855db9158aa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandos de menu e outras teclas de atalho (AccessToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para aplicativos de acesso.  
@@ -79,10 +80,10 @@ Para acessar o menu de exibição, o atalho de teclado usado é ALT + V. A tabel
 |Mostre painel de lista de erros.|ALT + V + eletrônico ou CTRL + E|  
 |Mostre painel de saída.|ALT + V + O ou CTRL + S|  
 |Submenu de layouts de acesso.|ALT + V + L|  
-|Adicionar o layout atual|ALT + V + A + L|  
+|Adicionar o layout atual|ALT + V + L + A|  
 |Selecione o layout padrão|ALT + V + L + D ou CTRL + ALT + 1|  
 |Selecione sem layout pesquisadores|ALT + V + L + W ou CTRL + ALT + 2|  
-|Exiba a caixa de diálogo Gerenciar layouts.|ALT + V + L + M|  
+|Exiba a caixa de diálogo Gerenciar layouts.|Alt + V + L + M|  
   
 ## <a name="tools-menu-commands"></a>Comandos do menu Ferramentas  
 Para acessar o menu Ferramentas, o atalho de teclado usado é ALT + T. A tabela a seguir descreve o teclado atalhos usados para acessar itens de menu no menu Ferramentas.  
@@ -198,6 +199,6 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |Inicie a informações rápidas.|CTRL + SHIFT + ESPAÇO|  
 |Vá para a declaração.|F12|  
   
-## <a name="see-also"></a>Consulte Também  
-[Teclas de atalho &#40; AccessToSQL &#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Teclas de atalho &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

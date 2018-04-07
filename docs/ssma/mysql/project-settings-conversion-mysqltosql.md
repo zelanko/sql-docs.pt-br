@@ -1,30 +1,31 @@
 ---
-title: "Configurações (conversão) (MySQLToSQL) do projeto | Microsoft Docs"
+title: Configurações (conversão) (MySQLToSQL) do projeto | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configurações de projeto (conversão) (MySQLToSQL)
 A página de conversão do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte a sintaxe do MySQL a sintaxe de SQL Server ou SQL Azure.  
@@ -96,7 +97,7 @@ O painel de conversão está disponível na **configurações de projeto** e **c
 |||  
 |-|-|  
 |**Termo**|**Definição**|  
-|**Padrão caixa delimitadora {XMAX &#124; XMIN &#124; YMAX &#124; YMIN} para índices espaciais**|Define o valor padrão para {XMAX &#124; XMIN &#124; YMAX &#124; Parâmetro YMIN} usada em índices espaciais de caixa delimitadora.<br /><br />**Modo padrão**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo otimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Padrão de caixa delimitadora {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para índices espaciais**|Define o valor padrão para {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} parâmetro usada em índices espaciais de caixa delimitadora.<br /><br />**Modo padrão**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo otimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Densidade padrão da grade para índices espaciais**|Define o valor padrão para LEVEL_1, LEVEL_2, LEVEL_3 e LEVEL_4 de densidade de grade usada em índices espaciais.<br /><br />**Modo padrão**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo otimista**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo completo**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão|  
   
 ### <a name="transactions"></a>Transactions  
@@ -120,6 +121,6 @@ O painel de conversão está disponível na **configurações de projeto** e **c
 |**Literais numéricos com precisão exceder 38**|Especifica como converter literais numéricos com precisão exceder 38.<br /><br />**Modo padrão**: arredondar se possível<br /><br />**Modo otimista**: arredondar se possível<br /><br />**Modo de inteira**: arredondar se possível|  
 |**Data de zero em colunas NULL e não**|Especifica como lidar com a atribuição não NULL colunas da data de Zero, data de Zero ou valores de data/hora inválido.<br /><br />**Modo padrão**: getDate)<br /><br />**Modo otimista**: getDate)<br /><br />**Modo de inteira**: getDate)|  
   
-## <a name="see-also"></a>Consulte Também  
-[Referência de Interface do usuário &#40; MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Referência da Interface de usuário &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

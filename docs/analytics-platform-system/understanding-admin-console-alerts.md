@@ -1,33 +1,33 @@
 ---
-title: "Noções básicas sobre alertas do Console de administração (Analytics Platform System)"
+title: Noções básicas sobre alertas do Console de administração (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: "10"
-ms.openlocfilehash: 84d7632df2e16c6939b91d299850ab26d5d93d4f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="understanding-admin-console-alerts"></a>Compreendendo os alertas do Console de administração
 Os alertas são exibidos no dispositivo de **Console de administração** e em **System Center Operations Manager** (SCOM). Use esta lista de alertas para ajudar a identificar quais alertas exigem mais investigação.  
   
-Para obter informações sobre a conexão com o **Console de administração** usando o Internet Explorer, consulte [monitorar o dispositivo usando o Console de administração &#40; Analytics Platform System &#41; ](monitor-the-appliance-by-using-the-admin-console.md). Para obter informações sobre **SCOM**, consulte [monitorar o dispositivo usando o System Center Operations Manager &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+Para obter informações sobre a conexão com o **Console de administração** usando o Internet Explorer, consulte [monitorar o dispositivo usando o Console de administração &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Para obter informações sobre **SCOM**, consulte [monitorar o dispositivo por usando o System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
-Para obter informações sobre como obter informações de alertas usando Transact\-SQL, consulte [monitorar o dispositivo usando exibições do sistema &#40; Analytics Platform System &#41; ](monitor-the-appliance-by-using-system-views.md).  
+Para obter informações sobre como obter informações de alertas usando Transact\-SQL, consulte [monitorar o dispositivo por exibições do sistema usando &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md).  
   
 ## <a name="types-of-alerts"></a>Tipos de alertas  
 Os nomes de alertas que indicam o status NORMAL geralmente não requerem a investigação. Alertas nomes que contêm as palavras NON_CRITICAL às vezes exigem ação. Investigação é necessária para todos os outros tipos de alertas.  
@@ -42,7 +42,7 @@ Os alertas são listados em ordem alfabética pelo **nome do alerta**. Todos os 
 |Ambari agente tem status NORMAL.|não|Operacional|Informational|O agente do Ambari está funcionando normalmente (status: em execução). Status será relatado na propriedade do componente "hadoop_service_status".||  
 |Agente do Ambari é desconhecido status.|Sim|Degradado|Aviso|Não foi possível determinar o status deste recurso de agente Ambari (status: -1). Status será relatado na propriedade do componente "hadoop_service_status".|Examine o recurso de Cluster em nós de cabeçalho e dados.|  
 |Pulsação do aplicativo tem status NORMAL.|não|Operacional|Informational|Comunicação com o aplicativo foi estabelecida com êxito.|Indica que o componente anteriormente relatou um status diferente, mas como voltou ao normal.|  
-|Pulsação do aplicativo está gerando o alerta crítico.|Sim|Não operacional|Erro|Não foi possível se comunicar com o aplicativo. Talvez o aplicativo esteja em processo de reinicialização.|A pulsação do aplicativo está em um estado inesperado. Solução de problemas necessária. Examine o log de eventos do Windows do nó para obter detalhes.|  
+|Pulsação do aplicativo está gerando o alerta crítico.|Sim|Non-operational|Erro|Não foi possível se comunicar com o aplicativo. Talvez o aplicativo esteja em processo de reinicialização.|A pulsação do aplicativo está em um estado inesperado. Solução de problemas necessária. Examine o log de eventos do Windows do nó para obter detalhes.|  
 |Ocorreu um evento de Failover de cluster.|Sim|Operacional|Erro|O nó de cluster primário não está mais ativo para que o passivo obteve como o nó primário. Examine o log de eventos do Windows do nó com falha para obter detalhes e examine o Gerenciador de Cluster de Failover na VM HST01.|Ocorreu um failover. Solução de problemas necessária. Revise o Gerenciador de Cluster de Failover na VM HST01 e log de eventos do sistema do nó.|  
 |Grupo de recursos de cluster tem status crítico.|Sim|Falhou|Erro|Este grupo de recursos de cluster falhou e pode estar no processo de tentar reiniciar ou está sendo VM de HST01 off-line.|O status do grupo de recursos falhou e exige a solução de problemas. Revise o Gerenciador de Cluster de Failover no HST01 VM.|  
 |Grupo de recursos de cluster tem o status de não-crítico.|Sim|Degradado|Aviso|Este grupo de recursos de cluster está online, mas em um estado não-crítico devido a um dos seguintes motivos: grupo de recursos é parcialmente online ou o grupo de recursos está em estado pendente.|O grupo de recursos não está totalmente no estado esperado. Solução de problemas necessária. Revise o Gerenciador de Cluster de Failover no HST01 VM.|  
@@ -132,7 +132,7 @@ Os alertas são listados em ordem alfabética pelo **nome do alerta**. Todos os 
 |Adaptador de barramento de Host de SAS tem uma condição de falha.|Sim|Falhou|Aviso|O adaptador de barramento de Host de SAS está relatando que a condição global do HBA está em um estado de falha, incluindo todos os discos físicos controlados por ele. Isso exigirá um componente a ser substituído (status de fornecedor: falha). Status do fornecedor é informado na propriedade do componente "hba_device_rollup_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  
 |Adaptador de barramento de Host de SAS tem status NORMAL.|não|Operacional|Informational|O adaptador de barramento de Host de SAS está funcionando normalmente (status de fornecedor: okey). Status do fornecedor é informado na propriedade do componente "hba_device_rollup_status".||  
 |Adaptador de barramento de Host de SAS é desconhecido status.|Sim|Degradado|Aviso|Não foi possível determinar o status do adaptador de barramento de Host de SAS (status de fornecedor: outros). Status do fornecedor é informado na propriedade do componente "hba_device_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  
-|O SQL Server tem status crítico.|Sim|Não-operacional|Erro|Esse serviço está em um estado crítico e parou de funcionar (status: interrompido) ou está em estado de transição para ser interrompido (status: StopPending).  Status será relatado na propriedade do componente "sql_server_service_status".|Examine o log de eventos do Windows do nó para obter detalhes.|  
+|O SQL Server tem status crítico.|Sim|NonOperational|Erro|Esse serviço está em um estado crítico e parou de funcionar (status: interrompido) ou está em estado de transição para ser interrompido (status: StopPending).  Status será relatado na propriedade do componente "sql_server_service_status".|Examine o log de eventos do Windows do nó para obter detalhes.|  
 |O SQL Server tem status NORMAL.|não|Operacional|Informational|Este serviço está sendo executado normalmente (status: em execução). Status será relatado na propriedade do componente "sql_server_service_status".||  
 |Ventilador do compartimento de armazenamento tem um status DEGRADADO.|Sim|Degradado|Aviso|O ventilador de compartimento de armazenamento está relatando que está degradado (status de fornecedor: 10,15). Status do fornecedor é informado na propriedade do componente "storage_fan_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  
 |Ventilador do compartimento de armazenamento tem um status de falha.|Sim|Falhou|Aviso|O ventilador de compartimento de armazenamento estiver se comunicando-se em um estado de falha. Isso exigirá um componente a ser substituído (status de fornecedor: 20,25). Status do fornecedor é informado na propriedade do componente "storage_fan_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  
@@ -157,8 +157,8 @@ Os alertas são listados em ordem alfabética pelo **nome do alerta**. Todos os 
 |Disco virtual tem o status de não-crítico.|Sim|Degradado|Aviso|O status de disco virtual de espaços de armazenamento está indicando que há um aviso não crítico mas o sistema operacional ainda (status: 1-aviso). O status será relatado na propriedade de "virtual_disk_status" do componente.  O Status operacional, mostrada na propriedade "virtual_disk_oper_status" pode fornecer mais informações sobre o problema.  Se o disco Virtual foi movida para outro nó, em seguida, examine o estado do cluster volume componentes compartilhados e mover os discos de volta para o proprietário do esperado, indicado pelo número após o N em nome, por exemplo. N01D01 pertence ao HSA01.|Examine os eventos do nó no log 'Aplicativo e serviço logs\Microsoft\Windows\StorageSpaces-Driver\Operational' para obter mais detalhes.  A integridade do espelho pode ser afetada por perda de um único disco para que outro alerta pode ter ocorrido por disco em si.|  
 |Disco virtual tem o status NORMAL.|não|Operacional|Informational|O status de disco virtual de espaços de armazenamento é normal (status: Íntegro de 0). O status será relatado na propriedade de "virtual_disk_status" do componente.||  
 |Disco virtual é desconhecido status.|Sim|Operacional|Aviso|Não foi possível determinar o status de disco virtual de espaços de armazenamento (status: 5-desconhecido). O status será relatado na propriedade de "virtual_disk_status" do componente.  O Status operacional, mostrada na propriedade "virtual_disk_oper_status" pode fornecer mais informações sobre o problema.  Se o disco Virtual foi movida para outro nó, em seguida, examine o estado do cluster volume componentes compartilhados e mover os discos de volta para o proprietário do esperado, indicado pelo número após o N em nome, por exemplo. N01D01 pertence ao HSA01.|Examine os eventos do nó no log 'Aplicativo e serviço logs\Microsoft\Windows\StorageSpaces-Driver\Operational' para obter mais detalhes.|  
-|Status de espaço livre do volume é crítico.|Sim|Degradado|Erro|Espaço livre no volume é criticamente baixo! O espaço em disco usado do volume atual está além 90% da capacidade total. Limpe dados/arquivos desnecessários para garantir a operação normal do dispositivo.|Os relatórios do Console de administração espaço alocado e espaço não usado. Você pode usar DBCC PDW_SHOWSPACEUSED para investigar usado versus espaço alocado. Você também pode usar DBCC SHRINKLOG <!-vínculos ausentes [DBCC SHRINKLOG &#40; SQL Server PDW &#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir bancos de dados.|  
-|Status de espaço livre do volume é não-crítico.|Opcional|Operacional|Aviso|O espaço de disco atual do volume usado é entre 70% e 90% cheio. Examine o espaço em disco usado no volume e limpeza de dados/arquivos desnecessários para garantir a operação normal do dispositivo.|Os relatórios do Console de administração espaço alocado e espaço não usado. Você pode usar [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-parallel-data-warehouse.md) investigar usado versus espaço alocado. Você também pode usar DBCC SHRINKLOG <!-vínculos ausentes [DBCC SHRINKLOG &#40; SQL Server PDW &#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir bancos de dados.|  
+|Status de espaço livre do volume é crítico.|Sim|Degradado|Erro|Espaço livre no volume é criticamente baixo! O espaço em disco usado do volume atual está além 90% da capacidade total. Limpe dados/arquivos desnecessários para garantir a operação normal do dispositivo.|Os relatórios do Console de administração espaço alocado e espaço não usado. Você pode usar DBCC PDW_SHOWSPACEUSED para investigar usado versus espaço alocado. Você também pode usar DBCC SHRINKLOG <!-vínculos ausentes [DBCC SHRINKLOG &#40;SQL Server PDW&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir bancos de dados.|  
+|Status de espaço livre do volume é não-crítico.|Opcional|Operacional|Aviso|O espaço de disco atual do volume usado é entre 70% e 90% cheio. Examine o espaço em disco usado no volume e limpeza de dados/arquivos desnecessários para garantir a operação normal do dispositivo.|Os relatórios do Console de administração espaço alocado e espaço não usado. Você pode usar [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-parallel-data-warehouse.md) investigar usado versus espaço alocado. Você também pode usar DBCC SHRINKLOG <!-vínculos ausentes [DBCC SHRINKLOG &#40;SQL Server PDW&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir bancos de dados.|  
 |Status de espaço livre do volume é NORMAL.|não|Operacional|Informational|Há espaço em disco suficiente no volume. O espaço de disco atual do volume usado está abaixo de 70%.|Indica que o componente anteriormente relatou um status diferente, mas como voltou ao normal.|  
   
 <!-- MISSING LINKS ## See Also  

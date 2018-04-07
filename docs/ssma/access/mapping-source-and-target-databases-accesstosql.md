@@ -2,14 +2,15 @@
 title: Mapeamento de origem e bancos de dados de destino (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -23,22 +24,22 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48e87d2b6c84db3534a3c52ee6176e29fd34257f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eed81b1bf2d9f3f2e70f30a6744c4d7ad9bf33d3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mapeamento de origem e bancos de dados de destino (AccessToSQL)
 Quando você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, é necessário especificar um banco de dados de destino para migração. Se você tiver vários bancos de dados do Access mapeá-los a vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bancos de dados (ou esquemas) ou para vários esquemas no banco de dados do SQL Azure conectado.  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server ou esquemas de banco de dados do Azure SQL  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]bancos de dados usam o conceito de esquemas para separar os objetos dentro de um banco de dados em grupos lógicos. Por exemplo, um banco de dados de biblioteca pode usar três esquemas chamados **manuais**, **áudio**, e **vídeo** para separar os objetos de áudio e vídeo do catálogo, uns dos outros. Por padrão, o banco de dados é mapeado para **mestre** banco de dados e **dbo** esquema [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e ao banco de dados conectado e **dbo** esquema no SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bancos de dados usam o conceito de esquemas para separar os objetos dentro de um banco de dados em grupos lógicos. Por exemplo, um banco de dados de biblioteca pode usar três esquemas chamados **manuais**, **áudio**, e **vídeo** para separar os objetos de áudio e vídeo do catálogo, uns dos outros. Por padrão, o banco de dados é mapeado para **mestre** banco de dados e **dbo** esquema [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e ao banco de dados conectado e **dbo** esquema no SQL Azure.  
   
 A menos que você personalize o mapeamento entre cada banco de dados do Access e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados e esquema, o SSMA migrará todos os esquemas e dados associados com o banco de dados para o banco de dados mapeado.  
   
@@ -79,6 +80,6 @@ Se você personalizar o mapeamento entre um banco de dados e um [!INCLUDE[ssNoVe
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [converter objetos de banco de dados](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

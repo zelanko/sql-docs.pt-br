@@ -2,24 +2,24 @@
 title: Adquirir e configurar um servidor de carregamento (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de carregamentos de dados SQL Server Parallel Data Warehouse."
+description: Adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de carregamentos de dados SQL Server Parallel Data Warehouse.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: "19"
-ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 19
+ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>Adquirir e configurar um servidor de carregamento
 Este tópico descreve como adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de cargas de dados para SQL Server Parallel Data Warehouse (PDW).  
@@ -116,6 +116,6 @@ Para reduzir os riscos de segurança com seus dados, é recomendável o seguinte
   
 -   Desative a inicialização instantânea de arquivo no Windows Server 2012 e além. Este é um equilíbrio entre desempenho e segurança, conforme observado na seção desempenho. Você precisa decidir o que é melhor de acordo com seus requisitos de segurança.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Visão geral de backup e restauração](backup-and-restore-overview.md)  
   

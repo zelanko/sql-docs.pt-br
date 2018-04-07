@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77e9c60892599a2032fda11bd9241a65c4089991
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 77a375f3aa928b110a01028755556d6de0f61a4e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -236,6 +236,6 @@ HRESULT InitFromPersistedDS
  O **IPersistFile:: Save** método pode ser chamado antes ou depois de chamar **IDBInitialize:: Initialize**. Chamar o método após um retorno bem-sucedido de **IDBInitialize:: Initialize** garante uma especificação de fonte de dados válido é persistente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Objetos de fonte de dados &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos de fonte de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

@@ -1,35 +1,36 @@
 ---
-title: "Configurações (sincronização) (MySQLToSQL) do projeto | Microsoft Docs"
+title: Configurações (sincronização) (MySQLToSQL) do projeto | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc7bd0c7dce1c8ad2b70cdaa6b66ed7872c5062d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a53e15a5bdadae9b0ca67980419fd9ae299e258
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Configurações de projeto (sincronização) (MySQLToSQL)
 A sincronização **configurações do projeto** permitem que você configure como os objetos de banco de dados MySQL são sincronizados com os objetos de banco de dados do SQL Server.  
   
-As ações padrão especifica as configurações padrão para atualizar objetos do banco de dados MySQL e para sincronizar objetos do banco de dados do SQL Server. Para obter mais informações, consulte [de atualização de banco de dados &#40; MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
+As ações padrão especifica as configurações padrão para atualizar objetos do banco de dados MySQL e para sincronizar objetos do banco de dados do SQL Server. Para obter mais informações, consulte [de atualização do banco de dados &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
   
 Você pode acessar duas páginas diferentes de sincronização que contêm as mesmas configurações:  
   

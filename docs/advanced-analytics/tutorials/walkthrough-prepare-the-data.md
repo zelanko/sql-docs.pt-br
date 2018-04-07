@@ -18,11 +18,11 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: a9edd0ba1b6a52dd7ce6ed36b8528283b42d8914
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar os dados usando o PowerShell (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ Todo o código necessário foi fornecido em um repositório do GitHub. Você pod
   
     ![Após a conclusão do script do PowerShell](media/rsql-e2e-psscriptresults.PNG "Após a conclusão do script do PowerShell")
   
-5.  No console do PowerShell, execute o comando `ls` para exibir uma lista dos arquivos que foram baixados em *DestDir*.  Para obter uma descrição dos arquivos, consulte [o que está incluído](#What-the-Download-Includes).
+5.  No console do PowerShell, execute o comando `ls` para exibir uma lista dos arquivos que foram baixados em *DestDir*.  Para obter uma descrição dos arquivos, consulte [o que está incluído](#whats-included-in-the-sample).
 
 ## <a name="2-install-required-r-packages"></a>2. Instalar pacotes de R necessários
 

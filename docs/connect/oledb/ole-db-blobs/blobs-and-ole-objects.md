@@ -10,7 +10,7 @@ ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +23,18 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afff6a5d9f19c0db2063ab0e0c486cc7460e971
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   O Driver OLE DB para SQL Server expõe o **ISequentialStream** interface para dar suporte ao acesso do consumidor para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **texto**, **imagem** , **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e tipos de dados de xml binários como BLOBs (objetos grandes). O **leitura** método **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
   
- Para obter um exemplo que demonstra esse recurso, consulte [do conjunto de dados grande &#40; OLE DB &#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Para obter um exemplo que demonstra esse recurso, consulte [do conjunto de dados grande & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  O Driver OLE DB para SQL Server pode usar um consumidor implementado **IStorage** interface quando o consumidor fornece o ponteiro de interface em um acessador associado para modificação de dados.  
   

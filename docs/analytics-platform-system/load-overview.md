@@ -2,24 +2,24 @@
 title: Carregar
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Você pode carregar ou inserir dados no SQL Server Parallel Data Warehouse (PDW) usando o utilitário bcp, Integration Services, dwloader ou a instrução SQL INSERT."
+description: Você pode carregar ou inserir dados no SQL Server Parallel Data Warehouse (PDW) usando o utilitário bcp, Integration Services, dwloader ou a instrução SQL INSERT.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
-caps.latest.revision: "22"
-ms.openlocfilehash: be5ea7c2b939b58c7dfd826965f1568431cb1bff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 77bb7e3ba6a3377fe63decf06a872872eaa4ee61
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-sql-server-pdw"></a>Carregamento (SQL Server PDW)
 Você pode carregar ou inserir dados no SQL Server Parallel Data Warehouse (PDW) usando o Integration Services, [utilitário bcp](../tools/bcp-utility.md), **dwloader** carregador de linha de comando ou a instrução SQL INSERT.  
@@ -46,7 +46,7 @@ Você pode usar as instruções preparadas para carregar dados em tabelas replic
 For more information, see [Prepared statements](prepared-statements.md).
 -->
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Tarefa|Description|  
 |--------|---------------|  

@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a501daca74470e7df9e08fc329e956301417b4ca
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Suporte a colunas esparsas no Driver do OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 03/30/2018
  No entanto, se **queryout** é usado para exportar e fazer referência a colunas esparsas que são membros da coluna esparsa definido por nome, você não pode executar uma importação direta para uma tabela de estrutura semelhante. Isso ocorre porque o BCP usa metadados consistentes com um **selecione \***  operação para a importação e não pode corresponder **column_set** colunas de membro com esses metadados. Para importar **column_set** colunas de membro individualmente, você deve definir uma exibição em uma tabela que faz referência a desejado **column_set** colunas e você deve executar a operação de importação usando o modo de exibição.  
   
 ## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para programação do SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [Programação no Driver do OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

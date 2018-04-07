@@ -2,25 +2,25 @@
 title: Gerenciamento de carga de trabalho (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/12/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 
-ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 11
+ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="workload-management"></a>Gerenciamento de carga de trabalho
 Recursos de gerenciamento de carga de trabalho do SQL Server PDW permitem que os usuários e administradores para atribuir solicitações pré-definir as configurações de memória e simultaneidade. Use o gerenciamento de carga de trabalho para melhorar o desempenho da carga de trabalho, consistente ou misto, permitindo solicitações para os recursos apropriados sem anteriores em todas as solicitações para sempre.  

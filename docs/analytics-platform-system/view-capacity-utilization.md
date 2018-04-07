@@ -1,26 +1,26 @@
 ---
-title: "Utilização de capacidade de exibição (Analytics Platform System)"
+title: Utilização de capacidade de exibição (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: "9"
-ms.openlocfilehash: 9bf391d92b29acc057fad1170f878bfb47bccd23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="view-capacity-utilization"></a>Exibir a utilização de capacidade
 Este tópico explica como exibir utilização de capacidade no dispositivo de PDW do SQL Server.  
@@ -28,7 +28,7 @@ Este tópico explica como exibir utilização de capacidade no dispositivo de PD
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para exibir a utilização de capacidade usando o Console de administração  
 Para exibir o espaço usado, abra o Console de administração e clique no **armazenamento** guia. Há um **armazenamento** guia para a região PDW e a região HDI.  
   
-![Armazenamento de Console de Admin do PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Para exibir a utilização de capacidade por meio de consultas  
 Para entender se um nó está com pouco espaço, o sistema de monitoramento de integridade do SQL Server PDW já monitora o espaço livre para todos os volumes em cada nó.  
@@ -109,7 +109,7 @@ GROUP BY [pdw_node_id], [db_name]
 ORDER BY [db_name], [pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Monitoramento de dispositivo &#40; Analytics Platform System &#41;](appliance-monitoring.md)  
+[Monitoramento de dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

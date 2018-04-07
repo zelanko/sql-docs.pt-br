@@ -1,26 +1,26 @@
 ---
-title: "Monitorar o dispositivo por meio de exibições do sistema (Analytics Platform System)"
+title: Monitorar o dispositivo por meio de exibições do sistema (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: "8"
-ms.openlocfilehash: 17845f9be4a3b6c40573403d2d314c8802b71015
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 8
+ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-system-views"></a>Monitorar o dispositivo por meio de exibições do sistema
 Este tópico lista as exibições do sistema que você pode usar para monitorar o SQL Server PDW.  
@@ -40,7 +40,7 @@ SQL Server PDW inclui exibições de sistema abrangente que permite a você obte
 |Monitorar as informações adicionais para cargas, backups e restaurações.|[sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)<br /><br />[sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)<br /><br />[sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)|  
 |Logs de nível de sistema operacional e informações de desempenho|[sys.dm_pdw_os_performance_counters](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-performance-counters-transact-sql.md)<br /><br />[sys.dm_pdw_os_event_logs](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-event-logs-transact-sql.md)<br /><br />[sys.dm_pdw_os_threads](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-threads-transact-sql.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Monitoramento de dispositivo &#40; Analytics Platform System &#41;](appliance-monitoring.md)  
+[Monitoramento de dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

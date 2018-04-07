@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1fd12d353e5c7ecc47852ea1ab570694312df1f
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 2913250e527da871dbb7a1ebea37d38dbd98538e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de fonte de dados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ else
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Propriedades da fonte de dados &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [Propriedades da fonte de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [Propriedades de informações de fonte de dados](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -91,7 +91,7 @@ else
   
 -   [Sessões](../../oledb/ole-db-data-source-objects/sessions.md)  
   
--   [Propriedades da sessão - Driver do OLE DB para SQL Server](../../oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md)  
+-   [Propriedades de sessão – Driver do OLE DB para SQL Server](../../oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md)  
   
 -   [Persistente de objetos de fonte de dados](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   

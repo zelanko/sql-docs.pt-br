@@ -2,24 +2,24 @@
 title: Carregar dados com o Integration Services
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Fornece informações de referência e de implantação para carregar dados no SQL Server Parallel Data Warehouse usando pacotes do SQL Server Integration Services (SSIS)."
+description: Fornece informações de referência e de implantação para carregar dados no SQL Server Parallel Data Warehouse usando pacotes do SQL Server Integration Services (SSIS).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Carregar dados com o Integration Services
 Fornece informações de referência e de implantação para carregar dados no SQL Server Parallel Data Warehouse usando pacotes do SQL Server Integration Services (SSIS).  
@@ -59,12 +59,12 @@ Por padrão, o BIDS executa pacotes usando os binários de 64 bits. Isso é dete
 Para executar o pacote a partir do SQL Server Data Tools, clique com botão direito em seu pacote e escolha **executar pacote**.  
   
 ### <a name="run-from-powershell"></a>Execução do PowerShell  
-Para executar o pacote do Windows PowerShell, usando o **dtexec** utilitário:`dtexec /FILE <packagePath>`  
+Para executar o pacote do Windows PowerShell, usando o **dtexec** utilitário: `dtexec /FILE <packagePath>`  
   
 Por exemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Prompt de comando executado de um Windows 
-Para executar o pacote em um prompt de comando do Windows, usando o **dtexec** utilitário:`dtexec /FILE <packagePath>`  
+Para executar o pacote em um prompt de comando do Windows, usando o **dtexec** utilitário: `dtexec /FILE <packagePath>`  
   
 Por exemplo: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -89,7 +89,7 @@ Em seguida, os dados são mapeados do Integration Services para tipos de dados d
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -156,7 +156,7 @@ Ao carregar os dados com o Integration Services, SQL ServerPDW usa bloqueios em 
   
 ## <a name="Examples"></a>Exemplos  
   
-### <a name="Walkthrough"></a>. Carga Simple de arquivo simples  
+### <a name="Walkthrough"></a>A. Carga Simple de arquivo simples  
 A instrução a seguir demonstra um carregamento de dados simples usando o Integration Services para carregar dados de arquivo simples em um dispositivo de PDW do SQL Server.  Este exemplo presume que o Integration Services já foi instalado no computador cliente e o destino do SQL Server PDW tiver sido instalado, conforme descrito acima.  
   
 Neste exemplo, será carregado para o `Orders` tabela, que tem o DDL a seguir. O `Orders` tabela faz parte do `LoadExampleDB` banco de dados.  
@@ -251,7 +251,7 @@ Execute o pacote no computador do Integration Services.
   
 2.  O pacote será executado e o andamento, bem como quaisquer erros serão mostrados no **andamento** painel. Use um cliente SQL para confirmar a carga ou monitorar a carga por meio do Console de administração do SQL Server PDW.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Criar uma tarefa de script que usa o adaptador de destino do SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
 [Projetando e implementando pacotes (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  

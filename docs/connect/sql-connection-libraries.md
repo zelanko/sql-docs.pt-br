@@ -13,11 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de Conexão para bancos de dados do Microsoft SQL
 
@@ -55,7 +55,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo do .NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo do .NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core para Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
-| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Driver do Node. js, instruções de instalação](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | *Sistema Operacional:*<br /><br />[Driver do PHP do Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Driver do PHP Linux ou macOS do Github](http://github.com/Microsoft/msphpsql/) |
 | Python | [pyodbc, instruções de instalação](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Baixe o ODBC](./odbc/download-odbc-driver-for-sql-server.md) |

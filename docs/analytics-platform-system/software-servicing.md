@@ -1,32 +1,32 @@
 ---
-title: "Software de manutenção (Analytics Platform System)"
+title: Software de manutenção (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cec4d924-c88f-470c-84bb-0af3e21aabf1
-caps.latest.revision: "33"
-ms.openlocfilehash: 8435291233a9486632f3d26ecae90c4bf1be8e21
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 33
+ms.openlocfilehash: 8bddf00569ad4c5e5c78e801399b589a9f6d5f42
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="software-servicing"></a>Manutenção de software
 Esta seção resume o software requisitos para dispositivos Analytics Platform System, incluindo os hotfixes do WSUS e Analytics Platform System de serviço.  
   
 ## <a name="Basics"></a>Noções básicas de manutenção de software  
-**WSUS:** seu aparelho Analytics Platform System precisa ser configurado para receber atualizações do Windows Server Update Services (WSUS). Essas atualizações incluem alterações importantes para software de dispositivo. Depois de serem configurados, muitas atualizações instalarão automaticamente e não requerem gerenciamento manual. Normalmente, as atualizações do WSUS são configuradas durante o [configurar o Windows Server Update Services &#40; O WSUS &#41; &#40; Analytics Platform System &#41; ](configure-windows-server-update-services-wsus.md) etapa executada durante a instalação do novo dispositivo. Caso contrário, essa etapa de configuração pode ser executada posteriormente. Para obter informações sobre o WSUS, consulte o [site do WSUS guia](http://go.microsoft.com/fwlink/?LinkId=202417).  
+**WSUS:** seu aparelho Analytics Platform System precisa ser configurado para receber atualizações do Windows Server Update Services (WSUS). Essas atualizações incluem alterações importantes para software de dispositivo. Depois de serem configurados, muitas atualizações instalarão automaticamente e não requerem gerenciamento manual. Normalmente, as atualizações do WSUS são configuradas durante a [configurar o Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md) etapa executada durante a instalação do novo dispositivo. Caso contrário, essa etapa de configuração pode ser executada posteriormente. Para obter informações sobre o WSUS, consulte o [site do WSUS guia](http://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Hotfixes:** Além disso, talvez seja necessário aplicar hotfixes Analytics Platform System. Um *hotfix* é uma atualização de software que é criada para um cliente específico resolver um problema com o software do sistema de plataforma de análise. Cada hotfix é um arquivo executável que instala a correção do problema específico do cliente. Cada hotfix também contém um acúmulo de todas as atualizações de software lançadas anteriormente para Windows, o SQL Server e o Analytics Platform System. Se você precisar instalar um hotfix, o suporte da Microsoft fornecerá o hotfix e as instruções.  
   
@@ -37,13 +37,13 @@ Esta seção resume o software requisitos para dispositivos Analytics Platform S
 ## <a name="software-servicing-topics"></a>Tópicos de manutenção de software  
 Os tópicos a seguir descrevem como gerenciar o serviço de software no dispositivo:  
   
--   [Baixe e aplique as atualizações da Microsoft &#40; Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)  
+-   [Baixe e aplique as atualizações da Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
   
--   [Desinstalar as atualizações da Microsoft &#40; Analytics Platform System &#41;](uninstall-microsoft-updates.md)  
+-   [Desinstalar atualizações Microsoft &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
   
--   [Aplicar Hotfixes do sistema de plataforma de análise &#40; Analytics Platform System &#41;](apply-analytics-platform-system-hotfixes.md)  
+-   [Aplicar Hotfixes do sistema de plataforma de análise &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
   
--   [Desinstalar Hotfixes do sistema de plataforma de análise &#40; Analytics Platform System &#41;](uninstall-analytics-platform-system-hotfixes.md)  
+-   [Desinstalar o Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

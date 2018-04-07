@@ -21,13 +21,13 @@ ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f826bd9b4bd2bdec0c7cd79c6faf20b0630639
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 511c652a221ffb3fe4392dd8f4c365de129efe13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Conecte-se ao banco de dados do SQL Azure (AccessToSQL)
 Use a conectar-se a caixa de diálogo do SQL Azure para se conectar ao banco de dados do SQL Azure que você deseja migrar.  
@@ -39,14 +39,14 @@ Para acessar essa caixa de diálogo, no **arquivo** menu, selecione **conectar-s
   
 Selecione ou insira o nome do servidor para conectar-se ao SQL Azure.  
   
-**Backup de banco de dados**  
+**Banco de dados**  
   
 Selecione, digite ou **procurar** o nome do banco de dados.  
   
 > [!IMPORTANT]  
 > O SSMA para Access não dá suporte a conexão ao banco de dados mestre no SQL Azure.  
   
-**User name**  
+**Nome de usuário**  
   
 Insira o nome de usuário SSMA usará para se conectar ao banco de dados do SQL Azure  
   
@@ -54,7 +54,7 @@ Insira o nome de usuário SSMA usará para se conectar ao banco de dados do SQL 
   
 Digite a senha para o nome de usuário.  
   
-**Criptografar**  
+**Encrypt**  
   
 O SSMA recomenda conexão criptografada para o SQL Azure.  
   

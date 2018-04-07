@@ -2,24 +2,24 @@
 title: Adquirir e configurar um servidor de Backup para PDW APS
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Configure um sistema do Windows não seja de aplicação como um servidor de backup para uso com o backup e restaurar recursos no Analytics Platform System (APS) e SQL Server Parallel Data Warehouse (PDW)."
+description: Configure um sistema do Windows não seja de aplicação como um servidor de backup para uso com o backup e restaurar recursos no Analytics Platform System (APS) e SQL Server Parallel Data Warehouse (PDW).
 ms.date: 10/20/2016
 ms.topic: article
-caps.latest.revision: "20"
+caps.latest.revision: 20
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>Adquirir e configurar um servidor de backup
 Este tópico descreve como configurar um sistema do Windows não seja de aplicação como um servidor de backup para uso com os recursos de backup e restauração no Analytics Platform System (APS) e SQL Server Parallel Data Warehouse (PDW).  
@@ -136,12 +136,12 @@ Como backups PDW não são armazenados no dispositivo, sua equipe de TI é respo
   
 ### <a name="manage-network-credentials"></a>Gerenciar credenciais de rede  
   
-Acesso à rede para o diretório de backup baseia-se a segurança de compartilhamento de arquivos de Windows padrão. Antes de executar um backup, você precisa criar ou designar uma conta do Windows que será usada para autenticar o PDW para o diretório de backup. Essa conta do windows deve ter permissão para acessar, criar e gravar no diretório de backup.  
+O acesso da rede ao diretório de backup baseia-se na segurança de compartilhamento de arquivos padrão do Windows. Antes de executar um backup, você precisa criar ou designar uma conta do Windows que será usada para autenticar o PDW para o diretório de backup. Essa conta do Windows precisa ter permissão para acessar, criar e gravar no diretório de backup.  
   
 > [!IMPORTANT]  
-> Para reduzir os riscos de segurança com seus dados, é recomendável que você designa uma conta do Windows exclusivamente para fins de execução de backups e operações de restauração. Permitir que essa conta tem permissões para o local de backup e em nenhum outro lugar.  
+> Para reduzir os riscos de segurança para seus dados, é recomendável designar uma conta do Windows exclusivamente para a finalidade de executar operações de backup e restauração. Permita que essa conta tenha permissões para o local de backup e não tenha para nenhum outro lugar.  
   
-Para armazenar o nome de usuário e senha PDW, use o [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procedimento armazenado. PDW usa o Gerenciador de credenciais do Windows para armazenar e criptografar os nomes de usuário e senhas no nó de controle e nós de computação. As credenciais não contam com o comando de banco de dados de BACKUP.  
+Para armazenar o nome de usuário e senha PDW, use o [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procedimento armazenado. PDW usa o Gerenciador de credenciais do Windows para armazenar e criptografar os nomes de usuário e senhas no nó de controle e nós de computação. As credenciais não são submetidas a backup com o comando BACKUP DATABASE.  
   
 Para remover as credenciais de rede do PDW, use o [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) procedimento armazenado.  
   
@@ -154,6 +154,6 @@ Operações no servidor de carregamento podem usar um caminho UNC para extrair d
 - Exigir assinatura em que a conexão. 
 - No servidor do carregamento, defina a opção de política de grupo a seguir nas opções de diretivas de configurações de segurança: o cliente de rede Microsoft: assinar comunicações digitalmente (sempre): habilitado.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Backup e restauração](backup-and-restore-overview.md)  
   

@@ -21,13 +21,13 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selecionando e configurando aos objetos afetados (SybaseToSQL)
 Nesta página, você pode selecionar tabelas e chaves estrangeiras, alterações em que devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -126,9 +126,9 @@ Você pode exibir as instruções SELECT geradas pelo testador SSMA no **SQL com
 Você pode editar essas instruções SELECT para fornecer verificação personalizada. Para salvar as alterações no Sybase e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instruções, use o **aplicar** botões na origem e de destino SQL, de forma correspondente.  
   
 ## <a name="next-step"></a>Próxima etapa  
-[Personalizando a ordem de chamadas &#40; SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[Personalizando a ordem de chamadas &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Executar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Casos de teste de execução &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Teste de objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

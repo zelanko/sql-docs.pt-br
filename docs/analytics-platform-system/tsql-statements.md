@@ -1,41 +1,41 @@
 ---
-title: "Instruções T-SQL Analytics Platform System Parallel Data Warehouse | Microsoft Docs"
+title: Instruções T-SQL Analytics Platform System Parallel Data Warehouse | Microsoft Docs
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Instruções de Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW)."
+description: Instruções de Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 54613765219912b7ad0db5d4dfd36478f6e5e3b3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="t-sql-topics"></a>Tópicos de T-SQL
 Instruções de Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Instruções de Definition Language (DDL) de dados
-* [ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+* [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTERAR O ESQUEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [INSTRUÇÃO ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CRIAR UM ÍNDICE COLUMNSTORE](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CRIAR BANCO DE DADOS](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CRIAR BANCO DE DADOS NO ESCOPO CREDENCIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CRIAR FONTE DE DADOS EXTERNA](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CRIAR UM FORMATO DE ARQUIVO EXTERNO](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -43,7 +43,7 @@ Instruções de Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL 
 * [CRIAR FUNÇÃO](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
-* [CRIAR ESQUEMA](../t-sql/statements/create-schema-transact-sql.md)
+* [CREATE SCHEMA](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 * [CRIAR TABELA COMO SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
@@ -82,11 +82,11 @@ Instruções de Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL 
 * [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
 * [FROM](../t-sql/queries/from-transact-sql.md)
 * [Usando PIVOT e UNPIVOT](../t-sql/queries/from-using-pivot-and-unpivot.md)
-* [AGRUPAR POR](../t-sql/queries/select-group-by-transact-sql.md)
-* [TENDO](../t-sql/queries/select-having-transact-sql.md)
-* [ORDENAR POR](../t-sql/queries/select-order-by-clause-transact-sql.md)
-* [OPÇÃO](../t-sql/queries/option-clause-transact-sql.md)
-* [UNIÃO](../t-sql/language-elements/set-operators-union-transact-sql.md)
+* [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
+* [HAVING](../t-sql/queries/select-having-transact-sql.md)
+* [ORDER BY](../t-sql/queries/select-order-by-clause-transact-sql.md)
+* [OPTION](../t-sql/queries/option-clause-transact-sql.md)
+* [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
 * [WHERE](../t-sql/queries/where-transact-sql.md)
 * [TOP](../t-sql/queries/top-transact-sql.md)
 * [Alias](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)

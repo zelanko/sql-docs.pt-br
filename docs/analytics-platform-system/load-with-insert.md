@@ -2,24 +2,24 @@
 title: Carregar dados com INSERT
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Você pode usar a instrução de inserção tsql para carregar dados em um SQL Server Parallel Data Warehouse (PDW) distribuídas ou tabela replicada."
+description: Você pode usar a instrução de inserção tsql para carregar dados em um SQL Server Parallel Data Warehouse (PDW) distribuídas ou tabela replicada.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
-caps.latest.revision: "21"
-ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 21
+ms.openlocfilehash: d11799aabdf3f0695a1a8e33add730886a4bcbbe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-insert"></a>Carregar dados com INSERT
 
@@ -27,7 +27,7 @@ Você pode usar a instrução de inserção tsql para carregar dados em um SQL S
   
   
 ## <a name="InsertingLiteralsBinary"></a>Inserir literais em tipos binários  
-A tabela a seguir define os tipos de literal aceitos, o formato e a regras de conversão para inserir um valor literal em uma coluna de distribuição do tipo **binário** (*n*) ou  **varbinary**(*n*).  
+A tabela a seguir define os tipos de literal aceitos, o formato e a regras de conversão para inserir um valor literal em uma coluna de distribuição do tipo **binário** (*n*) ou **varbinary** (*n*).  
   
 |Tipo literal|Formato|Regras de conversão|  
 |----------------|----------|--------------------|  
@@ -41,10 +41,10 @@ A tabela a seguir define os formatos aceitos e regras para inserir valores liter
   
 |Tipo literal|Formato|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Cadeia de caracteres literal no **datetime** formato|'AAAA-MM-DD HH [. nnn]'<br /><br />Exemplo: ' 2007-05-08 12:35:29.123'|Dígitos fracionários são definidos como 0 quando o valor é inserido. Por exemplo, o literal ' 2007-05-08 12:35 ° será inserido como ' 2007-05-08 12:35:00.000'.|  
+|Cadeia de caracteres literal no **datetime** formato|'YYYY-MM-DD hh:mm:ss[.nnn]'<br /><br />Exemplo: ' 2007-05-08 12:35:29.123'|Dígitos fracionários são definidos como 0 quando o valor é inserido. Por exemplo, o literal ' 2007-05-08 12:35 ° será inserido como ' 2007-05-08 12:35:00.000'.|  
 |Cadeia de caracteres literal no **smalldatetime** formato|'AAAA-MM-DD HH: mm'<br /><br />Exemplo: ' 2007-05-08 12:35 '|Segundos e fracionários restantes são definidos como 0 quando o valor é inserido.|  
 |Cadeia de caracteres literal no **data** formato|'AAAA-MM-DD'<br /><br />Exemplo: ' 2007-05-08'|Valores de tempo (horas, minutos, segundos e frações) são definidos como 12:00:00.000 quando o valor é inserido.|  
-|Cadeia de caracteres literal no **datetime2** formato|'AAAA-MM-DD. nnnnnnn'<br /><br />Exemplo: ' 2007-05-08 12:35:29.1234567'|Os dados de origem não podem exceder três dígitos fracionários. Por exemplo, o literal ' 2007-05-08 12:35:29.123' será inserido, mas o valor ' 2007-05-08 12:35:29.1234567' gera um erro.|  
+|Cadeia de caracteres literal no **datetime2** formato|'YYYY-MM-DD hh:mm:ss.nnnnnnn'<br /><br />Exemplo: ' 2007-05-08 12:35:29.1234567'|Os dados de origem não podem exceder três dígitos fracionários. Por exemplo, o literal ' 2007-05-08 12:35:29.123' será inserido, mas o valor ' 2007-05-08 12:35:29.1234567' gera um erro.|  
   
 ### <a name="smalldatetime-data-type"></a>tipo de dados smalldatetime  
 A tabela a seguir define os formatos aceitos e regras para inserir valores literais em uma coluna de distribuição do tipo **smalldatetime**. Qualquer cadeia de caracteres vazia (") é convertida para o valor padrão ' 1900-01-01 12:00 '. Cadeias de caracteres que contém somente espaços em branco (' ') gera um erro.  
@@ -66,25 +66,25 @@ A tabela a seguir define os formatos aceitos e regras para inserir valores liter
   
 |Tipo literal|Formato|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Cadeia de caracteres literal no **tempo** formato|'. nnnnnnn'<br /><br />Exemplo: '12:35:29.1234567'|Se a fonte de dados tem uma precisão menor ou igual (número de dígitos fracionários) que a precisão de **tempo** tipo de dados, os dados são preenchidos para a direita com zeros. Por exemplo, um valor literal '12:35:29.123' será inserido como '12:35:29.1230000'.<br /><br />Um valor que tem uma precisão maior que o tipo de dados de destino será rejeitado.|  
+|Cadeia de caracteres literal no **tempo** formato|'hh:mm:ss.nnnnnnn'<br /><br />Exemplo: '12:35:29.1234567'|Se a fonte de dados tem uma precisão menor ou igual (número de dígitos fracionários) que a precisão de **tempo** tipo de dados, os dados são preenchidos para a direita com zeros. Por exemplo, um valor literal '12:35:29.123' será inserido como '12:35:29.1230000'.<br /><br />Um valor que tem uma precisão maior que o tipo de dados de destino será rejeitado.|  
   
 ### <a name="datetimeoffset-data-type"></a>tipo de dados DateTimeOffset  
 A tabela a seguir define os formatos aceitos e regras para inserir valores literais em uma coluna de distribuição do tipo **datetimeoffset** (*n*). O formato padrão é '. AAAA-MM-DD nnnnnnn {+ |-} hh: mm '. Uma cadeia de caracteres vazia (") é convertida para o valor padrão ' 1900-01-01 12:00:00.0000000 + 00:00 '. Cadeias de caracteres que contém somente espaços em branco (' ') gera um erro. O número de dígitos fracionários depende da definição de coluna. Por exemplo, uma coluna definida como **datetimeoffset** (2) terá dois dígitos fracionários.  
   
 |Tipo literal|Formato|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Cadeia de caracteres literal no **datetime** formato|'AAAA-MM-DD HH [. nnn]'<br /><br />Exemplo: ' 2007-05-08 12:35:29.123'|Dígitos de fração ausentes e os valores de deslocamento são definidos como 0 quando o valor é inserido. Por exemplo, o literal ' 2007-05-08 12:35:29.123' será inserido como ' 2007-05-08 12:35:29.1230000 + 00:00 '.|  
+|Cadeia de caracteres literal no **datetime** formato|'YYYY-MM-DD hh:mm:ss[.nnn]'<br /><br />Exemplo: ' 2007-05-08 12:35:29.123'|Dígitos de fração ausentes e os valores de deslocamento são definidos como 0 quando o valor é inserido. Por exemplo, o literal ' 2007-05-08 12:35:29.123' será inserido como ' 2007-05-08 12:35:29.1230000 + 00:00 '.|  
 |Cadeia de caracteres literal no **smalldatetime** formato|'AAAA-MM-DD HH: mm'<br /><br />Exemplo: ' 2007-05-08 12:35 '|Segundos fracionários restantes e os valores de deslocamento são definidos como 0 quando o valor é inserido.|  
 |Cadeia de caracteres literal no **data** formato|'AAAA-MM-DD'<br /><br />Exemplo: ' 2007-05-08'|Valores de tempo (horas, minutos, segundos e frações) são definidos como 0 quando o valor é inserido. Por exemplo, o literal ' 2007-05-08' será inserido como ' 2007-05-08 00:00:00.0000000 + 00:00 '.|  
-|Cadeia de caracteres literal no **datetime2** formato|'AAAA-MM-DD. nnnnnnn'<br /><br />Exemplo: ' 2007-05-08 12:35:29.1234567'|Os dados de origem não podem exceder o número especificado de segundos fracionários na coluna datetimeoffset. Se a fonte de dados tem um número igual ou menor de frações de segundo, os dados são preenchidos para a direita com zeros. Por exemplo, se o tipo de dados datetimeoffset (5), o valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' será inserido como ' 12:35:29.12300 + 12:15 '.|  
-|Cadeia de caracteres literal no **datetimeoffset** formato|'. AAAA-MM-DD nnnnnnn {+ &#124;;-} hh: mm '<br /><br />Exemplo: ' 2007-05-08 12:35:29.1234567 + 12:15 '|Os dados de origem não podem exceder o número especificado de segundos fracionários na coluna datetimeoffset. Se a fonte de dados tem um número igual ou menor de frações de segundo, os dados são preenchidos para a direita com zeros. Por exemplo, se o tipo de dados datetimeoffset (5), o valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' será inserido como ' 12:35:29.12300 + 12:15 '.|  
+|Cadeia de caracteres literal no **datetime2** formato|'YYYY-MM-DD hh:mm:ss.nnnnnnn'<br /><br />Exemplo: ' 2007-05-08 12:35:29.1234567'|Os dados de origem não podem exceder o número especificado de segundos fracionários na coluna datetimeoffset. Se a fonte de dados tem um número igual ou menor de frações de segundo, os dados são preenchidos para a direita com zeros. Por exemplo, se o tipo de dados datetimeoffset (5), o valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' será inserido como ' 12:35:29.12300 + 12:15 '.|  
+|Cadeia de caracteres literal no **datetimeoffset** formato|'YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-} hh:mm'<br /><br />Exemplo: ' 2007-05-08 12:35:29.1234567 + 12:15 '|Os dados de origem não podem exceder o número especificado de segundos fracionários na coluna datetimeoffset. Se a fonte de dados tem um número igual ou menor de frações de segundo, os dados são preenchidos para a direita com zeros. Por exemplo, se o tipo de dados datetimeoffset (5), o valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' será inserido como ' 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>tipo de dados datetime2  
 A tabela a seguir define os formatos aceitos e regras para inserir valores literais em uma coluna de distribuição do tipo **datetime2** (*n*). O formato padrão é 'AAAA-MM-DD. nnnnnnn'. Uma cadeia de caracteres vazia (") é convertida para o valor padrão ' 1900-01-01 12:00:00 '. Cadeias de caracteres que contém somente espaços em branco (' ') gera um erro. O número de dígitos fracionários depende da definição de coluna. Por exemplo, uma coluna definida como **datetime2** (2) terá dois dígitos fracionários.  
   
 |Tipo literal|Formato|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Cadeia de caracteres literal no **datetime** formato|'AAAA-MM-DD HH [. nnn]'<br /><br />Exemplo: ' 2007-05-08 12:35:29.123'|Frações de segundo são opcionais e são definidos como 0 quando o valor é inserido.<br /><br />Um valor que tem mais dígitos fracionários que o tipo de dados de destino será rejeitado.|  
+|Cadeia de caracteres literal no **datetime** formato|'YYYY-MM-DD hh:mm:ss[.nnn]'<br /><br />Exemplo: ' 2007-05-08 12:35:29.123'|Frações de segundo são opcionais e são definidos como 0 quando o valor é inserido.<br /><br />Um valor que tem mais dígitos fracionários que o tipo de dados de destino será rejeitado.|  
 |Cadeia de caracteres literal no **smalldatetime** formato|'AAAA-MM-DD HH: mm'<br /><br />Exemplo: ' 2007-05-08 12'|Segundos opcionais e fracionários restantes são definidos como 0 quando o valor é inserido.|  
 |Cadeia de caracteres literal no **data** formato|'AAAA-MM-DD'<br /><br />Exemplo: ' 2007-05-08'|Valores de tempo (horas, minutos, segundos e frações) são definidos como 0 quando o valor é inserido. Por exemplo, o literal ' 2007-05-08' será inserido como ' 2007-05-08 12:00:00.0000000'.|  
 |Cadeia de caracteres literal no **datetime2** formato|'AAAA-MM-DD hh:mm:ss:nnnnnnn'<br /><br />Exemplo: ' 2007-05-08 12:35:29.1234567'|Se a fonte de dados contém os componentes de data e hora que são menor ou igual ao valor especificado em **datetime2**(*n*), os dados são inseridos; caso contrário, será gerado um erro.|  
@@ -129,8 +129,8 @@ A tabela a seguir define os formatos aceitos e regras para inserir valores liter
   
 |Tipo de literal|Formato|Regras de conversão|  
 |------------|------|----------------|
-|Cadeia de caracteres literal no **inteiro** formato|'nnnnnnnnnnnnnn'<br /><br />Exemplo: '321312313123'| Nenhum |  
-|Literal de inteiro|nnnnnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhum|  
+|Cadeia de caracteres literal no **inteiro** formato|'nnnnnnnnnnnnnn'<br /><br />Exemplo: '321312313123'| Nenhuma |  
+|Literal de inteiro|nnnnnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhuma|  
 |Literal decimal|nnnnnn.nnnnn<br /><br />Exemplo: 123344.34455|Os valores à direita do separador decimal são truncados.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipos de dados Money e smallmoney  
@@ -153,14 +153,14 @@ A tabela a seguir define os formatos aceitos e regras para inserir valores liter
   
 |Tipo de literal|Formato|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Literal de cadeia de caracteres|Formato: 'cadeia de caracteres'<br /><br />Exemplo: 'abc'| Nenhum|  
-|Literal de cadeia Unicode|Formato: Cadeia de caracteres N'character'<br /><br />Exemplo: N'abc'|  Nenhum |  
-|Literal de inteiro|Formato: nnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhum |  
-|Literal decimal|Formato: nnnnnn.nnnnnnn<br /><br />Exemplo: 12344.34455| Nenhum |  
-|Money literal|Formato: $nnnnnn.nnnnn<br /><br />Exemplo: US $123456.99|O símbolo de moeda não é inserido com o valor. Para inserir o símbolo de moeda, insira o valor como uma cadeia de caracteres literal. Isso irá corresponder ao formato da **dwloader** ferramenta, que trata cada literal como uma cadeia de caracteres literal.<br /><br />Vírgulas não são permitidas.<br /><br />Se o número de dígitos após o ponto decimal exceder 2, o valor é arredondado para o valor mais próximo. Por exemplo, o valor 123.946789 é inserido como 123.95.<br /><br />Somente o estilo padrão 0 (sem vírgulas e 2 dígitos após o ponto decimal) é permitido ao usar a função CONVERT para inserir os literais de dinheiro.|  
+|Literal de cadeia de caracteres|Formato: 'cadeia de caracteres'<br /><br />Exemplo: 'abc'| Nenhuma|  
+|Literal de cadeia Unicode|Formato: Cadeia de caracteres N'character'<br /><br />Exemplo: N'abc'|  Nenhuma |  
+|Literal de inteiro|Formato: nnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhuma |  
+|Literal decimal|Formato: nnnnnn.nnnnnnn<br /><br />Exemplo: 12344.34455| Nenhuma |  
+|Money literal|Format: $nnnnnn.nnnnn<br /><br />Exemplo: US $123456.99|O símbolo de moeda não é inserido com o valor. Para inserir o símbolo de moeda, insira o valor como uma cadeia de caracteres literal. Isso irá corresponder ao formato da **dwloader** ferramenta, que trata cada literal como uma cadeia de caracteres literal.<br /><br />Vírgulas não são permitidas.<br /><br />Se o número de dígitos após o ponto decimal exceder 2, o valor é arredondado para o valor mais próximo. Por exemplo, o valor 123.946789 é inserido como 123.95.<br /><br />Somente o estilo padrão 0 (sem vírgulas e 2 dígitos após o ponto decimal) é permitido ao usar a função CONVERT para inserir os literais de dinheiro.|  
 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  
 [Dados distribuídos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
 [INSERT](../t-sql/statements/insert-transact-sql.md)  

@@ -1,25 +1,25 @@
 ---
-title: "Configurações de hardware (Analytics Platform System)"
+title: Configurações de hardware (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "O hardware Analytics Platform System (APS) foi projetado com unidades escalonáveis, para que você comprar a quantidade certa de processamento e armazenamento de acordo com seus requisitos de negócios."
+description: O hardware Analytics Platform System (APS) foi projetado com unidades escalonáveis, para que você comprar a quantidade certa de processamento e armazenamento de acordo com seus requisitos de negócios.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: "9"
-ms.openlocfilehash: 6762775fdec3cd3a01a372ed5c16fbc4a93c1426
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: d6f4b25584826d637db0a5f51ebe8ede458136c2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hardware-configurations"></a>Configurações de hardware
 O hardware Analytics Platform System (APS) foi projetado com unidades escalonáveis, para que você comprar a quantidade certa de processamento e armazenamento de acordo com seus requisitos de negócios. O dispositivo pode ser dimensionado armazenamento para SQL Server Parallel Data Wareouse (PDW) de alguns Terabytes até Petabytes em 6 de dados.  
