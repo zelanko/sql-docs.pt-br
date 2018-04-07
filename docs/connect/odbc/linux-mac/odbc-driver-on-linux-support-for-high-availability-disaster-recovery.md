@@ -1,27 +1,28 @@
 ---
-title: "Driver ODBC no Linux e macOS - alta disponibilidade e recuperação de desastres | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: Driver ODBC no Linux e macOS - alta disponibilidade e recuperação de desastres | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC no Linux e macOS suporte para alta disponibilidade e recuperação de desastres
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ Se o roteamento somente leitura não estiver em efeito, conectar-se a um local d
 2.  Se um aplicativo usar **ApplicationIntent=ReadWrite** e o local de réplica secundário estiver configurado para acesso somente leitura.  
   
 Uma conexão falhará se uma réplica primária estiver configurada para rejeitar cargas de trabalho somente leitura e a cadeia de conexão contiver **ApplicationIntent=ReadOnly**.  
-  
-## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo  
-Quando **ApplicationIntent=ReadOnly**, o cliente solicita uma carga de trabalho de leitura ao se conectar a um banco de dados habilitado para AlwaysOn. O servidor imporá a intenção no momento de conexão e durante uma instrução de banco de dados de uso, mas somente para um banco de dados AlwaysOn habilitado.
 
-A palavra-chave **ApplicationIntent** não funciona com bancos de dados herdados somente leitura.  
 
-Um banco de dados pode permitir ou não cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Use o **ALLOW_CONNECTIONS** cláusula do **PRIMARY_ROLE** e **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)] instruções.)  
-  
-A palavra-chave **ApplicationIntent** é usada para habilitar o roteamento somente leitura.  
-  
-## <a name="read-only-routing"></a>Roteamento somente leitura  
-O roteamento somente leitura é um recurso que pode garantir a disponibilidade de uma réplica somente leitura de um banco de dados. Para habilitar roteamento somente leitura:  
-  
-1.  Conecte-se a um ouvinte de um grupo de disponibilidade AlwaysOn.  
-  
-2.  A palavra-chave de cadeia de conexão **ApplicationIntent** deve ser definida como **ReadOnly**.  
-  
-3.  O grupo de disponibilidade deve ser configurado pelo administrador de banco de dados para permitir o roteamento somente leitura.  
-  
-É possível que várias conexões usem o roteamento somente leitura para se conectarem a diferentes réplicas somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Para garantir que todas as solicitações somente leitura conectem-se à mesma réplica somente leitura, não passe um ouvinte de grupo de disponibilidade para a palavra-chave de conexão **Server** . Em vez disso, especifique o nome da instância somente leitura.  
-  
-Espere tempos de conexão maiores com o roteamento somente leitura do que com a conexão à instância primária. Portanto, aumente o tempo limite de logon. O roteamento somente leitura se conecta primeiro à instância primária e, em seguida, procura a melhor secundária legível disponível.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>Sintaxe do ODBC
 
 Suportam a palavras-chave o cadeia de caracteres de conexão ODBC dois [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  

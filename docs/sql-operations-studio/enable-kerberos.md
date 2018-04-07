@@ -1,6 +1,6 @@
 ---
-title: "Usar autenticação do Active Directory (Kerberos) ao conectar-se com o Studio de operações do SQL (visualização) | Microsoft Docs"
-description: "Saiba como habilitar o Kerberos usar autenticação do Active Directory para o Studio de operações do SQL (visualização)"
+title: Usar autenticação do Active Directory (Kerberos) ao conectar-se com o Studio de operações do SQL (visualização) | Microsoft Docs
+description: Saiba como habilitar o Kerberos usar autenticação do Active Directory para o Studio de operações do SQL (visualização)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,21 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc9e91255317d53a63dd9867f6060af591f36e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Conecte-se [!INCLUDE[name-sos](../includes/name-sos-short.md)] ao SQL Server usando a autenticação do Windows - Kerberos 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]oferece suporte à conexão ao SQL Server usando o Kerberos.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] oferece suporte à conexão ao SQL Server usando o Kerberos.
 
 Para usar a autenticação integrada (autenticação do Windows) no macOS ou Linux, você precisa configurar um **tíquete Kerberos** vinculando o usuário atual para uma conta de domínio do Windows. 
 
@@ -35,7 +35,7 @@ Para usar a autenticação integrada (autenticação do Windows) no macOS ou Lin
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verificando se o Sql Server tem a instalação do Kerberos
 
 Faça logon no computador host do Sql Server. No Prompt de comando do Windows, use o `setspn -L %COMPUTERNAME%` para listar todos os nomes de entidade de serviço para o host. Você deve ver as entradas que começam com MSSQLSvc/HostName.Domain.com que significa que o Sql Server tiver registrado um SPN e está pronto para aceitar a autenticação Kerberos. 
-- Se você não tiver acesso ao Host do Sql Server, de qualquer outro sistema operacional Windows associado ao mesmo Active Directory, você pode usar o comando `setspn -L <SQLSERVER_NETBIOS>` onde < SQLSERVER_NETBIOS > é o nome do computador do hsot do Sql Server.
+- Se você não tiver acesso ao Host do Sql Server, de qualquer outro sistema operacional Windows associado ao mesmo Active Directory, você pode usar o comando `setspn -L <SQLSERVER_NETBIOS>` onde < SQLSERVER_NETBIOS > é o nome do computador do host do Sql Server.
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Obter o Kerberos Key Distribution Center
@@ -94,7 +94,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>Linux RedHat Enterprise
+### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
@@ -126,9 +126,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- Unir o macOS para o controlador de domínio do Active Directory [siga estas etapas] (https://support.apple.com/kb/PH26282?viewlocale=en_US & localidade = en_US).
+- Unir o macOS para o controlador de domínio do Active Directory [siga estas etapas] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 
@@ -170,7 +170,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Conecte-se usando[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Conecte-se usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * Criar um novo perfil de conexão
 

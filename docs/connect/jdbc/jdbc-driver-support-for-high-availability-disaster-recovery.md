@@ -1,27 +1,28 @@
 ---
-title: "Suporte a Driver JDBC para alta disponibilidade, recuperação de desastres | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: Suporte a Driver JDBC para alta disponibilidade, recuperação de desastres | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Suporte a JDBC driver para alta disponibilidade e recuperação de desastre
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +64,7 @@ Se você estiver usando o Microsoft JDBC Driver 4.2 (ou inferior) para o SQL Ser
   
  Especificando **multiSubnetFailover = true** ao conectar-se a algo que não seja um ouvinte de grupo de disponibilidade ou instância de Cluster de Failover pode resultar em um impacto negativo no desempenho e não é suportado.  
   
- Se o gerenciador de segurança não for instalado, a Máquina Virtual Java armazenará VIPs (endereços IP virtuais) em cache por um período determinado, por padrão, definido pela implementação JDK e as propriedades Java networkaddress.cache.ttl e networkaddress.cache.negative.ttl. Se o gerenciador de segurança JDK for instalado, a Máquina Virtual Java armazenará VIPs em cache e não atualizará o cache, por padrão. Você deve definir a "vida útil" (networkaddress.cache.ttl) para um dia no cache da Máquina Virtual Java. Se você não alterar o valor padrão para um dia (ou valor parecido), o valor antigo não será limpo no cache da Máquina Virtual Java quando um VIP for adicionado ou atualizado. Para obter mais informações sobre networkaddress.cache.ttl e networkaddress.cache.negative.ttl, consulte [http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
+ Se o gerenciador de segurança não for instalado, a Máquina Virtual Java armazenará VIPs (endereços IP virtuais) em cache por um período determinado, por padrão, definido pela implementação JDK e as propriedades Java networkaddress.cache.ttl e networkaddress.cache.negative.ttl. Se o gerenciador de segurança JDK for instalado, a Máquina Virtual Java armazenará VIPs em cache e não atualizará o cache, por padrão. Você deve definir a "vida útil" (networkaddress.cache.ttl) para um dia no cache da Máquina Virtual Java. Se você não alterar o valor padrão para um dia (ou valor parecido), o valor antigo não será limpo no cache da Máquina Virtual Java quando um VIP for adicionado ou atualizado. Para obter mais informações sobre networkaddress.cache.ttl e networkaddress.cache.negative.ttl, consulte [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Use as diretrizes a seguir para conectar-se a um servidor em um grupo de disponibilidade ou Instância de Cluster de Failover:  
   
@@ -93,29 +94,11 @@ Se você estiver usando o Microsoft JDBC Driver 4.2 (ou inferior) para o SQL Ser
  Se você atualizar um [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aplicativo que usa espelhamento de banco de dados em um cenário de várias sub-redes, você deve remover o **failoverPartner** propriedade de conexão e substituí-lo por **multiSubnetFailover**  definida como **true** e substitua o nome do servidor na cadeia de conexão com um ouvinte de grupo de disponibilidade. Se uma cadeia de caracteres de conexão usa **failoverPartner** e **multiSubnetFailover = true**, o driver gerará um erro. No entanto, se uma cadeia de caracteres de conexão usa **failoverPartner** e **multiSubnetFailover = false** (ou **ApplicationIntent = ReadWrite**), o aplicativo usará o banco de dados o espelhamento.  
   
  O driver retornará um erro se o espelhamento de banco de dados é usado no banco de dados primário no AG e se **multiSubnetFailover = true** é usado na cadeia de conexão que se conecta a um banco de dados primário em vez de um grupo de disponibilidade ouvinte.  
-  
-## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo  
- Quando **applicationIntent = ReadOnly**, o cliente solicita uma carga de trabalho somente leitura ao se conectar a um banco de dados AlwaysOn habilitado. O serviço imporá a tentativa no momento da conexão e durante uma instrução de banco de dados USE, mas somente a um banco de dados habilitado AlwaysOn.  
-  
- O **applicationIntent** palavra-chave não funciona com bancos de dados herdados, somente leitura.  
-  
- Um banco de dados pode permitir ou não cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com a cláusula **ALLOW_CONNECTIONS** das instruções **PRIMARY_ROLE** e **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)].)  
-  
- O **applicationIntent** palavra-chave é usada para habilitar o roteamento somente leitura.  
-  
-## <a name="read-only-routing"></a>Roteamento somente leitura  
- O roteamento somente leitura é um recurso que pode garantir a disponibilidade de uma réplica somente leitura de um banco de dados. Para habilitar roteamento somente leitura:  
-  
-1.  Você deve se conectar a um ouvinte de grupo de disponibilidade do Grupo de Disponibilidade AlwaysOn.  
-  
-2.  O **applicationIntent** palavra-chave de cadeia de caracteres de conexão deve ser definida como **ReadOnly**.  
-  
-3.  O grupo de disponibilidade deve ser configurado pelo administrador de banco de dados para permitir o roteamento somente leitura.  
-  
- É possível que nem todas as várias conexões que usam roteamento somente leitura se conectem à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Para garantir que todas as solicitações somente leitura se conectem à mesma réplica somente leitura, não passe um ouvinte de grupo de disponibilidade ou endereço IP virtual para o **serverName** palavra-chave de cadeia de caracteres de conexão. Em vez disso, especifique o nome da instância somente leitura.  
-  
- O roteamento somente leitura pode demorar mais do que a conexão com a réplica primária, pois o roteamento somente leitura se conecta primeiro à réplica primária para, depois, procurar a melhor réplica secundária legível disponível. Por isso, você deve aumentar seu tempo limite de logon.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>Novos métodos que oferecem suporte a multiSubnetFailover e applicationIntent  
  Os seguintes métodos oferecem acesso programático para o **multiSubnetFailover**, **applicationIntent** e **transparentNetworkIPResolution** cadeia de caracteres de conexão palavras-chave:  
   
@@ -127,7 +110,7 @@ Se você estiver usando o Microsoft JDBC Driver 4.2 (ou inferior) para o SQL Ser
   
 -   [SQLServerDataSource.setMultiSubnetFailover](../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [Getpropertyinfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
+-   [SQLServerDriver.getPropertyInfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
 
 -   SQLServerDataSource.setTransparentNetworkIPResolution
 
@@ -136,7 +119,7 @@ Se você estiver usando o Microsoft JDBC Driver 4.2 (ou inferior) para o SQL Ser
  O **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** e **setTransparentNetworkIPResolution** métodos também são adicionados à [classe SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [ Classe SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), e [classe SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
 ## <a name="ssl-certificate-validation"></a>Validação do certificado SSL  
- Um grupo de disponibilidade consiste em vários servidores físicos. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]adicionado suporte para **nome alternativo da entidade** nos certificados SSL para vários hosts podem ser associados com o mesmo certificado. Para obter mais informações sobre o SSL, consulte [Noções básicas sobre o suporte a SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ Um grupo de disponibilidade consiste em vários servidores físicos. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] adicionado suporte para **nome alternativo da entidade** nos certificados SSL para vários hosts podem ser associados com o mesmo certificado. Para obter mais informações sobre o SSL, consulte [Noções básicas sobre o suporte a SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conectando ao SQL Server com o Driver JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
