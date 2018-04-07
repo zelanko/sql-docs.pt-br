@@ -2,29 +2,30 @@
 title: Conecte-se ao banco de dados do SQL Azure (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21b24f9b46490f0eb83a0b9508b8b5b2213cd7a9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Conecte-se ao banco de dados do SQL Azure (MySQLToSQL)
 Use a conectar-se a caixa de diálogo do SQL Azure para se conectar ao banco de dados do SQL Azure que você deseja migrar.  
@@ -36,14 +37,14 @@ Para acessar essa caixa de diálogo, no **arquivo** menu, selecione **conectar-s
   
 Selecione ou insira o nome do servidor para conectar-se ao SQL Azure.  
   
-**Backup de banco de dados**  
+**Banco de dados**  
   
 Selecione, digite ou **procurar** o nome do banco de dados.  
   
 > [!IMPORTANT]  
 > SSMA para MySQL não oferece suporte a conexão ao banco de dados mestre no SQL Azure.  
   
-**User name**  
+**Nome de usuário**  
   
 Insira o nome de usuário SSMA usará para se conectar ao banco de dados do SQL Azure  
   
@@ -51,7 +52,7 @@ Insira o nome de usuário SSMA usará para se conectar ao banco de dados do SQL 
   
 Digite a senha para o nome de usuário.  
   
-**Criptografar**  
+**Encrypt**  
   
 O SSMA recomenda conexão criptografada para o SQL Azure.  
   

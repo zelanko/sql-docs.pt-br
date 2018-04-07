@@ -21,13 +21,13 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opções de linha de comando no Console do SSMA (SybaseToSQL)
 Microsoft fornece um conjunto robusto de opções de linha de comando para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  
@@ -165,21 +165,21 @@ Exibe o resumo da sintaxe de opções do Console do SSMA:
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40; SybaseToSQL &#41; ](../../ssma/sybase/appendix-1-sybasetosql.md).  
+Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Opção de ajuda de SecurePassword: – securepassword-? /Help  
 Exibe o resumo da sintaxe de opções do Console do SSMA:  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40; SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
 ### <a name="next-step"></a>Próxima etapa  
 A próxima etapa depende de seus requisitos de projeto:  
   
--   Para especificar uma senha ou a exportação / importação de senhas, consulte [gerenciar senhas &#40; SybaseToSQL &#41; ](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   Para especificar uma senha ou a exportação / importação de senhas, consulte [gerenciar senhas &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
   
--   Para gerar relatórios, consulte [gerando relatórios &#40; SybaseToSQL &#41; ](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   Para gerar relatórios, consulte [gerando relatórios &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
--   Para solucionar problemas no console, consulte [solução de problemas &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   Para solucionar problemas no console, consulte [solução de problemas &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   

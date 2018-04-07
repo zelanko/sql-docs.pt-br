@@ -2,25 +2,25 @@
 title: Aplique Analytics Platform System (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
-caps.latest.revision: "25"
-ms.openlocfilehash: 562d0ce41f5a1b12930fdedabd73214ddebd4e4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 25
+ms.openlocfilehash: 1a054ead9ef39169257eb1813ba49eae06082b96
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar Hotfixes do sistema de plataforma de análise
 Este tópico discute como aplicar hotfixes para o software do sistema de plataforma de análise.  
@@ -38,14 +38,14 @@ Para executar essas etapas, você precisará de:
   
 -   Um logon de sistema de plataforma de análise com permissões para acessar o Console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Conhecimento da conta de administrador de domínio de malha para conectar-se para o *< nome_do_domínio >***-HST01** nó.  
+-   Conhecimento da conta de administrador de domínio de malha para conectar-se para o *< nome_do_domínio > * * *-HST01** nó.  
   
 ## <a name="HowToInstallPDW"></a>Para aplicar um hotfix Analytics Platform System  
 Ao contrário das atualizações da Microsoft, os hotfixes para o software do sistema de plataforma de análise não são controlados por meio do WSUS. Eles têm um fluxo de trabalho diferente e são instalados pela execução de um pacote de hotfix.  
   
 1.  **Verifique se os indicadores de estado do dispositivo.**  
   
-    1.  Abra o Console do administrador e navegue até a página de estado do aplicativo. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+    1.  Abra o Console do administrador e navegue até a página de estado do aplicativo. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
     2.  Todos os indicadores de vermelhos ou amarelos devem ser resolvidos antes de prosseguir para a próxima etapa. Duas exceções são:  
   
@@ -59,7 +59,7 @@ Ao contrário das atualizações da Microsoft, os hotfixes para o software do si
   
     2.  Use o **executar como administrador** opção para abrir um Prompt de comando.  
   
-    3.  Execute o seguinte comando, substituindo  *<HotfixPackageName>*  com o nome do pacote executável do hotfix e substituindo os outros itens de espaço reservado *< >* com as informações apropriadas.  
+    3.  Execute o seguinte comando, substituindo *<HotfixPackageName>* com o nome do pacote executável do hotfix e substituindo os outros itens de espaço reservado *< >* com as informações apropriadas.  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
@@ -67,9 +67,9 @@ Ao contrário das atualizações da Microsoft, os hotfixes para o software do si
   
     4.  Siga as etapas apresentadas pelo pacote de hotfix.  
   
-## <a name="see-also"></a>Consulte Também  
-[Baixe e aplique as atualizações da Microsoft &#40; Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)  
-[Desinstalar as atualizações da Microsoft &#40; Analytics Platform System &#41;](uninstall-microsoft-updates.md)  
-[Desinstalar Hotfixes do sistema de plataforma de análise &#40; Analytics Platform System &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Manutenção de software &#40; Analytics Platform System &#41;](software-servicing.md)  
+## <a name="see-also"></a>Consulte também  
+[Baixe e aplique as atualizações da Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
+[Desinstalar atualizações Microsoft &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Desinstalar o Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[Manutenção de software &#40;Analytics Platform System&#41;](software-servicing.md)  
   

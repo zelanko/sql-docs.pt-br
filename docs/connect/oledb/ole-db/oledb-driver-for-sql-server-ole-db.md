@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b76f06a3e1eff17bd1aafb7da06d00feb7da1280
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e14bb0a5154101c8d7bc90db91e0c1d0d34f1ccf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db"></a>Driver do OLE DB para SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Criando um Driver do OLE DB para o aplicativo do SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
+-   [Criação de aplicativo do Driver do OLE DB para SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Objetos de fonte de dados &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Objetos de fonte de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Comandos](../../oledb/ole-db-commands/commands.md)  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 03/30/2018
   
 -   [Tabelas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Tipos de dados &#40; OLE DB &#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Tipos de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Data e hora melhorias &#40; OLE DB &#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Data e hora melhorias & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Tipos definidos pelo usuário CLR grandes &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
@@ -80,6 +80,6 @@ ms.lasthandoff: 03/30/2018
 -   [Tópicos de instruções do OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para programação do SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [Programação no Driver do OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

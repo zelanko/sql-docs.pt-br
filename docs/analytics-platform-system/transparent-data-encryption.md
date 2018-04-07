@@ -2,24 +2,24 @@
 title: Criptografia transparente de dados para Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Criptografia de dados transparente (TDE) executa criptografia de e/s em tempo real e a descriptografia dos dados e arquivos de log de transação e os arquivos de log especiais do PDW."
+description: Criptografia de dados transparente (TDE) executa criptografia de e/s em tempo real e a descriptografia dos dados e arquivos de log de transação e os arquivos de log especiais do PDW.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: "22"
-ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
 Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, em um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
@@ -128,7 +128,7 @@ A tabela a seguir fornece links e explicações de comandos e funções da TDE.
 |[CRIAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Cria uma chave usada para criptografar um banco de dados.|  
 |[ALTERAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Altera a chave usada para criptografar um banco de dados.|  
 |[REMOVA A CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Remove a chave usada para criptografar um banco de dados.|  
-|[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-parallel-data-warehouse.md)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Exibições do catálogo e exibições de gerenciamento dinâmico  
 A tabela a seguir mostra exibições do catálogo de TDE e exibições de gerenciamento dinâmico.  
@@ -149,7 +149,7 @@ Quando um exame de recriptografia para uma operação de criptografia de banco d
   
 Você pode encontrar o estado de criptografia de banco de dados usando o **sys.dm_pdw_nodes_database_encryption_keys** exibição de gerenciamento dinâmico. Para obter mais informações, consulte o *exibições do catálogo e exibições de gerenciamento dinâmico* seção neste tópico).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrições  
 As operações a seguir não são permitidas durante a `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, ou `ALTER DATABASE...SET ENCRYPTION` instruções.  
   
 -   Descartando o banco de dados.  
@@ -282,8 +282,8 @@ Os links a seguir contêm informações gerais sobre como o SQL Server gerencia 
 -   [Chaves de criptografia do SQL Server e do banco de dados](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
-## <a name="see-also"></a>Consulte Também  
-[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
+## <a name="see-also"></a>Consulte também  
+[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
 [CRIAR A CHAVE MESTRA](../t-sql/statements/create-master-key-transact-sql.md)  
 [CRIAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  

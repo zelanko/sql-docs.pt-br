@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6be9ab05f9f7a5c669e62f92c238be3d06dbf44d
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: a785c2bf470df9f09b177fc7b5119132ed93c319
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriedades de inicialização e autorização
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/30/2018
 |SSPROP_INIT_ENCRYPT|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Para criptografar os dados aceitos na rede, a propriedade SSPROP_INIT_ENCRYPT é definida como VARIANT_TRUE.<br /><br /> Se a opção Habilitar Criptografia de Protocolo estiver ativada, a criptografia sempre ocorrerá, independentemente da configuração de SSPROP_INIT_ENCRYPT. Se estiver desativada e a propriedade SSPROP_INIT_ENCRYPT for definida como VARIANT_TRUE, a criptografia ocorrerá.<br /><br /> Se Habilitar Criptografia de Protocolo estiver desativada e SSPROP_INIT_ENCRYPT for definida como VARIANT_FALSE, nenhuma criptografia ocorrerá.|  
 |SSPROP_INIT_FAILOVERPARTNER|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: Especifica o nome do parceiro de failover para espelhamento de banco de dados. Ela é uma propriedade de inicialização e pode ser definida somente antes da inicialização. Depois da inicialização, ela retornará o parceiro de failover, se houver, retornado pelo servidor primário.<br /><br /> Isto permite que um aplicativo inteligente armazene em cache o servidor de backup determinado mais recentemente, mas esses aplicativos devem saber que as informações são atualizadas somente depois que a conexão é estabelecida pela primeira vez (ou redefinida, se estiver inserida em pool) e podem ficar desatualizadas em conexões de longo prazo.<br /><br /> Depois de estabelecer a conexão, o aplicativo pode consultar este atributo para determinar a identidade do parceiro de failover. Se o servidor primário não tiver nenhum parceiro de failover, esta propriedade retornará uma cadeia de caracteres vazia. Para obter mais informações, consulte [usando o espelhamento de banco de dados](../../oledb/features/using-database-mirroring.md).|  
 |SSPROP_INIT_FILENAME|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: Especifica o nome do arquivo primário de um banco de dados anexável. Esse banco de dados é anexado e torna-se o banco de dados padrão da conexão. Para usar SSPROP_INIT_FILENAME, você deve especificar o nome do banco de dados como o valor da propriedade de inicialização DBPROP_INIT_CATALOG. Se o nome do banco de dados não existir, este procedimento procurará o nome do arquivo primário especificado em SSPROP_INIT_FILENAME e anexará esse banco de dados ao nome especificado em DBPROP_INIT_CATALOG. Se o banco de dados tiver sido anexado previamente, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não o anexará novamente.|  
-|SSPROP_INIT_MARSCONNECTION|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Especifica se os MARS (Vários Conjuntos de Resultados Ativos) estão habilitados para a conexão. Esta opção deve ser definida como verdadeira antes de uma conexão com o banco de dados ser estabelecida. Para obter mais informações, consulte [usando Multiple Active Result Sets &#40; MARS &#41; ](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Especifica se os MARS (Vários Conjuntos de Resultados Ativos) estão habilitados para a conexão. Esta opção deve ser definida como verdadeira antes de uma conexão com o banco de dados ser estabelecida. Para obter mais informações, consulte [usando Multiple Active Result Sets & #40; MARS & #41; ](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: O endereço de rede do servidor que executa uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificada pela propriedade DBPROP_INIT_DATASOURCE.|  
 |SSPROP_INIT_NETWORKLIBRARY|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: O nome do networklibrary (DLL) usado para comunicação com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O nome não deve incluir o caminho ou a extensão de nome de arquivo .dll.<br /><br /> O padrão pode ser personalizado usando o Utilitário de Configuração do Cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Observação: Somente o TCP e Pipes nomeados são suportadas por esta propriedade. Se você usar essa propriedade com um prefixo, acabará com um prefixo duplo que resultará em erro, pois a propriedade é usada para gerar um prefixo internamente.|  
 |SSPROP_INIT_PACKETSIZE|Tipo: VT_I4<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: Um tamanho de pacote de rede em bytes. O valor da propriedade de tamanho de pacote deve estar entre 512 e 32.767. O Driver do OLE DB padrão para o tamanho de pacote de rede do SQL Server é 4.096.|  
@@ -93,6 +93,6 @@ Server=MyServer;UID=MyUserName;
  Para obter uma lista de palavras-chave disponíveis no Driver OLE DB para SQL Server, consulte [usando Conexão String Keywords com OLE DB para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Objetos de fonte de dados &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos de fonte de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

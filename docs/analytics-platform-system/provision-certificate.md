@@ -2,24 +2,24 @@
 title: Certificado PDW provisionamento (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "A página de provisionamento de certificado PDW do Analytics Platform System Configuration Manager importa ou remove o certificado usado pelo PDW."
+description: A página de provisionamento de certificado PDW do Analytics Platform System Configuration Manager importa ou remove o certificado usado pelo PDW.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>Provisionamento de certificados do PDW
 O **provisionamento de certificados do PDW** página do sistema de plataforma de análise de**do Configuration Manager** importa ou remove o certificado usado pelo PDW. 
@@ -53,7 +53,7 @@ As instruções a seguir mostram como importar ou remover o certificado do dispo
 ### <a name="to-import-the-certificate"></a>Para importar o certificado  
   
 1.  Inicie o **do Configuration Manager**.  
-Para obter mais informações, consulte [iniciar o Configuration Manager &#40; Analytics Platform System &#41; ](launch-the-configuration-manager.md).  
+Para obter mais informações, consulte [iniciar o Gerenciador de configuração &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
 
 2.  No painel esquerdo do **do Configuration Manager**, expanda **topologia de depósito de dados paralela**e, em seguida, clique em **certificados**.  
   
@@ -83,5 +83,5 @@ SQL Server PDW continuará criptografar conexões atuais, mas não usará o remo
   
 ![Certificado PDW do dispositivo DWConfig](media/dwconfig-appl-pdw-cert.png "certificado PDW do dispositivo DWConfig")  
   
-## <a name="see-also"></a>Consulte Também  
-[Inicie o Gerenciador de configuração &#40; Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Consulte também  
+[Inicie o Gerenciador de configuração &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  

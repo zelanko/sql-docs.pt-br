@@ -1,23 +1,23 @@
 ---
-title: "O que há de novo no Analytics Platform System – um depósito de dados de expansão"
+title: O que há de novo no Analytics Platform System – um depósito de dados de expansão
 author: happynicolle
 ms.author: nicw;barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Veja o que há de novo no Microsoft® Analytics Platform System, um aplicativo de expansão no local que hospeda MPP SQL Server Parallel Data Warehouse."
+description: Veja o que há de novo no Microsoft® Analytics Platform System, um aplicativo de expansão no local que hospeda MPP SQL Server Parallel Data Warehouse.
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System 2016, um data warehouse de MPP de expansão
 Consulte o que há de novo no Microsoft® Analytics Platform System (APS) 2016, a atualização mais recente do dispositivo de um dispositivo de expansão no local que hospeda MPP SQL Server Parallel Data Warehouse. 
@@ -32,7 +32,7 @@ APS 2016 dá suporte a esses melhorias de compatibilidade do T-SQL.  Esses eleme
 
 - [Agrupamentos no nível de coluna SQL][] agora têm suporte além de agrupamentos do Windows.
 - [Índices não clusterizados em índices columnstore clusterizados][] melhorar o desempenho de consultas que pesquisam valores específicos no índice columnstore clusterizado. 
-- [SELECIONE... EM][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][] exibe o espaço em disco usado ou reservados em uma tabela ou banco de dados.
 - [Tabelas largas][] suporte é o mesmo SQL Server 2016. O limite anterior de 32K para o tamanho de linha não existe mais. 
 
@@ -59,7 +59,7 @@ APS 2016 dá suporte a esses melhorias de compatibilidade do T-SQL.  Esses eleme
 ### <a name="additional-functions"></a>Funções adicionais
 
 - [NEWID)][]
-- [RAND)][]
+- [RAND()][]
 
 ## <a name="polybasehadoop-enhancements"></a>Aprimoramentos de PolyBase/Hadoop
 
@@ -99,7 +99,7 @@ Instalando ou atualizando para 2016 APS é mais rápido e requer menos tempo de 
 [nvarchar (max)]:https://msdn.microsoft.com/library/ms186939.aspx
 [varbinary (max)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[SELECIONE... EM]:https://msdn.microsoft.com/library/ms188029.aspx
+[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [Tabelas largas]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx
@@ -115,7 +115,7 @@ Instalando ou atualizando para 2016 APS é mais rápido e requer menos tempo de 
 [BINARY_CHECKSUM()]:https://msdn.microsoft.com/library/ms173784.aspx
 [HAS_PERMS_BY_NAME()]:https://msdn.microsoft.com/library/ms189802.aspx
 [NEWID)]:https://msdn.microsoft.com/library/ms190348.aspx
-[RAND)]:https://msdn.microsoft.com/library/ms177610.aspx
+[RAND()]:https://msdn.microsoft.com/library/ms177610.aspx
 
 
   

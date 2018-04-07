@@ -1,24 +1,24 @@
 ---
-title: "Conceder Permissões"
+title: Conceder Permissões
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>Conceder Permissões
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Conceder permissões para monitorar o dispositivo
-O dispositivo de PDW do SQL Server pode ser monitorado usando o Console do administrador ou o SQL Server PDW exibições do sistema. Logons exigem o nível de servidor **VIEW SERVER STATE** permissão para monitorar o dispositivo. Logons exigem o **ALTER ANY CONNECTION** permissão para encerrar conexões usando o Console de administração ou a **KILL** comando. Para obter informações sobre as permissões necessárias para usar o Console de administração, consulte [conceder permissões para usar o Console de administração &#40; SQL Server PDW &#41; ](#grant-permissions-to-use-the-admin-console).  
+O dispositivo de PDW do SQL Server pode ser monitorado usando o Console do administrador ou o SQL Server PDW exibições do sistema. Logons exigem o nível de servidor **VIEW SERVER STATE** permissão para monitorar o dispositivo. Logons exigem o **ALTER ANY CONNECTION** permissão para encerrar conexões usando o Console de administração ou a **KILL** comando. Para obter informações sobre as permissões necessárias para usar o Console de administração, consulte [conceder permissões para usar o Console de administração &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="PermsAdminConsole"></a>Conceder permissão para monitorar o dispositivo por meio de exibições do sistema  
 Instruções SQL a seguir criam um logon denominado `monitor_login` e concede a **VIEW SERVER STATE** permissão para o `monitor_login` logon.  

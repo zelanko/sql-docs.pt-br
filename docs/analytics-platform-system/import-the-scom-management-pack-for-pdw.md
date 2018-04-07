@@ -2,25 +2,25 @@
 title: Importar o pacote de gerenciamento do SCOM para PDW (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: "6"
-ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>Importar o pacote de gerenciamento do SCOM para PDW
 Siga estas etapas para importar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para SQL Server PDW. Os pacotes de gerenciamento necessários para monitorar o SQL Server PDW do SCOM.  
@@ -30,7 +30,7 @@ Siga estas etapas para importar os pacotes de gerenciamento do System Center Ope
   
 System Center Operations Manager 2007 R2 deve ser instalado e em execução.  
   
-Os pacotes de gerenciamento devem ser instalados. Consulte [instalar os pacotes de gerenciamento do SCOM &#40; Analytics Platform System &#41; ](install-the-scom-management-packs.md).  
+Os pacotes de gerenciamento devem ser instalados. Consulte [instalar os pacotes de gerenciamento do SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md).  
   
 ## <a name="Step1"></a>Etapa 1: Importar o pacote de gerenciamento de Base de dispositivo do SQL Server  
   
@@ -56,7 +56,7 @@ Os pacotes de gerenciamento devem ser instalados. Consulte [instalar os pacotes 
   
 7.  Clique em **Instalar**.  
   
-    ![Clique em instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Click Install](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  Uma vez concluído, clique em **fechar**.  
   
@@ -76,14 +76,14 @@ Os pacotes de gerenciamento devem ser instalados. Consulte [instalar os pacotes 
   
 4.  Clique em **Instalar**.  
   
-    ![Clique em instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Click Install](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Clique em **Fechar**.  
   
     ![Clique em Fechar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>Próxima etapa  
-Agora que você importou os pacotes de gerenciamento, prossiga para a próxima etapa: [configurar o SCOM para monitorar Analytics Platform System &#40; Analytics Platform System &#41; ](configure-scom-to-monitor-analytics-platform-system.md).  
+Agora que você importou os pacotes de gerenciamento, prossiga para a próxima etapa: [configurar o SCOM para monitorar Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

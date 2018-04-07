@@ -1,25 +1,25 @@
 ---
-title: "Backup e restauração"
+title: Backup e restauração
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Descreve como os dados de backup e restauração works para SQL Server Parallel Data Warehouse (PDW)."
+description: Descreve como os dados de backup e restauração works para SQL Server Parallel Data Warehouse (PDW).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 
-ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 50
+ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 Descreve como os dados de backup e restauração works para SQL Server Parallel Data Warehouse (PDW). Operações de backup e restauração são usadas para recuperação de desastres. Backup e restauração também podem ser usados para copiar um banco de dados de um dispositivo para outro dispositivo.  
@@ -35,7 +35,7 @@ The [master database](master-database.md) is a SMP SQL Server database. It is ba
 
 -->
   
-PDW usa a tecnologia de backup do SQL Server para fazer backup e restaurar bancos de dados do dispositivo. Opções de backup do SQL Server são pré-configurados para usar a compactação de backup. Você não pode definir opções de backup, como compactação, soma de verificação, o tamanho de bloco e contagem do buffer.  
+PDW usa a tecnologia de backup do SQL Server para fazer backup e restaurar bancos de dados do dispositivo. Opções de backup do SQL Server são pré-configurados para usar a compactação de backup. Não é possível definir as opções de backup, como compactação, soma de verificação, tamanho de bloco e contagem de buffer.  
   
 Backups de banco de dados são armazenados em um ou mais servidores de backup, que existem em sua própria rede de cliente.  PDW grava um backup de banco de dados do usuário em paralelo diretamente de nós de computação em um servidor de backup e restaura um backup de banco de dados do usuário em paralelo diretamente do servidor de backup para os nós de computação.  
   
@@ -46,7 +46,7 @@ Há dois tipos de dados que exigem um backup: bancos de dados de usuário e banc
   
 Um backup de banco de dados completo é um backup de um banco de dados inteiro do PDW. Este é o tipo de backup padrão. Um backup completo de um banco de dados do usuário inclui usuários de banco de dados e funções de banco de dados. Um backup do mestre de inclui logons.  
   
-Um backup diferencial contém todas as alterações desde o último backup completo. Um backup diferencial geralmente leva menos tempo que um backup completo e pode ser executado com mais frequência. Quando vários backups diferenciais se baseiam no mesmo backup completo, cada diferencial inclui todas as alterações no diferencial anterior.  
+Um backup diferencial contém todas as alterações desde o último backup completo. Um backup diferencial geralmente leva menos tempo do que um backup completo e pode ser executado com mais frequência. Quando vários backups diferenciais se baseiam no mesmo backup completo, cada diferencial inclui todas as alterações no diferencial anterior.  
   
 Por exemplo, você pode criar um backup completo semanal e um backup diferencial diário. Para restaurar o banco de dados do usuário, o backup completo e o último diferencial (se houver) precisa ser restaurado.  
   
@@ -123,11 +123,11 @@ Ao restaurar os dados, o dispositivo detecta o número de nós de computação n
   
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurando para um dispositivo com um número maior de nós de computação  
   
-Restaurar um backup para um dispositivo com um número maior de nós de computação aumenta o tamanho alocado do banco de dados proporcionalmente ao número de nós de computação.  
+A restauração de um backup em um dispositivo com um número maior de nós de Computação aumenta o tamanho do banco de dados alocado proporcionalmente ao número de nós de Computação.  
   
 Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós (30 GB por nó) em um dispositivo de nó de 6, o SQL Server PDW cria um banco de dados de 180 GB (6 nós com 30 GB por nó) no dispositivo do nó de 6. SQL Server PDW inicialmente restaura o banco de dados para 2 nós para corresponder à configuração de fonte e redistribui os dados para todos os nós de 6.  
   
-Após a redistribuição cada nó de computação contém menos dados reais e mais espaço livre do que cada nó de computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado é maior do que o necessário, você pode usar [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir o tamanho dos arquivos de banco de dados.  
+Após a redistribuição, cada nó de Computação conterá menos dados reais e mais espaço livre do que cada nó de Computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado é maior do que o necessário, você pode usar [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir o tamanho dos arquivos de banco de dados.  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   

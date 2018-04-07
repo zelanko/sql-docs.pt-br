@@ -2,29 +2,30 @@
 title: Convertendo esquemas de DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3684380a10f371952b2461907bb36a7b13f1107
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Convertendo esquemas de DB2 (DB2ToSQL)
 Depois de se conectar ao DB2, conectado à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e o conjunto de projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de banco de dados.  
@@ -35,7 +36,7 @@ Converter objetos de banco de dados usa as definições de objeto do DB2, conver
 Durante a conversão, o SSMA imprime mensagens de saída para o painel de saída e mensagens de erro para o painel de lista de erros. Use as informações de saída e de erro para determinar se você precisa modificar seus bancos de dados do DB2 ou o processo de conversão para obter os resultados da conversão desejada.  
   
 ## <a name="setting-conversion-options"></a>Definindo opções de conversão  
-Antes de converter objetos, examine as opções de conversão de projeto no **configurações de projeto** caixa de diálogo. Usando essa caixa de diálogo, você pode definir como o SSMA converte funções e variáveis globais. Para obter mais informações, consulte [configurações de projeto &#40; Conversão de &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md).  
+Antes de converter objetos, examine as opções de conversão de projeto no **configurações de projeto** caixa de diálogo. Usando essa caixa de diálogo, você pode definir como o SSMA converte funções e variáveis globais. Para obter mais informações, consulte [configurações de projeto &#40;conversão&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>Resultados de conversão  
 A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos:  
@@ -78,7 +79,7 @@ A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!IN
 |Cursores|**O SSMA mapeia CURSORES com as seguintes exceções:**<br /><br />Instrução de CURSOR ALLOCATE - não é mapeado para a semântica do SQL Server<br /><br />Instrução de LOCALIZADORES ASSOCIAR - não é mapeado para a semântica do SQL Server<br /><br />Instrução DECLARE CURSOR - cláusula Returnability não está mapeada para a semântica do SQL server<br /><br />Instrução FETCH – um mapeamento parcial. Variáveis como destino têm suporte apenas. DESCRITOR de sqlda não não está mapeada para a semântica do SQL server|  
 |Variáveis|São mapeados.|  
 |Exceções, manipuladores e condições|**O SSMA mapeia "tratamento de exceção" com as seguintes exceções:**<br /><br />Manipuladores de saída – são mapeados.<br /><br />Desfazer manipuladores – são mapeados.<br /><br />CONTINUAR manipuladores – não estão mapeados.<br /><br />Condições - ele não mapeia a semântica do SQL server.|  
-|SQL dinâmico|Não mapeado.|  
+|Dynamic SQL|Não mapeado.|  
 |Aliases|São mapeados.|  
 |Apelidos|Mapeamento parcial. Processamento manual é necessário para o objeto subjacente|  
 |Sinônimos|São mapeados.|  
@@ -151,13 +152,13 @@ Para cada item que não puderam ser convertido, você deve determinar o que voc�
   
 -   Você pode modificar o código-fonte para obter os procedimentos sobre o **SQL** guia.  
   
--   Você pode modificar o objeto no banco de dados DB2 para remover ou revisar código problemática. Para carregar o código atualizado no SSMA, você terá que atualizar os metadados. Para obter mais informações, consulte [se conectar ao banco de dados DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
+-   Você pode modificar o objeto no banco de dados DB2 para remover ou revisar código problemática. Para carregar o código atualizado no SSMA, você terá que atualizar os metadados. Para obter mais informações, consulte [se conectar ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
 -   Você pode excluir o objeto de migração. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados e o Gerenciador de metadados do DB2, desmarque a caixa de seleção ao lado do item antes de carregar os objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e migração de dados do DB2.  
   
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [carregar objetos convertidos no SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
-## <a name="see-also"></a>Consulte Também  
-[Migrando dados do DB2 no SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Migrando dados do DB2 no SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

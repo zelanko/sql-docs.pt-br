@@ -2,26 +2,26 @@
 title: banco de dados (SQL Server PDW) tempdb
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
+caps.latest.revision: 22
 ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
 **tempdb** é um banco de dados de sistema do PDW do SQL Server que armazena as tabelas temporárias locais para bancos de dados do usuário. Tabelas temporárias são geralmente usadas para melhorar o desempenho da consulta. Por exemplo, você pode usar uma tabela temporária para modularizar um script e reutilizar os dados computados.  
@@ -81,7 +81,7 @@ Limitações e restrições em tabelas temporárias locais. Você *não pode:*
   
 -   Execute comandos do console de banco de dados em tabelas temporárias.  
   
--   Use o mesmo nome para duas ou mais tabelas temporárias dentro do mesmo lote. Se mais de uma tabela temporária local for usada em um lote, cada um deve ter um nome exclusivo. Se várias sessões estão executando o mesmo lote e criar a mesma tabela temporária local, o SQL Server PDW acrescenta internamente um sufixo numérico para o nome de tabela temporária local para manter um nome exclusivo para cada tabela temporária local.  
+-   Use o mesmo nome para duas ou mais tabelas temporárias dentro do mesmo lote. Se mais de uma tabela temporária local for usada em um lote, cada uma precisará ter um nome exclusivo. Se várias sessões estão executando o mesmo lote e criar a mesma tabela temporária local, o SQL Server PDW acrescenta internamente um sufixo numérico para o nome de tabela temporária local para manter um nome exclusivo para cada tabela temporária local.  
   
 > [!NOTE]  
 > Você *pode* criar e atualizar estatísticas em uma tabela temporária. **ALTER INDEX** pode ser usado para recriar um índice clusterizado.  

@@ -1,30 +1,31 @@
 ---
 title: Conectar-se ao banco de dados do SQL Azure (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74be54cbdac01197d4756ae1f30b6285e8c2fa90
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 823532a0107db9bcbc6781f25466fb135ffeeefe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Conectar-se ao banco de dados do SQL Azure (SybaseToSQL)
 Para migrar bancos de dados Sybase para o banco de dados de SQL do Azure, você deve se conectar à instância de destino de banco de dados de SQL do Azure. Quando você se conectar, SSMA obtém metadados sobre todos os bancos de dados na instância do banco de dados de SQL do Azure e exibe os metadados de banco de dados no Gerenciador de metadados de banco de dados do Azure SQL. O SSMA armazena informações da instância do Azure SQL DB está conectado, mas não armazena as senhas.  
@@ -43,7 +44,7 @@ A conta que é usada para se conectar ao banco de dados de SQL do Azure requer p
 ## <a name="establishing-a-azure-sql-db-connection"></a>Estabelecer uma Conexão de banco de dados SQL do Azure  
 Antes de converter objetos de banco de dados Sybase a sintaxe do banco de dados de SQL do Azure, você deve estabelecer uma conexão com a instância do banco de dados do SQL Azure em que você deseja migrar os bancos de dados ou o banco de dados Sybase.  
   
-Quando você define as propriedades de conexão, você também especificar o banco de dados onde objetos e dados serão migrados. Você pode personalizar esse mapeamento no nível do esquema Sybase depois que você se conectar ao banco de dados de SQL do Azure. Para obter mais informações, consulte [mapeamento Sybase ASE esquemas para esquemas SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+Quando você define as propriedades de conexão, você também especificar o banco de dados onde objetos e dados serão migrados. Você pode personalizar esse mapeamento no nível do esquema Sybase depois que você se conectar ao banco de dados de SQL do Azure. Para obter mais informações, consulte [mapeamento Sybase ASE esquemas para esquemas SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
 > [!WARNING]  
 > Antes de tentar se conectar ao banco de dados do Azure SQL, certifique-se de que a instância do banco de dados do Azure SQL está em execução e pode aceitar conexões.  
@@ -85,14 +86,14 @@ Metadados sobre bancos de dados do banco de dados do Azure SQL não é atualizad
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento entre esquemas Sybase e bancos de dados do banco de dados de SQL do Azure e esquemas, consulte [mapeamento Sybase ASE esquemas para esquemas SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+-   Para personalizar o mapeamento entre esquemas Sybase e bancos de dados do banco de dados de SQL do Azure e esquemas, consulte [mapeamento Sybase ASE esquemas para esquemas SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
--   Para personalizar opções de configuração para os projetos, consulte [definindo opções de projeto &#40; SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
+-   Para personalizar opções de configuração para os projetos, consulte [definindo opções de projeto &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
   
--   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeamento Sybase ASE e tipos de dados do SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
+-   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeamento Sybase ASE e tipos de dados do SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
   
--   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados Sybase em definições de objeto de banco de dados de SQL do Azure. Para obter mais informações, consulte [converter objetos de banco de dados do Sybase ASE &#40; SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+-   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados Sybase em definições de objeto de banco de dados de SQL do Azure. Para obter mais informações, consulte [converter objetos de banco de dados do Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Migrando Sybase ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Migrando bancos de dados Sybase ASE para o SQL Server - banco de dados SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

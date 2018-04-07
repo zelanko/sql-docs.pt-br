@@ -2,25 +2,25 @@
 title: Configurar o SCOM para monitorar o Analytics Platform System
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: "10"
-ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>Configurar o SCOM para monitorar o Analytics Platform System
 Siga estas etapas para configurar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o sistema de plataforma de análise. Os pacotes de gerenciamento necessários para monitorar o Analytics Platform System do SCOM.  
@@ -30,7 +30,7 @@ Siga estas etapas para configurar os pacotes de gerenciamento do System Center O
   
 System Center Operations Manager 2007 R2 deve ser instalado e em execução.  
   
-Os pacotes de gerenciamento devem ser instalados e configurados. Consulte [instalar os pacotes de gerenciamento do SCOM &#40; Analytics Platform System &#41; ](install-the-scom-management-packs.md) e [importar o pacote de gerenciamento do SCOM para PDW &#40; Analytics Platform System &#41; ](import-the-scom-management-pack-for-pdw.md).  
+Os pacotes de gerenciamento devem ser instalados e configurados. Consulte [instalar os pacotes de gerenciamento do SCOM &#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md) e [importar o pacote de gerenciamento do SCOM para PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 ## <a name="ConfigureRunAsProfile"></a>Configurar o perfil executar como no System Center  
 Para configurar o System Center, você deve executar as etapas a seguir:  
@@ -121,7 +121,7 @@ Aqui estão as instruções detalhadas sobre como você pode fazer isso:
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>Próxima etapa  
-Agora que você configurou os pacotes de gerenciamento, você está pronto para iniciar o monitoramento do dispositivo. Para obter mais informações, consulte [monitorar o dispositivo usando o System Center Operations Manager &#40; Analytics Platform System &#41; ](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+Agora que você configurou os pacotes de gerenciamento, você está pronto para iniciar o monitoramento do dispositivo. Para obter mais informações, consulte [monitorar o dispositivo por usando o System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

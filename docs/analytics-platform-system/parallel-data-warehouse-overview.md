@@ -1,25 +1,25 @@
 ---
-title: "Visão geral do Parallel Data Warehouse"
+title: Visão geral do Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Este tópico explica o software de dispositivo e os componentes de software do dispositivo não do sistema de plataforma de análise."
+description: Este tópico explica o software de dispositivo e os componentes de software do dispositivo não do sistema de plataforma de análise.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="parallel-data-warehouse-overview"></a>Visão geral do Parallel Data Warehouse
 Este tópico explica o software de dispositivo e os componentes de software do dispositivo não do sistema de plataforma de análise.  
@@ -248,15 +248,15 @@ Analytics Platform System tem várias maneiras de monitorar a atividade de dispo
 ### <a name="admin-console"></a>Console de administração  
 O Console de administração permite que você exiba o status atual sobre a integridade do dispositivo. Isso é executado como um aplicativo web no nó de controle e é acessível via https.  
   
-Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>Exibições do sistema  
 O Console de administração baseia-se em consultas de exibição do sistema. Você pode consultar as exibições do sistema individualmente para obter a informação específica que é necessário.  
 
-Para obter mais informações, consulte [monitorar o dispositivo usando exibições do sistema &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md) 
+Para obter mais informações, consulte [monitorar o dispositivo por exibições do sistema usando &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 Há pacotes de gerenciamento do System Center Operations Manager (SCOM) para SQL Server PDW. 
 
-Para configurar o dispositivo para o SCOM, consulte [monitorar o dispositivo usando o System Center Operations Manager &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+Para configurar o dispositivo para o SCOM, consulte [monitorar o dispositivo por usando o System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

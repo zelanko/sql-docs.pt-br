@@ -1,15 +1,16 @@
 ---
-title: "Opções de linha de comando no Console do SSMA (MySQLToSQL) | Microsoft Docs"
+title: Opções de linha de comando no Console do SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa2e0210a3d59e41b9adf9d44b593e3bc83e9aef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 747d4fcd7825d718ee7216b0ff364954cc121059
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opções de linha de comando no Console do SSMA (MySQLToSQL)
 Microsoft fornece opções de linha de comando um conjunto robusto para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  
@@ -172,21 +173,21 @@ Exibe o resumo da sintaxe de opções do Console do SSMA:
   
 `C:\>SSMAforMySQLConsole.EXE -?`  
   
-Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40; MySQLToSQL &#41; ](../../ssma/mysql/appendix-1-mysqltosql.md).  
+Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Opção de ajuda de SecurePassword: – securepassword-? /Help  
 Exibe o resumo da sintaxe de opções do Console do SSMA:  
   
 `C:\>SSMAforMySQLConsole.EXE -securepassword -?`  
   
-Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40; MySQLToSQL &#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
+Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
   
 ### <a name="next-step"></a>Próxima etapa  
 A próxima etapa depende de seus requisitos de projeto:  
   
--   Para especificar uma senha ou a exportação / importação de senhas, consulte [gerenciar senhas &#40; MySQLToSQL &#41; ](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+-   Para especificar uma senha ou a exportação / importação de senhas, consulte [gerenciar senhas &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
   
--   Para gerar relatórios, consulte [gerando relatórios &#40; MySQLToSQL &#41; ](../../ssma/mysql/generating-reports-mysqltosql.md).  
+-   Para gerar relatórios, consulte [gerando relatórios &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
--   Para solucionar problemas no console, consulte [solução de problemas &#40; MySQLToSQL &#41; ](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+-   Para solucionar problemas no console, consulte [solução de problemas &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   

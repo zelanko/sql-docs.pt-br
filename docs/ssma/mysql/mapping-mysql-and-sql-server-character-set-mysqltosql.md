@@ -2,29 +2,30 @@
 title: Mapeamento de caracteres do SQL Server e MySQL definido (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapeamento de caracteres do SQL Server e MySQL definido (MySQLToSQL)
 Conjunto de caracteres (Charset) pode ser especificado para tipos de dados MySQL, expressões e literais.  
@@ -94,20 +95,20 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
     |cp850|Oeste DOS Europeu|CHAR/VARCHAR (padrão)|  
     |hp8|HP oeste Europeu|CHAR/VARCHAR (padrão)|  
     |koi8r|KOI8-R Relcom russo|CHAR/VARCHAR (padrão)|  
-    |Latino 1|CP1252 oeste Europeu|CHAR/VARCHAR (padrão)|  
+    |Latino 1|cp1252 West European|CHAR/VARCHAR (padrão)|  
     |latin2|Europeu Central ISO 8859-2|CHAR/VARCHAR (padrão)|  
     |swe7|7 bits sueco|CHAR/VARCHAR (padrão)|  
-    |ASCII|US ASCII|CHAR/VARCHAR (padrão)|  
+    |ascii|US ASCII|CHAR/VARCHAR (padrão)|  
     |ujis|EUC-JP japonês|NCHAR/NVARCHAR (padrão)|  
     |SJIS|Japonês Shift JIS|NCHAR/NVARCHAR (padrão)|  
     |Hebraico|ISO 8859-8 Hebraico|CHAR/VARCHAR (padrão)|  
     |tis620|TIS620 tailandês|CHAR/VARCHAR (padrão)|  
     |euckr|Coreano EUC-KR|NCHAR/NVARCHAR (padrão)|  
     |koi8u|Ucraniano KOI8-U|CHAR/VARCHAR (padrão)|  
-    |GB2312|GB2312 Chinês simplificado|NCHAR/NVARCHAR (padrão)|  
+    |gb2312|GB2312 Chinês simplificado|NCHAR/NVARCHAR (padrão)|  
     |Grego|ISO 8859-7 Grego|CHAR/VARCHAR (padrão)|  
-    |CP 1250|Europeu Central do Windows|CHAR/VARCHAR (padrão)|  
-    |GBK|E chinês simplificado GBK|NCHAR/NVARCHAR (padrão)|  
+    |cp 1250|Europeu Central do Windows|CHAR/VARCHAR (padrão)|  
+    |gbk|E chinês simplificado GBK|NCHAR/NVARCHAR (padrão)|  
     |latin5|ISO 8859-9 Turco|CHAR/VARCHAR (padrão)|  
     |armscii8|Armênio ARMSCII-8|CHAR/VARCHAR (padrão)|  
     |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (padrão)|  
@@ -118,9 +119,9 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
     |MacRoman|Mac oeste Europeu|CHAR/VARCHAR (padrão)|  
     |cp852|Europeu Central DOS|CHAR/VARCHAR (padrão)|  
     |latin7|ISO 8859-13 báltico|CHAR/VARCHAR (padrão)|  
-    |CP 1251|Windows cirílico|CHAR/VARCHAR (padrão)|  
-    |CP 1256|Árabe do Windows|CHAR/VARCHAR (padrão)|  
-    |CP 1257|Windows báltico|CHAR/VARCHAR (padrão)|  
+    |cp 1251|Windows cirílico|CHAR/VARCHAR (padrão)|  
+    |cp 1256|Árabe do Windows|CHAR/VARCHAR (padrão)|  
+    |cp 1257|Windows Baltic|CHAR/VARCHAR (padrão)|  
     |BINARY|Conjunto de caracteres binária pseudo|CHAR/VARCHAR (padrão)|  
     |geostd8|Georgiano GEOSTD8|CHAR/VARCHAR (padrão)|  
     |cp932|SJIS em japonês do Windows|NCHAR/NVARCHAR (padrão)|  

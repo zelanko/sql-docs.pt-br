@@ -1,26 +1,26 @@
 ---
-title: "Configuração de dispositivo de rede (Analytics Platform System)"
+title: Configuração de dispositivo de rede (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>Configuração de rede do dispositivo
 O utilitário do SQL Server PDW é criado e configurado com um conjunto de correção de endereços IP em todos os servidores e dispositivos aplicáveis de Chão de fábrica do IHVS. Na entrega do aparelho, o IP externo (Ethernet) endereçado deve ser reconfigurado para atender aos requisitos de centro de dados do cliente específico.  
@@ -30,7 +30,7 @@ O utilitário do SQL Server PDW é criado e configurado com um conjunto de corre
   
 O **configuração de rede** página permite que você exiba as configurações de rede externamente para os nós em sua aplicação Analytics Platform System. Esta página é somente leitura.  
   
-![Rede do dispositivo DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Para atualizar a configuração de rede no seu dispositivo  
 Alterar os endereços IP do domínio de malha, domínio de carga de trabalho e domínios de HDInsight, editando o **AplianceInfo.xml** de arquivo e, em seguida, executar a instalação. Esta é uma operação offline. O HDInsight (se houver) e PDW regiões serão automaticamente interrompidas durante a alteração do endereço IP.  
@@ -64,6 +64,6 @@ Para obter informações adicionais sobre dispositivos Dell, consulte:
   
 -   PDUS **Dell limitados Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
-## <a name="see-also"></a>Consulte Também  
-[Inicie o Gerenciador de configuração &#40; Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Consulte também  
+[Inicie o Gerenciador de configuração &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

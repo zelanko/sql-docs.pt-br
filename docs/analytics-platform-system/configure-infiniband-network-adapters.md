@@ -2,24 +2,24 @@
 title: Configurar adaptadores de rede InfiniBand Analytics Platform System (APS)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Descreve como configurar os adaptadores de rede InfiniBand em um servidor não seja de aplicação de cliente para conectar-se ao nó de controle no SQL Server Parallel Data Warehouse (PDW)."
+description: Descreve como configurar os adaptadores de rede InfiniBand em um servidor não seja de aplicação de cliente para conectar-se ao nó de controle no SQL Server Parallel Data Warehouse (PDW).
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 
-ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 15
+ms.openlocfilehash: 5724f5e61d458d19e8fc52d77fbff1401ca2afd3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de rede InfiniBand para Analytics Platform System
 Descreve como configurar os adaptadores de rede InfiniBand em um servidor não seja de aplicação de cliente para conectar-se ao nó de controle no SQL Server Parallel Data Warehouse (PDW). Use estas instruções para a conectividade básica e de alta disponibilidade, para que o carregamento, backup e outros processos vai se conectar automaticamente à rede InfiniBand ativa.  

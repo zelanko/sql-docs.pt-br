@@ -21,13 +21,13 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso de repositórios de teste (SybaseToSQL)
 Os repositórios de repositório de teste do SSMA SSMA Tester casos de teste e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_sybase_utilities** de **ssmatesterdb_syb** banco de dados.  
@@ -59,7 +59,7 @@ Os botões a seguir estão disponíveis na página de casos de teste:
   
 -   Clique o **editar** para executar o Assistente de caso de teste e alterar o teste selecionado.  
   
--   Clique o **executar** para abrir o [casos de teste em execução &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) caixa de diálogo e executar o teste selecionado.  
+-   Clique o **executar** para abrir o [casos de teste em execução &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) caixa de diálogo e executar o teste selecionado.  
   
 ## <a name="test-results-repository"></a>Repositório de resultados de teste  
 Você pode exibir o repositório de resultados de teste a **resultados de teste** página do **repositório de casos de teste** janela. Abra-o clicando em **resultados de teste...** do **Tester** menu.  
@@ -80,11 +80,11 @@ As seguintes informações sobre resultados de teste são exibidas na grade.
   
 Os botões a seguir estão disponíveis na página de resultados de teste:  
   
--   Clique o **exibição** para abrir [exibindo relatórios de caso de teste &#40; SybaseToSQL &#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) do resultado do caso de teste atual.  
+-   Clique o **exibição** para abrir [exibindo relatórios de caso de teste &#40;SybaseToSQL&#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) de resultado de caso de teste atual.  
   
 -   Clique o **excluir** botão para excluir o resultado do teste selecionado  
   
-## <a name="see-also"></a>Consulte Também  
-[Executar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Casos de teste de execução &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Teste de objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

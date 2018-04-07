@@ -1,30 +1,31 @@
 ---
-title: "Configurações globais (log) (MySQLToSQL) | Microsoft Docs"
+title: Configurações globais (log) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f80a451a574aad466258d77e9408c839d5a4075
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c0014fc222c045a0a35766f1d20225c3bf68866
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Configurações globais (log) (MySQLToSQL)
 Use o **configurações globais** caixa de diálogo para especificar as configurações de log para o SSMA. Normalmente, altere essas configurações apenas ao trabalhar com o suporte ao produto.  
@@ -41,12 +42,12 @@ As seguintes opções estão disponíveis em **nível mensagens**:
 |**Coletor**|Metadados sobre o esquema de origem de coleta e salva-o ao projeto.|  
 |**Conversor**|Converte a estruturas de objetos de banco de dados de origem, como tabelas e procedimentos armazenados, em correspondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] estruturas.|  
 |**Migrator de dados**|Migra os dados do banco de dados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.|  
+|**Formatter**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.|  
 |**Interface gráfica do usuário**|Mensagens que aparecem quando você usar a ferramenta SSMA.|  
-|**Vinculador**|Resolve os identificadores SQL e fornece informações para outros componentes.|  
+|**Linker**|Resolve os identificadores SQL e fornece informações para outros componentes.|  
 |**Outro**|Todas as mensagens que não estão em qualquer outra categoria.|  
 |**Analisador**|Analisa o esquema de origem.|  
-|**Sincronizador**|Objetos de banco de dados da fonte de cargas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Synchronizer**|Objetos de banco de dados da fonte de cargas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**TreeConverter**|Converte objetos em uma fonte de metadados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadados.|  
   
 Para cada opção em **mensagens nível**, configure um dos seguintes níveis de log para o SSMA:  
@@ -56,7 +57,7 @@ Para cada opção em **mensagens nível**, configure um dos seguintes níveis de
 |**Erro fatal**|Grave somente mensagens de erro fatal no log.|  
 |**Erro**|Grave no log de erro e mensagens de erro fatal.|  
 |**Aviso**|Grave mensagens de erro fatal, de aviso e erro no log.|  
-|**Informações de**|Gravação informativos, de aviso, erro e mensagens de erro fatal para o log.|  
+|**informações de**|Gravação informativos, de aviso, erro e mensagens de erro fatal para o log.|  
 |**Depurador**|Grave todas as mensagens, incluindo mensagens, o log de depuração.|  
   
 **Caminho do arquivo de log**  

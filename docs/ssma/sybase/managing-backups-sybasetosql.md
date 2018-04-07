@@ -21,13 +21,13 @@ ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>Gerenciando Backups (SybaseToSQL)
 Gerenciamento de Backup do Sybase permite backup e restauração de dados da tabela antes ou depois de executar um teste. Você também pode gerenciar o conteúdo de backup com a caixa de diálogo Gerenciar conteúdos de Backup.  
@@ -103,6 +103,6 @@ Os botões a seguir estão disponíveis na caixa de diálogo:
   
 -   Clique o **fechar** para fechar a caixa de diálogo.  
   
-## <a name="see-also"></a>Consulte Também  
-[Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Teste de objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

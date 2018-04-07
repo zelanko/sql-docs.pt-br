@@ -2,25 +2,25 @@
 title: Controlar o dispositivo alertas (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="track-appliance-alerts"></a>Controlar os alertas do dispositivo
 Este tópico explica como usar o Console de administração e as exibições do sistema para rastrear alertas em um dispositivo de PDW do SQL Server.  
@@ -33,7 +33,7 @@ SQL Server PDW logs e alertas [sys.dm_pdw_component_health_alerts](../relational
 ### <a name="view-alerts-by-using-the-admin-console"></a>Exibir alertas usando o Console de administração  
 Há um **alertas** guia para a região PDW, região HDI e para a região de malha do dispositivo. Após o failover, o evento de failover está incluído no número de alertas na página. Há uma página para a região PDW, região HDI e para a região de malha do dispositivo. Cada página de integridade tem uma guia. Para saber mais sobre um alerta, clique o **integridade** página, o **alertas** guia e, em seguida, clique em um alerta.  
   
-![Alertas do Console de Admin do PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 Sobre o **alertas** página:  
   
@@ -76,7 +76,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Monitoramento de dispositivo &#40; Analytics Platform System &#41;](appliance-monitoring.md)  
+[Monitoramento de dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

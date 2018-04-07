@@ -1,26 +1,26 @@
 ---
-title: "Configuração de inicialização de arquivo instantânea (Analytics Platform System)"
+title: Configuração de inicialização de arquivo instantânea (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: "20"
-ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuração de inicialização instantânea de arquivo
 A inicialização instantânea de arquivo é um recurso do SQL Server que permite operações de arquivo de dados ser executado mais rapidamente. Marcando a caixa para ativar a inicialização instantânea de arquivo melhorará o desempenho do SQL Server PDW. No entanto, se isso representa um risco de segurança para você business, em seguida, deixe a caixa desmarcada.  
@@ -45,7 +45,7 @@ O processo de backup requer uma credencial de rede (conta de usuário do Windows
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>Para ativar ou desativar a inicialização instantânea de arquivo  
   
-1.  Inicie o Gerenciador de configuração. Para obter mais informações, consulte [iniciar o Configuration Manager &#40; Analytics Platform System &#41; ](launch-the-configuration-manager.md).  
+1.  Inicie o Gerenciador de configuração. Para obter mais informações, consulte [iniciar o Gerenciador de configuração &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  No painel esquerdo do Gerenciador de configuração, clique em **inicialização imediata de arquivo**.  
   
@@ -54,7 +54,7 @@ O processo de backup requer uma credencial de rede (conta de usuário do Windows
     > [!WARNING]  
     > Quando você desativa a inicialização instantânea de arquivo, a consideração de segurança discutida acima para o recurso pode ainda se aplicam a arquivos excluídos durante a inicialização instantânea de arquivo foi habilitada.  
   
-4.  Clique em **Aplicar**. As alterações serão propagadas por meio de instâncias do SQL Server no SQL Server PDW na próxima vez em que os serviços de aplicativo são reiniciados. Para reiniciar os serviços do dispositivo, consulte [PDW serviços Status &#40; Analytics Platform System &#41; ](pdw-services-status.md).  
+4.  Clique em **Aplicar**. As alterações serão propagadas por meio de instâncias do SQL Server no SQL Server PDW na próxima vez em que os serviços de aplicativo são reiniciados. Para reiniciar os serviços do dispositivo, consulte [Status de serviços PDW &#40;Analytics Platform System&#41;](pdw-services-status.md).  
   
 5.  Talvez você queira repetir os passos descritos acima como **adicionar permissão para a conta de Backup** para remover o **executar tarefas de manutenção de volume** permissão.  
   

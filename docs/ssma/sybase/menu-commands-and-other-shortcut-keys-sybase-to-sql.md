@@ -1,30 +1,31 @@
 ---
 title: Comandos de menu e outras teclas de atalho (Sybase para SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc86f038488652df0bee371d695f5b21ce105147
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c0d4a6d5e9275c9d6f62b6ebe06b950f5600b4ee
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menu e outras teclas de atalho (Sybase para SQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para Sybase aplicativo.  
@@ -76,7 +77,7 @@ Para acessar o menu de exibição, o atalho de teclado usado é ALT + V. A tabel
 |Mostre painel de lista de erros.|ALT + V + eletrônico ou CTRL + E|  
 |Mostre painel de saída.|ALT + V + O ou CTRL + S|  
 |Submenu de layouts de acesso.|ALT + V + L|  
-|Adicione o layout atual.|ALT + V + A + L|  
+|Adicione o layout atual.|ALT + V + L + A|  
 |Selecione o layout padrão.|ALT + V + L + D ou CTRL + ALT + 1|  
 |Selecione sem layout pesquisadores.|ALT + V + L + W ou CTRL + ALT + 2|  
 |Exiba a caixa de diálogo Gerenciar layouts.|ALT + V + L + M|  
@@ -206,6 +207,6 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |Inicie a informações rápidas.|CTRL + SHIFT + ESPAÇO|  
 |Vá para a declaração.|F12|  
   
-## <a name="see-also"></a>Consulte Também  
-[Teclas de atalho &#40; Sybase SQL &#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
+## <a name="see-also"></a>Consulte também  
+[Teclas de atalho&#40;Sybase para o SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

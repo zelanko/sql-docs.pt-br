@@ -2,24 +2,24 @@
 title: Restaurar um banco de dados protegido por TDE no Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados."
+description: Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: "4"
-ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 4
+ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="restore-a-database-protected-by-tde"></a>Restaurar um banco de dados protegido por TDE
 Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados.  
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorksPDW2012
     FROM DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [BANCO DE DADOS DE BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  

@@ -2,24 +2,24 @@
 title: Carregador de linha de comando para Parallel Data Warehouse de dwloader
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "**dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente."
+description: '**dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente.'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 90
+ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dwloader-command-line-loader"></a>Carregador de linha de comando de dwloader
 **dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente. Quando o carregamento de linhas, você pode adicionar todas as linhas ao final da tabela (*modo de acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo upsert*), ou excluir todos os linhas antes do carregamento de existente e, em seguida, inserir todas as linhas em uma tabela vazia (*recarregar modo*).  
@@ -140,7 +140,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Usar um arquivo de parâmetro, *parameter_file_name*, em vez de parâmetros de linha de comando. *parameter_file_name* pode conter qualquer parâmetro de linha de comando, exceto *user_name* e *senha*. Se um parâmetro for especificado na linha de comando e no arquivo de parâmetro, a linha de comando substitui o parâmetro de arquivo.  
   
-O arquivo de parâmetros contém um parâmetro, sem o  **-**  prefixo por linha.  
+O arquivo de parâmetros contém um parâmetro, sem o **-** prefixo por linha.  
   
 Exemplos:  
   
@@ -402,7 +402,7 @@ O carregador insere linhas ao final de linhas existentes na tabela de destino.
 fastappend  
 O carregador insere linhas diretamente, sem usar uma tabela temporária, ao final de linhas existentes na tabela de destino. fastappend requer que a transação de vários (– m) opção. Um banco de dados de preparo não pode ser especificado ao usar fastappend. Não há nenhuma reversão com fastappend, o que significa que a recuperação de uma falha ou anulada carga deve ser tratada pelo seu próprio processo de carregamento.  
   
-upsert **-K***merge_column* [,... *n* ]  
+upsert **-K**  *merge_column* [ ,...*n* ]  
 O carregador usa a instrução de mesclagem do SQL Server para atualizar as linhas existentes e inserir novas linhas.  
   
 A opção -K Especifica a coluna ou colunas a base de dados de mesclagem. Essas colunas formam uma chave de mesclagem, que deve representar uma linha exclusiva. Se a chave de mesclagem existir na tabela de destino, a linha é atualizada. Se a chave de mesclagem não existe na tabela de destino, a linha será acrescentada.  

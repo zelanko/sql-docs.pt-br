@@ -1,30 +1,31 @@
 ---
-title: "Configurações (objetos de sistema de carregamento) do projeto (DB2ToSQL) | Microsoft Docs"
+title: Configurações (objetos de sistema de carregamento) do projeto (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0bf007faf72861607740d5af0f6ec418fefb71f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0ec81e97380007724ba1cfeb9ee2580ca64edd0
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Configurações (objetos de sistema de carregamento) do projeto (DB2ToSQL)
 A página carregar objetos do sistema do **configurações de projeto** caixa de diálogo permite que você especifique quais objetos de sistema DB2 SSMA converte e carrega em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -38,21 +39,21 @@ O painel ao carregar objetos do sistema está disponível na **configurações d
 ## <a name="default-settings"></a>Configurações padrão  
 Converter objetos de sistema consome recursos do sistema e leva tempo. Para melhorar o desempenho, o SSMA seleciona somente os objetos de sistema usados com mais frequência, conforme mostrado na lista a seguir:  
   
--   SYS. DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS. DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
--   SYS. DBMS_UTILITY  
+-   SYS.DBMS_UTILITY  
   
--   SYS. PADRÃO  
+-   SYS.STANDARD  
   
--   SYS. UTL_FILE  
+-   SYS.UTL_FILE  
   
--   SYS. DBMS_LOB  
+-   SYS.DBMS_LOB  
   
--   SYS. DBMS_SQL  
+-   SYS.DBMS_SQL  
   
--   SYS. DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 Se os objetos do DB2 se referem a objetos de sistema adicionais, você deve selecionar os objetos. Se você não selecionar os objetos do sistema que são referenciados por seus objetos de banco de dados do DB2, o SSMA relatará erros de conversão. Se você receber erros de conversão causados pela falta de objetos do sistema, selecione os objetos ausentes na caixa de diálogo. Você pode repetir a conversão conforme necessário.  
   

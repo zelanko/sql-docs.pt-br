@@ -1,37 +1,38 @@
 ---
-title: "Criando arquivos do valor da variável (DB2ToSQL) | Microsoft Docs"
+title: Criando arquivos do valor da variável (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34edb3b225984442a97480a15648744baa8f796e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41ddf64fdad160c1467903c41e40c5968bea2399
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Criando arquivos do valor da variável (DB2ToSQL)
 Arquivo de valor de variável é um arquivo XML que inclui os valores dos parâmetros de comandos como o nome do servidor de origem ou destino que mudam frequentemente de migração de um servidor para outro. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com o **– v** alternar na linha de comando. Isso ajuda a manter valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
   
 > [!NOTE]  
 > 1.  Nomes de variáveis são o prefixo e sufixo com um símbolo de $ (cifrão). Se as variáveis não estão atribuídas a um valor no arquivo de valor da variável, você encontrará um erro durante a análise do arquivo de script, resultando em atrasando o processo de execução do console.  
-> 2.  The escape character for **$** is **$$**. Se o valor de uma variável ou estáticos de um parâmetro contém  **$**  símbolo (cifrão), em seguida,  **$$**  devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
+> 2.  The escape character for **$** is **$$**. Se o valor de uma variável ou estáticos de um parâmetro contém **$** símbolo (cifrão), em seguida, **$$** devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
 > 3.  Para fins de facilidade de manutenção, as variáveis podem ser declaradas dentro `‘variable-group’` variáveis definidas de elementos de uma separação lógica do usuário.  O uso desse elemento não é obrigatório.  
   
 **Exemplos:**  
@@ -94,8 +95,8 @@ Arquivo de valor de variável é um arquivo XML que inclui os valores dos parâm
 ```  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [criar os arquivos de Conexão do servidor &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+A próxima etapa no operando o console é [criar os arquivos de Conexão de servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Criar os arquivos de conexão de servidor](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

@@ -2,30 +2,30 @@
 title: Configurar o Windows Server Update Services (WSUS) (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 
-ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+caps.latest.revision: 41
+ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Configurar o Windows Server Update Services (WSUS)
 Essas instruções orientam você durante as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual do VMM do dispositivo.  
   
-Para obter mais informações sobre como configurar o WSUS, consulte o [guia de instalação passo a passo do WSUS](http://go.microsoft.com/fwlink/?LinkId=202417) no site do WSUS. Depois de configurar o WSUS, consulte [baixar e aplicar atualizações da Microsoft &#40; Analytics Platform System &#41; ](download-and-apply-microsoft-updates.md) para iniciar uma atualização.  
+Para obter mais informações sobre como configurar o WSUS, consulte o [guia de instalação passo a passo do WSUS](http://go.microsoft.com/fwlink/?LinkId=202417) no site do WSUS. Depois de configurar o WSUS, consulte [baixar e aplicar atualizações da Microsoft &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) para iniciar uma atualização.  
   
 > [!WARNING]  
 > Se você encontrar erros durante esse processo de configuração, pare e entre em contato com o suporte para obter assistência. Não ignorar erros ou continuar o processo após erros são recebidos.  
@@ -41,7 +41,7 @@ Para configurar o WSUS, você precisa:
   
 -   Sabe o endereço IP do servidor proxy se seu dispositivo estiver usando um servidor proxy para acessar o servidor upstream ou o Microsoft Update.  
   
--   Na maioria dos casos, o WSUS precisa acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o sistema de plataforma de análise de DNS pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts Analytics Platform System e máquinas virtuais (VMs) usar servidores DNS externos para resolver nomes fora das dispositivo. Para obter mais informações, consulte [usar um encaminhador de DNS para resolver nomes de DNS do dispositivo não &#40; Analytics Platform System &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Na maioria dos casos, o WSUS precisa acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o sistema de plataforma de análise de DNS pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts Analytics Platform System e máquinas virtuais (VMs) usar servidores DNS externos para resolver nomes fora das dispositivo. Para obter mais informações, consulte [usar um encaminhador DNS para resolver nomes de DNS não Appliance &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Para configurar o Windows Server Update Services (WSUS)  
   
@@ -67,7 +67,7 @@ Para configurar o WSUS, você precisa:
   
         ![Menu do painel do Gerenciador do servidor](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Se esta for a primeira vez que você executou o Assistente do WSUS, você poderá ser solicitado a configurar um diretório para armazenar as atualizações. `C:\wsus`é um local apropriado; No entanto, você pode fornecer um caminho diferente.  
+    4.  Se esta for a primeira vez que você executou o Assistente do WSUS, você poderá ser solicitado a configurar um diretório para armazenar as atualizações. `C:\wsus` é um local apropriado; No entanto, você pode fornecer um caminho diferente.  
   
         ![Caminho WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -179,7 +179,7 @@ Para configurar o WSUS, você precisa:
 Depois de configurar o WSUS para Analytics Platform System, a próxima etapa é agrupar os servidores de aplicativo. Adicionando todos os servidores de dispositivo a um grupo, o WSUS poderá aplicar atualizações de software para todos os servidores no dispositivo.  
   
 > [!NOTE]  
-> O sistema do WSUS foi projetado para ser executado de forma assíncrona. Iniciar atividade nem sempre resulta em uma atualização imediatamente. Portanto, talvez seja necessário aguardar um pouco até que os computadores serão visíveis nas caixas de diálogo do WSUS. Executando o `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` comando descrito no final do tópico [baixar e aplicar atualizações da Microsoft &#40; Analytics Platform System &#41; ](download-and-apply-microsoft-updates.md) pode ajudar a atualizar as caixas de diálogo.  
+> O sistema do WSUS foi projetado para ser executado de forma assíncrona. Iniciar atividade nem sempre resulta em uma atualização imediatamente. Portanto, talvez seja necessário aguardar um pouco até que os computadores serão visíveis nas caixas de diálogo do WSUS. Executando o `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` comando descrito no final do tópico [baixar e aplicar atualizações da Microsoft &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) pode ajudar a atualizar as caixas de diálogo.  
   
 #### <a name="to-group-the-appliance-servers"></a>Para agrupar os servidores de aplicativo  
   

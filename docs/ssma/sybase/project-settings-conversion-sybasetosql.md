@@ -1,30 +1,31 @@
 ---
-title: "Configurações (conversão) (SybaseToSQL) do projeto | Microsoft Docs"
-ms.custom: 
+title: Configurações (conversão) (SybaseToSQL) do projeto | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configurações de projeto (conversão) (SybaseToSQL)
 A página de conversão do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte a sintaxe do Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou sintaxe de SQL Azure.  
@@ -271,7 +272,7 @@ Quando você seleciona um modo de conversão no **modo** caixa, SSMA aplica-se a
 **Modo padrão Optimistic/inteira:** marca com erro  
   
 **Número de mensagens base RAISERROR**  
-Mensagens de usuário ASE são armazenadas em cada banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]mensagens de usuário são armazenadas e disponibilizadas por meio de centralmente o **messages** exibição do catálogo. Além de mensagens de usuário ASE começam em 20000, mas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensagens de erro começam em 50001.  
+Mensagens de usuário ASE são armazenadas em cada banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensagens de usuário são armazenadas e disponibilizadas por meio de centralmente o **messages** exibição do catálogo. Além de mensagens de usuário ASE começam em 20000, mas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensagens de erro começam em 50001.  
   
 Essa configuração especifica o número para adicionar ao número de mensagens de usuário de ASE para convertê-lo para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensagem do usuário. Se seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tem mensagens de usuário na **messages** modo de exibição de catálogo, talvez você precise alterar esse número para um valor mais alto. Isso é para que os números de mensagem convertido não entrem em conflito com os números de mensagem existente.  
   
@@ -334,7 +335,7 @@ Quando você seleciona um modo de conversão no **modo** caixa, SSMA aplica-se a
 **Modo completo:** função Replace  
   
 **Função DATALENGTH**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure e ASE diferem no valor retornado pela função DATALENGTH quando o valor é um único espaço. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure retorna 0 e ASE retorna 1.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] / SQL Azure e ASE diferem no valor retornado pela função DATALENGTH quando o valor é um único espaço. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure retorna 0 e ASE retorna 1.  
   
 -   Para usar o comportamento de ASE, selecione **função Replace**. Todas as chamadas para a função DATALENGTH são substituídas por expressão CASE para emular o comportamento do Sybase ASE.  
   
@@ -454,6 +455,6 @@ Cria uma nova chave primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 > [!NOTE]  
 > Quando conectado ao SQL Azure, é por padrão True.  
   
-## <a name="see-also"></a>Consulte Também  
-[Referência de Interface do usuário &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Referência da Interface de usuário &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

@@ -1,25 +1,25 @@
 ---
-title: "Alta disponibilidade do sistema de plataforma de análise"
+title: Alta disponibilidade do sistema de plataforma de análise
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
 description: Descreve como Analytics Platform System (APS) foi projetado para alta disponibilidade.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
-caps.latest.revision: "9"
-ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 9fd057a4cd673f06034e0093ca93be7ceaf345ea
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidade do sistema de plataforma de análise
 Descreve como Analytics Platform System (APS) foi projetado para alta disponibilidade.  
@@ -39,7 +39,7 @@ Para manter os dados disponíveis online, o APS usa espaços de armazenamento do
   
 Para garantir que o pool de armazenamento permanece online, cada host na unidade de escala de dados tem uma máquina virtual ISCSI que não o failover não. Essa arquitetura é importante porque, se um host falhar, os dados ainda pode ser acessados por meio de outros hosts na unidade de escala de dados.  
   
-## <a name="hosts"></a>hosts  
+## <a name="hosts"></a>Hosts  
 Disponibilidade de host, todos os hosts são configurados em um Cluster de Failover do Windows. Cada rack tem um host de passivo. Opcionalmente, o primeiro rack, que controla o SQL Server Parallel Data Warehouse (PDW) e da malha de dispositivo, pode ter um segundo host passivo. Se um host falhar, máquinas virtuais que são configuradas para failover, serão failover para um host passivo disponíveis.  
   
 ## <a name="pdw-nodes-and-appliance-fabric"></a>Malha de dispositivo e nós PDW  

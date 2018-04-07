@@ -21,13 +21,13 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84759a9bee3439f0a561176a6d8583149770f02d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d1f3250b044706f742310a575135b0526484403
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Localizar o Assistente de bancos de dados (Selecione arquivos) (AccessToSQL)
 A página Selecionar arquivos do Assistente para localizar os bancos de dados lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo para adicionar a SSMA, selecione a linha que contém o nome do arquivo. Quando você terminar de selecionar os arquivos, clique em **próximo** para exibir a página seleção de verificar.  
@@ -61,6 +61,6 @@ A data e hora de que criação do banco de dados.
 **Modificado**  
 A data e hora que da última atualização do banco de dados.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

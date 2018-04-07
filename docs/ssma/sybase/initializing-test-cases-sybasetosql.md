@@ -21,13 +21,13 @@ ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a62d9803867f6b1d7ea86e027426f28c893b860
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a397b48e4c55cee98fd12cb7f1954ba17100854
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>Inicializando os casos de teste (SybaseToSQL)
 Nesta etapa, você especificar as informações iniciais para o novo caso de teste.  
@@ -46,8 +46,8 @@ Preenchido automaticamente. não deve ser alterado.
 Insira informações adicionais para identificar a finalidade do caso de teste.  
   
 ## <a name="next-step"></a>Próxima etapa  
-[Selecionando e Configurando objetos para teste &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[Selecionando e Configurando objetos para teste &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Teste de objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

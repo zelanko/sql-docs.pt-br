@@ -2,29 +2,30 @@
 title: Criando arquivos de Script (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088cd42b2635193ff34e45490811c44d6450ffc5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c07c232e22ba41899846f6e9cb5e6ecfa5783be
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-db2tosql"></a>Criando arquivos de Script (DB2ToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -348,14 +349,14 @@ A opção não configurável é:
 -   **Número máximo de tentativas de reconexão:** quando uma conexão estabelecida expira ou quebras devido à falha de rede, o servidor é necessário ser reconectado. As tentativas de reconexão são permitidas para um máximo de **5** tentativas após o qual o console executa automaticamente a reconexão. O recurso de reconexão automática reduz o esforço de executar novamente o script.  
   
 ## <a name="server-connection-parameters"></a>Parâmetros de Conexão de servidor  
-Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte o [criar os arquivos de Conexão do servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) seção para obter mais detalhes.  
+Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte o [criar os arquivos de Conexão de servidor &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) seção para obter mais detalhes.  
   
 ## <a name="script-commands"></a>Comandos de script  
 O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console SSMA processa a migração na ordem os comandos que aparecem no arquivo de script.  
   
 Por exemplo, uma migração de dados típicos de uma tabela específica em um banco de dados do DB2 segue a hierarquia de: esquema -&gt; tabela.  
   
-Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console SSMA é encerrado e retorna o controle ao usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em um [criando arquivos do valor de variável &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
+Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console SSMA é encerrado e retorna o controle ao usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em um [criando arquivos de valores de variável &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
 **Exemplo:**  
   
@@ -396,14 +397,14 @@ Modelos que consiste em 3 de arquivos de script (para executar vários cenários
   
 Você pode executar os modelos (arquivos) depois de alterar os parâmetros exibidos para relevância.  
   
-Lista completa de comandos de script pode ser encontrada no [executando o Console SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+Lista completa de comandos de script pode ser encontrada em [executando o Console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="script-file-validation"></a>Validação de arquivo de script  
 O usuário pode facilmente validar seu arquivo de script no arquivo de definição de esquema **'O2SSConsoleScriptSchema.xsd'** disponíveis na pasta 'Esquemas'.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [criando arquivos de valor variável &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
+A próxima etapa no operando o console é [criando arquivos de valor variável &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
-## <a name="see-also"></a>Consulte Também  
-[Criando arquivos do valor da variável &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Criando arquivos do valor da variável &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

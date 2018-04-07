@@ -1,34 +1,34 @@
 ---
-title: "Monitorar o dispositivo usando o Console de administração (Analytics Platform System)"
+title: Monitorar o dispositivo usando o Console de administração (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>Monitor de dispositivo usando o Console do administrador
 O Console de administração é um aplicativo web SQL Server PDW que revela as informações de estado, integridade e desempenho do dispositivo. Os usuários se conectar ao Console do administrador por meio do Internet Explorer.  
   
 ## <a name="About"></a>Sobre o Console de administração  
-![Início do Console de dispositivo](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Dispositivo**  
+**Appliance**  
 Base  
 Fornece um resumo rápido do estado do dispositivo.  
   
@@ -112,12 +112,12 @@ O Console do administrador fornece a capacidade de monitorar o seguinte:
 |-|-|  
 |**Tipo de informação**|**Como acessar no Console do administrador**|  
 |Status geral do dispositivo|Clique em **dispositivo estado** no menu superior, ou **início**.|  
-|Alertas|Clique em **alertas**. Para obter mais informações, consulte [Noções básicas sobre alertas do Console de administração &#40; Analytics Platform System &#41; ](understanding-admin-console-alerts.md).|  
+|Alertas|Clique em **alertas**. Para obter mais informações, consulte [Noções básicas sobre alertas do Console de administração &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Componentes do dispositivo e seu status|Clique em **dispositivo estado** no menu superior, ou **início**.|  
 |Solicitações de monitor (incluindo consultas, cargas, backups e restaurações)|Clique em **sessões** para ver as sessões atualmente ativas ou recentes.<br /><br />Clique em **consultas** para ver as consultas atualmente ativas ou mais recentes. As informações exibidas para consultas incluem cargas, backups e restaurações.<br /><br />Clique em **bloqueios** para ver os bloqueios ativos.|  
 |Monitorar as informações adicionais para cargas, backups e restaurações.|Clique em **cargas** ou **Backups/restaurações**.|  
 |Informações de desempenho|Clique em **Monitor de desempenho**.|  
   
-## <a name="see-also"></a>Consulte Também  
-[Monitoramento de dispositivo &#40; Analytics Platform System &#41;](appliance-monitoring.md)  
+## <a name="see-also"></a>Consulte também  
+[Monitoramento de dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

@@ -1,32 +1,33 @@
 ---
-title: "Configurações de migração de dados (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: Configurações de migração de dados (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587addb8e9772516b679efd84eb6d7ee05439448
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 07eb75232f809bb5d94004cab1b612467bda589f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="data-migration-settings-sybasetosql"></a>Configurações de migração de dados (SybaseToSQL)
+# <a name="data-migration-settings-sybasetosql"></a>Data Migration Settings (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>Configurações de migração de dados  
 **As configurações de migração de dados** permite que o usuário escreva consultas personalizadas para a migração de dados.  
@@ -61,6 +62,6 @@ Há dois botões presentes viz.:
   
 -   **Cancelar:** clique **Cancelar** para restaurar as configurações presentes antes que as alterações sejam feitas.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Migração de dados Sybase para o SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)  
   

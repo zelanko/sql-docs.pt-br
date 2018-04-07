@@ -1,15 +1,16 @@
 ---
-title: "Criando arquivos do valor da variável (MySQLToSQL) | Microsoft Docs"
+title: Criando arquivos do valor da variável (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,23 +19,23 @@ helpviewer_keywords:
 - Creating variable value files
 - variable value file validation
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cd159682512255ab253630ac762fbeac104ab14
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04b0efa56050e500277a62e52cbbbec9f6d261b2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Criando arquivos do valor da variável (MySQLToSQL)
 Arquivo de valor de variável é um arquivo XML que inclui os valores dos parâmetros de comandos como o nome do servidor de origem ou destino que mudam frequentemente de migração de um servidor para outro. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com o **– v** alternar na linha de comando. Isso ajuda a manter valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
   
 > [!NOTE]  
 > 1.  Nomes de variáveis são o prefixo e sufixo com um símbolo de $ (cifrão). Se as variáveis não estão atribuídas a um valor no arquivo de valor da variável, você encontrará um erro durante a análise do arquivo de script, resultando em atrasando o processo de execução do console.  
-> 2.  The escape character for **$** is **$$**. Se o valor de uma variável ou estáticos de um parâmetro contém  **$**  símbolo (cifrão), em seguida,  **$$**  devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
+> 2.  The escape character for **$** is **$$**. Se o valor de uma variável ou estáticos de um parâmetro contém **$** símbolo (cifrão), em seguida, **$$** devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
 > 3.  Para fins de facilidade de manutenção, as variáveis podem ser declaradas dentro `‘variable-group’` variáveis definidas de elementos de uma separação lógica do usuário.  O uso desse elemento não é obrigatório.  
   
 **Exemplos:**  
@@ -100,8 +101,8 @@ Arquivo de valor de variável é um arquivo XML que inclui os valores dos parâm
 O usuário pode facilmente validar seu arquivo de valor da variável no arquivo de definição de esquema **'ConsoleScriptVariablesSchema.xsd'** disponíveis na pasta 'Esquemas'.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [criar os arquivos de Conexão do servidor &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+A próxima etapa no operando o console é [criar os arquivos de Conexão de servidor &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Criar os arquivos de Conexão de servidor (MySQL)](http://msdn.microsoft.com/en-us/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
   

@@ -21,13 +21,13 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9de9ab5f01b0d6b5bf46c45d091e93430cfb8067
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-project-options-mysqltosql"></a>Definindo opções de projeto (MySQLToSQL)
 Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino.  Antes de converter os objetos no SQL Server ou SQL Azure ou migrar dados para o SQL Server ou SQL Azure, verifique se as opções de configuração apropriadas para o projeto.  
@@ -43,7 +43,7 @@ O SSMA tem cinco conjuntos de configurações de projeto:
   
 -   Synchronization  
   
--   INTERFACE GRÁFICA DO USUÁRIO  
+-   GUI  
   
 -   Mapeamento de tipo  
   
@@ -61,17 +61,17 @@ O padrão é recomendado para a maioria dos usuários. O modo otimista mantém m
   
 Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os tópicos a seguir:  
   
--   [Configurações de projeto &#40; Conversão de &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [Configurações do projeto &#40;conversão&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
--   [Configurações de projeto &#40; Migração de &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
+-   [Configurações do projeto &#40;migração&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
 -   [Configurações de projeto (GUI) (SSMA comum)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Configurações de projeto &#40; Mapeamento de tipo de &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
+-   [Configurações do projeto &#40;mapeamento de tipo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
--   [Configurações de projeto &#40; Sincronização &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+-   [Configurações do projeto &#40;sincronização&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Configurações de projeto &#40; Banco de dados SQL do Azure &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Configurações do projeto &#40;banco de dados SQL do Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>Definindo opções de projeto  
 Em SSMA, você pode configurar as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto que você criar.  
@@ -107,10 +107,10 @@ Você também pode personalizar as configurações para o projeto atual. As conf
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeamento MySQL e tipos de dados do SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [tipos de dados do SQL Server e MySQL de mapeamento &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   Caso contrário, você pode converter as definições de objeto de banco de dados MySQL no SQL Server ou definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Caso contrário, você pode converter as definições de objeto de banco de dados MySQL no SQL Server ou definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Mapeamento de tipos de dados do SQL Server &#40; e MySQL MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Mapeamento de tipos de dados do SQL Server e MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
