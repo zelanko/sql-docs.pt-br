@@ -2,7 +2,7 @@
 title: Driver do OLE DB para SQL Server Support for High Availability, Disaster Recovery | Microsoft Docs
 description: Suporte de OLE DB Driver para SQL Server para alta disponibilidade, recuperação de desastres
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ Um erro de conexão ocorrerá se as palavras-chave de conexão **MultiSubnetFail
 Se você atualizar um Driver OLE DB para o aplicativo do SQL Server que atualmente usa espelhamento de banco de dados em um cenário de várias sub-redes, você deve remover o **Failover_Partner** propriedade de conexão e substituí-lo por  **MultiSubnetFailover** definida como **Sim** e substitua o nome do servidor na cadeia de conexão com um ouvinte de grupo de disponibilidade. Se uma cadeia de conexão usa **Failover_Partner** e **MultiSubnetFailover=Yes**, o driver gerará um erro. No entanto, se uma cadeia de conexão usar **Failover_Partner** e **MultiSubnetFailover=No** (ou **ApplicationIntent=ReadWrite**), o aplicativo usará o espelhamento de banco de dados.  
   
 O driver retornará um erro se o espelhamento de banco de dados for usado no banco de dados primário no AG e se **MultiSubnetFailover=Yes** for usado na cadeia de conexão que se conecta a um banco de dados primário, em vez de ao ouvinte de um grupo de disponibilidade.  
-  
-## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo  
-Quando **ApplicationIntent = ReadOnly**, o cliente solicita uma carga de trabalho de leitura ao se conectar a um banco de dados do Always On habilitado. O servidor irá impor a intenção no momento da conexão e durante uma `USE` instrução, mas apenas para um banco de dados do Always On habilitado do banco de dados.  
-  
-A palavra-chave **ApplicationIntent** não funciona com bancos de dados herdados somente leitura.  
-  
-Um banco de dados pode permitir ou impedir que cargas de trabalho de leitura no banco de dados de sempre no destino. (Isso é feito com a cláusula **ALLOW_CONNECTIONS** das instruções **PRIMARY_ROLE** e **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)].)  
-  
-A palavra-chave **ApplicationIntent** é usada para habilitar o roteamento somente leitura.  
-  
-## <a name="read-only-routing"></a>Roteamento somente leitura  
-O roteamento somente leitura é um recurso que pode garantir a disponibilidade de uma réplica somente leitura de um banco de dados. Para habilitar roteamento somente leitura:  
-  
-1.  Você deve conectar-se a um ouvinte de grupo de disponibilidade AlwaysOn.  
-  
-2.  A palavra-chave de cadeia de conexão **ApplicationIntent** deve ser definida como **ReadOnly**.  
-  
-3.  O grupo de disponibilidade AlwaysOn deve ser configurado pelo administrador do banco de dados para habilitar o roteamento somente leitura.  
-  
-É possível que nem todas as várias conexões que usam roteamento somente leitura se conectem à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Para garantir que todas as solicitações somente leitura se conectem à mesma réplica somente leitura, não passe um ouvinte de grupo de disponibilidade AlwaysOn para o **Server** palavra-chave de cadeia de caracteres de conexão. Em vez disso, especifique o nome da instância somente leitura.  
-  
-O roteamento somente leitura pode demorar mais do que a conexão com a réplica primária, pois o roteamento somente leitura se conecta primeiro à réplica primária para, depois, procurar a melhor réplica secundária legível disponível. Por isso, você deve aumentar seu tempo limite de logon.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 O Driver OLE DB para SQL Server dá suporte a ambos os **ApplicationIntent** e o **MultiSubnetFailover** palavras-chave.   
   

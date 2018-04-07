@@ -1,27 +1,27 @@
 ---
-title: "Suporte para alta disponibilidade, recuperação de desastres do SQL Server Native Client | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: Suporte para alta disponibilidade, recuperação de desastres do SQL Server Native Client | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd805562b60d37b9988b9afeb84d81e2cb2f5125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 82c0cd64a3638ad747ca1f4fa88fdc8a2fc5a0e2
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,29 +73,11 @@ ms.lasthandoff: 01/25/2018
  Se você atualizar um aplicativo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que atualmente usa o espelhamento de banco de dados em um cenário de várias sub-redes, deverá remover a propriedade de conexão **Failover_Partner** e substituí-la por **MultiSubnetFailover** definido como **Yes** e substituir o nome do servidor da cadeia de conexão por um ouvinte de grupo de disponibilidade. Se uma cadeia de conexão usa **Failover_Partner** e **MultiSubnetFailover=Yes**, o driver gerará um erro. No entanto, se uma cadeia de conexão usar **Failover_Partner** e **MultiSubnetFailover=No** (ou **ApplicationIntent=ReadWrite**), o aplicativo usará o espelhamento de banco de dados.  
   
  O driver retornará um erro se o espelhamento de banco de dados for usado no banco de dados primário no AG e se **MultiSubnetFailover=Yes** for usado na cadeia de conexão que se conecta a um banco de dados primário, em vez de ao ouvinte de um grupo de disponibilidade.  
-  
-## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo  
- Quando **ApplicationIntent = ReadOnly**, o cliente solicita uma carga de trabalho de leitura ao se conectar a um banco de dados do Always On habilitado. O servidor irá impor a intenção no momento da conexão e durante uma instrução USE de banco de dados, mas somente para um banco de dados habilitado para AlwaysOn.  
-  
- A palavra-chave **ApplicationIntent** não funciona com bancos de dados herdados somente leitura.  
-  
- Um banco de dados pode permitir ou impedir que cargas de trabalho de leitura no banco de dados de sempre no destino. (Isso é feito com a cláusula **ALLOW_CONNECTIONS** das instruções **PRIMARY_ROLE** e **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)].)  
-  
- A palavra-chave **ApplicationIntent** é usada para habilitar o roteamento somente leitura.  
-  
-## <a name="read-only-routing"></a>Roteamento somente leitura  
- O roteamento somente leitura é um recurso que pode assegurar a disponibilidade de uma réplica somente leitura de um banco de dados. Para habilitar roteamento somente leitura:  
-  
-1.  Você deve conectar-se a um ouvinte de grupo de disponibilidade AlwaysOn.  
-  
-2.  A palavra-chave de cadeia de conexão **ApplicationIntent** deve ser definida como **ReadOnly**.  
-  
-3.  O grupo de disponibilidade deve ser configurado pelo administrador de banco de dados para permitir o roteamento somente leitura.  
-  
- É possível que nem todas as várias conexões que usam roteamento somente leitura se conectem à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Para garantir que todas as solicitações somente leitura conectem-se à mesma réplica somente leitura, não transmita um ouvinte de grupo de disponibilidade à palavra-chave de cadeia de conexão **Server**. Em vez disso, especifique o nome da instância somente leitura.  
-  
- O roteamento somente leitura pode demorar mais tempo do que a conexão ao primário porque o roteamento somente leitura conecta-se primeiramente ao primário e depois procura o melhor secundário legível disponível. Por isso, você deve aumentar seu tempo limite de logon.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc"></a>ODBC  
  Duas palavras-chave de cadeia de conexão ODBC foram adicionadas para oferecer suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
