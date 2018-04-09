@@ -1,22 +1,22 @@
 ---
-title: "Arquitetura do gráfico SQL | Microsoft Docs"
-ms.custom: 
+title: Arquitetura do Graph SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
@@ -30,15 +30,15 @@ ms.lasthandoff: 03/19/2018
 # <a name="sql-graph-architecture"></a>Arquitetura do gráfico do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Saiba como o gráfico de SQL foi projetado. Conhecer os conceitos básicos tornará mais fácil de entender outros artigos de gráfico de SQL.
+Saiba como o SQL Graph foi projetado. Conhecer os conceitos básicos tornará mais fácil de entender outros artigos de SQL Graph.
  
-## <a name="sql-graph-database"></a>Banco de dados de gráfico SQL
+## <a name="sql-graph-database"></a>Banco de dados SQL Graph
 Os usuários podem criar um gráfico por banco de dados. Um gráfico é uma coleção de tabelas de nó e borda. Tabelas de borda ou nó podem ser criadas em qualquer esquema no banco de dados, mas pertencerem a um gráfico lógico. Uma tabela de nó é a coleção de tipo semelhante de nós. Por exemplo, uma tabela de nó da pessoa que contém todos os nós da pessoa que pertencem a um gráfico. Da mesma forma, uma tabela de borda é uma coleção de tipo semelhante de bordas. Por exemplo, uma tabela de borda de amigos contém todas as bordas que se conectam a uma pessoa para outra pessoa. Nós e bordas são armazenadas em tabelas, a maioria das operações com suporte em tabelas regulares é suportada em tabelas de nó ou borda. 
  
  
-![arquitetura do gráfico de SQL](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitetura de banco de dados do gráfico de Sql")   
+![arquitetura do gráfico de SQL](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitetura de banco de dados do SQL Graph")   
 
-Figura 1: Arquitetura de banco de dados de gráfico SQL
+Figura 1: arquitetura de banco de dados do SQL Graph
  
 ## <a name="node-table"></a>Tabela do nó
 Uma tabela de nó representa uma entidade em um esquema de gráfico. Sempre que um nó criar tabela, juntamente com as colunas definidas pelo usuário, implícita `$node_id` coluna é criada, que identifica exclusivamente um nó específico no banco de dados. Os valores em `$node_id` são gerados automaticamente e são uma combinação de `object_id` de tabela nó e um valor gerado internamente bigint. No entanto, quando o `$node_id` coluna for selecionada, um valor calculado na forma de uma cadeia de caracteres JSON é exibido. Além disso, `$node_id` é uma pseudocoluna, que é mapeado para um nome interno com a cadeia de caracteres hexadecimal nele. Quando você seleciona `$node_id` da tabela, o nome da coluna será exibido como `$node_id_<hex_string>`. Usando nomes de colunas pseudo em consultas é a maneira recomendada de consulta interna `$node_id` coluna e usando o nome interno com a cadeia de caracteres hexadecimal devem ser evitados.
@@ -174,6 +174,6 @@ Há algumas limitações em tabelas de nó e borda nesta versão:
 
 
 ## <a name="next-steps"></a>Próximas etapas
-Para começar a usar a nova sintaxe, consulte [banco de dados de gráfico de SQL - exemplo](./sql-graph-sample.md)
+Para começar a usar a nova sintaxe, consulte [Banco de dados SQL Graph – Exemplo](./sql-graph-sample.md)
  
 
