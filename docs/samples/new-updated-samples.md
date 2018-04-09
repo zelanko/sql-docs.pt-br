@@ -1,6 +1,6 @@
 ---
-title: Atualizado - conectar-se com documentos do SQL Server | Microsoft Docs
-description: Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação, para conectar-se ao Microsoft SQL Server.
+title: -Exemplos atualizados para documentos do SQL Server | Microsoft Docs
+description: Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação, para obter exemplos do Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: connect
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: da7ff58d5930acb084220c8d0364147ae93ed963
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-connect-to-sql-server"></a>Novos e atualizados recentemente: conectar-se ao SQL Server
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>Novos e atualizados recentemente: exemplos do SQL Server
 
 
 
@@ -29,7 +29,7 @@ Atualizações recentes são relatadas para o intervalo de data a seguir e o ass
 
 
 - *Intervalo de datas das atualizações:* &nbsp; **03-12-2017** &nbsp; até &nbsp; **03-02-2018**
-- *Área de assunto:* &nbsp; **conectar ao SQL Server**.
+- *Área de assunto:* &nbsp; **exemplos para SQL Server**.
 
 
 
@@ -67,53 +67,13 @@ Para essas e outras razões, não copiar o código desses trechos e não em como
 
 Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
 
-1. [Use sempre criptografado com o Driver ODBC para SQL Server](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1. &nbsp; [Use sempre criptografado com o Driver ODBC para SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
-
-*Atualizado em: 2018-01-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 524.  ms.author= "v-chojas".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 a52abae2a8f27c3b5bc411ef758610116a608f9f 352368eb269b98ab5ca3a9791fae2e70bf26277a  (PR=4686  ,  Filename=using-always-encrypted-with-the-odbc-driver.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=82c9868b5bf95e5b0c68137ba434ddd37fc61072) -->
-
-
-
-**Recuperar dados em partes com SQLGetData**
-
-Antes de 17 do Driver ODBC para SQL Server, criptografada colunas binárias e caractere não podem ser recuperadas em partes com SQLGetData. Pode ser feita apenas uma chamada SQLGetData com um buffer de tamanho suficiente para conter os dados da coluna inteira.
-
-**Enviar dados em partes com SQLPutData**
-
-Não não possível enviar dados para uma comparação ou inserção em partes com SQLPutData. Pode ser feita apenas uma chamada para SQLPutData com um buffer que contém todos os dados. Para inserir dados longos em colunas criptografadas, use a API de cópia em massa, descrito na próxima seção, com um arquivo de dados de entrada.
-
-**Smallmoney e dinheiro criptografado**
-
-Criptografado **money** ou **smallmoney** colunas não podem ser direcionadas por parâmetros, porque não há não específica de tipo de dados ODBC que é mapeado para esses tipos, resultando em erros de tipo de operando podem conflitar.
-
-**Cópia em massa de colunas criptografadas**
-
-
-Usar o [funções de cópia em massa de SQL](odbc/../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) e **bcp** utilitário é suportado com o sempre criptografado desde 17 de Driver ODBC para SQL Server. Texto sem formatação (inserção criptografada no e descriptografados em recuperação) e o texto cifrado (transferidos textualmente) podem ser inseridos e recuperados usando a cópia em massa (bcp_ *) APIs e **bcp** utilitário.
-
-- Para recuperar o texto cifrado no formulário varbinary (max) (por exemplo, para o carregamento em massa no outro banco de dados), conecte-se sem o `ColumnEncryption` opção (ou defina-a como `Disabled`) e executar uma operação BCP OUT.
-
-- Para inserir e recuperar o texto sem formatação e permitir que o driver transparentemente executar criptografia e descriptografia como configuração necessária, `ColumnEncryption` para `Enabled` é suficiente. Caso contrário, a funcionalidade da API BCP permanece inalterada.
-
-- Para inserir texto cifrado no formulário varbinary (max) (por exemplo, como aqueles recuperados acima), configure o `BCPMODIFYENCRYPTED` opção como TRUE e executar uma operação BCP IN. Em ordem para os dados resultantes ser decryptable, certifique-se de que o destino CEK da coluna é o mesmo do qual o texto cifrado foi originalmente obtido.
-
+***Nenhum artigo nesta área foram atualizado recentemente, neste momento.***
 
 
 

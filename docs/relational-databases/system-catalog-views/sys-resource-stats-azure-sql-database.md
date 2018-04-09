@@ -1,7 +1,7 @@
 ---
 title: sys. resource_stats (banco de dados do SQL Azure) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,16 +28,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6b77fb44d24454b786ef74ed4471b8195619110
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5f1b2719813ecc58cc68477b47141a215f4880be
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retorna os dados de armazenamento e de utilização da CPU para um Banco de Dados SQL do Azure. Os dados são coletados e agregados em intervalos de cinco minutos. Para cada banco de dados de usuário, há uma linha para cada janela de relatório de cinco minutos no qual há uma alteração no consumo de recursos. Isso inclui o uso de CPU, a alteração do tamanho do armazenamento ou a alteração de SKU do banco de dados. Os bancos de dados ociosos sem alterações podem não ter linhas para cada intervalo de cinco minutos. Os dados históricos são retidos por aproximadamente 14 dias.  
+  Retorna os dados de armazenamento e de utilização da CPU para um Banco de Dados SQL do Azure. Os dados são coletados e agregados em intervalos de cinco minutos. Para cada banco de dados de usuário, há uma linha para cada janela de relatório de cinco minutos no qual há uma alteração no consumo de recursos. Os dados retornados incluem o uso de CPU, alteração do tamanho do armazenamento ou modificação de SKU de banco de dados. Bancos de dados ociosos sem alterações podem não ter linhas para cada intervalo de cinco minutos. Os dados históricos são retidos por aproximadamente 14 dias.  
   
  O **sys. resource_stats** exibição tem definições diferentes dependendo da versão do servidor de banco de dados SQL do Azure que o banco de dados está associado. Considere essas diferenças e quaisquer modificações que seu aplicativo exige ao fazer a atualização para uma nova versão do servidor.  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 04/05/2018
   
 |Colunas|Tipo de Dados|Description|  
 |----------------------------|---------------|-----------------|  
-|start_time|**datetime**|Hora UTC que indica o início do intervalo de relatório de 5 minutos.|  
-|end_time|**datetime**|Hora UTC que indica o final do intervalo de relatório 5 minutos.|  
+|start_time|**datetime**|Hora UTC que indica o início do intervalo de relatório de cinco minutos.|  
+|end_time|**datetime**|Hora UTC que indica o final do intervalo de relatório de cinco minutos.|  
 |database_name|**varchar**|Nome do banco de dados do usuário.|  
 |sku|**varchar**|Camada de serviço do banco de dados. O valores possíveis são os seguintes:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Uso geral<br /><br />Críticos de negócios|  
-|storage_in_megabytes|**float**|Tamanho máximo de armazenamento em megabytes para o período de tempo, inclusive dados do banco de dados, índices, procedimentos armazenados e metadados.|  
+|storage_in_megabytes|**float**|Tamanho máximo de armazenamento em megabytes para o período de tempo, incluindo o banco de dados, índices, procedimentos armazenados e metadados.|  
 |avg_cpu_percent|**numeric**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**numeric**|Utilização média de E/S em percentagem com base no limite da camada de serviço.|  
 |avg_log_write_percent|**numeric**|Utilização média do recurso de gravação, em porcentagem, do limite da camada de serviço.|  
-|max_worker_percent|**decimal(5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de 5 minutos com base em 15 segundo exemplos de contagens de trabalho simultâneos.|  
-|max_session_percent|**decimal(5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de 5 minutos com base em 15 segundo exemplos de contagens de sessões simultâneas.|  
-|dtu_limit|**Int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo.|  
+|max_worker_percent|**decimal(5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de cinco minutos com base em amostras de 15 segundos de contagens de trabalho simultâneos.|  
+|max_session_percent|**decimal(5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de cinco minutos com base em amostras de 15 segundos de contagens de sessões simultâneas.|  
+|dtu_limit|**Int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo. |  
   
 > [!TIP]  
 >  Para obter mais contexto sobre esses limites e as camadas de serviço, consulte os tópicos [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
@@ -64,11 +64,11 @@ ms.lasthandoff: 04/05/2018
  Essa exibição está disponível para todas as funções de usuário com permissões para se conectar ao virtual **mestre** banco de dados.  
   
 ## <a name="remarks"></a>Remarks  
- Os dados retornados por **sys. resource_stats** é expresso como uma porcentagem do máximo permitido de limites DTU para o nível de desempenho/da camada de serviço que você está executando para bancos de dados Basic, Standard e Premium.  
+ Os dados retornados por **sys. resource_stats** é expresso como uma porcentagem do máximo permitido de limites para o nível de desempenho/da camada de serviço que você está executando.  
   
- Quando um banco de dados é um membro de um pool Elástico, as estatísticas de recursos apresentadas como valores de porcentagem são expressos como o percentual do limite máximo de DTU de bancos de dados conforme definido na configuração do pool Elástico.  
+ Quando um banco de dados é um membro de um pool Elástico, estatísticas de recursos apresentadas como valores de porcentagem são expressas como porcentagem do limite máximo de bancos de dados conforme definido na configuração do pool Elástico.  
   
- Para obter uma exibição mais granular desses dados, use **sys.DM db_resource_stats** exibição de gerenciamento dinâmico em um banco de dados do usuário. Essa visualização captura dados a cada 15 segundos e mantém dados históricos por 1 hora.  Para obter mais informações, consulte [sys.DM db_resource_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ Para obter uma exibição mais granular desses dados, use **sys.DM db_resource_stats** exibição de gerenciamento dinâmico em um banco de dados do usuário. Essa exibição captura dados a cada 15 segundos e mantém dados históricos por 1 hora.  Para obter mais informações, consulte [sys.DM db_resource_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna todos os bancos de dados que estão com média de pelo menos 80% de utilização de computação durante a última semana.  

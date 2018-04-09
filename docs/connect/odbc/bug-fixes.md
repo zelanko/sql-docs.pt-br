@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de erros corrigidos
 
@@ -38,10 +38,10 @@ Esta página contém uma lista de erros corrigidos em cada versão, começando c
 - Correção de bug de raro no Windows de 32 bits quando converter um flutuante número de ponto para um número inteiro
 - Não corrigido um problema inserindo double no campo decimal com sempre criptografado em seria onde nenhum erro de truncamento de dados de retorno
 - Corrigido um aviso no instalador MacOS
+- Fixo enviar estado incorreto para o SQL Server durante a tentativa de recuperação da sessão quando a resiliência de Conexão e o Pooling de Conexão ambos estiverem habilitados, fazendo com que a sessão a ser descartado pelo servidor
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correções de bug no [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 do Driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Fixo enviar estado incorreto para o SQL Server durante a tentativa de recuperação da sessão quando a resiliência de Conexão e o Pooling de Conexão ambos estiverem habilitados, fazendo com que a sessão a ser descartado pelo servidor
 - Correção de bug em que ao usar a autenticação Kerberos, a inserção em massa pode falhar com o erro "acesso negado"
 - Solução alternativa removida para um bug unixODBC presente na versão abaixo 2.3.1 (driver duplicado os tamanhos de determinados buffers passados para unixODBC)
 - Fixo resiliência de Conexão (reconexão) deslocado ao usar ColumnEncryption = habilitado

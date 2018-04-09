@@ -4,7 +4,7 @@ description: Instalar, atualizar e desinstalar o SQL Server no Linux. Este artig
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
@@ -179,7 +179,7 @@ Se o computador Linux não tem acesso aos repositórios online usados no [iníci
 
 1. **Instalar o pacote do mecanismo de banco de dados**. Use um dos comandos a seguir com base em sua plataforma. Substitua o nome do arquivo de pacote neste exemplo com o nome exato que você baixou.
 
-   | Plataforma | Comando de remoção do pacote |
+   | Plataforma | Comando de instalação do pacote |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |

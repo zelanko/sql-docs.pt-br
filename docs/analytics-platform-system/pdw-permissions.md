@@ -1,26 +1,26 @@
 ---
-title: "Permissões de PDW (SQL Server PDW)"
+title: Permissões de PDW (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: "23"
-ms.openlocfilehash: 49bcb7cf5e8d4bb03acd9db5de87716ec2462191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-permissions"></a>Permissões do PDW
 Este tópico descreve os requisitos e opções de gerenciamento de permissões de banco de dados para SQL Server PDW.  
@@ -68,7 +68,7 @@ A lista a seguir descreve as permissões padrão:
   
 -   Quando um logon é criado pelo usos **CREATE LOGIN** instrução, o logon recebe o **CONNECT SQL** permissão Permitir logon para conexão com o SQL Server PDW.  
   
--   Quando um usuário de banco de dados é criado usando o **CREATE USER** instrução, o usuário recebe a **CONNECT ON DATABASE::***< nome_do_banco_de_dados >* permissão, permitindo que o logon para se conectar ao banco de dados como um usuário.  
+-   Quando um usuário de banco de dados é criado usando o **CREATE USER** instrução, o usuário receberá o **CONNECT ON DATABASE:: * < nome_do_banco_de_dados >* permissão, permitindo que o logon para se conectar ao banco de dados como um usuário.  
   
 -   Todas as entidades, incluindo a função pública, não têm nenhuma permissão explícita ou implícita por padrão como permissões implícitas são herdadas de permissões explícitas. Portanto, quando nenhuma permissão explícita estiverem presente, não pode também haver nenhuma permissão implícita.  
   
@@ -80,7 +80,7 @@ A lista a seguir descreve as permissões padrão:
   
 -   Transações não exigem permissões. Todas as entidades de segurança podem executar o **BEGIN TRANSACTION**, **confirmar**, e **REVERSÃO** comandos de transação. No entanto, uma entidade de segurança deve ter as permissões apropriadas para executar cada instrução na transação.  
   
--   O **USE** instrução não requer permissões. Todas as entidades de segurança podem executar o **USE** instrução em qualquer banco de dados, no entanto, para acessar um banco de dados, eles devem ter uma entidade de segurança do usuário no banco de dados ou o usuário convidado deve ser habilitado.  
+-   A instrução **USE** não requer permissões. Todas as entidades de segurança podem executar o **USE** instrução em qualquer banco de dados, no entanto, para acessar um banco de dados, eles devem ter uma entidade de segurança do usuário no banco de dados ou o usuário convidado deve ser habilitado.  
   
 ### <a name="the-public-role"></a>A função pública  
 Todos os novos logons de dispositivo automaticamente pertencem à função pública. A função de servidor público tem as seguintes características:  
@@ -95,7 +95,7 @@ Todos os novos logons de dispositivo automaticamente pertencem à função públ
 Se um logon tem permissão para executar uma ação específica depende das permissões concedidas ou negadas ao logon, usuário e funções que o usuário é membro. Permissões de nível de servidor (como **CREATE LOGIN** e **VIEW SERVER STATE**) estão disponíveis para entidades no nível do servidor (logons). Permissões de nível de banco de dados (como **selecione** de uma tabela ou **executar** em um procedimento) estão disponíveis para objetos de nível de banco de dados (usuários e funções de banco de dados).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Permissões implícitas e explícitas  
-Um *permissão explícita* é um **GRANT** ou **DENY** permissão concedida a uma entidade de segurança por um **GRANT** ou **DENY**instrução. Permissões de nível de banco de dados são listadas no [database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) exibição. Permissões de nível de servidor são listadas no [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição.  
+Uma *permissão explícita* é uma permissão **GRANT** ou **DENY** concedida a uma entidade de segurança por uma instrução **GRANT** ou **DENY**. Permissões de nível de banco de dados são listadas no [database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) exibição. Permissões de nível de servidor são listadas no [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição.  
   
 Um *permissão implícita* é um **GRANT** ou **DENY** permissão foi herdada uma entidade de segurança (logon ou função de servidor). Uma permissão pode ser herdada das seguintes maneiras.  
   
@@ -103,7 +103,7 @@ Um *permissão implícita* é um **GRANT** ou **DENY** permissão foi herdada um
   
 -   Uma entidade pode herdar de uma permissão em um objeto subordinado (como uma tabela) se a entidade de segurança tem uma permissão em um dos escopos objetos pai (como o esquema da tabela ou a permissão no banco de dados inteiro).  
   
--   Uma entidade pode herdar de uma permissão por ter uma permissão que inclui uma permissão subordinada. Por exemplo o **ALTER ANY USER** permissão inclui a ambos o **CREATE USER** e **ALTER ON USER::**  *<name>*  permissões.  
+-   Uma entidade pode herdar de uma permissão por ter uma permissão que inclui uma permissão subordinada. Por exemplo o **ALTER ANY USER** permissão inclui a ambos o **CREATE USER** e o **ALTER ON USER:: *<name>*  permissões.  
   
 ### <a name="determining-permissions-when-performing-actions"></a>Determinando permissões ao executar ações  
 O processo de determinação de qual permissão para atribuir a uma entidade de segurança é complexo. A complexidade ocorre quando determinando permissões implícitas porque as entidades podem ser membros de várias funções e permissões podem ser passadas por meio de vários níveis na hierarquia de funções.  
@@ -225,7 +225,7 @@ O sistema de funções de servidor fixas e funções fixas de banco de dados é 
 Funções de servidor fixas são criadas automaticamente pelo SQL Server. SQL Server PDW tem uma implementação limitada de funções de servidor fixas do SQL Server. Somente o **sysadmin** e **pública** ter logons de usuário como membros. O **setupadmin** e **dbcreator** são usadas internamente pelo SQL Server PDW. Membros adicionais não podem ser adicionados ou removidos de qualquer função.  
   
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin a função de servidor fixa  
-Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no servidor. O **sa** logon é o único membro a **sysadmin** função de servidor fixa. Logons adicionais não podem ser adicionados para o **sysadmin** função de servidor fixa. Concedendo a **CONTROL SERVER** permissão aproxima a associação a **sysadmin** função de servidor fixa. O exemplo a seguir concede a **CONTROL SERVER** permissão a um logon denominado Fay.  
+Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no servidor. O **sa** logon é o único membro a **sysadmin** função de servidor fixa. Logons adicionais não podem ser adicionados para o **sysadmin** função de servidor fixa. Conceder a permissão **CONTROL SERVER** aproxima-se da associação à função de servidor fixa **sysadmin**. O exemplo a seguir concede a **CONTROL SERVER** permissão a um logon denominado Fay.  
   
 ```sql  
 USE master;  
