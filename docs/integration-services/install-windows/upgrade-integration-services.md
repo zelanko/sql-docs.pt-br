@@ -1,16 +1,16 @@
 ---
 title: Fazer upgrade do Integration Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>Atualização do Integration Services
   Se o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] ou posterior estiver atualmente instalado no computador, você poderá atualizar para o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -37,18 +37,18 @@ ms.lasthandoff: 03/20/2018
  Com essa instalação lado a lado, várias versões do utilitário dtexec são instaladas. Para garantir a execução da versão correta do utilitário, no prompt de comando, execute o utilitário inserindo o caminho completo (\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn). Para obter mais informações sobre dtexec, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 > [!NOTE]  
->  Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, quando você instalava o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , todos os usuários no grupo Usuários tinham acesso ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os usuários não têm acesso ao serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por padrão, o serviço é protegido. Após a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá executar a ferramenta de Configuração DCOM (Dcomcnfg.exe) para conceder a usuários específicos acesso ao serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, veja [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
+>  Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, quando você instalava o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , todos os usuários no grupo Usuários tinham acesso ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os usuários não têm acesso ao serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por padrão, o serviço é protegido. Após a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , o administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá executar a ferramenta de Configuração DCOM (Dcomcnfg.exe) para conceder a usuários específicos acesso ao serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, veja [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 ## <a name="before-upgrading-integration-services"></a>Antes de atualizar o Integration Services  
  Recomenda-se executar o Supervisor de Atualização antes de atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização reporta problemas que você poderá encontrar se migrar pacotes existentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o novo formato de pacote utilizado pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 > [!NOTE]  
->  O suporte para a migração ou a execução de pacotes de DTS (Data Transformation Services) foram descontinuados na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A seguinte funcionalidade do DTS foi descontinuada:  
+>  O suporte para a migração ou a execução de pacotes de DTS (Data Transformation Services) foi descontinuado no SQL Server 2012. A seguinte funcionalidade do DTS foi descontinuada:  
 >   
 >  -   Tempo de execução DTS  
 > -   API DTS  
 > -   O Assistente de Migração de Pacotes para migração de pacotes DTS para a próxima versão do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-> -   Suporte para manutenção de pacote DTS no[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+> -   Suporte para manutenção de pacote DTS no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Tarefa Executar Pacote DTS 2000  
 > -   Exame de pacotes DTS do Supervisor de Atualização  
 >   

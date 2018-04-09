@@ -1,29 +1,29 @@
 ---
 title: Destinos para eventos estendidos no SQL Server | Microsoft Docs
-ms.custom: 
-ms.date: 06/12/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e75149107c4576a51737f77cf49679c62a2a0d42
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,6 +90,10 @@ Os eventos estendidos do SQL Server podem interoperar com o ETW (Rastreamento de
 
 Esse destino ETW processa os dados recebidos *de forma síncrona* , enquanto a maioria dos destinos os processa *de forma assíncrona*.
 
+> [!NOTE]
+> O Banco de Dados SQL do Azure não é compatível com o destino ETW. Nem a Instância Gerenciada do Banco de Dados SQL do Azure.
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -152,6 +156,12 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 
 
 - O nome de arquivo escolhido é usado pelo sistema como um prefixo ao qual é acrescentado um inteiro longo baseado em data e hora, seguido da extensão .xel.
+
+> [!NOTE]
+> O Banco de Dados SQL do Azure é compatível com o destino **event_file**, mas apenas usando um blob no Armazenamento do Azure para a saída. O Banco de Dados SQL não pode armazenar a saída de evento em um arquivo em seu disco rígido local.
+> Para um exemplo de código **event_file** específico para o Banco de Dados SQL (e para a Instância Gerenciada do Banco de Dados SQL), consulte [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file) (Código de destino do Arquivo de Evento para eventos estendidos no Banco de Dados SQL).
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION com o destino **event_file**

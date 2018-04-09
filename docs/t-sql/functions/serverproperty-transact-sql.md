@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: ''
+caps.latest.revision: 128
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 65e2c160cddd188b91887e7ed414033c9b51c1d0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/21/2018
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ComputerNamePhysicalNetBIOS|O nome NetBIOS do computador local no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução no momento.<br /><br /> Para uma instância clusterizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um cluster de failover, este valor muda à medida que a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efetua failover para os outros nós no cluster de failover.<br /><br /> Em uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse valor permanece constante e retorna o mesmo valor da propriedade MachineName.<br /><br /> **Observação:** se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em um cluster de failover e você desejar obter o nome da instância clusterizada de failover, use a propriedade MachineName.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |Edição|Edição instalada do produto da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use o valor dessa propriedade para determinar os recursos e os limites, como [Calcular limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Versões de 64 bits do [!INCLUDE[ssDE](../../includes/ssde-md.md)] anexam (64 bits) à versão.<br /><br /> Retorna:<br /><br /> 'Enterprise Edition'<br /><br /> ‘Enterprise Edition: licenciamento baseado em núcleo’<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> ‘Business Intelligence Edition’<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition com Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |EditionID|EditionID representa a edição instalada do produto da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use o valor dessa propriedade para determinar recursos e limites, como [Calcular limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: licenciamento baseado em núcleo<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express com Advanced Services<br /><br /> -1534726760 = Padrão<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = Banco de Dados SQL ou SQL Data Warehouse<br /><br /> Tipo de dados base: **bigint**|  
-|EngineEdition|Edição do [!INCLUDE[ssDE](../../includes/ssde-md.md)] da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada no servidor.<br /><br /> 1 = Personal ou Desktop Engine (Não disponível no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores.)<br /><br /> 2 = Standard (Retornada para Standard, Web e Business Intelligence.)<br /><br /> 3 = Enterprise (This is returned for Evaluation, Developer e Enterprise editions.)<br /><br /> 4 = Express (Retornada para Express, Express with Tools e Express com Advanced Services)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 – [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo de dados base: **int**|  
+|EngineEdition|Edição do [!INCLUDE[ssDE](../../includes/ssde-md.md)] da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada no servidor.<br /><br /> 1 = Personal ou Desktop Engine (Não disponível no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores.)<br /><br /> 2 = Standard (Retornada para Standard, Web e Business Intelligence.)<br /><br /> 3 = Enterprise (This is returned for Evaluation, Developer e Enterprise editions.)<br /><br /> 4 = Express (Retornada para Express, Express with Tools e Express com Advanced Services)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 – [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = instância gerenciada<br /><br /> Tipo de dados base: **int**|  
 |HadrManagerStatus|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se o gerenciador do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] foi iniciado.<br /><br /> 0 = não iniciado, comunicação pendente.<br /><br /> 1 = iniciado e em execução.<br /><br /> 2 = não iniciado e com falha.<br /><br /> NULL = Entrada inválida, um erro ou não aplicável.|  
 |InstanceDefaultDataPath|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Nome do caminho padrão para os arquivos de dados da instância.|  
 |InstanceDefaultLogPath|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a versão atual em atualizações a partir do final de 2015.<br /><br /> Nome do caminho padrão para os arquivos de log da instância.|  
@@ -123,6 +123,13 @@ GO
   
 ### <a name="version-properties"></a>Propriedades da versão  
  A função `SERVERPROPERTY` retorna propriedades individuais relacionadas às informações da versão, enquanto a função [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) combina a saída em uma cadeia de caracteres. Caso o aplicativo exija cadeias de caracteres de propriedade individuais, use a função `SERVERPROPERTY` para retorná-las, em vez de analisar os resultados de [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md).  
+
+> [!NOTE]  
+> Estamos cientes de um problema em que as propriedades de versão relatadas por SERVERPROPERTY são incorretas para o Banco de Dados SQL do Azure. A versão do mecanismo de banco de dados do SQL Server executada pelo Banco de Dados SQL do Azure sempre está à frente da versão local do SQL Server e inclui as correções de segurança mais recentes. Isso significa que o nível de patch está sempre pareado com a versão local do SQL Server ou à frente dela e que os recursos mais recentes disponíveis no SQL Server estão disponíveis no Banco de Dados SQL do Azure.
+>
+> Para determinar programaticamente a edição do mecanismo, use SELECT SERVERPROPERTY('EngineEdition'). Essa consulta retornará '5' para bancos de dados independentes e '8' para instâncias gerenciadas no Banco de Dados SQL do Azure. 
+>
+> A documentação será atualizada depois que esse problema for resolvido.
 
 ## <a name="permissions"></a>Permissões
 

@@ -1,16 +1,16 @@
 ---
 title: Origem do Excel | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Origem do Excel
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
-  
+
+> [!IMPORTANT]
+> Para obter informações detalhadas sobre como se conectar a arquivos do Excel, e sobre limitações e problemas conhecidos para carregar dados de ou para arquivos do Excel, consulte [Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md).
+
+## <a name="access-mode"></a>Modo de acesso
  A origem do Excel fornece quatro modos de acesso a dados diferentes para extrair dados:  
   
 -   Uma tabela ou exibição.  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   Os resultados de uma instrução SQL. A consulta pode ser uma consulta parametrizada.  
   
 -   Os resultados de uma instrução SQL armazenados em uma variável.  
-  
-> [!IMPORTANT]  
->  No Excel, uma planilha de trabalho ou intervalo é equivalente a uma tabela ou exibição. A lista de tabelas disponíveis nos Editores de Origem e Destino do Excel exibe planilhas de trabalho existentes (identificadas pelo sinal $ anexado ao nome da planilha, por exemplo, Planilha1$) e os intervalos nomeados (identificados pela ausência desse sinal $, como Meu Intervalo). Para obter mais informações, consulte a seção de Considerações de uso.  
   
  A origem do Excel usa um gerenciador de conexões do Excel para se conectar a uma fonte de dados e o gerenciador de conexões especifica o arquivo da planilha de trabalho a ser usado. Para obter mais informações, consulte [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  Aplique a opção de tratamento de erros às células selecionadas.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
-  
--   Entrada de blog, [Importando dados do Excel de 64 bits no SSIS](http://go.microsoft.com/fwlink/?LinkId=217673), em hrvoje.piasevoli.com  
-  
--   Entrada de blog, [Excel no Integration Services, Parte 1 de 3: conexões e componentes](http://go.microsoft.com/fwlink/?LinkId=217674), em dougbert.com  
-  
--   Entrada de blog, [Excel no Integration Services, Parte 2 de 3: tabelas e tipos de dados](http://go.microsoft.com/fwlink/?LinkId=217675), em dougbert.com.  
-  
--   Entrada de blog, [O Excel no Integration Services, parte 3 de 3: problemas e alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), no site dougbert.com.  
-  
-  
+[Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md)
+[Destino do Excel](excel-destination.md)  
+[Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)
