@@ -146,7 +146,7 @@
 ### [Monitor performance for availability groups](monitor-performance-for-always-on-availability-groups.md) (Monitorar o desempenho de grupos de disponibilidade)
 ### [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md) (Solução de problemas: o grupo de disponibilidade excedeu o RPO)
 ### [Troubleshoot: Availability group exceeded RTO](troubleshoot-availability-group-exceeded-rto.md) (Solução de problemas: o grupo de disponibilidade excedeu o RTO)
-### [Troubleshoot: Changes on primary not reflected on secondary replica](troubleshoot-primary-changes-not-reflected-on-secondary.md) (Solução de problemas: as alterações na réplica primária não refletiram na secundária)
+### [Solução de problemas: as alterações na réplica primária não refletiram na secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)
 ### [Useful tools for troubleshooting](useful-tools-for-troubleshooting.md) (Ferramentas úteis para solução de problemas)
 #### [Eventos estendidos](always-on-extended-events.md)
 #### [Health diagnostics log](always-on-health-diagnostics-log.md) (Log de diagnóstico de integridade)
