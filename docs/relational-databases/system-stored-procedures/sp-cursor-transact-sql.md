@@ -1,16 +1,16 @@
 ---
 title: sp_cursor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e85732afe35198cea86a605dfde8396b013842dc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |-|  
 |**Aplica-se a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  É um parâmetro necessário que designa qual operação o cursor executará. *optype* requer um dos seguintes **int** valores de entrada.  
   
-|Valor|Nome|Description|  
+|Value|Nome|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|É usado para atualizar uma ou mais linhas no buffer de busca.  As linhas especificadas em *rownum* são novamente acessadas e atualizadas.|  
 |0x0002|DELETE|É usado para excluir uma ou mais linhas no buffer de busca. As linhas especificadas em *rownum* são novamente acessadas e excluídas.|  
@@ -67,7 +67,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X20|SETPOSITION|É usado somente quando o programa for emitir um SQL Server subsequentes posicionado instrução DELETE ou UPDATE.|  
 |0X40|ABSOLUTE|Pode ser usado apenas junto com UPDATE ou DELETE.  ABSOLUTE é usado apenas com cursores KEYSET (é ignorado para cursores DYNAMIC e cursores STATIC não podem ser atualizados).<br /><br /> Observação: Se ABSOLUTE é especificado em uma linha no conjunto de chaves que não tiverem sido buscado, a operação poderá falhar na verificação de simultaneidade e o resultado de retorno não pode ser garantido.|  
   
- *rowNum*  
+ *rownum*  
  Especifica qual das linhas no buffer de busca o cursor irá afetar, atualizar ou excluir.  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Ao usar uma RPC, uma operação posicionada DELETE ou UPDATE com um número de buffer 0 retornará uma mensagem DONE com um *rowcount* 0 (falha) ou 1 (êxito) para cada linha no buffer de busca.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="optype-parameter"></a>Parâmetro optype  
  Com exceção das combinações de SETPOSITION com UPDATE, DELETE, atualização ou bloqueio; ou ABSOLUTO com UPDATE ou DELETE, o *optype* valores são mutuamente exclusivos.  
@@ -181,8 +181,8 @@ sp_cursor  cursor, optype, rownum, table
 >  É possível enviar um parâmetro como um parâmetro nomeado, isto é, "`@VALUES`". Neste caso, nenhum outro parâmetro nomeado pode ser usado.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

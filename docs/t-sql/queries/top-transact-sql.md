@@ -1,16 +1,16 @@
 ---
 title: TOP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TOP_TSQL
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Limita as linhas retornadas em um conjunto de resultados de consulta a um número ou percentual de linhas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando o TOP é usado em conjunto com a cláusula ORDER BY, o conjunto de resultados é limitado ao primeiro *N* número de linhas ordenadas, caso contrário, ele retorna o primeiro *N* número de linhas em uma ordem indefinida. Use esta cláusula para especificar o número de linhas retornado de uma instrução SELECT ou afetado por uma instrução INSERT, UPDATE, MERGE ou DELETE.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/19/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *expressão*  
+ *Expressão*  
  É uma expressão numérica válida que especifica o número de linhas a serem retornadas. *expression* será convertido implicitamente em um valor de **float** se PERCENT for especificado, caso contrário, ele será convertido em **bigint**.  
   
  PERCENT  
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/19/2018
 ## <a name="interoperability"></a>Interoperabilidade  
  A expressão TOP não afeta instruções que possam ser executadas devido a um gatilho acionado. As tabelas **inserted** e **deleted** nos gatilhos retornarão somente as linhas que realmente forem afetadas pelas instruções INSERT, UPDATE, MERGE ou DELETE. Por exemplo, se um INSERT TRIGGER for acionado como resultado de uma instrução INSERT que usou uma cláusula TOP.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite atualizar linhas por meio de exibições. Como a cláusula TOP pode ser incluída na definição de exibição, algumas linhas poderão desaparecer da exibição devido a uma atualização se as linhas deixarem de atender aos requisitos da expressão TOP.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite a atualização de linhas através de exibições. Como a cláusula TOP pode ser incluída na definição de exibição, algumas linhas poderão desaparecer da exibição devido a uma atualização se as linhas deixarem de atender aos requisitos da expressão TOP.  
   
  Quando especificada na instrução MERGE, a cláusula TOP será aplicada *depois* que a tabela de origem inteira e a tabela de destino inteira forem unidas e que as linhas unidas não qualificadas para uma ação de inserção, atualização ou exclusão forem removidas. A cláusula TOP ainda reduz o número de linhas unidas para o valor especificado e as ações de inserção, atualização ou exclusão são aplicadas às linhas unidas restantes de uma forma não ordenada. Ou seja, não há nenhuma ordem na qual as linhas são distribuídas entre as ações definidas nas cláusulas WHEN. Por exemplo, se a especificação de TOP (10) afetar 10 linhas, dessas linhas, 7 podem ser atualizadas e 3 inseridas, ou 1 pode ser excluída, 5 atualizadas e 4 inseridas, e assim por diante. Como a instrução MERGE executa um exame completo das tabelas de origem e de destino, o desempenho de E/S pode ser afetado ao usar a cláusula TOP para modificar uma tabela grande criando vários lotes. Neste cenário, é importante garantir que todos os lotes sucessivos se destinem a novas linhas.  
   
@@ -234,7 +234,7 @@ GO
 ###  <a name="DML"></a> Limitando as linhas afetadas por DELETE, INSERT ou UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Usando TOP para limitar o número de linhas excluídas  
- Quando uma cláusula TOP (*n*) é usada com DELETE, a operação de exclusão é executada em uma seleção indefinida de um número *n* de linhas. Ou seja, a instrução DELETE escolhe qualquer número (*n*) de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir exclui `20` linhas da tabela `PurchaseOrderDetail` que têm datas de vencimento anteriores a 1º de julho de 2002.  
+ Quando um superior (*n*) cláusula é usada com DELETE, a operação de exclusão é executada em uma seleção indefinida de *n* número de linhas. Ou seja, a instrução DELETE escolhe qualquer (*n*) número de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir exclui `20` linhas da tabela `PurchaseOrderDetail` que têm datas de vencimento anteriores a 1º de julho de 2002.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +300,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Usando TOP para limitar o número de linhas atualizadas  
- O exemplo a seguir usa a cláusula TOP para atualizar linhas em uma tabela. Quando uma cláusula TOP (*n*) é usada com UPDATE, a operação de atualização é executada em um número indefinido de linhas. Ou seja, a instrução UPDATE escolhe qualquer número (*n*) de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir atribui 10 clientes de um vendedor para outro.  
+ O exemplo a seguir usa a cláusula TOP para atualizar linhas em uma tabela. Quando um superior (*n*) cláusula é usada com a atualização, a operação de atualização é executada em um número indefinido de linhas. Ou seja, a instrução UPDATE escolhe qualquer (*n*) número de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir atribui 10 clientes de um vendedor para outro.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,9 +342,9 @@ FROM DimEmployee ORDER BY LastName;
   
  Resultado: 33 linhas são retornadas, porque 3 funcionários chamados Brown empatam na linha 31.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)   

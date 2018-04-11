@@ -1,31 +1,31 @@
 ---
-title: "Guia de arquitetura de gerenciamento de memória | Microsoft Docs"
-ms.custom: 
+title: Guia de arquitetura de gerenciamento de memória | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ Os sistemas de memória virtual permitem exceder o uso da memória física, de m
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>Arquitetura de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquire e libera memória dinamicamente, conforme necessário. Normalmente, um administrador não precisa especificar a quantidade de memória que deve ser alocada ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], embora essa opção exista e seja necessária em alguns ambientes.
+O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquire e libera memória dinamicamente conforme necessário. Normalmente, um administrador não precisa especificar a quantidade de memória que deve ser alocada ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], embora essa opção exista e seja necessária em alguns ambientes.
 
 Uma das principais metas de design de todo o software de banco de dados é minimizar a E/S de disco devido às leituras e gravações de disco estarem entre as operações que consomem muitos recursos. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria um pool de buffers na memória para manter a leitura de páginas do banco de dados. Grande parte do código do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é dedicada a minimizar o número de leituras e gravações físicas entre o disco e o pool de buffers. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta alcançar um equilíbrio entre as duas metas:
 
@@ -62,8 +62,8 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 | |32 bits <sup>1</sup> |64 bits|
 |-------|-------|-------| 
 |Memória convencional |Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Até o limite de espaço de endereço virtual do processo: <br>- 2 GB<br>- 3 GB com parâmetro de inicialização de /3gb <sup>2</sup> <br>- 4 GB no WOW64 <sup>3</sup> |Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Até o limite de espaço de endereço virtual do processo: <br>- 7 TB com arquitetura IA64 (IA64 não tem suporte no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e posterior)<br>- Máximo do sistema operacional com a arquitetura x64 <sup>4</sup>
-|Mecanismo AWE (Permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ir além do limite de espaço de endereço virtual do processo na plataforma de 32 bits.) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edições Standard, Enterprise e Developer: o pool de buffers é capaz de acessar até 64 GB de memória.|Não aplicável <sup>5</sup> |
-|Privilégio do SO (sistema operacional) de bloquear páginas na memória (permite o bloqueio de memória física, evitando a paginação do SO da memória bloqueada). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edições Standard, Enterprise e Developer: necessárias para o processo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar o mecanismo AWE. A memória alocada pelo mecanismo AWE não pode passar pelo page out. <br> A concessão desse privilégio sem a ativação de AWE não tem nenhum efeito no servidor. | Utilizada somente quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Neste caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo a seguir:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|Mecanismo AWE (Permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ir além do limite de espaço de endereço virtual do processo na plataforma de 32 bits.) |Edições Standard, Enterprise e Developer do[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : o pool de buffers é capaz de acessar até 64 GB de memória.|Não aplicável <sup>5</sup> |
+|Privilégio do SO (sistema operacional) de bloquear páginas na memória (permite o bloqueio de memória física, evitando a paginação do SO da memória bloqueada). <sup>6</sup> |Edições Standard, Enterprise e Developer do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: necessárias para o processo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar o mecanismo AWE. A memória alocada pelo mecanismo AWE não pode passar pelo page out. <br> A concessão desse privilégio sem a ativação de AWE não tem nenhum efeito no servidor. | Utilizada somente quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Neste caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo a seguir:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Versões de 32 bits não estão disponíveis a partir do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb é um parâmetro de inicialização do sistema operacional. Para saber mais, visite a Biblioteca MSDN.  
@@ -81,7 +81,7 @@ Nas versões anteriores do SQL Server ([!INCLUDE[ssVersion2005](../includes/ssve
 -  O **SPA (alocador de página única)**, incluindo somente as alocações de memória que eram menores ou iguais a 8 KB no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As opções de configuração *max server memory (MB)* e *min server memory (MB)* determinavam os limites de memória física que o SPA consumia. O pool de buffers era simultaneamente o mecanismo do SPA e o maior consumidor de alocações de uma página.
 -  O **Alocador de várias páginas (MPA)**, para as alocações de memória que solicitam mais de 8 KB.
 -  O **Alocador de CLR**, incluindo os heaps SQL CLR e suas alocações globais que são criadas durante a inicialização do CLR.
--  As alocações de memória para as  **[pilhas de thread](../relational-databases/memory-management-architecture-guide.md#stacksizes)**  no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+-  As alocações de memória para as **[pilhas de thread](../relational-databases/memory-management-architecture-guide.md#stacksizes)** no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 -  As **DWA (Alocações Diretas do Windows)**, para as solicitações de alocação de memória feitas diretamente no Windows. Elas incluem o uso de heap do Windows e as alocações virtuais diretas feitas pelos módulos que são carregados no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exemplos de tais solicitações de alocação de memória incluem as alocações de DLLs de procedimento armazenado estendido, os objetos que são criados usando procedimentos de automação (chamadas sp_OA) e as alocações de provedores de servidor vinculados.
 
 A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], as alocações de uma página, as alocações de várias páginas e as alocações de CLR são consolidadas em um **alocador de páginas de “qualquer tamanho”** e ele é incluído nos limites de memória que são controlados pelas opções de configuração *max server memory (MB)* e *min server memory (MB)*. Essa alteração forneceu uma capacidade de dimensionamento mais precisa para todos os requisitos de memória que passam pelo gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -91,7 +91,7 @@ A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], as alocações de um
 
 A tabela a seguir indica se um tipo específico de alocação de memória é controlado pelas opções de configuração *max server memory (MB)* e *min server memory (MB)*:
 
-|Tipo de alocação de memória| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Tipo de alocação de memória| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Alocações de uma página|Sim|Sim, consolidadas em alocações de página de “qualquer tamanho”|
 |Alocações de várias páginas|não|Sim, consolidadas em alocações de página de “qualquer tamanho”|
@@ -119,7 +119,7 @@ Uma vez que o novo alocador de páginas de “qualquer tamanho” também contro
 
 A tabela a seguir indica se um tipo específico de alocação de memória se encaixa na região *memory_to_reserve* do espaço de endereço virtual para o processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
 
-|Tipo de alocação de memória| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Tipo de alocação de memória| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Alocações de uma página|não|Não, consolidados em alocações de páginas de “qualquer tamanho”|
 |Alocações de várias páginas|Sim|Não, consolidados em alocações de páginas de “qualquer tamanho”|
@@ -167,7 +167,7 @@ FROM sys.dm_os_process_memory;
 
 <sup>2</sup> A memória do CLR é gerenciada em alocações de max_server_memory a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a API de notificação de memória **QueryMemoryResourceNotification** para determinar quando o Gerenciador de Memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar e liberar memória.  
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a API de notificação de memória **QueryMemoryResourceNotification** para determinar quando o Gerenciador de Memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar e liberar memória.  
 
 Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado, ele computa o tamanho do espaço de endereço virtual do pool de buffers baseado em vários parâmetros, como quantidade de memória física no sistema, número de threads de servidor e vários parâmetros de inicialização. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva a quantidade computada do seu espaço de endereço virtual de processo do pool de buffers, mas adquire (confirma) somente a quantidade exigida da memória física para a carga atual.
 
@@ -180,7 +180,7 @@ Conforme são iniciados outros aplicativos em um computador que está executando
 As opções de configuração min server memory e max server memory estabelecem limites superiores e inferiores à quantidade de memória usada pelo pool de buffers e por outros caches do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O pool de buffers não adquire imediatamente a quantidade de memória especificada na min server memory. O pool de buffers é iniciado apenas com a memória exigida para inicialização. Conforme a carga de trabalho do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] aumenta, ele continua adquirindo a memória exigida para oferecer suporte à carga de trabalho. O pool de buffers não libera a memória adquirida até atingir a quantidade especificada na min server memory. Quando a min server memory é atingida, o pool de buffers usa o algoritmo padrão para adquirir e liberar memória, conforme necessário. A única diferença é que o pool de buffers nunca cancela sua alocação de memória abaixo do nível especificado na min server memory, e nunca adquire mais memória que o nível especificado na max server memory.
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um processo, adquire mais memória do que a especificada pela opção max server memory. Os componentes internos e externos podem alocar memória fora do pool de buffers, que consome memória adicional, mas a memória alocada ao pool de buffers, em geral, ainda representa a parte maior da memória consumida pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+> Como um processo, o[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquire mais memória do que a especificada pela opção max server memory. Os componentes internos e externos podem alocar memória fora do pool de buffers, que consome memória adicional, mas a memória alocada ao pool de buffers, em geral, ainda representa a parte maior da memória consumida pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 A quantidade de memória adquirida pelo [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] é completamente dependente da carga de trabalho colocada na instância. Uma instância [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que não está processando muitas solicitações nunca consegue atingir a min server memory.
 
@@ -261,7 +261,7 @@ E/Ss demoradas e isoladas que não aparecem relacionadas a quaisquer condições
 ### <a name="error-detection"></a>Detecção de erro  
 As páginas de banco de dados podem usar um dentre dois mecanismos opcionais que ajudam a garantir a integridade da página do momento em que é gravada no disco até ser lida novamente: proteção de página interrompida e proteção de soma de verificação. Esses mecanismos permitem um método independente para verificar a exatidão não apenas do armazenamento de dados, mas de componentes de hardware, como controladores, drivers, cabos e até mesmo o sistema operacional. A proteção é adicionada à página um pouco antes da gravação no disco e verificada depois da leitura do disco.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] repetirá mais quatro vezes qualquer leitura que falhe com uma soma de verificação, página interrompida ou outro erro de E/S. Se a leitura tiver êxito em qualquer uma das novas tentativas, uma mensagem será gravada no log de erros e o comando que disparou a leitura continuará. Se as novas tentativas falharem, o comando falhará com a mensagem de erro 824. 
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] repetirá mais quatro vezes qualquer leitura que falhe com uma soma de verificação, página interrompida ou outro erro de E/S. Se a leitura tiver êxito em qualquer uma das novas tentativas, uma mensagem será gravada no log de erros e o comando que disparou a leitura continuará. Se as novas tentativas falharem, o comando falhará com a mensagem de erro 824. 
 
 O tipo de proteção de página usado é um atributo do banco de dados que contém a página. A proteção de soma de verificação é a proteção padrão para bancos de dados criados no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e posterior. O mecanismo de proteção da página é especificado no momento da criação do banco de dados e pode ser alterado usando a opção ALTER DATABASE SET. Você pode determinar a configuração de proteção da página atual, consultando a coluna *page_verify_option* na exibição do catálogo [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou na propriedade *IsTornPageDetectionEnabled* da função [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md). 
 
@@ -280,9 +280,9 @@ A proteção de soma de verificação, apresentada no [!INCLUDE[ssVersion2005](.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Compreendendo o Non-uniform Memory Access
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece o NUMA (Non-uniform Memory Access) e tem um bom desempenho em hardware de NUMA sem configuração especial. Devido ao aumento da velocidade de clock e do número de processadores, fica muito difícil reduzir a latência de memória exigida para usar este poder de processamento adicional. Para evitar isto, fornecedores de hardware fornecem caches de L3 grandes, mas esta é apenas uma solução limitada. A arquitetura NUMA oferece uma solução escalonável para esse problema. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi projetado para tirar proveito de computadores baseados em NUMA sem exigir nenhuma mudança de aplicativo. Para saber mais, veja [Como configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece o NUMA (Non-uniform Memory Access) e tem um bom desempenho em hardware de NUMA sem configuração especial. Devido ao aumento da velocidade de clock e do número de processadores, fica muito difícil reduzir a latência de memória exigida para usar este poder de processamento adicional. Para evitar isto, fornecedores de hardware fornecem caches de L3 grandes, mas esta é apenas uma solução limitada. A arquitetura NUMA oferece uma solução escalonável para esse problema. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi projetado para tirar proveito de computadores baseados em NUMA sem exigir nenhuma mudança de aplicativo. Para saber mais, veja [Como configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 [Opções Server Memory de configuração do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lendo Páginas](../relational-databases/reading-pages.md)   
 [Gravando Páginas](../relational-databases/writing-pages.md)   

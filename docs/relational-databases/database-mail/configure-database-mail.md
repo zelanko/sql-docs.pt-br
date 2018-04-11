@@ -1,16 +1,16 @@
 ---
 title: Configurar o Database Mail | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -42,20 +42,20 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
+  Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
   
 -   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  
   
@@ -195,7 +195,7 @@ Este tópico descreve como habilitar e configurar o Database Mail usando o Assis
  **Nome da conta**  
  Selecione a conta a exibir, atualizar ou excluir.  
   
- **Delete (excluir)**  
+ **Delete (excluir) (excluir)**  
  Excluir a conta selecionada. Você deve remover esta conta de perfis associados, ou excluir esses perfis, antes de excluir a conta selecionada.  
   
  **Descrição**  
@@ -225,7 +225,7 @@ Este tópico descreve como habilitar e configurar o Database Mail usando o Assis
  **Autenticação Básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
   
- **User name**  
+ **Nome de usuário**  
  Exiba ou atualize o nome do usuário que o Database Mail usa para fazer logon no servidor SMTP. O nome do usuário será necessário se o servidor SMTP exigir autenticação básica.  
   
  **Senha**  
@@ -275,7 +275,7 @@ Este tópico descreve como habilitar e configurar o Database Mail usando o Assis
  **Nome do perfil**  
  Selecione o nome do perfil a gerenciar.  
   
- **Delete (excluir)**  
+ **Delete (excluir) (excluir)**  
  Exclui o perfil selecionado. Você será solicitado a selecionar **Sim** para excluir o perfil selecionado e para optar por falhar em todas as mensagens não enviadas ou a selecionar **Não** para excluir o perfil selecionado apenas se não houver mensagens não enviadas.  
   
  **Descrição**  
@@ -369,7 +369,7 @@ Este tópico descreve como habilitar e configurar o Database Mail usando o Assis
   
  Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro.  
   
- **User name**  
+ **Nome de usuário**  
  Selecione o nome de um usuário ou função no banco de dados **msdb** .  
   
  **Acesso**  

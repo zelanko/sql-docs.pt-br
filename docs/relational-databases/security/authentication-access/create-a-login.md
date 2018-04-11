@@ -1,16 +1,16 @@
 ---
 title: Criar um logon | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/06/2017
  **Mapeamento**  
  Permita que o logon acesse os bancos de dados listados abaixo.  
   
- **Banco de Dados**  
+ **Banco de dados**  
  Liste os bancos de dados disponíveis no servidor.  
   
  **Usuário**  
@@ -170,9 +170,9 @@ ms.lasthandoff: 12/06/2017
   
 1.  Clique em **Pesquisar**.  
   
-2.  Na caixa de diálogo **Adicionar Objetos** , selecione um destas opções: **Objetos específicos...**, **Todos objetos dos tipos...**ou **O servidor***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  No **adicionar objetos** caixa de diálogo, selecione uma das seguintes opções: **objetos específicos...** , **Todos os objetos dos tipos...** , ou **o servidor * nome_do_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **OBSERVAÇÃO:** a seleção de **The server***server_name* preenche automaticamente a grade superior com todos os objetos protegíveis desses servidores.  
+    > **Observação:** selecionar **o servidor * nome_do_servidor* preenche automaticamente a grade superior com todos os objetos protegíveis de servidores.  
   
 3.  Se você selecionar **Objetos específicos…**:  
   
