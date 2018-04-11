@@ -1,28 +1,28 @@
 ---
-title: "Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória | Microsoft Docs"
-ms.custom: 
+title: Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória | Microsoft Docs
+ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-caps.latest.revision: 
+caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66cf48a0435cdb14681ab996d7707cc4e082c0d9
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: def11deba22b3d78922c41a76b6c4ff07dce8a83
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,9 +83,6 @@ ms.lasthandoff: 01/18/2018
   
  Você pode impor uma limpeza de dados invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) e especificando o nome do esquema e da tabela:   
 **sys.sp_xtp_flush_temporal_history @schema_name, @object_name**. Com este comando executado pelo usuário, o mesmo processo de movimentação de dados é invocado quando a tarefa de limpeza de dados é invocada pelo sistema na agenda interna.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
- Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20System-Versioned%20Temporal%20Tables%20with%20Memory-Optimized%20Tables%20page)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
