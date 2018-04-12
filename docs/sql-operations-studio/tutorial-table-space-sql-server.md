@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Habilitar o tabela uso exemplo insight o widget espaço no Studio de operações do SQL (visualização) | Microsoft Docs"
-description: "Este tutorial demonstra como habilitar o tabela uso exemplo insight o widget espaço no painel de banco de dados do SQL Studio de operações (visualização)."
+title: 'Tutorial: Habilitar o tabela uso exemplo insight o widget espaço no SQL Operations Studio (preview) | Microsoft Docs'
+description: Este tutorial demonstra como habilitar o tabela uso exemplo insight o widget espaço no painel de banco de dados do SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

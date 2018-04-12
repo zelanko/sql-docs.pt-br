@@ -1,6 +1,6 @@
 ---
-title: "Operações do SQL Studio (visualização) usuário e configurações de espaço de trabalho | Microsoft Docs"
-description: "Como modificar o Studio de operações do SQL (visualização) usuário e configurações de espaço de trabalho."
+title: SQL Operations Studio (preview) usuário e configurações de espaço de trabalho | Microsoft Docs
+description: Como modificar o SQL Operations Studio (preview) usuário e configurações de espaço de trabalho.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ O arquivo de configuração do espaço de trabalho está localizado sob o `.[!IN
 
 ## <a name="hot-exit"></a>Saída ativa
 
-Operações de SQL Studio será Lembre-se de alterações não salvas arquivos quando você sair por padrão. Isso é o mesmo que o recurso de saída ativa no código do Visual Studio.
+SQL Operations Studio será Lembre-se de alterações não salvas arquivos quando você sair por padrão. Isso é o mesmo que o recurso de saída ativa no código do Visual Studio.
 
 Por padrão, a saída ativa está desativado. Habilitar acesso saída editando o `files.hotExit` configuração. Para obter detalhes, consulte [Hot Exit (na documentação do Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 

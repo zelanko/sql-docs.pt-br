@@ -1,6 +1,6 @@
 ---
-title: "O que é o Studio de operações do SQL (visualização)? | Microsoft Docs"
-description: "Operações do SQL Studio (visualização) é uma ferramenta gratuita, leve, que é executado no Windows, macOS e Linux, para gerenciar o SQL Server, o banco de dados do SQL Azure e o Azure SQL Data Warehouse; onde quer que estejam em execução."
+title: O que é o SQL Operations Studio (preview)? | Microsoft Docs
+description: SQL Operations Studio (preview) é uma ferramenta gratuita, leve, que é executado no Windows, macOS e Linux, para gerenciar o SQL Server, o banco de dados do SQL Azure e o Azure SQL Data Warehouse; onde quer que estejam em execução.
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

@@ -1,6 +1,6 @@
 ---
-title: "Início rápido: Conectar e consultar o SQL Server usando o Studio de operações do SQL (visualização) | Microsoft Docs"
-description: "Este guia de início rápido mostra como usar o Studio de operações do SQL (visualização) para se conectar ao SQL Server e executar uma consulta"
+title: 'Início rápido: Conectar e consultar o SQL Server usando o SQL Operations Studio (preview) | Microsoft Docs'
+description: Este guia de início rápido mostra como usar o SQL Operations Studio (preview) para se conectar ao SQL Server e executar uma consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -38,8 +38,8 @@ Se você não tiver acesso a um SQL Server, selecione a plataforma os links a se
 ## <a name="connect-to-a-sql-server"></a>Conecte-se a um SQL Server
 
    
-1. Iniciar  **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. Na primeira vez que você executar  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  o **Conexão** caixa de diálogo é aberta. Se o **Conexão** não abre a caixa de diálogo, clique no **nova Conexão** ícone o **servidores** página:
+1. Iniciar **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Na primeira vez que você executar *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* o **Conexão** caixa de diálogo é aberta. Se o **Conexão** não abre a caixa de diálogo, clique no **nova Conexão** ícone o **servidores** página:
    
    ![Novo ícone de Conexão](media/quickstart-sql-server/new-connection-icon.png)
 
