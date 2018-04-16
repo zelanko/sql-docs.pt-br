@@ -1,16 +1,16 @@
 ---
-title: "Índices columnstore – visão geral | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2016
+title: Índices columnstore – visão geral | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---overview"></a>Índices columnstore – visão geral
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,16 @@ Os *índices columnstore* são o padrão para armazenar e consultar tabelas de f
   
  Para reduzir a fragmentação dos segmentos de coluna e melhorar o desempenho, o índice columnstore pode armazenar alguns dados temporariamente em um índice clusterizado, chamado deltastore, e em uma lista árvore B de IDs para linhas excluídas. As operações de deltastore são tratadas em segundo plano. Para retornar os resultados corretos da consulta, o índice columnstore clusterizado combina os resultados da consulta de columnstore e deltastore.  
   
- deltastore  
- Usado somente com índices de repositório de colunas clusterizadas, um *deltastore* é um índice clusterizado que melhora o desempenho e a compactação do columnstore armazenando linhas até que o número de linhas atinja um limite e sejam, em seguida, movidas para o columnstore.  
+ rowgroup delta  
+ Usado somente com índices de repositório de colunas, um *rowgroup delta* é um índice clusterizado que melhora o desempenho e a compactação do columnstore armazenando linhas até que o número de linhas alcance um limite e seja, em seguida, movido para o columnstore.  
+
+ Quando um rowgroup delta alcança o número máximo de linhas, ele fica fechado. Um processo de movimentação de tupla procura grupos de linhas fechados. Quando encontra o grupo de linhas fechado, compacta-o e armazena-o no columnstore.  
   
- Durante o carregamento em massa grande, a maioria das linhas vai diretamente para o columnstore sem passar pelo deltastore. No fim do carregamento em massa, o número de linhas pode ser muito pouco para atender ao tamanho mínimo de um rowgroup, que é de 102.400 linhas. Quando isso ocorre, as linhas finais vão para o deltastore, e não para o columnstore. Para carregamento em massa pequeno, menos de 102.400 linhas, todas as linhas vão diretamente para o deltastore.  
+Um índice columnstore deltastore A pode ter mais de um rowgroup delta.  Todos os rowgroups delta são coletivamente chamados de *deltastore*.   
+
+Durante o carregamento em massa grande, a maioria das linhas vai diretamente para o columnstore sem passar pelo deltastore. No fim do carregamento em massa, o número de linhas pode ser muito pouco para atender ao tamanho mínimo de um rowgroup, que é de 102.400 linhas. Quando isso ocorre, as linhas finais vão para o deltastore, e não para o columnstore. Para carregamento em massa pequeno, menos de 102.400 linhas, todas as linhas vão diretamente para o deltastore.  
   
- Quando o deltastore atinge o número máximo de linhas, ele é fechado. Um processo de movimentação de tupla procura grupos de linhas fechados. Quando encontra o grupo de linhas fechado, compacta-o e armazena-o no columnstore.  
+
   
  índice columnstore não clusterizado  
  Um *índice columnstore não clusterizado* e um índice columnstore clusterizado funcionam da mesma maneira. A diferença é que um índice não clusterizado é um índice secundário criado em uma tabela rowstore, enquanto um índice columnstore clusterizado é o armazenamento primário da tabela inteira.  

@@ -1,16 +1,16 @@
 ---
-title: "Guia de design de índice do SQL Server | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
+title: Guia de design de índice do SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index design guide
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -630,7 +630,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. Para obter mais informações, consulte [Visão geral de índices columnstore](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+Para obter informações de versão, veja [Índices Columnstore – Novidades](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
 
 ### <a name="columnstore-index-architecture"></a>Arquitetura de índices columnstore
 
@@ -649,7 +649,7 @@ Um índice columnstore armazena fisicamente a maioria dos dados no formato colum
 
 Um índice columnstore também armazena fisicamente algumas linhas em um formato de rowstore, chamado deltastore. O deltastore, também chamado de rowgroups delta, é um espaço reservado para linhas que são muito poucas para se qualificarem para compactação no columnstore. Cada rowgroup delta é implementado como um índice de árvore B clusterizado. 
 
-- Um **deltastore** é um local de espera para linhas que são muito poucas para serem compactadas no columnstore. O deltastore é um rowstore. 
+- O **deltastore** é um local de espera para linhas que são muito poucas para serem compactadas no columnstore. O deltastore armazena as linhas no formato rowstore. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Operações são executadas em rowgroups e em segmentos de colunas
 
@@ -743,7 +743,7 @@ O número de buckets deve ser especificado no momento da definição do índice:
 A função de hash é aplicada às colunas de chave do índice e o resultado da função determina em qual bucket a chave se enquadra. Cada bucket tem um ponteiro para linhas cujos valores de chave de hash são mapeados para o bucket.
 
 A função de hash usada para índices de hash tem as seguintes características:
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma função de hash que é usada para todos os índices de hash.
+- O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma função de hash que é usada para todos os índices de hash.
 - A função de hash é determinística. O mesmo valor de chave de entrada sempre é mapeado para o mesmo bucket no índice de hash.
 - Várias chaves de índice podem ser mapeadas para o mesmo bucket de hash.
 - A função de hash é equilibrada, o que significa que a distribuição de valores de chave do índice em buckets de hash geralmente segue uma distribuição de Poisson ou curva de sino, não uma distribuição linear simples.

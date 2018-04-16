@@ -1,16 +1,16 @@
 ---
 title: Dicas de tabela (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/25/2018
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  As seguintes dicas de tabela são permitidas com e sem a palavra-chave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Quando essas dicas de tabela forem especificadas sem a palavra-chave WITH, as dicas deverão ser especificadas sozinhas. Por exemplo:  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  Quando especificada com outra opção, a dica deverá ser especificada com a palavra-chave WITH:  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -155,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, consulte Comentários.  
   
- INDEX **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A alternativa INDEX = sintaxe especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
   
  Se existir um índice clusterizado, INDEX(0) forçará uma verificação de índice clusterizado e INDEX(1) forçará uma verificação ou busca de índice clusterizado. Na ausência de índices clusterizados, INDEX(0) forçará uma verificação de tabela e INDEX(1) será interpretado como um erro.  
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |Combinado com uma dica INDEX.|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|O otimizador de consulta considera apenas as operações de busca de índice para acessar a tabela ou exibição através do índice especificado.|  
 |Parametrizado especificando um índice e colunas do índice|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|O otimizador de consulta considera apenas as operações de busca de índice para acessar a tabela ou exibição através do índice especificado, usando pelo menos as colunas de índice especificadas.|  
   
- Ao usar a dica FORCESEEK (com ou sem parâmetros de índice), considere as diretrizes a seguir.  
+Ao usar a dica FORCESEEK (com ou sem parâmetros de índice), considere as diretrizes a seguir.  
   
 -   A dica pode ser especificada como uma dica de tabela ou como uma dica de consulta. Para obter mais informações sobre dicas de consulta, confira [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   Se FORCESEEK impedir a localização de um plano, o erro 8622 será retornado.  
   
- Quando FORCESEEK for especificado com parâmetros de índice, as diretrizes e restrições a seguir se aplicarão.  
+Quando FORCESEEK for especificado com parâmetros de índice, as diretrizes e restrições a seguir se aplicarão.  
   
 -   A dica não pode ser especificada para uma tabela que é o destino de uma instrução INSERT, UPDATE ou DELETE.  
   
@@ -351,7 +351,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  A tabela com otimização de memória é acessada no isolamento SNAPSHOT. O SNAPSHOT pode ser usado apenas com tabelas com otimização de memória (não com tabelas com base em disco). Para obter mais informações, confira [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>Dicas de índice filtrado  
  Um índice filtrado pode ser usado como uma dica de tabela, mas fará com que o otimizador de consulta gere o erro 8622 se ele não cobrir todas as linhas selecionadas pela consulta. O seguinte exemplo é uma dica de índice filtrado inválida. O exemplo cria o índice filtrado `FIBillOfMaterialsWithComponentID` e, em seguida, usa-o como uma dica de índice para uma instrução SELECT. O predicado do índice filtrado inclui linhas de dados para ComponentIDs 533, 324 e 753. O predicado da consulta também inclui linhas de dados para os ComponentIDs 533, 324 e 753, mas estende o conjunto de resultados para incluir os ComponentIDs 855 e 924 que não estão no índice filtrado. Portanto, o otimizador de consulta não pode usar a dica de índice filtrado e gera o erro 8622. Para saber mais, confira [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Usando a dica FORCESEEK para especificar uma operação de busca de índice  
  O exemplo a seguir usa a dica FORCESEEK sem especificar um índice para forçar o otimizador de consulta a executar uma operação de busca de índice na tabela `Sales.SalesOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

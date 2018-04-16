@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption com suporte a Bring Your Own Key (VERSÃO PRÉVIA) para o Banco de Dados SQL do Azure e Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ Quando a primeira TDE está configurada para usar um protetor de TDE do Key Vaul
 ### <a name="general-guidelines"></a>Instruções gerais
 - Certifique-se de que o Azure Key Vault e o Banco de Dados SQL do Azure estarão no mesmo locatário.  **Não há suporte** para interações de servidor e cofre de chaves entre locatários.
 - Decida quais assinaturas serão usadas para os recursos necessários, mover o servidor entre assinaturas posteriormente requer uma nova configuração de TDE com BYOKs.
-- Ao configurar a TDE com BYOK, é importante considerar a carga colocada no cofre de chaves por operações repetidas de encapsulamento/desencapsulamento. Por exemplo, já que todos os bancos de dados associados a um servidor lógico usam o mesmo protetor de TDE, um failover desse servidor disparará um número de operações de chave destinadas ao cofre que será equivalente ao número de bancos de dados no servidor. Com base em nossa experiência e nos [limites de serviço do cofre de chaves](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentados, recomendamos associar no máximo 500 bancos de dados Standard ou 200 bancos de dados Premium a um Azure Key Vault em uma assinatura única para garantir alta disponibilidade consistentemente alta ao acessar o protetor de TDE no cofre. 
+- Ao configurar a TDE com BYOK, é importante considerar a carga colocada no cofre de chaves por operações repetidas de encapsulamento/desencapsulamento. Por exemplo, já que todos os bancos de dados associados a um servidor lógico usam o mesmo protetor de TDE, um failover desse servidor disparará um número de operações de chave destinadas ao cofre que será equivalente ao número de bancos de dados no servidor. Com base em nossa experiência e nos [limites de serviço do cofre de chaves](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentados, recomendamos associar no máximo 500 bancos de dados Standard/Uso Geral ou 200 bancos de dados Premium/Comercialmente Críticos a um Azure Key Vault em uma assinatura única para garantir alta disponibilidade de forma consistente ao acessar o protetor de TDE no cofre. 
 - Recomendado: manter uma cópia local do protetor de TDE.  Isso exige um dispositivo HSM para criar um protetor de TDE localmente e um sistema de caução de chave para armazenar uma cópia local do protetor de TDE.
 
 

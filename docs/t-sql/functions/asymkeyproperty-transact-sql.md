@@ -1,16 +1,16 @@
 ---
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMKEYPROPERTY_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 808f7c8d840f18d9e09fe9906e366fb7feb76cff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna as propriedades de uma chave assimétrica.
+Essa função retorna as propriedades de uma chave assimétrica.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>Argumentos  
 *Key_ID*  
-É o parâmetro Key_ID de uma chave assimétrica do banco de dados. Para localizar a Key_ID quando você souber apenas o nome da chave, use ASYMKEY_ID. *Key_ID* é um tipo de dados **int**.
+O Key_ID de uma chave assimétrica do banco de dados. Se você souber apenas o nome da chave, use ASYMKEY_ID para localizar a Key_ID. *Key_ID* tem um tipo de dados **int**.
   
 **'**algorithm_desc**'**  
 Especifica que a saída retorna a descrição do algoritmo da chave assimétrica. Disponível somente para chaves assimétricas criadas de um módulo EKM.
@@ -61,10 +61,10 @@ Especifica que a saída retorna o SID da chave assimétrica em formato binário.
 **sql_variant**
   
 ## <a name="permissions"></a>Permissões  
-Requer algumas permissões na chave assimétrica e que a permissão VIEW não tenha sido negada para o chamador na chave assimétrica.
+Requer permissões adequadas na chave assimétrica e que a permissão VIEW não tenha sido negada para o chamador na chave assimétrica. Veja [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md) para obter mais informações sobre permissões de chaves assimétricas.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir retorna as propriedades da chave assimétrica com Key_ID 256.
+O exemplo a seguir retorna as propriedades da chave assimétrica da Key_ID 256.
   
 ```sql
 SELECT   
@@ -74,7 +74,7 @@ ASYMKEYPROPERTY(256, 'sid') AS SID ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
 [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
 [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  

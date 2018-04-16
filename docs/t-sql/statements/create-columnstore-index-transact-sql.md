@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -65,7 +65,7 @@ Saiba mais:
 -   [Guia de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [Resumo de recursos dos índices columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -184,7 +184,7 @@ Criar um índice columnstore não clusterizado na memória em uma tabela rowstor
 *index_name*  
    Especifica o nome do índice. O *index_name* precisa ser exclusivo na tabela, mas não precisa ser exclusivo no banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *column* [ **,**...*n* ] **)**  
+ **(** *column*  [ **,**...*n* ] **)**  
     Especifica as colunas a serem armazenadas. Um índice columnstore não clusterizado é limitado a 1024 colunas.  
    Cada coluna deve ser de um tipo de dados com suporte para índices columnstore. Confira [Limitações e restrições](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obter uma lista dos tipos de dados compatíveis.  
 
@@ -320,13 +320,13 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max) (aplica-se ao [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ao Banco de Dados SQL do Azure no tipo de preço Premium, apenas em índices columnstore clusterizados)   
+-   nvarchar (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e à camada Premium, à camada Standard (S3 e posterior) e a todas as camadas de ofertas de vCore, apenas em índices columnstore clusterizados)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max) (aplica-se ao [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ao Banco de Dados SQL do Azure no tipo de preço Premium, apenas em índices columnstore clusterizados)
+-   varchar (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e à camada Premium, à camada Standard (S3 e posterior) e a todas as camadas de ofertas de vCore, apenas em índices columnstore clusterizados)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max) (aplica-se ao [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ao Banco de Dados SQL do Azure no tipo de preço Premium, apenas em índices columnstore clusterizados)
+-   varbinary (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ao Banco de Dados SQL do Azure na camada Premium, na camada Standard (S3 e posterior) e a todas as camadas de ofertas de vCore, apenas em índices columnstore clusterizados)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (aplica-se ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posteriores)
   
@@ -349,7 +349,7 @@ Se a tabela subjacente tiver uma coluna de um tipo de dados não compatível com
 -   Não pode ser alterado usando a instrução **ALTER INDEX**. Para alterar o índice não clusterizado, é preciso descartar e recriar o índice columnstore. Você pode usar **ALTER INDEX** para desabilitar e recompilar um índice columnstore.  
 -   Ele não pode ser criado usando a palavra-chave **INCLUDE**.  
 -   Não é possível incluir as palavras-chave **ASC** ou **DESC** para classificar o índice. Os índices columnstore são ordenados de acordo com os algoritmos de compactação. A classificação eliminará muitos dos benefícios de desempenho.  
--   Não é possível incluir colunas de LOB (objeto grande) do tipo nvarchar(max), varchar(max) e varbinary(max) em índices de repositório de colunas não clusterizados. Somente índices columnstore clusterizados permitem os tipos LOB, começando com a versão do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o Banco de Dados SQL do Azure configurado no tipo de preço Premium. Observe que as versões anteriores não são compatíveis com os tipos LOB em índices columnstore clusterizados e não clusterizados.
+-   Não é possível incluir colunas de LOB (objeto grande) do tipo nvarchar(max), varchar(max) e varbinary(max) em índices de repositório de colunas não clusterizados. Somente índices columnstore clusterizados são compatíveis com tipos LOB, começando com a versão [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o Banco de Dados SQL do Azure configurado na camada Premium, na camada Standard (S3 e posterior) e em todas as camadas de ofertas de vCore. Observe que as versões anteriores não são compatíveis com os tipos LOB em índices columnstore clusterizados e não clusterizados.
 
 
  **Os índices columnstore não podem ser combinados com os seguintes recursos:**  

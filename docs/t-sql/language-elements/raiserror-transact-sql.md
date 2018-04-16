@@ -1,16 +1,16 @@
 ---
 title: RAISERROR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
@@ -31,23 +31,23 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6102463ccd42e8057349b4480aa71d818aaafedf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gera uma mensagem de erro e inicia o processamento de erros da sessão. RAISERROR pode referenciar uma mensagem de erro definida pelo usuário na exibição do catálogo sys.messages ou criar uma mensagem dinamicamente. A mensagem é retornada como uma mensagem de erro de servidor ao aplicativo de chamada ou a um bloco CATCH de uma construção TRY...CATCH. Em vez disso, os novos aplicativos devem usar [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -128,8 +128,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Para converter um valor no tipo de dados **bigint** do [!INCLUDE[tsql](../../includes/tsql-md.md)], especifique **%I64d**.  
   
- **@** *local_variable*  
- É uma variável de qualquer tipo de dados de caractere válido que contém uma cadeia de caracteres formatada da mesma maneira que *msg_str*. **@***local_variable* deve ser **char** ou **varchar** ou poder ser convertido implicitamente nesses tipos de dados.  
+ *@local_variable*  
+ É uma variável de qualquer tipo de dados de caractere válido que contém uma cadeia de caracteres formatada da mesma maneira que *msg_str*. *@local_variable* deve ser **char** ou **varchar** ou poder ser convertido implicitamente nesses tipos de dados.  
   
  *severity*  
  É o nível de severidade definido pelo usuário associado a essa mensagem. Ao usar *msg_id* para gerar uma mensagem definida pelo usuário criada com sp_addmessage, a severidade especificada em RAISERROR substitui a severidade especificada em sp_addmessage.  
