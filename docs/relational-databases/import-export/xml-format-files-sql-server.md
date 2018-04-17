@@ -1,32 +1,32 @@
 ---
 title: Arquivos de formato XML (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -191,7 +191,7 @@ ms.lasthandoff: 02/23/2018
   
  xsi**:**type **="***fieldType***"**  
   
- [ LENGTH **="***n***"** ]  
+ [Tamanho **= "***n***"** ]  
   
  [ PREFIX_LENGTH **="***p***"** ]  
   
@@ -222,7 +222,7 @@ ms.lasthandoff: 02/23/2018
   
 |Valores de xsi:type de \<FIELD>|Atributos XML obrigatórios<br /><br /> para tipo de dados|Atributos XML opcionais<br /><br /> para tipo de dados|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
-|**NativeFixed**|**LENGTH**|Nenhum.|  
+|**NativeFixed**|**LENGTH**|Nenhuma.|  
 |**NativePrefix**|**PREFIX_LENGTH**|MAX_LENGTH|  
 |**CharFixed**|**LENGTH**|COLLATION|  
 |**NCharFixed**|**LENGTH**|COLLATION|  
@@ -275,12 +275,12 @@ ms.lasthandoff: 02/23/2018
   
 |Categoria do tipo|Tipos de dados de \<COLUMN>|Atributos XML obrigatórios<br /><br /> para tipo de dados|Atributos XML opcionais<br /><br /> para tipo de dados|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Fixo|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**, e **SQLUNIQUEID**|Nenhum.|NULLABLE|  
-|Número variável|**SQLDECIMAL** e **SQLNUMERIC**|Nenhum.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|Nenhum.|NULLABLE|  
-|LOB caractere|**SQLNTEXT**|Nenhum.|NULLABLE|  
-|Cadeia de caracteres binária|**SQLBINARY** e **SQLVARYBIN**|Nenhum.|NULLABLE, LENGTH|  
-|Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nenhum.|NULLABLE, LENGTH|  
+|Fixo|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**, e **SQLUNIQUEID**|Nenhuma.|NULLABLE|  
+|Número variável|**SQLDECIMAL** e **SQLNUMERIC**|Nenhuma.|NULLABLE, PRECISION, SCALE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|Nenhuma.|NULLABLE|  
+|LOB caractere|**SQLNTEXT**|Nenhuma.|NULLABLE|  
+|Cadeia de caracteres binária|**SQLBINARY** e **SQLVARYBIN**|Nenhuma.|NULLABLE, LENGTH|  
+|Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nenhuma.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Para importar ou exportar em massa dados SQLXML, use um dos seguinte tipos de dados em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código cliente ou na página de código indicada pelo agrupamento), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode) e SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
@@ -571,8 +571,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  
   
-## <a name="see-also"></a>Consulte Também  
- [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+## <a name="see-also"></a>Consulte também  
+ [Importação e exportação de dados &#40;em massa SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  

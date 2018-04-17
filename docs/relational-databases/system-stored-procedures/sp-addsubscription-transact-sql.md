@@ -3,14 +3,14 @@ title: sp_addsubscription (Transact-SQL) | Microsoft Docs
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -18,23 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 
+caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adiciona uma assinatura a uma publicação e define o status do Assinante. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,13 +82,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication=] '*publicação*'  
+ [ @publication=] '*publication*'  
  É o nome da publicação. *publicação* é **sysname**, sem padrão.  
   
  [ @article=] '*artigo*'  
  É o artigo no qual a publicação é assinada. *artigo* é **sysname**, com um padrão de all. Se for todos, uma assinatura será adicionada a todos os artigos naquela publicação. Somente valores de todos ou NULL têm suporte para Publicadores Oracle.  
   
- [ @subscriber=] '*assinante*'  
+ [ @subscriber=] '*subscriber*'  
  É o nome do Assinante. *assinante* é **sysname**, com um padrão NULL.  
   
  [ @destination_db=] '*destination_db*'  
@@ -97,7 +97,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type=] '*sync_type*'  
  É o tipo de sincronização da assinatura. *sync_type* é **nvarchar (255)**, e pode ser um dos seguintes valores:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |none|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas.<br /><br /> Observação: Essa opção foi preterida. Use, em vez disso, suporte a replicação.|  
 |automatic (padrão)|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
@@ -111,7 +111,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=] '*status*'  
  E o status da assinatura. *status* é **sysname**, com um valor padrão de NULL. Quando esse parâmetro não é definido explicitamente, a replicação o define automaticamente para um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |active|A assinatura é inicializada e está pronta para oferecer suporte a alterações. Essa opção é definida quando o valor de *sync_type* é none, inicializar com backup ou suporte apenas para replicação.|  
 |subscribed|A assinatura precisa ser inicializada. Essa opção é definida quando o valor de *sync_type* é automático.|  
@@ -125,7 +125,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=] '*update_mode*'  
  É o tipo de atualização. *update_mode* é **nvarchar (30)**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |read only (padrão)|A assinatura é somente leitura. Qualquer alteração no Assinante não será mandada ao Publicador.|  
 |sync tran|Habilita suporte para assinaturas de atualização imediata. Sem suporte para Publicadores Oracle.|  
@@ -138,16 +138,16 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=] '*loopback_detection*'  
  Especifica se o Agente de Distribuição envia transações originadas no Assinante de volta ao Assinante. *loopback_detection* é **nvarchar (5)**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|true|O Distribution Agent não envia transações originadas no Assinante de volta ao Assinante. Usado com replicação transacional bidirecional. Para obter mais informações, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|O Distribution Agent não envia transações originadas no Assinante de volta ao Assinante. Usado com replicação transacional bidirecional. Para obter mais informações, consulte [Replicação transacional bidirecional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|O Distribution Agent envia transações originadas no Assinante de volta ao Assinante.|  
 |NULL (padrão)|Automaticamente definido como verdadeiro para um Assinante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e falso para um assinante não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  [ @frequency_type=] *frequency_type*  
  É a frequência de agendamento da tarefa de distribuição. *frequency_type* é int, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Uma vez|  
 |2|Sob Demanda|  
@@ -164,7 +164,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  É a data do Distribution Agent. Esse parâmetro é usado quando *frequency_type* é definido como 32 (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|First|  
 |2|Segundo|  
@@ -179,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  É a frequência, em minutos, de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Uma vez|  
 |2|Segundo|  
@@ -205,46 +205,46 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  É o prompt de comando opcional a ser executado. *optional_command_line* é **nvarchar (4000)**, com um padrão NULL.  
   
- [ @reserved=] '*reservado*'  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  Se a assinatura pode ser sincronizada por meio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de FALSE. Se for falso, a assinatura não será registrada com o Gerenciador de Sincronização do Windows. Se for verdadeiro, a assinatura será registrada com o Gerenciador de Sincronização do Windows e será sincronizada sem iniciar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sem suporte para Publicadores Oracle.  
   
- [ @offloadagent=] '*remote_agent_activation*'  
+ [ @offloadagent= ] '*remote_agent_activation*'  
  Especifica que o agente pode ser ativado remotamente. *remote_agent_activation* é **bit** com um padrão de 0.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e só é mantido para compatibilidade com versões anteriores.  
   
- [ @offloadserver=] '*remote_agent_server_name*'  
+ [ @offloadserver= ] '*remote_agent_server_name*'  
  Especifica o nome da rede de servidor a ser usada para ativação remota. *remote_agent_server_name*é **sysname**, com um padrão NULL.  
   
- [ @dts_package_name=] '*dts_package_name*'  
+ [ @dts_package_name= ] '*dts_package_name*'  
  Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname** com um padrão NULL. Por exemplo, para especificar um nome de pacote DTSPub_Package, o parâmetro seria `@dts_package_name = N'DTSPub_Package'`. Esse parâmetro está disponível para assinaturas push. Para adicionar informações de pacote DTS a uma assinatura pull, use sp_addpullsubscription_agent.  
   
- [ @dts_package_password=] '*dts_package_password*'  
+ [ @dts_package_password= ] '*dts_package_password*'  
  Especifica a senha no pacote, se houver um. *dts_package_password* é **sysname** com um padrão NULL.  
   
 > [!NOTE]  
 >  Você deve especificar uma senha se *dts_package_name* for especificado.  
   
- [ @dts_package_location=] '*dts_package_location*'  
+ [ @dts_package_location= ] '*dts_package_location*'  
  Especifica o local do pacote. *dts_package_location* é um **nvarchar (12)**, com um padrão de DISTRIBUIDOR. O local do pacote pode ser distribuidor ou assinante.  
   
- [ @distribution_job_name=] '*distribution_job_name*'  
+ [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher=] '*publicador*'  
+ [ @publisher= ] '*publisher*'  
  Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *publicador* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [ @backupdevicetype=] '*backupdevicetype*'  
+ [ @backupdevicetype= ] '*backupdevicetype*'  
  Especifica o tipo do dispositivo de backup a ser usado ao inicializar um Assinante de um backup. *backupdevicetype* é **nvarchar (20)**, e pode ser um destes valores:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |logical (padrão)|O dispositivo de backup é um dispositivo lógico.|  
 |disk|O dispositivo de backup é uma unidade de disco.|  
@@ -261,19 +261,19 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password=] '*senha*'  
+ [ @password= ] '*password*'  
  Especifica uma senha para o backup se uma senha já tiver sido definida quando o backup foi criado. *senha*é **sysname**, com um valor padrão de NULL.  
   
- [ @fileidhint=] *fileidhint*  
+ [ @fileidhint= ] *fileidhint*  
  Identifica um valor ordinal do conjunto de backup a ser restaurado. *fileidhint* é **int**, com um valor padrão de NULL.  
   
- [ @unload=] *descarregar*  
+ [ @unload= ] *unload*  
  Especifica se um dispositivo de backup em fita deve ser descarregado quando a inicialização do backup for concluída. *Descarregar* é **bit**, com um valor padrão de 1. 1 Especifica que a fita deve ser descarregada. *Descarregar* é usado apenas quando *backupdevicetype* é fita.  
   
- [ @subscriptionlsn=] *subscriptionlsn*  
+ [ @subscriptionlsn= ] *subscriptionlsn*  
  Especifica o LSN (número de sequência de log) no qual uma assinatura deve começar a entrega de alterações para um nó, em uma topologia de replicação transacional ponto a ponto. Usado com um @sync_type valor de inicialização do lsn para certificar-se de que todas as transações relevantes sejam replicadas para um novo nó. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- [ @subscriptionstreams=] *subscriptionstreams*  
+ [ @subscriptionstreams= ] *subscriptionstreams*  
  É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante, mantendo muitas das características transacionais presentes ao usar um thread único. *subscriptionstreams* é **tinyint**, com um valor padrão de NULL. Há suporte para um intervalo de valores de 1 a 64. Esse parâmetro não tem suporte para Assinantes, Publicadores Oracle ou assinaturas ponto a ponto que não sejam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre que fluxos de assinatura são usados, linhas adicionais são acrescentadas à tabela msreplication_subscriptions (1 por fluxo) com um agent_id definido como NULL.  
   
 > [!NOTE]  
@@ -282,9 +282,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  É o tipo de assinante. *subscriber_type* é **tinyint**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|0 (padrão)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assinante|  
+|0 (padrão)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assinante|  
 |1|Servidor de fontes de dados ODBC|  
 |2|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet |  
 |3|Provedor OLE DB|  
@@ -295,7 +295,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_addsubscription é usado em replicação de instantâneo e replicação transacional.  
   
  Quando sp_addsubscription é executado por um membro da função de servidor fixa sysadmin para criar uma assinatura push, o trabalho do Distribution Agent é implicitamente criado e executado na conta de serviço do SQL Server Agent. É recomendável que você execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) e especifique as credenciais de uma conta do Windows diferente, específica de agente para @job_login e @job_password. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -326,10 +326,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Criar uma assinatura para um assinante não SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_changesubstatus &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

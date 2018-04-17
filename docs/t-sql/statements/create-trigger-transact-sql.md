@@ -1,16 +1,16 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: mathoma
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE TRIGGER
@@ -31,23 +31,23 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 
+caps.latest.revision: 140
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cria um gatilho DML, DDL ou de logon. Um gatilho é um tipo especial de procedimento armazenado que é executado automaticamente quando um evento ocorre no servidor de banco de dados. Os gatilhos DML são executados quando um usuário tenta modificar dados através de um evento DML (linguagem de manipulação de dados). Os eventos DML são instruções INSERT, UPDATE ou DELETE em uma tabela ou exibição. Esses gatilhos são disparados quando qualquer evento válido é acionado, independentemente de quaisquer linhas da tabela serem afetadas ou não. Para obter mais informações, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
+  Cria um gatilho DML, DDL ou de logon. Um gatilho é um tipo especial de procedimento armazenado executado automaticamente quando um evento ocorre no servidor de banco de dados. Os gatilhos DML são executados quando um usuário tenta modificar dados através de um evento DML (linguagem de manipulação de dados). Os eventos DML são instruções INSERT, UPDATE ou DELETE em uma tabela ou exibição. Esses gatilhos são disparados quando qualquer evento válido é acionado, independentemente de quaisquer linhas da tabela serem afetadas ou não. Para obter mais informações, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
- Os gatilhos DDL são executados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem, basicamente, a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE, ALTER e DROP e determinados procedimentos armazenados do sistema que executam operações do tipo DDL. Os gatilhos de logon são disparados em resposta ao evento LOGON que é gerado quando as sessões de um usuário estão sendo estabelecidas. Os gatilhos podem ser criados diretamente de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de métodos de assemblies criados no CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e carregados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar vários gatilhos para qualquer instrução específica.  
+ Os gatilhos DDL são executados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem, basicamente, a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE, ALTER e DROP e determinados procedimentos armazenados do sistema que executam operações do tipo DDL. Os gatilhos de logon são disparados em resposta ao evento LOGON gerado quando a sessão de um usuário está sendo estabelecida. Os gatilhos podem ser criados diretamente de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de métodos de assemblies criados no CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e carregados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar vários gatilhos para qualquer instrução específica.  
   
 > [!IMPORTANT]  
 >  Um código mal-intencionado dentro de gatilhos pode ser executado sob privilégios escalonados. Para obter mais informações sobre como reduzir essa ameaça, veja [Gerenciar segurança do gatilho](../../relational-databases/triggers/manage-trigger-security.md).  
@@ -55,11 +55,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  A integração do CLR do .NET Framework ao SQL Server é discutida neste tópico. A integração CLR não se aplica ao Banco de Dados SQL do Azure.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -81,7 +81,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -100,7 +100,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```  
+```sql  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -116,7 +116,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```sql  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -133,7 +133,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -149,7 +149,7 @@ ON { table | view }
   
 ```  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -255,7 +255,7 @@ OR ALTER
   
  Gatilhos de DML usam as tabelas (conceituais) lógicas inseridas e excluídas. Eles são estruturalmente semelhantes à tabela na qual o gatilho é definido, ou seja, a tabela na qual a ação do usuário é tentada. As tabelas excluídas e inseridas contêm os valores antigos ou novos das linhas que podem ser alteradas pela ação do usuário. Por exemplo, para recuperar todos os valores na tabela `deleted`, use:  
   
-```  
+```sql  
 SELECT * FROM deleted;  
 ```  
   
@@ -277,7 +277,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  Por padrão, a capacidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em executar código CLR está desligada. Você pode criar, modificar e remover objetos do banco de dados que referenciam módulos de código gerenciado, mas essas referências não serão executadas em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que a [Opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) seja habilitada usando [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-## <a name="remarks-dml-triggers"></a>Comentários de gatilhos DML  
+## <a name="remarks-for-dml-triggers"></a>Comentários para gatilhos DML  
  Os gatilhos DML são usados com frequência para impor as regras de negócio e a integridade dos dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece DRI (declarative referential integrity, integridade referencial declarativa) por meio das instruções ALTER TABLE e CREATE TABLE. Entretanto, DRI não fornece integridade referencial em todos os bancos de dados. A integridade referencial refere-se às regras sobre as relações entre as chaves primárias e estrangeiras de tabelas. Para impor a integridade referencial, use as restrições PRIMARY KEY e FOREIGN KEY em ALTER TABLE e CREATE TABLE. Se houver restrições na tabela de gatilhos, elas serão verificadas após a execução do gatilho INSTEAD OF e antes da execução do gatilho AFTER. Se as restrições forem violadas, as ações do gatilho INSTEAD OF serão revertidas e o gatilho AFTER não será disparado.  
   
  Os primeiro e o último gatilhos AFTER a serem executados em uma tabela podem ser especificados usando sp_settriggerorder. Somente um primeiro e um último gatilho AFTER para cada operação INSERT, UPDATE e DELETE podem ser especificados em uma tabela. Se houver outros gatilhos AFTER na mesma tabela, eles serão executados aleatoriamente.  
@@ -330,9 +330,22 @@ SELECT * FROM deleted;
 |ALTER TABLE quando usado faz o seguinte:<br /><br /> Adiciona, modifica ou descarta colunas.<br /><br /> Alterna partições.<br /><br /> Adiciona ou descarta restrições PRIMARY KEY ou UNIQUE.|||  
   
 > [!NOTE]  
->  Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a gatilhos definidos pelo usuário em tabelas do sistema, não é recomendável criá-los.  
+>  Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a gatilhos definidos pelo usuário em tabelas do sistema, não é recomendável criá-los. 
+
+### <a name="optimizing-dml-triggers"></a>Otimizando gatilhos DML
+ Os gatilhos funcionam em transações (implícitas ou não) e, enquanto estiverem abertos, bloquearão recursos. O bloqueio permanecerá em vigor até que a transação seja confirmada (com COMMIT) ou rejeitada (com um ROLLBACK). Quanto mais um gatilho é executado, maior a probabilidade de outro processo ser bloqueado. Portanto, os gatilhos devem ser escritos de maneira a reduzir sua duração sempre que possível. Uma maneira de fazer isso é liberar um gatilho quando uma instrução DML altera 0 linhas. 
+
+Para liberar o gatilho para um comando que não altera nenhuma linha, empregue a variável de sistema [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+
+O seguinte trecho de código T-SQL fará isso, e deverá estar presente no início de cada gatilho DML:
+
+```sql
+IF (@@ROWCOUNT_BIG = 0)
+RETURN;
+```
   
-## <a name="remarks-ddl-triggers"></a>Comentários de gatilhos DDL  
+  
+## <a name="remarks-for-ddl-triggers"></a>Comentários para gatilhos DDL  
  Os gatilhos DDL, assim como os gatilhos padrão, executam procedimentos armazenados em resposta a um evento. Contudo, diferentemente dos gatilhos padrão, eles não são executados em resposta a instruções UPDATE, INSERT ou DELETE em uma tabela ou exibição. Em vez disso, eles são executados em resposta a instruções DDL (linguagem de definição de dados). Isso inclui instruções CREATE, ALTER, DROP, GRANT, DENY, REVOKE e UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
   
 > [!IMPORTANT]  
@@ -392,7 +405,7 @@ SELECT * FROM deleted;
 ### <a name="nested-triggers"></a>Gatilhos aninhados  
  Os gatilhos podem ser aninhados até no máximo 32 níveis. Se um gatilho alterar uma tabela na qual haja outro gatilho, o segundo gatilho será ativado e poderá chamar um terceiro gatilho e assim por diante. Se qualquer gatilho na cadeia iniciar um loop infinito, o nível de aninhamento será excedido e o gatilho será cancelado. Quando um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] executa um código gerenciado fazendo referência a uma rotina, tipo ou agregação CLR, essa referência também conta como um nível no limite de aninhamento de nível 32. Os métodos invocados do código gerenciado não contam em relação a esse limite.  
   
- Para desabilitar gatilhos aninhados, defina a opção de gatilhos aninhados de sp_configure como 0 (desativada). A configuração padrão permite gatilhos aninhados. Se os gatilhos aninhados estiverem desativados, os gatilhos recursivos também serão desabilitados, independentemente da configuração RECURSIVE_TRIGGERS definida através do uso de ALTER DATABASE.  
+ Para desabilitar gatilhos aninhados, defina a opção de gatilhos aninhados de sp_configure como 0 (desativada). A configuração padrão permite gatilhos aninhados. Se os gatilhos aninhados estiverem desativados, os gatilhos recursivos também serão desabilitados, independentemente da configuração RECURSIVE_TRIGGERS definida por meio do uso de ALTER DATABASE.  
   
  O primeiro gatilho AFTER aninhado dentro de um gatilho INSTEAD OF será disparado mesmo se a opção de configuração do servidor de **gatilhos aninhados** estiver definida como 0. Porém, nessa configuração, os gatilhos AFTER posteriores não são disparados. É recomendável que você examine seus aplicativos para verificar se há gatilhos aninhados e determinar se os aplicativos estão de acordo com as regras de negócio em relação a esse comportamento quando a opção de configuração do servidor de **gatilhos aninhados** estiver definida como 0. Em seguida, faça as modificações apropriadas.  
   
@@ -409,7 +422,7 @@ SELECT * FROM deleted;
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. Usando um gatilho DML com uma mensagem de lembrete  
  O gatilho DML a seguir imprime uma mensagem para o cliente quando alguém tenta adicionar ou alterar dados na tabela `Customer` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 CREATE TRIGGER reminder1  
 ON Sales.Customer  
 AFTER INSERT, UPDATE   
@@ -420,7 +433,7 @@ GO
 ### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Usando um gatilho DML com uma mensagem de email de lembrete  
  O exemplo a seguir envia uma mensagem de email a uma pessoa especificada (`MaryM`) quando a tabela `Customer` é alterada.  
   
-```  
+```sql  
 CREATE TRIGGER reminder2  
 ON Sales.Customer  
 AFTER INSERT, UPDATE, DELETE   
@@ -438,13 +451,15 @@ GO
   
  O exemplo a seguir cria um gatilho DML no banco de dados AdventureWorks2012. Esse gatilho realiza uma verificação para ter certeza de que a avaliação de crédito do fornecedor é satisfatória (não 5) quando for tentar inserir uma nova ordem de compra na tabela `PurchaseOrderHeader`. Para obter a classificação de crédito do fornecedor, a tabela `Vendor` deve ser referenciada. Se a classificação de crédito for muito baixa, uma mensagem será exibida e a inserção não será executada.  
   
-```  
+```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
 -- table when the credit rating of the specified vendor is set to 5 (below average).  
   
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
+IF (@@ROWCOUNT_BIG  = 0)
+RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   
            JOIN inserted AS i   
@@ -485,11 +500,13 @@ GO
 ### <a name="d-using-a-database-scoped-ddl-trigger"></a>D. Usando um gatilho DDL no escopo do banco de dados  
  O exemplo a seguir usa um gatilho DDL para evitar que qualquer sinônimo em um banco de dados seja descartado.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_SYNONYM  
 AS   
+IF (@@ROWCOUNT = 0)
+RETURN;
    RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
    ROLLBACK  
 GO  
@@ -503,7 +520,7 @@ GO
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 CREATE TRIGGER ddl_trig_database   
 ON ALL SERVER   
 FOR CREATE_DATABASE   
@@ -521,7 +538,7 @@ GO
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
@@ -546,14 +563,16 @@ END;
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. Exibindo os eventos que fazem um gatilho ser acionado  
  O exemplo a seguir consulta as exibições do catálogo `sys.triggers` e `sys.trigger_events` para determinar quais eventos de linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] fazem o gatilho `safety` ser acionado. `safety` é criado no exemplo anterior.  
   
-```  
+```sql  
 SELECT TE.*  
 FROM sys.trigger_events AS TE  
 JOIN sys.triggers AS T ON T.object_id = TE.object_id  
 WHERE T.parent_class = 0 AND T.name = 'safety';  
 GO  
 ```  
-  
+
+    
+
 ## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   

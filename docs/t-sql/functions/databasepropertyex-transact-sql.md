@@ -1,16 +1,16 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 07/29/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 
+caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Retorna a configuração atual da opção ou propriedade de banco de dados especificada para o banco de dados especificado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], deve ser o nome do banco de 
 |---|---|---|
 |Agrupamento|O nome do agrupamento padrão para o banco de dados.|Nome do agrupamento<br /><br /> NULL = Banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |ComparisonStyle|O estilo de comparação do agrupamento do Windows. ComparisonStyle é um bitmap calculado com os valores a seguir para os possíveis estilos.<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> <br /><br /> Por exemplo, o padrão de 196609 é o resultado de combinar as opções Ignorar maiúsculas e minúsculas, Ignorar Kana e Ignorar largura.|Retorna o estilo de comparação.<br /><br /> Retorna 0 para todos os agrupamentos binários.<br /><br /> Tipo de dados base: **int**|  
-|Edição|A camada de edição ou de serviço do banco de dados.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Web = Banco de Dados Web Edition<br /><br /> Negócios = Banco de Dados Business Edition<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> Sistema (para o banco de dados mestre)<br /><br /> NULL = Banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **nvarchar**(64)|  
+|Edição|A camada de edição ou de serviço do banco de dados.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso Geral<br /><br /> Comercialmente Crítica<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> Sistema (para o banco de dados mestre)<br /><br /> NULL = Banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **nvarchar**(64)|  
 |IsAnsiNullDefault|O banco de dados segue regras de ISO por permitir valores nulos.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsAnsiNullsEnabled|Todas as comparações com um nulo são avaliadas como desconhecido.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsAnsiPaddingEnabled|As cadeias de caracteres são convertidas na mesma largura antes da comparação ou inserção.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
@@ -146,7 +146,7 @@ Collation                     Edition        ServiceObjective  MaxSizeInBytes
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [Estados de banco de dados](../../relational-databases/databases/database-states.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

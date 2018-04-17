@@ -1,6 +1,6 @@
 ---
-title: "Início rápido: Conectar e consultar um banco de dados do SQL Azure usando o Studio de operações do SQL (visualização) | Microsoft Docs"
-description: "Este guia de início rápido mostra como usar o Studio de operações do SQL (visualização) para se conectar a um banco de dados SQL e executar uma consulta"
+title: 'Início rápido: Conectar e consultar um banco de dados do SQL Azure usando o SQL Operations Studio (preview) | Microsoft Docs'
+description: Este guia de início rápido mostra como usar o SQL Operations Studio (preview) para se conectar a um banco de dados SQL e executar uma consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Início rápido: Usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar o banco de dados do SQL Azure
 
-Este guia de início rápido demonstra como usar  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  para se conectar a um banco de dados do SQL Azure e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
+Este guia de início rápido demonstra como usar *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* para se conectar a um banco de dados do SQL Azure e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -59,7 +59,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma con
 
    ![Novo ícone de Conexão](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Se o servidor não tiver uma regra de firewall permitindo operações de SQL Studio para se conectar, o **criar nova regra de firewall** é aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, consulte [as regras de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Se o servidor não tiver uma regra de firewall permitindo SQL Operations Studio para se conectar, o **criar nova regra de firewall** é aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, consulte [as regras de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nova regra de firewall](media/quickstart-sql-database/firewall.png)  
 

@@ -1,16 +1,16 @@
 ---
 title: ASCII (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASCII_TSQL
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b933f33b8eb6b3909eaf7cb0afcd8bfe19862dee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 31edb66f5d213a7b2241f5f97d9733cb9e0cb523
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Retorna o valor do código ASCII do caractere mais à esquerda de uma expressão de caractere.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *character_expression*  
-É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **char** ou **varchar**.
+Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **char** ou **varchar**.
   
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
   
 ## <a name="remarks"></a>Remarks
-ASCII é uma abreviação de American Standard Code for Information Interchange. É um padrão de codificação de caracteres usado por computadores. Para obter uma lista de caracteres ASCII, consulte a seção **Caracteres imprimíveis** do [ASCII](https://www.wikipedia.org/wiki/ASCII).
+ASCII significa **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Ela serve como um padrão de codificação de caractere para computadores modernos. Veja a seção **Caracteres imprimíveis** do [ASCII](https://www.wikipedia.org/wiki/ASCII) para obter uma lista de caracteres ASCII.
 
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir supõe um conjunto de caracteres ASCII e retorna o `ASCII` valor para 6 caracteres.
+Este exemplo pressupõe um conjunto de caracteres ASCII e retorna o valor `ASCII` para 6 caracteres.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -74,7 +74,7 @@ A           B           a           b           1           2
 65          66          97          98          49          50  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

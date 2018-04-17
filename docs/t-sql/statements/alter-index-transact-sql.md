@@ -1,16 +1,16 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/24/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,23 +48,23 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica uma tabela ou índice de exibição existente (relacional ou XML) desabilitando, recriando ou reorganizando o índice, ou definindo opções no índice.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Compactar todos os rowgroups delta OPEN AND CLOSED para o columnstore  
  **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- O comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compacta cada rowgroup delta OPEN e CLOSED para o columnstore como um rowgroup compactado. Isso esvazia o deltastore e força todas as linhas a serem compactadas no columnstore. Isso é útil principalmente depois de executar várias operações de inserção, já que essas operações armazenam as linhas em um ou mais deltastores.  
+ O comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compacta cada rowgroup delta OPEN e CLOSED para o columnstore como um rowgroup compactado. Isso esvazia o deltastore e força todas as linhas a serem compactadas no columnstore. Isso é útil principalmente depois de executar várias operações de inserção, já que essas operações armazenam as linhas em um ou mais rowgroups delta.  
   
  REORGANIZE combina rowgroups para preencher rowgroups até um número máximo de linhas \<= 1.024.576. Portanto, ao compactar todos os rowgroups OPEN e CLOSED, você não acabará com vários rowgroups compactados que tenham apenas algumas linhas neles. Você deseja que rowgroups sejam tão completos quanto possível para reduzir o tamanho compactado e melhorar o desempenho da consulta.  
   

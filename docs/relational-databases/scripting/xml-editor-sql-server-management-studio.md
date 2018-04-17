@@ -1,16 +1,16 @@
 ---
 title: Editor XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -20,19 +20,20 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Fornece um conjunto de ferramentas visuais para trabalhar com esquemas XML, conjuntos de dados ADO.NET e documentos XML. O XML Designer oferece suporte para a linguagem de definição de esquema XML (XSD) definida pelo World Wide Web Consortium (WC3). O designer não oferece suporte para DTDs (definições de tipo de documento) ou outras linguagens de esquema XML, como XDR (XML-Data Reduced).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Fornece um conjunto de ferramentas visuais para trabalhar com Esquemas XML, conjuntos de dados ADO.NET e documentos XML. O XML Designer oferece suporte para a linguagem de definição de esquema XML (XSD) definida pelo World Wide Web Consortium (WC3). O designer não oferece suporte para DTDs (definições de tipo de documento) ou outras linguagens de esquema XML, como XDR (XML-Data Reduced).  
   
  Para exibir o designer, adicione um conjunto de dados, esquema XML ou arquivo XML a seu projeto ou abra qualquer um dos tipos de arquivo listados na tabela abaixo.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/24/2018
   
  O designer fornece as três exibições (ou modos) a seguir, para se trabalhar em arquivos XML, esquemas XML e conjuntos de dados:  
   
-|Exibição|Description|Tipos de arquivos com suporte|  
+|Exibição|Descrição|Tipos de arquivos com suporte|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para criar visualmente e modificar esquemas XML e conjuntos de dados ADO.NET.|.xsd|  
 |**Dados**|Para modificar visualmente arquivos de dados XML em uma grade de dados estruturada.|.xml|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 01/24/2018
 ## <a name="showplan-view"></a>Exibição de SHOWPLAN  
  Planos de consulta podem ser salvos em formato XML quando forem criados usando-se a opção SET SHOWPLAN_XML ON. Clique duas vezes em um arquivo com a extensão .showplan para abrir o plano de consulta.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Salvar um plano de execução em formato XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

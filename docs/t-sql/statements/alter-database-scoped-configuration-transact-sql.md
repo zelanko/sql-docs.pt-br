@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/04/2018
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f7bac70742dee98e760f93c3345df0546a058932
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Essa instrução permite várias definições de configuração de banco de dados no nível do **banco de dados individual**. Essa instrução está disponível no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Essas configurações são:  
+  Essa instrução permite várias definições de configuração de banco de dados no nível do **banco de dados individual**. Essa instrução está disponível no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Essas configurações são:  
   
 - Limpar o cache de procedimento.  
 - Definir o parâmetro MAXDOP para um valor arbitrário (1, 2,...) para o banco de dados primário com base naquilo que funciona melhor para esse banco de dados específico e definir um valor diferente (por exemplo, 0) para todos os bancos de dados secundários usados (como para consultas de relatórios).  
@@ -46,7 +46,8 @@ ms.lasthandoff: 01/25/2018
 - Habilitar ou desabilitar a detecção de parâmetro no nível do banco de dados.
 - Habilitar ou desabilitar hotfixes de otimização de consulta no nível do banco de dados.
 - Habilitar ou desabilitar o cache de identidade no nível do banco de dados.
-- Habilitar ou desabilitar um stub de plano compilado para ser armazenado em cache quando um lote for compilado pela primeira vez.    
+- Habilitar ou desabilitar um stub de plano compilado para ser armazenado em cache quando um lote for compilado pela primeira vez.  
+- Habilite ou desabilite a coleta de estatísticas de execução para módulos T-SQL compilados nativamente.
   
  ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,6 +70,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
 }  
 ```  
   
@@ -133,7 +136,7 @@ Limpa o cache de procedimento (plano) do banco de dados. Pode ser executado tant
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Habilita ou desabilita o cache de identidade no nível do banco de dados. O padrão é **ON**. O cache de identidade é usado para melhorar o desempenho de INSERT em tabelas com colunas de identidade. Para evitar lacunas nos valores de uma coluna de identidade em casos em que o servidor é reiniciado inesperadamente ou efetua failover para um servidor secundário, desabilite a opção IDENTITY_CACHE. Essa opção é semelhante ao [sinalizador de rastreamento 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) existente, exceto que ela pode ser definida no nível do banco de dados em vez de apenas no nível do servidor.   
 
@@ -142,9 +145,27 @@ Habilita ou desabilita o cache de identidade no nível do banco de dados. O padr
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**Aplica-se ao**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Aplica-se ao**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 Habilita ou desabilita um stub de plano compilado para ser armazenado em cache quando um lote é compilado pela primeira vez. O padrão é OFF. Quando a configuração no escopo do banco de dados OPTIMIZE_FOR_AD_HOC_WORKLOADS estiver habilitada para um banco de dados, um stub de plano compilado será armazenado em cache quando um lote for compilado pela primeira vez. Os stubs de plano têm um volume de memória menor em comparação com o tamanho do plano compilado completo.  Se um lote for compilado ou executado novamente, o stub de plano compilado será removido e substituído por um plano compilado completo.
+
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**Aplica-se ao**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+Habilita ou desabilita a coleta de estatísticas de execução no nível do módulo para módulos T-SQL compilados nativamente no banco de dados atual. O padrão é OFF. As estatísticas de execução são refletidas em [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
+
+As estatísticas de execução de nível de módulo para módulos T-SQL compilados nativamente serão coletadas se esta opção estiver ATIVADA ou se a coleta de estatísticas for habilitada por meio de [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).
+
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**Aplica-se ao**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+Habilita ou desabilita a coleta de estatísticas de execução no nível de instrução para módulos T-SQL compilados nativamente no banco de dados atual. O padrão é OFF. As estatísticas de execução são refletidas em [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) e no [Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+
+As estatísticas de execução de nível de instrução para módulos T-SQL compilados nativamente serão coletadas se esta opção estiver ATIVADA ou se a coleta de estatísticas for habilitada por meio de [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
+
+Para ver mais detalhes sobre monitoramento de desempenho de módulos T-SQL compilados nativamente, consulte [Monitorando o desempenho de procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
 ##  <a name="Permissions"></a> Permissões  
  Requer ALTER ANY DATABASE SCOPE CONFIGURATION   

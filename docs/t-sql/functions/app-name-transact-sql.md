@@ -1,16 +1,16 @@
 ---
 title: APP_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APP_NAME_TSQL
@@ -24,26 +24,26 @@ helpviewer_keywords:
 - current session application names
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2b65f2380cc52c7a1d084dedad5fdb744d377bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aaea21b68fe0e7a9b0e57bf18d9e9907371dc9b6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o nome do aplicativo para a sessão atual se definido pelo aplicativo.
+Uma função que retorna o nome do aplicativo para a sessão atual, se o aplicativo define esse valor de nome.
   
 > [!IMPORTANT]  
->  O nome do aplicativo é fornecido pelo cliente e não é verificado de nenhuma forma. Não use **APP_NAME** como parte de uma verificação de segurança.  
+>  O cliente fornece o nome do aplicativo e o valor do nome de aplicativo não é verificado de nenhuma forma. Não use **APP_NAME** como parte de uma verificação de segurança.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,12 +56,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-Use **APP_NAME** quando desejar executar ações diferentes para aplicativos diferentes. Por exemplo, formatar uma data de maneira diferente para diferentes aplicativos ou retornar uma mensagem informativa para determinados aplicativos.
+Use a **APP_NAME** para distinguir entre diferentes aplicativos, como uma maneira de executar ações diferentes para esses aplicativos. Por exemplo, **APP_NAME** pode distinguir entre diferentes aplicativos para permitir um formato de data diferente para cada aplicativo. Ela também pode permitir o retorno de uma mensagem informativa para determinados aplicativos.
   
-Para definir um nome de aplicativo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], na caixa de diálogo **Conectar ao Mecanismo de Banco de Dados**, clique em **Opções**. Na guia **Parâmetros de Conexão Adicionais**, forneça um atributo **app** no formato `;app='application_name'`
+Para definir um nome de aplicativo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique em **Opções** na caixa de diálogo **Conectar ao Mecanismo de Banco de Dados**. Na guia **Parâmetros de Conexão Adicionais**, forneça um atributo **app** no formato `;app='application_name'`
   
-## <a name="examples"></a>Exemplos  
-O exemplo a seguir verifica se o aplicativo cliente que iniciou esse processo é uma sessão do `SQL Server Management Studio` e fornece uma data no formato US ou ANSI.
+## <a name="example"></a>Exemplo  
+Esse exemplo verifica se o aplicativo cliente que iniciou esse processo é uma sessão do `SQL Server Management Studio` e fornece uma data no formato US ou ANSI.
   
 ```sql
 USE AdventureWorks2012;  
@@ -73,7 +73,7 @@ PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT (
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Funções](../../t-sql/functions/functions.md)
   

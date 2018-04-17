@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Índices columnstore – novidades
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   Resumo de recursos columnstore disponíveis para cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e para as versões mais recentes do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], índices columnstore estão disponíveis nas camadas Premium e Standard do Banco de Dados SQL (S3 e superior). Para o SQL Server (2016 SP1 e posterior), índices columnstore estão disponíveis em todas as edições. Para o SQL Server (2016 e anterior), índices columnstore estão disponíveis apenas na Enterprise Edition.
+ > No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], os índices columnstore estão disponíveis nas camadas de Banco de Dados SQL Premium e Standard: S3 e superior, e em todas as camadas de vCore. Para o SQL Server (2016 SP1 e posterior), índices columnstore estão disponíveis em todas as edições. Para o SQL Server (2016 e anterior), índices columnstore estão disponíveis apenas na Enterprise Edition.
  
 ## <a name="feature-summary-for-product-releases"></a>Resumo de recursos para versões do produto  
  Esta tabela resume os principais recursos para índices columnstore, e os produtos nos quais eles estão disponíveis.  
@@ -119,7 +119,8 @@ Esses DMVs baseados em OLTP na memória contêm atualizações para o columnstor
   
 ### <a name="limitations"></a>Limitações  
   
--   MERGE é desabilitado quando um índice de árvore B é definido em um índice columnstore clusterizado.  
+
+  
 -   Para tabelas na memória, um índice columnstore deve incluir todas as colunas; o índice columnstore não pode ter uma condição filtrada.  
 -   Para tabelas na memória, as consultas em índices columnstore são executadas somente no modo de interoperabilidade, e não no modo nativo na memória. Há suporte para a execução paralela.  
   

@@ -1,16 +1,16 @@
 ---
 title: XQuery e Static digitando | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e digitação estática
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="static-type-inference"></a>Inferência de tipo estático  
  A inferência de tipo estático determina o tipo de retorno de uma expressão. Ela determina isso considerando os tipos estáticos dos parâmetros de entrada e a semântica estática da operação e inferindo o tipo estático do resultado. Por exemplo, o tipo estático da expressão 1 + 2,3 é determinado da seguinte forma:  
   
--   O tipo estático de 1 é **xs: Integer** e o tipo estático de 2,3 é **xs: decimal**. Com base na semântica dinâmica, a semântica estática do  **+**  operação converte o inteiro em um decimal e retorna um decimal. O tipo estático inferido seria então **xs: decimal**.  
+-   O tipo estático de 1 é **xs: Integer** e o tipo estático de 2,3 é **xs: decimal**. Com base na semântica dinâmica, a semântica estática do **+** operação converte o inteiro em um decimal e retorna um decimal. O tipo estático inferido seria então **xs: decimal**.  
   
  Para instâncias XML não digitadas, há tipos especiais para indicar que os dados não foram digitados. Essas informações são usadas durante a verificação de tipo estático e para executar determinadas conversões implícitas.  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 02/09/2018
   
  Os subtipos são definidos, com base nas regras de subdigitação por usar derivação por restrição ou extensão do esquema XML. Por exemplo, um tipo S é um subtipo do tipo T, se todos os valores que tiverem o tipo S também forem instâncias do tipo T.  
   
- Além disso, todos os valores inteiros também são valores decimais com base na hierarquia do tipo de esquemas XML. No entanto, nem todos os valores decimais são inteiros. Portanto, um inteiro é um subtipo de decimal, mas não vice-versa. Por exemplo, o  **+**  operação permite apenas os valores de determinados tipos, como os tipos numéricos **xs: Integer**, **xs: decimal**, **xs: float**, e **xs: Double**. Se os valores de outros tipos, como **xs: string**, são passados, a operação gerará um erro de tipo. Isso será referido como digitação forte. Os valores de outros tipos, como o tipo atômico usado para indicar XML não digitado, podem ser convertidos implicitamente em um valor de um tipo que a operação aceite. Isso é referido como digitação fraca.  
+ Além disso, todos os valores inteiros também são valores decimais com base na hierarquia do tipo de esquemas XML. No entanto, nem todos os valores decimais são inteiros. Portanto, um inteiro é um subtipo de decimal, mas não vice-versa. Por exemplo, o **+** operação permite apenas os valores de determinados tipos, como os tipos numéricos **xs: Integer**, **xs: decimal**, **xs: float**, e **xs: Double**. Se os valores de outros tipos, como **xs: string**, são passados, a operação gerará um erro de tipo. Isso será referido como digitação forte. Os valores de outros tipos, como o tipo atômico usado para indicar XML não digitado, podem ser convertidos implicitamente em um valor de um tipo que a operação aceite. Isso é referido como digitação fraca.  
   
- Se for necessário depois de uma conversão implícita, a verificação de tipo estático garantirá que somente valores dos tipos permitidos com a cardinalidade correta serão passados em uma operação. Para "cadeia de caracteres" + 1, ele reconhece que é o tipo estático da "cadeia de caracteres" **xs: string**. Como isso não é um tipo permitido para o  **+**  operação, um erro de tipo é gerada.  
+ Se for necessário depois de uma conversão implícita, a verificação de tipo estático garantirá que somente valores dos tipos permitidos com a cardinalidade correta serão passados em uma operação. Para "cadeia de caracteres" + 1, ele reconhece que é o tipo estático da "cadeia de caracteres" **xs: string**. Como isso não é um tipo permitido para o **+** operação, um erro de tipo é gerada.  
   
- No caso de adicionar o resultado de uma expressão arbitrária E1 a uma expressão arbitrária E2 (E1 + E2), a inferência de tipo estático determina os tipos estáticos de E1 e E2 primeiro e, em seguida, verifica os tipos estáticos com os tipos permitidos para a operação. Por exemplo, se o tipo estático de E1 pode ser um **xs: string** ou um **xs: Integer**, a verificação de tipo estático gera um erro de digitação, mesmo que alguns valores em tempo de execução pode ser números inteiros. O mesmo seria o caso se o tipo estático de E1 fosse **xs: Integer\***. Porque o  **+**  operação só aceita exatamente um valor inteiro e E1 poderia retornar zero ou mais de 1, a verificação de tipo estático gera um erro.  
+ No caso de adicionar o resultado de uma expressão arbitrária E1 a uma expressão arbitrária E2 (E1 + E2), a inferência de tipo estático determina os tipos estáticos de E1 e E2 primeiro e, em seguida, verifica os tipos estáticos com os tipos permitidos para a operação. Por exemplo, se o tipo estático de E1 pode ser um **xs: string** ou um **xs: Integer**, a verificação de tipo estático gera um erro de digitação, mesmo que alguns valores em tempo de execução pode ser números inteiros. O mesmo seria o caso se o tipo estático de E1 fosse **xs: Integer\***. Porque o **+** operação só aceita exatamente um valor inteiro e E1 poderia retornar zero ou mais de 1, a verificação de tipo estático gera um erro.  
   
  Como mencionado anteriormente, a inferência de tipo frequentemente infere um tipo que é mais amplo do que aquilo que o usuário sabe sobre o tipo de dados sendo passados. Nesses casos, o usuário precisa reescrever a consulta. Alguns casos característicos incluem o seguinte:  
   

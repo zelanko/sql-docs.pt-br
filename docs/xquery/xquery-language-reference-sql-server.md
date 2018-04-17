@@ -1,16 +1,16 @@
 ---
-title: "Referência da linguagem XQuery (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Referência da linguagem XQuery (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[Fundamentos de XQuery](../xquery/xquery-basics.md)|Fornece uma visão geral básica dos conceitos da XQuery, além da avaliação de expressão (contexto estático e dinâmico), atomização, valor booliano efetivo, sistema de tipo XQuery, correspondência de tipo de sequência e tratamento de erros.|  
 |[Expressões XQuery](../xquery/xquery-expressions.md)|Descreve expressões primárias da XQuery, expressões de caminho, expressões de sequência, comparações aritméticas e expressões lógicas, construção da XQuery, expressão FLWOR, expressões quantificadas e condicionais e várias expressões em tipos de sequência.|  
-|[Módulos e Prólogos &#40; XQuery &#41;](../xquery/modules-and-prologs-xquery.md)|Descreve o prólogo da XQuery.|  
+|[Módulos e Prólogos &#40;XQuery&#41;](../xquery/modules-and-prologs-xquery.md)|Descreve o prólogo da XQuery.|  
 |[Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)|Descreve uma lista das funções XQuery que têm suporte.|  
 |[Operadores XQuery em relação ao Tipo de Dados XML](../xquery/xquery-operators-against-the-xml-data-type.md)|Descreve os operadores XQuery que têm suporte.|  
 |[Exemplos Adicionais de XQueries em relação ao Tipo de Dados XML](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|Fornece exemplos adicionais de XQuery.|  

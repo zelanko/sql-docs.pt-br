@@ -1,16 +1,16 @@
 ---
-title: "Excluir restrições exclusivas | Microsoft Docs"
-ms.custom: 
+title: Excluir restrições exclusivas | Microsoft Docs
+ms.custom: ''
 ms.date: 10/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - removing constraints
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - deleting constraints
 - constraints [SQL Server], unique
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 89d8fc0d3d2583f4e2fdbcedc1489b0fd191afac
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="delete-unique-constraints"></a>Excluir restrições exclusivas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/23/2018
   
 4.  Clique em **Excluir**.  
   
-5.  No menu **Arquivo**, clique em **Salvar** *nome da tabela*.  
+5.  No menu **Arquivo** , clique em **Salvar** *table name*.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

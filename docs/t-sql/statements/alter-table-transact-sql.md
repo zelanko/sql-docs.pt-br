@@ -61,16 +61,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: ''
+caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 03/16/2018
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -413,7 +413,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  Especifica que a propriedade ROWGUIDCOL propriedade é adicionada ou descartada da coluna especificada. ROWGUIDCOL indica que a coluna é uma coluna GUID de linha. Apenas uma coluna **uniqueidentifier** por tabela pode ser designada como a coluna ROWGUIDCOL, e a propriedade ROWGUIDCOL pode ser atribuída apenas a uma coluna **uniqueidentifier**. ROWGUIDCOL não pode ser atribuída a uma coluna de um tipo de dados definido pelo usuário.  
   
- ROWGUIDCOL não impõe exclusividade para os valores que são armazenados na coluna e não gera, automaticamente, valores para novas linhas inseridas na tabela. Para gerar valores exclusivos para cada coluna, use a função NEWID em instruções INSERT ou especifique a função NEWID como o padrão para a coluna.  
+ ROWGUIDCOL não impõe exclusividade para os valores que são armazenados na coluna e não gera, automaticamente, valores para novas linhas inseridas na tabela. Para gerar valores exclusivos para cada coluna, use a função NEWID ou NEWSEQUENTIALID em instruções INSERT ou especifique a função NEWID ou NEWSEQUENTIALID como o padrão para a coluna.  
   
  [ {ADD | DROP} PERSISTED ]  
  Especifica que a propriedade PERSISTED é adicionada ou descartada da coluna especificada. A coluna deve ser uma coluna computada que é definida com uma expressão determinista. No caso de colunas especificadas como PERSISTED, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazenará fisicamente os valores computados na tabela e os atualizará quando qualquer outra coluna, da qual depende a coluna computada, for atualizada. Ao marcar uma coluna computada como PERSISTED, é possível criar índices em colunas computadas definidas em expressões que são determinísticas, mas não precisas. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  

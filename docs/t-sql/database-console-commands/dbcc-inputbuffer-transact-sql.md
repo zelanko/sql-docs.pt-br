@@ -1,16 +1,16 @@
 ---
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/14/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -26,23 +26,23 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 
+caps.latest.revision: 51
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f3292b45e9a0e73754bc4f3247c18c431f11271a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Exibe a última instrução enviada de um cliente a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,7 +76,7 @@ DBCC INPUTBUFFER retorna um conjunto de linhas com as seguintes colunas.
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Tipo de evento. Pode ser **Evento de RPC** ou **Evento de Linguagem**. A saída será **Nenhum Evento** quando não for detectado nenhum último evento.|  
-|**Parâmetros**|**smallint**|0 = Texto<br /><br /> 1- *n* = parâmetros|  
+|**Parâmetros**|**smallint**|0 = Texto<br /><br /> 1- *n* = Parâmetros|  
 |**EventInfo**|**nvarchar(4000)**|Para um **EventType** de RPC, **EventInfo** contém apenas o nome do procedimento. Para um **EventType** de Language, são exibidos apenas os primeiros 4.000 caracteres do evento.|  
   
 Por exemplo, DBCC INPUTBUFFER retorna o conjunto de resultados a seguir quando o último evento no buffer é DBCC INPUTBUFFER(11).
@@ -104,7 +104,7 @@ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessário um 
 SELECT @@spid;  
 ```
   
-Em Camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], é necessária a permissão VIEW DATABASE STATE no banco de dados. Nas camadas Standard e Básica do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a conta do administrador do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] é necessária.
+No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as camadas Premium e Comercialmente Críticas requerem a permissão VIEW DATABASE STATE no banco de dados. No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as camadas Standard, Básica e de Uso Geral requerem a conta do administrador [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir executa `DBCC INPUTBUFFER` em uma segunda conexão enquanto uma transação longa é executada em uma conexão anterior.

@@ -1,6 +1,6 @@
 ---
-title: "Terminal integrado no Studio de operações do SQL (visualização) | Microsoft Docs"
-description: "Saiba mais sobre o terminal integrado no Studio de operações do SQL (visualização)."
+title: Terminal integrado no SQL Operations Studio (preview) | Microsoft Docs
+description: Saiba mais sobre o terminal integrado no SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

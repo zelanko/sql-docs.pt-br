@@ -1,6 +1,6 @@
 ---
-title: Atualizado - operações de SQL Studio documentos | Microsoft Docs
-description: Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação, para operações de SQL Studio.
+title: Atualizado - SQL Operations Studio documentos | Microsoft Docs
+description: Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação, para SQL Operations Studio.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -16,7 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Novos e recentemente atualizado: documentos de operações de SQL Studio
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Novos e recentemente atualizado: documentos de SQL Operations Studio
 
 
 
@@ -29,7 +29,7 @@ Atualizações recentes são relatadas para o intervalo de data a seguir e o ass
 
 
 - *Intervalo de datas das atualizações:* &nbsp; **03-12-2017** &nbsp; até &nbsp; **03-02-2018**
-- *Área de assunto:* &nbsp; **Studio de operações SQL**.
+- *Área de assunto:* &nbsp; **SQL Operations Studio**.
 
 
 
@@ -41,7 +41,7 @@ Atualizações recentes são relatadas para o intervalo de data a seguir e o ass
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-1. [Notas de versão do SQL Studio de operações (visualização)](release-notes.md)
+1. [Notas de versão do SQL Operations Studio (preview)](release-notes.md)
 
 
 
@@ -67,7 +67,7 @@ Para essas e outras razões, não copiar o código desses trechos e não em como
 
 Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
 
-1. [Baixe e instale o Studio de operações do SQL (visualização)](#TitleNum_1)
+1. [Baixe e instale o SQL Operations Studio (preview)](#TitleNum_1)
 
 
 
@@ -78,7 +78,7 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Baixe e instale o Studio de operações do SQL (visualização)](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Baixe e instale o SQL Operations Studio (preview)](download.md)
 
 *Atualizado: 18-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -99,20 +99,20 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](release-notes.md).
 
-**Obter o Studio de operações do SQL (visualização) para Windows**
+**Obter o SQL Operations Studio (preview) para Windows**
 
 
-Esta versão do SQL Studio de operações (visualização) inclui uma experiência de instalação padrão do Windows e. zip:
+Esta versão do SQL Operations Studio (preview) inclui uma experiência de instalação padrão do Windows e. zip:
 
 **Instalador**
 
-1. Baixe e execute o [instalador Studio de operações do SQL (visualização) para Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Inicie o aplicativo Studio de operações do SQL (visualização).
+1. Baixe e execute o [instalador SQL Operations Studio (preview) para Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Inicie o aplicativo SQL Operations Studio (preview).
 
 
 **arquivo. zip**
 
-1. Baixar [. zip do Studio de operações do SQL (visualização) para Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Baixar [. zip do SQL Operations Studio (preview) para Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 
 
 

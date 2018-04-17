@@ -18,16 +18,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: af185275ebb9a886b929f0b91b12a46ad6d30c8b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,9 +105,7 @@ Os métodos que operam em tipos de segmento de arco circular usam segmentos de l
 >  Se forem fornecidos valores Z para segmentos de arco circular, eles deverão ser iguais para todos os pontos no segmento de arco circular para que o segmento seja aceito para entrada. Por exemplo, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` é aceito, mas `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` não é.  
 
 ### <a name="linestring-and-circularstring-comparison"></a>Comparação de LineString e CircularString  
-O diagrama a seguir mostra triângulos isósceles idênticos (o triângulo A usa segmentos de linha para definir o triângulo, e o triângulo B usa segmentos de arco circular para definir o triângulo):  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) Este exemplo mostra como armazenar os triângulos isósceles anteriores que usam uma instância de **LineString** e outra de **CircularString**:  
+Este exemplo mostra como armazenar triângulos isósceles idênticos que usam uma instância **LineString** e uma instância **CircularString**:  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -129,17 +127,13 @@ SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-Esse trecho produzirá os seguintes resultados:  
+Esse trecho produz os seguintes resultados:  
 ```
 LS LengthCS Length
 5.65685…6.28318…
 ```
 
-A ilustração a seguir mostra como cada tipo é armazenado (a linha vermelha mostra **LineString**`@g1`e a linha azul mostra **CircularString**`@g2`):  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-Como a ilustração acima mostra, as instâncias **CircularString** usam menos pontos para armazenar limites de curva com maior precisão que instâncias **LineString** . As instâncias**CircularString** são úteis para armazenar limites circulares como um raio de pesquisa de vinte milhas de um ponto específico. Instâncias**LineString** são boas para armazenar limites que são lineares como um quarteirão de cidade.  
+As instâncias **CircularString** usam menos pontos para armazenar limites de curva com maior precisão que as instâncias **LineString**. As instâncias**CircularString** são úteis para armazenar limites circulares como um raio de pesquisa de vinte milhas de um ponto específico. Instâncias**LineString** são boas para armazenar limites que são lineares como um quarteirão de cidade.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparação de LineString e CompoundCurve  
 Os exemplos de código seguintes mostram como armazenar a mesma figura usando instâncias **LineString** e **CompoundCurve** :

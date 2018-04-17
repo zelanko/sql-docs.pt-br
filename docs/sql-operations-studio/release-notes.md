@@ -1,6 +1,6 @@
 ---
-title: Notas de versão do Microsoft SQL operações Studio (visualização) | Microsoft Docs
-description: Notas de versão do Microsoft SQL operações Studio (visualização)
+title: Notas de versão do Microsoft SQL Operations Studio (preview) | Microsoft Docs
+description: Notas de versão do Microsoft SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Studio de operações (visualização)
+# <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Operations Studio (preview)
 
 **[Baixe a visualização pública de março](download.md)**
 
@@ -34,7 +34,7 @@ O *Public Preview de março* continua a atender os principais problemas do GitHu
 - Melhorar o modelo de extensibilidade do painel para oferecer suporte a insights com guias e painéis de configuração.
    - Gerenciador de extensões permite simple aquisição das extensões.
    - Extensões de painel para sp_whoisactive de [whoisactive.com](http://www.whoisactive.com).
-   - Para obter detalhes, consulte [estender a funcionalidade do SQL operações Studio](extensions.md).
+   - Para obter detalhes, consulte [estender a funcionalidade do SQL Operations Studio](extensions.md).
 - Adicionar outras [APIs de extensibilidade para o Gerenciador de conexão e objeto](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) gerenciamento.
 - Continuar corrigir o cliente importante [GitHub problemas](https://github.com/Microsoft/sqlopsstudio/issues).
 

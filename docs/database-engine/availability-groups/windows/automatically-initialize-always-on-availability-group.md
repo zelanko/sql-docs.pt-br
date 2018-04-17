@@ -1,26 +1,27 @@
 ---
 title: Inicializar automaticamente o grupo de disponibilidade AlwaysOn | Microsoft Docs
-ms.custom: 
-ms.date: 08/23/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inicializar automaticamente o grupo de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ Na réplica primária, consulte `sys.dm_hadr_physical_seeding_stats` DMV para ve
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+As duas colunas *total_disk_io_wait_time_ms* e a *total_network_wait_time_ms* podem ser usadas para determinar um gargalo de desempenho no Processo de propagação automática. As duas colunas também estão presentes no evento estendido *hadr_physical_seeding_progress*.
+
+**total_disk_io_wait_time_ms** representa o tempo gasto pelo thread de backup/restauração enquanto aguarda no disco. Esse valor é cumulativo desde o início da operação de propagação. Se os discos não estiverem prontos para ler ou gravar o fluxo de backup, o thread de backup/restauração fará a transição para um estado de suspensão e será ativado a cada um segundo para verificar se o disco está pronto.
+        
+**total_network_wait_time_ms** é interpretado de maneira diferente para a réplica primária e secundária. Na réplica primária, esse contador representa o tempo de controle do fluxo de rede. Na réplica secundária, isso representa o tempo em que o thread de restauração está aguardando até que uma mensagem esteja disponível para gravação no disco.
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>Diagnosticar a inicialização do banco de dados usando a propagação automática no log de erros
 

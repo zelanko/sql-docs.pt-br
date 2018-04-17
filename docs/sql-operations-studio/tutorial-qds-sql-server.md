@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Exemplo de consultas mais lentas de habilitar os cinco widget - Studio de operações do SQL (visualização) | Microsoft Docs"
+title: 'Tutorial: Exemplo de consultas mais lentas de habilitar os cinco widget - SQL Operations Studio (preview) | Microsoft Docs'
 description: Este tutorial demonstra como habilitar o widget de exemplo de consultas mais lentos cinco no painel de banco de dados.
 ms.custom: tools|sos
 ms.date: 03/15/2018
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

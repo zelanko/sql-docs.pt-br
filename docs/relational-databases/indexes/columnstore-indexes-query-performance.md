@@ -1,28 +1,28 @@
 ---
-title: "Índices columnstore – desempenho de consultas | Microsoft Docs"
-ms.custom: 
+title: Índices columnstore – desempenho de consultas | Microsoft Docs
+ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-caps.latest.revision: 
+caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8c18a2198e32bae0427ea286a64998ab546e3ac
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 08222b4c7af5a62040f808bee56f181ed25149dd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/12/2018
 |classificação superior||não|não|sim||    
 |agregações de janela||NA|NA|sim|Novo operador do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹Aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ¹Aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], camadas Premium e camadas Standard do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], S3 e posterior, e a todas as camadas de vCore, e ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Aplicação de agregação    
  Um caminho de execução normal para a computação de agregação para buscar as linhas qualificadas do nó SCAN e agregar os valores no Modo de Lote. Embora isso ofereça bom desempenho, no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a operação de agregação pode ser enviada por push para o nó SCAN para melhorar o desempenho da computação de agregação em ordens de magnitude além da execução do Modo de Lote, desde que as seguintes condições sejam atendidas: 

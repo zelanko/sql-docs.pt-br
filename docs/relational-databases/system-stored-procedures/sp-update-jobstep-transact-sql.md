@@ -1,16 +1,16 @@
 ---
 title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_jobstep
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera a configuração para uma etapa em um trabalho que é usado para executar atividades automatizadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,22 +74,22 @@ sp_update_jobstep
  [ **@job_name =**] **'***job_name***'**  
  O nome do trabalho ao qual a etapa pertence. *job_name*é **sysname**, com um padrão NULL. O *job_id* ou *job_name* devem ser especificados, mas não podem ser especificados.  
   
- [  **@step_id =**] *step_id*  
+ [ **@step_id =**] *step_id*  
  O número de identificação da etapa de trabalho que será modificado. Esse número não pode ser alterado. *step_id*é **int**, sem padrão.  
   
- [  **@step_name =**] **'***step_name***'**  
+ [ **@step_name =**] **'***step_name***'**  
  É um novo nome para a etapa. *step_name*é **sysname**, com um padrão NULL.  
   
  [ **@subsystem =**] **'***subsystem***'**  
  O subsistema usado pelo Microsoft SQL Server Agent para executar *comando*. *subsistema* é **nvarchar (40)**, com um padrão NULL.  
   
- [  **@command =**] **'***comando***'**  
+ [ **@command =**] **'***command***'**  
  O comando a ser executado por meio de *subsistema*. *comando* é **nvarchar (max)**, com um padrão NULL.  
   
- [  **@additional_parameters =**] **'***parâmetros***'**  
+ [ **@additional_parameters =**] **'***parameters***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@cmdexec_success_code =**] *success_code*  
+ [ **@cmdexec_success_code =**] *success_code*  
  O valor retornado por uma **CmdExec** comando de subsistema para indicar que *comando* executado com êxito. *success_code* é **int**, com um padrão NULL.  
   
  [  **@on_success_action =**] *success_action*  
@@ -105,7 +105,7 @@ sp_update_jobstep
  [ **@on_success_step_id =**] *success_step_id*  
  O número de identificação da etapa neste trabalho a ser executado se a etapa tiver êxito e *success_action* é **4**. *success_step_id* é **int**, com um padrão NULL.  
   
- [  **@on_fail_action =**] *fail_action*  
+ [ **@on_fail_action =**] *fail_action*  
  A ação a ser executada se a etapa falhar. *fail_action* é **tinyint**, com um padrão de NULL e pode ter um destes valores.  
   
 |Value|Descrição (ação)|  
@@ -118,25 +118,25 @@ sp_update_jobstep
  [ **@on_fail_step_id =**] *fail_step_id*  
  O número de identificação da etapa neste trabalho a ser executado se a etapa falhar e *fail_action* é **4**. *fail_step_id* é **int**, com um padrão NULL.  
   
- [  **@server =**] **'***server***'**  
+ [ **@server =**] **'***server***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* é **nvarchar (128)**, com um padrão NULL.  
   
- [  **@database_name =**] **'***banco de dados***'**  
+ [ **@database_name =**] **'***database***'**  
  O nome do banco de dados no qual executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *banco de dados*é **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
- [  **@database_user_name =**] **'***usuário***'**  
+ [ **@database_user_name =**] **'***user***'**  
  O nome da conta de usuário a ser usada ao executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *usuário*é **sysname**, com um padrão NULL.  
   
- [  **@retry_attempts =**] *retry_attempts*  
+ [ **@retry_attempts =**] *retry_attempts*  
  O número de novas tentativas a serem usadas se esta etapa apresentar falha. *retry_attempts*é **int**, com um padrão NULL.  
   
- [  **@retry_interval =**] *intervalo_de_repetição*  
+ [ **@retry_interval =**] *retry_interval*  
  A quantidade de tempo, em minutos, entre as novas tentativas. *intervalo_de_repetição* é **int**, com um padrão NULL.  
   
- [  **@os_run_priority =**] *run_priority*  
+ [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@output_file_name =**] **'***file_name***'**  
+ [ **@output_file_name =**] **'***file_name***'**  
  O nome do arquivo no qual a saída desta etapa é gravado. *file_name* é **nvarchar (200)**, com um padrão NULL. Este parâmetro é válido somente com comandos executados nos subsistemas do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
   
  Para definir output_file_name novamente como NULL, você deve definir *output_file_name* para uma cadeia de caracteres vazia (' ') ou em uma cadeia de caracteres em branco, mas você não pode usar o **CHAR(32)** função. Por exemplo, defina este argumento como uma cadeia de caracteres vazios como segue:  

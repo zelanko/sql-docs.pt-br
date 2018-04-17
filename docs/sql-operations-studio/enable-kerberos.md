@@ -1,6 +1,6 @@
 ---
-title: Usar autenticação do Active Directory (Kerberos) ao conectar-se com o Studio de operações do SQL (visualização) | Microsoft Docs
-description: Saiba como habilitar o Kerberos usar autenticação do Active Directory para o Studio de operações do SQL (visualização)
+title: Usar autenticação do Active Directory (Kerberos) ao conectar-se com o SQL Operations Studio (preview) | Microsoft Docs
+description: Saiba como habilitar o Kerberos usar autenticação do Active Directory para o SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified

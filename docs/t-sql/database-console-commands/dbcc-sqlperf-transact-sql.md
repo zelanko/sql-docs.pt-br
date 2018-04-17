@@ -1,16 +1,16 @@
 ---
 title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQLPERF
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 
+caps.latest.revision: 43
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec1c32eb32b29fce5ea716c2a4e5255c7a46d445
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Fornece estatísticas de uso do espaço do log de transações para todos os ban
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -91,7 +91,7 @@ O log de transações registra cada transação feita em um banco de dados. Para
 ## <a name="permissions"></a>Permissões  
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a execução de `DBCC SQLPERF(LOGSPACE)` requer a permissão `VIEW SERVER STATE` no servidor. Para redefinir as estatísticas de espera e trava, é necessária a permissão `ALTER SERVER STATE` no servidor.
   
-Nas camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], é necessária a permissão `VIEW DATABASE STATE` no banco de dados. Nas camadas Standard e Básica do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a conta do administrador do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] é necessária. Não há suporte para reiniciar as estatísticas de espera e de trava.
+No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as camadas Premium e Comercialmente Críticas requerem a permissão `VIEW DATABASE STATE` no banco de dados. No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as camadas Standard, Básica e de Uso Geral requerem a conta do administrador [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Não há suporte para reiniciar as estatísticas de espera e de trava.
   
 ## <a name="examples"></a>Exemplos  
   

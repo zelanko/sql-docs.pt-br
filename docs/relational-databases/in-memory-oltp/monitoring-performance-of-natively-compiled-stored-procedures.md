@@ -1,32 +1,32 @@
 ---
 title: Monitorando o desempenho de procedimentos armazenados compilados nativamente | Microsoft Docs
-ms.custom: 
-ms.date: 03/16/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5f180e94f835adaa91812e0341dab85d382c2c2
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 1912c692998f08f947b9fb147d049048b8101ad6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitorando o desempenho de procedimentos armazenados compilados nativamente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este tópico discute como você pode monitorar o desempenho de procedimentos armazenados compilados de modo nativo  
+  Este artigo discute como é possível monitorar o desempenho de procedimentos armazenados e de outros módulos T-SQL, ambos compilados nativamente.  
   
 ## <a name="using-extended-events"></a>Usando eventos estendidos  
  Use o evento estendido **sp_statement_completed** para rastrear a execução de uma consulta. Crie uma sessão de evento estendido com esse evento, opcionalmente com um filtro no object_id para um procedimento armazenado específico compilado nativamente. O evento estendido é ativado depois da execução de cada consulta. O tempo de CPU e a duração relatados pelo evento estendido indicam a quantidade de CPU usada pela consulta e o tempo de execução. Um procedimento armazenado compilado de modo nativo que usa muito tempo da CPU pode ter problemas de desempenho.  
@@ -39,21 +39,39 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  Para obter mais informações sobre o evento estendido **sp_statement_completed** , consulte [Como recuperar a instrução que gerou um evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
-## <a name="using-data-management-views"></a>Usando exibições de gerenciamento de dados  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à coleta de estatísticas de execução para procedimentos armazenados compilados de modo nativo, nos níveis de procedimento e de consulta. Coletar estatísticas de execução não está habilitado por padrão devido ao impacto sobre o desempenho.  
-  
- Você pode habilitar e desabilitar a coleta de estatísticas nos procedimentos armazenados compilados de modo nativo usando [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
-  
- Quando a coleta de estatísticas está habilitada com [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md), você pode usar [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) para monitorar o desempenho de um procedimento armazenado nativamente compilado.  
-  
- Quando a coleta de estatísticas está habilitada com [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md), você pode usar [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) para monitorar o desempenho de um procedimento armazenado nativamente compilado.  
-  
- No início da coleta, habilite a coleta de estatísticas. Depois, execute o procedimento armazenado compilado de modo nativo. No final da coleta, desabilite a coleta de estatísticas. Em seguida, analise as estatísticas de execução retornadas pelos DMVs.  
-  
+## <a name="using-data-management-views-and-query-store"></a>Usando exibições de gerenciamento de dados e Repositório de Consultas
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dão suporte à coleta de estatísticas de execução para procedimentos armazenados compilados nativamente, nos níveis de procedimento e de consulta. Coletar estatísticas de execução não está habilitado por padrão devido ao impacto sobre o desempenho.  
+
+As estatísticas de execução são refletidas nas exibições do sistema [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) e [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), bem como no [Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+
+### <a name="enabling-procedure-level-execution-statistics-collection"></a>Habilitando a coleta de estatísticas de execução de nível de procedimento
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de procedimento usando [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  A instrução a seguir permite a coleta de estatísticas de execução de nível de procedimento para todos os módulos T-SQL compilados nativamente na instância atual:
+```sql
+EXEC sys.sp_xtp_control_proc_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de procedimento usando a opção [configuração com a configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_PROCEDURE_EXECUTION_STATISTICS`. A instrução a seguir permite a coleta de estatísticas de execução de nível de procedimento para todos os módulos T-SQL compilados nativamente no banco de dados atual:
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+```
+
+### <a name="enabling-query-level-execution-statistics-collection"></a>Habilitando a coleta de estatísticas de execução de nível de consulta
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de consulta usando [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  A instrução a seguir permite a coleta de estatísticas de execução de nível de consulta para todos os módulos T-SQL compilados nativamente na instância atual:
+```sql
+EXEC sys.sp_xtp_control_query_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: habilite ou desabilite a coleta de estatísticas em procedimentos armazenados compilados nativamente no nível de instrução usando a opção [configuração com a configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_QUERY_EXECUTION_STATISTICS`. A instrução a seguir permite a coleta de estatísticas de execução de nível de consulta para todos os módulos T-SQL compilados nativamente no banco de dados atual:
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+```
+
+## <a name="sample-queries"></a>Consultas de exemplo
+
  Depois que você coletar estatísticas, as estatísticas de execução de procedimentos armazenados compilados de modo nativo poderão ser consultadas para um procedimento com [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) e para consultas com [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).  
-  
-> [!NOTE]  
->  Para procedimentos armazenados compilados de modo nativo, quando a coleta de estatísticas estiver habilitada, o tempo de trabalho será coletado em milissegundos. Se a consulta for executada em menos de um milissegundo, o valor será 0. Para procedimentos armazenados compilados de modo nativo, o **total_worker_time** pode não ser preciso se várias execuções levarem menos de 1 milissegundo.  
+ 
   
  A seguinte consulta retorna os nomes de procedimento e as estatísticas de execução para procedimentos armazenados compilados de modo nativo no banco de dados atual, após a coleta de estatísticas:  
   
@@ -99,7 +117,9 @@ where  st.dbid=db_id() and st.objectid in (select object_id
 from sys.sql_modules where uses_native_compilation=1)  
 order by qs.total_worker_time desc  
 ```  
-  
+
+## <a name="query-execution-plans"></a>Planos de execução de consulta
+
  Os procedimentos armazenados compilados de modo nativo dão suporte ao SHOWPLAN_XML (plano de execução estimado). O plano de execução estimado pode ser usado para inspecionar o plano de consulta, para localizar quaisquer problemas de plano incorreto. As razões comuns de planos incorretos são:  
   
 -   As estatísticas não foram atualizadas antes da criação do procedimento.  

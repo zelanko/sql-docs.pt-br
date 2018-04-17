@@ -1,16 +1,16 @@
 ---
 title: managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_basic
 - sp_backup_config_basic
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 51507869caef7a8738381881f22f6cf9f1005144
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.lasthandoff: 02/03/2018
   Configura o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configurações básicas para um banco de dados específico ou para uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Esse procedimento pode ser chamado em seu próprio para criar uma configuração básica de backup gerenciada. No entanto, se você planeja adicionar recursos avançados ou uma agenda personalizada, primeiro defina essas configurações usando [managed_backup. sp_backup_config_advanced &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) e [managed_backup. sp_backup_config_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) antes de habilitar o backup gerenciado com este procedimento.  
+>  Esse procedimento pode ser chamado em seu próprio para criar uma configuração básica de backup gerenciada. No entanto, se você planeja adicionar recursos avançados ou uma agenda personalizada, primeiro defina essas configurações usando [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) e [managed_backup.sp_ backup_config_schedule &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) antes de habilitar o backup gerenciado com este procedimento.  
    
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,10 +69,10 @@ EXEC managed_backup.sp_backup_config_basic
  O período de retenção para os arquivos de backup em dias. O @storage_url é INT. Este é um parâmetro obrigatório ao configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao alterar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuração, esse parâmetro é opcional. Se não for especificado, os valores de configuração existentes serão retidos.  
   
  @credential_name  
- O nome da credencial de SQL usado para realizar a autenticação na conta de armazenamento do Windows Azure. @credentail_nameé **SYSNAME**. Quando especificado, o backup é armazenado em um blob de página. Se esse parâmetro for NULL, o backup será armazenado como um blob de bloco. Backup no blob de página foi preterido, é preferível usar a nova funcionalidade de backup de blob do bloco. Quando usado para alterar a configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], esse parâmetro é opcional. Se não for especificado, os valores de configuração existentes são mantidos.  
+ O nome da credencial de SQL usado para realizar a autenticação na conta de armazenamento do Windows Azure. @credentail_name é **SYSNAME**. Quando especificado, o backup é armazenado em um blob de página. Se esse parâmetro for NULL, o backup será armazenado como um blob de bloco. Backup no blob de página foi preterido, é preferível usar a nova funcionalidade de backup de blob do bloco. Quando usado para alterar a configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], esse parâmetro é opcional. Se não for especificado, os valores de configuração existentes são mantidos.  
   
 > [!WARNING]  
->  O  **@credential_name**  parâmetro não é suportado no momento. Somente backup para bloquear o blob tem suporte, que requer esse parâmetro como NULL.  
+>  O **@credential_name** parâmetro não é suportado no momento. Somente backup para bloquear o blob tem suporte, que requer esse parâmetro como NULL.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  

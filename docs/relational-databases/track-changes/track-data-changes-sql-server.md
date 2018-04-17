@@ -1,16 +1,16 @@
 ---
-title: "Controlar alterações de dados (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Controlar alterações de dados (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 99a8b9bc80dc23ab4d67d72acdb507447d8e9433
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
   
 -   Funções são fornecidas para obter informações de alterações.  
   
--   Há pouca sobrecarga em operações DML. O controle de alterações síncrono sempre terá alguma sobrecarga. No entanto, o uso do controle de alterações pode ajudar a minimizar a sobrecarga. A sobrecarga será frequentemente menor do que usar soluções alternativas, principalmente soluções que precisam usar gatilhos.  
+-   Há pouca sobrecarga em operações DML. O controle de alterações síncrono sempre terá alguma sobrecarga. No entanto, o uso do controle de alterações pode ajudar a minimizar a sobrecarga. A sobrecarga será frequentemente menor do que ao usar soluções alternativas, principalmente soluções que precisam usar gatilhos.  
   
 -   O controle de alterações é baseado em transações confirmadas. A ordem das alterações é baseada na hora da confirmação da transação. Isso permite que resultados confiáveis sejam obtidos ao executar transações demoradas e sobrepostas. Soluções personalizadas que usem valores de **timestamp** devem ser criadas especificamente para tratar desses cenários.  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Capture"></a> Change Data Capture  
  A captura de dados de alteração fornece informações de alteração de histórico para uma tabela de usuário, capturando o motivo pelo qual as alterações de DML foram feitas e os dados reais que foram alterados. As alterações são capturadas por meio de um processo assíncrono que lê o log de transações e tem baixo impacto no sistema.  
   
- Como mostrado na ilustração a seguir, as alterações feitas para tabelas de usuários são capturadas nas tabelas de alteração correspondentes. Essas tabelas de alteração fornecem uma exibição histórica das alterações com o passar do tempo. As funções da [captura de dados de alterações](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece habilita o consumo fácil e sistemático dos dados de alteração.  
+ Como mostrado na ilustração a seguir, as alterações feitas para tabelas de usuários são capturadas nas tabelas de alteração correspondentes. Essas tabelas de alteração fornecem uma exibição histórica das alterações com o passar do tempo. As funções de [captura de dados de alterações](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitam o consumo fácil e sistemático dos dados de alteração.  
   
  ![Ilustração conceitual da captura de dados de alteração](../../relational-databases/track-changes/media/cdcart1.gif "Ilustração conceitual da captura de dados de alteração")  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Tracking"></a> Change Tracking  
  O controle de alteração captura o motivo pelo qual as linhas em uma tabela foram alteradas, mas não captura o que foi alterado. Isso permite que os aplicativos determinem as linhas que foram alteradas com os últimos dados de linha obtidos diretamente das tabelas de usuários. Então, o controle de alterações é mais limitado nas perguntas de histórico do que pode responder comparado à captura de dados de alterações. Entretanto, para aqueles aplicativos que não exigem informações de histórico, há menos sobrecarga de armazenamento pois os dados alterados não são capturados. Um mecanismo de controle síncrono é usado para controlar as alterações. Isso foi projetado para ter o mínimo de sobrecarga nas operações de DML.  
   
- A ilustração a seguir mostra um cenário de sincronização que se beneficiaria com o uso do controle de alterações. No cenário, um aplicativo requer as seguintes informações: todas as linhas na tabela que foram alteradas desde a última sincronização da tabela e apenas os dados da linha atual. Como um mecanismo síncrono é usado para controlar as alterações, um aplicativo pode executar a sincronização de duas vias e detectar de modo confiável qualquer conflito que possa ocorrer.  
+ A ilustração a seguir mostra um cenário de sincronização que se beneficiaria com o uso do controle de alterações. No cenário, um aplicativo requer as seguintes informações: todas as linhas da tabela que foram alteradas desde a última sincronização da tabela e apenas os dados da linha atual. Como um mecanismo síncrono é usado para controlar as alterações, um aplicativo pode executar a sincronização de duas vias e detectar de modo confiável qualquer conflito que possa ocorrer.  
   
  ![Ilustração conceitual do controle de alterações](../../relational-databases/track-changes/media/cdcart2.gif "Ilustração conceitual do controle de alterações")  
   

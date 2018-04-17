@@ -1,6 +1,6 @@
 ---
-title: "Habilitar ou desabilitar a coleta de dados de uso e falhas de emissão de relatórios para o Studio de operações do SQL (visualização) | Microsoft Docs"
-description: "Este artigo explica como controlar se os dados de relatório de falhas e de uso são coletados e enviados à Microsoft."
+title: Habilitar ou desabilitar a coleta de dados de uso e falhas de emissão de relatórios para o SQL Operations Studio (preview) | Microsoft Docs
+description: Este artigo explica como controlar se os dados de relatório de falhas e de uso são coletados e enviados à Microsoft.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

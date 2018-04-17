@@ -1,16 +1,16 @@
 ---
 title: sp_update_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza as configurações de um alerta existente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ sp_update_alert
  [  **@enabled =**] *habilitado*  
  Especifica se o alerta está habilitado (**1**) ou não habilitado (**0**). *habilitado* é **tinyint**, com um padrão NULL. Um alerta deve estar habilitado para ser disparado.  
   
- [  **@message_id =**] *message_id*  
+ [ **@message_id =**] *message_id*  
  Uma mensagem nova ou número de erro para a definição alerta. Normalmente, *message_id* corresponde a um número de erro no **sysmessages** tabela. *message_id* é **int**, com um padrão NULL. Uma mensagem ID pode ser usada somente se a configuração de nível de severidade do alerta é **0**.  
   
  [  **@severity =**] *severidade*  
@@ -87,7 +87,7 @@ sp_update_alert
  [ **@delay_between_responses =**] *delay_between_responses*  
  O novo período de espera, em segundos, entre respostas ao alerta. *delay_between_responses* é **int**, com um padrão NULL.  
   
- [  **@notification_message =**] **'***notification_message***'**  
+ [ **@notification_message =**] **'***notification_message***'**  
  O texto revisado de uma mensagem adicional enviada ao operador como parte do email, **net send**, ou uma notificação de pager. *notification_message* é **nvarchar (512)**, com um padrão NULL.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
@@ -101,7 +101,7 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|Todos|  
   
- [  **@database_name =**] **'***banco de dados***'**  
+ [ **@database_name =**] **'***database***'**  
  O nome do banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. *banco de dados* é **sysname.** Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
@@ -134,19 +134,19 @@ sp_update_alert
  [ **@last_response_time =**] *last_response_time*  
  Redefine a hora em que o alerta foi respondido pela última vez pelo serviço SQLServerAgent. *last_response_time* é **int**, com um padrão NULL e pode ser definido somente como **0**.  
   
- [  **@raise_snmp_trap =**] *raise_snmp_trap*  
+ [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  Reservado.  
   
- [  **@performance_condition =**] **'***performance_condition***'**  
+ [ **@performance_condition =**] **'***performance_condition***'**  
  Um valor expressado no formato **'***itemcomparatorvalue***'**. *performance_condition* é **nvarchar (512)**, com um padrão NULL e consiste nestes elementos.  
   
 |Elemento Format|Description|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
-|*Comparador*|Um destes operadores:  **>** ,  **<** ,**=**|  
+|*Comparator*|Um destes operadores: **>**, **<**, **=**|  
 |*Value*|Valor numérico do contador|  
   
- [  **@category_name =**] **'***categoria***'**  
+ [ **@category_name =**] **'***category***'**  
  O nome da categoria do alerta. *categoria de* é **sysname** com um padrão NULL.  
   
  [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
