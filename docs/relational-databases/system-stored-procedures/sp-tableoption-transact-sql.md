@@ -1,16 +1,16 @@
 ---
 title: sp_tableoption (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tableoption_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b468d62444bd3c9217cc7f931a2786034baec12
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 >  O recurso text in row será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para armazenar dados de valor grande, é recomendável que você usar o **varchar (max)**, **nvarchar (max)** e **varbinary (max)** tipos de dados.  
   
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,13 +59,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  É um nome de opção de tabela. *option_name* é **varchar (35)**, sem padrão de NULL. *option_name* pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |table lock on bulk load|Quando desabilitado (o padrão), faz com que o processo de carregamento em massa em tabelas definidas pelo usuário obtenha bloqueio de linhas. Quando habilitado, faz com que os processos de carregamento em massa em tabelas definidas pelo usuário obtenham um bloqueio de atualização em massa.|  
 |insert row lock|Não tem mais suporte.<br /><br /> Essa opção não tem nenhum efeito no comportamento de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e só é incluída para a compatibilidade de scripts e procedimentos existentes.|  
 |text in row|Quando OFF ou 0 (desabilitado, o padrão), não altera o comportamento atual e não há nenhum BLOB na linha.<br /><br /> Quando especificado e @OptionValue está ON (habilitado) ou um valor inteiro de 24 a 7000, novas **texto**, **ntext**, ou **imagem** cadeias de caracteres são armazenadas diretamente na linha de dados. Todos os BLOBs existentes (objetos binários grandes: **texto**, **ntext**, ou **imagem** dados) serão alterados para texto em formato de linha quando o valor do BLOB for atualizado. Para obter mais informações, consulte Comentários.|  
-|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** e colunas grandes tipo definido pelo usuário (UDT) na tabela são armazenadas fora de linha, com um ponteiro de 16 bytes para a raiz.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** e valores UDT grandes são armazenados diretamente na linha de dados, até o limite de 8000 bytes e desde que o valor pode se ajustar no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. 0 é o valor padrão.<br /><br /> O UDT (tipo definido pelo usuário) grande aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Use a opção TEXTIMAGE_ON [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar um local para o armazenamento de tipos de dados grandes. |  
-|formato de armazenamento vardecimal|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Quando TRUE, ON ou 1, a tabela designada é habilitada para o formato de armazenamento vardecimal. Quando FALSE, OFF ou 0, a tabela designada não é habilitada para o formato de armazenamento vardecimal. Formato de armazenamento vardecimal pode ser habilitado somente quando o banco de dados foi habilitado para o formato de armazenamento vardecimal usando [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). Em [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, **vardecimal** o formato de armazenamento foi preterido. Em vez disso, use compactação ROW. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). 0 é o valor padrão.|  
+|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** e colunas grandes tipo definido pelo usuário (UDT) na tabela são armazenadas fora de linha, com um ponteiro de 16 bytes para a raiz.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** e valores UDT grandes são armazenados diretamente na linha de dados, até o limite de 8000 bytes e desde que o valor pode se ajustar no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.<br /><br /> O UDT (tipo definido pelo usuário) grande aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Use a opção TEXTIMAGE_ON [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar um local para o armazenamento de tipos de dados grandes. |  
+|formato de armazenamento vardecimal|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Quando TRUE, ON ou 1, a tabela designada é habilitada para o formato de armazenamento vardecimal. Quando FALSE, OFF ou 0, a tabela designada não é habilitada para o formato de armazenamento vardecimal. Formato de armazenamento vardecimal pode ser habilitado somente quando o banco de dados foi habilitado para o formato de armazenamento vardecimal usando [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). Em [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, **vardecimal** o formato de armazenamento foi preterido. Em vez disso, use compactação ROW. Para obter mais informações, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). O valor padrão é 0.|  
   
  [ @OptionValue =] '*valor*'  
  É se o *option_name* está habilitado (TRUE, no ou 1) ou desabilitado (FALSE, OFF ou 0). *valor* é **varchar(12)**, sem padrão. *valor* diferencia maiusculas de minúsculas.  
@@ -74,7 +75,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número de erro (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use sp_tableoption apenas para definir valores de opção para tabelas definidas pelo usuário. Para exibir propriedades de tabela, use OBJECTPROPERTY.  
   
  A opção text in row em sp_tableoption só pode ser habilitada ou desabilitada em tabelas que contêm colunas de texto. Se a tabela não tiver uma coluna de texto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro.  
@@ -85,7 +86,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   A opção texto em linha está habilitada.  
   
--   O comprimento da cadeia de caracteres é menor que o limite especificado em@OptionValue  
+-   O comprimento da cadeia de caracteres é menor que o limite especificado em @OptionValue  
   
 -   Há bastante espaço disponível na linha de dados.  
   
@@ -143,6 +144,6 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

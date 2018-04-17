@@ -1,16 +1,16 @@
 ---
 title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7ba3b42c0ac095d4f8c0ad8f4819cd341097aef4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Há duas filas no Database Mail: a fila de email e a fila de status. A fila de email armazena itens de email que estão esperando para serem enviados. A fila de status armazena o status de itens que já foram enviados. Este procedimento armazenado permite exibir o estado das filas de email ou de status. Se o parâmetro  **@queue_type**  não for especificado, o procedimento armazenado retorna uma linha para cada uma das filas.  
+  Há duas filas no Database Mail: a fila de email e a fila de status. A fila de email armazena itens de email que estão esperando para serem enviados. A fila de status armazena o status de itens que já foram enviados. Este procedimento armazenado permite exibir o estado das filas de email ou de status. Se o parâmetro **@queue_type** não for especificado, o procedimento armazenado retorna uma linha para cada uma das filas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   

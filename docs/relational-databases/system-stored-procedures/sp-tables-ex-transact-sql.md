@@ -1,16 +1,16 @@
 ---
 title: sp_tables_ex (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables_ex
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 428d75a311ba1f160d8200f4b949e6a7eeee8088
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ffe5cadca156137608904aade40adba47ca83a7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna as informações de tabela sobre as tabelas do servidor vinculado especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
  [  **@table_type=** ] **'***table_type***'**  
  É o tipo da tabela a ser retornada. *TABLE_TYPE* é **sysname**, com um padrão NULL e pode ter um dos valores a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ALIAS**|Nome de um alias.|  
 |**TEMPORÁRIO GLOBAL**|Nome de uma tabela temporária disponível no sistema.|  
@@ -78,7 +78,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**VIEW**|Nome de uma exibição.|  
   
  [  **@fUsePattern=** ] **'***fUsePattern***'**  
- Determina se os caracteres **_**,  **%** , **[**, e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
+ Determina se os caracteres **_**, **%**, **[**, e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhuma  
@@ -87,13 +87,13 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.** *proprietário***.** *nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em outros produtos, ela representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.*** proprietário***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em outros produtos, ela representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário de tabela. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_TYPE**|**varchar (32)**|Tabela, tabela do sistema ou exibição.|  
 |**COMENTÁRIOS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_tables_ex** é executado consultando o conjunto de linhas de tabelas de **IDBSchemaRowset** interface do provedor OLE DB correspondente a *table_server*. O *table_name*, *table_schema*, *table_catalog*, e *coluna* parâmetros são passados para essa interface para restringir as linhas retornado.  
   
  **sp_tables_ex** retorna um resultado vazio definido se o provedor OLE DB do servidor vinculado especificado não suporta o conjunto de linhas de tabelas de **IDBSchemaRowset** interface.  
@@ -112,14 +112,14 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas distribuídas armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_columns_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_column_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_table_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [Procedimentos armazenados de consultas de Distributed &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

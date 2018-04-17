@@ -1,16 +1,16 @@
 ---
 title: sp_enum_sqlagent_subsystems (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_sqlagent_subsystems
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 946c623004db5efaeb470b26b74daaba9f5271bb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ad4a380353dddd0bf17a25952b81220f2f2e6a2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lista os subsistemas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ sp_enum_sqlagent_subsystems
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**subsystem**|**nvarchar(40)**|Nome do subsistema.|  
-|**description**|**nvarchar(512)**|Descrição do subsistema.|  
+|**Descrição**|**nvarchar(512)**|Descrição do subsistema.|  
 |**subsystem_dll**|**nvarchar(510)**|Módulo DLL que contém o subsistema.|  
 |**agent_exe**|**nvarchar(510)**|Módulo executável usado pelo subsistema.|  
 |**start_entry_point**|**nvarchar(30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  

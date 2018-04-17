@@ -1,16 +1,16 @@
 ---
 title: sp_replmonitorchangepublicationthreshold (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e24fd4746ee5a93489e55b6cf16edc0150c647b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cf3ff13767e7d5f91e73b477e9587b2ea2fb4991
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera a métrica de limite de monitoramento de uma publicação. Esse procedimento armazenado, usado para monitorar a replicação, é executado no Distribuidor, no banco de dados de distribuição.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,29 +54,29 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher**  =] **'***publicador***'**  
+ [ **@publisher** =] **'***publicador***'**  
  É o nome do Publicador. *publicador* é **sysname**, sem padrão.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** =] **'***publisher_db***'**  
  É o nome do banco de dados publicado. *publisher_db* é **sysname**, sem padrão.  
   
- [  **@publication**  =] **'***publicação***'**  
+ [ **@publication** =] **'***publicação***'**  
  É o nome da publicação para a qual os atributos de limite de monitoramento estão sendo alterados. *publicação* é **sysname**, sem padrão.  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  Se o tipo de publicação. *publication_type* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Publicação transacional.|  
 |**1**|Publicação de instantâneo.|  
 |**2**|Publicação de mesclagem.|  
 |NULL (padrão)|Replicação tenta determinar o tipo de publicação.|  
   
- [  **@metric_id**  =] *metric_id*  
+ [ **@metric_id** =] *metric_id*  
  É a ID da métrica de limite da publicação que está sendo alterada. *metric_id* é **int**, com um valor padrão de NULL e pode ser um destes valores.  
   
-|Valor|Nome da métrica|  
+|Value|Nome da métrica|  
 |-----------|-----------------|  
 |**1**|**expiration** - monitora a expiração iminente de assinaturas para publicações transacionais.|  
 |**2**|**latency** - monitora o desempenho de assinaturas para publicações transacionais.|  
@@ -88,22 +88,22 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Você deve especificar *metric_id* ou *thresholdmetricname*. Se *thresholdmetricname* for especificado, então *metric_id* deve ser NULL.  
   
- [  **@thresholdmetricname**  =] **'***thresholdmetricname***'**  
+ [ **@thresholdmetricname** =] **'***thresholdmetricname***'**  
  É o nome da métrica de limite da publicação que está sendo alterada. *thresholdmetricname* é **sysname**, com um valor padrão de NULL. Você deve especificar *thresholdmetricname* ou *metric_id*. Se *metric_id* for especificado, então *thresholdmetricname* deve ser NULL.  
   
- [  **@value**  =] *valor*  
+ [ **@value** =] *valor*  
  É o novo valor da métrica de limite de publicação. *valor* é **int**, com um valor padrão de NULL. Se **nulo**, em seguida, o valor da métrica não é atualizado.  
   
- [  **@shouldalert**  =] *shouldalert*  
+ [ **@shouldalert** =] *shouldalert*  
  Será se um alerta for gerado quando a métrica de limite de publicação for atingida. *shouldalert* é **bit**, com um padrão NULL. Um valor de **1** significa que um alerta é gerado e um valor de **0** significa que um alerta não é gerado.  
   
- [  **@mode**  =] *modo*  
+ [ **@mode** =] *modo*  
  Será se a métrica de limite de publicação estiver habilitada. *modo* é **tinyint**, com um padrão de **1**. Um valor de **1** significa que o monitoramento dessa métrica está habilitada e um valor de **2** significa que o monitoramento dessa métrica está desabilitado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorchangepublicationthreshold** é usado com todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  

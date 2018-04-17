@@ -1,16 +1,16 @@
 ---
 title: sp_addsubscriber_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a84145ac6088d56df3ad08eeff6aac2da038654
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4dd092a18fb8265e6ce8d29fe68d2f3b13445cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adiciona uma agenda para o Distribution Agent e Merge Agent. Esse procedimento armazenado é executado no Publicador, em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@agent_type =** ] *agent_type*  
  É o tipo de agente. *agent_type* é **smallint**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (padrão)|Agente de Distribuição|  
 |**1**|Agente de Mesclagem|  
@@ -72,7 +72,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_type =** ] *frequency_type*  
  É a frequência de agendamento do Agente de Distribuição. *frequency_type* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -89,7 +89,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  É a data do Distribution Agent. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (padrão)|First|  
 |**2**|Segundo|  
@@ -103,7 +103,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_subday =** ] *frequency_subday*  
  É a frequência de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -134,14 +134,14 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_addsubscriber_schedule** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
  Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_addsubscriber_schedule**.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_changesubscriber_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
+ [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

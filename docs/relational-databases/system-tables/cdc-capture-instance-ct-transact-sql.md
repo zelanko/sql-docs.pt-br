@@ -1,16 +1,16 @@
 ---
 title: CDC. &lt;capture_instance&gt;CT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f2078f3894d5db7c398b2470b4a3625320e948
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.lasthandoff: 11/21/2017
 |**__$start_lsn**|**binary(10)**|LSN (número de sequência de log) associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de exclusão na tabela de origem remover duas linhas, a tabela de alteração conterá duas linhas, cada um com o mesmo **_ $start_lsn** valor.|  
 |**_ $end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta coluna é sempre NULL.|  
 |**__$seqval**|**binary(10)**|Valor de sequência usado para ordenar as alterações de linha em uma transação.|  
-|**__$operation**|**int**|Identifica a operação DML (linguagem de manipulação de dados) associada com a alteração. Pode ser uma destas opções:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores antigos)<br /><br /> Os dados de coluna têm valores de linha antes de executar a instrução de atualização.<br /><br /> 4 = atualizar (valores novos)<br /><br /> Os dados de coluna têm valores de linha depois de executar a instrução de atualização.|  
+|**__$operation**|**Int**|Identifica a operação DML (linguagem de manipulação de dados) associada com a alteração. Pode ser uma destas opções:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores antigos)<br /><br /> Os dados de coluna têm valores de linha antes de executar a instrução de atualização.<br /><br /> 4 = atualizar (valores novos)<br /><br /> Os dados de coluna têm valores de linha depois de executar a instrução de atualização.|  
 |**__$update_mask**|**varbinary(128)**|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração que identificam as colunas que foram alteradas.|  
-|*\<colunas da tabela de origem capturadas >*|varia|As colunas restantes na tabela de alteração são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada na lista de colunas capturadas, todas as colunas da tabela de origem serão incluídas nessa tabela.|  
-|**_ $command_id** |**int** |Controla a ordem das operações em uma transação. |  
+|*\<colunas da tabela de origem capturada>*|varia|As colunas restantes na tabela de alteração são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada na lista de colunas capturadas, todas as colunas da tabela de origem serão incluídas nessa tabela.|  
+|**_ $command_id** |**Int** |Controla a ordem das operações em uma transação. |  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 
 O `__$command_id` coluna foi coluna foi introduzida em uma atualização cumulativa em versões 2012 por meio de 2016. Para obter informações de versão e o download, consulte o artigo 3030352 no [corrigir: A tabela de alteração é ordenada incorretamente para atualizar linhas depois de habilitar o change data capture para um banco de dados do Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obter mais informações, consulte [funcionalidade de CDC pode quebrar após a atualização para a atualização Cumulativa mais recente para o SQL Server 2012, 2014 e 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
@@ -89,7 +89,7 @@ O `__$command_id` coluna foi coluna foi introduzida em uma atualização cumulat
  Para as operações de inserção e exclusão, todos os bits na máscara de atualização estão definidos. Para operações de atualização, a máscara de atualização nas linhas da antiga atualização e da nova atualização será modificada para refletir as colunas alteradas durante a atualização.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sp_cdc_get_ddl_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_addsubscriber (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48dba20940cff922fa3bdacd78471d57fbec7707
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 364f88ae30fa71cd5f2a39dea897252b967d8228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  Esse procedimento armazenado foi preterido. Não é mais necessário que você registre explicitamente um Assinante no Publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,15 +75,15 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@type=**] *tipo*  
  É o tipo de assinante. *tipo* é **tinyint**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assinante|  
+|**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assinante|  
 |**1**|Servidor de fontes de dados ODBC|  
 |**2**|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet |  
 |**3**|Provedor OLE DB|  
   
  [  **@login=**] **'***login***'**  
- É a ID do logon para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *logon* é **sysname**, com um padrão NULL.  
+ É a ID do logon para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
@@ -118,7 +118,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  É a frequência de agendamento do agente de replicação. *frequency_type* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -141,7 +141,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  É a data do agente de replicação. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (padrão)|First|  
 |**2**|Segundo|  
@@ -161,7 +161,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  É a frequência de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -213,7 +213,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@encrypted_password=**] *encrypted_password*  
  Esse parâmetro foi preterido e é fornecido para compatibilidade com versões anteriores somente configuração *encrypted_password* para qualquer valor mas **0** resultará em erro.  
   
- [  **@publisher** =] **'***publicador***'**  
+ [ **@publisher**=] **'***publicador***'**  
  Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -222,7 +222,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_addsubscriber** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
  **sp_addsubscriber** não é necessário quando o assinante só tiver assinaturas anônimas para publicações de mesclagem.  
@@ -234,9 +234,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 ## <a name="see-also"></a>Consulte também  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpsubscriberinfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

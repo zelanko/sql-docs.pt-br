@@ -1,16 +1,16 @@
 ---
 title: sp_cursor_list (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4ce00bf096ecbd0c40b723c017b21d6fa982d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a01fabe88b8e38c9495ebd349c6251fa2388fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Informa os atributos de cursores de servidor atualmente abertos para a conexão.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope=] *cursor_scope*  
  Especifica o nível dos cursores a serem relatados. *cursor_scope* é **int**, sem padrão e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Informar todos os cursores locais.|  
 |2|Informar todos os cursores globais.|  
@@ -78,14 +78,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |simultaneidade|**smallint**|1 = somente leitura<br /><br /> 2 = Bloqueios de rolagem<br /><br /> 3 = Otimista|  
 |rolável|**smallint**|0 = Somente avanço<br /><br /> 1 = Rolável|  
 |open_status|**smallint**|0 = Fechado<br /><br /> 1 = Abrir|  
-|cursor_rows|**int**|O número de linhas de qualificação no conjunto de resultados. Para obter mais informações, consulte [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  
+|cursor_rows|**Int**|O número de linhas de qualificação no conjunto de resultados. Para obter mais informações, consulte [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  
 |fetch_status|**smallint**|O status da última busca nesse cursor. Para obter mais informações, consulte [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Busca bem-sucedida.<br /><br /> -1 = A busca falhou ou está além dos limites do cursor.<br /><br /> -2 = A linha solicitada está ausente.<br /><br /> -9 = Não houve busca no cursor.|  
 |column_count|**smallint**|O número de colunas no conjunto de resultados do cursor.|  
 |row_count|**smallint**|O número de linhas afetadas pela última operação no cursor. Para obter mais informações, consulte [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md).|  
 |last_operation|**smallint**|A última operação executada no cursor:<br /><br /> 0 = Nenhuma operação foi executada no cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERT<br /><br /> 4 = UPDATE<br /><br /> 5 = EXCLUIR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
-|cursor_handle|**int**|Um valor exclusivo que identifica o cursor dentro do escopo do servidor.|  
+|cursor_handle|**Int**|Um valor exclusivo que identifica o cursor dentro do escopo do servidor.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_cursor_list gera uma lista dos cursores de servidor atuais aberta pela conexão e descreve os atributos globais de cada cursor, como a capacidade do cursor de ser rolável e atualizável. Os cursores listados por sp_cursor_list incluem:  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]Cursores de servidor   

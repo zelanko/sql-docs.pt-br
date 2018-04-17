@@ -1,16 +1,16 @@
 ---
 title: sp_add_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4e6218ad7eaba6f6f6e108739dee392b0f9ec177
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um alerta.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'***nome***'**  
  O nome do alerta. O nome é exibido na mensagem de email ou de pager enviada em resposta ao alerta. Ele deve ser exclusivo e pode conter a porcentagem (**%**) caracteres. *nome* é **sysname**, sem padrão.  
   
  [  **@message_id =** ] *message_id*  
@@ -75,7 +75,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@enabled =** ] *habilitado*  
  Indica o status atual do alerta. *habilitado* é **tinyint**, com um padrão de 1 (habilitado). Se **0**, o alerta não está habilitado e não será acionado.  
   
- [ **@delay_between_responses =** ] *delay_between_responses*  
+ [  **@delay_between_responses =** ] *delay_between_responses*  
  O período de espera, em segundos, entre respostas ao alerta. *delay_between_responses*é **int**, com um padrão de **0**, que significa que não haverá nenhuma espera entre as respostas (cada ocorrência do alerta gera uma resposta). A resposta pode acontecer de uma destas maneiras ou de ambas:  
   
 -   Uma ou mais notificações enviadas por email ou pager.  
@@ -87,7 +87,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@notification_message =** ] **'***notification_message***'**  
  É uma mensagem adicional opcional enviada ao operador como parte do email, **net send**, ou uma notificação de pager. *notification_message* é **nvarchar (512)**, com um padrão NULL. Especificando *notification_message* é útil para adicionar observações especiais como procedimentos corretivos.  
   
- [ **@include_event_description_in =** ] *include_event_description_in*  
+ [  **@include_event_description_in =** ] *include_event_description_in*  
  Define se a descrição do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser incluída como parte da mensagem de notificação. *include_event_description_in*é **tinyint**, com um padrão de **5** (email e **net send**) e pode ter um ou mais desses valores combinados com um **Ou** operador lógico.  
   
 > [!IMPORTANT]  
@@ -103,19 +103,19 @@ sp_add_alert [ @name = ] 'name'
  [  **@database_name =** ] **'***banco de dados***'**  
  O banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. Se *banco de dados*não for fornecido, o alerta será acionado independentemente de onde o erro ocorreu. *banco de dados* é **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
- [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
  A sequência de caracteres que a descrição do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter. Os caracteres correspondentes ao padrão da expressão LIKE do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados. *event_description_keyword_pattern* é **nvarchar (100)**, com um padrão NULL. Esse parâmetro é útil para filtrar nomes de objeto (por exemplo, **% customer_table %**).  
   
- [ **@job_id =** ] *job_id*  
+ [  **@job_id =** ] *job_id*  
  O número de identificação do trabalho a ser executado em resposta a esse alerta. *job_id* é **uniqueidentifier**, com um padrão NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'***job_name***'**  
  O nome do trabalho a ser executado em resposta a esse alerta. *job_name*é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
   
- [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
+ [  **@raise_snmp_trap =** ] *raise_snmp_trap*  
  Não implementado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0. *raise_snmp_trap* é **tinyint**, com um padrão de 0.  
   
  [  **@performance_condition =** ] **'***performance_condition***'**  
@@ -130,7 +130,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@category_name =** ] **'***categoria***'**  
  O nome da categoria do alerta. *categoria de* é **sysname**, com um padrão NULL.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'***wmi_namespace***'**  
  O namespace WMI para consulta de eventos. *wmi_namespace* é **sysname**, com um padrão NULL. Somente namespaces no servidor local possuem suporte.  
   
  [ **@wmi_query**= ] **'***wmi_query***'**  

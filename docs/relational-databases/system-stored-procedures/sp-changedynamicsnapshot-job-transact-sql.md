@@ -1,16 +1,16 @@
 ---
 title: sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c7c2aaa546d1951117c39835ae2a285d3533a78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 160831b54f96bb06652287934da87142c855a348
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica o trabalho do agente que gera o instantâneo para uma assinatura de uma publicação com um filtro de linha com parâmetros. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_type =** ] *frequency_type*  
  É a frequência de agendamento do agente. *frequency_type* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -87,7 +87,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_interval =** ] *frequency_interval*  
  Os dias em que o agente é executado. *frequency_interval* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Segunda-feira|  
@@ -104,7 +104,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  É a frequência de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -118,7 +118,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  É a data de execução do Agente de Mesclagem. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Segundo|  
@@ -154,7 +154,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_changedynamicsnapshot_job** é usado em replicação de mesclagem para publicações com filtros de linha com parâmetros.  
   
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  

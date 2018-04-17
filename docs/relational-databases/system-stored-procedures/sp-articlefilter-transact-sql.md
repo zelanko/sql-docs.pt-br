@@ -1,16 +1,16 @@
 ---
 title: sp_articlefilter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlefilter
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de8979cdc3cb382aa290148e560d8eb72db94b1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ca25ec698e928ef247148be55d65c3ea37f59be8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Filtra dados que são publicados com base em um artigo de tabela. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -87,14 +87,14 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_articlefilter** é usado em replicação de instantâneo e replicação transacional.  
   
  Executar **sp_articlefilter** para um artigo com assinaturas existentes requer que as assinaturas sejam reinicializadas.  
   
- **sp_articlefilter** cria o filtro, insere a ID do procedimento armazenado de filtro a **filtro** coluna o [sysarticles &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) da tabela e, em seguida, insere o texto da cláusula de restrição de **filter_clause** coluna.  
+ **sp_articlefilter** cria o filtro, insere a ID do procedimento armazenado de filtro a **filtro** coluna o [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela e, em seguida, Insere o texto da cláusula de restrição de **filter_clause** coluna.  
   
- Para criar um artigo com um filtro horizontal, execute [sp_addarticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *filtro* parâmetro. Executar **sp_articlefilter**, fornecendo todos os parâmetros incluindo *filter_clause*e, em seguida, execute [sp_articleview &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), fornecendo todos os parâmetros incluindo idênticas *filter_clause*. Se o filtro já existe e se o **tipo** na **sysarticles** é **1** (artigo com base em log), o filtro anterior será excluído e um novo filtro é criado.  
+ Para criar um artigo com um filtro horizontal, execute [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *filtro* parâmetro. Executar **sp_articlefilter**, fornecendo todos os parâmetros incluindo *filter_clause*e, em seguida, execute [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), fornecer todos os parâmetros incluindo idênticas *filter_clause*. Se o filtro já existe e se o **tipo** na **sysarticles** é **1** (artigo com base em log), o filtro anterior será excluído e um novo filtro é criado.  
   
  Se *filter_name* e *filter_clause* não forem fornecidos, o filtro anterior será excluído e a ID do filtro é definida como **0**.  
   
@@ -107,8 +107,8 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="see-also"></a>Consulte também  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir e modificar um filtro de linha estático](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

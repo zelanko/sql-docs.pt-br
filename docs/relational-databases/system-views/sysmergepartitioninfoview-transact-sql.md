@@ -1,16 +1,16 @@
 ---
 title: sysmergepartitioninfoview (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfoview view
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee0a46b7ec48d16bb2af2d528b4e832298c36a39
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 92e3effdde5a4272094e55e7baed289d009ce275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.lasthandoff: 02/03/2018
 |**sync_objid**|**Int**|A ID de objeto da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não uma exibição; use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
-|**description**|**nvarchar(255)**|A descrição breve do artigo.|  
+|**Descrição**|**nvarchar(255)**|A descrição breve do artigo.|  
 |**pre_creation_command**|**tinyint**|A ação padrão a ser tomada quando o artigo é criado no banco de dados de assinatura:<br /><br /> **0** = nenhum - se a tabela já existir no assinante, nenhuma ação será tomada.<br /><br /> **1** = descartar - descarta a tabela antes de recriá-la.<br /><br /> **2** = excluir - emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.<br /><br /> **3** = truncar - igual a 2, mas exclui páginas em vez de linhas. Porém, não exige uma cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|A ID da publicação à qual o artigo atual pertence.|  
-|**nickname**|**Int**|O mapeamento de apelido para identificação do artigo.|  
+|**Apelido**|**Int**|O mapeamento de apelido para identificação do artigo.|  
 |**column_tracking**|**Int**|Indica se o controle de coluna é implementado para o artigo.|  
 |**status**|**tinyint**|Indica o status do artigo, que pode ser um dos seguintes:<br /><br /> **1** = não sincronizado - o script de processamento inicial para publicar a tabela será executado na próxima vez em que o Snapshot Agent é executado.<br /><br /> **2** = ativo - o script de processamento inicial para publicar a tabela foi executado.|  
 |**conflict_table**|**sysname**|O nome da tabela local que contém os registros conflitantes para o artigo atual. Essa tabela é somente informativa e seu conteúdo pode ser modificado ou excluído por rotinas de resolução de conflitos personalizadas ou diretamente pelo administrador.|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
 |**select_proc**|**sysname**|O nome de um procedimento armazenado gerado automaticamente que o Agente de Mesclagem usa para realizar bloqueio e localizar colunas e linhas para um artigo.|  
 |**metadata_select_proc**|**sysname**|O nome do procedimento armazenado gerado automaticamente usado para acessar metadados nas tabelas de sistema de replicação de mesclagem.|  
 |**delete_proc**|**sysname**|O procedimento usado para excluir linhas durante a sincronização.|  
-|**schema_option**|**binary(8)**|O bitmap da opção de geração de esquema para o artigo determinado. Para obter informações sobre suporte *schema_option* valores, consulte [sp_addmergearticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|O bitmap da opção de geração de esquema para o artigo determinado. Para obter informações sobre suporte *schema_option* valores, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|O nome da tabela criada no Assinante.|  
 |**destination_owner**|**sysname**|O nome do proprietário do objeto de destino.|  
 |**resolver_clsid**|**nvarchar(50)**|A ID do resolvedor de conflitos personalizado. Para um manipulador de lógica de negócios, este valor é NULL.|  
@@ -102,8 +102,8 @@ ms.lasthandoff: 02/03/2018
 |**partition_view_id**|**Int**|Identifica a exibição que define uma partição de assinante.|  
 |**repl_view_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|A instrução usada em um gatilho de replicação de mesclagem para recuperar a ID de partição de cada linha excluída ou atualizada com base em seus valores antigos de coluna.|  
-|**partition_inserted_view_rule**|**Sysname**|A instrução usada em um gatilho de replicação de mesclagem para recuperar a ID de partição de cada linha inserida ou atualizada com base em seus novos valores de coluna.|  
-|**membership_eval_proc_name**|**sysname**|O nome do procedimento que avalia a ID de partição atual de linhas no [MSmerge_contents &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
+|**partition_inserted_view_rule**|**sysname**|A instrução usada em um gatilho de replicação de mesclagem para recuperar a ID de partição de cada linha inserida ou atualizada com base em seus novos valores de coluna.|  
+|**membership_eval_proc_name**|**sysname**|O nome do procedimento que avalia a ID de partição atual de linhas no [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
 |**column_list**|**sysname**|Uma lista separada por vírgula de colunas publicadas no artigo.|  
 |**column_list_blob**|**sysname**|Uma lista separada por vírgulas de colunas publicada em um artigo, incluindo colunas de objeto binário grande.|  
 |**expand_proc**|**sysname**|O nome do procedimento que reavalia IDs de partição para todas as linhas filho de uma linha pai recém-inserida e para linhas pai que sofreram alteração de partição ou foram excluídas.|  
@@ -117,8 +117,8 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Tabelas de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   

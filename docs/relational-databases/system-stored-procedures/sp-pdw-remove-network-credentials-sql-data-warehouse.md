@@ -1,37 +1,38 @@
 ---
 title: sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a82cc5004304310c7c2bc3392ada6bad0acb617f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8cb851a07f0b10289ca60e28477b8bd5e165110a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Isso remove as credenciais de rede armazenadas no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] para acessar um compartilhamento de arquivos de rede. Por exemplo, use este procedimento armazenado para remover a permissão de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] para realizar backup e restaurar operações em um servidor que reside dentro de sua própria rede.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,11 +61,11 @@ sp_pdw_remove_network_credentials 'target_server_name'
  Esse procedimento armazenado remove as credenciais de rede da conta NetworkService para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A conta NetworkService executa cada instância de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no nó de controle e os nós de computação. Por exemplo, quando uma operação de backup é executado, o nó de controle e cada nó de computação usará as credenciais da conta NetworkService para acessar o servidor de destino.  
   
 ## <a name="metadata"></a>Metadados  
- Para listar todas as credenciais e verifique se as credenciais foram removidas, use [sys.dm_pdw_network_credentials &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+ Para listar todas as credenciais e verifique se as credenciais foram removidas, use [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
- Para adicionar as credenciais, use [sp_pdw_add_network_credentials &#40; SQL Data Warehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+ Para adicionar as credenciais, use [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. Remover as credenciais para executar um backup de banco de dados  
  O exemplo a seguir remove as credenciais de nome e uma senha para acessar o servidor de destino que tem um endereço IP de 10.192.147.63.  

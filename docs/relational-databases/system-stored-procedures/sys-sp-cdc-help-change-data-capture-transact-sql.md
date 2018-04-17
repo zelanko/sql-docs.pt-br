@@ -1,16 +1,16 @@
 ---
 title: sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
@@ -24,23 +24,23 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d3c187f86ab51d8a96a4ea0115830963f058ff1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 637b9edcc51832e37289057e4513ca18f30ef446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna a configuração de captura dos dados de alteração para cada tabela habilitada para a captura de dados de alteração no banco de dados atual. Podem ser retornadas até duas linhas para cada tabela de origem, uma linha para cada instância de captura. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,8 +76,8 @@ sys.sp_cdc_help_change_data_capture
 |source_schema|**sysname**|Nome do esquema de tabela de origem.|  
 |source_table|**sysname**|Nome da tabela de origem.|  
 |capture_instance|**sysname**|Nome da instância de captura.|  
-|object_id|**int**|ID da tabela de alteração associada à tabela de origem.|  
-|source_object_id|**int**|ID da tabela de origem.|  
+|object_id|**Int**|ID da tabela de alteração associada à tabela de origem.|  
+|source_object_id|**Int**|ID da tabela de origem.|  
 |start_lsn|**binary(10)**|LSN (Número de Sequência de Log) representando o ponto de extremidade inferior para consulta da tabela de alteração.<br /><br /> NULL = o ponto de extremidade inferior não foi definido.|  
 |end_lsn|**binary(10)**|LSN representando o ponto de extremidade superior para consulta da tabela de alteração. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta coluna é sempre NULL.|  
 |supports_net_changes|**bit**|O suporte à alteração de rede está habilitado.|  
@@ -89,7 +89,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Lista de colunas de índice usadas para identificar exclusivamente linhas na tabela de origem.|  
 |captured_column_list|**nvarchar(max)**|Lista de colunas de origem capturadas.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando ambos *source_schema* e *source_name* padrão como NULL ou são definidos explicitamente como NULL, esse procedimento armazenado retorna informações para todo o banco de dados de instâncias de captura que o chamador tem selecionar acesso. Quando *source_schema* e *source_name* são não NULL, somente informações sobre a tabela habilitada nomeada específica serão retornadas.  
   
 ## <a name="permissions"></a>Permissões  

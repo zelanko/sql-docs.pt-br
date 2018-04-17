@@ -1,16 +1,16 @@
 ---
 title: SP_CHANGEARTICLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 
+caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9f5c5722d588d864d698772c063efc64425d679d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as propriedades de um artigo em uma publicação transacional ou de instantâneo. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,7 +82,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**pre_creation_cmd**||Comando de pré-criação que pode descartar, excluir ou truncar a tabela de destino antes que a sincronização seja aplicada.|  
 ||**Nenhum**|Não usa um comando.|  
 ||**drop**|Descarta a tabela de destino.|  
-||**Excluir**|Exclui a tabela de destino.|  
+||**delete**|Exclui a tabela de destino.|  
 ||**Truncar**|Trunca a tabela de destino.|  
 |**pub_identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
 |**schema_option**||Especifica o bitmap da opção de geração de esquema para o artigo determinado. *schema_option* é **binary (8)**. Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.|  
@@ -121,10 +121,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x80000000**|Tentativa de remover dependências de todos os objetos que não fazem parte da publicação.|  
 ||**0x100000000**|Use esta opção para replicar o atributo FILESTREAM, se for especificado em **varbinary (max)** colunas. Não especifique essa opção se você estiver replicando tabelas para Assinantes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicação de tabelas com colunas FILESTREAM para [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] assinantes não tem suporte, independentemente de como essa opção de esquema é definida.<br /><br /> Consulte a opção relacionada **0x800000000**.|  
 ||**0x200000000**|Converte tipos de dados de data e hora (**data**, **tempo**, **datetimeoffset**, e **datetime2**) que foram introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para tipos de dados que têm suporte em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-||**0x400000000**|Replica a opção de compactação para dados e índices. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
+||**0x400000000**|Replica a opção de compactação para dados e índices. Para obter mais informações, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Defina essa opção para armazenar dados FILESTREAM em seu próprio grupo de arquivos no Assinante. Se essa opção não for definida, os dados FILESTREAM serão armazenados no grupo de arquivos padrão. A replicação não cria grupos de arquivos; portanto, se você definir essa opção, deverá criar o grupo de arquivos antes de aplicar o instantâneo no Assinante. Para obter mais informações sobre como criar objetos antes de aplicar o instantâneo, consulte [executar Scripts antes e após a aplicação do instantâneo](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Consulte a opção relacionada **0x100000000**.|  
 ||**0x1000000000**|Converte tipos common language runtime (CLR) definidos pelo usuário (UDTs) maiores que 8000 bytes em **varbinary (max)** para que as colunas do tipo UDT possam ser replicadas para os assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||**0x2000000000**|Converte o **hierarchyid** tipo de dados **varbinary (max)** para que colunas do tipo **hierarchyid** podem ser replicadas para assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações sobre como usar **hierarchyid** colunas em tabelas replicadas, consulte [hierarchyid &#40; Transact-SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|Converte o **hierarchyid** tipo de dados **varbinary (max)** para que colunas do tipo **hierarchyid** podem ser replicadas para assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações sobre como usar **hierarchyid** colunas em tabelas replicadas, consulte [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replica qualquer índice filtrado na tabela. Para obter mais informações sobre índices filtrados, consulte [criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).|  
 ||**0x8000000000**|Converte o **geografia** e **geometria** para tipos de dados **varbinary (max)** para que colunas desses tipos podem ser replicadas para assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Replica índices em colunas do tipo **geografia** e **geometria**.|  
@@ -137,11 +137,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**Não há nomes de coluna**|Nomes de coluna não são incluídos na instrução INSERT replicada.|  
 ||**sem partições horizontais dts**|A partição horizontal para o artigo não é definida por uma assinatura transformável.|  
 ||**Nenhum**|Limpa todas as opções de status no [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) de tabela e marca o artigo como inativo.|  
-||**parâmetros**|As alterações são propagadas ao Assinante usando comandos com parâmetros. Essa é a configuração padrão para um novo artigo.|  
-||**literais de cadeia de caracteres**|As alterações são propagadas ao Assinante usando valores de literal de cadeia de caracteres.|  
+||**parameters**|As alterações são propagadas ao Assinante usando comandos com parâmetros. Essa é a configuração padrão para um novo artigo.|  
+||**Literais de cadeia de caracteres**|As alterações são propagadas ao Assinante usando valores de literal de cadeia de caracteres.|  
 |**sync_object**||Nome da tabela ou exibição usado para produzir um arquivo de saída de sincronização. O padrão é NULO. Sem suporte para Publicadores Oracle.|  
-|**espaço de tabela**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**limite**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
+|**Espaço de tabela**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**threshold**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
 |**type**||Sem suporte para Publicadores Oracle.|  
 ||**logbased**|Artigo com base em log.|  
 ||**logbased manualboth**|Artigo com base em log com filtro manual e exibição manual. Essa opção requer que o *sync_object* e *filtro* propriedades também ser definidas. Sem suporte para Publicadores Oracle.|  
@@ -163,7 +163,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Consulte a seção Comentários das propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
   
- [  **@force_reinit_subscription=]***force_reinit_subscription*  
+ [**@force_reinit_subscription=] * force_reinit_subscription*  
  Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que a assinatura ser reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
@@ -172,7 +172,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Consulte a seção Comentários para as propriedades que, quando alteradas, requerem que todas as assinaturas existentes sejam reiniciadas.  
   
- [  **@publisher** =] **'***publicador***'**  
+ [ **@publisher**=] **'***publicador***'**  
  Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -252,13 +252,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>Permissões  
  Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changearticle**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de artigo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

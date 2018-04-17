@@ -1,16 +1,16 @@
 ---
 title: sp_addmergesubscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5db2e319393afd6d3751b5eeb6ee58fd4d84fd6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc7b47a0253b47e9c8e1a75131ae3003fce2ac33
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria uma assinatura push ou pull. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,10 +88,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscriber_type=**] **'***subscriber_type***'**  
  É o tipo de assinante. *subscriber_type*é **nvarchar (15)**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**local** (padrão)|Assinante conhecido somente pelo Publicador.|  
-|**global**|Assinante conhecido por todos os servidores.|  
+|**Global**|Assinante conhecido por todos os servidores.|  
   
  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores, assinaturas locais são referidas como assinaturas de cliente e assinaturas globais são referidas como assinaturas de servidor.  
   
@@ -107,7 +107,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  É um valor que indica quando o Agente de Mesclagem será executado. *frequency_type* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**4**|Diariamente|  
@@ -120,7 +120,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_interval=**] *frequency_interval*  
  O dia ou dias em que o Agente de Mesclagem é executado. *frequency_interval* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Segunda-feira|  
@@ -137,7 +137,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  É a ocorrência da mesclagem agendada do intervalo de frequência em cada mês. *frequency_relative_interval* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Segundo|  
@@ -152,7 +152,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_subday=**] *frequency_subday*  
  É a unidade para *frequency_subday_interval*. *frequency_subday* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -197,10 +197,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Permite resolver conflitos interativamente para todos os artigos que permitem resolução interativa. *use_interactive_resolver* é **nvarchar (5)**, com um padrão de FALSE.  
   
  [  **@merge_job_name=** ] **'***merge_job_name***'**  
- O  *@merge_job_name*  parâmetro é preterido e não pode ser definido. *merge_job_name* é **sysname**, com um padrão NULL.  
+ O *@merge_job_name* parâmetro é preterido e não pode ser definido. *merge_job_name* é **sysname**, com um padrão NULL.  
   
- [  **@hostname** =] **'***hostname***'**  
- Substitui o valor retornado por [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando essa função é usada na cláusula WHERE de um filtro com parâmetros. *Nome do host* é **sysname**, com um padrão NULL.  
+ [ **@hostname**=] **'***hostname***'**  
+ Substitui o valor retornado por [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando essa função é usada na cláusula WHERE de um filtro com parâmetros. *nome do host* é **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Por motivos de desempenho, recomendamos que não sejam aplicadas funções a nomes de colunas em cláusulas de filtro de linha com parâmetros, como `LEFT([MyColumn]) = SUSER_SNAME()`. Se você usar [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) em uma cláusula de filtro e substituir o valor HOST_NAME, talvez seja necessário converter tipos de dados usando [converter](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obter mais informações sobre práticas recomendadas para esse caso, consulte a seção "Substituindo o valor de HOST_NAME()" no tópico [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -208,10 +208,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_addmergesubscription** é usado em replicação de mesclagem.  
   
- Quando **sp_addmergesubscription** é executado por um membro do **sysadmin** função de servidor fixa para criar uma assinatura push, o trabalho do Merge Agent é implicitamente criado e é executado sob o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent conta de serviço. É recomendável que você execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e especifique as credenciais de uma conta do Windows diferente, específica de agente para  **@job_login**  e  **@job_password** . Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Quando **sp_addmergesubscription** é executado por um membro do **sysadmin** função de servidor fixa para criar uma assinatura push, o trabalho do Merge Agent é implicitamente criado e é executado sob o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent conta de serviço. É recomendável que você execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e especifique as credenciais de uma conta do Windows diferente, específica de agente para **@job_login** e **@job_password**. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -221,11 +221,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Consulte também  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Resolução interativa de conflitos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

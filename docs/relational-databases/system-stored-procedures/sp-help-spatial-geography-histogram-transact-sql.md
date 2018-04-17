@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geography_histogram_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geography_histogram
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c65b21ab76c3ca5880c709e09255ad083ad05def
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e6045950af5e91a787fc793321b2f8f5f39bde4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,14 +66,14 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**cellid**|**int**|Representa a identificação exclusiva de cada célula, com uma contagem inicial a partir de 1.|  
-|**célula**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**cellid**|**Int**|Representa a identificação exclusiva de cada célula, com uma contagem inicial a partir de 1.|  
+|**Célula**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  
  Usuário deve ser um membro do **pública** função. Requer permissão READ ACCESS no servidor e no objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A guia SSMS espacial mostra uma representação gráfica dos resultados. Você pode consultar os resultados em relação à janela espacial para obter um número aproximado dos itens do resultado.  
   
 > [!NOTE]  
@@ -89,6 +89,6 @@ EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = S
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Índice espacial armazenados procedimentos &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [Procedimentos armazenados de índice espacial &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

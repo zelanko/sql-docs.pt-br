@@ -1,16 +1,16 @@
 ---
 title: sp_help_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_schedule
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59223cb9ba6fd0a7129966fa49aef4d8e7e67eb3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c29f9e803884778a4bc4222eec29feb40e867996
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lista informações sobre agendas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,16 +50,16 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@schedule_id =** ] *id*  
+ [  **@schedule_id =** ] *id*  
  O identificador da agenda a ser listado. *schedule_name* é **int**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'***schedule_name***'**  
  O nome da agenda a ser listada. *schedule_name* é **sysname**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
   
  [ **@attached_schedules_only** = ] *attached_schedules_only* ]  
  Especifica se apenas agendas com um trabalho anexado devem ser mostradas. *attached_schedules_only* é **bit**, com um padrão de **0**. Quando *attached_schedules_only* é **0**, todas as agendas são mostradas. Quando *attached_schedules_only* é **1**, o conjunto de resultados contém apenas as agendas anexadas a um trabalho.  
   
- [ **@include_description** = ] *include_description*  
+ [ **@include_description** =] *include_description*  
  Especifica se descrições devem ser incluídas no conjunto de resultados. *include_description* é **bit**, com um padrão de **0**. Quando *include_description* é **0**, o *schedule_description* coluna do conjunto de resultados contém um espaço reservado. Quando *include_description* é **1**, a descrição da agenda será incluída no conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -73,12 +73,12 @@ sp_help_schedule
 |**schedule_id**|**Int**|Número do identificador de agenda.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador da agenda.|  
 |**schedule_name**|**sysname**|Nome da agenda.|  
-|**enabled**|**Int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
-|**freq_type**|**Int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = Once<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando o serviço SQLServerAgent é iniciado.|  
-|**freq_interval**|**Int**|Dias em que o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**Int**|Número de **freq_subday_type** períodos devem ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**Int**|Ocorrência do trabalho de agendado a **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**Habilitado**|**Int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
+|**freq_type**|**Int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando o serviço SQLServerAgent é iniciado.|  
+|**freq_interval**|**Int**|Dias em que o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**Int**|Número de **freq_subday_type** períodos devem ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**Int**|Ocorrência do trabalho de agendado a **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**Int**|Número de meses entre a execução agendada do trabalho.|  
 |**active_start_date**|**Int**|Data em que a agenda foi ativada.|  
 |**active_end_date**|**Int**|Data de término da agenda.|  

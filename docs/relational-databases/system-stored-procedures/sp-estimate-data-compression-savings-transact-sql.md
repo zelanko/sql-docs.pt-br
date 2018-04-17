@@ -1,16 +1,16 @@
 ---
 title: sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acb61e6c699728902bc7ada6d5cfd7e12febb1c8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d93c3626e7177df5920cd2e8888ba75a2416fdfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/27/2017
 > [!NOTE]  
 >  Se os dados existentes forem fragmentados, é possível reduzir seu tamanho sem usar compactação recriando o índice. Para índices, o fator de preenchimento será aplicado durante a recriação de um índice. Isso pode aumentar o tamanho do índice.  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -90,14 +90,14 @@ sp_estimate_data_compression_savings
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nome da tabela ou exibição indexada.|  
 |schema_name|**sysname**|Esquema da tabela ou exibição indexada.|  
-|index_id|**int**|ID de um índice.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> > 1 = Índice não clusterizado|  
-|partition_number|**int**|Número da partição. Retorna 1 para uma tabela ou índice não particionado.|  
+|index_id|**Int**|ID de um índice.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> > 1 = Índice não clusterizado|  
+|partition_number|**Int**|Número da partição. Retorna 1 para uma tabela ou índice não particionado.|  
 |size_with_current_compression_setting (KB)|**bigint**|Tamanho da tabela, índice ou partição solicitada como existe atualmente.|  
 |size_with_requested_compression_setting (KB)|**bigint**|Tamanho estimado da tabela, índice ou partição que usa a configuração da compactação solicitada e, se aplicável, o fator de preenchimento existente, supondo que não há nenhuma fragmentação.|  
 |sample_size_with_current_compression_setting (KB)|**bigint**|Tamanho do exemplo com a definição de compactação atual. Isso inclui qualquer fragmentação.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Tamanho do exemplo criado usando a configuração da compactação solicitada e, se aplicável, o fator de preenchimento existente e nenhuma fragmentação.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use sp_estimate_data_compression_savings para estimar o aumento que pode ocorrer quando uma tabela ou partição é habilitada para compactação de linha ou de página. Por exemplo, se o tamanho médio da linha puder ser reduzido em 40%, o tamanho do objeto poderá ser potencialmente reduzido em 40%. Um aumento de espaço poderá não ser obtido porque isso depende do fator de preenchimento e do tamanho da linha. Por exemplo, se você tiver uma linha de 8000 bytes de comprimento e reduzir seu tamanho em 40%, ainda poderá ajustar apenas uma linha em uma página de dados. Não há nenhum aumento.  
   
  Se os resultados da execução de sp_estimate_data_compression_savings indicarem que a tabela crescerá, isso significará que muitas linhas da tabela usam quase toda a precisão dos tipos de dados e que a adição da pequena sobrecarga necessária para o formato compactado será maior do que o aumento obtido da compactação. Nessa caso raro, não habilite a compactação.  
@@ -129,8 +129,8 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys. Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implementação da compactação Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

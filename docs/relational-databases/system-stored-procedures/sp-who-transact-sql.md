@@ -1,16 +1,16 @@
 ---
 title: SP_WHO (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_who_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99f8ff7ccfee468c0e9b3598167d6d9823e2bd61
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a46a146e022eb7ce0caa0cdb28579580bc789e93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações sobre os usuários atuais, sessões e processos em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. As informações podem ser filtradas para retornar somente os processos que não estão ociosos, que pertencem a um usuário específico ou que pertencem a uma sessão específica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'***login***'** | *ID de sessão*  |  **'ACTIVE'**  
+ [  **@loginame =** ] **'***login***'** | *ID de sessão* | **'ACTIVE'**  
  É usado para filtrar o conjunto de resultados.  
   
  *logon* é **sysname** que identifica os processos que pertencem a um logon específico.  
@@ -65,19 +65,19 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 |Coluna|Data type|Description|  
 |------------|---------------|-----------------|  
-|**SPID**|**smallint**|ID da sessão.|  
-|**ecid**|**smallint**|ID do contexto de execução de determinado thread associado a uma ID de sessão específica.<br /><br /> ECID = {0, 1, 2, 3,...  *n* }, onde 0 representa sempre principal ou thread de pai e {1, 2, 3,...  *n* } representa os subthreads.|  
-|**status**|**nchar(30)**|Status do processo. Os valores possíveis são:<br /><br /> **inativo**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reiniciando a sessão.<br /><br /> **executando**. A sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, consulte [usando Multiple Active Result Sets &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **plano de fundo**. A sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **reversão**. A sessão tem uma reversão de transação em processo.<br /><br /> **pendente**. A sessão está aguardando que um thread de trabalho seja disponibilizado.<br /><br /> **executável**. A tarefa da sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de hora.<br /><br /> **spinloop**. A tarefa da sessão está aguardando que um spinlock seja liberado.<br /><br /> **suspenso**. A sessão está aguardando que um evento, como E/S, seja concluído.|  
+|**spid**|**smallint**|ID da sessão.|  
+|**ecid**|**smallint**|ID do contexto de execução de determinado thread associado a uma ID de sessão específica.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, onde 0 representa sempre principal ou thread de pai e {1, 2, 3,... *n*} representa os subthreads.|  
+|**status**|**nchar(30)**|Status do processo. Os valores possíveis são:<br /><br /> **inativo**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reiniciando a sessão.<br /><br /> **Executando**. A sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, consulte [usando Multiple Active Result Sets & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **plano de fundo**. A sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **reversão**. A sessão tem uma reversão de transação em processo.<br /><br /> **pendente**. A sessão está aguardando que um thread de trabalho seja disponibilizado.<br /><br /> **executável**. A tarefa da sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de hora.<br /><br /> **spinloop**. A tarefa da sessão está aguardando que um spinlock seja liberado.<br /><br /> **suspenso**. A sessão está aguardando que um evento, como E/S, seja concluído.|  
 |**LoginName**|**nchar(128)**|Nome de logon associado a determinado processo.|  
-|**nome do host**|**nchar(128)**|Nome do host ou computador de cada processo.|  
+|**Nome do host**|**nchar(128)**|Nome do host ou computador de cada processo.|  
 |**blk**|**char (5)**|ID de sessão do processo de bloqueio, se houver. Caso contrário, essa coluna será zero.<br /><br /> Quando uma transação associada a uma ID de sessão especificada for bloqueada por uma transação distribuída órfã, essa coluna retornará um '-2' para o bloqueio da transação órfã.|  
-|**DBName**|**nchar(128)**|Banco de dados usado pelo processo.|  
-|**cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], processo [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno e assim por diante) sendo executado para o processo.|  
-|**request_id**|**int**|ID de solicitações em execução em uma sessão específica.|  
+|**dbname**|**nchar(128)**|Banco de dados usado pelo processo.|  
+|**Cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], processo [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno e assim por diante) sendo executado para o processo.|  
+|**request_id**|**Int**|ID de solicitações em execução em uma sessão específica.|  
   
  No caso de processamento paralelo, são criados subthreads para a ID de sessão específica. O thread principal é indicado como `spid = <xxx>` e `ecid =0`. Os outros subthreads têm o mesmo `spid = <xxx>`, mas com **ecid** > 0.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um processo de bloqueio, que pode ter um bloqueio exclusivo, é um que está retendo recursos que outro processo precisa.  
   
  Todas as transações distribuídas órfãs recebem o valor de ID da sessão de '-2'. As transações distribuídas órfãs são transações distribuídas que não estão associadas a qualquer ID de sessão. Para obter mais informações, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
@@ -128,8 +128,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys. sysprocesses &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_fulltext_table (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9bb3305149fac1fd1747341634f06414c76c3be3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER_FULLTEXT_INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) em vez disso.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +56,7 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@tabname=**] **'***qualified_table_name***'**  
+ [  **@tabname=**] **'***qualified_table_name***'**  
  É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. *qualified_table_name* é **nvarchar (517)**, sem padrão.  
   
  [  **@action=**] **'***ação***'**  
@@ -76,10 +77,10 @@ sp_fulltext_table
 |**start_incremental**|Inicia uma população incremental do índice de texto completo na tabela.|  
 |**Parar**|Interrompe uma população completa ou incremental.|  
   
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
+ [  **@ftcat=**] **'***fulltext_catalog_name***'**  
  É um nome de catálogo de texto completo válido e existente para um **criar** ação. Para todas as outras ações, esse parâmetro deve ser NULL. *fulltext_catalog_name* é **sysname**, com um padrão NULL.  
   
- [ **@keyname=**] **'***unique_index_name***'**  
+ [  **@keyname=**] **'***unique_index_name***'**  
  É um índice não nulo válido de coluna de chave única e exclusiva em *qualified_table_name* para um **criar** ação. Para todas as outras ações, esse parâmetro deve ser NULL. *unique_index_name* é **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -144,6 +145,6 @@ GO
  [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Pesquisa de texto completo e pesquisa semântica armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados de pesquisa de texto completo e pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

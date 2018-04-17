@@ -1,16 +1,16 @@
 ---
 title: sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54763594122216c14ef8b74f17fbc83919ea44fc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cd2c499284976a03f601fd43725905d85afd1bdb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/03/2018
   Lista informações sobre associações entre perfis de Database Mail e entidades do banco de dados.  
   
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,16 +48,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@principal_id=** ] *principal_id*  
+ [  **@principal_id=** ] *principal_id*  
  É a ID do usuário de banco de dados ou da função no **msdb** banco de dados para a associação à lista. *principal_id* é **int**, com um padrão NULL. O *principal_id* ou *principal_name* pode ser especificado.  
   
- [ **@principal_name=** ] **'***principal_name***'**  
+ [  **@principal_name=** ] **'***principal_name***'**  
  É o nome do usuário de banco de dados ou da função no **msdb** banco de dados para a associação à lista. *principal_name* é **sysname**, com um padrão NULL. O *principal_id* ou *principal_name* pode ser especificado.  
   
- [ **@profile_id=** ] *profile_id*  
+ [  **@profile_id=** ] *profile_id*  
  É a ID do perfil da associação a ser listada. *profile_id* é **int**, com um padrão NULL. O *profile_id* ou *profile_name* pode ser especificado.  
   
- [ **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'***profile_name***'**  
  É o nome do perfil da associação a ser listada. *profile_name* é **sysname**, com um padrão NULL. O *profile_id* ou *profile_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -120,6 +120,6 @@ principal_id principal_name     profile_id  profile_name                   is_de
   
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Armazenados do Database Mail procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_syspolicy_configure (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_configure
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ff49cd5be072fb288bb721b781474da93b7ba9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1028040b63f843a2d6b189b23cbbf88ee73349c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Define configurações de Gerenciamento Baseado em Políticas, como, por exemplo, se o Gerenciamento Baseado em Políticas é habilitado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'***nome***'**  
  É o nome do parâmetro que você deseja configurar. *nome* é **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
   
  *nome* pode ser qualquer um dos seguintes valores:  
@@ -58,7 +58,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Especifica se o Gerenciamento Baseado em Políticas registra em log avaliações de política com êxito.  
   
- [ **@value =** ] *value*  
+ [  **@value =** ] *valor*  
  É o valor que está associado com o valor especificado para *nome*. *valor* é **sql_variant**e é necessário.  
   
 -   Se você especificar 'Enabled' para *nome*, você pode usar qualquer um dos seguintes valores:  
@@ -118,7 +118,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento baseado em políticas armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados de gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  

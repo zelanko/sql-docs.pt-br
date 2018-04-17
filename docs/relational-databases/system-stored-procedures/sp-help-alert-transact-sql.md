@@ -1,16 +1,16 @@
 ---
 title: sp_help_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_alert
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1dc2217a34afadc5a105709ac294325ac9e80a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 070e37092c8683b1709ae878686a337df74f3232
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Relata informações sobre os alertas definidos para o servidor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando  **@legacy_format**  é **0**, **sp_help_alert** produz o seguinte conjunto de resultados.  
+ Quando **@legacy_format** é **0**, **sp_help_alert** produz o seguinte conjunto de resultados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
@@ -80,7 +80,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**Int**|Número de erro de mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela). Se for usada gravidade para definir o alerta, **message_id** é **0** ou nulo.|  
 |**severity**|**Int**|Nível de gravidade (de **9** por meio de **25**, **110**, **120**, **130**, ou **140**) que define o alerta.|  
-|**enabled**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
+|**Habilitado**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**Int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**Int**|Data em que o alerta ocorreu pela última vez.|  
 |**last_occurrence_time**|**Int**|Hora em que o alerta ocorreu pela última vez.|  
@@ -98,12 +98,12 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**Int**|Diferente de zero se um ou mais operadores forem notificados para este alerta. O valor é um ou mais dos seguintes valores (ORed junto):<br /><br /> **1**= tem notificação de email<br /><br /> **2**= tem notificação de pager<br /><br /> **4**= tem **net send** notificação.|  
 |**flags**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|Se **tipo** é **2**, esta coluna mostra a definição da condição de desempenho; caso contrário, a coluna será NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sempre será '[Uncategorized]' para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] sempre será '[Uncategorized]' para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**wmi_namespace**|**sysname**|Se **tipo** é **3**, esta coluna mostra o namespace do evento WMI.|  
 |**wmi_query**|**nvarchar(512)**|Se **tipo** é **3**, esta coluna mostra a consulta para o evento WMI.|  
 |**type**|**Int**|Tipo do evento:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de eventos WMI|  
   
- Quando  **@legacy_format**  é **1**, **sp_help_alert** produz o seguinte conjunto de resultados.  
+ Quando **@legacy_format** é **1**, **sp_help_alert** produz o seguinte conjunto de resultados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
@@ -114,7 +114,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**Int**|Número de erro de mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela). Se for usada gravidade para definir o alerta, **message_id** é **0** ou nulo.|  
 |**severity**|**Int**|Nível de gravidade (de **9** por meio de **25**, **110**, **120**, **130**, ou 1**40**) que define o alerta.|  
-|**enabled**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
+|**Habilitado**|**tinyint**|Status de alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**Int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**Int**|Data em que o alerta ocorreu pela última vez.|  
 |**last_occurrence_time**|**Int**|Hora em que o alerta ocorreu pela última vez.|  

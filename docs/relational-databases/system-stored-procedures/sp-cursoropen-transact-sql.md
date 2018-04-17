@@ -1,16 +1,16 @@
 ---
 title: sp_cursoropen (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoropen
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f1b18a69dfb558963f8740313d94285bd5fad36e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Abre um cursor. sp_cursoropen define a instrução SQL associada ao cursor e opções de cursor e, em seguida, popula o cursor. sp_cursoropen é equivalente à combinação da [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções DECLARE_CURSOR e OPEN. Esse procedimento é invocado pela especificação de ID = 2 em um pacote TDS.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,13 +53,13 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *cursor* permite vários cursores ativos em uma conexão de banco de dados único.  
   
- *instrução INSERT*  
+ *stmt*  
  É um parâmetro obrigatório que define o conjunto de resultados do cursor. Qualquer cadeia de consulta válida (sintaxe e associação) de qualquer tipo de cadeia de caracteres (independentemente de Unicode, tamanho, etc.) pode servir como uma opção válida *stmt* tipo de valor.  
   
  *scrollopt*  
  Opção de rolagem. *scrollopt* é um parâmetro opcional que requer um dos seguintes **int** valores de entrada.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,7 +81,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opção de controle de simultaneidade. *ccopt* é um parâmetro opcional que requer um dos seguintes **int** valores de entrada.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (anteriormente conhecido como LOCKCC)|  
@@ -124,7 +124,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  Uma operação FETCH está em andamento.  
   
- Um  
+ A  
  Este cursor foi desalocado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não está disponível.  
   
  Quando um erro ocorrer, os valores de retorno poderão estar inconsistentes e a exatidão não pode ser garantida.  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Se o procedimento sp_cursoropen for executado com êxito, serão enviados os parâmetros de retorno RPC e um conjunto de resultados com informações de formato de coluna TDS (mensagens 0xa1 e 0xa0). Caso contrário, uma ou mais mensagens de erro TDS serão enviadas. Em qualquer caso, nenhum dado de linha será retornado e a *feito* contagem de mensagens será zero. Se você estiver usando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à 7.0, 0xa0 e 0xa1 (padrão para instruções SELECT) serão retornadas junto com os fluxos de token 0xa5 e 0xa4. Se você estiver usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 0x81 será retornado (padrão para instruções SELECT) junto com os fluxos de token 0xa5 e 0xa4.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="stmt-parameter"></a>Parâmetro stmt  
  Se *stmt* Especifica a execução de um procedimento armazenado, os parâmetros de entrada podem ser definidos como constantes como parte do *stmt* de cadeia de caracteres, ou especificados como *boundparam* argumentos. Variáveis declaradas podem ser passadas como parâmetros associados dessa forma.  
@@ -218,7 +218,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Os parâmetros subsequentes são usados para passar os valores a serem substituídos pelo *nome de variável local* na instrução.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cursorfetch &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

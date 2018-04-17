@@ -1,16 +1,16 @@
 ---
 title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobsteplog
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f5bf88c8b02b51dac095dcd0445d3324e23e5e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 83299ab01c2ec8c82b979bb2193cce1a9ca87803
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/03/2018
   Remove todos os logs de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent especificados com os argumentos. Use este procedimento armazenado para manter o **sysjobstepslogs** tabela o **msdb** banco de dados.  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,16 +50,16 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'***job_id***'**  
  O número de identificação do trabalho que contém o log de etapas do trabalho a ser removido. *job_id* é **int**, com um padrão NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***job_name***'**  
  O nome do trabalho. *job_name* é **sysname**, com um padrão NULL.  
   
 > **Observação:** ou *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
   
  [  **@step_id =**] *step_id*  
- O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho do trabalho são excluídos, a menos que  **@older_than**  ou  **@larger_than**  são especificados. *step_id* é **int**, com um padrão NULL.  
+ O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho do trabalho são excluídos, a menos que **@older_than** ou **@larger_than** são especificados. *step_id* é **int**, com um padrão NULL.  
   
  [  **@step_name =**] **'***step_name***'**  
  O nome da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. *step_name* é **sysname**, com um padrão NULL.  
@@ -67,10 +67,10 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 > **Observação:** ou *step_id* ou *step_name* podem ser especificados, mas não é possível especificar ambos.  
   
  [  **@older_than =**] **'***data***'**  
- A data e hora do log de etapa de trabalho mais antigo a ser mantido. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *data* é **datetime**, com um padrão NULL. Ambos  **@older_than**  e  **@larger_than**  pode ser especificado.  
+ A data e hora do log de etapa de trabalho mais antigo a ser mantido. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *data* é **datetime**, com um padrão NULL. Ambos **@older_than** e **@larger_than** pode ser especificado.  
   
  [  **@larger_than =**] **'***size_in_bytes***'**  
- O tamanho em bytes do maior log de etapa de trabalho a ser mantido. Todos os logs de etapa de trabalho maiores que esse serão removidos. Ambos  **@larger_than**  e  **@older_than**  pode ser especificado.  
+ O tamanho em bytes do maior log de etapa de trabalho a ser mantido. Todos os logs de etapa de trabalho maiores que esse serão removidos. Ambos **@larger_than** e **@older_than** pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -81,7 +81,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Remarks  
  **sp_delete_jobsteplog** está no **msdb** banco de dados.  
   
- Se nenhum argumento exceto  **@job_id**  ou  **@job_name**  forem especificados, todos os logs de etapa de trabalho para o trabalho especificado serão excluídos.  
+ Se nenhum argumento exceto **@job_id** ou **@job_name** forem especificados, todos os logs de etapa de trabalho para o trabalho especificado serão excluídos.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -139,6 +139,6 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Agente do SQL Server armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

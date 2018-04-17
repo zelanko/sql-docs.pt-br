@@ -1,16 +1,16 @@
 ---
-title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6284bd7690c715ed47177b42a5a1f5beb4b4b6a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +42,9 @@ ms.lasthandoff: 02/09/2018
   Lê arquivos que são criados pelo destino de arquivos assíncronos do mecanismo de Eventos estendidos. É retornado um evento, em formato XML, por linha.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceitam resultados de rastreamento gerados no formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Suporte estendido de eventos somente resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceitam resultados de rastreamento gerados no formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suporte estendido de eventos somente resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -81,7 +82,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Os conteúdos de evento no formato XML. Não permite valor nulo.|  
 |file_name|**nvarchar(260)**|O nome do arquivo que contém o evento. Não permite valor nulo.|  
 |file_offset|**bigint**|O deslocamento do bloco no arquivo que contém o evento. Não permite valor nulo.|  
-|timestamp_utc|**datetime2**|**Aplica-se a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />A data e hora (fuso horário UTC) do evento. Não permite valor nulo.|  
+|timestamp_utc|**datetime2**|**Aplica-se a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />A data e hora (fuso horário UTC) do evento. Não permite valor nulo.|  
 
   
 ## <a name="remarks"></a>Remarks  

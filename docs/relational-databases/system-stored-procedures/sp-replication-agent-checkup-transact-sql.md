@@ -1,16 +1,16 @@
 ---
 title: sp_replication_agent_checkup (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e580accb9fbe9506a831ca835c09e0dd6c08d364
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 84ea8f214e8e74771acb6d7fbf8634f518390079
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verifica cada banco de dados de distribuição para os agentes de replicação em execução, mas não têm histórico registrado no intervalo de pulsação. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,13 +46,13 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@heartbeat_interval**  =] **'***heartbeat_interval***'**  
+ [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
  É o número máximo de minutos que um agente pode continuar sem registrar uma mensagem de progresso. *heartbeat_interval* é **int**, com um padrão de 10 minutos.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **sp_replication_agent_checkup** gera erro 14151 para cada agente detectado como suspeito. Também registra uma mensagem de histórico de falha sobre os agentes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_replication_agent_checkup** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  

@@ -1,16 +1,16 @@
 ---
 title: sp_change_subscription_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fe61cfc2088b75e2ab1af2c457073ad723dd7f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 42f06141f24970c2a787f9e0ddfca711a6657b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza informações de assinaturas pull. Esse procedimento armazenado é executado no assinante no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [  **@publication_type =** ] *publication_type*  
  Especifica o tipo de replicação da publicação. *publication_type* é **int**, e pode ser um destes valores.  
   
-|Valor|Tipo de Publicação|  
+|Value|Tipo de Publicação|  
 |-----------|----------------------|  
 |**0**|Transacional.|  
 |**1**|Instantâneo|  
@@ -78,7 +78,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Valor|Description|  
+|Propriedade|Value|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Especifica o local da pasta alternativa para o instantâneo. Se definido como NULL, os arquivos de instantâneo serão retirados do local padrão especificado pelo Publicador.|  
 |**distrib_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
@@ -95,10 +95,10 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||Somente para compatibilidade com versões anteriores.|  
 |**ftp_password**||Somente para compatibilidade com versões anteriores.|  
 |**ftp_port**||Somente para compatibilidade com versões anteriores.|  
-|**nome do host**||Nome do host usado ao conectar ao Publicador.|  
+|**Nome do host**||Nome do host usado ao conectar ao Publicador.|  
 |**internet_login**||Logon que o Agente de Mesclagem usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_password**||Senha que o Agente de Mesclagem usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
-|**internet_security_mode**|**1**|Use Autenticação Integrada do Windows para sincronização da Web. Recomendamos o uso da Autenticação Básica com sincronização da Web. Para obter mais informações, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
+|**internet_security_mode**|**1**|Use Autenticação Integrada do Windows para sincronização da Web. Recomendamos o uso da Autenticação Básica com sincronização da Web. Para obter mais informações, consulte [Configurar sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md).|  
 ||**0**|Use Autenticação Básica para sincronização da Web.<br /><br /> Observação: A sincronização da Web requer uma conexão SSL com o servidor Web.|  
 |**internet_timeout**||Período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.|  
 |**internet_url**||URL que representa o local do Replication Listener para sincronização da Web.|  
@@ -117,7 +117,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_change_subscription_properties** é usado em todos os tipos de replicação.  
   
  **sp_change_subscription_properties** é usado para assinaturas pull.  
@@ -128,11 +128,11 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_change_subscription_properties**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [Exibir e Modificar Propriedades de Assinatura Pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

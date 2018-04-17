@@ -1,16 +1,16 @@
 ---
 title: sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor_columns
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fe882cf908e4ae227a486b68c54d34376164455
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4e5d7c2462551e31d9a32ad62bacd0a281fb9249
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Relata os atributos das colunas no conjunto de resultados de um cursor de servidor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,21 +82,21 @@ sp_describe_cursor_columns
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (nulo)|Nome atribuído à coluna do conjunto de resultados. A coluna será NULL se tiver sido especificada sem uma cláusula AS associada.|  
-|ordinal_position|**int**|Posição relativa da coluna a partir da coluna mais à esquerda do conjunto de resultados. A primeira coluna está na posição 0.|  
-|column_characteristics_flags|**int**|Um bitmask que indica as informações armazenadas em DBCOLUMNFLAGS no OLE DB. Pode ser um ou uma combinação dos seguintes:<br /><br /> 1 = Indicador<br /><br /> 2 = Comprimento fixo<br /><br /> 4 = Permite valor nulo<br /><br /> 8 = Controle de versão de linha<br /><br /> 16 = Coluna atualizável (defina para colunas projetadas de um cursor que não tenha uma cláusula FOR UPDATE e, se houver tal coluna, poderá ser apenas uma por cursor).<br /><br /> Quando valores do bit são combinados, as características desses valores combinados são aplicadas. Por exemplo, se o valor do bit for 6, a coluna será de comprimento fixo (2) e permitirá valor nulo (4).|  
-|column_size|**int**|Tamanho máximo possível para um valor nesta coluna.|  
+|ordinal_position|**Int**|Posição relativa da coluna a partir da coluna mais à esquerda do conjunto de resultados. A primeira coluna está na posição 0.|  
+|column_characteristics_flags|**Int**|Um bitmask que indica as informações armazenadas em DBCOLUMNFLAGS no OLE DB. Pode ser um ou uma combinação dos seguintes:<br /><br /> 1 = Indicador<br /><br /> 2 = Comprimento fixo<br /><br /> 4 = Permite valor nulo<br /><br /> 8 = Controle de versão de linha<br /><br /> 16 = Coluna atualizável (defina para colunas projetadas de um cursor que não tenha uma cláusula FOR UPDATE e, se houver tal coluna, poderá ser apenas uma por cursor).<br /><br /> Quando valores do bit são combinados, as características desses valores combinados são aplicadas. Por exemplo, se o valor do bit for 6, a coluna será de comprimento fixo (2) e permitirá valor nulo (4).|  
+|column_size|**Int**|Tamanho máximo possível para um valor nesta coluna.|  
 |data_type_sql|**smallint**|Número que indica o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna.|  
 |column_precision|**tinyint**|Precisão máxima da coluna conforme o *bPrecision* valor no OLE DB.|  
 |column_scale|**tinyint**|Número de dígitos à direita do ponto decimal para o **numérico** ou **decimal** tipos de dados conforme o *bScale* valor no OLE DB.|  
-|order_position|**int**|Se a coluna participar da ordenação do conjunto de resultados, a posição da coluna na chave de ordem relativa à coluna mais à esquerda.|  
+|order_position|**Int**|Se a coluna participar da ordenação do conjunto de resultados, a posição da coluna na chave de ordem relativa à coluna mais à esquerda.|  
 |order_direction|**varchar (1)**(nulo)|A = A coluna está na chave de ordem e a ordenação é crescente.<br /><br /> D = A coluna está na chave de ordem e a ordenação é decrescente.<br /><br /> NULL = A coluna não participa na ordenação.|  
 |hidden_column|**smallint**|0 = esta coluna aparece na lista de seleção.<br /><br /> 1 = Reservado para uso futuro.|  
-|columnid|**int**|ID da coluna base. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, columnid será -1.|  
-|objectid|**int**|O ID do objeto ou da tabela base que está fornecendo a coluna. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, objectid será -1.|  
-|dbid|**int**|O ID do banco que dados que contém a tabela base que está fornecendo a coluna. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, dbid será -1.|  
+|columnid|**Int**|ID da coluna base. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, columnid será -1.|  
+|objectid|**Int**|O ID do objeto ou da tabela base que está fornecendo a coluna. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, objectid será -1.|  
+|dbid|**Int**|O ID do banco que dados que contém a tabela base que está fornecendo a coluna. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, dbid será -1.|  
 |dbname|**sysname**<br /><br /> (permite valor nulo)|Nome do banco que dados que contém a tabela base que está fornecendo a coluna. Se a coluna do conjunto de resultados foi criada a partir de uma expressão, dbname será NULL.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_describe_cursor_columns descreve os atributos das colunas no conjunto de resultados de um cursor de servidor, tais como o nome e o tipo de dados de cada cursor. Use sp_describe_cursor para obter uma descrição dos atributos globais do cursor de servidor. Use sp_describe_cursor_tables para obter um relatório das tabelas base referenciadas pelo cursor. Para obter um relatório dos cursores de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)] visíveis na conexão, use sp_cursor_list.  
   
 ## <a name="permissions"></a>Permissões  
@@ -144,11 +144,11 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Cursores](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_describe_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [sp_cursor_list &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_tables &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
+ [sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
+ [sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

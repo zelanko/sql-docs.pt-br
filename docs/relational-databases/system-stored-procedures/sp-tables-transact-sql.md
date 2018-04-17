@@ -1,16 +1,16 @@
 ---
 title: sp_tables (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95a0bae2722c519cea3e1dac14c633fe582ed5a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  Para determinar o nome do objeto base de um sinônimo, consulte o [synonyms](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md) exibição do catálogo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +55,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_name=** ] **'***nome***'**  
+ [ **@table_name=** ] **'***name***'**  
  É a tabela usada para retornar informações do catálogo. *nome* é **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
   
  [  **@table_owner=** ] **'***proprietário***'**  
@@ -63,9 +64,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o proprietário não estiver especificado e o usuário atual não possuir uma tabela com o nome especificado, este procedimento procurará uma tabela com o nome especificado, pertencente ao proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
  [  **@table_qualifier=** ] **'***qualificador***'**  
- É o nome do qualificador da tabela. *qualificador* é **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.** *proprietário***.** *nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela. *qualificador* é **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.*** proprietário***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
- [ **,** [  **@table_type=** ] **"'***tipo***'**, **'**tipo **'"** ]  
+ [ **,** [  **@table_type=** ] **"'***tipo***'**, **'**tipo**'"** ]  
  É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela que estão especificados. Isso inclui **tabela**, **SYSTEMTABLE**, e **exibição**. *tipo* é **varchar(100)**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -87,7 +88,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar (32)**|Tabela, tabela do sistema ou exibição.|  
 |**COMENTÁRIOS**|**varchar(254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão SQL SQL-92 (os caracteres curinga % e _).  
   
  As informações de privilégio sobre o acesso de leitura ou gravação do usuário atual a uma tabela específica nem sempre são verificadas. Portanto, o acesso não está garantido. Esse conjunto de resultados inclui não apenas tabelas e exibições, mas também sinônimos e aliases de gateways para produtos DBMS que oferecem suporte a esses tipos. Se o atributo de servidor **ACCESSIBLE_TABLES** for Y no conjunto de resultados de **sp_server_info**, somente tabelas que podem ser acessadas pelo usuário atual são retornadas.  
@@ -118,7 +119,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Retornando uma lista de objetos que podem ser consultados no ambiente atual  
  O exemplo a seguir retorna uma lista de objetos que podem ser consultas no ambiente atual.  
@@ -140,7 +141,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [synonyms &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

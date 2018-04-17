@@ -1,16 +1,16 @@
 ---
 title: sp_notify_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_notify_operator_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_notify_operator
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7683e0150c41810c14981e0c6b6364c59ae19ae3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dcfa1cd158e0e853315c57581b48a1abfffd4bdf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/03/2018
   Envia uma mensagem de email a um operador usando o Database Mail.  
   
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_name=** ] **'***profilename***'**  
+ [  **@profile_name=** ] **'***profilename***'**  
  O nome do perfil do Database Mail a ser usado para enviar a mensagem. *ProfileName* é **nvarchar (128)**. Se *profilename* não for especificado, o perfil de email de banco de dados padrão será usado.  
   
  [ **@id=** ] *id*  
@@ -65,10 +65,10 @@ sp_notify_operator
   
 > **Observação:** um endereço de email deve ser definido para o operador antes de poder receber mensagens.  
   
- [ **@subject=** ] **'***subject***'**  
+ [  **@subject=** ] **'***assunto***'**  
  O assunto da mensagem de email. *entidade* é **nvarchar (256)** sem nenhum padrão.  
   
- [ **@body=** ] **'***message***'**  
+ [  **@body=** ] **'***mensagem***'**  
  O corpo da mensagem de email. *mensagem* é **nvarchar (max)** sem nenhum padrão.  
   
  [ **@file_attachments=** ] **'***attachment***'**  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Agente do SQL Server armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  

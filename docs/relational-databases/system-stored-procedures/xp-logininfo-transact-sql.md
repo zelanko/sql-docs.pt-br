@@ -1,16 +1,16 @@
 ---
 title: xp_logininfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre os usuários e grupos do Windows.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  É o nome de um usuário ou grupo do Windows que recebeu acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* é **sysname**, com um padrão NULL. Se *account_name* não for especificado, todos os grupos e usuários do Windows que foram explicitamente concedida permissão de logon são relatados. *account_name* devem ser totalmente qualificados. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
   
  **'todos'** | **'members'**  
- Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. **@option**é **varchar (10)**, com um padrão NULL. A menos que **todos os** for especificado, somente o primeiro caminho de permissão é exibido.  
+ Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. **@option** é **varchar (10)**, com um padrão NULL. A menos que **todos os** for especificado, somente o primeiro caminho de permissão é exibido.  
   
  [  **@privilege =** ] *variable_name*  
  É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* é **varchar (10)**, com um padrão de 'Not wanted'. O nível de privilégio retornado é **usuário**, **admin**, ou **nulo**.  
@@ -67,13 +67,13 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**nome da conta**|**sysname**|Nome da conta do Windows completamente qualificada.|  
-|**tipo**|**char (8)**|Tipo de conta do Windows. Os valores válidos são **usuário** ou **grupo**.|  
+|**Nome da conta**|**sysname**|Nome da conta do Windows completamente qualificada.|  
+|**type**|**char (8)**|Tipo de conta do Windows. Os valores válidos são **usuário** ou **grupo**.|  
 |**privilégio**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **usuário**, ou **nulo**.|  
 |**nome de logon mapeado**|**sysname**|Contas de usuário que tem o privilégio de usuário, **mapeado nome de logon** mostra o nome de logon mapeado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta usar ao efetuar logon nesta conta usando as regras mapeadas com o nome de domínio é adicionado antes dele.|  
 |**caminho de permissão**|**sysname**|Associação de grupo que permitiu o acesso à conta.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se *account_name* for especificado, **xp_logininfo** relata o nível de privilégio mais alto do usuário do Windows especificado ou grupo. Se um usuário do Windows tiver acesso como administrador de sistema e como usuário de domínio, ele será relatado como um administrador de sistema. Se o usuário for membro de vários grupos do Windows com o mesmo nível de privilégio, somente o grupo ao qual o acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi concedido primeiro será relatado.  
   
  Se *account_name* é um usuário do Windows ou grupo que não está associado a válido um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon, um conjunto de resultados vazio será retornado. Se *account_name* não pode ser identificado como um usuário válido do Windows ou um grupo, uma mensagem de erro é retornada.  
@@ -99,6 +99,6 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Estendidos gerais procedimentos armazenados &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

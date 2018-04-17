@@ -1,16 +1,16 @@
 ---
 title: sp_help_agent_profile (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2459e35032b90dda8056e5cf3a31d99698b36ffa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 24ceddf37682da448ba318a3ea1050ee6ef5d9af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe o perfil de um agente especificado. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  [  **@agent_type=**] *agent_type*  
  É o tipo de agente. *agent_type* é **int**, com um padrão de **0**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent|  
 |**2**|Agente de Leitor de Log|  
@@ -65,17 +65,17 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**int**|A ID do perfil.|  
+|**profile_id**|**Int**|A ID do perfil.|  
 |**profile_name**|**sysname**|Exclusivo para o tipo de agente.|  
-|**agent_type**|**int**|**1** = o agente de instantâneo<br /><br /> **2** = o log Reader Agent<br /><br /> **3** = o agente de distribuição<br /><br /> **4** = o agente de mesclagem<br /><br /> **9** = queue Reader Agent|  
-|**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
+|**agent_type**|**Int**|**1** = o agente de instantâneo<br /><br /> **2** = o log Reader Agent<br /><br /> **3** = o agente de distribuição<br /><br /> **4** = o agente de mesclagem<br /><br /> **9** = queue Reader Agent|  
+|**Tipo**|**Int**|**0** = sistema<br /><br /> **1** = personalizado|  
 |**Descrição**|**varchar(3000)**|Descrição do perfil.|  
 |**def_profile**|**bit**|Especifica se este perfil será o padrão para esse tipo de agente.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_profile** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
@@ -83,8 +83,8 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_profile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

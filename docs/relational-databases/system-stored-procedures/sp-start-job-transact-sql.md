@@ -1,16 +1,16 @@
 ---
 title: sp_start_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89cf8ae7b00aa917d626fd47070835690b56e1f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Instrui o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a executar um trabalho imediatamente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ sp_start_job
  [ **@server_name=** ] **'***server_name***'**  
  O servidor de destino no qual iniciar o trabalho. *server_name* é **nvarchar (128)**, com um padrão NULL. *server_name* deve ser um dos servidores de destino para o qual o trabalho atualmente está direcionado.  
   
- [ **@step_name=** ] **'***step_name***'**  
+ [  **@step_name=** ] **'***step_name***'**  
  O nome da etapa na qual a execução do trabalho será iniciada. Aplica-se apenas a trabalhos locais. *step_name* é **sysname**, com um padrão de NULL  
   
  [ **@output_flag=** ] *output_flag*  

@@ -2,7 +2,7 @@
 title: sp_addmergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,18 +25,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria uma nova publicação de mesclagem. Esse procedimento armazenado é executado no Publicador, no banco de dados que está sendo publicado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -99,10 +99,10 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@sync_mode =** ] **'***sync_mode***'**  
  É o modo de sincronização inicial de assinantes na publicação. *sync_mode* é **nvarchar (10)**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**nativo** (padrão)|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas.|  
-|**caractere**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar suporte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e não-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.|  
+|**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar suporte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e não-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.|  
   
  [  **@allow_push =** ] **'***allow_push***'**  
  Especifica se podem ser criadas assinaturas push para a publicação determinada. *allow_push* é **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas push na publicação.  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@use_partition_groups =** ] **'***use_partition_groups***'**  
  Especifica se as partições pré-computadas devem ser usadas para otimizar o processo de sincronização. *use_partition_groups* é **nvarchar (5)**, e pode ser um destes valores:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**true**|A publicação usa partições pré-computadas.|  
 |**false**|A publicação não usa partições pré-computadas.|  
@@ -211,7 +211,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@publication_compatibility_level =** ] *backward_comp_level*  
  Indica a compatibilidade com versões anteriores da publicação. *backward_comp_level* é **nvarchar(6)**, e pode ser um destes valores:  
   
-|Valor|Versão|  
+|Value|Versão|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -245,12 +245,12 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@retention_period_unit =** ] **'***retention_period_unit***'**  
  Especifica as unidades para a período de retenção definido *retenção*. *retention_period_unit* é **nvarchar (10)**, e pode ser um dos valores a seguir.  
   
-|Valor|Versão|  
+|Value|Versão|  
 |-----------|-------------|  
 |**dia** (padrão)|O período de retenção é especificado em dias.|  
-|**semana**|O período de retenção é especificado em semanas.|  
-|**mês**|O período de retenção é especificado em meses.|  
-|**ano**|O período de retenção é especificado em anos.|  
+|**week**|O período de retenção é especificado em semanas.|  
+|**month**|O período de retenção é especificado em meses.|  
+|**year**|O período de retenção é especificado em anos.|  
   
  [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
  Especifica o número de alterações que estão contidos em uma geração. Uma geração é uma coleção de alterações que é entregue a um Publicador ou Assinante. *generation_leveling_threshold* é **int**, com um valor padrão de 1000.  
@@ -264,9 +264,9 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@conflict_logging =** ] **'***conflict_logging***'**  
  Especifica onde são armazenados registros de conflito. *conflict_logging* é **nvarchar (15)**, e pode ser um dos seguintes valores:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Publicador**|Registros de conflito são armazenados no Publicador.|  
+|**publisher**|Registros de conflito são armazenados no Publicador.|  
 |**Assinante**|Registros de conflito são armazenados no Assinante que causou o conflito. Não há suportada para [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.|  
 |**ambos**|Registros de conflito são armazenados no Publicador e no Assinante.|  
 |NULL (padrão)|A replicação define automaticamente *conflict_logging* para **ambos** quando o valor *backward_comp_level* é **90RTM** e **publicador** em todos os outros casos.|  
@@ -274,7 +274,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepublication** é usado em replicação de mesclagem.  
   
  Para listar objetos de publicação no Active Directory usando o **@add_to_active_directory** parâmetro, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto já deve ser criado no Active Directory.  
@@ -283,7 +283,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Para [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, o valor de *alternate_snapshot_folder* é usado apenas quando o valor de *snapshot_in_default_folder* é **false**.  
   
- Com replicação DDL habilitada (*replicate_ddl***= 1**) para uma publicação, para fazer a DDL de não replicação alterações na publicação, [sp_changemergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) deve ser primeiro executado para definir *replicate_ddl* para **0**. Depois que as instruções de DDL de não replicação forem emitidas, **sp_changemergepublication** pode ser executado novamente para retroceder a replicação de DDL.  
+ Com replicação DDL habilitada (* replicate_ddl ***= 1**) para uma publicação, para fazer a DDL de não replicação alterações na publicação, [sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)deve ser primeiro executado para definir *replicate_ddl* para **0**. Depois que as instruções de DDL de não replicação forem emitidas, **sp_changemergepublication** pode ser executado novamente para retroceder a replicação de DDL.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
@@ -295,7 +295,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

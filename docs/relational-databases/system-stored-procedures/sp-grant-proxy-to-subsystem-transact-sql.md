@@ -1,16 +1,16 @@
 ---
 title: sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_grant_login_to_subsystem_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df9499f7c562cf353e5bf2a71ba50b8ff6b33a36
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2cf2ce50f8e59c5c02b99a84bda91bd512dff522
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Concede um acesso de proxy a um subsistema.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,18 +48,18 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@proxy_id =** ] *id*  
+ [  **@proxy_id =** ] *id*  
  O número de identificação de proxy do proxy ao qual o acesso será concedido. O *proxy_id* é **int**, com um padrão NULL. O *proxy_id* ou *proxy_name* devem ser especificados, mas não é possível especificar ambos.  
   
- [ **@proxy_name =** ] **'***proxy_name***'**  
+ [  **@proxy_name =** ] **'***proxy_name***'**  
  O nome do proxy ao qual o acesso será concedido. O *proxy_name* é **sysname**, com um padrão NULL. O *proxy_id* ou *proxy_name* devem ser especificados, mas não é possível especificar ambos.  
   
- [ **@subsystem_id =** ] *id*  
+ [  **@subsystem_id =** ] *id*  
  O número de identificação do subsistema ao qual o acesso será concedido. O *subsystem_id* é **int**, com um padrão NULL. O *subsystem_id* ou *subsystem_name* devem ser especificados, mas não é possível especificar ambos. A tabela a seguir lista os valores padrão para cada subsistema.  
   
 |Value|Descrição|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Script do ActiveX<br /><br /> **\*\*Importante \* \***  subsistema ActiveX Scripting será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script do ActiveX<br /><br /> **\*\* Importante \* \***  subsistema ActiveX Scripting será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**3**|Sistema Operacional (**CmdExec**)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|Replication Agente de Leitor de Log|  
@@ -71,7 +71,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] execução de pacotes|  
 |**12**|Scripts PowerShell|  
   
- [ **@subsystem_name =** ] **'***subsystem_name***'**  
+ [  **@subsystem_name =** ] **'***subsystem_name***'**  
  O nome do subsistema ao qual o acesso será concedido. O **subsystem_name** é **sysname**, com um padrão NULL. O *subsystem_id* ou *subsystem_name* devem ser especificados, mas não é possível especificar ambos. A tabela a seguir lista os valores padrão para cada subsistema.  
   
 |Value|Description|  

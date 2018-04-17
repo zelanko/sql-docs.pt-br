@@ -1,16 +1,16 @@
 ---
 title: sp_describe_cursor_tables (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor_tables_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2803fdaf84b2a31a98b8fda50a5766008e71a3c9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b18e95e52ff4f7c44f11e9f8010e017c39dd85e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Informa os objetos ou tabelas base referenciadas por um cursor de servidor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -81,15 +81,15 @@ sp_describe_cursor_tables
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |table owner|**sysname**|ID de usuário do proprietário de tabela.|  
-|Table_name|**sysname**|Nome do objeto ou tabela base. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cursores de servidor sempre retornam o objeto especificado pelo usuário, não as tabelas base.|  
+|table_name|**sysname**|Nome do objeto ou tabela base. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cursores de servidor sempre retornam o objeto especificado pelo usuário, não as tabelas base.|  
 |Optimizer_hints|**smallint**|Bitmap constituído de um ou mais dos seguinte itens:<br /><br /> 1 = Bloqueio de nível de linha (ROWLOCK)<br /><br /> 4 = Bloqueio em nível de página (PAGELOCK)<br /><br /> 8 = Bloqueio de tabela (TABLOCK)<br /><br /> 16 = Bloqueio de tabela exclusivo (TABLOCKX)<br /><br /> 32 = Update lock (UPDLOCK)<br /><br /> 64 = Sem bloqueio (NOLOCK)<br /><br /> 128 = Opção primeira-linha rápida (FASTFIRST)<br /><br /> 4096 = Semântica de repetição de leitura, quando usado com DECLARE CURSOR (HOLDLOCK)<br /><br /> Quando são fornecidas diversas opções, o sistema usa a mais restritiva. No entanto, sp_describe_cursor_tables mostra os sinalizadores especificados na consulta.|  
 |lock_type|**smallint**|Tipo de scroll lock solicitado, explícita ou implicitamente, para cada tabela base subjacente a este cursor. O valor pode ser um dos seguintes:<br /><br /> 0 = Nenhum<br /><br /> 1 = Compartilhado<br /><br /> 3 = atualizar|  
 |server_name|**sysname, anulável**|Nome do servidor vinculado em que reside a tabela. NULL quando OPENQUERY ou OPENROWSET são usados.|  
-|Objectid|**int**|ID do objeto da tabela. 0 quando OPENQUERY ou OPENROWSET são usados.|  
-|dbid|**int**|ID do banco de dados em que a tabela reside. 0 quando OPENQUERY ou OPENROWSET são usados.|  
+|Objectid|**Int**|ID do objeto da tabela. 0 quando OPENQUERY ou OPENROWSET são usados.|  
+|dbid|**Int**|ID do banco de dados em que a tabela reside. 0 quando OPENQUERY ou OPENROWSET são usados.|  
 |dbname|**sysname**, **anulável**|Nome do banco de dados em que a tabela reside. NULL quando OPENQUERY ou OPENROWSET são usados.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_describe_cursor_tables descreve as tabelas base referenciadas por um cursor de servidor. Para obter uma descrição dos atributos do conjunto de resultados retornado pelo cursor, use sp_describe_cursor_columns. Para obter uma descrição das características globais do cursor, como sua rolagem e atualização, use sp_describe_cursor. Para obter um relatório do [!INCLUDE[tsql](../../includes/tsql-md.md)] cursores de servidor que estão visíveis na conexão, use sp_cursor_list.  
   
 ## <a name="permissions"></a>Permissões  
@@ -138,11 +138,11 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Cursores](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_cursor_list &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [sp_describe_cursor_columns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
+ [sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

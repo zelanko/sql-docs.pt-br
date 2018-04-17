@@ -2,7 +2,7 @@
 title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f9accc8ae7ffb64d82fa10c3b60a2f8fec44b8a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 82b1103e9dcf780dbc4a5be4c1a487173051f50a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,17 +54,17 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'***publicação***'**  
  É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**, que retorna informações sobre todos os trabalhos de instantâneo de dados filtrados correspondentes especificado *dynamic_ snapshot_jobid*e *dynamic_snapshot_jobname*para todas as publicações.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
  É o nome de um trabalho de instantâneo de dados filtrados. *dynamic_snapshot_jobname*é **sysname**, com padrão de **%**', que retorna todos os trabalhos dinâmicos de uma publicação com especificado *dynamic_ snapshot_jobid*. Se um nome de trabalho não tiver sido explicitamente especificado quando o trabalho foi criado, o nome do trabalho terá o seguinte formato:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  É um identificador de um trabalho de instantâneo de dados filtrados. *dynamic_snapshot_jobid*é **uniqueidentifier**, com padrão de NULL, que retorna todos os trabalhos de instantâneo que correspondem à cadeia *dynamic_snapshot_jobname*.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -81,7 +81,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**frequency_interval**|**Int**|Os dias de execução do agente, que pode ter um destes valores.<br /><br /> **1** = domingo<br /><br /> **2** = segunda-feira<br /><br /> **3** = terça-feira<br /><br /> **4** = quarta-feira<br /><br /> **5** = quinta-feira<br /><br /> **6** = sexta-feira<br /><br /> **7** = sábado<br /><br /> **8** = dia<br /><br /> **9** = dias da semana<br /><br /> **10** = semana|  
 |**frequency_subday_type**|**Int**|É o tipo que define a frequência na qual o agente é executado quando *frequency_type* é **4** (diariamente), e pode ser um destes valores.<br /><br /> **1** = na hora especificada<br /><br /> **2** = segundos<br /><br /> **4** = minutos<br /><br /> **8** = horas|  
 |**frequency_subday_interval**|**Int**|Número de intervalos de *frequency_subday_type* que ocorre entre execuções programadas do agente.|  
-|**frequency_relative_interval**|**Int**|É a que o agente é executado em um determinado mês quando *frequency_type* é **32** (mensal relativo), e pode ser um destes valores.<br /><br /> **1** = First<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = último|  
+|**frequency_relative_interval**|**Int**|É a que o agente é executado em um determinado mês quando *frequency_type* é **32** (mensal relativo), e pode ser um destes valores.<br /><br /> **1** = primeiro<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = último|  
 |**frequency_recurrence_factor**|**Int**|Número de semanas ou meses entre execuções programadas do agente.|  
 |**active_start_date**|**Int**|Data do primeiro agendamento de execução do agente, formatada como YYYYMMDD.|  
 |**active_end_date**|**Int**|Data do último agendamento de execução do agente, formatada como YYYYMMDD.|  

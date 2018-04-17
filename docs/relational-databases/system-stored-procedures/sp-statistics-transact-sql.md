@@ -1,16 +1,16 @@
 ---
 title: sp_statistics (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_statistics_TSQL
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acb1e775a99bb3c296064a65aa9eed7be5d17745
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bed13d18bf7055bd72280cabde3fe65ce05b7b64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna uma lista de todos os índices e estatísticas em uma tabela especificada ou exibição indexada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +62,7 @@ sp_statistics [ @table_name = ] 'table_name'
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, os índices dessa tabela serão retornados. Se *proprietário* não for especificado e o usuário atual não possuir uma tabela com especificado *nome*, esse procedimento procurará uma tabela com especificado *nome* pertencentes a proprietário do banco de dados. Caso exista, os índices da tabela serão retornados.  
   
  [  **@table_qualifier=** ] **'***qualificador***'**  
- É o nome do qualificador da tabela. *qualificador* é **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.** *proprietário***.** *nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela. *qualificador* é **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.*** proprietário***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [  **@index_name=** ] **'***index_name***'**  
  É o nome do índice. *index_name* é **sysname**, com um padrão de %. Há suporte para a correspondência do padrão curinga.  
@@ -88,16 +89,16 @@ sp_statistics [ @table_name = ] 'table_name'
 |**INDEX_NAME**|**sysname**|É o nome do índice. Esta coluna sempre retorna um valor.|  
 |**TYPE**|**smallint**|Esta coluna sempre retorna um valor:<br /><br /> 0 = Estatísticas de uma tabela<br /><br /> 1 = Clusterizado<br /><br /> 2 = Com hash<br /><br /> 3 = não clusterizado|  
 |**SEQ_IN_INDEX**|**smallint**|Posição da coluna dentro do índice.|  
-|**NOME DA COLUNA**|**sysname**|Nome de coluna para cada coluna do **TABLE_NAME** retornado. Esta coluna sempre retorna um valor.|  
-|**AGRUPAMENTO**|**char (1)**|Ordem usada no agrupamento. Pode ser:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável|  
-|**CARDINALIDADE**|**int**|Número de linhas na tabela ou valores exclusivos no índice.|  
-|**PÁGINAS**|**int**|Número de páginas para armazenar o índice ou a tabela.|  
-|**FILTER_CONDITION**|**varchar (128)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  
+|**COLUMN_NAME**|**sysname**|Nome de coluna para cada coluna do **TABLE_NAME** retornado. Esta coluna sempre retorna um valor.|  
+|**COLLATION**|**char(1)**|Ordem usada no agrupamento. Pode ser:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável|  
+|**CARDINALIDADE**|**Int**|Número de linhas na tabela ou valores exclusivos no índice.|  
+|**PÁGINAS**|**Int**|Número de páginas para armazenar o índice ou a tabela.|  
+|**FILTER_CONDITION**|**varchar(128)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os índices no conjunto de resultados aparecem em ordem crescente pelas colunas **NON_UNIQUE**, **tipo**, **INDEX_NAME**, e **SEQ_IN_INDEX**.  
   
  O tipo de índice clusterizado se refere a um índice no qual são armazenados dados de tabela na ordem do índice. Isso corresponde à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] índices clusterizados.  
@@ -109,7 +110,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplo: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplo: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna informações sobre o `DimEmployee` tabela.  
   
 ```  
@@ -119,7 +120,7 @@ EXEC sp_statistics DimEmployee;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados &#40; do catálogo Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

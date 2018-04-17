@@ -1,16 +1,16 @@
 ---
 title: sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab7bf1c5fb7653f4b61af1912af7de3454bf776
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7ec407d84267e8a2a03d2a6774e7c86cc469af94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  O uso incorreto desse procedimento armazenado ou a especificação incorreta de um valor LSN pode fazer com que o Agente de Distribuição reverta as alterações que já tinham sido aplicadas no Assinante ou ignore todas as alterações restantes.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,19 +68,19 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**XACT_SEQNO ORIGINAL**|**varbinary (16)**|É o LSN original da próxima transação a ser aplicada no Assinante.|  
-|**XACT_SEQNO ATUALIZADO**|**varbinary (16)**|É o LSN atualizado da próxima transação a ser aplicada no Assinante.|  
-|**CONTAGEM DE FLUXO DE ASSINATURA**|**int**|O número de fluxos de assinatura usado durante a última sincronização.|  
+|**XACT_SEQNO ORIGINAL**|**varbinary(16)**|É o LSN original da próxima transação a ser aplicada no Assinante.|  
+|**XACT_SEQNO ATUALIZADO**|**varbinary(16)**|É o LSN atualizado da próxima transação a ser aplicada no Assinante.|  
+|**CONTAGEM DE FLUXO DE ASSINATURA**|**Int**|O número de fluxos de assinatura usado durante a última sincronização.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_setsubscriptionxactseqno** é usado em replicação transacional.  
   
  **sp_setsubscriptionxactseqno** não pode ser usado em uma topologia de replicação transacional ponto a ponto.  
   
- **sp_setsubscriptionxactseqno** pode ser usado para ignorar uma transação específica que está causando um erro quando aplicada ao assinante. Quando há uma falha e depois que o agente de distribuição é interrompida, chame [sp_helpsubscriptionerrors &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) no distribuidor para recuperar o valor xact_seqno da transação com falha e, em seguida, chamar **sp_setsubscriptionxactseqno**, passando esse valor para *xact_seqno*. Isso assegurará que somente os comandos após esse LSN sejam processados.  
+ **sp_setsubscriptionxactseqno** pode ser usado para ignorar uma transação específica que está causando um erro quando aplicada ao assinante. Quando há uma falha e depois que o agente de distribuição é interrompida, chame [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) no distribuidor para recuperar o valor xact_seqno da transação com falha e, em seguida, chamar **sp_setsubscriptionxactseqno**, passando esse valor para *xact_seqno*. Isso assegurará que somente os comandos após esse LSN sejam processados.  
   
  Especifique um valor de **0** para *xact_seqno* para entregar todos os comandos pendentes no banco de dados de distribuição para o assinante.  
   

@@ -2,7 +2,7 @@
 title: sp_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: baa693e0765a8796a4f6fbed3284d440f5a1327d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,19 +70,19 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@description =** ] **'***descrição***'**  
  A descrição do trabalho. *Descrição* é **nvarchar (512)**, com um padrão NULL. Se *descrição* for não omitido, será usada "Nenhuma descrição disponível".  
   
- [ **@start_step_id =** ] *step_id*  
+ [  **@start_step_id =** ] *step_id*  
  O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*é **int**, com um padrão de 1.  
   
  [  **@category_name =** ] **'***categoria***'**  
  A categoria do trabalho. *categoria de*é **sysname**, com um padrão NULL.  
   
- [ **@category_id =** ] *category_id*  
+ [  **@category_id =** ] *category_id*  
  Um mecanismo independente de idioma para especificar uma categoria de trabalho. *category_id*é **int**, com um padrão NULL.  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **'***login***'**  
  O nome do logon que é o proprietário do trabalho. *logon*é **sysname**, com um padrão NULL, que é interpretado como o nome de logon atual. Somente membros do **sysadmin** função de servidor fixa pode definir ou alterar o valor de **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, ocorrerá falha na execução deste procedimento armazenado e um erro será retornado.  
   
- [ **@notify_level_eventlog =** ] *eventlog_level*  
+ [  **@notify_level_eventlog =** ] *eventlog_level*  
  Um valor que indica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*é **int**, e pode ser um destes valores.  
   
 |Value|Descrição|  
@@ -92,25 +92,25 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (padrão)|Caso haja falha|  
 |**3**|Always|  
   
- [ **@notify_level_email =** ] *email_level*  
+ [  **@notify_level_email =** ] *email_level*  
  Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores como *eventlog_level*.  
   
- [ **@notify_level_netsend =** ] *netsend_level*  
+ [  **@notify_level_netsend =** ] *netsend_level*  
  Um valor que indica quando enviar uma mensagem da rede após a conclusão deste trabalho. *netsend_level*é **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores como *eventlog_level*.  
   
- [ **@notify_level_page =** ] *page_level*  
+ [  **@notify_level_page =** ] *page_level*  
  Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*é **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores como *eventlog_level*.  
   
- [ **@notify_email_operator_name =** ] **'***email_name***'**  
+ [  **@notify_email_operator_name =** ] **'***nome_email***'**  
  O nome de email da pessoa para enviar email quando *email_level* for atingido. *nome_email* é **sysname**, com um padrão NULL.  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
  O nome do operador para quem a mensagem da rede será enviada após a conclusão deste trabalho. *netsend_name*é **sysname**, com um padrão NULL.  
   
- [ **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'***page_name***'**  
  O nome da pessoa para quem uma mensagem de pager será enviada após a conclusão deste trabalho. *page_name*é **sysname**, com um padrão NULL.  
   
- [ **@delete_level =** ] *delete_level*  
+ [  **@delete_level =** ] *delete_level*  
  Um valor que indica quando excluir o trabalho. *delete_value*é **int**, com um padrão de 0, o que significa nunca. *delete_level*usa os mesmos valores como *eventlog_level*.  
   
 > [!NOTE]  

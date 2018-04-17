@@ -1,16 +1,16 @@
 ---
-title: sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.DM resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588bbcb915873ba8a121432a83579b5877df8454
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1836223ec409b0b10b66e6b5df298b52029b6575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**Int**|ID do grupo de carga de trabalho. Não permite valor nulo.|  
-|name|**sysname**|Nome do grupo de carga de trabalho. Não permite valor nulo.|  
+|nome|**sysname**|Nome do grupo de carga de trabalho. Não permite valor nulo.|  
 |pool_id|**Int**|ID do pool de recursos. Não permite valor nulo.|  
 |external_pool_id|**Int**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID do pool de recursos externos. Não permite valor nulo.|  
 |statistics_start_time|**datetime**|Hora em que coleta de estatísticas foi redefinida para o grupo de carga de trabalho. Não permite valor nulo.|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |queued_request_count|**Int**|Conta de solicitação em fila atual. Não permite valor nulo.|  
 |total_cpu_limit_violation_count|**bigint**|Conta cumulativa de solicitações que excedem o limite de CPU. Não permite valor nulo.|  
 |total_cpu_usage_ms|**bigint**|Uso cumulativo da CPU, em milissegundos, pelo grupo de carga de trabalho. Não permite valor nulo.|  
-|max_request_cpu_time_ms|**bigint**|Uso máximo da CPU, em milissegundos, para uma única solicitação. Não permite valor nulo.<br /><br /> **Observação:** isso é um valor medido, ao contrário de request_max_cpu_time_sec, que é uma definição configurável. Para obter mais informações, consulte [limite de CPU excedido classe de evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|max_request_cpu_time_ms|**bigint**|Uso máximo da CPU, em milissegundos, para uma única solicitação. Não permite valor nulo.<br /><br /> **Observação:** isso é um valor medido, ao contrário de request_max_cpu_time_sec, que é uma definição configurável. Para obter mais informações, consulte [Classe de evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |blocked_task_count|**Int**|Contagem atual de tarefas bloqueadas. Não permite valor nulo.|  
 |total_lock_wait_count|**bigint**|Contagem cumulativa de esperas de bloqueio ocorridas. Não permite valor nulo.|  
 |total_lock_wait_time_ms|**bigint**|Soma cumulativa de tempo, em milissegundos, em que um bloqueio é mantido. Não permite valor nulo.|  

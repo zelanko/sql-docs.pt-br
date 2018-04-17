@@ -1,16 +1,16 @@
 ---
 title: MSsubscriber_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriber_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 983ea7374e26cfae1c3313f1e4eaec9bd287ff22
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7570e2f4a0d445d24a455904c8ddd843e841cdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,22 +41,22 @@ ms.lasthandoff: 11/21/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do publicador.|  
+|**publisher**|**sysname**|O nome do publicador.|  
 |**Assinante**|**sysname**|O nome do Assinante.|  
 |**agent_type**|**smallint**|O tipo de agente:<br /><br /> 0 = Distribution Agent.<br /><br /> 1 = Merge Agent.|  
-|**frequency_type**|**int**|A frequência de agendamento do Distribution Agent:<br /><br /> **1** = uma vez.<br /><br /> **2** = sob demanda.<br /><br /> **4** = diariamente.<br /><br /> **8** = semanalmente.<br /><br /> **16** = mensalmente.<br /><br /> **32** = relativo ao mês.<br /><br /> **64** = iniciar automaticamente.<br /><br /> **128** = recorrente.|  
-|**frequency_interval**|**int**|O valor a ser aplicado à frequência definida **frequency_type**.|  
-|**frequency_relative_interval**|**int**|A data do Distribution Agent.<br /><br /> **1** = primeiro.<br /><br /> **2** = segundo.<br /><br /> **4** = terceiro.<br /><br /> **8** = quarto.<br /><br /> **16** = último.|  
-|**frequency_recurrence_factor**|**int**|O fator de recorrência usado pelo **frequency_type**.|  
-|**frequency_subday**|**int**|Frequência de reagendamento durante o período definido:<br /><br /> **1** = uma vez.<br /><br /> **2** = segundo.<br /><br /> **4** = minuto.<br /><br /> **8** = hora.|  
-|**frequency_subday_interval**|**int**|O intervalo de **frequency_subday**.|  
-|**active_start_time_of_day**|**int**|A hora de dia do primeiro agendamento do Distribution Agent, formatada como HHMMSS.|  
-|**active_end_time_of_day**|**int**|A hora do dia em que o Distribution Agent deixa de ser agendado, formatada como HHMMSS.|  
-|**active_start_date**|**int**|A data do primeiro agendamento do Distribution Agent, formatada como AAAAMMDD.|  
-|**active_end_date**|**int**|A data em que o Distribution Agent deixa de ser agendado, formatada como AAAAMMDD.|  
+|**frequency_type**|**Int**|A frequência de agendamento do Distribution Agent:<br /><br /> **1** = uma vez.<br /><br /> **2** = sob demanda.<br /><br /> **4** = diariamente.<br /><br /> **8** = semanalmente.<br /><br /> **16** = mensalmente.<br /><br /> **32** = relativo ao mês.<br /><br /> **64** = iniciar automaticamente.<br /><br /> **128** = recorrente.|  
+|**frequency_interval**|**Int**|O valor a ser aplicado à frequência definida **frequency_type**.|  
+|**frequency_relative_interval**|**Int**|A data do Distribution Agent.<br /><br /> **1** = primeiro.<br /><br /> **2** = segundo.<br /><br /> **4** = terceiro.<br /><br /> **8** = quarto.<br /><br /> **16** = último.|  
+|**frequency_recurrence_factor**|**Int**|O fator de recorrência usado pelo **frequency_type**.|  
+|**frequency_subday**|**Int**|Frequência de reagendamento durante o período definido:<br /><br /> **1** = uma vez.<br /><br /> **2** = segundo.<br /><br /> **4** = minuto.<br /><br /> **8** = hora.|  
+|**frequency_subday_interval**|**Int**|O intervalo de **frequency_subday**.|  
+|**active_start_time_of_day**|**Int**|A hora de dia do primeiro agendamento do Distribution Agent, formatada como HHMMSS.|  
+|**active_end_time_of_day**|**Int**|A hora do dia em que o Distribution Agent deixa de ser agendado, formatada como HHMMSS.|  
+|**active_start_date**|**Int**|A data do primeiro agendamento do Distribution Agent, formatada como AAAAMMDD.|  
+|**active_end_date**|**Int**|A data em que o Distribution Agent deixa de ser agendado, formatada como AAAAMMDD.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

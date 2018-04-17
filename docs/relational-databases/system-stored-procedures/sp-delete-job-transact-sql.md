@@ -1,16 +1,16 @@
 ---
 title: sp_delete_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exclui um trabalho.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 > [!NOTE]  
 >  O *job_id* ou *job_name*deve ser especificado; não podem ser especificados.  
   
- [ **@originating_server=** ] **'***server***'**  
+ [  **@originating_server=** ] **'***server***'**  
  Para uso interno.  
   
  [  **@delete_history=** ] *delete_history*  
@@ -76,9 +76,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Nenhuma  
   
 ## <a name="remarks"></a>Remarks  
- O  **@originating_server**  argumento é reservado para uso interno.  
+ O **@originating_server** argumento é reservado para uso interno.  
   
- O  **@delete_unused_schedule**  argumento fornece compatibilidade com versões anteriores do SQL Server removendo automaticamente agendas que não estão associadas a qualquer trabalho. Observe que esse parâmetro padroniza o comportamento de compatibilidade com versões anteriores. Para manter as agendas que não estão associadas a um trabalho, você deve fornecer o valor **0** como o  **@delete_unused_schedule**  argumento.  
+ O **@delete_unused_schedule** argumento fornece compatibilidade com versões anteriores do SQL Server removendo automaticamente agendas que não estão associadas a qualquer trabalho. Observe que esse parâmetro padroniza o comportamento de compatibilidade com versões anteriores. Para manter as agendas que não estão associadas a um trabalho, você deve fornecer o valor **0** como o **@delete_unused_schedule** argumento.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_bindrule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindrule_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 969ce21685f6a63bbab3e629fbf657710133a67e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: af3a7f2e9d0c891cd416db9eb5449e21e3b8aa06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,9 +38,9 @@ ms.lasthandoff: 11/27/2017
   Associa uma regra a uma coluna ou a um tipo de dados de alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Use[restrições Unique e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md) em vez disso. As restrições CHECK são criadas usando a palavra-chave CHECK do [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) instruções.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use[restrições Unique e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md) em vez disso. As restrições CHECK são criadas usando a palavra-chave CHECK do [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) instruções.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +56,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
  É o nome de uma regra criada pela instrução CREATE RULE. *regra* é **nvarchar(776)**, sem padrão.  
   
  [  **@objname=**] **'***object_name***'**  
- É a tabela e a coluna ou o tipo de dados de alias aos quais a regra será associada. A regra não pode ser associada a um **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, tipo CLR definido pelo usuário, ou **timestamp**coluna. A regra não pode ser associada a uma coluna computada.  
+ É a tabela e a coluna ou o tipo de dados de alias aos quais a regra será associada. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
   
  *object_name* é **nvarchar(776)** sem nenhum padrão. Se *object_name* é um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome composto de duas ou três partes, primeiro será resolvido como uma tabela e coluna e, se essa resolução falhar, será resolvido como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados de alias herdam *regra* , a menos que uma regra foi associada diretamente à coluna.  
   
@@ -71,7 +72,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode associar uma nova regra a uma coluna (Embora usar uma restrição de verificação é preferencial) ou a um tipo de dados de alias com **sp_bindrule** sem desassociar a regra existente. A regra antiga é substituída. Se uma regra for associada a uma coluna com uma restrição CHECK existente, todas as restrições serão avaliadas. Não é possível associar uma regra a um tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A regra é imposta quando uma instrução INSERT é usada, mas não na associação. Você pode associar uma regra de caractere para uma coluna de **numérico** tipo de dados, embora essa operação INSERT não é válida.  
@@ -128,10 +129,10 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [Remover regra &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_unbindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

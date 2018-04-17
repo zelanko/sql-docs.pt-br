@@ -2,7 +2,7 @@
 title: sp_bindefault (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +52,10 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@defname=** ] **'***default***'**  
+ [  **@defname=** ] **'***padrão***'**  
  É o nome do valor padrão criado por CREATE DEFAULT. *padrão* é **nvarchar(776)**, sem padrão.  
   
- [ **@objname=** ] **'***object_name***'**  
+ [  **@objname=** ] **'***object_name***'**  
  É o nome da tabela e da coluna ou o tipo de dados de alias aos quais o valor padrão será associado. *object_name* é **nvarchar(776)** sem nenhum padrão. *object_name* não pode ser definido com o **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR tipos definidos pelo usuário.  
   
  Se *object_name* é um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome de duas ou três partes, primeiro será resolvido como uma tabela e coluna; e se essa resolução falhar, ele será resolvido como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados de alias herdam *padrão*, a menos que um padrão foi associado diretamente à coluna. Um padrão não pode ser associado a um **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, ou CLR coluna de tipo definido pelo usuário, uma coluna com a propriedade IDENTITY, uma coluna computada ou uma coluna que já tem uma restrição padrão.  
@@ -62,7 +63,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como identificadores delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **'***futureonly_flag***'**  
  É usado apenas ao associar um padrão a um tipo de dados de alias. *futureonly_flag* é **varchar(15)** com um padrão NULL. Quando esse parâmetro é definido como **futureonly**, as colunas existentes desse tipo de dados não podem herdar o novo padrão. Este parâmetro nunca é usado ao associar um padrão a uma coluna. Se *futureonly_flag* for NULL, o novo padrão é associado a quaisquer colunas do tipo de dados de alias que atualmente não tenham padrão ou que estejam usando o padrão existente do tipo de dados de alias.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

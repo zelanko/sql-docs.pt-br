@@ -1,16 +1,16 @@
 ---
 title: sp_xml_preparedocument (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xml_preparedocument_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86d05a3148d84622fb454bd83d25fee7875c1eb5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 911d6dd9613803aff79187a22f4ebf6bc0b7a4cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/27/2017
 > [!NOTE]  
 >  **sp_xml_preparedocument** limita o número de elementos que podem ser abertos de uma vez para 256.  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,7 +76,7 @@ OUTPUT
 >  **sp_xml_preparedocument** só pode processar XML não tipado ou texto. Se um valor de instância a ser usado como entrada já é XML digitado, primeiro converta-o em uma nova instância XML digitada ou uma cadeia de caracteres e, em seguida, passe esse valor como entrada. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  [ *xpath_namespaces* ]  
- Especifica as declarações de namespace usadas em expressões XPATH de linha e coluna em OPENXML. *xpath_namespaces* é um parâmetro de texto: **char**, **nchar**, **varchar**, **nvarchar**, **texto** , **ntext** ou **xml**.  
+ Especifica as declarações de namespace usadas em expressões XPATH de linha e coluna em OPENXML. *xpath_namespaces* é um parâmetro de texto: **char**, **nchar**, **varchar**, **nvarchar**, **texto**, **ntext** ou **xml**.  
   
  O valor padrão é  **\<raiz xmlns:mp = "urn: schemas-microsoft-com: XML-metaprop" >**. *xpath_namespaces* fornece namespace URIs para os prefixos usados em expressões XPath em OPENXML por meio de um documento XML bem formado. *xpath_namespaces* declara o prefixo que deve ser usado para fazer referência ao namespace **urn: schemas-microsoft-com: XML-metaprop**; isso fornece metadados sobre os elementos XML analisados. Embora você possa redefinir o prefixo de namespace para o namespace metaproperty usando essa técnica, esse namespace não será perdido. O prefixo **mp** ainda é válido para **urn: schemas-microsoft-com: XML-metaprop** mesmo se *xpath_namespaces* não tiver tal declaração.  
   
@@ -160,9 +160,10 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [XML armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
- [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)  
+ <br>[XML armazenados Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[Procedures(Transact-SQL) armazenado do sistema](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+ <br>[sys.DM exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

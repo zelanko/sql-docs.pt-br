@@ -1,16 +1,16 @@
 ---
 title: sp_getbindtoken (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getbindtoken
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58c73d303ac8fdcd8e9d4acf9f937538c3df816c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 92ad4bead82c82f1a8d23de15bb2c525b66db74a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/27/2017
   Retorna um identificador exclusivo para a transação. Esse identificador exclusivo é uma cadeia de caracteres usada para associar sessões usando sp_bindsession.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use MARS (vários conjuntos de resultados ativos) ou, então, transações distribuídas. Para obter mais informações, consulte [usando Multiple Active Result Sets &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use MARS (vários conjuntos de resultados ativos) ou, então, transações distribuídas. Para obter mais informações, consulte [usando Multiple Active Result Sets & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_getbindtoken retornará um token válido somente quando o procedimento armazenado é executado dentro de uma transação ativa. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará uma mensagem de erro. Por exemplo:  
   
 ```  
@@ -133,8 +133,8 @@ SELECT @bind_token AS Token;
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_bindsession &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [srv_getbindtoken &#40; Estendido API de procedimento armazenado &#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
+ [srv_getbindtoken &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

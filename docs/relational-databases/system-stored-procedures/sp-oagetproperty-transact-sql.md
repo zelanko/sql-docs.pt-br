@@ -1,16 +1,16 @@
 ---
 title: sp_OAGetProperty (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAGetProperty_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0132315386f5c7922ee778d4ec0067190c03fe9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 773f9026b5f2c5afc515351c26aaea958e06894c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Obtém um valor de propriedade de um objeto OLE.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ sp_OAGetProperty objecttoken , propertyname
  *objecttoken*  
  É o token de objeto de um objeto OLE que foi criado anteriormente usando **sp_OACreate**.  
   
- *PropertyName*  
+ *propertyname*  
  É o nome de propriedade do objeto OLE a ser retornado.  
   
  *PropertyValue* **saída**  
@@ -65,7 +65,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Se *propertyvalue* for especificado, mas a propriedade não retorna um valor, ocorrerá um erro. Se a propriedade retornar uma matriz com mais de duas dimensões, ocorrerá um erro.  
   
- *índice*  
+ *index*  
  É um parâmetro de índice. Se especificado, *índice* deve ser um valor do tipo de dados apropriado.  
   
  Algumas propriedades têm parâmetros. Estas propriedades são chamadas de propriedades indexadas e os parâmetros são chamados de parâmetros de índice. Uma propriedade pode ter vários parâmetros de índice.  
@@ -91,14 +91,14 @@ sp_OAGetProperty objecttoken , propertyname
   
 ||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
-|**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você também pode usar **sp_OAMethod** para obter um valor de propriedade.  
   
 ## <a name="permissions"></a>Permissões  
@@ -133,7 +133,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Automação OLE armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE procedimentos armazenados de automação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script de exemplo de automação](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

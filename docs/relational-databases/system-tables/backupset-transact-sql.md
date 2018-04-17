@@ -1,16 +1,16 @@
 ---
-title: backupset (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: conjunto de backup (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupset
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: 
+caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1675b6703b8729458ff10fae7d83a2c56328ee59
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  Contém uma linha para cada conjunto de backup. Um *conjunto de backup* contém o backup de uma operação de backup único, com êxito. As instruções RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY e RESTORE VERIFYONLY funcionam em um único conjunto de backups dentro do conjunto de mídias no dispositivo de backup ou dispositivos especificados.  
+  Contém uma linha para cada conjunto de backup. Um *conjunto de backup* contém o backup de uma única operação de backup bem-sucedida. As instruções RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY e RESTORE VERIFYONLY funcionam em um único conjunto de backups dentro do conjunto de mídias no dispositivo de backup ou dispositivos especificados.  
   
  Essa tabela é armazenada no **msdb** banco de dados.  
 
@@ -52,17 +53,17 @@ ms.lasthandoff: 02/03/2018
 |**last_media_number**|**smallint**|Número de mídia da mídia em que conjunto de backup é encerrado. Pode ser NULL.|  
 |**catalog_family_number**|**tinyint**|Número de família da mídia que contém o início do diretório de conjunto de backup. Pode ser NULL.|  
 |**catalog_media_number**|**smallint**|Número de mídia da mídia que contém o início do diretório de conjunto de backup. Pode ser NULL.|  
-|**position**|**Int**|Posição de backup usada na operação de restauração para localizar o conjunto de backup e arquivos apropriados. Pode ser NULL. Para obter mais informações, consulte o arquivo [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**Int**|Posição de backup usada na operação de restauração para localizar o conjunto de backup e arquivos apropriados. Pode ser NULL. Para obter mais informações, consulte o arquivo [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Data e hora de vencimento do conjunto de backup. Pode ser NULL.|  
 |**software_vendor_id**|**Int**|Número de identificação do fornecedor de software que escreve o cabeçalho de mídia de backup. Pode ser NULL.|  
 |**name**|**nvarchar(128)**|Nome do conjunto de backup. Pode ser NULL.|  
-|**description**|**nvarchar(255)**|Descrição do conjunto de backup. Pode ser NULL.|  
+|**Descrição**|**nvarchar(255)**|Descrição do conjunto de backup. Pode ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nome do usuário que realizou a operação de backup. Pode ser NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]número de versão principal. Pode ser NULL.|  
-|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de versão secundária. Pode ser NULL.|  
-|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de compilação. Pode ser NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de versão principal. Pode ser NULL.|  
+|**software_minor_version**|**tinyint**|Número de versão secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
+|**software_build_version**|**smallint**|Número de compilação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
 |**time_zone**|**smallint**|Diferença entre a hora local (onde a operação de backup está acontecendo) e o UTC (Tempo Universal Coordenado) em intervalos de 15 minutos. Os valores podem ser de -48 a +48, inclusive. Um valor de 127 indica que é desconhecido. Por exemplo, -20 é Hora Padrão do Leste dos EUA ou cinco horas após o UTC. Pode ser NULL.|  
-|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Número de versão secundária do formato de fita. Pode ser NULL.|  
+|**mtf_minor_version**|**tinyint**|Número de versão secundário de formato de fita da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Pode ser NULL.|  
 |**first_lsn**|**numeric(25,0)**|Número de sequência de log do primeiro ou mais antigo registro de log no conjunto de backup. Pode ser NULL.|  
 |**last_lsn**|**numeric(25,0)**|Número de sequência de log do próximo registro de log após o conjunto de backup. Pode ser NULL.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Número de sequência de log do registro de log em que a operação de refazer deve ser iniciada. Pode ser NULL.|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 02/03/2018
 |**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** não é igual a **last_recovery_fork_guid**, este é o número de sequência de log do ponto de bifurcação. Caso contrário, o valor será NULL.|  
 |**database_guid**|**uniqueidentifier**|ID exclusiva para o banco de dados. Isso corresponde à **BindingID** de RESTORE HEADERONLY. Quando o banco de dados é restaurado, um valor novo é atribuído.|  
 |**family_guid**|**uniqueidentifier**|ID exclusiva do banco de dados original na criação. Este valor permanece o mesmo quando o banco de dados é restaurado, mesmo para um nome diferente.|  
-|**differential_base_lsn**|**numeric(25,0)**|LSN base para backups diferenciais. Para um único backup diferencial de base; alterações com LSNs maiores que ou iguais a **differential_base_lsn** são incluídos no backup diferencial.<br /><br /> Para um diferencial com várias bases, o valor é NULL e o LSN base deve ser determinado no nível de arquivo (consulte [backupfile &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para tipos de backup não diferencial, o valor é sempre NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|LSN base para backups diferenciais. Para um único backup diferencial de base; alterações com LSNs maiores que ou iguais a **differential_base_lsn** são incluídos no backup diferencial.<br /><br /> Para um diferencial com várias bases, o valor é NULL e o LSN base deve ser determinado no nível de arquivo (consulte [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para tipos de backup não diferencial, o valor é sempre NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Para um backup diferencial de base única, o valor é o identificador exclusivo da base diferencial.<br /><br /> Para diferenciais com várias bases, o valor é NULL, e a base diferencial deve ser determinada em nível de arquivo.<br /><br /> Para tipos de backup não diferencial, o valor é NULL.|  
 |**compressed_backup_size**|**Numeric(20,0)**|Contagem total de bytes do backup armazenado em disco.<br /><br /> Para calcular a taxa de compactação, use **compressed_backup_size** e **backup_size**.<br /><br /> Durante uma **msdb** atualização, esse valor é definido como NULL. o que indica um backup não compactado.|  
 |**key_algorithm**|**nvarchar(32)**|O algoritmo de criptografia usado para criptografar o backup. O valor de NO_Encryption indica que o backup não foi criptografado.|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  Para reduzir o número de linhas nessa tabela e em outras tabelas de histórico e de backup, execute o [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimento armazenado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Backup e restauração tabelas &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Backup e restauração tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -122,6 +123,6 @@ ms.lasthandoff: 02/03/2018
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [Backup e restauração tabelas &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [Backup e restauração tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

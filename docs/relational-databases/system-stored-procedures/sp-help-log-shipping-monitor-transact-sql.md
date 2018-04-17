@@ -1,16 +1,16 @@
 ---
 title: sp_help_log_shipping_monitor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d48e5d889890c9ab657733aec2d564bb1c2f7eb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna um conjunto de resultados contendo informações de status e outras informações para bancos de dados primários e secundário registrados, em um primário, secundário ou servidor monitor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,8 +61,8 @@ sp_help_log_shipping_monitor
 |**database_name**|**sysname**|Nome do banco de dados.|  
 |**time_since_last_backup**|**Int**|Período, em minutos, desde o último backup de log.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.|  
 |**last_backup_file**|**nvarchar(500)**|Nome do último arquivo de backup de log com êxito.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.|  
-|**backup_threshold**|**Int**|O período de tempo, em minutos, depois do último backup antes que um erro de alerta de limite seja gerado. **backup_threshold** é **int**, com um padrão de **60 minutos**.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.<br /><br /> Esse valor pode ser alterado usando [sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
-|**is_backup_alert_enabled**|**bit**|Especifica se um alerta será gerado quando **backup_threshold** for excedido. O valor de um (**1**), o padrão, significa que o alerta será gerado.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.<br /><br /> Esse valor pode ser alterado usando [sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**backup_threshold**|**Int**|O período de tempo, em minutos, depois do último backup antes que um erro de alerta de limite seja gerado. **backup_threshold** é **int**, com um padrão de **60 minutos**.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.<br /><br /> Esse valor pode ser alterado usando [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**is_backup_alert_enabled**|**bit**|Especifica se um alerta será gerado quando **backup_threshold** for excedido. O valor de um (**1**), o padrão, significa que o alerta será gerado.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.<br /><br /> Esse valor pode ser alterado usando [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
 |**time_since_last_copy**|**Int**|Período, em minutos, desde que o último backup de log foi copiado.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.|  
 |**last_copied_file**|**nvarchar(500)**|Nome do último arquivo de backup de log copiado com êxito.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.|  
 |**time_since_last_restore**|**Int**|Período, em minutos, desde que o último backup de log foi restaurado.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.|  
@@ -78,7 +78,7 @@ sp_help_log_shipping_monitor
  Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

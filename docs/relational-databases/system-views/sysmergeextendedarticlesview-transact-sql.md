@@ -1,16 +1,16 @@
 ---
 title: sysmergeextendedarticlesview (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeextendedarticlesview view
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c517abaa4c5ffdc5e0d84ac6d4c6268ddd524ac9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a7d5d6047fad60544f8a0047a08011940fcf08d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.lasthandoff: 02/03/2018
 |**sync_objid**|**Int**|Identificador da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não uma exibição; use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
-|**description**|**nvarchar(255)**|A descrição breve do artigo.|  
+|**Descrição**|**nvarchar(255)**|A descrição breve do artigo.|  
 |**pre_creation_command**|**tinyint**|A ação padrão a ser tomada quando o artigo é criado no banco de dados de assinatura:<br /><br /> **0** = nenhum - se a tabela já existir no assinante, nenhuma ação será tomada.<br /><br /> **1** = descartar - descarta a tabela antes de criá-lo novamente.<br /><br /> **2** = excluir - emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.<br /><br /> **3** = truncar - igual a 2, mas exclui páginas em vez de linhas. Porém, não exige uma cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|A ID da publicação à qual o artigo atual pertence.|  
-|**nickname**|**Int**|O mapeamento de apelido para identificação do artigo.|  
+|**Apelido**|**Int**|O mapeamento de apelido para identificação do artigo.|  
 |**column_tracking**|**Int**|Indica se o controle de coluna é implementado ou não para o artigo.|  
 |**status**|**tinyint**|Indica o status do artigo, que pode ser um dos seguintes:<br /><br /> **1** = não sincronizado - o script de processamento inicial para publicar a tabela será executado na próxima vez em que o Snapshot Agent é executado.<br /><br /> **2** = ativo - o script de processamento inicial para publicar a tabela foi executado.<br /><br /> **5** = New_inactive - a ser adicionado.<br /><br /> **6** = New_active - a ser adicionado.|  
 |**conflict_table**|**sysname**|O nome da tabela local que contém os registros conflitantes para o artigo atual. Essa tabela é somente informativa e seu conteúdo pode ser modificado ou excluído por rotinas de resolução de conflitos personalizadas ou diretamente pelo administrador.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/03/2018
 |**insert_proc**|**sysname**|O procedimento usado pelo resolvedor de conflitos padrão para inserir linhas durante a sincronização.|  
 |**update_proc**|**sysname**|O procedimento usado pelo resolvedor de conflitos padrão para atualizar linhas durante a sincronização.|  
 |**select_proc**|**sysname**|O nome de um procedimento armazenado gerado automaticamente usado pelo Merge Agent para efetuar bloqueio e localizar colunas e linhas para um artigo.|  
-|**schema_option**|**binary(8)**|Para obter os valores com suporte de *schema_option*, consulte [sp_addmergearticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|Para obter os valores com suporte de *schema_option*, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|O nome da tabela criada no Assinante.|  
 |**resolver_clsid**|**nvarchar(50)**|A ID do resolvedor de conflitos personalizado.|  
 |**subset_filterclause**|**nvarchar(1000)**|A cláusula de filtro para este artigo.|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/03/2018
 |**identity_support**|**Int**|Especifica se o tratamento de intervalo de identidade automático está habilitado. **1** significa que a manipulação de intervalo de identidade é habilitada, e **0** significa que não há nenhuma identidade de intervalo de suporte.|  
 |**destination_owner**|**sysname**|O nome do proprietário do objeto de destino.|  
 |**before_image_objid**|**Int**|A ID de objeto da tabela de controle. A tabela de controle contém certos valores de coluna de chave quando uma publicação é configurada para habilitar otimizações de alteração de partição.|  
-|**before_view_objid**|**Int**|A ID de objeto de uma tabela de exibição. A exibição está em uma tabela que controla se uma linha pertenceu a um Assinante específico antes de ser excluída ou atualizada. Aplica-se apenas quando uma publicação é criada com  *@keep_partition_changes*   =  **true**.|  
+|**before_view_objid**|**Int**|A ID de objeto de uma tabela de exibição. A exibição está em uma tabela que controla se uma linha pertenceu a um Assinante específico antes de ser excluída ou atualizada. Aplica-se apenas quando uma publicação é criada com *@keep_partition_changes*  =  **true**.|  
 |**verify_resolver_signature**|**Int**|Especifica se uma assinatura digital é verificada antes de usar um resolvedor em replicação de mesclagem:<br /><br /> **0** = assinatura não for verificada.<br /><br /> **1** = assinatura é verificada para ver se ele é de uma fonte confiável.|  
 |**allow_interactive_resolver**|**bit**|Especifica se o uso do Resolvedor Interativo em um artigo está habilitado. **1** Especifica que o resolvedor interativo é usado no artigo.|  
 |**fast_multicol_updateproc**|**bit**|Especifica se o Merge Agent foi habilitado para aplicar alterações em várias colunas na mesma linha em uma instrução UPDATE.<br /><br /> **0** = problemas de uma atualização separada para cada coluna alterada.<br /><br /> **1** = emitido em instrução UPDATE que faz com que as atualizações ocorram em várias colunas em uma instrução.|  
@@ -98,8 +98,8 @@ ms.lasthandoff: 02/03/2018
 |**preserve_rowguidcol**|**bit**|Indica se a replicação usa uma coluna rowguid existente. Um valor de **1** significa que uma coluna ROWGUIDCOL existente é usada. **0** significa que a replicação adicionou a coluna ROWGUIDCOL.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   

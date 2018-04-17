@@ -1,16 +1,16 @@
 ---
 title: sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_refresh_parameter_encryption
@@ -21,23 +21,24 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 564d0bd6479d185ce37e1f4c293d73b87756edf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Atualiza os metadados sempre criptografado para os parâmetros do procedimento armazenado de não associadas a esquema especificado, função definida pelo usuário, exibição, DML disparador, gatilho DDL de nível de banco de dados ou gatilho DDL de nível de servidor no banco de dados atual. 
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +57,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL de nível do banco de dados ou gatilho DDL do nível de servidor. *nome_de_módulo* não pode ser um tempo de execução de linguagem comum (CLR) procedimento armazenado ou uma função CLR. *nome_de_módulo* não pode ser associada a esquema. *nome_de_módulo* é `nvarchar`, sem padrão. *nome_de_módulo* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.
 
 [  **@namespace =** ] **'** < classe > **'**   
-É a classe do módulo especificado. Quando *nome_de_módulo* é um gatilho DDL, `<class>` é necessária. `<class>`is `nvarchar(20)`. As entradas válidas são `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER`.    
+É a classe do módulo especificado. Quando *nome_de_módulo* é um gatilho DDL, `<class>` é necessária. `<class>` é `nvarchar(20)`. As entradas válidas são `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER`.    
 
 ## <a name="return-code-values"></a>Valores do código de retorno  
 
@@ -71,7 +72,7 @@ Os metadados de criptografia para os parâmetros de um módulo podem se tornar d
 
 Quando as propriedades de criptografia de uma tabela são modificadas, `sp_refresh_parameter_encryption` deve ser executado para quaisquer módulos direta ou indiretamente faz referência à tabela. Esse procedimento armazenado pode ser chamado nesses módulos em qualquer ordem, sem exigir que o usuário para o módulo interno de primeira atualização antes de passar para chamadores.
 
-`sp_refresh_parameter_encryption`não afeta nenhuma permissão, propriedades estendidas, ou `SET` opções que estão associadas ao objeto. 
+`sp_refresh_parameter_encryption` não afeta nenhuma permissão, propriedades estendidas, ou `SET` opções que estão associadas ao objeto. 
 
 Para atualizar um gatilho DDL de nível de servidor, execute este procedimento armazenado a partir do contexto de qualquer banco de dados.
 
@@ -161,7 +162,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>Consulte Também 
+## <a name="see-also"></a>Consulte também 
 
 [Sempre criptografado](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Assistente do Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

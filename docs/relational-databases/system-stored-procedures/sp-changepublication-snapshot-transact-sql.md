@@ -1,16 +1,16 @@
 ---
 title: sp_changepublication_snapshot (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication_snapshot
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a0a7c888c4851a9bcb671823d0bd46309a00300
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d88193ced1dede073870ff319dedd8c63066ec48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_type =**] *frequency_type*  
  É a frequência de agendamento do agente. *frequency_type* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -87,7 +87,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_interval =**] *frequency_interval*  
  Especifica os dias em que o agente é executado. *frequency_interval* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Segunda-feira|  
@@ -104,7 +104,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_subday =**] *frequency_subday*  
  É a unidade do *freq_subday_interval*. *frequency_subday* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -151,7 +151,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
- [  **@job_login**  =] **'***job_login***'**  
+ [ **@job_login** =] **'***job_login***'**  
  É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo. Isso não pode ser alterado para um editor não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [  **@job_password =** ] **'***job_password***'**  
@@ -169,7 +169,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_changepublication_snapshot** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
@@ -178,7 +178,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication_snapshot &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

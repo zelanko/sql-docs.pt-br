@@ -1,16 +1,16 @@
 ---
-title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sql_referenced_entities (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ sys.dm_sql_referenced_entities (
   
  *schema_name.referencing_entity_name* é **nvarchar (517)**.  
   
- *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
+ *< Referencing_class >* :: = {objeto | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  É a classe da entidade de referência especificada. Apenas uma classe pode ser especificada por instrução.  
   
  *< referencing_class >* é **nvarchar (60)**.  
@@ -86,7 +87,7 @@ sys.dm_sql_referenced_entities (
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**Int**|ID da coluna quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.|  
-|referenced_server_name|**sysname**|Nome do servidor da entidade referenciada.<br /><br /> Essa coluna é populada para dependências entre servidores que são feitas especificando um nome de quatro partes válido. Para obter informações sobre nomes de várias partes, consulte [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para dependências não associadas a esquema para as quais a entidade foi referenciada sem especificar um nome de quatro partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e portanto, só podem ser definidas usando uma de duas partes (*Object*) nome.|  
+|referenced_server_name|**sysname**|Nome do servidor da entidade referenciada.<br /><br /> Essa coluna é populada para dependências entre servidores que são feitas especificando um nome de quatro partes válido. Para obter informações sobre nomes de várias partes, consulte [convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para dependências não associadas a esquema para as quais a entidade foi referenciada sem especificar um nome de quatro partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e portanto, só podem ser definidas usando uma de duas partes (*Object*) nome.|  
 |referenced_database_name|**sysname**|Nome do banco de dados da entidade referenciada.<br /><br /> Essa coluna é populada para referências entre servidores ou entre bancos de dados, que são feitas especificando um nome de três ou quatro partes válido.<br /><br /> NULL para referências não associadas a esquema quando especificadas usando um nome de uma ou duas partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e portanto, só podem ser definidas usando uma de duas partes (*Object*) nome.|  
 |referenced_schema_name|**sysname**|Esquema ao qual a entidade referenciada pertence.<br /><br /> NULL para referências não associadas a esquema para as quais a entidade foi referenciada sem especificar o nome do esquema.<br /><br /> Jamais NULL para referências associadas a esquema.|  
 |referenced_entity_name|**sysname**|Nome da entidade referenciada. Não permite valor nulo.|  
@@ -128,14 +129,14 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado * *|Sim|Sim|  
+|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
 |procedimento armazenado CLR|não|Sim|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] função definida pelo usuário|Sim|Sim|  
+|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
 |Função CLR definida pelo usuário|não|Sim|  
 |Gatilho CLR (DML e DDL)|não|não|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DML|Sim|não|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DDL de nível de banco de dados|Sim|não|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DDL de nível de servidor|Sim|não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
 |Procedimentos armazenados estendidos|não|Sim|  
 |Fila|não|Sim|  
 |Sinônimo|não|Sim|  
@@ -143,7 +144,7 @@ sys.dm_sql_referenced_entities (
 |Coleção de esquemas XML|não|Sim|  
 |Função de partição|não|Sim|  
   
- \*Uma tabela é controlada como uma entidade de referência apenas quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de coluna computada, restrição CHECK ou restrição padrão.  
+ \* Uma tabela é controlada como uma entidade de referência apenas quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de coluna computada, restrição CHECK ou restrição padrão.  
   
  ** Os procedimentos armazenados numerados com um valor inteiro maior que 1 não são controlados como entidade que faz referência nem como entidade referenciada.  
   

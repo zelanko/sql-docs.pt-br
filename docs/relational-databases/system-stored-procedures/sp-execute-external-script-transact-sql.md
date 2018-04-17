@@ -2,7 +2,7 @@
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ sp_execute_external_script
  @script = N'*script*'  
  Script de idioma externo especificado como uma entrada de um literal ou variável. *script* é **nvarchar (max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*' ]  
+ [ @input_data_1_name = N'*input_data_1_name*']  
  Especifica o nome da variável usado para representar a consulta definida pelo @input_data_1. O tipo de dados da variável no script externo depende do idioma. No caso de R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. *input_data_1_name* é **sysname**.  
   
  Valor padrão é `InputDataSet`.  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*']  
  Especifica os dados de entrada usados pelo script externo na forma de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. O tipo de dados *input_data_1* é **nvarchar (max)**.
   
- [ @output_data_1_name =  N'*output_data_1_name*' ]  
+ [ @output_data_1_name = N'*output_data_1_name*']  
  Especifica o nome da variável no script externo que contém os dados a serem retornados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após a conclusão da chamada de procedimento armazenado. O tipo de dados da variável no script externo depende do idioma. Para R, a saída deve ser um quadro de dados. Para Python, a saída deve ser um quadro de dados pandas. *output_data_1_name* é **sysname**.  
   
  Valor padrão é "OutputDataSet".  
@@ -137,7 +137,7 @@ Como alternativa, **CAST** a coluna ou o valor para um tipo com suporte no [!INC
   
 -   **xml**  
   
--   **hierarchyid**, **geometry**, **geography**  
+-   **HierarchyID**, **geometria**, **geografia**  
   
 -   Tipos definidos pelo usuário de CLR
 

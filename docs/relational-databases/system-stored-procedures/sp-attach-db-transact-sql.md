@@ -1,16 +1,16 @@
 ---
 title: sp_attach_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b17a11f31faff52e2519d2c10d34af88108f0399
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 460d9eab90fb65f4d271829d76d72dfa26f0b1b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,11 +54,11 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@dbname=** ] **'***dbnam* **'**  
+ [  **@dbname=** ] **' * dbnam* **'**  
  É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *DBName* é **sysname**, com um padrão NULL.  
   
- [ **@filename1=** ] **'***filename_n***'**  
- É o nome físico, incluindo o caminho, do arquivo de banco de dados. *filename_n* é **nvarchar (260)**, com um padrão NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começar em  **@filename1**  e são incrementados para  **@filename16** . A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
+ [  **@filename1=** ] **'***filename_n***'**  
+ É o nome físico, incluindo o caminho, do arquivo de banco de dados. *filename_n* é **nvarchar (260)**, com um padrão NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começar em **@filename1** e são incrementados para **@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -85,14 +85,14 @@ sp_attach_db [ @dbname= ] 'dbname'
   
 -   Se você anexar o banco de dados à mesma instância e versão de servidor como banco de dados original, nenhuma etapa adicional será necessária.  
   
--   Se você anexar o banco de dados para a mesma instância de servidor, mas com uma versão atualizada, você deve executar [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) para atualizar a replicação após a conclusão da operação de anexação.  
+-   Se anexar o banco de dados à mesma instância de servidor, mas com uma versão atualizada, você deverá executar [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) para atualizar a replicação depois que a operação de anexação tiver sido concluída.  
   
--   Se você anexar o banco de dados a uma instância de servidor diferente, independentemente da versão, você deve executar [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para remover a replicação após a conclusão da operação de anexação.  
+-   Se você anexar o banco de dados a uma instância de servidor diferente, independentemente da versão, deverá executar [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para remover a replicação depois que a operação de anexação tiver sido concluída.  
   
  Quando um banco de dados é anexado ou restaurado pela primeira vez a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra de banco de dados (criptografada pela chave mestra de serviço) ainda não está armazenada no servidor. É necessário usar a instrução **OPEN MASTER KEY** para descriptografar a DMK (chave mestra do banco de dados). Após a descriptografia da DMK, você tem a opção de habilitar a descriptografia automática no futuro usando a instrução **ALTER MASTER KEY REGENERATE** para provisionar o servidor com uma cópia da DMK criptografada com a SMK (chave mestra de serviço). Quando um banco de dados for atualizado de uma versão anterior, a DMK deverá ser regenerada para usar o algoritmo AES mais recente. Para obter mais informações sobre como regenerar a DMK, veja [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). O tempo necessário para regenerar a chave DMK para atualizar o AES depende do número de objetos protegidos pela DMK. É necessário regenerar a chave DMK para atualizar o AES somente uma vez, isso não tem impacto sobre regenerações futuras como parte de uma estratégia de rotação de chave.  
   
 ## <a name="permissions"></a>Permissões  
- Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [CREATE DATABASE &#40; Servidor SQL Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [criar banco de dados &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir anexa arquivos de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ao servidor atual.  

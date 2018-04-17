@@ -2,7 +2,7 @@
 title: sp_update_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a98f5a61c76e1e6ef0cd2dc2a17a445084dd15eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @name=] '*name*'  
+ [ @name=] '*nome*'  
  O nome do operador a ser modificado. *nome* é **sysname**, sem padrão.  
   
  [ @new_name=] '*novo_nome*'  
  O novo nome do operador. Esse nome deve ser exclusivo. *Novo_nome* é **sysname**, com um padrão NULL.  
   
- [ @enabled=] *enabled*  
+ [ @enabled=] *habilitado*  
  Um número que indica o status atual do operador (**1** se habilitado, **0** se não estiver). *habilitado* é **tinyint**, com um padrão NULL. Se não estiver habilitado, um operador não receberá notificações de alerta.  
   
  [ @email_address=] '*email_address*'  

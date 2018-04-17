@@ -1,16 +1,16 @@
 ---
-title: "syspublications (exibição do sistema) (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: syspublications (exibição do sistema) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - syspublications view
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b67197861029cbd9b16e1c829e4570540ca377f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 978d352a45fd10fcb1945c9614f7b04154419ccd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Exibição de sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**description**|**nvarchar(255)**|A entrada descritiva para a publicação.|  
+|**Descrição**|**nvarchar(255)**|A entrada descritiva para a publicação.|  
 |**name**|**sysname**|O nome exclusivo associado com a publicação.|  
 |**pubid**|**Int**|A coluna de identidade que fornece um ID exclusivo para a publicação.|  
 |**repl_freq**|**tinyint**|A frequência da replicação:<br /><br /> **0** = a transação com base (transacional).<br /><br /> **1** = atualização de tabela agendada (instantâneo).|  
@@ -79,11 +79,11 @@ ms.lasthandoff: 02/03/2018
 |**allow_initialize_from_backup**|**bit**|Indica se os assinantes podem iniciar uma assinatura para esta publicação de um backup em vez de um instantâneo inicial. **1** significa que as assinaturas podem ser inicializadas de um backup, e **0** significa que eles não podem. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**Int**|Indica se replicação de esquema tem suporte para a publicação.<br /><br /> **1** = DDL instruções executadas no publicador são replicadas.<br /><br /> **0** = indica que instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).|  
-|**options**|**Int**|Um bitmap que especifica opções de publicação adicionais, onde os valores de opção bit a bit são os seguintes:<br /><br /> **0x1** - habilitado para replicação ponto a ponto.<br /><br /> **0x2** -publicar somente alterações locais para replicação ponto a ponto.<br /><br /> **0x4** - habilitado para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.<br /><br /> **0x8** - habilitado para detecção de conflitos ponto a ponto.|  
+|**Opções**|**Int**|Um bitmap que especifica opções de publicação adicionais, onde os valores de opção bit a bit são os seguintes:<br /><br /> **0x1** - habilitado para replicação ponto a ponto.<br /><br /> **0x2** -publicar somente alterações locais para replicação ponto a ponto.<br /><br /> **0x4** - habilitado para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.<br /><br /> **0x8** - habilitado para detecção de conflitos ponto a ponto.|  
 |**originator_id**|**smallint**|Identifica cada nó em uma topologia de replicação ponto a ponto com a finalidade de detecção de conflito. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

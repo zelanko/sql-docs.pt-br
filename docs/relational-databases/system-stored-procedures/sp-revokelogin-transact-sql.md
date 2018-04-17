@@ -1,16 +1,16 @@
 ---
 title: sp_revokelogin (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revokelogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_revokelogin
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6869d96b5fb561328b9eed41c7b5af147b50db10
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ac3277bbfb2a56d5be771fef82ccf56b2b5e866e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/27/2017
   Remove as entradas de logon de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um usuário do Windows ou o grupo criado usando CREATE LOGIN, **sp_grantlogin**, ou **sp_denylogin**.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) em vez disso.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_revokelogin** desabilita conexões que usam a conta especificada pelo *login* parâmetro. No entanto, os usuários do Windows que têm acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] através da associação em um grupo do Windows ainda podem se conectar como o grupo após o acesso individual ter sido revogado. Da mesma forma, se o *login* parâmetro especifica o nome de um grupo do Windows, os membros desse grupo foram separadamente concedido acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda será capaz de se conectar.  
   
  Por exemplo, se o usuário de Windows **ADVWORKS\john** é um membro do grupo do Windows **ADVWORKS\Admins**, e **sp_revokelogin** revoga o acesso de `ADVWORKS\john`:  
@@ -87,8 +87,8 @@ EXEC sp_revokelogin [Corporate\MollyA];
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Segurança armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Remover logon &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Remover logon & #40; Transact-SQL & #41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   

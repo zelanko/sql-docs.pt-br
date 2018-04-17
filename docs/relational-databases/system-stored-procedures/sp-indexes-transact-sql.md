@@ -1,16 +1,16 @@
 ---
 title: sp_indexes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_indexes_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63e05b45d16e8fdbe00f98957851e00408ac7c5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bebd14116b2b8cea0c1f0836571c994ba3fbd340
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações de índice da tabela remota especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique=] '*is_unique*'  
  É o tipo de índice para o qual as informações devem ser retornadas. *is_unique* é **bit**, com um padrão NULL, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Retorna informações sobre índices exclusivos.|  
 |0|Retorna informações sobre índices que não são exclusivos.|  
@@ -86,11 +86,11 @@ sp_indexes [ @table_server = ] 'table_server'
 |INDEX_QUALIFER|**sysname**|Nome do proprietário do índice. Alguns produtos DBMS permitem que outros usuários, que não o proprietário da tabela, criam índices. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que **TABLE_NAME**.|  
 |INDEX_NAME|**sysname**|Nome do índice.|  
 |TYPE|**smallint**|Tipo de índice:<br /><br /> 0 = Estatísticas de uma tabela<br /><br /> 1 = Clusterizado<br /><br /> 2 = Com hash<br /><br /> 3 = outros|  
-|ORDINAL_POSITION|**int**|Posição ordinal da coluna no índice. A primeira coluna no índice é 1. Esta coluna sempre retorna um valor.|  
+|ORDINAL_POSITION|**Int**|Posição ordinal da coluna no índice. A primeira coluna no índice é 1. Esta coluna sempre retorna um valor.|  
 |COLUMN_NAME|**sysname**|É o nome correspondente da coluna para cada coluna do TABLE_NAME retornado.|  
 |ASC_OR_DESC|**varchar**|É a ordem usada no agrupamento:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna A.|  
-|CARDINALITY|**int**|É o número de linhas na tabela ou valores exclusivos no índice.|  
-|PAGES|**int**|É o número de páginas para armazenar o índice ou a tabela.|  
+|CARDINALITY|**Int**|É o número de linhas na tabela ou valores exclusivos no índice.|  
+|PAGES|**Int**|É o número de páginas para armazenar o índice ou a tabela.|  
 |FILTER_CONDITION|**nvarchar (**4000**)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -107,13 +107,13 @@ EXEC sp_indexes @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas distribuídas armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_tables_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [Procedimentos armazenados de consultas de Distributed &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

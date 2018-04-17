@@ -1,16 +1,16 @@
 ---
 title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_parameter_encryption
@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_describe_parameter_encryption
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b458e871ff32abe97727fc5d1a2c07f6c628e1cf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59cd9e2425f55c8b3b138d25de298b8fae400474
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,9 +51,9 @@ sp_describe_parameter_encryption
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. SQL_batch Transact pode ser nvarchar (n) ou nvarchar (max).  
   
  [ @params =] 'N'parameters  
- *@params*Fornece uma cadeia de caracteres de declaração para os parâmetros para o lote Transact-SQL, que é similar a sp_executesql. Parâmetros podem ser nvarchar (n) ou nvarchar (max).  
+ *@params* Fornece uma cadeia de caracteres de declaração para os parâmetros para o lote Transact-SQL, que é similar a sp_executesql. Parâmetros podem ser nvarchar (n) ou nvarchar (max).  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n*é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em  *@params* . Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiver parâmetros,  *@params*  não é necessária. NULL é o valor padrão para esse parâmetro.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em *@params*. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiver parâmetros, *@params* não é necessária. NULL é o valor padrão para esse parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
  0 indica êxito. Qualquer outra coisa indicam falha.  
@@ -68,12 +69,12 @@ sp_describe_parameter_encryption
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_ordinal**|**int**|ID da linha no conjunto de resultados.|  
-|**database_id**|**int**|Id do banco de dados.|  
-|**column_encryption_key_id**|**int**|A id de chave de criptografia de coluna. Observação: essa id indica uma linha de [sys. column_encryption_keys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) exibição do catálogo.|  
-|**column_encryption_key_version**|**int**|Reservado para uso futuro. No momento, sempre contém 1.|  
-|**column_encryption_key_metadata_version**|**binary (8)**|Um carimbo de hora que representa a hora de criação da chave de criptografia de coluna.|  
-|**column_encryption_key_encrypted_value**|**varbinary (4000)**|O valor criptografado da chave de criptografia de coluna.|  
+|**column_encryption_key_ordinal**|**Int**|ID da linha no conjunto de resultados.|  
+|**database_id**|**Int**|Id do banco de dados.|  
+|**column_encryption_key_id**|**Int**|A id de chave de criptografia de coluna. Observação: essa id indica uma linha de [sys. column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) exibição do catálogo.|  
+|**column_encryption_key_version**|**Int**|Reservado para uso futuro. No momento, sempre contém 1.|  
+|**column_encryption_key_metadata_version**|**binary(8)**|Um carimbo de hora que representa a hora de criação da chave de criptografia de coluna.|  
+|**column_encryption_key_encrypted_value**|**varbinary(4000)**|O valor criptografado da chave de criptografia de coluna.|  
 |**column_master_key_store_provider_name**|**sysname**|O nome do provedor de repositório de chaves que contém a chave mestra de coluna que foi usada para produzir o valor criptografado da chave de criptografia de coluna.|  
 |**column_master_key_path**|**nvarchar(4000)**|O caminho da chave da chave mestra de coluna, que foi usada para produzir o valor criptografado da chave de criptografia de coluna.|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|O nome do algoritmo de criptografia usado para gerar o valor de criptografia da chave de criptografia de coluna.|  
@@ -82,14 +83,14 @@ sp_describe_parameter_encryption
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**parameter_ordinal**|**int**|ID da linha no conjunto de resultados.|  
-|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados no  *@params*  argumento.|  
+|**parameter_ordinal**|**Int**|ID da linha no conjunto de resultados.|  
+|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados no *@params* argumento.|  
 |**column_encryption_algorithm**|**tinyint**|Código que indica o algoritmo de criptografia configurado para a coluna, o parâmetro corresponde ao. Os valores atualmente suportados são: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Código que indica o tipo de criptografia configurado para a coluna, o parâmetro corresponde ao. Os valores com suporte são:<br /><br /> 0 – texto sem formatação (a coluna não está criptografada)<br /><br /> 1 – a criptografia aleatória<br /><br /> 2 – criptografia determinística.|  
-|**column_encryption_key_ordinal**|**int**|Código da linha em que o primeiro resultado definido. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde ao.|  
+|**column_encryption_key_ordinal**|**Int**|Código da linha em que o primeiro resultado definido. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde ao.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versão do algoritmo de normalização de tipo.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver de cliente, dando suporte a Always Encrypted, chama automaticamente **sp_describe_parameter_encryption** para recuperar metadados de criptografia para consultas parametrizadas, emitidas pelo aplicativo. Subsequentemente, o driver usa os metadados de criptografia para criptografar os valores de parâmetros que correspondem às colunas de banco de dados protegidas com o sempre criptografado e substitui os valores de parâmetro de texto sem formatação, enviados pelo aplicativo, com criptografada valores de parâmetro antes de enviar a consulta para o mecanismo de banco de dados.  
   
 ## <a name="permissions"></a>Permissões  

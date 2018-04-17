@@ -1,16 +1,16 @@
 ---
 title: sp_update_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f9b2702c847457fec32085efec94b0d25e840fa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/03/2018
   
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,16 +63,16 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  O número de identificação do trabalho a ser atualizado. *job_id*é **uniqueidentifier**.  
   
- [ **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name*is **nvarchar(128)**.  
+ [  **@job_name =**] **'***job_name***'**  
+ O nome do trabalho. *job_name*é **nvarchar (128)**.  
   
 > **Observação:** ou *job_id* ou *job_name* devem ser especificados, mas não podem ser especificados.  
   
- [ **@new_name =**] **'***new_name***'**  
- O novo nome do trabalho. *new_name*is **nvarchar(128)**.  
+ [  **@new_name =**] **'***novo_nome***'**  
+ O novo nome do trabalho. *Novo_nome*é **nvarchar (128)**.  
   
  [  **@enabled =**] *habilitado*  
  Especifica se o trabalho está habilitado (**1**) ou não habilitado (**0**). *habilitado*é **tinyint**.  
@@ -84,9 +84,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*é **int**.  
   
  [  **@category_name =**] **'***categoria***'**  
- ID da categoria do trabalho. *category*is **nvarchar(128)**.  
+ ID da categoria do trabalho. *categoria de*é **nvarchar (128)**.  
   
- [ **@owner_login_name =**] **'***login***'**  
+ [  **@owner_login_name =**] **'***login***'**  
  O nome do logon que é o proprietário do trabalho. *logon*é **nvarchar (128)** somente os membros do **sysadmin** função de servidor fixa pode alterar a propriedade do trabalho.  
   
  [  **@notify_level_eventlog =**] *eventlog_level*  
@@ -120,7 +120,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@delete_level =**] *delete_level*  
  Especifica quando excluir o trabalho. *delete_value*é **int**. *delete_level*usa os mesmos valores como *eventlog_level*.  
   
- [ **@automatic_post =**] *automatic_post*  
+ [  **@automatic_post =**] *automatic_post*  
  Reservado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

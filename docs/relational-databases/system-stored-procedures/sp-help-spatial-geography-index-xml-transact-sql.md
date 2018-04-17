@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geography_index_xml (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geography_index_xml_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geography_index_xml procedure
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffc4f49e8087189e9fd7d364d4d9ee3cc668573a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6e9c6fe0d979d9e07a7023d1746a1e0cfb2cd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/27/2017
   
  Os resultados são retornados em um fragmento de XML que exibe o nome e valor das propriedades selecionadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permissões  
  O usuário deve ter uma função PUBLIC atribuída a ele para acessar o procedimento. Requer permissão READ ACCESS no servidor e no objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As propriedades que contêm valores NULL não são incluídas no conjunto de retorno.  
   
 ## <a name="example"></a>Exemplo  
@@ -88,6 +88,6 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Fundamentos de XQuery](../../xquery/xquery-basics.md)   
- [Referência de linguagem XQuery](../../xquery/xquery-language-reference-sql-server.md)  
+ [Referência de linguagem do XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

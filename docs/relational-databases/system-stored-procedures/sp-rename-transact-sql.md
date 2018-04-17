@@ -1,16 +1,16 @@
 ---
 title: sp_rename (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rename_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3e8a506b800ebb81c1721175009c41d7f2a748d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 > [!CAUTION]  
 >  A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. É recomendável não usar essa instrução para renomear procedimentos armazenados, gatilhos, funções definidas pelo usuário ou exibições; em vez disso, descarte o objeto e recrie-o com o novo nome.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +65,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 > [!NOTE]  
 >  Os nomes de gatilhos não podem começar com # ou ##.  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =] '*object_type*'  
  É o tipo do objeto que está sendo renomeado. *object_type* é **varchar(13)**, com um padrão NULL, e pode ser um destes valores.  
   
 |Value|Description|  
@@ -73,7 +74,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|Um banco de dados definido pelo usuário. Esse tipo de objeto é necessário quando um banco de dados é renomeado.|  
 |INDEX|Um índice definido pelo usuário. Renomear um índice com estatísticas automaticamente também renomeia as estatísticas.|  
 |OBJECT|Um item de um tipo controlado no [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Por exemplo, OBJECT pode ser usado para renomear objetos, inclusive restrições (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), tabelas de usuário e regras.|  
-|STATISTICS|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> As estatísticas criadas explicitamente por um usuário ou criadas implicitamente com um índice. Renomear as estatísticas de um índice automaticamente também renomeia o índice.|  
+|STATISTICS|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> As estatísticas criadas explicitamente por um usuário ou criadas implicitamente com um índice. Renomear as estatísticas de um índice automaticamente também renomeia o índice.|  
 |USERDATATYPE|Um [tipos definidos pelo usuário CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) adicionado pela execução [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) ou [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -213,6 +214,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   
