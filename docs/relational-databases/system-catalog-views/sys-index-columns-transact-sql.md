@@ -1,16 +1,16 @@
 ---
 title: index_columns (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.index_columns
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.index_columns catalog view
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aee9551240096547e37d4157179f80ca7e936182
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 28917dfed2c032fc3a6646c77cbd869fc2982798
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +41,10 @@ ms.lasthandoff: 11/21/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID do objeto em que o índice está definido.|  
-|**index_id**|**int**|ID do índice no qual a coluna está definida.|  
-|**index_column_id**|**int**|ID da coluna de índice. **index_column_id** só é exclusivo dentro **index_id**.|  
-|**column_id**|**int**|ID da coluna na **object_id**.<br /><br /> 0 = RID (Identificador de linha) em um índice não clusterizado.<br /><br /> **column_id** só é exclusivo dentro **object_id**.|  
+|**object_id**|**Int**|ID do objeto em que o índice está definido.|  
+|**index_id**|**Int**|ID do índice no qual a coluna está definida.|  
+|**index_column_id**|**Int**|ID da coluna de índice. **index_column_id** só é exclusivo dentro **index_id**.|  
+|**column_id**|**Int**|ID da coluna na **object_id**.<br /><br /> 0 = RID (Identificador de linha) em um índice não clusterizado.<br /><br /> **column_id** só é exclusivo dentro **object_id**.|  
 |**key_ordinal**|**tinyint**|Ordinal (com base em 1) dentro do conjunto de colunas chave.<br /><br /> 0 = Não é uma coluna de chave ou é um índice XML, índice columnstore ou índice espacial.<br /><br /> Observação: Um índice XML ou espacial não pode ser uma chave porque as colunas subjacentes não são comparáveis, que significa que seus valores não podem ser ordenados.|  
 |**partition_ordinal**|**tinyint**|Ordinal (com base em 1) dentro do conjunto de colunas de particionamento. Um índice columnstore clusterizado pode ter, no máximo, uma coluna de particionamento.<br /><br /> 0 = Não é uma coluna de particionamento.|  
 |**is_descending_key**|**bit**|1 = A coluna de chave do índice tem uma classificação decrescente.<br /><br /> 0 = A coluna de chave do índice tem uma classificação crescente, ou a coluna faz parte de um índice de hash.|  
@@ -87,10 +88,10 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de catálogo de objeto &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Consultando as perguntas frequentes do catálogo do sistema do SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

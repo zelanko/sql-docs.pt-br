@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.DM exec_cursors (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_cursors_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3765face3d65bbb56f65bd9383aa21f62225e79d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**Int**|ID da sessão que detém o cursor.|  
 |**cursor_id**|**Int**|ID do objeto do cursor.|  
 |**name**|**nvarchar(256)**|Nome do cursor como definido pelo usuário.|  
-|**Propriedades**|**nvarchar(256)**|Especifica as propriedades do cursor. Os valores das seguintes propriedades são concatenados para formar o valor desta coluna:<br />Interface de declaração<br />Tipo de cursor <br />Simultaneidade de cursores<br />Escopo do cursor<br />Nível de aninhamento do cursor<br /><br /> Por exemplo, o valor retornado nesta coluna pode ser "TSQL &#124; Dinâmico &#124; Otimista &#124; Global (0) ".|  
+|**Propriedades**|**nvarchar(256)**|Especifica as propriedades do cursor. Os valores das seguintes propriedades são concatenados para formar o valor desta coluna:<br />Interface de declaração<br />Tipo de cursor <br />Simultaneidade de cursores<br />Escopo do cursor<br />Nível de aninhamento do cursor<br /><br /> Por exemplo, o valor retornado nesta coluna pode ser "TSQL &#124; dinâmico &#124; Optimistic &#124; Global (0)".|  
 |**sql_handle**|**varbinary(64)**|Identificador do texto do lote que declarou o cursor.|  
 |**statement_start_offset**|**Int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com o **sql_handle**, o **statement_end_offset**e o [dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
 |**statement_end_offset**|**Int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usado junto com o **sql_handle**, o **statement_start_offset**e o **dm_exec_sql_text** função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
@@ -73,7 +73,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**Int**|Posição de cursor dentro do buffer de busca.|  
 |**worker_time**|**bigint**|Tempo gasto, em microssegundos, pelos trabalhados que executam este cursor.|  
 |**reads**|**bigint**|Número de leituras executadas pelo cursor.|  
-|**writes**|**bigint**|Número de gravações executadas pelo cursor.|  
+|**Gravações**|**bigint**|Número de gravações executadas pelo cursor.|  
 |**dormant_duration**|**bigint**|Milissegundos desde o início da última consulta (aberta ou de busca) neste cursor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -126,7 +126,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
   

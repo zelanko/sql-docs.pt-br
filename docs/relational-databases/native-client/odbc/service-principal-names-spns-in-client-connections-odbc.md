@@ -1,33 +1,34 @@
 ---
-title: "Nomes da entidade de serviço (SPNs) em conexões de cliente (ODBC) | Microsoft Docs"
-ms.custom: 
+title: Nomes da entidade de serviço (SPNs) em conexões de cliente (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10a6289d31cbb40ac7f468a38cc2bf53e895feed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 25bfc438f1bba14f3b173d67bbb8d40a4a8cf66d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Este tópico descreve atributos e funções ODBC que dão suporte a SPNs (nomes de entidades de serviço) em aplicativos cliente. Para obter mais informações sobre SPNs em aplicativos cliente, consulte [Nome Principal de serviço &#40; SPN &#41; Suporte em conexões de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) e [obter autenticação Kerberos mútua](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
+  Este tópico descreve atributos e funções ODBC que dão suporte a SPNs (nomes de entidades de serviço) em aplicativos cliente. Para obter mais informações sobre SPNs em aplicativos cliente, consulte [Nome Principal de serviço & #40; SPN & #41; Suporte em conexões de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) e [obter autenticação Kerberos mútua](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## <a name="connection-string-keywords"></a>Palavras-chave de cadeia de conexão  
  As palavras-chave de cadeia de conexão a seguir permitem que aplicativos cliente especifiquem um SPN.  
@@ -60,6 +61,6 @@ ms.lasthandoff: 01/25/2018
 -   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Cliente nativo do SQL Server &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [Cliente nativo do SQL Server & #40; ODBC & #41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

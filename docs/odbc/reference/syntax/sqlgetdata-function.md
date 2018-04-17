@@ -2,7 +2,7 @@
 title: Função SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>Função SQLGetData
 **Conformidade**  
@@ -134,7 +134,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync** não foi chamado para concluir a operação assíncrona anterior neste identificador.|Se a chamada de função anterior na alça retornará SQL_STILL_EXECUTING e se o modo de notificação está habilitado, **SQLCompleteAsync** deve ser chamado na alça para fazer o pós-processamento e concluir a operação.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLGetData** retorna os dados em uma coluna especificada. **SQLGetData** pode ser chamado somente depois que uma ou mais linhas foram buscadas do conjunto de resultados por **SQLFetch**, **SQLFetchScroll**, ou **SQLExtendedFetch** . Se os dados de comprimento variável são muito grandes para ser retornado em uma única chamada para **SQLGetData** (devido a uma limitação no aplicativo), **SQLGetData** poderá recuperá-lo em partes. É possível associar algumas colunas em uma linha e a chamada **SQLGetData** para outras pessoas, embora isso esteja sujeito a algumas restrições. Para obter mais informações, consulte [Obtendo dados Long](../../../odbc/reference/develop-app/getting-long-data.md).  
+ **SQLGetData** retorna os dados em uma coluna especificada. **SQLGetData** pode ser chamado somente depois que uma ou mais linhas foram buscadas do conjunto de resultados por **SQLFetch**, **SQLFetchScroll**, ou **SQLExtendedFetch**. Se os dados de comprimento variável são muito grandes para ser retornado em uma única chamada para **SQLGetData** (devido a uma limitação no aplicativo), **SQLGetData** poderá recuperá-lo em partes. É possível associar algumas colunas em uma linha e a chamada **SQLGetData** para outras pessoas, embora isso esteja sujeito a algumas restrições. Para obter mais informações, consulte [Obtendo dados Long](../../../odbc/reference/develop-app/getting-long-data.md).  
   
  Para obter informações sobre como usar **SQLGetData** com parâmetros de saída em fluxo, consulte [recuperar parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
@@ -277,7 +277,7 @@ if (retcode == SQL_SUCCESS) {
 |Envio de dados de parâmetro em tempo de execução|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Posicionando o cursor, atualizar dados no conjunto de linhas, ou atualizar ou excluir dados no conjunto de linhas|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

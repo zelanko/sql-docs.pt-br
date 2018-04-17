@@ -1,16 +1,16 @@
 ---
 title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4417ef0b9d7aef7de1133d05772ae8e80160b30b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/03/2018
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Primeiro LSN que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, o primeiro LSN que contém transações do change data capture.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|LSN do último registro de log de confirmação que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, o último registro de log de confirmação LSN para qualquer sessão que continha transações do change data capture|  
 |**last_commit_cdc_time**|**datetime**|Horário em que o último registro de log de confirmação foi processado que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, a hora em que o último log de confirmação registro para qualquer sessão que continha transações do change data capture.|  
-|**latency**|**Int**|A diferença, em segundos, entre **end_time** e **last_commit_cdc_time** na sessão. Este contador é populado no final da fase 7.<br /><br /> Quando **session_id** = 0, o último valor de latência diferente de zero registrado por uma sessão.|  
+|**Latência**|**Int**|A diferença, em segundos, entre **end_time** e **last_commit_cdc_time** na sessão. Este contador é populado no final da fase 7.<br /><br /> Quando **session_id** = 0, o último valor de latência diferente de zero registrado por uma sessão.|  
 |**empty_scan_count**|**Int**|Número de sessões sucessivas que não contém nenhuma transação do Change Data Capture.|  
 |**failed_sessions_count**|**Int**|Número de sessões que falharam.|  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/03/2018
  Os valores nesta exibição de gerenciamento dinâmico são redefinidos sempre que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciada.  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão VIEW DATABASE STATE para consultar o **cdc_log_scan_sessions** exibição de gerenciamento dinâmico. Para obter mais informações sobre permissões sobre exibições de gerenciamento dinâmico, consulte [funções e exibições de gerenciamento dinâmico &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Requer permissão VIEW DATABASE STATE para consultar o **cdc_log_scan_sessions** exibição de gerenciamento dinâmico. Para obter mais informações sobre permissões sobre exibições de gerenciamento dinâmico, consulte [funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações da sessão mais atual.  

@@ -1,30 +1,31 @@
 ---
-title: "Usos de parâmetros com valor de tabela do ODBC | Microsoft Docs"
-ms.custom: 
+title: Usos de parâmetros com valor de tabela do ODBC | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 050d0e33419b2f73fba8e5e7fd011d786fcb9f21
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dc60cd2dba6917fca0d2836112801a7a1477ecf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Usos de parâmetros ODBC com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/24/2018
   
  Às vezes, um aplicativo usa um parâmetro com valor de tabela com SQL dinâmico e é necessário fornecer o nome do tipo do parâmetro com valor de tabela. Se esse for o caso e o parâmetro com valor de tabela não está definido no esquema padrão atual para a conexão, SQL_CA_SS_TYPE_CATALOG_NAME e SQL_CA_SS_TYPE_SCHEMA_NAME devem ser definida usando SQLSetDescField. Como as definições de tipo de tabela e parâmetros com valor de tabela devem ocorrer no mesmo banco de dados, SQL_CA_SS_TYPE_CATALOG_NAME não deve ser definido se o aplicativo usar parâmetros com valor de tabela. Caso contrário, SQLSetDescField relatará um erro.  
   
- Exemplo de código para este cenário está no procedimento `demo_fixed_TVP_binding` na [usar parâmetros &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Exemplo de código para este cenário está no procedimento `demo_fixed_TVP_binding` na [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>Parâmetro com valor de tabela com streaming de linhas (Enviar dados como TVP usando dados em execução)  
  Neste cenário, o aplicativo fornece linhas ao driver conforme ele precisa e elas são transmitidas ao servidor. Isto evita ter a necessidade de armazenar em buffer todas as linhas na memória. Isto representa os cenários de inserção/atualização em massa. Parâmetros com valor de tabela fornecem um ponto de desempenho em algum local entre as matrizes do parâmetro e a cópia em massa. Isto é, parâmetros com valor de tabela são quase tão simples de programar quanto matrizes de parâmetros, mas eles fornecem mais flexibilidade no servidor.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/24/2018
   
  Quando todas as colunas de parâmetro com valor de tabela tiverem sido processadas, o driver retornará ao parâmetro com valor de tabela para processar outras linhas dos dados. Portanto, para parâmetros com valor de tabela de dados em execução, o driver não segue a verificação sequencial habitual de parâmetros associados. Um parâmetro de valor de tabela associado será pesquisado até SQLPutData é chamado com *StrLen_Or_IndPtr* igual a 0, momento em que o driver ignora colunas de parâmetro com valor de tabela e move para o próximo parâmetro de procedimento armazenado real.  Quando SQLPutData passa um valor indicador maior ou igual a 1, o driver processa linhas e colunas de parâmetro com valor de tabela sequencialmente até que tenha valores para todas as colunas e linhas associadas. Então o driver retornará o parâmetro com valor de tabela. Entre receber o token para o parâmetro com valor de tabela de SQLParamData e SQLPutData (hstmt, NULL, n) ao chamar um parâmetro com valor de tabela, o aplicativo deve definir dados de coluna constituintes do parâmetro com valor de tabela e o indicador de conteúdo do buffer para o próxima linha ou linhas a serem passados para o servidor.  
   
- Exemplo de código para este cenário está na rotina `demo_variable_TVP_binding` na [usar parâmetros &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Exemplo de código para este cenário está na rotina `demo_variable_TVP_binding` na [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>Recuperando metadados do parâmetro com valor de tabela do catálogo do sistema  
  Quando um aplicativo chama SQLProcedureColumns para um procedimento com parâmetros com valor de tabela, DATA_TYPE é retornado como SQL_SS_TABLE e TYPE_NAME é o nome do tipo de tabela para o parâmetro com valor de tabela. Duas colunas adicionais são adicionadas ao conjunto de resultados retornado por SQLProcedureColumns: SS_TYPE_CATALOG_NAME retorna o nome do catálogo onde o tipo de tabela do parâmetro com valor de tabela é definido e SS_TYPE_SCHEMA_NAME retorna o nome do esquema onde o onde o tipo de tabela do parâmetro com valor de tabela é definido. Em conformidade com a especificação de ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME aparecem antes de todas as colunas específicas do driver foram adicionadas em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e depois de todas as colunas autorizadas pelo próprio ODBC.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/24/2018
   
  Um aplicativo usa SQLColumns para determinar as colunas para um tipo de tabela da mesma maneira que faz para tabelas persistentes, mas primeiro deve definir SQL_SOPT_SS_NAME_SCOPE para indicar que está trabalhando com tipos de tabela em vez de tabelas reais. SQLPrimaryKeys também pode ser usado com tipos de tabela, novamente usando SQL_SOPT_SS_NAME_SCOPE.  
   
- Exemplo de código para este cenário está na rotina `demo_metadata_from_catalog_APIs` na [usar parâmetros &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Exemplo de código para este cenário está na rotina `demo_metadata_from_catalog_APIs` na [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>Recuperando metadados do parâmetro com valor de tabela para uma instrução preparada  
  Nesse cenário, um aplicativo usa SQLNumParameters e SQLDescribeParam para recuperar metadados para parâmetros com valor de tabela.  
@@ -90,9 +91,9 @@ ms.lasthandoff: 01/24/2018
   
  Um aplicativo usa SQLColumns para recuperar metadados de coluna para um parâmetro com valor de tabela nesse cenário, também, porque SQLDescribeParam não retorna metadados para as colunas de uma coluna de parâmetro com valor de tabela.  
   
- Exemplo de código para esse caso de uso está na rotina `demo_metadata_from_prepared_statement` na [usar parâmetros &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Exemplo de código para esse caso de uso está na rotina `demo_metadata_from_prepared_statement` na [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Com valor de tabela parâmetros &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Parâmetros com valor de tabela &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

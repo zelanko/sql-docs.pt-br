@@ -2,7 +2,7 @@
 title: Função SQLFetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetch-function"></a>Função SQLFetch
 **Conformidade**  
@@ -138,9 +138,9 @@ SQLRETURN SQLFetch(
 |52 para 56|SQL_SUCCESS|57 para 61|5|  
 |91 a 95|SQL_SUCCESS|96 a 100|5|  
 |93 para 97|SQL_SUCCESS|98 a 100. Linhas 4 e 5 da matriz de status de linha são definidas como SQL_ROW_NOROW.|3|  
-|96 a 100|SQL_NO_DATA|Nenhum.|0|  
-|99 a 100|SQL_NO_DATA|Nenhum.|0|  
-|Após o término|SQL_NO_DATA|Nenhum.|0|  
+|96 a 100|SQL_NO_DATA|Nenhuma.|0|  
+|99 a 100|SQL_NO_DATA|Nenhuma.|0|  
+|Após o término|SQL_NO_DATA|Nenhuma.|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Retornando dados em colunas associadas  
  Como **SQLFetch** retorna cada linha, ele coloca os dados para cada coluna associada no buffer associado a essa coluna. Se não há colunas associadas, **SQLFetch** Avançar o cursor em bloco, mas não retorna nenhum dado. Os dados ainda podem ser recuperados usando **SQLGetData**. Se o cursor é multilinha (ou seja, se SQL_ATTR_ROW_ARRAY_SIZE for maior que 1), **SQLGetData** pode ser chamado somente se SQL_GD_BLOCK é retornado quando **SQLGetInfo** é chamado com um  *Tipo de informação* de SQL_GETDATA_EXTENSIONS. (Para obter mais informações, consulte [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
@@ -275,6 +275,6 @@ SQLRETURN SQLFetch(
 |Colunas do conjunto de retorno do número de resultados|[Função SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Preparar uma instrução para execução|[Função SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

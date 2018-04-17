@@ -1,16 +1,16 @@
 ---
 title: symmetric_keys (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - symmetric_keys
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.symmetric_keys catalog view
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dbfdb1c6b128c1a596f092f500ce5c3cf85d2e7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7dae3699cb464bf224986f3904d1df9b6d416bd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,14 +42,14 @@ ms.lasthandoff: 11/21/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da chave. É exclusivo no c4database.|  
-|**principal_id**|**int**|ID da entidade de banco de dados que possui a chave.|  
-|**symmetric_key_id**|**int**|ID da chave. Exclusiva no banco de dados.|  
-|**comprimento_de_chave**|**int**|Comprimento da chave em bits.|  
+|**principal_id**|**Int**|ID da entidade de banco de dados que possui a chave.|  
+|**symmetric_key_id**|**Int**|ID da chave. Exclusiva no banco de dados.|  
+|**key_length**|**Int**|Comprimento da chave em bits.|  
 |**key_algorithm**|**char(2)**|Algoritmo usado com a chave:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = DES triplo<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = Chave EKM|  
-|**algorithm_desc**|**nvarchar (60)**|Descrição do algoritmo usado com a chave:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (somente algoritmos de Gerenciador de Chave Extensível)|  
+|**algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo usado com a chave:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (somente algoritmos de Gerenciador de Chave Extensível)|  
 |**create_date**|**datetime**|A data em que a chave foi criada.|  
 |**modify_date**|**datetime**|A data em que a chave foi modificada.|  
-|**Key_GUID**|**uniqueidentifier**|Identificador globalmente exclusivo (GUID) associado à chave. É gerado automaticamente para chaves persistentes. Os GUIDs para chaves temporárias são derivados da frase secreta fornecida pelo usuário.|  
+|**key_guid**|**uniqueidentifier**|Identificador globalmente exclusivo (GUID) associado à chave. É gerado automaticamente para chaves persistentes. Os GUIDs para chaves temporárias são derivados da frase secreta fornecida pelo usuário.|  
 |**key_thumbprint**|**sql_variant**|Hash SHA-1 da chave. O hash é globalmente exclusivo. Para chaves de Gerenciamento de Chave não Extensível, esse valor será NULL.|  
 |**provider_type**|**nvarchar(120)**|Tipo de provedor criptográfico:<br /><br /> CRYPTOGRAPHIC PROVIDER = Chaves de Gerenciamento de Chave Extensível<br /><br /> NULL = Chaves de Gerenciamento de Chave não Extensível|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|GUID do provedor criptográfico. Para chaves de Gerenciamento de Chave não Extensível, esse valor será NULL.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  

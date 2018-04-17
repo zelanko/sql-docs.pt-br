@@ -1,16 +1,16 @@
 ---
 title: sp_delete_targetserver (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f95d6489635c40a7ba478e4100cb672dc6938c2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a4674f0bd6d8bbcb3ed456f74a0ee034c6f25db9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove o servidor especificado da lista de servidores de destino disponíveis.  
    
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,13 +48,13 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@server_name=** ] **'***server***'**  
+ [  **@server_name=** ] **'***server***'**  
  O nome do servidor a ser removido como um servidor de destino disponível. *servidor* é **nvarchar (30)**, sem padrão.  
   
  [ **@clear_downloadlist=** ] *clear_downloadlist*  
  Especifica se a lista de download para o servidor de destino deve ser limpa. *clear_downloadlist* é do tipo **bit**, com um padrão de **1**. Quando *clear_downloadlist* é **1**, o procedimento desmarca a lista de download para o servidor antes de excluir o servidor. Quando *clear_downloadlist* é **0**, a lista de download não estiver desmarcada.  
   
- [ **@post_defection=** ] *post_defection*  
+ [  **@post_defection=** ] *post_defection*  
  Especifica se uma instrução de defeito deve ser postada para o servidor de destino. *post_defection* é do tipo **bit**, com um padrão de 1. Quando *post_defection* é **1**, o procedimento posta uma instrução de defeito para o servidor de destino antes de excluir o servidor. Quando *post_defection* é **0**, o procedimento não posta uma instrução de defeito para o servidor de destino.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

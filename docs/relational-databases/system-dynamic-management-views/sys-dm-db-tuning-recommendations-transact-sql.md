@@ -3,7 +3,7 @@ title: sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs
 description: Saiba como localizar problemas de desempenho e recomendações de correção no SQL Server e banco de dados do SQL Azure
 ms.custom: ''
 ms.date: 07/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -29,13 +29,14 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4f783c82d92aa0837ea9fbb90f9b3d2afc8c8d
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: fc933666e31c45fc78fb6d303ca1e7d3b5874d55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_tuning\_recommendations (Transact-SQL)
+# <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_ajuste\_recomendações (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Retorna informações detalhadas sobre recomendações de ajuste.  
@@ -50,18 +51,18 @@ ms.lasthandoff: 04/05/2018
 | **valid\_since** | **datetime2** | Na primeira vez em que essa recomendação foi gerada. |
 | **última\_atualizar** | **datetime2** | A última vez em que essa recomendação foi gerada. |
 | **state** | **nvarchar(4000)** | Documento JSON que descreve o estado da recomendação. Campos a seguir estão disponíveis:<br />-   `currentValue` -estado atual da recomendação.<br />-   `reason` – constante que descreve o motivo pelo qual a recomendação está no estado atual.|
-| **is\_executable\_action** | **bit** | 1 = a recomendação pode ser executada no banco de dados por meio de [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = a recomendação não pode ser executada no banco de dados (por exemplo: recomendação apenas ou revertido de informações) |
-| **is\_revertable\_action** | **bit** | 1 = a recomendação pode ser monitorada e revertida pelo mecanismo de banco de dados automaticamente.<br />0 = a recomendação não pode ser monitorada e revertida automaticamente. A maioria dos &quot;executável&quot; ações serão &quot;revertable&quot;. |
-| **execute\_action\_start\_time** | **datetime2** | Data em que a recomendação é aplicada. |
-| **execute\_action\_duration** | **time** | Duração da ação executar. |
+| **é\_executável\_ação** | **bit** | 1 = a recomendação pode ser executada no banco de dados por meio de [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = a recomendação não pode ser executada no banco de dados (por exemplo: recomendação apenas ou revertido de informações) |
+| **é\_revertable\_ação** | **bit** | 1 = a recomendação pode ser monitorada e revertida pelo mecanismo de banco de dados automaticamente.<br />0 = a recomendação não pode ser monitorada e revertida automaticamente. A maioria dos &quot;executável&quot; ações serão &quot;revertable&quot;. |
+| **executar\_ação\_iniciar\_tempo** | **datetime2** | Data em que a recomendação é aplicada. |
+| **executar\_ação\_duração** | **time** | Duração da ação executar. |
 | **executar\_ação\_iniciada\_por** | **nvarchar(4000)** | `User` = Usuário forçado manualmente o plano na recomendação. <br /> `System` = Sistema aplicada automaticamente a recomendação. |
 | **executar\_ação\_iniciada\_tempo** | **datetime2** | Data em que a recomendação foi aplicada. |
-| **revert\_action\_start\_time** | **datetime2** | Data em que a recomendação foi revertida. |
+| **Reverter\_ação\_iniciar\_tempo** | **datetime2** | Data em que a recomendação foi revertida. |
 | **revert\_action\_duration** | **time** | Duração da ação de reversão. |
 | **Reverter\_ação\_iniciada\_por** | **nvarchar(4000)** | `User` = Plano de recomendado manualmente unforced usuário. <br /> `System` = Sistema revertido automaticamente a recomendação. |
 | **Reverter\_ação\_iniciada\_tempo** | **datetime2** | Data em que a recomendação foi revertida. |
 | **score** | **Int** | Estimado valor/impacto para esta recomendação para o valor de 0 a 100 escala (quanto maior o melhor) |
-| **details** | **nvarchar(max)** | Documento JSON que contém mais detalhes sobre a recomendação. Campos a seguir estão disponíveis:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_id da consulta retornada.<br />-    `regressedPlanId` -plan_id do plano retornado.<br />-   `regressedPlanExecutionCount` -Número de execuções de consulta com retornadas plano antes da regressão é detectado.<br />-    `regressedPlanAbortedCount` -Número de erros detectados durante a execução do plano retornada.<br />-    `regressedPlanCpuTimeAverage` -Tempo de CPU médio consumido pela consulta retornada para a regressão é detectada.<br />-    `regressedPlanCpuTimeStddev` -Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br />-    `recommendedPlanId` -plan_id do plano que deve ser forçado.<br />-   `recommendedPlanExecutionCount`-Número de execuções de consulta com o plano deve ser forçado para a regressão é detectada.<br />-    `recommendedPlanAbortedCount` -Número de erros detectados durante a execução do plano que deve ser forçado.<br />-    `recommendedPlanCpuTimeAverage` -Tempo de CPU médio consumido pela consulta executada com o plano deve ser forçado (calculado antes da regressão é detectada).<br />-    `recommendedPlanCpuTimeStddev` Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br /><br />`implementationDetails`<br />-  `method` -O método que deve ser usado para corrigir a regressão. Valor é sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que deve ser executado para forçar o plano recomendado. |
+| **Detalhes** | **nvarchar(max)** | Documento JSON que contém mais detalhes sobre a recomendação. Campos a seguir estão disponíveis:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_id da consulta retornada.<br />-    `regressedPlanId` -plan_id do plano retornado.<br />-   `regressedPlanExecutionCount` -Número de execuções de consulta com retornadas plano antes da regressão é detectado.<br />-    `regressedPlanAbortedCount` -Número de erros detectados durante a execução do plano retornada.<br />-    `regressedPlanCpuTimeAverage` -Tempo de CPU médio consumido pela consulta retornada para a regressão é detectada.<br />-    `regressedPlanCpuTimeStddev` -Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br />-    `recommendedPlanId` -plan_id do plano que deve ser forçado.<br />-   `recommendedPlanExecutionCount`-Número de execuções de consulta com o plano deve ser forçado para a regressão é detectada.<br />-    `recommendedPlanAbortedCount` -Número de erros detectados durante a execução do plano que deve ser forçado.<br />-    `recommendedPlanCpuTimeAverage` -Tempo de CPU médio consumido pela consulta executada com o plano deve ser forçado (calculado antes da regressão é detectada).<br />-    `recommendedPlanCpuTimeStddev` Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br /><br />`implementationDetails`<br />-  `method` -O método que deve ser usado para corrigir a regressão. Valor é sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que deve ser executado para forçar o plano recomendado. |
   
 ## <a name="remarks"></a>Remarks  
  Informações retornadas por `sys.dm_db_tuning_recommendations` é atualizada quando o mecanismo de banco de dados identifica possíveis regressão de desempenho de consulta e não persistirão. As recomendações são mantidas apenas até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de recomendação de ajuste de se quiserem mantê-lo após a reciclagem do servidor. 

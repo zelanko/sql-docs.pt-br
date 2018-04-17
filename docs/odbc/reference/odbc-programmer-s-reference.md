@@ -2,7 +2,7 @@
 title: ODBC programador referência de | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-programmer39s-reference"></a>O programador ODBC referência
 O *referência do programador de ODBC* contém as seções a seguir.  
@@ -58,11 +58,11 @@ O *referência do programador de ODBC* contém as seções a seguir.
 |------------|--------------|  
 |SELECIONE * DE|Letras maiusculas indicam instruções SQL, nomes de macro e termos usados no nível de comando do sistema operacional.|  
 |`RETCODE SQLFetch(hdbc)`|A fonte de espaçamento uniforme é usada para linhas de comando de exemplo e código de programa.|  
-|*argumento*|Palavras em itálico indicam argumentos programáticos, informações que o usuário ou o aplicativo deve fornecer ou word ênfase.|  
+|*argument*|Palavras em itálico indicam argumentos programáticos, informações que o usuário ou o aplicativo deve fornecer ou word ênfase.|  
 |**SQLEndTran**|Em negrito indica sintaxe deve ser digitada exatamente conforme mostrado, incluindo nomes de função.|  
 |&#124;|Uma barra vertical separa as duas opções mutuamente exclusivas em uma linha de sintaxe.|  
 |...|Uma elipse indica que os argumentos podem ser repetidos várias vezes.|  
-|para obter informações sobre a ferramenta de configuração e recursos adicionais. para obter informações sobre a ferramenta de configuração e recursos adicionais. para obter informações sobre a ferramenta de configuração e recursos adicionais.|Uma coluna de três pontos indica continuação anterior linhas de código.|  
+|. . .|Uma coluna de três pontos indica continuação anterior linhas de código.|  
   
 ## <a name="about-the-code-examples"></a>Sobre os exemplos de código  
  Os exemplos de código neste guia destinam-se apenas para fins ilustrativos. Porque eles são gravados principalmente para demonstrar os princípios ODBC, eficiência, às vezes, foi definida para fins de esclarecimento. Além disso, todas seções do código, às vezes, foram omitidas para fins de esclarecimento. Isso inclui as definições de funções de ODBC não (funções cujos nomes não começam com "SQL") e a maioria dos tratamento de erros.  

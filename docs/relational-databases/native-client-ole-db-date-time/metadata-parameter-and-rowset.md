@@ -1,29 +1,30 @@
 ---
-title: "Parâmetro e metadados de conjunto de linhas | Microsoft Docs"
-ms.custom: 
+title: Parâmetro e metadados de conjunto de linhas | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d7d4ee439ff2695ab2094c3e1e4784506173b27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadados - parâmetro e o conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -151,6 +152,6 @@ ms.lasthandoff: 01/25/2018
  Um novo sinalizador DBCOLUMNFLAGS_SS_ISVARIABLESCALE é fornecido em *dwFlags* para permitir que um aplicativo determinar o tipo de servidor de colunas, onde *wType* é DBTYPE_DBTIMESTAMP. *bScale* também deve ser usado para identificar o tipo de servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Metadados &#40; OLE DB &#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [Metadados &#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

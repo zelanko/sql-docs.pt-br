@@ -1,16 +1,16 @@
 ---
-title: sys.dm_hadr_availability_group_states (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.DM hadr_availability_group_states (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_availability_group_states
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4d6dbddbf0fb211335789eefeff5f2a392f2d59
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0b5f23c9c5d9c21285d44e998dc0457795bf3670
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**primary_recovery_health_desc**|**nvarchar(60)**|Descrição do **primary_replica_health**, um de:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Indica a integridade da recuperação de uma réplica secundária, um de:<br /><br /> 0 = em andamento<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> Na réplica primária, o **secondary_recovery_health** coluna será NULL.|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|Descrição do **secondary_recovery_health**, um de:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|Reflete um rollup do **synchronization_health** de todas as réplicas de disponibilidade no grupo de disponibilidade. Abaixo estão os valores possíveis e suas descrições.<br /><br /> 0: não está íntegro. Nenhuma das réplicas de disponibilidade tem um **synchronization_health** (2 = HEALTHY).<br /><br /> 1: parcialmente íntegro. Há integridade de sincronização de algumas, mas não todas, as réplicas de disponibilidade.<br /><br /> 2: íntegro. Há integridade de sincronização de todas as réplicas de disponibilidade.<br /><br /> Para obter informações sobre a integridade de sincronização de réplica, consulte o **synchronization_health** coluna [sys.DM hadr_availability_replica_states &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health**|**tinyint**|Reflete um rollup do **synchronization_health** de todas as réplicas de disponibilidade no grupo de disponibilidade. Abaixo estão os valores possíveis e suas descrições.<br /><br /> 0: não está íntegro. Nenhuma das réplicas de disponibilidade tem um **synchronization_health** (2 = HEALTHY).<br /><br /> 1: parcialmente íntegro. Há integridade de sincronização de algumas, mas não todas, as réplicas de disponibilidade.<br /><br /> 2: íntegro. Há integridade de sincronização de todas as réplicas de disponibilidade.<br /><br /> Para obter informações sobre a integridade de sincronização de réplica, consulte o **synchronization_health** coluna [sys.DM hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Descrição do **synchronization_health**, um de:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>Segurança  
@@ -59,8 +59,8 @@ ms.lasthandoff: 02/03/2018
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Monitorar grupos de disponibilidade &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Monitorar grupos de disponibilidade & #40; Transact-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidade AlwaysOn, funções e exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [Funções e exibições de gerenciamento dinâmico de grupos de disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

@@ -2,7 +2,7 @@
 title: Função SQLConfigDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f2c33bc5c946331057486719750086a1f962924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>Função SQLConfigDataSource
 **Conformidade**  
@@ -102,7 +102,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** retornará FALSE se não for possível localizar ou carregar a DLL de configuração ou se o usuário cancelar a caixa de diálogo. Caso contrário, retornará o status recebido do **ConfigDSN**.  
   
- **SQLConfigDataSource** mapeia o DSN do sistema *frequentes*s para o DSN do usuário *frequentes*s (ODBC_ADD_SYS_DSN para ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN e ODBC_REMOVE_SYS _DSN para ODBC_REMOVE_DSN). Para distinguir os DSNs de sistema e usuário **SQLConfigDataSource** define o instalador do modo de configuração de acordo com a tabela a seguir. Antes de retornar, **SQLConfigDataSource** redefine o modo de configuração para BOTHDSN. **ConfigDSN** (implementado pelos drivers) deve chamar **SQLWriteDSNToIni** e **SQLWritePrivateProfileString** para dar suporte a um DSN de sistema. Para obter mais informações, consulte [ConfigDSN função](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** mapeia o DSN do sistema *frequentes*s para o DSN do usuário *frequentes*s (ODBC_ADD_SYS_DSN para ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN e ODBC_REMOVE_SYS_ DSN para ODBC_REMOVE_DSN). Para distinguir os DSNs de sistema e usuário **SQLConfigDataSource** define o instalador do modo de configuração de acordo com a tabela a seguir. Antes de retornar, **SQLConfigDataSource** redefine o modo de configuração para BOTHDSN. **ConfigDSN** (implementado pelos drivers) deve chamar **SQLWriteDSNToIni** e **SQLWritePrivateProfileString** para dar suporte a um DSN de sistema. Para obter mais informações, consulte [ConfigDSN função](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*Frequentes*|Modo de configuração|  
 |----------------|------------------------|  

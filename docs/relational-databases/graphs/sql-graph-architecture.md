@@ -2,7 +2,7 @@
 title: Arquitetura do Graph SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: graphs
@@ -21,11 +21,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 40a1cf05c5c17be3c11d25cd5e8792eb504c2fa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura do gráfico do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -105,20 +106,20 @@ A tabela a seguir lista os valores válidos para `graph_type` coluna
 Colunas implícitas em uma tabela de nó  
 |Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |coluna graph_id interno  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |Coluna de id do nó externo  |
+|graph_id_\<hex_string > |bigint |1  |coluna graph_id interno  |
+|$node_id_\<hex_string > |NVARCHAR   |0  |Coluna de id do nó externo  |
 
 Colunas implícitas em uma tabela de borda  
 |Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |coluna graph_id interno  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |coluna de id da borda externa  |
+|graph_id_\<hex_string > |bigint |1  |coluna graph_id interno  |
+|$edge_id_\<hex_string > |NVARCHAR   |0  |coluna de id da borda externa  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno da id de objeto de nó  |
-|from_id_\<hex_string>  |bigint |1  |Internos do nó graph_id  |
-|$from_id_\<hex_string> |NVARCHAR   |0  |externa da id de nó  |
+|from_id_\<hex_string >  |bigint |1  |Internos do nó graph_id  |
+|$from_id_\<hex_string > |NVARCHAR   |0  |externa da id de nó  |
 |to_obj_id_\<hex_string>    |INT    |1  |a id de objeto de nó interno  |
 |to_id_\<hex_string>    |bigint |1  |Nó graph_id interno  |
-|$to_id_\<hex_string>   |NVARCHAR   |0  |externos ao id do nó  |
+|$to_id_\<hex_string >   |NVARCHAR   |0  |externos ao id do nó  |
  
 ### <a name="system-functions"></a>Funções de sistema
 As seguintes funções internas são adicionadas. Eles ajudarão os usuários extrair informações de colunas geradas. Observe que, esses métodos não validará a entrada do usuário. Se o usuário Especifica um inválido `sys.node_id` o método extrairá parte apropriada e retorná-la. Por exemplo, OBJECT_ID_FROM_NODE_ID terão um `$node_id` como entrada e retorna o object_id da tabela, este nó pertence. 

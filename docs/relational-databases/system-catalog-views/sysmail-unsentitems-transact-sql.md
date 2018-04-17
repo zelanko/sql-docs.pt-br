@@ -1,16 +1,16 @@
 ---
 title: sysmail_unsentitems (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3a05add3c6c490a0b45e664389e6a49c59959d1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5891918cc9226c4bfdb458f2fe2689244c7a630f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,20 +46,20 @@ ms.lasthandoff: 02/03/2018
   
  Use essa exibição para saber quantas mensagens estão aguardando o envio e há quanto tempo estão na fila de email. Normalmente, o número de **unsent** mensagens será baixas. Faça um teste de parâmetro durante as operações normais para determinar um número razoável de mensagens que devam ficar na fila para suas operações.  
   
- Para ver todas as mensagens processadas pelo Database Mail, use [sysmail_allitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Para ver somente as mensagens com o status de falha, use [sysmail_faileditems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver apenas as mensagens que foram enviadas, use [sysmail_sentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Para ver todas as mensagens processadas pelo Database Mail, use [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Para ver somente as mensagens com o status de falha, use [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver apenas as mensagens que foram enviadas, use [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**Int**|Identificador do item de email na fila de email.|  
 |**profile_id**|**Int**|O identificador do perfil usado para enviar a mensagem.|  
-|**recipients**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
+|**destinatários**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
 |**copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem.|  
 |**blind_copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem, mas cujos nomes não aparecem no cabeçalho.|  
 |**subject**|**nvarchar(510)**|A linha de assunto da mensagem.|  
-|**body**|**varchar(max)**|O corpo da mensagem.|  
+|**Corpo**|**varchar(max)**|O corpo da mensagem.|  
 |**body_format**|**varchar(20)**|O formato do corpo da mensagem. Os valores possíveis são **texto** e **HTML**.|  
 |**importance**|**varchar(6)**|O **importância** parâmetro da mensagem.|  
-|**sensitivity**|**varchar(12)**|O **sensibilidade** parâmetro da mensagem.|  
+|**Sensibilidade**|**varchar(12)**|O **sensibilidade** parâmetro da mensagem.|  
 |**file_attachments**|**varchar(max)**|Uma lista delimitada por ponto-e-vírgula de nomes de arquivo anexados à mensagem de email.|  
 |**attachment_encoding**|**varchar(20)**|O tipo de anexo de email.|  
 |**query**|**varchar(max)**|A consulta executada pelo programa de email.|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**query_result_header**|**bit**|Quando o valor for 1, os resultados da consulta continha cabeçalhos de coluna. Quando o valor for 0, resultados da consulta não incluem cabeçalhos de coluna.|  
 |**query_result_width**|**Int**|O **query_result_width** parâmetro da mensagem.|  
 |**query_result_separator**|**char(1)**|O caractere usado para separar as colunas na saída da consulta.|  
-|**exclude_query_output**|**bit**|O **exclude_query_output** parâmetro da mensagem. Para obter mais informações, consulte [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**exclude_query_output**|**bit**|O **exclude_query_output** parâmetro da mensagem. Para obter mais informações, consulte [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|O **append_query_error** parâmetro da mensagem. 0 indica que o Database Mail não deverá enviar a mensagem de email se houver um erro na consulta.|  
 |**send_request_date**|**datetime**|A data e a hora em que a mensagem foi colocada na fila de email.|  
 |**send_request_user**|**sysname**|O usuário que enviou a mensagem. Este é o contexto de usuário do procedimento de email de banco de dados, não o **de** campo da mensagem.|  

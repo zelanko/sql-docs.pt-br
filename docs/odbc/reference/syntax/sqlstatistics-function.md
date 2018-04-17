@@ -2,7 +2,7 @@
 title: Função SQLStatistics | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d18b910da6bf23aa507c3fecc7994a59cf74e705
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstatistics-function"></a>Função SQLStatistics
 **Conformidade**  
@@ -68,7 +68,7 @@ SQLRETURN SQLStatistics(
  *NameLength1*  
  [Entrada] Comprimento em caracteres de **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Entrada] Nome do esquema. Se um driver dá suporte a esquemas para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, uma cadeia de caracteres vazia ("") indica as tabelas que não têm esquemas. *SchemaName* não pode conter um padrão de pesquisa de cadeia de caracteres.  
   
  Se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_TRUE, *SchemaName* é tratado como um identificador e o seu caso não é significativo. Se for SQL_FALSE, *SchemaName* é um argumento comum; ela será tratada literalmente e seu caso é significativo.  
@@ -76,7 +76,7 @@ SQLRETURN SQLStatistics(
  *NameLength2*  
  [Entrada] Comprimento em caracteres de **SchemaName*.  
   
- *Nome de tabela*  
+ *TableName*  
  [Entrada] Nome da tabela. Esse argumento não pode ser um ponteiro nulo. *SchemaName* não pode conter um padrão de pesquisa de cadeia de caracteres.  
   
  Se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_TRUE, *TableName* é tratado como um identificador e o seu caso não é significativo. Se for SQL_FALSE, *TableName* é um argumento comum; ela será tratada literalmente e seu caso é significativo.  
@@ -87,7 +87,7 @@ SQLRETURN SQLStatistics(
  *Exclusivo*  
  [Entrada] Tipo de índice: SQL_INDEX_UNIQUE ou SQL_INDEX_ALL.  
   
- *Reserved*  
+ *Reservado*  
  [Entrada] Indica a importância das colunas CARDINALIDADE e as páginas no conjunto de resultados. As opções a seguir afetam o retorno de CARDINALIDADE e as páginas de colunas. informações de índice serão retornadas mesmo se a CARDINALIDADE e as páginas não são retornadas.  
   
  SQL_ENSURE solicita que o driver recupere as estatísticas incondicionalmente. (Drivers de acordo com apenas o padrão Open Group e não oferecem suporte a extensões ODBC não será capazes de dar suporte a SQL_ENSURE.)  
@@ -175,6 +175,6 @@ SQLRETURN SQLStatistics(
 |Retornando as colunas de chaves estrangeiras|[Função SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|  
 |Retornando as colunas de uma chave primária|[Função SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,15 +1,15 @@
 ---
-title: "Propriedades de inicialização e autorização | Microsoft Docs"
-ms.custom: 
+title: Propriedades de inicialização e autorização | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-source-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - authorization [OLE DB]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, authorization properties
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5c2658d15a374a4cd971eb0236d5a45dca2c9752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriedades de inicialização e autorização
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/25/2018
 |SSPROP_INIT_ENCRYPT|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Para criptografar os dados aceitos na rede, a propriedade SSPROP_INIT_ENCRYPT é definida como VARIANT_TRUE.<br /><br /> Se a opção Habilitar Criptografia de Protocolo estiver ativada, a criptografia sempre ocorrerá, independentemente da configuração de SSPROP_INIT_ENCRYPT. Se estiver desativada e a propriedade SSPROP_INIT_ENCRYPT for definida como VARIANT_TRUE, a criptografia ocorrerá.<br /><br /> Se Habilitar Criptografia de Protocolo estiver desativada e SSPROP_INIT_ENCRYPT for definida como VARIANT_FALSE, nenhuma criptografia ocorrerá.|  
 |SSPROP_INIT_FAILOVERPARTNER|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: Especifica o nome do parceiro de failover para espelhamento de banco de dados. Ela é uma propriedade de inicialização e pode ser definida somente antes da inicialização. Depois da inicialização, ela retornará o parceiro de failover, se houver, retornado pelo servidor primário.<br /><br /> Isto permite que um aplicativo inteligente armazene em cache o servidor de backup determinado mais recentemente, mas esses aplicativos devem saber que as informações são atualizadas somente depois que a conexão é estabelecida pela primeira vez (ou redefinida, se estiver inserida em pool) e podem ficar desatualizadas em conexões de longo prazo.<br /><br /> Depois de estabelecer a conexão, o aplicativo pode consultar este atributo para determinar a identidade do parceiro de failover. Se o servidor primário não tiver nenhum parceiro de failover, esta propriedade retornará uma cadeia de caracteres vazia. Para obter mais informações, consulte [usando o espelhamento de banco de dados](../../relational-databases/native-client/features/using-database-mirroring.md).|  
 |SSPROP_INIT_FILENAME|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: Especifica o nome do arquivo primário de um banco de dados anexável. Esse banco de dados é anexado e torna-se o banco de dados padrão da conexão. Para usar SSPROP_INIT_FILENAME, você deve especificar o nome do banco de dados como o valor da propriedade de inicialização DBPROP_INIT_CATALOG. Se o nome do banco de dados não existir, este procedimento procurará o nome do arquivo primário especificado em SSPROP_INIT_FILENAME e anexará esse banco de dados ao nome especificado em DBPROP_INIT_CATALOG. Se o banco de dados tiver sido anexado previamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não o anexará novamente.|  
-|SSPROP_INIT_MARSCONNECTION|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Especifica se os MARS (Vários Conjuntos de Resultados Ativos) estão habilitados para a conexão. Esta opção deve ser definida como verdadeira antes de uma conexão com o banco de dados ser estabelecida. Para obter mais informações, consulte [usando Multiple Active Result Sets &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Especifica se os MARS (Vários Conjuntos de Resultados Ativos) estão habilitados para a conexão. Esta opção deve ser definida como verdadeira antes de uma conexão com o banco de dados ser estabelecida. Para obter mais informações, consulte [usando Multiple Active Result Sets & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: O endereço de rede do servidor que executa uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada pela propriedade DBPROP_INIT_DATASOURCE.|  
 |SSPROP_INIT_NETWORKLIBRARY|Tipo: VT_BSTR<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: O nome do networklibrary (DLL) usado para comunicação com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome não deve incluir o caminho ou a extensão de nome de arquivo .dll.<br /><br /> O padrão pode ser personalizado usando o Utilitário de Configuração do Cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Observação: Somente o TCP e Pipes nomeados são suportadas por esta propriedade. Se você usar essa propriedade com um prefixo, acabará com um prefixo duplo que resultará em erro, pois a propriedade é usada para gerar um prefixo internamente.|  
 |SSPROP_INIT_PACKETSIZE|Tipo: VT_I4<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Descrição: Um tamanho de pacote de rede em bytes. O valor da propriedade de tamanho de pacote deve estar entre 512 e 32.767. O tamanho padrão do pacote de rede do provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é 4.096.|  
@@ -94,6 +95,6 @@ Server=MyServer;UID=MyUserName;
  Para obter uma lista de palavras-chave disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, consulte [usando Conexão String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Objetos de fonte de dados &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos de fonte de dados & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

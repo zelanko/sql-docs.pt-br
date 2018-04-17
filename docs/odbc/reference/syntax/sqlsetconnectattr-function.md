@@ -2,7 +2,7 @@
 title: Função SQLSetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>Função SQLSetConnectAttr
 **Conformidade**  
@@ -64,7 +64,7 @@ SQLRETURN SQLSetConnectAttr(
  *ValuePtr*  
  [Entrada] Ponteiro para o valor a ser associado aos *atributo*. Dependendo do valor de *atributo*, *ValuePtr* será um valor inteiro não assinado ou aponta para uma cadeia de caracteres terminada em nulo. Observe que a base integral de tipo do *atributo* argumento pode não ser de comprimento fixo, consulte a seção comentários para obter detalhes.  
   
- *StringLength*  
+ *stringLength*  
  [Entrada] Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de **ValuePtr*. Para dados de cadeia de caracteres, esse argumento deve conter o número de bytes na cadeia de caracteres.  
   
  Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* é um inteiro, *StringLength* será ignorado.  
@@ -134,7 +134,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Alguns atributos de conexão podem ser definidos apenas antes de uma conexão foi feita; outras podem ser definidas somente depois que uma conexão é estabelecida. A tabela a seguir indica os atributos de conexão devem ser definidos antes ou depois que uma conexão é estabelecida. *Qualquer* indica que o atributo pode ser definido antes ou depois da conexão.  
   
-|attribute|Defina antes ou após a conexão?|  
+|Atributo|Defina antes ou após a conexão?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Qualquer|  
@@ -212,6 +212,6 @@ SQLRETURN SQLSetConnectAttr(
 |Alocando um identificador|[Função SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Retornando a configuração de um atributo de conexão|[Função SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

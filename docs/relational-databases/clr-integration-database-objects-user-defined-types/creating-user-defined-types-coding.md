@@ -1,15 +1,15 @@
 ---
-title: "Codificando tipos definidos pelo usuário | Microsoft Docs"
-ms.custom: 
+title: Codificando tipos definidos pelo usuário | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -33,20 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Criando tipos definidos pelo usuário - codificação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Ao codificar a definição UDT (tipo definido pelo usuário), você deve implementar vários recursos, dependendo da implementação da UDT como classe ou estrutura, bem como das opções de formato e de serialização escolhidas.  
+  Ao codificar a definição UDT (tipo definido pelo usuário), você deve implementar vários recursos, dependendo da implementação da UDT como classe ou estrutura, bem como das opções de formato e de serialização escolhidas.  
   
  O exemplo nesta seção ilustra a implementação de um **ponto** UDT como uma **struct** (ou **estrutura** no Visual Basic). O **ponto** UDT consiste em X e Y coordenadas implementadas como procedimentos de propriedade.  
   
@@ -72,7 +72,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Especificando atributos  
  Os atributos determinam como a serialização é usada para construir a representação de armazenamento de UDTs e transmiti-los por valor para o cliente.  
   
- O **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** é necessário. O **Serializable** atributo é opcional. Você também pode especificar o **Microsoft.SqlServer.Server.SqlFacetAttribute** para fornecer informações sobre o tipo de retorno de um UDT. Para obter mais informações, consulte [atributos personalizados para rotinas de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+ O **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** é necessário. O **Serializable** atributo é opcional. Você também pode especificar o **Microsoft.SqlServer.Server.SqlFacetAttribute** para fornecer informações sobre o tipo de retorno de um UDT. Para obter mais informações, confira [Atributos personalizados para rotinas do CLR (Common Language Runtime)](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Atributos da UDT Point  
  O **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** define o formato de armazenamento para o **ponto** UDT **nativo**. **IsByteOrdered** é definido como **true**, que garante que os resultados das comparações sejam os mesmos no SQL Server, como se a mesma comparação foi feita no código gerenciado. A UDT implementa o **System.Data.SqlTypes.INullable** interface para informar o nulo UDT.  
@@ -99,7 +99,7 @@ public struct Point : INullable
   
  Você deve criar uma propriedade chamada **IsNull**, que é necessário para determinar se um valor é nulo dentro do código CLR. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontra uma instância nula de uma UDT, esta é mantida, usando métodos manipulação de nulos normais. O servidor não perde tempo serializando ou desserializando a UDT caso não precise, e ele não perde espaço armazenando uma UDT nula. Essa verificação de nulos é realizada sempre que uma UDT passa pelo CLR, o que significa que usar a construção [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL para verificar se há UDTs nulas deve funcionar sempre. O **IsNull** propriedade também é usada pelo servidor para testar se uma instância é nula. Quando determina que a UDT é nula, o servidor pode usar a manipulação de nulos nativa.  
   
- O **Get ()** método **IsNull** não é especial de maiusculas e minúsculas de forma alguma. Se um **ponto** variável  **@p**  é **nulo**, em seguida,  **@p.IsNull**  será, por padrão, avaliada como "NULL", não "1". Isso ocorre porque o **SqlMethod(OnNullCall)** atributo o **IsNull Get ()** método padrão é false. Porque o objeto é **nulo**, quando a propriedade é solicitada, o objeto não é desserializado, o método não é chamado e um valor padrão de "NULL" será retornado.  
+ O **Get ()** método **IsNull** não é especial de maiusculas e minúsculas de forma alguma. Se um **ponto** variável **@p** é **nulo**, em seguida, **@p.IsNull** será, por padrão, avaliada como "NULL", não "1". Isso ocorre porque o **SqlMethod(OnNullCall)** atributo o **IsNull Get ()** método padrão é false. Porque o objeto é **nulo**, quando a propriedade é solicitada, o objeto não é desserializado, o método não é chamado e um valor padrão de "NULL" será retornado.  
   
 ### <a name="example"></a>Exemplo  
  No seguinte exemplo, a variável `is_Null` é privada e mantém o estado de nulidade para a instância da UDT. O código deve manter um valor apropriado para `is_Null`. A UDT também deve ter uma propriedade estática chamada **nulo** que retorna uma instância de valor nulo da UDT. Isso permite que a UDT retorne um valor nulo caso a instância seja realmente nula no banco de dados.  

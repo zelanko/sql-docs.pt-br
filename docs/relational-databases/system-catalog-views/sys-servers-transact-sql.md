@@ -1,16 +1,16 @@
 ---
 title: sys.servers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - servers_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-caps.latest.revision: 
+caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc6dcb18c9961bffcf65db5f918ad54f19ca78ae
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 72c9f755ca12d9124a40bb5a05e0d1ed3e2e1b65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +46,9 @@ ms.lasthandoff: 03/21/2018
 |**server_id**|**Int**|ID local do servidor vinculado.|  
 |**name**|**sysname**|Quando **server_id** = 0, este é o nome do servidor.<br /><br /> Quando **server_id** > 0, este é o nome local do servidor vinculado.|  
 |**product**|**sysname**|Nome de produto do servidor vinculado. "SQL Server" indica que esta é outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**provider**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
+|**Provedor**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
-|**location**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
+|**local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
 |**provider_string**|**nvarchar(4000)**|Propriedade de conexão da cadeia de caracteres de provedor OLE DB.<br /><br /> É NULL, exceto se o chamador tiver a permissão ALTER ANY LINKED SERVER.|  
 |**catalog**|**sysname**|Propriedade de conexão do catálogo OLEDB. NULL se nenhum.|  
 |**connect_timeout**|**Int**|Tempo de limite de conexão em segundos, 0 se nenhum.|  

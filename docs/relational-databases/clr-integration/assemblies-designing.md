@@ -1,34 +1,34 @@
 ---
 title: Criando Assemblies | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 769c0aa7f6d9593ab3e2360a0e26876f23f16b41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---designing"></a>Assemblies - criação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
+  Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
   
 -   Empacotando assemblies  
   
@@ -41,7 +41,7 @@ Este tópico descreve os seguintes fatores que você deve considerar ao projetar
   
  Quando você estiver empacotando código em um assembly, você deverá considerar o seguinte:  
   
--   Tipos de dados CLR definidos pelo usuário e índices que dependem de funções CLR definidas pelo usuário podem fazer com que dados persistentes fiquem no banco de dados que dependem do assembly. Modificar o código de um assembly é frequentemente mais complexo quando há dados persistentes que dependem do assembly no banco de dados. Portanto, geralmente é melhor separar o código onde haja dependências de dados persistentes (como tipos definidos pelo usuário e índices com funções definidas pelo usuário) do código que não tenha tal dependência de dados persistentes. Para obter mais informações, consulte [implementando Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md) e [ALTER ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   Tipos de dados CLR definidos pelo usuário e índices que dependem de funções CLR definidas pelo usuário podem fazer com que dados persistentes fiquem no banco de dados que dependem do assembly. Modificar o código de um assembly é frequentemente mais complexo quando há dados persistentes que dependem do assembly no banco de dados. Portanto, geralmente é melhor separar o código onde haja dependências de dados persistentes (como tipos definidos pelo usuário e índices com funções definidas pelo usuário) do código que não tenha tal dependência de dados persistentes. Para obter mais informações, consulte [implementando Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md) e [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Se uma parte do código gerenciado requerer permissão mais alta, será melhor separar aquele código em um assembly separado do código que não requer tal permissão.  
   
@@ -64,7 +64,7 @@ Este tópico descreve os seguintes fatores que você deve considerar ao projetar
  Além disso, especificando UNSAFE permite que o código no assembly execute operações consideradas como tipo inseguro pelo verificador CLR. Essas operações podem potencialmente acessar buffers de memória no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma maneira descontrolada. Assemblies UNSAFE também podem potencialmente subverter o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do CLR. Somente permissões UNSAFE devem ser concedidas a assemblies altamente confiáveis por desenvolvedores ou administradores experientes. Somente membros do **sysadmin** função de servidor fixa pode criar assemblies UNSAFE.  
   
 ## <a name="restrictions-on-assemblies"></a>Restrições em assemblies  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coloca certas restrições em código gerenciado em assemblies para certificar-se de que ele podem ser executado de maneira confiável e escalonável. Isso significa que não são permitidas certas operações que podem comprometer a robustez do servidor em assemblies SAFE e EXTERNAL_ACCESS.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coloca certas restrições em código gerenciado em assemblies para verificar se eles podem ser executados de uma maneira segura e evolutiva. Isso significa que não são permitidas certas operações que podem comprometer a robustez do servidor em assemblies SAFE e EXTERNAL_ACCESS.  
   
 ### <a name="disallowed-custom-attributes"></a>Atributos personalizados não permitidos  
  Assemblies não podem ser anotados com os seguintes atributos personalizados:  
@@ -124,7 +124,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Assemblies &#40; mecanismo de banco de dados &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblies & #40; mecanismo de banco de dados & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

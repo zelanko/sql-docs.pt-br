@@ -1,16 +1,16 @@
 ---
 title: sys.dm_server_services (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/07/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_services
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 205d755e46b472cfca44170819ba177e523e4f3f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8879e4d23c4e74aaa39649b03e59d5303f42e658
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/03/2018
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nome da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], texto completo ou o serviço SQL Server Agent. Não pode ser nulo.|  
-|startup_type|**Int**|Indica o modo inicial do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> 0: outros<br />1: outros<br />2: automático<br />3: Manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
+|startup_type|**Int**|Indica o modo inicial do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> 0: outros<br />1: outros<br />2: automático<br />3: manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
 |startup_desc|**nvarchar(256)**|Descreve o modo inicial do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> Outros: Outros (iniciar reinicialização)<br />Outros: Outros (Iniciar sistema)<br />Automática: Inicialização automática<br />Manual: Início de demanda<br />Desabilitado: desabilitado<br /><br /> Não pode ser nulo.|  
 |status|**Int**|Indica o status atual do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> 1: interrompido<br />2: outros (início pendente)<br />3: outros (parada pendente)<br />4: em execução<br />5: outros (continuação pendente)<br />6: outros (pausa pendente)<br />7: pausado<br /><br /> Permite valor nulo.|  
 |status_desc|**nvarchar(256)**|Descreve o status atual do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> Interrompido: O serviço é interrompido.<br />Outros (início de operação pendente): O serviço está iniciando.<br />Outros (parada de operação pendente): O serviço está no processo de parada.<br />Está em execução: O serviço está em execução.<br />Outros (continuar operações pendente): O serviço está em um estado pendente.<br />Outros (pausa pendente): O serviço está no processo de pausa.<br />Em pausa: O serviço está em pausa.<br /><br /> Não pode ser nulo.|  

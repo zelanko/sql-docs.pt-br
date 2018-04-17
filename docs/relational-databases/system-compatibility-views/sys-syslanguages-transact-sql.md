@@ -1,16 +1,16 @@
 ---
-title: sys.syslanguages (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys. syslanguages (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syslanguages
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03708a28eb0cdd1a961035f95d89cc9476cfbd63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,17 +46,17 @@ ms.lasthandoff: 02/09/2018
 |dateformat|**nchar(3)**|Ordem de data, por exemplo, DMA.|  
 |datefirst|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante, até 7 para domingo.|  
 |atualização|**Int**|Reservado para uso do sistema.|  
-|name|**sysname**|Nome oficial do idioma, por exemplo, francês.|  
+|nome|**sysname**|Nome oficial do idioma, por exemplo, francês.|  
 |alias|**sysname**|Nome de idioma alternativo, por exemplo, francês.|  
 |months|**nvarchar(372)**|Lista de nomes de meses completos separados por vírgula, de janeiro a dezembro, com cada nome contendo até 20 caracteres.|  
 |shortmonths|**nvarchar(132)**|Lista de nomes de meses abreviados separados por vírgula, de janeiro a dezembro, com cada nome contendo até 9 caracteres.|  
 |dias|**nvarchar(217)**|Lista de nomes de dias separados por vírgula, de segunda-feira a domingo, com cada nome contendo até 30 caracteres.|  
-|lcid|**Int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ID de localidade do Windows para o idioma.|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ID do grupo de mensagem.|  
+|lcid|**Int**|ID de localidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows para o idioma.|  
+|msglangid|**smallint**|ID do grupo de mensagens do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] contém os seguintes idiomas instalados.  
   
-|Nome em inglês|LCID do Windows|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ID do grupo de mensagem|  
+|Nome em inglês|LCID do Windows|ID do grupo de mensagens do [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
 |Inglês|1046|1046|  
 |Alemão|1031|1031|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 02/09/2018
 |Estoniano|1061|1061|  
 |Letão|1062|1062|  
 |Lituano|1063|1063|  
-|Português do Brasil|1046|1046|  
+|Brasileiro|1046|1046|  
 |Chinês tradicional|1028|1028|  
 |Coreano|1042|1042|  
 |Chinês simplificado|2052|2052|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 02/09/2018
 |Tailandês|1054|1054|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de compatibilidade &#40; Transact-SQL &#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mapeando tabelas do sistema para exibições do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

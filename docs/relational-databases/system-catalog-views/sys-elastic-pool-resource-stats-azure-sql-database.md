@@ -27,13 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e77bcfcfd4e27981f63fd2802fd6b76c18fe1f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: c7c1d272d3bcbfd85002624b15a69bd2bc31e0e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
+# <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna estatísticas de uso de recursos de todos os pools de banco de dados Elástico em um servidor lógico. Para cada pool Elástico de banco de dados, há uma linha para cada relatório de janela (quatro linhas por minuto) de 15 segundos. Isso inclui a utilização da CPU, e/s, Log, o consumo de armazenamento e simultâneas/sessão de solicitação por todos os bancos de dados no pool. Esses dados são retidos por 14 dias. 

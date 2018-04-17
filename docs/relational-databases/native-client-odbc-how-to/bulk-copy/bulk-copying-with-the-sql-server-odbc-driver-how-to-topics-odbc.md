@@ -1,30 +1,31 @@
 ---
-title: "Cópia em massa com o SQL Server ODBC Driver tópicos de instruções (ODBC) | Microsoft Docs"
-ms.custom: 
+title: Cópia em massa com o SQL Server ODBC Driver tópicos de instruções (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1030204bead6ebfdb6327564a29e6faf457619d3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 77e43cebaaa9cd3b0a1d727bd983b5add09057d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Tópicos de instrução sobre cópia em massa com o driver ODBC do SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,19 +33,19 @@ ms.lasthandoff: 01/25/2018
 
   Quando usado com o Microsoft® SQL Server™ 2005, o driver ODBC do SQL Server dá suporte às mesmas funções de cópia em massa com suporte na API DB-Library.  
   
- Para obter informações sobre uma quebra de alteração na partir de cópia em massa [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [executando operações de cópia em massa &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Para obter informações sobre uma quebra de alteração na partir de cópia em massa [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [executando operações de cópia em massa & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Cópia em massa sem um arquivo de formato &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md)  
+-   [Cópia em massa sem um arquivo de formato & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md)  
   
--   [Copie em massa um conjunto de resultados de SELECT &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md)  
+-   [Copie em massa um conjunto de resultados de SELECT & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md)  
   
--   [Criar um arquivo de formato de cópia em massa &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)  
+-   [Criar um arquivo de formato de cópia em massa & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)  
   
--   [Cópia em massa usando um arquivo de formato &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-by-using-a-format-file-odbc.md)  
+-   [Cópia em massa usando um arquivo de formato & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [Em massa dados de cópia de variáveis de programa &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md)  
+-   [Em massa dados de cópia de variáveis de programa & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

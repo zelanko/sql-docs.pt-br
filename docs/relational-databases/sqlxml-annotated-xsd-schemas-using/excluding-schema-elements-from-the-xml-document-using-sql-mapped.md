@@ -1,16 +1,16 @@
 ---
 title: 'Excluindo elementos de esquema do documento XML usando sql: mapeado | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -25,20 +25,21 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ccb3a9d274191ef11c031872062b07e5058acf54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluindo elementos de esquema do documento XML usando sql: mapeado
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Todo elemento e atributo no esquema XSD é mapeado para uma tabela/exibição e uma coluna do banco de dados devido ao mapeamento padrão. Se você quiser criar um elemento no esquema XSD que não é mapeado para nenhuma tabela de banco de dados (exibição) ou coluna e que não aparece no XML, você pode especificar o **sql: mapeado** anotação.  
+  Todo elemento e atributo no esquema XSD é mapeado para uma tabela/exibição e uma coluna do banco de dados devido ao mapeamento padrão. Se você quiser criar um elemento no esquema XSD que não é mapeado para nenhuma tabela de banco de dados (exibição) ou coluna e que não aparece no XML, você pode especificar o **sql: mapeado** anotação.  
   
  O **sql: mapeado** anotação é especialmente útil se o esquema não pode ser modificado ou se o esquema é usado para validar o XML de outras fontes e ainda contém dados que não são armazenados no banco de dados. O **sql: mapeado** difere de anotação **sql: constante é** em que os atributos e elementos não mapeados não aparecem no documento XML.  
   
@@ -112,6 +113,6 @@ Todo elemento e atributo no esquema XSD é mapeado para uma tabela/exibição e 
  Observe que o ContactID, FirstName e LastName estão presentes, mas HomeAddress não está, pois o esquema de mapeamento especificou 0 para o **sql: mapeado** atributo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Mapeamento padrão de atributos e elementos XSD para tabelas e colunas &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Mapeamento de padrão de atributos e elementos XSD para tabelas e colunas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

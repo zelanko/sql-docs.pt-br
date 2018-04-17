@@ -2,7 +2,7 @@
 title: Função SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Função SQLGetDiagField
 **Conformidade**  
@@ -224,7 +224,7 @@ n-definição *|"CRIAR DOMÍNIO"|SQL_DIAG_CREATE_DOMAIN|
 |*definição de tradução*|"CRIAR TRADUÇÃO"|SQL_DIAG_CREATE_TRANSLATION|  
 |*posição da instrução de atualização*|"A ATUALIZAÇÃO DINÂMICA CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*pesquisa de instrução de atualização*|"ONDE A ATUALIZAÇÃO"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown (desconhecido)|*cadeia de caracteres vazia*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown (desconhecido)|*Cadeia de caracteres vazia*|SQL_DIAG_UNKNOWN_STATEMENT|  
   
 ## <a name="sequence-of-status-records"></a>Sequência de registros de Status  
  Registros de status são posicionados em uma sequência com base no número de linha e o tipo do diagnóstico. O Gerenciador de Driver determina a ordem final para retornar registros de status que ele gera. O driver determina a ordem final para retornar registros de status que ele gera.  
@@ -262,6 +262,6 @@ n-definição *|"CRIAR DOMÍNIO"|SQL_DIAG_CREATE_DOMAIN|
 |---------------------------|---------|  
 |Obter vários campos de uma estrutura de dados de diagnóstico|[Função SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,16 +1,16 @@
 ---
 title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_post_msx_operation
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b54a5b8dbf5539adb2d87ef6a095f4f78f767aff
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 08cda2f3508e5c4f338c8e607654f5e41ed803f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Insere operações (linhas) do **sysdownloadlist** tabela do sistema para servidores de destino baixar e executar.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,16 +64,16 @@ sp_post_msx_operation
  [  **@object_type =**] **'***objeto***'**  
  O tipo de objeto para o qual uma operação será postada. Os tipos válidos são **trabalho**, **servidor**, e **AGENDA**. *objeto* é **varchar(64)**, com um padrão de **trabalho**.  
   
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  O número de identificação do trabalho ao qual a operação se aplica. *job_id* é **uniqueidentifier**, sem padrão. **0x00** indica todos os trabalhos. Se *objeto* é **servidor**, em seguida, *job_id*não é necessária.  
   
- [ **@specific_target_server =**] **'***target_server***'**  
+ [  **@specific_target_server =**] **'***target_server***'**  
  O nome do servidor de destino ao qual a operação especificada se aplica. Se *job_id* for especificado, mas *target_server* não for especificado, as operações serão postadas para todos os servidores de trabalho do trabalho. *target_server* é **nvarchar (30)**, com um padrão NULL.  
   
  [  **@value =**] *valor*  
  O intervalo de sondagem, em segundos. *value* é **int**, com um padrão NULL. Especifique esse parâmetro somente se *operação* é **SET-POLL**.  
   
- [ **@schedule_uid=** ] *schedule_uid*  
+ [  **@schedule_uid=** ] *schedule_uid*  
  O identificador exclusivo da agenda à qual a operação se aplica. *schedule_uid* é **uniqueidentifier**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

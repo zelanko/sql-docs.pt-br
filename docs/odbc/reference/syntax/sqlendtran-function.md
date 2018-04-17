@@ -2,7 +2,7 @@
 title: Função SQLEndTran | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>Função SQLEndTran
 **Conformidade**  
@@ -115,7 +115,7 @@ SQLRETURN SQLEndTran(
   
  Se o valor SQL_CURSOR_ROLLBACK_BEHAVIOR ou SQL_CURSOR_COMMIT_BEHAVIOR for igual a SQL_CB_DELETE, **SQLEndTran** fecha e exclui todos os cursores abertos em todas as instruções associadas com a conexão e descarta todos os resultados pendentes. **SQLEndTran** deixa qualquer instrução presente em um estado (despreparado) alocado; o aplicativo pode reutilizá-los para solicitações subsequentes de SQL ou pode chamar **SQLFreeStmt** ou **SQLFreeHandle** com um *HandleType* sql_handle_stmt para desalocá-los.  
   
- Se o valor SQL_CURSOR_ROLLBACK_BEHAVIOR ou SQL_CURSOR_COMMIT_BEHAVIOR for igual a SQL_CB_CLOSE, **SQLEndTran** fecha todos os cursores abertos em todas as instruções associadas com a conexão. **SQLEndTran** deixa qualquer instrução presente em um estado preparado; o aplicativo pode chamar **SQLExecute** para uma instrução associada com a conexão sem primeiro chamar **SQLPrepare** .  
+ Se o valor SQL_CURSOR_ROLLBACK_BEHAVIOR ou SQL_CURSOR_COMMIT_BEHAVIOR for igual a SQL_CB_CLOSE, **SQLEndTran** fecha todos os cursores abertos em todas as instruções associadas com a conexão. **SQLEndTran** deixa qualquer instrução presente em um estado preparado; o aplicativo pode chamar **SQLExecute** para uma instrução associada com a conexão sem primeiro chamar **SQLPrepare**.  
   
  Se o valor SQL_CURSOR_ROLLBACK_BEHAVIOR ou SQL_CURSOR_COMMIT_BEHAVIOR for igual a SQL_CB_PRESERVE, **SQLEndTran** não afeta cursores abertos associados a conexão. Os cursores permanecem na linha que apontada antes da chamada para **SQLEndTran**.  
   
@@ -159,7 +159,7 @@ SQLRETURN SQLEndTran(
 |Liberando um identificador|[Função SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Liberando um identificador de instrução|[Função SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

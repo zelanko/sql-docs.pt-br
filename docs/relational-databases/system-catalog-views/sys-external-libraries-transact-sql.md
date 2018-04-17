@@ -1,15 +1,15 @@
 ---
 title: sys.external_libraries (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external_libraries
@@ -23,11 +23,12 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: c1e65db4ccb43dde92188e462b6e99414ee05f52
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d8fa8a4d41cff452379c420b712f13b2d4415a74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ O sys.external_libraries de exibição de catálogo lista uma linha para cada bi
 |Nome da coluna |Tipo de dados | Description|
 |------|------|------|
 |external_library_id |int | ID do objeto de biblioteca externa. |
-|name |sysname |Nome da biblioteca externa. É exclusivo no banco de dados por proprietário.|
+|nome |sysname |Nome da biblioteca externa. É exclusivo no banco de dados por proprietário.|
 |principal_id |int |ID da entidade de segurança que possui esta biblioteca externa. |
 |language | sysname | Nome do idioma ou tempo de execução que oferece suporte a biblioteca externa. Os valores válidos são 'R'. Tempos de execução adicionais podem ser adicionados no futuro.|
 |escopo |int |0 para escopo público. 1 para o escopo particular |  
@@ -51,5 +52,5 @@ O sys.external_libraries de exibição de catálogo lista uma linha para cada bi
 
 ## <a name="see-also"></a>Consulte também  
 [sys.external_library_files](sys-external-library-files-transact-sql.md)  
-[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
+[CRIAR BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
 [Gerenciamento de pacotes do SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

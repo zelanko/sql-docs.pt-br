@@ -1,16 +1,16 @@
 ---
 title: sys. security_predicates (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - sys.security_predicates catalog view
 - security_predicates catalog view
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 472c9c6504b010d6abfea0d3161ada98e9e0f5f6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 51799910d0e240d14b231c0d2c8d97f36cca66d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys. security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,14 +45,14 @@ ms.lasthandoff: 11/21/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|ID da política de segurança que contém esse predicado.|  
-|security_predicate_id|**int**|ID do predicado nesta política de segurança.|  
-|target_object_id|**int**|ID do objeto no qual o predicado de segurança está associado.|  
+|object_id|**Int**|ID da política de segurança que contém esse predicado.|  
+|security_predicate_id|**Int**|ID do predicado nesta política de segurança.|  
+|target_object_id|**Int**|ID do objeto no qual o predicado de segurança está associado.|  
 |predicate_definition|**nvarchar(max)**|Nome totalmente qualificado da função que será usada como um predicado de segurança, incluindo os argumentos. Observe que o `schema.function` nome pode ser normalizado (ou seja, com caracteres de escape), bem como qualquer outro elemento em texto para manter a consistência. Por exemplo:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
-|predicate_type|**int**|O tipo de predicado usado pela política de segurança:<br /><br /> 0 = O PREDICADO DE FILTRO<br /><br /> 1 = O PREDICADO DE BLOCO|  
-|predicate_type_desc|**nvarchar (60)**|O tipo de predicado usado pela política de segurança:<br /><br /> FILTER<br /><br /> BLOCO|  
-|operação|**int**|O tipo de operação especificado para o predicado:<br /><br /> NULL = todas as operações aplicável<br /><br /> 1 = APÓS INSERIR<br /><br /> 2 = DEPOIS DA ATUALIZAÇÃO<br /><br /> 3 = ANTES DA ATUALIZAÇÃO<br /><br /> 4 = ANTES DA EXCLUSÃO|  
-|operation_desc|**nvarchar (60)**|O tipo de operação especificado para o predicado:<br /><br /> NULL<br /><br /> DEPOIS DE INSERIR<br /><br /> AFTER UPDATE<br /><br /> ANTES DA ATUALIZAÇÃO<br /><br /> ANTES DE EXCLUIR|  
+|predicate_type|**Int**|O tipo de predicado usado pela política de segurança:<br /><br /> 0 = O PREDICADO DE FILTRO<br /><br /> 1 = O PREDICADO DE BLOCO|  
+|predicate_type_desc|**nvarchar(60)**|O tipo de predicado usado pela política de segurança:<br /><br /> FILTER<br /><br /> BLOCO|  
+|operação|**Int**|O tipo de operação especificado para o predicado:<br /><br /> NULL = todas as operações aplicável<br /><br /> 1 = APÓS INSERIR<br /><br /> 2 = DEPOIS DA ATUALIZAÇÃO<br /><br /> 3 = ANTES DA ATUALIZAÇÃO<br /><br /> 4 = ANTES DA EXCLUSÃO|  
+|operation_desc|**nvarchar(60)**|O tipo de operação especificado para o predicado:<br /><br /> NULL<br /><br /> DEPOIS DE INSERIR<br /><br /> AFTER UPDATE<br /><br /> ANTES DA ATUALIZAÇÃO<br /><br /> ANTES DE EXCLUIR|  
   
 ## <a name="permissions"></a>Permissões  
  Entidades com o **ALTER ANY SECURITY POLICY** permissão têm acesso a todos os objetos nesta exibição do catálogo, bem como qualquer pessoa com **VIEW DEFINITION** no objeto.  

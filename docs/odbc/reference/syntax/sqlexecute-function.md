@@ -2,7 +2,7 @@
 title: Função SQLExecute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1660fbd60346aff1c4ef24dcba32a778a00d5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: def8205423e1f79045cb54e80cf9bc33c4d8246d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecute-function"></a>Função SQLExecute
 **Conformidade**  
@@ -68,7 +68,7 @@ SQLRETURN SQLExecute(
 |01007|Privilégio não concedido|A instrução preparada associada a *StatementHandle* foi uma **GRANT** instrução e o usuário não foi possível conceder o privilégio especificado.|  
 |01S02|Valor de opção alterado|Um atributo de instrução especificada era inválido devido a condições de trabalho de implementação para que um valor semelhante temporariamente foi substituído. (**SQLGetStmtAttr** pode ser chamado para determinar o que é o valor substituído temporariamente.) O valor de substituição é válido para o *StatementHandle* até que o cursor seja fechado, no ponto em que o atributo de instrução será revertido para seu valor anterior. Os atributos de instrução que podem ser alterados são: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT e SQL_ATTR_SIMULATE_CURSOR. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01S07|Truncamento fracionário|Os dados retornados para uma entrada/saída ou parâmetro de saída foi truncado de modo que a parte fracionária de um tipo de dados numérico foi truncada ou a parte fracionária do componente de um tipo de dados de tempo, o carimbo de hora ou intervalo de tempo foi truncada.<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|07002|Campo COUNT incorreto|O número de parâmetros especificados na **SQLBindParameter** era menor do que o número de parâmetros na instrução SQL contida no \* *StatementText*.<br /><br /> **SQLBindParameter** foi chamado com *ParameterValuePtr* definido como um ponteiro nulo, *StrLen_or_IndPtr* não está definido como SQL_NULL_DATA ou SQL_DATA_AT_EXEC, e  *InputOutputType* não é definido como SQL_PARAM_OUTPUT, para que o número de parâmetros especificado em **SQLBindParameter** era maior que o número de parâmetros na instrução SQL contidos em **StatementText*.|  
+|07002|Campo COUNT incorreto|O número de parâmetros especificados na **SQLBindParameter** era menor do que o número de parâmetros na instrução SQL contida no \* *StatementText*.<br /><br /> **SQLBindParameter** foi chamado com *ParameterValuePtr* definido como um ponteiro nulo, *StrLen_or_IndPtr* não está definido como SQL_NULL_DATA ou SQL_DATA_AT_EXEC, e *InputOutputType*  não é definido como SQL_PARAM_OUTPUT, para que o número de parâmetros especificado em **SQLBindParameter** era maior que o número de parâmetros na instrução SQL contidos em **StatementText* .|  
 |07006|Violação do atributo de tipo de dados restrito|O valor de dados identificado pelo *ValueType* argumento **SQLBindParameter** para o parâmetro associado não pôde ser convertido para o tipo de dados identificado pelo *ParameterType*argumento **SQLBindParameter**.<br /><br /> O valor dos dados retornados para um parâmetro associado como SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_OUTPUT não pôde ser convertido para o tipo de dados identificado pelo *ValueType* argumento **SQLBindParameter**.<br /><br /> (Se não foi possível converter os valores de dados para uma ou mais linhas, mas uma ou mais linhas foram retornadas com êxito, essa função retorna SQL_SUCCESS_WITH_INFO.)|  
 |07007|Violação de valor de parâmetro restrito|O tipo de parâmetro SQL_PARAM_INPUT_OUTPUT_STREAM é usado somente para um parâmetro que envia e recebe dados em partes. Um buffer de entrada associado não é permitido para este tipo de parâmetro.<br /><br /> Este erro ocorre quando o tipo de parâmetro for SQL_PARAM_INPUT_OUTPUT e quando o \* *StrLen_or_IndPtr* especificado em **SQLBindParameter** não é igual a SQL_NULL_DATA, SQL_DEFAULT_ PARAM, SQL_LEN_DATA_AT_EXEC(len) ou SQL_DATA_AT_EXEC.|  
 |07S01|Uso inválido de parâmetro padrão|Um valor de parâmetro definido com **SQLBindParameter**, SQL_DEFAULT_PARAM, e o parâmetro correspondente não era um parâmetro para uma chamada de procedimento canônica ODBC.|  
@@ -151,6 +151,6 @@ SQLRETURN SQLExecute(
 |Definir um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,16 +1,16 @@
 ---
 title: Especificar um destino Namespace usando o atributo (SQLXML 4.0) targetNamespace | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -22,20 +22,21 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9b420ec48a7bc78a55e50dc549c6e06be7e34cb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Escrever esquemas XSD, você pode usar o XSD **targetNamespace** atributo para especificar um namespace de destino. Este tópico descreve como o XSD **targetNamespace**, **elementFormDefault**, e **attributeFormDefault** atributos de trabalho, como eles afetam a instância XML que é gerado, e como são especificadas consultas XPath com namespaces.  
+  Escrever esquemas XSD, você pode usar o XSD **targetNamespace** atributo para especificar um namespace de destino. Este tópico descreve como o XSD **targetNamespace**, **elementFormDefault**, e **attributeFormDefault** atributos de trabalho, como eles afetam a instância XML que é gerado, e como são especificadas consultas XPath com namespaces.  
   
  Você pode usar o **xsd: targetNamespace** atributo para colocar elementos e atributos do namespace padrão em um namespace diferente. Você também pode especificar se os elementos e atributos do esquema declarados localmente devem aparecer qualificados por um namespace, seja explicitamente, usando um prefixo, ou implicitamente, por padrão. Você pode usar o **elementFormDefault** e **attributeFormDefault** atributos no  **\<xsd: schema >** elemento para especificar globalmente a qualificação de locais elementos e atributos, você pode usar o **formulário** atributo para especificar os atributos e elementos individuais separadamente.  
   

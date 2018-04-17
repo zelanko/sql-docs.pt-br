@@ -2,7 +2,7 @@
 title: Função SQLDriverConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>Função SQLDriverConnect
 **Conformidade**  
@@ -153,13 +153,13 @@ SQLRETURN SQLDriverConnect(
   
  *cadeia de caracteres de conexão* :: = *cadeia de caracteres vazia*[;] &#124; *atributo*[;] &#124; *atributo*; *cadeia de caracteres de conexão*  
   
- *cadeia de caracteres vazia* :: =*atributo* :: = *palavra-chave de atributo*=*atributo-valor* &#124; DRIVER = [{}]*atributo-valor*[}]  
+ *cadeia de caracteres vazia* :: =*atributo* :: = *palavra-chave de atributo*=*atributo-valor* &#124; DRIVER = [{}] *valor do atributo*[}]  
   
  *palavra-chave de atributo* :: = DSN &#124; UID &#124; PWD &#124; *-definido-atributo-palavra-chave driver*  
   
- *valor do atributo* :: = *cadeia de caracteres*  
+ *attribute-value* ::= *character-string*  
   
- *definido-atributo-palavra-chave driver* :: = *identificador*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  onde *cadeia de caracteres* tem zero ou mais caracteres; *identificador* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; *atributo-valor* pode diferenciar maiusculas de minúsculas; e o valor da **DSN** palavra-chave não ser formado apenas por espaços em branco.  
   
@@ -373,6 +373,6 @@ int main() {
 |Liberando um identificador|[Função SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Definir um atributo de conexão|[Função SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

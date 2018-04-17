@@ -1,15 +1,15 @@
 ---
 title: Ambiente hospedado do CLR | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 
+caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5beddb30dcf9948c2e11d0ad3110e21d485b14cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração de CLR - ambiente hospedado de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
  O código do usuário não deve ter permissão para realizar operações que comprometam a integridade do processo do Mecanismo de banco de dados, como exibir uma mensagem em pop-up solicitando resposta do usuário ou sair do processo. Também não deve ser capaz substituir os buffers de memória ou as estruturas de dados internas do Mecanismo de banco de dados.  
   
 ###### <a name="scalability"></a>Escalabilidade  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR têm modelos internos diferentes para agendamento e gerenciamento de memória. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um modelo de threading cooperativo, e não preemptivo, no qual os threads são executados de forma voluntária, periodicamente ou quando estão aguardando bloqueios ou E/S. O CLR dá suporte um modelo de threading preemptivo. Se o código do usuário que estiver sendo executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puder chamar diretamente as primitivas de threading do sistema operacional, então ele não se integrará bem ao agendador de tarefas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e poderá degradar a escalabilidade do sistema. O CLR não faz distinção entre memória física e virtual, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia diretamente a memória física e deve usar a memória física dentro de um limite configurável.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR têm modelos internos diferentes para agendamento e gerenciamento de memória. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um modelo de threading cooperativo, e não preemptivo, no qual os threads são executados de forma voluntária, periodicamente ou quando estão aguardando bloqueios ou E/S. O CLR dá suporte um modelo de threading preemptivo. Se o código do usuário que estiver sendo executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puder chamar diretamente as primitivas de threading do sistema operacional, então ele não se integrará bem ao agendador de tarefas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e poderá degradar a escalabilidade do sistema. O CLR não faz distinção entre memória física e virtual, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia diretamente a memória física e deve usar a memória física dentro de um limite configurável.  
   
  Os diferentes modelos de threading, agendamento e gerenciamento de memória são um desafio de integração para um RDBMS (sistema de gerenciamento de banco de dados relacional) que se dimensiona para dar suporte a milhares de sessões de usuário simultâneas. A arquitetura deve garantir que a escalabilidade do sistema não seja comprometida pelo código de usuário que chame diretamente APIs (application programming interfaces) para primitivas de threading, memória e sincronização.  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 02/09/2018
  Quando é feita hospedagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essas anulações de thread são manipuladas da seguinte forma: o CLR detecta qualquer estado compartilhado no domínio do aplicativo no qual a anulação de thread ocorre. Ele faz isto verificando para a presença de objetos de sincronização. Se houver um estado compartilhado no domínio do aplicativo, então o próprio domínio do aplicativo será descarregado. A descarga do domínio do aplicativo para transações de banco de dados que estão em execução no momento, naquele domínio de aplicativo. Como a presença do estado compartilhado pode ampliar o impacto de tais exceções críticas para as sessões de usuário que não são aquela que está disparando a exceção, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR tomaram medidas para reduzir a probabilidade de estado compartilhado. Para obter mais informações, consulte a documentação do .NET Framework.  
   
 ###### <a name="security-permission-sets"></a>Segurança: conjuntos de permissões  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: SAFE, EXTERNAL_ACCESS e UNSAFE.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: SAFE, EXTERNAL_ACCESS e UNSAFE.  
   
 |||||  
 |-|-|-|-|  
@@ -142,7 +142,7 @@ ms.lasthandoff: 02/09/2018
   
  EXTERNAL_ACCESS fornece uma opção de segurança intermediária, permitindo que o código acesse recursos externos ao banco de dados, mas ainda tenha as garantias de confiabilidade de SAFE.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a camada de política de CAS de nível de host para configurar uma política de host que conceda um dos três conjuntos de permissões com base no conjunto de permissões armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] catálogos. Código gerenciado em execução dentro do banco de dados sempre obtém um desses conjuntos de permissão de acesso de código.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a camada de políticas do CAS no nível de host para configurar uma política de host que conceda um dos três conjuntos de permissões com base no conjunto de permissões armazenado nos catálogos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Código gerenciado em execução dentro do banco de dados sempre obtém um desses conjuntos de permissão de acesso de código.  
   
 ### <a name="programming-model-restrictions"></a>Restrições do modelo de programação  
  O modelo de programação para código gerenciado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envolve a codificação de funções, procedimentos e tipos que normalmente não exigem o uso do estado mantido entre várias invocações nem o compartilhamento do estado entre várias sessões de usuário. Além disso, conforme descrito anteriormente, a presença do estado compartilhado pode causar exceções críticas que afetam a escalabilidade e a confiabilidade do aplicativo.  

@@ -1,16 +1,16 @@
 ---
-title: "No lado do cliente e do servidor de formatação (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: No lado do cliente e do servidor de formatação (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - formats [SQLXML]
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - XML formatting [SQLXML]
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf98c39c527e6141c699118adda04b9afb3c36da
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ceae1893eec2f63ae38d9437a646cfadb28d40b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Formatação do lado do cliente e do lado do servidor (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-O SQLXML fornece dois modos de formatar um documento de XML:  
+  O SQLXML fornece dois modos de formatar um documento de XML:  
   
 -   Formatação do lado do servidor  
   
@@ -40,16 +41,16 @@ O SQLXML fornece dois modos de formatar um documento de XML:
  Esta seção inclui informações sobre a formatação de documentos XML no lado do cliente ou no lado do servidor de conjuntos de linhas que são gerados por consultas executadas em um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Arquitetura de formatação de XML do lado do cliente e do servidor &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
+ [Arquitetura de formatação de XML do lado do cliente e do servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
  Fornece diagramas de arquitetura e descreve os pontos básicos da arquitetura de formatação dos lados do cliente e do servidor no SQLXML.  
   
- [Formatação XML do lado do servidor &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [Formatação XML do lado do servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
  Descreve a formatação de XML do lado de servidor.  
   
- [Formatação XML do lado do cliente &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Formatação XML do lado do cliente & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
  Descreve a formatação de XML no lado do cliente, incluindo informações sobre o uso de FOR XML no cliente.  
   
- [Formatação XML do lado do cliente vs. Formatação XML do lado do servidor &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)  
+ [Formatação XML do lado do cliente vs. Formatação XML do lado do servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)  
  Descreve diferenças específicas entre a formatação de XML do lado do cliente e do lado do servidor.  
   
   

@@ -2,7 +2,7 @@
 title: Função SQLNativeSql | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e233d9742ea7bd9aa5de56962e1d785be78b8066
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0a18b6575d403c44fb8aa546a4ce90d3a99e6b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnativesql-function"></a>Função SQLNativeSql
 **Conformidade**  
@@ -128,8 +128,8 @@ SELECT int2 (empid) FROM employee
  Para obter mais informações, consulte [execução direta](../../../odbc/reference/develop-app/direct-execution-odbc.md) e [execução preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
   
 ## <a name="related-functions"></a>Funções relacionadas  
- Nenhum.  
+ Nenhuma.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

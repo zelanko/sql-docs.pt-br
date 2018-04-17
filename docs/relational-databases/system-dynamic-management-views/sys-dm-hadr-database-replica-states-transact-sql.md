@@ -1,16 +1,16 @@
 ---
 title: sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c69d36319ca4273fad7b1c4890bf27e4e4fa0797
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d0c1fcebeb62701761134103e16ee8127372858d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/12/2018
 |**replica_id**|**uniqueidentifier**|O identificador da réplica de disponibilidade dentro do grupo de disponibilidade.|  
 |**group_database_id**|**uniqueidentifier**|O identificador do banco de dados dentro do grupo de disponibilidade. Esse identificador é idêntico em cada réplica à qual este banco de dados é unido.|  
 |**is_local**|**bit**|Se o banco de dados de disponibilidade é local, um dos seguintes:<br /><br /> 0 = O banco de dados não é local para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = O banco de dados é local para a instância do servidor.|  
-|**is_primary_replica**|**bit**|Retorna 1 se a réplica for primária, ou 0 se for uma réplica secundária.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**is_primary_replica**|**bit**|Retorna 1 se a réplica for primária, ou 0 se for uma réplica secundária.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**synchronization_state**|**tinyint**|Estado da movimentação de dados, um dos valores a seguir.<br /><br /> 0 = não sincronizando. Para um banco de dados primário, indica que o banco de dados não está pronto para sincronizar seu log de transações com os bancos de dados secundários correspondentes. Para um banco de dados secundário, indica que o banco de dados não iniciou a sincronização de log devido a um problema de conexão, está sendo suspenso ou está passando por estados de transição durante a inicialização ou uma troca de função.<br /><br /> 1 = a sincronização. Para um banco de dados primário, indica que o banco de dados está pronto para aceitar uma solicitação de exame de um banco de dados secundário. Para um banco de dados secundário, indica que o movimento de dados ativo está ocorrendo para o banco de dados.<br /><br /> 2 = Synchronized. Um banco de dados primário mostra SYNCHRONIZED em vez de SYNCHRONIZING. Um banco de dados secundário de confirmação síncrona mostrará sincronizado quando o cache local informar que o banco de dados está pronto para failover e quando está sincronizando.<br /><br /> 3 = revertendo. Indica a fase do processo de desfazer em que um banco de dados secundário está obtendo páginas ativamente do banco de dados primário.<br />**Cuidado:** quando um banco de dados em uma réplica secundária estiver no estado REVERTING, forçar o failover para a réplica secundária deixa o banco de dados em um estado no qual ele não pode ser iniciado como um banco de dados primário. O banco de dados precisará ser reconectado como um banco de dados secundário ou você precisará aplicar novos registros de log de um backup de log.<br /><br /> 4 = inicializando. Indica a fase de desfazer em que o log de transações que exigiu que um banco de dados secundário ficasse em dia com o LSN de desfazer está sendo enviado e protegido em uma réplica secundária.<br />**Cuidado:** quando um banco de dados em uma réplica secundária estiver no estado INITIALIZING, forçar failover na réplica secundária deixa o banco de dados em um estado no qual ele pode ser iniciado como um banco de dados primário. O banco de dados precisará ser reconectado como um banco de dados secundário ou você precisará aplicar novos registros de log de um backup de log.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Descrição do estado da movimentação de dados, um dos seguintes:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = A confirmação da transação não está sincronizada em relação a este banco de dados.<br /><br /> 1 = A confirmação da transação está sincronizada em relação a este banco de dados.<br /><br /> Para um banco de dados em uma réplica de disponibilidade de confirmação assíncrona, este valor é sempre 0.<br /><br /> Para um banco de dados em uma réplica de disponibilidade de confirmação síncrona, este valor é preciso somente no banco de dados primário.|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/12/2018
 |**last_commit_lsn**|**Numeric(25,0)**|O número de sequência de log real que corresponde ao último registro de confirmação no log de transações.<br /><br /> No banco de dados primário, corresponde ao último registro de confirmação processado. As linhas para bancos de dados secundários mostram o número de sequência de log que a réplica secundária enviou para a primária.<br /><br /> Na réplica secundária, é o último registro de confirmação refeito.|  
 |**last_commit_time**|**datetime**|A hora correspondente ao último registro de confirmação.<br /><br /> No banco de dados secundário, essa hora é a mesma do banco de dados primário.<br /><br /> Na réplica primária, cada linha de banco de dados secundário exibe a hora em que a réplica secundária que hospeda aquele banco de dados secundário relatou de volta para a réplica primária. A diferença de tempo entre a linha do banco de dados primário e a linha de um determinado banco de dados secundário representa aproximadamente o RPO (objetivo de tempo de recuperação), supondo-se que o processo de refazer é alcançado e que o progresso foi relatado de volta para a réplica primária pela réplica secundária.|  
 |**low_water_mark_for_ghosts**|**bigint**|Um número aumentado de maneira constante para o banco de dados, que indica uma marca d'água inferior usada pela limpeza de fantasma no banco de dados primário. Se esse número não estiver aumentando ao longo do tempo, isso indicará que a limpeza fantasma talvez não esteja ocorrendo. Para decidir quais linhas fantasmas devem ser limpas, a réplica primária usa o valor mínimo dessa coluna para este banco de dados em todas as réplicas de disponibilidade (inclusive a réplica primária).|  
-|**secondary_lag_seconds**|**bigint**|O número de segundos que a réplica secundária está atrás da réplica primária durante a sincronização.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**secondary_lag_seconds**|**bigint**|O número de segundos que a réplica secundária está atrás da réplica primária durante a sincronização.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ##  <a name="LSNcolumns"></a> Compreendendo os valores da coluna LSN  
  Os valores de **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recuperação _lsn**, e **truncation_lsn** colunas não são números de sequência de log real (LSNs). Em vez disso, cada um desses valores reflete uma ID de bloco de log preenchida com zeros.  
