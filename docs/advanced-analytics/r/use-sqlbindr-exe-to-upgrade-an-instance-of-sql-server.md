@@ -1,36 +1,28 @@
 ---
 title: Vincular componentes de aprendizado de máquina no SQL Server para o servidor de aprendizado de máquina do Microsoft | Microsoft Docs
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Vincular componentes de aprendizado de máquina no SQL Server para Microsoft Server de aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo explica o processo de _associação_, que pode ser usado para atualizar a componentes usados no SQL Server de aprendizado de máquina. O processo de ligação de bloqueios do servidor em um ritmo de atualização com base em versões do servidor de aprendizado de máquina, em vez de usar o SQL Server de versão e agenda de atualização.
+Este artigo explica o processo de *associação* uma instância (no banco de dados) de serviços de aprendizado de máquina do SQL Server ou SQL Server R Services para Microsoft Server de aprendizado de máquina para fins de atualização de pacotes de R e Python em um cadência de lançamento mais rápida. 
 
-> [!IMPORTANT]
-> Você não precisa usar este processo de atualização, se você deseja obter as atualizações como parte de atualizações do SQL Server. Sempre que você instala um novo service pack ou uma versão de serviço, componentes de aprendizado de máquina são automaticamente atualizados para a versão mais recente. Usar somente o _associação_ processar, se você deseja atualizar os componentes em um ritmo mais rápido do que é permitida por versões de serviço do SQL Server.
+O processo de associação altera o mecanismo de atualização de serviço. Sem a associação, a versão dos pacotes de R e Python são atualizados somente quando você instalar um service pack ou atualização cumulativa (CU). Com associação, versões mais recentes do pacote podem ser aplicadas à sua instância, independentemente do agendamento de atualizações Cumulativas de versão.
 
-Se a qualquer momento em que você deseja parar de atualizar a agenda do servidor de aprendizado de máquina, você deve _desassociar_ a instância, conforme descrito em [nesta seção](#bkmk_Unbind)e desinstalar o servidor de aprendizado de máquina.
+Associação afeta apenas os componentes de R ou de aprendizado de máquina da instância do mecanismo de banco de dados, não a instância de mecanismo de banco de dados em si. Só se aplica a uma instância (no banco de dados). Uma instalação (autônomo) não está no escopo.
+
+Se a qualquer momento em que você deseja reverter para o serviço do SQL Server para seus componentes de aprendizado de máquina, você pode _desassociar_ a instância, conforme descrito em [nesta seção](#bkmk_Unbind)e desinstalar o servidor de aprendizado de máquina.
 
 **Aplica-se a:** R Services do SQL Server 2016, SQL Server 2017 serviços de aprendizado de máquina
 

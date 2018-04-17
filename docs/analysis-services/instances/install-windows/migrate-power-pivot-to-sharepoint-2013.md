@@ -1,27 +1,27 @@
 ---
 title: Migrar o Power Pivot para SharePoint 2013 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 6d14c449823f55d5c400c9f17ba73724d3ea43a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrar o Power Pivot para o SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,32 +38,20 @@ ms.lasthandoff: 01/29/2018
 |Preparar o farm do SharePoint 2013|Fazer backup, cópia e restauração de bancos de dados.|Montar bancos de dados de conteúdo|Migrar agendas do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- Administração Central do SharePoint<br /><br /> - Windows PowerShell|- Páginas do aplicativo do SharePoint<br /><br /> - Windows PowerShell|  
   
- **Neste tópico:**  
+##  <a name="bkmk_prepare_sharepoint2013"></a>Preparar o Farm do SharePoint 2013  
   
--   [1) Preparar o farm do SharePoint 2013](#bkmk_prepare_sharepoint2013)  
-  
--   [2) Fazer backup, cópia e restauração de bancos de dados](#bkmk_backup_restore)  
-  
--   [3) Preparar aplicativos Web e montar bancos de dados de conteúdo](#bkmk_prepare_mount_databases)  
-  
--   [4) Atualizar agendas do Power Pivot](#bkmk_upgrade_powerpivot_schedules)  
-  
--   [Recursos adicionais](#bkmk_additional_resources)  
-  
-##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Preparar o farm do SharePoint 2013  
-  
-1.  > [!TIP]  
+  > [!TIP]  
     >  Revise o método de autenticação para os quais seus aplicativos Web existentes estão configurados. Os aplicativos Web do SharePoint 2013 assumem como padrão a autenticação baseada em declarações. Os aplicativos Web do SharePoint 2010 configurados para a autenticação de modo clássico exigem etapas adicionais para migrar bancos de dados do SharePoint 2010 para o SharePoint 2013. Se seus aplicativos Web são configurados para autenticação de modo clássica, revise a documentação do SharePoint 2013.  
   
-2.  Instalar um novo farm do SharePoint Server 2013.  
+1.  Instalar um novo farm do SharePoint Server 2013.  
   
-3.  Instalar uma instância de um servidor do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Para saber mais, veja [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+2.  Instalar uma instância de um servidor do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Para saber mais, veja [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Executar o pacote de instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** em cada farm do SharePoint Server. Para obter informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Executar o pacote de instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** em cada farm do SharePoint Server. Para obter informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  Na Administração Central do SharePoint 2013, configure o aplicativo de serviço dos Serviços do Excel para usar o servidor do modo do SharePoint do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] criado na etapa anterior. Para obter mais informações, consulte a seção “Configure a integração básica do Analysis Services SharePoint” de [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+4.  Na Administração Central do SharePoint 2013, configure o aplicativo de serviço dos Serviços do Excel para usar o servidor do modo do SharePoint do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] criado na etapa anterior. Para obter mais informações, consulte a seção “Configure a integração básica do Analysis Services SharePoint” de [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-##  <a name="bkmk_backup_restore"></a> 2) Fazer backup, cópia e restauração de bancos de dados  
+##  <a name="bkmk_backup_restore"></a>Fazer backup, cópia e restauração de bancos de dados  
  O processo “Atualização da anexação do banco de dados do SharePoint” é uma sequência de etapas para fazer backup, copiar e restaurar conteúdo relacionado ao [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e bancos de dados de aplicativo de serviço para o farm do SharePoint 2013.  
   
 1.  **Definir banco de dados como somente leitura:** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no nome do banco de dados e clique em **Propriedades**. Na página **Opções** , defina a propriedade **Banco de Dados Somente Leitura** como **True**.  
@@ -76,8 +64,8 @@ ms.lasthandoff: 01/29/2018
   
 5.  **Definir banco de dados para leitura e gravação:** defina o **Banco de Dados Somente Leitura** como **False**.  
   
-##  <a name="bkmk_prepare_mount_databases"></a> 3) Preparar aplicativos Web e montar bancos de dados de conteúdo  
- Para obter uma explicação mais detalhada dos seguintes procedimentos, veja [Atualizar bancos de dados do SharePoint 2010 para SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+##  <a name="bkmk_prepare_mount_databases"></a>Preparar aplicativos Web e bancos de dados de conteúdo de montagem  
+ Para obter uma explicação mais detalhada dos procedimentos a seguir, consulte [atualizar bancos de dados do SharePoint 2010 para o SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Colocar o banco de dados offline:**  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 01/29/2018
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     Para obter mais informações, veja [Anexar ou desanexar bancos de dados de conteúdo (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
+     Para obter mais informações, consulte [anexar ou desanexar bancos de dados de conteúdo (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
   
      **Status quando a etapa está concluída:**  quando a operação de montagem estiver concluída, os usuários podem ver os arquivos que estavam no banco de dados de conteúdo antigo. Portanto os usuários podem ver e abrir as pastas de trabalho na biblioteca de documentos.  
   
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/29/2018
   
 2.  **PowerPivot.Files ausentes:** se você encontrar erros relacionados a DLLs ausentes do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , isso significa que o **spPowerPivot.msi** não foi instalado ou que a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] não foi usada para configurar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
-##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) Atualizar agendas do Power Pivot  
+##  <a name="bkmk_upgrade_powerpivot_schedules"></a>Atualizar agendas do Power Pivot  
  Esta seção descreve os detalhes e as opções para migrar agendas do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . A migração da agenda é um processo de duas etapas. Primeiro configure o aplicativo de serviço do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para usar o banco de dados do aplicativo de serviço migrado. Em seguida, escolha uma destas opções para migração da agenda.  
   
  **Configure o aplicativo de serviço para usar o banco de dados do aplicativo de serviço migrado.**  
@@ -176,9 +164,9 @@ ms.lasthandoff: 01/29/2018
   
 -   [Atualizar pastas de trabalho e a atualização de dados agendada &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
--   [Visão geral do processo de atualização no SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Visão geral do processo de atualização para o SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Limpar preparações antes de uma atualização do SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Limpar preparações antes de uma atualização para o SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [Atualizar bancos de dados do SharePoint 2010 para o SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   

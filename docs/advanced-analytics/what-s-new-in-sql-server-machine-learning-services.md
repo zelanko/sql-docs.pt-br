@@ -1,24 +1,17 @@
 ---
 title: O que&#39;novo nos serviços de aprendizado de máquina do SQL Server | Microsoft Docs
-ms.date: 03/17/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 07c21de29f41826d1314f92f77fd9277f84cb0e7
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>O que há de novo nos serviços de aprendizado de máquina do SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,10 +26,10 @@ Esta versão também introduzida **o servidor de aprendizado de máquina do SQL 
 
 | Versão | Atualização de recurso |
 |---------|---------------|
-| CU 4 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. |
-| CU 3 | Serialização no revoscalepy, de modelo do Python usando a [rx_serialize_model função](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Pontuação nativo](sql-native-scoring.md) mais aprimoramentos [em tempo real de pontuação](real-time-scoring.md). Com a pontuação no banco de dados, taxa de transferência é um milhão de linhas por segundo usando modelos de R. Nesta atualização, em tempo real de pontuação e pontuação nativo oferecem melhor desempenho em uma linha e a pontuação do lote. Nativo pontuação usa uma função de T-SQL para pontuação rápida que pode ser executada em qualquer edição do SQL Server, mesmo em Linux. A função não requer nenhuma instalação de R ou configuração adicional. Isso significa que você pode treinar um modelo em outro lugar, salvá-lo no SQL Server e, em seguida, executar pontuação sem nunca chamar R. Para obter mais informações sobre as metodologias de pontuação, consulte [como realizar em tempo real de pontuação ou pontuação nativo](r/how-to-do-realtime-scoring.md). |
+| ATUALIZAÇÃO CUMULATIVA 4 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. |
+| ATUALIZAÇÃO CUMULATIVA 3 | Serialização no revoscalepy, de modelo do Python usando a [rx_serialize_model função](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Pontuação nativo](sql-native-scoring.md) mais aprimoramentos [em tempo real de pontuação](real-time-scoring.md). Com a pontuação no banco de dados, taxa de transferência é um milhão de linhas por segundo usando modelos de R. Nesta atualização, em tempo real de pontuação e pontuação nativo oferecem melhor desempenho em uma linha e a pontuação do lote. Nativo pontuação usa uma função de T-SQL para pontuação rápida que pode ser executada em qualquer edição do SQL Server, mesmo em Linux. A função não requer nenhuma instalação de R ou configuração adicional. Isso significa que você pode treinar um modelo em outro lugar, salvá-lo no SQL Server e, em seguida, executar pontuação sem nunca chamar R. Para obter mais informações sobre as metodologias de pontuação, consulte [como realizar em tempo real de pontuação ou pontuação nativo](r/how-to-do-realtime-scoring.md). |
 | ATUALIZAÇÃO CUMULATIVA 2 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. |
-| CU 1 | Revoscalepy, adiciona rx_create_col_info para retornar informações de esquema de uma fonte de dados do SQL Server, semelhante a [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) r. <br/><br/>Aprimoramentos para [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) para dar suporte a cenários paralelos usando o `RxLocalParallel` contexto de computação.|
+| ATUALIZAÇÃO CUMULATIVA 1 | Revoscalepy, adiciona rx_create_col_info para retornar informações de esquema de uma fonte de dados do SQL Server, semelhante a [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) r. <br/><br/>Aprimoramentos para [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) para dar suporte a cenários paralelos usando o `RxLocalParallel` contexto de computação.|
 | Versão inicial |[**Integração do Python para análise no banco de dados**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>O [revoscalepy](python/what-is-revoscalepy.md) pacote é o equivalente de Python de RevoScaleR. Você pode criar modelos de Python para árvores de decisão, regressão linear e logística, árvores aumentadas e florestas aleatórias, todos os paralelizáveis e é capazes de está sendo executado em contextos de computação remota. Este pacote dá suporte ao uso de várias fontes de dados e contextos de computação remota. O cientista de dados ou o desenvolvedor pode executar o código Python em um servidor SQL remoto, para explorar dados ou criar modelos sem mover os dados. <br/><br/>O [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) pacote é o equivalente de Python do pacote MicrosoftML R.<br/><br/>Integração do T-SQL e Python por meio de [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Você pode chamar qualquer código Python usando esse procedimento armazenado. Essa infraestrutura segura permite a implantação de nível empresarial de scripts que podem ser chamados a partir de um aplicativo usando um procedimento armazenado simples e modelos de Python. São obtidos ganhos de desempenho adicionais por streaming de dados do SQL para paralelização do anel MPI e processos de Python. <br/><br/>Você pode usar o T-SQL [PREVER](../t-sql/queries/predict-transact-sql.md) função para executar [pontuação nativo](sql-native-scoring.md) em um modelo previamente treinado que tenha sido previamente salva em formato binário necessário.|
 | Versão inicial | [**MicrosoftML (R)** ](using-the-microsoftml-package.md) contém algoritmos e transformação de dados que pode ser contextos de computação remota dimensionado ou executados em de aprendizado de máquina de última geração. Algoritmos incluem redes neurais profundas personalizáveis, árvores de decisão rápida e florestas de decisão, regressão linear e regressão logística. |
 | Versão inicial | [**Modelos previamente treinados** ](r/install-pretrained-models-sql-server.md) de reconhecimento de imagem e análise de sentimento positivo negativo. Use esses modelos para gerar previsões em seus próprios dados. |

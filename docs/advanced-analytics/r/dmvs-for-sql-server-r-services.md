@@ -1,24 +1,17 @@
 ---
-title: DMVs para serviços de aprendizado de máquina do SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 07/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Serviços de aprendizado de máquina de exibições de gerenciamento de dados (DMVs) para o SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 269b40244faca6bd76e1245f8771ed4bf26ae594
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>DMVs para serviços de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +21,7 @@ O artigo lista as exibições de catálogo do sistema e DMVs relacionados ao apr
 Para obter informações sobre eventos estendidos, consulte [eventos estendidos do aprendizado de máquina](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
 > [!TIP]
-> A equipe de produto forneceu personalizar relatórios que você pode usar para monitorar sessões do aprendizado de máquina e a utilização do pacote. Para obter mais informações, consulte [monitorar usando relatórios personalizados no Management Studio de aprendizado de máquina](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> Use os relatórios internos para sessões de aprendizado de máquina do monitor e a utilização do pacote. Para obter mais informações, consulte [monitorar usando relatórios personalizados no Management Studio de aprendizado de máquina](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## <a name="system-configuration-and-system-resources"></a>Configuração do sistema e os recursos do sistema
 

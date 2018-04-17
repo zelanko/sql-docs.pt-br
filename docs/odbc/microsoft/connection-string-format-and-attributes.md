@@ -1,30 +1,31 @@
 ---
-title: "Formato de cadeia de caracteres de Conexão e os atributos | Microsoft Docs"
-ms.custom: 
+title: Formato de cadeia de caracteres de Conexão e os atributos | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3bc1fc7fcefb034b30c604c358b15ae1db6353e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7a16ee8409a96433929e2b900e3f68c41573a8b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-format-and-attributes"></a>Atributos e formato de cadeia de caracteres de Conexão
 > [!IMPORTANT]  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Os atributos para a cadeia de caracteres de conexão são da seguinte maneira:  
   
-|attribute|Description|Valor padrão|  
+|Atributo|Description|Valor padrão|  
 |---------------|-----------------|-------------------|  
 |DSN|O nome da fonte de dados listados na guia Drivers do **administrador de fonte de dados ODBC** caixa de diálogo.|""|  
 |PWD|A senha para o servidor Oracle que você deseja acessar. Este driver suporta limitações Oracle coloca em senhas.|""|  

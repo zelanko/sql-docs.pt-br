@@ -1,30 +1,31 @@
 ---
-title: "Criar índice para Paradox | Microsoft Docs"
-ms.custom: 
+title: Criar índice para Paradox | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a64feb77cc0562635b5e432174c58503e459e8ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef256444ea5fe613b92c6d504e9fb972325803ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-for-paradox"></a>Criar índice para Paradox
 A sintaxe da instrução CREATE INDEX para o driver ODBC Paradox é:  
@@ -51,7 +52,7 @@ A sintaxe da instrução CREATE INDEX para o driver ODBC Paradox é:
   
 -   O *nome do índice* argumento para um índice primário deve ser igual ao nome de base da tabela, conforme exigido pelo Paradox.  
   
- Se a palavra-chave **UNIQUE** for omitido, o driver ODBC Paradox criará um índice não exclusivo. Isso consiste em dois arquivos de índice secundário Paradox denominados *nome de tabela*. X *nn*  e *nome de tabela*. Y*nn*, onde  *nn*  é o número da coluna na tabela. Índices não exclusivos estão sujeitas às seguintes restrições:  
+ Se a palavra-chave **UNIQUE** for omitido, o driver ODBC Paradox criará um índice não exclusivo. Isso consiste em dois arquivos de índice secundário Paradox denominados *nome de tabela*. X*nn* e *nome de tabela*. Y*nn*, onde *nn* é o número da coluna na tabela. Índices não exclusivos estão sujeitas às seguintes restrições:  
   
 -   Antes de um índice não exclusivo pode ser criado para uma tabela, um índice primário deve existir para essa tabela.  
   

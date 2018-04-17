@@ -2,7 +2,7 @@
 title: Comando exclusivo do conjunto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a7795e2f77d72dfe8e92c125aa1270db6c0442a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cd877a854c1be02365b338829cc28f1db9d44dee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-exclusive-command"></a>Comando exclusivo do conjunto
 Especifica se os arquivos de tabela são abertos para uso exclusivo ou compartilhado em uma rede.  
@@ -46,5 +46,5 @@ SET EXCLUSIVE ON | OFF
 ## <a name="remarks"></a>Remarks  
  Alterando a configuração de um conjunto exclusivo não altera o status de tabelas abertos anteriormente. Por exemplo, se uma tabela é aberta com o conjunto exclusivo definido como ON e definir exclusivo for alterado posteriormente como OFF, a tabela retém seu status de uso exclusivo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo da instalação do Visual FoxPro do ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

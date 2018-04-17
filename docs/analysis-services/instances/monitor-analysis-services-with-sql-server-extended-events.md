@@ -1,15 +1,15 @@
 ---
 title: Monitorar o Analysis Services com eventos estendidos do SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - XEvents
@@ -18,20 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 273ee749ecdb35c2f69331898f643b914fd52360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Monitorar o Analysis Services com Eventos Estendidos do SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-Os Eventos Estendidos (*xEvents*) são um sistema leve de monitoramento de desempenho e rastreamento que usa pouquíssimos recursos do sistema, o que o torna uma ferramenta ideal para problemas de diagnóstico nos servidores de teste e de produção. Além disso, é altamente escalonável, configurável e mais fácil de usar no SQL Server 2016 por meio do novo suporte interno de ferramenta. No SQL Server Management Studio, em conexões com instâncias do Analysis Services, você pode configurar, executar e monitorar um rastreamento em tempo real, semelhante ao uso do SQL Server Profiler. A adição de ferramentas melhores deve tornar o xEvents uma substituição mais adequada para o SQL Server Profiler e criar mais simetria na forma de diagnosticar problemas relacionados ao mecanismo de banco de dados e às cargas de trabalho do Analysis Services.  
+  Os Eventos Estendidos (*xEvents*) são um sistema leve de monitoramento de desempenho e rastreamento que usa pouquíssimos recursos do sistema, o que o torna uma ferramenta ideal para problemas de diagnóstico nos servidores de teste e de produção. Além disso, é altamente escalonável, configurável e mais fácil de usar no SQL Server 2016 por meio do novo suporte interno de ferramenta. No SQL Server Management Studio, em conexões com instâncias do Analysis Services, você pode configurar, executar e monitorar um rastreamento em tempo real, semelhante ao uso do SQL Server Profiler. A adição de ferramentas melhores deve tornar o xEvents uma substituição mais adequada para o SQL Server Profiler e criar mais simetria na forma de diagnosticar problemas relacionados ao mecanismo de banco de dados e às cargas de trabalho do Analysis Services.  
   
  Além do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você também pode configurar sessões de Eventos Estendidos do  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da maneira antiga, por meio de scripts de XMLA, da mesma forma que era compatível em versões anteriores.  
   
@@ -40,11 +40,6 @@ Os Eventos Estendidos (*xEvents*) são um sistema leve de monitoramento de desem
 > [!NOTE]  
 >  Assista a este [breve vídeo de introdução](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) ou leia a [postagem do blog de suporte](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) para saber mais sobre os xEvents para Analysis Services no SQL Server 2016.  
   
-##  <a name="bkmk_top"></a> Neste tópico  
-  
--   [Usar o Management Studio para configurar o Analysis Services](#bkmk_ssas_extended_events_ssms)  
-  
--   [Script XMLA para iniciar Eventos Estendidos no Analysis Services](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Usar o Management Studio para configurar o Analysis Services  
  Para instâncias multidimensionais e de tabela, o Management Studio fornece uma nova pasta de gerenciamento que inclui sessões de xEvent iniciadas pelo usuário. Você pode executar várias sessões simultaneamente. No entanto, na implementação atual, a interface do usuário dos Eventos Estendidos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não têm suporte para a atualização ou substituição de uma sessão existente.  
@@ -139,9 +134,6 @@ Os Eventos Estendidos (*xEvents*) são um sistema leve de monitoramento de desem
  *metadata_filename*  
  O nome do arquivo que contém metadados dos eventos. Este nome terá um carimbo de data/hora como sufixo para evitar a substituição de dados se o rastreamento for enviado repetidas vezes.  
   
-||  
-|-|  
-|![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste tópico](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Script XMLA para interromper Eventos Estendidos no Analysis Services  
  Para interromper o objeto de rastreamento de Eventos Estendidos, exclua esse objeto usando um comando de script de objeto de exclusão XMLA, conforme mostrado abaixo:  
@@ -167,9 +159,6 @@ Os Eventos Estendidos (*xEvents*) são um sistema leve de monitoramento de desem
  *trace_id*  
  Define o identificador exclusivo para o rastreamento a ser excluído.  
   
-||  
-|-|  
-|![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste tópico](#bkmk_top)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  

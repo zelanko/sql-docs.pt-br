@@ -1,15 +1,15 @@
 ---
-title: "Lição do Analysis Services tutorial 1: criar um novo projeto de modelo de tabela | Microsoft Docs"
+title: 'Lição do Analysis Services tutorial 1: criar um novo projeto de modelo de tabela | Microsoft Docs'
 description: Descreve como criar um novo projeto do tutorial do Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 6b8d24a31ade8fe621ef2a71b932e87c13211451
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 72b403297be09f8bee1e78b9f545f279936cfa0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-tabular-model-project"></a>Criar um projeto de modelo de tabela
 
@@ -66,15 +67,15 @@ Agora que você criou um novo projeto de modelo de tabela, vamos explorar o ambi
   
 Depois que o projeto é criado, ele é aberto no Visual Studio. No lado direito, em **Gerenciador de modelos de tabela**, verá uma exibição de árvore de objetos em seu modelo. Desde que você ainda não tiver importado dados, as pastas estão vazias. Clique com botão direito uma pasta de objeto para executar ações, semelhantes à barra de menus. Como você percorrer este tutorial, você usar o Gerenciador de modelos de tabela para navegar objetos diferentes em seu projeto de modelo.
 
-![as-lesson1-tme](../tutorial-tabular-1400/media/as-lesson1-tme.png)
+![tempo como lição 1](../tutorial-tabular-1400/media/as-lesson1-tme.png)
 
 Clique o **Solution Explorer** guia. Aqui, você vê seu **Model.bim** arquivo. Se você não vir a janela do designer para a esquerda (a janela vazia com a guia Model.bim), em **Solution Explorer**, em **projeto de vendas da Internet AW**, clique duas vezes o **Model.bim** arquivo. O arquivo Model.bim contém os metadados para o seu projeto de modelo. 
 
-![as-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
+![se como lição 1](../tutorial-tabular-1400/media/as-lesson1-se.png)
   
 Clique em **Model.bim**. No **propriedades** janela, você ver as propriedades do modelo, mais importantes do que é o **o modo DirectQuery** propriedade. Essa propriedade especifica se o modelo é implantado no modo na memória (desativado) ou no modo DirectQuery (ativado). Para este tutorial, você pode cria e implanta o modelo no modo na memória.
 
-![as-lesson1-properties](../tutorial-tabular-1400/media/as-lesson1-properties.png)
+![propriedades como lição 1](../tutorial-tabular-1400/media/as-lesson1-properties.png)
   
 Quando você cria um projeto de modelo, determinadas propriedades de modelo são definidas automaticamente acordo com as configurações de modelagem de dados que podem ser especificadas o **ferramentas** menu > **opções** caixa de diálogo. As propriedades de Backup de Dados, Retenção de Espaço de trabalho e Servidor de Espaço de Trabalho especificam como e onde o banco de dados de espaço de trabalho (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você pode alterar essas configurações posteriormente se necessário, mas por enquanto, deixe essas propriedades como estão.  
 

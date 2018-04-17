@@ -1,27 +1,28 @@
 ---
-title: "Pooling de Conexão com reconhecimento de driver | Microsoft Docs"
-ms.custom: 
+title: Pooling de Conexão com reconhecimento de driver | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 337ce5bca53a3b9099cbe9cd91774b748930d7ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 87d323d75fbbdb0166ced03156a9e7510652f344
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver
 Pooling de conexão com reconhecimento de driver é um novo recurso do Gerenciador de Driver no Windows 8. Pooling de conexão com reconhecimento de driver permite que os autores de driver personalizar o comportamento no seu driver ODBC de pooling de conexão.  
@@ -43,5 +44,5 @@ Pooling de conexão com reconhecimento de driver é um novo recurso do Gerenciad
 ## <a name="how-to-enable-driver-aware-connection-pooling"></a>Como habilitar o pool de Conexão com reconhecimento de Driver  
  Um aplicativo pode usar o reconhecimento de pool de conexão do driver, definindo o atributo SQL_ATTR_CONNECTION_POOLING para SQL_CP_DRIVER_AWARE com [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Se um driver não dá suporte a reconhecimento de pool de conexão, o pool de conexão do Gerenciador de Driver será usado (o mesmo como se tivesse sido especificado SQL_CP_ONE_PER_HENV em vez de SQL_CP_DRIVER_AWARE). Os aplicativos ODBC 2. x e 3. x podem habilitar esse recurso.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

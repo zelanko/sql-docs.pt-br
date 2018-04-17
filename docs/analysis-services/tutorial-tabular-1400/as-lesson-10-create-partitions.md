@@ -1,15 +1,15 @@
 ---
-title: "Lição tutorial do Analysis Services 10: criar partições | Microsoft Docs"
-description: "Descreve como criar partições no projeto do tutorial do Analysis Services."
+title: 'Lição tutorial do Analysis Services 10: criar partições | Microsoft Docs'
+description: Descreve como criar partições no projeto do tutorial do Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 417bcbe36a49c44bcb5c8297968e6595d1ed3d91
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f393e0f7100236df428dcceacf55444048fddef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitions"></a>Criar partições
 
@@ -53,7 +54,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
 
 6.  Na caixa de diálogo Filtrar linhas, em **Mostrar linhas onde: OrderDate**, deixe **é depois ou igual a**e, em seguida, no campo de data, digite **1/1/2010**. Deixe o **e** operador selecionado, selecione **é antes**, no campo de data, digite **1/1/2011**e, em seguida, clique em **Okey**.
 
-    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![como-lesson10-filtrar-linhas](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Observe no Editor de consulta, em etapas aplicadas, verá outra etapa chamada linhas filtradas. Esse filtro é selecionar apenas as datas de pedido de 2010.
 
@@ -114,13 +115,13 @@ No Gerenciador de partições, observe o **último processados** coluna para cad
   
 4.  Marque a caixa de seleção na coluna **Processar** para cada uma das cinco partições criadas e clique em **OK**.  
 
-    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![como-lesson10-processo-partições](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Se você for solicitado a fornecer credenciais de representação, insira o nome de usuário do Windows e a senha que você especificou na lição 2.  
   
     A caixa de diálogo **Processamento de Dados** será exibida, mostrando os detalhes do processo de cada partição. Observe que um número diferente de linhas para cada partição é transferido. Cada partição inclui somente as linhas para o ano especificado na cláusula WHERE na instrução SQL. Quando o processamento for concluído, vá em frente e feche a caixa de diálogo Processamento de Dados.  
   
-    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![como-lesson10-processo-concluído](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>O que vem a seguir?
 

@@ -1,30 +1,31 @@
 ---
-title: "Gramática SQL mínima | Microsoft Docs"
-ms.custom: 
+title: Gramática SQL mínima | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 130f434bfb0b41829d2c49782454fcf888af1e27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3186090eb2c912f9d0e683210b00674d65f6e6e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-minimum-grammar"></a>Gramática SQL mínima
 Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODBC. A sintaxe descrita nesta seção é um subconjunto da sintaxe de nível de entrada do SQL-92.  
@@ -67,23 +68,23 @@ Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODB
   
  *instrução* :: = *instrução create de tabela*  
   
- &#124; *pesquisados de instrução de exclusão*  
+ &#124;*pesquisados de instrução de exclusão*  
   
- &#124; *descarte de tabela de instrução*  
+ &#124;*descarte de tabela de instrução*  
   
- &#124; *instrução insert*  
+ &#124;*instrução insert*  
   
- &#124; *instrução select*  
+ &#124;*instrução select*  
   
- &#124; *pesquisados de instrução de atualização*  
+ &#124;*pesquisados de instrução de atualização*  
   
  *pesquisa de instrução de atualização*  
   
  ATUALIZAÇÃO *nome de tabela*  
   
- DEFINIR *identificador de coluna* = {*expressão* &#124; NULL}  
+ DEFINIR *identificador de coluna* = {*expressão* &#124; nulo}  
   
- [, *identificador de coluna* = {*expressão* &#124; NULL}]...  
+ [, *identificador de coluna* = {*expressão* &#124; nulo}]...  
   
  [Onde *critério de pesquisa*]  
   

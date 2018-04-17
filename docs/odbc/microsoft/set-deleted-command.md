@@ -2,7 +2,7 @@
 title: CONJUNTO excluído comando | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50364dfbbebb7b16b1438e3e17e0e1bbabc30cef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d81c422b5984fbc95b0c71787940f24b75356db2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-deleted-command"></a>Comando do conjunto excluído
 Especifica se os registros marcados para exclusão são processados e se eles estão disponíveis para uso em outros comandos.  
@@ -49,5 +49,5 @@ SET DELETED ON | OFF
 > [!IMPORTANT]  
 >  Definir excluída será ignorada se o escopo padrão para o comando é o registro atual ou se você incluir um escopo de um único registro. O índice sempre ignora definido excluídas e todos os registros na tabela de índices.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [DELETE – comando SQL](../../odbc/microsoft/delete-sql-command.md)

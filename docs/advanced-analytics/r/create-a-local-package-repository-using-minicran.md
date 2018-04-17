@@ -1,27 +1,19 @@
 ---
-title: Criar um repositório de pacote local usando miniCRAN | Microsoft Docs
-titleSuffix: SQL Server
-ms.custom: ''
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Criar um repositório local do pacote de R usando miniCRAN (aprendizado de máquina do SQL Server) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 6dfaa01607bb25e1afe41301e655025a8d2b059f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 4ce6479c0e7087e63271811abb47a2174747638e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-local-package-repository-using-minicran"></a>Criar um repositório de pacote local usando miniCRAN
+# <a name="create-a-local-r-package-repository-using-minicran"></a>Criar um repositório local do pacote de R usando miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 O [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) pacote foi criado pelo Andre de Vries para dar suporte a esses cenários comuns: 

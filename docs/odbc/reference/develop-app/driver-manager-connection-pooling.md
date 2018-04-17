@@ -1,15 +1,16 @@
 ---
-title: "Pooling de Conexão de Gerenciador de driver | Microsoft Docs"
-ms.custom: 
+title: Pooling de Conexão de Gerenciador de driver | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Pooling de Conexão de Gerenciador de driver
 O pool de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecida para cada uso. Depois que uma conexão foi criado e colocado em um pool, um aplicativo pode reutilizar essa conexão sem executar o processo de conexão completa.  
@@ -36,7 +37,7 @@ O pool de Conexão permite que um aplicativo para usar uma conexão de um pool d
  Além de ganhos de desempenho, a arquitetura do pool de conexão permite que um ambiente e suas conexões associadas a ser usado por vários componentes em um único processo. Isso significa que componentes autônomos no mesmo processo podem interagir entre si sem conhecimento uns dos outros. Uma conexão em um pool de conexão pode ser usada repetidamente por vários componentes.  
   
 > [!NOTE]  
->  Pooling de Conexão pode ser usado por um aplicativo ODBC apresentando ODBC 2. *x* comportamento, desde que o aplicativo pode chamar *SQLSetEnvAttr*. Ao usar o pooling de conexão, o aplicativo não deve executar instruções SQL que alterar o banco de dados ou o contexto do banco de dados, como alterar o \< *banco de dados**nome*>, que Altera o catálogo usado por uma fonte de dados.  
+>  Pooling de Conexão pode ser usado por um aplicativo ODBC apresentando ODBC 2. *x* comportamento, desde que o aplicativo pode chamar *SQLSetEnvAttr*. Ao usar o pooling de conexão, o aplicativo não deve executar instruções SQL que alterar o banco de dados ou o contexto do banco de dados, como alterar o \< *banco de dados * * nome*>, que altera o catálogo usado por um fonte de dados.  
   
  Um driver ODBC deve ser totalmente thread-safe, e as conexões não devem ter afinidade de threads para dar suporte ao pooling de conexão. Isso significa que o driver é capaz de lidar com uma chamada em qualquer segmento a qualquer momento e é capaz de se conectar em um thread, para usar a conexão em outro thread e para desconectá-lo em um thread de terceiro.  
   
@@ -87,7 +88,7 @@ O pool de Conexão permite que um aplicativo para usar uma conexão de um pool d
 ## <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver  
  Começando no Windows 8, um driver ODBC pode usar conexões no pool de forma mais eficiente. Para obter mais informações, consulte [Pooling de Conexão com reconhecimento de Driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conectando a dados de um fonte ou Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Pool no Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)

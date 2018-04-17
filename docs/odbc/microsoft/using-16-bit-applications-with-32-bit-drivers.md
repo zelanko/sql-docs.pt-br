@@ -1,30 +1,31 @@
 ---
 title: Uso de aplicativos de 16 bits com Drivers de 32 bits | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d389ada78e2a04b23b046f9a4c1eab8cff736227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso de aplicativos de 16 bits com Drivers de 32 bits
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Arquitetura  
  A ilustração a seguir mostra como 16-bit aplicativos se comunicam com drivers de 32 bits. Entre o Gerenciador de Driver de 16 bits e os drivers de 32 bits são genéricos conversão DLLs que converte chamadas ODBC de 16 bits para chamadas ODBC de 32 bits.  
   
- ![Como 16 &#45; aplicativos de bits se comunicam com 32 &#45; bit drivers](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![Como 16&#45;aplicativos de bits se comunicam com 32&#45;bit drivers](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
 >  Sempre que um aplicativo de 16 bits interage com um driver de 32 bits, o Gerenciador de Driver de 32 bits sempre retorna "2.0" como a versão do ODBC com suporte pelo driver.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  A ilustração a seguir mostra como um aplicativo de 16 bits chama uma DLL de instalação do driver de 32 bits. Entre o DLL do instalador de 16 bits e o driver de 32 bits a DLL de configuração é uma DLL de conversão genérica que converte chamadas DLL do instalador de 16 bits para chamadas DLL do instalador de 32 bits.  
   
- ![Como um 16 &#45; bit aplicativo chama um 32 &#45; bit DLL de instalação do driver](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![Como um 16&#45;bit aplicativo chama um 32&#45;bits de instalação de driver DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
  No Windows on Windows (conversão de 16 bits para 32 bits), uma DLL de conversão adicional denominada Ds32gt.dll converte valores de argumento de 16 bits passados por meio de uma instalação de 32 bits DLL de volta para 16 bits.  
   

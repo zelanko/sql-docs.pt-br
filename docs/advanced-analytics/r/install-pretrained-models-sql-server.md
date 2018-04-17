@@ -1,28 +1,22 @@
 ---
 title: Instalar os modelos de aprendizado de máquina previamente treinado no SQL Server | Microsoft Docs
-ms.date: 03/14/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c9895584e53f488c0db15ad533ba4a2230ae60c4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar os modelos no SQL Server de aprendizado de máquina previamente treinada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve como adicionar modelos previamente treinados para uma instância do SQL Server que já tem o R Services ou serviços de aprendizado de máquina do SQL Server instalado. 
+Este artigo descreve como adicionar modelos previamente treinados para uma instância (no banco de dados) do SQL Server que já tem o R Services ou serviços de aprendizado de máquina do SQL Server instalado. 
 
 Existem modelos previamente treinados para ajudar os clientes que precisam para executar tarefas como a personalização de imagem ou de análise de sentimento, mas que não possuem os recursos para obter os conjuntos de dados grandes ou treinar um modelo complexo. A equipe de servidor de aprendizado de máquina criado e treinar esses modelos para ajudá-lo a começar em texto e imagem, processamento de forma eficiente. Para obter mais informações, consulte o [recursos](#bkmk_resources) deste artigo.
 
@@ -88,7 +82,7 @@ Com o SQL Server 2016, você deve executar algumas etapas adicionais para regist
 
     + Versão Release candidate 0: **9.1.0.0**
     + Versão Release candidate 1: **9.2.0.22**
-    + RTM: **9.2.0.100**
+    + NA VERSÃO RTM: **9.2.0.100**
     + A atualização cumulativa 1: **9.2.0.24**
     + Atualização cumulativa 4: **9.3.0**
 
@@ -107,7 +101,7 @@ Com o SQL Server 2016, você deve executar algumas etapas adicionais para regist
 
     + AlexNet\_Updated.model
     + ImageNet1K\_mean.xml
-    + pretrained.model
+    + pretrained.Model
     + ResNet\_101\_Updated.model
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
@@ -174,7 +168,7 @@ Após a conclusão da instalação, você deve executar algumas etapas adicionai
 
     + Versão Release candidate 0: **9.1.0.0**
     + Versão Release candidate 1: **9.2.0.22**
-    + RTM: **9.2.0.100**
+    + NA VERSÃO RTM: **9.2.0.100**
     + A atualização cumulativa 1: **9.2.0.24**
     + Atualização cumulativa 4: **9.3.0**
 

@@ -1,15 +1,16 @@
 ---
-title: "Principais funções de API de nível (Driver ODBC para Oracle) | Microsoft Docs"
-ms.custom: 
+title: Principais funções de API de nível (Driver ODBC para Oracle) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funções de API de nível de núcleo (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLCancel**|Cancela o processamento em um identificador de instrução, hstmt. Em alguns casos, o Oracle não permite o cancelamento de uma instrução em execução. Isso significa que uma instrução em execução continuará até que o Oracle conclui o processo, em que os resultados das instruções são cancelados pelo Driver ODBC para Oracle.|  
 |**SQLColAttributes**|Retorna informações de descritor para uma coluna em um conjunto de resultados. Informações do descritor são retornadas como uma cadeia de caracteres, um valor de descritor dependente de 32 bits ou um valor inteiro.|  
 |**SQLConnect**|Conecta-se a uma fonte de dados. Para usar a autenticação de sistema operacional do Oracle, especifique "/" como o *szUID* parâmetro e "" como o *szAuthStr* parâmetro.|  
-|**SQLDescribeCol**|Retorna o nome, tipo, precisão, escala e nulidade da coluna de resultados fornecido. **Observação:****SQLDescribeCol** reporta colunas calculadas como SQL_VARCHAR.|  
+|**SQLDescribeCol**|Retorna o nome, tipo, precisão, escala e nulidade da coluna de resultados fornecido. **Observação:****SQLDescribeCol** reporta colunas calculadas como SQL_VARCHAR.  |  
 |**SQLDisconnect**|Fecha uma conexão. Se o pool de conexão está habilitado para um ambiente compartilhado, e um aplicativo chama **SQLDisconnect** em uma conexão nesse ambiente, a conexão é retornado para o pool de conexão e ainda está disponível para outros componentes usando o mesmo ambiente compartilhado.|  
 |**SQLError**|Retorna informações de erro ou de status sobre o último erro. O driver mantém uma pilha ou a lista de erros que podem ser retornadas para o *hstmt*, *hdbc*, e *henv* argumentos, dependendo de como a chamada para **SQLError**  é feita. A fila de erros é liberada após cada instrução. Geralmente recupera uma mensagem de erro do Oracle e está vazia.|  
 |**SQLExecDirect**|Executa uma instrução SQL não preparada, novo. O driver usa os valores atuais das variáveis de marcador de parâmetro, se houver quaisquer parâmetros na instrução. Se sua tabela, exibição ou nomes de campo contiverem espaços, coloque os nomes de aspas em marcas. Por exemplo, se seu banco de dados contém uma tabela chamada *My Table* e o campo *Meu campo*, coloque cada elemento do identificador da seguinte forma:<br /><br /> Selecione \`minha tabela\`. \`Meu Field1\`, \`Minha tabela\`.\` Meu Field2\` FROM \`minha tabela '|  

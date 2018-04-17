@@ -1,7 +1,7 @@
 ---
 title: Consolidar relatórios de avaliação (SQL Server Data Migration Assistant) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2017
+ms.date: 04/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: ''
@@ -21,15 +21,15 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d0dd690a34cf2e4bf5df2d758f65da9b1123506
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f13ca7479abf67c63bdb2d1de53523737d975180
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="consolidate-assessment-reports-data-migration-assistant"></a>Consolidar relatórios de avaliação (Assistente de migração de dados)
 
-Você pode usar a linha de comando para executar avaliações de migração no modo autônomo, começando com v 2.1 do Assistente de migração de dados. Esse recurso ajuda a executar avaliações em escala.  Os resultados da avaliação na forma de um arquivo CSV ou JSON.
+Você pode usar a linha de comando para executar avaliações de migração no modo autônomo, começando com v 2.1 do Assistente de migração de dados. Esse recurso ajuda a executar avaliações em escala. Os resultados da avaliação na forma de um arquivo CSV ou JSON.
 
 Você pode avaliar vários bancos de dados em uma única instância do utilitário de linha de comando do Assistente de migração de dados e exportar todos os resultados de avaliação em um único arquivo JSON. Ou, você pode avaliar um banco de dados em tempo e posteriormente consolidar os resultados desses vários arquivos de JSON em um banco de dados do SQL.
 
@@ -39,6 +39,9 @@ Para obter informações sobre como executar o Assistente de migração de dados
 ## <a name="import-assessment-results-into-a-sql-server-database"></a>Importar resultados de avaliação para um banco de dados do SQL Server
 
 Use o script do PowerShell disponível neste [repositório Github](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant) para importar os resultados da avaliação dos arquivos JSON para um banco de dados do SQL Server.
+
+> [!NOTE]
+> PowerShell v5 ou versão posterior é necessário.
 
 Quando você executar o script, você precisa fornecer as seguintes informações: 
 
@@ -71,7 +74,7 @@ O script do PowerShell cria os seguintes objetos na instância do SQL que você 
 
 - **Tabela** -BreakingChangeWeighting
 
-  - Tabela de referência para todas as alterações de quebra.  Aqui você pode definir seus próprios valores de peso para influenciar uma classificação de sucesso de atualização de porcentagem (%) mais precisa.
+  - Tabela de referência para todas as alterações de quebra. Aqui você pode definir seus próprios valores de peso para influenciar uma classificação de sucesso de atualização de porcentagem (%) mais precisa.
 
 - **Exibição** – UpgradeSuccessRanking\_local
 
@@ -103,7 +106,7 @@ Depois que o script for concluído, os resultados são importados para a tabela,
 
 ### <a name="viewing-the-results-in-sql-server"></a>Exibindo os resultados no SQL Server
 
-Depois que os dados forem carregados, conecte-se à instância do SQL Server. Você deve ver o seguinte:
+Depois que os dados forem carregados, conecte-se à instância do SQL Server. Sua tela deve aparecer como mostrado no gráfico a seguir:
 
 ![Relatórios consolidados no banco de dados do SQL Server](../dma/media/DMAReportingDatabase.png)
 
@@ -115,13 +118,13 @@ Para ver uma lista de bancos de dados e sua posição de sucesso de porcentagem 
 
 ![Exibir dados em UpgradeSuccessRaning_OnPrem](../dma/media/UpgradeSuccessRankingView.png)
 
-Aqui podemos ver um determinado banco de dados que é a chance de sucesso de atualização para níveis de compatibilidade diferentes.  Portanto, por exemplo, o banco de dados de RH foi avaliado em relação a níveis de compatibilidade 100, 110, 120 e 130.  Essa avaliação ajuda você a ver visualmente quanto esforço está envolvido na migração para uma versão posterior do SQL Server da versão atual do banco de dados está em.
+Aqui você pode ver um determinado banco de dados que é a chance de sucesso de atualização para níveis de compatibilidade diferentes. Portanto, por exemplo, o banco de dados de RH foi avaliado em relação a níveis de compatibilidade 100, 110, 120 e 130. Essa avaliação ajuda você a ver visualmente quanto esforço está envolvido na migração para uma versão posterior do SQL Server da versão atual do banco de dados está em.
 
-Geralmente a métrica que nos preocupamos é quantas alterações recentes para um determinado banco de dados.  No exemplo anterior, podemos ver que o banco de dados de RH tem um fator de sucesso de atualização de 50% para níveis de compatibilidade 100, 110, 120 e 130.
+Geralmente a métrica que importam é quantas alterações recentes para um determinado banco de dados. No exemplo anterior, você pode ver que o banco de dados de RH tem um fator de sucesso de atualização de 50% para níveis de compatibilidade 100, 110, 120 e 130.
 
 Essa métrica pode ser influenciada alterando os valores de peso em dbo. Tabela BreakingChangeWeighting.
 
-No exemplo a seguir, o esforço envolvido na correção do problema de sintaxe no banco de dados de RH é considerado alto para um valor de 3 é atribuído a **esforço**. Porque ele não é demorado para corrigir o problema de sintaxe, um valor de 1 é atribuído a **FixTime**. Como haverá alguns custos envolvidos em fazer a alteração, um valor de 2 é atribuído a **custo**.  Isso altera o Changerank combinada para 2.
+No exemplo a seguir, o esforço envolvido na correção do problema de sintaxe no banco de dados de RH é considerado alto para um valor de 3 é atribuído a **esforço**. Porque ele não é demorado para corrigir o problema de sintaxe, um valor de 1 é atribuído a **FixTime**. Como haverá alguns custos envolvidos em fazer a alteração, um valor de 2 é atribuído a **custo**. O uso deste valor muda o Changerank combinada para 2.
 
 > [!NOTE]
 > A pontuação é em uma escala de 1 a 5.  1 sendo baixa e 5 alta. Além disso, o ChangeRank é uma coluna computada.
@@ -138,10 +141,8 @@ Para ver uma lista de bancos de dados para migrar para o banco de dados de SQL d
 
 ![Exibir dados em UpgradeSuccessRanking_Azure](../dma/media/UpgradeSuccessRankingView_Azure.png)
 
-Aqui, estamos interessados no valor MigrationBlocker.  100,00 significa que há uma classificação de sucesso de 100% para mover um banco de dados para o banco de dados SQL v12.
+Aqui, você está interessado no valor MigrationBlocker. 100,00 significa que há uma classificação de sucesso de 100% para mover um banco de dados para o banco de dados SQL v12.
 
 A diferença com esse modo de exibição é que, atualmente, há nenhuma substituição para alterar a importância para regras de Bloqueador de migração.
 
 Para obter informações sobre relatórios de dados usando o Power BI, consulte [de relatório em suas avaliações consolidadas com PowerBI](../dma/dma-powerbiassesreport.md).
-
-

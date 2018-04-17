@@ -1,31 +1,32 @@
 ---
-title: "Recuperando parâmetros de saída usando SQLGetData | Microsoft Docs"
-ms.custom: 
+title: Recuperando parâmetros de saída usando SQLGetData | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92903e38c31af40c7d2cf375cad6695a23acb010
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Recuperando parâmetros de saída usando SQLGetData
 Antes de ODBC 3.8, um aplicativo só pode recuperar os parâmetros de saída de uma consulta com um buffer de saída associada. No entanto, é difícil alocar um buffer grande quando o tamanho do valor do parâmetro é muito grande (por exemplo, uma imagem grande). ODBC 3.8 introduz uma nova maneira de recuperar os parâmetros de saída em partes. Um aplicativo pode chamar agora **SQLGetData** várias vezes com um buffer pequeno para recuperar um valor de parâmetro grande. Isso é semelhante à recuperação de dados de coluna grande.  
@@ -274,5 +275,5 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md)

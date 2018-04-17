@@ -2,7 +2,7 @@
 title: Chamadas de função escalar | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
 Funções escalares retornam um valor para cada linha. Por exemplo, a função escalar do valor absoluto considera uma coluna numérica como um argumento e retorna o valor absoluto de cada valor na coluna. É a sequência de escape para chamar uma função escalar  
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  Para interoperabilidade máxima, os aplicativos devem usar o **converter** função escalar para certificar-se de que a saída de uma função escalar é o tipo exigido. O **converter** função converte dados de um tipo de dados do SQL para o tipo de dados SQL especificado. A sintaxe do **converter** função é  
   
- **Converter (** *value_exp* **,** *data_type***)**  
+ **Converter (** *value_exp* **,** *data_type *)**  
   
  onde *value_exp* é um nome de coluna, o resultado de outra função escalar ou um valor literal, e *data_type* é uma palavra-chave que corresponde a **#define** nome que é usado por um Identificador de tipo de dados SQL conforme definido em [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por exemplo, a instrução SQL a seguir usa o **converter** função para certificar-se de que a saída do **CURDATE** função for uma data, em vez de um caractere ou carimbo de hora de dados:  
   

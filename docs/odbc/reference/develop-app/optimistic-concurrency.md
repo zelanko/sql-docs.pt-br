@@ -1,31 +1,32 @@
 ---
 title: Simultaneidade otimista | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff92590df7cbc65f3fb349327827c652fe1dd567
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 756775900c04ff501095f95fda95fa4f184e8833
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 *Simultaneidade otimista* deriva seu nome a suposição otimista de que raramente ocorrerão conflitos entre transações; uma colisão é considerada ocorreram quando outra transação atualiza ou exclui uma linha de dados entre o momento em que ele seja lido a transação atual e a hora, ela é atualizada ou excluída. É o oposto do *simultaneidade pessimista,* ou bloqueio, em que o desenvolvedor do aplicativo acredita que tal colisões são comuns.  

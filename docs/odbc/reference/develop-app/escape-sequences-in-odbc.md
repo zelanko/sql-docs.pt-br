@@ -1,31 +1,32 @@
 ---
-title: "Sequências em ODBC de escape | Microsoft Docs"
-ms.custom: 
+title: Sequências em ODBC de escape | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC]
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72884da8498b5e0ccb3533c353e676dee2517795
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08ee3939b280ba284f0387d3ccfd4c2db0bf0a1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape de ODBC
 Um número de recursos de idioma, como junções externas e chamadas de função escalar, geralmente é implementado por DBMSs. No entanto, sintaxes para esses recursos costumam ser DBMS específico, mesmo quando sintaxes padrão são definidos por vários corpos de padrões. Por isso, o ODBC define sequências de escape que contêm sintaxes padrão para os seguintes recursos de idioma:  
@@ -52,7 +53,7 @@ Um número de recursos de idioma, como junções externas e chamadas de função
  A sequência de escape é reconhecida e analisada por drivers, substitua as sequências de escape a gramática de DBMS específico. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) na gramática do apêndice c: SQL.  
   
 > [!NOTE]  
->  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (***nome do fornecedor***), product (** *nome do produto***)***extensão*  **\*) –**  
+>  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (***nome do fornecedor***), product (***nome do produto***) * extensão*  **\*)--**  
 >   
 >  Além dessa sintaxe, uma sintaxe abreviada foi definida no formato: **{***extensão***}**  
 >   

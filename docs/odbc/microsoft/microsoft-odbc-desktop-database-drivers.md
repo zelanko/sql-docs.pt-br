@@ -1,15 +1,16 @@
 ---
-title: "Drivers de banco de dados de área de trabalho do Microsoft ODBC | Microsoft Docs"
-ms.custom: 
+title: Drivers de banco de dados de área de trabalho do Microsoft ODBC | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a57a4fca26e40a5c83d79f4a952e1c9ccbfa1cc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d1d35ce2ec2ebd37cf9718a85e07e27ec1348ca2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Drivers de banco de dados de área de trabalho do Microsoft ODBC
 ODBC é uma API que usa SQL Structured Query Language () como o idioma de acesso de banco de dados. Você pode acessar uma ampla variedade de sistemas de gerenciamento de banco de dados (DBMSs) com o mesmo código de origem ODBC que esteja incorporado diretamente no código-fonte do aplicativo. Com os Drivers de banco de dados de área de trabalho do Microsoft ODBC, um usuário de um aplicativo habilitado para ODBC pode abrir a consulta e atualizar um banco de dados de área de trabalho por meio da interface do ODBC.  

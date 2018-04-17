@@ -1,31 +1,32 @@
 ---
 title: Bloquear cursores | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5e136741491e644a223eb4f9294179893121d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors"></a>Cursores em bloco
 Muitos aplicativos gastam uma quantidade significativa de tempo para trazer os dados pela rede. Parte desse tempo é gasto na verdade trazer os dados pela rede e parte dele é gasto na sobrecarga de rede, como a chamada feita pelo driver para solicitar uma linha de dados. A última hora pode ser reduzida se o aplicativo faça uso eficiente de *bloco,* ou *fat,* *cursores,* que pode retornar mais de uma linha por vez.  

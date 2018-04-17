@@ -1,26 +1,17 @@
 ---
-title: Cenários de ciência de dados e modelos de solução | Microsoft Docs
-ms.custom: ''
-ms.date: 08/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: Cenários de ciência de dados e modelos de solução (aprendizado de máquina do SQL Server) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d7fb0e16b20089d9d84ef8df66c8b97cc254cda4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Cenários de ciência de dados e modelos de solução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +30,7 @@ Cada solução inclui dados de exemplo, o código de R ou o código Python e pro
 
 ## <a name="fraud-detection"></a>Detecção de fraudes
 
-[Modelo de detecção de fraudes online (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Modelo de detecção de fraudes online (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **O que:** a capacidade de detectar transações fraudulentas é importante para empresas online. Para reduzir as perdas de devolução, as empresas precisam identificar rapidamente as transações que foram feitas usando instrumentos de pagamento roubado ou credenciais. Quando transações fraudulentas são descobertas, as empresas normalmente tomam medidas para bloquear determinadas contas assim que possível, para evitar um número maior de perdas. Nesse cenário, você aprenderá como usar dados de transações de compra online para identificar fraude provável.
 

@@ -2,7 +2,7 @@
 title: Selecione - o comando SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>Selecione - o comando SQL
 Recupera dados de uma ou mais tabelas.  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  Um *subconsulta*, referido nos argumentos a seguir, é uma SELECT dentro de uma seleção e devem ser colocados entre parênteses. Você pode ter até duas subconsultas no mesmo nível (não aninhado) na cláusula WHERE. (Consulte a seção de argumentos.) Subconsultas podem conter várias condições de junção.  
   
- [Todos os &#124; DISTINCT] [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
+ [Todos os &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
  A cláusula SELECT especifica os campos, constantes e expressões que são exibidas nos resultados da consulta.  
   
  Por padrão, todos os exibe todas as linhas nos resultados da consulta.  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* Especifica um nome temporário para a tabela nomeada na *tabela*. Se você especificar um alias de local, você deve usar o alias local em vez do nome de tabela em toda a instrução SELECT. O alias de local não afeta o ambiente do Visual FoxPro.  
   
- ONDE *JoinCondition* [AND *JoinCondition* ...]    [E &#124; OU *FilterCondition* [AND &#124; OU *FilterCondition* ...]]  
+ ONDE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; ou *FilterCondition* [AND &#124; ou *FilterCondition* ...]]  
  Informa do Visual FoxPro para incluir somente determinados registros nos resultados da consulta. Em que é necessário para recuperar dados de várias tabelas.  
   
  *JoinCondition* Especifica os campos que vinculam as tabelas na cláusula FROM. Se você incluir mais de uma tabela em uma consulta, você deve especificar uma condição de junção para cada tabela após a primeira.  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Quando a condição de filtro inclui tudo, o campo deve atender a condição de comparação para todos os valores gerados pela subconsulta antes de seu registro está incluído nos resultados da consulta.  
   
- **Exemplo 4** *FieldName comparação* qualquer &#124; Alguns (*subconsulta*)  
+ **Exemplo 4** *FieldName comparação* ANY &#124; alguns (*subconsulta*)  
   
  `company < ANY ;`  
   
@@ -287,7 +287,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Comentários de driver  
  Quando o aplicativo envia a instrução SQL ODBC SELECT para a fonte de dados, o Driver de ODBC do Visual FoxPro converte o comando para o comando Selecionar do Visual FoxPro sem conversão, a menos que o comando contém uma sequência de escape ODBC. Itens colocados em uma sequência de escape ODBC são convertidos em sintaxe do Visual FoxPro. Para obter mais informações sobre como usar o ODBC sequências de escape, consulte [funções de data e hora](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) e no *referência do programador de ODBC do Microsoft*, consulte [sequências de Escape no ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) .  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [CRIAR TABELA - SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERIR - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   

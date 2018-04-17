@@ -1,38 +1,39 @@
 ---
-title: "A associação | Microsoft Docs"
-ms.custom: 
+title: A associação | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-wise-binding"></a>A associação
 Ao usar a associação, um aplicativo associar um ou dois ou em alguns casos, três, matrizes para cada coluna para o qual os dados são a ser retornado. A primeira matriz contém os valores de dados, e a segunda matriz contém buffers de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separados, definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, está associada a uma matriz de terceira. Cada matriz contém elementos existem linhas no conjunto de linhas.  
   
  O aplicativo declara que ele está usando a associação com o atributo de instrução SQL_ATTR_ROW_BIND_TYPE, que determina o tipo de associação para buffers de conjunto de linhas em vez de parâmetro de conjunto de buffers. O driver retorna os dados para cada linha em elementos sucessivos de cada matriz. A ilustração a seguir mostra como a associação funciona.  
   
- ![Coluna &#45; aconselhável associação de três colunas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Coluna&#45;aconselhável associação de três colunas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
  Por exemplo, o código a seguir associa as matrizes de elemento de 10 para as colunas OrderID, o vendedor e o Status:  
   

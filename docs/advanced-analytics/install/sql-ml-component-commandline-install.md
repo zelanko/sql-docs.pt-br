@@ -1,26 +1,17 @@
 ---
-title: "Instalação dos componentes de aprendizado de máquina do SQL Server do prompt de comando | Microsoft Docs"
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: Instalação dos componentes de aprendizado de máquina do SQL Server do prompt de comando | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Instalar componentes de aprendizado de máquina do SQL Server a partir da linha de comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,13 +46,13 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 
 | Argumentos | Description |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | Instala a versão no banco de dados: SQL Server 2017 Machine Learning Services (no banco de dados) ou SQL Server 2016 R Services (no banco de dados).  |
+| / RECURSOS = AdvancedAnalytics | Instala a versão no banco de dados: SQL Server 2017 Machine Learning Services (no banco de dados) ou SQL Server 2016 R Services (no banco de dados).  |
 | /FEATURES = SQL_INST_MR | Aplica-se ao SQL Server 2017 somente. Combinar isso com AdvancedAnalytics. Instala o recurso (no banco de dados) R, incluindo Microsoft R Open e os pacotes de R proprietários. O recurso SQL Server 2016 R Services é R somente, portanto não há nenhum parâmetro para essa versão.|
 | /FEATURES = SQL_INST_MPY | Aplica-se ao SQL Server 2017 somente. Combinar isso com AdvancedAnalytics. Instala o recurso de Python (no banco de dados), incluindo Anaconda e os pacotes do Python proprietários. |
 | /FEATURES = SQL_SHARED_MR | Instala o recurso de R para a versão autônoma: servidor do aprendizado de máquina 2017 SQL Server (autônomo) ou o servidor do SQL Server 2016 R (autônomo). Um servidor autônomo é um "recurso compartilhado" não está associado a uma instância do mecanismo de banco de dados.|
 | /FEATURES = SQL_SHARED_MPY | Aplica-se ao SQL Server 2017 somente. Instala o recurso de Python para a versão autônoma: servidor do aprendizado de máquina 2017 SQL Server (autônomo). Um servidor autônomo é um "recurso compartilhado" não está associado a uma instância do mecanismo de banco de dados.|
 | /IACCEPTROPENLICENSETERMS  | Indica que você aceitou os termos de licença para usar os componentes de R de código-fonte aberto. |
-| /IACCEPTPYTHONLICENSETERMS | Indica que você aceitou os termos de licença para usar os componentes de Python. |
+| / IACCEPTPYTHONLICENSETERMS | Indica que você aceitou os termos de licença para usar os componentes de Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica que você aceitou os termos de licença para usar o SQL Server.|
 | / MRCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos de CAB do componente de R. |
 | / MPYCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos de CAB do componente de Python. |

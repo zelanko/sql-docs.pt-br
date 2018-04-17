@@ -2,7 +2,7 @@
 title: Comando de marca de exclusão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31107e21cee13d51046e43acc5c557cf20b9ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 909c0b94127547e27c10deef107a62af6400a9d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-tag-command"></a>EXCLUIR o comando marca
 Remove uma marca ou marcas de um arquivo de índice composto (. cdx).  
@@ -51,5 +51,5 @@ DELETE TAG ALL [OF CDXFileName]
   
  Do Visual FoxPro procura primeiro uma marca no arquivo de índice composto estrutural (se estiver aberto). Se a marca não está no arquivo de índice composto estrutural, Visual FoxPro, em seguida, procura a marca em outros arquivos de índice composto aberto.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Comando INDEX](../../odbc/microsoft/index-command.md)
