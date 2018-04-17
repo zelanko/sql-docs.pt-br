@@ -1,30 +1,31 @@
 ---
 title: Administrador de fonte de dados ODBC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d3ad9ed32342dbd2dc7faf955eba3e9141b4fab1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f94dd66f0b09c31244a7126edbaff526308dd8d7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de Fonte de Dados ODBC
 O administrador de fonte de dados do Microsoft® ODBC gerencia o banco de dados drivers e fontes de dados. Esse aplicativo está localizado no painel de controle do Windows em **ferramentas administrativas**. Começando no Windows 8, o ícone é chamado **fontes de dados ODBC**, e há uma versão de 32 bits e 64 bits em sistemas operacionais de 64 bits.  

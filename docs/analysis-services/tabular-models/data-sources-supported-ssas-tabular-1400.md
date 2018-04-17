@@ -8,11 +8,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: d153a2ca638c2ab70e147d22d5755e70ab5aba06
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1400
 
@@ -33,7 +34,7 @@ Para serviços de análise do Azure, consulte [fontes de dados com suporte no Az
 |Azure SQL Data Warehouse     |   Sim      |   Sim       |
 |Armazenamento de blobs do Azure     |   Sim       |    não      |
 |Armazenamento de tabela do Azure    |   Sim       |    não      |
-|Azure Cosmos DB      |  Sim        |  não        |
+|Banco de dados do Azure Cosmos      |  Sim        |  não        |
 |Repositório Azure Data Lake     |   Sim       |    não      |
 |HDFS de HDInsight do Azure     |     Sim     |   não       |
 |Azure HDInsight Spark (Beta)     |   Sim       |   não       |
@@ -49,7 +50,7 @@ Na memória e modelos do DirectQuery se conectar a fontes de dados do Azure usam
 |Fonte de dados | Provedor de memória | Provedor de DirectQuery |
 |  --- | --- | --- |
 | SQL Server |SQL Server Native Client 11.0, provedor Microsoft OLE DB para SQL Server, o .NET Framework Data Provider para SQL Server | Provedor de dados do .NET Framework para SQL Server |
-| SQL Server Data Warehouse |SQL Server Native Client 11.0, provedor Microsoft OLE DB para SQL Server, o .NET Framework Data Provider para SQL Server | Provedor de dados do .NET Framework para SQL Server |
+| Data Warehouse do SQL Server |SQL Server Native Client 11.0, provedor Microsoft OLE DB para SQL Server, o .NET Framework Data Provider para SQL Server | Provedor de dados do .NET Framework para SQL Server |
 | Oracle |Provedor Microsoft OLE DB para Oracle, o provedor de dados Oracle para .NET |Provedor de dados Oracle para .NET | |
 | Teradata |Provedor OLE DB para Teradata, o provedor de dados Teradata para .NET |Provedor de dados Teradata para .NET | |
 | | | |
@@ -85,10 +86,10 @@ Na memória e modelos do DirectQuery se conectar a fontes de dados do Azure usam
 |Serviços online  |  
 |---------|---------|
 |Dynamics 365      |
-|Exhange Online     |
+|Exchange do on-line     |
 |Objetos Saleforce    | 
 |Relatórios do Salesforce     |
-|SharePoint Online List     |
+|Lista do SharePoint Online     |
 |||
 
 |Outro  |  

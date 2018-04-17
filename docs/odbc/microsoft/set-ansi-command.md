@@ -2,7 +2,7 @@
 title: Comando de ANSI SET | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef87baef7367068b5a22225f3bb9b4c3e1783ca6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 358dceb034106eed23632bf0c08c425a0a98cf9e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-ansi-command"></a>Comando de ANSI SET
 Determina como as comparações entre cadeias de caracteres de comprimentos diferentes são feitas com o operador = em comandos do Visual FoxPro SQL.  
@@ -63,6 +63,6 @@ SET ANSI ON | OFF
 ## <a name="string-order"></a>Ordem de cadeia de caracteres  
  Em comandos SQL, a ordem da esquerda para direita das duas cadeias de caracteres em uma comparação é irrelevantswitching uma cadeia de caracteres de um lado do = ou = = operador para o outro não afeta o resultado da comparação.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Selecione - o comando SQL](../../odbc/microsoft/select-sql-command.md)   
  [Comando SET EXACT](../../odbc/microsoft/set-exact-command.md)

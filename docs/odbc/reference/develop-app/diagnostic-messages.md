@@ -1,31 +1,32 @@
 ---
-title: "Mensagens de diagnóstico | Microsoft Docs"
-ms.custom: 
+title: Mensagens de diagnóstico | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d8820ce1c437d4bb5012a84ced5db6040cd1b552
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostic-messages"></a>Mensagens de diagnóstico
 Uma mensagem de diagnóstico é retornada com cada SQLSTATE. O SQLSTATE mesmo geralmente é retornado com um número de mensagens diferentes. Por exemplo, o SQLSTATE 42000 (sintaxe ou violação de acesso) é retornado para a maioria dos erros de sintaxe SQL. No entanto, cada erro de sintaxe costuma ser descrita por uma mensagem diferente.  
@@ -38,11 +39,11 @@ Uma mensagem de diagnóstico é retornada com cada SQLSTATE. O SQLSTATE mesmo ge
   
  Se a fonte de um erro ou aviso é um componente em si, a mensagem de diagnóstica deve explicar isso. Portanto, o texto de mensagens tem dois formatos diferentes. Para erros e avisos que não ocorram em uma fonte de dados, a mensagem de diagnóstica deve usar este formato:  
   
- **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **]**  *texto fornecido pelo componente*  
+ **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **]** *texto fornecido pelo componente*  
   
  Para erros e avisos que ocorrem em uma fonte de dados, a mensagem de diagnóstica deve usar este formato:  
   
- **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **] [**  *Identificador da fonte de dados* **]** *dados--fornecido-texto de origem*  
+ **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **] [** *identificador da fonte de dados*  **]** *dados--fornecido-texto de origem*  
   
  A tabela a seguir mostra o significado de cada elemento.  
   

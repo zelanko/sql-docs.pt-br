@@ -1,15 +1,15 @@
 ---
-title: "Lição tutorial do Analysis Services 12: analisar no Excel | Microsoft Docs"
+title: 'Lição tutorial do Analysis Services 12: analisar no Excel | Microsoft Docs'
 description: Descreve como usar o analisar no Excel no projeto tutorial do Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: dda8a42cd5e82c60f98de8ab351274f3c1e93820
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17fee33ed671ba60625a2df7629890c8abbbaed5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analyze-in-excel"></a>Analisar no Excel
 
@@ -63,7 +64,7 @@ Nestas primeiras tarefas, procurar seu modelo usando a perspectiva padrão, que 
     
 3.  No Excel, na **PivotTable Fields**, observe que a tabela DimCustomer foi excluída da lista de campos.  
     
-    ![as-lesson12-fields](../tutorial-tabular-1400/media/as-lesson12-fields.png)
+    ![campos como lesson12](../tutorial-tabular-1400/media/as-lesson12-fields.png)
     
 4.  Feche o Excel sem salvar a pasta de trabalho.  
   

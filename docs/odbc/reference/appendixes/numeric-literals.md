@@ -1,15 +1,16 @@
 ---
-title: "Literais numéricos | Microsoft Docs"
-ms.custom: 
+title: Literais numéricos | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], numeric data types
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b0e86350d2f2182e257456192d1e2c18c31f061
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33b180e63bf3f0c38c930f46e3b4a74a7ab66754
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="numeric-literals"></a>Literais numéricos
 Literais numéricos são usados quando valores de dados numéricos são armazenados em cadeias de caracteres. Para conversão de dados numéricos do SQL para uma cadeia de caracteres SQL_C_CHAR ou conversão de dados C numéricos em uma cadeia de caracteres SQL_CHAR ou SQL_VARCHAR, sintaxe de literal numérico é usado para especificar o que é armazenado no destino. Para conversão de um numérico armazenado como uma cadeia de caracteres SQL_C_CHAR para dados numéricos do SQL ou um numérico armazenado como uma cadeia de caracteres para dados numéricos de C SQL_CHAR, essa sintaxe é usada para validar o que é armazenado na fonte.  

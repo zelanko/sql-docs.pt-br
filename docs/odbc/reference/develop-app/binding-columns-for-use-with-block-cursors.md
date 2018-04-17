@@ -1,15 +1,16 @@
 ---
-title: "Colunas de associação para uso com cursores em bloco | Microsoft Docs"
-ms.custom: 
+title: Colunas de associação para uso com cursores em bloco | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c527c2e89ab9acd0218a1b7f88112a81d537b780
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bbe734fa37ece0609a24527162c061298294d4ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Colunas de associação para uso com cursores em bloco
 Como cursores em bloco retornam várias linhas, os aplicativos que utilizam devem vincular uma matriz de variáveis para cada coluna em vez de uma única variável. Essas matrizes são coletivamente conhecidos como o *buffers de conjunto de linhas*. Estes são os dois estilos de associação:  

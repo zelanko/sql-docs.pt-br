@@ -1,15 +1,16 @@
 ---
-title: "Cursores roláveis e isolamento da transação | Microsoft Docs"
-ms.custom: 
+title: Cursores roláveis e isolamento da transação | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68517f733dcb10f75669341bdef861b035b79a72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursores roláveis e isolamento da transação
 A tabela a seguir lista os fatores que governam a visibilidade das alterações.  
@@ -46,17 +47,17 @@ A tabela a seguir lista os fatores que governam a visibilidade das alterações.
 |Type\action de cursor|Self|O proprietário<br /><br /> Txn|Outra<br /><br /> Txn<br /><br /> (RU[a])|Outra<br /><br /> Txn<br /><br /> (RC[a])|Outra<br /><br /> Txn<br /><br /> (RR[a])|Outra<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Talvez [b]|não|não|não|não|não|  
-|Update|Talvez [b]|não|não|não|não|não|  
-|DELETE|Talvez [b]|não|não|não|não|não|  
+|Insert (inserir)|Talvez [b]|não|Não|Não|Não|não|  
+|Update (atualizar)|Talvez [b]|não|Não|Não|Não|não|  
+|Delete (excluir)|Talvez [b]|não|Não|Não|Não|não|  
 |Controlado por conjunto de chaves|||||||  
-|Insert|Talvez [b]|não|não|não|não|não|  
-|Update|Sim|Sim|Sim|Sim|não|não|  
-|DELETE|Talvez [b]|Sim|Sim|Sim|não|não|  
+|Insert (inserir)|Talvez [b]|não|Não|Não|Não|não|  
+|Update (atualizar)|Sim|Sim|Sim|Sim|Não|não|  
+|Delete (excluir)|Talvez [b]|Sim|Sim|Sim|Não|não|  
 |Dinâmicos|||||||  
-|Insert|Sim|Sim|Sim|Sim|Sim|não|  
-|Update|Sim|Sim|Sim|Sim|não|não|  
-|DELETE|Sim|Sim|Sim|Sim|não|não|  
+|Insert (inserir)|Sim|Sim|Sim|Sim|Sim|não|  
+|Update (atualizar)|Sim|Sim|Sim|Sim|Não|não|  
+|Delete (excluir)|Sim|Sim|Sim|Sim|Não|não|  
   
  [a] as letras entre parênteses indicam o nível de isolamento da transação que contém o cursor; o nível de isolamento da transação (no qual a alteração foi feita) é irrelevante.  
   

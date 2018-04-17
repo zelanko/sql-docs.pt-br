@@ -1,31 +1,32 @@
 ---
 title: Mensagens de erro nativo do Visual FoxPro ODBC Driver | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ea42345439cfba41cc6c22788f76307ecab0876
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensagens de erro nativo de Driver ODBC do Visual FoxPro
 As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do Visual FoxPro.  
@@ -108,7 +109,7 @@ As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do
 |206|Definição de macro recursiva.|  
 |209|Linha é muito longa.|  
 |210|Aninhamento permitido nível excedido.|  
-|211|Um se &#124; OUTRA &#124; Instrução ENDIF está ausente.|  
+|211|Um se &#124; ELSE &#124; instrução ENDIF está ausente.|  
 |212|Aninhamento de estrutura é muito profundo.|  
 |213|Há uma palavra-chave ausente na tela de... ENDFOR ou fazer maiusculas e MINÚSCULAS... Estrutura do comando ENDCASE.|  
 |219|Comando contém frase/palavra-chave não reconhecido.|  

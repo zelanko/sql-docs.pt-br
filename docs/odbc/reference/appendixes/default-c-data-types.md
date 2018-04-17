@@ -1,31 +1,32 @@
 ---
-title: "Padrão de tipos de dados C | Microsoft Docs"
-ms.custom: 
+title: Padrão de tipos de dados C | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69613e528d2b0e4e660725f204d9ffd1bf3d54af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 730203c438568152bb1ce42ef5f152c87bd5f468
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-c-data-types"></a>Tipos de dados C padrão
 Se um aplicativo especifica SQL_C_DEFAULT em **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**, o driver pressupõe que o C tipo de dados do buffer de entrada ou saída corresponde ao tipo de dados SQL da coluna ou parâmetro ao qual o buffer está associado.  

@@ -1,23 +1,17 @@
 ---
 title: Instalar pacotes R adicionais no SQL Server | Microsoft Docs
-ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 79f62f394b31349308e9e67b3b0fe45bc57cff78
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 0ac316f4870482b15700395eb44b3adef934f2ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Instalar pacotes R adicionais no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,13 +51,13 @@ Este procedimento descreve como você pode instalar pacotes usando RGui; No enta
 
   **Instância padrão**
 
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    2017 do SQL Server: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
   **Instância nomeada**
 
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    2017 do SQL Server: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
@@ -105,13 +99,13 @@ Este procedimento pressupõe que você preparou todos os pacotes que você preci
 
   **Instância padrão**
 
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    2017 do SQL Server: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
   **Instância nomeada**
 
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    2017 do SQL Server: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 

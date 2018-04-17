@@ -1,15 +1,16 @@
 ---
-title: "Dígitos decimais | Microsoft Docs"
-ms.custom: 
+title: Dígitos decimais | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - size of data types [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cac84febc2f1dc2afe11cf118237ad4ed4a65a0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ded2bda56c0fee5012e451dbee55a89cfa32e16a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="decimal-digits"></a>Dígitos decimais
 O *dígitos decimais* de dados decimais e numéricos tipos é definido como o número máximo de dígitos à direita da vírgula decimal, ou a escala dos dados. Para parâmetros ou colunas de número de ponto flutuantes aproximadas, a escala é indefinida porque o número de dígitos à direita da vírgula decimal não é fixo. Para datetime ou intervalo de dados que contém um componente de segundos, os dígitos decimais é definido como o número de dígitos à direita da vírgula decimal no componente de segundos de dados.  

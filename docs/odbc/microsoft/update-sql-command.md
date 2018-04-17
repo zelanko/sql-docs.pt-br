@@ -2,7 +2,7 @@
 title: UPDATE - SQL comando | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8c1189955ee62fd14484816358feffc38e002c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update---sql-command"></a>SQL de atualização - comando
 Atualiza os registros em uma tabela com novos valores.  
@@ -50,7 +50,7 @@ SET Column_Name1 = eExpression1
  DEFINIR *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Especifica as colunas que estão atualizadas e seus novos valores. Se você omitir a cláusula WHERE, cada linha na coluna é atualizada com o mesmo valor.  
   
- ONDE *FilterCondition1*[AND &#124; OU *FilterCondition2*...]  
+ ONDE *FilterCondition1*[AND &#124; ou *FilterCondition2*...]  
  Especifica os registros que são atualizados com novos valores.  
   
  *FilterCondition* Especifica os critérios que os registros devem atender para ser atualizada com novos valores. Você pode incluir muitas condições de filtragem você deseja conectar-se com o operador e ou operador OR. Você também pode usar o operador NOT para reverter o valor de uma expressão lógica, ou você pode usar **vazio**() para verificar se há um campo vazio.  
@@ -63,6 +63,6 @@ SET Column_Name1 = eExpression1
 ## <a name="driver-remarks"></a>Comentários de driver  
  Quando o aplicativo envia a instrução SQL ODBC atualização para a fonte de dados, o Driver de ODBC do Visual FoxPro converte o comando para o comando FoxProUPDATE Visual sem conversão.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exclua - o comando SQL](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT – comando SQL](../../odbc/microsoft/insert-sql-command.md)

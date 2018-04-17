@@ -1,15 +1,16 @@
 ---
-title: "Funções de hora e data (Driver ODBC do Visual FoxPro) | Microsoft Docs"
-ms.custom: 
+title: Funções de hora e data (Driver ODBC do Visual FoxPro) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95545399054e35ee9377f2be5ad2569205c64e8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funções de hora e data (Driver ODBC do Visual FoxPro)
 A tabela a seguir lista funções de data e hora ODBC com suporte do Visual FoxPro ODBC Driver; Quando a gramática do Visual FoxPro para a mesma função difere da sintaxe de ODBC, o Visual FoxPro equivalente é listado.  
@@ -66,7 +67,7 @@ A tabela a seguir lista funções de data e hora ODBC com suporte do Visual FoxP
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- Nessa sintaxe, **d** indica que *valor* é uma data no *aaaa-mm-dd* formato e **ts** indica que *valor*  é um carimbo de hora a *aaaa-mm-dd hh*[. *f...* ] formato. A sintaxe abreviada para dados de data e o carimbo de hora é o seguinte:  
+ Nessa sintaxe, **d** indica que *valor* é uma data no *aaaa-mm-dd* formato e **ts** indica que *valor*  é um carimbo de hora a *aaaa-mm-dd hh*[.*f...*] formato. A sintaxe abreviada para dados de data e o carimbo de hora é o seguinte:  
   
 ```  
 {d 'value'}  

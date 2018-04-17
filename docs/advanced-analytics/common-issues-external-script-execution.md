@@ -1,27 +1,17 @@
 ---
 title: Problemas comuns com a execução do script externo no SQL Server | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/11/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-caps.latest.revision: 1
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: cf86d1e6d4150736b5d2d6be8d90172bb9cd6f82
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b1994227284d395e4a8043c6e272bead5cd6c372
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemas comuns com a execução do script externo no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -319,7 +309,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *Mensagem(ns) STDOUT do script externo:*
 
-*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
+*[1] "c:\\arquivos de programa\\do Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES "*
 
 *[1] "SQL de arquivos/Microsoft Server/MSSQL13 da unidade c: / programa. R_SERVICES/SQL2016/biblioteca"*
 

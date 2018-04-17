@@ -1,28 +1,19 @@
 ---
-title: Gerando um procedimento armazenado de R para o código de R usando o pacote sqlrutils | Microsoft Docs
-ms.custom: ''
-ms.date: 02/28/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: Gerar um procedimento armazenado de R para o código R usando o pacote sqlrutils | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: ac234229a5d44d2016252318093853b4dc9cd957
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 2b327391b7a21e340b30f2bc5fbf27481168266e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Gerando um procedimento armazenado de R para o código R usando o pacote sqlrutils
+# <a name="generate-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Gerar um procedimento armazenado de R para o código de R usando o pacote sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 O pacote **sqlrutils** fornece um mecanismo para que os usuários de R coloquem seus scripts de R em um procedimento armazenado T-SQL, registrem esse procedimento armazenado em um banco de dados, e executem o procedimento armazenado em um ambiente de desenvolvimento de R. 

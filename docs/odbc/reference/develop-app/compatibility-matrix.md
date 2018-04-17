@@ -1,15 +1,16 @@
 ---
 title: Matriz de compatibilidade | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a7fac17ed685680e71b329388e192ec1c9f97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidade
 A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers definidas anteriormente nesta seção.  
@@ -74,5 +75,5 @@ A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers 
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>Usando SQLCancelHandle em um aplicativo compatível com todos os gerenciadores de Driver  
  Porque [SQLCancelHandle função](../../../odbc/reference/syntax/sqlcancelhandle-function.md) não tem suporte em gerenciadores de Driver que foram lançadas antes do Windows 7, um aplicativo não pode ser carregado em versões mais antigas do Windows se chama **SQLCancelHandle** diretamente. Para trabalhar com todas as versões do Driver de gerentes e usar **SQLCancelHandle** em novas versões do Windows, um aplicativo deve chamar **SQLCancelHandle** indiretamente usando **LoadLibrary** e **GetProcAddress.**  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Novidades no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

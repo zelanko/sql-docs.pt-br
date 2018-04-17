@@ -1,15 +1,16 @@
 ---
 title: Faz o Gerenciador de Driver | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], backward compatibility
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4d94cc3308964a97e5355de0f68306dcd375058
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2563d56273b513c59935c1c7e7865de50c225f98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-the-driver-manager-does"></a>O que faz o Gerenciador de Driver
 A tabela a seguir resume como o ODBC 3*. x* Gerenciador de Driver mapeia chamadas para ODBC 2. *x* e o ODBC 3*. x* drivers.  

@@ -1,30 +1,31 @@
 ---
-title: "Cursores dinâmicos ODBC | Microsoft Docs"
-ms.custom: 
+title: Cursores dinâmicos ODBC | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0d82da741babc168ce305ed8134d8f44f682f57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5a4b547af3899f1f3775e5075605a23b3a4f6f3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinâmicos do ODBC
 Um cursor dinâmico é exatamente isso: dinâmico. Ele pode detectar todas as alterações feitas a associação, ordem e os valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que duas linhas de busca de um cursor dinâmico e outro aplicativo, em seguida, atualiza uma dessas linhas e exclui a outra. Se o cursor dinâmico, em seguida, tenta buscar essas linhas novamente, ele não localizará a linha excluída, mas retornará os novos valores para a linha atualizada.  

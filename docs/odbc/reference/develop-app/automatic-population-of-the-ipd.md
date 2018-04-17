@@ -1,15 +1,16 @@
 ---
-title: "Preenchimento automático do IPD | Microsoft Docs"
-ms.custom: 
+title: Preenchimento automático do IPD | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - ipd [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be483c04101007383a4672701ac2cdfefbade862
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9ff41c33a308b6e1645f81a0f62e311939d971b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-population-of-the-ipd"></a>Preenchimento automático do IPD
 Alguns drivers são capazes de definir os campos do IPD depois que uma consulta parametrizada foi preparada. Os campos de descritor são preenchidos automaticamente com informações sobre o parâmetro, incluindo o tipo de dados, precisão, escala e outras características. Isso é equivalente ao suporte **SQLDescribeParam**. Essas informações podem ser especialmente importantes para um aplicativo quando ele não tem outros como descobri-lo, como quando uma consulta ad hoc é executada com parâmetros que o aplicativo não conhece.  

@@ -1,30 +1,31 @@
 ---
 title: Enviando dados Long | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e60a23396a725f449b3b5f37f70bcb28284071d8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-long-data"></a>Enviando dados Long
 Definem DBMSs *dados long* como qualquer caractere ou dados binários em um determinado tamanho, como 254 caracteres. Pode não ser possível armazenar todo o item de dados longo na memória, como quando o item representa um documento de texto longo ou um bitmap. Como esses dados não podem ser armazenadas em um único buffer, a fonte de dados envia para o driver em partes com **SQLPutData** quando a instrução é executada. Parâmetros para o qual os dados são enviados em tempo de execução são conhecidos como *parâmetros de dados em execução*.  

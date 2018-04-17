@@ -1,30 +1,31 @@
 ---
 title: Uso de aplicativos de 32 bits com Drivers de 32 bits | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 008f948580057fdaa6e59802fd6fa8395140b735
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso de aplicativos de 32 bits com Drivers de 32 bits
 Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativos de 32 bits e os drivers de 32 bits usam a API do Win32®.  
@@ -32,7 +33,7 @@ Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativo
 ## <a name="architecture"></a>Arquitetura  
  A ilustração a seguir mostra os aplicativos de 32 bits como se comunicam com drivers de 32 bits. O aplicativo chama o Gerenciador de Driver de 32 bits, que por sua vez, chama os drivers de 32 bits.  
   
- ![Como 32 &#45; aplicativos de bits se comunicam com 32 &#45; bit drivers](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![Como 32&#45;aplicativos de bits se comunicam com 32&#45;bit drivers](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
 >  Não use o instalador de conversão de 32 bits DLL no Windows NT/Windows 2000. Embora ele tenha o mesmo nome de arquivo que o DLL do instalador de 32 bits, é uma DLL diferente.  

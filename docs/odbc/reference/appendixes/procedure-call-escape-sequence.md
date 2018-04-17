@@ -1,42 +1,43 @@
 ---
-title: "Sequência de Escape de chamada de procedimento | Microsoft Docs"
-ms.custom: 
+title: Sequência de Escape de chamada de procedimento | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC], procedure call
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 080c74baca0cd641b14de3746657b4bfb09bc6dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5cccd4828a7c7509a3876ac2b194ffccfc6a083d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="procedure-call-escape-sequence"></a>Sequência de Escape de chamada de procedimento
 ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa sequência de escape é da seguinte maneira:  
   
- **{**[? =]**chamar** *nome do procedimento*[**(**[*parâmetro*] [, [*parâmetro*]] ... **)**]**}**  
+ **{**[? =]**chamar** *nome do procedimento*[**(**[*parâmetro*] [, [*parâmetro*]]... **)**]**}**  
   
  Na notação BNF, a sintaxe é:  
   
  *Escape de procedimento de ODBC* :: =  
   
- &#124; *ODBC de esc de iniciador* [? =] chamar *procedimento terminador de esc ODBC*  
+ &#124;*ODBC de esc de iniciador* [? =] chamar *procedimento terminador de esc ODBC*  
   
  *procedimento* :: = *nome do procedimento* &#124; *nome do procedimento* (*lista de parâmetros de procedimento*)  
   
@@ -44,11 +45,11 @@ ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa se
   
  *nome do procedimento* :: = *identificador de procedimento*  
   
- &#124; *nome do proprietário*. *Identificador de procedimento*  
+ &#124;*nome do proprietário*. *Identificador de procedimento*  
   
- &#124; *separador de catálogo de nome de catálogo* *identificador de procedimento*  
+ &#124;*separador de catálogo de nome de catálogo* *identificador de procedimento*  
   
- &#124; *separador de catálogo de nome de catálogo* [*nome do proprietário*]. *Identificador de procedimento*  
+ &#124;*separador de catálogo de nome de catálogo* [*nome do proprietário*]. *Identificador de procedimento*  
   
  (A sintaxe de terceira é válida somente se a fonte de dados não oferece suporte a proprietários).  
   
@@ -62,7 +63,7 @@ ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa se
   
  *lista de parâmetros de procedimento* :: = *parâmetro de procedimento*  
   
- &#124; *parâmetro de procedimento*, *lista de parâmetros de procedimento*  
+ &#124;*parâmetro de procedimento*, *lista de parâmetros de procedimento*  
   
  *parâmetro de procedimento* :: = *parâmetro dinâmico* &#124; *literal* &#124; *cadeia de caracteres vazia*  
   

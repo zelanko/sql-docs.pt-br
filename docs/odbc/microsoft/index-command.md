@@ -2,7 +2,7 @@
 title: Comando índice | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1a3cd65cf38079a6d6c23cd08f371841a0463f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b989e45c8a3779108316358d34df472103a71676
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="index-command"></a>Comando de índice
 Cria um arquivo de índice para exibir e acessar os registros da tabela em uma ordem lógica.  
@@ -122,7 +122,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  Se você usar uma função definida pelo usuário em uma expressão de índice, do Visual FoxPro deve ser capaz de localizar a função definida pelo usuário. Quando o Visual FoxPro cria um índice, a expressão de índice é salvo no arquivo de índice, mas apenas uma referência para a função definida pelo usuário está incluída na expressão do índice.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [ALTER TABLE - comando SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [EXCLUIR o comando marca](../../odbc/microsoft/delete-tag-command.md)   
  [Comando do conjunto COLLATE](../../odbc/microsoft/set-collate-command.md)   

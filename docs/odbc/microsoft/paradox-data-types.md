@@ -1,15 +1,16 @@
 ---
 title: Tipos de dados Paradox | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40266f580e162ed021c069c1b583748906b3b336
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cee6fd6f7b13b10a59047964ba0d344ba13b8381
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="paradox-data-types"></a>Tipos de dados Paradox
 O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL ODBC. A tabela a seguir lista todos os tipos de dados Paradox e mostra o ODBC SQL são mapeados para os tipos de dados.  
@@ -64,6 +65,6 @@ O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL O
 |ALFANUMÉRICO|Criando uma coluna ALFANUMÉRICA de zero ou comprimento especificado, na verdade, retorna uma coluna de 255 bytes.|  
 |BYTES|Se você inserir NULL em uma coluna binária com o driver Paradox5, ele será alterado para 0.|  
 |LONG|O valor negativo máximo com suporte pelo driver para o tipo de dados Long Paradox 5 Paradox. *x* não é de -2 ^ 31 (-2147483648), pois ele deve ser desde longo mapas para os dados ODBC tipo SQL_INTEGER. O valor negativo máximo com suporte por muito tempo é realmente -2 ^ 31 + 1 (-2147483647).|  
-|timestamp|Quando um valor é inserido em uma coluna de carimbo de hora pelo driver Paradox e subsequentemente recuperado da coluna, o valor recuperado pode diferir do que o valor inserido por até 1 segundo em razão do arredondamento.|  
+|TIMESTAMP|Quando um valor é inserido em uma coluna de carimbo de hora pelo driver Paradox e subsequentemente recuperado da coluna, o valor recuperado pode diferir do que o valor inserido por até 1 segundo em razão do arredondamento.|  
   
  Mais limitações nos tipos de dados podem ser encontradas no [limitações do tipo de dados](../../odbc/microsoft/data-type-limitations.md).

@@ -1,29 +1,22 @@
 ---
-title: Instalar novos pacotes de Python no SQL Server | Microsoft Docs
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology:
-- r-services
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Instalar novos pacotes de Python no aprendizado de máquina do SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: dbf91e37bde5e648113ce2040f695fd41047808d
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 927d34755dbe291d1b208d968b13d36baf90bc15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar novos pacotes de Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve como instalar novos pacotes do Python em uma instância do SQL Server 2017.
+Este artigo descreve como instalar novos pacotes do Python em uma instância de serviços de aprendizado de máquina do SQL Server de 2017.
 
 Em geral, o processo de instalação de novos pacotes é semelhante ao que em um ambiente padrão do Python. No entanto, algumas etapas adicionais serão necessárias se o servidor não tiver uma conexão de internet.
 
@@ -64,7 +57,7 @@ O pacote instalado neste exemplo é [CNTK](https://docs.microsoft.com/cognitive-
 
     Por exemplo, em um computador separado, você pode baixar o arquivo WHL deste site [ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)e, em seguida, copie o arquivo `cntk-2.1-cp35-cp35m-win_amd64.whl` para uma pasta local no computador do SQL Server.
 
-+ SQL Server 2017 uses Python 3.5. 
++ SQL Server 2017 usa Python 3.5. 
 
 > [!IMPORTANT]
 > Certifique-se de que você obtenha a versão do pacote do Windows. Se o arquivo termina em .gz, provavelmente não é a versão correta.

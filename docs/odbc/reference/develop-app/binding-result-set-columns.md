@@ -1,30 +1,31 @@
 ---
-title: "Colunas do conjunto de resultados de associação | Microsoft Docs"
-ms.custom: 
+title: Colunas do conjunto de resultados de associação | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 156d7a4fa40e28f2526b5ab3f5fd1a5bef19c003
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-result-set-columns"></a>Colunas do conjunto de resultados de associação
 Os aplicativos podem associar como muitas ou poucas colunas do conjunto de resultados como quiser, incluindo sem colunas de associação em todos os. Quando uma linha de dados for encontrada, o driver retorna os dados para as colunas associadas ao aplicativo. Se o aplicativo associa todas as colunas no conjunto de resultados depende do aplicativo. Por exemplo, aplicativos que geram relatórios geralmente têm um formato fixo; Esses aplicativos criar um conjunto de resultados que contém todas as colunas usadas no relatório e, em seguida, vincular e recuperam os dados de todas essas colunas. Aplicativos que exibem as telas de dados, às vezes, permitir que o usuário decidir quais colunas serão exibidas; Esses aplicativos criam um conjunto de resultados contendo todas as colunas, o usuário pode desejar, mas vincular e recuperar os dados somente para as colunas escolhidos pelo usuário.  

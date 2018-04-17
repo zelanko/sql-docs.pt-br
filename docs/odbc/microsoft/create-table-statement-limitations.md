@@ -1,30 +1,31 @@
 ---
-title: "Criar tabela instrução limitações | Microsoft Docs"
-ms.custom: 
+title: Criar tabela instrução limitações | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CREATE TABLE statement limitations [ODBC]
 - ODBC SQL grammar, CREATE TABLE statement limitations
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d8f73082a87978bf735e2e44f97987ba34ffbb5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dfbea40812f956400d5958e8e55e0139ba9f8fd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-statement-limitations"></a>Criar tabela limitações de instrução
 Quando o Microsoft Access, Microsoft Excel ou Paradoxdriver é usado e o comprimento de uma coluna de texto ou binário não for especificado (ou for especificado como 0), o comprimento da coluna será definido como 255.  

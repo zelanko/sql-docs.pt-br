@@ -2,7 +2,7 @@
 title: ALTER TABLE - comando SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9897be4d0e594c82aa872f904d500bd1216d40f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - comando SQL
 Modifica programaticamente a estrutura de uma tabela.  
@@ -83,7 +83,7 @@ ALTER TABLE TableName1
   
  *nFieldWidth* e *nPrecision* para D, G, I, L, M, P, T e Y são ignoradas tipos. Por padrão, *nPrecision* é zero (sem casas decimais) se *nPrecision* não está incluído para os tipos de B, F ou N.  
   
- NULL &#124; NÃO NULO  
+ NULL &#124; NOT NULL  
  Permite ou impede que valores nulos no campo.  
   
  Se você omite NULL e NOT NULL, a configuração atual de SET NULL determina se valores nulos são permitidos no campo. No entanto, se você omite NULL e NOT NULL e incluem a chave primária ou exclusiva cláusula, a configuração atual de SET NULL é ignorada e o campo não é nulo por padrão.  
@@ -198,6 +198,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Se a tabela que você modificar um banco de dados, ALTER TABLE - SQL requer o uso exclusivo do banco de dados. Para abrir um banco de dados para uso exclusivo, incluem exclusivo no banco de dados aberto.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar tabela - comando SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [Comando INDEX](../../odbc/microsoft/index-command.md)

@@ -1,15 +1,16 @@
 ---
 title: Tamanho da coluna | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], column size
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-size"></a>Tamanho da coluna
 O tamanho da coluna (ou parâmetro) dos tipos de dados numérico é definido como o número máximo de dígitos usado pelo tipo de dados da coluna ou parâmetro ou a precisão dos dados. Para tipos de caracteres, esse é o comprimento em caracteres de dados. para tipos de dados binários, o tamanho da coluna é definido como o comprimento em bytes dos dados. Para o tempo, timestamp e todos os tipos de dados de intervalo, este é o número de caracteres a representação de caracteres de dados. O tamanho da coluna definido para cada tipo de dados SQL conciso é mostrado na tabela a seguir.  
@@ -46,7 +47,7 @@ O tamanho da coluna (ou parâmetro) dos tipos de dados numérico é definido com
 |Todos os tipos binários [a], [b].|O definido ou máximo comprimento em bytes da coluna ou parâmetro. Por exemplo, o comprimento de uma coluna definida como binário (10) é 10.|  
 |SQL_TYPE_DATE [c]|10 (o número de caracteres a *aaaa-mm-dd* formato).|  
 |SQL_TYPE_TIME [c]|8 (o número de caracteres a *hh-mm-ss* formato), 9 + *s* (o número de caracteres a *hh*formato [.... fff], onde *s*é a precisão de segundos).|  
-|SQL_TYPE_TIMESTAMP|16 (o número de caracteres a *aaaa-mm-dd hh: mm* formato)<br /><br /> 19 (o número de caracteres a *aaaa-mm-dd* *hh* formato)<br /><br /> ou em<br /><br /> 20 + *s* (o número de caracteres a *aaaa-mm-dd hh*formato [.... fff], onde *s* é a precisão de segundos).|  
+|SQL_TYPE_TIMESTAMP|16 (o número de caracteres a *aaaa-mm-dd hh: mm* formato)<br /><br /> 19 (o número de caracteres a *aaaa-mm-dd* *hh* formato)<br /><br /> ou<br /><br /> 20 + *s* (o número de caracteres a *aaaa-mm-dd hh*formato [.... fff], onde *s* é a precisão de segundos).|  
 |SQL_INTERVAL_SECOND|Onde *p* é o intervalo de precisão principal e *s* é a precisão de segundos, *p* (se *s*= 0) ou *p* + *s*+ 1 (se *s*> 0). [ d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|Onde *p* é o intervalo de precisão principal e *s* é a precisão de segundos, 9 +*p* (se *s*= 0) ou 10 +*p* + *s* (se *s*> 0). [ d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|Onde *p* é o intervalo de precisão principal e *s* é a precisão de segundos, 6 +*p* (se *s*= 0) ou 7 +*p* + *s* (se *s*> 0). [ d]|  
