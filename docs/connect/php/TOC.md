@@ -9,6 +9,7 @@
 
 # [Visão geral](overview-of-the-php-sql-driver.md)
 ## [Requisitos do sistema](system-requirements-for-the-php-sql-driver.md)
+## [Baixar Drivers para PHP para SQL Server](download-drivers-php-sql-server.md)
 ## [Carregando os drivers](loading-the-php-sql-driver.md)
 ## [Configurando o IIS](configuring-iis-for-php-sql-driver.md)
 ## [Tutorial de instalação de drivers PHP de Linux e de Mac](installation-tutorial-linux-mac.md)
