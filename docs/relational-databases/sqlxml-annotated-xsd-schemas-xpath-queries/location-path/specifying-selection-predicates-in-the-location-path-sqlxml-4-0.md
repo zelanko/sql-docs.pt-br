@@ -1,16 +1,16 @@
 ---
-title: "Especificando predicados de seleção no caminho do local (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Especificando predicados de seleção no caminho do local (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -20,25 +20,26 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 67cbd749cf3293b6a20b55581648ff6cbfa6ddf5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificando predicados de seleção no caminho do local (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Um predicado filtra um conjunto de nós com respeito a um eixo (semelhantemente a uma cláusula WHERE em uma instrução SELECT). O predicado é especificado entre colchetes. Para cada nó no conjunto de nós a ser filtrado, a expressão de predicado é avaliada com esse nó como o nó de contexto, com o número de nós no conjunto de nós como o tamanho do contexto. Se a expressão de predicado for avaliada como TRUE para esse nó, o nó será incluído no conjunto de nós resultante.  
+  Um predicado filtra um conjunto de nós com respeito a um eixo (semelhantemente a uma cláusula WHERE em uma instrução SELECT). O predicado é especificado entre colchetes. Para cada nó no conjunto de nós a ser filtrado, a expressão de predicado é avaliada com esse nó como o nó de contexto, com o número de nós no conjunto de nós como o tamanho do contexto. Se a expressão de predicado for avaliada como TRUE para esse nó, o nó será incluído no conjunto de nós resultante.  
   
  XPath também permite a filtragem com base na posição. Uma expressão de predicado avaliada como um número seleciona esse nó ordinal. Por exemplo, o caminho do local `Customer[3]` retorna o terceiro cliente. Não há suporte para tais predicados numéricos. Há suporte somente para expressões de predicado que retornem um resultado Boolean.  
   
 > [!NOTE]  
->  Para obter informações sobre as limitações desta implementação XPath do XPath e as diferenças entre ele e a especificação do W3C, consulte [Introdução ao usando consultas XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  Para obter informações sobre as limitações desta implementação XPath do XPath e as diferenças entre ele e a especificação do W3C, consulte [Introdução ao usando consultas XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Predicado de seleção: Exemplo 1  
  A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos o  **\<cliente >** filhos do elemento que tem o **CustomerID** atributo com valor ALFKI:  
@@ -122,7 +123,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Predicado de seleção: Exemplo 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] O SQLXML 4.0 inclui suporte para consultas XPath que contêm um produto cruzado no predicado, conforme mostrado no exemplo a seguir:  
+ O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 inclui suporte para consultas XPath que contenham um produto cruzado no predicado, conforme mostrado no seguinte exemplo:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  
@@ -131,7 +132,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
  Esta consulta seleciona todos os clientes com qualquer `Order` para o qual `OrderDate` é igual a qualquer `ShipDate` de qualquer `Order`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução aos esquemas XSD anotados &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [Formatação XML do lado do cliente &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Introdução aos esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [Formatação XML do lado do cliente & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

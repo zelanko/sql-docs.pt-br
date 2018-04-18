@@ -2,7 +2,7 @@
 title: sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2f0214309eb060bbc02c7c05bf5243444ed5796
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: ad0abf8d12b245842b3837d11586c9afb7f6c40f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'***publicação***'**  
  É o nome da publicação na qual são realocados novos intervalos de identidades. *publicação* é **sysname**, com um padrão NULL.  
   
  [  **@table_name=**] **'***table_name***'**  
  É o nome da tabela na qual são realocados novos intervalos de identidades. *table_name* é **sysname**, com um padrão NULL.  
   
- [ **@table_owner=**] **'***table_owner***'**  
+ [  **@table_owner=**] **'***table_owner***'**  
  É o nome do proprietário da tabela no Publicador. *table_owner* é **sysname**, com um padrão NULL. Se *table_owner* não for especificado, o nome do usuário atual será usado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -1,16 +1,16 @@
 ---
 title: bcp_colfmt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_colfmt
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c19dd268f958bc35f6e41fd6a6283ca23beb60e9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 477fcbfa6eb2f4a25877ecd563a565ce857d4523
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +63,7 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  É o tipo de dados desta coluna no arquivo de usuário. Se diferente do tipo de dados da coluna correspondente na tabela do banco de dados (*idxServerColumn*), a cópia em massa converterá os dados, caso seja possível.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu o suporte para tokens de tipo de dados SQLXML e SQLUDT no *eUserDataType* parâmetro.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o suporte para tokens de tipo de dados SQLXML e SQLUDT no *eUserDataType* parâmetro.  
   
  O *eUserDataType* parâmetro é enumerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de dados em SQLNCLI. h, não os enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, ODBC tipo SQL_C_CHAR, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SQLCHARACTER de tipo específico.  
   
@@ -148,9 +149,9 @@ RETCODE bcp_colfmt (
  O [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) função pode ser usada para manter a especificação de formato.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte do bcp_colfmt a recursos aprimorados de data e hora  
- Para obter informações sobre os tipos usados com o *eUserDataType* parâmetro para tipos de data/hora, consulte [alterações de cópia em massa para aprimorados de data e hora tipos &#40; OLE DB e ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Para obter informações sobre os tipos usados com o *eUserDataType* parâmetro para tipos de data/hora, consulte [alterações de cópia em massa para tipos aprimorados de data e hora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obter mais informações, consulte [data e hora melhorias &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [data e hora melhorias & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

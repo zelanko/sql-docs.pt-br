@@ -1,16 +1,16 @@
 ---
 title: sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9020182762ac7f74e888e64814cedcae6fedec2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9cbb7a77d2592be420fb3e10527cd6d33301571f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Marca uma assinatura pull transacional ou anônima para reinicialização da próxima vez que o Agente de Distribuição for executado. Esse procedimento armazenado é executado no Assinante, no banco de dados de assinatura pull.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,14 +60,14 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription** é usado em replicação transacional.  
   
  **sp_reinitpullsubscription** não há suporte para replicação transacional ponto a ponto.  
   
  **sp_reinitpullsubscription** pode ser chamado do assinante para reinicializar a assinatura, durante a próxima execução do Distribution Agent.  
   
- Assinaturas para publicações criadas com um valor de **false** para  **@immediate_sync**  não podem ser reiniciadas no assinante.  
+ Assinaturas para publicações criadas com um valor de **false** para **@immediate_sync** não podem ser reiniciadas no assinante.  
   
  Você pode reinicializar uma assinatura pull executando **sp_reinitpullsubscription** no assinante ou **sp_reinitsubscription** no publicador.  
   

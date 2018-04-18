@@ -1,15 +1,15 @@
 ---
-title: "Detalhes da programação de cursor (ODBC) | Microsoft Docs"
-ms.custom: 
+title: Detalhes da programação de cursor (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - ODBC cursors, programming
 - cursors [ODBC], programming
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8657ba947643e5675c51f8719d8d16cab890bafb
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75162c2d1153aecb097d0683c900a19c8c53a6ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-programming-details-odbc"></a>Detalhes da programação de cursor (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +37,13 @@ ms.lasthandoff: 01/24/2018
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Conversões implícitas de Cursor &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
+-   [Conversões implícitas de Cursor & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
   
 -   [Usando a opção Autofetch com cursores ODBC](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
--   [Somente de avanço rápido cursores &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
+-   [Somente de avanço rápido cursores & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando cursores &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Usando cursores & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

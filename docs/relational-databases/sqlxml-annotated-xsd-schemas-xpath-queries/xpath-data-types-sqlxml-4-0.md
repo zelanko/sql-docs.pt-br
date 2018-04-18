@@ -1,16 +1,16 @@
 ---
 title: Tipos de dados XPath (SQLXML 4.0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -30,25 +30,26 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d36d141e552750650ede74ba2aba92b203825558
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2d52d84c175b7f7f3975645c385934a3c89be0d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de dados XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e Esquema XML (XSD) têm tipos de dados bem diferentes. Por exemplo, o XPath não tem tipos de dados de data ou inteiros, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o XSD têm muitos. O XSD usa precisão de nanossegundos para valores de tempo, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa precisão de no máximo 1/300 segundo. Consequentemente, o mapeamento de um tipo de dados para outro nem sempre é possível. Para obter mais informações sobre o mapeamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para tipos de dados XSD, consulte [coerções de tipo de dados e a anotação SQL: DataType &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e Esquema XML (XSD) têm tipos de dados bem diferentes. Por exemplo, o XPath não tem tipos de dados de data ou inteiros, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o XSD têm muitos. O XSD usa precisão de nanossegundos para valores de tempo, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa precisão de no máximo 1/300 segundo. Consequentemente, o mapeamento de um tipo de dados para outro nem sempre é possível. Para obter mais informações sobre o mapeamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para tipos de dados XSD, consulte [coerções de tipo de dados e a anotação SQL: DataType &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath tem três tipos de dados: **cadeia de caracteres**, **número**, e **booliano**. O **número** tipo de dados é sempre um IEEE 754 de precisão dupla de ponto flutuante. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float(53)** tipo de dados é o mais semelhante ao XPath **número**. No entanto, **float(53)** não é exatamente IEEE 754. Por exemplo, nem NaN (não é um número) nem infinidade é usado. Tentativa de converter uma cadeia de caracteres não numérica para **número** e tentar dividir por zero resulta em erro.  
   
 ## <a name="xpath-conversions"></a>Conversões do XPath  
- Quando você usa uma consulta do XPath como `OrderDetail[@UnitPrice > "10.0"]`, conversões de tipos de dados implícitas e explícitas podem alterar sutilmente o significado da consulta. Por isso, é importante entender como são implementados os tipos de dados XPath. A especificação da linguagem XPath, ou seja, a XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, pode ser encontrada no site do W3C em http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Quando você usa uma consulta do XPath como `OrderDetail[@UnitPrice > "10.0"]`, conversões de tipos de dados implícitas e explícitas podem alterar sutilmente o significado da consulta. Por isso, é importante entender como são implementados os tipos de dados XPath. A especificação da linguagem XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 de October de 1999, podem ser encontradas no site do W3C em http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Os operadores de XPath são divididos em quatro categorias:  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 02/12/2018
  As conversões de conjuntos de nós nem sempre são intuitivas. Um conjunto de nós é convertido em um **cadeia de caracteres** colocando o valor de cadeia de caracteres de apenas o primeiro nó no conjunto. Um conjunto de nós é convertido em **número** , convertendo-o para **cadeia de caracteres**e, em seguida, converter **cadeia de caracteres** para **número**. Um conjunto de nós é convertido em **booliano** testando sua existência.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a seleção posicional nos conjuntos de nós: por exemplo, a consulta XPath `Customer[3]` significa o terceiro cliente; não há suporte para esse tipo de seleção posicional no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o nó-definir-para-**cadeia de caracteres** ou nó de-conjunto-para-**número** conversões conforme descrito pela especificação do XPath não são implementadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa "qualquer" semântica sempre que a especificação do XPath define "primeira" semântica. Por exemplo, com base na especificação XPath do W3C, a consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleciona os pedidos com a primeira **OrderDetail** que tem um **UnitPrice** maior do que 10.0. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa consulta XPath seleciona os pedidos com qualquer **OrderDetail** que tem um **UnitPrice** maior do que 10.0.  
+>  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a seleção posicional nos conjuntos de nós: por exemplo, a consulta do XPath `Customer[3]` significa o terceiro cliente; não há suporte a esse tipo de seleção posicional no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o nó-definir-para-**cadeia de caracteres** ou nó de-conjunto-para-**número** conversões conforme descrito pela especificação do XPath não são implementadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa "qualquer" semântica sempre que a especificação do XPath define "primeira" semântica. Por exemplo, com base na especificação XPath do W3C, a consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleciona os pedidos com a primeira **OrderDetail** que tem um **UnitPrice** maior do que 10.0. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa consulta XPath seleciona os pedidos com qualquer **OrderDetail** que tem um **UnitPrice** maior do que 10.0.  
   
  A conversão em **booliano** gera a existência de uma teste; portanto, a consulta XPath `Products[@Discontinued=true()]` é equivalente à expressão SQL "Discontinued is not null", não à expressão SQL "Discontinued = 1". Para tornar a consulta equivalente à última expressão SQL, primeiro converta o conjunto de nós em uma não -**booliano** tipo, como **número**. Por exemplo, `Products[number(@Discontinued) = true()]`.  
   

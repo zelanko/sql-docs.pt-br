@@ -1,16 +1,16 @@
 ---
 title: sp_addlogin (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlogin
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlogin
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a8425f9c3d773af00a0418ff4430839c221d87
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f191cf305941d837a65708aea62527c0649b6e7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +37,12 @@ ms.lasthandoff: 11/27/2017
   Cria um novo logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a um usuário se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) em vez disso.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -79,7 +79,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt=] '*encryption_option*'  
  Especifica se a senha é passada como texto não criptografado ou como o hash da senha de texto não criptografado. Observe que não há nenhuma criptografia. A palavra "criptografia" é usada nesta discussão por causa de compatibilidade com versões anteriores. Se uma senha de texto não criptografado for passada, ocorrerá hash. O hash é armazenado. *encryption_option* é **varchar (20)**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
 |NULL|A senha é passada sem-criptografia. Esse é o padrão.|  
 |**skip_encryption**|A senha já tem hash. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve armazenar o valor sem hash.|  
@@ -88,7 +88,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem conter 1 a 128 caracteres, inclusive cartas, símbolos e números. Logons não podem conter uma barra invertida (\\); ser um nome de logon reservado, por exemplo, sa ou público, nem existirem; nem ser nulo ou uma cadeia de caracteres vazia (`''`).  
   
  Se o nome de um banco de dados padrão for fornecido, não será possível conectar-se ao banco de dados especificado sem executar a instrução USE. No entanto, você não pode usar o banco de dados padrão até que você terá acesso ao banco de dados pelo proprietário do banco de dados (usando [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) ou [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) ou [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
@@ -148,8 +148,8 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ## <a name="see-also"></a>Consulte também  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

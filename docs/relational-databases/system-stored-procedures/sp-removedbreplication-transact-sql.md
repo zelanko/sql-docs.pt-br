@@ -1,16 +1,16 @@
 ---
 title: sp_removedbreplication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2c44063c4ab9019f191136ead3c890f50806885
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bd63c99efa1b5f2b9701b278916cd1b5bf66b555
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  Esse procedimento só deve ser usado se outros métodos de remoção de objetos de replicação falharem.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,19 +53,19 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
  [  **@dbname=**] **'***dbname***'**  
  É o nome do banco de dados. *dbname* é **sysname**, com um valor padrão de NULL. Quando for NULL, o banco de dados atual será usado.  
   
- [  **@type**  =] *tipo*  
+ [ **@type** =] *tipo*  
  É o tipo de replicação para a qual os objetos de banco de dados estão sendo removidos. *tipo* é **nvarchar (5)** e pode ser um dos valores a seguir.  
   
 |||  
 |-|-|  
 |**tran**|Remove objetos de publicação de replicação transacional.|  
-|**mesclagem**|Remove objetos de publicação de replicação de mesclagem.|  
+|**Mesclagem**|Remove objetos de publicação de replicação de mesclagem.|  
 |**ambos** (padrão)|Remove todos os objetos de publicação de replicação.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_removedbreplication** é usado em todos os tipos de replicação.  
   
  **sp_removedbreplication** é útil ao restaurar um banco de dados replicado que não tem nenhum objeto de replicação a ser restaurado.  

@@ -1,16 +1,16 @@
 ---
 title: sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43e2866c70c60e8b7c7b7f1eaffabebf53a98ebe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9a60ff831a77a5b557d22d00b79d4b936167a628
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/27/2017
   
  A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ sys.sp_cdc_enable_table
   
  *source_name* deve existir no banco de dados atual. Tabelas de **cdc** esquema não pode ser habilitado para change data capture.  
   
- [  **@role_name =** ] **'***role_name***'**  
+ [  **@role_name =** ] **'***nome_da_função***'**  
  É o nome da função de banco de dados usada como acesso aos dados de alteração. *nome_da_função* é **sysname** e deve ser especificado. Se explicitamente definido como NULL, nenhuma função associada será usada para limitar o acesso aos dados de alteração.  
   
  Se a função existir atualmente, ela será usada. Se a função não existir, será feita uma tentativa de criar uma função de banco de dados com o nome especificado. Os espaços em branco do nome da função à direita da cadeia de caracteres são eliminados antes de tentar criar a função. Se o chamador não for autorizado a criar uma função dentro do banco de dados, a operação de procedimento armazenado irá falhar.  
@@ -79,7 +79,7 @@ sys.sp_cdc_enable_table
   
  Se não for especificado, o nome é derivado do nome de esquema de origem mais o nome da tabela de origem no formato *schemaname_sourcename*. *capture_instance* não pode exceder 100 caracteres e deve ser exclusivo no banco de dados. Se especificado ou derivado, *capture_instance* é cortados de qualquer espaço em branco à direita da cadeia de caracteres.  
   
- Uma tabela de origem pode ter um máximo de duas instâncias de captura. Para obter mais informações, consulte [sp_cdc_help_change_data_capture &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ Uma tabela de origem pode ter um máximo de duas instâncias de captura. Para obter mais informações, consulte [sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
  Indica se o suporte à consulta de alterações líquidas será habilitado para esta instância de captura. *supports_net_changes* é **bit** com um padrão de 1, se a tabela tem uma chave primária ou a tabela tem um índice exclusivo identificado usando o @index_name parâmetro. Caso contrário, o parâmetro será padronizado como 0.  
@@ -90,7 +90,7 @@ sys.sp_cdc_enable_table
   
  Se *supports_net_changes* é definido como 1, *index_name* devem ser especificados, ou a tabela de origem deve ter uma chave primária definida.  
   
- [  **@index_name =** ] **'***index_name*'  
+ [  **@index_name =** ] **' * index_name*'  
  O nome de um índice exclusivo a ser usado para identificar exclusivamente as linhas na tabela de origem. *index_name* é **sysname** e pode ser NULL. Se especificado, *index_name* deve ser um índice exclusivo válido na tabela de origem. Se *index_name* for especificado, as colunas de índice identificadas tem precedência sobre quaisquer colunas de chave primária definidas como o identificador de linha exclusivo para a tabela.  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
@@ -100,7 +100,7 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* é uma lista separada por vírgulas de nomes de coluna. Nomes de colunas individuais na lista podem ser citados opcionalmente usando aspas duplas ("") ou colchetes ([]). Se um nome de coluna contiver uma vírgula inserida, o nome de coluna deve ser citado.  
   
- *captured_column_list* não pode conter os seguintes nomes de coluna reservados: **_ $start_lsn**, **_ $end_lsn**, **_ $seqval**, **_ $operation**, e **_ $update_mask**.  
+ *captured_column_list* não pode conter os seguintes nomes de coluna reservados: **_ $start_lsn**, **_ $end_lsn**, **_ $seqval**, **_ $ operação**, e **_ $update_mask**.  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
  É o grupo de arquivos a ser usado para a tabela de alteração criada para a instância de captura. *filegroup_name* é **sysname** e pode ser NULL. Se especificado, *filegroup_name* deve ser definida para o banco de dados atual. Se for NULL, o grupo de arquivos padrão será usado.  
@@ -121,7 +121,7 @@ sys.sp_cdc_enable_table
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Antes de habilitar uma tabela para Change Data Capture, o banco de dados deve estar habilitado. Para determinar se o banco de dados está habilitado para change data capture, consulte o **is_cdc_enabled** coluna o [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo. Para habilitar o banco de dados, use o [sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procedimento armazenado.  
   
  Quando o Change Data Capture está habilitado para uma tabela, uma tabela de alteração e uma ou duas funções de consulta são geradas. A tabela de alteração serve como um repositório para as alterações da tabela de origem extraídas do log de transações pelo processo de captura. As funções de consulta são usadas para extrair dados da tabela de alteração. Os nomes dessas funções são derivados do *capture_instance* parâmetro das seguintes maneiras:  
@@ -172,10 +172,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cdc_disable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sp_cdc_help_change_data_capture &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_ &#60; capture_instance &#62;  &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [CDC. fn_cdc_get_net_changes_ &#60; capture_instance &#62; &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sp_cdc_help_jobs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

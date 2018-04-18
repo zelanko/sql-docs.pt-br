@@ -1,16 +1,16 @@
 ---
 title: sys.DM db_wait_stats (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_wait_stats_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4d15404469382da4d8ab135e0619f4d6a9360d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 4e1545f2df00c9f3ddfb66d5b3b84424e5b3ce7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.DM db_wait_stats (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no servidor.  
   
-##  <a name="WaitTypes"></a>Tipos de esperas  
+##  <a name="WaitTypes"></a> Tipos de esperas  
  Esperas de recurso  
  As esperas de recurso ocorrem quando um trabalhador solicita acesso a um recurso que não está disponível porque esse recurso está sendo usado por outro trabalhador ou ainda não foi disponibilizado. Exemplos de esperas de recurso são bloqueios, travas, rede e esperas de E/S de disco. Bloqueio e trava são esperas em objetos de sincronização.  
   
@@ -200,27 +201,27 @@ ms.lasthandoff: 02/03/2018
 |LATCH_SH|Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma listagem de esperas de LATCH_* está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.|  
 |LATCH_UP|Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma listagem de esperas de LATCH_* está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.|  
 |LAZYWRITER_SLEEP|Ocorre quando as tarefas lazywriter são suspensas. É uma medição do tempo gasto por tarefas em segundo plano em espera. Não considere esse estado quando você estiver procurando pausas de usuário.|  
-|LCK_M_BU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização em Massa (BU). Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Tentativa Compartilhada (IS). Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização da Tentativa (IU). Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo da Tentativa (IX). Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Ocorre quando uma tarefa está esperando adquirir um bloqueio NULL no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Um bloqueio NULL na chave é um bloqueio de liberação instantâneo. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio compartilhado no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|Uma tarefa que está esperando para adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Compartilhado entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Atualização de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Modificação de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhamento de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Atualização da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo. Para uma matriz de compatibilidade de bloqueio, consulte [tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização em Massa (BU). Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Tentativa Compartilhada (IS). Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização da Tentativa (IU). Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo da Tentativa (IX). Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Ocorre quando uma tarefa está esperando adquirir um bloqueio NULL no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Um bloqueio NULL na chave é um bloqueio de liberação instantâneo. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio compartilhado no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|Uma tarefa que está esperando para adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Compartilhado entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Atualização de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Modificação de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhamento de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Atualização da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo. Para uma matriz de compatibilidade de bloqueio, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Ocorre quando o BD está esperando a cota para gravação no log.|  
 |LOGBUFFER|Ocorre quando uma tarefa está esperando espaço no buffer de log para armazenar um registro de log. Consistentemente, valores altos podem indicar que os dispositivos de log não podem acompanhar a quantidade de log que está sendo gerada pelo servidor.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

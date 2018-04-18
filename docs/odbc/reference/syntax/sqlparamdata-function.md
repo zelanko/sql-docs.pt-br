@@ -2,7 +2,7 @@
 title: Função SQLParamData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 395cf795659b47398639f30fbd863b1f2d385e55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlparamdata-function"></a>Função SQLParamData
 **Conformidade**  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
  Se **SQLParamData** é chamado durante o envio de dados para um parâmetro em uma instrução SQL, ele pode retornar qualquer SQLSTATE que pode ser retornado pela função chamada para executar a instrução (**SQLExecute** ou **SQLExecDirect**). Se ele é chamado durante o envio de dados de uma coluna que está sendo atualizada ou adicionadas **SQLBulkOperations** ou que está sendo atualizado com **SQLSetPos**, pode retornar qualquer SQLSTATE que pode ser retornado por  **SQLBulkOperations** ou **SQLSetPos**.  
   
 ## <a name="comments"></a>Comentários  
- **SQLParamData** pode ser chamado para fornecer dados de dados em execução para dois usos: dados de parâmetro que serão usados em uma chamada para **SQLExecute** ou **SQLExecDirect**, ou dados da coluna que serão usados Quando uma linha é atualizada ou adicionada por uma chamada para **SQLBulkOperations** ou atualizada por uma chamada para **SQLSetPos**. Em tempo de execução, **SQLParamData** retorna para o aplicativo requer que um indicador de quais dados o driver.  
+ **SQLParamData** pode ser chamado para fornecer dados de dados em execução para dois usos: dados de parâmetro que serão usados em uma chamada para **SQLExecute** ou **SQLExecDirect**, ou dados da coluna que serão usada quando uma linha é atualizada ou adicionada por uma chamada para **SQLBulkOperations** ou atualizada por uma chamada para **SQLSetPos**. Em tempo de execução, **SQLParamData** retorna para o aplicativo requer que um indicador de quais dados o driver.  
   
  Quando um aplicativo chama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos**, o driver retorna SQL_NEED_ DADOS se precisar de dados de dados em execução. Um aplicativo, em seguida, chama **SQLParamData** para determinar quais dados a serem enviados. Se o driver requer dados de parâmetro, o driver retorna no  *\*ValuePtrPtr* o valor que o aplicativo é colocado no buffer de linhas do buffer de saída. O aplicativo pode usar esse valor para determinar quais dados de parâmetro, o driver está solicitando. Se o driver requer dados de coluna, o driver retorna no  *\*ValuePtrPtr* buffer o endereço que a coluna foi originalmente associada, da seguinte maneira:  
   
@@ -123,7 +123,7 @@ SQLRETURN SQLParamData(
 |Executar uma instrução preparada do SQL|[Função SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Envio de dados de parâmetro em tempo de execução|[Função SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

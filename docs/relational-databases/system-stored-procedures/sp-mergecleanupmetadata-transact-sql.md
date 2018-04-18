@@ -1,16 +1,16 @@
 ---
 title: sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f13d51e68d864410bab57b2723fd2e89cac18dd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f4d2e6e866cff9c4c48e874871f7cfdf113a0d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Deve ser usado somente em topologias de replicação que incluem servidores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. **sp_mergecleanupmetadata** permite que os administradores limpem metadados no **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** tabelas do sistema. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de  **%** , que limpa metadados para todas as publicações. A publicação já deve existir se explicitamente especificada.  
+ É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**, que limpa metadados para todas as publicações. A publicação já deve existir se explicitamente especificada.  
   
  [  **@reinitialize_subscriber =** ] **'***assinante***'**  
  Especifica se o Assinante deve ser reinicializado. *assinante* é **nvarchar (5)**, pode ser **TRUE** ou **FALSE**, com um padrão de **TRUE**. Se **TRUE**, as assinaturas serão marcadas para reinicialização. Se **FALSE**, as assinaturas não estão marcadas para reinicialização.  
@@ -56,7 +56,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_mergecleanupmetadata** deve ser usado somente em topologias de replicação que incluem servidores que executam versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Topologias que só incluem o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou versão posterior deveriam usar limpeza automática de metadados com base em retenção. Ao executar esse procedimento armazenado, tenha cuidado com o crescimento potencialmente grande e necessário do arquivo de log no computador em que o procedimento armazenado está sendo executado.  
   
 > [!CAUTION]  
@@ -65,9 +65,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 > [!NOTE]  
 >  Se houver várias publicações em um banco de dados e qualquer uma dessas publicações usar um período de retenção de publicação infinito (**@retention**=**0**), executando  **sp_mergecleanupmetadata** não limpará a alteração de replicação de mesclagem metadados para o banco de dados de rastreamento. Por esse motivo, use a retenção de publicação infinita com precaução.  
   
- Ao executar esse procedimento armazenado, você pode optar por reiniciar os assinantes definindo o  **@reinitialize_subscriber**  parâmetro **TRUE** (o padrão) ou **FALSE**. Se **sp_mergecleanupmetadata** é executada com o  **@reinitialize_subscriber**  parâmetro definido como **TRUE**, um instantâneo será reaplicado no assinante, mesmo que a assinatura foi criado sem um instantâneo (por exemplo, se os dados de instantâneo e esquema foram aplicados manualmente ou já existiam no assinante) inicial. Definindo o parâmetro como **FALSE** deve ser usada com cuidado, porque se a publicação não for reiniciada, você deve garantir que os dados no publicador e assinante estão sincronizados.  
+ Ao executar esse procedimento armazenado, você pode optar por reiniciar os assinantes definindo o **@reinitialize_subscriber** parâmetro **TRUE** (o padrão) ou **FALSE**. Se **sp_mergecleanupmetadata** é executada com o **@reinitialize_subscriber** parâmetro definido como **TRUE**, um instantâneo será reaplicado no assinante, mesmo que a assinatura foi criado sem um instantâneo (por exemplo, se os dados de instantâneo e esquema foram aplicados manualmente ou já existiam no assinante) inicial. Definindo o parâmetro como **FALSE** deve ser usada com cuidado, porque se a publicação não for reiniciada, você deve garantir que os dados no publicador e assinante estão sincronizados.  
   
- Independentemente do valor  **@reinitialize_subscriber** , **sp_mergecleanupmetadata** processos que estão tentando carregar alterações para um publicador ou um assinante de republicação de mesclagem falhará se houver em andamento a hora em que o procedimento armazenado é chamado.  
+ Independentemente do valor **@reinitialize_subscriber**, **sp_mergecleanupmetadata** processos que estão tentando carregar alterações para um publicador ou um assinante de republicação de mesclagem falhará se houver em andamento a hora em que o procedimento armazenado é chamado.  
   
  **Executando sp_mergecleanupmetadata com @reinitialize_subscriber = TRUE:**  
   
@@ -127,8 +127,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  Para usar esse procedimento armazenado, o Publicador deve estar executando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Os assinantes devem estar executando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, Service Pack 2.  
   
 ## <a name="see-also"></a>Consulte também  
- [MSmerge_genhistory &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

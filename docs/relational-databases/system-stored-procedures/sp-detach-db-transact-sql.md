@@ -1,16 +1,16 @@
 ---
 title: sp_detach_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/30/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 
+caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]  
 >  Para que um banco de dados replicado seja desanexado, é preciso que ele seja não publicado. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@dbname =** ] **'***database_name***'**  
  É o nome do banco de dados a ser desanexado. *Database_Name* é um **sysname** valor, com um valor padrão de NULL.  
   
- [ **@skipchecks =** ] **'***skipchecks***'**  
+ [  **@skipchecks =** ] **'***skipchecks***'**  
  Especifica se UPDATE STATISTIC deve ser ignorado ou executado. *skipchecks* é um **nvarchar (10)** valor, com um valor padrão de NULL. Para ignorar UPDATE STATISTICS, especifique **true**. Para executar explicitamente UPDATE STATISTICS, especifique **false**.  
   
  Por padrão, UPDATE STATISTICS é executado para atualizar as informações sobre os dados nas tabelas e os índices. A execução de UPDATE STATISTICS é útil para bancos de dados que serão movidos para mídias somente leitura.  
@@ -64,7 +64,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  Especifica se o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será descartado durante a operação de desanexação. *KeepFulltextIndexFile* é um **nvarchar (10)** valor com um padrão de **true**. Se *KeepFulltextIndexFile* é **false**, todos os arquivos de índice de texto completo associado com o banco de dados e os metadados do índice de texto completo são removidos, a menos que o banco de dados é somente leitura. Se for NULL ou **true**, texto completo relacionadas a metadados são mantidos.  
   
 > [!IMPORTANT]  
->  O **@keepfulltextindexfile**  parâmetro será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
+>  O**@keepfulltextindexfile** parâmetro será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -76,7 +76,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  Quando um banco de dados é desanexado, todos os metadados são descartados. Se o banco de dados padrão de qualquer conta de logon, o banco de dados **mestre** torna-se o seu banco de dados padrão.  
   
 > [!NOTE]  
->  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [sp_helplogins &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, você pode usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão para um logon.  
+>  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, você pode usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão para um logon.  
   
 ## <a name="restrictions"></a>Restrições  
  Um banco de dados não pode ser desanexado se algum dos seguintes fatores for verdadeiro:  

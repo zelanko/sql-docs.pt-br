@@ -1,15 +1,15 @@
 ---
 title: Atualizando colunas UDT com DataAdapters | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -25,20 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b27e47e8aa8563b004f0ad7b07163ecd3891ffb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Acessando tipos definidos pelo usuário - Atualizando colunas UDT com DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Tipos definidos pelo usuário (UDTs) têm suporte usando um **dataset** e um **System.Data.SqlClient.SqlDataAdapter** para recuperar e modificar dados.  
+  Tipos definidos pelo usuário (UDTs) têm suporte usando um **dataset** e um **System.Data.SqlClient.SqlDataAdapter** para recuperar e modificar dados.  
   
 ## <a name="populating-a-dataset"></a>Populando um conjunto de dados  
  Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha um **pontos** tabela definida com a seguinte estrutura e alguns dados de exemplo. O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções criam os **pontos** tabela e insira algumas linhas.  
@@ -92,7 +92,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  O seguinte exemplo do ADO.NET tem dois métodos:  
   
--   **UserProvidedCommands**, que demonstra como fornecer **InsertCommand**, **UpdateCommand**, e **DeleteCommand** objetos para atualizar o **Ponto** UDT de **pontos** tabela (que não contém um **timestamp** coluna).  
+-   **UserProvidedCommands**, que demonstra como fornecer **InsertCommand**, **UpdateCommand**, e **DeleteCommand** objetos para atualizar o  **Ponto** UDT de **pontos** tabela (que não contém um **timestamp** coluna).  
   
 -   **CommandBuilder**, que demonstra como usar um **SqlCommandBuilder** no **Points_ts** tabela que contém o **timestamp** coluna.  
   

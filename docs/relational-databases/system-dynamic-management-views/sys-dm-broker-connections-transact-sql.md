@@ -1,16 +1,16 @@
 ---
-title: sys.dm_broker_connections (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.DM broker_connections (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_connections
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abe087369c6584f1548930cf25f8930a2e78bc8c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3818944074a84e2eb5c97fcb12e8b1da940c1a2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,8 @@ ms.lasthandoff: 02/03/2018
 |**login_state**|**smallint**|Estado do processo de logon dessa conexão. Valores possíveis:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ON-LINE<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|Estado atual de logon do computador remoto. Valores possíveis:<br /><br /> O handshake da conexão está sendo inicializado.<br /><br /> O handshake da conexão está esperando a mensagem de Negociação de Logon.<br /><br /> O handshake da conexão foi inicializado e enviou o contexto de segurança para autenticação.<br /><br /> O handshake da conexão recebeu e aceitou o contexto de segurança para autenticação.<br /><br /> O handshake da conexão foi inicializado e enviou o contexto de segurança para autenticação. Há um mecanismo opcional disponível para autenticar os pares.<br /><br /> O handshake da conexão recebeu e enviou o contexto de segurança aceito para autenticação. Há um mecanismo opcional disponível para autenticar os pares.<br /><br /> O handshake da conexão está esperando a mensagem de Confirmação para Inicializar o Contexto de Segurança.<br /><br /> O handshake da conexão está esperando a mensagem de Confirmação para Aceitar o Contexto de Segurança.<br /><br /> O handshake da conexão está esperando a mensagem de rejeição de SSPI para autenticação com falha.<br /><br /> O handshake da conexão está esperando a mensagem de Segredo Pré-masterizado.<br /><br /> O handshake da conexão está esperando a mensagem de Validação.<br /><br /> O handshake da conexão está esperando a mensagem de Arbitragem.<br /><br /> O handshake da conexão está concluído e online (pronto) para a troca de mensagens.<br /><br /> A conexão está em estado de erro.|  
 |**peer_certificate_id**|**Int**|A ID de objeto local do certificado usado pela instância remota para autenticação. O proprietário deste certificado deve ter permissões CONNECT no ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. É NULLABLE.|  
-|**encryption_algorithm**|**smallint**|Algoritmo de criptografia usado para esta conexão. É NULLABLE. Valores possíveis:<br /><br /> **Valor &#124; Descrição &#124; Opção de DDL correspondente**<br /><br /> 0 &#124; Nenhum &#124; Desabilitado<br /><br /> 1 &#124; ASSINATURA<br /><br /> 2 &#124; AES RC4 &#124; Necessário &#124; Algoritmo RC4 obrigatório}<br /><br /> 3 &#124; AES &#124; Algoritmo AES obrigatório<br /><br /> **Observação:** o algoritmo RC4 é suporte somente para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versões posteriores, o material criptografado usando RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Representação textual do algoritmo de criptografia. É NULLABLE. Valores possíveis:<br /><br /> **Descrição &#124; Opção de DDL correspondente**<br /><br /> Nenhum &#124; Desabilitado<br /><br /> RC4 &#124; {Necessário &#124; Necessário o algoritmo RC4}<br /><br /> AES &#124; Algoritmo AES obrigatório<br /><br /> NONE, RC4 &#124; {Com suporte &#124; Com suporte do algoritmo RC4}<br /><br /> Nenhum, AES &#124; Com suporte do algoritmo RC4<br /><br /> RC4, AES &#124; Algoritmo RC4 obrigatório AES<br /><br /> AES RC4 &#124; Necessário o algoritmo AES RC4<br /><br /> NONE, RC4, AES &#124; Suporte para o algoritmo RC4 AES<br /><br /> Nenhum, AES, RC4 &#124;  Com suporte o algoritmo AES RC4|  
+|**encryption_algorithm**|**smallint**|Algoritmo de criptografia usado para esta conexão. É NULLABLE. Valores possíveis:<br /><br /> **Valor &#124; descrição &#124; opção DDL correspondente**<br /><br /> 0 &#124; nenhum &#124; desabilitado<br /><br /> 1 &AMP;#124; ASSINATURA<br /><br /> 2 &#124; AES, RC4 &#124; necessário &#124; algoritmo RC4 obrigatório}<br /><br /> 3 &#124; AES &#124;algoritmo AES obrigatório<br /><br /> **Observação:** o algoritmo RC4 é suporte somente para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e em versões posteriores, o material criptografado por meio do algoritmo RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Representação textual do algoritmo de criptografia. É NULLABLE. Valores possíveis:<br /><br /> **Descrição &#124; opção DDL correspondente**<br /><br /> NENHUM &#124; desabilitado<br /><br /> RC4 &#124; {necessário &#124; algoritmo RC4 obrigatório}<br /><br /> AES &#124; necessário algoritmo AES<br /><br /> NONE, RC4 &#124; {suporte &#124; suporte para o algoritmo RC4}<br /><br /> Nenhum, AES &#124; suporte para o algoritmo RC4<br /><br /> RC4, AES &#124; algoritmo RC4 obrigatório AES<br /><br /> AES, RC4 &#124; algoritmo AES RC4 obrigatório<br /><br /> NONE, RC4, AES &#124; suporte para o algoritmo RC4 AES<br /><br /> Nenhum, AES RC4 &#124; suporte para o algoritmo AES RC4|  
 |**receives_posted**|**smallint**|Número de recebimentos de rede assíncrona desta conexão que ainda não foram concluídos. É NULLABLE.|  
 |**is_receive_flow_controlled**|**bit**|Se os recebimentos de rede foram adiados pelo controle de fluxo porque a rede está ocupada. É NULLABLE.<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|Número de envios de rede assíncrona desta conexão que ainda não foram concluídos. É NULLABLE.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico &#40; relacionadas ao Service Broker Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico & #40; relacionadas ao Service Broker Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

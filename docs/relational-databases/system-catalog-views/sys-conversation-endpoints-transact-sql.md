@@ -1,16 +1,16 @@
 ---
-title: sys.conversation_endpoints (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: conversation_endpoints (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conversation_endpoints_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cbfc13a807b2ec7c61ab2f12ec6f6cfe9f4ae82
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 19d599519d01b9f9ea7619c6d69fdc0212172889
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.lasthandoff: 02/03/2018
 |conversation_group_id|**uniqueidentifier**|O identificador do grupo de conversa ao qual esta conversa pertence. Não é NULLABLE.|  
 |service_id|**Int**|Identificador do serviço para este lado da conversa. Não é NULLABLE.|  
 |lifetime|**datetime**|Data/hora de validade desta conversa. Não é NULLABLE.|  
-|state|**char(2)**|O estado atual da conversa. Não é NULLABLE. Um dos seguintes:<br /><br /> PORTANTO saída iniciada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processou BEGIN CONVERSATION para esta conversa, mas nenhuma mensagem foi enviada ainda.<br /><br /> SI entrada iniciada. Outra instância iniciou uma nova conversa com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda não recebeu completamente a primeira mensagem. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá criar a conversa neste estado se a primeira mensagem estiver fragmentada ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] receber mensagens fora de ordem. No entanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar a conversa no estado CO (em conversação) se a primeira transmissão recebida para a conversa contiver a primeira mensagem completa.<br /><br /> CO em conversa. A conversa está estabelecida, e ambos os lados da conversa podem enviar mensagens. A maior parte da comunicação para um serviço típico acontece quando a conversa está neste estado.<br /><br /> Disconnected DI entrada. O lado remoto da conversa emitiu uma instrução END CONVERSATION. A conversa permanecerá nesse estado até o lado local emitir uma instrução END CONVERSATION. Um aplicativo ainda pode receber mensagens para a conversa. Como o lado remoto da conversa encerrou a conversa, um aplicativo não pode enviar mensagens nesta conversa. Quando um aplicativo emite uma instrução END CONVERSATION, a conversa passa para o estado CD (Fechado).<br /><br /> DO saída desconectada. O lado local da conversa emitiu uma instrução END CONVERSATION. A conversa permanecerá neste estado até o lado remoto da conversa reconhecer a instrução END CONVERSATION. Um aplicativo não pode enviar ou receber mensagens para a conversa. Quando o lado remoto da conversa reconhece a instrução END CONVERSATION, a conversa passa para o estado CD (Fechada).<br /><br /> ER   Error. Ocorreu um erro neste ponto de extremidade. A mensagem de erro é colocada na fila de aplicativos. Se a fila de aplicativos estiver vazia, isso indicará que o aplicativo já consumiu a mensagem de erro.<br /><br /> CD fechado. O ponto de extremidade da conversa não está mais em uso.|  
-|state_desc|**nvarchar(60)**|Descrição do estado do ponto de extremidade de conversação. Esta coluna é NULLABLE. Um dos seguintes:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSING**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **FECHADO**<br /><br /> **ERROR**|  
+|state|**char(2)**|O estado atual da conversa. Não é NULLABLE. Um dos seguintes:<br /><br /> PORTANTO saída iniciada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processou BEGIN CONVERSATION para esta conversa, mas nenhuma mensagem foi enviada ainda.<br /><br /> SI entrada iniciada. Outra instância iniciou uma nova conversa com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda não recebeu completamente a primeira mensagem. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá criar a conversa neste estado se a primeira mensagem estiver fragmentada ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] receber mensagens fora de ordem. No entanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar a conversa no estado CO (em conversação) se a primeira transmissão recebida para a conversa contiver a primeira mensagem completa.<br /><br /> CO em conversa. A conversa está estabelecida, e ambos os lados da conversa podem enviar mensagens. A maior parte da comunicação para um serviço típico acontece quando a conversa está neste estado.<br /><br /> Disconnected DI entrada. O lado remoto da conversa emitiu uma instrução END CONVERSATION. A conversa permanecerá nesse estado até o lado local emitir uma instrução END CONVERSATION. Um aplicativo ainda pode receber mensagens para a conversa. Como o lado remoto da conversa encerrou a conversa, um aplicativo não pode enviar mensagens nesta conversa. Quando um aplicativo emite uma instrução END CONVERSATION, a conversa passa para o estado CD (Fechado).<br /><br /> DO saída desconectada. O lado local da conversa emitiu uma instrução END CONVERSATION. A conversa permanecerá neste estado até o lado remoto da conversa reconhecer a instrução END CONVERSATION. Um aplicativo não pode enviar ou receber mensagens para a conversa. Quando o lado remoto da conversa reconhece a instrução END CONVERSATION, a conversa passa para o estado CD (Fechada).<br /><br /> ER erro. Ocorreu um erro neste ponto de extremidade. A mensagem de erro é colocada na fila de aplicativos. Se a fila de aplicativos estiver vazia, isso indicará que o aplicativo já consumiu a mensagem de erro.<br /><br /> CD fechado. O ponto de extremidade da conversa não está mais em uso.|  
+|state_desc|**nvarchar(60)**|Descrição do estado do ponto de extremidade de conversação. Esta coluna é NULLABLE. Um dos seguintes:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSAR**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **FECHADO**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|Nome do serviço no lado remoto da conversa. Não é NULLABLE.|  
 |far_broker_instance|**nvarchar(128)**|A instância do agente do lado remoto da conversa. É NULLABLE.|  
 |principal_id|**Int**|Identificador da entidade cujo certificado é usado pelo lado local do diálogo. Não é NULLABLE.|  

@@ -1,16 +1,16 @@
 ---
 title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e82dc23da2641019fc0b6215dd633479ae0272
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 35411c46105097f343c6df8fcaab31d43951e923
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as configurações do banco de dados secundário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,22 +54,22 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@primary_server** = ] '*primary_server*'  
+ [ **@primary_server** =] '*primary_server*'  
  O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* é **sysname** e não pode ser NULL.  
   
- [  **@primary_database**  =] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*'  
  É o nome do banco de dados do servidor primário. *primary_database* é **sysname**, sem padrão.  
   
- [ **@backup_source_directory** = ] '*backup_source_directory*'  
+ [ **@backup_source_directory** =] '*backup_source_directory*'  
  O diretório onde os arquivos de backup de log de transações do servidor primário são armazenados. *backup_source_directory* é **nvarchar (500)** e não pode ser NULL.  
   
- [ **@backup_destination_directory** = ] '*backup_destination_directory*'  
+ [ **@backup_destination_directory** =] '*backup_destination_directory*'  
  O diretório no servidor secundário onde arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser NULL.  
   
- [  **@file_retention_period**  =] '*file_retention_period*'  
+ [ **@file_retention_period** =] '*file_retention_period*'  
  É a duração de tempo em minutos na qual o histórico será retido. *history_retention_period* é **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
- [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  O modo de segurança usado para conexão ao servidor monitor.  
   
  1 = Autenticação do Windows;  
@@ -79,7 +79,7 @@ sp_change_log_shipping_secondary_primary
  [ **@monitor_server_login** = ] '*monitor_server_login*'  
  É o nome de usuário da conta usada para acessar o servidor monitor.  
   
- [ **@monitor_server_password** = ] '*monitor_server_password*'  
+ [ **@monitor_server_password** =] '*monitor_server_password*'  
  Senha da conta usada para acessar o servidor monitor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -99,7 +99,7 @@ sp_change_log_shipping_secondary_primary
  Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

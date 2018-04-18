@@ -2,7 +2,7 @@
 title: Função SQLColumnPrivileges | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5058ae7c097858469db0aad57509f013e68db7ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 419bb70737c37e8cb47e53f7b1179d46b68582fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumnprivileges-function"></a>Função SQLColumnPrivileges
 **Conformidade**  
@@ -68,7 +68,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength1*  
  [Entrada] Comprimento em caracteres de **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Entrada] Nome do esquema. Se um driver dá suporte a esquemas para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, uma cadeia de caracteres vazia ("") indica que as tabelas que não têm esquemas. *SchemaName* não pode conter um padrão de pesquisa de cadeia de caracteres.  
   
  Se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_TRUE, *SchemaName* é tratado como um identificador. Se for SQL_FALSE, *SchemaName* é um argumento comum; ela será tratada literalmente e seu caso é significativo.  
@@ -76,7 +76,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength2*  
  [Entrada] Comprimento em caracteres de **SchemaName*.  
   
- *Nome de tabela*  
+ *TableName*  
  [Entrada] Nome da tabela. Esse argumento não pode ser um ponteiro nulo. *TableName* não pode conter um padrão de pesquisa de cadeia de caracteres.  
   
  Se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_TRUE, *TableName* é tratado como um identificador e o seu caso não é significativo. Se for SQL_FALSE, *TableName* é um argumento comum; ela será tratada literalmente e seu caso é significativo.  
@@ -167,6 +167,6 @@ SQLRETURN SQLColumnPrivileges(
 |Retornando privilégios para uma tabela ou tabelas|[Função SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
 |Retornando uma lista de tabelas em uma fonte de dados|[Função SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

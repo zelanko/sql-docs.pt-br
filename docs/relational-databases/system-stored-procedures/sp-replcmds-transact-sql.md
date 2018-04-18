@@ -1,16 +1,16 @@
 ---
 title: sp_replcmds (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 279d002e0a088386440cd978410476dee8def3ac
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28b41af867b956f64391a2332a95015b46db823f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  O **sp_replcmds** procedimento deve ser executado apenas para solucionar problemas de replicação.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,22 +56,22 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id do artigo**|**int**|A ID do artigo.|  
+|**id do artigo**|**Int**|A ID do artigo.|  
 |**partial_command**|**bit**|Indica se este é um comando parcial ou não.|  
 |**command**|**varbinary(1024)**|O valor do comando.|  
 |**Xactid**|**binary(10)**|ID da transação.|  
-|**xact_seqno**|**varbinary (16)**|O número de sequência da transação.|  
-|**publication_id**|**int**|A ID da publicação.|  
-|**command_id**|**int**|ID do comando na [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
-|**command_type**|**int**|Tipo de comando.|  
+|**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
+|**publication_id**|**Int**|A ID da publicação.|  
+|**command_id**|**Int**|ID do comando na [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_type**|**Int**|Tipo de comando.|  
 |**originator_srvname**|**sysname**|Servidor onde a transação originou.|  
 |**originator_db**|**sysname**|Banco de dados onde a transação originou.|  
-|**pkHash**|**int**|Somente para uso interno.|  
-|**originator_publication_id**|**int**|ID da publicação de origem da transação.|  
-|**originator_db_version**|**int**|Versão do banco de dados onde a transação originou.|  
-|**originator_lsn**|**varbinary (16)**|Identifica o LSN (número de sequência de log) para o comando na publicação de origem.|  
+|**pkHash**|**Int**|Somente para uso interno.|  
+|**originator_publication_id**|**Int**|ID da publicação de origem da transação.|  
+|**originator_db_version**|**Int**|Versão do banco de dados onde a transação originou.|  
+|**originator_lsn**|**varbinary(16)**|Identifica o LSN (número de sequência de log) para o comando na publicação de origem.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_replcmds** é usado pelo processo do leitor de log na replicação transacional.  
   
  Replicação trata o primeiro cliente que executa o **sp_replcmds** dentro de um determinado banco de dados como o leitor de log.  
@@ -90,9 +90,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>Consulte também  
  [Mensagens de erro](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

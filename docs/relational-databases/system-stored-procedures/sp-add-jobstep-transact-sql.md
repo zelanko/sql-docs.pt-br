@@ -1,16 +1,16 @@
 ---
 title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-caps.latest.revision: 
+caps.latest.revision: 80
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c757a3d30bae1e95a8bf7d862daf0e1f0cf6138b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5f3210cc635396eb391baa30cc7aa2ab85a73bfb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adiciona uma etapa (operação) a um trabalho.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,10 +66,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id =** ] *job_id*  
+ [  **@job_id =** ] *job_id*  
  O número de identificação do trabalho ao qual adicionar a etapa. *job_id* é **uniqueidentifier**, com um padrão NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'***job_name***'**  
  O nome do trabalho ao qual adicionar a etapa. *job_name* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -78,15 +78,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@step_id =** ] *step_id*  
  O número de identificação de sequência para a etapa de trabalho. Etapa inicial de números de identificação em **1** e incremento sem espaços. Se uma etapa for inserida na sequência existente, os números da sequência serão ajustados automaticamente. Um valor é fornecido se *step_id* não for especificado. *step_id*é **int**, com um padrão NULL.  
   
- [ **@step_name =** ] **'***step_name***'**  
+ [  **@step_name =** ] **'***step_name***'**  
  O nome da etapa. *step_name*é **sysname**, sem padrão.  
   
- [ **@subsystem =** ] **'***subsystem***'**  
+ [  **@subsystem =** ] **'***subsistema***'**  
  O subsistema usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço de agente para executar *comando*. *subsistema* é **nvarchar (40)**, e pode ser um destes valores.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script ativo<br /><br /> **\*\*Importante\*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Script ativo<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Comando do sistema operacional ou programa executável|  
 |'**DISTRIBUIÇÃO**'|Trabalho do Replication Distribution Agent|  
 |'**SNAPSHOT**'|Trabalho do Replication Snapshot Agent|  
@@ -97,7 +97,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**ANALYSISCOMMAND**'|Comando do Analysis Services (XMLA).|  
 |'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] execução de pacotes|  
 |'**PowerShell**'|Scripts PowerShell|  
-|'**TSQL**' (padrão)|[!INCLUDE[tsql](../../includes/tsql-md.md)] instrução|  
+|'**TSQL**' (padrão)|Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
  [  **@command=** ] **'***comando***'**  
  Os comandos a serem executados pelo **SQLServerAgent** serviço por meio de *subsistema*. *comando* é **nvarchar (max)**, com um padrão NULL. O SQL Server Agent fornece uma substituição de token que propicia a mesma flexibilidade que as variáveis ao escrever programas de software.  
@@ -130,10 +130,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Ir para a próxima etapa|  
 |**4**|Vá para a etapa *on_success_step_id*|  
   
- [ **@on_success_step_id =** ] *success_step_id*  
+ [  **@on_success_step_id =** ] *success_step_id*  
  A ID da etapa neste trabalho a ser executado se a etapa tiver êxito e *success_action*é **4**. *success_step_id*é **int**, com um padrão de **0**.  
   
- [ **@on_fail_action=** ] *fail_action*  
+ [  **@on_fail_action=** ] *fail_action*  
  A ação a ser executada se a etapa falhar. *fail_action*é **tinyint**, e pode ser um destes valores.  
   
 |Value|Descrição (ação)|  
@@ -143,28 +143,28 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Ir para a próxima etapa|  
 |**4**|Vá para a etapa *on_fail_step_id*|  
   
- [ **@on_fail_step_id=** ] *fail_step_id*  
+ [  **@on_fail_step_id=** ] *fail_step_id*  
  A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action*é **4**. *fail_step_id*é **int**, com um padrão de **0**.  
   
  [  **@server =**] **'***server***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor*é **nvarchar (30)**, com um padrão NULL.  
   
- [ **@database_name=** ] **'***database***'**  
+ [  **@database_name=** ] **'***banco de dados***'**  
  O nome do banco de dados no qual executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *banco de dados* é **sysname**, com um padrão NULL, caso em que o **mestre** banco de dados é usado. Os nomes entre colchetes ([ ]) não são permitidos. Para uma etapa do ActiveX, o *banco de dados* é o nome da linguagem de script que usa a etapa.  
   
- [ **@database_user_name=** ] **'***user***'**  
+ [  **@database_user_name=** ] **'***usuário***'**  
  O nome da conta de usuário a ser usada ao executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *usuário* é **sysname**, com um padrão NULL. Quando *usuário* for NULL, a etapa é executada no contexto de usuário do proprietário do trabalho na *banco de dados*.  O SQL Server Agent só incluirá esse parâmetro se o proprietário do trabalho for um sysadmin de SQL Server. Assim, a determinada etapa de Transact-SQL será executada no contexto do determinado nome de usuário do SQL Server. Se o proprietário do trabalho não for um sysadmin do SQL Server, a etapa de Transact-SQL sempre será executada no contexto do logon que possua esse trabalho, e o @database_user_name parâmetro será ignorado.  
   
- [ **@retry_attempts=** ] *retry_attempts*  
+ [  **@retry_attempts=** ] *retry_attempts*  
  O número de novas tentativas a serem usadas se esta etapa apresentar falha. *retry_attempts*é **int**, com um padrão de **0**, que não indica nenhuma repetição tentativas.  
   
- [ **@retry_interval=** ] *retry_interval*  
+ [  **@retry_interval=** ] *intervalo_de_repetição*  
  A quantidade de tempo, em minutos, entre as novas tentativas. *intervalo_de_repetição*é **int**, com um padrão de **0**, que indica um **0**-intervalo de minutos.  
   
  [  **@os_run_priority =** ] *run_priority*  
  Reservado.  
   
- [ **@output_file_name=** ] **'***file_name***'**  
+ [  **@output_file_name=** ] **'***file_name***'**  
  O nome do arquivo no qual a saída desta etapa é gravado. *file_name*é **nvarchar (200)**, com um padrão NULL. *file_name*pode incluir um ou mais dos tokens listados em *comando*. Este parâmetro é válido somente com comandos executados no [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsistemas.  
   
  [ **@flags=** ] *flags*  
@@ -180,10 +180,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|Grave todas as saídas no histórico do trabalho|  
 |**64**|Crie um evento do Windows para usar como um sinal para o jobstep de Cmd anular|  
   
- [ **@proxy_id** = ] *proxy_id*  
+ [ **@proxy_id** =] *proxy_id*  
  O número de identificação do que a etapa de trabalho é executado como proxy. *proxy_id* é do tipo **int**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e não *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'***proxy_name***'**  
  O nome do proxy com o qual a etapa de trabalho é executada. *proxy_name* é do tipo **sysname**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e não *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

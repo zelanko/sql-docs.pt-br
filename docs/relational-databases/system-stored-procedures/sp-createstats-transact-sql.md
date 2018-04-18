@@ -1,16 +1,16 @@
 ---
 title: sp_createstats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_createstats_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c89f3aed714fba775e2271425fb86949e3f26ac
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17d061eec260c1553fb03623ed392444f02ea939
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +39,9 @@ ms.lasthandoff: 11/27/2017
   
  sp_createstats é útil para aplicativos como o benckmark, quando os tempos de execução de consulta são críticos e não podem aguardar a geração de estatísticas de coluna única pelo otimizador de consulta. Na maioria dos casos, não é necessário usar sp_createstats; o otimizador de consultas gera estatísticas de coluna única conforme necessário para melhorar a consulta planos quando o **AUTO_CREATE_STATISTICS** opção está ativada.  
   
- Para obter mais informações sobre estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte o **AUTO_CREATE_STATISTICS** opção [opções ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obter mais informações sobre estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte o **AUTO_CREATE_STATISTICS** opção [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +73,7 @@ sp_createstats
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Cada objeto de estatísticas novo tem o mesmo nome da coluna em que foi criado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_createstats não cria nem atualiza estatísticas em colunas que são a primeira coluna em um objeto de estatísticas existente;  Isso inclui a primeira coluna de estatísticas criada para índices, colunas com estatísticas de coluna única geradas com a opção AUTO_CREATE_STATISTICS e a primeira coluna de estatísticas criadas com a instrução CREATE STATISTICS. sp_createstats não cria estatísticas nas primeiras colunas de índices desabilitados a menos que essa coluna é usada em outro índice habilitado. sp_createstats não cria estatísticas em tabelas com um índice clusterizado desabilitado.  
   
  Quando a tabela contém um conjunto de colunas, sp_createstats não cria estatísticas em colunas esparsas. Para obter mais informações sobre conjuntos de colunas e as colunas esparsas, consulte [usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md) e [usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).  
@@ -99,13 +100,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Estatísticas](../../relational-databases/statistics/statistics.md)   
+ [Estatística](../../relational-databases/statistics/statistics.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

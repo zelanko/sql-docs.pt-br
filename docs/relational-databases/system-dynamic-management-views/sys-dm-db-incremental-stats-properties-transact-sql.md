@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2014
@@ -24,16 +24,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6187179f6599404dac86f92403cba507eb5e5fcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89309e660606a4ce9845ce71748fb37061d5628a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |object_id|**Int**|ID do objeto (tabela) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
 |stats_id|**Int**|ID do objeto de estatísticas. É exclusivo na tabela. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|
 |partition_number|**Int**|Número da partição que contém a parte da tabela.|  
-|last_updated|**datetime2**|Data e hora da última atualização do objeto de estatísticas. Para obter mais informações, consulte o [comentários](#Remarks) seção nesta página.|  
+|last_updated|**datetime2**|Data e hora da última atualização do objeto de estatísticas. Para obter mais informações, consulte a seção de [Comentários](#Remarks) nesta página.|  
 |rows|**bigint**|O número total de linhas da tabela na última atualização das estatísticas. Se as estatísticas forem filtradas ou corresponderem a um índice filtrado, o número de linhas talvez seja menor do que o número de linhas na tabela.|  
 |rows_sampled|**bigint**|O número total de linhas amostradas para cálculos de estatísticas.|  
 |etapas|**Int**|O número de etapas no histograma. Para obter mais informações, veja [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
@@ -79,7 +79,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  Esse comportamento permite o uso seguro de `sys.dm_db_incremental_stats_properties` quando aplicado a linhas em exibições como `sys.objects` e `sys.stats`. Esse método pode retornar propriedades para as estatísticas que correspondem a cada partição. Para ver as propriedades das estatísticas mescladas combinadas entre todas as partições, use sys.dm_db_stats_properties. 
 
-Data de atualização de estatísticas é armazenada no [objeto de estatísticas de blob](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto com o [histograma](../../relational-databases/statistics/statistics.md#histogram) e [vetor de densidade](../../relational-databases/statistics/statistics.md#density), não nos metadados. Quando nenhum dado será lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não estiver disponível e o *last_updated* coluna será NULL. Esse é o caso para estatísticas filtradas para que o predicado não retornar linhas, ou para novas tabelas vazias.
+A data de atualização de estatísticas é armazenada no [objeto de blob de estatísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics), junto com o [histograma](../../relational-databases/statistics/statistics.md#histogram) e o [vetor de densidade](../../relational-databases/statistics/statistics.md#density), não nos metadados. Quando nenhum dado será lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não estiver disponível e o *last_updated* coluna será NULL. Esse é o caso para estatísticas filtradas para as quais o predicado não retorna nenhuma linha ou para novas tabelas vazias.
 
 ## <a name="permissions"></a>Permissões  
  Requer que o usuário tenha permissões selecionadas em colunas de estatísticas, que ele possua a tabela ou que seja membro da função de servidor fixa `sysadmin`, da função de banco de dados fixa `db_owner` ou da função de banco de dados fixa `db_ddladmin`.  

@@ -2,7 +2,7 @@
 title: Função SQLSetStmtAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>Função SQLSetStmtAttr
 **Conformidade**  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetStmtAttr(
   
  Se o *atributo* argumento é um valor específico do driver, *ValuePtr* pode ser um inteiro com sinal.  
   
- *StringLength*  
+ *stringLength*  
  [Entrada] Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de \* *ValuePtr*. Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* é um inteiro, *StringLength* será ignorado.  
   
  Se *atributo* é um atributo definido pelo driver, o aplicativo indica a natureza do atributo para o Gerenciador de Driver, definindo o *StringLength* argumento. *StringLength* pode ter os seguintes valores:  
@@ -166,7 +166,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Atributos de instrução  
  Os atributos definidos atualmente e a versão do ODBC no qual eles foram apresentados são mostrados na tabela a seguir; é esperado que serão definidos atributos mais drivers para tirar proveito de diferentes fontes de dados. Um intervalo de atributos é reservado pelo ODBC; os desenvolvedores de driver devem reservar valores para seu próprio uso específico do driver do Open Group. Para obter mais informações, consulte [tipos de dados específicos do Driver, tipos de descritor, tipos de informações, tipos de diagnóstico e atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|attribute|*ValuePtr* conteúdo|  
+|Atributo|*ValuePtr* conteúdo|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|O identificador para o APD para chamadas subsequentes para **SQLExecute** e **SQLExecDirect** no identificador da instrução. O valor inicial deste atributo é o descritor alocado implicitamente quando a instrução foi inicialmente alocada. Se o valor desse atributo é definido como SQL_NULL_DESC ou o identificador originalmente alocado para o descritor de, um identificador APD explicitamente alocado que foi previamente associado com o identificador de instrução é dissociado dele e o identificador de instrução é revertida para o alocado implicitamente identificador APD.<br /><br /> Esse atributo não pode ser definido para um indicador de descritor que foi alocado implicitamente para outra instrução ou outro identificador do descritor que foi implicitamente definido na mesma instrução; identificadores de descritor alocado implicitamente não podem ser associados a mais de uma instrução ou o identificador do descritor.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|O identificador para descartar para buscas subsequentes no identificador da instrução. O valor inicial deste atributo é o descritor alocado implicitamente quando a instrução foi inicialmente alocada. Se o valor desse atributo é definido como SQL_NULL_DESC ou o identificador originalmente alocado para o descritor de, um identificador de descartar explicitamente alocado que foi previamente associado com o identificador de instrução é dissociado dele e o identificador de instrução é revertida para o Identificador de descartar foi alocado implicitamente.<br /><br /> Esse atributo não pode ser definido para um indicador de descritor que foi alocado implicitamente para outra instrução ou outro identificador do descritor que foi implicitamente definido na mesma instrução; identificadores de descritor alocado implicitamente não podem ser associados a mais de uma instrução ou o identificador do descritor.|  
@@ -219,6 +219,6 @@ SQLRETURN SQLSetStmtAttr(
 |Definir um atributo de conexão|[Função SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |Configuração de um único campo do descritor|[Função SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

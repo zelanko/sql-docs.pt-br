@@ -1,16 +1,16 @@
 ---
 title: Executando um DiffGram usando SQLXML Classes gerenciadas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], Managed Classes
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9788bf33cb9ec0b1502fb338f39884bfb2f7dec8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fa04e87ef14c0a863cbace5e2dfa41a31ec2c7a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Executando um DiffGram usando as classes gerenciadas SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Este exemplo mostra como executar um arquivo DiffGram no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework para aplicar dados atualizações [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelas usando Classes gerenciadas SQLXML (Microsoft.Data.SqlXml).  
+  Este exemplo mostra como executar um arquivo DiffGram no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework para aplicar dados atualizações [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelas usando Classes gerenciadas SQLXML (Microsoft.Data.SqlXml).  
   
  Neste exemplo, o DiffGram atualiza as informações do cliente (CompanyName e ContactName) de ALFKI do cliente.  
   
@@ -186,6 +187,6 @@ class Test
 8.  No prompt de comando, execute DiffgramSample.exe.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de DiffGram &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Exemplos de DiffGram & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

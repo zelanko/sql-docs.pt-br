@@ -2,7 +2,7 @@
 title: Função SQLSetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescrec-function"></a>Função SQLSetDescRec
 **Conformidade**  
@@ -67,7 +67,7 @@ SQLRETURN SQLSetDescRec(
  *Tipo*  
  [Entrada] O valor para o qual definir o campo SQL_DESC_TYPE para o registro do descritor.  
   
- *Subtipo*  
+ *SubType*  
  [Entrada] Para registros cujo tipo é SQL_DATETIME ou SQL_INTERVAL, esse é o valor para o qual definir o campo SQL_DESC_DATETIME_INTERVAL_CODE.  
   
  *Comprimento*  
@@ -166,6 +166,6 @@ SQLRETURN SQLSetDescRec(
 |Obtendo vários campos de descritor|[Função SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Definindo campos de descritor único|[Função SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,16 +1,16 @@
 ---
 title: sys. server_principals (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_principals catalog view
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a37a7a41cfb219ec584c03b932cfe450cead48c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3705caa0221d2e0f4a6b93b6d2ffffb9b2fcb9e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,17 +42,17 @@ ms.lasthandoff: 11/21/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do principal. É exclusivo em um servidor.|  
-|**principal_id**|**int**|Número da ID do principal. É exclusivo em um servidor.|  
-|**SID**|**varbinary(85)**|SID (ID de segurança) do principal. Se for o principal do Windows, corresponde à SID do Windows.|  
-|**tipo**|**char (1)**|Tipo do principal:<br /><br /> S = Logon SQL<br /><br /> U = Logon do Windows<br /><br /> G = Grupo do Windows<br /><br /> R = Função do servidor<br /><br /> C = Logon mapeado para um certificado<br /><br /> K = Logon mapeado para uma chave assimétrica|  
-|**type_desc**|**nvarchar (60)**|Descrição do tipo do principal:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
-|**is_disabled**|**int**|1 = O logon está desabilitado.|  
+|**principal_id**|**Int**|Número da ID do principal. É exclusivo em um servidor.|  
+|**sid**|**varbinary(85)**|SID (ID de segurança) do principal. Se for o principal do Windows, corresponde à SID do Windows.|  
+|**type**|**char(1)**|Tipo do principal:<br /><br /> S = Logon SQL<br /><br /> U = Logon do Windows<br /><br /> G = Grupo do Windows<br /><br /> R = Função do servidor<br /><br /> C = Logon mapeado para um certificado<br /><br /> K = Logon mapeado para uma chave assimétrica|  
+|**type_desc**|**nvarchar(60)**|Descrição do tipo do principal:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**is_disabled**|**Int**|1 = O logon está desabilitado.|  
 |**create_date**|**datetime**|Hora em que o principal foi criado.|  
 |**modify_date**|**datetime**|Hora em que a definição do principal foi modificada pela última vez.|  
 |**default_database_name**|**sysname**|Banco de dados padrão para este principal.|  
 |**default_language_name**|**sysname**|Linguagem padrão deste principal.|  
-|**credential_id**|**int**|ID de uma credencial associada a este principal. Se nenhuma credencial for associada a este principal, credential_id será NULL.|  
-|**owning_principal_id**|**int**|O **principal_id** do proprietário de uma função de servidor. NULL se a entidade não for uma função de servidor.|  
+|**credential_id**|**Int**|ID de uma credencial associada a este principal. Se nenhuma credencial for associada a este principal, credential_id será NULL.|  
+|**owning_principal_id**|**Int**|O **principal_id** do proprietário de uma função de servidor. NULL se a entidade não for uma função de servidor.|  
 |**is_fixed_role**|**bit**|Retornará 1 se a entidade for uma das de funções de servidor fixas. Para obter mais informações, veja [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Permissões  

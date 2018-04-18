@@ -1,16 +1,16 @@
 ---
 title: sys.DM continuous_copy_status (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34d840580edb8bb15f4af379575bc0f24b44edcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 2e54262b107b7bf028f4bf3c6dd3fe803ca6b9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.DM continuous_copy_status (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ Se você estiver usando o SQL Database V12 use [sys.dm_geo_replication_link_stat
  Como o **sys.DM database_copies** exibição, **sys.DM continuous_copy_status** reflete o estado da relação de cópia contínua no qual o banco de dados é um principal ou ativo secundário banco de dados . Ao contrário de **sys.DM database_copies**, **sys.DM continuous_copy_status** contém várias colunas que fornecem detalhes sobre as operações e o desempenho. Essas colunas incluem **last_replication**, e **replication_lag_sec**...  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.DM database_copies &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Replicação geográfica ativa armazenados procedimentos &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [sys.DM database_copies &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Procedimentos armazenados de replicação geográfica ativa &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

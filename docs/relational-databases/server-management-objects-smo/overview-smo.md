@@ -1,32 +1,33 @@
 ---
-title: "Visão geral (SMO) | Microsoft Docs"
-ms.custom: 
+title: Visão geral (SMO) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b8fc017c4005021ca22350feb8c6e19a869b5bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
   
  Por exemplo, pode ser necessário simplificar os aplicativos de usuário que controlam as tarefas de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atender as necessidades dos novos usuários e reduzir custos de treinamento. Pode ser necessário criar bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados ou criar um aplicativo para criar e monitorar a eficiência de índices. Um aplicativo de SMO também pode ser usado para incluir hardware ou software de terceiros de modo homogêneo no aplicativo de gerenciamento de banco de dados.  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 01/12/2018
   
 -   Isolamento de instantâneo e versão do nível de linha para aprimoramento de simultaneidade. Para obter mais informações, consulte [trabalhando com isolamento de instantâneo](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   A coleção do esquema XML, os índices XML e o tipo de dados XML fornecem validação e armazenamento dos dados de XML. Para obter mais informações, consulte [coleções de esquemas XML &#40; SQL Server &#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [com esquemas XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   A coleção do esquema XML, os índices XML e o tipo de dados XML fornecem validação e armazenamento dos dados de XML. Para obter mais informações, consulte [coleções de esquema XML &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Bancos de dados de instantâneo para criar cópias somente leitura de bancos de dados.  
   
 -   Suporte do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para comunicação baseada em mensagem. Para obter mais informações, consulte [do SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sinônimos &#40; mecanismo de banco de dados &#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sinônimos &#40;mecanismo de banco de dados&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
 -   O gerenciamento de Banco de Dados de Email permite criar servidores de email, perfis de email e contas de email no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   

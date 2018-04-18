@@ -2,7 +2,7 @@
 title: Função SQLSetCursorName | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f416827e5f192599b35027d2a203b011b844f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2501a747df22295cd42b9820e7b80b1ee9716333
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetcursorname-function"></a>Função SQLSetCursorName
 **Conformidade**  
@@ -54,7 +54,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [Entrada] Identificador de instrução.  
   
- *CursorName*  
+ *cursorName*  
  [Entrada] Nome de cursor. Para processamento eficiente, o nome de cursor não deve conter espaços à esquerda ou à direita no nome do cursor e, se o nome de cursor inclui um identificador delimitado, o delimitador deve ser tratado como o primeiro caractere no nome do cursor.  
   
  *NameLength*  
@@ -146,6 +146,6 @@ if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
 |Retornando um nome de cursor|[Função SQLGetCursorName](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|  
 |Definindo opções de rolagem do cursor|[Função SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

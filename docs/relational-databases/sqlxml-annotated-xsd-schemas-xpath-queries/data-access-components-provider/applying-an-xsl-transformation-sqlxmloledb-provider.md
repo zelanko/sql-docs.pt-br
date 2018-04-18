@@ -1,16 +1,16 @@
 ---
-title: "Aplicando uma transformação XSL (provedor SQLXMLOLEDB) | Microsoft Docs"
-ms.custom: 
+title: Aplicando uma transformação XSL (provedor SQLXMLOLEDB) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5a39d9069824e21b9c6fee2489b0c16c66e76f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 23986c6fdddfd8cc632aac6efd7df2dee8532076
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicando um XSL Transformation (provedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Neste exemplo de aplicativo ADO, uma consulta SQL é executada e uma transformação em XSL é aplicada ao resultado. Definindo a propriedade ClientSideXML como True impõe o processamento do conjunto de linhas no lado do cliente. O dialeto do comando é definido como {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque a consulta SQL é especificada em um modelo e esse dialeto precisa ser especificado ao executar um modelo. A propriedade xsl Especifica o arquivo a ser usado para aplicar a transformação XSL. O valor da propriedade Base Path é usado para pesquisar o arquivo XSL. Se você especificar um caminho no valor da propriedade xsl, o caminho é relativo ao caminho especificado na propriedade do caminho de Base.  
+  Neste exemplo de aplicativo ADO, uma consulta SQL é executada e uma transformação em XSL é aplicada ao resultado. Definindo a propriedade ClientSideXML como True impõe o processamento do conjunto de linhas no lado do cliente. O dialeto do comando é definido como {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque a consulta SQL é especificada em um modelo e esse dialeto precisa ser especificado ao executar um modelo. A propriedade xsl Especifica o arquivo a ser usado para aplicar a transformação XSL. O valor da propriedade Base Path é usado para pesquisar o arquivo XSL. Se você especificar um caminho no valor da propriedade xsl, o caminho é relativo ao caminho especificado na propriedade do caminho de Base.  
   
  Este exemplo mostra como usar as propriedades específicas do Provedor SQLXMLOLEDB a seguir:  
   

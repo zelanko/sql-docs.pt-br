@@ -1,16 +1,16 @@
 ---
 title: sp_create_removable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Recomendamos que você use [criar banco de dados](../../t-sql/statements/create-database-sql-server-transact-sql.md) em vez disso.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,27 +68,27 @@ sp_create_removable
  [ **@syslogical=** ] **'***syslogical***'**  
  É o nome lógico do arquivo que contém as tabelas de catálogo de sistema. *syslogical* é **sysname**.  
   
- [ **@sysphysical=** ] **'***sysphysical***'**  
+ [  **@sysphysical=** ] **'***sysphysical***'**  
  É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de catálogo de sistema. *sysphysical* é **nvarchar (260)**.  
   
- [ **@syssize=** ] *syssize*  
+ [  **@syssize=** ] *syssize*  
  É o tamanho, em megabytes, do arquivo que contém as tabelas de catálogo do sistema. *syssize* é **int**. O mínimo *syssize* é 1.  
   
- [ **@loglogical=** ] **'***loglogical***'**  
+ [  **@loglogical=** ] **'***loglogical***'**  
  É o nome lógico do arquivo que contém o log de transações. *loglogical* é **sysname**.  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+ [  **@logphysical=** ] **'***logphysical***'**  
  É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém o log de transações. *logphysical* é **nvarchar (260)**.  
   
- [ **@logsize=** ] *logsize*  
+ [  **@logsize=** ] *logsize*  
  É o tamanho, em megabytes, do arquivo que contém o log de transações. *logsize* é **int**. O mínimo *logsize* é 1.  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+ [  **@datalogical1=** ] **'***datalogical***'**  
  É o nome lógico do arquivo que contém as tabelas de dados. *datalogical* é **sysname**.  
   
  Deve ser de 1 a 16 arquivos de dados. Geralmente, mais de um arquivo de dados é criado quando é esperado que o banco de dados seja grande e deve ser distribuído em vários discos.  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+ [  **@dataphysical1=** ] **'***dataphysical***'**  
  É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de dados. *dataphysical* é **nvarchar (260)**.  
   
  [  **@datasize1=** ] **'***datasize***'**  
@@ -114,11 +114,11 @@ sp_create_removable
 |Operação no banco de dados|Permissões definidas em arquivos|  
 |---------------------------|------------------------------|  
 |Modificado para adicionar um novo arquivo|Criado|  
-|O backup|Anexado|  
+|Incluído em backup|Anexado|  
 |Restaurado|Desanexado|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não o conjunto de dados e log arquivo permissões.  
+>  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não define dados e permissões de arquivos de log.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria o banco de dados `inventory` como um banco de dados removível.  

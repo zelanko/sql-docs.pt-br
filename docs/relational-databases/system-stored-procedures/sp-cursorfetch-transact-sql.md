@@ -1,16 +1,16 @@
 ---
 title: sp_cursorfetch (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorfetch
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9b33361094966dc180939f0cdf92ac951922139
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3a018fe2a3ebf5aaa53e1ed5f04112f0b512c712
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Busca um buffer de uma ou mais linhas no banco de dados. O grupo de linhas nesse buffer é chamado do cursor *buffer de busca*. sp_cursorfetch é invocado pela especificação de ID = 7 em um pacote de protocolo TDS de dados tabulares.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ sp_cursorfetch cursor
  *fetchType*  
  Especifica o buffer de cursor a ser buscado. *fetchType* é um parâmetro opcional que requer um dos seguintes valores de entrada de número inteiro.  
   
-|Valor|Nome|Description|  
+|Value|Nome|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Busca o primeiro buffer de *nrows* linhas. Se *nrows* é igual a 0, o cursor é posicionado antes do conjunto de resultados e nenhuma linha será retornada.|  
 |0x0002|NEXT|Busca o próximo buffer de *nrows* linhas.|  
@@ -103,7 +103,7 @@ sp_cursorfetch cursor
 |Para cursores KEYSET e STATIC|Normalmente, o tamanho do conjunto de chaves atual.<br /><br /> **– m** se o cursor estiver em criação assíncrona com *m* linhas encontradas para este ponto.|  
 |Para cursores DYNAMIC|-1|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="cursor-parameter"></a>Parâmetro cursor  
  Antes de haver qualquer operação de busca, a posição padrão de um cursor é antes da primeira linha do conjunto de resultados.  
@@ -140,7 +140,7 @@ sp_cursorfetch cursor
   
  O parâmetro de status RPC é definido como um dos valores mostrados na tabela a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |0|Procedimento executado com êxito.|  
 |0x0001|Falha no procedimento.|  
@@ -149,7 +149,7 @@ sp_cursorfetch cursor
   
  As linhas são retornadas como um conjunto de resultados comum, ou seja, formato de coluna (0x2a), linhas (0xd1), seguidas de Done (0xfd). Tokens de metadados são enviados no mesmo formato que o especificado para sp_cursoropen, ou seja, 0x81, 0xa5 e 0xa4 para usuários do SQL Server 7.0, e assim por diante. Os indicadores de status de linha são enviados como colunas ocultas, semelhante ao modo BROWSE, ao final de cada linha com o nome de coluna rowstat e o tipo de dados INT4. Essa coluna rowstat tem um dos valores mostrados na tabela a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -199,7 +199,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

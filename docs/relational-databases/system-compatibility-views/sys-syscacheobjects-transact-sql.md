@@ -1,16 +1,16 @@
 ---
-title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: syscacheobjects (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 18e93585cea187fa46a1a86068a17e7692789272
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.lasthandoff: 02/09/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**bucketid**|**Int**|Identificação da partição de memória. O valor indica um intervalo de 0 a (tamanho de diretório - 1). O tamanho de diretório é o tamanho da tabela de hash.|  
+|**BucketID**|**Int**|Identificação da partição de memória. O valor indica um intervalo de 0 a (tamanho de diretório - 1). O tamanho de diretório é o tamanho da tabela de hash.|  
 |**cacheobjtype**|**nvarchar(17)**|Tipo de objeto no cache:<br /><br /> Plano compilado<br /><br /> Plano executável<br /><br /> Árvore de análise<br /><br /> Cursor<br /><br /> Procedimento armazenado estendido|  
 |**objtype**|**nvarchar(8)**|Tipo de objeto:<br /><br /> Procedimento armazenado<br /><br /> Instrução preparada<br /><br /> Consulta ad hoc ([!INCLUDE[tsql](../../includes/tsql-md.md)] enviado como eventos de linguagem do **sqlcmd** ou **osql** utilitários, em vez de chamadas de procedimento remoto)<br /><br /> ReplProc (procedimento de replicação)<br /><br /> Gatilho<br /><br /> Exibição<br /><br /> Padrão<br /><br /> Tabela de usuário<br /><br /> Tabela do sistema<br /><br /> Verificar<br /><br /> Regra|  
 |**objid**|**Int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Este é o objeto ID armazenada na **sysobjects** para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para objetos de cache como ad hoc ou SQL preparado, **objid** é um valor gerado internamente.|  
 |**dbid**|**smallint**|A identificação do banco de dados no qual o objeto de cache foi compilado.|  
 |**dbidexec**|**smallint**|A identificação de banco de dados da qual a consulta é executada.<br /><br /> Para a maioria dos objetos, **dbidexec** tem o mesmo valor como **dbid**.<br /><br /> Para exibições do sistema, **dbidexec** é a ID de banco de dados do qual a consulta é executada.<br /><br /> Para consultas ad hoc, **dbidexec** é 0. Isso significa **dbidexec** tem o mesmo valor como **dbid**.|  
-|**uid**|**smallint**|Indica o designer do plano para planos de consulta ad hoc e planos preparados.<br /><br /> -2 = O lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
+|**UID**|**smallint**|Indica o designer do plano para planos de consulta ad hoc e planos preparados.<br /><br /> -2 = O lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
 |**refcounts**|**Int**|Número de outros objetos de cache que fazem referência a este objeto de cache. Uma contagem de 1 é a base.|  
 |**usecounts**|**Int**|Número de vezes em que este objeto de cache foi usado desde o começo.|  
 |**pagesused**|**Int**|Número de páginas consumidas pelo objeto de cache.|  

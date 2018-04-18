@@ -1,16 +1,16 @@
 ---
 title: sp_getapplock (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -21,23 +21,24 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c7b65a7330a1b87e7ee81a4f76a715038cd3d6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 09977560a053f883aed8ffe42f593921d3203243
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Insere um bloqueio em um recurso de aplicativo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,10 +62,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Depois que um bloqueio de aplicativo for adquirido, somente os primeiros 32 caracteres poderão ser recuperados em texto não criptografado, o restante será em modo hash.  
   
  [ @LockMode=] '*lock_mode*'  
- É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar (32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **compartilhado**, **atualização**, **IntentShared**, **IntentExclusive**, ou **exclusivo** .  
+ É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **compartilhado**, **atualização**, **IntentShared**, **IntentExclusive**, ou **exclusivo** .  
   
  [ @LockOwner=] '*lock_owner*'  
- É o proprietário do bloqueio, que é o *lock_owner* valor quando o bloqueio foi solicitado. *lock_owner* é **nvarchar (32)**. O valor pode ser **transação** (o padrão) ou **sessão**. Quando o *lock_owner* valor é **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
+ É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor é **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
   
  [ @LockTimeout=] '*valor*'  
  É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado pelo@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um erro em vez de esperar pelo bloqueio quando não for possível conceder a solicitação imediatamente, especifique 0.  
@@ -75,7 +76,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valores do código de retorno  
  \>= 0 (êxito) ou < 0 (falha)  
   
-|Valor|Resultado|  
+|Value|Resultado|  
 |-----------|------------|  
 |0|O bloqueio foi concedido com sucesso de forma síncrona.|  
 |1|O bloqueio foi concedido com sucesso após outros bloqueios incompatíveis terem sido liberados.|  
@@ -84,7 +85,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|A solicitação de bloqueio foi selecionada como uma vítima de deadlock.|  
 |-999|Indica uma validação de parâmetro ou outro erro de chamada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Bloqueios inseridos em um recurso são associados com a transação atual ou a sessão atual. Os bloqueios associados a uma transação atual são liberados quando a transação for confirmada ou revertida. Bloqueios associados com a sessão são liberados quando a sessão é finalizada. Quando o servidor é desligado por algum motivo, todos os bloqueios são liberados.  
   
  O recurso de bloqueio criado por sp_getapplock é criado no banco de dados atual para a sessão. Cada recurso de bloqueio é identificado pelos valores combinados de:  
@@ -170,8 +171,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [APPLOCK_MODE &#40; Transact-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

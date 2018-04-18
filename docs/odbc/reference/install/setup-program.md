@@ -2,7 +2,7 @@
 title: Programa de instalação | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 615f3151212c362ad0a813ee1af9718f83398270
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 03f834f4258ccc01c551a5e59c2b27dce4a829ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setup-program"></a>Programa de instalação
 > **Observação:** começando com o Windows XP e Windows Server 2003, **ODBC está incluído no sistema operacional Windows**. Instale somente explicitamente ODBC em versões anteriores do Windows.  

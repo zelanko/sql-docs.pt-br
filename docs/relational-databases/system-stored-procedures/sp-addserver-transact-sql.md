@@ -2,7 +2,7 @@
 title: sp_addserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a90fde54b2924d418265a9f752e31ecf3a463ffd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +51,12 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@server =** ] **'***server***'**  
+ [  **@server =** ] **'***server***'**  
  É o nome do servidor. Os nomes de servidor devem ser exclusivos e seguir as regras de nomes do computador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, embora não sejam permitidos espaços. *server* é **sysname**, sem padrão.  
   
  Quando várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instalados em um computador, uma instância funciona como se estivesse em um servidor separado. Especificar uma instância nomeada, fazendo referência ao *servidor* como *NomedoServidor \ NomedaInstância*.  
   
- [ **@local =** ] **'LOCAL'**  
+ [  **@local =** ] **'LOCAL'**  
  Especifica se o servidor que está sendo adicionado é um servidor local. **@local** é **varchar (10)**, com um padrão NULL. Especificando **@local** como **LOCAL** define **@server** como o nome do servidor local e faz com que o @@SERVERNAME função para retornar o valor de *server*.  
   
  A Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define essa variável como o nome do computador durante a instalação. Por padrão, o nome do computador é os maneira como os usuários se conectem a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem a necessidade de configuração adicional.  

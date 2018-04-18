@@ -1,16 +1,16 @@
 ---
 title: sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2e856435a18b89d9708112bd81ca2c8976371165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contém uma linha para cada dependência por nome em uma entidade definida pelo usuário no banco de dados atual. Isso inclui dependências entre funções escalares definidas pelo usuário e outras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] módulos. Uma dependência entre duas entidades é criada quando uma entidade, chamada de *entidade referenciada*, aparece por nome em uma expressão SQL persistente de outra entidade, denominada a *entidade de referência*. Por exemplo, quando uma tabela for referenciada na definição de uma exibição, a exibição, como a entidade de referência, dependerá da tabela, a entidade referenciada. Se a tabela for descartada, a exibição será inutilizável.  
   
- Para obter mais informações, consulte [funções escalares definidas pelo usuário para OLTP na memória](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+ Para obter mais informações, consulte [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
  Você pode usar essa exibição do catálogo para relatar informações de dependência das seguintes entidades:  
   
@@ -54,47 +55,47 @@ ms.lasthandoff: 11/21/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|referencing_id|**int**|ID da entidade de referência. Não permite valor nulo.|  
-|referencing_minor_id|**int**|ID da coluna quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.|  
+|referencing_id|**Int**|ID da entidade de referência. Não permite valor nulo.|  
+|referencing_minor_id|**Int**|ID da coluna quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.|  
 |referencing_class|**tinyint**|Classe da entidade de referência.<br /><br /> 1 = Objeto ou coluna<br /><br /> 12 = Gatilho DDL do banco de dados<br /><br /> 13 - Gatilho DDL do servidor<br /><br /> Não permite valor nulo.|  
-|referencing_class_desc|**nvarchar (60)**|Descrição da classe da entidade de referência.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Não permite valor nulo.|  
+|referencing_class_desc|**nvarchar(60)**|Descrição da classe da entidade de referência.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Não permite valor nulo.|  
 |is_schema_bound_reference|**bit**|1 = A entidade referenciada é associada a esquema.<br /><br /> 0 = A entidade referenciada não é associada a esquema.<br /><br /> Não permite valor nulo.|  
 |referenced_class|**tinyint**|Classe da entidade referenciada.<br /><br /> 1 = Objeto ou coluna<br /><br /> 6 = Tipo<br /><br /> 10 = Coleção de esquema XML<br /><br /> 21 = Função de partição<br /><br /> Não permite valor nulo.|  
-|referenced_class_desc|**nvarchar (60)**|Descrição de classe da entidade referenciada.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Não permite valor nulo.|  
-|referenced_server_name|**sysname**|Nome do servidor da entidade referenciada.<br /><br /> Essa coluna é populada para dependências entre servidores que são feitas especificando um nome de quatro partes válido. Para obter informações sobre nomes de várias partes, consulte [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para entidades não associadas a esquema para as quais a entidade foi referenciada sem especificar um nome de quatro partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e portanto, só podem ser definidas usando uma de duas partes (*Object*) nome.|  
+|referenced_class_desc|**nvarchar(60)**|Descrição de classe da entidade referenciada.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Não permite valor nulo.|  
+|referenced_server_name|**sysname**|Nome do servidor da entidade referenciada.<br /><br /> Essa coluna é populada para dependências entre servidores que são feitas especificando um nome de quatro partes válido. Para obter informações sobre nomes de várias partes, consulte [convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para entidades não associadas a esquema para as quais a entidade foi referenciada sem especificar um nome de quatro partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e portanto, só podem ser definidas usando uma de duas partes (*Object*) nome.|  
 |referenced_database_name|**sysname**|Nome do banco de dados da entidade referenciada.<br /><br /> Essa coluna é populada para referências entre servidores ou entre bancos de dados, que são feitas especificando um nome de três ou quatro partes válido.<br /><br /> NULL para referências não associadas a esquema quando especificadas usando um nome de uma ou duas partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e portanto, só podem ser definidas usando uma de duas partes (*Object*) nome.|  
 |referenced_schema_name|**sysname**|Esquema ao qual a entidade referenciada pertence.<br /><br /> NULL para referências não associadas a esquema para as quais a entidade foi referenciada sem especificar o nome do esquema.<br /><br /> Nunca NULL para referências associadas a esquema porque devem ser definidas entidades associadas a esquema e referenciadas usando um nome de duas partes.|  
 |referenced_entity_name|**sysname**|Nome da entidade referenciada. Não permite valor nulo.|  
-|referenced_id|**int**|ID da entidade referenciada. O valor desta coluna nunca é NULL para referências associadas a esquema. O valor dessa coluna é sempre NULL para referências entre servidores e bancos de dados.<br /><br /> NULL para referências dentro do banco de dados se a ID não puder ser determinada. Para referências não associadas a esquema, a ID não pode ser resolvida nos seguintes casos:<br /><br /> A entidade referenciada não existe no banco de dados.<br /><br /> O esquema da entidade referenciada depende do esquema do chamador e é resolvido em tempo de execução. Nesse caso, is_caller_dependent está definido como 1.|  
-|referenced_minor_id|**int**|ID da coluna referenciada quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.<br /><br /> Uma entidade referenciada é uma coluna quando uma coluna é identificada pelo nome na entidade de referência, ou quando a entidade pai é usada em uma instrução SELECT *.|  
+|referenced_id|**Int**|ID da entidade referenciada. O valor desta coluna nunca é NULL para referências associadas a esquema. O valor dessa coluna é sempre NULL para referências entre servidores e bancos de dados.<br /><br /> NULL para referências dentro do banco de dados se a ID não puder ser determinada. Para referências não associadas a esquema, a ID não pode ser resolvida nos seguintes casos:<br /><br /> A entidade referenciada não existe no banco de dados.<br /><br /> O esquema da entidade referenciada depende do esquema do chamador e é resolvido em tempo de execução. Nesse caso, is_caller_dependent está definido como 1.|  
+|referenced_minor_id|**Int**|ID da coluna referenciada quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.<br /><br /> Uma entidade referenciada é uma coluna quando uma coluna é identificada pelo nome na entidade de referência, ou quando a entidade pai é usada em uma instrução SELECT *.|  
 |is_caller_dependent|**bit**|Indica que a associação de esquema para a entidade referenciada ocorre em tempo de execução; portanto, a resolução da ID da entidade depende do esquema do chamador. Isso ocorre quando a entidade referenciada for um procedimento armazenado, um procedimento armazenado estendido ou uma função definida pelo usuário não associada a esquema chamados em uma instrução EXECUTE.<br /><br /> 1 = A entidade referenciada é dependente do chamador e é resolvida em tempo de execução. Nesse caso, referenced_id é NULL.<br /><br /> 0 = A ID da entidade referenciada não é dependente do chamador.<br /><br /> Sempre 0 para referências associadas a esquema e referências entre bancos de dados e entre servidores que especificam explicitamente um nome de esquema. Por exemplo, uma referência para uma entidade no formato `EXEC MyDatabase.MySchema.MyProc` não é dependente do chamador. Porém, uma referência no formato `EXEC MyDatabase..MyProc` é dependente do chamador.|  
 |is_ambiguous|**bit**|Indica a referência é ambígua e pode ser resolvida em tempo de execução para uma função definida pelo usuário, um tipo definido pelo usuário (UDT) ou uma referência xquery para uma coluna do tipo **xml**.<br /><br /> Por exemplo, suponha que a instrução `SELECT Sales.GetOrder() FROM Sales.MySales` esteja definida em um procedimento armazenado. Até que o procedimento armazenado seja executado, não se sabe se `Sales.GetOrder()` é uma função definida pelo usuário no esquema `Sales` ou é uma coluna denominada `Sales` do tipo UDT com um método denominado `GetOrder()`.<br /><br /> 1 = A referência é ambígua.<br /><br /> 0 = A referência não é ambígua ou a entidade pode ser associada com êxito quando a exibição é chamada.<br /><br /> Sempre 0 para o esquema associado referências.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir lista os tipos de entidades para os quais as informações de dependência são criadas e mantidas. As informações de dependência não são criadas nem mantidas para regras, padrões, tabelas temporárias, procedimentos armazenados temporários ou objetos do sistema.  
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
-|Índice filtrado|Sim**|Não|  
-|Estatísticas filtradas|Sim**|Não|  
+|Índice filtrado|Sim**|não|  
+|Estatísticas filtradas|Sim**|não|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sim|Sim|  
-|procedimento armazenado CLR|Não|Sim|  
+|procedimento armazenado CLR|não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
-|Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|Não|Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|Não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Procedimentos armazenados estendidos|Não|Sim|  
-|Fila|Não|Sim|  
-|Sinônimo|Não|Sim|  
-|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não|Sim|  
-|Coleção de esquemas XML|Não|Sim|  
-|Função de partição|Não|Sim|  
+|Função CLR definida pelo usuário|não|Sim|  
+|Gatilho CLR (DML e DDL)|não|não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|Procedimentos armazenados estendidos|não|Sim|  
+|Fila|não|Sim|  
+|Sinônimo|não|Sim|  
+|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|não|Sim|  
+|Coleção de esquemas XML|não|Sim|  
+|Função de partição|não|Sim|  
   
- \*Uma tabela é controlada como uma entidade de referência apenas quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de coluna computada, restrição CHECK ou restrição padrão.  
+ \* Uma tabela é controlada como uma entidade de referência apenas quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de coluna computada, restrição CHECK ou restrição padrão.  
   
  * * Cada coluna usada no predicado de filtro é controlada como uma entidade de referência.  
   

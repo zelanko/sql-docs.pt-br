@@ -1,8 +1,8 @@
 ---
-title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: sys.DM tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e4552d7acab5640a6e6b8210b73eff20bf963d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STA
   
  Vários cursores em execução em uma sessão são indistinguíveis e são tratados como uma entidade.  
   
- As transações distribuídas não associadas a uma ID de sessão são órfãs e recebem o valor da ID de sessão igual a -2. Para obter mais informações, consulte [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ As transações distribuídas não associadas a uma ID de sessão são órfãs e recebem o valor da ID de sessão igual a -2. Para obter mais informações, consulte [KILL & #40; Transact-SQL & #41; ](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>Detalhes dos recursos  
  A tabela a seguir lista os recursos que estão representados no **resource_associated_entity_id** coluna.  
@@ -207,7 +208,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STA
 |FILE|<file_id>|ID do arquivo representado por esse recurso.|  
 |OBJECT|<object_id>|ID do objeto representado por esse recurso. Esse objeto pode ser qualquer objeto listado em **sys. Objects**, não apenas uma tabela.|  
 |PAGE|<file_id>:<page_in_file>|Representa o arquivo e a ID da página representada por esse recurso.|  
-|KEY|<hash_value>|Representa um hash das colunas principais da linha representada por esse recurso.|  
+|KEY|< hash_value >|Representa um hash das colunas principais da linha representada por esse recurso.|  
 |EXTENT|<file_id>:<page_in_files>|Representa o arquivo e a ID da extensão representada por esse recurso. A ID de extensão é igual à ID da página da primeira página na extensão.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Representa a ID da página e a ID da linha representada por esse recurso. Observe que se a ID de objeto associada for 99, esse recurso representará um dos oito slots de página misturados na primeira página IAM de uma cadeia IAM.|  
 |APPLICATION|\<DbPrincipalId >:\<com até 32 caracteres > :(< hash_value >)|Representa a ID do banco de dados principal usado para fazer o escopo desse recurso de bloqueio de aplicativo. Também incluídos estão até 32 caracteres da cadeia de caracteres de recurso que corresponde a este recurso de bloqueio de aplicativo. Em certos casos, podem ser exibidos só 2 caracteres devido à cadeia de caracteres cheia que já não está mais disponível. Esse comportamento ocorre apenas no momento da recuperação do banco de bancos com relação aos bloqueios que são readquiridos como parte do processo de recuperação. O valor de hash representa um hash da cadeia de caracteres de recurso cheia, que corresponde a esse recurso de bloqueio de aplicativo.|  

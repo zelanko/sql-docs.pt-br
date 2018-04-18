@@ -1,16 +1,16 @@
 ---
 title: sp_helptrigger (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helptrigger
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 568e8eadad6dd63a2b2980284ec56bff9bb0293e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6046d4ceb501c6e0ce6f267d29a9f10964861e8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o tipo ou os tipos de gatilhos DML definidos na tabela especificada para o banco de dados atual. sp_helptrigger não pode ser usado com gatilhos DDL. Consulta o [procedimentos armazenados do sistema](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) exibição do catálogo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +54,7 @@ sp_helptrigger [ @tabname = ] 'table'
  [  **@triggertype=** ] **'***tipo***'**  
  É o tipo de gatilho DML sobre o qual retornar informações. *tipo* é **char(6)**, com um padrão NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**DELETE**|Retorna informações do gatilho DELETE.|  
 |**INSERT**|Retorna informações do gatilho INSERT.|  
@@ -69,11 +70,11 @@ sp_helptrigger [ @tabname = ] 'table'
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Nome do gatilho.|  
 |**trigger_owner**|**sysname**|Nome do proprietário da tabela em que o gatilho é definido.|  
-|**isupdate**|**int**|1 = Gatilho UPDATE<br /><br /> 0 = Não é um gatilho UPDATE|  
-|**isdelete**|**int**|1 = Gatilho DELETE<br /><br /> 0 = Não é um gatilho DELETE|  
-|**propriedade IsInsert**|**int**|1 = Gatilho INSERT<br /><br /> 0 = Não é um gatilho INSERT|  
-|**isafter**|**int**|1 = Gatilho AFTER<br /><br /> 0 = Não é um gatilho AFTER|  
-|**isinsteadof**|**int**|1 = Gatilho INSTEAD OF<br /><br /> 0 = Não é um gatilho INSTEAD OF|  
+|**isupdate**|**Int**|1 = Gatilho UPDATE<br /><br /> 0 = Não é um gatilho UPDATE|  
+|**isdelete**|**Int**|1 = Gatilho DELETE<br /><br /> 0 = Não é um gatilho DELETE|  
+|**propriedade IsInsert**|**Int**|1 = Gatilho INSERT<br /><br /> 0 = Não é um gatilho INSERT|  
+|**isafter**|**Int**|1 = Gatilho AFTER<br /><br /> 0 = Não é um gatilho AFTER|  
+|**isinsteadof**|**Int**|1 = Gatilho INSTEAD OF<br /><br /> 0 = Não é um gatilho INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nome do esquema ao qual o gatilho pertence.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -89,7 +90,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

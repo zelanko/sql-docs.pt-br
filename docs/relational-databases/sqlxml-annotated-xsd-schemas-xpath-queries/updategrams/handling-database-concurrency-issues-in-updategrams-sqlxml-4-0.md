@@ -1,16 +1,16 @@
 ---
-title: "Tratamento de problemas de simultaneidade de banco de dados em diagramas de atualização (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Tratamento de problemas de simultaneidade de banco de dados em diagramas de atualização (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e19d8397d59b4c85d60593c63faa5bc6f0f2ea4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 328bb2b98ffe4a6a266463aa8fe0d8348ebbd975
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Manipulando problemas de simultaneidade de banco de dados nos diagramas de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Da mesma forma que outros mecanismos de atualização de banco de dados, os diagramas de atualização devem lidar com atualizações simultâneas dos dados em um ambiente multiusuário. Os diagramas de atualização usam o Controle de simultaneidade otimista, que usa a comparação de dados de campos selecionados como instantâneos para garantir que os dados a serem atualizados não foram alterados por outro aplicativo de usuário desde que foram lidos do banco de dados. Diagramas de atualização incluem estes valores de instantâneo no  **\<antes >** bloco dos diagramas de atualização. Antes de atualizar o banco de dados, o diagrama de atualização verifica os valores que são especificados no  **\<antes >** bloco em relação aos valores no momento no banco de dados para garantir que a atualização é válida.  
+  Da mesma forma que outros mecanismos de atualização de banco de dados, os diagramas de atualização devem lidar com atualizações simultâneas dos dados em um ambiente multiusuário. Os diagramas de atualização usam o Controle de simultaneidade otimista, que usa a comparação de dados de campos selecionados como instantâneos para garantir que os dados a serem atualizados não foram alterados por outro aplicativo de usuário desde que foram lidos do banco de dados. Diagramas de atualização incluem estes valores de instantâneo no  **\<antes >** bloco dos diagramas de atualização. Antes de atualizar o banco de dados, o diagrama de atualização verifica os valores que são especificados no  **\<antes >** bloco em relação aos valores no momento no banco de dados para garantir que a atualização é válida.  
   
  O Controle de simultaneidade otimista oferece três níveis de proteção em um diagrama de atualização: baixo (nenhum), intermediário e alto. Você pode decidir qual o nível de proteção necessário especificando o diagrama de atualização de acordo com ele.  
   
@@ -195,6 +196,6 @@ Da mesma forma que outros mecanismos de atualização de banco de dados, os diag
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Considerações de segurança do diagrama &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerações de segurança do diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

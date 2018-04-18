@@ -1,15 +1,15 @@
 ---
-title: "Mapeamento de dados de parâmetro CLR | Microsoft Docs"
-ms.custom: 
+title: Mapeamento de dados de parâmetro CLR | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -28,46 +28,46 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 
+caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e47f4cf6d163921b5fb6a398c61c66e217e797a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapeando dados de parâmetro CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-A seguinte tabela lista [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados, seus equivalentes no common language runtime (CLR) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **SqlTypes** namespace e seus equivalentes CLR nativos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Do .NET framework.  
+  A seguinte tabela lista [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados, seus equivalentes no common language runtime (CLR) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **SqlTypes** namespace e seus equivalentes CLR nativos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Do .NET framework.  
   
 ||||  
 |-|-|-|  
 |**Tipo de dados do SQL Server**|Tipo (em System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Tipo de dados CLR (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64, anulável\<Int64 >**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
-|**bit**|**SqlBoolean**|**Boolean, Nullable\<Boolean>**|  
+|**bit**|**SqlBoolean**|**Booliano, anulável\<booliana >**|  
 |**char**|Nenhuma|Nenhuma|  
 |**cursor**|Nenhuma|Nenhuma|  
-|**date**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
-|**datetime**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
-|**datetime2**|Nenhuma|**DateTime, Nullable\<DateTime>**|  
-|**DATETIMEOFFSET**|**Nenhuma**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
+|**date**|**SqlDateTime**|**DateTime, anulável\<DateTime >**|  
+|**datetime**|**SqlDateTime**|**DateTime, anulável\<DateTime >**|  
+|**datetime2**|Nenhuma|**DateTime, anulável\<DateTime >**|  
+|**DATETIMEOFFSET**|**Nenhuma**|**DateTimeOffset, anulável\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**float**|**SqlDouble**|**Duplo, anulável\<duplo >**|  
 |**geografia**|**SqlGeography**<br /><br /> **SqlGeography** é definido no Microsoft.SqlServer.Types.dll, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhuma|  
 |**geometria**|**SqlGeometry**<br /><br /> **SqlGeometry** é definido no Microsoft.SqlServer.Types.dll, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhuma|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** é definido no Microsoft.SqlServer.Types.dll, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhuma|  
 |**image**|Nenhuma|Nenhuma|  
-|**Int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
+|**Int**|**SqlInt32**|**Int32, anulável\<Int32 >**|  
 |**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
 |**ntext**|Nenhuma|Nenhuma|  
 |**numeric**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** é uma melhor correspondência para transferência de dados e acesso, e **SQLString** é uma melhor correspondência para executar operações de cadeia de caracteres.|**String, Char[]**|  
-|**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char[], Nullable\<char>**|  
+|**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char >**|  
 |**real**|**SqlSingle** (o intervalo de **SqlSingle**, no entanto, é maior do que **real**)|**Único, anulável\<único >**|  
 |**rowversion**|Nenhuma|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, anulável\<Int16 >**|  
@@ -75,10 +75,10 @@ A seguinte tabela lista [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!IN
 |**sql_variant**|Nenhuma|**Objeto**|  
 |**table**|Nenhuma|Nenhuma|  
 |**text**|Nenhuma|Nenhuma|  
-|**time**|Nenhuma|**TimeSpan, Nullable\<TimeSpan>**|  
+|**time**|Nenhuma|**Período de tempo, anulável\<TimeSpan >**|  
 |**timestamp**|Nenhuma|Nenhuma|  
 |**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
-|**uniqueidentifier**|**SqlGuid**|**Guid, Nullable\<Guid>**|  
+|**uniqueidentifier**|**SqlGuid**|**GUID, anulável\<Guid >**|  
 |**Type(UDT) definida pelo usuário**|Nenhuma|A mesma classe que é associada ao tipo definido pelo usuário no mesmo assembly ou em um assembly dependente.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  

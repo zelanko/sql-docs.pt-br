@@ -2,7 +2,7 @@
 title: sp_add_log_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1623d485132881e7d4df61926dc425257e3113b3
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 56d7c18f3523481343ff3c5c43b130ee04d93dd3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  [  **@dbName =** ] **'***banco de dados***'**  
  É o nome do banco de dados. *banco de dados* é **sysname**, sem padrão.  
   
- [ **@name=** ] **'***logical_file_name***'**  
+ [  **@name=** ] **'***logical_file_name***'**  
  É o nome usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando um arquivo é referenciado. O nome deve ser exclusivo no servidor. *logical_file_name* é **nvarchar (260)**, sem padrão.  
   
- [ **@filename =** ] **'***os_file_name***'**  
+ [  **@filename =** ] **'***os_file_name***'**  
  É o caminho e o nome de arquivo usados pelo sistema operacional para o arquivo. O arquivo deve residir no servidor no qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] está instalado. *os_file_name* é **nvarchar (260)**, sem padrão.  
   
- [ **@size=** ] **'***size* **'**  
+ [  **@size=** ] **' * tamanho* **'**  
  É o tamanho inicial do arquivo. *tamanho* é **nvarchar (20)**, com um padrão NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB. O valor mínimo é 512 KB. Se *tamanho* não for especificado, o padrão é 1 MB.  
   
  [ **@maxsize=** ] **'***max_size* **'**  
@@ -68,7 +68,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
   
  Se *max_size* não for especificado, o arquivo crescerá até que o disco está cheio. O log de aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows adverte o administrador quando o disco está quase cheio.  
   
- [ **@filegrowth=** ] **'***growth_increment* **'**  
+ [  **@filegrowth=** ] **' * growth_increment* **'**  
  É a quantidade de espaço adicionada ao arquivo a cada vez que novo espaço é necessário. *growth_increment* é **nvarchar (20)**, com um padrão NULL. Um valor de 0 indica que não houve crescimento. Especifique um número inteiro; não inclua um decimal. O valor pode ser especificado em MB, KB ou porcentagem (%). Quando a % é especificada, o incremento de crescimento é a porcentagem especificada do tamanho do arquivo no momento em que ocorre o incremento. Se um número for especificado sem um sufixo MB, KB, ou %, o padrão será MB.  
   
  Se *growth_increment* for NULL, o valor padrão é 10% e o valor de tamanho mínimo é 64 KB. O tamanho especificado é arredondado para o mais próximo de 64 KB.  

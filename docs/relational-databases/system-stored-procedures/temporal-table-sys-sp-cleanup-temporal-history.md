@@ -1,33 +1,34 @@
 ---
 title: sys.sp_cleanup_temporal_history | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
 ms.service: sql-database
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-caps.latest.revision: 
+caps.latest.revision: 4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1539ae456b1159cf4fdd458948a905171e3d33aa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 463565c898ca351ea5b891a60b5b80aefd57c540
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="temporal-table---sysspcleanuptemporalhistory"></a>Tabela temporal - sys.sp_cleanup_temporal_history
+# <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 Remove todas as linhas da tabela de histórico temporal que corresponde a período HISTORY_RETENTION configurado em uma única transação.
   
@@ -46,7 +47,7 @@ O nome da tabela temporal para qual a retenção de limpeza é chamada.
 
 O nome do esquema ao qual tabela temporal atual pertence a
 
-*row_count_var* [OUTPUT]
+*row_count_var* [saída]
 
 O parâmetro de saída que retorna o número de linhas excluídas. Esse parâmetro se a tabela de histórico tem columnstore índice clusterizado, irá retornar sempre 0.
   

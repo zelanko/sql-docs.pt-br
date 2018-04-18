@@ -1,16 +1,16 @@
 ---
-title: core.sp_update_data_source (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_update_data_source (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 042f03a9004a357e0b7a488494533d7f778247b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza uma linha existente ou insere uma nova linha na tabela core.source_info_internal do data warehouse de gerenciamento. Esse procedimento é chamado pelo componente de tempo de execução do coletor de dados sempre que um pacote de carregamento começa a carregar dados no data warehouse de gerenciamento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,22 +53,22 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier**, sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
   
  [ @machine_name =] '*nome_da_máquina*'  
  O nome do servidor no qual o conjunto de coleta reside. *nome_da_máquina* é **sysname** sem nenhum valor padrão.  
   
- [ @named_instance = ] '*named_instance*'  
+ [ @named_instance =] '*instância_nomeada*'  
  O nome da instância do conjunto de coleta. *instância_nomeada* é **sysname**, sem nenhum valor padrão.  
   
 > [!NOTE]  
 >  *instância_nomeada* deve ser o nome totalmente qualificado da instância, que consiste do nome do computador e o nome da instância no formato *computername*\\*instancename*.  
   
- [ @days_until_expiration = ] *days_until_expiration*  
+ [ @days_until_expiration =] *days_until_expiration*  
  O número de dias restantes no período de retenção de dados do instantâneo. *days_until_expiration* é **smallint**.  
   
- [ @source_id = ] *source_id*  
+ [ @source_id =] *source_id*  
  O identificador exclusivo da origem da atualização. *source_id* é **int** e é retornada como OUTPUT.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -1,16 +1,16 @@
 ---
 title: sys. database_connection_stats (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -23,34 +23,35 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 0ab4255a4c13199a445335eef491ca0986ab3287
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contém estatísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] banco de dados **conectividade** eventos, fornecendo uma visão geral do banco de dados conexão êxitos e falhas. Para obter mais informações sobre eventos de conectividade, consulte tipos de evento em [sys. event_log &#40; Banco de dados SQL do Azure &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contém estatísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] banco de dados **conectividade** eventos, fornecendo uma visão geral do banco de dados conexão êxitos e falhas. Para obter mais informações sobre eventos de conectividade, consulte tipos de evento em [sys. event_log &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|estatística|Tipo|Description|  
+|Estatística|Tipo|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados.|  
 |**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e hora UTC do término do intervalo de agregação. **End_time** é sempre exatamente 5 minutos após o correspondente **start_time** na mesma linha.|  
-|**success_count**|**int**|Número de conexões bem-sucedidas.|  
-|**total_failure_count**|**int**|Número total de conexões com falha. Essa é a soma de **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e não inclui eventos de deadlock.|  
-|**connection_failure_count**|**int**|Número de falhas de logon.|  
-|**terminated_connection_count**|**int**|***Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexões encerradas.|  
-|**throttled_connection_count**|**int**|***Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexões aceleradas.|  
+|**success_count**|**Int**|Número de conexões bem-sucedidas.|  
+|**total_failure_count**|**Int**|Número total de conexões com falha. Essa é a soma de **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e não inclui eventos de deadlock.|  
+|**connection_failure_count**|**Int**|Número de falhas de logon.|  
+|**terminated_connection_count**|**Int**|***Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexões encerradas.|  
+|**throttled_connection_count**|**Int**|***Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexões aceleradas.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>Agregação de eventos  
  As informações de evento para esta exibição são coletadas e agregadas em intervalos de 5 minutos. As colunas de contagem representam o número de vezes que um evento de conectividade determinado ocorreu para um banco de dados específico dentro de um intervalo de tempo.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time e end_time do intervalo  
- Um evento é incluído em um intervalo de agregação quando ocorre o evento *na* ou *depois***start_time** e *antes de*  **end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
+ Um evento é incluído em um intervalo de agregação quando ocorre o evento *na* ou *depois * start_time** e *antes * end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
   
 ```  
   
@@ -80,7 +81,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Erros não incluídos  
  Essa exibição não pode incluir todas as informações de conexão e erro:  
   
--   Essa exibição não inclui todos os [!INCLUDE[ssSDS](../../includes/sssds-md.md)] erros que podem ocorrer, somente aqueles especificados em tipos de evento no banco de dados [sys. event_log &#40; Banco de dados SQL do Azure &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   Essa exibição não inclui todos os [!INCLUDE[ssSDS](../../includes/sssds-md.md)] erros que podem ocorrer, somente aqueles especificados em tipos de evento no banco de dados [sys. event_log &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   Se houver uma falha do computador no datacenter do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], uma pequena quantidade de dados para seu servidor lógico poderá ser perdida da tabela de evento.  
   

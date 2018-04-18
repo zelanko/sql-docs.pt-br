@@ -1,7 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Microsoft Docs
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,13 +82,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication=] '*publication*'  
+ [ @publication=] '*publicação*'  
  É o nome da publicação. *publicação* é **sysname**, sem padrão.  
   
  [ @article=] '*artigo*'  
  É o artigo no qual a publicação é assinada. *artigo* é **sysname**, com um padrão de all. Se for todos, uma assinatura será adicionada a todos os artigos naquela publicação. Somente valores de todos ou NULL têm suporte para Publicadores Oracle.  
   
- [ @subscriber=] '*subscriber*'  
+ [ @subscriber=] '*assinante*'  
  É o nome do Assinante. *assinante* é **sysname**, com um padrão NULL.  
   
  [ @destination_db=] '*destination_db*'  
@@ -205,43 +205,43 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  É o prompt de comando opcional a ser executado. *optional_command_line* é **nvarchar (4000)**, com um padrão NULL.  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*reservado*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  Se a assinatura pode ser sincronizada por meio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de FALSE. Se for falso, a assinatura não será registrada com o Gerenciador de Sincronização do Windows. Se for verdadeiro, a assinatura será registrada com o Gerenciador de Sincronização do Windows e será sincronizada sem iniciar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sem suporte para Publicadores Oracle.  
   
- [ @offloadagent= ] '*remote_agent_activation*'  
+ [ @offloadagent=] '*remote_agent_activation*'  
  Especifica que o agente pode ser ativado remotamente. *remote_agent_activation* é **bit** com um padrão de 0.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e só é mantido para compatibilidade com versões anteriores.  
   
- [ @offloadserver= ] '*remote_agent_server_name*'  
+ [ @offloadserver=] '*remote_agent_server_name*'  
  Especifica o nome da rede de servidor a ser usada para ativação remota. *remote_agent_server_name*é **sysname**, com um padrão NULL.  
   
- [ @dts_package_name= ] '*dts_package_name*'  
+ [ @dts_package_name=] '*dts_package_name*'  
  Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname** com um padrão NULL. Por exemplo, para especificar um nome de pacote DTSPub_Package, o parâmetro seria `@dts_package_name = N'DTSPub_Package'`. Esse parâmetro está disponível para assinaturas push. Para adicionar informações de pacote DTS a uma assinatura pull, use sp_addpullsubscription_agent.  
   
- [ @dts_package_password= ] '*dts_package_password*'  
+ [ @dts_package_password=] '*dts_package_password*'  
  Especifica a senha no pacote, se houver um. *dts_package_password* é **sysname** com um padrão NULL.  
   
 > [!NOTE]  
 >  Você deve especificar uma senha se *dts_package_name* for especificado.  
   
- [ @dts_package_location= ] '*dts_package_location*'  
+ [ @dts_package_location=] '*dts_package_location*'  
  Especifica o local do pacote. *dts_package_location* é um **nvarchar (12)**, com um padrão de DISTRIBUIDOR. O local do pacote pode ser distribuidor ou assinante.  
   
- [ @distribution_job_name= ] '*distribution_job_name*'  
+ [ @distribution_job_name=] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher= ] '*publisher*'  
+ [ @publisher=] '*publicador*'  
  Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *publicador* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [ @backupdevicetype= ] '*backupdevicetype*'  
+ [ @backupdevicetype=] '*backupdevicetype*'  
  Especifica o tipo do dispositivo de backup a ser usado ao inicializar um Assinante de um backup. *backupdevicetype* é **nvarchar (20)**, e pode ser um destes valores:  
   
 |Value|Description|  
@@ -261,19 +261,19 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*password*'  
+ [ @password=] '*senha*'  
  Especifica uma senha para o backup se uma senha já tiver sido definida quando o backup foi criado. *senha*é **sysname**, com um valor padrão de NULL.  
   
- [ @fileidhint= ] *fileidhint*  
+ [ @fileidhint=] *fileidhint*  
  Identifica um valor ordinal do conjunto de backup a ser restaurado. *fileidhint* é **int**, com um valor padrão de NULL.  
   
- [ @unload= ] *unload*  
+ [ @unload=] *descarregar*  
  Especifica se um dispositivo de backup em fita deve ser descarregado quando a inicialização do backup for concluída. *Descarregar* é **bit**, com um valor padrão de 1. 1 Especifica que a fita deve ser descarregada. *Descarregar* é usado apenas quando *backupdevicetype* é fita.  
   
- [ @subscriptionlsn= ] *subscriptionlsn*  
+ [ @subscriptionlsn=] *subscriptionlsn*  
  Especifica o LSN (número de sequência de log) no qual uma assinatura deve começar a entrega de alterações para um nó, em uma topologia de replicação transacional ponto a ponto. Usado com um @sync_type valor de inicialização do lsn para certificar-se de que todas as transações relevantes sejam replicadas para um novo nó. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- [ @subscriptionstreams= ] *subscriptionstreams*  
+ [ @subscriptionstreams=] *subscriptionstreams*  
  É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante, mantendo muitas das características transacionais presentes ao usar um thread único. *subscriptionstreams* é **tinyint**, com um valor padrão de NULL. Há suporte para um intervalo de valores de 1 a 64. Esse parâmetro não tem suporte para Assinantes, Publicadores Oracle ou assinaturas ponto a ponto que não sejam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre que fluxos de assinatura são usados, linhas adicionais são acrescentadas à tabela msreplication_subscriptions (1 por fluxo) com um agent_id definido como NULL.  
   
 > [!NOTE]  

@@ -1,16 +1,16 @@
 ---
-title: "Inserindo dados usando diagramas de atualização XML (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Inserindo dados usando diagramas de atualização XML (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -36,20 +36,21 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserindo dados usando diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Um diagrama de atualização indica uma operação de inserção quando uma instância de registro aparece no  **\<depois >** bloco, mas não no correspondente  **\<antes >** bloco. Nesse caso, o diagrama de atualização insere o registro no  **\<depois >** bloco no banco de dados.  
+  Um diagrama de atualização indica uma operação de inserção quando uma instância de registro aparece no  **\<depois >** bloco, mas não no correspondente  **\<antes >** bloco. Nesse caso, o diagrama de atualização insere o registro no  **\<depois >** bloco no banco de dados.  
   
  Este é o formato do diagrama de atualização em uma operação de inserção:  
   
@@ -81,7 +82,7 @@ Um diagrama de atualização indica uma operação de inserção quando uma inst
  Se o  **\<depois >** bloco não fornecer um valor para uma determinada coluna, o diagrama usa o valor padrão especificado no esquema anotado (se foi especificado um esquema). Se o esquema não especificar um valor padrão para a coluna, o diagrama de atualização não especificar qualquer valor explícito para essa coluna e, em vez disso, atribui o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor de padrão (se especificado) para essa coluna. Se não houver nenhum valor padrão [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a coluna aceitar um valor NULL, o diagrama de atualização definirá o valor da coluna como NULL. Caso a coluna não tenha um valor padrão nem aceite valores NULL, o comando apresentará uma falha e o diagrama de atualização retornará um erro. Opcional **updg: ReturnId** atributo é usado para retornar o valor de identidade que é gerado pelo sistema quando um registro é adicionado em uma tabela com uma coluna de tipo de identidade.  
   
 ## <a name="updgid-attribute"></a>Atributo updg:id  
- Se o diagrama de atualização só estiver inserindo registros, o diagrama de atualização não exige a **updg: ID** atributo. Para obter mais informações sobre **updg: ID**, consulte [atualizar dados usando diagramas de atualização XML &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Se o diagrama de atualização só estiver inserindo registros, o diagrama de atualização não exige a **updg: ID** atributo. Para obter mais informações sobre **updg: ID**, consulte [atualização de dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>Atributo updg:at-identity  
  Quando um diagrama de atualização insere um registro em uma tabela que possui uma coluna de tipo de identidade, o diagrama pode capturar o valor atribuído pelo sistema usando opcional **updg: a identidade** atributo. Esse valor pode ser usado em todas as operações subsequentes. Após a execução do diagrama de atualização, você pode retornar o valor de identidade gerado pela especificação de **updg: ReturnId** atributo.  
@@ -94,7 +95,7 @@ Um diagrama de atualização indica uma operação de inserção quando uma inst
   
  Antes de usar os exemplos de diagrama de atualização, observe o seguinte:  
   
--   A maioria dos exemplos usa mapeamento padrão (ou seja, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de diagramas de atualização que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   A maioria dos exemplos usa mapeamento padrão (ou seja, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de diagramas de atualização que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   A maioria dos exemplos usa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Todas as atualizações são aplicadas às tabelas deste banco de dados.  
   
@@ -418,7 +419,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Para obter mais exemplos de diagramas de atualização que especificam um esquema de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Para obter mais exemplos de diagramas de atualização que especificam um esquema de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
@@ -734,6 +735,6 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Considerações de segurança do diagrama &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerações de segurança do diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sys. database_files (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/19/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_files
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-caps.latest.revision: 
+caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dc7218ee0d36f7bd233be92870e32e627401734
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01995248dd1b769c1d598500bdd97d04852206d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,20 +41,20 @@ ms.lasthandoff: 11/21/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**file_id**|**int**|ID do arquivo no banco de dados.|  
+|**file_id**|**Int**|ID do arquivo no banco de dados.|  
 |**file_guid**|**uniqueidentifier**|GUID do arquivo.<br /><br /> NULL = O banco de dados foi atualizado a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**tipo**|**tinyint**|Tipo de arquivo:<br /><br /> 0 = Linhas (Inclui arquivos de catálogos de texto complexo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele.)<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texto completo (Os catálogos de texto completo anteriores ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; os catálogos de texto completo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele relatarão um tipo de arquivo 0.)|  
-|**type_desc**|**nvarchar (60)**|Descrição do tipo de arquivo:<br /><br /> ROWS (Inclui arquivos de catálogos de texto completo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele.)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)|  
-|**data_space_id**|**int**|O valor pode ser 0 ou maior que 0. Um valor igual a 0 representa o arquivo de log do banco de dados, e um valor maior que 0 representa a ID do grupo de arquivos no qual os dados estão armazenados.|  
+|**type**|**tinyint**|Tipo de arquivo:<br /><br /> 0 = Linhas (Inclui arquivos de catálogos de texto complexo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele.)<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texto completo (Os catálogos de texto completo anteriores ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; os catálogos de texto completo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele relatarão um tipo de arquivo 0.)|  
+|**type_desc**|**nvarchar(60)**|Descrição do tipo de arquivo:<br /><br /> ROWS (Inclui arquivos de catálogos de texto completo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele.)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)|  
+|**data_space_id**|**Int**|O valor pode ser 0 ou maior que 0. Um valor igual a 0 representa o arquivo de log do banco de dados, e um valor maior que 0 representa a ID do grupo de arquivos no qual os dados estão armazenados.|  
 |**name**|**sysname**|Nome lógico do arquivo no banco de dados.|  
-|**physical_name**|**nvarchar (260)**|Nome de arquivo do sistema operacional. Se o banco de dados é hospedado por um AlwaysOn [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** indica o local do arquivo do banco de dados de réplica primária. Para o local correto do arquivo de banco de dados secundário legível, consulte [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
-|**estado**|**tinyint**|Estado do arquivo:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|**state_desc**|**nvarchar (60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [estados de arquivo](../../relational-databases/databases/file-states.md).|  
-|**tamanho**|**int**|Tamanho atual do arquivo, em páginas de 8 KB.<br /><br /> 0 = Não aplicável<br /><br /> Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, tamanho reflete que o tamanho do contêiner usado atual.|  
-|**max_size**|**int**|Tamanho de arquivo máximo, em páginas de 8 KB:<br /><br /> 0 = Crescimento não é permitido.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, max_size reflete o tamanho máximo do contêiner.<br /><br /> Observe que os bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado informarão -1 para o tamanho máximo do arquivo de log.|  
-|**crescimento**|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> >0 = Arquivo crescerá automaticamente.<br /><br /> Se is_percent_growth = 0, incremento de crescimento está em unidades de páginas de 8 KB, arredondadas para o mais próximo de 64 KB.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
+|**physical_name**|**nvarchar(260)**|Nome de arquivo do sistema operacional. Se o banco de dados é hospedado por um AlwaysOn [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** indica o local do arquivo do banco de dados de réplica primária. Para o local correto do arquivo de banco de dados secundário legível, consulte [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**state**|**tinyint**|Estado do arquivo:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|**state_desc**|**nvarchar(60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md).|  
+|**size**|**Int**|Tamanho atual do arquivo, em páginas de 8 KB.<br /><br /> 0 = Não aplicável<br /><br /> Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, tamanho reflete que o tamanho do contêiner usado atual.|  
+|**max_size**|**Int**|Tamanho de arquivo máximo, em páginas de 8 KB:<br /><br /> 0 = Crescimento não é permitido.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, max_size reflete o tamanho máximo do contêiner.<br /><br /> Observe que os bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado informarão -1 para o tamanho máximo do arquivo de log.|  
+|**growth**|**Int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> >0 = Arquivo crescerá automaticamente.<br /><br /> Se is_percent_growth = 0, incremento de crescimento está em unidades de páginas de 8 KB, arredondadas para o mais próximo de 64 KB.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
 |**is_media_read_only**|**bit**|1 = O arquivo está em mídia somente leitura.<br /><br /> 0 = O arquivo está em mídia de leitura/gravação.|  
-|**is_ready_only**|**bit**|1 = Arquivo está marcado como somente leitura.<br /><br /> 0 = O arquivo está marcado como leitura/gravação.|  
+|**is_read_only**|**bit**|1 = Arquivo está marcado como somente leitura.<br /><br /> 0 = O arquivo está marcado como leitura/gravação.|  
 |**is_sparse**|**bit**|1 = O arquivo é um arquivo esparso.<br /><br /> 0 = O arquivo não é um arquivo esparso.<br /><br /> Para obter mais informações, consulte [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
 |**is_percent_growth**|**bit**|1 = Crescimento do arquivo é uma porcentagem.<br /><br /> 0 = Tamanho de crescimento absoluto em páginas.|  
 |**is_name_reserved**|**bit**|1 = Nome de arquivo descartado (name ou physical_name) só é reutilizável após o backup de log seguinte. Quando arquivos são descartados de um banco de dados, os nomes lógicos ficam em um estado reservado até o próximo backup de log. Essa coluna é relevante apenas no modelo de recuperação completa ou no modelo de recuperação bulk-logged.|  
@@ -91,8 +92,8 @@ Para obter mais informações ao usar [!INCLUDE[ssSDS_md](../../includes/sssds-m
  [Exibição de catálogo do bancos de dados e de arquivos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Estados de arquivo](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
- [data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [Arquivos e grupos de arquivos do banco de dados](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [data_spaces & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

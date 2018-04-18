@@ -1,16 +1,16 @@
 ---
 title: sys.cryptographic_providers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cryptographic_providers
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.cryptographic_providers catalog view
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c453171a7378a0fb7201c8a2e577b207e5042337
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 30d84da2b80e4e9f2a65ee013cfa28356cb1078c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,14 +41,14 @@ ms.lasthandoff: 11/21/2017
     
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**provider_id**|**int**|Número de identificação do provedor criptográfico.|  
+|**provider_id**|**Int**|Número de identificação do provedor criptográfico.|  
 |**name**|**sysname**|Nome do provedor criptográfico.|  
-|**GUID**|**uniqueidentifier**|GUID de provedor exclusivo.|  
+|**guid**|**uniqueidentifier**|GUID de provedor exclusivo.|  
 |**version**|**nvarchar(50)**|Versão do provedor no formato '*aa.bb.cccc.dd*'.|  
 |**dll_path**|**nvarchar(512)**|Caminho para a DLL que implementa a interface de aplicativo (API) do Gerenciamento Extensível de Chaves.|  
 |**is_enabled**|**bit**|Indica se o provedor está habilitado no servidor ou não.<br /><br /> 0 = Não habilitado (padrão)<br /><br /> 1 = habilitado|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **sys.cryptographic_providers** exibição é visível ao público.  
   
 ## <a name="permissions"></a>Permissões  

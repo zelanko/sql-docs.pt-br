@@ -2,7 +2,7 @@
 title: Função SQLGetDiagRec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 34aa67ed374f525f6195403b299500019192c19a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2196a981bd60eb178c4d36e20c6b4925d328e974
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagrec-function"></a>Função SQLGetDiagRec
 **Conformidade**  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetDiagRec(
 |---------------------------|---------|  
 |Obter um campo de um registro de diagnóstico ou um campo do cabeçalho do diagnóstico|[Função SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa ODBC de exemplo](../../../odbc/reference/sample-odbc-program.md)

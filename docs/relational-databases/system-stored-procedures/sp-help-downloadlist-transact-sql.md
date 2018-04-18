@@ -1,16 +1,16 @@
 ---
 title: sp_help_downloadlist (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c768ab8d8908d6c62805539e3fb811cee293da55
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b891780620de40d8541b7fc42e100b575e6ad7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lista todas as linhas de **sysdownloadlist** tabela do sistema para o trabalho fornecido, ou todas as linhas se nenhum trabalho for especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,32 +67,32 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 |Value|Description|  
 |-----------|-----------------|  
-|**DEFECT**|Operação de servidor que solicita o servidor de destino para remover do mestre **SQLServerAgent** serviço.|  
+|**DEFEITO**|Operação de servidor que solicita o servidor de destino para remover do mestre **SQLServerAgent** serviço.|  
 |**DELETE**|Operação de trabalho que remove um trabalho inteiro.|  
 |**INSERT**|Operação de trabalho que insere um trabalho inteiro ou atualiza um trabalho existente. Esta operação inclui todas as etapas de trabalho e agendas, se aplicável.|  
-|**RE-ENLIST**|Operação de servidor que faz com que o servidor de destino reenvie suas informações de inscrição, incluindo o intervalo de sondagem e o fuso horário do domínio multisservidor. O servidor de destino também baixa novamente o **MSXOperator** detalhes.|  
+|**INSCREVER-SE NOVAMENTE**|Operação de servidor que faz com que o servidor de destino reenvie suas informações de inscrição, incluindo o intervalo de sondagem e o fuso horário do domínio multisservidor. O servidor de destino também baixa novamente o **MSXOperator** detalhes.|  
 |**SET-POLL**|Operação de servidor que define o intervalo, em segundos, para que os servidores de destino sondem o domínio multisservidor. Se especificado, *valor* é interpretado como o valor de intervalo necessário, e pode ser um valor de **10** para **28.800**.|  
 |**START**|Operação de trabalho que solicita o início da execução do trabalho.|  
 |**STOP**|Operação de trabalho que solicita a parada da execução do trabalho.|  
-|**SYNC-TIME**|Operação de servidor que faz com que o servidor de destino sincronize seu relógio de sistema com o domínio multisservidor. Como esta é uma operação cara, execute-a de maneira limitada e infrequente.|  
+|**TEMPO DE SINCRONIZAÇÃO**|Operação de servidor que faz com que o servidor de destino sincronize seu relógio de sistema com o domínio multisservidor. Como esta é uma operação cara, execute-a de maneira limitada e infrequente.|  
 |**UPDATE**|Operação de trabalho que atualiza apenas o **sysjobs** informações para um trabalho, não as etapas de trabalho ou agendas. É chamado automaticamente pelo **sp_update_job**.|  
   
  [ **@object_type=** ] **'***object_type***'**  
- O tipo do objeto para o trabalho especificado. *object_type* é **varchar(64)**, com um padrão NULL. *object_type* pode ser JOB ou SERVER. Para obter mais informações sobre válido *object_type*valores, consulte [sp_add_category &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+ O tipo do objeto para o trabalho especificado. *object_type* é **varchar(64)**, com um padrão NULL. *object_type* pode ser JOB ou SERVER. Para obter mais informações sobre válido *object_type*valores, consulte [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
- [ **@object_name=** ] **'***object_name***'**  
+ [  **@object_name=** ] **'***object_name***'**  
  O nome do objeto. *object_name* é **sysname**, com um padrão NULL. Se *object_type* for JOB, *object_name*é o nome do trabalho. Se *object_type*é o servidor, *object_name*é o nome do servidor.  
   
  [ **@target_server=** ] **'***target_server***'**  
  O nome do servidor de destino. *target_server* é **nvarchar (128)**, com um padrão NULL.  
   
- [ **@has_error=** ] *has_error*  
+ [  **@has_error=** ] *has_error*  
  Especifica se o trabalho deve confirmar erros. *has_error* é **tinyint**, com um padrão NULL, que indica que nenhum erro deve ser confirmado. **1** indica que todos os erros devem ser confirmados.  
   
  [ **@status=** ] *status*  
  O status do trabalho. *status* é **tinyint**, com um valor padrão de NULL.  
   
- [ **@date_posted=** ] *date_posted*  
+ [  **@date_posted=** ] *date_posted*  
  A data e a hora a partir das quais todas as entradas feitas na data e hora especificadas ou depois devem ser incluídas no conjunto de resultados. *date_posted* é **datetime**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

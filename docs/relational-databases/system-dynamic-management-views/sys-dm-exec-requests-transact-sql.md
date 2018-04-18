@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_requests_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: 
+caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c66516230609677ae4f7598dc81fb8df4758e84e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 51f71a3274031ad3a9a795e94fa0c15968fc2bfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/03/2018
 |user_id|**Int**|ID do usuário que enviou a solicitação. Não permite valor nulo.|  
 |connection_id|**uniqueidentifier**|ID da conexão em que a solicitação chegou. Permite valor nulo.|  
 |blocking_session_id|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada neste momento devido a transições internas de estado da trava.|  
-|wait_type|**nvarchar(60)**|Se a solicitação estiver bloqueada, esta coluna retornará o tipo de espera. Permite valor nulo.<br /><br /> Para obter informações sobre tipos de espera, consulte [sys.DM os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Se a solicitação estiver bloqueada, esta coluna retornará o tipo de espera. Permite valor nulo.<br /><br /> Para obter informações sobre tipos de espera, consulte [sys.DM os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**Int**|Se a solicitação estiver bloqueada, esta coluna retornará a duração, em milissegundos, da espera atual. Não permite valor nulo.|  
 |last_wait_type|**nvarchar(60)**|Se esta solicitação tiver sido previamente bloqueada, esta coluna retornará o tipo da última espera. Não permite valor nulo.|  
 |wait_resource|**nvarchar(256)**|Se a solicitação estiver bloqueada, esta coluna retornará o recurso pelo qual a solicitação está esperando atualmente. Não permite valor nulo.|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 02/03/2018
 |is_resumable |**bit** |**Aplica-se a**: do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se a solicitação é uma operação de índice reiniciável. |  
   
 ## <a name="permissions"></a>Permissões  
- Se o usuário tiver `VIEW SERVER STATE` permissão no servidor, o usuário verá executando todas as sessões na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual. `VIEW SERVER STATE`não pode ser concedida em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] para `sys.dm_exec_requests` sempre é limitado para a conexão atual. 
+ Se o usuário tiver `VIEW SERVER STATE` permissão no servidor, o usuário verá executando todas as sessões na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual. `VIEW SERVER STATE` não pode ser concedida em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] para `sys.dm_exec_requests` sempre é limitado para a conexão atual. 
   
 ## <a name="examples"></a>Exemplos  
   
@@ -154,7 +155,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

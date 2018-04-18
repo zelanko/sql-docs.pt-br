@@ -1,15 +1,15 @@
 ---
 title: Usando o ADO com SQL Server Native Client | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, ADO
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - ADO [SQL Server Native Client]
 - SQLNCLI, ADO
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13978b8eb01fda4b9478111a3bef3e36c76f8e58
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4153097e55d2cdcf77fcfdf880ec7a0181e3d9e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Usando o ADO com SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  Caso você esteja desenvolvendo um novo aplicativo, é recomendável considerar o uso do ADO.NET e do provedor de dados .NET Framework do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], e não o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, para acessar todos os novos recursos de versões recentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o provedor de dados .NET Framework do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte a documentação do SDK do .NET Framework referente ao ADO.NET.  
   
- Para permitir que o ADO use os novos recursos de versões recentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], foram feitas algumas melhorias no provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, que estende os principais recursos do OLE DB. Essas melhorias permitem que os aplicativos ADO usem mais recente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos e consumam dois tipos de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** e **udt**. Esses também exploram melhorias feitas para o **varchar**, **nvarchar**, e **varbinary** tipos de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client adiciona a propriedade de inicialização SSPROP_INIT_DATATYPECOMPATIBILITY para o conjunto de propriedades DBPROPSET_SQLSERVERDBINIT definido para uso por aplicativos do ADO para que os novos tipos de dados são expostos de maneira compatível com o ADO. Além disso, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client também define uma nova conexão cadeia palavra-chave denominada **DataTypeCompatibility** que é definido na cadeia de conexão.  
+ Para permitir que o ADO use os novos recursos de versões recentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], foram feitas algumas melhorias no provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, que estende os principais recursos do OLE DB. Essas melhorias permitem que os aplicativos ADO usem mais recente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos e consumam dois tipos de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** e **udt**. Esses também exploram melhorias feitas para o **varchar**, **nvarchar**, e **varbinary** tipos de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona a propriedade de inicialização SSPROP_INIT_DATATYPECOMPATIBILITY para o conjunto de propriedades DBPROPSET_SQLSERVERDBINIT definido para uso por aplicativos do ADO para que os novos tipos de dados são expostos de maneira compatível com o ADO. Além disso, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client também define uma nova conexão cadeia palavra-chave denominada **DataTypeCompatibility** que é definido na cadeia de conexão.  
   
 > [!NOTE]  
 >  Os aplicativos do ADO existentes podem acessar e atualizar valores de XML, UDT, de campo binário e de texto grandes usando o provedor SQLOLEDB. O novo maior **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipos de dados são retornados como tipos do ADO **adLongVarChar**, **adLongVarWChar** e **adLongVarBinary** respectivamente. Colunas XML são retornadas como **adLongVarChar**, e colunas UDT são retornadas como **adVarBinary**. No entanto, se você usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB Native Client (SQLNCLI11) em lugar do SQLOLEDB, você precisa certificar-se de definir o **DataTypeCompatibility** palavra-chave como "80" para que os novos tipos de dados sejam mapeados corretamente para os dados de ADO tipos.  

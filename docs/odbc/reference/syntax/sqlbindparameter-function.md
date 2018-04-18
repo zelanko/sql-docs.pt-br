@@ -2,7 +2,7 @@
 title: Função SQLBindParameter | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>Função SQLBindParameter
 **Conformidade**  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  Se *ParameterNumber* na chamada para **SQLBindParameter** é maior que o valor de SQL_DESC_COUNT, **SQLSetDescField** é chamado para aumentar o valor de SQL_DESC_ Contagem de *ParameterNumber*.  
   
 ## <a name="inputoutputtype-argument"></a>Argumento InputOutputType  
- O *InputOutputType* argumento especifica o tipo do parâmetro. Esse argumento define o campo SQL_DESC_PARAMETER_TYPE o IPD. Todos os parâmetros em instruções SQL que não chamam procedimentos, como **inserir** , as instruções são *entrada**parâmetros*. Parâmetros em chamadas de procedimento podem ser de entrada, entradam/saídam ou parâmetros de saída. (Um aplicativo chama **SQLProcedureColumns** para determinar o tipo de um parâmetro em uma chamada de procedimento; parâmetros cujo tipo não pode ser determinado são considerados parâmetros de entrada.)  
+ O *InputOutputType* argumento especifica o tipo do parâmetro. Esse argumento define o campo SQL_DESC_PARAMETER_TYPE o IPD. Todos os parâmetros em instruções SQL que não chamam procedimentos, como **inserir** , as instruções são *entrada * * parâmetros*. Parâmetros em chamadas de procedimento podem ser de entrada, entradam/saídam ou parâmetros de saída. (Um aplicativo chama **SQLProcedureColumns** para determinar o tipo de um parâmetro em uma chamada de procedimento; parâmetros cujo tipo não pode ser determinado são considerados parâmetros de entrada.)  
   
  O *InputOutputType* argumento for um dos seguintes valores:  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLBindParameter(
   
      Depois que a instrução é executada, o driver retorna dados para o parâmetro para o aplicativo, a menos que o *ParameterValuePtr* e *StrLen_or_IndPtr* argumentos são ambos os ponteiros nulos, caso em que o driver descartará o valor de saída. Se a fonte de dados não retornar um valor para um parâmetro de saída, o driver define o **StrLen_or_IndPtr* buffer como SQL_NULL_DATA.  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM. Indica que um parâmetro de entrada/saída deve ser transmitido. **SQLGetData** pode ler os valores de parâmetro em partes. *BufferLength* foi ignorada porque o tamanho do buffer será determinado na chamada de **SQLGetData**. O valor de *StrLen_or_IndPtr* buffer deve conter SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC ou o resultado da macro SQL_LEN_DATA_AT_EXEC. Um parâmetro deve ser associado como um parâmetro de dados em execução (Disk) na entrada se ela será transmitida na saída. *ParameterValuePtr* pode ser qualquer valor de ponteiro null não será retornado por **SQLParamData** conforme definido pelo usuário cujo valor do token foi passado com *ParameterValuePtr* de entrada e a saída. Para obter mais informações, consulte [recuperar parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM. Indica que um parâmetro de entrada/saída deve ser transmitido. **SQLGetData** pode ler os valores de parâmetro em partes. *BufferLength* foi ignorada porque o tamanho do buffer será determinado na chamada de **SQLGetData**. O valor de *StrLen_or_IndPtr* buffer deve conter SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC ou o resultado da macro SQL_LEN_DATA_AT_EXEC. Um parâmetro deve ser associado como um parâmetro de dados em execução (Disk) na entrada se ela será transmitida na saída. *ParameterValuePtr* pode ser qualquer valor de ponteiro null não será retornado por **SQLParamData** conforme definido pelo usuário cujo valor do token foi passado com *ParameterValuePtr* para entrada e saída. Para obter mais informações, consulte [recuperar parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 -   SQL_PARAM_OUTPUT_STREAM. Mesmo que SQL_PARAM_INPUT_OUTPUT_STREAM, para um parâmetro de saída. **StrLen_or_IndPtr* é ignorado na entrada.  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|Ignorado na entrada.|Fluxo de saída|*ParameterValuePtr* pode ser qualquer valor de ponteiro, que será retornado por **SQLParamData** conforme definido pelo usuário cujo valor do token foi passado com *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Entrada em partes e o buffer de saída de associado|*ParameterValuePtr* é o endereço do buffer de saída, também será retornado por **SQLParamData** conforme definido pelo usuário cujo valor do token foi passado com *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|Não SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Entrada buffer vinculado e o buffer de saída de associado|*ParameterValuePtr* é o endereço do buffer de entrada/saída compartilhado.|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Entrada em partes e fluxo de saída|*ParameterValuePtr* pode ser qualquer valor de ponteiro não nulo, que será retornado por **SQLParamData** conforme definido pelo usuário cujo valor do token foi passado com *ParameterValuePtr* para ambos entrada e saída.|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Entrada em partes e fluxo de saída|*ParameterValuePtr* pode ser qualquer valor de ponteiro não nulo, que será retornado por **SQLParamData** conforme definido pelo usuário cujo valor do token foi passado com *ParameterValuePtr* de entrada e a saída.|  
   
 > [!NOTE]  
 >  O driver deve decidir quais tipos SQL são permitidos quando um aplicativo associar uma saída ou um parâmetro de entrada e saída, conforme transmitido. O Gerenciador de driver não irá gerar um erro para um tipo SQL inválido.  
@@ -591,7 +591,7 @@ int main() {
 |Especificando vários valores de parâmetro|[Função SQLParamOptions](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |Envio de dados de parâmetro em tempo de execução|[Função SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

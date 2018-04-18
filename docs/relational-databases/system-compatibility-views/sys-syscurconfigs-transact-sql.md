@@ -1,16 +1,16 @@
 ---
-title: sys.syscurconfigs (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys. syscurconfigs (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscurconfigs
@@ -23,21 +23,21 @@ helpviewer_keywords:
 - sys.syscurconfigs compatibility view
 - syscurconfigs system table
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 930bf46731bb657076a6cc2e2dd3420594d293a2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b691a8f107ab0ff5c20e8835d1f3f40f551ed78c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma entrada para cada opção de configuração atual. Além disso, esta exibição contém quatro entradas que descrevem a estrutura da configuração. **syscurconfigs** é criado dinamicamente quando consultado por um usuário. Para obter mais informações, consulte [sysconfigures &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md).  
+  Contém uma entrada para cada opção de configuração atual. Além disso, esta exibição contém quatro entradas que descrevem a estrutura da configuração. **syscurconfigs** é criado dinamicamente quando consultado por um usuário. Para obter mais informações, consulte [sysconfigures &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
 |**status**|**smallint**|Bitmap indicando o status da opção. Os possíveis valores incluem os seguintes:<br /><br /> 0 = Estático. A definição entra em vigor quando o servidor é reinicializado.<br /><br /> 1 = Dinâmico. A variável é implementada quando a instrução RECONFIGURE é executada.<br /><br /> 2 = Avançado. Variável é exibida somente quando o **Mostrar opções avançadas** está definido.<br /><br /> 3 = Dinâmico e avançado.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Mapeando tabelas do sistema para exibições do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

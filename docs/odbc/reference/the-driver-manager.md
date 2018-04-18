@@ -1,15 +1,16 @@
 ---
 title: O Gerenciador de Driver | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - driver manager [ODBC], about driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bd1a9c9f164c1a745e3ec9baf40a7184600a4b1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f33e9b5ebd9ae699240170990b7daeeaefbea8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-driver-manager"></a>O Gerenciador de Driver
 O *Gerenciador de Driver* é uma biblioteca que gerencia a comunicação entre aplicativos e drivers. Por exemplo, em plataformas Microsoft® Windows®, o Gerenciador de Driver é uma biblioteca de vínculo dinâmico (DLL) que foi criada pela Microsoft e pode ser redistribuída por usuários do SDK do SP1 redistributable MDAC 2.8.  

@@ -1,15 +1,15 @@
 ---
-title: "Cópia em massa de variáveis de programa | Microsoft Docs"
-ms.custom: 
+title: Cópia em massa de variáveis de programa | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 255e91a51f92c09f8ed1ba872cb5c8bdc052fd52
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5f00c8542691fcbdd66e5a35151161b3a901f439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copying-from-program-variables"></a>Cópia em massa de variáveis do programa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/25/2018
 |Tipo de dados do ODBC SQLz|Tipos de dados do ODBC C|bcp_bind *tipo* parâmetro|Tipo de dados do SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variável de caractere**<br /><br /> **char variados**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variável de caractere**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **a variável binário**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **A variável binário**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]não entraram **tinyint**sem sinal **smallint**, ou não assinado **int** tipos de dados. Para evitar a perda de valores de dados ao migrar estes tipos de dados, crie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela com o próximo tipo de dados inteiro maior. Para impedir que os usuários adicionem posteriormente valores fora da faixa permitida pelo tipo de dados original, aplique uma regra à coluna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fim de restringir os valores permitidos para a faixa com suporte do tipo de dados na fonte original:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não entraram **tinyint**sem sinal **smallint**, ou não assinado **int** tipos de dados. Para evitar a perda de valores de dados ao migrar estes tipos de dados, crie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela com o próximo tipo de dados inteiro maior. Para impedir que os usuários adicionem posteriormente valores fora da faixa permitida pelo tipo de dados original, aplique uma regra à coluna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fim de restringir os valores permitidos para a faixa com suporte do tipo de dados na fonte original:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -111,7 +112,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]não dá suporte para tipos de dados de intervalo diretamente. Um aplicativo pode, no entanto, armazenar sequências de escape de intervalo como cadeias de caracteres em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coluna de caracteres. O aplicativo pode lê-los para uso posterior, mas eles não podem ser usados em instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte para tipos de dados de intervalo diretamente. Um aplicativo pode, no entanto, armazenar sequências de escape de intervalo como cadeias de caracteres em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coluna de caracteres. O aplicativo pode lê-los para uso posterior, mas eles não podem ser usados em instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  As funções de cópia em massa podem ser usadas para carregar rapidamente dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenham sido lidos de uma fonte de dados ODBC. Use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) para associar as colunas de um conjunto de resultados para variáveis de programa, em seguida, use **bcp_bind** para associar as mesmas variáveis de programa para uma operação de cópia em massa. Chamando [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ou **SQLFetch** busca uma linha de dados da fonte de dados ODBC em variáveis de programa e chamar [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) copia os dados em massa as variáveis de programa para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -120,6 +121,6 @@ GO
  Você não pode ler dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em variáveis de programa usando a cópia em massa; há nada como uma função "bcp_readrow". Você só pode enviar dados do aplicativo para o servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Executando operações de cópia em massa &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Executando operações de cópia em massa &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

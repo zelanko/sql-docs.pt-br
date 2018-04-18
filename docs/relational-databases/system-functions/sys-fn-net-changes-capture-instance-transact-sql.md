@@ -1,16 +1,16 @@
 ---
 title: sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,23 +25,23 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d95fad7337666594aa41552a20e6ab5d4f211995
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b3155994177127d9739b9a908ab439acaf50c979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Wrappers para o **net alterações** funções de consulta. Os scripts necessários para criar essas funções são gerados pelo procedimento armazenado sys.sp_cdc_generate_wrapper_function.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -104,7 +104,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Nome da coluna|Tipo de coluna|Description|  
 |-----------------|-----------------|-----------------|  
-|\<colunas de @column_list>|**varia de acordo**|As colunas que são identificadas no **column_list** argumento para a sp_cdc_generate_wrapper_function quando ela é chamada para gerar o script para criar o wrapper. Se *column_list* for NULL, todas as colunas de origem controladas aparecerão no conjunto de resultados.|  
+|\<colunas de @column_list>|**Varia de acordo**|As colunas que são identificadas no **column_list** argumento para a sp_cdc_generate_wrapper_function quando ela é chamada para gerar o script para criar o wrapper. Se *column_list* for NULL, todas as colunas de origem controladas aparecerão no conjunto de resultados.|  
 |__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para se aplicar a linha ao ambiente de destino. A operação variará com base no valor do argumento *row_filter_option* que é fornecido na seguinte chamada:<br /><br /> *row_filter_option* = 'todos', 'all with mask'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza a operação<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' – exclui a operação<br /><br /> 'M – insere ou atualiza a operação|  
 |\<colunas de @update_flag_list>|**bit**|Um sinalizador de bit é nomeado acrescentando _uflag ao nome da coluna. O sinalizador assume um valor não nulo somente quando *row_filter_option* **= 'all with mask'** e \__CDC_OPERATION **= 'UN'**. Ele é definido como 1 se a coluna correspondente foi modificada dentro da janela de consulta. Caso contrário, será 0.|  
   

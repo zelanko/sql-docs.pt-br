@@ -2,7 +2,7 @@
 title: Função SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Função SQLBrowseConnect
 **Conformidade**  
@@ -54,7 +54,7 @@ SQLRETURN SQLBrowseConnect(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ConnectionHandle*  
+ *Identificador da conexão*  
  [Entrada] Identificador de Conexão.  
   
  *InConnectionString*  
@@ -75,7 +75,7 @@ SQLRETURN SQLBrowseConnect(
  [Saída] O número total de caracteres (exceto null de terminação) disponíveis para retornar em \* *OutConnectionString*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, a cadeia de caracteres de conexão em \* *OutConnectionString* será truncado para  *BufferLength* menos o comprimento de um caractere null de terminação.  
   
 ## <a name="returns"></a>Retorna  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>diagnóstico  
  Quando **SQLBrowseConnect** retorna SQL_ERROR, SQL_SUCCESS_WITH_INFO ou SQL_NEED_DATA, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* sql_handle_stmt e um *identificador do identificador da conexão*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLBrowseConnect** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições de SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado em contrário.  
@@ -137,7 +137,7 @@ SQLRETURN SQLBrowseConnect(
  *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
  *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
- *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
+ *lista de valores de atributo* :: = *cadeia de caracteres* [`:`*cadeia de caracteres localizada*] &#124; *cadeia de caracteres* [`:` *cadeia de caracteres localizada*] `,` *lista de valores de atributo*<br>
   
  onde *cadeia de caracteres* e *cadeia de caracteres localizada* ter zero ou mais caracteres; *identificador* e *identificador localizado* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; e *atributo-valor* pode diferenciar maiusculas de minúsculas. Devido à conexão cadeia de caracteres de inicialização gramática, palavras-chave, localizados identificadores de arquivo e valores de atributo que contém os caracteres **[] {} (),? \*=! @** devem ser evitadas. Devido a gramática nas informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
   

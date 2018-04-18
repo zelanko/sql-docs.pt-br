@@ -1,15 +1,15 @@
 ---
 title: SQL Server Native Client (OLE DB) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, about SQL Server Native Client OLE DB provider
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91ec3d738f8a718a2af7415a6f204be3c204201a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bc3ed2b32a51e3daa21bb34d6d3869ada0e212f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client é uma API COM baixo nível que é usado para acessar dados. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é uma API COM de baixo nível usada para acessar dados. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornece suporte de OLE DB a aplicativos que se conectam ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [Criando um aplicativo de provedor do SQL Server Native Client OLE DB](../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
--   [Objetos de fonte de dados &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Objetos de fonte de dados & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Comandos](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
@@ -54,27 +56,27 @@ ms.lasthandoff: 01/25/2018
   
 -   [Tabelas e índices](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Tipos de dados &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+-   [Tipos de dados & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [Suporte ao conjunto de linhas de esquema &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+-   [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
--   [Com valor de tabela parâmetros &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
+-   [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Data e hora melhorias &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Data e hora melhorias & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [Grandes tipos CLR definidos pelo usuário &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
+-   [Tipos definidos pelo usuário CLR grandes &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [Suporte a FILESTREAM &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [Suporte a FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
 -   [Transações](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [Erros](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
--   [Nomes de entidade de serviço &#40; SPNs &#41; em conexões de cliente &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [Esparso suporte a colunas &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
+-   [Suporte a colunas esparsas &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
   
--   [Cliente nativo do SQL Server &#40; OLE DB &#41; Referência](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [SQL Server Native Client &#40;OLE DB&#41; referência](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
 -   [Tópicos de instruções do OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

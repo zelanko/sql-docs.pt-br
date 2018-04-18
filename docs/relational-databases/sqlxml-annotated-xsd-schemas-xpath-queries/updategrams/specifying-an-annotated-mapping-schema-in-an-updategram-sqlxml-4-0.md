@@ -1,16 +1,16 @@
 ---
-title: "Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -23,25 +23,26 @@ helpviewer_keywords:
 - mapping schema [SQLXML], updategrams
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7114229a879e05222d67cbb0147ced02628bfe9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7d9b0918551889ee6474e00bdfb46c83eb5598dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Este tópico explica como o esquema de mapeamento (XSD ou XDR), especificado em um diagrama de atualização, é usado para processar as atualizações. Em um diagrama de atualização, você pode fornecer o nome de um esquema de mapeamento anotado para usar no mapeamento de elementos e atributos no diagrama para tabelas e colunas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando um esquema de mapeamento é especificado em um diagrama de atualização, os nomes de elementos e atributos especificados no diagrama deverão ser mapeados para os elementos e atributos do esquema de mapeamento.  
+  Este tópico explica como o esquema de mapeamento (XSD ou XDR), especificado em um diagrama de atualização, é usado para processar as atualizações. Em um diagrama de atualização, você pode fornecer o nome de um esquema de mapeamento anotado para usar no mapeamento de elementos e atributos no diagrama para tabelas e colunas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando um esquema de mapeamento é especificado em um diagrama de atualização, os nomes de elementos e atributos especificados no diagrama deverão ser mapeados para os elementos e atributos do esquema de mapeamento.  
   
  Para especificar um esquema de mapeamento, use o **esquema de mapeamento** atributo o  **\<sincronização >** elemento. Os exemplos a seguir mostram dois diagramas de atualização: um que usa um esquema de mapeamento simples e outro que usa um esquema mais complexo.  
   
 > [!NOTE]  
->  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Introdução a esquemas de XSD anotado &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [os esquemas XDR anotados &#40; preteridos no SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Introdução a esquemas de XSD anotado & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Lidando com tipos de dados  
  Se o esquema Especifica a **imagem**, **binário**, ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados (usando **SQL: DataType**) e não Especifique um tipo de dados XML, o diagrama de atualização pressupõe que o tipo de dados XML é **binários na base 64**. Se os dados forem **bin.base** tipo, você deve especificar explicitamente o tipo (**dt:type=bin.base** ou **tipo = "xsd:hexBinary"**).  
@@ -238,7 +239,7 @@ Este tópico explica como o esquema de mapeamento (XSD ou XDR), especificado em 
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Inserindo um registro usando a relação pai-filho e a anotação de inverso especificada no esquema XSD  
- Este exemplo ilustra como a lógica do diagrama usa a relação pai-filho especificada no XSD para processar atualizações e como o **inverso** anotação é usada. Para obter mais informações sobre o **inverso** anotação, consulte [especificando o atributo SQL: Inverse em SQL: Relationship &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ Este exemplo ilustra como a lógica do diagrama usa a relação pai-filho especificada no XSD para processar atualizações e como o **inverso** anotação é usada. Para obter mais informações sobre o **inverso** anotação, consulte [especificando o atributo SQL: Inverse em SQL: Relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
  Este exemplo supõe que as tabelas a seguir estão no **tempdb** banco de dados:  
   
@@ -331,6 +332,6 @@ Este tópico explica como o esquema de mapeamento (XSD ou XDR), especificado em 
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Considerações de segurança do diagrama &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerações de segurança do diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

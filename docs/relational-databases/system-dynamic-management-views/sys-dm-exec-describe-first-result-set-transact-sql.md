@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
@@ -20,26 +20,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 203db81a3bf752b071ee63453330ac08fc9db8a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Essa função de gerenciamento dinâmico usa uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução como um parâmetro e descreve os metadados do primeiro conjunto de resultados para a instrução.  
   
- **sys.DM exec_describe_first_result_set** tem o mesmo resultado definição do conjunto de [sys.DM exec_describe_first_result_set_for_object &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) e é semelhante ao [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.DM exec_describe_first_result_set** tem o mesmo resultado definição do conjunto de [sys.DM exec_describe_first_result_set_for_object &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) e é semelhante a [SP _ describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -108,7 +109,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|Contém uma pequena cadeia de caracteres maiúsculos que representa o erro sendo retornado. Mapeia para error_type. Consulte a lista sob comentários.|  
   
 ## <a name="remarks"></a>Remarks  
- Essa função usa o mesmo algoritmo como **sp_describe_first_result_set**. Para obter mais informações, consulte [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Essa função usa o mesmo algoritmo como **sp_describe_first_result_set**. Para obter mais informações, consulte [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  A tabela a seguir lista os tipos de erros e suas descrições  
   
@@ -132,7 +133,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Requer permissão para executar o @tsql argumento.  
   
 ## <a name="examples"></a>Exemplos  
- Exemplos adicionais no tópico [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) podem ser adaptados para usar **sys.DM exec_describe_first_result_set**.  
+ Exemplos adicionais no tópico [sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) podem ser adaptados para usar **sys.DM exec_describe_first_result_set**.  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Retornando informações sobre uma única instrução Transact-SQL  
  O código a seguir retorna informações sobre os resultados de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  

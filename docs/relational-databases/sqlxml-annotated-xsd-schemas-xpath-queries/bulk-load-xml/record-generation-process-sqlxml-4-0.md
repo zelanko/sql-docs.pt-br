@@ -1,16 +1,16 @@
 ---
-title: "Registrar processo de geração (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Registrar processo de geração (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], record generation process
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7e494f0d849834bfe4434f42da1de8fddb9d10d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Registrar processo de geração (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-O Carregamento em massa XML processa os dados de entrada XML e prepara os registros para as tabelas apropriadas no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A lógica no Carregamento em massa XML determina quando gerar um novo registro, quais valores de elemento filho ou de atributo copiar nos campos do registro e quando o registro está completo e pronto para ser enviado ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para inserção.  
+  O Carregamento em massa XML processa os dados de entrada XML e prepara os registros para as tabelas apropriadas no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A lógica no Carregamento em massa XML determina quando gerar um novo registro, quais valores de elemento filho ou de atributo copiar nos campos do registro e quando o registro está completo e pronto para ser enviado ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para inserção.  
   
  O Carregamento em massa XML não carrega todos os dados XML de entrada na memória e não produz conjuntos de registros completos antes de enviar dados ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Isto é porque os dados de entrada XML podem ser um documento grande e carregar o documento inteiro na memória pode ser caro. Em vez disso, o Carregamento em massa XML faz o seguinte:  
   
@@ -50,7 +51,7 @@ O Carregamento em massa XML processa os dados de entrada XML e prepara os regist
  O Carregamento em massa XML trata as anotações do esquema de mapeamento comum, incluindo mapeamentos de coluna e tabela (especificados explicitamente, usando anotações, ou implicitamente, através do mapeamento padrão), e relacionamentos de junção.  
   
 > [!NOTE]  
->  Parte-se do pressuposto que você está familiarizado com esquemas de mapeamento anotados XSD ou XDR. Para obter mais informações sobre esquemas, consulte [Introdução a esquemas de XSD anotado &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) ou [anotado esquemas XDR &#40; substituídos no SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Parte-se do pressuposto que você está familiarizado com esquemas de mapeamento anotados XSD ou XDR. Para obter mais informações sobre esquemas, consulte [Introdução a esquemas de XSD anotado &#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) ou [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
  Compreender a geração de registros requer o conhecimento dos seguintes conceitos:  
   
@@ -156,7 +157,7 @@ O Carregamento em massa XML processa os dados de entrada XML e prepara os regist
   
 -   Quando um  **\<cliente >** nó de elemento no arquivo de dados XML entra no escopo, o XML Bulk Load gera um registro para a tabela Cust. Carregamento em massa XML, em seguida, copia os valores de colunas necessárias (CustomerID, CompanyName e City) do  **\<CustomerID >**,  **\<CompanyName >**e o  **\<Cidade >** elementos filho como esses elementos entrarem no escopo.  
   
--   Quando um  **\<ordem >** nó de elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder. Carregamento em massa XML copia o valor de **OrderID** atributo para este registro. O valor necessário para a coluna CustomerID é obtida a partir de  **\<CustomerID >** elemento filho do  **\<cliente >** elemento. O XML Bulk Load usa as informações que são especificadas no  **\<SQL: Relationship >** para obter o valor da chave estrangeiro CustomerID para este registro, a menos que o **CustomerID** foi de atributo especificado no  **\<ordem >** elemento. A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeiro, o XML Bulk Load usa esse valor e não obtém o valor do elemento pai usando especificado  **\<SQL: Relationship >** . Como isso  **\<ordem >** nó de elemento sai do escopo, o carregamento em massa XML envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os próximos  **\<ordem >** nós de elemento da mesma maneira.  
+-   Quando um  **\<ordem >** nó de elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder. Carregamento em massa XML copia o valor de **OrderID** atributo para este registro. O valor necessário para a coluna CustomerID é obtida a partir de  **\<CustomerID >** elemento filho do  **\<cliente >** elemento. O XML Bulk Load usa as informações que são especificadas no  **\<SQL: Relationship >** para obter o valor da chave estrangeiro CustomerID para este registro, a menos que o **CustomerID** foi de atributo especificado no  **\<ordem >** elemento. A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeiro, o XML Bulk Load usa esse valor e não obtém o valor do elemento pai usando especificado **\<SQL: Relationship >**. Como isso  **\<ordem >** nó de elemento sai do escopo, o carregamento em massa XML envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os próximos  **\<ordem >** nós de elemento da mesma maneira.  
   
 -   Por fim, o  **\<cliente >** nó de elemento sai do escopo. Nesse instante, o Carregamento em massa XML envia o registro do cliente ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Carregamento em massa XML segue este processo para todos os clientes subsequentes no fluxo de dados XML.  
   

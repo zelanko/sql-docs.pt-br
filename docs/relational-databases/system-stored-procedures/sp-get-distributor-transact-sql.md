@@ -1,16 +1,16 @@
 ---
 title: sp_get_distributor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a9a52ebbb8e17ff88008b2b04208a0d383179ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4176c160e069dc1cb2061f2b3e6257e195b593b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Determina se um Distribuidor é instalado em um servidor. Esse procedimento armazenado é executado no computador onde o Distribuidor está sendo procurado, em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,13 +49,13 @@ sp_get_distributor
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**instalado**|**int**|**0** = não; **1** = Sim|  
+|**Instalado**|**Int**|**0** = não; **1** = Sim|  
 |**servidor de distribuição**|**sysname**|O nome do servidor Distribuidor.|  
-|**banco de dados de distribuição instalado**|**int**|**0** = não; **1** = Sim|  
-|**é o publicador de distribuição**|**int**|**0** = não; **1** = Sim|  
-|**possui publicador de distribuição remoto**|**int**|**0** = não; **1** = Sim|  
+|**banco de dados de distribuição instalado**|**Int**|**0** = não; **1** = Sim|  
+|**é o publicador de distribuição**|**Int**|**0** = não; **1** = Sim|  
+|**possui publicador de distribuição remoto**|**Int**|**0** = não; **1** = Sim|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_get_distributor** é usado principalmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no instantâneo, transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  

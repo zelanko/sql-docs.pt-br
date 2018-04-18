@@ -1,32 +1,32 @@
 ---
 title: Sintaxe de hierarquia (Transact-SQL) do objeto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23464c196392c8be8eee21ca37e6ee1adb1d2ebb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b217fa48f2bbaad1b8c2423dd701f0f839f8786b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintaxe da hierarquia de objetos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  As aspas duplas (") são necessárias. Todos os parâmetros nomeados deverão ser especificados depois que todos os parâmetros posicionais forem especificados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se *TraversedObject* não for especificado, *PropertyOrMethod* é necessário.  
   
  Se *PropertyOrMethod* não for especificado, o *TraversedObject* é retornado como um parâmetro de saída de token de objeto do procedimento armazenado de automação OLE. Se *PropertyOrMethod* for especificado, a propriedade ou método do *TraversedObject* é chamado, e o valor da propriedade ou o valor de retorno do método é retornado como um parâmetro de saída de automação OLE procedimento armazenado.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  Para obter mais informações sobre a sintaxe de objeto OLE do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], consulte a documentação do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [sp_OACreate &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  Os seguintes são exemplos de sintaxe de hierarquia de objeto que usam um objeto SQL-DMO SQLServer.  

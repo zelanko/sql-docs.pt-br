@@ -1,16 +1,16 @@
 ---
 title: sp_add_agent_profile (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83fd104a70e8cda855bc13dcedfbb589af5034fb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 37a7a794bf30e9b4aaeb9c3a95d5886efe575395
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um perfil novo para um agente de replicação. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,10 +57,10 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [  **@profile_name=** ] **'***profile_name***'**  
  É o nome do perfil. *profile_name* é **sysname**, sem padrão.  
   
- [  **@agent_type=** ] **'***agent_type***'**  
+ [ **@agent_type=** ] **'***agent_type***'**  
  É o tipo de agente de replicação. *agent_type* é **int**, sem padrão e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent|  
 |**2**|Agente de Leitor de Log|  
@@ -77,17 +77,17 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  É uma descrição do perfil. *Descrição* é **nvarchar (3000)**, sem padrão.  
   
  [  **@default=** ] *padrão*  
- Indica se o perfil é o padrão para *agent_type**.* *padrão* é **bit**, com um padrão de **0**. **1** indica que o perfil que está sendo adicionado se torne o novo perfil padrão para o agente especificado por *agent_type*.  
+ Indica se o perfil é o padrão para *agent_type * *.* *padrão* é **bit**, com um padrão de **0**. **1** indica que o perfil que está sendo adicionado se torne o novo perfil padrão para o agente especificado por *agent_type*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_add_agent_profile** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
- Perfis de agente personalizados são adicionados com os valores de parâmetro de agente padrão. Use [sp_change_agent_parameter &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) para alterar esses valores padrão ou [sp_add_agent_parameter &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) para adicionar parâmetros adicionais.  
+ Perfis de agente personalizados são adicionados com os valores de parâmetro de agente padrão. Use [sp_change_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) para alterar esses valores padrão ou [sp_add_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) para adicionar parâmetros adicionais.  
   
- Quando **sp_add_agent_profile** é executado, uma linha é adicionada para o novo perfil personalizado no [MSagent_profiles &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabela e os parâmetros padrão associado para este perfil são adicionados para o [MSagent_parameters &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela.  
+ Quando **sp_add_agent_profile** é executado, uma linha é adicionada para o novo perfil personalizado no [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabela e os parâmetros padrão associados perfil são adicionados para o [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela.  
   
 ## <a name="permissions"></a>Permissões  
  Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_agent_profile**.  
@@ -95,12 +95,12 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="see-also"></a>Consulte também  
  [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Perfis do agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_parameter &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_change_agent_parameter &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
- [sp_change_agent_profile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_drop_agent_parameter &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_drop_agent_profile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
- [sp_help_agent_profile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)  
+ [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)  
   
   

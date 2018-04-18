@@ -2,7 +2,7 @@
 title: Função SQLPrepare | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a1ad2c08c1b2df085e98581576fabfb93ba6236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprepare-function"></a>Função SQLPrepare
 **Conformidade**  
@@ -86,7 +86,7 @@ SQLRETURN SQLPrepare(
 |42S11|O índice já existe|\**StatementText* continha um **CREATE INDEX** instrução e o nome do índice especificado já existiam.|  
 |42S12|Índice não encontrado|\**StatementText* continha um **DROP INDEX** instrução e o nome do índice especificado não existe.|  
 |42S21|Já existe uma coluna|\**StatementText* continha um **ALTER TABLE** instrução e a coluna especificada no **adicionar** cláusula não é exclusiva ou identifica uma coluna existente na tabela base.|  
-|42S22|Coluna não encontrada|\**StatementText* continha um **CREATE INDEX** instrução e um ou mais da coluna de nomes especificados na lista de colunas não existe.<br /><br /> \**StatementText* continha um **GRANT** ou **REVOGAR** instrução e um nome de coluna especificado não existe.<br /><br /> \**StatementText* continha um **selecione**, **excluir**, **inserir**, ou **atualização** instrução e uma coluna especificada nome não existe.<br /><br /> \**StatementText* continha um **CREATE TABLE** instrução e uma coluna especificada em uma restrição (fazendo referência a uma tabela que está sendo criado) não existe.|  
+|42S22|Coluna não encontrada|\**StatementText* continha um **CREATE INDEX** instrução e um ou mais da coluna de nomes especificados na lista de colunas não existe.<br /><br /> \**StatementText* continha um **GRANT** ou **REVOGAR** instrução e um nome de coluna especificado não existe.<br /><br /> \**StatementText* continha um **selecione**, **excluir**, **inserir**, ou **atualização** instrução e um nome de coluna especificado não existe.<br /><br /> \**StatementText* continha um **CREATE TABLE** instrução e uma coluna especificada em uma restrição (fazendo referência a uma tabela que está sendo criado) não existe.|  
 |HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes ele concluiu a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*, e, em seguida, a função foi chamada no *StatementHandle*.<br /><br /> A função foi chamada e antes ele concluiu a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em uma aplicativos multithread.|  
@@ -136,6 +136,6 @@ SQLRETURN SQLPrepare(
 |Retornando o número de linhas afetadas por uma instrução|[Função SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |Definir um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

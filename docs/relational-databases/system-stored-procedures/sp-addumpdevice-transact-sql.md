@@ -1,16 +1,16 @@
 ---
 title: sp_addumpdevice (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 444dbea29259eca54e815ce49c73df3986db8e11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/03/2018
 
 Adiciona um dispositivo de backup a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,18 +54,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@devtype=** ] **'***device_type***'**  
+ [  **@devtype=** ] **'***device_type***'**  
  É o tipo do dispositivo de backup. *device_type* é **varchar (20)**, sem padrão e pode ser um dos valores a seguir.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**disk**|Arquivo de disco rígido como dispositivo de backup.|  
-|**fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**Disco**|Arquivo de disco rígido como dispositivo de backup.|  
+|**Fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
   
- [ **@logicalname =** ] **'***logical_name***'**  
+ [  **@logicalname =** ] **'***logical_name***'**  
  É o nome lógico do dispositivo de backup usado na instruções BACKUP e RESTORE. *logical_name* é **sysname**, sem padrão, e não pode ser NULL.  
   
- [ **@physicalname =** ] **'***physical_name***'**  
+ [  **@physicalname =** ] **'***physical_name***'**  
  Nome físico do dispositivo de backup. Os nomes físicos devem seguir as regras para nomes de arquivo do sistema operacional ou convenções universais de nomenclatura de dispositivos de rede e devem incluir um caminho completo. *physical_name* é **nvarchar (260)**, sem padrão de valor e não pode ser NULL.  
   
  Ao criar um dispositivo de backup em um local de rede remota, certifique-se de que o nome com o qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado tenha os recursos adequados de gravação no computador remoto.  
@@ -75,7 +75,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Esse procedimento insere no nome físico especificado no catálogo. O procedimento não tenta acessar nem criar o dispositivo.  
   
- [ **@cntrltype =** ] **'***controller_type***'**  
+ [  **@cntrltype =** ] **'***controller_type***'**  
  Obsoleto. Se especificado, esse parâmetro será ignorado. Há suporte apenas pela compatibilidade com versões anteriores. Novos usos de **sp_addumpdevice** devem omitir esse parâmetro.  
   
  [  **@devstatus =** ] **'***device_status***'**  

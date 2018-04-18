@@ -1,16 +1,16 @@
 ---
 title: sp_table_privileges (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f71b84e9f2aa0f732178a302f3d131f0a448dc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma lista de permissões de tabela (como INSERT, DELETE, UPDATE, SELECT, REFERENCES) para a tabela ou tabelas especificadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|Uma das permissões de tabela disponíveis. As permissões de tabela podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação for definida):<br /><br /> SELECT = GRANTEE pode recuperar dados para uma ou mais colunas.<br /><br /> INSERT = GRANTEE pode fornecer dados a novas linhas para uma ou mais colunas.<br /><br /> UPDATE = GRANTEE pode modificar dados existentes para uma ou mais colunas.<br /><br /> DELETE = GRANTEE pode remover linhas da tabela.<br /><br /> REFERENCES = GRANTEE pode referenciar uma coluna em uma tabela estrangeira em uma relação de chave primária/chave estrangeira. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as relações de chave primária/chave estrangeira são definidas com restrições de tabela.<br /><br /> O escopo de ação dado ao GRANTEE por um determinado privilégio de tabela é dependente da fonte de dados. Por exemplo, o privilégio UPDATE pode permitir que o GRANTEE atualize todas as colunas de uma tabela em uma fonte de dados e somente aquelas colunas para as quais o GRANTOR possui o privilégio UPDATE em outra fonte de dados.|  
 |IS_GRANTABLE|**sysname**|Indica se o GRANTEE tem ou não permissão para conceder permissões a outros usuários (em geral referida como permissão "concessão com concessão"). Pode ser YES, NO ou NULL. Um valor desconhecido (ou NULL) refere-se a uma fonte de dados para a qual a "concessão com concessão" não é aplicável.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O procedimento armazenado sp_table_privileges é equivalente a SQLTablePrivileges no ODBC. Os resultados retornados são ordenados por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME e PRIVILEGE.  
   
 ## <a name="permissions"></a>Permissões  
@@ -95,7 +95,7 @@ EXEC sp_table_privileges
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados &#40; do catálogo Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_publication_validation (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c08dc184475526abd962ab97f52ccfbb8c405e8f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0a2bca31164d91186426895fe4a25d0661400b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Inicia uma solicitação de validação de artigo para cada artigo na publicação especificada. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,13 +50,13 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publication=**] **'***publicação '*  
+ [**@publication=**] **' * publicação '*  
  É o nome da publicação. *publicação* é **sysname**, sem padrão.  
   
  [**@rowcount_only=**] *rowcount_only*  
  Especifica se apenas a contagem de linhas da tabela deve ser retornada. *rowcount_only* é **smallint** e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Execute uma soma de verificação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 compatível.<br /><br /> Observação: Quando um artigo é filtrado horizontalmente, uma operação de contagem de linhas é executada em vez de uma operação de soma de verificação.|  
 |**1** (padrão)|Só execute uma verificação de número de linhas.|  
@@ -65,7 +65,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [**@full_or_fast=**] *full_or_fast*  
  É o método usado para calcular a contagem de linhas. *full_or_fast* é **tinyint** e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Efetua contagem completa usando COUNT (*).|  
 |**1**|Efetua contagem rápida de **sysindexes**. Contagem de linhas em [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápido do que contar linhas na tabela atual. No entanto, como [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) lentamente é atualizado, o número de linhas pode não ser preciso.|  
@@ -74,7 +74,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  Especifica se o Agente de Distribuição deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se **0**, o agente de replicação não é desligado. Se **1**, o agente de replicação desligará após o último artigo é validado.  
   
- [  **@publisher**  =] **'***publicador***'**  
+ [ **@publisher** =] **'***publicador***'**  
  Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -83,7 +83,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_publication_validation** é usado em replicação transacional.  
   
  **sp_publication_validation** pode ser chamado a qualquer momento depois que os artigos associados com a publicação tem sido ativados. O procedimento pode ser executado manualmente (uma vez) ou como parte de um trabalho agendado regularmente que valida a data.  
@@ -95,8 +95,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte também  
  [Validar dados no assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

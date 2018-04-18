@@ -1,16 +1,16 @@
 ---
 title: sp_addmergepullsubscription_agent (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4658a2c2f960cdee289eb90940aac7cb92107e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a4034453646cc75c41ac2dd0f2bd7661778e65c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adiciona um novo trabalho de agente para agendar a sincronização de uma assinatura pull com uma publicação de mesclagem. Esse procedimento armazenado é executado no assinante no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -176,7 +176,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_type =** ] *frequency_type*  
  É a frequência do agendamento do Agente de Mesclagem. *frequency_type* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -194,7 +194,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_interval =** ] *frequency_interval*  
  O dia ou dias em que o Agente de Mesclagem é executado. *frequency_interval* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Segunda-feira|  
@@ -211,7 +211,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  É a data do Agente de Mesclagem. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Segundo|  
@@ -226,7 +226,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday =** ] *frequency_subday*  
  É a frequência de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -321,13 +321,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_security_mode =** ] *internet_security_mode*  
  É o método de autenticação usado pelo Agente de Mesclagem ao se conectar ao servidor da Web durante a sincronização da Web, usando HTTPS. *internet_security_mode* é **int** e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Autenticação Básica é usada.|  
 |**1** (padrão)|Autenticação Integrada do Windows é usada.|  
   
 > [!NOTE]  
->  Recomendamos o uso da Autenticação Básica com sincronização da Web. Para usar sincronização da Web, você deve fazer uma conexão SSL ao servidor Web. Para obter mais informações, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+>  Recomendamos o uso da Autenticação Básica com sincronização da Web. Para usar sincronização da Web, você deve fazer uma conexão SSL ao servidor Web. Para obter mais informações, consulte [Configurar sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
  [  **@internet_timeout =** ] *internet_timeout*  
  É o período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire. *internet_timeout* é **int**, com um padrão de **300** segundos.  
@@ -347,7 +347,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepullsubscription_agent** é usado em replicação de mesclagem e usa funcionalidade semelhante a [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Para obter um exemplo de como especificar configurações de segurança corretamente ao executar **sp_addmergepullsubscription_agent**, consulte [criar uma assinatura Pull](../../relational-databases/replication/create-a-pull-subscription.md).  
@@ -359,12 +359,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

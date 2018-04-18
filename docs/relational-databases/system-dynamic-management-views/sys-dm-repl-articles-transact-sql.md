@@ -1,16 +1,16 @@
 ---
 title: sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2514ef1aea1e096a1bb543e7a1a815f923afaadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ ms.lasthandoff: 02/03/2018
 |**wszArtdesttable**|**nvarchar(514)**|Nome do objeto publicado no destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Proprietário do objeto publicado no destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado para inserções.|  
-|**cmdTypeIns**|**Int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeIns**|**Int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em exclusões.|  
-|**cmdTypeDel**|**Int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeDel**|**Int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações.|  
-|**cmdTypeUpd**|**Int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeUpd**|**Int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações parciais.|  
 |**cmdTypePartialUpd**|**Int**|Sintaxe de chamada do procedimento armazenado de atualização parcial, podendo ser um destes valores.<br /><br /> **2** = SQL|  
 |**numcol**|**Int**|Número de colunas na partição de um artigo filtrado verticalmente.|  
-|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = ATUALIZAÇÃO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
+|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERT<br /><br /> **2** = EXCLUIR<br /><br /> **3** = ATUALIZAÇÃO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
 |**artgeninscmd**|**nvarchar(510)**|Modelo de comando INSERT baseado nas colunas incluídas no artigo.|  
 |**artgendelcmd**|**nvarchar(510)**|Modelo de comando DELETE, que pode incluir a chave primária ou as colunas incluídas no artigo, dependendo de a sintaxe de chamada ser usada ou não.|  
 |**artgenupdcmd**|**nvarchar(510)**|Modelo de comando UPDATE, que pode incluir a chave primária, colunas atualizadas ou uma lista de colunas completa, dependendo de a sintaxe de chamada ser usada ou não.|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico &#40; relacionadas à replicação Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico relacionadas à replicação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,16 +1,16 @@
 ---
 title: sp_lookupcustomresolver (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df262bcf0d12d99b2c16b7eeff18cbc80c151ad8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad45f26fbd1c6b7f9488497333f5ba44a2b5fa8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna as informações em um valor de manipulador de lógica de negócios ou CLSID (identificador de classe) de um componente resolvedor personalizado com base em COM registrado no Distribuidor. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [  **@article_resolver =** ] **'***article_resolver***'**  
  Especifica o nome da lógica comercial personalizada cujo registro está sendo cancelado. *article_resolver* é **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
   
- [  **@resolver_clsid** =] **'***resolver_clsid***'** saída  
+ [ **@resolver_clsid**=] **'***resolver_clsid***'** saída  
  É o valor CLSID do objeto COM associado ao nome da lógica de negócios personalizada especificada no *article_resolver* parâmetro. *resolver_clsid* é **nvarchar (50)**, com um padrão NULL.  
   
  [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** saída  
@@ -72,7 +72,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_lookupcustomresolver** é usado em replicação de mesclagem.  
   
  **sp_lookupcustomresolver** retorna um valor nulo para *resolver_clsid* quando o componente não está registrado na distribuição e um valor de "00000000-0000-0000-0000-000000000000" quando o registro pertence a um Assembly do .NET framework registrado como um manipulador de lógica de negócios.  
@@ -87,8 +87,8 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [Executar lógica de negócios durante sincronizações de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Especificar um resolvedor de artigo de mesclagem](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [sp_registercustomresolver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

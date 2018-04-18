@@ -1,16 +1,16 @@
 ---
 title: sys.server_event_session_events (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_event_session_events
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ea5b8f9396b989557e9a7758b0c15888951bb8d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5fccc364eab149a6c3ee401c1924880167c605c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,18 @@ ms.lasthandoff: 11/27/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
-|event_id|**int**|A ID do evento. Essa ID é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
-|name|**sysname**|O nome do evento. Não permite valor nulo.|  
+|event_session_id|**Int**|A identificação da sessão de evento. Não permite valor nulo.|  
+|event_id|**Int**|A ID do evento. Essa ID é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
+|nome|**sysname**|O nome do evento. Não permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Não permite valor nulo.|  
 |Módulo|**sysname**|O nome do módulo que contém o evento. Não permite valor nulo.|  
-|predicate|**nvarchar (3000)**|A expressão de predicado que é aplicada ao evento. Permite valor nulo.|  
-|predicate_xml|**nvarchar (3000)**|A expressão de predicado XML que é aplicada ao evento. Permite valor nulo.|  
+|predicate|**nvarchar(3000)**|A expressão de predicado que é aplicada ao evento. Permite valor nulo.|  
+|predicate_xml|**nvarchar(3000)**|A expressão de predicado XML que é aplicada ao evento. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa exibição tem as cardinalidades de relação a seguir.  
   
 ||||  

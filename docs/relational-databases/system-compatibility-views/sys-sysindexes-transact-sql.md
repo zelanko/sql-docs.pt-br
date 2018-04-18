@@ -1,16 +1,16 @@
 ---
-title: sys.sysindexes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys. sysindexes (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysindexes
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6871dcbbc0259e6aeca7b3d24ff6050b9608f199
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 541b0de942e5b67c4c4be26ed1a6e29578a178ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/09/2018
 |**minlen**|**smallint**|Tamanho mínimo de uma linha.|  
 |**keycnt**|**smallint**|Número de chaves.|  
 |**groupid**|**smallint**|ID do grupo de arquivos em que o objeto foi criado.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
-|**dpages**|**Int**|Para **indid** = 0 ou **indid** = 1, **dpages** é a contagem de páginas de dados usado.<br /><br /> Para **indid** > 1, **dpages** é a contagem de páginas de índice usado.<br /><br /> 0 = o índice é particionado quando **indid** > 1.<br /><br /> 0 = a tabela é particionada quando **indid** é 0 ou 1.<br /><br /> Não produzirá resultados precisos se ocorrer estouro de linha.|  
+|**Dpages**|**Int**|Para **indid** = 0 ou **indid** = 1, **dpages** é a contagem de páginas de dados usado.<br /><br /> Para **indid** > 1, **dpages** é a contagem de páginas de índice usado.<br /><br /> 0 = o índice é particionado quando **indid** > 1.<br /><br /> 0 = a tabela é particionada quando **indid** é 0 ou 1.<br /><br /> Não produzirá resultados precisos se ocorrer estouro de linha.|  
 |**reserved**|**Int**|Para **indid** = 0 ou **indid** = 1, **reservado** é a contagem de páginas alocadas para todos os índices e dados da tabela.<br /><br /> Para **indid** > 1, **reservado** é a contagem de páginas alocadas para o índice.<br /><br /> 0 = o índice é particionado quando **indid** > 1.<br /><br /> 0 = a tabela é particionada quando **indid** é 0 ou 1.<br /><br /> Não produzirá resultados precisos se ocorrer estouro de linha.|  
-|**used**|**Int**|Para **indid** = 0 ou **indid** = 1, **usado** é a contagem do total de páginas usadas para todos os dados de índice e tabela.<br /><br /> Para **indid** > 1, **usado** é a contagem de páginas usadas para o índice.<br /><br /> 0 = o índice é particionado quando **indid** > 1.<br /><br /> 0 = a tabela é particionada quando **indid** é 0 ou 1.<br /><br /> Não produzirá resultados precisos se ocorrer estouro de linha.|  
+|**usado**|**Int**|Para **indid** = 0 ou **indid** = 1, **usado** é a contagem do total de páginas usadas para todos os dados de índice e tabela.<br /><br /> Para **indid** > 1, **usado** é a contagem de páginas usadas para o índice.<br /><br /> 0 = o índice é particionado quando **indid** > 1.<br /><br /> 0 = a tabela é particionada quando **indid** é 0 ou 1.<br /><br /> Não produzirá resultados precisos se ocorrer estouro de linha.|  
 |**rowcnt**|**bigint**|Contagem de linhas de nível de dados com base em **indid** = 0 e **indid** = 1.<br /><br /> 0 = o índice é particionado quando **indid** > 1.<br /><br /> 0 = a tabela é particionada quando **indid** é 0 ou 1.|  
 |**rowmodctr**|**Int**|Conta o número total de linhas inseridas, excluídas ou atualizadas desde a última atualização das estatísticas da tabela.<br /><br /> 0 = o índice é particionado quando **indid** > 1.<br /><br /> 0 = a tabela é particionada quando **indid** é 0 ou 1.<br /><br /> Em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior, **rowmodctr** não é totalmente compatível com versões anteriores. Para obter mais informações, consulte Comentários.|  
 |**reserved3**|**Int**|Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -68,10 +68,10 @@ ms.lasthandoff: 02/09/2018
 |**impid**|**smallint**|Sinalizador de implementação de índice.<br /><br /> Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Usado para restringir as granularidades de bloqueio consideradas para um índice. Por exemplo, para minimizar o custo de bloqueio, uma tabela de pesquisa que é essencialmente somente leitura pode ser configurada para realizar apenas bloqueios de nível de tabela.|  
 |**pgmodctr**|**Int**|Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**keys**|**varbinary(816)**|Lista de IDs das colunas que constituem a chave de índice.<br /><br /> Retorna NULL.<br /><br /> Para exibir as colunas de chave de índice, use [sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**Chaves**|**varbinary(816)**|Lista de IDs das colunas que constituem a chave de índice.<br /><br /> Retorna NULL.<br /><br /> Para exibir as colunas de chave de índice, use [sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Nome do índice ou estatística. Retorna NULL quando **indid** = 0. Modifique seu aplicativo de modo a fazê-lo procurar um nome de heap NULL.|  
 |**statblob**|**image**|Objeto binário grande (BLOB) de estatísticas.<br /><br /> Retorna NULL.|  
-|**maxlen**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**MaxLen**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**rows**|**Int**|Contagem de linhas de nível de dados com base em **indid** = 0 e **indid** = 1, e o valor é repetido para **indid** > 1.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -93,7 +93,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Mapeando tabelas do sistema para exibições do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

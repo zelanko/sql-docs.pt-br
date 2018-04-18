@@ -1,16 +1,16 @@
 ---
 title: sp_execute_remote (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_execute_remote
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: d681bdeafa6fc39a01a41f067bf9cec7a809add6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 02/15/2018
   
  O procedimento armazenado é parte do recurso de consulta Elástico.  Consulte [visão geral de consulta de banco de dados Elástico de banco de dados do Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) e [consultas de banco de dados Elástico de fragmentação (particionamento horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,10 +52,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @data_source_name = ] *datasourcename*  
- Identifica a fonte de dados externa em que a instrução é executada. Consulte [criar fonte de dados externa &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). Fonte de dados externa pode ser do tipo "RDBMS" ou "SHARD_MAP_MANAGER".  
+ [ @data_source_name =] *datasourcename*  
+ Identifica a fonte de dados externa em que a instrução é executada. Consulte [criar fonte de dados externa &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Fonte de dados externa pode ser do tipo "RDBMS" ou "SHARD_MAP_MANAGER".  
   
- [ @stmt= ] *statement*  
+ [ @stmt=] *instrução*  
  É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. @stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** é válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -83,11 +84,11 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>Remarks  
  `sp_execute_remote` parâmetros devem ser inseridos na ordem específica, conforme descrito na seção de sintaxe acima. Se os parâmetros forem inseridos na ordem incorreta, uma mensagem de erro será exibida.  
   
- `sp_execute_remote` tem o mesmo comportamento que [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) em relação a lotes e o escopo de nomes. A instrução Transact-SQL ou lote no sp_execute_remote  *@stmt*  parâmetro não é compilado até que a instrução sp_execute_remote seja executada.  
+ `sp_execute_remote` tem o mesmo comportamento que [EXECUTE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) em relação a lotes e o escopo de nomes. A instrução Transact-SQL ou lote no sp_execute_remote *@stmt* parâmetro não é compilado até que a instrução sp_execute_remote seja executada.  
   
  `sp_execute_remote` Adiciona uma coluna adicional para o conjunto de resultados chamado '$ShardName' que contém o nome do banco de dados remoto que gerou a linha.  
   
- `sp_execute_remote` pode ser usado como [sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` pode ser usado como [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
 ### <a name="simple-example"></a>Exemplo simples  

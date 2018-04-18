@@ -1,16 +1,16 @@
 ---
 title: MSpeer_originatorid_history (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_originatorid_history
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c98612ad170d6b8490b222defa60a5cdc46672b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 24991d91a43ee00e5999de417d7cc4d44436d408
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mspeeroriginatoridhistory-transact-sql"></a>MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ ms.lasthandoff: 11/21/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |originator_publication|**sysname**|Publicação para a qual a ID de originador foi especificada.|  
-|originator_id|**int**|Número que identifica cada nó na topologia com a finalidade de detecção de conflito.|  
+|originator_id|**Int**|Número que identifica cada nó na topologia com a finalidade de detecção de conflito.|  
 |originator_node|**sysname**|Instância do servidor para a qual a ID de originador foi especificada.|  
 |originator_db|**sysname**|Banco de dados da publicação para o qual a ID de originador foi especificada.|  
-|originator_db_version|**int**|Identifica o número da versão do banco de dados de origem.|  
-|originator_version|**int**|Identifica o número da versão do Publicador.|  
+|originator_db_version|**Int**|Identifica o número da versão do banco de dados de origem.|  
+|originator_version|**Int**|Identifica o número da versão do Publicador.|  
 |inserted_date|**datetime**|Data e hora em que a linha para a ID do originador foi inserida nesta tabela.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

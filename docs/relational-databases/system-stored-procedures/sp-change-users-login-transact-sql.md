@@ -1,16 +1,16 @@
 ---
 title: sp_change_users_login (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_users_login
@@ -20,24 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_users_login
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 207272f7644ab39055b7c6bb330faf6053353601
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 065126113e8914d1f22959bbfacc3e341d8855c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Mapeia um usuário de banco de dados existente para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) em vez disso.  
+  Mapeia um usuário de banco de dados existente para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) em vez disso.  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action=] '*ação*'  
  Descreve a ação a ser executada pelo procedimento. *ação* é **varchar (10)**. *ação* pode ter um dos valores a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula uma entrada de usuário na exibição do catálogo de sistema sys.database_principals no banco de dados atual a um logon de nome igual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ainda não existir um logon com o mesmo nome, ele será criado. Examine o resultado do **Auto_Fix** instrução para confirmar que o vínculo correto foi realmente estabelecido. Evite usar **Auto_Fix** em situações confidenciais de segurança.<br /><br /> Quando você usa **Auto_Fix**, você deve especificar *usuário* e *senha* se o logon não existir, caso contrário, você deve especificar *usuário*mas *senha* será ignorado. *logon* deve ser NULL. *usuário* deve ser um usuário válido no banco de dados atual. Não pode haver outro usuário mapeado para o logon.|  
 |**Relatório**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *login*, e *senha* deve ser NULL ou não especificado.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **sys. server_prinicpals** com as entradas em **database_principals**.|  
@@ -64,7 +64,7 @@ sp_change_users_login [ @Action = ] 'action'
  É o nome de um usuário no banco de dados atual. *usuário* é **sysname**, com um padrão NULL.  
   
  [ @LoginName=] '*login*'  
- E o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *logon* é **sysname**, com um padrão NULL.  
+ E o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
  [ @Password=] '*senha*'  
  É a senha atribuída a um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon é criado especificando **Auto_Fix**. Se já existir um logon correspondente, o usuário e logon serão mapeados e *senha* será ignorado. Se não existir um logon correspondente, sp_change_users_login criará um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon e atribui *senha* como a senha para o novo logon. *senha* é **sysname**, e não deve ser NULL.  
@@ -81,7 +81,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|Nome do usuário do banco de dados.|  
 |UserSID|**varbinary(85)**|O identificador de segurança do usuário.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use sp_change_users_login para vincular um usuário do banco de dados atual a um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o logon do usuário for alterado, use sp_change_users_login para vinculá-lo ao novo logon sem perder as permissões de usuário. O novo *login* não pode ser sa e o *usuário*não pode ser dbo, convidado ou um usuário do INFORMATION_SCHEMA.  
   
  Não é possível usar sp_change_users_login para mapear os usuários do banco de dados para entidades do nível do Windows, certificados ou chaves assimétricas.  
@@ -127,10 +127,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Segurança armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

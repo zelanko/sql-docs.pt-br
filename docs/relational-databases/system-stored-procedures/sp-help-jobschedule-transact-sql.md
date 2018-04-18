@@ -1,16 +1,16 @@
 ---
 title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/03/2018
   Retorna informações sobre o agendamento de trabalhos usado pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para executar atividades automatizadas.  
  
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,10 +58,10 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **Observação:** ou *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'***schedule_name***'**  
  O nome do item de agenda que será definido para o trabalho. *schedule_name*é **sysname**, com um padrão NULL.  
   
- [ **@schedule_id=** ] *schedule_id*  
+ [  **@schedule_id=** ] *schedule_id*  
  O número de identificação do item de agenda do trabalho. *schedule_id*é **int**, com um padrão NULL.  
   
  [  **@include_description=** ] *include_description*  
@@ -76,12 +76,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**Int**|Número do identificador de agenda.|  
 |**schedule_name**|**sysname**|Nome da agenda.|  
-|**enabled**|**Int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
-|**freq_type**|**Int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = Once<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando **SQLServerAgent** inicia o serviço.|  
-|**freq_interval**|**Int**|Dias em que o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**Int**|Número de **freq_subday_type** períodos devem ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**Int**|Ocorrência do trabalho de agendado a **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**Habilitado**|**Int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
+|**freq_type**|**Int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando **SQLServerAgent** inicia o serviço.|  
+|**freq_interval**|**Int**|Dias em que o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**Int**|Número de **freq_subday_type** períodos devem ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**Int**|Ocorrência do trabalho de agendado a **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**Int**|Número de meses entre a execução agendada do trabalho.|  
 |**active_start_date**|**Int**|Data em que a agenda foi ativada.|  
 |**active_end_date**|**Int**|Data de término da agenda.|  
@@ -94,7 +94,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identificador da agenda.|  
 |**job_count**|**Int**|Contagem de trabalhos retornados.|  
   
-> **Observação:****sp_help_jobschedule** retorna valores da **dbo. sysjobschedules** e **dbo. sysschedules** tabelas do sistema em **msdb** . **sysjobschedules** atualizado a cada 20 minutos. Isso pode afetar os valores que são retornados por esse procedimento armazenado.  
+> **Observação:****sp_help_jobschedule** retorna valores da **dbo. sysjobschedules** e **dbo. sysschedules** tabelas do sistema em **msdb** .   **sysjobschedules** atualizado a cada 20 minutos. Isso pode afetar os valores que são retornados por esse procedimento armazenado.  
   
 ## <a name="remarks"></a>Remarks  
  Os parâmetros de **sp_help_jobschedule** pode ser usado somente em determinadas combinações. Se *schedule_id* for especificada, nem *job_id* nem *job_name* pode ser especificado. Caso contrário, o *job_id* ou *job_name* parâmetros podem ser usados com *schedule_name*.  

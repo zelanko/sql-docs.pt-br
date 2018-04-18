@@ -1,16 +1,16 @@
 ---
 title: sp_cursorexecute (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorexecute
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dc0a358e0d62fa8a0319ab6d2ad586315f30e24
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7cc46446c64fe247eee88ae08628032793cbebb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria e popula um cursor com base no plano de execução criado por sp_cursorprepare. Neste procedimento, associado a sp_cursorprepare, tem a mesma função que sp_cursoropen, mas é dividido em duas fases. sp_cursorprepare é invocado pela especificação de ID = 4 em um pacote de protocolo TDS de dados tabulares.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,12 +86,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valor de retorno do código  
  *número de linhas* pode retornar os seguintes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |-1|Número de linhas desconhecidas.|  
 |-n|Uma população assíncrona está em vigor.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parâmetros scrollopt e ccopt  
  *scrollopt* e *ccopt* são úteis quando os planos em cache são capturados para o cache do servidor, que significa que o identificador preparado que identifica a instrução deve ser recompilado. O *scrollopt* e *ccopt* valores de parâmetro devem corresponder aos valores enviados na solicitação original a sp_cursorprepare.  
@@ -105,8 +105,8 @@ sp_cursorexecute prepared_handle, cursor
  O sinalizador de entrada RPC RETURN_METADATA pode ser definido como 1 para solicitar que os metadados da lista de seleção de cursor sejam retornados no fluxo TDS.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa31d747ebfd9fbf56aee874f477468212bc161b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d2c0a90791e36d7628d99335116067143b1db0d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre limites de aviso em uma ou todas as várias métricas de desempenho do monitor de espelhamento de banco de dados principal.  
  
-  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ sp_dbmmonitorhelpalert database_name
 |4|Sobrecarga espelhada confirmada|Especifica o número de milissegundos de atraso médio por transação tolerado, antes que um aviso seja gerado no servidor principal. Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração. Esse valor é relevante somente no modo de alta segurança.|  
 |5|Período de retenção|Metadados que controlam quanto tempo as linhas na tabela de status de espelhamento de banco de dados são preservadas.|  
   
- Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [Use limites de aviso e alertas em métricas de desempenho de espelhamento &#40; SQL Server &#41; ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [Use limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhuma  
@@ -76,7 +76,7 @@ sp_dbmmonitorhelpalert database_name
 |------------|---------------|-----------------|  
 |**alert_id**|**Int**|A tabela abaixo lista os **alert_id** valor para cada métrica de desempenho e a unidade de medida da métrica exibida no **sp_dbmmonitorresults** conjunto de resultados:|  
 |**threshold**|**Int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** para exibir os valores atuais, execute o [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procedimento armazenado.|  
-|**enabled**|**bit**|0 = Evento desabilitado.<br /><br /> 1 = Evento habilitado.<br /><br /> **Observação:** período de retenção está sempre habilitado.|  
+|**Habilitado**|**bit**|0 = Evento desabilitado.<br /><br /> 1 = Evento habilitado.<br /><br /> **Observação:** período de retenção está sempre habilitado.|  
   
 |Value|Métrica de desempenho|Unidade|  
 |-----------|------------------------|----------|  

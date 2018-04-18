@@ -2,7 +2,7 @@
 title: Função SQLSetConnectAttrForDbcInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b71c2d308efd74f1ec2574d20d7f14455965715d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Função SQLSetConnectAttrForDbcInfo
 **Conformidade**  
@@ -53,7 +53,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *ValuePtr*  
  [Entrada] Ponteiro para o valor a ser associado aos *atributo*. Dependendo do valor de *atributo*, *ValuePtr* será um valor inteiro não assinado de 32 bits ou aponta para uma cadeia de caracteres terminada em nulo. Observe que, se o *atributo* argumento é um driver específico, o valor em *ValuePtr* pode ser um inteiro com sinal.  
   
- *StringLength*  
+ *stringLength*  
  [Entrada] Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de **ValuePtr*. Para dados de cadeia de caracteres, esse argumento deve conter o número de bytes na cadeia de caracteres.  
   
  Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* é um inteiro, *StringLength* será ignorado.  
@@ -83,7 +83,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
  Inclua sqlspi.h para desenvolvimento de driver ODBC.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Pooling de Conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

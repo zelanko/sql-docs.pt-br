@@ -1,16 +1,16 @@
 ---
 title: sp_changepublication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f05323e102e4f68d7281dd517eaee00abfcdcdc7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8db735195ad0667944ca3e3710e629791662fd7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as propriedades de uma publicação. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Essa tabela descreve as propriedades da publicação que podem ser alteradas e restrições nos valores dessas propriedades.  
   
-|Propriedade|Valor|Description|  
+|Propriedade|Value|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Podem ser criadas assinaturas anônimas para a publicação determinada, e *immediate_sync* também deve ser **true**. Não pode ser alterado para publicações ponto a ponto.|  
 ||**false**|Não podem ser criadas assinaturas anônimas para a publicação determinada. Não pode ser alterado para publicações ponto a ponto.|  
@@ -106,20 +106,20 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||Especifica o local de um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] que o Distribution Agent executa antes que todos os outros scripts de objetos e dados replicados sejam aplicados durante uma sincronização inicial.|  
 |**publish_to_ActiveDirectory**|**true**|Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Remove as informações de publicação do Active Directory.|  
-|**QUEUE_TYPE**|**SQL**|Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações. Essa propriedade só poderá ser alterada se não houver assinaturas ativas.<br /><br /> Observação: O suporte para o uso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens foi descontinuado. Especificando um valor de **msmq** para *valor* resulta em um erro.|  
-|**repl_freq**|**contínua**|Publica saída de todas as transações com base em log.|  
-||**instantâneo**|Publica somente eventos de sincronização agendados.|  
+|**queue_type**|**sql**|Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações. Essa propriedade só poderá ser alterada se não houver assinaturas ativas.<br /><br /> Observação: O suporte para o uso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens foi descontinuado. Especificando um valor de **msmq** para *valor* resulta em um erro.|  
+|**repl_freq**|**Contínua**|Publica saída de todas as transações com base em log.|  
+||**Instantâneo**|Publica somente eventos de sincronização agendados.|  
 |**replicate_ddl**|**1**|Instruções DDL (linguagem de definição de dados) executadas no Publicador são replicadas. Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Instruções DDL não são replicadas. Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A replicação de alterações de esquema não pode ser desabilitada ao usar replicação ponto a ponto.|  
 |**replicate_partition_switch**|**true**|As instruções ALTER TABLE…SWITCH que são executadas no banco de dados publicado devem ser replicadas para Assinantes. Essa opção é válida somente se *allow_partition_switch* está definida como TRUE. Para obter mais informações, consulte [Replicar tabelas e índices particionados](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 ||**false**|As instruções ALTER TABLE…SWITCH que não devem ser replicadas para Assinantes.|  
-|**retenção**||**int** que representa o período de retenção, em horas, para a atividade de assinatura. Se uma assinatura não estiver ativa dentro do período de retenção, será removida.|  
+|**retention**||**int** que representa o período de retenção, em horas, para a atividade de assinatura. Se uma assinatura não estiver ativa dentro do período de retenção, será removida.|  
 |**snapshot_in_defaultfolder**|**true**|Arquivos de instantâneo são armazenados na pasta de instantâneos padrão. Se *alt_snapshot_folder*também for especificado, os arquivos de instantâneo são armazenados em ambos os locais padrão e alternativos.|  
 ||**false**|Arquivos de instantâneo são armazenados no local alternativo especificado por *alt_snapshot_folder*.|  
-|**status**|**ativo**|Dados de Publicação estão imediatamente disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
-||**inativo**|Dados de Publicação não estão disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
-|**sync_method**|**nativo**|Usa saída de cópia em massa do modo nativo de todas as tabelas ao sincronizar assinaturas.|  
-||**caractere**|Usa saída de cópia em massa do modo de caractere de todas as tabelas ao sincronizar assinaturas.|  
+|**status**|**Ativo**|Dados de Publicação estão imediatamente disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
+||**Inativo**|Dados de Publicação não estão disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
+|**sync_method**|**native**|Usa saída de cópia em massa do modo nativo de todas as tabelas ao sincronizar assinaturas.|  
+||**character**|Usa saída de cópia em massa do modo de caractere de todas as tabelas ao sincronizar assinaturas.|  
 ||**simultâneas**|Usa saída de programa de cópia em massa do modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 ||**concurrent_c**|Usa saída de programa de cópia em massa do modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 |**TaskID**||Essa propriedade foi preterida e não tem mais suporte.|  
@@ -138,7 +138,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
   - **0** Especifica que as alterações no artigo fazem com que a assinatura ser reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   - **1** Especifica que as alterações no artigo fazem com que a assinatura existente seja reiniciada e dá permissão para que ocorra a reinicialização da assinatura.  
   
-[  **@publisher**  =] **'***publicador***'**  
+[ **@publisher** =] **'***publicador***'**  
  Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
   
   > [!NOTE]  
@@ -147,7 +147,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_changepublication** é usado em replicação de instantâneo e replicação transacional.  
   
  Depois de alterar qualquer uma das propriedades a seguir, você deve gerar um novo instantâneo, e você deve especificar um valor de **1** para o *force_invalidate_snapshot* parâmetro.  
@@ -180,8 +180,8 @@ Para listar objetos de publicação no Active Directory usando o **publish_to_ac
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

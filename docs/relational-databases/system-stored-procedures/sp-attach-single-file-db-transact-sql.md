@@ -1,16 +1,16 @@
 ---
 title: sp_attach_single_file_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_single_file_db
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: 
+caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53b3e03d87ff8efb9be90b8cd85b9ce0951c0f40
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 57c9194019652552f84611977006fa91710092cd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]  
 >  Não é recomendável anexar ou restaurar bancos de dados de origem desconhecida ou não confiável. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  [ **@dbname=** ] **'***dbname***'**  
  É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *DBName* é **sysname**, com um padrão NULL.  
   
- [ **@physname=** ] **'***physical_name***'**  
+ [  **@physname=** ] **'***physical_name***'**  
  É o nome físico, incluindo o caminho, do arquivo de banco de dados. *physical_name* é **nvarchar (260)**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  Não use este procedimento em um banco de dados replicado.  
   
 ## <a name="permissions"></a>Permissões  
- Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [CREATE DATABASE &#40; Servidor SQL Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [criar banco de dados &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desanexa [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, então, anexa um arquivo de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] para o servidor atual.  

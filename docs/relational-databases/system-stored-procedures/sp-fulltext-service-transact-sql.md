@@ -2,7 +2,7 @@
 title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -27,18 +27,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07e4a7e1832a91ebc2acd5da19839766b83619ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as propriedades do servidor da pesquisa de texto completo para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ sp_fulltext_service [ [@action=] 'action'
  [  **@action=**] **'***ação***'**  
  É a propriedade a ser alterada ou redefinida. *ação* é **nvarchar(100),** sem nenhum padrão. Para obter uma lista de um*c*ção propriedades, suas descrições e os valores que podem ser definidos, consulte a tabela sob o *valor* argumento. Esse argumento retorna as seguintes propriedades: tipo de dados, valor em execução atual, valor mínimo ou máximo e status da reprovação, se aplicável.  
   
- [ **@value=**] *value*  
+ [  **@value=**] *valor*  
  É o valor da propriedade especificada. *valor* é **sql_variant**, com um valor padrão de NULL. Se @value for nulo, **sp_fulltext_service** retorna a configuração atual. Essa tabela lista propriedades de ação, suas descrições e os valores que podem ser definidos.  
   
 > [!NOTE]  

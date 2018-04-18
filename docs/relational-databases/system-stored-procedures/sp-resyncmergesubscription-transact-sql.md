@@ -2,7 +2,7 @@
 title: sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 676257b0429fa236780c435c934852fb7258a4b7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 93c48af023d34b5c73f1ea69c8bb6e26538cd8d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** = ] **'***publisher***'**  
+ [ **@publisher** =] **'***publicador***'**  
  É o nome do Publicador. *publicador* é **sysname**, com um padrão NULL. Um valor de NULL será válido se o procedimento armazenado for executado no Publicador. Se o procedimento armazenado for executado no Assinante, um Publicador deverá ser especificado.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+ [ **@publisher_db** =] **'***publisher_db***'**  
  É o nome do banco de dados de publicação. *publisher_db* é **sysname**, com um padrão NULL. Um valor de NULL será válido se o procedimento armazenado for executado no Publicador, no banco de dados de publicação. Se o procedimento armazenado for executado no Assinante, um Publicador deverá ser especificado.  
   
- [ **@publication** = ] **'***publication***'**  
+ [ **@publication** =] **'***publicação***'**  
  É o nome da publicação. *publicação*é **sysname**, sem padrão.  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+ [ **@subscriber** =] **'***assinante***'**  
  É o nome do Assinante. *assinante* é **sysname**, com um padrão NULL. Um valor de NULL será válido se o procedimento armazenado for executado no Assinante. Se o procedimento armazenado for executado no Publicador, um Assinante deverá ser especificado.  
   
- [ **@subscriber_db** = ] **'***subscriber_db***'**  
+ [ **@subscriber_db** =] **'***subscriber_db***'**  
  É o nome do banco de dados de assinatura. *subscription_db* é **sysname**, com um padrão NULL. Um valor de NULL será válido se o procedimento armazenado for executado no Assinante, no banco de dados de assinatura. Se o procedimento armazenado for executado no Publicador, um Assinante deverá ser especificado.  
   
- [ **@resync_type** = ] *resync_type*  
+ [ **@resync_type** =] *resync_type*  
  Define quando a ressincronização deve ser iniciada. *resync_type* é **int**, e pode ser um dos valores a seguir.  
   
 |Value|Descrição|  
@@ -76,7 +76,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|A sincronização inicia a partir da última validação bem-sucedida. Todas as gerações novas ou incompletas que tiveram origem desde a última validação bem-sucedida são reaplicadas ao Assinante.|  
 |**2**|A sincronização inicia na data fornecida *resync_date_str*. Todas as gerações novas ou incompletas que tiveram origem após essa data são reaplicadas ao Assinante.|  
   
- [ **@resync_date_str=**] *resync_date_string*  
+ [  **@resync_date_str=**] *resync_date_string*  
  Define a data quando a ressincronização deve ser iniciada. *resync_date_string* é **nvarchar (30)**, com um padrão NULL. Esse parâmetro é usado quando o *resync_type* é um valor de **2**. A data fornecida é convertida em seu equivalente **datetime** valor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

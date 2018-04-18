@@ -1,16 +1,16 @@
 ---
 title: sp_table_validation (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -18,23 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd5182a0e742db6ef535a30e94ddb2b4da5f669a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e4d146cdd2620af70d2fafb6de06341a7bfabf6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações de número de linhas e soma de verificação em uma tabela ou exibição indexada, ou compara as informações de número de linhas e soma de verificação com a tabela ou exibição indexada. Esse procedimento armazenado é executado no Publicador no banco de dados de publicação e no Assinante, no banco de dados de assinatura. *Não há suportada para editores Oracle*.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,7 +76,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@full_or_fast=**] *full_or_fast*  
  É o método usado para calcular a contagem de linhas. *full_or_fast* é **tinyint**, com um padrão de **2**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Efetua contagem completa usando COUNT (*).|  
 |**1**|Efetua contagem rápida de **sysindexes**. Contagem de linhas em **sysindexes** é muito mais rápido do que contar linhas na tabela atual. No entanto, como **sysindexes** lentamente é atualizado, o número de linhas pode não ser preciso.|  
@@ -86,9 +86,9 @@ sp_table_validation [ @table = ] 'table'
  Se estiver executando o agente de distribuição **sp_table_validation**, especifica se o agente de distribuição deve ser desligado imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se **0**, o agente de replicação não é desligado. Se **1**, erro 20578 será gerado e o agente de replicação é sinalizado para desligar. Esse parâmetro é ignorado quando **sp_table_validation** é executado diretamente por um usuário.  
   
  [  **@table_name =**] *table_name*  
- É o nome da tabela da exibição usada para mensagens de saída. *table_name* é **sysname**, com um padrão de  **@table** .  
+ É o nome da tabela da exibição usada para mensagens de saída. *table_name* é **sysname**, com um padrão de **@table**.  
   
- [  **@column_list** =] **'***column_list***'**  
+ [ **@column_list**=] **'***column_list***'**  
  É a lista de colunas que devem ser usadas na função soma de verificação. *column_list* é **nvarchar (4000)**, com um padrão NULL. Habilita validação de artigos de mesclagem para especificar uma lista de colunas que exclui colunas computadas e colunas de carimbo de data e hora.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -96,7 +96,7 @@ sp_table_validation [ @table = ] 'table'
   
  Se executar uma validação de número de linhas e o número esperado de linhas é igual ao número na tabela, **sp_table_validation** retorna uma mensagem de que a tabela passou na validação. Caso contrário, retornará uma mensagem de que a tabela pode estar fora de sincronização e informará a diferença entre o número de linhas esperado e o atual.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_table_validation** é usado em todos os tipos de replicação. **sp_table_validation** não há suporte para editores Oracle.  
   
  A soma de verificação computa uma CRC (verificação e redundância cíclica) de 32 bits em toda a imagem de linha na página. Ela não verifica colunas seletivamente e não pode operar em uma exibição ou em uma partição vertical da tabela. Além disso, a soma de verificação ignora o conteúdo de **texto** e **imagem** colunas (por padrão).  
@@ -109,10 +109,10 @@ sp_table_validation [ @table = ] 'table'
  Para executar **sp_table_validation**, você deve ter permissões SELECT na tabela que está sendo validada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Soma de verificação &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [Soma de verificação &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

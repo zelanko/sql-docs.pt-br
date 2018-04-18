@@ -1,16 +1,16 @@
 ---
 title: sp_changesubscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,26 +22,26 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e2a49e9b60927d1838205a5ae594c01ee4a1ffb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d94c10040ec7dc82640a17e5454269790acca498
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Altera as propriedades de uma assinatura push transacional ou de instantâneo ou uma assinatura pull envolvidas em uma replicação transacional de atualização em fila. Para alterar as propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** é executado no publicador do banco de dados de publicação.  
+  Altera as propriedades de uma assinatura push transacional ou de instantâneo ou uma assinatura pull envolvidas em uma replicação transacional de atualização em fila. Para alterar as propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** é executado no publicador do banco de dados de publicação.  
   
 > [!IMPORTANT]  
 >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,16 +57,16 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication** =] **'***publicação***'**  
+ [ **@publication**=] **'***publicação***'**  
  É o nome da publicação a ser alterada. *publicação*é **sysname**, sem padrão  
   
- [  **@article**  =] **'***artigo***'**  
+ [ **@article** =] **'***artigo***'**  
  É o nome do artigo a ser alterado. *artigo* é **sysname**, sem padrão.  
   
- [  **@subscriber**  =] **'***assinante***'**  
+ [ **@subscriber** =] **'***assinante***'**  
  É o nome do Assinante. *assinante* é **sysname**, sem padrão.  
   
- [  **@destination_db**  =] **'***destination_db***'**  
+ [ **@destination_db** =] **'***destination_db***'**  
  É o nome do banco de dados de assinatura. *destination_db* é **sysname**, sem padrão.  
   
  [  **@property=**] **'***propriedade***'**  
@@ -75,7 +75,7 @@ sp_changesubscription [ @publication = ] 'publication'
  [  **@value=**] **'***valor***'**  
  É o novo valor especificado *propriedade*. *valor* é **nvarchar (4000)**, e pode ser um dos valores na tabela.  
   
-|Propriedade|Valor|Description|  
+|Propriedade|Value|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**distrib_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
@@ -102,10 +102,10 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_changesubscription** é usado em replicação de instantâneo e transacional.  
   
- **sp_changesubscription** só pode ser usado para modificar as propriedades de assinaturas push ou pull envolvidas em replicação transacional de atualização enfileirada. Para alterar as propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **sp_changesubscription** só pode ser usado para modificar as propriedades de assinaturas push ou pull envolvidas em replicação transacional de atualização enfileirada. Para alterar as propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
   
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
@@ -113,7 +113,7 @@ sp_changesubscription [ @publication = ] 'publication'
  Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,26 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Aplica um filtro a um rastreamento. **sp_trace_setfilter** pode ser executado apenas em rastreamentos existentes que são interrompidos (*status* é **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Retorna um erro se esse procedimento armazenado é executado em um rastreamento que não existe ou cujo *status* não é **0**.  
+  Aplica um filtro a um rastreamento. **sp_trace_setfilter** pode ser executado apenas em rastreamentos existentes que são interrompidos (*status* é **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Retorna um erro se esse procedimento armazenado é executado em um rastreamento que não existe ou cujo *status* não é **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use Eventos Estendidos.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,10 +56,10 @@ sp_trace_setfilter [ @traceid = ] trace_id
  [  **@traceid=** ] *trace_id*  
  É a ID do rastreamento para o qual o filtro está definido. *trace_id* é **int**, sem padrão. O usuário emprega este *trace_id* valor para identificar, modificar e controlar o rastreamento.  
   
- [ **@columnid=** ] *column_id*  
+ [  **@columnid=** ] *column_id*  
  É a ID da coluna na qual o filtro é aplicado. *column_id* é **int**, sem padrão. Se *column_id* for NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limpa todos os filtros para o rastreamento especificado.  
   
- [ **@logical_operator** = ] *logical_operator*  
+ [ **@logical_operator** =] *logical_operator*  
  Especifica se o AND (**0**) ou OR (**1**) operador é aplicado. *logical_operator* é **int**, sem padrão.  
   
  [ **@comparison_operator=** ] *comparison_operator*  
@@ -76,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Não semelhante a|  
   
- [ **@value=** ] *value*  
+ [  **@value=** ] *valor*  
  Especifica o valor no qual filtrar. O tipo de dados *valor* deve corresponder ao tipo de dados da coluna a ser filtrada. Por exemplo, se o filtro está definido em uma coluna de ID de objeto que é um **int** tipo de dados, *valor* devem ser **int**. Se *valor* é **nvarchar** ou **varbinary**, ele pode ter um comprimento máximo de 8000.  
   
  Quando o operador de comparação for LIKE ou NOT LIKE, o operador lógico poderá incluir "%" ou outro filtro apropriado para a operação LIKE.  

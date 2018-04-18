@@ -2,7 +2,7 @@
 title: Função SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>Função SQLBindCol
 **Conformidade**  
@@ -68,7 +68,7 @@ SQLRETURN SQLBindCol(
  Você também pode especificar um tipo de dados estendido C. Para obter mais informações, consulte [tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
- [Entrada/saída adiada] Ponteiro para o buffer de dados para associar à coluna. **SQLFetch** e **SQLFetchScroll** retornar dados nesse buffer. **SQLBulkOperations** retorna dados nesse buffer quando *operação* é SQL_FETCH_BY_BOOKMARK; recupera dados desse buffer quando *operação* é SQL_ADD ou SQL_UPDATE_BY_BOOKMARK . **SQLSetPos** retorna dados nesse buffer quando *operação* é SQL_REFRESH; recupera dados desse buffer quando *operação* é SQL_UPDATE.  
+ [Entrada/saída adiada] Ponteiro para o buffer de dados para associar à coluna. **SQLFetch** e **SQLFetchScroll** retornar dados nesse buffer. **SQLBulkOperations** retorna dados nesse buffer quando *operação* é SQL_FETCH_BY_BOOKMARK; recupera dados desse buffer quando *operação* é SQL_ADD ou SQL_UPDATE_BY_BOOKMARK. **SQLSetPos** retorna dados nesse buffer quando *operação* é SQL_REFRESH; recupera dados desse buffer quando *operação* é SQL_UPDATE.  
   
  Se *TargetValuePtr* é um ponteiro nulo, o driver desassocia o buffer de dados para a coluna. Um aplicativo pode desassociar todas as colunas chamando **SQLFreeStmt** com a opção SQL_UNBIND. Um aplicativo pode desassociar o buffer de dados para uma coluna, mas ainda tem um buffer de comprimento/indicador associado para a coluna, se o *TargetValuePtr* argumentos na chamada para **SQLBindCol** é um ponteiro nulo, mas o *StrLen_or_IndPtr* argumento é um valor válido.  
   
@@ -387,6 +387,6 @@ int main() {
 |Busca de parte ou toda uma coluna de dados|[Função SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |Colunas do conjunto de retorno do número de resultados|[Função SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,6 +1,6 @@
 ---
-title: Baixe e instale o Microsoft SQL Operations Studio (preview) | Microsoft Docs
-description: Baixar e instalar o Microsoft SQL Operations Studio (preview) para Windows, macOS ou Linux
+title: Baixe e instale o Studio de operações do Microsoft SQL (visualização) | Microsoft Docs
+description: Baixar e instalar o Microsoft SQL operações Studio (visualização) para Windows, macOS ou Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>Baixe e instale o SQL Operations Studio (preview)
+# <a name="download-and-install-sql-operations-studio-preview"></a>Baixe e instale o Studio de operações do SQL (visualização)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] executa no Linux, Windows e macOS.
 
@@ -34,7 +34,7 @@ Baixe e instale a versão mais recente, o *Public Preview de março*:
 
 Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](release-notes.md).
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Obter o SQL Operations Studio (preview) para Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Obter o Studio de operações do SQL (visualização) para Windows
 
 Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma experiência de instalação padrão do Windows e. zip: 
 
@@ -51,16 +51,16 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma e
 3. Execute `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>Obter o SQL Operations Studio (preview) para macOS
+## <a name="get-sql-operations-studio-preview-for-macos"></a>Obter o Studio de operações do SQL (visualização) para macOS
 
 1. Baixar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=870839).
 2. Para expandir o conteúdo do zip, clique duas vezes nele.
 3. Para fazer [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponíveis no *Launchpad*, arraste *sqlops.app* para o *aplicativos* pasta.
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Obter o SQL Operations Studio (preview) para Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>Obter o Studio de operações do SQL (visualização) para Linux
 
-1. Baixe [! INCLUIR[nome sos](../includes/name-sos-short.md) para Linux usando um dos instaladores ou o arquivamento gz:
+1. Baixar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux usando um dos instaladores ou o arquivamento gz:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
@@ -101,7 +101,7 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma e
    sudo apt-get install libuwind8
    ```
 
-   **Redhat:** 
+   **RedHat:** 
    ```bash
    yum install libXScrnSaver
    ```
@@ -116,7 +116,7 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma e
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>Desinstalar o SQL Operations Studio (preview)
+## <a name="uninstall-sql-operations-studio-preview"></a>Desinstalar o Studio de operações do SQL (visualização)
 
 Se você instalou [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] usando o Windows installer, desinstale da mesma maneira que você remova qualquer aplicativo do Windows.
 
@@ -138,10 +138,10 @@ Se você instalou [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] . zi
 
 ### <a name="macos"></a>macOS
 - macOS 10.13 Serra alta
-- macOS 10.12 Sierra
+- macOS 10.12 Serra
 
 ### <a name="linux"></a>Linux
-- Red Hat Enterprise Linux 7.4
+- 7.4 do Red Hat Enterprise Linux
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04

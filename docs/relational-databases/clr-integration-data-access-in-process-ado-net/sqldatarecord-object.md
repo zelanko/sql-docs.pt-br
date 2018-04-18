@@ -1,34 +1,34 @@
 ---
 title: Objeto SqlDataRecord | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a5c5ba2cad9145134ae27d2450707b0d11af89c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldatarecord-object"></a>Objeto SqlDataRecord
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-O objeto **SqlDataRecord** representa uma única linha de dados, junto com seus metadados relacionados.  
+  O objeto **SqlDataRecord** representa uma única linha de dados, junto com seus metadados relacionados.  
   
  Os procedimentos armazenados gerenciados podem enviar conjuntos de resultados ao cliente que não sejam de um **SqlDataReader**. A classe **SqlDataRecord** , junto com os métodos **SendResultsStart**, **SendResultsRow**e **SendResultsEnd** do objeto **SqlPipe** permite que os procedimentos armazenados enviem conjuntos de resultados personalizados ao cliente.  
   

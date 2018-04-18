@@ -1,7 +1,7 @@
-# [Driver do OLE DB para SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [Programação no Driver do OLE DB para SQL Server](oledb-driver-for-sql-server-programming.md)
 
 # Áreas específicas
-## [Driver do OLE DB para SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [Criar aplicativos do Driver do OLE DB para SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [Objetos de fonte de dados do OLE DB +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [Comandos +](../../oledb/ole-db-commands/commands.md)
 ## [Conjuntos de linhas +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [Interfaces +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [Instruções +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [Suporte a FILESTREAM (OLE DB)](filestream-support-ole-db.md)
-# [Tipos definidos pelo usuário CLR grandes (OLE DB)](large-clr-user-defined-types-ole-db.md)
-# [Suporte a conjunto de linhas de esquema (OLE DB)](schema-rowset-support-ole-db.md)
+# [Tipos de dados CLR grandes definidos pelo usuário](large-clr-user-defined-types-ole-db.md)
+# [Suporte a conjunto de linhas de esquema](schema-rowset-support-ole-db.md)
 # [Conjuntos de linhas do esquema – Suporte à consulta distribuída](schema-rowsets-distributed-query-support.md)
 # [Conjuntos de linhas do esquema – Conjunto de linhas LINKEDSERVERS](schema-rowsets-linkedservers-rowset.md)
-# [SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [Suporte de colunas esparsas (OLE DB)](sparse-columns-support-ole-db.md)
+# [SPNs (Nomes da Entidade de Serviço) em conexões de cliente](service-principal-names-spns-in-client-connections-ole-db.md)
+# [Suporte a colunas esparsas](sparse-columns-support-ole-db.md)
 # [Procedimentos armazenados – Chamada](stored-procedures-calling.md)
 # [Procedimentos armazenados – Execução](stored-procedures-running.md)
 # [Procedimentos armazenados](stored-procedures.md)

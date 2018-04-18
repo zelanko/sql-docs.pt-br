@@ -1,16 +1,16 @@
 ---
 title: sp_describe_cursor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38eae1442b8058b6596efd525196f2f76b4b6dce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce7ca0bb9efe8f00cb65dfe9c8cc1dd1d383544b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Informa os atributos de um cursor de servidor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -84,19 +84,19 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |reference_name|**sysname**|Nome usado para se referir ao cursor. Se a referência ao cursor for feita através do nome especificado em uma instrução DECLARE CURSOR, o nome de referência será igual ao nome de cursor. Se a referência ao cursor for feita por uma variável, o nome de referência será o nome da variável.|  
 |cursor_name|**sysname**|Nome do cursor de uma instrução DECLARE CURSOR. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o cursor foi criado, definindo uma variável de cursor para um cursor, cursor_name retorna o nome da variável do cursor. Em versões mais recentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna de saída retorna um nome gerado pelo sistema.|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
-|status|**int**|Mesmos valores como relatado pela função do sistema CURSOR_STATUS:<br /><br /> 1 = O cursor referenciado pelo nome do cursor ou pela variável de cursor está aberto. Se o cursor for insensível, estático ou controlado por um conjunto de chaves terá ao menos uma linha. Se o cursor for dinâmico, o conjunto de resultados terá zero ou mais linhas.<br /><br /> 0 = O cursor referenciado pelo nome ou pela variável do cursor está aberto, mas não contém linhas. Cursores dinâmicos nunca retornam esse valor.<br /><br /> -1 = O cursor referenciado pelo nome ou pela variável do cursor está fechado.<br /><br /> -2 = Aplicável somente a variáveis de cursor. Não há nenhum cursor atribuído à variável. Possivelmente, um parâmetro OUTPUT atribuiu um cursor à variável, mas o procedimento armazenado fechou o cursor antes de retornar.<br /><br /> -3 = Um cursor ou uma variável de cursor com o nome especificado não existe, ou nenhum cursor foi alocado à variável de cursor.|  
+|status|**Int**|Mesmos valores como relatado pela função do sistema CURSOR_STATUS:<br /><br /> 1 = O cursor referenciado pelo nome do cursor ou pela variável de cursor está aberto. Se o cursor for insensível, estático ou controlado por um conjunto de chaves terá ao menos uma linha. Se o cursor for dinâmico, o conjunto de resultados terá zero ou mais linhas.<br /><br /> 0 = O cursor referenciado pelo nome ou pela variável do cursor está aberto, mas não contém linhas. Cursores dinâmicos nunca retornam esse valor.<br /><br /> -1 = O cursor referenciado pelo nome ou pela variável do cursor está fechado.<br /><br /> -2 = Aplicável somente a variáveis de cursor. Não há nenhum cursor atribuído à variável. Possivelmente, um parâmetro OUTPUT atribuiu um cursor à variável, mas o procedimento armazenado fechou o cursor antes de retornar.<br /><br /> -3 = Um cursor ou uma variável de cursor com o nome especificado não existe, ou nenhum cursor foi alocado à variável de cursor.|  
 |modelo|**tinyint**|1 = Insensível (ou estático)<br /><br /> 2 = o conjunto de chaves<br /><br /> 3 = dinâmico<br /><br /> 4 = De avanço rápido|  
 |simultaneidade|**tinyint**|1 = somente leitura<br /><br /> 2 = Bloqueios de rolagem<br /><br /> 3 = Otimista|  
 |rolável|**tinyint**|0 = Somente avanço<br /><br /> 1 = Rolável|  
 |open_status|**tinyint**|0 = Fechado<br /><br /> 1 = Abrir|  
-|cursor_rows|**decimal(10,0)**|Número de linhas de qualificação no conjunto de resultados. Para obter mais informações, consulte [@@CURSOR_ROWS &#40; Transact-SQL &#41; ](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|Status da última busca nesse cursor. Para obter mais informações, consulte [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = Busca bem-sucedida.<br /><br /> -1 = A busca falhou ou está além dos limites do cursor.<br /><br /> -2 = A linha solicitada está ausente.<br /><br /> -9 = Não houve busca no cursor.|  
+|cursor_rows|**decimal(10,0)**|Número de linhas de qualificação no conjunto de resultados. Para obter mais informações, consulte [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md).|  
+|fetch_status|**smallint**|Status da última busca nesse cursor. Para obter mais informações, consulte [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = Busca bem-sucedida.<br /><br /> -1 = A busca falhou ou está além dos limites do cursor.<br /><br /> -2 = A linha solicitada está ausente.<br /><br /> -9 = Não houve busca no cursor.|  
 |column_count|**smallint**|Número de colunas no conjunto de resultados do cursor.|  
-|row_count|**decimal(10,0)**|Número de linhas afetadas pela última operação no cursor. Para obter mais informações, consulte [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**decimal(10,0)**|Número de linhas afetadas pela última operação no cursor. Para obter mais informações, consulte [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).|  
 |last_operation|**tinyint**|Última operação executada no cursor:<br /><br /> 0 = Nenhuma operação foi executada no cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERT<br /><br /> 4 = UPDATE<br /><br /> 5 = EXCLUIR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
-|cursor_handle|**int**|Um valor exclusivo para o cursor dentro do escopo do servidor.|  
+|cursor_handle|**Int**|Um valor exclusivo para o cursor dentro do escopo do servidor.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_describe_cursor descreve os atributos globais a um cursor de servidor, como a capacidade de rolagem e atualização. Use sp_describe_cursor_columns para uma descrição dos atributos do conjunto de resultados retornado pelo cursor. Use sp_describe_cursor_tables para obter um relatório das tabelas base referenciadas pelo cursor. Para obter um relatório dos cursores de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)] visíveis na conexão, use sp_cursor_list.  
   
  Uma instrução DECLARE CURSOR pode exigir um tipo de cursor que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não suporta usando a instrução SELECT que está contida no DECLARE CURSOR. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o cursor implicitamente a um tipo que ofereça suporte para usar a instrução SELECT. Se TYPE_WARNING for especificado na instrução DECLARE CURSOR, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enviará ao aplicativo uma mensagem informativa de que uma conversão foi concluída. sp_describe_cursor pode ser chamado para determinar o tipo de cursor implementado.  
@@ -145,10 +145,10 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Cursores](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_cursor_list &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_columns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [sp_describe_cursor_tables &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

@@ -1,8 +1,8 @@
 ---
-title: sys.soap_endpoints (Transact-SQL) | Microsoft Docs
+title: soap_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-catalog-views
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38bc05ab3d49716f2c4fc484098c4ff838bc634e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d3f4367b7e399e13addda748a8688bfa579076ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/10/2018
 |**< colunas herdadas >**||Para obter uma lista de colunas que essa exibição herda valores, consulte [Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_sql_language_enabled**|**bit**|1 = A opção BATCHES = ENABLED foi especificada, o que significa que são permitidos lotes SQL ad hoc no ponto de extremidade.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|O nome de três partes do procedimento armazenado que implementa esse método.<br /><br /> Os nomes de métodos exigem sintaxe de três partes rígida. nomes de uma, duas ou quatro partes não são permitidos.|  
-|**default_database**|**sysname**|O nome do banco de dados padrão especificado na opção DATABASE =.<br /><br /> NULL = DEFAULT foi especificado.|  
+|**DEFAULT_DATABASE**|**sysname**|O nome do banco de dados padrão especificado na opção DATABASE =.<br /><br /> NULL = DEFAULT foi especificado.|  
 |**default_namespace**|**nvarchar(384)**|O namespace padrão especificado no NAMESPACE = opção, ou 'http://tempuri.org' se DEFAULT foi especificado.|  
 |**default_result_schema**|**tinyint**|O valor padrão da opção SCHEMA =.<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|Descrição do valor padrão da opção SCHEMA =.<br /><br /> Nenhuma<br /><br /> STANDARD|  

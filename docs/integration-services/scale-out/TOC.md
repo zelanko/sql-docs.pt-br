@@ -9,4 +9,5 @@
 # [Alterar a conta para registor em log do Scale Out](change-logdb-account.md)
 # [Gerenciar os certificados para Scale Out](deal-with-certificates-in-ssis-scale-out.md)
 # [Alta disponibilidade para Scale Out](scale-out-support-for-high-availability.md)
+# [Alta disponibilidade via instância de cluster de failover do SQL Server](scale-out-failover-cluster-instance.md)
 # [Solucionar problemas do Scale Out](troubleshooting-scale-out.md)

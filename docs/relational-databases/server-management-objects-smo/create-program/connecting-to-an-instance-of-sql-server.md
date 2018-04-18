@@ -1,15 +1,15 @@
 ---
-title: "Conectar a uma instância do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Conectar a uma instância do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, connections
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - instances of SQL Server, connections
 - SMO [SQL Server], connections
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 721e0fdf56fe26bc4c9484bce8dea091a479aba7
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2249b03be21af2a5b765dd7dff2435188ba85a19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Conectando-se a uma instância do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/12/2018
 -   O método <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> precisa ser chamado antes de passar a conexão com qualquer objeto de programação de RMO.  
   
 ## <a name="examples"></a>Exemplos  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C &#35; Projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Conectando-se à instância local do SQL Server usando a Autenticação do Windows no Visual Basic  
  A conexão com a instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não exige muito código. Em vez disso, ela depende das configurações padrão para o servidor e o método de autenticação. A primeira operação que exige a recuperação dos dados faz com que uma conexão seja criada.  

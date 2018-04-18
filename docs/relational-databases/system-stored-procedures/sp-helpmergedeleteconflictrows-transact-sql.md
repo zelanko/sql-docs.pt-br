@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af2e83f26bfe8f94dd0befcc71259c4d04ed148a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6af4f2128a2ced993129c4e9b813ecd8d9154716
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre linhas de dados perdedoras no conflito de exclusão. Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação, ou no Assinante, no banco de dados de assinatura, quando um logon de conflito descentralizado é usado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de  **%** . Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
+ É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
   
  [  **@source_object=**] **'***source_object***'**  
  É o nome do objeto de origem. *source_object* é **nvarchar (386)**, com um padrão NULL.  
@@ -65,19 +65,19 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**source_object**|**nvarchar (386)**|Objeto de origem para o conflito de exclusão.|  
+|**source_object**|**nvarchar(386)**|Objeto de origem para o conflito de exclusão.|  
 |**ROWGUID**|**uniqueidentifier**|Identificador de linha para o conflito de exclusão.|  
-|**conflict_type**|**int**|Código que indica tipo de conflito:<br /><br /> **1** = UpdateConflict: conflito é detectado no nível de linha.<br /><br /> **2** = ColumnUpdateConflict: conflito detectado no nível de coluna.<br /><br /> **3** = UpdateDeleteWinsConflict: exclusão ganha o conflito.<br /><br /> **4** = UpdateWinsDeleteConflict: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = UploadInsertFailed: inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = DownloadInsertFailed: a inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = UploadDeleteFailed: exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = DownloadDeleteFailed: exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = UploadUpdateFailed: atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = DownloadUpdateFailed: atualização do publicador não pôde ser aplicada ao assinante.|  
+|**conflict_type**|**Int**|Código que indica tipo de conflito:<br /><br /> **1** = UpdateConflict: conflito é detectado no nível de linha.<br /><br /> **2** = ColumnUpdateConflict: conflito detectado no nível de coluna.<br /><br /> **3** = UpdateDeleteWinsConflict: exclusão ganha o conflito.<br /><br /> **4** = UpdateWinsDeleteConflict: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = UploadInsertFailed: inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = DownloadInsertFailed: a inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = UploadDeleteFailed: exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = DownloadDeleteFailed: exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = UploadUpdateFailed: atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = DownloadUpdateFailed: atualização do publicador não pôde ser aplicada ao assinante.|  
 |**reason_code**|**Int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar(720)**|Descrição de erro que pode ser sensível ao contexto.|  
-|**origin_datasource**|**varchar (255)**|Origem do conflito.|  
-|**PubID**|**uniqueidentifier**|Identificador da publicação.|  
+|**origin_datasource**|**varchar(255)**|Origem do conflito.|  
+|**pubid**|**uniqueidentifier**|Identificador da publicação.|  
 |**MSrepl_create_time**|**datetime**|Hora em que as informações de conflitos foram adicionadas.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergedeleteconflictrows** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  

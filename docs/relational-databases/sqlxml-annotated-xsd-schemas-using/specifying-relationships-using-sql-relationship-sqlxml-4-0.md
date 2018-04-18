@@ -1,16 +1,16 @@
 ---
-title: "Especificando relações usando SQL: Relationship (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: 'Especificando relações usando SQL: Relationship (SQLXML 4.0) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -31,20 +31,21 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048b90bb17952147d254e0dc89a28dc58fe9532c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhados hierarquicamente e as relações ID, IDREF ou IDREFS entre os elementos podem ser especificadas.  
+  Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhados hierarquicamente e as relações ID, IDREF ou IDREFS entre os elementos podem ser especificadas.  
   
  Por exemplo, em um esquema XSD, um  **\<cliente >** elemento contém  **\<ordem >** elementos filho. Quando o esquema é mapeado para o banco de dados AdventureWorks, o  **\<cliente >** elemento é mapeado para a tabela Sales. Customer e o  **\<ordem >** elemento é mapeado para o Tabela Sales. SalesOrderHeader. Estas tabelas subjacentes, Sales. Customer e Sales. SalesOrderHeader, estão relacionadas porque os clientes fazem pedidos. O elemento CustomerID na tabela Sales.SalesOrderHeader é uma chave estrangeira que se refere à chave primária CustomerID na tabela Sales.Customer. Você pode estabelecer estas relações entre elementos de esquema de mapeamento usando o **SQL: Relationship** anotação.  
   
@@ -67,7 +68,7 @@ Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhado
  **parent-key**  
  Especifica a chave pai do pai. Se a chave pai for composta por várias colunas, os valores serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave filha correspondente.  
   
- **Child**  
+ **Filho**  
  Especifica a relação de filho (tabela).  
   
  **child-key**  
@@ -394,7 +395,7 @@ Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhado
   
  O  **\<ordem >** é um elemento filho do  **\<cliente >** elemento. **\<SQL: Relationship >** é especificado no  **\<ordem >** elemento filho; portanto, os pedidos que pertencem a um cliente aparecem como elementos filho do  **\<cliente >**.  
   
- O  **\<ordem >** elemento inclui o  **\<OrderDetail >** elemento filho. **\<SQL: Relationship >** é especificada em  **\<OrderDetail >** elemento filho, para que os detalhes do pedido que pertençam a um pedido apareçam como elementos filho que  **\<ordem >**  elemento.  
+ O  **\<ordem >** elemento inclui o  **\<OrderDetail >** elemento filho. **\<SQL: Relationship >** é especificada em  **\<OrderDetail >** elemento filho, para que os detalhes do pedido que pertençam a um pedido apareçam como elementos filho que **\<ordem >** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

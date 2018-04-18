@@ -1,0 +1,3 @@
+O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Neste artigo, o cartaz é pequeno demais para ser lido. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
+  
+ [![Permissões do Mecanismo de Banco de Dados](../media/database-engine-permissions/database-engine-permissions.png)](https://aka.ms/sql-permissions-poster)

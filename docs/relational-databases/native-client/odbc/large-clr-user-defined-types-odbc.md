@@ -1,30 +1,31 @@
 ---
-title: "Tipos definidos pelo usuário do CLR grandes (ODBC) | Microsoft Docs"
-ms.custom: 
+title: Tipos definidos pelo usuário do CLR grandes (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ed85a2386d3d02df2af2e22805cea464cf2d130d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos de dados CLR grandes definidos pelo usuário (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/25/2018
   
 |Tipo de dados SQL|Layout de memória|Tipos de dados do C|Valor (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR *(unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campos do descritor dos parâmetros  
  As informações são retornadas nos campos IPD são as seguintes:  
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Tem suporte|  
 |SQL_C_CHAR|Com suporte *|  
   
- \*Dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
+ \* Dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
   
  As conversões com suporte dos tipos de dados do C para SQL são as seguintes:  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Tem suporte|  
 |SQL_C_CHAR|Com suporte *|  
   
- \*Ocorre uma cadeia de caracteres hexadecimal para a conversão de dados binários.  
+ \* Ocorre uma cadeia de caracteres hexadecimal para a conversão de dados binários.  
   
 ## <a name="sqlvariant-support-for-udts"></a>Suporte SQL_VARIANT para UDTs  
  Não há suporte para UDTs em colunas de SQL_VARIANT.  
@@ -219,7 +220,7 @@ ms.lasthandoff: 01/25/2018
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Os valores retornados para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Tipo|SubType|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Tipo|Subtipo|Comprimento|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -239,7 +240,7 @@ ms.lasthandoff: 01/25/2018
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Os valores permitidos para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Tipo|SubType|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Tipo|Subtipo|Comprimento|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

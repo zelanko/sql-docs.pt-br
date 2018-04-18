@@ -1,16 +1,16 @@
 ---
 title: sp_changesubscriber (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b52c51d2e516b8d4c4f787c8e5d56d95922b2d4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fd7a0652f2c1f00ec2d577d0c8e74efdc19558d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as opções para um Assinante. Qualquer tarefa de distribuição para os Assinantes deste Publicador será atualizada. Esse procedimento armazenado grava o **MSsubscriber_info** tabela no banco de dados de distribuição. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,10 +72,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  É o tipo de Assinante. *tipo* é **tinyint**, com um padrão NULL. **0** indica uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** Especifica um não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em outro servidor de fonte de dados ODBC assinante.  
   
  [  **@login=**] **'***login***'**  
- É a ID do logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *logon* é **sysname**, com um padrão NULL.  
+ É a ID do logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
  [  **@password=**] **'***senha***'**  
- É a senha de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *senha* é **sysname**, com um padrão de  **%** . **%**indica que não há nenhuma alteração para a propriedade de senha.  
+ É a senha de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *senha* é **sysname**, com um padrão de **%**. **%** indica que não há nenhuma alteração para a propriedade de senha.  
   
  [  **@commit_batch_size=**] *commit_batch_size*  
  Com suporte somente para compatibilidade com versões anteriores.  
@@ -89,7 +89,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  É a frequência de agendamento da tarefa de distribuição. *frequency_type* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -106,7 +106,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Segundo|  
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  É a frequência de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -148,12 +148,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@security_mode=**] *security_mode*  
  É o modo de segurança implementado. *security_mode* é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação|  
 |**1**|Autenticação do Windows|  
   
- [  **@publisher** =] **'***publicador***'**  
+ [ **@publisher**=] **'***publicador***'**  
  Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -162,17 +162,17 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_changesubscriber** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
  Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_addsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

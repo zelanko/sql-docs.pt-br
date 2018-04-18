@@ -2,7 +2,7 @@
 title: sp_executesql (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -26,11 +26,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29c2557584393605ba0e89f45dc079dea6d5ddb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +56,7 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @stmt= ] *statement*  
+ [ @stmt=] *instrução*  
  É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. @stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** é válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -63,10 +64,10 @@ sp_executesql [ @stmt = ] statement
   
  Cada parâmetro incluído em @stmt deve ter uma entrada correspondente na lista de definições de parâmetro @params e na lista de valores de parâmetro.  
   
- [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
+ [ @params=] N'@*parameter_name * * data_type* [,... *n* ] '  
  É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos em @stmt. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado em @stmtmust ser definido em @params. Se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou lote em @stmt não contiverem parâmetros, @params não será necessário. O valor padrão para este parâmetro é NULL.  
   
- [ @param1= ] '*value1*'  
+ [ @param1=] '*value1*'  
  É um valor para o primeiro parâmetro definido na cadeia de caracteres de parâmetro. O valor pode ser uma constante Unicode ou uma variável Unicode. Deve haver um valor de parâmetro fornecido para cada parâmetro incluído em @stmt. Os valores não são necessários quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou lote em @stmt não tiver nenhum parâmetro.  
   
  [ OUT | OUTPUT ]  

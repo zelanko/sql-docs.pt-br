@@ -1,16 +1,16 @@
 ---
 title: sp_articleview (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 165f494482aaac169eef7137bd0b45c0fa8b55d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fbf7f9ae65894464935bf0a89d9566624321a714
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria a exibição que define o artigo publicado, quando uma tabela é filtrada verticalmente ou horizontalmente. Essa exibição é usada como a fonte filtrada de esquema e dados para as tabelas de destino. Somente artigos não assinados podem ser modificados por esse procedimento armazenado. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -84,37 +84,37 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** Especifica que as alterações no artigo faz com que uma assinatura existente seja reiniciada e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [  **@publisher** =] **'***publicador***'**  
+ [ **@publisher**=] **'***publicador***'**  
  Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *publicador* não deve ser usado durante a publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [  **@refreshsynctranprocs**  =] *refreshsynctranprocs*  
+ [ **@refreshsynctranprocs** =] *refreshsynctranprocs*  
  Especifica se os procedimentos armazenados usados para sincronizar replicações são recriados automaticamente. *refreshsynctranprocs* é **bit**, com um padrão de 1.  
   
  **1** significa que os procedimentos armazenados são recriados.  
   
  **0** significa que os procedimentos armazenados não são recriados.  
   
- [  **@internal** =] *interno*  
+ [ **@internal**=] *interno*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
- **sp_articleview** cria a exibição que define o artigo publicado e insere a ID dessa exibição no **sync_objid** coluna o [sysarticles &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) da tabela e insere o texto da cláusula de restrição de **filter_clause** coluna. Se todas as colunas são replicadas e não há nenhum **filter_clause**, o **sync_objid** no [sysarticles &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela está definida como a ID da tabela base e o uso de **sp_articleview** não é necessária.  
+## <a name="remarks"></a>Remarks  
+ **sp_articleview** cria a exibição que define o artigo publicado e insere a ID dessa exibição no **sync_objid** coluna o [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela e insere o texto da cláusula de restrição de **filter_clause** coluna. Se todas as colunas são replicadas e não há nenhum **filter_clause**, o **sync_objid** no [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela está definida como a ID do tabela base e o uso de **sp_articleview** não é necessária.  
   
- Para publicar uma tabela filtrada verticalmente (ou seja, para filtrar colunas) executado pela primeira vez **sp_addarticle** sem nenhum *sync_object* parâmetro, execute [sp_articlecolumn &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna a ser replicada (definindo o filtro vertical) e, em seguida, execute **sp_articleview** para criar o modo de exibição que define o artigo publicado.  
+ Para publicar uma tabela filtrada verticalmente (ou seja, para filtrar colunas) executado pela primeira vez **sp_addarticle** sem nenhum *sync_object* parâmetro, execute [sp_articlecolumn &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna a ser replicada (definindo o filtro vertical) e, em seguida, execute **sp_articleview** para criar o modo de exibição que define o artigo publicado.  
   
- Para publicar uma tabela horizontalmente filtrada (isto é, para filtrar linhas), execute [sp_addarticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *filtro* parâmetro. Executar [sp_articlefilter &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), fornecendo todos os parâmetros incluindo *filter_clause*. Em seguida, execute **sp_articleview**, fornecendo todos os parâmetros incluindo idênticas *filter_clause*.  
+ Para publicar uma tabela horizontalmente filtrada (isto é, para filtrar linhas), execute [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *filtro* parâmetro. Executar [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), fornecendo todos os parâmetros incluindo *filter_clause*. Em seguida, execute **sp_articleview**, fornecendo todos os parâmetros incluindo idênticas *filter_clause*.  
   
- Para publicar uma tabela filtrada verticalmente e horizontalmente, execute [sp_addarticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *sync_object* ou *filtro* parâmetros. Executar [sp_articlecolumn &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna a ser replicada e, em seguida, execute [sp_articlefilter &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) e **sp_articleview**.  
+ Para publicar uma tabela filtrada verticalmente e horizontalmente, execute [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *sync_object* ou *filtro* parâmetros. Executar [sp_articlecolumn &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna a ser replicada e, em seguida, execute [sp_articlefilter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) e **SP _ articleview**.  
   
- Se o artigo já tiver uma exibição que define o artigo publicado, **sp_articleview** descarta o modo de exibição existente e cria um novo automaticamente. Se a exibição foi criada manualmente (**tipo** na [sysarticles &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) é **5**), o modo de exibição existente não será removido.  
+ Se o artigo já tiver uma exibição que define o artigo publicado, **sp_articleview** descarta o modo de exibição existente e cria um novo automaticamente. Se a exibição foi criada manualmente (**tipo** na [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) é **5**), o modo de exibição existente não será removido.  
   
- Se você criar um procedimento armazenado de filtro personalizado e uma exibição que define o artigo publicado manualmente, não execute **sp_articleview**. Em vez disso, forneça esses como o *filtro* e *sync_object* parâmetros para [sp_addarticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), junto com as *tipo* valor.  
+ Se você criar um procedimento armazenado de filtro personalizado e uma exibição que define o artigo publicado manualmente, não execute **sp_articleview**. Em vez disso, forneça esses como o *filtro* e *sync_object* parâmetros para [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), junto com o apropriado*tipo* valor.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
@@ -125,7 +125,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="see-also"></a>Consulte também  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir e modificar um filtro de linha estático](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

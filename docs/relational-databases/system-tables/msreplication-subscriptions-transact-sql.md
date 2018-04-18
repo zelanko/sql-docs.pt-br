@@ -1,16 +1,16 @@
 ---
 title: MSreplication_subscriptions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_subscriptions
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3840528a0a566f250eae99c2764f64766c4e0891
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76f05678e1f8c892fe20499142b270b0c87cdb77
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +38,24 @@ ms.lasthandoff: 11/21/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do publicador.|  
+|**publisher**|**sysname**|O nome do publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
-|**publicação**|**sysname**|O nome da publicação.|  
+|**Publicação**|**sysname**|O nome da publicação.|  
 |**independent_agent**|**bit**|Indica se existe um Distribution Agent autônomo para essa publicação.|  
-|**subscription_type**|**int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anônimo.|  
+|**subscription_type**|**Int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anônimo.|  
 |**distribution_agent**|**sysname**|O nome do Distribution Agent.|  
 |**Hora**|**smalldatetime**|A hora da última atualização pelo Distribution Agent.|  
 |**Descrição**|**nvarchar(255)**|A descrição da assinatura.|  
-|**transaction_timestamp**|**varbinary (16)**|Interno-somente para uso.|  
+|**transaction_timestamp**|**varbinary(16)**|Interno-somente para uso.|  
 |**update_mode**|**tinyint**|O tipo de atualização.|  
-|**agent_id**|**binário (16)**|A ID do agente.|  
-|**subscription_guid**|**binário (16)**|O identificador global para a versão da assinatura na publicação.|  
-|**subid**|**binário (16)**|O identificador global de uma assinatura anônima.|  
+|**agent_id**|**binary(16)**|A ID do agente.|  
+|**subscription_guid**|**binary(16)**|O identificador global para a versão da assinatura na publicação.|  
+|**subid**|**binary(16)**|O identificador global de uma assinatura anônima.|  
 |**immediate_sync**|**bit**|Indica se arquivos de sincronização são criados ou recriados cada vez que o Snapshot Agent é executado.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

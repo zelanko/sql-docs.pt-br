@@ -1,16 +1,16 @@
 ---
 title: xp_logevent (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logevent
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - xp_logevent
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ac262c1d16baf15eb9f1eafd05960f8d1905ec9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 18f3cf3516eee810aca57c4be2b2521df15c9b45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Registra uma mensagem definida pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log e no Visualizador de eventos do Windows. xp_logevent pode ser usado para enviar um alerta sem enviar uma mensagem ao cliente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ERROR_NUMBER*  
+ *error_number*  
  É um número de erro definido pelo usuário maior que 50.000. O valor máximo é 2147483647 (2^31 - 1).  
   
  **'** *mensagem* **'**  
@@ -63,7 +63,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando você envia mensagens de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos, disparadores, lotes e assim por diante, usam a instrução RAISERROR, em vez de xp_logevent. xp_logevent não chama um manipulador de mensagens de um cliente ou definir@ERROR. Para gravar mensagens em Visualizador de Eventos do Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a instrução RAISERROR.  
   
 ## <a name="permissions"></a>Permissões  
@@ -87,6 +87,6 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Estendidos gerais procedimentos armazenados &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

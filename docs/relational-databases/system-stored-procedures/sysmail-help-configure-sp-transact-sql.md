@@ -1,16 +1,16 @@
 ---
 title: sysmail_help_configure_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f768cd5e1cbbbcfa3f5b74d7ae52d2e9f357e1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 49bfb41a364ab5c82b42026d23d0768f4297a9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe definições de configuração do Database Mail.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,26 +46,26 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@parameter_name** = ] **'***parameter_name***'**  
- O nome da definição de configuração a ser recuperado. Quando especificado, o valor da configuração é retornado no  **@parameter_value**  parâmetro de saída. Quando nenhum  **@parameter_name**  for especificado, esse procedimento armazenado retorna um conjunto de resultados contendo todas as definições de configuração do Database Mail na instância.  
+ [**@parameter_name** =] **'***parameter_name***'**  
+ O nome da definição de configuração a ser recuperado. Quando especificado, o valor da configuração é retornado no **@parameter_value** parâmetro de saída. Quando nenhum **@parameter_name** for especificado, esse procedimento armazenado retorna um conjunto de resultados contendo todas as definições de configuração do Database Mail na instância.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando nenhum  **@parameter_name**  for especificado, retorna um conjunto de resultados com as seguintes colunas.  
+ Quando nenhum **@parameter_name** for especificado, retorna um conjunto de resultados com as seguintes colunas.  
   
 ||||  
 |-|-|-|  
 |Nome da coluna|Tipo de dados|Description|  
 |**paramname**|**nvarchar(256)**|O nome do parâmetro de configuração.|  
 |**paramvalue**|**nvarchar(256)**|O valor do parâmetro de configuração.|  
-|**description**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
+|**Descrição**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
   
 ## <a name="remarks"></a>Remarks  
  O procedimento armazenado **sysmail_help_configure_sp** lista as definições de configuração do Database Mail atuais para a instância.  
   
- Quando um  **@parameter_name**  for especificado, mas nenhum parâmetro de saída é fornecido para  **@parameter_value** , esse procedimento armazenado não produz nenhuma saída.  
+ Quando um **@parameter_name** for especificado, mas nenhum parâmetro de saída é fornecido para **@parameter_value**, esse procedimento armazenado não produz nenhuma saída.  
   
  O procedimento armazenado **sysmail_help_configure_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser chamado com um nome de três partes se o banco de dados atual não é **msdb**.  
   
@@ -96,6 +96,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Armazenados do Database Mail procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_OAMethod (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dcf9235953ca1e907c4bae97562d5ea0a00049b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1a2ed3efb39a681e2f3cb4e935e7b7e6d8d41a75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Chama um método de um objeto OLE.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,18 +71,18 @@ sp_OAMethod objecttoken , methodname
   
 -   O método retornar uma matriz como um parâmetro de saída.  
   
- [  *@parametername*   **=**  ] *parâmetro*[ **saída** ]  
+ [  *@parametername* =**] *parâmetro*[ **saída** ]  
  É um parâmetro de método. Se especificado, *parâmetro* deve ser um valor do tipo de dados apropriado.  
   
  Para obter o valor de retorno de um parâmetro de saída, *parâmetro* deve ser uma variável local de tipo de dados apropriado, e **saída** deve ser especificado. Se um parâmetro constante for especificado ou se **saída** não for especificado, qualquer retornar o valor de um parâmetro de saída é ignorado.  
   
- Se especificado, *parametername* deve ser o nome do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parâmetro nomeado. Observe que  **@**  *parametername*não é um [!INCLUDE[tsql](../../includes/tsql-md.md)] variável local. O sinal de arroba (**@**) é removido, e *parametername*é passado para o objeto OLE como o nome do parâmetro. Todos os parâmetros nomeados deverão ser especificados depois que todos os parâmetros posicionais forem especificados.  
+ Se especificado, *parametername* deve ser o nome do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parâmetro nomeado. Observe que  **@** *parametername*não é um [!INCLUDE[tsql](../../includes/tsql-md.md)] variável local. O sinal de arroba (**@ * *) for removido, e *parametername*é passado para o objeto OLE como o nome do parâmetro. Todos os parâmetros nomeados deverão ser especificados depois que todos os parâmetros posicionais forem especificados.  
   
  *n*  
  É um espaço reservado que indica que vários parâmetros podem ser especificados.  
   
 > [!NOTE]  
->  *@parametername*pode ser um parâmetro nomeado porque ele faz parte do método especificado e é passado para o objeto. Os outros parâmetros deste procedimento armazenado são especificados por posição, não por nome.  
+>  *@parametername* pode ser um parâmetro nomeado porque ele faz parte do método especificado e é passado para o objeto. Os outros parâmetros deste procedimento armazenado são especificados por posição, não por nome.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
@@ -102,14 +102,14 @@ sp_OAMethod objecttoken , methodname
   
 ||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
-|**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você também pode usar **sp_OAMethod** para obter um valor de propriedade.  
   
 ## <a name="permissions"></a>Permissões  
@@ -145,7 +145,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Automação OLE armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE procedimentos armazenados de automação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script de exemplo de automação](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

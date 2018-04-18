@@ -1,16 +1,16 @@
 ---
 title: sp_addlinkedserver (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlinkedserver_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-caps.latest.revision: 
+caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35173890392c69d6ef6fe40c71b484ae9db3bee3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um servidor vinculado. Um servidor vinculado permite acesso a consultas distribuídas e heterogêneas em fontes de dados OLE DB. Depois que um servidor vinculado é criado usando **sp_addlinkedserver**distribuído consultas podem ser executadas nesse servidor. Se o servidor vinculado estiver definido como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poderão ser executados procedimentos armazenados remotos.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server=** ] **'***servidor***'**  
+ [  **@server=** ] **'***server***'**  
  É o nome do servidor vinculado a ser criado. *server* é **sysname**, sem padrão.  
   
  [  **@srvproduct=** ] **'***product_name***'**  
@@ -72,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Quando o servidor vinculado é criado em relação a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, a instância pode ser especificada usando a palavra-chave SERVER como SERVER =*servername*\\*instancename*para especificar uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* é o nome do computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução, e *instancename* é o nome da instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual o usuário será conectado.  
   
 > [!NOTE]  
->  Para acessar um banco de dados espelho, uma cadeia de conexão deve conter o nome do banco de dados. Esse nome é necessário para habilitar tentativas de failover pelo provedor de acesso de dados. O banco de dados pode ser especificado no  **@provstr**  ou  **@catalog**  parâmetro. Opcionalmente, a cadeia de conexão também pode fornecer um nome de parceiro de failover.  
+>  Para acessar um banco de dados espelho, uma cadeia de conexão deve conter o nome do banco de dados. Esse nome é necessário para habilitar tentativas de failover pelo provedor de acesso de dados. O banco de dados pode ser especificado no **@provstr** ou **@catalog** parâmetro. Opcionalmente, a cadeia de conexão também pode fornecer um nome de parceiro de failover.  
   
  [  **@catalog=** ] **'***catálogo***'**  
  É o catálogo a ser usado quando uma conexão for feita ao provedor OLE DB. *catálogo* é **sysname**, com um padrão NULL. *catálogo* é passado como a propriedade DBPROP_INIT_CATALOG para inicializar o provedor OLE DB. Quando o servidor vinculado for definido em relação a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o catálogo se referirá ao banco de dados padrão ao qual o servidor vinculado estará mapeado.  
@@ -81,16 +81,16 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum.  
+ Nenhuma.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir mostra as formas que um servidor vinculado pode ser definido para que as fontes de dados possam ser acessadas através do OLE DB. Um servidor vinculado pode ser definido em mais de uma forma para uma fonte de dados em particular; pode haver mais de uma linha para um tipo de fonte de dados. Esta tabela também mostra o **sp_addlinkedserver** valores de parâmetro a ser usado para configurar o servidor vinculado.  
   
 |Fonte de dados remota OLE DB.|Provedor OLE DB|product_name|provider_name|data_source|local|provider_string|catálogo|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (padrão)||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB native Client||**SQLNCLI**|Nome de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (para instância padrão)|||Nome do banco de dados (opcional)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB native Client||**SQLNCLI**|*servername*\\*instancename* (para instância específica)|||Nome do banco de dados (opcional)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (padrão)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB Native Client||**SQLNCLI**|Nome de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (para instância padrão)|||Nome do banco de dados (opcional)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provedor OLE DB Native Client||**SQLNCLI**|*servername*\\*instancename* (para instância específica)|||Nome do banco de dados (opcional)|  
 |Oracle, versão 8 e posterior|Provedor Oracle para OLE DB|Any (qualquer)|**OraOLEDB**|Alias para o banco de dados de Oracle||||  
 |Access/Jet|Microsoft OLE DB Provider for Jet|Any (qualquer)|**Microsoft.Jet.OLEDB.4.0**|Caminho completo de arquivo de banco de dados de Jet||||  
 |Fonte de dados ODBC|Microsoft OLE DB Provider para ODBC|Any (qualquer)|**MSDASQL**|DSN do sistema da fonte de dados ODBC||||  
@@ -145,7 +145,7 @@ EXEC sp_addlinkedserver
  O provedor Microsoft.Jet.OLEDB.4.0 se conecta a bancos de dados Microsoft Access que usam o formato 2002-2003. O exemplo abaixo cria um servidor vinculado chamado `SEATTLE Mktg`.  
   
 > [!NOTE]  
->  Este exemplo presume que [!INCLUDE[msCoName](../../includes/msconame-md.md)] acesso e o exemplo **Northwind** banco de dados estão instalados e que o **Northwind** banco de dados reside em c:\msoffice\access\samples..  
+>  Este exemplo presume que [!INCLUDE[msCoName](../../includes/msconame-md.md)] acesso e o exemplo **Northwind** banco de dados estão instalados e que o **Northwind** banco de dados reside em c:\msoffice\access\samples.  
   
 ```  
 EXEC sp_addlinkedserver   
@@ -159,7 +159,7 @@ GO
  O provedor Microsoft.ACE.OLEDB.12.0 se conecta a bancos de dados Microsoft Access que usam o formato 2007. O exemplo abaixo cria um servidor vinculado chamado `SEATTLE Mktg`.  
   
 > [!NOTE]  
->  Este exemplo presume que [!INCLUDE[msCoName](../../includes/msconame-md.md)] acesso e o exemplo **Northwind** banco de dados estão instalados e que o **Northwind** banco de dados reside em c:\msoffice\access\samples..  
+>  Este exemplo presume que [!INCLUDE[msCoName](../../includes/msconame-md.md)] acesso e o exemplo **Northwind** banco de dados estão instalados e que o **Northwind** banco de dados reside em c:\msoffice\access\samples.  
   
 ```  
 EXEC sp_addlinkedserver   
@@ -311,13 +311,13 @@ select * from myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas distribuídas armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ [Procedimentos armazenados de consultas de Distributed &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Tabelas do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

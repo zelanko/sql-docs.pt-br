@@ -1,16 +1,16 @@
 ---
 title: sp_helprotect (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c254488d42940c2f88b395082db1cd0079f79f3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/27/2017
   
  Não lista as permissões que sempre são atribuídas às funções de servidor fixas ou funções de banco de dados fixas. Não inclui os logons ou os usuários que recebem permissões com base em sua associação em uma função.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =** ] **'***object_statement***'**  
- É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões a serem relatadas. *object_statement* é **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato *proprietário***.** *objeto*.  
+ É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões a serem relatadas. *object_statement* é **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato *proprietário***.*** objeto*.  
   
  Se *object_statement* é uma instrução, ele pode ser uma instrução CREATE.  
   
@@ -79,11 +79,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Objeto**|**sysname**|Nome do objeto.|  
 |**Usuário autorizado**|**sysname**|Nome do principal para o qual foram concedidas permissões.|  
 |**Concessor**|**sysname**|Nome do principal que concedeu permissões ao usuário autorizado especificado.|  
-|**ProtectType**|**nvarchar (10)**|Nome do tipo de proteção:<br /><br /> GRANT REVOKE|  
-|**Ação**|**nvarchar (60)**|Nome da permissão. As instruções de permissão válidas dependem do tipo de objeto.|  
+|**ProtectType**|**nvarchar(10)**|Nome do tipo de proteção:<br /><br /> GRANT REVOKE|  
+|**Ação**|**nvarchar(60)**|Nome da permissão. As instruções de permissão válidas dependem do tipo de objeto.|  
 |**Coluna**|**sysname**|Tipo de permissão:<br /><br /> Todas = Permissão que cobre todas as colunas atuais do objeto.<br /><br /> Nova = Permissão que cobre qualquer coluna nova que possa ser alterada (com a instrução ALTER) no objeto no futuro.<br /><br /> Todas+Nova = combinação de Todas e Nova.<br /><br /> Retornará um ponto se o tipo de permissão não se aplicar às colunas.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todos os parâmetros no procedimento seguinte são opcionais. Se for executado sem parâmetros, o `sp_helprotect` mostra todas as permissões que tenham sido concedidas ou negadas no banco de dados atual.  
   
  Se alguns, mas não todos os parâmetros forem especificados, use parâmetros nomeados para identificar o parâmetro particular ou `NULL` como um espaço reservado.  Por exemplo, para relatar todas as permissões para o proprietário do banco de dados de concessor (`dbo`), execute o seguinte:  
@@ -143,7 +143,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Segurança armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

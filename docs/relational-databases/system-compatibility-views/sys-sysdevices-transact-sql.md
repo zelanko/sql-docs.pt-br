@@ -1,16 +1,16 @@
 ---
-title: sys.sysdevices (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys. sysdevices (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdevices
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sysdevices compatibility view
 - sysdevices system table
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df1376d568b0b95952f57251d1f2b32fe9680a52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 61a587fbb92e46686e7fe73cd8a69d5468240f20
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ ms.lasthandoff: 02/09/2018
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome lógico do arquivo de backup ou arquivo de banco de dados.|  
 |**size**|**Int**|Tamanho do arquivo em páginas de 2 KB (quilobytes).|  
-|**low**|**Int**|Mantido somente para compatibilidade com versões anteriores.|  
-|**high**|**Int**|Mantido somente para compatibilidade com versões anteriores.|  
+|**Baixa**|**Int**|Mantido somente para compatibilidade com versões anteriores.|  
+|**Alta**|**Int**|Mantido somente para compatibilidade com versões anteriores.|  
 |**status**|**smallint**|Bitmap que indica o tipo de dispositivo:<br /><br /> 1 = Disco padrão<br /><br /> 2 = Disco físico<br /><br /> 4 = Disco lógico<br /><br /> 8 = Ignorar cabeçalho<br /><br /> 16 = Arquivo de backup<br /><br /> 32 = Gravações seriais<br /><br /> 4096 = Somente leitura|  
 |**cntrltype**|**smallint**|Tipo de controlador:<br /><br /> 0 = Arquivo de banco de dados não CD ROM<br /><br /> 2 = Arquivo de backup de disco<br /><br /> 3 - 4 = Arquivo de backup de disquete<br /><br /> 5 = Arquivo de backup de fita<br /><br /> 6 = Arquivo de pipe nomeado|  
 |**phyname**|**nvarchar(260)**|Nome do arquivo físico.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Mapeando tabelas do sistema para exibições do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

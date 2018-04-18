@@ -1,15 +1,15 @@
 ---
 title: Propriedades do conjunto de linhas e os comportamentos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_BOOKMARKTYPE|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_BMK_NUMERIC<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client implementa apenas indicadores numéricos. Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicador do provedor OLE DB Native Client é inteiro não assinado de 32 bits, tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client oferece suporte à busca e rolagem em conjuntos de linhas não sequenciais com versões anteriores. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client cria um conjunto de linhas com suporte de cursor quando DBPROP_CANFETCHBACKWARDS ou DBPROP_CANSCROLLBACKWARDS é VARIANT_TRUE. Para obter mais informações, consulte [conjuntos de linhas e cursores do SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client retornará DB_E_ROWSNOTRELEASED se o consumidor tenta obter linhas de mais de um conjunto de linhas enquanto as alterações pendentes existe nas atualmente no conjunto de linhas. Este comportamento pode ser modificado.<br /><br /> A definição de DBPROP_CANHOLDROWS e DBPROP_IRowsetChange como VARIANT_TRUE implica um conjunto de linhas com indicadores. Se as duas propriedades forem VARIANT_TRUE, o **IRowsetLocate** interface está disponível no conjunto de linhas e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS serão ambos VARIANT_TRUE.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB provider conjuntos de linhas contêm indicadores têm suporte por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores.|  
+|DBPROP_CANHOLDROWS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client retornará DB_E_ROWSNOTRELEASED se o consumidor tenta obter linhas de mais de um conjunto de linhas enquanto as alterações pendentes existe nas atualmente no conjunto de linhas. Este comportamento pode ser modificado.<br /><br /> A definição de DBPROP_CANHOLDROWS e DBPROP_IRowsetChange como VARIANT_TRUE implica um conjunto de linhas com indicadores. Se as duas propriedades forem VARIANT_TRUE, o **IRowsetLocate** interface está disponível no conjunto de linhas e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS serão ambos VARIANT_TRUE.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider conjuntos de linhas contêm indicadores têm suporte por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores.|  
 |DBPROP_CHANGEINSERTEDROWS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: esta propriedade só poderá ser definida como VARIANT_TRUE se o conjunto de linhas estiver usando um cursor controlado por conjunto de chaves.|  
 |DBPROP_COLUMNRESTRICT|Leitura/gravação: somente leitura<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client define a propriedade como VARIANT_TRUE quando uma coluna em um conjunto de linhas não pode ser alterada pelo consumidor. Outras colunas no conjunto de linhas podem ser atualizáveis e as linhas em si podem ser excluídas.<br /><br /> Quando a propriedade for VARIANT_TRUE, o consumidor examina o *dwFlags* membro da estrutura DBCOLUMNINFO para determinar se o valor de uma coluna individual pode ser gravado ou não. Para colunas modificáveis, *dwFlags* exibe DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|Leitura/gravação: leitura/gravação<br /><br /> Padrão: 0<br /><br /> Descrição: por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client não expira no **ICommand:: execute** método.|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_MAYWRITECOLUMN|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_MEMORYUSAGE|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
-|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client oferece suporte a todas as fases de notificação.|  
+|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client oferece suporte a todas as fases de notificação.|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|Leitura/gravação: somente leitura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fases de notificação do provedor OLE DB Native Client são canceláveis antes de tentar executar a modificação do conjunto de linhas indicado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client não oferece suporte ao cancelamento de fase após a conclusão da tentativa.|  
 |DBPROP_ORDEREDBOOKMARKS|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: A configuração alterar propriedades de visibilidade faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider para usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores para dar suporte ao conjunto de linhas. Para obter mais informações, consulte [conjuntos de linhas e cursores do SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  

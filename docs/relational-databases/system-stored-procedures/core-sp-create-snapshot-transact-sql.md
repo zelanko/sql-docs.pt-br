@@ -1,16 +1,16 @@
 ---
-title: core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_create_snapshot (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1b0ff5c71ec0516b51040c157eb517fcd0402ca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Insere uma linha na exibição core.snapshots do data warehouse de gerenciamento. Esse procedimento é chamado sempre que um pacote de carregamento começa a carregar dados no data warehouse de gerenciamento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier** sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
@@ -63,10 +63,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  [ @machine_name=] '*nome_da_máquina*'  
  O nome do servidor no qual o conjunto de coleta reside. *nome_da_máquina* é **sysname**, sem nenhum valor padrão.  
   
- [ @named_instance= ] '*named_instance*'  
+ [ @named_instance=] '*instância_nomeada*'  
  O nome da instância do conjunto de coleta. *instância_nomeada* é **sysname**, sem nenhum valor padrão.  
   
- [ @log_id = ] *log_id*  
+ [ @log_id =] *log_id*  
  O identificador exclusivo que é mapeado para o log de eventos do conjunto de coleta que coletou os dados. *log_id* é **bigint** sem nenhum valor padrão. Para obter o valor de *log_id*, consulte a exibição syscollector_execution_log no banco de dados msdb.  
   
  [ @snapshot_id =] *snapshot_id*  

@@ -1,16 +1,16 @@
 ---
 title: sp_purge_jobhistory (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_jobhistory_TSQL
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f50228e089d71a6cf3a8d74225e1e26f42844fd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5ca210be5b062f7e09c3010597a37294f71379ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Remove os registros históricos de um trabalho.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +57,7 @@ sp_purge_jobhistory
 >  Membros do **sysadmin** fixo de função de servidor ou os membros do **SQLAgentOperatorRole** pode executar a função de banco de dados fixa **sp_purge_jobhistory** sem especificar um *job_name* ou *job_id*. Quando **sysadmin** os usuários não especificarem esses argumentos, o histórico do trabalho para todos os trabalhos locais e multisservidor será excluído no tempo especificado por *oldest_date*. Quando **SQLAgentOperatorRole** os usuários não especificarem esses argumentos, o histórico do trabalho para todos os trabalhos locais será excluído no tempo especificado por *oldest_date*.  
   
  [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho cujos registros serão excluídos. *job_id*é **uniqueidentifier**, com um padrão NULL. O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos. Consulte a observação na descrição do  **@job_name**  para obter informações sobre como **sysadmin** ou **SQLAgentOperatorRole** os usuários podem usar esse argumento.  
+ O número de identificação do trabalho cujos registros serão excluídos. *job_id*é **uniqueidentifier**, com um padrão NULL. O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos. Consulte a observação na descrição do **@job_name** para obter informações sobre como **sysadmin** ou **SQLAgentOperatorRole** os usuários podem usar esse argumento.  
   
  [ **@oldest_date** = ] *oldest_date*  
  O registro mais antigo a ser retido no histórico. *oldest_date* é **datetime**, com um padrão NULL. Quando *oldest_date* for especificado, **sp_purge_jobhistory** remove somente os registros mais antigos que o valor especificado.  
@@ -110,6 +111,6 @@ GO
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Permissões de objeto GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [Permissões de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

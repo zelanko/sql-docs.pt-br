@@ -1,16 +1,16 @@
 ---
 title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 21479f5ae60a12165bcda38702f540dd3746fa2f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza as informações de uma associação entre uma entidade e um perfil.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,13 +51,13 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  [ **@principal_id** = ] *principal_id*  
  A ID do usuário de banco de dados ou da função no **msdb** banco de dados para associação a ser alterada. *principal_id* é **int**, com um padrão NULL. O *principal_id* ou *principal_name* deve ser especificado.  
   
- [ **@principal_name** = ] **'***principal_name***'**  
+ [ **@principal_name** =] **'***principal_name***'**  
  O nome do usuário de banco de dados ou da função no **msdb** banco de dados para a associação atualizar. *principal_name* é **sysname**, com um padrão NULL. O *principal_id* ou *principal_name* pode ser especificado.  
   
- [ **@profile_id** = ] *profile_id*  
+ [ **@profile_id** =] *profile_id*  
  A ID do perfil da associação a ser alterada. *profile_id* é **int**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **'***profile_name***'**  
  O nome do perfil da associação a ser alterada. *profile_name* é **sysname**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
   
  [ **@is_default** = ] **'***is_default***'**  
@@ -74,7 +74,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Quando o nome da entidade para a associação é **pública** ou a id da entidade para a associação é **0**, esse procedimento armazenado alterará o perfil público. Pode haver somente um perfil público padrão.  
   
- Quando  **@is_default**  é '**1**' e a entidade de segurança está associada a mais de um perfil, o perfil especificado torna-se o perfil padrão para a entidade de segurança. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
+ Quando **@is_default** é '**1**' e a entidade de segurança está associada a mais de um perfil, o perfil especificado torna-se o perfil padrão para a entidade de segurança. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
   
  O procedimento armazenado **sysmail_update_principalprofile_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
   
@@ -107,6 +107,6 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Objetos de configuração do Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Armazenados do Database Mail procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -3,7 +3,7 @@ title: Ajuste automático | Microsoft Docs
 description: Saiba mais sobre o ajuste automático no SQL Server e banco de dados do SQL Azure
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -75,6 +76,8 @@ Além disso, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] permite automatizar 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta automaticamente qualquer potencial regressão de escolha do plano incluindo o plano deve ser usado em vez do plano incorreto.
 Quando o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] aplica-se a última conhecido bom plano, ele automaticamente monitora o desempenho do plano forçado. Se o plano forçado não é melhor do que o plano retornado, o novo plano será unforced e o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compilará um novo plano. Se [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifica se o plano forçado é melhor do que um retornadas, o plano forçado será mantido até uma recompilação (por exemplo, na próxima alteração de esquema ou de estatísticas) se ele é melhor do que o plano retornado.
 
+Observação: Qualquer automática de planos forçada não não persit em uma reinicialização da instância do SQL Server.
+
 ### <a name="enabling-automatic-plan-choice-correction"></a>Habilitando a correção de escolha do plano automático
 
 Habilite o ajuste automático por banco de dados e especifique que o último bom plano deve ser forçado sempre que uma regressão da alteração do plano for detectada. O ajuste automático é habilitado com o seguinte comando:
@@ -94,7 +97,7 @@ Planos forçados manualmente não devem ser forçados para sempre, porque o [!IN
 
 Em [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], você pode encontrar regressões de escolha do plano usando exibições de sistema do repositório de consultas. Em [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra as regressões de escolha do plano potencial e as ações recomendadas que devem ser aplicadas no [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) exibição. O modo de exibição mostra informações sobre o problema, a importância do problema e detalhes de como a consulta identificada, a ID do plano retornada, a ID do plano que foi usada como linha de base para comparação e o [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instrução que pode ser executada para corrigir o problema.
 
-| tipo | descrição | datetime | score | detalhes | … |
+| Tipo | descrição | datetime | score | detalhes | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Tempo de CPU alterado de 4 ms para ms 14 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tempo de CPU alterado de 37 ms para 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -142,6 +145,8 @@ FROM sys.dm_db_tuning_recommendations
 `estimated_gain` representa o número estimado de segundos que seria economizado se o plano recomendado seria executado em vez do plano atual. O plano recomendado deve ser forçado em vez do plano atual se o ganho for maior que 10 segundos. Se não houver mais erros (por exemplo, tempos limite ou anuladas execuções) no plano atual que em recomendada planejar, a coluna `error_prone` será definido como o valor `YES`. Plano sujeitos a erros é outra razão por que o plano recomendado deve ser forçado, em vez do ano atual.
 
 Embora [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornece todas as informações necessárias para identificar as regressões de escolha do plano; contínua monitorar e corrigir problemas de desempenho podem ser um processo entediante. Ajuste automático torna esse processo muito mais fácil.
+
+Observação: Os dados nessa DMV não persistem após uma reinicialização da instância do SQL Server.
 
 ## <a name="automatic-index-management"></a>Gerenciamento de índice automáticas
 

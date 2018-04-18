@@ -1,17 +1,17 @@
 ---
 title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs
-description: "Retorna o status atual do recurso semáforos usado para limitar a otimização de consultas simultâneas"
-ms.custom: 
+description: Retorna o status atual do recurso semáforos usado para limitar a otimização de consultas simultâneas
+ms.custom: ''
 ms.date: 04/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_optimizer_memory_gateways_TSQL
@@ -26,11 +26,12 @@ author: josack
 ms.author: josack
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 98e83cab69ca5346f1af7d8de41f3e2e666a5e16
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,6 +76,6 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
- [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Como usar o comando DBCC MEMORYSTATUS para monitorar o uso de memória no SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
 [compilação de consulta grande espera RESOURCE_SEMAPHORE_QUERY_COMPILE no SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

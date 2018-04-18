@@ -1,16 +1,16 @@
 ---
 title: sys.database_mirroring_endpoints (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_endpoints_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9bc0c2229fe72265957d39991f2b67a1b395f0b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b52d5a18294171a5da03c10d78307a3c478b89bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.lasthandoff: 02/03/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**\<herdado colunas >**|—|Herda colunas de **Endpoints** (para obter mais informações, consulte [Endpoints &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**role**|**tinyint**|Função de reflexão; uma dentre:<br /><br /> **0** = nenhum<br /><br /> **1** = partner<br /><br /> **2** = testemunha<br /><br /> **3** = All<br /><br /> Observação: Esse valor é relevante apenas para o espelhamento de banco de dados.|  
+|**\<herdado colunas >**|—|Herda colunas de **Endpoints** (para obter mais informações, consulte [Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**role**|**tinyint**|Função de reflexão; uma dentre:<br /><br /> **0** = nenhum<br /><br /> **1** = partner<br /><br /> **2** = testemunha<br /><br /> **3** = all<br /><br /> Observação: Esse valor é relevante apenas para o espelhamento de banco de dados.|  
 |**role_desc**|**nvarchar(60)**|Descrição da função de reflexão; uma dentre:<br /><br /> **NONE**<br /><br /> **PARCEIRO**<br /><br /> **TESTEMUNHA**<br /><br /> **ALL**<br /><br /> Observação: Esse valor é relevante apenas para o espelhamento de banco de dados.|  
 |**is_encryption_enabled**|**bit**|**1** significa que a criptografia está habilitada.<br /><br /> **0** significa que a criptografia está desabilitada.|  
-|**connection_auth**|**tinyint**|O tipo de autenticação de conexão exigido para conexões com este ponto de extremidade; um dentre:<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** -NEGOCIAR<br /><br /> **4** -CERTIFICADO<br /><br /> **5** - NTLM, CERTIFICATE<br /><br /> **6** - KERBEROS, CERTIFICATE<br /><br /> **7** -NEGOTIATE, DE CERTIFICADO<br /><br /> **8** - CERTIFICATE, NTLM<br /><br /> **9** - CERTIFICATE, KERBEROS<br /><br /> **10** - CERTIFICATE, NEGOTIATE|  
+|**connection_auth**|**tinyint**|O tipo de autenticação de conexão exigido para conexões com este ponto de extremidade; um dentre:<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOCIAR<br /><br /> **4** -CERTIFICADO<br /><br /> **5** -NTLM, CERTIFICADOS<br /><br /> **6** -KERBEROS, O CERTIFICADO<br /><br /> **7** -NEGOTIATE, DE CERTIFICADO<br /><br /> **8** -CERTIFICADO, NTLM<br /><br /> **9** -CERTIFICADO, O KERBEROS<br /><br /> **10** -CERTIFICADO, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Descrição do tipo de autenticação de conexão exigido para conexões com este ponto de extremidade; uma dentre:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**Int**|ID de certificado usado para autenticação, se houver.<br /><br /> 0 = Está sendo usada a Autenticação do Windows.|  
 |**encryption_algorithm**|**tinyint**|Algoritmo de criptografia; um dentre:<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – NONE, RC4<br /><br /> **4** – NENHUM, AES<br /><br /> **5** – RC4, AES<br /><br /> **6** – AES, RC4<br /><br /> **7** – NONE, RC4, AES<br /><br /> **8** – NENHUM, AES RC4|  
@@ -65,11 +65,11 @@ ms.lasthandoff: 02/03/2018
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Especifique a URL de ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
+ [Especifique a URL de ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;do SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [Espelhamento de ponto de extremidade &#40; banco de dados SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [Espelhamento de ponto de extremidade & #40; banco de dados SQL Server & #41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Consultando as perguntas frequentes do catálogo do sistema do SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

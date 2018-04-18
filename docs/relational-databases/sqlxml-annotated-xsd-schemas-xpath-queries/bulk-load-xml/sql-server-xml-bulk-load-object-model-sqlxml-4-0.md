@@ -1,16 +1,16 @@
 ---
 title: SQL Server XML Bulk Load Object Model (SQLXML 4.0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], object model
@@ -34,27 +34,28 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b954b9690d8e6f67995a45336296e2ff1f404f1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b3b3798be063dd586d74cf4f44d72a48c5f39ccf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-O Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste de modelo de objeto de carregamento em massa de XML do objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
+  O Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste de modelo de objeto de carregamento em massa de XML do objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
   
 ## <a name="methods"></a>Métodos  
  Execute (executar)  
  Carrega em massa os dados usando o arquivo de esquema e o arquivo de dados (ou fluxo) que são fornecidos como parâmetros.  
   
 ## <a name="properties"></a>Propriedades  
- BulkLoad  
+ Carregamento em massa  
  Especifica se um Carregamento em Massa deveria ser executado. Esta propriedade é útil se você deseja gerar somente os esquemas (consulte as propriedades SchemaGen, SGDropTables e SGUseID que seguem) e não executar um carregamento em massa. Essa é uma propriedade booliana. Quando a propriedade é definida como TRUE, o Carregamento em Massa de XML é executado. Quando é definida como FALSE, o Carregamento em Massa de XML não é executado.  
   
  O valor padrão é TRUE.  

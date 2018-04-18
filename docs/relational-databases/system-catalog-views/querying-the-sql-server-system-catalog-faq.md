@@ -1,16 +1,16 @@
 ---
-title: "Consultando o catálogo de sistema do SQL Server perguntas Frequentes | Microsoft Docs"
-ms.custom: 
+title: Consultando o catálogo de sistema do SQL Server perguntas Frequentes | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f63ac73300f4206acf65bf85b05e6802dada33ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28cf58ccd693f0c958901487a8387dd9d1c1073b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Consultando as perguntas frequentes do catálogo do sistema do SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Este tópico contém uma lista de perguntas frequentes. As respostas a essas perguntas são consultas baseadas em exibições do catálogo.  
   
-##  <a name="_TOP"></a>Perguntas frequentes  
+##  <a name="_TOP"></a> Perguntas frequentes  
  As seções a seguir listam as perguntas frequentes por categoria.  
   
 ### <a name="data-types"></a>Tipos de dados  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="answers"></a>Respostas  
   
-###  <a name="_FAQ1"></a>Como localizar todas as tabelas que não têm um índice clusterizado em um banco de dados especificado?  
+###  <a name="_FAQ1"></a> Como localizar todas as tabelas que não têm um índice clusterizado em um banco de dados especificado?  
  Antes de executar as consultas a seguir, substitua `<database_name>` pelo nome de um banco de dados válido.  
   
 ```  
@@ -148,7 +148,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a>Como localizar todos os proprietários de entidades contidos em um esquema especificado?  
+###  <a name="_FAQ2"></a> Como localizar todos os proprietários de entidades contidos em um esquema especificado?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name>` por nomes válidos.  
   
 ```  
@@ -176,7 +176,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ3"></a>Como localizar todas as tabelas que não têm uma chave primária?  
+###  <a name="_FAQ3"></a> Como localizar todas as tabelas que não têm uma chave primária?  
  Antes de executar as consultas a seguir, substitua `<database_name>` pelo nome de um banco de dados válido.  
   
 ```  
@@ -211,7 +211,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a>Como localizar todas as tabelas que não têm um índice?  
+###  <a name="_FAQ4"></a> Como localizar todas as tabelas que não têm um índice?  
  Antes de executar a consulta a seguir, substitua `<database_name>` pelo nome de um banco de dados válido.  
   
 ```  
@@ -228,7 +228,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ5"></a>Como localizar todas as tabelas que têm uma coluna de identidade?  
+###  <a name="_FAQ5"></a> Como localizar todas as tabelas que têm uma coluna de identidade?  
  Antes de executar a consulta a seguir, substitua `<database_name>` pelo nome de um banco de dados válido.  
   
 ```  
@@ -263,7 +263,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a>Como localizar os tipos de dados das colunas de uma tabela especificada?  
+###  <a name="_FAQ7"></a> Como localizar os tipos de dados das colunas de uma tabela especificada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.table_name>` por nomes válidos.  
   
 ```  
@@ -288,7 +288,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ8"></a>Como localizar as dependências em uma função especificada?  
+###  <a name="_FAQ8"></a> Como localizar as dependências em uma função especificada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.function_name>` por nomes válidos.  
   
 ```  
@@ -306,7 +306,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a>Como localizar todos os procedimentos armazenados em um banco de dados?  
+###  <a name="_FAQ9"></a> Como localizar todos os procedimentos armazenados em um banco de dados?  
  Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido.  
   
 ```  
@@ -325,7 +325,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ10"></a>Como localizar os parâmetros para uma função ou procedimento armazenado especificado?  
+###  <a name="_FAQ10"></a> Como localizar os parâmetros para uma função ou procedimento armazenado especificado?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.object_name>` por nomes válidos.  
   
 ```  
@@ -351,7 +351,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a>Como localizar todas as funções definidas pelo usuário em um banco de dados?  
+###  <a name="_FAQ12"></a> Como localizar todas as funções definidas pelo usuário em um banco de dados?  
  Antes de executar a consulta a seguir, substitua `<database_name>` pelo nome de um banco de dados válido.  
   
 ```  
@@ -370,7 +370,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ13"></a>Como localizar todas as exibições em um banco de dados?  
+###  <a name="_FAQ13"></a> Como localizar todas as exibições em um banco de dados?  
  Antes de executar a consulta a seguir, substitua `<database_name>` pelo nome de um banco de dados válido.  
   
 ```  
@@ -388,7 +388,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a>Como localizar todas as entidades que foram modificadas nos últimos N dias?  
+###  <a name="_FAQ6"></a> Como localizar todas as entidades que foram modificadas nos últimos N dias?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<n_days>` por valores válidos.  
   
 ```  
@@ -408,7 +408,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ14"></a>Como localizar os tipos de dados LOB de uma tabela especificada?  
+###  <a name="_FAQ14"></a> Como localizar os tipos de dados LOB de uma tabela especificada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.table_name>` por nomes válidos.  
   
 ```  
@@ -436,7 +436,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ15"></a>Como exibir a definição de um módulo?  
+###  <a name="_FAQ15"></a> Como exibir a definição de um módulo?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.object_name>` por nomes válidos.  
   
 ```  
@@ -461,7 +461,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ19"></a>Como exibir a definição de um gatilho de nível de servidor?  
+###  <a name="_FAQ19"></a> Como exibir a definição de um gatilho de nível de servidor?  
   
 ```  
 SELECT definition  
@@ -472,7 +472,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a>Como localizar as colunas de uma chave primária para uma tabela especificada?  
+###  <a name="_FAQ16"></a> Como localizar as colunas de uma chave primária para uma tabela especificada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.table_name>` por nomes válidos.  
   
 ```  
@@ -515,7 +515,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a>Como localizar as colunas de uma chave estrangeira para uma tabela especificada?  
+###  <a name="_FAQ17"></a> Como localizar as colunas de uma chave estrangeira para uma tabela especificada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.table_name>` por nomes válidos.  
   
 ```  
@@ -539,7 +539,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a>Como localizar as permissões concedidas ou negadas a uma entidade especificada?  
+###  <a name="_FAQ18"></a> Como localizar as permissões concedidas ou negadas a uma entidade especificada?  
  O exemplo a seguir cria uma função para retornar o nome da entidade na qual as permissões são verificadas. A função é chamada nas consultas a seguir. A função deve ser criada em cada banco de dados no qual você quer verificar permissões.  
   
 ```  
@@ -622,7 +622,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a>Como determinar se uma coluna é usada em uma expressão de coluna computada?  
+###  <a name="_FAQ20"></a> Como determinar se uma coluna é usada em uma expressão de coluna computada?  
  Antes de executar a consulta a seguir, substitua `<database_name>`, `<schema_name.table_name>` e `<column_name`> por nomes válidos.  
   
 ```  
@@ -644,7 +644,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a>Como localizar todas as colunas que são usadas em uma expressão de coluna computada?  
+###  <a name="_FAQ21"></a> Como localizar todas as colunas que são usadas em uma expressão de coluna computada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido.  
   
 ```  
@@ -666,7 +666,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a>Como localizar as colunas que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
+###  <a name="_FAQ22"></a> Como localizar as colunas que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
  Antes de executar a consulta a seguir, substitua `<database_name>` com um nome válido e `<schema_name.data_type_name>` com um válido e qualificado por esquema CLR definido pelo usuário, ou nome de tipo qualificado por esquema ou alias. A consulta a seguir requer a participação no **db_owner** função ou as permissões para ver todas as colunas dependentes e a coluna computada metadados no banco de dados.  
   
 ```  
@@ -704,7 +704,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a>Como localizar as colunas computadas que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
+###  <a name="_FAQ23"></a> Como localizar as colunas computadas que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
  Antes de você executar a consulta a seguir, substitua `<database_name>` por um nome válido e `<schema_name.data_type_name>` por um tipo de dados CLR definido pelo usuário válido e qualificado por esquema ou nome de tipo de alias.  
   
 ```  
@@ -721,7 +721,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a>Como localizar os parâmetros que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
+###  <a name="_FAQ24"></a> Como localizar os parâmetros que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
  Antes de você executar a consulta a seguir, substitua `<database_name>` por um nome válido e `<schema_name.data_type_name>` por um tipo de dados CLR definido pelo usuário válido e qualificado por esquema ou nome de tipo de alias. A consulta a seguir requer a participação no **db_owner** função ou as permissões para ver todas as colunas dependentes e a coluna computada metadados no banco de dados.  
   
 ```  
@@ -763,7 +763,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a>Como localizar as restrições CHECK que dependem de um tipo definido pelo usuário CLR especificado?  
+###  <a name="_FAQ25"></a> Como localizar as restrições CHECK que dependem de um tipo definido pelo usuário CLR especificado?  
  Antes de executar a consulta a seguir, substitua `<database_name>` com um nome válido e `<schema_name.data_type_name>` com um nome válido e qualificado por esquema de tipo definido pelo usuário CLR.  
   
 ```  
@@ -783,7 +783,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a>Como localizar as exibições, funções Transact-SQL e procedimentos armazenados do Transact-SQL que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
+###  <a name="_FAQ26"></a> Como localizar as exibições, funções Transact-SQL e procedimentos armazenados do Transact-SQL que dependem de um tipo definido pelo usuário CLR especificado ou o tipo de alias?  
  Antes de você executar a consulta a seguir, substitua `<database_name>` por um nome válido e `<schema_name.data_type_name>` por um tipo de dados CLR definido pelo usuário válido e qualificado por esquema ou nome de tipo de alias.  
   
  Os parâmetros definidos em uma função ou procedimento são implicitamente associados ao esquema. Portanto, os parâmetros que dependem de um tipo CLR definido pelo usuário ou tipo de alias podem ser exibidos usando o [sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) exibição do catálogo. Os procedimentos e os gatilhos não são associados ao esquema. Isso significa que as dependências entre qualquer expressão definida no corpo do procedimento ou gatilho e um tipo de dados CLR definido pelo usuário ou tipo de alias não é mantido. Exibições associadas ao esquema e funções definidas pelo usuário que têm expressões que dependem de um tipo CLR definido pelo usuário associadas a esquema ou tipo de alias são mantidas no **sql_dependencies** exibição do catálogo. Não são mantidas dependências entre tipos, funções CLR e procedimentos CLR.  
@@ -811,7 +811,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ27"></a>Como localizar todas as restrições de uma tabela especificada?  
+###  <a name="_FAQ27"></a> Como localizar todas as restrições de uma tabela especificada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.table_name>` por nomes válidos.  
   
 ```  
@@ -835,7 +835,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ28"></a>Como localizar todos os índices de uma tabela especificada?  
+###  <a name="_FAQ28"></a> Como localizar todos os índices de uma tabela especificada?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.table_name>` por nomes válidos.  
   
 ```  
@@ -864,7 +864,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a>Como localizar todos os objetos que têm um nome de coluna especificado?  
+###  <a name="_FAQ30"></a> Como localizar todos os objetos que têm um nome de coluna especificado?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<column_name>` por nomes válidos.  
   
 ```  
@@ -894,7 +894,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ31"></a>Como localizar todas as tabelas definidas pelo usuário em um banco de dados especificado?  
+###  <a name="_FAQ31"></a> Como localizar todas as tabelas definidas pelo usuário em um banco de dados especificado?  
  Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido.  
   
 ```  
@@ -908,7 +908,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a>Como localizar todas as tabelas e índices particionados?  
+###  <a name="_FAQ32"></a> Como localizar todas as tabelas e índices particionados?  
  Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido.  
   
 ```  
@@ -930,7 +930,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ33"></a>Como localizar todas as estatísticas em um objeto especificado?  
+###  <a name="_FAQ33"></a> Como localizar todas as estatísticas em um objeto especificado?  
  Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido e `<schema_name.object_name>` por uma tabela válida, exibição indexada ou nome de função com valor de tabela.  
   
 ```  
@@ -949,7 +949,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a>Como localizar todas as estatísticas e as colunas em um objeto especificado?  
+###  <a name="_FAQ34"></a> Como localizar todas as estatísticas e as colunas em um objeto especificado?  
  Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido e `<schema_name.object_name>` por uma tabela válida, exibição indexada ou nome de função com valor de tabela.  
   
 ```  
@@ -970,7 +970,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a>Como localizar a definição de uma exibição?  
+###  <a name="_FAQ35"></a> Como localizar a definição de uma exibição?  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.object_name>` por nomes válidos.  
   
 ```  
@@ -996,6 +996,6 @@ GO
  [TOP](#_TOP)  
   
 ## <a name="see-also"></a>Consulte também  
- [Mapeando tabelas do sistema para exibições do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

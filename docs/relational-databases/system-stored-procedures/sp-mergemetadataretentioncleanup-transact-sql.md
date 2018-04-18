@@ -1,16 +1,16 @@
 ---
 title: sp_mergemetadataretentioncleanup (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5ddc3ccb31599685dc9b41e383f29422b8b74e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 32a8e2654428569f189efd111839fbde7c6258f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Executa uma limpeza manual de metadados de [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_ mapeamentos de](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md), e [MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md) tabelas do sistema. Esse procedimento armazenado é executado em cada Publicador e Assinante na topologia.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,10 +64,10 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Se houver várias publicações em um banco de dados, e qualquer uma dessas publicações usar um período de retenção de publicação infinito, executando **sp_mergemetadataretentioncleanup** não limpará o controle de alterações a replicação de mesclagem metadados para o banco de dados. Por esse motivo, use a retenção de publicação infinita com precaução. Para determinar se uma publicação tem um período de retenção infinito, execute [sp_helpmergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) no publicador e observe qualquer publicação no resultado definido com um valor de **0** para **retenção**.  
+>  Se houver várias publicações em um banco de dados, e qualquer uma dessas publicações usar um período de retenção de publicação infinito, executando **sp_mergemetadataretentioncleanup** não limpará o controle de alterações a replicação de mesclagem metadados para o banco de dados. Por esse motivo, use a retenção de publicação infinita com precaução. Para determinar se uma publicação tem um período de retenção infinito, execute [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) no publicador e observe qualquer publicação no resultado definido com um valor de **0** para **retenção**.  
   
 ## <a name="permissions"></a>Permissões  
  Somente membros do **db_owner** fixo de função de banco de dados ou os usuários na lista de acesso da publicação de um banco de dados publicado pode executar **sp_mergemetadataretentioncleanup**.  

@@ -2,7 +2,7 @@
 title: Função SQLDescribeCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>Função SQLDescribeCol
 **Conformidade**  
@@ -123,7 +123,7 @@ SQLRETURN SQLDescribeCol(
 |IM017|Sondagem está desabilitada no modo de notificação assíncrona|Sempre que o modelo de notificação é usado, a sondagem está desabilitada.|  
 |IM018|**SQLCompleteAsync** não foi chamado para concluir a operação assíncrona anterior neste identificador.|Se a chamada de função anterior na alça retornará SQL_STILL_EXECUTING e se o modo de notificação está habilitado, **SQLCompleteAsync** deve ser chamado na alça para fazer o pós-processamento e concluir a operação.|  
   
- **SQLDescribeCol** pode retornar qualquer SQLSTATE que pode ser retornado por **SQLPrepare** ou **SQLExecute** quando chamado depois **SQLPrepare** e antes de  **SQLExecute**, dependendo de quando a fonte de dados avalia a instrução SQL associada com o identificador de instrução.  
+ **SQLDescribeCol** pode retornar qualquer SQLSTATE que pode ser retornado por **SQLPrepare** ou **SQLExecute** quando chamado depois **SQLPrepare** e antes de **SQLExecute**, dependendo de quando a fonte de dados avalia a instrução SQL associada com o identificador de instrução.  
   
  Por motivos de desempenho, um aplicativo não deve chamar **SQLDescribeCol** antes de executar uma instrução.  
   
@@ -146,6 +146,6 @@ SQLRETURN SQLDescribeCol(
 |Colunas do conjunto de retorno do número de resultados|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Preparar uma instrução para execução|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,16 +1,16 @@
 ---
 title: sp_server_diagnostics (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a3bd7cf97a37e2e01cb1d593ee1370c3d5430162
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Captura dados de diagnóstico e informações de integridade sobre o [!INCLUDE[s
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@repeat_interval**  =] **'***repeat_interval_in_seconds***'**  
+ [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
  Indica o intervalo de tempo no qual o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
   
  *repeat_interval_in_seconds* é **int** com o padrão de 0. Os valores de parâmetros válidos são 0 ou qualquer valor igual ou superior a 5. O procedimento armazenado deve ser executado por pelo menos 5 segundos para retornar dados completos. O valor mínimo de execução do procedimento armazenado no modo de repetição é de 5 segundos.  
@@ -64,12 +64,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** retorna as informações a seguir  
   
-|coluna|Data type|Description|  
+|Coluna|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica o carimbo de data/hora de criação de linha. Cada linha em um único conjunto de linhas tem o mesmo carimbo de data/hora.|  
 |**component_type**|**sysname**|Indica se a linha contém informações para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de nível de componente ou para um grupo de disponibilidade AlwaysOn:<br /><br /> instância<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> recurso<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
-|**state**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**Int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: desconhecido<br /><br /> 1: limpa<br /><br /> 2: aviso<br /><br /> 3: erro|  
 |**data**|**varchar (max)**|Especifica dados que são específicos do componente.|  
   
@@ -248,7 +248,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Política de failover para instâncias de cluster de failover](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   
