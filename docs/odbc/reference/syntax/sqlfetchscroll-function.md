@@ -2,7 +2,7 @@
 title: Função SQLFetchScroll | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-function"></a>Função SQLFetchScroll
 **Conformidade**  
@@ -200,8 +200,8 @@ SQLRETURN SQLFetchScroll(
 |*(Iniciar antes e FetchOffset > 0) OU (após o término e FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart e FetchOffset < = 0*|*Antes de iniciar*|  
 |*CurrRowsetStart = 1 FetchOffset AND < 0*|*Antes de iniciar*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Antes de iniciar*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Antes de iniciar*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Após o término*|  
 |*Após o término e FetchOffset > = 0*|*Após o término*|  
@@ -217,9 +217,9 @@ SQLRETURN SQLFetchScroll(
   
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 e &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow e &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Antes de iniciar*|  
-|*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow e &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Antes de iniciar*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Antes de iniciar*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Após o término*|  
@@ -235,7 +235,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
-|*Qualquer*|*1*|  
+|*qualquer*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  As seguintes regras se aplicam.  
@@ -338,7 +338,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll e 2. x Drivers de ODBC  
  Quando um aplicativo chama **SQLFetchScroll** em um driver do ODBC 2. x, o Gerenciador de Driver mapeia essa chamada para **SQLExtendedFetch**. Ele passa os valores a seguir para os argumentos de **SQLExtendedFetch**.  
   
-|Argumento SQLExtendedFetch|Valor|  
+|Argumento SQLExtendedFetch|Value|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle em **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation em **SQLFetchScroll**.|  
@@ -370,6 +370,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Posicionando o cursor, atualizar dados no conjunto de linhas, ou atualizar ou excluir dados no conjunto de resultados|[Função SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

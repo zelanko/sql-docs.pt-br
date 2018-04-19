@@ -1,15 +1,16 @@
 ---
-title: "Mapeamento preterido funções | Microsoft Docs"
-ms.custom: 
+title: Mapeamento preterido funções | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa5f1fb5c50911718adf3aa509dd99fb6e30673c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-deprecated-functions"></a>Mapeamento de funções de preteridas
 Esta seção descreve como preteridas funções são mapeados por ODBC 3*. x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC 3*. x* drivers que são usados com o ODBC 2. *x* aplicativos. O Gerenciador de Driver executa esse mapeamento, independentemente da versão do aplicativo. Como cada ODBC 2. *x* funções na lista a seguir é mapeado para o ODBC 3 correspondente*. x* função quando chamado em um ODBC 3*. x* driver, o ODBC 3*. x*driver não precisa implementar o ODBC 2. *x* funções.  

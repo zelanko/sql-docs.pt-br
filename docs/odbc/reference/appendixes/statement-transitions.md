@@ -1,31 +1,32 @@
 ---
-title: "Instrução transições | Microsoft Docs"
-ms.custom: 
+title: Instrução transições | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
 - statement transitions [ODBC]
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50a20cb922b3f608a9d16cd24d5c288b096e01ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-transitions"></a>Transições de instrução
 Instruções de ODBC tem os seguintes estados.  
@@ -44,7 +45,7 @@ Instruções de ODBC tem os seguintes estados.
 |S9|Função precisa de dados. **SQLPutData** não foi chamado.|  
 |S10|Função precisa de dados. **SQLPutData** foi chamado.|  
 |S11|Ainda em execução. Uma instrução fica nesse estado depois que uma função que é executada de forma assíncrona retornará SQL_STILL_EXECUTING. Uma instrução é temporariamente nesse estado enquanto qualquer função que aceite que um identificador de instrução está em execução. Residência temporária em estado S11 não é mostrada em nenhuma tabela de estado, exceto a tabela de estado **SQLCancel**. Enquanto uma instrução temporariamente está em estado S11, a função pode ser cancelada chamando **SQLCancel** de outro thread.|  
-|/S12|Execução assíncrona cancelada. /S12, um aplicativo deve chamar a função cancelada até que ela retorna um valor diferente de SQL_STILL_EXECUTING. A função foi cancelada com êxito apenas se a função retornará SQL_ERROR e SQLSTATE HY008 (operação cancelada). Se ele retornar qualquer outro valor, como SQL_SUCCESS, falha na operação de cancelamento e a função executada normalmente.|  
+|S12|Execução assíncrona cancelada. /S12, um aplicativo deve chamar a função cancelada até que ela retorna um valor diferente de SQL_STILL_EXECUTING. A função foi cancelada com êxito apenas se a função retornará SQL_ERROR e SQLSTATE HY008 (operação cancelada). Se ele retornar qualquer outro valor, como SQL_SUCCESS, falha na operação de cancelamento e a função executada normalmente.|  
   
  Estados S2 e S3 são conhecidos como os estados preparados, Estados S5 por meio de S7 como o cursor estados, Estados S8 por meio de S10 como os estados de dados necessário e estados S11 e /s12 como os estados assíncronos. Em cada um desses grupos, as transições são mostradas separadamente somente quando eles são diferentes para cada estado do grupo. Na maioria dos casos, as transições de cada estado em cada um grupo são os mesmos.  
   
@@ -121,9 +122,9 @@ Instruções de ODBC tem os seguintes estados.
   
 ## <a name="sqlcancel-asynchronous-states"></a>SQLCancel (Estados assíncronos)  
   
-|S11<br /><br /> Ainda em execução|/S12<br /><br /> Assíncrona cancelada|  
+|S11<br /><br /> Ainda em execução|S12<br /><br /> Assíncrona cancelada|  
 |-----------------------------|-----------------------------|  
-|/S12 NS [1] [2]|/S12|  
+|/S12 NS [1] [2]|S12|  
   
  [1] a instrução foi temporariamente no estado S11 enquanto uma função estava em execução. **SQLCancel** foi chamado de um thread diferente.  
   
