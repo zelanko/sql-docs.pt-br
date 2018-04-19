@@ -1,31 +1,32 @@
 ---
 title: Tipos de dados SQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas os tipos de dados SQL que define o DBMS associado. Obter informações sobre como um driver mapeia tipos de DBMS SQL para os identificadores de tipo definidas pelo ODBC SQL e como um driver mapeia os tipos de DBMS SQL para seus próprio identificadores de tipo SQL específica do driver é retornado por uma chamada a **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados das colunas e parâmetros por meio de chamadas **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -42,24 +43,24 @@ Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas os tip
   
 |Identificador de tipo SQL [1]|Típica de dados do SQL<br /><br /> tipo [2]|Descrição do tipo típico|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR (*n*)|Cadeia de caracteres de comprimento de cadeia de caracteres fixa  *n* .|  
-|SQL_VARCHAR|VARCHAR (*n*)|Cadeia de caracteres de comprimento variável com um comprimento máximo da cadeia de caracteres  *n* .|  
+|SQL_CHAR|CHAR (*n*)|Cadeia de caracteres de comprimento de cadeia de caracteres fixa *n*.|  
+|SQL_VARCHAR|VARCHAR (*n*)|Cadeia de caracteres de comprimento variável com um comprimento máximo da cadeia de caracteres *n*.|  
 |SQL_LONGVARCHAR|LONG VARCHAR|Dados de caracteres de comprimento variável. Comprimento máximo é – dependente da fonte de dados. [9]|  
-|SQL_WCHAR|WCHAR (*n*)|Cadeia de caracteres Unicode de comprimento de cadeia de caracteres fixa*n*|  
-|SQL_WVARCHAR|VARWCHAR (*n*)|Cadeia de caracteres de comprimento variável Unicode com um comprimento máximo da cadeia de caracteres*n*|  
+|SQL_WCHAR|WCHAR (*n*)|Cadeia de caracteres Unicode de comprimento de cadeia de caracteres fixa *n*|  
+|SQL_WVARCHAR|VARWCHAR (*n*)|Cadeia de caracteres de comprimento variável Unicode com um comprimento máximo da cadeia de caracteres *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Dados de caractere de comprimento variável Unicode. Comprimento máximo é de – dependente da fonte de dados|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Assinado, valor numérico exato com precisão de pelo menos *p* e escala *s.* (A precisão máxima é definido pelo driver.) (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRICO (*p*,*s*)|Conectado, o valor numérico exato com precisão *p* e escala *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valor numérico com precisão 5 exato e escala de 0 (assinado: – 32.768 < =  *n*  < = 32.767, não assinado: 0 < =  *n*  < = 65.535) [3].|  
-_INTEGER|INTEGER|Valor numérico com precisão 10 exato e escala de 0 (assinado: – 2 [31] < =  *n*  < = 2 [31] – 1, não assinado: 0 < =  *n*  < = 2 [32] – 1) [3].|  
-|SQL_REAL|real|Conectado, o valor numérico aproximado com uma precisão de binária 24 (zero ou valor absoluto 10 [–38] para 10[38]).|  
+|SQL_SMALLINT|SMALLINT|Valor numérico com precisão 5 exato e escala de 0 (assinado: – 32.768 < = *n* < = 32.767, não assinado: 0 < = *n* < = 65.535) [3].|  
+_INTEGER|INTEGER|Valor numérico com precisão 10 exato e escala de 0 (assinado: – 2 [31] < = *n* < = 2 [31] – 1, não assinado: 0 < = *n* < = 2 [32] – 1) [3].|  
+|SQL_REAL|REAL|Conectado, o valor numérico aproximado com uma precisão de binária 24 (zero ou valor absoluto 10 [–38] para 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Assinado, valor numérico aproximado com uma precisão de binária de pelo menos *p*. (A precisão máxima é definido pelo driver.) [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Conectado, o valor numérico aproximado com uma precisão de binária 53 (zero ou valor absoluto 10 [–308] para 10[308]).|  
 |SQL_BIT|BIT|Dados binários de bit único. [8]|  
-|SQL_TINYINT|TINYINT|Valor numérico com precisão 3 exato e escala de 0 (assinado: –128 < =  *n*  < = 127, não assinado: 0 < =  *n*  < = 255) [3].|  
-_BIGINT|bigint|Exato de valor numérico com precisão 19 (se conectado) ou 20 (se não assinado) e a escala de 0 (assinado: – 2 [63] < =  *n*  < = 2 63 – 1, não assinado: 0 < =  *n*  < = 2 [64] – 1) [3], [9].|  
-|SQL_BINARY|BINÁRIO (*n*)|Dados binários de comprimento fixo  *n* . [ 9]|  
-|SQL_VARBINARY|VARBINARY (*n*)|Dados binários de comprimento máximo de comprimento variável  *n* . O máximo é definido pelo usuário. [9]|  
+|SQL_TINYINT|TINYINT|Valor numérico com precisão 3 exato e escala de 0 (assinado: –128 < = *n* < = 127, não assinado: 0 < = *n* < = 255) [3].|  
+_BIGINT|bigint|Exato de valor numérico com precisão 19 (se conectado) ou 20 (se não assinado) e a escala de 0 (assinado: – 2 [63] < = *n* < = 2 63 – 1, não assinado: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
+|SQL_BINARY|BINÁRIO (*n*)|Dados binários de comprimento fixo *n*. [ 9]|  
+|SQL_VARBINARY|VARBINARY (*n*)|Dados binários de comprimento máximo de comprimento variável *n*. O máximo é definido pelo usuário. [9]|  
 |SQL_LONGVARBINARY|VARBINARY LONGO|Dados binários de comprimento variável. Comprimento máximo é – dependente da fonte de dados. [9]|  
 |SQL_TYPE_DATE [6]|DATE|Ano, mês e dia campos, em conformidade com as regras do calendário gregoriano. (Consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), mais adiante neste apêndice.)|  
 |SQL_TYPE_TIME [6]|TEMPO (*p*)|Hora, minuto e segundo campos, com os valores válidos para horas de 00 a 23, os valores válidos para minutos de 00 a 59 e os valores válidos para segundos de 00 a 61. Precisão *p* indica a precisão de segundos.|  
