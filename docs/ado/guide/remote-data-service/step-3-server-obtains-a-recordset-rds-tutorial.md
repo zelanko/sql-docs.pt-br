@@ -1,30 +1,30 @@
 ---
-title: "Etapa 3: O servidor obtém um conjunto de registros (Tutorial de RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 'Etapa 3: O servidor obtém um conjunto de registros (Tutorial de RDS) | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server obtains Recordset
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6a55083897b680ece362fe734f3f4a4cd97db4d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c24a84e24498003d5c08af60f81707c43d11091
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Etapa 3: O servidor obtém um conjunto de registros (Tutorial de RDS)
 O programa de servidor usa o texto de cadeia de caracteres e o comando connect para consultar a fonte de dados para as linhas desejadas. ADO normalmente é usado para recuperar esse **registros**, embora outros dados do Microsoft interfaces de acesso, como OLE DB, pode ser usado.  

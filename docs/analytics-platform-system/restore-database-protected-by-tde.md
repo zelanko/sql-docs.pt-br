@@ -1,27 +1,21 @@
 ---
-title: Restaurar um banco de dados protegido por TDE no Parallel Data Warehouse
-author: barbkess
-ms.author: barbkess
+title: Restaurar um banco de dados protegido por TDE - Parallel Data Warehouse | Microsoft Docs
+description: Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados na análise de plataforma de sistema Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: 4
-ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-a-database-protected-by-tde"></a>Restaurar um banco de dados protegido por TDE
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurar um banco de dados protegido por TDE no Parallel Data Warehouse
 Use as etapas a seguir para restaurar um banco de dados que é criptografado usando criptografia transparente de dados.  
   
 O [usando criptografia transparente de dados](transparent-data-encryption.md#using-tde) exemplo tem o código para habilitar a TDE o `AdventureWorksPDW2012` banco de dados. O código a seguir continua este exemplo, criando um backup do banco de dados no dispositivo Analytics Platform System (APS) original e, em seguida, restaurar o certificado e o banco de dados em um dispositivo diferente.  

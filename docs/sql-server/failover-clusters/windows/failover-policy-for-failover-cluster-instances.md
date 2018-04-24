@@ -18,16 +18,17 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a6c3525ed89624bca7289bd76963cd932b9623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], somente um nó pode ter o grupo de recursos de cluster do WSFC (Cluster de Failover do Windows Server) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , somente um nó pode ter o grupo de recursos de cluster do WSFC (Windows Server Failover Cluster) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
   
  Uma FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende do serviço do WSFC subjacente para detecção de failover. Assim, dois mecanismos determinam o comportamento de failover para FCI: a primeira é a funcionalidade nativa do WSFC e a última é a funcionalidade adicionada pela instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
  Examine [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), pois esse procedimento armazenado de sistema desempenha uma função importante nos níveis de condição de falha.  
   
-|Nível|Condição|Descrição|  
+|Nível|Condição|Description|  
 |-----------|---------------|-----------------|  
 |0|Nenhum failover ou reinicialização automática|Indica que nenhum failover ou reinicialização será disparado automaticamente em nenhuma condição de falha. Esse nível destina-se apenas a fins de manutenção do sistema.|  
 |1|Failover ou reinicialização quando o servidor estiver inativo|Indica que uma reinicialização ou failover de servidor será disparado se a seguinte condição for gerada:<br /><br /> O serviço SQL Server está inativo.|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/05/2017
   
  Para obter mais informações sobre como manter a integridade do quórum, veja [Configuração de modos de quorum e votação do WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

@@ -1,32 +1,33 @@
 ---
 title: Parceiros de gerenciamento do SQL Server | Microsoft Docs
-description: "Lista de parceiros terceirizados com soluções para monitorar o servidor."
+description: Lista de parceiros terceirizados com soluções para monitorar o servidor.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: database-engine
-ms.component: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
+ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 6e4cd02cdf12b18516bbf795db347f2035619774
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d6a6559da315ccb2b601f7d28af444d3cdabb6b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-managing-partners"></a>Parceiros de gerenciamento do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para gerenciar os serviços do SQL Server, escolha entre uma ampla variedade de ferramentas líderes do setor.  Este artigo destaca empresas parceiras da Microsoft com soluções de gerenciamento com suporte ao Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para gerenciar os serviços do SQL Server, escolha entre uma ampla variedade de ferramentas do setor.  Este artigo destaca empresas parceiras da Microsoft com soluções de gerenciamento com suporte ao Microsoft SQL Server.
 
 ## <a name="our-management-partners"></a>Nossos parceiros de gerenciamento
 | Partner (parceiro) | Description | Links |

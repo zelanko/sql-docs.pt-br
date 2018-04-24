@@ -1,16 +1,16 @@
 ---
 title: Novidades no SQL Server 2016
-ms.custom: 
+ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - novo sql server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 
+caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0c8b7cbe768aa6c443bf803f3a4fcf65f50dfeb6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -111,7 +111,9 @@ Confira [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-serv
 - [Recursos com suporte nas edições do SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
 - [Requisitos de hardware e software para a instalação do SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Instalar o SQL Server 2016 por meio do Assistente de Instalação](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Configuração e instalação de manutenção](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+- [Configuração e instalação de manutenção](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [Novo módulo do PowerShell no SQL](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

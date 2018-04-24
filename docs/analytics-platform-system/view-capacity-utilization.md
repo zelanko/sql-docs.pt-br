@@ -1,28 +1,21 @@
 ---
-title: Utilização de capacidade de exibição (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Exibir a utilização da capacidade no Analytics Platform System | Microsoft Docs
+description: Exibir a utilização de capacidade no sistema de plataforma de análise.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: 9
-ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="view-capacity-utilization"></a>Exibir a utilização de capacidade
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Exibição de utilização de capacidade no sistema de plataforma de análise
 Este tópico explica como exibir utilização de capacidade no dispositivo de PDW do SQL Server.  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para exibir a utilização de capacidade usando o Console de administração  

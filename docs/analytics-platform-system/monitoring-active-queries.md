@@ -1,29 +1,22 @@
 ---
-title: Monitorando consultas ativas (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Monitorar consultas ativas - Parallel Data Warehouse | Microsoft Docs
+description: Use as exibições de sistema do Console de administração e o Parallel Data Warehouse para monitorar consultas ativas no sistema de plataforma de análise.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: 7
-ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 057e5448b68ea7a7f8f23bc57d1a3b0308b300d2
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitoring-active-queries"></a>Monitorando consultas ativas
-Este tópico mostra como usar o Console de administração e as exibições do sistema SQL Server PDW para monitorar consultas ativas. Consulte [monitorar o dispositivo usando o Console de administração](monitor-the-appliance-by-using-the-admin-console.md) e [exibições do sistema](tsql-system-views.md) para obter informações sobre essas ferramentas.  
+# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Monitorando consultas active - Parallel Data Warehouse
+Este artigo mostra como usar o Console de administração e as exibições do sistema SQL Server PDW para monitorar consultas ativas. Consulte [monitorar o dispositivo usando o Console de administração](monitor-the-appliance-by-using-the-admin-console.md) e [exibições do sistema](tsql-system-views.md) para obter informações sobre essas ferramentas.  
   
 ## <a name="prerequisites"></a>Prerequisites  
 Independentemente do método usado para monitorar consultas ativas, o logon deve ter as permissões descritas em "Usar todos os do Console de administração" [conceder permissões para usar o Console de administração](grant-permissions.md#grant-permissions-to-use-the-admin-console).  

@@ -1,30 +1,30 @@
 ---
 title: Preparar e executar comandos | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9c8bce6735f6fb7db1f0c279514aca3420d3ba1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfe5be8b68fe701d5b44431ab6e10cf8445deda3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="preparing-and-executing-commands"></a>Preparação e execução de comandos
 Comandos são emitidas para um provedor de instruções para executar algumas operações em relação à fonte de dados subjacente. Uma instrução SQL, por exemplo, é um comando para o provedor de dados do Microsoft SQL. No ADO, comandos normalmente são representados por **comando** objetos, embora simples comandos também podem ser emitidos por **Conexão** ou **registros** objetos.  

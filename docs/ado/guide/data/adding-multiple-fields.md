@@ -1,33 +1,33 @@
 ---
-title: "Adicionando vários campos | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Adicionando vários campos | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
 - ADO, adding data
 - editing data [ADO], adding multiple fields
 - editing data [ADO], AddNew method
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9eac6c90c0605b157dcd83c1b23f34969f3f73c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 691ad7a1a48ea0f733db145a4a03ddd841383962
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adding-multiple-fields-and-values"></a>Adicionando vários campos e valores
 Ocasionalmente, talvez seja mais eficiente para passar uma matriz de campos e seus valores correspondentes para o **AddNew** método, em vez de configuração **valor** várias vezes para cada novo campo. Se *FieldList* é uma matriz, *valores* também deve ser uma matriz com o mesmo número de membros; caso contrário, ocorrerá um erro. A ordem dos nomes de campo deve corresponder à ordem dos valores de campo em cada matriz. O código a seguir passa uma matriz de campos e uma matriz de valores para o **AddNew** método.

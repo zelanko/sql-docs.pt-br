@@ -1,28 +1,21 @@
 ---
-title: Ligar o dispositivo de APS ativado ou desativado (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Ligar o dispositivo ou desative - o Analytics Platform System | Microsoft Docs
+description: Power dispositivo ativado ou desativado para Analytics Platform System
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>Ligar o dispositivo de APS ou desligar
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power dispositivo ativado ou desativado para Analytics Platform System
 Este tópico descreve como ligar ou desligar o Systemappliance de plataforma de análise que esteja executando o Parallel Data Warehouse e, opcionalmente, executando uma região de HDInsight. Use este tópico quando um dispositivo Analytics Platform System é movido ou a potência em um dispositivo após uma falha catastrófica de energia.  
   
 Alimentar o dispositivo e desativar não é o mesmo que iniciar e parar os serviços de dispositivo. Para obter informações sobre o assunto, consulte [Status de serviços PDW &#40;Analytics Platform System&#41;](pdw-services-status.md). Para obter informações sobre a habilitação de ativar ou desativar um SQL Server 2008 Parallel Data Warehouse, consulte o arquivo de Ajuda do SQL Server 2008 Parallel Data Warehouse. Para obter informações sobre a habilitação ou desativar um SQL Server 2012 AU1 ou AU2 Parallel Data Warehouse, consulte o arquivo de ajuda para essas versões.  

@@ -1,31 +1,31 @@
 ---
 title: Provedor Microsoft OLE DB para ODBC | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provedor Microsoft OLE DB para visão geral ODBC
 Para um programador ADO ou RDS, um mundo ideal seria um no qual todos os dados de origem expõe uma interface OLE DB, para que o ADO poderia chamar diretamente na fonte de dados. Embora cada vez mais fornecedores de banco de dados estiver implementando interfaces OLE DB, algumas fontes de dados não são ainda expostos dessa maneira. No entanto, a maioria dos sistemas DBMS em uso hoje podem ser acessados por meio de ODBC.
@@ -146,7 +146,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 "{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
 ```
 
- Each **?** faz referência a um objeto de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. A primeira **?** referências **parâmetros**(0), a próxima **?** referências **parâmetros**(1), e assim por diante.
+ Cada **?** faz referência a um objeto de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. A primeira **?** referências **parâmetros**(0), a próxima **?** referências **parâmetros**(1), e assim por diante.
 
  As referências de parâmetro são opcionais e dependem da estrutura do procedimento armazenado. Se você quiser chamar um procedimento armazenado que define sem parâmetros, a cadeia de caracteres seria semelhante ao seguinte:
 
@@ -185,7 +185,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|somente leitura|somente leitura|somente leitura|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
+|[Indicador](../../../ado/reference/ado-api/bookmark-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
@@ -223,7 +223,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sim|Sim|Sim|Sim|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[Repetir](../../../ado/reference/ado-api/requery-method.md)|Sim|Sim|Sim|Sim|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|não|Não|Sim|Sim|
+|[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|não|Não|Sim|Sim|
 |[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Sim|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sim|Sim|Sim|Sim|

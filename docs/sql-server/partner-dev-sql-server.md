@@ -1,32 +1,33 @@
 ---
 title: Parceiros de Desenvolvimento do SQL Server | Microsoft Docs
-description: "Lista de parceiros terceirizados com soluções de desenvolvimento para o SQL Server."
+description: Lista de parceiros terceirizados com soluções de desenvolvimento para o SQL Server.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: f604e1c50e28e07274531e885ecd026097e9bca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-development-partners"></a>Parceiros de desenvolvimento do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para obter suporte sobre como desenvolver soluções de Banco de Dados do SQL Server, escolha entre uma ampla variedade de ferramentas líderes do setor.  Este artigo destaca empresas parceiras da Microsoft com soluções de desenvolvimento com suporte ao Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para obter suporte sobre como desenvolver soluções de banco de dados do SQL Server, escolha entre uma ampla variedade de ferramentas do setor.  Este artigo destaca empresas parceiras da Microsoft com soluções de desenvolvimento com suporte ao Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Nossos parceiros de desenvolvimento
 | Partner (parceiro) | Description | Links |

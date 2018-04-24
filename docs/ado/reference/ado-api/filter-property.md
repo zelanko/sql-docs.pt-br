@@ -1,6 +1,6 @@
 ---
 title: Propriedade Filter | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3b06134dcf65ead3a97577a6d08fd46ec2f52e
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-property"></a>Propriedade de filtro
 Indica um filtro de dados em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -52,7 +52,7 @@ A cadeia de caracteres de critérios é composta por cláusulas no formulário *
   
 -   Operador deve ser um dos seguintes: \<, >, \<=, > =, <>, =, ou **como**.  
   
--   É o valor com o qual você irá comparar os valores de campo (por exemplo, 'Smith', 24/8/&#95;, 12.345 ou r $50,00). Use aspas simples com cadeias de caracteres e sinais sustenido (#) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se o operador é **como**, valor pode usar curingas. São permitidas apenas o asterisco (*) e curingas de sinal de porcentagem (%) e devem ser o último caractere na cadeia de caracteres. Valor não pode ser nulo.  
+-   É o valor com o qual você irá comparar os valores de campo (por exemplo, 'Smith', 24/8/95 #, 12.345 ou r $50,00). Use aspas simples com cadeias de caracteres e sinais sustenido (#) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se o operador é **como**, valor pode usar curingas. São permitidas apenas o asterisco (*) e curingas de sinal de porcentagem (%) e devem ser o último caractere na cadeia de caracteres. Valor não pode ser nulo.  
   
 > [!NOTE]
 >  Para incluir aspas simples (') no filtro de valor, use duas aspas simples para representar um. Por exemplo, para filtrar o ' Malley, a cadeia de caracteres deve ser `"col1 = 'O''Malley'"`. Para incluir aspas simples no início e final do valor do filtro, coloque a cadeia de caracteres com sinais sustenido (#). Por exemplo, para filtrar '1', a cadeia de caracteres deve ser `"col1 = #'1'#"`.  
@@ -95,7 +95,7 @@ Somente filtros na forma de cadeias de caracteres de critérios afetam o conteú
   
 -   As modificações feitas em todos os campos em uma tabela com chave vários.  
   
-A tabela a seguir resume os efeitos de **adFilterPendingRecords** em combinações diferentes de filtragem e modificações. A coluna esquerda mostra as modificações possíveis. As modificações podem ser feitas em qualquer um dos campos sem chave, o campo de chave em uma tabela de chave única, ou em qualquer um dos campos de chave em uma tabela com chave vários. A linha superior mostra o critério de filtragem. A filtragem pode se basear em qualquer um dos campos sem chave, o campo de chave em uma tabela de chave única, ou qualquer um dos campos de chave em uma tabela com chave vários. As células de interseção mostram os resultados. Um  **+**  sinal significa que se aplicam **adFilterPendingRecords** resulta em não-vazia **registros**. Um  **-**  sinal significa vazio **registros**.  
+A tabela a seguir resume os efeitos de **adFilterPendingRecords** em combinações diferentes de filtragem e modificações. A coluna esquerda mostra as modificações possíveis. As modificações podem ser feitas em qualquer um dos campos sem chave, o campo de chave em uma tabela de chave única, ou em qualquer um dos campos de chave em uma tabela com chave vários. A linha superior mostra o critério de filtragem. A filtragem pode se basear em qualquer um dos campos sem chave, o campo de chave em uma tabela de chave única, ou qualquer um dos campos de chave em uma tabela com chave vários. As células de interseção mostram os resultados. Um **+** sinal significa que se aplicam **adFilterPendingRecords** resulta em não-vazia **registros**. Um **-** sinal significa vazio **registros**.  
   
 ||Não chaves|Chave única|Várias chaves|
 |-|--------------|----------------|-------------------|

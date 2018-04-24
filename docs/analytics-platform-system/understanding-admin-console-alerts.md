@@ -1,28 +1,21 @@
 ---
-title: Noções básicas sobre alertas do Console de administração (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Alertas do Console do administrador - Analytics Platform System | Microsoft Docs
+description: Noções básicas sobre alertas do Console de administração no Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>Compreendendo os alertas do Console de administração
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Noções básicas sobre alertas do Console de administração no Analytics Platform System
 Os alertas são exibidos no dispositivo de **Console de administração** e em **System Center Operations Manager** (SCOM). Use esta lista de alertas para ajudar a identificar quais alertas exigem mais investigação.  
   
 Para obter informações sobre a conexão com o **Console de administração** usando o Internet Explorer, consulte [monitorar o dispositivo usando o Console de administração &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Para obter informações sobre **SCOM**, consulte [monitorar o dispositivo por usando o System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
@@ -42,7 +35,7 @@ Os alertas são listados em ordem alfabética pelo **nome do alerta**. Todos os 
 |Ambari agente tem status NORMAL.|não|Operacional|Informational|O agente do Ambari está funcionando normalmente (status: em execução). Status será relatado na propriedade do componente "hadoop_service_status".||  
 |Agente do Ambari é desconhecido status.|Sim|Degradado|Aviso|Não foi possível determinar o status deste recurso de agente Ambari (status: -1). Status será relatado na propriedade do componente "hadoop_service_status".|Examine o recurso de Cluster em nós de cabeçalho e dados.|  
 |Pulsação do aplicativo tem status NORMAL.|não|Operacional|Informational|Comunicação com o aplicativo foi estabelecida com êxito.|Indica que o componente anteriormente relatou um status diferente, mas como voltou ao normal.|  
-|Pulsação do aplicativo está gerando o alerta crítico.|Sim|Non-operational|Erro|Não foi possível se comunicar com o aplicativo. Talvez o aplicativo esteja em processo de reinicialização.|A pulsação do aplicativo está em um estado inesperado. Solução de problemas necessária. Examine o log de eventos do Windows do nó para obter detalhes.|  
+|Pulsação do aplicativo está gerando o alerta crítico.|Sim|Não operacional|Erro|Não foi possível se comunicar com o aplicativo. Talvez o aplicativo esteja em processo de reinicialização.|A pulsação do aplicativo está em um estado inesperado. Solução de problemas necessária. Examine o log de eventos do Windows do nó para obter detalhes.|  
 |Ocorreu um evento de Failover de cluster.|Sim|Operacional|Erro|O nó de cluster primário não está mais ativo para que o passivo obteve como o nó primário. Examine o log de eventos do Windows do nó com falha para obter detalhes e examine o Gerenciador de Cluster de Failover na VM HST01.|Ocorreu um failover. Solução de problemas necessária. Revise o Gerenciador de Cluster de Failover na VM HST01 e log de eventos do sistema do nó.|  
 |Grupo de recursos de cluster tem status crítico.|Sim|Falhou|Erro|Este grupo de recursos de cluster falhou e pode estar no processo de tentar reiniciar ou está sendo VM de HST01 off-line.|O status do grupo de recursos falhou e exige a solução de problemas. Revise o Gerenciador de Cluster de Failover no HST01 VM.|  
 |Grupo de recursos de cluster tem o status de não-crítico.|Sim|Degradado|Aviso|Este grupo de recursos de cluster está online, mas em um estado não-crítico devido a um dos seguintes motivos: grupo de recursos é parcialmente online ou o grupo de recursos está em estado pendente.|O grupo de recursos não está totalmente no estado esperado. Solução de problemas necessária. Revise o Gerenciador de Cluster de Failover no HST01 VM.|  
@@ -132,7 +125,7 @@ Os alertas são listados em ordem alfabética pelo **nome do alerta**. Todos os 
 |Adaptador de barramento de Host de SAS tem uma condição de falha.|Sim|Falhou|Aviso|O adaptador de barramento de Host de SAS está relatando que a condição global do HBA está em um estado de falha, incluindo todos os discos físicos controlados por ele. Isso exigirá um componente a ser substituído (status de fornecedor: falha). Status do fornecedor é informado na propriedade do componente "hba_device_rollup_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  
 |Adaptador de barramento de Host de SAS tem status NORMAL.|não|Operacional|Informational|O adaptador de barramento de Host de SAS está funcionando normalmente (status de fornecedor: okey). Status do fornecedor é informado na propriedade do componente "hba_device_rollup_status".||  
 |Adaptador de barramento de Host de SAS é desconhecido status.|Sim|Degradado|Aviso|Não foi possível determinar o status do adaptador de barramento de Host de SAS (status de fornecedor: outros). Status do fornecedor é informado na propriedade do componente "hba_device_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  
-|O SQL Server tem status crítico.|Sim|NonOperational|Erro|Esse serviço está em um estado crítico e parou de funcionar (status: interrompido) ou está em estado de transição para ser interrompido (status: StopPending).  Status será relatado na propriedade do componente "sql_server_service_status".|Examine o log de eventos do Windows do nó para obter detalhes.|  
+|O SQL Server tem status crítico.|Sim|Não-operacional|Erro|Esse serviço está em um estado crítico e parou de funcionar (status: interrompido) ou está em estado de transição para ser interrompido (status: StopPending).  Status será relatado na propriedade do componente "sql_server_service_status".|Examine o log de eventos do Windows do nó para obter detalhes.|  
 |O SQL Server tem status NORMAL.|não|Operacional|Informational|Este serviço está sendo executado normalmente (status: em execução). Status será relatado na propriedade do componente "sql_server_service_status".||  
 |Ventilador do compartimento de armazenamento tem um status DEGRADADO.|Sim|Degradado|Aviso|O ventilador de compartimento de armazenamento está relatando que está degradado (status de fornecedor: 10,15). Status do fornecedor é informado na propriedade do componente "storage_fan_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  
 |Ventilador do compartimento de armazenamento tem um status de falha.|Sim|Falhou|Aviso|O ventilador de compartimento de armazenamento estiver se comunicando-se em um estado de falha. Isso exigirá um componente a ser substituído (status de fornecedor: 20,25). Status do fornecedor é informado na propriedade do componente "storage_fan_status".|Examine o log de eventos do Windows do nó para obter detalhes ou fabricante do dispositivo de contato.|  

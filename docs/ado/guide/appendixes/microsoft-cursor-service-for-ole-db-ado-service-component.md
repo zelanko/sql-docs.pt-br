@@ -1,31 +1,31 @@
 ---
-title: "Serviço Microsoft Cursor para OLE DB (componente do serviço de ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Serviço Microsoft Cursor para OLE DB (componente do serviço de ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 17bf332ec692bbcaaafaaf5a491d47b360064f56
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Serviço de Cursor da Microsoft para visão geral do OLE DB
 O serviço de Cursor da Microsoft para OLE DB complementa as funções de suporte de cursor de provedores de dados. Como resultado, o usuário percebe funcionalidade relativamente uniforme de todos os provedores de dados.
@@ -68,7 +68,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros criados com o Data Shaping Service, esse valor indica a frequência colunas calculadas e de agregação são calculadas. O padrão (valor = 1) é recalcular sempre que o Data Shaping Service determina que os valores foram alterados. Se o valor for 0, as colunas calculadas ou agregação só são calculadas quando a hierarquia é criada inicialmente.|
 |Tamanho do lote (DBPROP_ADC_BATCHSIZE)|Indica o número de instruções de atualização que pode ser colocado em lote antes de serem enviados para o repositório de dados. As instruções mais em um lote, as menos viagens de ida e aos dados de repositório.|
 |Linhas filho de cache (DBPROP_ADC_CACHECHILDROWS)|Para conjuntos de registros criados com o Data Shaping Service, esse valor indica se o conjunto de registros filho é armazenados em um cache para uso posterior.|
-|Cursor Engine Version (DBPROP_ADC_CEVER)|Indica a versão do serviço de Cursor que está sendo usado.|
+|Versão do mecanismo de cursor (DBPROP_ADC_CEVER)|Indica a versão do serviço de Cursor que está sendo usado.|
 |Manter o Status de alteração (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indica o texto do comando usado para ressincronizar uma ou mais linhas em uma junção de várias tabelas.|
 |[Otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indica se um índice deve ser criado. Quando definido como **True**, autoriza a criação temporária de índices para melhorar a execução de determinadas operações.|
 |[Alterar a forma de nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indica o nome do **registros**. Pode ser referenciado em atual ou a subsequente, comandos de formatação de dados.|
@@ -76,8 +76,8 @@ Recordset1.Properties.Item("Command Time out") = 50
 |[Catálogo exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome do banco de dados que contém a tabela referenciada no **tabela exclusiva** propriedade.|
 |[Esquema exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome do proprietário da tabela referenciada no **tabela exclusiva** propriedade.|
 |[Tabela exclusiva](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome de uma tabela em uma **registros** criado a partir de várias tabelas que podem ser modificadas por inserções, atualizações ou exclusões.|
-|Update Criteria (DBPROP_ADC_UPDATECRITERIA)|Indica quais campos o **onde** cláusula são usados para controlar conflitos que ocorrem durante uma atualização.|
-|[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indica se o **Resync** método é chamado implicitamente após o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método (e seu comportamento), quando o **tabela exclusiva** propriedade está em vigor.|
+|Critérios de atualização (DBPROP_ADC_UPDATECRITERIA)|Indica quais campos o **onde** cláusula são usados para controlar conflitos que ocorrem durante uma atualização.|
+|[Atualizar ressincronização](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indica se o **Resync** método é chamado implicitamente após o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método (e seu comportamento), quando o **tabela exclusiva** propriedade está em vigor.|
 
  Você também pode definir ou recuperar uma propriedade dinâmica especificando seu nome como o índice para o **propriedades** coleção. Por exemplo, obter e imprimir o valor atual de [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedades dinâmicas, em seguida, defina um novo valor, da seguinte maneira:
 

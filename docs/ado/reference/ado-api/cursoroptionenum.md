@@ -1,33 +1,33 @@
 ---
 title: CursorOptionEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - CursorOptionEnum
 helpviewer_keywords:
 - CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93999724b38f670f8462ae62c9052b10028bf929
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4acc97166d85e5c55b96405505f4267ee9c8386e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Especifica qual funcionalidade o [suporta](../../../ado/reference/ado-api/supports-method.md) deve testar o método para.  
@@ -48,8 +48,8 @@ Especifica qual funcionalidade o [suporta](../../../ado/reference/ado-api/suppor
 |**adUpdate**|0x1008000|Oferece suporte a [atualização](../../../ado/reference/ado-api/update-method.md) método para modificar os dados existentes.|  
 |**adUpdateBatch**|0x10000|Oferece suporte a atualização em lotes ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) e [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos) para transmitir grupos de alterações no provedor.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

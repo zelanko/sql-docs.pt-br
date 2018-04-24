@@ -1,31 +1,31 @@
 ---
 title: Propriedades do ADO MD | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae381b20c4073ff5da87b6e3d26a964ed6a6ca60
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0e4d39e1dc5d89f1d93d56fdb7b4cc3cd04b52a2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-md-properties"></a>Propriedades do ADO MD
 |||  
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
 |[Item](../../../ado/reference/ado-api/item-property-ado.md)|Retorna um membro específico de uma coleção por nome ou número ordinal.|  
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Indica a exibição formatada de um valor de célula.|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Indica o número de níveis entre a raiz da hierarquia e um membro.|  
-|[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indica o nome do nível do membro.|  
+|[Nome do nível](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indica o nome do nível do membro.|  
 |[Nome](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Indica o nome de um objeto.|  
 |[Ordinal (célula)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Identifica exclusivamente uma célula por sua posição dentro de um conjunto de células.|  
 |[Ordinal (posição)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica uma posição de um eixo.|  

@@ -1,26 +1,26 @@
 ---
-title: "Índice de propriedade dinâmica de ADO | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Índice de propriedade dinâmica de ADO | Microsoft Docs
+ms.prod: sql
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d646865c5fc95ed032c0cc21e973a3204162201
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propriedade dinâmica de ADO
 Provedores de dados, provedores de serviços e componentes de serviços podem adicionar propriedades dinâmicas para o **propriedades** coleções de não o aberta [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) e [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Um determinado provedor também pode inserir propriedades adicionais quando esses objetos são abertos. Algumas dessas propriedades são listadas no [propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) seção. Mais são listados na provedores específicos no [apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md) seção.  

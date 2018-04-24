@@ -1,33 +1,33 @@
 ---
 title: RecordStatusEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - RecordStatusEnum
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2315d18add9b25aab826d47346d8725aaa2af6e7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 400d920692f8ee8d130caa5f3f98b46a11710a3d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Especifica o [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de um registro em relação a atualizações em lotes e outras operações em massa.  
@@ -53,10 +53,10 @@ Especifica o [status](../../../ado/reference/ado-api/status-property-ado-records
 |**adRecSchemaViolation**|0x20000|Indica que o registro não foi salva porque ela viola a estrutura do banco de dados subjacente.|  
 |**adRecUnmodified**|0x8|Indica que o registro não foi modificado.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
  AdoEnums.RecordStatus.  
   
- Package: **com.ms.wfc.data**  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

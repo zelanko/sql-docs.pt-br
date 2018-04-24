@@ -1,28 +1,21 @@
 ---
-title: Status do serviços PDW (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Serviços de PDW status - Analytics Platform System | Microsoft Docs
+description: Parallel Data Warehouse (PDW) dos serviços de status para Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3fc9bee2-c372-4c4a-956c-fb54215d8918
-caps.latest.revision: 14
-ms.openlocfilehash: 727adf27c5118130682d8d63eb120c67380ac20d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e2252bb821f9522515f1625b0fc118323cb50d1f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-services-status"></a>Status de serviços do PDW
+# <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Status dos serviços de Parallel Data Warehouse para Analytics Platform System
 Parallel Data Warehouse **Status de serviços** página no Gerenciador de configuração do sistema do Microsoft Analytics Platform mostra o status atual de todos os serviços do SQL Server PDW e fornece a capacidade de parar e iniciar os serviços do PDW. Este é o único método suportado para iniciar e interromper os serviços do PDW. Observe que componentes individuais ou serviços não podem ser iniciados independentemente.  
   
 #### <a name="to-start-or-stop-the-appliance-services"></a>Para iniciar ou parar os serviços de aplicativo  

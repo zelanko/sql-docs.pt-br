@@ -1,6 +1,6 @@
 ---
 title: Como contribuir para a documentação do SQL Server | Microsoft Docs
-ms.date: 03/19/2018
+ms.date: 04/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: ''
@@ -15,11 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1885c57cfcf21dcdb877fc4c59b229636b74c137
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
 
@@ -36,7 +37,7 @@ Há dois fluxos de trabalho principais que você pode usar para contribuir:
 
 ## <a id="githubui"></a> Editar no navegador
 
-As etapas a seguir fornecem uma visão geral de como fazer edições simples no conteúdo do SQL Server no navegador. O processo completo é documentado no artigo [Fluxo de trabalho de contribuição do GitHub para alterações pequenas ou raras](https://docs.microsoft.com/contribute/contribute/light-workflow).
+As etapas a seguir fornecem uma visão geral de como fazer edições simples no conteúdo do SQL Server no navegador. O processo completo é documentado no artigo [Fluxo de trabalho de contribuição do GitHub para alterações pequenas ou raras](https://docs.microsoft.com/contribute/light-workflow).
 
 1. Cada artigo, inclusive este, tem um botão **Editar** à direita. Encontre um artigo que você deseja alterar e clique no botão **Editar** para começar.
 
@@ -49,7 +50,7 @@ As etapas a seguir fornecem uma visão geral de como fazer edições simples no 
    ![Botão Editar](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > É necessário estar conectado ao GitHub para editar um artigo. Se você não tiver uma conta do GitHub, consulte [Configuração de conta do GitHub](https://docs.microsoft.com/contribute/contribute/get-started-setup-github). Depois de criar uma nova conta, também será necessário confirmar seu endereço de email no GitHub antes que você possa editar.
+   > É necessário estar conectado ao GitHub para editar um artigo. Se você não tiver uma conta do GitHub, consulte [Configuração de conta do GitHub](https://docs.microsoft.com/contribute/get-started-setup-github). Depois de criar uma nova conta, também será necessário confirmar seu endereço de email no GitHub antes que você possa editar.
 
 1. Editar o artigo no navegador. Todos os artigos são escritos em Markdown. Se você precisar de ajuda com o Markdown, revise as [Noções básicas de Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). Você também pode aprender observando como os artigos publicados renderizam o Markdown existente.
 
@@ -65,7 +66,7 @@ As etapas a seguir fornecem uma visão geral de como fazer edições simples no 
 
    ![Criar solicitação de pull](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-Neste ponto, você deverá ser guiado pelo resto do processo nos comentários da solicitação de pull. O processo completo e detalhes adicionais podem ser encontrados no [guia do colaborador](https://docs.microsoft.com/contribute/contribute/light-workflow).
+Neste ponto, você deverá ser guiado pelo resto do processo nos comentários da solicitação de pull. O processo completo e detalhes adicionais podem ser encontrados no [guia do colaborador](https://docs.microsoft.com/contribute/light-workflow).
 
 ## <a id="tools"></a> Editar localmente com ferramentas
 
@@ -73,10 +74,10 @@ Outra opção de edição é criar fork nos repositórios **sql-docs** ou **azur
 
 Para contribuir com esse método, consulte os seguintes artigos:
 
-- [Criar uma conta do GitHub](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [Instalar as ferramentas de criação de conteúdo](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [Configurar um repositório Git localmente](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [Usar as ferramentas para colaborar](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [Criar uma conta do GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [Instalar as ferramentas de criação de conteúdo](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [Configurar um repositório Git localmente](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [Usar as ferramentas para colaborar](https://docs.microsoft.com/contribute/full-workflow)
 
 Se enviar uma solicitação de pull com alterações significativas na documentação, você receberá um comentário no GitHub solicitando o envio de um **CLA (contrato de licença de contribuição)** online. É necessário preencher o formulário online para que sua solicitação de pull seja aceita.
 

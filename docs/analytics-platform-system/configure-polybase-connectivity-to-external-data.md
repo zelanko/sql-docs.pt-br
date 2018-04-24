@@ -1,29 +1,22 @@
 ---
-title: Configurar a conectividade do PolyBase para dados externos (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Configurar a conectividade do PolyBase - Analytics Platform System | Microsoft Docs
+description: Explica como configurar o PolyBase no Parallel Data Warehouse para se conectar ao Microsoft Azure ou Hadoop armazenamento blob fontes de dados externas. Use o PolyBase para executar consultas que integram dados de várias fontes, incluindo Hadoop, o armazenamento de BLOBs do Azure e o Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 43
-ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Configurar a conectividade do PolyBase para dados externos
-Explica como configurar o PolyBase no SQL Server PDW para se conectar ao Microsoft Azure ou Hadoop armazenamento blob fontes de dados externas. Use o PolyBase para executar consultas que integram dados de várias fontes, incluindo Hadoop, armazenamento de BLOBs do Azure e SQL Server PDW.  
+Explica como configurar o PolyBase no Parallel Data Warehouse para se conectar ao Microsoft Azure ou Hadoop armazenamento blob fontes de dados externas. Use o PolyBase para executar consultas que integram dados de várias fontes, incluindo Hadoop, o armazenamento de BLOBs do Azure e o Parallel Data Warehouse.  
   
 ### <a name="to-configure-connectivity"></a>Para configurar a conectividade  
   

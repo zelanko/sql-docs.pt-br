@@ -18,16 +18,17 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8829a826c0e31d1c37cf7b65478cbd781cf89d0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administração de logons e trabalhos depois de troca de funções (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao implantar uma solução de alta disponibilidade ou de recuperação de desastre para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é importante reproduzir informações relevantes que são armazenadas para o banco de dados nos bancos de dados **master** ou **msdb**. Normalmente, as informações relevantes incluem os trabalhos do banco de dados principal/primário e os logons de usuários ou de processos que precisam se conectar ao banco de dados. É necessário duplicar essas informações em qualquer instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda um banco de dados secundário/espelho. Se for possível, após a troca de funções, o melhor é reproduzir de forma programática as informações do banco de dados primário/principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Ao implantar uma solução de alta disponibilidade ou de recuperação de desastres para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é importante reproduzir informações relevantes que são armazenadas para o banco de dados nos bancos de dados **master** ou **msdb** . Normalmente, as informações relevantes incluem os trabalhos do banco de dados principal/primário e os logons de usuários ou de processos que precisam se conectar ao banco de dados. É necessário duplicar essas informações em qualquer instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda um banco de dados secundário/espelho. Se for possível, após a troca de funções, o melhor é reproduzir de forma programática as informações do banco de dados primário/principal.  
   
 ## <a name="logins"></a>Logons  
  Em cada instância de servidor que hospeda uma cópia do banco de dados, você precisa reproduzir os logons que têm permissão para acessar o banco de dados principal. Quando a função principal/primária for alternada, somente os usuários cujos logons existirem na nova instância de servidor principal/primária poderão acessar o novo banco de dados principal/primário. Os usuários cujos logons não estão definidos na nova instância de servidor principal/primária ficam órfãos e não podem acessar o banco de dados.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
  Para obter mais informações, consulte [Usuários órfãos com espelhamento de banco de dados e envio de logs](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (um blog do mecanismo de banco de dados).  
   
-## <a name="jobs"></a>Trabalhos  
+## <a name="jobs"></a>trabalhos  
  Trabalhos, tais como trabalhos de backup, requerem consideração especial. Em geral, após uma troca de funções, o proprietário do banco de dados ou administrador do sistema deve recriar os trabalhos para o novo banco de dados primário/principal.  
   
  Quando a instância de servidor primária/principal anterior estiver disponível, será preciso excluir os trabalhos originais nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os trabalhos no banco de dados espelho atual apresentam falhas porque o banco de dados está no estado RESTORING, tornando-o indisponível.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Diferentes instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderiam ser configuradas de forma diferente, com diferentes letras de unidade de fita ou algo semelhante. Os trabalhos de cada parceiro devem permitir essas diferenças.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   

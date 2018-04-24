@@ -1,31 +1,31 @@
 ---
-title: "Códigos de erro do Internet Explorer | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Códigos de erro do Internet Explorer | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf4ee8c31a09ad1c1bf88ffb37d987f5dabb8bf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3865a413a0530e5d21b358b953adce5e5cc4c5f2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Códigos de erro do Internet Explorer para o serviço de dados remotos
 A tabela a seguir lista os códigos de erro do Microsoft® Internet Explorer relacionados ao uso do serviço de dados remoto. A conversão decimal positiva de dois bytes de baixa, a conversão decimal negativa do código de erro completa e os valores hexadecimais são mostrados.

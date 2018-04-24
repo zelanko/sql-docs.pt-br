@@ -1,17 +1,17 @@
 ---
 title: Armazenado exemplo de propriedades de procedimento (JScript) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9de22a7cb7d4fa673f37368c72ab3390841304d8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 06479e3fc2e3db026994f5a929e8dcf02f90fbe1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (JScript)
 Este exemplo usa o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [direção](../../../ado/reference/ado-api/direction-property.md) propriedades para executar um procedimento armazenado. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **ActiveConnectionJS.asp**.  

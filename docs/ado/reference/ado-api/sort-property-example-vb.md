@@ -1,32 +1,32 @@
 ---
 title: Classificar o exemplo da propriedade (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afc3a981438c2aab15e5b4928ee1776a62c31966
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c224224772f4aa560dc8fd5d2accd3405ab1b4a3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sort-property-example-vb"></a>Exemplo de propriedade de classificação (VB)
 Este exemplo usa o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [classificação](../../../ado/reference/ado-api/sort-property.md) propriedade para reordenar as linhas de um **registros** derivado a ***autores*** tabela de o ***Pubs*** banco de dados. Uma rotina de utilitários secundária imprime cada linha.  

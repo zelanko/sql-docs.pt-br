@@ -1,36 +1,36 @@
 ---
 title: Antes de instalar o clustering de failover | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 
+caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 61839a9371b86805b6b939c2b6fbe0f86d42c64e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Antes de instalar um cluster de failover do SQL Server, você deve selecionar o hardware e o sistema operacional nos quais o SQL Server será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
+  Antes de instalar um cluster de failover do SQL Server, você deve selecionar o hardware e o sistema operacional nos quais o SQL Server será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
   
  Se um cluster do Windows tiver uma unidade de disco local e a mesma letra de unidade também for usada em um ou mais nós de cluster como uma unidade compartilhada, você não poderá instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nessa unidade.  
   
@@ -59,7 +59,7 @@ Antes de instalar um cluster de failover do SQL Server, você deve selecionar o 
   
     -   .NET Framework 4: a instalação instala o .NET Framework 4 em um sistema operacional clusterizado. Para reduzir o tempo de instalação, convém instalar o .NET Framework 4 antes de executar a Instalação.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Arquivos de suporte à Instalação. Você pode instalar esses arquivos executando o SqlSupport.msi localizado na mídia de instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Arquivos de suporte à Instalação. Você pode instalar esses arquivos executando o SqlSupport.msi localizado na mídia de instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 -   Verifique se o software antivírus não está instalado no cluster do WSFC. Para obter mais informações, veja o artigo da Base de Dados de Conhecimento da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , [Software antivírus que não está ciente do cluster pode causar problemas com serviços de cluster](http://go.microsoft.com/fwlink/?LinkId=116986).  
   
@@ -81,7 +81,7 @@ Antes de instalar um cluster de failover do SQL Server, você deve selecionar o 
   
 -   Verifique se você limpou os logs do sistema em todos os nós e se exibiu os logs do sistema novamente. Verifique se os logs estão livres de quaisquer mensagens de erro antes de continuar.  
   
--   Antes de instalar ou atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], desabilite todos os aplicativos e serviços que talvez possam usar os componentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante a instalação, mas deixe os recursos de disco online.  
+-   Antes de instalar ou atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , desabilite todos os aplicativos e serviços que talvez possam usar os componentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante a instalação, mas deixe os recursos de disco online.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A Instalação define automaticamente dependências entre o grupo de clusters do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e os discos que estarão no cluster de failover. Não defina dependências para discos antes da Instalação.  
   
@@ -110,7 +110,7 @@ Antes de instalar um cluster de failover do SQL Server, você deve selecionar o 
   
      Um volume montado ou ponto de montagem permite usar uma única letra de unidade para fazer referência a muitos discos ou volumes. Se você tiver um letra D: de unidade que faça referência a um disco ou volume normal, poderá conectar ou "montar" discos ou volumes adicionais como diretórios com a letra D: de unidade sem os discos ou volumes adicionais que exigem suas próprias letras de unidade.  
   
-     Considerações adicionais sobre ponto de montagem para cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+     Considerações adicionais sobre ponto de montagem para cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A Instalação exige que a unidade base de uma unidade montada tenha uma letra da unidade associada. Para instalações de cluster de failover, esta unidade base deve ser uma unidade clusterizada. GUIDs de volume não têm suporte nesta versão.  
   

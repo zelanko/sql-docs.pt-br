@@ -1,31 +1,31 @@
 ---
-title: "Consulta de método (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Consulta de método (RDS) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01174a253f5157cf43f577ebf495819f557f2d4a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c1088a06456152ad9845361e733acfc250591a7d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="query-method-rds"></a>Método Query (RDS)
 Usa uma cadeia de caracteres de consulta SQL válida para retornar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

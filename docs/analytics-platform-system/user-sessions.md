@@ -1,28 +1,21 @@
 ---
-title: Sessões de usuário (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Sessões de usuário em Analytics Platform System | Microsoft Docs"
+description: Sessões de usuário Parallel Data Warehouse do Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
-caps.latest.revision: 15
-ms.openlocfilehash: 4ed0fab1fae1fe2d1a5a3ebb961d6c4d4747764f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fc2e759d77953f739d77f6ad4eb371cc9747efdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="user-sessions"></a>Sessões de usuário
+# <a name="user-sessions-in-analytics-platform-system"></a>Sessões de usuário no sistema de plataforma de análise
 Um logon com as permissões adequadas pode gerenciar as sessões de todos os logons em um dispositivo de PDW do SQL Server, incluindo executar estas ações:  
   
 -   Exibir as sessões atuais no dispositivo, incluindo sessões ativas e ociosas.  

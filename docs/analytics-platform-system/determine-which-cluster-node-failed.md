@@ -1,29 +1,22 @@
 ---
-title: Determinar qual nó de Cluster falhou (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Determinar o nó de cluster com falha - Analytics Platform System | Microsoft Docs
+description: Este artigo descreve como determinar o nome do nó Analytics Platform System (APS) que apresentou falha após um failover de cluster ocorreu e um alerta de failover de cluster foi ativado. Como parte de um cluster de failover de solução de problemas, você deve determinar o nome do nó com falha antes de entrar em contato com a Microsoft para ajudar a resolver o problema.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>Determinar qual nó de Cluster falhou
-Este tópico descreve como determinar o nome do nó do SQL Server PDW que apresentou falha após um failover de cluster ocorreu e um alerta de failover de cluster foi ativado. Como parte de um cluster de failover de solução de problemas, você deve determinar o nome do nó com falha antes de entrar em contato com a Microsoft para ajudar a resolver o problema.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinar qual cluster do nó falhou para Analytics Platform System
+Este tópico descreve como determinar o nome do nó Analytics Platform System (APS) que apresentou falha após um failover de cluster ocorreu e um alerta de failover de cluster foi ativado. Como parte de um cluster de failover de solução de problemas, você deve determinar o nome do nó com falha antes de entrar em contato com a Microsoft para ajudar a resolver o problema.  
   
 ## <a name="Background"></a>Plano de fundo  
 Para alta disponibilidade no SQL Server PDW, o nó de controle e os nós de computação são configurados como ativos ou passivos componentes de clusters de failover do Windows. Quando um servidor ativo não responder a solicitações de sistema críticos, o servidor passivo failover e executa as funções de servidor que falhou.  

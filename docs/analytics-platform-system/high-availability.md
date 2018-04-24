@@ -1,28 +1,22 @@
 ---
-title: Alta disponibilidade do sistema de plataforma de análise
-author: barbkess
-ms.author: barbkess
+title: Alta disponibilidade em Analytics Platform System | Microsoft Docs
+description: Saiba como Analytics Platform System (APS) foi projetado para alta disponibilidade.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Descreve como Analytics Platform System (APS) foi projetado para alta disponibilidade.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
-caps.latest.revision: 9
-ms.openlocfilehash: 9fd057a4cd673f06034e0093ca93be7ceaf345ea
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5c8a562ab105e1bc40b590916d0881757036aeff
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidade do sistema de plataforma de análise
-Descreve como Analytics Platform System (APS) foi projetado para alta disponibilidade.  
+Saiba como Analytics Platform System (APS) foi projetado para alta disponibilidade.  
   
 ## <a name="high-availability-architecture"></a>Arquitetura de alta disponibilidade  
 ![Arquitetura de dispositivo](media/appliance-architecture.png "arquitetura de dispositivo")  
@@ -39,7 +33,7 @@ Para manter os dados disponíveis online, o APS usa espaços de armazenamento do
   
 Para garantir que o pool de armazenamento permanece online, cada host na unidade de escala de dados tem uma máquina virtual ISCSI que não o failover não. Essa arquitetura é importante porque, se um host falhar, os dados ainda pode ser acessados por meio de outros hosts na unidade de escala de dados.  
   
-## <a name="hosts"></a>Hosts  
+## <a name="hosts"></a>hosts  
 Disponibilidade de host, todos os hosts são configurados em um Cluster de Failover do Windows. Cada rack tem um host de passivo. Opcionalmente, o primeiro rack, que controla o SQL Server Parallel Data Warehouse (PDW) e da malha de dispositivo, pode ter um segundo host passivo. Se um host falhar, máquinas virtuais que são configuradas para failover, serão failover para um host passivo disponíveis.  
   
 ## <a name="pdw-nodes-and-appliance-fabric"></a>Malha de dispositivo e nós PDW  

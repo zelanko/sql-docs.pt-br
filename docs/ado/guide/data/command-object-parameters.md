@@ -1,30 +1,30 @@
 ---
-title: "Parâmetros de objeto de comando | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Parâmetros de objeto de comando | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d55af0ad3553a9129ff9e54308b68b14a622c154
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="command-object-parameters"></a>Parâmetros do objeto de comando
 O tópico anterior discutido [criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Use uma mais interessante para o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto é mostrado no exemplo a seguir, no qual o comando SQL foi parametrizado. Essa modificação possibilita a reutilização de comando, passando um valor diferente para o parâmetro de cada vez. Porque o [propriedade preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propriedade o **comando** objeto é definido como **true**, ADO exigirá o provedor compilar o comando especificado em [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) antes de executá-lo pela primeira vez. Ele também manterão o comando compilado na memória. Isso reduz a execução do comando ligeiramente na primeira vez que ele é executado por causa da sobrecarga necessária para preparar, mas resulta em um ganho de desempenho de cada vez que o comando é chamado depois disso. Portanto, comandos devem ser preparados somente se eles serão usados mais de uma vez.  

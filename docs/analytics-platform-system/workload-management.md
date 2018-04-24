@@ -1,28 +1,22 @@
 ---
-title: Gerenciamento de carga de trabalho (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Gerenciamento de carga de trabalho no sistema de plataforma de análise | Microsoft Docs
+description: Gerenciamento de carga de trabalho no sistema de plataforma de análise.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management"></a>Gerenciamento de carga de trabalho
+# <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no sistema de plataforma de análise
+
 Recursos de gerenciamento de carga de trabalho do SQL Server PDW permitem que os usuários e administradores para atribuir solicitações pré-definir as configurações de memória e simultaneidade. Use o gerenciamento de carga de trabalho para melhorar o desempenho da carga de trabalho, consistente ou misto, permitindo solicitações para os recursos apropriados sem anteriores em todas as solicitações para sempre.  
   
 Por exemplo, com as técnicas de gerenciamento de carga de trabalho no SQL Server PDW, você pode:  
@@ -132,7 +126,7 @@ Instruções SQL e operações regidas pelas classes de recursos:
   
 -   Carregamento de dados com **dwloader**.  
   
--   INSERT-SELECT  
+-   INSERT SELECT  
   
 -   UPDATE  
   

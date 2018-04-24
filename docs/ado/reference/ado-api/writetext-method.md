@@ -1,17 +1,17 @@
 ---
-title: "Método WriteText | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Método WriteText | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce6482cf6b3b640f737ced8dedda66279245a0cd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 16df2d4d2cc4467cbbcffac468271b59b928ff6d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="writetext-method"></a>Método WriteText
 Grava uma cadeia de caracteres de texto especificado para um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  

@@ -1,30 +1,30 @@
 ---
 title: Trabalhando com conjuntos de registros | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-recordsets"></a>Trabalhando com conjuntos de registros
 O **registros** objeto possui recursos internos que permitem a você reorganizar a ordem dos dados no conjunto de resultados, para procurar um registro específico com base em critérios fornecidos por você e até mesmo para otimizar as operações de pesquisa usando os índices. Se esses recursos estão disponíveis para uso depende do provedor e, em alguns casos, como do [índice](../../../ado/reference/ado-api/index-property.md) propriedade — a estrutura da fonte de dados em si.  
@@ -94,7 +94,7 @@ O **registros** objeto possui recursos internos que permitem a você reorganizar
   
 -   *FieldName* deve ser um nome de campo válido do **registros**. Se o nome do campo contiver espaços, você deve colocar o nome entre colchetes.  
   
--   *Operador* deve ser um dos seguintes:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , ou **como**.  
+-   *Operador* deve ser um dos seguintes: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, ou **como**.  
   
 -   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Use aspas simples (') com cadeias de caracteres e sinais numéricos (`#`) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se *operador* é **como**, *valor* pode usar caracteres curinga. Somente o asterisco (\*) e sinal de porcentagem (%) curinga são permitidos caracteres e devem ser o último caractere na cadeia de caracteres. *Valor* não pode ser nulo.  
   

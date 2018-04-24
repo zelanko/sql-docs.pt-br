@@ -1,30 +1,24 @@
 ---
-title: Criptografia transparente de dados para Parallel Data Warehouse
-author: barbkess
-ms.author: barbkess
+title: Criptografia transparente de dados - Parallel Data Warehouse | Microsoft Docs
+description: Criptografia de dados transparente (TDE) para o Parallel Data Warehouse (PDW) executa criptografia de e/s em tempo real e a descriptografia dos dados e arquivos de log de transação e os arquivos de log especiais do PDW."
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Criptografia de dados transparente (TDE) executa criptografia de e/s em tempo real e a descriptografia dos dados e arquivos de log de transação e os arquivos de log especiais do PDW.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: 22
-ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6dc8bef420939d64b569ae285e6a3525d57983bd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
-Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, em um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
+Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, para um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode apenas restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
   
-*Criptografia transparente de dados* (TDE) executa criptografia de e/s em tempo real e a descriptografia dos dados e arquivos de log de arquivos de log de transação e o PDW especial. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados mestre do SQL Server PDW. A TDE protege os dados “em repouso”, ou seja, os dados e arquivos de log. Fornece a capacidade de se adequar a muitas leis, regulamentos e diretrizes estabelecidos em vários setores. Isso permite que os desenvolvedores de software criptografem dados usando algoritmos de criptografia AES e 3DES, sem alterar os aplicativos existentes.  
+*Criptografia transparente de dados* (TDE) executa criptografia de e/s em tempo real e a descriptografia dos dados e arquivos de log de arquivos de log de transação e o PDW especial. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados mestre do SQL Server PDW. A TDE protege os dados “em repouso”, ou seja, os dados e arquivos de log. Fornece a capacidade de se adequar a muitas leis, regulamentos e diretrizes estabelecidos em vários setores. Esse recurso permite que os desenvolvedores de software criptografem dados usando algoritmos de criptografia AES e 3DES, sem alterar os aplicativos existentes.  
   
 > [!IMPORTANT]  
 > A TDE não fornece criptografia de dados entre o cliente e o PDW. Para obter mais informações sobre como criptografar dados entre o cliente e o SQL Server PDW, consulte [provisionar um certificado](provision-certificate.md).  
@@ -40,7 +34,7 @@ A criptografia do arquivo de banco de dados é executada no nível de página. A
   
 A ilustração a seguir mostra a hierarquia de chaves de criptografia de TDE:  
   
-![Exibe a hierarquia descrita no tópico. ] (media/tde-architecture.png "TDE_Architecture")  
+![Exibe a hierarquia](media/tde-architecture.png "TDE_Architecture")  
   
 ## <a name="using-tde"></a>Usando a criptografia transparente de dados  
 Para usar a TDE, execute estes procedimentos. As três primeiras etapas são realizadas somente uma vez, quando preparar SQL Server PDW para dar suporte a TDE.  
@@ -49,11 +43,11 @@ Para usar a TDE, execute estes procedimentos. As três primeiras etapas são rea
   
 2.  Use **sp_pdw_database_encryption** para habilitar a TDE sobre o SQL Server PDW. Esta operação modifica os bancos de dados temporários para garantir a proteção de dados temporários futuras e falhará se você tentar quando há quaisquer sessões ativas que têm tabelas temporárias. **sp_pdw_database_encryption** ativa de mascaramento de dados de usuário nos logs de sistema do PDW. (Para obter mais informações sobre o mascaramento de dados de usuário nos logs de sistema do PDW, consulte [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md).)  
   
-3.  Use [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) para criar uma credencial que pode autenticar e gravar no compartilhamento onde o backup do certificado será armazenado. Se já existir uma credencial para o servidor de armazenamento desejado, a credencial existente pode ser usada.  
+3.  Use [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) para criar uma credencial que pode autenticar e gravar no compartilhamento onde o backup do certificado será armazenado. Se já existir uma credencial para o servidor de armazenamento desejado, você pode usar a credencial existente.  
   
 4.  No banco de dados mestre, crie um certificado protegido pela chave mestra.  
   
-5.  O certificado para o compartilhamento de armazenamento de backup.  
+5.  Faça backup do certificado para o compartilhamento de armazenamento.  
   
 6.  No banco de dados de usuário, crie uma chave de criptografia do banco de dados e proteja-a com o certificado que é armazenado no banco de dados mestre.  
   
@@ -61,7 +55,7 @@ Para usar a TDE, execute estes procedimentos. As três primeiras etapas são rea
   
 O exemplo a seguir ilustra a criptografar o `AdventureWorksPDW2012` banco de dados usando um certificado denominado `MyServerCert`, criado no SQL Server PDW.  
   
-**Primeiro: Habilitar a TDE no SQL Server PDW.** Isso só é necessário uma vez.  
+**Primeiro: Habilitar a TDE no SQL Server PDW.** Esta ação só é necessária uma vez.  
   
 ```sql  
 USE master;  
@@ -80,7 +74,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**Segunda: Criar e fazer backup de um certificado no banco de dados mestre.** Isso só é necessário uma vez. Você pode ter um certificado separado para cada banco de dados (recomendado) ou você pode proteger vários bancos de dados com um certificado.  
+**Segunda: Criar e fazer backup de um certificado no banco de dados mestre.** Esta ação só é necessário uma vez. Você pode ter um certificado separado para cada banco de dados (recomendado) ou você pode proteger vários bancos de dados com um certificado.  
   
 ```sql  
 -- Create certificate in master  
@@ -98,7 +92,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**Última: Criar a DEK e use ALTER DATABASE para criptografar um banco de dados do usuário.** Isso é repetido para cada banco de dados protegido por TDE.  
+**Última: Criar a DEK e use ALTER DATABASE para criptografar um banco de dados do usuário.** Essa ação é repetida para cada banco de dados protegido por TDE.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -113,7 +107,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-As operações de criptografia e descriptografia são agendadas em threads em segundo plano pelo SQL Server. É possível exibir o status dessas operações usando exibições do catálogo e de gerenciamento dinâmico na lista mostrada posteriormente neste tópico.  
+As operações de criptografia e descriptografia são agendadas em threads em segundo plano pelo SQL Server. Você pode exibir o status dessas operações usando exibições do catálogo e exibições de gerenciamento dinâmico na lista mostrada posteriormente neste artigo.  
   
 > [!CAUTION]  
 > Os arquivos de backup de bancos de dados com TDE habilitada também são criptografados usando a chave de criptografia do banco de dados. Como resultado, quando você restaura esses backups, o certificado que protege a chave de criptografia do banco de dados deve estar disponível. Isso significa que, além de fazer backup do banco de dados, você deve assegurar que os backups dos certificados de servidor sejam mantidos para evitar perda de dados. Se o certificado não estiver mais disponível, haverá perda de dados.  
@@ -128,7 +122,7 @@ A tabela a seguir fornece links e explicações de comandos e funções da TDE.
 |[CRIAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Cria uma chave usada para criptografar um banco de dados.|  
 |[ALTERAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Altera a chave usada para criptografar um banco de dados.|  
 |[REMOVA A CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Remove a chave usada para criptografar um banco de dados.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
+|[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-parallel-data-warehouse.md)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Exibições do catálogo e exibições de gerenciamento dinâmico  
 A tabela a seguir mostra exibições do catálogo de TDE e exibições de gerenciamento dinâmico.  
@@ -147,7 +141,7 @@ Exibição de metadados envolvidos com TDE requer a `CONTROL SERVER` permissão.
 ## <a name="considerations"></a>Considerações  
 Quando um exame de recriptografia para uma operação de criptografia de banco de dados está em andamento, as operações de manutenção no banco de dados são desabilitadas.  
   
-Você pode encontrar o estado de criptografia de banco de dados usando o **sys.dm_pdw_nodes_database_encryption_keys** exibição de gerenciamento dinâmico. Para obter mais informações, consulte o *exibições do catálogo e exibições de gerenciamento dinâmico* seção neste tópico).  
+Você pode encontrar o estado de criptografia de banco de dados usando o **sys.dm_pdw_nodes_database_encryption_keys** exibição de gerenciamento dinâmico. Para obter mais informações, consulte o *exibições do catálogo e exibições de gerenciamento dinâmico* seção neste artigo.  
   
 ### <a name="restrictions"></a>Restrições  
 As operações a seguir não são permitidas durante a `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, ou `ALTER DATABASE...SET ENCRYPTION` instruções.  
@@ -245,7 +239,7 @@ Exemplo da ação de atualização. Substituir `**********` com sua senha DMK.
   
 `setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
   
-Exemplo de operação de máquina virtual de substituição.  
+Exemplo da ação para substituir uma máquina virtual.  
   
 `setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
   
@@ -253,7 +247,7 @@ Durante a atualização, se um usuário de banco de dados é criptografado e a s
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
   
-. Execute manualmente essas instruções PDW e reinicie o dispositivo depois que para recuperar a DMK:  
+Execute esses instrução manualmente no PDW e reiniciar o dispositivo depois que para recuperar a DMK:  
   
 ```sql
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
@@ -273,7 +267,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 O impacto no desempenho da TDE varia de acordo com o tipo de dados que você tem, como ele é armazenado e o tipo de atividade de carga de trabalho do SQL Server PDW. Quando protegido por TDE, a e/s de leitura e, em seguida, a descriptografia de dados ou a criptografia e, em seguida, gravar dados é uma atividade de uso intensivo de CPU e terá o maior impacto quando outras atividades de uso intensivo de CPU estão ocorrendo ao mesmo tempo. Porque ela criptografa `tempdb`, TDE pode afetar o desempenho de bancos de dados que não estão criptografados. Para obter uma ideia precisa de desempenho, você deve testar todo o sistema com a sua atividade de consulta e de dados.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
-Os links a seguir contêm informações gerais sobre como o SQL Server gerencia criptografia. Esses tópicos podem ajudar você a entender a criptografia do SQL Server, mas esses tópicos não possuem informações específicas para o SQL Server PDW e eles abordam os recursos que não estão presentes no SQL Server PDW.  
+Os links a seguir contêm informações gerais sobre como o SQL Server gerencia criptografia. Esses artigos podem ajudá-lo a entender a criptografia do SQL Server, mas esses artigos não têm informações específicas para o SQL Server PDW e eles abordam os recursos que não estão presentes no SQL Server PDW.  
   
 -   [Criptografia do SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
   
@@ -283,7 +277,7 @@ Os links a seguir contêm informações gerais sobre como o SQL Server gerencia 
 
   
 ## <a name="see-also"></a>Consulte também  
-[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
+[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
 [CRIAR A CHAVE MESTRA](../t-sql/statements/create-master-key-transact-sql.md)  
 [CRIAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  

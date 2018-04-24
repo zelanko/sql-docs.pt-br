@@ -1,29 +1,22 @@
 ---
-title: Comportamento de bloqueio (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Comportamento de bloqueio - Parallel Data Warehouse | Microsoft Docs
+description: Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: 27
-ms.openlocfilehash: db8b05abe5d3eea3a927cdf410e7aa8df5ed2032
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="locking-behavior"></a>Comportamento de bloqueio
-PDW do SQL Server usa bloqueio para garantir a integridade de transações e para manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.  
+# <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamento de bloqueio no Parallel Data Warehouse
+Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.  
   
 ## <a name="Basics"></a>Noções básicas de bloqueio  
 **Modos**  
@@ -95,9 +88,9 @@ SQL Server suporta os seguintes tipos de bloqueios. Nem todos os tipos de bloque
   
 -   RangeI_X. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e X.  
   
--   RangeX_S. Bloqueio de conversão de intervalo de chaves criado por uma sobreposição de bloqueios RangeI_N e RangeS-S.  
+-   Rangeix_s. Bloqueio de conversão de intervalo de chaves criado por uma sobreposição de bloqueios RangeI_N e RangeS-S.  
   
--   RangeX_U. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e RangeS_U.  
+-   Rangeix_u. Bloqueio de conversão de intervalo de chave criado por uma sobreposição dos bloqueios RangeI_N e RangeS_U.  
   
 -   RangeX_X (bloqueio de intervalo de chave exclusivo e de recurso exclusivo). Este é um bloqueio de conversão usado na atualização de uma chave em um intervalo.  
   

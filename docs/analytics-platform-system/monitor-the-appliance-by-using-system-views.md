@@ -1,29 +1,22 @@
 ---
-title: Monitorar o dispositivo por meio de exibições do sistema (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Monitor com exibições do sistema - Analytics Platform System | Microsoft Docs
+description: Este artigo lista as exibições do sistema que você pode usar para monitorar o dispositivo de sistema de plataforma de análise.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>Monitorar o dispositivo por meio de exibições do sistema
-Este tópico lista as exibições do sistema que você pode usar para monitorar o SQL Server PDW.  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Monitor de dispositivo com exibições do sistema - Analytics Platform System
+Este artigo lista as exibições do sistema que você pode usar para monitorar o SQL Server PDW.  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>Para monitorar o dispositivo por meio de exibições do sistema  
 SQL Server PDW inclui exibições de sistema abrangente que permite a você obter informações detalhadas sobre a integridade do dispositivo, o estado e o desempenho. Esta tabela fornece links para exibições do sistema que podem ser usadas para cada recurso de monitoramento.  

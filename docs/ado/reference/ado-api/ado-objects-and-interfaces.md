@@ -1,31 +1,31 @@
 ---
 title: ADO objetos e Interfaces | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76115318e0205c0b0f0bf4746dd482f39f4a8b89
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a9888255ff5560cf432b29850b1104f5470df9a6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces e ADO
 As relações entre esses objetos são representadas no [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -47,7 +47,7 @@ As relações entre esses objetos são representadas no [modelo de objeto ADO](.
 |[Propriedade](../../../ado/reference/ado-api/property-object-ado.md)|Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.|  
 |[Record](../../../ado/reference/ado-api/record-object-ado.md)|Representa uma linha de um **registros**, ou um diretório ou arquivo em um sistema de arquivos. O **registro** objeto é seguro para script.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o **registros** objeto se refere a um único registro dentro do conjunto de como o registro atual.<br /><br /> O **registros** objeto é seguro para script.|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Representa um fluxo binário de dados.<br /><br /> O **fluxo** objeto é seguro para script.|  
+|[Fluxo](../../../ado/reference/ado-api/stream-object-ado.md)|Representa um fluxo binário de dados.<br /><br /> O **fluxo** objeto é seguro para script.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

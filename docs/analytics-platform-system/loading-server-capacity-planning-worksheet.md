@@ -1,27 +1,21 @@
 ---
-title: Carregando a planilha de planejamento capacidade do servidor (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Carregando a capacidade do servidor planejamento - Analytics Platform System | Microsoft Docs
+description: Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de carregamento de carregamento de dados para análise de plataforma de sistema Parallel Data Warehouse."
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de carregamento para carregar dados no SQL Server PDW.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 73f4b55c82f0b2b5e3c7cb73222a546d3dfc4af6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="loading-server-capacity-planning-worksheet"></a>Carregando a planilha de planejamento de capacidade do servidor
+# <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Carregando a planilha de planejamento de capacidade do servidor para Analytics Platform System
 Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de carregamento para carregar dados no SQL Server PDW. Use isso para criar seu plano para compra ou provisionamento existentes ao carregar servidores.  
   
 ## <a name="worksheet-notes"></a>Notas de planilha

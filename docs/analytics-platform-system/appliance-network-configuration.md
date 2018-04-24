@@ -1,29 +1,22 @@
 ---
-title: Configuração de dispositivo de rede (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Configuração de rede do dispositivo - Analytics Platform System | Microsoft Docs
+description: O dispositivo Analytics Platform System (APS) é criado e configurado com um conjunto de correção de endereços IP em todos os servidores e dispositivos aplicáveis de Chão de fábrica do IHVS. Na entrega do aparelho, o IP externo (Ethernet) endereçado deve ser reconfigurado para atender aos requisitos de centro de dados do cliente específico.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>Configuração de rede do dispositivo
-O utilitário do SQL Server PDW é criado e configurado com um conjunto de correção de endereços IP em todos os servidores e dispositivos aplicáveis de Chão de fábrica do IHVS. Na entrega do aparelho, o IP externo (Ethernet) endereçado deve ser reconfigurado para atender aos requisitos de centro de dados do cliente específico.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configuração de rede do dispositivo para Analytics Platform System
+O dispositivo Analytics Platform System (APS) é criado e configurado com um conjunto de correção de endereços IP em todos os servidores e dispositivos aplicáveis de Chão de fábrica do IHVS. Na entrega do aparelho, o IP externo (Ethernet) endereçado deve ser reconfigurado para atender aos requisitos de centro de dados do cliente específico.  
   
 > [!NOTE]  
 > PDW V1 necessários 8 externo IP (*voltada para o cliente*) endereços para fornecer conectividade externa para cada controle rack nós. 2012 PDW (V2) aprimorado comunicações de rede com a exposição de cada componente do aparelho externamente através de endereços IP. Essa abordagem fornece um design mais robusto que reduz os custos e aumenta a flexibilidade e aprimora a movimentação de dados, o carregamento de dados e a integração do Hadoop. O número de endereços IP necessários depende do número de nós no dispositivo e a presença de recursos, como HDInsight. Para acomodar esse bloco maior de endereços IP, o cliente deve configurar uma sub-rede separada para PDW. Essa sub-rede, haverá espaço de endereços IP suficientes (até 250 endereços) para acomodar os componentes de até 5 racks PDW.  

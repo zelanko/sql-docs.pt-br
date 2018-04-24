@@ -1,33 +1,33 @@
 ---
-title: "Comandos com os comandos de computação parametrizados | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Comandos com os comandos de computação parametrizados | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18bfbc4a2e18e0232380edf157410fbd4eb3b12c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8e03709adbc901a8f9f365c291e1809ec48e1ed9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos de computação de comandos com parâmetros com intervenção
 Uma forma com parâmetros típica comando APPEND possui uma cláusula que cria um pai **registros** com um comando de consulta e outra cláusula que cria um filho **registros** com um comando de consulta parametrizada — ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). Resultante em forma de **registros** possui dois níveis, em que o pai ocupa o nível superior e o filho ocupa um nível inferior.  

@@ -1,31 +1,31 @@
 ---
 title: Chamado comandos | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e00f320409602e33ba250f4943b782ec7ea9a96
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4e9f82cc25d589d222b312e362252e4447f3bea0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="named-commands"></a>Comandos nomeados
 [Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: torná-lo um comando nomeado e, em seguida, chamar essa chamada comando diretamente no **Conexão** objeto (atribuído para o **ActiveConnection** propriedade do **comando** objeto). Um comando de nomenclatura significa a atribuição de um nome para o **nome** propriedade de um **comando** objeto. Por exemplo,  

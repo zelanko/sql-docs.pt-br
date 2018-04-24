@@ -1,33 +1,33 @@
 ---
 title: Exemplo de propriedades de modo (VB) e IsolationLevel | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d59b27059ee4249bebbe3d35129a755e91544895
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cd99808954a10c715eef8526c01f8c7dfc90e64a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>Exemplo de propriedades de modo (VB) e IsolationLevel
 Este exemplo usa o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade para abrir uma conexão exclusiva e o [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriedade para abrir uma transação que é realizada em isolamento de outras transações.  

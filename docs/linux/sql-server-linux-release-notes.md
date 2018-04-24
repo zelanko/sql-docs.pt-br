@@ -4,7 +4,7 @@ description: Este artigo contém as notas de versão e recursos com suporte para
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/04/2018
+ms.date: 04/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 2e768322cf8dc33e9d8995012f87088902c2e705
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 786153cf6d3f9cee30a01d3b6e3a94646a75eecc
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -49,6 +49,7 @@ A tabela a seguir lista o histórico de versão do SQL Server 2017.
 
 | Versão | Versão | Data de lançamento |
 |-----|-----|-----|
+| [CU6](#CU6) | 14.0.3025.34 | 2018 4 |
 | [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
 | [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
@@ -66,6 +67,20 @@ Se você estiver atualizando os pacotes existentes do SQL Server, executados o c
 - [Instalar o pacote de pesquisa de texto completo](sql-server-linux-setup-full-text-search.md)
 - [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU6"></a> CU6 (abril de 2018)
+
+Esta é a versão de atualização cumulativa 6 (CU6) do SQL Server 2017. A versão do mecanismo do SQL Server para esta versão é 14.0.3025.34. Para obter informações sobre as correções e aperfeiçoamentos desta versão, consulte [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464).
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacote manual ou off-line, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+
+| Pacote | versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 14.0.3025.34-3 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[Pacote do SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacote RPM SLES | 14.0.3025.34-3 | [pacote de RPM mecanismo MSSQL server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
+| Pacote Debian Ubuntu 16.04 | 14.0.3025.34-3 | [Mecanismo de pacote Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[Pacote Debian do alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[Pacote do SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU5"></a> CU5 (março de 2018)
 

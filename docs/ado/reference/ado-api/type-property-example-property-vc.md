@@ -1,32 +1,32 @@
 ---
 title: Tipo de exemplo da propriedade (propriedade) (VC + +) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c868bbb78964c66e9d61ce85937b6c78a07f687
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aaa756ce6f9a314a15421b68872cb28e610c1411
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="type-property-example-property-vc"></a>Exemplo de propriedade de tipo (propriedade) (VC + +)
 Este exemplo demonstra o [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade. É um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

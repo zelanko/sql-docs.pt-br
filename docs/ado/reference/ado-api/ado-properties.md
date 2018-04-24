@@ -1,31 +1,31 @@
 ---
 title: Propriedades do ADO | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 919d3573a0d5b1178d24af3befd553a39b3c0d3a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-properties"></a>Propriedades do ADO
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Indica o comprimento real do valor do campo.|  
 |[Atributos](../../../ado/reference/ado-api/attributes-property-ado.md)|Indica uma ou mais características de um objeto.|  
 |[BOF e EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** indica que a posição do registro atual é anterior ao primeiro registro em um objeto de conjunto de registros.<br /><br /> **EOF** indica que a posição do registro atual é após o último registro de um objeto de conjunto de registros.|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica um marcador que identifica exclusivamente o registro atual em um **registros** do objeto ou define o registro atual em um **Recordset** objeto para o registro identificado por um indicador válido.|  
+|[Indicador](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica um marcador que identifica exclusivamente o registro atual em um **registros** do objeto ou define o registro atual em um **Recordset** objeto para o registro identificado por um indicador válido.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Indica o número de registros de um **registros** objeto são armazenadas localmente em cache.|  
 |[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Obtém ou define um banco de dados OLE **capítulo** objeto de/em uma **ADORecordsetConstruction** objeto.|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Indica o caractere definido no qual o conteúdo de um texto **fluxo** deve ser convertido.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica o local do serviço de cursor.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica o tipo de cursor usado em uma **registros** objeto.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica o nome do membro de dados que será recuperado do objeto referenciado pelo **DataSource** propriedade.|  
-|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica um objeto que contém dados a ser representado como um **registros** objeto.|  
+|[Fonte de dados](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica um objeto que contém dados a ser representado como um **registros** objeto.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Indica o banco de dados padrão para um **Conexão** objeto.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica a capacidade de dados de um **campo** objeto.|  
 |[Descrição](../../../ado/reference/ado-api/description-property.md)|Descreve um **erro** objeto.|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/09/2018
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Indica o tipo de **registro** objeto.|  
 |[Linha](../../../ado/reference/ado-api/row-property-ado.md)|Obtém ou define um banco de dados OLE **linha** objeto de/em uma **ADORecordConstruction** objeto.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Obtém ou define um banco de dados OLE **RowPosition** objeto de/em uma **ADORecordsetConstruction** objeto.|  
-|[Conjunto de linhas](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtém ou define um banco de dados OLE **linhas** objeto de/em uma **ADORecordsetConstruction** objeto.|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtém ou define um banco de dados OLE **linhas** objeto de/em uma **ADORecordsetConstruction** objeto.|  
 |[Fonte (erro de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Indica o nome do objeto ou aplicativo que originalmente gerou um erro.|  
 |[Fonte (ADO registro)](../../../ado/reference/ado-api/source-property-ado-record.md)|Indica a entidade representada pelo **registro** objeto.|  
 |[Fonte (conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Indica a fonte de dados em um **registros** objeto|  

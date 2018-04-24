@@ -1,30 +1,32 @@
 ---
-title: "Instalação do cluster de failover do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Instalação do cluster de failover do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 045f941ca5f5de2703bbd315f862ecf2c1985902
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b01ae5041d57ef4f7937c0d1efbb61e8271d104a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalação do cluster de failover do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve criar e configurar uma instância de cluster de failover executando a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Para instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve criar e configurar uma instância de cluster de failover por meio da execução da Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installing-a-failover-cluster"></a>Instalando um cluster de failover  
  Para instalar um cluster de failover, você deve usar uma conta de domínio com direitos de administrador local, permissão para fazer logon como um serviço e atuar como parte do sistema operacional em todos os nós do cluster de failover. Para instalar um cluster de failover por meio do programa de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , siga estas etapas:  
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/05/2017
 ##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster de failover de várias sub-redes  
  Você pode definir dependências OR quando os nós no cluster estiverem em sub-redes diferentes. No entanto, cada nó no cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser um possível proprietário de pelo menos um dos endereços IP especificados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Antes de instalar o cluster de failover](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [Instalar o SQL Server 2016 do prompt de comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   

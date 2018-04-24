@@ -1,33 +1,33 @@
 ---
-title: "Coleção de parâmetros, o exemplo de comando de propriedade (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Coleção de parâmetros, o exemplo de comando de propriedade (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Parameters collection [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674bf858215fc2d6f5b1c0384e368d2100ca1c25
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e1611bd3aa314158ae53ec67236e62b4bd19e29c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Coleção de parâmetros, o exemplo de comando de propriedade (VC + +)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade com o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto para recuperar informações de parâmetro para o procedimento.  

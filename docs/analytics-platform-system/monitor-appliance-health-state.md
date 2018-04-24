@@ -1,29 +1,22 @@
 ---
-title: Monitor de estado de integridade de dispositivo (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Monitorar a integridade do dispositivo - Analytics Platform System
+description: Como monitorar o estado de um dispositivo Analytics Platform System usando o Console do administrador ou ao consultar diretamente as exibições de gerenciamento dinâmico do Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>Monitor de estado de integridade de dispositivo
-Este tópico explica como monitorar o estado de um dispositivo de PDW do SQL Server usando o Console de administração, ou consultar diretamente as exibições de gerenciamento dinâmico do SQL Server PDW.  
+Este artigo explica como monitorar o estado de um dispositivo Analytics Platform System usando o Console do administrador ou ao consultar diretamente as exibições de gerenciamento dinâmico do Parallel Data Warehouse. 
   
 ## <a name="to-monitor-the-appliance-state"></a>Para monitorar o estado do dispositivo  
 Um administrador de sistema pode usar o Console de administração ou o SQL Server PDW exibições de gerenciamento dinâmico (DMVs) para recuperar a hierarquia completa de nós, componentes e software. O diagrama a seguir oferece uma compreensão de alto nível dos componentes que monitora o SQL Server PDW.  
@@ -77,7 +70,7 @@ Possíveis valores retornados para a propriedade de Status são:
   
 -   Ok  
   
--   NonCritical  
+-   Não crítica  
   
 -   Crítico  
   

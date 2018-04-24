@@ -1,27 +1,21 @@
 ---
-title: Carregador de linha de comando para Parallel Data Warehouse de dwloader
-author: barbkess
-ms.author: barbkess
+title: dwloader carregador de linha de comando - Parallel Data Warehouse | Microsoft Docs
+description: dwloader é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: '**dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente.'
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>Carregador de linha de comando de dwloader
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando para Parallel Data Warehouse de dwloader
 **dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente. Quando o carregamento de linhas, você pode adicionar todas as linhas ao final da tabela (*modo de acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo upsert*), ou excluir todos os linhas antes do carregamento de existente e, em seguida, inserir todas as linhas em uma tabela vazia (*recarregar modo*).  
   
 **Processo de carregamento de dados**  
@@ -148,7 +142,7 @@ Exemplos:
   
 `rv=25`  
   
-**-S***target_appliance*  
+**-S * target_appliance*  
 Especifica o dispositivo de PDW do SQL Server que receberá os dados carregados.  
   
 *Para conexões do Infiniband*, *target_appliance* é especificado como < nome do dispositivo >-SQLCTL01. Para configurar essa conexão, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).  
@@ -201,7 +195,7 @@ Exemplos:
   
 -   -i \\\loadserver\loads\daily\\*.gz  
   
--   -i \\\loadserver\loads\daily\\*.txt  
+-   -i \\\loadserver\loads\daily\\*. txt  
   
 -   -i \\\loadserver\loads\daily\monday.*  
   
@@ -229,10 +223,10 @@ O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou
 |Nome|Caractere de escape|Caractere hexadecimal|  
 |--------|--------------------|-----------------|  
 |Tab|\t|0x09|  
-|Retorno de carro (CR)|\r|0x0d|  
+|Retorno de carro (CR)|\r|0x0D|  
 |Alimentação de linha (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
-|Comma|','|0x2c|  
+|Vírgula|','|0x2c|  
 |Aspas duplas|\\"|0x22|  
 |Aspas simples|\\'|0x27|  
   
@@ -402,7 +396,7 @@ O carregador insere linhas ao final de linhas existentes na tabela de destino.
 fastappend  
 O carregador insere linhas diretamente, sem usar uma tabela temporária, ao final de linhas existentes na tabela de destino. fastappend requer que a transação de vários (– m) opção. Um banco de dados de preparo não pode ser especificado ao usar fastappend. Não há nenhuma reversão com fastappend, o que significa que a recuperação de uma falha ou anulada carga deve ser tratada pelo seu próprio processo de carregamento.  
   
-upsert **-K**  *merge_column* [ ,...*n* ]  
+upsert **-K***merge_column* [,... *n* ]    
 O carregador usa a instrução de mesclagem do SQL Server para atualizar as linhas existentes e inserir novas linhas.  
   
 A opção -K Especifica a coluna ou colunas a base de dados de mesclagem. Essas colunas formam uma chave de mesclagem, que deve representar uma linha exclusiva. Se a chave de mesclagem existir na tabela de destino, a linha é atualizada. Se a chave de mesclagem não existe na tabela de destino, a linha será acrescentada.  

@@ -1,29 +1,22 @@
 ---
-title: Conecte-se a nós de dispositivo (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Conecte-se ao dispositivo nós - Analytics Platform System | Microsoft Docs
+description: Este artigo explica as várias maneiras de se conectar a cada nó no dispositivo de sistema de plataforma de análise.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>Conecte-se a nós de dispositivo
-Este tópico explica as várias maneiras de se conectar a cada nó no dispositivo de sistema de plataforma de análise.  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conecte-se a nós de dispositivo no sistema de plataforma de análise
+Este artigo explica as várias maneiras de se conectar a cada nó no dispositivo de sistema de plataforma de análise.  
   
 ## <a name="connecting-with-hadoop"></a>Conectando com Hadoop  
 Antes de usar Hadoop com o SQL Server PDW, peça ao administrador do dispositivo para instalar o Java Runtime Environment para SQL Server PDW. Para obter instruções, consulte [configurar conectividade do PolyBase para dados externos &#40;Analytics Platform System&#41; ](configure-polybase-connectivity-to-external-data.md) no guia de operações do dispositivo.  
