@@ -1,34 +1,37 @@
 ---
-title: "Permissões de pasta e arquivo (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Permissões de pasta e arquivo (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [Master Data Services], file and folder
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32d0245d68c521faf47a6fa9dc2f207bdb8a124a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 9c28403839aff3c7a52bebe7cc6571cfef11dca1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Permissões de pasta e arquivo (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Quando você instala o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], as pastas e arquivos são instalados no sistema de arquivos no caminho de instalação especificado para recursos compartilhados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se você usar o caminho de instalação padrão para recursos compartilhados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o caminho de instalação para [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] será *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services. Embora seja possível alterar o caminho de instalação de recursos compartilhados, considere as permissões que são herdadas da pasta pai e as permissões que são definidas explicitamente para o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="inherited-permissions"></a>Permissões herdadas  

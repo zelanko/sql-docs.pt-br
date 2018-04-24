@@ -1,16 +1,16 @@
 ---
 title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_SHOWCONTIG_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebc23e00ed03e4e4cca50b4a1655c373816d563e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Exibe informações de fragmentação para os dados e índices da tabela ou exib
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -174,7 +174,7 @@ Quando um índice está bastante fragmentado, as opções a seguir são disponib
 -   Reconstruir o índice.  
      Use ALTER INDEX com REBUILD para reconstruir o índice. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-As estatísticas **Média de bytes livres por página** e **Média de densidade de página (completa)** no conjunto de resultados indicam o preenchimento de páginas de índice. O número da **Média de bytes livres por página** deve ser baixo e o número da **Média de densidade de página (completa)** deve ser alto para um índice sem muitas inserções aleatórias. Descartar e recriar um índice com a opção de FILLFACTOR especificada pode melhorar as estatísticas. Da mesma forma, ALTER INDEX com REORGANIZE compactará um índice, levando em conta seu FILLFACTOR e melhorará as estatísticas.
+O número da **Média de bytes livres por página** e **Média de densidade de página (completa)** no conjunto de resultados indicam o preenchimento de páginas de índice. O número da **Média de bytes livres por página** deve ser baixo e o número da **Média de densidade de página (completa)** deve ser alto para um índice sem muitas inserções aleatórias. Descartar e recriar um índice com a opção de FILLFACTOR especificada pode melhorar as estatísticas. Da mesma forma, ALTER INDEX com REORGANIZE compactará um índice, levando em conta seu FILLFACTOR e melhorará as estatísticas.
   
 > [!NOTE]  
 >  Um índice que tem muitas inserções aleatórias e páginas muito cheias terá um número maior de separações de página. Isso causa mais fragmentação.  

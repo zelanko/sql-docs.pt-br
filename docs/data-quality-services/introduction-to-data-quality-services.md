@@ -15,18 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2b0004068581d06c516c711565d811cc1736b55
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 84373ec49b5342a4e975f26ab474d4420190a686
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Introdução ao Data Quality Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A solução de qualidade de dados fornecida pelo [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite que um administrador de dados ou profissional de TI mantenha a qualidade de seus dados e assegure que os dados sejam adequados para uso comercial. O DQS é uma solução controlada por conhecimento que fornece maneiras assistidas por computador e interativas para gerenciar a integridade e a qualidade de suas fontes de dados. O DQS permite descobrir, compilar e gerenciar conhecimento sobre seus dados. Você pode usar esse conhecimento para executar a limpeza, a correspondência e a criação de perfil de dados. Você também pode aproveitar os serviços baseados em nuvem de provedores de dados de referência em um projeto de qualidade de dados do DQS.  
   
 ##  <a name="BusinessNeed"></a> A necessidade comercial do DQS  

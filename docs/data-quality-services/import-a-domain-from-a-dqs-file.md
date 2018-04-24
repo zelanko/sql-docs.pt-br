@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a1d2f72e65b054336f27cf629a40fec7abaa15
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 69b7f5a369330a6dd961926189f465f6eea7e81a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar um domínio de um arquivo .dqs
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como importar um domínio de um arquivo .dqs para uma base de dados de conhecimento existente no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um arquivo de dados .dqs é criado por meio da exportação de um domínio ou de uma base de dados de conhecimento do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Um arquivo de dados .dqs é criptografado e, portanto, não pode ser exibido.  
   
  O uso de um arquivo de dados .dqs para exportar um domínio de uma base de dados de conhecimento e, em seguida, importá-lo para outra base de dados de conhecimento simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que você compartilhe um domínio e seu conhecimento com outras pessoas, fazendo-as ganhar tempo. Você pode importar um único domínio ou um domínio composto (com vários domínios únicos). Um arquivo .dqs com um único domínio inclui todos os dados do domínio, inclusive os dados de propriedades, valores e regras do domínio, exceto para as informações de dados referenciados mapeados. Um arquivo .dqs com um domínio composto inclui todos os dados do domínio composto, incluindo todos os dados do domínio para os domínios únicos contidos no domínio composto, além das propriedades de domínio composto, das relações de valor e das regras de CD, exceto para os dados referenciados mapeados. Os dados publicados e não publicados serão importados.  

@@ -1,16 +1,16 @@
 ---
 title: IsDescendantOf (Mecanismo de Banco de Dados) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IsDescendant_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - IsDescendantOf [Database Engine]
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 291a38e51da8e342d96b3a5feac90fbbc2a00d46
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b0e35c5df5fb2124ba89fd26d7d93d31fa990d39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ O trecho de código a seguir chama o método `IsDescendantOf()`.
 this.IsDescendantOf(Parent)  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Referência de método de tipo de dados hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

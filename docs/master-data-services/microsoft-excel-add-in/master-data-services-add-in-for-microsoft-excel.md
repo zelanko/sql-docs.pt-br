@@ -1,30 +1,33 @@
 ---
 title: Suplemento Master Data Services para Microsoft Excel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 
+caps.latest.revision: 30
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8f1e34eb5bb7992661f79e2c524b660442a6df35
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f8e30f8a42bd6be429c1e6a437ce9fd241aa0843
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você pode carregar listas filtradas de dados do MDS no Excel, em que pode trabalhar com elas da mesma maneira como trabalharia com outros dados. Quando você terminar, poderá publicar os dados no MDS novamente, onde serão armazenados centralmente. A segurança determina quais dados você pode exibir e atualizar.  
   
  Se você for um administrador, também poderá usar o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para novas entidades e atributos, e carregá-los com os dados. Isso elimina a necessidade de usar outras ferramentas para carregar dados em seus modelos.  

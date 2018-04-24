@@ -1,16 +1,16 @@
 ---
-title: "Permissões REVOKE de esquema (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Permissões REVOKE de esquema (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,23 +19,23 @@ helpviewer_keywords:
 - schemas [SQL Server], permissions
 - permissions [SQL Server], schemas
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09bf03fc40529e2975727ae1e7068a18c35b6002
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 288835023123a03c89f7e4cd8b2b6b102b33a68c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>Permissões de esquema REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Revoga permissões em um esquema.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- ON SCHEMA **::** schema*_name*  
+ ON SCHEMA **::** schema *_name*  
  Especifica o esquema no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  

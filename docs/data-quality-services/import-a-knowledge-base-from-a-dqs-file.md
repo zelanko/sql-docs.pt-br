@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbe05945d348179426de1ff3e01ffa506429d08a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: bad13d8ffc5b8668fbbdbbe8863e4363193cf330
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importar uma base de dados de conhecimento de um arquivo .dqs
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como importar uma base de dados de conhecimento inteira de um arquivo de dados .dqs no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você cria o arquivo de dados exportando uma base de dados de conhecimento existente do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] (consulte [exportar uma Base de dados de conhecimento para um arquivo. DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)).  
   
  O uso de um arquivo de dados .dqs para exportar o conteúdo de uma base de dados de conhecimento e, depois, importar o conteúdo para outra base de dados de conhecimento no mesmo [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ou em outro [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que você compartilhe uma base de dados de conhecimento e seu conhecimento com outras pessoas, fazendo-as ganhar tempo. O arquivo .dqs conterá todas as informações da base de dados de conhecimento, inclusive domínios e a política de correspondência, exceto as informações de dados de referência anexadas. Os dados publicados e não publicados serão importados.  

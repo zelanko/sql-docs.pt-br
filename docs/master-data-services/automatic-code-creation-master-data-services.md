@@ -1,30 +1,33 @@
 ---
-title: "Criação automática de código (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Criação automática de código (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71f49623abe25581d9bdf5e53f0a208384b2aca7
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 82b145eb8a947c9320b4c4cb261d3a83e623d094
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Criação automática de código (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], os valores numéricos podem ser gerados automaticamente para o atributo de código, ou para qualquer outro atributo numérico. Quando códigos são gerados automaticamente, não está impedido de inserir outros valores para códigos; um valor inicial é definido automaticamente.  
   
 ## <a name="generating-code-values"></a>Gerando valores de códigos  

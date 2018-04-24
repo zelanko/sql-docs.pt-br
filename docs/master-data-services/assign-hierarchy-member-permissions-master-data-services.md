@@ -1,33 +1,36 @@
 ---
-title: "Atribuir permissões de membro de hierarquia (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Atribuir permissões de membro de hierarquia (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions [Master Data Services], assigning member permissions
 - members [Master Data Services], assigning permissions
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf535c4f82f099ef3db2bb0d438d6d7fcf7e0e00
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b417365e74eed99b0598eff878157309254e3fb1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Atribuir permissões de membro de hierarquia (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Atribua permissões a membros de hierarquia para conceder aos usuários ou grupos o acesso para exibir dados na área funcional **Explorer** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  As permissões de membro de hierarquia são opcionais. Elas fornecem granularidade adicional às permissões de objeto de modelo, que são obrigatórias.  

@@ -1,16 +1,16 @@
 ---
 title: OPENXML (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -26,20 +26,20 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab0c04534f730157d6112c2428b0cd2ff4a7277f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1fc81deadbf518851599699c83f6f5dbf39a39c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
+  OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
   
  OPENXML pode ser usado em instruções SELECT e SELECT INTO sempre que provedores de conjunto de linhas, uma exibição ou OPENROWSET podem ser exibidos como a origem. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   

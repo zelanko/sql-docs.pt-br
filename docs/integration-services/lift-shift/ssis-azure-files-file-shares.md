@@ -3,17 +3,18 @@ title: Armazenar e recuperar arquivos em compartilhamentos de arquivos local e n
 description: Este artigo descreve como usar o sistema de arquivos e compartilhamentos de arquivos, localmente e no Azure, com o SSIS
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.technology: integration-services
+ms.prod: sql
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b9fb260101c1f814c85360d3fe5998b6e9234101
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Armazenar e recuperar arquivos em compartilhamentos de arquivos local e no Azure com o SSIS
 Este artigo descreve como atualizar seus pacotes do SSIS (SQL Server Integration Services) quando você compara e desloca pacotes que usam sistemas de arquivos locais no SSIS no Azure.

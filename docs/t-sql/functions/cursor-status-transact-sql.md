@@ -1,16 +1,16 @@
 ---
 title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CURSOR_STATUS
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59a2cd382855f47d7cb37a3bc00bc723dde8f6df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: db83807ad5b9868d9f570e9c1db9f06a54f6fcfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Uma função escalar que permite o chamador de um procedimento armazenado para determinar se o procedimento retornou um cursor e conjunto de resultados para um determinado parâmetro ou não.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,7 +70,7 @@ Especifica uma constante que indica que a fonte do cursor é uma variável local
 ## <a name="return-types"></a>Tipos de retorno
 **smallint**
   
-|Valor de retorno|Cursor name|Variável de cursor|  
+|Valor retornado|Cursor name|Variável de cursor|  
 |---|---|---|
 |1|O conjunto de resultados do cursor tem, ao menos, uma fila.<br /><br /> Para cursores insensitive e keyset, o conjunto de resultados terá ao menos uma linha.<br /><br /> Para cursores dinâmicos, o conjunto de resultados pode ter zero, uma ou mais linhas.|O cursor alocado a esta variável está aberto.<br /><br /> Para cursores insensitive e keyset, o conjunto de resultados terá ao menos uma linha.<br /><br /> Para cursores dinâmicos, o conjunto de resultados pode ter zero, uma ou mais linhas.|  
 |0|O conjunto de resultados do cursor está vazio.*|O cursor alocado a esta variável está aberto, mas o conjunto de resultados está definitivamente vazio.*|  
@@ -133,7 +133,7 @@ After Close
 -1
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Funções do cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

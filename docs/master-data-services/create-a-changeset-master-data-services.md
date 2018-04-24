@@ -1,30 +1,33 @@
 ---
-title: "Criar um conjunto de alterações (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Criar um conjunto de alterações (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64cd181b331eae21b92765e947ddcda766eee242
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 691cdd7592240be142281ea7d6505a2765d3b7f5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-changeset-master-data-services"></a>Criar um Conjunto de Alterações (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Um conjunto de alterações é uma coleção das alterações pendentes nos dados mestre. Se a entidade requer aprovação para alterações, as alterações pendentes devem ser salvas em um conjunto de alterações e, em seguida, enviadas para aprovação do administrador.  
   
 ## <a name="prerequisites"></a>Prerequisites  

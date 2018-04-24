@@ -1,36 +1,36 @@
 ---
-title: "Usar os métodos value() e nodes() com OPENXML | Microsoft Docs"
-ms.custom: 
+title: Usar os métodos value() e nodes() com OPENXML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OpenXML method [XML in SQL Server]
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 831efec8d02c212f5a037423c42148e0c93fd072
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: bd55ee7aa1aa684ded13ab4b719b674fb0a5932b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Usar os métodos value() e nodes() com OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-É possível usar vários métodos **value()** em tipo de dados **xml** em uma cláusula **SELECT** para gerar um conjunto de linhas de valores extraídos. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
+  É possível usar vários métodos **value()** em tipo de dados **xml** em uma cláusula **SELECT** para gerar um conjunto de linhas de valores extraídos. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
   
  O método **nodes()** produz instâncias de um tipo de dados **xml** especial, cada uma das quais tem seu contexto definido como um nó selecionado diferente. Esse tipo de instância XML dá suporte aos métodos **query()**, **value()**, **nodes()** e **exist()** e pode ser usado em agregações **count(\*)**. Todos os outros usos provocam um erro.  
   

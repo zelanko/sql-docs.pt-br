@@ -1,35 +1,35 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 16
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0c4f5c0f65e6f7ae8b532cb42d117fa49fc83b00
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a0e15872ca8e161a75b2506b098ede4dd324cf3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Atualiza o valor de uma propriedade em uma cadeia de caracteres JSON e retorna a cadeia de caracteres JSON atualizada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,7 +73,7 @@ No [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e no [!INCLUDE[ssSDSfu
   
 JSON_MODIFY faz o escape de todos os caracteres especiais no novo valor se o tipo do valor é NVARCHAR ou VARCHAR. Um valor de texto não é seguido de caracteres de escape se ele é um JSON formatado corretamente produzido por FOR JSON, JSON_QUERY ou JSON_MODIFY.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna o valor atualizado de *expression* como um texto JSON formatado corretamente.  
   
 ## <a name="remarks"></a>Remarks  

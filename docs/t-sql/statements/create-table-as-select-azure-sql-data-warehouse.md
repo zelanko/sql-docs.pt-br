@@ -1,30 +1,31 @@
 ---
 title: CREATE TABLE AS SELECT (SQL Data Warehouse do Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/07/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a20e31dca149315c050657e9632d3e7fb3b8c92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ CTAS (CREATE TABLE AS SELECT) é um dos recursos mais importantes do T-SQL dispo
 > [!NOTE]  
 > Como CTAS complementa os recursos de criação de uma tabela, este tópico tenta não repetir o tópico CREATE TABLE. Ele descreve as diferenças entre as instruções CTAS e CREATE TABLE. Para obter os detalhes sobre CREATE TABLE, veja a instrução [CREATE TABLE (SQL Data Warehouse do Azure)](https://msdn.microsoft.com/library/mt203953/). 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 

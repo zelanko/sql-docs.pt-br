@@ -1,33 +1,36 @@
 ---
 title: Banco de dados do Master Data Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 529ddfd73ede13e92250b7bd80b41b946a7d720e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3971fa505ff46b0d742ee0ce8eef938212f60b81
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-database"></a>Banco de dados do Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   O banco de dados contém todas as informações do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ele é fundamental para uma implantação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . O banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
 -   Armazena as configurações, os objetos de banco de dados e os dados necessários ao sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

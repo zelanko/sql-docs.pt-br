@@ -1,30 +1,33 @@
 ---
 title: Aplicativo Web Master Data Manager | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 306d66b832e5df725d3a3b619998be960ac5fd8e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 813bb9419b97a264a873e57fbad6208f16c3d243
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-manager-web-application"></a>Aplicativo Web Master Data Manager
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   O aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] é usado principalmente por administradores para executar tarefas administrativas. Por exemplo, apenas administradores podem criar modelos, regras de negócio ou versões de dados. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  

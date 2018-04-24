@@ -17,18 +17,21 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72881f3b184c14b682990c012daa4e2aba5a8465
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 1214dcef9c0fb095becb3cb1f80986df28b709de
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="manage-dqs-log-files"></a>Gerenciar arquivos de log do DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Arquivos de log do[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) o ajudam a diagnosticar e solucionar problemas no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]e no [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. São gerados arquivos de log separados para o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]e o [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
  Você pode usar o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] para definir a configuração de severidade de log para recursos e módulos do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Adicionalmente, você também pode definir outras configurações (avançadas) para os arquivos de log do DQS, alterando manualmente os parâmetros de configuração de log DQS no banco de dados DQS_MAIN e um arquivo XML no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  

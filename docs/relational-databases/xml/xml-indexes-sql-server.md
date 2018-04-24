@@ -1,16 +1,16 @@
 ---
-title: "Índices XML (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Índices XML (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - removing indexes
@@ -36,20 +36,20 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ae2dbced7f4a077bcab341abf84eba5c189c3da
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1449b45958d4760ea2cdf3df9a259da68f621b11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Índices XML podem ser criados em colunas de tipo de dados **xml** . Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
+  Índices XML podem ser criados em colunas de tipo de dados **xml** . Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
   
 -   Consultas em colunas XML são comuns em sua carga de trabalho. O custo da manutenção de índices XML durante a modificação de dados deve ser considerado.  
   

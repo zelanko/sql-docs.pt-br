@@ -1,16 +1,16 @@
 ---
 title: ReorientObject (tipo de dados geography) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ReorientObject
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ReorientObject method (geography)
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f132cc69c1e4acdf20fbcf88280c212fc1a13ca
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f93e26f5a52e8faa796533438c5d02bbe721d936
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
  *geografia*  
  É outra instância de **geography** na qual `ReorientObject()` é invocado.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de retorno do CLR: **SqlGeography**  

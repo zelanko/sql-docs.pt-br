@@ -1,16 +1,16 @@
 ---
 title: SOME | ANY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a79c7a06edb70b694481e4c30b0244ebd39e2ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Compara um valor escalar com um conjunto de valores de uma única coluna. SOME e ANY são equivalentes.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,7 +70,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (*scalar_expression***,***x*) e quando *x* for um valor no conjunto de uma única coluna; caso contrário retornará **FALSE**.  
+ SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (*scalar_expression ***,*** x*) e quando *x* for um valor no conjunto de uma única coluna; caso contrário retornará **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
  SOME exige que a *scalar_expression* seja comparada positivamente com, pelo menos, um valor retornado pela subconsulta. Para obter instruções que exigem que *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = SOME (subconsulta) será avaliada como TRUE para um *scalar_express* igual a 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (subconsulta) será avaliada como FALSE, porque alguns dos valores da subconsulta (o valor 3) não atenderão aos critérios da expressão.  

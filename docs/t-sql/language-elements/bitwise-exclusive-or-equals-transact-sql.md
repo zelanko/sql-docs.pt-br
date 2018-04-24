@@ -1,16 +1,16 @@
 ---
-title: "^= (Atribuição de OR exclusivo bit a bit) (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ^= (Atribuição de OR exclusivo bit a bit) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ^=
@@ -23,23 +23,24 @@ helpviewer_keywords:
 - assignment operators, ^=
 - augmented operators, ^=
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da8f3df7201794db31bfff09927c97c128f82b0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 07edabdc5963468a901e652ae3f90c2e72571738
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^= (Atribuição de OR exclusivo bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Executa uma operação OR exclusiva bit a bit entre dois valores inteiros e define um valor como resultado da operação.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   

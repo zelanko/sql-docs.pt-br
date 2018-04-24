@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3b93c059c363d1690a614c7c61e1947559580e
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7dfd8c89dc12f19a9397b3a9053e4a7c979ad12e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como alterar e aumentar os metadados em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Depois que você gerar conhecimento através de descoberta de conhecimento, importar conhecimento para a base de dados de conhecimento ou domínios, ou utilizar outra base de dados de conhecimento como base para a base de dados de conhecimento, poderá alterar os valores de dados interativamente. A geração de base de dados de conhecimento não só aproveita processos assistidos por computador, mas lhe fornece os meios para usar seu próprio conhecimento para verificar valores de dados e alterá-los da seguinte forma:  
   
 -   Adicione um valor de domínio à lista de valores ou selecione um valor e exclua-o da lista  
@@ -79,7 +82,7 @@ ms.lasthandoff: 03/22/2018
   
     -   **Definir valores de domínio selecionados como inválidos**: para alterar o estado de um valor de Correto ou Erro para Inválido, selecione o valor e clique no ícone **Definir valores de domínio selecionados como inválidos** (triângulo) na seta para baixo da barra de ícones ou na lista suspensa de Tipo. Insira uma correção na coluna **Corrigir para** ou deixe em branco.  
   
-    -   **Corrigir para:**Após definir um valor como erro ou inválido, insira um novo valor na coluna **Corrigir para** . O DQS adicionará uma nova linha para o valor substituto, o designará como correto e agrupará os dois valores. O novo valor será mostrado como o valor principal, com o valor principal em negrito e o valor com erro ou inválido recuado.  
+    -   **Corrigir para:** Após definir um valor como erro ou inválido, insira um novo valor na coluna **Corrigir para** . O DQS adicionará uma nova linha para o valor substituto, o designará como correto e agrupará os dois valores. O novo valor será mostrado como o valor principal, com o valor principal em negrito e o valor com erro ou inválido recuado.  
   
 6.  Para designar valores como um grupo de sinônimos, selecione diversos valores corretos e continue da seguinte maneira:  
   

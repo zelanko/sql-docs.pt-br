@@ -2,7 +2,7 @@
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: ''
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b839da305714566169a95dc3636c00eac9286e94
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 44f5222050176deeefe489b833322c2ecfd57748
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 03/17/2018
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +58,7 @@ OPENDATASOURCE ( provider_name, init_string )
  É o nome registrado como PROGID do provedor OLE DB usado para acessar a fonte de dados. *provider_name* é um tipo de dados **char** sem nenhum valor padrão.  
   
  *init_string*  
- É a cadeia de conexão passada à interface IDataInitialize do provedor de destino. A sintaxe de cadeia de caracteres de provedor é baseada em pares palavras-chave e valor separados por ponto e vírgula, como: **'***palavrachave1*=*valor***;***palavrachave2*=*valor***'**.  
+ É a cadeia de conexão passada à interface IDataInitialize do provedor de destino. A sintaxe de cadeia de caracteres de provedor é baseada em pares palavras-chave e valor separados por ponto e vírgula, como: **'***palavrachave1*=* valor***;***palavrachave2*=* valor***'**.  
   
  Para ver os pares de valor e palavra-chave específicos com suporte no provedor, consulte o SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access. Essa documentação define a sintaxe básica. A tabela a seguir lista as palavras-chave mais usadas no argumento *init_string*.  
   

@@ -2,7 +2,7 @@
 title: Permissões GRANT do grupo de disponibilidade (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - granting permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc8e7f098645e78145c48ce8b1984946e80a9ebb
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 2001630068b0d60dbd2e7967b8041e2386d39da5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/15/2018
   Concede permissões em um Grupo de Disponibilidade AlwaysOn.  
   
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   

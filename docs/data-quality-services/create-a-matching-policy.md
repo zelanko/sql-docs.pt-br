@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: ''
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c9fe7a9614c1b389362edd0b40284508329fc1b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: cc6cc423dc00cb7a9615102217bfd3736d8ca7a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como criar uma política correspondente em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você se prepara para o processo de correspondência no DQS executando a atividade Política de Correspondência dos dados de exemplo. Nesta atividade, você cria e testa uma ou mais regras de correspondência na política e depois publica a base de dados de conhecimento para tornar as regras de correspondência publicamente disponíveis para uso. Pode haver apenas uma política de correspondência em uma base de dados de conhecimento, mas essa política pode conter várias regras de correspondência.  
   
  A criação de política de correspondência é executada em três estágios: um processo de mapeamento no qual você identifica a fonte de dados e mapeia os domínios para colunas, um processo de política de correspondência no qual você cria uma ou mais regras de correspondência e testa cada regra de correspondência separadamente e um processo de resultados de correspondência no qual você executa todas as regras de correspondência em conjunto e, caso fique satisfeito com elas, adiciona a política à base de dados de conhecimento. Cada um desses processos é executado em uma página separada do assistente da atividade Política de Correspondência, permitindo que você percorra páginas diferentes, para executar o processo novamente e fechar um processo de política de correspondência específico e depois retornar ao mesmo estágio do processo. Depois de testar todas as regras em conjunto, se desejar, você poderá retornar à página **Política de Correspondência** , ajustar uma regra individual, testá-la separadamente outra vez e retornar à página **Resultados de Correspondência** para executar todas as regras em conjunto mais uma vez. O DQS fornece estatísticas sobre a fonte de dados, as regras de correspondência e os resultados de correspondência que permitem a você tomar decisões conscientes sobre a política de correspondência, para que seja possível refiná-la.  

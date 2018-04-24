@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: ''
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0958845553a92f18e64c5fd39a3a62229bf9ed7b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: cd936e2ceeba5b2b20f922bbd6a59d430c44de4b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como criar uma base de dados de conhecimento através da descoberta da base de dados de conhecimento. No processo de descoberta, o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analisa os dados em uma fonte de dados de exemplo através de um processo assistido por computador e adiciona o conhecimento obtido na base de dados de conhecimento. Esse conhecimento pode ser modificado e aprimorado na etapa **Gerenciar Valores de Domínio** da atividade de descoberta da base de dados de conhecimento ou na atividade de gerenciamento de domínio.  
   
  A descoberta da base de dados de conhecimento é um processo controlado por assistente que inclui três etapas, que devem ser concluídas.  
@@ -165,7 +168,7 @@ ms.lasthandoff: 03/22/2018
   
     3.  **Definir valores de domínio selecionados como inválidos**: para alterar o estado de um valor de Correto ou Erro para Inválido, selecione o valor e clique no ícone **Definir valores de domínio selecionados como inválidos** (triângulo) na seta para baixo da barra de ícones ou na lista suspensa de Tipo. Insira uma correção na coluna **Corrigir para** ou deixe em branco.  
   
-    4.  **Corrigir para:**Após definir um valor como erro ou inválido, insira um novo valor na coluna **Corrigir para** . O DQS adicionará uma nova linha para o valor substituto, o designará como correto e agrupará os dois valores. O novo valor será mostrado como o valor principal, com o valor principal em negrito e o valor com erro ou inválido recuado.  
+    4.  **Corrigir para:** Após definir um valor como erro ou inválido, insira um novo valor na coluna **Corrigir para** . O DQS adicionará uma nova linha para o valor substituto, o designará como correto e agrupará os dois valores. O novo valor será mostrado como o valor principal, com o valor principal em negrito e o valor com erro ou inválido recuado.  
   
 5.  Para designar valores como um grupo de sinônimos, selecione diversos valores corretos e continue da seguinte maneira:  
   

@@ -1,34 +1,37 @@
 ---
-title: "Atributos baseados em domínio (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Atributos baseados em domínio (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], about domain-based attributes
 - domain-based attributes [Master Data Services]
 - attributes [Master Data Services], domain-based attributes
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdd5bb47c6a63a7ed91c83c50551beaa3c16058a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 6fa2ce3f0b8e422e2ddd2812dbe4be895a1af27c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Atributos baseados em domínio (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um atributo baseado em domínio é um atributo com valores que são preenchidos por membros de outra entidade. Você pode pensar em um atributo baseado em domínio como uma lista restrita; atributos baseados em domínio impedem os usuários de inserir valores de atributo que não são válidos. Para selecionar um valor de atributo, o usuário deve escolher as opções de uma lista.  
   
 ## <a name="domain-based-attribute-example"></a>Exemplo de atributo baseado em domínio  

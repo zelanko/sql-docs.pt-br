@@ -2,7 +2,7 @@
 title: Dicas de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|queries
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: ''
+caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d937872a3c00b453a58932dd127c3e3acc99c9f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 03/15/2018
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -291,7 +291,7 @@ ms.lasthandoff: 03/15/2018
 > [!IMPORTANT] 
 > Algumas dicas USE HINT podem entrar em conflito com os sinalizadores de rastreamento habilitados no nível global ou no nível da sessão, ou com as definições de configurações de escopo do banco de dados. Nesse caso, a dica no nível da consulta (USE HINT) sempre terá precedência. Se um USE HINT estiver em conflito com outra dica de consulta ou com um sinalizador de rastreamento habilitado no nível da consulta (como por QUERYTRACEON), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro ao tentar executar a consulta. 
 
- USE PLAN N**'***xml_plan***'**     
+ USE PLAN N **'***xml_plan***'**     
  Força o otimizador de consulta a usar um plano de consulta existente para uma consulta especificada por **'***xml_plan***'**. USE PLAN não pode ser especificado com instruções INSERT, UPDATE, MERGE ou DELETE.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Aplica a dica de tabela especificada à tabela ou à exibição que corresponde ao *exposed_object_name*. É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md).  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2932ba3a3eeb2c043745486c536d4e0a04bcc496
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 624f72be359452bd80c3d68a7a8487dbe06be6b0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-cleansing"></a>Data Cleansing
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Limpeza de dados é o processo de analisar a qualidade de dados em uma fonte de dados, aprovando/rejeitando as sugestões manualmente pelo sistema e fazer alterações assim aos dados. A limpeza de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) inclui um processo auxiliado por computador que analisa a conformidade dos dados em relação ao conhecimento de uma base de dados de conhecimento, e um processo interativo que permite que o administrador de dados examine e modifique resultados de processo auxiliado por computador para garantir que a limpeza de dados seja executada exatamente como desejado.  
   
  O administrador de dados também pode executar a limpeza de dados no processo de empacotamento do Integration Services. Neste caso, o administrador de dados deve usar um componente do [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] que executa automaticamente a limpeza de dados com o uso de uma base de conhecimento existente. Para obter mais informações, consulte [Transformação de Limpeza DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  

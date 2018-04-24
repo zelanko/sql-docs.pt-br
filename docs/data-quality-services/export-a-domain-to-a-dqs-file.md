@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dfec4e0fd2dbefad70651ddcca119e930c927c1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 95e7854e4a6839bbcff7f26265c4858d750a8b31
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar um domínio para um arquivo .dqs
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como exportar um domínio para um arquivo .dqs no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você pode exportar um domínio ou uma base de dados de conhecimento inteira para um arquivo de dados. Para obter informações sobre como exportar uma base de dados de conhecimento, consulte [Exportar uma base de dados de conhecimento para um arquivo .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
  A exportação de um domínio de uma base de dados de conhecimento para um arquivo de dados .dqs e sua subsequente importação para outra base de dados de conhecimento simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que você compartilhe um domínio e sua base de dados de conhecimento com outras pessoas.  

@@ -1,30 +1,33 @@
 ---
-title: "Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e97bda2761c85e690bf43e568371d7dc25584b41
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: bbe98747dd35a5320ef2878a72908cae8825b595
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   As DHs (Hierarquias Derivadas) exibem relações um para muitos e, agora, também podem mostrar relações muitos para muitos.  
   
 ## <a name="many-to-many-m2m-relationships"></a>Relações M2M (muitos-para-muitos)  

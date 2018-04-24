@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7b80a8efa3f80ba349144afa2b931e4d255ec1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 419f6ae4c8c7c5e19117aaeb86d730e1c625ee44
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md).  
   
  A limpeza de dados é executada em quatro estágios: um estágio de *mapeamento* no qual você identifica a fonte de dados a ser limpa e executa seu mapeamento para os domínios necessários em uma base de dados de conhecimento, um estágio de *limpeza auxiliada por computador* no qual o DQS aplica a base de dados de conhecimento aos dados a serem limpos e propõe ou faz alterações na fonte de dados, um estágio de *limpeza interativa* em que os administradores de dados podem analisar as alterações de dados e aceitar ou rejeitar as alterações nos dados e, por fim, o estágio de *exportação* que permite exportar os dados limpos. Cada um desses processos é executado em uma página separada do assistente da atividade de limpeza, permitindo que você percorra páginas diferentes, para executar o processo novamente, e fechar um processo de limpeza específico e depois retornar ao mesmo estágio do processo. O DQS fornece estatísticas sobre a fonte de dados e os resultados da limpeza que permitem a você tomar decisões conscientes sobre a limpeza de dados.  

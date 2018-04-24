@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Lock:Timeout | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f50705fbc3639cc5301a1c2c4c621cff1e14ef94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 65d461f49ea49245fd050a004162f1c3dafb36f1
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-event-class"></a>Classe de evento Lock:Timeout
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento Lock:Timeout indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. O tempo limite é determinado pela função de sistema @@LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  A classe de evento Lock:Timeout indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. O tempo limite é determinado pela função de sistema @@LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  
   
  Use a classe de evento Lock:Timeout para monitorar quando as condições de tempo limite acontecerem. Essas informações são úteis para determinar se os tempos limite estão afetando significativamente o desempenho de seu aplicativo, e quais são os objetos envolvidos. Você pode examinar o código do aplicativo que modifica esses objetos para determinar se podem ser efetuadas alterações para minimizar os intervalos.  
   

@@ -1,36 +1,37 @@
 ---
 title: Eventos DDL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ddl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DDL events
 - DDL triggers, events
 - events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ab16db537c4033f0dd68ddd457e9e1a341a7449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3f65b5b259ef635f1b77932bec9e01decca58fcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ddl-events"></a>Eventos DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-As tabelas seguintes listam os eventos DDL que podem ser usados para um gatilho DDL ou notificação de eventos. Observe que cada evento corresponde a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou procedimento armazenado, com a sintaxe de instrução modificada para incluir um caractere sublinhado (_) entre palavras-chave.  
+  As tabelas seguintes listam os eventos DDL que podem ser usados para um gatilho DDL ou notificação de eventos. Observe que cada evento corresponde a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou procedimento armazenado, com a sintaxe de instrução modificada para incluir um caractere sublinhado (_) entre palavras-chave.  
   
 > [!IMPORTANT]  
 >  Os procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar gatilhos DDL e notificações de eventos. Teste seus gatilhos e notificações de eventos DDL para determinar suas respostas aos procedimentos armazenados do sistema que são executados. Por exemplo, a instrução CREATE TYPE e o procedimento armazenado **sp_addtype** acionarão um gatilho DDL ou uma notificação de eventos que tenham sido criados em um evento CREATE_TYPE.  

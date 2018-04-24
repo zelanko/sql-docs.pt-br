@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d2e84f851fb8fdba29424de7ee9664b4724e2ec
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: d0b805297ba84fe30dbc393dd73a968bc32f6a52
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Desanexando e anexando bancos de dados do DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como desanexar e anexar os bancos de dados do DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
@@ -49,7 +52,7 @@ ms.lasthandoff: 03/22/2018
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
 ##  <a name="Detach"></a> Desanexar bancos de dados DQS  
- Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados do DQS geralmente estão disponíveis no seguinte local no computador do Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>*\MSSQL\DATA.  
+ Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados do DQS geralmente estão disponíveis no seguinte local no computador do Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>* \MSSQL\DATA.  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   

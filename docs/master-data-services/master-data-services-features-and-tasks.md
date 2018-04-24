@@ -1,30 +1,33 @@
 ---
 title: Recursos e tarefas do Master Data Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a64d484a0739e17e947370d2760886bcbac7dd90
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a85118fdc5499a47a491ae1229713a4d58d87451
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-features-and-tasks"></a>Recursos e tarefas do Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Aprenda a usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para gerenciar os dados mestre de sua organização. Aprenda a criar e manipular objetos de modelo que são contêineres de dados. Aprenda a organizar e manter os próprios dados mestre. Aprenda a importar e exportar dados mestre, bem como compartilhar modelos entre ambientes de teste e produção. Por fim, saiba como desenvolver aplicativos personalizados que acessam o serviço Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="create-structures-to-contain-data"></a>Criar estruturas para conter dados  

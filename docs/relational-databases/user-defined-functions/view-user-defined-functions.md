@@ -1,16 +1,16 @@
 ---
-title: "Exibir funções definidas pelo usuário | Microsoft Docs"
-ms.custom: 
+title: Exibir funções definidas pelo usuário | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: udf
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.udfproperties.general.f1
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], viewing
 - status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee41a96246e6808d214b4d421401bd2dff6c6718
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c28f6cb503134ce4d1d52abeaecaad3d48663594
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Você pode obter informações sobre a definição ou as propriedades de uma função definida pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da função para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela função.  
+  Você pode obter informações sobre a definição ou as propriedades de uma função definida pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da função para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela função.  
   
 > [!IMPORTANT]  
 >  Se você alterar o nome de um objeto referenciado por uma função, deverá modificar essa função, de modo que seu texto reflita o novo nome. Portanto, antes de renomear um objeto, exiba primeiramente as dependências do objeto para determinar se alguma função é afetada pela mudança proposta.  

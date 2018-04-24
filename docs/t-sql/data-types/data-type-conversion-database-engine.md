@@ -1,16 +1,16 @@
 ---
-title: "Conversão de tipo de dados (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: 
+title: Conversão de tipo de dados (Mecanismo de Banco de Dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - explicit data type conversions [SQL Server]
 - converting data types [SQL Server], about converting data types
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 811eacd3dc0cbbd622fc6eac6ad91a6e740554f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9443c64daa514c83e6493606f961e501b26f04f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversão de tipo de dados (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +97,7 @@ A tabela a seguir descreve as conversões de tipo de dados do [!INCLUDE[ssNoVers
 |**decimal**, **numeric**|**String**|  
 |**bit**|**Booliano**|  
 |**binary**, **varbinary**, **image**|Matriz **Byte()** unidimensional|  
-|**int**|**Longo**|  
+|**int**|**Long**|  
 |**smallint**|**Integer**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
@@ -105,7 +106,7 @@ A tabela a seguir descreve as conversões de tipo de dados do [!INCLUDE[ssNoVers
 |**datetime**, **smalldatetime**|**Date**|  
 |Tudo definido como NULL|**Variant** definida como Null|  
   
-Todos os valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] únicos são convertidos em um valor [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] único, com a exceção dos valores **binary**, **varbinary** e **image**. Esses valores são convertidos em uma matriz **Byte()** unidimensional em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Essa matriz tem um intervalo de **Byte(**0 to *length*1**)** em que *length* é o número de bytes nos valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
+Todos os valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] únicos são convertidos em um valor [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] único, com a exceção dos valores **binary**, **varbinary** e **image**. Esses valores são convertidos em uma matriz **Byte()** unidimensional em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Essa matriz tem um intervalo de **Byte(** 0 to *length*1 **)** em que *length* é o número de bytes nos valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
   
 Estas são as conversões de tipos de dados [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -120,7 +121,7 @@ Estas são as conversões de tipos de dados [!INCLUDE[vbprvb](../../includes/vbp
 |Matriz **Byte()** unidimensional com 8.000 bytes ou menos|**varbinary**|  
 |Matriz **Byte()** unidimensional com mais de 8.000 bytes|**imagem**|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Procedimentos armazenados de Automação OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

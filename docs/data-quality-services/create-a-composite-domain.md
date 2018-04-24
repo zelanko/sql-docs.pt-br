@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d358802cd5500359b4132e6db6868485e317773
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8edd709f2a753d75c5208b82ac8cd6d885d83db6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como criar um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em um ou mais domínios únicos que se aplicam a um campo de dados único. Para obter mais informações sobre domínios de composição, consulte [Gerenciando um domínio de composição](../data-quality-services/managing-a-composite-domain.md).  
   
  Há duas maneiras de criar um novo domínio composto. A primeira é durante a etapa Mapear da atividade de descoberta da base de dados de conhecimento, quando você está no processo de analisar um exemplo de dados para adicionar conhecimento a uma base de dados de conhecimento nova ou existente. A segunda é durante a atividade de gerenciamento de domínio, quando, em vez de alterar um domínio existente, você cria um novo domínio. Para criar um domínio composto, você já deve ter criado pelo menos dois domínios únicos para adicionar ao domínio composto. Somente os domínios únicos que já foram criados e não foram adicionados a um domínio composto existente estão disponíveis quando você cria um novo domínio composto. Um domínio único não pode ser adicionado a mais de um domínio composto e um domínio composto não pode ser adicionado a outro domínio composto.  

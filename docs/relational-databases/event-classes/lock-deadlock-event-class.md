@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Lock:Deadlock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b4cd55a7d886e6d3eb6f979898cbf7f85d0e9a6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4a3ba6839c66cb275f48e16a0734359a6394e521
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockdeadlock-event-class"></a>Classe de evento Lock:Deadlock
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento Lock:Deadlock é produzida quando é cancelada uma tentativa para adquirir um bloqueio, porque a tentativa fazia parte de um deadlock e foi escolhida como a vítima de deadlock.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  A classe de evento Lock:Deadlock é produzida quando é cancelada uma tentativa para adquirir um bloqueio, porque a tentativa fazia parte de um deadlock e foi escolhida como a vítima de deadlock.  
   
  Use a classe de evento Lock:Deadlock para monitorar quando ocorrer deadlock e quais os objetos envolvidos. Você pode usar essas informações para determinar se os deadlocks estão afetando significativamente o desempenho de seu aplicativo. Em seguida, é possível examinar o código do aplicativo para determinar se é possível fazer alterações para minimizar os deadlock.  
   

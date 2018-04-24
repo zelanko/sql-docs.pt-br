@@ -1,16 +1,16 @@
 ---
 title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_SRVROLEMEMBER_TSQL
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 342eadd8e537611cc292c95ebfa41b98c222c920
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1ae1dac9be576e6f1c6c2c83164bd83e2716d658
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Indica se um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é membro da função de servidor especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-|Valor de retorno|Description|  
+|Valor retornado|Description|  
 |------------------|-----------------|  
 |0|*logon* não é um membro de *role*.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa instrução sempre retorna 0.|  
 |1|*login* é um membro de *role*.|  

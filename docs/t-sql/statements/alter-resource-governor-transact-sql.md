@@ -1,16 +1,16 @@
 ---
 title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER RESOURCE GOVERNOR
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: 
+caps.latest.revision: 49
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e2f672982778249cf5bc7329a8bc371b95407ed4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Define o máximo de operações de E/S por volume de disco.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -94,7 +94,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE deve ser emitida para que qualquer alteração de configuração entre em vigor.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.***function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { *schema_name ***.*** function_name* | NULL }  
  Registra a função de classificação especificada por *schema_name.function_name*. Essa função classifica cada sessão nova e atribui as solicitações e consultas de sessão a um grupo de carga de trabalho. Quando NULL é usado, novas sessões são automaticamente atribuídas ao grupo de carga de trabalho padrão.  
   
  RESET STATISTICS  

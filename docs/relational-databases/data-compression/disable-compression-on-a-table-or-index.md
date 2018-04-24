@@ -1,29 +1,30 @@
 ---
-title: "Desabilitar a compactação em uma tabela ou índice | Microsoft Docs"
-ms.custom: 
+title: Desabilitar a compactação em uma tabela ou índice | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: data-compression
 ms.technology:
 - dbe-data-compression
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26617d7ebdeae568acb35d518cc17f068b607ba3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a10b0aba535ab1c5332d2843de9b502eddb692da
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Desabilitar a compactação em uma tabela ou índice
 

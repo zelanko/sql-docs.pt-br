@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee0c75c41ac8feb6141adbaa0ef1daa363b31d6f
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 425ea0bf553e081cb3f61d387529193a0d88dbf5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reference-data-services-in-dqs"></a>Serviços de Dados de Referência no DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Os dados de referência se referem a um conjunto exato e completo de dados relacionados ou globais categorizados (além dos limites de uma empresa) que estão disponíveis para domínios públicos confiáveis ou de provedores de conteúdo comercial premium.  
   
  O recurso Serviço de Dados de Referência no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite a você assinar provedores de dados de referência de terceiros e limpar facilmente e enriquecer os dados empresariais validando-os em relação aos dados de alta qualidade. Você pode usar serviços dos principais provedores do Data Quality Services de dentro do DQS para padronizar, corrigir ou enriquecer seus dados durante o processo de limpeza. Por exemplo, você pode usar uma lista de códigos de área ou CEPs em relação aos dados de referência para validar endereços de seus clientes.  

@@ -1,30 +1,33 @@
 ---
-title: "Exibir todas as anotações ou transações de um membro (Suplemento MDS para Excel) | Microsoft Docs"
-ms.custom: 
+title: Exibir todas as anotações ou transações de um membro (Suplemento MDS para Excel) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ef64ad23cf73feaf9345a72dafe2c652c28c74a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 63465ce922f8ab2ffc6257206aa5f80a5af4d2a8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Exibir todas as anotações ou transações de um membro (suplemento MDS para Excel)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], exiba anotações (comentários) e transações de linhas de dados (membros) quando quiser verificar as atualizações dos dados com o passar do tempo.  
   
 ## <a name="prerequisites"></a>Prerequisites  

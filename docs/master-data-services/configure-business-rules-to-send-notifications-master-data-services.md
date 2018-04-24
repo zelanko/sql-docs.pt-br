@@ -1,34 +1,37 @@
 ---
-title: "Configurar regras de negócio para enviar notificações (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Configurar regras de negócio para enviar notificações (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 407e57317e5b92ca529ce3fa4196b7d1ddafd6a7
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: fd7790eb4d1958b9291b2318baa52038c82b9489
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar regras de negócio para enviar notificações (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure regras de negócios para enviar notificações quando você desejar notificar os usuários sobre alterações de valor de atributo.  
   
 ## <a name="prerequisites"></a>Prerequisites  

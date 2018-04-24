@@ -1,15 +1,15 @@
 ---
-title: "Habilitar a compactação em uma tabela ou índice | Microsoft Docs"
-ms.custom: 
+title: Habilitar a compactação em uma tabela ou índice | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: data-compression
 ms.technology:
 - dbe-data-compression
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.compwiz.compressiontype.f1
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: affe8cf85b5a4d3d9b692273bdf569a80287f305
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 632fbcd80361de5090cb10505a8a77d7ed67d4ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
 

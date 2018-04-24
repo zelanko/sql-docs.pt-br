@@ -2,7 +2,7 @@
 title: Modificar relações de chave estrangeira | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 86e25333f1ea21d1500bdef3a61b2c10bd013cd7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -150,7 +151,7 @@ ms.lasthandoff: 04/10/2018
   
 4.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar uma chave estrangeira**  
   
  Para modificar uma restrição FOREIGN KEY usando o Transact-SQL, exclua primeiramente a FOREIGN KEY já existente e, em seguida, recrie-a com a nova definição. Para obter mais informações, consulte [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  

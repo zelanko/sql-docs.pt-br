@@ -1,8 +1,8 @@
 ---
 title: Destinos para eventos estendidos no SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,11 +155,14 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 
 - O nome de arquivo escolhido é usado pelo sistema como um prefixo ao qual é acrescentado um inteiro longo baseado em data e hora, seguido da extensão .xel.
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
 > [!NOTE]
 > O Banco de Dados SQL do Azure é compatível com o destino **event_file**, mas apenas usando um blob no Armazenamento do Azure para a saída. O Banco de Dados SQL não pode armazenar a saída de evento em um arquivo em seu disco rígido local.
+>
 > Para um exemplo de código **event_file** específico para o Banco de Dados SQL (e para a Instância Gerenciada do Banco de Dados SQL), consulte [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file) (Código de destino do Arquivo de Evento para eventos estendidos no Banco de Dados SQL).
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION com o destino **event_file**

@@ -1,32 +1,32 @@
 ---
 title: IsValidDetailed (DataType de geometria) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f7531e9b692db3a026e4697e502f3d10e39cfa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 285833fd707c524f3912fa68ca7e44878417f788
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (DataType geométrico)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
 ## <a name="remarks"></a>Remarks  
  A tabela a seguir contém os valores de retorno possíveis:  
   
-|Valor de retorno|Description|  
+|Valor retornado|Description|  
 |------------------|-----------------|  
 |24400|Válido|  
 |24401|Não válido, motivo desconhecido.|  

@@ -2,7 +2,7 @@
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -54,11 +54,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e2018a6e0975c739a3d796cb1f0bdf6a0b392584
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 9f0a96fb3d9ffabc97ae32afbaa2462a34ec14e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -391,22 +391,22 @@ column_name <data_type>
  PERSISTED  
  Especifica que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] armazenará fisicamente os valores computados na tabela e atualizará os valores quando for atualizada qualquer outra coluna da qual a coluna computada depende. Marcar uma coluna computada como PERSISTED permite a criação de um índice em uma coluna computada que seja determinística, mas não precisa. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Qualquer coluna computada usada como colunas de partição de uma tabela particionada deve ser marcada como PERSISTED. *computed_column_expression* deve ser determinística quando PERSISTED é especificado.  
   
- ON { *partition_scheme* | *filegroup* | **"**default**"** }  
+ ON { *partition_scheme* | *filegroup* | **"** default **"** }  
 
- Especifica o esquema de partição ou grupo de arquivos no qual a tabela é armazenada. Se *partition_scheme* for especificado, a tabela será uma tabela particionada cujas partições são armazenadas em um conjunto de um ou mais grupos de arquivos especificados em *partition_scheme*. Se *filegroup* for especificado, a tabela será criada no grupo de arquivos nomeado. O grupo de arquivos deve existir no banco de dados. Se **"**default**"** for especificado ou se ON não for especificado, a tabela será armazenada no grupo de arquivos padrão. O mecanismo de armazenamento de uma tabela como especificado em CREATE TABLE não pode ser alterado posteriormente.  
+ Especifica o esquema de partição ou grupo de arquivos no qual a tabela é armazenada. Se *partition_scheme* for especificado, a tabela será uma tabela particionada cujas partições são armazenadas em um conjunto de um ou mais grupos de arquivos especificados em *partition_scheme*. Se *filegroup* for especificado, a tabela será criada no grupo de arquivos nomeado. O grupo de arquivos deve existir no banco de dados. Se **"** default **"** for especificado ou se ON não for especificado, a tabela será armazenada no grupo de arquivos padrão. O mecanismo de armazenamento de uma tabela como especificado em CREATE TABLE não pode ser alterado posteriormente.  
   
- ON {*partition_scheme* | *filegroup* | **"**default**"**} também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se *filegroup* for especificado, o índice será armazenado no grupo de arquivos nomeado. Se **"**default**"** for especificado ou se ON não for especificado, o índice será armazenado no mesmo grupo de arquivos que a tabela. Se a restrição PRIMARY KEY ou UNIQUE criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos que o índice. Se CLUSTERED for especificado ou se a restrição de alguma outra forma criar um índice clusterizado e for especificado um *partition_scheme* diferente do *partition_scheme* ou do *filegroup* da definição da tabela ou vice-versa, somente a definição da restrição será preservada, as demais serão ignoradas.  
+ ON {*partition_scheme* | *filegroup* | **"** default **"**} também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se *filegroup* for especificado, o índice será armazenado no grupo de arquivos nomeado. Se **"** default **"** for especificado ou se ON não for especificado, o índice será armazenado no mesmo grupo de arquivos que a tabela. Se a restrição PRIMARY KEY ou UNIQUE criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos que o índice. Se CLUSTERED for especificado ou se a restrição de alguma outra forma criar um índice clusterizado e for especificado um *partition_scheme* diferente do *partition_scheme* ou do *filegroup* da definição da tabela ou vice-versa, somente a definição da restrição será preservada, as demais serão ignoradas.  
   
 > [!NOTE]  
->  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"**default**"** ou ON **[**default**]**. Se **"**default**"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 > [!NOTE]  
 >  Depois de criar uma tabela particionada, considere definir a opção LOCK_ESCALATION da tabela como AUTO. Isso pode melhorar a simultaneidade ao permitir que os bloqueios escalem para o nível da partição (HoBT) em vez da tabela. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
- TEXTIMAGE_ON { *filegroup*| **"**default**"** }  
+ TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
  Indica que **text**, **ntext**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e as colunas de tipo definido pelo usuário CLR (incluindo geometria e geografia) são armazenadas no grupo de arquivos especificado.  
   
- TEXTIMAGE_ON não será permitido se não houver ma coluna de valor grande na tabela. TEXTIMAGE_ON não poderá ser especificado se *partition_scheme* for especificado. Se **"**default**"** for especificado ou se TEXTIMAGE_ON não for especificado, as colunas de valores grandes serão armazenadas no grupo de arquivos padrão. O armazenamento de qualquer dado de coluna de valor grande especificado em CREATE TABLE não poderá ser alterado posteriormente.  
+ TEXTIMAGE_ON não será permitido se não houver ma coluna de valor grande na tabela. TEXTIMAGE_ON não poderá ser especificado se *partition_scheme* for especificado. Se **"** default **"** for especificado ou se TEXTIMAGE_ON não for especificado, as colunas de valores grandes serão armazenadas no grupo de arquivos padrão. O armazenamento de qualquer dado de coluna de valor grande especificado em CREATE TABLE não poderá ser alterado posteriormente.  
 
 > [!NOTE]  
 > Varchar(max), nvarchar(max), varbinary(max), xml e valores UDT grandes são armazenados diretamente na linha de dados, até um limite de 8.000 bytes, contanto que o valor caiba no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.
@@ -414,9 +414,9 @@ TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afet
 
 
 > [!NOTE]  
->  Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e deve ser delimitado, como em TEXTIMAGE_ON **"**default**"** ou TEXTIMAGE_ON **[**default**]**. Se **"**default**"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e deve ser delimitado, como em TEXTIMAGE_ON **"** default **"** ou TEXTIMAGE_ON **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  Especifica o grupo de arquivos para obter dados de FILESTREAM.  
   
@@ -430,7 +430,7 @@ TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afet
   
 -   Uma instrução [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) converte um heap em um índice clusterizado. Nesse caso, um outro grupo de arquivos FILESTREAM, um esquema de partição ou NULL pode ser especificado.  
   
--   Uma instrução [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) converte um índice clusterizado em um heap. Neste caso, um outro grupo de arquivos FILESTREAM, um esquema de partição ou **"**default**"** pode ser especificado.  
+-   Uma instrução [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) converte um índice clusterizado em um heap. Neste caso, um outro grupo de arquivos FILESTREAM, um esquema de partição ou **"** default **"** pode ser especificado.  
   
  O grupo de arquivos da cláusula `FILESTREAM_ON <filegroup>`, ou cada grupo de arquivos FILESTREAM nomeado no esquema de partição, deve ter um arquivo definido para o grupo de arquivos. Esse arquivo deve ser definido usando uma instrução [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); caso contrário, ocorrerá um erro.  
   
@@ -525,7 +525,7 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
   
  O índice columnstore não clusterizado é armazenado e gerenciado como um índice columnstore clusterizado. Isso é chamado de índice columnstore não clusterizado porque as colunas podem ser limitadas e existem como um índice secundário em uma tabela.  
   
- ON *partition_scheme_name***(***column_name***)**  
+ ON *partition_scheme_name ***(*** column_name***)**  
  Especifica o esquema de partição que define os grupos de arquivos nos quais as partições de um índice particionado serão mapeadas. O esquema de partição deve existir no banco de dados com a execução de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) ou [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica a coluna com relação à qual um índice particionado será particionado. Essa coluna precisa corresponder ao tipo de dados, ao comprimento e à precisão do argumento da função de partição que *partition_scheme_name* está usando. *column_name* não é restrito às colunas na definição de índice. Qualquer coluna da tabela base pode ser especificada, exceto que, ao particionar um índice UNIQUE, *column_name* deve ser escolhido entre aqueles usados como chave exclusiva. Essa restrição permite ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificar a exclusividade de valores de chave em uma única partição apenas.  
   
 > [!NOTE]  
@@ -541,10 +541,10 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
  ON *filegroup_name*  
  Cria o índice especificado no grupo de arquivos especificado. Se nenhum local for especificado e a tabela ou exibição não for particionada, o índice usará o mesmo grupo de arquivos que a tabela ou exibição subjacente. O grupo de arquivos já deve existir.  
   
- ON **"**default**"**  
+ ON **"** default **"**  
  Cria o índice especificado no grupo de arquivos padrão.  
   
- Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"**default**"** ou ON **[**default**]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    

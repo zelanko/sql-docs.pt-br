@@ -1,16 +1,16 @@
 ---
 title: WRITETEXT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WRITETEXT_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f2a5eb2808bf0f438adbe606f2d59e39b4ec3c55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
   Permite a atualização interativa minimamente registrada de uma coluna de **text**, **ntext** ou **image** existente. WRITETEXT substitui quaisquer dados existentes na coluna afetada. WRITETEXT não pode ser usado em colunas de **text**, **ntext** e **image** em exibições.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use os tipos de dados de valor grande e a cláusula **.**WRITE da instrução [UPDATE](../../t-sql/queries/update-transact-sql.md) nesse caso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use os tipos de dados de valor grande e a cláusula **.** WRITE da instrução [UPDATE](../../t-sql/queries/update-transact-sql.md) nesse caso.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
