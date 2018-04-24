@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: ae48076185149d0ba1306260459ec7b34dcc8123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Este tópico descreve como executar a correspondência de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de correspondência identifica clusters de registros de correspondência com base em regras de correspondência na política de correspondência, designa um registro de cada cluster como o sobrevivente com base em uma regra de sobrevivência, e exporta os resultados. O DQS executa o processo de correspondência, também chamado de eliminação de duplicação, em um processo assistido por computador, mas você cria regras de correspondência interativamente e seleciona a regra de correspondência a partir de várias opções; assim, você controla o processo de correspondência.  
   
  A correspondência é executada em três etapas: um processo de mapeamento no qual você identifica a fonte de dados e mapeia domínios para a fonte de dados, um processo de correspondência no qual você executa a análise de correspondência, e um processo de sobrevivência e exportação no qual você designa a regra de sobrevivência e exporta os resultados correspondentes. Cada um desses processos é executado em uma página separada do assistente da atividade de correspondência, permitindo que você percorra páginas diferentes, para executar o processo novamente e fechar um processo de correspondência específico e, depois, retornar ao mesmo estágio do processo. O DQS fornece estatísticas sobre a fonte de dados, as regras de correspondência e os resultados correspondentes que permitem a você tomar decisões conscientes sobre a correspondência e refinar o processo de correspondência.  

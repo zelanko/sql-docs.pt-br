@@ -1,28 +1,29 @@
 ---
 title: EXPLAIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 4f772512c98f131af7313e765c08231e925e3fef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ EXPLAIN SQL_statement
 ## <a name="permissions"></a>Permissões  
  Requer a permissão **SHOWPLAN** e a permissão para executar *SQL_statement*. Confira [Permissões: GRANT, DENY, REVOKE &#40;SQL Data Warehouse do Azure, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O valor retornado do comando **EXPLAIN** é um documento XML com a estrutura mostrada abaixo. Este documento XML lista todas as operações no plano de consulta para determinada consulta, cada uma delimitada pela marcação `<dsql_operation>`. O valor retornado é do tipo **nvarchar(max)**.  
   
  O plano de consulta retornado mostra instruções SQL sequenciais. Quando a consulta é executada, ela pode envolver operações em paralelo, portanto algumas das instruções sequenciais mostradas podem ser executadas ao mesmo tempo.  

@@ -1,16 +1,16 @@
 ---
-title: "Precisão, escala e comprimento (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Precisão, escala e comprimento (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - scale [SQL Server], data types
 - data types [SQL Server], precision
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6f35d99b2bc195aa311e30310787023dfafd4855
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 04fd1c983a9c580e021de51cd93fff69800e5c9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisão, escala e comprimento (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10
 Neste caso, a precisão é de 61 e escala é de 20.
 A escala é maior do que 6 e a parte integral (`precision-scale = 41`) é maior do que 32. Isso é caso (3) nas regras de multiplicação e tipo de resultado é `decimal(38,6)`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

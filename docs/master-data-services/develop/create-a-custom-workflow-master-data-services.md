@@ -1,39 +1,42 @@
 ---
 title: Criar um fluxo de trabalho personalizado (Master Data Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: e9068bb0564b0b4f0635175efb1a1805bcd2f4e5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócio para criar soluções de fluxo de trabalho básicas, como atualizar automaticamente e validar dados e obter o envio de notificações por email, com base nas condições especificadas. Quando você requer processamento mais complexo do que o oferecido pelas ações de fluxo de trabalho internas, use um fluxo de trabalho personalizado. Um fluxo de trabalho personalizado é um assembly .NET que você cria. Quando seu assembly de fluxo de trabalho é chamado, seu código pode executar qualquer ação que sua situação exija. Por exemplo, se seu fluxo de trabalho exigir o processamento de eventos complexos, como aprovações em várias camadas ou árvores de decisão complicadas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para iniciar um fluxo de trabalho personalizado que analisa os dados e determina para onde enviá-lo para aprovação.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócio para criar soluções de fluxo de trabalho básicas, como atualizar automaticamente e validar dados e obter o envio de notificações por email, com base nas condições especificadas. Quando você requer processamento mais complexo do que o oferecido pelas ações de fluxo de trabalho internas, use um fluxo de trabalho personalizado. Um fluxo de trabalho personalizado é um assembly .NET que você cria. Quando seu assembly de fluxo de trabalho é chamado, seu código pode executar qualquer ação que sua situação exija. Por exemplo, se seu fluxo de trabalho exigir o processamento de eventos complexos, como aprovações em várias camadas ou árvores de decisão complicadas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para iniciar um fluxo de trabalho personalizado que analisa os dados e determina para onde enviá-lo para aprovação.  
   
 ## <a name="how-custom-workflows-are-processed"></a>Como os fluxos de trabalho personalizados são processados  
  Há três componentes principais envolvidos no processamento de fluxos de trabalho personalizados: o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server e o assembly de manipulador de fluxo de trabalho. Esses componentes processam um fluxo de trabalho personalizado da seguinte forma:  
   
 1.  Você usa o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para validar uma entidade que inicia um fluxo de trabalho.  
   
-2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envia membros que conhecem as condições de regra de negócios a uma fila do Service Broker no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+2.  O [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envia membros que conhecem as condições de regra de negócio a uma fila do Service Broker no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 3.  Em intervalos regulares, o Serviço de Integração de Fluxo de trabalho MDS do SQL Server chama um procedimento armazenado no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   

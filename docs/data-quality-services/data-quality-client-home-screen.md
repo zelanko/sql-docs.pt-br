@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec74905b85cc048e84d7cd4996cfb02ff03191a4
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 2cfbc7192c1e8ecb4b8873ecade45a0b3f67a4e8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-client-home-screen"></a>Tela inicial do Cliente Data Quality
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use esta tela para obter acesso às interfaces do usuário de cada um dos três grupos de tarefas do DQS ( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ): gerenciamento da base de dados de conhecimento, projetos de qualidade de dados e administração.  
   
 ## <a name="options"></a>Opções  

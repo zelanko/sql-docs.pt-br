@@ -2,7 +2,7 @@
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -53,11 +53,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49f7f6f0849382ba7558c106c339c331679a5b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -212,7 +213,7 @@ LOG **Aplica-se a:** SQL Server
   
  Para obter mais informações, consulte [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Fazer backup de arquivos e grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
  Especifica um backup parcial. Um backup parcial inclui todos os arquivos de leitura/gravação em um banco de dados: o grupo de arquivos primário e quaisquer grupos de arquivos secundários de leitura/gravação e também quaisquer arquivos ou grupos de arquivos somente leitura especificados.  
   
  READ_WRITE_FILEGROUPS  
@@ -233,7 +234,7 @@ TO \<backup_device> [ **,**...*n* ] Indica que o conjunto complementar de [dispo
   
 \<backup_device> **Aplica-se a:** SQL Server Especifica um dispositivo de backup lógico ou físico a ser usado para a operação de backup.  
   
- { *logical_device_name* | **@***logical_device_name_var* } **Aplica-se a:** SQL Server É o nome lógico do dispositivo de backup no qual é feito o backup do banco de dados. O nome lógico deve seguir as regras para identificadores. Se for fornecida como uma variável (@*logical_device_name_var*), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres (nome do dispositivo de backup lógico de @*logical_device_name_var***=**) ou como uma variável de qualquer tipo de dados de cadeia de caracteres, com exceção dos tipos de dados **ntext** ou **text**.  
+ { *logical_device_name* | **@***logical_device_name_var* } **Aplica-se a:** SQL Server É o nome lógico do dispositivo de backup no qual é feito o backup do banco de dados. O nome lógico deve seguir as regras para identificadores. Se for fornecida como uma variável (@* logical_device_name_var *), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres (nome do dispositivo de backup lógico de @* logical_device_name_var***=**) ou como uma variável de qualquer tipo de dados de cadeia de caracteres, com exceção dos tipos de dados **ntext** ou **text**.  
   
  { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **Aplica-se a:** DISK, TAPE e URL aplicam-se ao SQL Server. Apenas a URL aplica-se a uma Instância Gerenciada do Banco de Dados SQL Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de Armazenamento de blobs do Microsoft Azure. O formato de URL é usado para criar backups no serviço de armazenamento do Microsoft Azure. Para obter mais informações e exemplos, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obter um tutorial, consulte [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
@@ -358,7 +359,7 @@ Se nenhuma opção for especificada, a data de expiração será determinada pel
 > [!IMPORTANT]  
 > Essas opções apenas impedem que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitua um arquivo. Fitas podem ser apagadas por outros métodos e os arquivos de disco podem ser excluídos pelo sistema operacional. Para obter mais informações sobre verificação de validade, consulte SKIP e FORMAT neste tópico.  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* } Especifica quando o conjunto de backup expira e pode ser substituído. Se for fornecida como uma variável (@*date_var*), essa data deverá seguir o formato de **datetime** do sistema configurado e ser especificado como um dos seguintes:  
+EXPIREDATE **=** { **'***date***'** | **@***date_var* } Especifica quando o conjunto de backup expira e pode ser substituído. Se for fornecida como uma variável (@* date_var*), essa data deverá seguir o formato de **datetime** do sistema configurado e ser especificado como um dos seguintes:  
   
 -   Uma constante de cadeia de caracteres (@*date_var* **=** date)  
 -   Uma variável do tipo de dados de cadeia de caracteres (exceto para os tipos de dados **ntext** ou **text**)  

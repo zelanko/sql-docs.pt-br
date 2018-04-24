@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cec57e97ff2a78fe977c3385b748eb4efdffef54
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 3eed1bd6c3ca4dd3a381dac65bceb507ec92fc54
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Recursos e tarefas do Data Quality Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Localize informações necessárias a qualquer um — administrador de dados, administrador do Data Quality Services ou administrador do SQL Server — para preparar e executar um projeto de qualidade de dados.  
   
  ![Ícone de pasta de arquivos pequena](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Projetando e implementando uma solução de qualidade de dados**  

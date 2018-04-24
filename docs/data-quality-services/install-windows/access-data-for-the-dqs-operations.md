@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8da32d9464294466e93a9d7a42094709da7dbade
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: dac1d338d8a4a835099de086be4c162fdadafb0e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Para usar seus dados de origem para operações do [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) e exportar seus dados processados, você pode adotar um destes procedimentos:  
   
 -   Copiar seus dados de origem em uma tabela/exibição no banco de dados DQS_STAGING_DATA e, depois, usá-los em operações do DQS. Você também pode exportar os dados processados para uma nova tabela no banco de dados DQS_STAGING_DATA. Para isso, sua conta de usuário do Windows deve ter acesso de leitura/gravação ao banco de dados DQS_STAGING_DATA.  
