@@ -1,16 +1,16 @@
 ---
-title: "Exemplo de espaço em disco de índice | Microsoft Docs"
-ms.custom: 
+title: Exemplo de espaço em disco de índice | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - online index disk space
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 
+caps.latest.revision: 30
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04b3917ece9134d66a055e0d5b2daf68d901153d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 471fb85a2168d26e507ccbc759b85ba157bc589d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="index-disk-space-example"></a>Exemplo de espaço em disco de índice
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Sempre que um índice é criado, recriado, ou cancelado, o espaço em disco tanto para a velha (fonte) quanto para a nova (destino) estrutura é necessário em seus arquivos e grupos de arquivos apropriados. A estrutura antiga não é desalocada até que a transação de criação do índice seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação de operações. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
+  Sempre que um índice é criado, recriado, ou cancelado, o espaço em disco tanto para a velha (fonte) quanto para a nova (destino) estrutura é necessário em seus arquivos e grupos de arquivos apropriados. A estrutura antiga não é desalocada até que a transação de criação do índice seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação de operações. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  Neste exemplo, os requisitos de espaço em disco para criar um índice clusterizado são determinados.  
   

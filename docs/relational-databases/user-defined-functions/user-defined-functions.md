@@ -1,35 +1,36 @@
 ---
-title: "Funções definidas pelo usuário | Microsoft Docs"
-ms.custom: 
+title: Funções definidas pelo usuário | Microsoft Docs
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: udf
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 03521903614a187ca0af708dd318bbc9b3ae599d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4f2d140eddab4117dbd6ee8d61c7d6d386adfc46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
+  Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
    
 ##  <a name="Benefits"></a> Funções definidas pelo usuário  
 Por que usá-las? 
@@ -49,7 +50,7 @@ Por que usá-las?
      Uma operação que filtra dados com base em alguma restrição complexa que não pode ser expressa em uma única expressão escalar pode ser expressa como uma função. Em seguida, a função pode ser invocada na cláusula WHERE para reduzir o número ou linhas enviadas ao cliente.  
   
 > [!NOTE]
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] As funções definidas pelo usuário em consultas só podem ser executadas em um único thread (plano de execução serial).  
+> As funções definidas pelo usuário [!INCLUDE[tsql](../../includes/tsql-md.md)] em consultas só podem ser executadas em um único thread (plano de execução serial).  
   
 ##  <a name="FunctionTypes"></a> Tipos de funções  
 **Função escalar**  
@@ -60,10 +61,10 @@ Por que usá-las?
  As funções com valor de tabela definidas pelo usuário retornam um tipo de dados **table**. Para uma função com valor de tabela embutida, não há um corpo de função; a tabela é o conjunto de resultados de uma única instrução SELECT. **[Exemplos.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
 **Funções do Sistema**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Diretrizes  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Erros que levam ao cancelamento de uma instrução e que continue com a instrução seguinte no módulo (como gatilhos ou procedimentos armazenados) são tratados de modo diferente em uma função. Nas funções, esses erros fazem com que a execução da função seja interrompida. Em troca, isso faz com que a instrução que chamou a função seja cancelada.  
+ Erros de [!INCLUDE[tsql](../../includes/tsql-md.md)] que levam ao cancelamento de uma instrução e continuam com a instrução seguinte no módulo (como gatilhos ou procedimentos armazenados) tratados de modo diferente em uma função. Nas funções, esses erros fazem com que a execução da função seja interrompida. Em troca, isso faz com que a instrução que chamou a função seja cancelada.  
   
  As instruções em um bloco BEGIN... END não podem ter nenhum efeito colateral. Os efeitos colaterais da função são as alterações permanentes realizada no estado de um recurso que tem um escopo fora da função como uma modificação em uma tabela do banco de dados. As únicas alterações que podem ser feitas pelas instruções na função são alterações em objetos locais à função, como cursores ou variáveis locais. As modificações em tabelas de banco de dados, operações em cursores que não são locais à função, envio de e-mail, tentativa de modificação em catálogo e geração de um conjunto de resultados retornados ao usuário são exemplos de ações que não devem ser realizadas em uma função.  
   

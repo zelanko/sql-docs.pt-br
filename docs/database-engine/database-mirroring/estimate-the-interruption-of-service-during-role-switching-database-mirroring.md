@@ -1,15 +1,16 @@
 ---
-title: "Estimar a interrupção do serviço para a troca de função (Espelhamento de Banco de Dados) | Microsoft Docs"
-ms.custom: 
+title: Estimar a interrupção do serviço para a troca de função (Espelhamento de Banco de Dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel redo [SQL Server]
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - redo [database mirroring]
 - database mirroring [SQL Server], failover
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b506d1897f7de298a3f9bbe9259eab106ffcbda
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ecfc3f4c066afaf535922e8144452fccdb78991c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durante uma mudança de função, a quantidade de tempo que o espelhamento de banco de dados fica fora de serviço depende do tipo da função modificada e da causa da mudança de função.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Durante uma troca de função, a quantidade de tempo que o espelhamento de banco de dados fica fora de serviço depende do tipo de função trocada e da causa da troca de função.  
   
 -   Para failover automático, dois fatores contribuem para a interrupção do serviço de tempo: o tempo necessário para o servidor espelho reconhecer que a instância de servidor principal falhou, ou seja, detecção de erros, mais o tempo necessário para o failover do banco de dados, isto é, tempo de failover.  
   

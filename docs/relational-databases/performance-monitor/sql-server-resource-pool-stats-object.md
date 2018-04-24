@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, objeto de Estatísticas do pool de recursos | Microsoft Docs"
-ms.custom: 
+title: SQL Server, objeto de Estatísticas do pool de recursos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Reosurce Pool Stats object
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 626e2db49945df2262db203dde46f78d5b5bde81
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 24853ad0bfcd473c7f67492f187292118b639f55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, objeto de estatísticas do pool de recursos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto SQLServer:Resource Pool Stats contém contadores de desempenho que fornecem informações sobre as estatísticas de pool de recursos do Resource Governor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O objeto SQLServer:Estatísticas de Pool de Recursos contém contadores de desempenho que fornecem informações sobre as estatísticas de pool de recursos do Administrador de Recursos.  
   
  Cada pool de recursos ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Pool de Recursos que tem o mesmo nome de instância do pool de recursos do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   

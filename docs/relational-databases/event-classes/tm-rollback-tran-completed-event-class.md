@@ -1,34 +1,35 @@
 ---
 title: 'Classe de evento TM: Rollback Tran Completed | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Rollback Tran Completed event class'
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5244f8a17a280792e7a645ccd6943859adfbdfb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7b60e71502901b11f2de4dc582d2d6f2a000d872
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>classe de evento TM: Rollback Tran Completed
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento TM: Rollback Tran Completed indica que foi concluída uma solicitação ROLLBACK TRANSACTION. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  
+  A classe de evento TM: Rollback Tran Completed indica que foi concluída uma solicitação ROLLBACK TRANSACTION. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>Colunas de dados de classe de evento TM: Rollback Tran Completed  
   

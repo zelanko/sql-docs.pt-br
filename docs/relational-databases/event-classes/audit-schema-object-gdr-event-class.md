@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Audit Schema Object GDR | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Schema Object GDR event class
 ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8176171934e5c5bb1b033743fc42a4f15eea5bf6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3ab61e453fa40d499018620d1f7188bd8e7c471
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Classe de evento Audit Schema Object GDR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento **Audit Schema Object GDR** ocorre sempre que uma instrução GRANT, REVOKE ou DENY é emitida para uma permissão de objeto de esquema por qualquer usuário no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  A classe de evento **Audit Schema Object GDR** ocorre sempre que uma instrução GRANT, REVOKE ou DENY é emitida para uma permissão de objeto de esquema por qualquer usuário no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="audit-schema-object-gdr-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Schema Object GDR  
   

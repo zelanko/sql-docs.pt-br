@@ -1,31 +1,32 @@
 ---
-title: "Caixa de diálogo Criar Nova Política ou Abrir Política, página Descrição | Microsoft Docs"
-ms.custom: 
+title: Caixa de diálogo Criar Nova Política ou Abrir Política, página Descrição | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc54ea269d627ce3935c307ef9f5c330c603e99d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ba6a75781bfa626ab33b24bf2fd506f89499c8e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para adicionar uma descrição e informações a uma política do Gerenciamento Baseado em Políticas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use esta caixa de diálogo para adicionar uma descrição e informações a uma política do Gerenciamento Baseado em Políticas.  
   
 ## <a name="options"></a>Opções  
  **Categoria**  

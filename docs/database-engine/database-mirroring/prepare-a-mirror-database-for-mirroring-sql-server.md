@@ -1,34 +1,36 @@
 ---
 title: Preparar um banco de dados espelho para espelhamento (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], preparing for mirroring
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a14d697865f099b584e3f8f7132f0bfc6a0cf49
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 71458796cd4a1c7dee69960d3514440ac987a58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar um banco de dados espelho para espelhamento (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de iniciar uma sessão de espelhamento de banco de dados, o proprietário do banco de dados ou o administrador do sistema devem verificar se o banco de dados de espelho foi criado e está pronto para ser espelhado. A criação de um novo banco de dados espelho requer minimamente um backup cheio do banco de dados principal e um backup de log subsequente e a restauração de ambos sobre a instância do servidor espelho, usando WITH NORECOVERY.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Antes de uma sessão de espelhamento do banco de dados poder iniciar, o proprietário do banco de dados ou administrador de sistema devem ter certeza de que o banco de dados espelho foi criado e está pronto para espelhar. A criação de um novo banco de dados espelho requer minimamente um backup cheio do banco de dados principal e um backup de log subsequente e a restauração de ambos sobre a instância do servidor espelho, usando WITH NORECOVERY.  
   
  Este tópico descreve como preparar um banco de dados espelho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

@@ -1,33 +1,34 @@
 ---
-title: "Caixa de diálogo (Condição de) Edição Avançada | Microsoft Docs"
-ms.custom: 
+title: Caixa de diálogo (Condição de) Edição Avançada | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Caixa de diálogo Edição Avançada (Condição)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Edição Avançada** para criar expressões complexas para condições do Gerenciamento Baseado em Políticas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use a caixa de diálogo **Edição Avançada** para criar expressões complexas para condições do Gerenciamento Baseado em Políticas.  
   
 ## <a name="options"></a>Opções  
  **Valor da célula**  
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/18/2018
   
 > **IMPORTANTE:** As funções que você pode usar para criar condições de Gerenciamento Baseado em Políticas nem sempre usam a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] . Não se esqueça de seguir a sintaxe de exemplo. Por exemplo, quando usar as funções **DateAdd** ou **DatePart** , você deverá colocar o argumento *datepart* entre aspas simples.  
   
-|Função|Assinatura|Description|Argumentos|Valor de retorno|Exemplo|  
+|Função|Assinatura|Description|Argumentos|Valor retornado|Exemplo|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|Soma dois números.|*expression1* e *expression2* – Qualquer expressão válida de qualquer um dos tipos de dados na categoria numeric, exceto pelo tipo de dados **bit** . Pode ser uma constante, propriedade ou função que retorna um tipo numérico.|Retorna o tipo de dados do argumento que tem a maior precedência.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|Cria uma matriz com base em uma lista de valores. Pode ser usado com funções de agregação como Sum() e Count().|*expression* – Uma expressão que será convertida em uma matriz.|A matriz|`Array(2,3,4,5,6)`|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 01/18/2018
 |**True()**|Bool TRUE()|Retorna um valor booliano TRUE.||Retorna um valor booliano TRUE.|`IsDatabaseMailEnabled = True()`|  
 |**Upper()**|String Upper (String*_expression*)|Retorna a cadeia de caracteres após converter todas as minúsculas em maiúsculas.|*expression* – A expressão de cadeia de caracteres de origem.|Retorna uma cadeia de caracteres que representa a expressão da cadeia de caracteres de origem após a conversão de todas as minúsculas em maiúsculas.|`Upper('HeLlO')` retorna `'HELLO'` neste exemplo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

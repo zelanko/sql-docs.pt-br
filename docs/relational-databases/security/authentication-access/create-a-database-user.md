@@ -1,16 +1,16 @@
 ---
-title: "Criar um usuário de banco de dados | Microsoft Docs"
-ms.custom: 
+title: Criar um usuário de banco de dados | Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.user.securables.f1
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2fce0eac03c6b1c68d1b6bb91637135c3bf8f13c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Expanda o banco de dados no qual o novo usuário de banco de dados será criado.  
   
-3.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e selecione **Usuário...**.  
+3.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Usuário...**.  
   
 4.  Na caixa de diálogo **Usuário de banco de dados – Novo** da página **Geral** , selecione um dos seguintes tipos de usuário na lista **Tipo de usuário** :  
   
@@ -113,10 +114,10 @@ ms.lasthandoff: 11/21/2017
      Insira o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Esquema** . **Esquema padrão** estará disponível se você ou selecionar **Usuário do SQL com logon**, **Usuário do SQL sem logon**ou **Usuário do Windows** na lista **Tipo de usuário** .  
   
      **Nome de certificado**  
-     Insira o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Certificado** . **Nome de certificado** estará disponível se você selecionar **Usuário mapeado para um certificado** na lista **Tipo de Usuário** .  
+     Insira o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Certificado**. **Nome de certificado** estará disponível se você selecionar **Usuário mapeado para um certificado** na lista **Tipo de Usuário** .  
   
      **Nome da chave assimétrica**  
-     Insira a chave a ser usada para o usuário de banco de dados. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Chave Assimétrica** . **Nome da chave assimétrica** estará disponível se você selecionar **Usuário mapeado para uma chave assimétrica** na lista **Tipo de usuário** .  
+     Insira a chave a ser usada para o usuário de banco de dados. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Chave Assimétrica**. **Nome da chave assimétrica** estará disponível se você selecionar **Usuário mapeado para uma chave assimétrica** na lista **Tipo de usuário** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/21/2017
   
  Para obter mais informações, veja [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md), que contém muitos outros exemplos do [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Criar um logon](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  

@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_2515 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 2515 (Database Engine error)
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceb7bfd2db48729c1851a23cad005492a0379c3d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 31dc7b2d0f3cc837fd81822676d9883e75f6de78
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver2515"></a>MSSQLSERVER_2515
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Se a execução de DBCC CHECKDB com uma das cláusulas REPAIR não corrigir o pr
 ### <a name="results-of-running-repair-options"></a>Resultados da execução de opções REPAIR  
 A execução de REPAIR invalidará o bitmap diferencial. Não será possível executar um backup diferencial até que seja feito um backup total do banco de dados. O backup total do banco de dados provê uma base para a recriação do bitmap diferencial.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar um backup completo de banco de dados &#40;SQL Server&#41;](~/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
 [MSSQLSERVER_2516](~/relational-databases/errors-events/mssqlserver-2516-database-engine-error.md)  
   

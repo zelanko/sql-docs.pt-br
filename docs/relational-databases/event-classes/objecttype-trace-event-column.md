@@ -1,16 +1,16 @@
 ---
 title: Coluna de evento de rastreamento ObjectType | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server event classes, Object Type column values
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c18a4ccff2675b000f56fc11c20143fa5e9ed399
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objecttype-trace-event-column"></a>Coluna de evento de rastreamento ObjectType
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A coluna Object Type é usada em diversos eventos de rastreamento. Este tópico descreve os possíveis valores dessa coluna e as definições a ela associadas.  
+  A coluna Object Type é usada em diversos eventos de rastreamento. Este tópico descreve os possíveis valores dessa coluna e as definições a ela associadas.  
   
 ## <a name="object-type-column-values"></a>Valores da coluna Object Type  
   

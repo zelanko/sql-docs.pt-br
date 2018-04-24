@@ -1,16 +1,16 @@
 ---
-title: "Guia de arquitetura e gerenciamento de log de transações do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Guia de arquitetura e gerenciamento de log de transações do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e6d9a9107e0ddb997492bec813938120e0fd6bf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -247,7 +248,7 @@ O log ativo deve incluir todas as partes de todas as transações não confirmad
 
 O Log Reader Agent monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição. O log ativo deve conter todas as transações marcadas para replicação, mas que ainda não foram enviadas ao banco de dados de distribuição. Se essas transações não forem replicadas de maneira oportuna, elas poderão impedir o truncamento do log. Para obter mais informações, consulte [Replicação transacional](../relational-databases/replication/transactional/transactional-replication.md).
 
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Confira também 
 Recomendamos a leitura dos artigos e manuais a seguir para obter mais informações sobre o log de transações e as melhores práticas de gerenciamento do log de transações.  
   
 [O log de transações &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)    

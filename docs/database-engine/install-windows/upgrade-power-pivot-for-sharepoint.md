@@ -1,27 +1,27 @@
 ---
 title: Fazer upgrade do Power Pivot para SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 29c01e9972997459764933b25a23f8e0b085deb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Atualizar Power Pivot para SharePoint
 
@@ -265,7 +265,7 @@ Get-PowerPivotSystemService
   
 3.  Clique em **Detalhes**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a versão do arquivo deve ser 13.00.\<build principal>.\<build secundário>.  
+4.  A versão de arquivo do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve ser 13.00.\<major build>.\<minor build>.  
   
 5.  Verifique se esse número é idêntico à versão da solução do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e do serviço do sistema.  
   

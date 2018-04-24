@@ -1,16 +1,16 @@
 ---
-title: "Ajuda F1 do Gerenciador do Utilitário | Microsoft Docs"
-ms.custom: 
+title: Ajuda F1 do Gerenciador do Utilitário | Microsoft Docs
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.ue.navigation.f1
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 195806725d74efb689c14200529d6dafc6a17316
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As seções a seguir documentam a funcionalidade e as operações associadas do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  As seções a seguir documentam a funcionalidade do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as operações associadas.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Painel do Utilitário (Utilitário do SQL Server)
  Para consultar dados no painel do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione o nó superior na árvore do Gerenciador do Utilitário, identificado como “Utility<UCP_Name>\\(ComputerName\UCP).” O painel inclui dados resumidos e dados detalhados de todas as instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e todos os aplicativos da camada de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para atualizar dados no painel, clique com o botão direito do mouse no nó superior da árvore do Gerenciador do Utilitário e selecione **Atualizar**.  

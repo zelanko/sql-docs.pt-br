@@ -1,30 +1,32 @@
 ---
-title: "Instâncias do Mecanismo de Banco de Dados (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Instâncias do Mecanismo de Banco de Dados (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 14c823a19e267f0e32196a1e44598fc3fa308662
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Instâncias do mecanismo de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma cópia do executável **sqlservr.exe** que é executada como um serviço do sistema operacional. Cada instância gerencia vários bancos de dados do sistema e um ou mais bancos de dados de usuários. Cada computador pode executar várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Aplicativos conectam à instância para executar trabalhos em um banco de dados gerenciado pela instância.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma cópia do executável **sqlservr.exe** que é executada como um serviço do sistema operacional. Cada instância gerencia vários bancos de dados do sistema e um ou mais bancos de dados de usuários. Cada computador pode executar várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Aplicativos conectam à instância para executar trabalhos em um banco de dados gerenciado pela instância.  
   
 ## <a name="instances"></a>Instâncias  
  Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] opera como um serviço que trata toda as solicitações do aplicativo pede trabalhar com os dados em quaisquer bancos de dados gerenciados por essa instância. É o destino das solicitações de conexão (logons) de aplicativos. A conexão será executada em uma conexão de rede se o aplicativo e a instância estiverem em computadores separados. Se o aplicativo e a instância estiverem no mesmo computador, a conexão de SQL Server poderá executar como uma conexão de rede ou uma conexão de memória. Quando uma conexão for concluída, um aplicativo enviará instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] pela conexão para a instância. A instância resolve as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em operações nos dados e objetos nos bancos de dados e, se as permissões exigidas tiverem sido concedidas às credenciais de logon, executará o trabalho. Quaisquer dados recuperados são retornados ao aplicativo, junto com mensagens como erros.  

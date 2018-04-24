@@ -1,31 +1,32 @@
 ---
-title: "Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c5714ee80d2c95fd89d2acf9e63f7784195e902
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciador do Utilitário, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecta-se a instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para fornecer um modo de exibição de árvore de todos os objetos no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O painel de conteúdo do Gerenciador do Utilitário oferece várias formas de exibir dados resumidos e detalhados sobre o estado de integridade de instâncias gerenciadas do SQL Server. O Gerenciador do Utilitário também oferece uma interface do usuário para exibir e gerenciar definições de políticas. Os recursos de Gerenciador do Utilitário variam ligeiramente, dependendo dos objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, mas em geral incluem objetos, dados e políticas gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O Gerenciador do Utilitário, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecta-se a instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para fornecer uma exibição de árvore de todos os objetos no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O painel de conteúdo do Gerenciador do Utilitário oferece várias formas de exibir dados resumidos e detalhados sobre o estado de integridade de instâncias gerenciadas do SQL Server. O Gerenciador do Utilitário também oferece uma interface do usuário para exibir e gerenciar definições de políticas. Os recursos de Gerenciador do Utilitário variam ligeiramente, dependendo dos objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, mas em geral incluem objetos, dados e políticas gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Criar ponto de controle do utilitário  
  Para que você possa usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deve criar um ponto de controle do utilitário. Para obter mais informações, veja [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) ou [Criar um ponto de controle do utilitário do SQL Server &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  

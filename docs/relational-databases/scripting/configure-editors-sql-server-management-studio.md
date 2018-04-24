@@ -1,31 +1,33 @@
 ---
 title: Configurar editores (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6085dc6fe12622915eca8f01ff10df020e69bbde
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3b6e8a17ab2cf97b318c15058ddfcfc28704b068
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode personalizar a operação dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando as opções para cada editor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Você pode personalizar a operação dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando as opções para cada editor.  
   
 ## <a name="settng-editor-options"></a>Opções do Editor de Configurações  
  A maioria das opções de editor é definida no menu **Ferramentas** e selecionando **Opções...** para exibir uma caixa de diálogo **Opções** . Na caixa de diálogo **Opções** , abra o nó **Editor de Texto** no painel esquerdo para definir opções de edição de código e texto. Os nós sob Editor de Texto se aplicam a editores específicos:  

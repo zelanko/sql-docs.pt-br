@@ -1,31 +1,32 @@
 ---
-title: "Guia de arquitetura de páginas e extensões | Microsoft Docs"
-ms.custom: 
+title: Guia de arquitetura de páginas e extensões | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 
+caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b81580d88fc57a88aadd7212c229faf2aa7bcda7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 76c3411535c32c4d921ed464a877868b9600c9af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -95,7 +96,7 @@ As estruturas de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 ### <a name="managing-extent-allocations"></a>Gerenciando alocações de extensão
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dois tipos de mapas de alocação para registrar a alocação de extensões: 
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dois tipos de mapas de alocação para registrar a alocação de extensões: 
 
 - **GAM (Global Allocation Map)**   
   As páginas GAM registram quais extensões foram alocadas. Cada GAM cobre 64.000 extensões ou quase 4 GB de dados. O GAM tem um bit para cada extensão no intervalo que cobre. Se o bit for 1, a extensão será livre; se o bit for 0, a extensão será alocada. 
@@ -163,7 +164,7 @@ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] só alocará uma ex
 
 ## <a name="tracking-modified-extents"></a>Controlando extensões modificadas 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa duas estruturas de dados internas para acompanhar extensões modificadas por operações de cópia em massa e extensões modificadas desde o último backup completo. Essas estruturas de dados aceleram consideravelmente os backups diferenciais. Elas também aceleram o registro de operações de cópia em massa quando um banco de dados está usando o modelo de recuperação bulk logged. Como as páginas GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map), essas estruturas são bitmaps em que cada bit representa uma única extensão. 
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa duas estruturas de dados internas para acompanhar extensões modificadas por operações de cópia em massa e extensões modificadas desde o último backup completo. Essas estruturas de dados aceleram consideravelmente os backups diferenciais. Elas também aceleram o registro de operações de cópia em massa quando um banco de dados está usando o modelo de recuperação bulk logged. Como as páginas GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map), essas estruturas são bitmaps em que cada bit representa uma única extensão. 
 
 - **DCM (Differential Changed Map)**   
    Acompanha as extensões que foram alteradas desde a última instrução `BACKUP DATABASE`. Se o bit de uma extensão for 1, isso significa que a extensão foi modificada desde a última instrução `BACKUP DATABASE`. Se o bit for 0, a extensão não foi modificada. Os backups diferenciais leem apenas as páginas DCM para determinar quais extensões foram modificadas. Isso reduz significativamente o número de páginas que um backup diferencial deve examinar. O tempo de execução de um backup diferencial é proporcional ao número de extensões modificadas desde a última instrução BACKUP DATABASE, e não ao tamanho geral do banco de dados. 

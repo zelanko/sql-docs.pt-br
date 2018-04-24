@@ -1,16 +1,16 @@
 ---
 title: Servidores remotos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - server management [SQL Server], remote servers
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1c662eb0ba6ba239f53b8983864f3d861d21e092
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-servers"></a>Servidores remotos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+  Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Uma configuração de servidor remoto permite que um cliente conectado a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute um procedimento armazenado em outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem estabelecer uma conexão separada. Em vez disso, o servidor ao qual o cliente está conectado aceita a solicitação do cliente e envia a solicitação para o servidor remoto em nome do cliente. O servidor remoto processa a solicitação e retorna todos os resultados ao servidor original. Esse servidor, por sua vez, passa esses resultados para o cliente. Quando você define uma configuração de servidor remoto, deve considerar também como estabelecer a segurança.  
   

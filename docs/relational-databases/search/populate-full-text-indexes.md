@@ -1,16 +1,16 @@
 ---
-title: "Preencher índices de texto completo | Microsoft Docs"
-ms.custom: 
+title: Preencher índices de texto completo | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index populations [full-text search]
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 
+caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
+  A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
   
 ##  <a name="types"></a> Types of population  
 Um índice de texto completo dá suporte aos seguintes tipos de população:
@@ -225,7 +226,7 @@ O arquivo de log de rastreamento segue o seguinte esquema de nomeação:
 As partes variáveis do nome do arquivo de log de rastreamento são as seguintes.
 -   <**DatabaseID**> – a ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
 -   <**FullTextCatalogID**> – ID do catálogo de texto completo. <**catid**> é um número de cinco dígitos com zeros à esquerda.  
--   <**n**> – é um inteiro que indica que existe um ou mais logs de rastreamento do mesmo catálogo de texto completo.  
+-   <**n**> – É um inteiro que indica um ou mais logs de rastreamento que existem do mesmo catálogo de texto completo.  
   
  Por exemplo, `SQLFT0000500008.2` é o arquivo de log de rastreamento de um banco de dados com a ID de banco de dados = 5 e a ID de catálogo de texto completo = 8. O 2 no final do nome do arquivo indica que há dois arquivos de log de rastreamento para esse par de banco de dados/catálogo.  
 

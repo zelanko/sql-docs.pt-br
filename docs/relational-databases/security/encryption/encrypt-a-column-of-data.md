@@ -1,16 +1,16 @@
 ---
 title: Criptografar uma coluna de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - encryption [SQL Server], columns
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24b6bdbb36bafdcc0fcd7899a93d652a99b9c4c2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 122d7855ea6df7dd6ac913a3a511d4e92f123f0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Alguma permissão na chave, e não deve ter a permissão VIEW DEFINITION negada.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
 
 Para usar os exemplos a seguir, você precisa ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a instrução a seguir e fornecendo sua senha:   
 ```  

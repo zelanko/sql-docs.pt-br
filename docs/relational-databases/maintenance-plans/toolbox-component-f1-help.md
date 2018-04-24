@@ -1,35 +1,36 @@
 ---
 title: Ajuda de F1 do componente Caixa de Ferramentas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3b4a0a7f0aa62e57968fac4d2ca94d50c8ac5218
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A **Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  A**Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
   
  Os ícones da**Caixa de Ferramentas** podem ser arrastados e soltos ou copiados e colados em editores de códigos ou superfícies de modo exibição de design no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

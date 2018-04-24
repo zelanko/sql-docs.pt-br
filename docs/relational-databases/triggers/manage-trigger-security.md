@@ -1,34 +1,35 @@
 ---
-title: "Gerenciar a segurança dos gatilhos | Microsoft Docs"
-ms.custom: 
+title: Gerenciar a segurança dos gatilhos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5daea563cbc89957c525d2247f5c7537145d13b1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a3b930f28eb6ee699f8d5de2c4ff543c091856bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-trigger-security"></a>Gerenciar a segurança dos gatilhos
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Por padrão, os gatilhos DML e DDL executam sob o contexto do usuário que aciona o gatilho. O chamador do gatilho é o usuário que executa a instrução que faz com que o gatilho execute. Por exemplo, se o usuário **Marina** executar uma instrução DELETE que faz com que o gatilho DML **DML_trigMarina** seja executado, o código dentro do **DML_trigMarina** executará no contexto dos privilégios do usuário para **Marina**. Esse comportamento padrão pode ser explorado pelos usuários que desejam apresentar um código mal-intencionado no banco de dados ou na instância do servidor. Por exemplo, o gatilho DDL a seguir é criado pelo usuário `JohnDoe`:  
+  Por padrão, os gatilhos DML e DDL executam sob o contexto do usuário que aciona o gatilho. O chamador do gatilho é o usuário que executa a instrução que faz com que o gatilho execute. Por exemplo, se o usuário **Marina** executar uma instrução DELETE que faz com que o gatilho DML **DML_trigMarina** seja executado, o código dentro do **DML_trigMarina** executará no contexto dos privilégios do usuário para **Marina**. Esse comportamento padrão pode ser explorado pelos usuários que desejam apresentar um código mal-intencionado no banco de dados ou na instância do servidor. Por exemplo, o gatilho DDL a seguir é criado pelo usuário `JohnDoe`:  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   

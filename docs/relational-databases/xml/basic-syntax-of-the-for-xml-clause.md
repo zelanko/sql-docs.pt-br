@@ -1,16 +1,16 @@
 ---
-title: "Sintaxe básica da cláusula FOR XML | Microsoft Docs"
-ms.custom: 
+title: Sintaxe básica da cláusula FOR XML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - BINARY BASE64 directive
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - FOR XML clause, syntax
 - FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8ddf22a9e26c4452c97dea011beb9de01885443
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8ed317f0e71d92c09ce94da9d3008215864622cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Sintaxe básica da cláusula FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-O modo FOR XML pode ser RAW, AUTO, EXPLICIT ou PATH. Ele determina a forma do XML resultante.  
+  O modo FOR XML pode ser RAW, AUTO, EXPLICIT ou PATH. Ele determina a forma do XML resultante.  
   
 > [!IMPORTANT]  
 >  A diretiva XMLDATA para a opção FOR XML foi preterida. Use geração de XSD no caso dos modos RAW e AUTO. Não há substituição para a diretiva XMLDATA no modo EXPLICIT. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  

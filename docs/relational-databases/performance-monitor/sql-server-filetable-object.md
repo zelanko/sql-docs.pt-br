@@ -1,33 +1,34 @@
 ---
 title: SQL Server, objeto FileTable | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-caps.latest.revision: 
+caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57a16709c701e8754446287f9d0b74b6e94581b3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e6016445b8d844eb62291ee01df9575134dc7c35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatísticas associadas a FileTable e ao acesso não transacionado.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatísticas associadas a FileTable e ao acesso não transacionado.
 
 A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 

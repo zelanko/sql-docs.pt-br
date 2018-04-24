@@ -1,16 +1,16 @@
 ---
-title: "Referência de operadores físicos e lógicos de plano de execução | Microsoft Docs"
-ms.custom: 
+title: Referência de operadores físicos e lógicos de plano de execução | Microsoft Docs
+ms.custom: ''
 ms.date: 10/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
@@ -138,20 +138,21 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 605d3ff10ac725358ec51e28357f8b03cfcee094
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9fc11ac48b6827fcf0f92ceb4ab7e05d6699f10e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referência de operadores físicos e lógicos de plano de execução
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Os operadores descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executa uma consulta ou uma instrução DML (Linguagem de Manipulação de Dados). O otimizador de consultas usa os operadores para criar um plano de consulta a fim de criar o resultado especificado na consulta ou para executar a operação especificada na instrução DML. O plano de consulta é uma árvore que consiste em operadores físicos. Você pode exibir o plano de consulta usando as instruções SET SHOWPLAN, as opções de plano de execução gráfica no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou as classes de evento do Plano de Execução do SQL Server Profiler.  
+  Os operadores descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executa uma consulta ou uma instrução DML (Linguagem de Manipulação de Dados). O otimizador de consultas usa os operadores para criar um plano de consulta a fim de criar o resultado especificado na consulta ou para executar a operação especificada na instrução DML. O plano de consulta é uma árvore que consiste em operadores físicos. Você pode exibir o plano de consulta usando as instruções SET SHOWPLAN, as opções de plano de execução gráfica no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou as classes de evento do Plano de Execução do SQL Server Profiler.  
   
  Os operadores são classificados como lógicos e físicos.  
   
@@ -283,7 +284,7 @@ Os operadores descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 |![Ícone do operador Dividir](../relational-databases/media/split-32x.gif "Ícone do operador Dividir")|**Split**|O operador **Split** é usado para otimizar o processamento da atualização. Ele divide cada operação de atualização em uma operação de exclusão e inserção. **Split** é um operador lógico e físico.|  
 |![Ícone do operador spool](../relational-databases/media/spool-32x.gif "Ícone do operador spool")|**Spool**|O operador **Spool** salva um resultado de consulta intermediário no banco de dados **tempdb** .|  
 |![Ícone do operador Agregação de fluxo](../relational-databases/media/stream-aggregate-32x.gif "Ícone do operador Agregação de fluxo")|**Stream Aggregate**|O operador **Stream Aggregate** agrupa linhas por uma ou mais colunas e, em seguida, calcula uma ou mais expressões de agregação retornadas pela consulta. A saída deste operador pode ser referenciada por operadores posteriores na consulta, retornada ao cliente, ou ambos. O operador **Stream Aggregate** requer a entrada de dados ordenada pelas colunas dentro de seus grupos. O otimizador usará um operador **Sort** antes desse operador se os dados ainda não estiverem classificados em função de um operador **Sort** anterior ou devido a uma busca ou análise de índice ordenado. Na instrução SHOWPLAN_ALL ou no plano de execução gráfica no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], são listadas as colunas no predicado GROUP BY na coluna **Argument** , e as expressões de agregação são listadas na coluna **Defined Values** . **Stream Aggregate** é um operador físico.|  
-|![Ícone do operador Comutador](../relational-databases/media/switch-32x.gif "Ícone do operador Comutador")|**Opção**|**Opção** é um tipo especial de iterador de concatenação que tem *n* entradas. Uma expressão é associada a cada operador **Switch** . Dependendo do valor retornado da expressão (entre 0 e *n*-1), **Opção** copia o fluxo de entrada apropriado ao fluxo de saída. Um uso de **Switch** é implementar planos de consulta envolvendo cursores de avanço rápido com determinados operadores, como o operador **TOP** . **Switch** é um operador lógico e físico.|  
+|![Ícone do operador Comutador](../relational-databases/media/switch-32x.gif "Ícone do operador Comutador")|**Opção**|**Switch** é um tipo especial de iterador de concatenação que tem *n* entradas. Uma expressão é associada a cada operador **Switch** . Dependendo do valor retornado da expressão (entre 0 e *n*-1), **Switch** copia o fluxo de entrada apropriado ao fluxo de saída. Um uso de **Switch** é implementar planos de consulta envolvendo cursores de avanço rápido com determinados operadores, como o operador **TOP** . **Switch** é um operador lógico e físico.|  
 |![Ícone do operador Exclusão de tabela](../relational-databases/media/table-delete-32x.gif "Ícone do operador Exclusão de tabela")|**Table Delete**|O operador físico **Table Delete** exclui linhas da tabela especificadas na coluna **Argument** do plano de execução da consulta.|  
 |![Ícone do operador Inserção de tabela](../relational-databases/media/table-insert-32x.gif "Ícone do operador Inserção de tabela")|**Table Insert**|O operador **Table Insert** insere linhas de sua entrada na tabela especificada na coluna **Argument** do plano de execução de consulta. A coluna **Argument** também contém um predicado SET:(), que indica o valor para o qual cada coluna está definida. Se **Table Insert** não tiver nenhum filho para valores de inserção, então a linha inserida será tirada do próprio operador Insert. **Table Insert** é um operador físico.|  
 |![Operador Mesclar tabela](../relational-databases/media/table-merge-32x.gif "Operador Mesclar tabela")|**Table Merge**|O operador **Table Merge** aplica um fluxo de dados de mesclagem a um heap. O operador exclui, atualiza ou insere linhas na tabela especificada na coluna **Argument** do operador. A operação real executada depende do valor do tempo de execução da coluna **ACTION** especificada na coluna **Argument** do operador. **Table Merge** é um operador físico.|  

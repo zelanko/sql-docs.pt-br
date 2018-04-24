@@ -1,16 +1,16 @@
 ---
 title: Configurar regras de firewall antes de executar o Depurador TSQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
@@ -24,19 +24,21 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c1196f3195b1b54844a5420a8a9322265a1efa8
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d402891970dbed7e36c9533b9fa85ae9a8df5d74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar regras de firewall antes de executar o Depurador TSQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Configurando o Depurador Transact-SQL  
  O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui componentes do lado do servidor e do lado do cliente. Os componentes do depurador do servidor são instalados com cada instância do Mecanismo de Banco de Dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 (Service Pack 2) ou posterior. Os componentes do depurador do lado do cliente são incluídos:  

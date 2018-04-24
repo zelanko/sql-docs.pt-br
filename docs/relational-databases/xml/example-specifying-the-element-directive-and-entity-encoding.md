@@ -1,35 +1,35 @@
 ---
-title: "Exemplo: especificando a diretiva ELEMENT e a codificação de entidade | Microsoft Docs"
-ms.custom: 
+title: 'Exemplo: especificando a diretiva ELEMENT e a codificação de entidade | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ffd9bd6df20bef46bdc4e5f96d6e9f525abd171
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7a35443fb7b50ac50a9502a265408ef9977b5729
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemplo: Especificando a diretiva ELEMENT e codificação de entidade
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Este exemplo ilustra a diferença entre as diretivas **ELEMENT** e **XML** . A entidade dos dados é definida pela diretiva **ELEMENT** , mas não pela diretiva **XML** . O elemento \<Summary> é atribuído como XML, `<Summary>This is summary description</Summary>`, na consulta.  
+  Este exemplo ilustra a diferença entre as diretivas **ELEMENT** e **XML** . A entidade dos dados é definida pela diretiva **ELEMENT** , mas não pela diretiva **XML** . O elemento \<Summary> é atribuído como XML, `<Summary>This is summary description</Summary>`, na consulta.  
   
  Considere esta consulta:  
   

@@ -1,33 +1,35 @@
 ---
 title: Migrar dados confidenciais protegidos pelo Always Encrypted | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fa13b882639b0b23d937c479eec6b2a29aa34ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3e3e9a41fca762ae1303be0f451cbdc4e33e6c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrar dados confidenciais protegidos pelo Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Para carregar dados criptografados sem realizar verificações de metadados no servidor durante operações de cópia em massa, crie o usuário com a opção **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS**. Essa opção destina-se a ser usada por ferramentas herdadas de versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (como bcp.exe) ou ao usar fluxos de trabalho ETL (extrair, transformar, carregar) de terceiros que não podem usar o Always Encrypted. Isso permite que um usuário mova dados criptografados com segurança de um conjunto de tabelas, contendo colunas criptografadas, para outro conjunto de tabelas com colunas criptografadas (para o mesmo ou para outro banco de dados).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ Para carregar dados criptografados sem realizar verificações de metadados no servidor durante operações de cópia em massa, crie o usuário com a opção **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Essa opção destina-se a ser usada por ferramentas herdadas de versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (como bcp.exe) ou ao usar fluxos de trabalho ETL (extrair, transformar, carregar) de terceiros que não podem usar o Always Encrypted. Isso permite que um usuário mova dados criptografados com segurança de um conjunto de tabelas, contendo colunas criptografadas, para outro conjunto de tabelas com colunas criptografadas (para o mesmo ou para outro banco de dados).  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>A opção ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
  Tanto [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) , quanto [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) tem uma opção ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Quando definida como ON (o padrão é OFF), essa opção suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa, o que permite ao usuário copiar em massa dados criptografados entre tabelas ou bancos de dados, sem descriptografá-los.  
@@ -75,7 +77,7 @@ Para aplicativos ou ferramentas de cópia em massa de execução curta que preci
  
 Não use essa opção para o desenvolvimento de novos aplicativos. Em vez disso, use um driver cliente (como ADO 4.6.1) que ofereça uma API para suprimir as verificações de metadados criptográficos de uma única sessão.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
 [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

@@ -1,16 +1,16 @@
 ---
 title: Aplicativos da camada de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - designing DACs
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d42c7d587e18e306a15a95e4576e312a0e7c31c0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: db6922f32b7e502c08138e6ff7bbab927eba9edf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um aplicativo da camada de dados (DAC) é uma entidade de gerenciamento de banco de dados lógico que define todos os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assim como tabelas, exibições e objetos de instância, inclusive logons, associados do banco de dados do usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Um DAC (aplicativo da camada de dados) é uma entidade lógica de gerenciamento de banco de dados que define todos os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como tabelas, exibições e objetos de instância, incluindo logons, associados a um banco de dados de usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
   
  Um BACPAC é um artefato relacionado que encapsula o esquema de banco de dados e também os dados armazenados no banco de dados.  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/17/2018
 |Descreve como colocar o conteúdo de um pacote de DAC em uma pasta onde um administrador de banco de dados pode analisar o que o DAC faz antes de implantá-lo em um servidor de produção.|[Desempacotar um pacote de DAC](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |Descreve como usar um assistente para implantar um banco de dados existente. O assistente usa os DACs para executar a implantação.|[Implantar um banco de dados usando um DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Suporte ao DAC para objetos e versões do SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   

@@ -1,32 +1,32 @@
 ---
-title: "Gerenciar o tamanho do arquivo de log de transações | Microsoft Docs"
-ms.custom: 
+title: Gerenciar o tamanho do arquivo de log de transações | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-transaction-log
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b604f834bbc1e3f08c30f3feae06d637036610d6
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 07d23c2ae6b72acd1b9b9c1a78b7cdd595444e77
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ Estas são algumas recomendações gerais ao trabalhar com arquivos de log de tr
     -   O arquivo é reduzido de forma que 25% de seu tamanho seja de espaço não utilizado ou ele tenha o tamanho original, o que for maior. 
     -   Para obter informações sobre como alterar a configuração da propriedade **auto_shrink**, consulte [Exibir ou alterar as propriedades de um banco de dados](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) e [Opções de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
 [Solução de problemas de um log de transações cheio &#40;Erro 9002 do SQL Server &#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)    
 [Guia de gerenciamento e arquitetura de backups de log de transações no log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Backups)    

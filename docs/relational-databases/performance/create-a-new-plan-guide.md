@@ -1,16 +1,16 @@
 ---
 title: Criar um novo guia de plano | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.designer.newplanguide.f1
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9baac19391b76e916bd317f3836cde0d083432fa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: cbe01f5eb685eb435712ab600397bb3b0b6066bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Guias de plano influenciam a otimização de consulta, anexando a elas dicas de consulta ou um plano de consulta fixo. No guia de plano, você especifica a instrução que deseja otimizar e uma cláusula OPTION que contém as dicas de consulta que deseja usar. ou um plano de consulta específico que você deseja usar para otimizar a consulta. Quando a consulta é executada, o otimizador de consultas faz a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] com o guia de plano, anexando a cláusula OPTION à consulta em tempo de execução ou usando o plano de consulta especificado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Guias de plano influenciam a otimização de consulta, anexando a elas dicas de consulta ou um plano de consulta fixo. No guia de plano, você especifica a instrução que deseja otimizar e uma cláusula OPTION que contém as dicas de consulta que deseja usar. ou um plano de consulta específico que você deseja usar para otimizar a consulta. Quando a consulta é executada, o otimizador de consultas faz a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] com o guia de plano, anexando a cláusula OPTION à consulta em tempo de execução ou usando o plano de consulta especificado.  
 
 Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, para uma consulta.
   

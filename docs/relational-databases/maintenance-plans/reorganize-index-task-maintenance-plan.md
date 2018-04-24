@@ -1,35 +1,36 @@
 ---
-title: "Tarefa Reorganizar Índice (plano de manutenção) | Microsoft Docs"
-ms.custom: 
+title: Tarefa Reorganizar Índice (plano de manutenção) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.defrag.f1
 helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae99ab0d4f0893885cbe001ec579bc973094412c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0feb94d9d527a91fbf03ad8dcae36c97c2b3c205
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tarefa de Reorganização de Índice (Plano de Manutenção)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa de Reorganização de Índice** para mover as páginas de índice em uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX REORGANIZE` com bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use a caixa de diálogo **Tarefa de Reorganização de Índice** para mover as páginas de índice em uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX REORGANIZE` com bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="options"></a>Opções  
  **Conexão**  
@@ -96,13 +97,13 @@ ms.lasthandoff: 11/17/2017
  **Usar nome de usuário e senha específicos**  
  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
- **Nome de usuário**  
+ **User name**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
   
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)  
   

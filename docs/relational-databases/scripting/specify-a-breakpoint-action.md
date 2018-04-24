@@ -1,16 +1,16 @@
 ---
-title: "Especificar uma ação de ponto de interrupção | Microsoft Docs"
-ms.custom: 
+title: Especificar uma ação de ponto de interrupção | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug.breakpt.action
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 543b2919c801ed6af696a31114bf840eff9cae05
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc843d4ee2866eaaa90a78ce6d4141c5ba8bf400
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Considerações sobre a ação  
  A ação padrão de um ponto de interrupção é interromper a execução quando a contagem de ocorrências e a condição de ponto de interrupção são atendidas. O principal uso de uma ação **Quando Atingido** no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] é imprimir informações na janela **Saída** do depurador especificando uma mensagem de impressão.  

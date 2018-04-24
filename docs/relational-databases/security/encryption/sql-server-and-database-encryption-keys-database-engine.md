@@ -1,33 +1,34 @@
 ---
 title: Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1f811501db4568f9e893fdbdf64205381298368
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d640b7fc6ce4aa49b19dac142d9fcfa1d412993
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
-O [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenados em um banco de dados de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois tipos de chaves: *simétrica* e *asimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenados em um banco de dados de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois tipos de chaves: *simétrica* e *asimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
   
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as chaves de criptografia incluem uma combinação de chaves públicas, privadas e assimétricas, usadas para proteger dados confidenciais. A chave simétrica é criada durante a inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando você inicia pela primeira vez a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A chave é usada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criptografar dados confidenciais que são armazenados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As chaves públicas e privadas são criadas pelo sistema operacional e são usadas para proteger a chave simétrica. Um par de chaves pública e privada é criado para cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que armazena dados confidenciais em um banco de dados.  
   
@@ -74,7 +75,7 @@ O [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-x
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Explica como usar sistemas de gerenciamento de chaves de terceiros com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Fazer backup da chave mestra de serviço](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Restaurar a chave mestra de serviço](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  
@@ -100,7 +101,7 @@ O [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-x
   
  [Restaurar uma chave mestra de banco de dados](../../../relational-databases/security/encryption/restore-a-database-master-key.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Adicionar e remover chaves de criptografia para implantação escalável &#40;Gerenciador de Configurações do SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   

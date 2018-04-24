@@ -1,34 +1,36 @@
 ---
-title: "Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting [SQL Server], HADR
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 644a3e05f20c1aecc1ef768410e5f3d13486b5bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem provocar uma falha em uma sessão entre duas réplicas de disponibilidade. Uma réplica de disponibilidade não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas, que de outra forma passariam despercebidas, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa seu próprio mecanismo de tempo limite de sessão. Especifica o tempo limite da sessão, em segundos. Esse tempo limite é o tempo máximo que uma instância de servidor espera para receber uma mensagem PING de outra instância antes de considerá-la desconectada. Quando um tempo limite de sessão ocorre entre duas réplicas de disponibilidade, as réplicas de disponibilidade pressupõem que ocorreu uma falha e declaram um *erro de software*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem provocar uma falha em uma sessão entre duas réplicas de disponibilidade. Uma réplica de disponibilidade não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas, que de outra forma passariam despercebidas, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa seu próprio mecanismo de tempo limite de sessão. Especifica o tempo limite da sessão, em segundos. Esse tempo limite é o tempo máximo que uma instância de servidor espera para receber uma mensagem PING de outra instância antes de considerá-la desconectada. Quando um tempo limite de sessão ocorre entre duas réplicas de disponibilidade, as réplicas de disponibilidade pressupõem que ocorreu uma falha e declaram um *erro de software*.  
   
 > [!IMPORTANT]  
 >  Falhas em bancos de dados diferentes do banco de dados primário não são detectáveis. Além disso, é improvável que uma falha no disco de dados seja detectada, a menos que o banco de dados seja reiniciado por causa de uma falha no disco de dados.  

@@ -1,32 +1,33 @@
 ---
 title: Melhorar o desempenho de consultas de texto completo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ff0018ac7b170b990f59020b243175940c7ad10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a5b73924b6393ea2de31fbcde95a82fd88097125
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Melhorar o desempenho de consultas de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A lista a seguir apresenta recomendações que ajudarão a melhorar o desempenho das consultas de texto completo.  
+  A lista a seguir apresenta recomendações que ajudarão a melhorar o desempenho das consultas de texto completo.  
   
  O desempenho das consultas de texto completo também é influenciado por recursos de hardware, como memória, velocidade de disco, velocidade de CPU e arquitetura de computador.  
   

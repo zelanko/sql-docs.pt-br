@@ -1,36 +1,36 @@
 ---
-title: "Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de Texto Completo | Microsoft Docs"
-ms.custom: 
+title: Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de Texto Completo | Microsoft Docs
+ms.custom: ''
 ms.date: 12/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 
+caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 849c650522d90348fd7bec2d115dd3af04b1c18b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: eeec287627230c999a242bfb53bf196468270075
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As consultas da pesquisa de texto completo podem pesquisar sinônimos de termos especificados pelo usuário por meio do uso de um *dicionário de sinônimos* da pesquisa de texto completo. Cada dicionário de sinônimos define um conjunto de sinônimos para um idioma específico. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados.
+As consultas da Pesquisa de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem pesquisar sinônimos de termos especificados pelo usuário por meio do uso de um *dicionário de sinônimos* da Pesquisa de Texto Completo. Cada dicionário de sinônimos define um conjunto de sinônimos para um idioma específico. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados.
 
 A correspondência com o dicionário de sinônimos ocorre para todas as consultas [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) e para quaisquer consultas [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) que especifiquem a cláusula `FORMSOF THESAURUS`.
   

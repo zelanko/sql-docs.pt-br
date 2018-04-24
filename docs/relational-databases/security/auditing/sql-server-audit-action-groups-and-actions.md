@@ -1,16 +1,16 @@
 ---
-title: "Ações e grupos de ações de auditoria do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Ações e grupos de ações de auditoria do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -24,19 +24,20 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a6dbc0a4fd646a93f6b0934d3297579e7e44398
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7676c207da04ade84dad14018c7b5c984dd0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O recurso Auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite auditar grupos de eventos e eventos individuais no nível do servidor e do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos e eventos individuais no nível do servidor e do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consistem em zero ou mais itens de ação de auditoria. Esses itens de ação de auditoria podem ser um grupo de ações, como Server_Object_Change_Group ou ações individuais, como operações SELECT em uma tabela.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
  A tabela a seguir descreve os grupos de ações de auditoria no nível do servidor e fornece a Classe de Evento SQL Server equivalente onde aplicável.  
   
-|Nome do grupo de ação|Descrição|  
+|Nome do grupo de ação|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Esse evento é gerado sempre que uma senha é alterada por uma função de aplicativo. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Esse evento é gerado sempre que uma auditoria é criada, modificada ou excluída. Esse evento é gerado sempre que qualquer especificação de auditoria é criada, modificada ou excluída. Qualquer alteração em uma auditoria é auditada nessa auditoria. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/21/2017
   
  A tabela a seguir descreve os grupos de ações de auditoria no nível de banco de dados e fornece a Classe de Evento do SQL Server equivalente onde aplicável.  
   
-|Nome do grupo de ação|Descrição|  
+|Nome do grupo de ação|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Esse evento é gerado sempre que uma senha é alterada por uma função de aplicativo. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Esse evento é gerado sempre que uma auditoria é criada, modificada ou excluída. Esse evento é gerado sempre que qualquer especificação de auditoria é criada, modificada ou excluída. Qualquer alteração em uma auditoria é auditada nessa auditoria. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -163,13 +164,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="database-level-audit-actions"></a>Ações de auditoria no nível do banco de dados  
  Ações no nível do banco de dados oferecem suporte à auditoria de ações específicas diretamente no esquema do banco de dados e em objetos do esquema, como tabelas, exibições, procedimentos armazenados, funções, procedimentos armazenados estendidos, filas e sinônimos. Tipos, coleção de esquema XML, banco de dados e esquema não são auditados. A auditoria de objetos de esquema pode ser configurada no esquema e no banco de dados, o que indica que os eventos em todos os objetos do esquema contidos no esquema ou banco de dados especificado serão auditados. A tabela a seguir descreve ações de auditoria no nível de banco de dados.  
   
-|Ação|Descrição|  
+|Ação|Description|  
 |------------|-----------------|  
 |SELECT|Esse evento é gerado sempre que SELECT é emitido.|  
 |UPDATE|Esse evento é gerado sempre que UPDATE é emitido.|  
 |INSERT|Esse evento é gerado sempre que INSERT é emitido.|  
-|DELETE|Esse evento é gerado sempre que DELETE é emitido.|  
-|EXECUTE|Esse evento é gerado sempre que EXECUTE é emitido.|  
+|Delete (excluir)|Esse evento é gerado sempre que DELETE é emitido.|  
+|Execute|Esse evento é gerado sempre que EXECUTE é emitido.|  
 |RECEIVE|Esse evento é gerado sempre que RECEIVE é emitido.|  
 |REFERENCES|Esse evento é gerado sempre que uma permissão REFERENCES é verificada.|  
   
@@ -183,7 +184,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="audit-level-audit-action-groups"></a>Grupos de ação de auditoria no nível de auditoria  
  Também é possível auditar as ações no processo de auditoria. Isso pode ocorrer no escopo de servidor ou no escopo do banco de dados. No escopo do banco de dados, isso ocorre somente para especificações de auditoria de banco de dados. A tabela a seguir descreve grupos de ações de auditoria no nível da auditoria.  
   
-|Nome do grupo de ação|Descrição|  
+|Nome do grupo de ação|Description|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Esse evento é gerado sempre que um dos comandos a seguir é emitido:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

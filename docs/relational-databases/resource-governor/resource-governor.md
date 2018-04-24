@@ -1,34 +1,35 @@
 ---
 title: Resource Governor | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: resource-governor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 631b9668bbea31db5b38a0f20eef099f470815b3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 8825a530b99737bbf7e04e08327dd8849dfa803e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resource-governor"></a>Administrador de Recursos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Resource Governor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar.  
   
 ## <a name="benefits-of-resource-governor"></a>Benefícios do Administrador de Recursos  
  O Administrador de Recursos permite gerenciar cargas de trabalho e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando limites de consumo de recursos por solicitações de entrada. No contexto do Administrador de Recursos, carga de trabalho é um conjunto de consultas ou solicitações de tamanho similar que podem e devem, ser tratadas como uma única entidade. Não se trata de um requisito, mas quanto mais uniforme for o padrão de uso dos recursos de uma carga de trabalho, maior a probabilidade de obter benefícios derivados do Administrador de Recursos. Limites de recurso podem ser reconfigurados em tempo real, com impacto mínimo sobre as cargas de trabalho que se encontram em execução.  

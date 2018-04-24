@@ -1,16 +1,16 @@
 ---
-title: "Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados | Microsoft Docs"
-ms.custom: 
+title: Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dta.workload.f1
@@ -22,19 +22,20 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c827fd810238c823cd40ab11b47109876234b646
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8decab3a7a2bece72e381a2c1efc579e914df82c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inicialize o Orientador de Otimização do Mecanismo de Banco de Dados  
  Ao usá-lo pela primeira vez, um usuário que seja membro da função de servidor fixa **sysadmin** deve inicializar o Orientador de Otimização do Mecanismo de Banco de Dados. Isso acontece porque devem ser criadas vários tabelas do sistema no banco de dados **msdb** para oferecer suporte a operações de ajuste. A inicialização também possibilita que os usuários membros da função de banco de dados fixa **db_owner** ajustem cargas de trabalho em tabelas em seus próprios bancos de dados.  

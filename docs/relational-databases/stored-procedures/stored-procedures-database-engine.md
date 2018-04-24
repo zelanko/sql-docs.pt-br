@@ -1,35 +1,36 @@
 ---
 title: Procedimento armazenados (Mecanismo de Banco de Dados) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3923972ec113d0f7f1b5906eeab6d1c85f04d0f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimento armazenados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um grupo de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma referência a um método CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Os procedimentos lembram as construções em outras linguagens de programação porque podem:  
+  Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um grupo de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma referência a um método CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Os procedimentos lembram as construções em outras linguagens de programação porque podem:  
   
 -   Aceitar parâmetros de entrada e retornar vários valores no formulário de parâmetros de saída para o programa de chamada.  
   
@@ -75,7 +76,7 @@ Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
  Sistema  
  Os procedimentos do sistema são fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são fisicamente armazenados no banco de dados **Resource** interno oculto, e logicamente aparecem no esquema **sys** de cada banco de dados definido pelo sistema e pelo usuário. Além disso, o banco de dados **msdb** também pode conter procedimentos armazenados do sistema no esquema **dbo** que são usados para agendar alertas e trabalhos. Como os procedimentos do sistema começam com o prefixo **sp_**, recomendamos que você não use esse perfil quando for nomear procedimentos definidos pelo usuário. Para obter uma lista completa de procedimentos do sistema, veja [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos procedimentos do sistema que fornecem uma interface do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programas externos para várias atividades de manutenção. Esses procedimentos estendidos usam o prefixo xp_. Para obter uma lista completa de procedimentos estendidos, veja [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos procedimentos do sistema que fornecem uma interface no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a programas externos para várias atividades de manutenção. Esses procedimentos estendidos usam o prefixo xp_. Para obter uma lista completa de procedimentos estendidos, veja [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
  Extensões definidas pelo usuário  
  Os procedimentos estendidos permitem criar rotinas externas em uma linguagem de programação como C. Esses procedimentos são DLLs que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode carregar e executar dinamicamente.  

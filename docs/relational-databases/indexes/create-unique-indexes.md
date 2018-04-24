@@ -2,7 +2,7 @@
 title: Criar índices exclusivos | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -25,13 +25,14 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d8ec65be74b3fefe8e3da66e1952012f8598b4b3
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 652c81c2236ee63ba5ee3a61bef2026d0c9a8f49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-unique-indexes"></a>Create Unique Indexes
+# <a name="create-unique-indexes"></a>Criar índices exclusivos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como criar um índice exclusivo em uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Não existe nenhuma diferença significativa entre criar uma restrição UNIQUE e criar um índice exclusivo que seja independente de uma restrição. A validação de dados ocorre da mesma maneira, e o otimizador de consultas não diferencia entre um índice exclusivo criado por uma restrição ou manualmente criado. No entanto, criar uma restrição UNIQUE na coluna torna claro o objetivo do índice. Para obter mais informações sobre restrições UNIQUE, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -157,7 +158,7 @@ ms.lasthandoff: 04/10/2018
   
 10. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Para criar um índice exclusivo em uma tabela  
   

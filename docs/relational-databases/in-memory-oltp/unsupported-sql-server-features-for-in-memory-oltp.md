@@ -1,28 +1,29 @@
 ---
 title: Recursos do SQL Server sem suporte para OLTP in-memory | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a2ccc853663dd125fec186b9e9e3834f28345c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0cdaeb155f34ec4adaf285c2b1345ab3af713980
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Recursos do SQL Server sem suporte para OLTP na Memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a segui
 |Servidor vinculado|Você não pode acessar servidores vinculados na mesma consulta ou transação como tabelas com otimização de memória. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Registro em massa|Independentemente do modelo de recuperação do banco de dados, todas as operações nas tabelas duráveis com otimização de memória sempre são completamente registradas.|  
 |Log mínimo|O log mínimo não tem suporte para tabelas com otimização de memória. Para obter mais informações sobre log mínimo, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Pré-requisitos para log mínimo na importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|Controle de alterações|O controle de alterações pode ser habilitado em um banco de dados com objetos OLTP na memória. No entanto, as alterações em tabelas com otimização de memória não são rastreadas.|  
+|controle de alterações|O controle de alterações pode ser habilitado em um banco de dados com objetos OLTP na memória. No entanto, as alterações em tabelas com otimização de memória não são rastreadas.|  
 | gatilhos DDL | Os gatilhos DDL no nível de servidor e de banco de dados não têm suporte com tabelas OLTP in-memory e módulos compilados nativamente. |  
 | Change Data Capture (CDC) | O CDC não pode ser usado com um banco de dados que tenha tabelas com otimização de memória, pois ele usa um gatilho DDL para DROP TABLE internamente. |  
 | Modo fibra | O modo fibra não tem suporte em tabelas com otimização de memória:<br /><br />Se o modo fibra estiver ativo, não será possível criar bancos de dados com grupos de arquivos com otimização de memória ou adicionar grupos de arquivos com otimização de memória a bancos de dados existentes.<br /><br />Você pode habilitar o modo fibra se houver bancos de dados com grupos de arquivos com otimização de memória. No entanto, habilitar o modo fibra exige a reinicialização do servidor. Nessa situação, haverá falha na recuperação dos bancos de dados com grupos de arquivos com otimização de memória. Em seguida, uma mensagem de erro sugerirá que você desabilite o modo fibra para usar bancos de dados com grupos de arquivos com otimização de memória.<br /><br />Haverá falha ao anexar e restaurar bancos de dados com grupos de arquivos com otimização de memória se o modo fibra estiver ativo. Os bancos de dados será marcado como suspeito.<br /><br />Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
@@ -59,7 +60,7 @@ Com algumas exceções, as transações entre bancos de dados não têm suporte.
 
 |Bancos de dados|Allowed (permitido)|Description|  
 |---------------|-------------|-----------------|  
-| Bancos de dados de usuário, **modelo** e **msdb**. | Não | Na maioria dos casos, *não* há suporte para consultas e transações entre bancos de dados.<br /><br />Uma consulta não poderá acessar outros bancos de dados se utilizar uma tabela com otimização de memória ou um procedimento armazenado compilado nativamente. Essa restrição se aplica a transações e a consultas.<br /><br />As exceções são os bancos de dados do sistema **tempdb** e **mestre**. Aqui, o banco de dados **mestre** está disponível para acesso somente leitura. |
+| Bancos de dados de usuário, **modelo** e **msdb**. | não | Na maioria dos casos, *não* há suporte para consultas e transações entre bancos de dados.<br /><br />Uma consulta não poderá acessar outros bancos de dados se utilizar uma tabela com otimização de memória ou um procedimento armazenado compilado nativamente. Essa restrição se aplica a transações e a consultas.<br /><br />As exceções são os bancos de dados do sistema **tempdb** e **mestre**. Aqui, o banco de dados **mestre** está disponível para acesso somente leitura. |
 | Banco de dados de **recursos**, **tempdb** | Sim | Em uma transação com objetos OLTP in-memory, os bancos de dados do sistema **Recurso** e **tempdb** podem ser usados sem restrição adicional.
 
 
@@ -89,6 +90,6 @@ Com algumas exceções, as transações entre bancos de dados não têm suporte.
     - Há suporte para autenticação de banco de dados independente. No entanto, todos os objetos OLTP in-memory são marcados como "contenção recente" no **dm_db_uncontained_entities** da exibição de gerenciamento dinâmico (DMV).
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 
 - [Suporte ao SQL Server para OLTP na memória](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

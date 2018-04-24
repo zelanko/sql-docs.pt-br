@@ -1,35 +1,36 @@
 ---
 title: Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a36b99483ece6d73dd94e9f5d218fdcf8ce4c743
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c99ac0185cb5b098f78cb99a0bdeaa1e7359ad7a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Este tópico discute como obter os valores que são necessários antes de adicionar uma propriedade a uma lista de propriedades de pesquisa, tornando-a pesquisável através de pesquisa de texto completo. Estes valores incluem o GUID do conjunto de propriedades e o identificador de inteiro de propriedade de uma propriedade de documento.  
+  Este tópico discute como obter os valores que são necessários antes de adicionar uma propriedade a uma lista de propriedades de pesquisa, tornando-a pesquisável através de pesquisa de texto completo. Estes valores incluem o GUID do conjunto de propriedades e o identificador de inteiro de propriedade de uma propriedade de documento.  
   
  As propriedades de documentos que são extraídas por IFilters de dados binários – ou seja, de dados armazenados em uma coluna de tipo de dados **varbinary**, **varbinary(max)** (incluindo **FILESTREAM**) ou **image** – podem ser disponibilizadas para pesquisa de texto completo. Para tornar uma propriedade extraída pesquisável, adicione manualmente a propriedade a uma lista de propriedades de pesquisa. A lista de propriedades de pesquisa também deve ser associada a um ou mais índices de texto completo. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
