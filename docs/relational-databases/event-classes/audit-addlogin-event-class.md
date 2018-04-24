@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Audit Addlogin | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Addlogin event class
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 307e71a029c1e2aba66394d323ffe04017df153f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5dc30ba9153b294c968429d380108033e613b1fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-addlogin-event-class"></a>Classe de evento Audit Addlogin
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento **Audit Addlogin** ocorre quando um logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é adicionado ou removido.  
+  A classe de evento **Audit Addlogin** ocorre quando um logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é adicionado ou removido.  
   
  Se você definir propriedades adicionais quando o logon for adicionado, como um banco de dados padrão, as informações sobre essas propriedades serão encontradas na coluna **TextData** desse evento. Se você definir essas propriedades enquanto adiciona um logon, o evento **Audit Login Change Property** não ocorrerá.  
   

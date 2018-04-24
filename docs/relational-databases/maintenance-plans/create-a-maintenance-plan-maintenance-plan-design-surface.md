@@ -2,7 +2,7 @@
 title: Criar um plano de manutenção (superfície de design do plano de manutenção) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 738e4846e7dcead475b8c8b5924e7b8fb359f97a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,10 +176,10 @@ ms.lasthandoff: 04/10/2018
         > [!NOTE]  
         >  A linha de restrição de precedência é verde para **Êxito**, vermelha para **Falha**e azul para **Conclusão**.  
   
-         **Expressão**  
+         **Expression**  
          Se usar as operações **Expression**, **Expression and Constraint**ou **Expression or Constraint**, digite uma expressão. A expressão deve ser avaliada como um booliano.  
   
-         **Teste**  
+         **Testar**  
          Valide a expressão.  
   
          **Várias restrições**  
@@ -261,7 +261,7 @@ ms.lasthandoff: 04/10/2018
      **Resumo do arquivo de log**  
      Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que:**  \<filter criteria>.  
   
-     **Data**  
+     **Date**  
      Exibe a data do evento.  
   
      **Origem**  

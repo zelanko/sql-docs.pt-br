@@ -1,30 +1,30 @@
 ---
-title: "Tutorial: backup e restauração do SQL Server para o Serviço de Armazenamento de Blobs do Azure | Microsoft Docs"
-ms.custom: 
-ms.date: 02/16/2017
-ms.prod: sql-non-specified
+title: 'Tutorial: backup e restauração do SQL Server para o Serviço de Armazenamento de Blobs do Azure | Microsoft Docs'
+ms.custom: ''
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01e2469b6dc300c8ac03a8b8ccdd622a7ee599b7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 309fdeeafc0d8fbd6f1f0a2633a15929757607b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Nesta lição, você criará uma conta de armazenamento do Azure e um contêiner
 [Lição 2: criar uma credencial do SQL Server](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 Nesta lição, você criará uma credencial para armazenar as informações de segurança usadas para acessar a conta de armazenamento do Azure.  
   
-[Lição 3: gravar um backup de banco de dados completo no serviço de Armazenamento de Blobs do Azure](http://msdn.microsoft.com/library/454c8296-64e9-46ed-b141-5ebfbc8a4fe2)  
+[Lição 3: gravar um backup de banco de dados completo no serviço de Armazenamento de Blobs do Azure](https://technet.microsoft.com/en-us/library/jj720552&#40;v=sql.110&#41;.aspx)  
 Nesta lição, você gerará uma instrução T-SQL para gravar um backup do banco de dados AdventureWorks2012 no serviço de Armazenamento de Blobs do Azure.  
   
 [Lição 4: executar uma restauração de um backup de banco de dados completo](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  
@@ -63,6 +63,6 @@ Estas são algumas leituras que podem ajudar a compreender os conceitos e as pr�
   
 2.  [Melhores práticas e solução de problemas de backup do SQL Server para URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
 

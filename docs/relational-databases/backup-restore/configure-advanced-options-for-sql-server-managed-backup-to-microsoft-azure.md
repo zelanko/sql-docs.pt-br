@@ -1,31 +1,32 @@
 ---
-title: "Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure | Microsoft Docs"
-ms.custom: 
+title: Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b1f6ccfb9fdcf2fa3022864159fb87e589844df
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1f64010973cd54bee7723668c861ca515e818bce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O tutorial a seguir descreve como definir opções avançadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esses procedimentos só serão necessários se você precisar dos recursos que oferecem. Caso contrário, você pode habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e depender do comportamento padrão.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O tutorial a seguir descreve como definir opções avançadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esses procedimentos só serão necessários se você precisar dos recursos que oferecem. Caso contrário, você pode habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e depender do comportamento padrão.  
   
  Em cada cenário, o backup é especificado usando o parâmetro `database_name` . Quando `database_name` é NULL ou *, as alterações afetam as configurações padrão no nível da instância. Configurações de nível de instância também afetam os novos bancos de dados criados após a alteração.  
   

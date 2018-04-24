@@ -1,34 +1,36 @@
 ---
-title: "Espelhamento de banco de dados e instantâneos do banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Espelhamento de banco de dados e instantâneos do banco de dados (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db1c0902b2de0a761e1a7558e9bbb71c946afe5b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b51e1ad9f6789480165ece1d97f43d447a5b7a65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Espelhamento de banco de dados e instantâneos de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode tirar proveito de um banco de dados espelho que você está mantendo para fins de disponibilidade para descarregar relatórios. Para usar um banco de dados espelho para relatórios, você pode criar um instantâneo do banco de dados no banco de dados espelho e direcionar as solicitações de conexão de clientes para o instantâneo mais recente. Um instantâneo do banco de dados é um instantâneo consistente de transações, estático e somente leitura de seu banco de dados de origem tal como ele estava no momento da criação do instantâneo. Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no estado de espelhamento sincronizado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Você pode tirar proveito de um banco de dados espelho que você está mantendo para fins de disponibilidade para descarregar relatórios. Para usar um banco de dados espelho para relatórios, você pode criar um instantâneo do banco de dados no banco de dados espelho e direcionar as solicitações de conexão de clientes para o instantâneo mais recente. Um instantâneo do banco de dados é um instantâneo consistente de transações, estático e somente leitura de seu banco de dados de origem tal como ele estava no momento da criação do instantâneo. Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no estado de espelhamento sincronizado.  
   
  Ao contrário do próprio banco de dados espelho, um instantâneo do banco de dados está acessível aos clientes. Contanto que o servidor espelho esteja se comunicando com o servidor principal, você pode dirigir os clientes que estejam inserindo informações para que se conectem a um instantâneo. Observe que devido ao fato de o instantâneo do banco de dados ser estático, os novos dados não estão disponíveis. Para tornar dados relativamente recentes disponíveis a seus usuários, você precisa criar periodicamente um novo instantâneo do banco de dados e fazer com que os aplicativos dirijam as conexões de entrada de clientes para o instantâneo mais recente.  
   

@@ -13,12 +13,12 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 75dfac4c3f09746bbe891a72ff8528f6d7418e75
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guia de solução de problemas e monitoramento dos Grupos de Disponibilidade Always On
  Este guia ajuda você a começar a monitorar Grupos de Disponibilidade Always On e solucionar alguns dos problemas comuns em grupos de disponibilidade. Ele fornece o conteúdo original, bem como uma página inicial com informações úteis que são publicadas em outros lugares. Embora este guia não aborde completamente todos os problemas que podem ocorrer no vasto campo dos grupos de disponibilidade, ele pode indicar a direção correta para sua análise de causa raiz e para a solução de problemas. 

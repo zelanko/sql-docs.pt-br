@@ -1,34 +1,34 @@
 ---
-title: "Recusar permissões em uma coleção de esquemas XML | Microsoft Docs"
-ms.custom: 
+title: Recusar permissões em uma coleção de esquemas XML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f671b78f43515a1968b384660df5b13fc933b252
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: cdca7cef4545decd73ecd443ea128936a3ad1e2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Recusar permissões em uma coleção de esquemas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Permissões podem ser negadas para criar uma nova coleção de esquema XML ou para usar uma coleção existente.  
+  Permissões podem ser negadas para criar uma nova coleção de esquema XML ou para usar uma coleção existente.  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Negando permissão para criar uma coleção de esquema XML  
  É possível negar permissão para criar uma coleção de esquema XML das seguintes maneiras:  

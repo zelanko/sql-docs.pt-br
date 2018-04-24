@@ -1,16 +1,16 @@
 ---
 title: Hierarquia de criptografia | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873a266bd722f6e5337abe94f615e2e82ea0e278
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7447398e55b4f3d8ad212dc506cafbb90512b15a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryption-hierarchy"></a>Hierarquia de criptografia
-O [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografa dados com uma criptografia hierárquica e infraestrutura de gerenciamento de chaves. Cada camada criptografa a camada abaixo dela usando uma combinação de certificados, chaves assimétricas e chaves simétricas. Chaves assimétricas e chaves simétricas podem ser armazenadas fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um módulo EKM (Gerenciamento Extensível de Chaves).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografa dados com uma criptografia hierárquica e infraestrutura de gerenciamento de chaves. Cada camada criptografa a camada abaixo dela usando uma combinação de certificados, chaves assimétricas e chaves simétricas. Chaves assimétricas e chaves simétricas podem ser armazenadas fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um módulo EKM (Gerenciamento Extensível de Chaves).  
   
  A ilustração a seguir mostra que cada camada da hierarquia de criptografia criptografa a camada abaixo dela e exibe as configurações de criptografia mais comuns. O acesso ao início da hierarquia normalmente é protegido por uma senha.  
   
@@ -116,7 +118,7 @@ O [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-x
   
  [Funções de segurança &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Protegíveis](../../../relational-databases/security/securables.md)  
   

@@ -1,31 +1,31 @@
 ---
 title: Guia de arquitetura de processamento de consultas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 1f1e2a721201fbc1e497cdd65daab9ec46ad9c06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -274,7 +274,7 @@ Não são permitidas dicas nas definições de exibições indexadas. No modo de
 
 O processador de consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] otimiza o desempenho das exibições particionadas distribuídas. O aspecto mais importante de desempenho de exibição particionada distribuída é minimizar a quantidade de dados transferida entre servidores membro.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria planos inteligentes e dinâmicos que usam de forma eficaz as consultas distribuídas para acessar dados de tabelas de membro remoto: 
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria planos inteligentes e dinâmicos que usam de forma eficaz as consultas distribuídas para acessar dados de tabelas de membro remoto: 
 
 * O Processador de Consultas usa o OLE DB primeiro para recuperar as definições de restrição de verificação de cada tabela de membro. Isso permite ao processador de consultas mapear a distribuição de valores da chave entre as tabelas de membro.
 * The Query Processor compares the key ranges specified in an SQL statement `WHERE` da instrução SQL com o mapa que mostra como as linhas são distribuídas nas tabelas de membro. O processador de consultas cria um plano de execução de consulta que usa consultas distribuídas para recuperar apenas essas linhas remotas exigidas para completar a instrução SQL. O plano de execução também é criado de forma que qualquer acesso a tabelas de membro remoto, tanto para dados quanto para metadados, seja adiado até as informações serem exigidas.
@@ -301,7 +301,7 @@ FROM CompanyData.dbo.Customers
 WHERE CustomerID = @CustomerIDParameter;
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode prever qual valor de chave será fornecido pelo parâmetro `@CustomerIDParameter` sempre que o procedimento for executado. Como o valor da chave não pode ser previsto, o processador de consultas também não pode prever qual tabela de membro precisará ser acessada. Para lidar com isso, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria um plano de execução que tem lógica condicional, conhecido como filtros dinâmicos, para controlar qual tabela de membro será acessada, com base no valor de parâmetro de entrada. Supondo que o procedimento armazenado `GetCustomer` foi executado no Server1, a lógica do plano de execução poderá ser representada como mostrado a seguir:
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode prever qual valor de chave será fornecido pelo parâmetro `@CustomerIDParameter` sempre que o procedimento for executado. Como o valor da chave não pode ser previsto, o processador de consultas também não pode prever qual tabela de membro precisará ser acessada. Para lidar com isso, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria um plano de execução que tem lógica condicional, conhecido como filtros dinâmicos, para controlar qual tabela de membro será acessada, com base no valor de parâmetro de entrada. Supondo que o procedimento armazenado `GetCustomer` foi executado no Server1, a lógica do plano de execução poderá ser representada como mostrado a seguir:
 
 ```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
@@ -312,19 +312,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] às vezes, cria esses tipos de planos de execução dinâmicos até para consultas que não são parametrizadas. O Otimizador de Consulta pode parametrizar uma consulta para que o plano de execução possa ser reutilizado. Se o Otimizador de Consulta parametrizar uma consulta que referencia uma exibição particionada, ele já não poderá supor que as linhas exigidas serão provenientes de uma tabela base especificada. Ele terá de usar filtros dinâmicos no plano de execução.
+Às vezes, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria esses tipos de planos de execução dinâmicos até para consultas que não são parametrizadas. O Otimizador de Consulta pode parametrizar uma consulta para que o plano de execução possa ser reutilizado. Se o Otimizador de Consulta parametrizar uma consulta que referencia uma exibição particionada, ele já não poderá supor que as linhas exigidas serão provenientes de uma tabela base especificada. Ele terá de usar filtros dinâmicos no plano de execução.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Execução de procedimento armazenado e disparador
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazena apenas a origem de procedimentos armazenados e gatilhos. Quando um procedimento armazenado ou disparador é executado primeiro, a origem é compilada em um plano de execução. Se o procedimento armazenado ou o disparador for executado novamente antes de o plano de execução envelhecer na memória, o mecanismo relacional detectará o plano existente e o reutilizará. Se o plano envelhecer fora da memória, um plano novo será criado. Esse processo é semelhante ao processo que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] segue para todas as instruções SQL. A vantagem de desempenho principal que os procedimentos armazenados e os disparadores têm no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], comparada com lotes de SQL dinâmico, é que suas instruções SQL são sempre as mesmas. Portanto, o mecanismo relacional as corresponde facilmente com qualquer plano de execução existente. O planos de procedimento armazenado e disparador são reutilizados facilmente.
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazena apenas a origem de procedimentos armazenados e disparadores. Quando um procedimento armazenado ou disparador é executado primeiro, a origem é compilada em um plano de execução. Se o procedimento armazenado ou o disparador for executado novamente antes de o plano de execução envelhecer na memória, o mecanismo relacional detectará o plano existente e o reutilizará. Se o plano envelhecer fora da memória, um plano novo será criado. Esse processo é semelhante ao processo que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] segue para todas as instruções SQL. A vantagem de desempenho principal que os procedimentos armazenados e os disparadores têm no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], comparada com lotes de SQL dinâmico, é que suas instruções SQL são sempre as mesmas. Portanto, o mecanismo relacional as corresponde facilmente com qualquer plano de execução existente. O planos de procedimento armazenado e disparador são reutilizados facilmente.
 
 O plano de execução de procedimentos armazenados e disparadores é executado separadamente do plano de execução do lote que chama o procedimento armazenado ou aciona o disparador. Isso permite uma grande reutilização de planos de execução de procedimento armazenado e disparador.
 
 ## <a name="execution-plan-caching-and-reuse"></a>Reutilização e armazenamento em cache do plano de execução
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um pool de memória usado para armazenar planos de execução e buffers de dados. A porcentagem do pool alocada a planos de execução ou buffers de dados flutua dinamicamente, dependendo do estado do sistema. A parte do pool de memória usada para armazenar os planos de execução é conhecida como cache de planos.
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um pool de memória usado para armazenar planos de execução e buffers de dados. A porcentagem do pool alocada a planos de execução ou buffers de dados flutua dinamicamente, dependendo do estado do sistema. A parte do pool de memória usada para armazenar os planos de execução é conhecida como cache de planos.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] os planos de execução têm os componentes principais a seguir: 
+Os planos de execução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] têm os componentes principais a seguir: 
 
 * Plano de Execução de Consulta A maior parte do plano de execução é uma estrutura de dados somente leitura reentrante usada por qualquer número de usuários. Isso é conhecido como plano de consulta. Nenhum contexto de usuário é armazenado no plano de consulta. Nunca há mais de uma ou duas cópias do plano de consulta na memória: uma cópia para todas as execuções em série e outra para todas as execuções paralelas. A cópia paralela cobre todas as execuções paralelas, independentemente do grau de paralelismo. 
 * Contexto de execução. Cada usuário que está executando a consulta atualmente tem uma estrutura de dados que retém os dados específicos para a sua execução, como valores de parâmetro. Esta estrutura de dados é conhecida como contexto de execução. As estruturas de dados de contexto de execução são reutilizadas. Se um usuário executar uma consulta e uma das estruturas não estiver sendo usada, ela será reinicializada com o contexto do usuário novo. 
@@ -333,7 +333,7 @@ O plano de execução de procedimentos armazenados e disparadores é executado s
 
 Quando alguma instrução SQL for executada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o mecanismo relacional examinará primeiro o cache de planos para verificar se há um plano de execução para a mesma instrução SQL. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reutiliza qualquer plano existente que encontrar, diminuindo as despesas de recompilação da instrução SQL. Se não houver nenhum plano de execução, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gerará um plano de execução novo para a consulta.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um algoritmo eficiente para localizar qualquer plano de execução existente de qualquer instrução SQL específica. Na maioria dos sistemas, os recursos mínimos usados por esta varredura são inferiores aos recursos salvos graças à reutilização de planos existentes em vez da compilação de cada instrução SQL.
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um algoritmo eficiente para localizar qualquer plano de execução existente de qualquer instrução SQL específica. Na maioria dos sistemas, os recursos mínimos usados por esta varredura são inferiores aos recursos salvos graças à reutilização de planos existentes em vez da compilação de cada instrução SQL.
 
 Os algoritmos para corresponder as instruções SQL novas a planos de execução existentes não utilizados no cache exigeem que todas as referências de objeto sejam qualificadas completamente. Por exemplo, a primeira dessas instruções `SELECT` não corresponde a um plano existente e a segunda corresponde:
 
@@ -633,7 +633,7 @@ Valores de parâmetro são detectados durante a compilação ou recompilação p
 
 ## <a name="parallel-query-processing"></a>Processamento paralelo de consultas
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece consultas paralelas para otimizar a execução de consultas e operações de índice para computadores que têm mais de um microprocessador (CPU). Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode executar uma consulta ou uma operação de índice em paralelo usando vários threads de trabalho do sistema operacional, a operação pode ser executada de forma rápida e eficiente.
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece consultas paralelas para otimizar a execução de consultas e operações de índice para computadores que têm mais de um microprocessador (CPU). Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode executar uma consulta ou uma operação de índice em paralelo usando vários threads de trabalho do sistema operacional, a operação pode ser executada de forma rápida e eficiente.
 
 Durante a otimização da consulta, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procura consultas ou operações de índice que poderiam se beneficiar da execução paralela. Para essas consultas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] insere operadores de troca no plano de execução de consulta para preparar a consulta para a execução paralela. Um operador de troca é um operador em um plano de execução de consulta que fornece gerenciamento de processo, redistribuição de dados e controle de fluxo. O operador de troca inclui como subtipos os operadores lógicos `Distribute Streams`, `Repartition Streams`e `Gather Streams` dos quais um ou mais podem aparecer na saída do Plano de Execução de um plano de consulta para uma consulta paralela. 
 
@@ -647,7 +647,7 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 ### <a name="DOP"></a> Grau de Paralelismo
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente o melhor grau de paralelismo para cada instância de uma execução de consulta paralela ou operação DDL (linguagem de definição de dados) do índice. Isso é feito baseado nos seguintes critérios: 
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente o melhor grau de paralelismo para cada instância de uma execução de consulta paralela ou operação DDL (linguagem de definição de dados) do índice. Isso é feito baseado nos seguintes critérios: 
 
 1. Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estiver sendo executado em um computador que tenha mais de um microprocessador ou mais de uma CPU, como um computador SMP (multiprocessamento simétrico).  
   Apenas computadores que têm mais de uma CPU podem usar consultas paralelas. 
@@ -774,7 +774,7 @@ Os planos de consulta criados para as operações de índice que criam ou recomp
 > [!NOTE]
 > As operações de índice paralelas somente estão disponíveis no Enterprise Edition, a partir de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].
  
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa os mesmos algoritmos para determinar o grau de paralelismo (o número total de threads de trabalho separados a serem executados) para operações de índice que em outras consultas. O grau máximo de paralelismo para uma operação de índice está sujeito à opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . É possível substituir o valor do grau máximo de paralelismo para operações de índice individuais definindo a opção de índice MAXDOP nas instruções CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa os mesmos algoritmos para determinar o grau de paralelismo (o número total de threads de trabalho separados a serem executados) para operações de índice que em outras consultas. O grau máximo de paralelismo para uma operação de índice está sujeito à opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . É possível substituir o valor do grau máximo de paralelismo para operações de índice individuais definindo a opção de índice MAXDOP nas instruções CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
 
 Quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cria um plano de execução de índice, o número de operações paralelas é definido como o menor valor entre: 
 
@@ -816,7 +816,7 @@ O Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa o OLE DB para se comunicar entre o mecanismo relacional e o mecanismo de armazenamento. O mecanismo relacional divide cada instrução Transact-SQL em uma série de operações nos conjuntos de linhas OLE DB simples abertos pelo mecanismo de armazenamento das tabelas base. Isso significa que o mecanismo relacional também pode abrir os conjuntos de linhas OLE DB simples em qualquer fonte de dados OLE DB.  
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa o OLE DB para se comunicar entre o mecanismo relacional e o mecanismo de armazenamento. O mecanismo relacional divide cada instrução Transact-SQL em uma série de operações nos conjuntos de linhas OLE DB simples abertos pelo mecanismo de armazenamento das tabelas base. Isso significa que o mecanismo relacional também pode abrir os conjuntos de linhas OLE DB simples em qualquer fonte de dados OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 O mecanismo relacional usa a API (interface de programação de aplicativo) do OLE DB para abrir os conjuntos de linhas em servidores vinculados, buscar as linhas e gerenciar as transações.
 
@@ -828,11 +828,11 @@ As consultas distribuídas podem permitir que os usuários acessem outra fonte d
 
 Quando possível, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envia operações relacionais como junções, restrições, projeções, classificações e operações de agrupar por para a fonte de dados OLE DB. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não assume o padrão de examinar a tabela base no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e executar as operações relacionais em si. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consulta o provedor OLE DB para determinar o nível de gramática SQL ao qual ele dá suporte e, com base nessas informações, envia o máximo possível de operações relacionais para o provedor. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica um mecanismo para um provedor OLE DB retornar estatísticas que indicam como os valores de chave são distribuídos em uma fonte de dados OLE DB. Isso permite ao Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] analisar melhor o padrão de dados na fonte de dados em relação aos requisitos de cada instrução SQL, aumentando a capacidade do Otimizador de Consulta de gerar planos de execução otimizados. 
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica um mecanismo para um provedor OLE DB retornar estatísticas que indicam como os valores de chave são distribuídos em uma fonte de dados OLE DB. Isso permite ao Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] analisar melhor o padrão de dados na fonte de dados em relação aos requisitos de cada instrução SQL, aumentando a capacidade do Otimizador de Consulta de gerar planos de execução otimizados. 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados
 
-[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] melhorou o desempenho do processamento de consultas em tabelas particionadas para muitos planos paralelos, alterou a maneira como os planos paralelos e seriais são representados e aprimorou as informações de particionamento fornecidas nos planos de execução de tempo de compilação e tempo de execução. Este tópico descreve esses aperfeiçoamentos, fornece orientação sobre como interpretar os planos de execução de consultas de tabelas e índices particionados e fornece as práticas recomendadas para aperfeiçoar o desempenho de consultas em objetos particionados. 
+O [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] melhorou o desempenho do processamento de consultas em tabelas particionadas para muitos planos paralelos, alterou a maneira como os planos paralelos e seriais são representados e aprimorou as informações de particionamento fornecidas nos planos de execução de tempo de compilação e tempo de execução. Este tópico descreve esses aperfeiçoamentos, fornece orientação sobre como interpretar os planos de execução de consultas de tabelas e índices particionados e fornece as práticas recomendadas para aperfeiçoar o desempenho de consultas em objetos particionados. 
 
 > [!NOTE]
 > Há suporte para tabelas e índices particionados apenas nas edições Enterprise, Developer e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -873,7 +873,7 @@ Usando essas ferramentas, você pode averiguar as seguintes informações:
 
 #### <a name="partition-information-enhancements"></a>Aprimoramentos das informações sobre partições
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece informações aperfeiçoadas de particionamento para planos de execução de tempo de compilação e tempo de execução. Agora, os planos de execução fornecem as seguintes informações:
+O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece informações aperfeiçoadas de particionamento para planos de execução de tempo de compilação e tempo de execução. Agora, os planos de execução fornecem as seguintes informações:
 
 * Um atributo opcional `Partitioned` que indica que um operador, como `seek`, `scan`, `insert`, `update`, `merge`ou `delete`, é executado em uma tabela particionada.  
 * Um novo elemento `SeekPredicateNew` com um subelemento `SeekKeys` que inclui `PartitionID` como a coluna de chave de índice à esquerda e as condições de filtro que especificam buscas de intervalo em `PartitionID`. A presença de dois subelementos `SeekKeys` indica que uma operação de busca seletiva no `PartitionID` é usada.   

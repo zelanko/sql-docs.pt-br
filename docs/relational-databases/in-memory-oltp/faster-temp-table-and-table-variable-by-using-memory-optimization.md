@@ -1,28 +1,29 @@
 ---
-title: "Tabela temporária e variável de tabela mais rápidas usando a otimização de memória | Microsoft Docs"
-ms.custom: 
+title: Tabela temporária e variável de tabela mais rápidas usando a otimização de memória | Microsoft Docs
+ms.custom: ''
 ms.date: 10/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 29b7fbe140943ba0f2f3493f00561e8cf2b509e2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f0e664913296f0e2820c1b4916e5d74e29eddd5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabela temporária e variável de tabela mais rápidas usando a otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -432,7 +433,7 @@ Para variáveis de tabela maiores, índices não clusterizados usam mais memóri
   
 Se a variável de tabela com otimização de memória é acessada apenas com um valor de chave exato por acesso, um índice de hash pode ser uma escolha melhor do que um índice não clusterizado. No entanto, se você não puder estimar o BUCKET_COUNT apropriado, um índice NONCLUSTERED é uma boa segunda opção.  
   
-## <a name="h-see-also"></a>H. Consulte também  
+## <a name="h-see-also"></a>H. Confira também  
   
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Definindo a durabilidade dos objetos com otimização de memória](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  

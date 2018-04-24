@@ -1,36 +1,37 @@
 ---
-title: "Informações sobre erros e códigos de retorno de automação | Microsoft Docs"
-ms.custom: 
+title: Informações sobre erros e códigos de retorno de automação | Microsoft Docs
+ms.custom: ''
 ms.date: 07/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ole
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2621860c2090c3c3efe1fa72bbd4c9e4315c68d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 80a4fd9b2c929d54158c39e06635818ec95b8d30
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Informações sobre erros e códigos de retorno de automação OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Os procedimentos armazenados do sistema de Automação OLE retornam um código de retorno **int** que é o HRESULT retornado pela operação de Automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas ao ser retornado com o valor **int** em um código de retorno de procedimento armazenado, o HRESULT assume o formato 214*nnnnnnn*.  
+  Os procedimentos armazenados do sistema de Automação OLE retornam um código de retorno **int** que é o HRESULT retornado pela operação de Automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas ao ser retornado com o valor **int** em um código de retorno de procedimento armazenado, o HRESULT assume o formato 214*nnnnnnn*.  
   
  Por exemplo, passar um nome de objeto inválido (SQLDMO.Xyzzy) para sp_OACreate faz o procedimento retornar um HRESULT **int** de 2147221005, que é 0x800401f3 em número hexadecimal.  
   

@@ -1,16 +1,16 @@
 ---
 title: Arquivos e grupos de Arquivos de Banco de Dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/07/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -35,19 +35,20 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: d341ebd7425d1108e3d22129d14b0b5a81996f0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todo o banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem, no mínimo, dois arquivos de sistema operacional: um arquivo de dados e um arquivo de log. Os arquivos de dados contêm dados e objetos como tabelas, índices, procedimentos armazenados e exibições. Os arquivos de log contêm as informações necessárias para recuperar todas as transações no banco de dados. Os arquivos de dados podem ser agrupados em grupos de arquivos para propósitos de alocação e administração.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Todo o banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem, no mínimo, dois arquivos de sistema operacional: um arquivo de dados e um arquivo de log. Os arquivos de dados contêm dados e objetos como tabelas, índices, procedimentos armazenados e exibições. Os arquivos de log contêm as informações necessárias para recuperar todas as transações no banco de dados. Os arquivos de dados podem ser agrupados em grupos de arquivos para propósitos de alocação e administração.  
   
 ## <a name="database-files"></a>Arquivos do banco de dados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possuem três tipos de arquivos, como mostrado na tabela a seguir.  

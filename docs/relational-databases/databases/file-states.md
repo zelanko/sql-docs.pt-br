@@ -1,16 +1,16 @@
 ---
 title: Estados de arquivo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring file state [SQL Server]
@@ -31,19 +31,21 @@ helpviewer_keywords:
 - displaying filegroup states
 - defunct file state
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d7bc331185c97dc72f11de6441570a267af0157
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 31805d4e577e72a8648c3f66b8725c97c9af815a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-states"></a>Estados de arquivo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o estado de um arquivo de banco de dados é mantido independentemente do estado do banco de dados. Um arquivo sempre está em um estado específico, como ONLINE ou OFFLINE. Para exibir o estado atual de um arquivo, use a exibição de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Se o banco de dados estiver offline, o estado dos arquivos poderá ser exibido da exibição de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o estado de um arquivo de banco de dados é mantido independentemente do estado do banco de dados. Um arquivo sempre está em um estado específico, como ONLINE ou OFFLINE. Para exibir o estado atual de um arquivo, use a exibição de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Se o banco de dados estiver offline, o estado dos arquivos poderá ser exibido da exibição de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
  O estado dos arquivos em um grupo de arquivos determina a disponibilidade de todo o grupo. Para que um grupo de arquivos fique disponível, todos os seus arquivos devem estar online. Para exibir o estado atual de um grupo de arquivos, use a exibição de catálogo [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) . Se um grupo de arquivos estiver off-line e você tentar acessá-lo por uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , ele falhará com um erro. Quando o otimizador de consulta cria planos de consulta para instruções SELECT, ele evita índices não clusterizados e exibições indexadas que residam em grupos de arquivos off-line, permitindo que essas instruções sejam bem-sucedidas. Porém, se o grupo de arquivos offline contiver o heap ou índice clusterizado da tabela de destino, as instruções SELECT falharão. Além disso, qualquer instrução INSERT, UPDATE ou DELETE que modifique uma tabela contendo um índice em um grupo de arquivos offline falhará.  
   

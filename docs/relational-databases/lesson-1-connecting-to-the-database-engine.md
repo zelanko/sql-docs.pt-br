@@ -1,28 +1,28 @@
 ---
-title: "Lição 1: Conectando ao Mecanismo de Banco de Dados | Microsoft Docs"
-ms.custom: 
+title: 'Lição 1: Conectando ao Mecanismo de Banco de Dados | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 
+caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Esta lição contém as seguintes tarefas:
  -O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] é enviado com uma variedade de ferramentas. Este tópico descreve as primeiras ferramentas das que você precisará e o ajuda a selecionar a ferramenta certa para o trabalho. Todas as ferramentas podem ser acessadas no menu **Iniciar** . Algumas ferramentas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], não são instaladas por padrão. Você deve selecionar as ferramentas como parte dos componentes de cliente durante a instalação. Para obter uma descrição completa das ferramentas descritas abaixo, pesquise-as nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contém somente um subconjunto das ferramentas.  
 
 ### <a name="basic-tools"></a>Ferramentas básicas
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é a principal ferramenta para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)]. Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . O SSMS está disponível como download gratuito no [Centro de Download da Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). A versão mais recente pode ser usada com versões mais antigas do [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é a principal ferramenta para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)] . Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . O SSMS está disponível como download gratuito no [Centro de Download da Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). A versão mais recente pode ser usada com versões mais antigas do [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é instalado com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e as ferramentas de cliente. Ela permite que você habilite protocolos de servidor, configure opções de protocolo como portas de TCP, configure serviços de servidor para iniciar automaticamente e configure computadores de cliente para conectar de sua maneira preferida. Esta ferramenta configura os mais avançados elementos de conectividade mas não habilita recursos.  
 

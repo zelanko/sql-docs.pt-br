@@ -1,16 +1,16 @@
 ---
-title: "Configuração da área de superfície | Microsoft Docs"
-ms.custom: 
+title: Configuração da área de superfície | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reducing attackable surface area
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e16dac870c31a7d409189d29b84f88686a71db21
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 399484dfea5e83f8204a48c2da80c7e6db81c09f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="surface-area-configuration"></a>Configuração da Área de Superfície
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Na configuração padrão de novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], muitos recursos não estão habilitados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e inicia seletivamente somente os serviços e recursos principais, para reduzir o número de recursos que podem ser atacados por um usuário mal-intencionado. Um administrador de sistema pode alterar esses padrões no momento da instalação e também seletivamente habilitar ou desabilitar recursos de uma instância em execução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Além disso, alguns componentes podem não estar disponíveis ao estabelecer conexão a partir de outros computadores até que os protocolos sejam configurados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Na configuração padrão de novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], muitos recursos não estão habilitados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e inicia seletivamente somente os serviços e recursos principais, para reduzir o número de recursos que podem ser atacados por um usuário mal-intencionado. Um administrador de sistema pode alterar esses padrões no momento da instalação e também seletivamente habilitar ou desabilitar recursos de uma instância em execução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Além disso, alguns componentes podem não estar disponíveis ao estabelecer conexão a partir de outros computadores até que os protocolos sejam configurados.  
   
 > [!NOTE]  
 >  Ao contrário das novas instalações, nenhum serviço ou recurso existente é desativado durante uma atualização, mas as opções adicionais de configuração da área da superfície poderão ser aplicadas após a conclusão da atualização.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  Para verificar a configuração de uma faceta periodicamente, use o Gerenciamento Baseado em Política. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
- Você também pode definir opções do [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando o procedimento armazenado **sp_configure**. Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Você também pode definir opções do [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando o procedimento armazenado **sp_configure**. Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  Para alterar a propriedade **EnableIntegrated Security** do [!INCLUDE[ssRS](../../includes/ssrs-md.md)], use as configurações de propriedades no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para alterar as propriedades **Eventos de agendamento e entrega de relatório** e **Serviço Web e acesso HTTP** , edite o arquivo de configuração **RSReportServer.config** .  
   

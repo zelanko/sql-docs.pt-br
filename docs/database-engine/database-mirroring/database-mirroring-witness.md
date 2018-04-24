@@ -1,34 +1,36 @@
 ---
 title: Testemunha de espelhamento de banco de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81c8212ce3e85c15e6015e64474b50be394f7869
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 931607fe4617c362f8b2d8db3d936c2a9d272b30
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para dar suporte a failover automático, a sessão de espelhamento de banco de dados deve ser configurada em modo de alta segurança e também deve ter uma terceira instância de servidor, conhecida como a *testemunha*. A testemunha é uma instância opcional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite ao servidor espelho, em uma sessão de modo de alta segurança, reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Para dar suporte a failover automático, a sessão de espelhamento de banco de dados deve ser configurada em modo de alta segurança e também deve possuir uma terceira instância de servidor, conhecida como *testemunha*. A testemunha é uma instância opcional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite ao servidor espelho, em uma sessão de modo de alta segurança, reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
   
 > [!NOTE]  
 >  No modo de alto desempenho, a testemunha pode prejudicar a disponibilidade. Se uma testemunha for configurada para uma sessão de espelhamento de banco de dados, o servidor principal deverá ser conectado a pelo menos uma das outras instâncias de servidor, o servidor espelho ou a testemunha, ou ambos. Caso contrário, o banco de dados ficará indisponível e será impossível forçar o serviço (com possível perda de dados). Portanto, para o modo de alto desempenho, é altamente recomendável que você sempre mantenha a testemunha definida como OFF. Para obter informações sobre o impacto de uma testemunha no modo de alto desempenho, veja [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  

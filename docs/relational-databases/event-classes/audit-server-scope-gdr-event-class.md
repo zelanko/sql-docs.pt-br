@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Audit Server Scope GDR | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Server Scope GDR event class
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02b6faf2c8a8b516a8040afdb39fb40eb806c1bb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3982c26a27c970a1f452973eb2897f182b264da3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Classe de evento Audit Server Scope GDR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento **Audit Server Scope GDR** ocorre quando um GRANT, REVOKE ou DENY é emitido para permissões no escopo do servidor como, por exemplo, criar um logon.  
+  A classe de evento **Audit Server Scope GDR** ocorre quando um GRANT, REVOKE ou DENY é emitido para permissões no escopo do servidor como, por exemplo, criar um logon.  
   
 ## <a name="audit-server-scope-gdr-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Server Scope GDR  
   

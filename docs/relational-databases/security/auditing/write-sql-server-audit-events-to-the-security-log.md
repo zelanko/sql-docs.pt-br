@@ -1,16 +1,16 @@
 ---
-title: "Escrever eventos de auditoria do SQL Server no log de segurança | Microsoft Docs"
-ms.custom: 
+title: Escrever eventos de auditoria do SQL Server no log de segurança | Microsoft Docs
+ms.custom: ''
 ms.date: 09/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logs [SQL Server], Security Log
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - audits [SQL Server], writing to Security Log
 - security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81487f57c0addf8f6e703a22e14bfe7e305a8fc6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2741717a635f0c92aceca76668a76a52bf5aacd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ A política de auditoria do Windows poderá afetar a auditoria do [!INCLUDE[ssNo
   
 7.  Feche a ferramenta Política de Segurança.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

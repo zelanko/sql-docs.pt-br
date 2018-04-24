@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Audit Schema Object Access | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Schema Object Access event class
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c42f3f3aa8102dd24f10119efba46651189212cc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ed6276150d80b5bc508724ddbf3d7eefdcdcdfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-schema-object-access-event-class"></a>Classe de evento Audit Schema Object Access
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento **Audit Schema Object Access** ocorre quando uma permissão de objeto (como SELECT) é usada.  
+  A classe de evento **Audit Schema Object Access** ocorre quando uma permissão de objeto (como SELECT) é usada.  
   
 ## <a name="audit-schema-object-access-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Schema Object Access  
   

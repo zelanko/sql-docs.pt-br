@@ -1,30 +1,31 @@
 ---
-title: "Guia de Introdução às permissões do mecanismo de banco de dados | Microsoft Docs"
-ms.custom: 
+title: Guia de Introdução às permissões do mecanismo de banco de dados | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,9 +165,9 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  A primeira permissão listada acima (`GRANT SELECT ON OBJECT::Region TO Ted;`) é a mais granular, ou seja, essa instrução é a permissão mínima possível que concede a `SELECT`. Nenhuma permissão para subordinar objetos vem com ela. É um bom princípio conceder sempre a permissão mínima possível, mas (contradizendo isso) conceda em níveis mais altos para simplificar o sistema a concessão. Então, se o Ted precisar de permissões para o esquema inteiro, conceda `SELECT` uma vez no nível do esquema, em vez de conceder `SELECT` várias vezes no nível da tabela ou do modo de exibição. O design do banco de dados afeta bastante o quão bem-sucedida essa estratégia pode ser. Essa estratégia funcionará melhor quando o banco de dados for projetado de modo que os objetos que precisam de permissões idênticas forem incluídos em um único esquema.  
   
 ## <a name="list-of-permissions"></a>Lista de permissões  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] tem 230 permissões. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tem 219 permissões. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tem 214 permissões. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tem 195 permissões. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] têm menos permissões, pois expõem apenas uma parte do mecanismo de banco de dados, mas cada um tem algumas permissões que não se aplicam a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Neste tópico, o cartaz é pequeno demais para ser lido. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
-  
-[![Permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] tem 230 permissões. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tem 219 permissões. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tem 214 permissões. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tem 195 permissões. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] têm menos permissões, pois expõem apenas uma parte do mecanismo de banco de dados, mas cada um tem algumas permissões que não se aplicam a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  Para conferir um gráfico mostrando as relações entre as entidades [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o servidor e objetos de banco de dados, consulte [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   

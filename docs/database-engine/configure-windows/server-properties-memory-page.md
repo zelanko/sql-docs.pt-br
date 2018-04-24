@@ -2,7 +2,7 @@
 title: Propriedades do servidor (página Memória) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a614fb49bb9e346d97b3c573d03e8911db53f2f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---memory-page"></a>Propriedades do servidor – página Memória
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa página para exibir ou modificar as opções de memória do servidor. Quando a **Memória mínima do servidor** está definida como 0 e a **Memória máxima do servidor** está definida como 2147483647 MB, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode tirar vantagem da quantidade ideal de memória a qualquer momento, sujeito à quantidade de memória que o sistema operacional e os outros aplicativos estão usando no momento. À medida que muda a carga no computador e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a memória alocada também muda. Você pode limitar mais essa alocação de memória dinâmica aos valores mínimo e máximo especificados abaixo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use essa página para exibir ou modificar as opções de memória do servidor. Quando a **Memória mínima do servidor** está definida como 0 e a **Memória máxima do servidor** está definida como 2147483647 MB, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode tirar vantagem da quantidade ideal de memória a qualquer momento, sujeito à quantidade de memória que o sistema operacional e os outros aplicativos estão usando no momento. À medida que muda a carga no computador e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a memória alocada também muda. Você pode limitar mais essa alocação de memória dinâmica aos valores mínimo e máximo especificados abaixo.  
   
 ## <a name="options"></a>Opções  
  **Memória mínima do servidor (em MB)**  

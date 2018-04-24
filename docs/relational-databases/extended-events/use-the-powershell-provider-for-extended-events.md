@@ -2,7 +2,7 @@
 title: Usar o provedor do PowerShell para Eventos Estendidos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -20,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c51331b402cf848d9b76d5dfc42801c71c3e2a6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f804f515f31b64923cdc4dd2a70bcc285568414a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar o Provedor do PowerShell para eventos estendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,9 +117,9 @@ $session.Create()
 ## <a name="security"></a>Segurança  
  Para criar, alterar ou cancelar uma sessão de Eventos Estendidos, você deve ter a permissão ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Usar a sessão de system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
- [Ferramentas de eventos estendidos](../../relational-databases/extended-events/extended-events-tools.md)  
+ [Ferramentas de Eventos Estendidos](../../relational-databases/extended-events/extended-events-tools.md)  
   
   

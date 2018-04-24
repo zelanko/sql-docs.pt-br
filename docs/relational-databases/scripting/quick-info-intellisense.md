@@ -1,16 +1,16 @@
 ---
-title: "Informações Rápidas (IntelliSense) | Microsoft Docs"
-ms.custom: 
+title: Informações Rápidas (IntelliSense) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Quick Info option [IntelliSense]
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], Quick Info
 - identifier declarations [IntelliSense]
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fe3ba8344fafc7523b4e46a4557bcaf35c11ced
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f661c2d8c63241e97e4fbc37e348d13a4bcae624
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-info-intellisense"></a>Informações rápidas (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A opção **Informações Rápidas** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense exibe a declaração completa de qualquer identificador em seu código. Quando você move o ponteiro do mouse sobre um identificador, sua declaração é exibida em uma janela pop-up amarela. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], as **Informações Rápidas** estão disponíveis nos Editores do Mecanismo de Banco de Dados e de Consulta XML.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  A opção [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **Informações Rápidas** exibe a declaração completa de qualquer identificador em seu código. Quando você move o ponteiro do mouse sobre um identificador, sua declaração é exibida em uma janela pop-up amarela. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], as **Informações Rápidas** estão disponíveis nos Editores do Mecanismo de Banco de Dados e de Consulta XML.  
   
 ## <a name="transact-sql-quick-info"></a>Informações Rápidas do Transact-SQL  
  As**Informações Rápidas** exibem dois tipos de informações no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Quando não estão no modo de depuração, as **Informações Rápidas** exibem a declaração da expressão. Quando estão no modo de depuração, as **Informações Rápidas** exibem o nome da expressão e seu valor atual.  

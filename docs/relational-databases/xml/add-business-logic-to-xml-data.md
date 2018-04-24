@@ -1,34 +1,34 @@
 ---
-title: "Adicionar lógica de negócios a dados XML | Microsoft Docs"
-ms.custom: 
+title: Adicionar lógica de negócios a dados XML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6794df397b0cdb304a03f5d18c5facfd43dc146
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8bd981fa60077792357c2d02d7e8675b79e57423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-business-logic-to-xml-data"></a>Adicionar lógica de negócios a dados XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Sua lógica comercial pode ser adicionada a dados XML de vários modos:  
+  Sua lógica comercial pode ser adicionada a dados XML de vários modos:  
   
 -   Você pode gravar restrições de linha ou de coluna para impor restrições específicas ao domínio durante inserção e modificação de dados XML.  
   

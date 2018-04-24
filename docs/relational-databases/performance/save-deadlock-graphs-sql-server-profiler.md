@@ -1,35 +1,36 @@
 ---
-title: "Salvar gráficos de deadlock (SQL Server Profiler) | Microsoft Docs"
-ms.custom: 
+title: Salvar gráficos de deadlock (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [SQL Server], saving deadlock graphs
 - graphs [SQL Server]
 - saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0aaa9c41b63479eda21bf1f0e862639c50160495
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b32263a3881b6fe5b99b4c150e1c1ab3e17f70bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Salvar gráficos de deadlock (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como salvar um gráfico de deadlock usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Gráficos de deadlock são salvos como arquivos XML.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico descreve como salvar um gráfico de deadlock usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Gráficos de deadlock são salvos como arquivos XML.  
   
 ## <a name="save-deadlock-graph-events-separately"></a>Salvar eventos de gráfico de deadlock separadamente  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/18/2018
   
  Após salvar o arquivo de deadlock, você pode abri-lo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Abrir, exibir e imprimir um arquivo de deadlock &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Analisar deadlocks com o SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

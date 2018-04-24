@@ -2,7 +2,7 @@
 title: Determinando permissões de mecanismo de banco de dados eficiente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -16,16 +16,17 @@ helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d4142a9779b689d26d775d33926496e78fec7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,9 +92,8 @@ Para entender as permissões concedidas a cada função, consulte as descriçõe
 
 Esse sistema é flexível, o que significa que ele poderá ser complicado se as pessoas que estão definindo a configuração buscarem precisão. Para simplificar, ele ajuda a criar funções, atribuir permissões a funções e adicionar grupos de pessoas para as funções. E é mais fácil se a equipe de desenvolvimento de banco de dados separar atividades por esquema e, em seguida, conceder permissões de função para um esquema inteiro em vez de tabelas individuais ou procedimentos. Cenários do mundo real são complexos e as necessidades de negócios podem criar requisitos de segurança inesperados.   
 
-O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Neste artigo, o cartaz é pequeno demais para ser lido. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
-  
- [![Permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+
 
 ### <a name="security-classes"></a>Classes de segurança
 

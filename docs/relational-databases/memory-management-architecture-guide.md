@@ -2,7 +2,7 @@
 title: Guia de arquitetura de gerenciamento de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -21,11 +21,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a623c59bbc78503c7cf6bcbf190ed342763727c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -282,7 +283,7 @@ A proteção de soma de verificação, apresentada no [!INCLUDE[ssVersion2005](.
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece o NUMA (Non-uniform Memory Access) e tem um bom desempenho em hardware de NUMA sem configuração especial. Devido ao aumento da velocidade de clock e do número de processadores, fica muito difícil reduzir a latência de memória exigida para usar este poder de processamento adicional. Para evitar isto, fornecedores de hardware fornecem caches de L3 grandes, mas esta é apenas uma solução limitada. A arquitetura NUMA oferece uma solução escalonável para esse problema. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi projetado para tirar proveito de computadores baseados em NUMA sem exigir nenhuma mudança de aplicativo. Para saber mais, veja [Como configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Opções Server Memory de configuração do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lendo Páginas](../relational-databases/reading-pages.md)   
 [Gravando Páginas](../relational-databases/writing-pages.md)   

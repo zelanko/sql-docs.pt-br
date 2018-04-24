@@ -2,7 +2,7 @@
 title: Reduzir um banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: databases
@@ -26,14 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b706efb7e6a3939f89de750a80c0abe1eb2c1da
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: df353c4345de034394a11c14ead1c359db525d4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shrink-a-database"></a>Reduzir um banco de dados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como reduzir um banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Este tópico descreve como reduzir um banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  A redução de arquivos de dados recupera espaço com a movimentação de páginas de dados do final do arquivo para o espaço desocupado mais próximo à frente do arquivo. Quando espaço livre suficiente é criado no final do arquivo, as páginas de dados no final do arquivo podem ser desalocadas e retornadas para o sistema de arquivos.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Para visualizar a quantidade atual de espaço livre (não alocado) no banco de dados. Para obter mais informações, consulte [Exibir dados e informações de espaço de log para um banco de dados](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+-   Para visualizar a quantidade atual de espaço livre (não alocado) no banco de dados. Para obter mais informações, consulte [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
   
 -   Considere as seguintes informações ao planejar reduzir um banco de dados:  
   

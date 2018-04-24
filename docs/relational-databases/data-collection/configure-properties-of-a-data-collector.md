@@ -1,35 +1,35 @@
 ---
 title: Configurar propriedades de um coletor de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.datacollectionprop.general.f1
 - sql13.swb.dc.datacollectionprop.advanced.f1
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
-caps.latest.revision: 
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb01bee5ac0dd68dc4cda375e076a72543e3988f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c48be04b5e8fbfd4043143ac920dee1bf3abb8f5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Configurar propriedades de um coletor de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tópico discute como você pode configurar as propriedades de um coletor de dados.  
+  Este tópico discute como você pode configurar as propriedades de um coletor de dados.  
   
 ## <a name="data-collection-properties-general-tab"></a>Propriedades de Coleta de Dados (guia Geral)  
  Use esta página para definir configurações para o data warehouse de gerenciamento e especifique em que lugar os dados coletados devem ser armazenados antes de serem carregados no data warehouse.  

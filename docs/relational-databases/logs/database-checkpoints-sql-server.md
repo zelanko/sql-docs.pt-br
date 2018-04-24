@@ -1,16 +1,16 @@
 ---
-title: "Pontos de verificação de banco de dados (SQL Server) | Microsoft Docs"
+title: Pontos de verificação de banco de dados (SQL Server) | Microsoft Docs
 ms.date: 09/23/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatic checkpoints
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 
+caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c82c775f808b1747261f3ce33d46ca467d8bca1
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 18c14e9dd948a655046cc8e6ae6974d386c42b88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ A opção de configuração do intervalo de recuperação usa o número de trans
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  - [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 
  -   [Arquitetura física do log de transações](http://technet.microsoft.com/library/ms179355.aspx) (dos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Manuais Online, mas ainda aplicável)  
   

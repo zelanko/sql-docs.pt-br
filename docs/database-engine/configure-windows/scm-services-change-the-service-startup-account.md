@@ -1,36 +1,36 @@
 ---
-title: "Serviços SCM – alterar a conta de inicialização do serviço | Microsoft Docs"
-ms.custom: 
+title: Serviços SCM – alterar a conta de inicialização do serviço | Microsoft Docs
+ms.custom: ''
 ms.date: 01/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server services, startup account changes
 - startup accounts [SQL Server]
 - changing startup accounts for services
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1db335f23e1e4b67cce264753021d052fcb956d5
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: dda25e3155e7b74390b113d0c749c8b618bcfea7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Serviços SCM – alterar a conta de inicialização do serviço
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tópico descreve como usar o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alterar as opções de inicialização dos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as contas de serviço usadas pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o PowerShell. Para obter mais informações sobre como selecionar uma conta de serviço adequada, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+  Este tópico descreve como usar o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alterar as opções de inicialização dos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as contas de serviço usadas pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o PowerShell. Para obter mais informações sobre como selecionar uma conta de serviço adequada, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 > [!IMPORTANT]  
 >  Quando você altera a conta de inicialização do serviço do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o [!INCLUDE[ssDE](../../includes/ssde-md.md)]) deve ser reiniciado para que a alteração entre em vigor. Quando o serviço é reinicializado, todos os bancos de dados associados com aquela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ficarão indisponíveis até que o serviço seja reiniciado com êxito. Se for necessário alterar a conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, faça isso durante a manutenção regular agendada ou quando os bancos de dados puderem ser colocados offline sem interromper as operações diárias.  

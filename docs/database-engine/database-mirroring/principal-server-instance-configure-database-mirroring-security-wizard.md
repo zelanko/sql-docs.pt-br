@@ -2,7 +2,7 @@
 title: Instância do servidor principal (Assistente para Configurar Segurança de Espelhamento de Banco de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mirroring
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47b9352af9dfa0c29a2536e82938663f6b56a36c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7baf8a9de820ef4d7829174b9606b00d8bc79511
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>Instância do servidor principal (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para especificar informações sobre a instância de servidor do banco de dados principal. O banco de dados principal é a cópia do banco de dados que dá início à sessão de espelhamento. Após o início da sessão, o banco de dados principal é a cópia do banco de dados que aceita as mudanças feitas pelo usuário. (Quando ocorre um failover, as funções principal e de espelhamento são trocadas. Dessa forma, o banco de dados principal inicial pode não permanecer como banco de dados principal.)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use essa página para especificar informações sobre a instância de servidor principal do banco de dados. O banco de dados principal é a cópia do banco de dados que dá início à sessão de espelhamento. Após o início da sessão, o banco de dados principal é a cópia do banco de dados que aceita as mudanças feitas pelo usuário. (Quando ocorre um failover, as funções principal e de espelhamento são trocadas. Dessa forma, o banco de dados principal inicial pode não permanecer como banco de dados principal.)  
   
  **Para configurar o espelhamento de banco de dados usando o SQL Server Management Studio**  
   

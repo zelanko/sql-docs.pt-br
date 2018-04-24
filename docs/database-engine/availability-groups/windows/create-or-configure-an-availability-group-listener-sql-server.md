@@ -2,7 +2,7 @@
 title: Criar ou configurar um ouvinte do grupo de disponibilidade (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: fae108d9d72c9ba183b7f4b37b418b6d99ed5f56
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 746cdda3b75aee4f15f7c03f9754614f15c68434
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade Always On usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
 >  Para criar o primeiro ouvinte de grupo de disponibilidade de um grupo de disponibilidade, é altamente recomendável ter o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite criar um ouvinte diretamente no cluster WSFC, exceto se necessário, por exemplo, para criar um ouvinte adicional.  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/20/2017
  **OK**  
  Clique para criar o ouvinte do grupo de disponibilidade especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para criar ou configurar um ouvinte de grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
@@ -380,7 +381,7 @@ Start-ClusterResource yourListenerName
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

@@ -1,32 +1,32 @@
 ---
 title: MSSQLSERVER_53 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - "53"
 helpviewer_keywords:
 - 53 (Database Engine error)
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92e18d67d20b9333563f64db149355daeeb8feb9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0524a562ffbce5475b9e44140a0926ef802bf9bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver53"></a>MSSQLSERVER_53
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ O cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode
 ## <a name="user-action"></a>Ação do usuário  
 Verifique se você digitou o nome correto do servidor no cliente e se é possível resolver o nome do servidor no cliente. Para verificar a resolução de nomes TCP/IP, é possível usar o comando **ping** no sistema operacional Windows.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Protocolos de rede e bibliotecas de rede](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Configuração de rede de cliente](~/database-engine/configure-windows/client-network-configuration.md)  
 [Configurar protocolos de cliente](~/database-engine/configure-windows/configure-client-protocols.md)  

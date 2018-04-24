@@ -1,35 +1,36 @@
 ---
 title: Ponto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
 - geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3fd20af212e94f33bf72ca35f6cf674bb46e50d0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b8c1020a150189cda4677f6684331eb5e5da831f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="point"></a>Ponto
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Em dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um **Point** é um objeto dimensional zero que representa um único local e pode conter valores Z (elevação) e M (medida).  
+  Em dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um **Point** é um objeto dimensional zero que representa um único local e pode conter valores Z (elevação) e M (medida).  
   
 ## <a name="geography-data-type"></a>Tipo de dados de geografia  
  O tipo de Ponto para o tipo de dados geography representa um único local em que *Lat* representa latitude e *Long* representa longitude. Os valores de latitude e longitude são medidos em graus. Valores para latitude sempre estão no intervalo [-90, 90] e os valores inseridos fora desse intervalo gerarão uma exceção. Os valores de longitude estão sempre no intervalo (-180, 180]; e os valores inseridos fora desse intervalo são ajustados para caberem nesse intervalo. Por exemplo, se 190 for inserido para longitude, ele será ajustado para o valor -170. *SRID* representa a ID de referência espacial da instância **geography** que você deseja retornar.  

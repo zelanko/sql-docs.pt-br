@@ -1,16 +1,16 @@
 ---
-title: "Visão geral de backup (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Visão geral de backup (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tables [SQL Server], backing up data
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2dbe987e0ac96162423d461c848f59e6a354e27c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f0301885294d6befa6dc40ce1eb8c5a2d415d0a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico apresenta o componente de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O backup do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é essencial para proteger seus dados. Esta discussão abrange tipos de backup e restrições de backup. O tópico também apresenta dispositivos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e mídia de backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico apresenta o componente de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O backup do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é essencial para proteger seus dados. Esta discussão abrange tipos de backup e restrições de backup. O tópico também apresenta dispositivos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e mídia de backup.  
   
   
 ## <a name="terms"></a>Termos

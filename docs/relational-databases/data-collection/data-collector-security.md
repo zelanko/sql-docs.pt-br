@@ -1,36 +1,36 @@
 ---
-title: "Segurança do coletor de dados | Microsoft Docs"
-ms.custom: 
+title: Segurança do coletor de dados | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6884f7f420bed12112b910808bfa72146948e54f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 98e33385f0f34e9ba3ba272237b42edee6017bbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-collector-security"></a>Segurança do coletor de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-O coletor de dados usa o modelo de segurança baseado em função implementado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Esse modelo permite que o administrador do banco de dados execute várias tarefas de coletor de dados em um contexto de segurança que tem apenas as permissões exigidas para executar a tarefa. Essa abordagem também é usada para operações que envolvem tabelas internas que só podem ser acessadas usando um procedimento armazenado ou exibição. Nenhuma permissão é concedida a tabelas internas. Em vez disso, as permissões são verificadas no usuário do procedimento armazenado ou na exibição usada para acessar a tabela.  
+  O coletor de dados usa o modelo de segurança baseado em função implementado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Esse modelo permite que o administrador do banco de dados execute várias tarefas de coletor de dados em um contexto de segurança que tem apenas as permissões exigidas para executar a tarefa. Essa abordagem também é usada para operações que envolvem tabelas internas que só podem ser acessadas usando um procedimento armazenado ou exibição. Nenhuma permissão é concedida a tabelas internas. Em vez disso, as permissões são verificadas no usuário do procedimento armazenado ou na exibição usada para acessar a tabela.  
   
 > [!IMPORTANT]  
 >  Outro aspecto fundamental desse modelo de segurança são as permissões concêntricas. Nas permissões concêntricas, funções mais privilegiadas herdam as permissões de funções menos privilegiadas nos objetos (incluindo alertas, operadores, tarefas, agendas e proxy). Para obter mais informações, consulte [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  

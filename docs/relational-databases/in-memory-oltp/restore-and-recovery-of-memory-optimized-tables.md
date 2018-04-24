@@ -1,28 +1,28 @@
 ---
-title: "Restauração e recuperação de tabelas com otimização de memória | Microsoft Docs"
-ms.custom: 
+title: Restauração e recuperação de tabelas com otimização de memória | Microsoft Docs
+ms.custom: ''
 ms.date: 12/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc4980acc94353003205668ef81653d6b9c55f75
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 37f27bc6a66583e03c53037d82a0ada262491f8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauração e recuperação de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ As tabelas com otimização de memória normalmente podem ser carregadas na mem�
   
 -   Tabelas grandes com otimização de memória com um ou mais índices não clusterizados podem causar uma alta utilização da CPU. Ao contrário de um índice de hash cujo número de buckets é dimensionado no momento da criação, índices não clusterizados aumentam dinamicamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

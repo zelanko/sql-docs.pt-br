@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, objeto Estatística de SQL| Microsoft Docs"
-ms.custom: 
+title: SQL Server, objeto Estatística de SQL| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8254edc172dc9e10133e90eab8842dcc0347cb8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  
   
  Compilação é uma parte significativa do tempo de retorno de uma consulta. Para economizar no custo da compilação, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] salva o plano de consulta compilado em um cache de consulta. O objetivo do cache é reduzir a compilação por meio do armazenamento das consultas compiladas para reutilização posterior encerrando, assim, a solicitação para recompilar consultas quando forem executadas mais tarde. Porém, cada consulta exclusiva deve ser compilada pelo menos uma vez. Recompilações de consultas podem ser causadas pelos seguintes fatores:  
   

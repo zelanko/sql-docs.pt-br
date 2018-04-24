@@ -1,34 +1,35 @@
 ---
 title: Classe de evento User-Configurable | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6858694e1407806db8763d8de3dd01feda3bab59
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 50fe3bdd1c835279b6575475e3d3f580ceff18da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="user-configurable-event-class"></a>classe de evento User-Configurable
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Use a categoria de evento User-Configurable para monitorar eventos definidos pelo usuário. Crie classes de evento definidas pelo usuário para monitorar eventos que não podem ser monitorados pelas classes de eventos fornecidas pelo sistema em outras categorias de evento. Por exemplo, um evento definido pelo usuário pode ser criado para monitorar o progresso do aplicativo que você está testando. À medida que o aplicativo é executado, ele pode gerar eventos em pontos predefinidos, permitindo que você determine o ponto de execução atual no seu aplicativo.  
+  Use a categoria de evento User-Configurable para monitorar eventos definidos pelo usuário. Crie classes de evento definidas pelo usuário para monitorar eventos que não podem ser monitorados pelas classes de eventos fornecidas pelo sistema em outras categorias de evento. Por exemplo, um evento definido pelo usuário pode ser criado para monitorar o progresso do aplicativo que você está testando. À medida que o aplicativo é executado, ele pode gerar eventos em pontos predefinidos, permitindo que você determine o ponto de execução atual no seu aplicativo.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Colunas de dados da classe de evento User-Configurable  
   

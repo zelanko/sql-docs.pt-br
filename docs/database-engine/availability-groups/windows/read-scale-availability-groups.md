@@ -1,27 +1,28 @@
 ---
 title: Grupos de disponibilidade de escala de leitura | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: "9"
+ms.assetid: ''
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2d3eb4751cee7ab0258554f3b176b73a7cd12e5
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: 727fbed9301389f740b112bc3fec3fcdf8767052
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-scale-availability-groups"></a>Grupos de disponibilidade de escala de leitura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ Um único grupo de disponibilidade distribuído pode ter até 17 réplicas secun
 
 [Configurar um grupo de disponibilidade de escala de leitura no Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
 
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Confira também 
  [Visão geral de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
   
   

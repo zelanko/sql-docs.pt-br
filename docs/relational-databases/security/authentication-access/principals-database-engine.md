@@ -1,16 +1,16 @@
 ---
-title: "Entidades de segurança (mecanismo de banco de dados) | Microsoft Docs"
-ms.custom: 
+title: Entidades de segurança (mecanismo de banco de dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.roleproperties.selectroll.f1
@@ -31,16 +31,17 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab67ccf5240ad3797bf744b56e615a92fa95d9bd
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c071c953f36a1e32612366c6cbb7a4a1666ef5f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +94,7 @@ Cada logon pertence à função de servidor fixa `public` e cada usuário de ban
  Cada banco de dados inclui um `guest`. As permissões concedidas ao usuário `guest` são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário `guest` não pode ser descartado, mas pode ser desabilitado revogando sua permissão CONNECT. A permissão CONNECT pode ser revogada executando `REVOKE CONNECT FROM GUEST;` em qualquer banco de dados diferente de `master` ou `tempdb`.  
   
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
  Os tópicos a seguir são incluídos nesta seção dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -106,7 +107,7 @@ Cada logon pertence à função de servidor fixa `public` e cada usuário de ban
   
 -   [Funções de aplicativo](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Protegendo o SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

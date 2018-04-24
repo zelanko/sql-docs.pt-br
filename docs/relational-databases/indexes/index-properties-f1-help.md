@@ -2,7 +2,7 @@
 title: Ajuda de F1 de propriedades do índice | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -26,11 +26,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d51449f61a3c324952946704c2df5bcfecf5cb84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +151,7 @@ ms.lasthandoff: 04/10/2018
  Especifica o grupo de arquivos para obter dados de FILESTREAM. Essa lista exibe apenas grupos de arquivos FILESTREAM. A seleção de lista padrão é o grupo de arquivos PRIMARY FILESTREAM. Para obter mais informações, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  **Esquema de partição**  
- Armazena o índice em um esquema de partição. Clicando em **Esquema de Partição** a grade abaixo é habilitada. A seleção de lista padrão é o esquema de partição usado para armazenar os dados de tabela. Ao selecionar um esquema de partição diferente na lista, a informações na grade é atualizada. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Armazena o índice em um esquema de partição. Clicando em **Esquema de Partição** a grade abaixo é habilitada. A seleção de lista padrão é o esquema de partição usado para armazenar os dados de tabela. Ao selecionar um esquema de partição diferente na lista, a informações na grade é atualizada. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  A opção de esquema de partição fica indisponível se não houver nenhum esquema de partição no banco de dados.  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 04/10/2018
 >  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
   
  **Definir grau máximo de paralelismo**  
- Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [Definir o grau máximo da opção de paralelismo para obtenção do desempenho ideal](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
@@ -247,7 +248,7 @@ ms.lasthandoff: 04/10/2018
  **Expressão de filtro**  
  Define quais linhas de dados devem ser incluídas no índice filtrado. Por exemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções Set Index](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

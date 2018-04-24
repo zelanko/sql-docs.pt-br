@@ -2,7 +2,7 @@
 title: Restaurar o banco de dados mestre (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdcb8f41a3eb6abd20f905f573f84fb1b426f014
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: ded66fff7ebab4f29a883815459e1020e3acc3c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar o banco de dados mestre (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  Para restaurar um backup de banco de dados completo do **master**, use a seguinte instrução [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-     `RESTORE DATABASE master FROM`  *&lt;backup_device&gt;*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
      A opção REPLACE instrui o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a restaurar o banco de dados especificado mesmo quando um banco de dados do mesmo nome já existir. O banco de dados existente, se houver, será excluído. Em modo de usuário único, é recomendável inserir a instrução RESTORE DATABASE no [utilitário sqlcmd](../../tools/sqlcmd-utility.md). Para obter mais informações, consulte [Usar o Utilitário sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 04/10/2018
 2> GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restaurações completas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

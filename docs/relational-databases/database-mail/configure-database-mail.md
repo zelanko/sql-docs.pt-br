@@ -2,7 +2,7 @@
 title: Configurar o Database Mail | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -47,11 +47,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +195,7 @@ ms.lasthandoff: 04/10/2018
  **Nome da conta**  
  Selecione a conta a exibir, atualizar ou excluir.  
   
- **Delete (excluir) (excluir)**  
+ **Delete (excluir)**  
  Excluir a conta selecionada. Você deve remover esta conta de perfis associados, ou excluir esses perfis, antes de excluir a conta selecionada.  
   
  **Descrição**  
@@ -225,7 +225,7 @@ ms.lasthandoff: 04/10/2018
  **Autenticação Básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
   
- **Nome de usuário**  
+ **User name**  
  Exiba ou atualize o nome do usuário que o Database Mail usa para fazer logon no servidor SMTP. O nome do usuário será necessário se o servidor SMTP exigir autenticação básica.  
   
  **Senha**  
@@ -275,7 +275,7 @@ ms.lasthandoff: 04/10/2018
  **Nome do perfil**  
  Selecione o nome do perfil a gerenciar.  
   
- **Delete (excluir) (excluir)**  
+ **Delete (excluir)**  
  Exclui o perfil selecionado. Você será solicitado a selecionar **Sim** para excluir o perfil selecionado e para optar por falhar em todas as mensagens não enviadas ou a selecionar **Não** para excluir o perfil selecionado apenas se não houver mensagens não enviadas.  
   
  **Descrição**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 04/10/2018
   
  Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro.  
   
- **Nome de usuário**  
+ **User name**  
  Selecione o nome de um usuário ou função no banco de dados **msdb** .  
   
  **Acesso**  

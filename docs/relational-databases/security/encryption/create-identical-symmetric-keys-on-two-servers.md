@@ -1,33 +1,35 @@
 ---
-title: "Criar chaves simétricas idênticas em dois servidores | Microsoft Docs"
-ms.custom: 
+title: Criar chaves simétricas idênticas em dois servidores | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b2c00ee9318ec923ea3d1097552d1a7c59290e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bbdbb3b6e1fbafe8824b283f3ed2147387c9a9c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Criar chaves simétricas idênticas em dois servidores
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como criar chaves simétricas idênticas em dois servidores diferentes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para descriptografar texto cifrado, você precisa da chave que foi usada para criptografá-lo. Quando ocorrem criptografia e descriptografia em um único banco de dados, a chave é armazenada no banco de dados e fica disponível, dependendo das permissões, tanto para criptografia quanto para descriptografia. Mas quando a criptografia e a descriptografia ocorrem em bancos de dados ou servidores separados, a chave armazenada em um banco de dados não estará disponível para uso no segundo banco de dados  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Este tópico descreve como criar chaves simétricas idênticas em dois servidores diferentes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para descriptografar texto cifrado, você precisa da chave que foi usada para criptografá-lo. Quando ocorrem criptografia e descriptografia em um único banco de dados, a chave é armazenada no banco de dados e fica disponível, dependendo das permissões, tanto para criptografia quanto para descriptografia. Mas quando a criptografia e a descriptografia ocorrem em bancos de dados ou servidores separados, a chave armazenada em um banco de dados não estará disponível para uso no segundo banco de dados  
   
  **Neste tópico**  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 ####  <a name="Permissions"></a> Permissões  
  Requer permissão ALTER ANY SYMMETRIC KEY no banco de dados. Se AUTHORIZATION for especificada, será necessária a permissão IMPERSONATE no usuário de banco de dados ou a permissão ALTER na função de aplicativo. Se a criptografia for por certificado ou chave assimétrica, exigirá a permissão VIEW DEFINITION no certificado ou na chave assimétrica. Somente logons do Windows, logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e funções de aplicativo podem ter chaves simétricas. Grupos e funções não podem possuir chaves simétricas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>Para criar chaves simétricas idênticas em dois servidores diferentes  
   

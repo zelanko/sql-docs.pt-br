@@ -1,36 +1,36 @@
 ---
-title: "Visão geral do Monitor de Espelhamento de Banco de Dados | Microsoft Docs"
-ms.custom: 
+title: Visão geral do Monitor de Espelhamento de Banco de Dados | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3a15bc793ad97e19a80e13d6b79a74f6bf677592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>Visão geral do Monitor de Espelhamento de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Se tiver as permissões corretas, você pode usar o Monitor de Espelhamento de Banco de Dados para monitorar qualquer subconjunto de bancos de dados espelhado em uma instância de servidor. O monitoramento permite verificar como e se os dados estão fluindo satisfatoriamente na sessão de espelhamento de banco de dados. O Monitor de Espelhamento de Banco de Dados é também útil para solucionar problemas da causa da redução do fluxo de dados.  
+  Se tiver as permissões corretas, você pode usar o Monitor de Espelhamento de Banco de Dados para monitorar qualquer subconjunto de bancos de dados espelhado em uma instância de servidor. O monitoramento permite verificar como e se os dados estão fluindo satisfatoriamente na sessão de espelhamento de banco de dados. O Monitor de Espelhamento de Banco de Dados é também útil para solucionar problemas da causa da redução do fluxo de dados.  
   
  Você pode registrar qualquer um dos bancos de dados espelhados para monitoramento em cada um dos parceiros de failover individualmente. Quando você registra um banco de dados, o Monitor de Espelhamento de Banco de Dados armazenará em cache as seguintes informações do banco de dados.  
   

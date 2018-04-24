@@ -1,36 +1,37 @@
 ---
-title: "Arquivos de formato para importação ou exportação de dados (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Arquivos de formato para importação ou exportação de dados (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bulk exporting [SQL Server], format files
 - bulk importing [SQL Server], format files
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68184c18cc03daf8798d62c819ef0866f7d592b7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dbdf2b87687818284426af604a24407e0a08340d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Arquivos de formato para importação ou exportação de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Na importação de dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou na exportação em massa de dados de uma tabela, você pode usar um *arquivo de formato* para armazenar todas as informações necessárias para exportar ou importar dados em massa. Isso inclui informações de formato para cada campo em um arquivo de dados relativo para essa tabela.  
+  Na importação de dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou na exportação em massa de dados de uma tabela, você pode usar um *arquivo de formato* para armazenar todas as informações necessárias para exportar ou importar dados em massa. Isso inclui informações de formato para cada campo em um arquivo de dados relativo para essa tabela.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a dois tipos de arquivos de formato: arquivos de formato XML e não XML. Os arquivos de formato XML e não XML contêm descrições de cada campo de um arquivo de dados, e arquivos de formato XML também contêm descrições das colunas das tabelas correspondentes. Geralmente, arquivos de formato XML e não XML são intercambiáveis. Entretanto, recomendamos que você use a sintaxe XML para novos arquivos de formato porque eles oferecem diversas vantagens em relação aos arquivos de formato não XML. Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   

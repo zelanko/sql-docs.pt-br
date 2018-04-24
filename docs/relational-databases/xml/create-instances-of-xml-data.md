@@ -1,16 +1,16 @@
 ---
-title: "Criar instâncias de dados XML | Microsoft Docs"
-ms.custom: 
+title: Criar instâncias de dados XML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 54afef1467ec06d3ca695db00aa829fa387f6292
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Este tópico descreve como gerar instâncias XML.  
+  Este tópico descreve como gerar instâncias XML.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode gerar instâncias XML das seguintes maneiras:  
   

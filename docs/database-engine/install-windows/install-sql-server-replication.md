@@ -1,16 +1,16 @@
 ---
-title: "Instalar a Replicação do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Instalar a Replicação do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - components [SQL Server replication]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - replication [SQL Server], installing
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 70e40040c5302af98ebca91248f14c9077fc43b6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4a7bbef0fe861660b5db2f25ca41b2cb525911a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-replication"></a>Instalar a replicação do SQL Server
 
@@ -50,7 +50,7 @@ Depois da instalação dos componentes de replicação, é necessário configura
   
 - Consulte [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md)   
  [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Recursos com suporte nas edições do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  

@@ -1,35 +1,35 @@
 ---
 title: Monitorando o espelhamento de banco de dados (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 
+caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 96e9a421b1ec2ffd0e8b02cd24a9142fbc3fea07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Esta seção apresenta o Monitor de Espelhamento de Banco de Dados e os procedimentos armazenados do sistema **sp_dbmmonitor** , explica como funciona o monitoramento de espelhamento de banco de dados (incluindo o **Trabalho de Monitor de Espelhamento de Banco de Dados)**e resume as informações sobre as sessões de espelhamento de banco de dados que podem ser monitoradas. Além disso, esta seção apresenta como definir limites de avisos para um conjunto de eventos de espelhamento de banco de dados predefinido e como configurar alertas em qualquer evento de espelhamento de banco de dados.  
+  Esta seção apresenta o Monitor de Espelhamento de Banco de Dados e os procedimentos armazenados do sistema **sp_dbmmonitor** , explica como funciona o monitoramento de espelhamento de banco de dados (incluindo o **Trabalho de Monitor de Espelhamento de Banco de Dados)**e resume as informações sobre as sessões de espelhamento de banco de dados que podem ser monitoradas. Além disso, esta seção apresenta como definir limites de avisos para um conjunto de eventos de espelhamento de banco de dados predefinido e como configurar alertas em qualquer evento de espelhamento de banco de dados.  
   
  Você pode monitorar um banco de dados espelho durante uma sessão de espelhamento para verificar se e como os dados estão fluindo. Para definir e gerenciar o monitoramento de um ou mais dos bancos de dados espelhados em uma instância do servidor, você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados do sistema **sp_dbmmonitor** .  
   

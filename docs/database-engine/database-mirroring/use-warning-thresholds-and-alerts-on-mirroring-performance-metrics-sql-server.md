@@ -1,15 +1,16 @@
 ---
-title: "Usar os limites de aviso e alertas em métricas de desempenho de espelhamento | Microsoft Docs"
-ms.custom: 
+title: Usar os limites de aviso e alertas em métricas de desempenho de espelhamento | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring database mirroring [SQL Server]
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01d279d30860e0e10cf3a76b447aaec245541fcc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d7c4f7584e5a8f3313d57d9f5d445a8221f082e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Use os limites de aviso e alertas em métricas de desempenho de espelhamento (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém informações sobre os eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os quais os limites de avisos podem ser configurados e gerenciados para espelhamento de banco de dados. Você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Este tópico também contém informações sobre como configurar alertas em eventos de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico contém informações sobre os eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os quais os limites de avisos podem ser configurados e gerenciados para espelhamento de banco de dados. Você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Este tópico também contém informações sobre como configurar alertas em eventos de espelhamento de banco de dados.  
   
  Depois que o monitoramento é definido para um banco de dados espelho, um administrador de sistema pode configurar limites de aviso em várias métricas chave de desempenho. Além disso, um administrador pode configurar alertas nesses e em outros eventos de espelhamento de banco de dados.  
   

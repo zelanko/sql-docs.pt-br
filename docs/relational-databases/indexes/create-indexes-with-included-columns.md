@@ -2,7 +2,7 @@
 title: Criar índices com colunas incluídas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -28,11 +28,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b3f9d4311ad0cf14254e2b5f4efe5930b1a74f51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/10/2018
   
 12. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Para criar um índice com colunas não chave  
   

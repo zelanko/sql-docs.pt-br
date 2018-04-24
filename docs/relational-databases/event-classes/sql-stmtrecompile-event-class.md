@@ -1,34 +1,35 @@
 ---
 title: Classe de evento SQL:StmtRecompile | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df67c9972328d7e418a5f68315bcd46d8d60e369
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 64078643b1892d32d239e1016007ad428562cc06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstmtrecompile-event-class"></a>classe de evento SQL:StmtRecompile
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento SQL:StmtRecompile indica recompilações em nível de instrução causadas por todos os tipos de lotes: procedimentos armazenados, gatilhos lotes ad hoc e consultas. Consultas podem ser submetidas usando-se sp_executesql, SQL dinâmico, métodos Preparar, métodos Executar ou interfaces semelhantes. A classe de evento SQL:StmtRecompile deve ser usada, em vez da classe de evento SP:Recompile.  
+  A classe de evento SQL:StmtRecompile indica recompilações em nível de instrução causadas por todos os tipos de lotes: procedimentos armazenados, gatilhos lotes ad hoc e consultas. Consultas podem ser submetidas usando-se sp_executesql, SQL dinâmico, métodos Preparar, métodos Executar ou interfaces semelhantes. A classe de evento SQL:StmtRecompile deve ser usada, em vez da classe de evento SP:Recompile.  
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>Colunas de dados de classes de evento SQL:StmtRecompile  
   

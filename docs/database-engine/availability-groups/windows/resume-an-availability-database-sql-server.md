@@ -2,7 +2,7 @@
 title: Retomar um banco de dados de disponibilidade (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -25,14 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc747146c4629010438f26c5d4a29d9c5da252d0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1a96c489595c3d8bbdb5543715756158f420d843
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Retomar um banco de dados de disponibilidade (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode retomar um banco de dados de disponibilidade suspenso no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A retomada de um banco de dados suspenso coloca o banco de dados no estado SYNCHRONIZING. A retomada do banco de dados primário também retoma todos os bancos de dados secundários que foram suspensos devido à suspensão do banco de dados primário. Se um banco de dados secundário foi suspenso localmente, na instância de servidor que hospeda a réplica secundária, o banco de dados secundário deverá ser retomado localmente. Quando um determinado banco de dados secundário e o banco de dados primário correspondente estiverem no estado SYNCHRONIZING, a sincronização de dados é retomada no banco de dados secundário.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Você pode retomar um banco de dados de disponibilidade suspenso no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A retomada de um banco de dados suspenso coloca o banco de dados no estado SYNCHRONIZING. A retomada do banco de dados primário também retoma todos os bancos de dados secundários que foram suspensos devido à suspensão do banco de dados primário. Se um banco de dados secundário foi suspenso localmente, na instância de servidor que hospeda a réplica secundária, o banco de dados secundário deverá ser retomado localmente. Quando um determinado banco de dados secundário e o banco de dados primário correspondente estiverem no estado SYNCHRONIZING, a sincronização de dados é retomada no banco de dados secundário.  
   
 > [!NOTE]  
 >  Suspender e retomar um banco de dados secundário AlwaysOn não afetam diretamente a disponibilidade do banco de dados primário. Porém, suspender um banco de dados secundário pode afetar os recursos de redundância e failover para o banco de dados primário, até que o banco de dados secundário suspenso seja retomado. Isto está em contraste com o espelhamento de banco de dados, onde o estado de espelhamento é suspenso no banco de dados espelho e no banco de dados principal até que o espelhamento seja retomado. Suspender um banco de dados secundário AlwaysOn suspende o movimento de dados em todos os bancos de dados secundários correspondentes, e os recursos de failover e a redundância são eliminados para esse banco de dados até que o banco de dados primário seja retomado.  

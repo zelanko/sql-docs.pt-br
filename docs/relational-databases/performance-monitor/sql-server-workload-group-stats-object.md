@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, objeto Estatísticas de grupo de cargas de trabalho | Microsoft Docs"
-ms.custom: 
+title: SQL Server, objeto Estatísticas de grupo de cargas de trabalho | Microsoft Docs
+ms.custom: ''
 ms.date: 12/04/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Workload Group Stats object
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80da02219c14d213d758af746eb13acb35d2f433
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fe2d63bf50fb6b0095533cdd354f63cee6f8b3b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objeto de estatísticas de grupo de cargas de trabalho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto SQLServer:Workload Group Stats contém contadores de desempenho que dão informações sobre estatísticas de grupo de cargas de trabalho do Resource Governor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O objeto SQLServer:Estatísticas de Grupo de Cargas de Trabalho contém contadores de desempenho que dão informações sobre estatísticas de grupo de cargas de trabalho do Administrador de Recursos.  
   
  Cada grupo de cargas de trabalho ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Grupo de Cargas de Trabalho que tem o mesmo nome de instância do grupo de cargas de trabalho do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   

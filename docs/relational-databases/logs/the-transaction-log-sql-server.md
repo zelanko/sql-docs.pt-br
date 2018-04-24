@@ -1,32 +1,32 @@
 ---
-title: "O log de transações (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: O log de transações (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-transaction-log
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 
+caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 74b2c04f523357b3a998ddfa7a2bb84fc6d76ad4
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: f1986e7d788080609dd13d91947176f62cbf451a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ Quando a replicação transacional está habilitada, as operações SELECT INTO 
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md)   
 [Pré-requisitos para registro mínimo em log na importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   

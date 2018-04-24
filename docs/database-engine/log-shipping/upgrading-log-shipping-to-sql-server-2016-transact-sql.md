@@ -2,7 +2,7 @@
 title: Fazendo upgrade do envio de logs para o SQL Server 2016 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: log-shipping
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5d0824b800c75e627ecafb1be8d30b3d53fef00d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Atualização do envio de logs para SQL Server 2016 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao atualizar de uma configuração de envio de logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo service pack do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma atualização cumulativa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a atualização de seus servidores de envio de log na ordem apropriada preservará sua solução de recuperação de desastres de envio de log.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Ao atualizar de uma configuração de envio de logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , um novo service pack do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou uma atualização cumulativa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a atualização de seus servidores de envio de log na ordem apropriada preservará sua solução de recuperação de desastres de envio de log.  
   
 > [!NOTE]  
 >  [A compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) foi introduzida no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Uma configuração de envio de logs atualizada usa a opção de configuração no nível do servidor de **compactação de backup padrão** para controlar se a compactação será utilizada para os arquivos de backup de log de transações. O comportamento de compactação de backups de log pode ser especificado para cada configuração de envio de logs. Para obter mais informações, consulte [Configurar o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  

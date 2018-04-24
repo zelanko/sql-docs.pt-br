@@ -1,16 +1,16 @@
 ---
-title: "Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.SWB.create.ucp.validation.F1
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff6b20dc866c6d4e7b7ebf9bf21ccf6ae883a474
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 10239fb4654e478daf792084bdc9241ec1260001
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Uma empresa pode ter vários Utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerenciar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos da camada de dados. Cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um UCP (ponto de controle do utilitário). Você deve criar um novo UCP para cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cada aplicativo da camada de dados é membro somente de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e é gerenciada por um único UCP.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Uma empresa pode ter vários Utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerenciar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos da camada de dados. Cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um UCP (ponto de controle do utilitário). Você deve criar um novo UCP para cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cada aplicativo da camada de dados é membro somente de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e é gerenciada por um único UCP.  
   
  O UCP coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. Dados de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar gargalos no uso de recursos e oportunidades de consolidação.  
   

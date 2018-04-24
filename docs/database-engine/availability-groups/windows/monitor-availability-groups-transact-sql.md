@@ -1,15 +1,16 @@
 ---
 title: Monitorar grupos de disponibilidade (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4510a528afc92850a9cb96c597a29dea33949873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorar grupos de disponibilidade (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para monitorar os grupos de disponibilidade e as réplicas e os bancos de dados associados usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)], o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece um conjunto de exibições do catálogo e de gerenciamento dinâmico e propriedades de servidor. Usando as instruções SELECT [!INCLUDE[tsql](../../../includes/tsql-md.md)] , é possível usar as exibições para monitorar grupos de disponibilidade e suas réplicas e bancos de dados. As informações retornadas a um determinado grupo de disponibilidade dependem de se você está conectado à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando a réplica primária ou uma réplica secundária.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Para monitorar os grupos de disponibilidade e as réplicas e os bancos de dados associados usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)], o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece um conjunto de exibições do catálogo e de gerenciamento dinâmico e propriedades de servidor. Usando as instruções SELECT [!INCLUDE[tsql](../../../includes/tsql-md.md)] , é possível usar as exibições para monitorar grupos de disponibilidade e suas réplicas e bancos de dados. As informações retornadas a um determinado grupo de disponibilidade dependem de se você está conectado à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando a réplica primária ou uma réplica secundária.  
   
 > [!TIP]  
 >  Muitas dessas exibições podem ser unidas usando suas colunas de ID para retornar informações de várias exibições em uma única consulta.  

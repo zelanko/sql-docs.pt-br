@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Showplan Text | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan Text event class
 ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeeab7ad2669c205bd73384d41a107b5e0e21007
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b230a67640bbf63d67173b9c5ab382acdc9b8933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-text-event-class"></a>classe de evento Showplan Text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento Showplan Text ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. As informações incluídas são um subconjunto das informações disponíveis nas classes de evento Showplan All, Showplan XML Statistics Profile ou Showplan XML.  
+  A classe de evento Showplan Text ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. As informações incluídas são um subconjunto das informações disponíveis nas classes de evento Showplan All, Showplan XML Statistics Profile ou Showplan XML.  
   
  Quando a classe de evento Showplan Text estiver incluída em um rastreamento, a quantidade de sobrecarga será um obstáculo significativo ao desempenho. Para minimizar isso, limite o uso dessa classe de evento a rastreamentos que monitorem problemas específicos em períodos breves de tempo. Showplan Text não incorrerá em tanta sobrecarga quanto outras classes de evento do Plano de Exibição.  
   

@@ -1,27 +1,27 @@
 ---
-title: "Instalar as atualizações de manutenção do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Instalar as atualizações de manutenção do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d543239bfec50ec6b5466bf8e57d98fba542e8b7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a8f82cc7e1afa88af9a3eeb30dc2970baaa10f7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>Instalar as atualizações de manutenção do SQL Server
 
@@ -38,7 +38,7 @@ Instale as atualizações mais recentes do [!INCLUDE[ssNoVersion](../../includes
 ## <a name="installing-updates-for-includenoversionincludesssnoversion-mdmd-during-a-new-installation"></a>Instalando atualizações para o [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] durante uma nova instalação  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integra as últimas atualizações de produto com a instalação principal de produto, de forma que o produto principal e suas atualizações aplicáveis sejam instalados ao mesmo tempo. A atualização de produto pode pesquisar as atualizações aplicáveis de:  
   
-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update  
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (atualizar)  
   
 - Windows Server Update Services (WSUS)  
   

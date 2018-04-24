@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_207 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 207 (Database Engine error)
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb5dd99ae08c46b689353ddd07d83e040b41418f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f3c334cadbde541118562f0577386a3b0f0d336a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ Verifique as informações a seguir e corrija a instrução conforme apropriado.
   
 -   A cláusula WHEN NOT MATCHED BY SOURCE na instrução MERGE faz referência a um valor que pode ser acessado. Modifique a instrução MERGE de forma que pelo menos uma linha seja retornada pela tabela de origem na cláusula WHEN NOT MATCHED BY SOURCE. Por exemplo, talvez você precise adicionar ou revisar a condição da pesquisa especificada para a cláusula. Como alternativa, é possível modificar a cláusula para especificar um valor que não faz referência à tabela de origem. Por exemplo, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  
 [FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md)  
 [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  

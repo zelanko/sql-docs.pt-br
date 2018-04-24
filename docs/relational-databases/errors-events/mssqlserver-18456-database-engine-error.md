@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: da4c628ad102eb7115e0cab2e2ed7a73c7ed9c4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 |||  
 |-|-|  
 |Nome do produto|SQL Server|  
-|ID do Evento|18456|  
+|ID do evento|18456|  
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LOGON_FAILED|  
@@ -101,7 +101,7 @@ Para resolver esse problema, inclua **TRUSTED_CONNECTION = TRUE** na cadeia de c
 ## <a name="examples"></a>Exemplos  
 Neste exemplo, o estado do erro de autenticação é 8. Isso indica que a senha está incorreta.  
   
-|Data|Origem|Mensagem|  
+|data|Origem|Mensagem|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|Logon|Erro: 18456, Severidade: 14, Estado: 8.|  
 |2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [CLIENTE: <ip address>]|  

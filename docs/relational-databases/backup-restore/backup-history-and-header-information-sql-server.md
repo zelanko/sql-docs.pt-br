@@ -1,16 +1,16 @@
 ---
-title: "Informações de histórico e cabeçalho de backup (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Informações de histórico e cabeçalho de backup (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -36,19 +36,20 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d03a11e3048a65ef344b14dbcd2a7840a619b52f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um histórico completo de todas as operações de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor é armazenado no banco de dados **msdb**. Este tópico apresenta as tabelas de histórico de backup e restauração e também as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usadas para acessar o histórico de backup. O tópico também discute quando a listagem de banco de dados e de arquivos de log de transação é útil e quando usar informações do cabeçalho de mídia comparado a quando usar informações do cabeçalho de backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Um histórico completo de todas as operações de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor é armazenado no banco de dados **msdb** . Este tópico apresenta as tabelas de histórico de backup e restauração e também as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usadas para acessar o histórico de backup. O tópico também discute quando a listagem de banco de dados e de arquivos de log de transação é útil e quando usar informações do cabeçalho de mídia comparado a quando usar informações do cabeçalho de backup.  
   
 > [!IMPORTANT]  
 >  Para gerenciar o risco de perder alterações recentes no seu histórico de backup e restauração, faça backup do **msdb** com frequência. Para obter informações sobre de quais bancos de dados do sistema você deve fazer backup, veja [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  

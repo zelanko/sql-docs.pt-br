@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, objeto Definível pelo usuário | Microsoft Docs"
-ms.custom: 
+title: SQL Server, objeto Definível pelo usuário | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fac823d76b763243ecb97303dd88f30c38535fa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
   
  O objeto **User Settable** contém 10 instâncias do contador de consultas: de **Contador do usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
   

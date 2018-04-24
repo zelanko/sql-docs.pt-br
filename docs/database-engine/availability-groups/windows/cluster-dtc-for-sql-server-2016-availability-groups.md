@@ -1,30 +1,32 @@
 ---
 title: Cluster DTC para grupos de disponibilidade do SQL Server 2016 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad11a6e0f6e9bf9a2830fed6068423b79d0726ae
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: aed26f710495ef7bac77cf1a1a732fd73a9d77f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Cluster DTC para Grupos de Disponibilidade do SQL Server 2016
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve os requisitos e as etapas para agrupar em cluster o serviço DTC (Coordenador de Transações Distribuídas) da Microsoft do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre transações distribuídas e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Transações entre bancos de dados e transações distribuídas para Grupos de Disponibilidade AlwaysOn e Espelhamento de Banco de Dados (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve os requisitos e as etapas para agrupar em cluster o serviço DTC (Coordenador de Transações Distribuídas) da Microsoft do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre transações distribuídas e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Transações entre bancos de dados e transações distribuídas para Grupos de Disponibilidade AlwaysOn e Espelhamento de Banco de Dados (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## <a name="checklist-preliminary-requirements"></a>Lista de verificação: Requisitos preliminares
 ||Tarefa|Referência|  

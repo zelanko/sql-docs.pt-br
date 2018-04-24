@@ -1,34 +1,36 @@
 ---
-title: "Correspondência automática de pares de sintaxe | Microsoft Docs"
-ms.custom: 
+title: Correspondência automática de pares de sintaxe | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c92287748c6724f10c5b89cf82ca7ff3be8a39bd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: da274e16d460d0f4d0be54372bf006062cca92ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondência automática de pares de sintaxe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A correspondência automática de pares de sintaxe lhe informa imediatamente se os elementos de sintaxe que devem ser codificados em pares estão corretamente emparelhados. Isso é conhecido como correspondência de delimitadores no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondência de colchetes no Editor de Consultas XMLA do Analysis Services e correspondência de parênteses nos editores MDX e DMX.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  A correspondência automática de pares de sintaxe informa imediatamente se os elementos de sintaxe que devem ser codificados em pares estão formando pares corretos. Isso é conhecido como correspondência de delimitadores no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondência de colchetes no Editor de Consultas XMLA do Analysis Services e correspondência de parênteses nos editores MDX e DMX.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Correspondência de delimitadores do Editor de Consultas do Mecanismo de Banco de Dados  
  O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] faz a correspondência de delimitadores que identificam os limites dos blocos de código. A correspondência é feita de duas maneiras:  

@@ -1,16 +1,16 @@
 ---
 title: Alterar a cor, o tamanho e o estilo da fonte | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - size [SQL Server], fonts
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing fonts
 - text fonts [SQL Server Management Studio]
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86bd0ea46e11f544b543c952b9630654a67f95de
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3f7102c000ec8f39dfe3a49a0d9ed74051ca6684
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-font-color-size-and-style"></a>Alterar cor, tamanho e estilo da fonte
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode personalizar o modo em que o texto aparece no Editor, assim como em outros locais no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Você pode personalizar o modo em que o texto aparece no Editor, assim como em outros lugares no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>Para alterar a cor, o tamanho e o estilo da fonte no Editor  
   

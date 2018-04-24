@@ -1,34 +1,36 @@
 ---
-title: "Espelhamento de Banco de Dados – usar certificados para conexões de saída | Microsoft Docs"
-ms.custom: 
+title: Espelhamento de Banco de Dados – usar certificados para conexões de saída | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - outbound connections [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2f2b52243f94686b1132988d588bf901db09c7c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2c2929c64686a2b696563da4d2f954e163c763fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Espelhamento de Banco de Dados – usar certificados para conexões de saída
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve os passos para configurar instâncias de servidor para usar certificados para autenticar conexões de saída para espelhamento de banco de dados. A configuração de conexão de saída deve ser feita antes que você possa configurar conexões de entrada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico descreve os passos para configurar instâncias de servidor para usar certificados para autenticar conexões de saída para espelhamento de banco de dados. A configuração de conexão de saída deve ser feita antes que você possa configurar conexões de entrada.  
   
 > [!NOTE]  
 >  Todas as conexões de espelhamento em uma instância do servidor usam um único ponto de extremidade de espelhamento do banco de dados e você deve especificar o método de autenticação da instância do servidor quando criar o ponto de extremidade.  

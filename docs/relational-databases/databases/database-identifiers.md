@@ -1,16 +1,16 @@
 ---
 title: Identificadores de banco de dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -23,19 +23,21 @@ helpviewer_keywords:
 - Transact-SQL identifiers
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35570e23edbec76e06c58a0756c6850024d371ea
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4ecfe1129302f837485bc9f947b6a0dc9b8fe39a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-identifiers"></a>Identificadores de banco de dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O nome do objeto de banco de dados é conhecido como identificador. Tudo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ter um identificador. Servidores, bancos de dados e objetos de banco de dados, como tabelas, exibições, colunas, índices, gatilhos, procedimentos, restrições e regras, podem ter identificadores. Os identificadores são necessários para a maioria dos objetos, mas são opcionais para alguns objetos, como restrições.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  O nome do objeto de banco de dados é conhecido como identificador. Tudo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ter um identificador. Servidores, bancos de dados e objetos de banco de dados, como tabelas, exibições, colunas, índices, gatilhos, procedimentos, restrições e regras, podem ter identificadores. Os identificadores são necessários para a maioria dos objetos, mas são opcionais para alguns objetos, como restrições.  
   
  O identificador de objeto é criado quando o objeto é definido. O identificador é utilizado para referenciar o objeto. Por exemplo, a seguinte instrução cria uma tabela com o identificador `TableX`e duas colunas com os identificadores `KeyCol` e `Description`:  
   

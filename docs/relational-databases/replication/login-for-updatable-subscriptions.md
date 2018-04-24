@@ -1,30 +1,30 @@
 ---
-title: "Logon para assinaturas atualizáveis | Microsoft Docs"
-ms.custom: 
+title: Logon para assinaturas atualizáveis | Microsoft Docs
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38aa63a6e51c961b99f0d1b49cce4be893da3c8c
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 874b593fa3a811e95f79825208e2f1d6a6b2090e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/08/2018
  **Usar servidor vinculado ou remoto já definido.**  
  Essa opção requer um servidor vinculado ou remoto já definido. Para obter mais informações, consulte [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md) e [Servidores remotos](../../database-engine/configure-windows/remote-servers.md). Verifique se o logon usado para o servidor vinculado ou servidor remoto tem uma senha forte e somente as permissões descritas nesse tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

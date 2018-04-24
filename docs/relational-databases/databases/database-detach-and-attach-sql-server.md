@@ -1,16 +1,16 @@
 ---
 title: Anexar e desanexar bancos de dados (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading databases
@@ -30,20 +30,20 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: 
+caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7338e364e970aaccc6c24cdba04e1b43a188c8c9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8aa76191ff303e1db3bd0c51c294ecceee19db8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anexar e desanexar bancos de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Os dados e os arquivos de log de transações de um banco de dados podem ser desanexados e, em seguida, reanexados à mesma ou a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desanexar e anexar um banco de dados é útil se você deseja alterar o banco de dados a uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador ou mover o banco de dados.  
+  Os dados e os arquivos de log de transações de um banco de dados podem ser desanexados e, em seguida, reanexados à mesma ou a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desanexar e anexar um banco de dados é útil se você deseja alterar o banco de dados a uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador ou mover o banco de dados.  
   
   
 ##  <a name="Security"></a> Segurança  

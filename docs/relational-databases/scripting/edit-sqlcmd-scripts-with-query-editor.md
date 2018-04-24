@@ -1,16 +1,16 @@
 ---
 title: Editar scripts SQLCMD com o Editor de Consultas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35f569c6d26c888566eb8dbb47f1472101158d61
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 383564a5aed33b7263c0c4ade4b0339f9afbfe87
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usando o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gravar e editar consultas como scripts SQLCMD. Você usa scripts SQLCMD quando precisa processar comandos de Sistema do Windows e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no mesmo script.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Com o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode gravar e editar consultas como scripts SQLCMD. Você usa scripts SQLCMD quando precisa processar comandos de Sistema do Windows e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no mesmo script.  
   
 ## <a name="sqlcmd-mode"></a>Modo SQLCMD  
  Para usar o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para gravar ou editar scripts SQLCMD, habilite o modo de script SQLCMD. Por padrão, o modo SQLCMD não é habilitado no Editor de Consultas. Você pode habilitar o modo de script clicando no ícone **Modo SQLCMD** na barra de ferramentas ou selecionando **Modo SQLCMD** no menu **Consulta** .  

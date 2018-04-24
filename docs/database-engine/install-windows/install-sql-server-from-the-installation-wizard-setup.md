@@ -1,31 +1,31 @@
 ---
-title: "Instalar o SQL Server 2016 por meio do Assistente de Instalação (Instalação) | Microsoft Docs"
-ms.custom: 
+title: Instalar o SQL Server 2016 por meio do Assistente de Instalação (Instalação) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: 
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0425515d7ffe6f912de76d12c8c64d9fbd938366
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8deb055e72bd4f3e8a3e6a35397a4bae5c621617
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -199,7 +199,7 @@ A Microsoft identificou um problema com a versão específica dos binários do T
   
  Para reduzir a área da superfície de um sistema vulnerável a ataques, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos essenciais. Para obter mais informações, consulte [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Validar uma instalação do SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [Reparar uma instalação com falha do SQL Server 2016](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   

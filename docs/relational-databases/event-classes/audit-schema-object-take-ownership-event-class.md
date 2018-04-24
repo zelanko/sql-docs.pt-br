@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Audit Schema Object Take Ownership | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Schema Object Take Ownership event class
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccc4f79a96b03cc24ba62f3291893d13af3417ea
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d8021bdd9b06ebe9a50b364389b979ae238f1409
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Classe de evento Audit Schema Object Take Ownership
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento **Audit Schema Object Take Ownership** ocorre quando as permissões para alterar o proprietário do objeto de esquema (como uma tabela, um procedimento ou funções) são verificadas. Isso acontece quando a instrução ALTER AUTHORIZATION é usada para atribuir um proprietário a um objeto.  
+  A classe de evento **Audit Schema Object Take Ownership** ocorre quando as permissões para alterar o proprietário do objeto de esquema (como uma tabela, um procedimento ou funções) são verificadas. Isso acontece quando a instrução ALTER AUTHORIZATION é usada para atribuir um proprietário a um objeto.  
   
 ## <a name="audit-schema-object-take-ownership-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Schema Object Take Ownership  
   

@@ -2,7 +2,7 @@
 title: Editor XML (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-scripting
@@ -25,11 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b90d35941d80dae9ba0775a859cca3c764008987
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/10/2018
   
  O designer fornece as três exibições (ou modos) a seguir, para se trabalhar em arquivos XML, esquemas XML e conjuntos de dados:  
   
-|Exibição|Descrição|Tipos de arquivos com suporte|  
+|Exibição|Description|Tipos de arquivos com suporte|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para criar visualmente e modificar esquemas XML e conjuntos de dados ADO.NET.|.xsd|  
 |**Dados**|Para modificar visualmente arquivos de dados XML em uma grade de dados estruturada.|.xml|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 04/10/2018
 ## <a name="showplan-view"></a>Exibição de SHOWPLAN  
  Planos de consulta podem ser salvos em formato XML quando forem criados usando-se a opção SET SHOWPLAN_XML ON. Clique duas vezes em um arquivo com a extensão .showplan para abrir o plano de consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salvar um plano de execução em formato XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

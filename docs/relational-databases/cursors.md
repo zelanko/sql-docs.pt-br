@@ -1,16 +1,16 @@
 ---
 title: Cursores | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - results [SQL Server], cursors
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 882f657706c9875732e89321ffb9d5fe3061b32a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9ac2c5a01e12a8a90b631934de9fa4ae5be818c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursors"></a>Cursores
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-As operações em um ato de banco de dados relacional em um conjunto completo de linhas. Por exemplo, o conjunto de linhas retornado por uma instrução SELECT consiste de todas as linhas que satisfazem as condições na cláusula WHERE da instrução. Este conjunto completo de linhas retornado pela instrução é conhecido como conjunto de resultados. Aplicativos, especialmente aplicativos online interativos, não podem sempre trabalhar efetivamente com todo o conjunto de resultados como uma unidade. Esses aplicativos precisam de um mecanismo para trabalhar com uma linha ou um bloco pequeno de linhas de cada vez. Os cursores são uma extensão dos conjuntos de resultados que proveem esse mecanismo.  
+  As operações em um ato de banco de dados relacional em um conjunto completo de linhas. Por exemplo, o conjunto de linhas retornado por uma instrução SELECT consiste de todas as linhas que satisfazem as condições na cláusula WHERE da instrução. Este conjunto completo de linhas retornado pela instrução é conhecido como conjunto de resultados. Aplicativos, especialmente aplicativos online interativos, não podem sempre trabalhar efetivamente com todo o conjunto de resultados como uma unidade. Esses aplicativos precisam de um mecanismo para trabalhar com uma linha ou um bloco pequeno de linhas de cada vez. Os cursores são uma extensão dos conjuntos de resultados que proveem esse mecanismo.  
   
  Os cursores estendem o resultado de processamento por:  
   

@@ -1,15 +1,16 @@
 ---
-title: "Fazer failover para um secundário do envio de logs (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Fazer failover para um secundário do envio de logs (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - primary databases [SQL Server]
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6358e0fe4be60bcb57441a864b30e036147e5eed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ada8976a3c51dcbe1a0a6c4b3c4cff6b3b399745
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover para um envio de logs secundário (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O failover para um envio de logs secundário será útil se a instância do servidor primário falhar ou requerer manutenção.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O failover para um envio de logs secundário será útil se a instância do servidor primário falhar ou requerer manutenção.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Preparando para um failover controlado  
  Geralmente, os bancos de dados primário e secundário não são sincronizados porque o banco de dados primário continua sendo atualizado após seu último trabalho de backup. Além disso, em alguns casos, os backups de log de transações recentes não foram copiados nas instâncias do servidor secundário ou alguns backups de log copiados talvez ainda não tenham sido aplicados ao banco de dados secundário. Recomendamos que você comece sincronizando todos os bancos de dados secundários com o banco de dados primário, se possível.  

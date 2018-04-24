@@ -2,7 +2,7 @@
 title: Permissões (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -21,25 +21,24 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: ''
+caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0932d368e23c01e181dbe94e3d27ce71e8c1b0f4
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5d0fcc6fcb0e0a40e23f65f4efbf7f6ff8a39255
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Todo protegível do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões associadas que podem ser concedidas a uma entidade de segurança. As permissões no [!INCLUDE[ssDE](../../includes/ssde-md.md)] são gerenciadas no nível do servidor atribuídas a funções de logon e de servidor, e no nível do banco de dados atribuídas a funções de usuários do banco de dados e funções de banco de dados. O modelo para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tem o mesmo sistema para as permissões de banco de dados, mas as permissões no nível do servidor não estão disponíveis. Este tópico contém a lista completa de permissões. Para obter uma implementação típica das permissões, veja [Introdução às permissões do Mecanismo de Banco de Dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-O número total de permissões para o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] é 237. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, permissões de nível de servidor não podem ser concedidas no banco de dados SQL, e algumas permissões só fazem sentido no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expôs 230 permissões. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expôs 219 permissões. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expôs 214 permissões. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expôs 195 permissões. O tópico [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica os tópicos que são novos em versões recentes. O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
-  
-[![Permissões do Mecanismo de Banco de Dados](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+O número total de permissões para o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] é 237. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, permissões de nível de servidor não podem ser concedidas no banco de dados SQL, e algumas permissões só fazem sentido no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expôs 230 permissões. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expôs 219 permissões. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expôs 214 permissões. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expôs 195 permissões. O tópico [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica os tópicos que são novos em versões recentes.
 
 Depois de compreender as permissões, aplique permissões em nível de servidor a logons e a usuários de permissões no nível de banco de dados com as instruções [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Por exemplo:   
 ```sql
@@ -102,7 +101,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
      A permissão REFERENCES é necessária em um objeto para criar uma FUNCTION ou VIEW com a cláusula `WITH SCHEMABINDING` que faz referência àquele objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
- Para obter um gráfico com tamanho de um cartaz de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, consulte [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ##  <a name="_securables"></a> Permissões Aplicáveis a Protegíveis Específicos  
  A tabela a seguir lista classes principais de permissões e os tipos de protegíveis aos quais elas podem ser aplicadas.  

@@ -1,33 +1,34 @@
 ---
-title: "Propriedades de banco de dados (página Envio de Logs de Transações) | Microsoft Docs"
-ms.custom: 
+title: Propriedades de banco de dados (página Envio de Logs de Transações) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1016bfa1e560c6ec9b4db1db393e4c44366cae16
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3d789a576c56808a56830bcf23455b9df30e0de9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>Propriedades de banco de dados (página Envio do Logs de Transações)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa página para configurar e modificar as propriedades de envio de logs para um banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use essa página para configurar e modificar as propriedades de envio de logs para um banco de dados.  
   
  Para obter uma explicação dos conceitos de envio de log, veja [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   

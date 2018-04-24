@@ -1,34 +1,36 @@
 ---
-title: "Fazendo upgrade de instâncias espelhadas | Microsoft Docs"
-ms.custom: 
+title: Fazendo upgrade de instâncias espelhadas | Microsoft Docs
+ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 329c2a8f2fb61ed3691d83b289bcb3fb9ea4f4e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Atualização de Instâncias Espelhadas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao fazer o upgrade de uma instância espelhada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], para um novo service pack ou uma atualização cumulativa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Windows, você pode reduzir o tempo de inatividade para cada banco de dados espelhado para um único failover manual executando uma atualização sem interrupção (ou dois failovers manuais em caso de failback para o primário original). Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelhado, atualizar a antiga instância principal do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e retomar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que você está atualizando.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Ao atualizar uma instância espelhada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , para um novo service pack ou uma atualização cumulativa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou para um novo service pack ou atualização cumulativa do Windows, você pode reduzir o tempo de inatividade para cada banco de dados espelhado para um único failover manual executando uma atualização sem interrupção (ou dois failovers manuais em caso de failback para a primária original). Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelhado, atualizar a antiga instância principal do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e retomar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que você está atualizando.  
   
 > [!NOTE]  
 >  Para saber mais sobre como usar o espelhamento de banco de dados com envio de log durante a migração, baixe este [white paper sobre Espelhamento de Banco de Dados e Envio de Log](https://t.co/RmO6ruCT4J).  

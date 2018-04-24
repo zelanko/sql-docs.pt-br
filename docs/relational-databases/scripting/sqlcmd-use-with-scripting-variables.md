@@ -2,7 +2,7 @@
 title: Usar sqlcmd com variáveis de script | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-scripting
@@ -26,11 +26,12 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 14a86c83343b85df0aa3f7a16929d55b06d9ae1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd – Usar com variáveis de script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +117,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Variáveis de script do sqlcmd  
  Variáveis definidas por **sqlcmd** são conhecidas como variáveis de script. A tabela a seguir lista variáveis de script do **sqlcmd** .  
   
-|        Variável         | Opção relacionada | R/W |         Default         |
+|        Variável         | Opção relacionada | R/W |         Padrão         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
@@ -337,7 +338,7 @@ C:\> sqlcmd
 >2 GO
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o utilitário sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

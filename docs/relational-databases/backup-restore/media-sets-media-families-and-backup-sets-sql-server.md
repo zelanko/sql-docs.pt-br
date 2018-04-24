@@ -1,16 +1,16 @@
 ---
-title: "Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13405de028f7392c9ef384743a44db9fb49c627c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 74c5f0a7856d27dce738a43964595493e298b169
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -300,7 +300,7 @@ O acréscimo, que é o comportamento padrão do BACKUP, pode ser especificado ex
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   

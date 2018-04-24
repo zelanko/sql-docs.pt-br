@@ -1,33 +1,35 @@
 ---
-title: "Injeção de SQL | Microsoft Docs"
-ms.custom: 
+title: Injeção de SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-security
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de3575bfac8b2e13e6d02835d5355b1e6b78cfa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6fc38f900f84abba5f1e5efab47772703f246317
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-injection"></a>Injeção SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A injeção SQL é um ataque no qual um código mal-intencionado é inserido em cadeias de caracteres que são passadas posteriormente para uma instância do SQL Server para análise e execução. Qualquer procedimento que construa instruções SQL deve ser verificado quanto a vulnerabilidades de injeção porque o SQL Server executará todas as consultas sintaticamente válidas que receber. Mesmo dados com parâmetros podem ser manipulados por um invasor qualificado e determinado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Injeção SQL é um ataque no qual um código mal-intencionado é inserido em cadeias de caracteres que são passadas posteriormente para uma instância do SQL Server para análise e execução. Qualquer procedimento que construa instruções SQL deve ser verificado quanto a vulnerabilidades de injeção porque o SQL Server executará todas as consultas sintaticamente válidas que receber. Mesmo dados com parâmetros podem ser manipulados por um invasor qualificado e determinado.  
   
 ## <a name="how-sql-injection-works"></a>Como funciona a injeção de SQL  
  A forma principal de injeção SQL consiste em inserção direta de código em variáveis de entrada de usuário, concatenadas com comandos SQL e executadas. Um ataque menos direto injeta código mal-intencionado em cadeias de caracteres destinadas a armazenamento em uma tabela ou como metadados. Quando as cadeias de caracteres armazenadas são concatenadas subsequentemente em um comando SQL dinâmico, o código mal-intencionado é executado.  
@@ -98,7 +100,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|Delimitador de consulta.|  
 |**'**|Delimitador de cadeia de dados de caractere.|  
-|**--**|Delimitador de cadeia de dados de caractere.<br />.|  
+|**--**|Delimitador de cadeia de dados de caractere.<br />para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
 |**/\*** ... **\*/**|Delimitadores de comentário. Texto entre **/\*** e **\*/** não é avaliado pelo servidor.|  
 |**xp_**|Usado no início do nome de procedimentos armazenados estendidos de catálogo, como `xp_cmdshell`.|  
   
@@ -343,7 +345,7 @@ GO
   
  Quando você está concatenando valores do tipo sysname, deve usar variáveis temporárias suficientemente grandes para manter no máximo 128 caracteres por valor. Se possível, chame `QUOTENAME()` diretamente no [!INCLUDE[tsql](../../includes/tsql-md.md)]dinâmico. Caso contrário, você pode calcular o tamanho do buffer exigido como explicado na seção anterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
 title: Severidades de erros do Mecanismo de Banco de Dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -19,24 +19,25 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f48f4b4b774538f9ca388e8a8fbaf1e0f9b1aded
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-error-severities"></a>Severidade dos erros do Mecanismo de Banco de Dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando um erro é acionado pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], sua gravidade indica o tipo de problema encontrado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando um erro é gerado pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], sua severidade indica o tipo de problema encontrado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Níveis de severidade  
  A tabela a seguir lista e descreve os níveis de severidade dos erros gerados pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Nível de severidade|Descrição|  
+|Nível de severidade|Description|  
 |--------------------|-----------------|  
 |0-9|Mensagens informativas que retornam informações de status ou reportam erros que não sejam severos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não gera erros de sistema com severidades de 0 a 9.|  
 |10|Mensagens informativas que retornam informações de status ou reportam erros que não sejam severos. Por razões de compatibilidade, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte a severidade 10 em severidade 0 antes de retornar as informações de erro ao aplicativo de chamada.|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="retrieving-error-severity"></a>recuperando a severidade dos erros  
  A função do sistema ERROR_SEVERITY pode ser usada para recuperar a severidade do erro que fez o bloco CATCH de uma construção TRY...CATCH ser executado. ERROR_SEVERITY retorna NULL se chamado de fora do escopo de um bloco CATCH. Para obter mais informações, consulte [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compreendendo os erros do Mecanismo de Banco de Dados](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Funções de sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

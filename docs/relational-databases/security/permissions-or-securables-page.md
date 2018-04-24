@@ -1,16 +1,16 @@
 ---
-title: "Página Permissões ou Protegíveis | Microsoft Docs"
-ms.custom: 
+title: Página Permissões ou Protegíveis | Microsoft Docs
+ms.custom: ''
 ms.date: 01/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.permissions.f1
@@ -19,19 +19,21 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a8f26b252efab2f41c086049a988a41f440099a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-or-securables-page"></a>Página Permissões ou Protegíveis
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a página **Permissões** ou a página **Protegíveis** para exibir ou definir as permissões para os protegíveis. Essa página pode ser aberta de muitos locais. O conteúdo da página pode ser ligeiramente alterado, dependendo de como a página é aberta e do que contém. A grade na parte superior da página pode estar populada quando a página é aberta ou pode estar vazia. Para adicionar itens à grade superior, clique em **Pesquisar**. Na grade superior, selecione um item e, depois, defina as permissões apropriadas na guia **Explícita** . Para exibir as permissões adicionadas, use a guia **Efetiva** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Use a página **Permissões** ou a página **Protegíveis** para exibir ou definir as permissões para protegíveis. Essa página pode ser aberta de muitos locais. O conteúdo da página pode ser ligeiramente alterado, dependendo de como a página é aberta e do que contém. A grade na parte superior da página pode estar populada quando a página é aberta ou pode estar vazia. Para adicionar itens à grade superior, clique em **Pesquisar**. Na grade superior, selecione um item e, depois, defina as permissões apropriadas na guia **Explícita** . Para exibir as permissões adicionadas, use a guia **Efetiva** .  
   
  Para entender as combinações possíveis de protegíveis e as entidades, confira os links de sintaxe específica de protegíveis no tópico [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, consulte [Securables](../../relational-databases/security/securables.md).  
   

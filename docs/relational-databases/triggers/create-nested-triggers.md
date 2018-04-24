@@ -1,16 +1,16 @@
 ---
 title: Criar gatilhos aninhados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d3a37b5abbf9c29dd52a94033980c5b637546487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-nested-triggers"></a>Criar gatilhos aninhados
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Os gatilhos DML e DDL são aninhados quando um gatilho executa uma ação que inicia outro gatilho. Essas ações podem iniciar outros gatilhos, e assim por diante. Os gatilhos DML e DDL podem ser aninhados em até 32 níveis. Você pode controlar se os gatilhos AFTER podem ser aninhados pela opção de configuração do servidor **nested triggers** . Os gatilhos INSTEAD OF (apenas gatilhos DML podem ser gatilhos INSTEAD OF) podem ser aninhados, independentemente dessa configuração.  
+  Os gatilhos DML e DDL são aninhados quando um gatilho executa uma ação que inicia outro gatilho. Essas ações podem iniciar outros gatilhos, e assim por diante. Os gatilhos DML e DDL podem ser aninhados em até 32 níveis. Você pode controlar se os gatilhos AFTER podem ser aninhados pela opção de configuração do servidor **nested triggers** . Os gatilhos INSTEAD OF (apenas gatilhos DML podem ser gatilhos INSTEAD OF) podem ser aninhados, independentemente dessa configuração.  
   
 > [!NOTE]  
 >  Qualquer referência a um código gerenciado de um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] conta como um nível em relação ao limite de 32 níveis de aninhamento. Os métodos invocados a partir do código gerenciado não são contados em relação a esse limite.  

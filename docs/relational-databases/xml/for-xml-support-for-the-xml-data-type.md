@@ -1,35 +1,35 @@
 ---
 title: Suporte a FOR XML para o tipo de dados xml | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db0cb5f5484415cdac27c18bf177f3b06eed8509
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: dc77f2c8e63c28386d05c6430e38dbc5bc2cbd2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Se uma consulta FOR XML especificar uma coluna de tipo **xml** na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar especificada. Qualquer declaração XML na coluna de tipo **xml** não é serializada.  
+  Se uma consulta FOR XML especificar uma coluna de tipo **xml** na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar especificada. Qualquer declaração XML na coluna de tipo **xml** não é serializada.  
   
  Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como as colunas `BusinessEntityID`, `FirstName`e `LastName` , e os números de telefone da coluna `AdditionalContactInfo` de tipo **xml** .  
   

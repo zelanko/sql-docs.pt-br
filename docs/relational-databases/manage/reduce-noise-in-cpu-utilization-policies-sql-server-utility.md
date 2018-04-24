@@ -1,33 +1,34 @@
 ---
-title: "Reduzir o ruído em políticas de utilização da CPU (Utilitário do SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Reduzir o ruído em políticas de utilização da CPU (Utilitário do SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.SWB.UE.ReduceNoise.F1
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a391598d304ce2566d35b806e2a9894a81555b50
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 18d7c0d9db15cdbcfa8adf02de6b4febaa99c5bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Reduzir o ruído em políticas de utilização da CPU (Utilitário do SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use as estratégias a seguir para reduzir o relato de ruídos e violações indesejáveis em políticas de utilização de recursos do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use as estratégias a seguir para reduzir o relato de ruídos e violações indesejáveis em políticas de utilização de recursos do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>Qual deve ser a frequência de violação na utilização do processador para relatá-lo como superutilizado?  
  O período de tempo de avaliação e a tolerância em violações de percentual são ambos configuráveis usando as definições da guia **Política** no nó **Administração do Utilitário** do Gerenciador do Utilitário. Para alterar políticas, use os controles deslizantes à direita das descrições de política e clique em **Aplicar**. Você também pode restaurar valores padrão ou descartar alterações usando os botões na parte inferior da exibição.  

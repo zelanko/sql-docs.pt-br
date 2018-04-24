@@ -1,35 +1,36 @@
 ---
-title: "Tarefa Atualização de Estatísticas (Plano de manutenção) | Microsoft Docs"
-ms.custom: 
+title: Tarefa Atualização de Estatísticas (Plano de manutenção) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.statistics.f1
 helpviewer_keywords:
 - Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77bdf027ea3354d11c9877f03f20f2ebfe92afba
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bba2c07ae95ac58a6c76c8b62242d2da30c314ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tarefa Atualização de Estatísticas (Plano de manutenção)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa Atualizar Estatísticas** para atualizar informações do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre os dados nas tabelas e índices. Essa tarefa cria uma nova amostra das estatísticas de distribuição de cada índice criado em tabelas de usuário no banco de dados. As estatísticas de distribuição são usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para otimizar a navegação em tabelas durante o processamento de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para construir as estatísticas de distribuição automaticamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz uma amostra periódica dos dados na tabela correspondente para cada índice. O tamanho da amostra tem como base o número de linhas na tabela e a frequência de modificação dos dados. Use essa opção para executar uma amostragem adicional usando a porcentagem de dados especificada nas tabelas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa estas informações para criar planos de consulta melhores.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use a caixa de diálogo **Tarefa Atualizar Estatísticas** para atualizar informações do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre os dados nas tabelas e índices. Essa tarefa cria uma nova amostra das estatísticas de distribuição de cada índice criado em tabelas de usuário no banco de dados. As estatísticas de distribuição são usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para otimizar a navegação em tabelas durante o processamento de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para construir as estatísticas de distribuição automaticamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz uma amostra periódica dos dados na tabela correspondente para cada índice. O tamanho da amostra tem como base o número de linhas na tabela e a frequência de modificação dos dados. Use essa opção para executar uma amostragem adicional usando a porcentagem de dados especificada nas tabelas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa estas informações para criar planos de consulta melhores.  
   
  Essa tarefa executa a instrução UPDATE STATISTICS.  
   

@@ -2,7 +2,7 @@
 title: Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-engine
@@ -22,11 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30fee63cd25509d56bd2c55cd682ae31fc801691
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 345c1e8766c1136577848b5fd5bae31f53ac4478
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

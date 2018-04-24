@@ -1,16 +1,16 @@
 ---
 title: TDE (Transparent Data Encryption) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 
+caps.latest.revision: 75
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dc91fd8963b438902ee29ffb64d6cac0bb2d2f9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 014bf3a80c499d5efc296eb623c976a4d48d2205
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  **Informações aplicáveis a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Ao usar a TDE com o [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, o certificado de nível de servidor armazenado no banco de dados mestre é criado automaticamente pelo [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para mover um banco de dados de TDE no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] é necessário descriptografar o banco de dados, movê-lo e habilitar novamente a TDE no destino [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para obter instruções passo a passo para a TDE em [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consulte [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ Ao usar a TDE com o [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, o certificado de nível de servidor armazenado no banco de dados mestre é criado automaticamente pelo [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para mover um banco de dados de TDE no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] é necessário descriptografar o banco de dados, movê-lo e habilitar novamente a TDE no destino [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para obter instruções passo a passo sobre a TDE no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], veja [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Informações aplicáveis a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -155,7 +156,7 @@ GO
 > [!TIP]  
 > Para monitorar alterações no status de TDE do banco de dados, use a Auditoria do SQL Server ou a Auditoria de Banco de Dados SQL. Para o SQL Server, o TDE é controlado no grupo de ação de auditoria DATABASE_CHANGE_GROUP que pode ser encontrado em [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
   
-### <a name="restrictions"></a>Restrições  
+### <a name="restrictions"></a>Restrictions  
  As operações seguintes não são permitidas durante criptografia de banco de dados inicial, alteração de chave ou descriptografia de banco de dados:  
   
 -   Descartando um arquivo de um grupo de arquivos no banco de dados  
@@ -241,7 +242,7 @@ GO
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption e OLTP na memória  
  A TDE pode ser habilitada em um banco de dados que tenha objetos OLTP na memória. No [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , os dados e os registros de log do OLTP in-memory serão criptografados se a TDE estiver habilitada. No [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , os registros de log do OLTP in-memory serão criptografados se a TDE estiver habilitada, mas os arquivos no grupo de arquivos MEMORY_OPTIMIZED_DATA não serão criptografados.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Mover um banco de dados protegido por TDE para outro SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
  [Habilitar TDE no SQL Server usando EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
  [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
@@ -252,7 +253,7 @@ GO
  [Criptografia do SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)  
  [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
    
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)  
   

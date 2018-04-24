@@ -1,16 +1,16 @@
 ---
 title: Fazer upgrade de bancos de dados replicados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 
+caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 670b4f90c0461de12718fcf5a8cf2dfc97817b4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] é compatível com a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante o upgrade de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
+  O [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] suporta a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante a atualização de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
   
 -   Um Distribuidor pode ser de qualquer versão, desde que ela seja maior ou igual à do Publicador (em muitos casos, o Distribuidor tem a mesma instância que o Publicador).  
   

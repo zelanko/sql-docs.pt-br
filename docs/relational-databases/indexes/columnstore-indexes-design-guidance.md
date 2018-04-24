@@ -1,28 +1,29 @@
 ---
-title: "Índices columnstore – diretrizes de design | Microsoft Docs"
-ms.custom: 
+title: Índices columnstore – diretrizes de design | Microsoft Docs
+ms.custom: ''
 ms.date: 12/1/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c2b3c604d5da223b651b8467b126878653fae294
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Índices columnstore – diretrizes de design
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +100,7 @@ Como um índice columnstore tem uma compactação de dados 10x melhor do que um 
   
 *   Acabe com a necessidade de ter um data warehouse separado. Normalmente, as empresas executam transações em uma tabela rowstore e, em seguida, carregam os dados em um data warehouse separado para executar a análise. Para muitas cargas de trabalho, é possível eliminar o processo de carregamento e o data warehouse separado criando um índice columnstore não clusterizado em tabelas transacionais.
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oferece várias estratégias para dar a esse cenário um bom desempenho. É muito fácil experimentá-lo, pois é possível habilitar um índice columnstore não clusterizado sem alterações para seu aplicativo OLTP. 
+  O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oferece várias estratégias para dar a esse cenário um bom desempenho. É muito fácil experimentá-lo, pois é possível habilitar um índice columnstore não clusterizado sem alterações para seu aplicativo OLTP. 
 
 Para adicionar recursos adicionais de processamento, é possível executar a análise em um secundário legível. Usar um secundário legível separa o processamento da carga de trabalho transacional e a carga de trabalho de análise. 
 

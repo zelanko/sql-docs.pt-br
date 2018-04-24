@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Audit Database Operation | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Operation event class
 ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44c9b40a811e29c496bfca72a5d4c30d459f775d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e9c19afe7f3976a78228e053853d132c7117c105
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-operation-event-class"></a>Classe de evento Audit Database Operation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento **Audit Database Operation** acontece quando ocorrem operações em um banco de dados, como uma notificação de consulta de ponto de verificação e assinatura.  
+  A classe de evento **Audit Database Operation** acontece quando ocorrem operações em um banco de dados, como uma notificação de consulta de ponto de verificação e assinatura.  
   
 ## <a name="audit-database-operation-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Operation  
   

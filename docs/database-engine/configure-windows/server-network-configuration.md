@@ -1,15 +1,16 @@
 ---
-title: "Configuração de rede do servidor | Microsoft Docs"
-ms.custom: 
+title: Configuração de rede do servidor | Microsoft Docs
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-network-configuration"></a>Configuração de rede do servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome da Entidade do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome do Principal do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
   
  A configuração da rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é realizada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o Utilitário de Rede do Servidor fornecido com esses produtos.  
   

@@ -1,33 +1,35 @@
 ---
 title: Espelhamento de banco de dados e envio de logs (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 51f97eadcf5e018134ac64255bfffa8c31dd9e3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um determinado banco de dados pode ser espelhado ou ter o respectivo log enviado ou pode ainda ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Um determinado banco de dados pode ser espelhado ou ter o log enviado; ou ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
   
 -   Você precisa de quantos servidores de destino?  
   

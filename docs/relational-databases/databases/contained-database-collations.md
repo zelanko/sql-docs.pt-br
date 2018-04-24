@@ -1,33 +1,34 @@
 ---
 title: Agrupamentos de banco de dados independentes | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 11828773d88f1ff303fd4e34f76ea1e2fb9ccac4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contained-database-collations"></a>Agrupamentos de banco de dados contidos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, a distinção de acentos e o idioma base sendo usado. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha do agrupamento dos dados. Para obter uma discussão mais detalhada sobre os agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha do agrupamento dos dados. Para obter uma discussão mais detalhada sobre os agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Os agrupamentos se aplicam não apenas aos dados armazenados nas tabelas de usuário, mas também a todo o texto tratado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo metadados, objetos temporários, nomes de variável etc. O tratamento deles varia nos bancos de dados dependentes e independentes. Essa alteração não afetará muitos usuários, mas ajuda a fornecer independência de instância e uniformidade. Mas isso também pode causar alguma confusão, bem como problemas em sessões que acessam bancos de dados contidos e não contidos.  
   

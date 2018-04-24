@@ -1,16 +1,16 @@
 ---
-title: "Tabelas e índices particionados | Microsoft Docs"
-ms.custom: 
+title: Tabelas e índices particionados | Microsoft Docs
+ms.custom: ''
 ms.date: 01/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6e5758702f60671b64fc97d9e9e98b89a80ccd6f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d8af645cee08f550eb8d22ba06d6ab68da50312e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, as tabelas e os índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, as tabelas e os índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições por padrão. Nas versões anteriores do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o número de partições foi limitado a 1.000 por padrão. Nos sistemas baseados em x86, a criação de uma tabela ou de um índice com mais de 1000 partições é possível, mas não tem suporte.  

@@ -1,16 +1,16 @@
 ---
-title: "Instantâneos do banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Instantâneos do banco de dados (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - static database views
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 
+caps.latest.revision: 54
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dbc97b4e0a07f21471c1c6de18308390a3a9183
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-snapshots-sql-server"></a>Instantâneos de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um instantâneo de banco de dados é uma exibição estática somente leitura de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o *banco de dados de origem*). O instantâneo de banco de dados é transacionalmente consistente com o banco de dados de origem a partir do momento da criação do instantâneo. Um instantâneo de um banco de dados sempre reside na mesma instância de servidor que o banco de dados de origem. Quando o banco de dados de origem é atualizado, o instantâneo do banco de dados é atualizado. Portanto, quanto mais tempo o instantâneo de banco de dados existir, maior será a probabilidade de ele usar todo o espaço em disco disponível.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Um instantâneo de banco de dados é uma exibição estática somente leitura de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o *banco de dados de origem*). O instantâneo de banco de dados é transacionalmente consistente com o banco de dados de origem a partir do momento da criação do instantâneo. Um instantâneo de um banco de dados sempre reside na mesma instância de servidor que o banco de dados de origem. Quando o banco de dados de origem é atualizado, o instantâneo do banco de dados é atualizado. Portanto, quanto mais tempo o instantâneo de banco de dados existir, maior será a probabilidade de ele usar todo o espaço em disco disponível.  
   
  Vários instantâneos podem existir em um banco de dados de origem. Cada instantâneo de banco de dados persiste até que seja explicitamente removido pelo proprietário do banco de dados.  
   

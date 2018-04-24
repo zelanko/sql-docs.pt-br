@@ -1,30 +1,30 @@
 ---
 title: Solucionar problemas de conectividade do PolyBase Kerberos | Microsoft Docs
-description: 
-services: 
-documentationcenter: 
+description: ''
+services: ''
+documentationcenter: ''
 author: alazad-msft
-manager: 
-editor: 
-tags: 
-ms.assetid: 
-ms.service: 
+manager: ''
+editor: ''
+tags: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: polybase
 ms.suite: sql
-ms.custom: 
-ms.workload: 
+ms.custom: ''
+ms.workload: ''
 ms.tgt_pltfrm: na
-ms.devlang: 
+ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
-ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d41adcd958af3c5bc87c03b83a4d1330fdf1c779
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -203,7 +203,7 @@ Os logs do KDC estão disponíveis em **/var/log/krb5kdc.log** por padrão, que 
 ### <a name="active-directory"></a>Active Directory 
 No Active Directory, os SPNs podem ser exibidos por meio do Painel de Controle > Usuários e Computadores do Active Directory > *MyRealm* > *MyOrganizationalUnit*. Se o cluster Hadoop tiver sido devidamente “kerberizado”, deverá haver um SPN para cada um dos vários serviços disponíveis (por exemplo, nn, dn, rm, yarn, spnego etc.)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Integrar o PolyBase com o Cloudera usando a Autenticação do Active Directory](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Guia do Cloudera para a Configuração do Kerberos para CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Guia do Hortonworks para a Configuração do Kerberos para HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  

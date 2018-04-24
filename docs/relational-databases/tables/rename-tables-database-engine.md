@@ -2,7 +2,7 @@
 title: Renomear tabelas (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: tables
@@ -21,11 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61aa8b3a739b03201e92cd81007bc1c43c6ab435
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7c96ad974288ec9c8bbaf09ae9405c40b47cb5e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rename-tables-database-engine"></a>Renomear tabelas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ Para renomear uma tabela no SQL Data Warehouse do Azure ou no Parallel Data Ware
   
 5.  No menu **Arquivo**, escolha **Salvar***nome da tabela*.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>Para renomear uma tabela  
   

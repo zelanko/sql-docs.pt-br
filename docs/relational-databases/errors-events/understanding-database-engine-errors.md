@@ -1,16 +1,16 @@
 ---
 title: Compreendendo os erros do Mecanismo de Banco de Dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [SQL Server], about errors
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - errors [SQL Server]
 - Database Engine [SQL Server], errors
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbd10231e195d22b227589d704ce166eb44c0c26
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdd35c45e3e6828a9faf1da3ee78236791de372d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-database-engine-errors"></a>Compreendendo os erros do Mecanismo de Banco de Dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os erros acionados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] têm os atributos descritos na tabela a seguir.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Os erros gerados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] têm os atributos descritos na tabela abaixo.  
   
-|Atributo|Descrição|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Número do erro|Cada mensagem de erro tem um número de erro exclusivo.|  
 |Error message string|A mensagem de erro contém informações de diagnóstico sobre a causa do erro. Muitas mensagens de erro têm variáveis de substituição nas quais são inseridas informações, como o nome do objeto que gera o erro.|  
@@ -63,7 +65,7 @@ SELECT
   
  Para obter mais informações, consulte [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   

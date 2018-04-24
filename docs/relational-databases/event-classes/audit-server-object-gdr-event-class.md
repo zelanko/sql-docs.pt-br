@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Audit Server Object GDR | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Server Object GDR event class
 ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0ff3dc06da5d0aa76ef9bf99b4ece7eebcd2fd8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0514ee0c58fa0d21b133c3ea8c1beb07c95f5051
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Classe de evento Audit Server Object GDR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento **Audit Server Object GDR** ocorre sempre que uma instrução GRANT, REVOKE ou DENY é emitida para uma permissão de objeto de servidor por qualquer usuário no Microsoft SQL Server.  
+  A classe de evento **Audit Server Object GDR** ocorre sempre que uma instrução GRANT, REVOKE ou DENY é emitida para uma permissão de objeto de servidor por qualquer usuário no Microsoft SQL Server.  
   
 ## <a name="audit-server-object-gdr-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Server Object GDR  
   

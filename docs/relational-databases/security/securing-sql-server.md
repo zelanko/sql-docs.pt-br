@@ -1,16 +1,16 @@
 ---
 title: Protegendo o SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Security [SQL Server]
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 07ab7d7c420d1b0c9809f58476d2bf8f6b4b0260
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="securing-sql-server"></a>Protegendo o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-A segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser exibida como uma série de etapas, envolvendo quatro áreas: a plataforma, a autenticação, os objetos (inclusive os dados) e os aplicativos que acessam o sistema. Os tópicos a seguir guiarão você pela criação e implementação de um plano de segurança efetivo.  
+  A segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser exibida como uma série de etapas, envolvendo quatro áreas: a plataforma, a autenticação, os objetos (inclusive os dados) e os aplicativos que acessam o sistema. Os tópicos a seguir guiarão você pela criação e implementação de um plano de segurança efetivo.  
   
  Você pode encontrar mais informações sobre a segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no site do [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . Ele inclui um guia de práticas recomendadas e uma lista de verificação de segurança. Este site também contém as informações mais recentes de service packs e downloads.  
   

@@ -1,34 +1,35 @@
 ---
 title: Classe de evento Performance Statistics | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3b788ea13beced99f19a35707591ecf90c5dd5d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 02db411f94695499fa0fdc3ad061ff8e0e5effe4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performance-statistics-event-class"></a>classe de evento Performance Statistics
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A classe de evento Performance Statistics pode ser usada para monitorar o desempenho de consultas, procedimentos armazenados e gatilhos que são executados. Cada uma das seis subclasses de evento indica um evento no tempo de vida de consultas, procedimentos armazenados e gatilhos no sistema. Usando a combinação dessas subclasses de evento e as exibições de gerenciamento dinâmico sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associadas, você pode reconstituir o histórico de desempenho de qualquer consulta, procedimento armazenado ou gatilho específico.  
+  A classe de evento Performance Statistics pode ser usada para monitorar o desempenho de consultas, procedimentos armazenados e gatilhos que são executados. Cada uma das seis subclasses de evento indica um evento no tempo de vida de consultas, procedimentos armazenados e gatilhos no sistema. Usando a combinação dessas subclasses de evento e as exibições de gerenciamento dinâmico sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associadas, você pode reconstituir o histórico de desempenho de qualquer consulta, procedimento armazenado ou gatilho específico.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colunas de dados da classe de evento Performance Statistics  
  As tabelas a seguir descrevem as colunas de dados da classe de evento associada a cada uma das seguintes subclasses de evento: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 e EventSubClass 5.  
@@ -61,7 +62,7 @@ A classe de evento Performance Statistics pode ser usada para monitorar o desemp
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
-|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Foram compiladas consultas dentro de um procedimento armazenado.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento para procedimentos armazenados.<br /><br /> Para procedimentos armazenados com o número de consultas *n* número de consultas:<br /><br /> *n* número de tipo 1|21|Sim|  
+|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Foram compiladas consultas dentro de um procedimento armazenado.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento para procedimentos armazenados.<br /><br /> Para procedimentos armazenados com o número de consultas *n* :<br /><br /> *n* número de tipo 1|21|Sim|  
 |IntegerData2|**int**|Término da instrução do procedimento armazenado.<br /><br /> -1 para o término do procedimento armazenado.|55|Sim|  
 |ObjectID|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
 |Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
@@ -108,7 +109,7 @@ A classe de evento Performance Statistics pode ser usada para monitorar o desemp
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
-|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 3 = Uma consulta armazenada em cache foi destruída e os dados históricos do desempenho associados ao plano serão destruídos.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento.<br /><br /> Para lotes ad hoc com *n* número de consultas:<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache<br /><br /> Para procedimentos armazenados com o número de consultas *n* número de consultas:<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache.|21|Sim|  
+|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 3 = Uma consulta armazenada em cache foi destruída e os dados históricos do desempenho associados ao plano serão destruídos.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento.<br /><br /> Para lotes ad hoc com *n* número de consultas:<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache<br /><br /> Para procedimentos armazenados com o número de consultas *n* :<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache.|21|Sim|  
 |IntegerData2|**int**|Fim da instrução no procedimento armazenado ou lote.<br /><br /> -1 para o final do procedimento armazenado ou lote.|55|Sim|  
 |ObjectID|**int**|NULL|22|Sim|  
 |Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.<br /><br /> 0 para o início do procedimento armazenado ou lote.|61|Sim|  

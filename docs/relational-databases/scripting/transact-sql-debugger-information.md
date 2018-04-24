@@ -1,16 +1,16 @@
 ---
-title: "Informações do depurador Transact-SQL | Microsoft Docs"
-ms.custom: 
+title: Informações do depurador Transact-SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff61f3cc84829372e305ffe40aefff870531679
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Depurador do Transact-SQL – Informações
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
   
 ## <a name="debugger-windows"></a>Janelas do depurador  
  Em modo de depurador, o depurador abre duas janelas na parte inferior da janela principal do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . O depurador exibe toda as suas informações nessas duas janelas. Cada uma das janelas de depurador tem guias que você pode selecionar para controlar o conjunto de informações exibido na janela. A janela esquerda do depurador contém as guias **Locais**, **Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4** . A janela direita do depurador contém as guias **Pilha de Chamadas**, **Threads**, **Pontos de Interrupção**, **Janela de Comando**e **Saída** .  

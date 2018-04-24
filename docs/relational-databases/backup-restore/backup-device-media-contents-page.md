@@ -1,33 +1,34 @@
 ---
-title: "Dispositivo de backup (página Conteúdo de Mídia) | Microsoft Docs"
-ms.custom: 
+title: Dispositivo de backup (página Conteúdo de Mídia) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 530a6791c6c6b8353161f4dec1f8556b434ba761
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f11bcb2335b6a2a703938a2f228119dc39aad462
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de backup (página Conteúdo da Mídia)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Dispositivo de Backup** para exibir as informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use a caixa de diálogo **Dispositivo de Backup** para exibir as informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
   
  **Para usar o SQL Server Management Studio para exibir o conteúdo de um dispositivo de backup**  
   

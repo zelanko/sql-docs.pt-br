@@ -1,16 +1,16 @@
 ---
 title: Objetos do sistema de mensagens do Database Mail | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Database Mail [SQL Server], host databases
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8de888cea76c64cf8c5356b68ac8d852bd46bd1f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 61b20e832a847566390ab4e430ff5cc87a0178ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos do sistema de mensagens do Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-O banco de dados **msdb** é o host de Database Mail. Este banco de dados contém os procedimentos armazenados e objetos de mensagens para o Database Mail. O Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contém o Assistente para Configuração do Database Mail, que permite habilitar o Database Mail, criar e gerenciar perfis e contas e configurar opções do Database Mail.  
+  O banco de dados **msdb** é o host de Database Mail. Este banco de dados contém os procedimentos armazenados e objetos de mensagens para o Database Mail. O Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contém o Assistente para Configuração do Database Mail, que permite habilitar o Database Mail, criar e gerenciar perfis e contas e configurar opções do Database Mail.  
   
 ##  <a name="ComponentsAndConcepts"></a> Objetos no banco de dados **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser habilitado no banco de dados **msdb** . Porém, o Database Mail não usa o sistema de rede do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Portanto, os usuários não têm que criar um ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para usar o Database Mail. O processo externo do Database Mail usa uma conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] padrão para se comunicar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

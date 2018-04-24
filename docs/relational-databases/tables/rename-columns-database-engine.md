@@ -2,7 +2,7 @@
 title: Renomear colunas (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -22,11 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0bb8f1e02fa372e33174b2268584885808e25790
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e77770943b98c5330b80cfb1cc6421c19a87c8b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rename-columns-database-engine"></a>Renomear colunas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/10/2018
 > [!NOTE]  
 >  Você também pode alterar o nome de uma coluna na guia **Propriedades da Coluna** . Selecione a coluna cujo nome você deseja alterar e digite um novo valor para **Nome**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para renomear uma coluna**  
   
 #### <a name="to-rename-a-column"></a>Para renomear uma coluna  
