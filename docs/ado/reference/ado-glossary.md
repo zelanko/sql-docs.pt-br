@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>Glossário do ADO
 Este tópico define condições relevantes para ADO.  
@@ -53,7 +53,7 @@ Este tópico define condições relevantes para ADO.
  entrada de associação  
  Um mapeamento entre um campo em uma tabela e uma variável. Nas extensões do Visual C++ de ADO, **registros** campos são mapeados para variáveis de C/C++.  
   
- bitmask  
+ Máscara de bits  
  Um valor numérico pretende para uma comparação de valor de bit a bit com outros valores numéricos, normalmente opções em valores de retorno ou parâmetro de sinalizador. Normalmente essa comparação é feita com operadores lógicos, como **e** e **ou** no Visual Basic, **&** e **&#124;** em C++.  
   
  Por exemplo, o ADO **FieldAttributeEnum** valores podem ser usados como bitmasks para determinar os atributos de um campo. Suponha que você desejava determinar se um campo foi atualizável. Você pode testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`  
@@ -78,7 +78,7 @@ Este tópico define condições relevantes para ADO.
   
  Colunas de capítulo possibilitam definir um *pai-filho* relação onde a *pai* é o **registros** que contém a coluna de capítulo e  *filho* é o **registros** representado pelo capítulo.  
   
- chapter-alias  
+ alias de capítulo  
  Um alias que se refere à coluna acrescentada ao pai.  
   
  conjunto de caracteres  
@@ -116,7 +116,7 @@ Este tópico define condições relevantes para ADO.
  Um número de arquivos individuais, agrupadas em um arquivo físico. Cada arquivo individual em um arquivo composto pode ser acessado como se fosse um único arquivo físico.  
   
  constante  
- Um valor numérico ou cadeia de caracteres que não é alterado. Enumerações de ADO nomeadas (constantes enumeradas) podem ser usadas em seu código em vez de valores reais, por exemplo, **adUseClient** é uma constante cujo valor é 3. (Const adUseClient = 3). Consulte também *enumeração*.  
+ Um valor numérico ou cadeia de caracteres que não é alterado. Enumerações de ADO nomeadas (constantes enumeradas) podem ser usadas em seu código em vez de valores reais, por exemplo, **adUseClient** é uma constante cujo valor é 3. (AdUseClient const = 3). Consulte também *enumeração*.  
   
  cursor  
  Um elemento de banco de dados que controla a navegação de registro, a capacidade de atualização de dados e a visibilidade das alterações feitas no banco de dados por outros usuários.  

@@ -1,34 +1,36 @@
 ---
-title: "Solução de problemas de cluster de failover | Microsoft Docs"
-ms.custom: 
+title: Solução de problemas de cluster de failover | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troublshooting, failover clustering
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c68c3b282241cfe56e60762e70d2d22e4a64d7b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85d9a421358b026cab07832965f8e27dc7efb071
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-cluster-troubleshooting"></a>Diagnóstico e solução de problemas do cluster de failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém informações sobre os seguintes problemas:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico contém informações sobre os seguintes problemas:  
   
 -   Etapas básicas da solução de problemas.  
   
@@ -190,7 +192,7 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
   
  Se os procedimentos armazenados estendidos usam componentes COM, o administrador deve registrar esses componentes em cada nó do cluster. As informações para carregar e executar componentes COM devem estar no Registro do nó ativo para que os componentes sejam criados. Caso contrário, as informações permanecerão no Registro do computador em que os componentes COM foram registrados primeiro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Como funcionam os procedimentos armazenados estendidos](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Características de execução de procedimentos armazenados estendidos](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  

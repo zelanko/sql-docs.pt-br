@@ -1,16 +1,16 @@
 ---
 title: Configurar o Firewall do Windows para permitir acesso ao SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Firewall ports
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -314,7 +314,7 @@ A tabela a seguir lista portas e serviços dos quais o [!INCLUDE[ssNoVersion](..
   
     2.  No prompt de comando, digite **netstat -n -a**.  
   
-         O item **-n** instrui o **netstat** para exibir numericamente o endereço e o número da porta das conexões TCP ativas. A opção **-a** instrui o **netstat** a exibir as portas TCP e UDP escutadas pelo computador.  
+         A opção **-n** instrui o **netstat** para exibir numericamente o endereço e o número da porta das conexões TCP ativas. A opção **-a** instrui o **netstat** a exibir as portas TCP e UDP escutadas pelo computador.  
   
 -   O utilitário **PortQry** pode ser usado para relatar o status das portas TCP/IP como escutando, não escutando ou filtrado. (Com o status filtrado, a porta pode ou não estar escutando; esse status indica que o utilitário não recebeu uma resposta da porta.) O utilitário **PortQry** está disponível para download no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   

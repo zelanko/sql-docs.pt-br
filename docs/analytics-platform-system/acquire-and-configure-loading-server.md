@@ -1,28 +1,22 @@
 ---
-title: Adquirir e configurar um servidor de carregamento (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Adquirir e configurar um servidor de carregamento - Parallel Data Warehouse | Microsoft Docs
+description: Este artigo descreve como adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de cargas de dados para o Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de carregamentos de dados SQL Server Parallel Data Warehouse.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: 19
-ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a796616ad76ba62ea4174cf22c1517c489305055
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-loading-server"></a>Adquirir e configurar um servidor de carregamento
-Este tópico descreve como adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de cargas de dados para SQL Server Parallel Data Warehouse (PDW).  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de carregamento para Parallel Data Warehouse
+Este artigo descreve como adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de cargas de dados para o Parallel Data Warehouse (PDW).  
   
 ## <a name="Basics"></a>Noções básicas  
 O servidor de carregamento:  

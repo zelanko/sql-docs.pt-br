@@ -1,22 +1,22 @@
 ---
-title: "Introdução ao SQL Server 2017 na nuvem | Microsoft Docs"
-description: "Este guia de início rápido mostra como executar o SQL Server 2017 no Linux na nuvem de sua escolha."
+title: Introdução ao SQL Server 2017 na nuvem | Microsoft Docs
+description: Este guia de início rápido mostra como executar o SQL Server 2017 no Linux na nuvem de sua escolha.
 author: annashres
 ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.component: 
+ms.component: ''
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
-ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.assetid: ''
+ms.openlocfilehash: 29ed2b218f4d9c746f9356a2a57bbacd845b4df6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Início rápido: Executar o SQL Server 2017 na nuvem
 
@@ -53,7 +53,7 @@ Este guia de início rápido, você instalará o SQL Server 2017 no Red Hat Ente
     * Na parte superior do painel de controle, siga o **rede** link e, em seguida, selecione **Firewalls**
     * Adicionar uma regra de entrada para permitir o tráfego na porta na qual o SQL Server escuta (porta TCP padrão 1433)
     
-## <a name="google-cloud-platform"></a>Google Cloud Platform
+## <a name="google-cloud-platform"></a>Plataforma de nuvem do Google
 1.  Criar uma imagem do Linux com pelo menos 2 GB de memória do iniciador a nuvem 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)

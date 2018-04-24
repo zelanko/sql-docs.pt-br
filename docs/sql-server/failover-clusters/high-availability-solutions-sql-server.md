@@ -1,15 +1,16 @@
 ---
-title: "Soluções de alta disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Soluções de alta disponibilidade (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/19/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -18,22 +19,23 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: "84"
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2e3eacea1174a805abe0cce4474634f091ecd6ab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e8a25e4cca326edaa40fb850f8b5deed0a175bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluções de alta disponibilidade (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico apresenta várias soluções de alta disponibilidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que melhoram a disponibilidade de servidores ou bancos de dados. Uma solução de alta disponibilidade mascara os efeitos da falha de um hardware ou software e mantém a disponibilidade dos aplicativos, de modo a minimizar o tempo de inatividade percebido pelos usuários.    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico apresenta várias soluções de alta disponibilidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que melhoram a disponibilidade de servidores ou bancos de dados. Uma solução de alta disponibilidade mascara os efeitos da falha de um hardware ou software e mantém a disponibilidade dos aplicativos, de modo a minimizar o tempo de inatividade percebido pelos usuários.    
     
    
->  **Observação:** Quer saber quais edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte a uma solução de alta disponibilidade específica? Confira a seção “Alta disponibilidade (AlwaysOn)” de [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
+>  **Observação!** Quer saber quais edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte a uma solução de alta disponibilidade específica? Confira a seção “Alta disponibilidade (AlwaysOn)” de [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
      
     
 ##  <a name="TermsAndDefinitions"></a> Visão geral das soluções de alta disponibilidade do SQL Server    
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 >  **Observação!** Uma FCI pode aproveitar os [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para fornecer recuperação remota de desastres no nível do banco de dados. Para obter mais informações, veja [Clustering de failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).    
     
-*  Espelhamento de banco de dados. **Observação:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez dessa função, recomendamos usar [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .     
+*  Espelhamento de banco de dados. **Observação!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez dessa função, recomendamos usar [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .     
 O espelhamento de banco de dados é uma solução para aumentar a disponibilidade do banco de dados, dando suporte a failover quase instantâneo. O espelhamento de banco de dados pode ser usado para manter um único banco de dados de espera, ou *banco de dados espelho*, para um banco de dados de produção correspondente, que é referido como o *banco de dados principal*. Para obter mais informações, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).    
     
 *  Envio de logs    
@@ -65,7 +67,7 @@ O espelhamento de banco de dados é uma solução para aumentar a disponibilidad
     
        >  É recomendável usar o envio de logs se você estiver executando uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não dá suporte a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Para obter informações sobre quais edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], confira a seção “Alta disponibilidade (AlwaysOn)” de [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
     
-## <a name="see-also"></a>Consulte também    
+## <a name="see-also"></a>Consulte Também    
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)     
  [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)     
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    

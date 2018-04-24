@@ -1,33 +1,33 @@
 ---
 title: RecordOpenOptionsEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - RecordOpenOptionsEnum
 helpviewer_keywords:
 - RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56caae53741a24727763868295ca92216557323c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fecb68d5e6884a0a6bd6bfc4732c0eb02c5d7fdf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Especifica opções para abrir um [registro](../../../ado/reference/ado-api/record-object-ado.md). Esses valores podem ser combinados usando ou.  
@@ -41,7 +41,7 @@ Especifica opções para abrir um [registro](../../../ado/reference/ado-api/reco
 |**adOpenRecordUnspecified**|-1|Padrão. Indica que nenhuma opção for especificada.|  
 |**adOpenOutput**|0x800000|Indica que se os pontos de origem para um nó que contém um script executável (como um. Página ASP), em seguida, aberto **registro** conterá os resultados do script executado. Esse valor só é válido com coleção não registros.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
  Constantes não têm equivalentes do ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se a  

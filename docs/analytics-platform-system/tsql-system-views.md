@@ -1,32 +1,22 @@
 ---
-title: Exibições do sistema do T-SQL - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
-author: barbkess
-ms.author: barbkess
+title: Exibições do sistema - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
+description: Exibições de sistema para sistema de plataforma analítica (APS) SQL Server Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Exibições do sistema Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
-documentationcenter: NA
-editor: ''
-ms.assetid: 21ec594b-d270-4202-a8cd-bb150e5ae12c
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: f6964967bc0ba44b6dd72463c6cbd90c36ad3115
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 35cf9252b43fd4ec52b81cd02fa1e7e777bdbe93
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="system-views"></a>Exibições do sistema
-Exibições do sistema Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Exibições do sistema para análise de plataforma de sistema Parallel Data Warehouse
+Exibições de sistema para sistema de plataforma analítica (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="parallel-data-warehouse-catalog-views"></a>Exibições de catálogo do Parallel Data Warehouse
 * [sys.pdw_column_distribution_properties](http://msdn.microsoft.com/library/mt204022.aspx)

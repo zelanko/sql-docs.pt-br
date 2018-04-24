@@ -1,29 +1,22 @@
 ---
-title: Monitor de dispositivo com o System Center Operations Manager (APS)
-author: barbkess
-ms.author: barbkess
+title: Monitor com o SCOM - Analytics Platform System | Microsoft Docs
+description: Use o System Center Operations Manager (SCOM) para monitorar o dispositivo Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>Monitorar o dispositivo usando o System Center Operations Manager
-Descreve como usar o System Center Operations Manager para monitorar o SQL Server PDW e HDInsight.  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitor com o System Center Operations Manager - Analytics Platform System
+Use o System Center Operations Manager (SCOM) para monitorar o dispositivo Analytics Platform System (APS).
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
@@ -33,7 +26,7 @@ Descreve como usar o System Center Operations Manager para monitorar o SQL Serve
   
 2.  SQL Server 2008 R2 Native Client ou SQL Server 2012 Native Client deve ser instalado.  
   
-3.  Os pacotes de gerenciamento para monitorar o SQL Server PDW e HDInsight devem ser instalados, importados e configurados. Use o seguinte para obter instruções para executar essas tarefas.  
+3.  Os pacotes de gerenciamento para monitorar o SQL Server PDW e HDInsight devem ser instalados, importados e configurados. Use os seguintes artigos para obter instruções para executar essas tarefas.  
   
     -   [Instalar os pacotes de gerenciamento do SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
   
@@ -53,7 +46,7 @@ Alertas são onde você pode encontrar os alertas atuais para gerenciar.
 ![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Dispositivos  
-Os dispositivos são onde você encontrará os dispositivos de PDW do servidor do SQL que tenha atualmente descobertos e monitorados no seu ambiente. Se um dispositivo não aparecerão aqui e você criou a conexão ODBC para ele, em seguida, pode haver algum problema com sua conta PDWWatcher. Se eles aparecem como "Não monitorado" talvez haja algum problema com sua conta PDWMonitor. Tenha Paciência SCOM não fazer alterações em tempo real, mas verifica periodicamente se há novos dispositivos monitorar e periodicamente envia consultas com dispositivos para monitoramento.  
+Os dispositivos são onde você encontrará os dispositivos de PDW do servidor do SQL que tenha atualmente descobertos e monitorados no seu ambiente. Se um dispositivo não aparecerão aqui e você criou a conexão ODBC para ele, em seguida, pode haver algum problema com sua conta PDWWatcher. Se eles aparecem como "Não monitorado", pode haver algum problema com sua conta PDWMonitor. Tenha Paciência pois SCOM não fazer alterações em tempo real, mas verifica periodicamente se há novos dispositivos monitorar e periodicamente envia consultas com dispositivos para monitoramento.  
   
 ![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
@@ -65,7 +58,7 @@ A página de diagrama de dispositivos é onde você pode obter uma aparência a 
 ### <a name="nodes"></a>Nós  
 Por fim, o modo de exibição de nós permite ver a integridade do seu dispositivo por meio de cada nó:  
   
-![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nós](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Consulte também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

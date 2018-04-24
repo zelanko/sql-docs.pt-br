@@ -1,28 +1,21 @@
 ---
-title: Configuração de Firewall PDW (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Configuração de firewall PDW - Analytics Platform System | Microsoft Docs
+description: A página firewall do SQL Server PDW Configuration Manager permite que você habilite ou desabilite as regras de firewall que permitem ou impedem o acesso a portas específicas no dispositivo Analytics Platform System.
+aauthor: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: 28
-ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-firewall-configuration"></a>Configuração de Firewall PDW
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuração do firewall do Data Warehouse paralela no sistema de plataforma de análise
 O **Firewall** página do SQL Server PDW Configuration Manager permite que você habilite ou desabilite as regras de firewall que permitem ou impedem o acesso a portas específicas no dispositivo Analytics Platform System.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Gerenciar portas e regras de firewall para nós de dispositivo  
@@ -44,12 +37,12 @@ As seguintes portas estão abertas para conexões de clientes provenientes de fo
 |-----------|-----------|---------|  
 |Acesso de cliente SQL para PDW (TDS)|17001|CTL|  
 |Acesso de cliente carregador (dwloader & SSIS)|8001|CTL|  
-|Acesso de área de trabalho remoto|3389|CTL, CMP|  
+|Acesso de área de trabalho remoto|3389|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
 |BinaryLoaderDataChannel do SSIS|16551|CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL criptografadas conexões (para comunicações internas, para acessar o Console de administração e para acessar os serviços de cluster do HDInsight)|443|Todos os nós|  
 |Fluxo de controle de carregamento do SQL Server PDW - credenciais do Windows|8002|CTL|  
-|_Kerberos|88|AD01 e AD02,|  
+|Kerberos|88|AD01 e AD02,|  
 |filtros|389|AD01 e AD02|  
   
 ## <a name="internal-ports"></a>Portas internas  
@@ -57,13 +50,13 @@ As seguintes portas são usadas pelo PDW para comunicação interna, mas não es
   
 |Finalidade|N º de porta|Nós|  
 |-----------|-----------|---------|  
-|Tráfego do canal de controle DMS|16450|CTL, CMP|  
-|Tráfego do canal de dados DMS|16550|CTL, CMP|  
-|Diagnósticos internos|16650|CTL, CMP|  
-|Status de failover (DMS)|15000|CTL, CMP|  
+|Tráfego do canal de controle DMS|16450|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Tráfego do canal de dados DMS|16550|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Diagnósticos internos|16650|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Status de failover (DMS)|15000|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
 |Status de failover (Engine)|15001|CMP|  
-|Intervalo de portas dinâmicas de (efêmeras)|20000-65535|CTL, CMP|  
-|Intervalos de porta do SQL Server (TDS)|1433, 1500-1508|CTL, CMP|  
+|Intervalo de portas dinâmicas de (efêmeras)|20000-65535|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
+|Intervalos de porta do SQL Server (TDS)|1433, 1500-1508|LISTA DE CERTIFICADOS CONFIÁVEIS, CMP|  
   
 > [!NOTE]  
 > Criando tabelas externas ou fontes de dados externos usa a porta TCP 8020 por padrão. Essas instruções podem ser configuradas para usar outras portas em vez disso. A porta padrão Hortonworks JOB_TRACKER_LOCATION é 50300. Integração com outros sistemas e ferramentas pode exigir portas adicionais.  

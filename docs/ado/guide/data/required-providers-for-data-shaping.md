@@ -1,6 +1,6 @@
 ---
 title: Necessário provedores para modelagem de dados | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 577c377c4c8022272ffb7c55507d3fdc378aa440
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: ce88a316a1ef31baf083032e31023d36a3e3fff4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>Provedores necessários para modelagem de dados
 Modelagem de dados normalmente requer dois provedores. O provedor de serviços, [Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornece os dados de formatação de funcionalidade e um provedor de dados, como o provedor OLE DB para SQL Server, que fornece linhas de dados para preencher a forma [conjunto de registros ](../../../ado/reference/ado-api/recordset-object-ado.md).  

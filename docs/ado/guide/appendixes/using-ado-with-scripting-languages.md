@@ -1,31 +1,31 @@
 ---
 title: Usando o ADO com linguagens de script | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usando o ADO com linguagens de script
 Em um ambiente de script, ADO permite expor dados por meio de scripts do lado do servidor. Nesse cenário, ADO, o provedor OLE DB subjacente que ele usa, e quaisquer outros componentes necessários para fazer referência a um repositório de dados são instalados em um servidor executando o Internet Information Services (IIS). Usando o Active Server Pages (ASP), o ADO é um componente referenciado em um script que pode gerar HTML, por exemplo. Este conteúdo HTML pode ser passado por meio de HTTP para um navegador da Web do cliente. Usando o script, a página da Web pode enviar ações de volta para o script do lado do servidor, permitindo que você atualizar, percorrer ou visualizar dados específicos.  
@@ -39,10 +39,10 @@ Em um ambiente de script, ADO permite expor dados por meio de scripts do lado do
 |Parâmetro de ADO|não|  
 |ADO Recordset|Sim|  
 |ADO Record|Sim|  
-|ADO Stream|Sim|  
+|Fluxo de ADO|Sim|  
 |Erro de ADO|não|  
 |Catálogo ADOX|não|  
-|ADOX CellSet|não|  
+|Conjunto de células ADOX|não|  
 |DataControl RDS|Sim|  
 |DataSpace RDS|Sim|  
 |DataFactory do RDS|não|  

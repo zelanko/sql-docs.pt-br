@@ -1,15 +1,16 @@
 ---
-title: "Atualizar uma instância do cluster de failover do SQL Server (configuração) | Microsoft Docs"
-ms.custom: 
+title: Atualizar uma instância do cluster de failover do SQL Server (configuração) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading clusters
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e35eab411af665d7758d76fa7e9f3f1353be7ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7bdf71944c3ac248ab61bb43fc07f2db7bc9eab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Atualizar uma instância de cluster de failover do SQL Server (instalação)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode fazer o upgrade de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um cluster de failover do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando a interface do usuário de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou por meio de um prompt de comando.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Você pode atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um cluster de failover do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando a interface de usuário de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou com um prompt de comando.  
   
  Em instalações locais, você deve executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Com a ferramenta de gerenciamento de Cluster de Failover do Windows, adicione um novo endereço IP à nova sub-rede e defina a dependência do recurso de endereço IP como OR.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Depois de atualizar para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], conclua as seguintes tarefas:  
   
 -   [Concluir a atualização do mecanismo de banco de dados](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
@@ -111,7 +113,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Aproveitar os Novos Recursos do SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar uma instância de cluster de failover do SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Adicionar recursos a uma instância do SQL Server 2016 &#40;instalação&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  

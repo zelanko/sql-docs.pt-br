@@ -1,30 +1,30 @@
 ---
 title: Definir o formato de empacotamento de fluxo DCOM | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dcom stream marshaling format in rds [ADO]
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29bef8d1d0bf72dbb818a75387eb8c33f7001981
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 15d82c4896fb5c5b74da6e050d7bdf8b1476ddd8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Definir o formato de empacotamento de fluxo DCOM
 Um computador cliente usando componentes de RDS 1.5 ou anterior não é compatível com um servidor usando componentes de RDS 2.0 ou posterior. Ao usar DCOM como protocolo subjacente, o suporte para RDS 2.0 ou posterior é mais eficiente no transporte [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Se o cliente estiver executando os componentes de RDS 1.5 ou anterior, você pode definir seu servidor para trabalhar com o suporte RDS anterior (chamado RDS 1.0) ou o suporte mais recente do RDS (chamado RDS 2.0 ou posterior). Defina qualquer uma das entradas do registro a seguir:  

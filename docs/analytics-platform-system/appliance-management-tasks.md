@@ -1,29 +1,22 @@
 ---
-title: Tarefas de gerenciamento de dispositivo (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Tarefas de gerenciamento do dispositivo - Analytics Platform System | Microsoft Docs
+description: Este guia descreve como executar tarefas de administração do dispositivo para o Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 516d05a9-b791-4ad3-b8cf-ba34a854e309
-caps.latest.revision: 25
-ms.openlocfilehash: 584de02b3a22224de8b60ba476259a98de31c0ba
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9012ddc562e9252367c7204383fa4ccc06f06345
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-management-tasks"></a>Tarefas de gerenciamento de dispositivo
-Este guia descreve como executar tarefas de administração do dispositivo para o SQL Server PDW.  
+# <a name="appliance-management-tasks-for-analytics-platform-system"></a>Tarefas de gerenciamento de dispositivo para Analytics Platform System
+Este guia descreve como executar tarefas de administração do dispositivo para o Analytics Platform System (APS).  
   
 ## <a name="guide-sections"></a>Seções do guia  
   

@@ -1,33 +1,33 @@
 ---
 title: ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADCPROP_UPDATECRITERIA_ENUM
 helpviewer_keywords:
 - ADCPROP_UPDATECRITERIA_ENUM [ADO]
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf0c00fb7f353171686f57405879b3beb544aa1d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7bdd24f437d1bc0712e0e0222a8e99e999b1f3a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Especifica quais campos podem ser usados para detectar conflitos durante uma atualização otimista de uma linha da fonte de dados com um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -41,8 +41,8 @@ Especifica quais campos podem ser usados para detectar conflitos durante uma atu
 |**adCriteriaTimeStamp**|3|Detecta conflitos se o carimbo de hora dos dados de linha de origem foi alterada, o que significa que a linha tiver sido acessada após o **registros** foi obtido.|  
 |**adCriteriaUpdCols**|2|Detecta conflitos se qualquer uma das colunas da fonte de dados de linhas que correspondem aos campos atualizados o **registros** foram alteradas.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

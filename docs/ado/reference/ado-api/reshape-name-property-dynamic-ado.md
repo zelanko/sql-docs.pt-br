@@ -1,31 +1,31 @@
 ---
-title: "Alterar o nome de propriedade dinâmica (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Alterar o nome de propriedade dinâmica (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8a1d81e91edfcab8b6938f5898ae4fd46cc38b67
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Alterar o nome de propriedade dinâmica (ADO)
 Especifica um nome para o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  

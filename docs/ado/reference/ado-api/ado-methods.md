@@ -1,31 +1,31 @@
 ---
-title: "Métodos de ADO | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Métodos de ADO | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4a2b180e8886931819dafe089e9012dcaa578694
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 |||  
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/09/2018
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lê um número especificado de caracteres de um texto **fluxo** objeto.|  
 |[Atualizar](../../../ado/reference/ado-api/refresh-method-ado.md)|Atualiza os objetos em uma coleção para refletir os objetos disponíveis do e específico ao provedor.|  
 |[Repetir](../../../ado/reference/ado-api/requery-method.md)|Atualiza os dados em um **registros** objeto executar novamente a consulta na qual o objeto se baseia.|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Atualiza os dados no atual **registros** objeto, ou **campos** coleção de um **registro** objeto do banco de dados subjacente.|  
+|[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Atualiza os dados no atual **registros** objeto, ou **campos** coleção de um **registro** objeto do banco de dados subjacente.|  
 |[Salvar](../../../ado/reference/ado-api/save-method.md)|Salva o **registros** em um arquivo ou **fluxo** objeto.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Salva o conteúdo binário de um **fluxo** para um arquivo.|  
 |[Busca](../../../ado/reference/ado-api/seek-method.md)|Pesquisa o índice de um **registros** para localizar rapidamente a linha que corresponde aos valores especificados e altera a posição da linha atual para aquela linha.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/09/2018
 |[Suporta](../../../ado/reference/ado-api/supports-method.md)|Determina se um especificado **registros** objeto oferece suporte a um determinado tipo de funcionalidade.|  
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Salva as alterações feitas à linha atual de um **registros** objeto, ou o **campos** coleção de um **registro** objeto.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Grava todas as atualizações em lotes pendentes no disco.|  
-|[Write](../../../ado/reference/ado-api/write-method.md)|Grava dados binários em uma **fluxo** objeto.|  
+|[Gravação](../../../ado/reference/ado-api/write-method.md)|Grava dados binários em uma **fluxo** objeto.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Grava uma cadeia de caracteres de texto especificado para um **fluxo** objeto.|  
   
 ## <a name="see-also"></a>Consulte também  

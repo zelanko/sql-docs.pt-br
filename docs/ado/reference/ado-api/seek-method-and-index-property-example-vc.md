@@ -1,33 +1,33 @@
 ---
-title: "Exemplo de propriedade de índice (VC + +) e método de busca | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Exemplo de propriedade de índice (VC + +) e método de busca | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a69c31406aa87ac0dc79d7b44a0f471bf7c8c392
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 28bcf43a7aa2d3422b93ffbc6cfff665b255fadc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Exemplo de propriedade de índice (VC + +) e método de busca
 Este exemplo usa o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [busca](../../../ado/reference/ado-api/seek-method.md) método e [índice](../../../ado/reference/ado-api/index-property.md) propriedade em conjunto com um determinado ***ID de funcionário***, para localizar o nome do funcionário no ***funcionários*** tabela do banco de dados Nwind.  

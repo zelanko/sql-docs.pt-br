@@ -1,31 +1,31 @@
 ---
-title: "Método CreateObject (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Método CreateObject (RDS) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 355c56509e8c06b0d687e5d6164cf0e7c4abe93c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="createobject-method-rds"></a>Método CreateObject (RDS)
 Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para ele. Os pacotes e lê dados de proxy para o stub do lado do servidor para comunicação com o objeto de negócios enviar solicitações e dados pela Internet. Para objetos de componente em andamento, sem os proxies são usados, apenas um ponteiro para o objeto é fornecido.  
@@ -38,16 +38,16 @@ Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para el
   
 |Protocolo|Sintaxe|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "http://awebsrvr")|  
+|HTTP|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "http://awebsrvr")|  
 |HTTPS|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
 |DCOM|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "computername")|  
-|Em processo|Set object = DataSpace.CreateObject("ProgId", "")|  
+|Em processo|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>Parâmetros  
  *Objeto*  
  Uma variável de objeto que é avaliada como um objeto que é o tipo especificado em *ProgID*.  
   
- *DataSpace*  
+ *Espaço de dados*  
  Uma variável de objeto que representa um [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto usado para criar uma instância do novo objeto.  
   
  *ProgID*  

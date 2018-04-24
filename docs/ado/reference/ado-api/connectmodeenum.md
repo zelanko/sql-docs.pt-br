@@ -1,33 +1,33 @@
 ---
 title: ConnectModeEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ConnectModeEnum
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f524d7d0385de331abed8d857296c55fcdbdc64
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 09209e0d60bb58e9cf27d74828df30c81d852383
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Especifica as permissões disponíveis para modificar dados em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), abrindo um [registro](../../../ado/reference/ado-api/record-object-ado.md), ou especificar valores para o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade o  **Registro** e [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
@@ -36,7 +36,7 @@ Especifica as permissões disponíveis para modificar dados em um [Conexão](../
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indica as permissões somente leitura.|  
 |**adModeReadWrite**|3|Indica as permissões de leitura/gravação.|  
-|**adModeRecursive**|0x400000|Usado em conjunto com outras  *\*ShareDeny\**  valores (**adModeShareDenyNone**, **adModeShareDenyWrite**, ou **adModeShareDenyRead**) para propagar as restrições de compartilhamento para todos os registros de subtipo do atual **registro**. Ela não terá efeito se a **registro** não tem nenhum filho. Um erro de tempo de execução será gerado se ele é usado com **adModeShareDenyNone** somente. No entanto, ele pode ser usado com **adModeShareDenyNone** quando combinado com outros valores. Por exemplo, você pode usar "**adModeRead** ou **adModeShareDenyNone** ou **adModeRecursive**".|  
+|**adModeRecursive**|0x400000|Usado em conjunto com outras *\*ShareDeny\** valores (**adModeShareDenyNone**, **adModeShareDenyWrite**, ou **adModeShareDenyRead**) para propagar as restrições de compartilhamento para todos os registros de subtipo do atual **registro**. Ela não terá efeito se a **registro** não tem nenhum filho. Um erro de tempo de execução será gerado se ele é usado com **adModeShareDenyNone** somente. No entanto, ele pode ser usado com **adModeShareDenyNone** quando combinado com outros valores. Por exemplo, você pode usar "**adModeRead** ou **adModeShareDenyNone** ou **adModeRecursive**".|  
 |**adModeShareDenyNone**|16|Permite que outros usuários abrir uma conexão com as permissões. O acesso à leitura/gravação não pode ser negado a outras pessoas.|  
 |**adModeShareDenyRead**|4|Impede que outras pessoas abram uma conexão com permissões de leitura.|  
 |**adModeShareDenyWrite**|8|Impede que outras pessoas abram uma conexão com permissões de gravação.|  
@@ -44,8 +44,8 @@ Especifica as permissões disponíveis para modificar dados em um [Conexão](../
 |**adModeUnknown**|0|Padrão. Indica que as permissões ainda não foi definidas ou não podem ser determinadas.|  
 |**adModeWrite**|2|Indica as permissões de somente gravação.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

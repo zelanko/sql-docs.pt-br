@@ -1,15 +1,16 @@
 ---
-title: "Especificações de capacidade máxima do SQL Server | Microsoft Docs"
+title: Especificações de capacidade máxima do SQL Server | Microsoft Docs
 ms.date: 11/6/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - objects [SQL Server]
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: "88"
+caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ec628362449c449d26005797e806e47b4614a79
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2b1465f6816523cd057aec54b6685a09141e2d72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/05/2017
 |Bytes por chave de índice para tabelas com otimização de memória||2.500 bytes para um índice não clusterizado. Nenhum limite para um índice de hash, desde que todas as chaves de índice caibam em linha.|Em uma tabela com otimização de memória, um índice não clusterizado não pode ter colunas de chave cujos tamanhos máximos de declarados excedem 2.500 bytes. É irrelevante se os dados reais nas colunas de chave são menores que os tamanhos máximos declarados.<br /><br /> Para uma chave de índice de hash, não há um limite fixo no tamanho.<br /><br /> Para índices em tabelas com otimização de memória, não há nenhum conceito de colunas incluídas, pois inerentemente todos os índices abrangem todas as colunas.<br /><br /> Para uma tabela com otimização de memória, mesmo que o tamanho da linha seja 8.060 bytes, algumas colunas de comprimento variável podem ser fisicamente armazenadas fora desses 8.060 bytes. No entanto, os tamanhos máximos declarados de todas as colunas de chave para todos os índices em uma tabela, além de quaisquer colunas de comprimento fixo adicionais, devem caber nos 8.060 bytes.|  
 |Bytes por chave estrangeira||900||  
 |Bytes por chave primária||900||  
-|Bytes por linha||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte ao armazenamento de estouro de linha, o que permite que colunas de comprimento variável sejam enviadas por push para fora da linha. Somente uma raiz de 24 bytes é armazenada no registro principal para colunas de comprimento variável empurradas para fora da linha; por isso, o limite efetivo de linha é maior que nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte o tópico "Dados de estouro de linha que excedem 8 KB" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|Bytes por linha||8.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte ao armazenamento de estouro de linha, o que permite que colunas de comprimento variável sejam enviadas por push para fora da linha. Somente uma raiz de 24 bytes é armazenada no registro principal para colunas de comprimento variável empurradas para fora da linha; por isso, o limite efetivo de linha é maior que nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte o tópico "Dados de estouro de linha que excedem 8 KB" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |Bytes por linha em tabelas com otimização de memória||8,060|Começando no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , as tabelas com otimização de memória dão suporte ao armazenamento fora da linha. Colunas de comprimento variável são enviadas por push para fora da linha se os tamanhos máximos de todas as colunas na tabela excederem 8.060 bytes. Esta é uma decisão de tempo de compilação. Apenas uma referência de 8 bytes é armazenada na linha para colunas armazenadas fora de linha. Para obter mais informações, consulte [Tamanho da tabela e da linha em tabelas com otimização de memória](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes em texto de fonte de um procedimento armazenado||Menor que o tamanho do lote ou 250 MB||  
 |Bytes por coluna **varchar(max)**, **varbinary(max)**, **xml**, **text**ou **image**||2^31-1||  
@@ -155,7 +156,7 @@ ms.lasthandoff: 12/05/2017
   
  **A tabela base pode incluir o número máximo de colunas permitidas no banco de dados de publicação (1.024 para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mas as colunas devem ser filtradas do artigo se excederem o máximo especificado para o tipo de publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Requisitos de hardware e software para a instalação do SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Verificar parâmetros do Verificador de Configuração do Sistema](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

@@ -1,33 +1,33 @@
 ---
 title: EventStatusEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - EventStatusEnum
 helpviewer_keywords:
 - EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 213d511098daa616043e7dd3078025d63ba2333c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8201b8a12ce70a71aff25c72d55db317e326c5f5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Especifica o status atual da execução de um evento.  
@@ -40,8 +40,8 @@ Especifica o status atual da execução de um evento.
 |**adStatusOK**|1|Indica que a operação que causou o evento foi bem-sucedida.|  
 |**adStatusUnwantedEvent**|5|Impede que as notificações subsequentes antes do método de evento concluiu a execução.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+ Pacote: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

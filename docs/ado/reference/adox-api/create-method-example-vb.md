@@ -1,32 +1,32 @@
 ---
-title: "Criar um exemplo de método (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Criar um exemplo de método (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Create method [ADOX], Visual Basic example
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da338a38485850ea383644af3c64ee9ba1cfb975
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3a20f49fe8f62afe8558c4614fa9f6e77728ea12
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-method-example-vb"></a>Criar um exemplo de método (VB)
 O código a seguir mostra como criar um novo banco de dados do Microsoft Jet com o [criar](../../../ado/reference/adox-api/create-method-adox.md) método.  

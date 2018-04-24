@@ -1,28 +1,21 @@
 ---
-title: Definir senha de Logon de administrador de nós do AD no modo de restauração dos serviços de diretório (APS)
-author: barbkess
-ms.author: barbkess
+title: Definir senha do Active Directory - Analytics Platform System | Microsoft Docs
+description: Definir senha de logon do administrador do Active Directory nós no modo de restauração dos serviços de diretório Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 97a9c715-2763-417d-b45c-bb0180759e47
-caps.latest.revision: 20
-ms.openlocfilehash: 3e09305152a2892ae4acaf7096921d2a73345b63
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e74689216c1485fc0c11c588acb151269e2b5d2b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm"></a>Definir senha de administrador para fazer logon em nós do AD no modo de restauração dos serviços de diretório (DSRM)
+# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Definir senha de administrador para fazer logon no AD nós nos serviços de diretório restaurar modo (DSRM) - Analytics Platform System
 Modo de restauração de serviços de diretório (DSRM) é um modo de inicialização para reparo ou recuperação de serviços de domínio Active Directory (AD DS). Ele é usado para fazer logon em nós de dispositivo AD após a falha do AD DS ou quando o AD DS precisa ser restaurado. A senha do DSRM foi inicializada durante a configuração de dispositivo no site do fornecedor de hardware e deve ser alterada pelo administrador do dispositivo. Analytics Platform System tem dois AD DS (controladores de domínio); ***appliance_domain *-AD01** e ***appliance_domain *-AD02**. Para cada nó de dispositivo AD, altere a senha do DSRM usando as etapas a seguir.  
   
 ## <a name="HowToDSRM"></a>Para redefinir a senha de administrador  

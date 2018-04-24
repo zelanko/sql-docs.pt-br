@@ -1,27 +1,21 @@
 ---
-title: Configurações de hardware (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: As configurações de hardware - Analytics Platform System | Microsoft Docs
+description: O hardware do dispositivo Analytics Platform System (APS) foi projetado com unidades escalonáveis, para que você comprar a quantidade certa de processamento e armazenamento de acordo com seus requisitos de negócios. O dispositivo é dimensionada armazenamento para Parallel Data Warehouse de alguns terabytes até petabytes em 6 de dados.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: O hardware Analytics Platform System (APS) foi projetado com unidades escalonáveis, para que você comprar a quantidade certa de processamento e armazenamento de acordo com seus requisitos de negócios.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: 9
-ms.openlocfilehash: d6f4b25584826d637db0a5f51ebe8ede458136c2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-configurations"></a>Configurações de hardware
+# <a name="hardware-configurations---analytics-platform-system"></a>Configurações de hardware - Analytics Platform System
 O hardware Analytics Platform System (APS) foi projetado com unidades escalonáveis, para que você comprar a quantidade certa de processamento e armazenamento de acordo com seus requisitos de negócios. O dispositivo pode ser dimensionado armazenamento para SQL Server Parallel Data Wareouse (PDW) de alguns Terabytes até Petabytes em 6 de dados.  
   
 ## <a name="contents"></a>Sumário  

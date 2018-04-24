@@ -1,28 +1,21 @@
 ---
-title: Configurar o Windows Server Update Services (WSUS) (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Configurar o WSUS - Analytics Platform System | Microsoft Docs
+description: Essas instruções orientam você durante as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>Configurar o Windows Server Update Services (WSUS)
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no sistema de plataforma de análise
 Essas instruções orientam você durante as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual do VMM do dispositivo.  
   
 Para obter mais informações sobre como configurar o WSUS, consulte o [guia de instalação passo a passo do WSUS](http://go.microsoft.com/fwlink/?LinkId=202417) no site do WSUS. Depois de configurar o WSUS, consulte [baixar e aplicar atualizações da Microsoft &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) para iniciar uma atualização.  
@@ -113,7 +106,7 @@ Para configurar o WSUS, você precisa:
   
     Se este servidor requer um servidor proxy para acessar o Microsoft Update ou outro servidor upstream, você pode configurar as configurações do servidor proxy aqui. Caso contrário, clique em **próximo**.  
   
-    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![Proxy WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>Para definir configurações de servidor proxy  
   
@@ -165,7 +158,7 @@ Para configurar o WSUS, você precisa:
   
     Selecione **sincronizar manualmente**e, em seguida, clique em **próximo**.  
   
-    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Definir agenda de sincronização](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Começar a sincronização inicial.  
   
@@ -185,7 +178,7 @@ Depois de configurar o WSUS para Analytics Platform System, a próxima etapa é 
   
 1.  Abra o console do WSUS, clique no **todos os computadores** e, em seguida, clique em **adicionar grupo de computadores**.  
   
-    ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
+    ![Adicione um grupo de computadores. ] (./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
 2.  Insira o nome "APS" para o grupo de computadores e, em seguida, clique em **adicionar**.  
   
@@ -201,7 +194,7 @@ Depois de configurar o WSUS para Analytics Platform System, a próxima etapa é 
   
 5.  Selecione o novo grupo de computadores que você criou clicando na caixa de seleção e, em seguida, clicando em **Okey**.  
   
-    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Associação de grupo de computadores do conjunto](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Selecione o novo grupo de computadores, alterar seu **Status** para **qualquer**e, em seguida, clique em **atualizar**. Todos os computadores agora devem ser atribuídos a esse grupo e listados no painel direito. Geralmente é seguro continuar quando nós mostram avisos como **esse nó não relatou o status ainda**.  
   

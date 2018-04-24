@@ -1,15 +1,16 @@
 ---
-title: "Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados) | Microsoft Docs"
-ms.custom: 
+title: 'Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatic page repair
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3977d1893d009b9a427a28d4f320d31c1e747d03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O reparo automático de página é compatível com o espelhamento de banco de dados e com o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois que certos tipos de erros corrompem uma página, tornando-a ilegível, um parceiro de espelhamento de banco de dados (entidade de segurança ou espelho) ou uma réplica de disponibilidade (primária ou secundária) tenta recuperar a página automaticamente. O parceiro/réplica que não puder ler a página solicitará uma cópia atualizada da página do seu parceiro ou de outra réplica. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia legível. Isso costuma resolver o erro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O reparo automático de página tem suporte do espelhamento de banco de dados e de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois que certos tipos de erros corrompem uma página, tornando-a ilegível, um parceiro de espelhamento de banco de dados (entidade de segurança ou espelho) ou uma réplica de disponibilidade (primária ou secundária) tenta recuperar a página automaticamente. O parceiro/réplica que não puder ler a página solicitará uma cópia atualizada da página do seu parceiro ou de outra réplica. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia legível. Isso costuma resolver o erro.  
   
  Em geral, o espelhamento de banco de dados e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tratam erros de E/S de formas equivalentes. As poucas diferenças são destacadas explicitamente aqui.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  O reparo automático de página do espelhamento de banco de dados tenta reparar apenas páginas em um arquivo de dados no qual houve falha na operação de um dos erros listados na tabela a seguir.  
   
-|Número do erro|Descrição|Instâncias que causam uma tentativa de reparo automático de página|  
+|Número do erro|Description|Instâncias que causam uma tentativa de reparo automático de página|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|Ação realizada apenas se o sistema operacional tiver executado uma CRC (verificação de redundância cíclica) que falhou nos dados.|ERROR_CRC. O valor do sistema operacional desse erro é 23.|  
 |824|Erros lógicos.|Erros de dados lógicos, como gravação interrompida ou soma de verificação de página inválida.|  
@@ -116,7 +118,7 @@ ms.lasthandoff: 12/05/2017
      Retorna uma linha para cada tentativa de reparo automático de página em qualquer banco de dados espelho na instância de servidor.  
   
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

@@ -1,32 +1,32 @@
 ---
-title: "Formatar a cláusula COMPUTE | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Formatar a cláusula COMPUTE | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula COMPUTE de forma gera um pai **registros**, cujas colunas consistem em uma referência para o filho **registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **Recordset** ou de forma anteriormente **Recordset**; e todas as colunas de filho **Recordset** listados em opcional pela cláusula.  

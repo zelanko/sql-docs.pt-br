@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 53cbc9dd9fe0f2043026345e3385bdcdb2075f39
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-features-for-each-release"></a>Recursos do ADO para cada versão.
 Este tópico lista os novos recursos introduzidos por cada versão do ADO MD, ADO e ADOX.
@@ -37,30 +37,30 @@ Este tópico lista os novos recursos introduzidos por cada versão do ADO MD, AD
  *Acesso de unidade de disco rígido não é permitido fora de uma zona confiável.*
 No domínio cruzado script envolvendo sites não confiáveis, as operações a seguir estão desabilitadas: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, e **Recordset.Open**, usado em conjunto com o **adCmdFile** sinalizador ou com o Microsoft OLE DB provedor de persistência (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, e* **Stream.LoadFromFile***operar somente arquivos físicos.* 
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, e* **Stream.LoadFromFile***operar somente arquivos físicos.*
 Esses métodos agora verificar o ponto de identificadores de arquivo para arquivos físicos apenas.
 
- **Recordset.ActiveCommand***retorna um erro quando chamado a partir de uma página HTML/ASP.* 
+ **Recordset.ActiveCommand***retorna um erro quando chamado a partir de uma página HTML/ASP.*
 Isso impede que o **comando** objeto sejam mal utilizadas.
 
- *O número de***conjuntos de registros***retornado por uma instrução***forma***comando possui um limite superior.* 
+ *O número de***conjuntos de registros***retornado por uma instrução***forma***comando possui um limite superior.*
 Um comando de forma aninhada agora retorna um máximo de 512 **conjuntos de registros**. Isso significa que um **forma** comando não pode ser aninhado em qualquer profundidade. Em vez disso, a profundidade máxima de nível é 512, se cada comando resulta em uma única (filho) **registros**. Se, em qualquer nível, um **forma** comando retorna várias **conjuntos de registros**, o nível máximo de profundidade será menor que 512.
 
 ## <a name="ado-27"></a>ADO 2.7
  *suporte a plataformas de 64 bits* ADO 2.7 introduz suporte para processadores de 64 bits.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***método* começando com o ADO 2.6, objetos do ADO MD podem ser recuperados usando nomes exclusivos, conforme especificado pelo [propriedade UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Os nomes de objetos pai não precisam ser conhecidos e coleções pai não precisam ser preenchidos para recuperar um objeto de esquema. Consulte [GetSchemaObject método (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***método* começando com o ADO 2.6, objetos do ADO MD podem ser recuperados usando nomes exclusivos, conforme especificado pelo [propriedade UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Os nomes de objetos pai não precisam ser conhecidos e coleções pai não precisam ser preenchidos para recuperar um objeto de esquema. Consulte [GetSchemaObject método (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Comando fluxos* o **comando** objeto dá suporte a comandos no formato de fluxo como uma alternativa ao uso de **CommandText** propriedade. O [propriedade CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) pode ser usado para especificar modelos XML ou diagramas de atualização como o **comando** de entrada com o Microsoft OLE DB Provider para SQL Server.
 
- **Dialeto***propriedade* [dialeto](../../ado/reference/ado-api/dialect-property.md) é uma nova propriedade que define a sintaxe e geral de regras que o provedor usa para analisar a cadeia de caracteres ou fluxo.  
+ **Dialeto***propriedade* [dialeto](../../ado/reference/ado-api/dialect-property.md) é uma nova propriedade que define a sintaxe e geral de regras que o provedor usa para analisar a cadeia de caracteres ou fluxo.
 
- **Command.Execute***método* o [executar o método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto foi aprimorado para usar fluxos de entrada e saída.  
+ **Command.Execute***método* o [executar o método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto foi aprimorado para usar fluxos de entrada e saída.
 
  *Campo statusvalues* se o usuário encontra um erro DB_E_ERRORSOCCURRED ao modificar um **campo** de um **registros**, ADO preencherá o **Field.Status**propriedade com as informações de status apropriado para que o usuário tenha mais informações sobre o que deu errado. Consulte [a propriedade de Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***propriedade* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) é uma nova propriedade do **comando** chamado de objeto que indica que o provedor deve usar parâmetros.  
+ **NamedParameters***propriedade* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) é uma nova propriedade do **comando** chamado de objeto que indica que o provedor deve usar parâmetros.
 
  *Conjuntos de resultados em fluxos* ADO pode retornar conjuntos de resultados de uma fonte de dados em um **fluxo**, em vez de **registros** objeto. Usando a versão mais recente do Microsoft OLE DB Provider para SQL Server, você pode obter resultados XML do provedor executando uma consulta de "Para XML". Um **fluxo** que recebe o conjunto de resultados pode ser aberto com um comando "Para XML" como a origem. Consulte [recuperar conjuntos de resultados em fluxos](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 

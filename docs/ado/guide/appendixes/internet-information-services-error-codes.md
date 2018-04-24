@@ -1,31 +1,31 @@
 ---
-title: "Códigos de erro de serviços de informações da Internet | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Códigos de erro de serviços de informações da Internet | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], IIS
 - IIS errors [ADO]
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcffff281bcd3f537dcf696e5a2ff374ebe56e54
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f8049c588ff230a5f9339bb932af10e9f9fe65eb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Códigos de erro de serviços de informações da Internet para o serviço de dados remotos
 A tabela a seguir lista os códigos de erro do Microsoft® Internet Information Services (IIS) relacionados ao uso do serviço de dados remoto. A conversão decimal positiva de dois bytes de baixa, a conversão decimal negativa do código de erro completa e os valores hexadecimais são mostrados.

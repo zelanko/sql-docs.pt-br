@@ -1,31 +1,31 @@
 ---
-title: "Botões de comando do catálogo de endereços | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Botões de comando do catálogo de endereços | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 531e10f28850e6da6f9863cb5f06e253793b1dee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05c3a221f32b7c9921746a13cc3c20d8244a3ff8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-command-buttons"></a>Botões de comando do catálogo de endereços
 O aplicativo de catálogo de endereços inclui os seguintes botões de comando:  
@@ -78,7 +78,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Quando `DC1.SubmitChanges` é executado, o serviço de dados remoto todas as informações de atualização de pacotes e a envia para o servidor por meio de HTTP. A atualização é tudo ou nada; Se uma parte da atualização for bem-sucedida, nenhuma alteração é feita, e uma mensagem de status é retornada. `DC1.Refresh`não é necessário após **SubmitChanges** com o serviço de dados remoto, mas garante dados atualizados.  
+ Quando `DC1.SubmitChanges` é executado, o serviço de dados remoto todas as informações de atualização de pacotes e a envia para o servidor por meio de HTTP. A atualização é tudo ou nada; Se uma parte da atualização for bem-sucedida, nenhuma alteração é feita, e uma mensagem de status é retornada. `DC1.Refresh` não é necessário após **SubmitChanges** com o serviço de dados remoto, mas garante dados atualizados.  
   
 ## <a name="cancel-changes-button"></a>Botão Cancelar alterações  
  Clicando em **Cancelar alterações** ativa o procedimento de VBScript Cancel_OnClick Sub, que executa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método.  

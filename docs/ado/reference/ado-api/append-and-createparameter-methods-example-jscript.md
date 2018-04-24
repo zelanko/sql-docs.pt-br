@@ -1,33 +1,33 @@
 ---
-title: "Anexar e exemplo dos métodos CreateParameter (JScript) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Anexar e exemplo dos métodos CreateParameter (JScript) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f4fb56c40cca35734a4dbc247492f8db3dd86b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6b4419f1d7935ea15aff3170f922bc9f1d43fa00
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Anexar e exemplo dos métodos CreateParameter (JScript)
 Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AppendJS.asp**.  

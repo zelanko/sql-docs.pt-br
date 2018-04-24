@@ -1,33 +1,33 @@
 ---
-title: "Exemplo de propriedades de precisão (VC + +) e NumericScale | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Exemplo de propriedades de precisão (VC + +) e NumericScale | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcd1f58b172fc74220b0340b8b1b50ac6744ea64
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07b8f08ec1eedc9475eb0e745e8772258a0595da
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Exemplo de propriedades de precisão (VC + +) e NumericScale
 Este exemplo usa o [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [precisão](../../../ado/reference/ado-api/precision-property-ado.md) propriedades para exibir a escala numérica e a precisão dos campos no ***descontos*** analítico o  ***Pubs*** banco de dados.  

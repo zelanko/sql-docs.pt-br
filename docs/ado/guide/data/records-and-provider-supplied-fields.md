@@ -1,31 +1,31 @@
 ---
 title: Registros e campos fornecidos pelo provedor | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fbde4c56512a93113e583f906d812e93f8b9e921
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros e campos fornecidos pelo provedor
 Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto está aberto, sua origem pode ser a linha atual de uma abertas [registros](../../../ado/reference/ado-api/recordset-object-ado.md), uma URL absoluta ou uma URL relativa em conjunto com um aberto [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -73,8 +73,8 @@ Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica o tipo MIME do documento, que indica o formato como "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica o idioma no qual o conteúdo é armazenado.|  
 |RESOURCE_CREATIONTIME|adFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi criado. O tempo é relatado no formato Tempo Universal Coordenado (UTC).|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi acessado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não oferece suporte a esse membro de tempo.|  
-|RESOURCE_LASTWRITETIME|AdFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi gravado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não oferece suporte a esse membro de tempo.|  
+|RESOURCE_LASTACCESSTIME|adFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi acessado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não oferece suporte a esse membro de tempo.|  
+|RESOURCE_LASTWRITETIME|adFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi gravado pela última vez. A hora está no formato UTC. Os membros FILETIME são zero se o provedor não oferece suporte a esse membro de tempo.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Somente leitura. Indica o tamanho do fluxo de padrão do recurso, em bytes.|  
 |RESOURCE_ISCOLLECTION|adBoolean|Somente leitura. True se o recurso é uma coleção, como um diretório. False se o recurso é um arquivo simple.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True se o recurso for um documento estruturado. False se o recurso não é um documento estruturado. Pode ser uma coleção ou um arquivo simples.|  

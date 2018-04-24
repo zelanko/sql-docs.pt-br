@@ -1,30 +1,23 @@
 ---
-title: Configurar servidor de SQL SMP externos para receber cópias da tabela remota (PDW)
-author: barbkess
-ms.author: barbkess
+title: Configurar o SQL Server para receber cópias da tabela remota - Parallel Data Warehouse | Microsoft Docs
+description: Descreve como configurar uma instância externa do SMP SQL Server para receber cópias da tabela remota do Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: 13
-ms.openlocfilehash: 94b62dbae331c19fa97c1625a53804f4cd96bfa5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>Configurar um servidor SQL SMP externos para receber cópias da tabela remota
-Descreve como configurar uma instância externa do SQL Server para receber cópias da tabela remota do SQL Server PDW.  
-  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Configurar um servidor de SQL SMP externo para receber cópias da tabela remota - Parallel Data Warehouse
+Descreve como configurar uma instância externa do SQL Server para receber cópias da tabela remota do Parallel Data Warehouse.  
+
 Este tópico descreve uma das etapas de configuração para configurar a cópia da tabela remota. Para obter uma lista de todas as etapas de configuração, consulte [cópia da tabela remota](remote-table-copy.md).  
   
 ## <a name="before-you-begin"></a>Antes de começar  

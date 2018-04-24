@@ -1,31 +1,31 @@
 ---
-title: "Operação de comandos parametrizados | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Operação de comandos parametrizados | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Operação de comandos com parâmetros
 Se você estiver trabalhando com um grande filho **registros**, especialmente em comparação com o tamanho do pai **registros**, mas que precisam acessar apenas alguns capítulos de filho, talvez seja mais eficiente usar um comando com parâmetros.  

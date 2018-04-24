@@ -1,15 +1,16 @@
 ---
-title: "Criar um novo cluster de failover do SQL Server (instalação) | Microsoft Docs"
-ms.custom: 
+title: Criar um novo cluster de failover do SQL Server (instalação) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14ed72a03a7911dd9e6bf29c38f516781b5df6a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a1553c7584ec6d90bcefbbdabf7c44788830740d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Criar um novo cluster de failover do SQL Server (instalação)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para instalar ou fazer o upgrade de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve executar o programa de instalação em cada nó do cluster de failover. Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser adicionado à instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Não execute a Instalação no nó ativo para gerenciar os outros nós.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Para instalar ou atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve executar o programa de instalação em cada nó do cluster de failover. Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser adicionado à instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Não execute a Instalação no nó ativo para gerenciar os outros nós.  
   
  Dependendo de como os nós estão agrupados, o cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será configurado das seguintes maneiras:  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obter mais informações sobre como instalar o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em um cluster de failover do Windows, consulte [Como criar clusters do SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de começar, examine os seguintes tópicos dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Planejando uma instalação do SQL Server](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -401,12 +403,12 @@ ms.lasthandoff: 11/20/2017
   
 19. Após a instalação, a página **Concluído** fornece um link para o arquivo de log de resumo da instalação e outras observações importantes. Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Fechar**. Com essa etapa, todos os nós preparados para o mesmo cluster de failover agora fazem parte do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concluído.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  **Configure a nova instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** – Para reduzir a área da superfície sujeita a ataque de um sistema, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos chave. Para obter mais informações, consulte [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Para obter mais informações sobre os locais de arquivo de log, consulte [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o SQL Server 2016 do prompt de comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

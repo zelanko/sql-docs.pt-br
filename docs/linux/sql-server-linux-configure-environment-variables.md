@@ -1,6 +1,6 @@
 ---
-title: "Configurar o SQL Server com variáveis de ambiente | Microsoft Docs"
-description: "Este artigo descreve como usar variáveis de ambiente para configurar as configurações específicas de 2017 do SQL Server no Linux."
+title: Configurar o SQL Server com variáveis de ambiente | Microsoft Docs
+description: Este artigo descreve como usar variáveis de ambiente para configurar as configurações específicas de 2017 do SQL Server no Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 523959047c7b7cd7cce36138650b8cc52873f73e
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar o SQL Server com variáveis de ambiente no Linux
 
@@ -53,6 +53,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 | **MSSQL_AGENT_ENABLED** | Habilite o SQL Server Agent. Por exemplo, 'true' está habilitada e 'false' está desabilitado. Por padrão, o agente está desabilitado.  |
 | **MSSQL_MASTER_DATA_FILE** | Define o local do arquivo de dados do banco de dados mestre. |
 | **MSSQL_MASTER_LOG_FILE** | Define o local do arquivo de log do banco de dados mestre. |
+| **MSSQL_ERROR_LOG_FILE** | Define o local dos arquivos de log de erros. |
 
 
 ## <a name="example-initial-setup"></a>Exemplo: instalação inicial

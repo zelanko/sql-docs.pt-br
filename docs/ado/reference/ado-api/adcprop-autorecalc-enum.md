@@ -1,33 +1,33 @@
 ---
 title: ADCPROP_AUTORECALC_ENUM | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADCPROP_AUTORECALC_ENUM
 helpviewer_keywords:
 - ADCPROP_AUTORECALC_ENUM [ADO]
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: febcd58f0ae5fb96f40708712520ea8d0bcd7d0b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5cac0bdaf0980913cbbcbde4147bafece3de8a0a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 Especifica quando o [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provedor calcula novamente colunas calculadas e agregação em um conjunto de registros hierárquico.  
@@ -39,5 +39,5 @@ Especifica quando o [MSDataShape](../../../ado/guide/appendixes/microsoft-data-s
 |**adRecalcAlways**|1|Padrão. Recalcula sempre que o **MSDataShape** provedor determina os valores que dependem de colunas calculadas que foram alterados.|  
 |**adRecalcUpFront**|0|Calcula apenas quando criar inicialmente o hierárquica **registros**.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
  Constantes não têm equivalentes do ADO/WFC.

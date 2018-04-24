@@ -1,35 +1,35 @@
 ---
 title: Interface ADOStreamConstruction | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADOStreamConstruction
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87d609abefd972ec6fe3c9443f658ffbcc069511
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0be1e9a290fc95303220c9a6c4b80df7e75e2905
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="adostreamconstruction-interface"></a>ADOStreamConstruction Interface
+# <a name="adostreamconstruction-interface"></a>Interface ADOStreamConstruction
 O **ADOStreamConstruction** interface é usada para construir um ADO **fluxo** objeto a partir de um banco de dados OLE **IStream** objeto em um aplicativo C/C++.  
   
 ## <a name="properties"></a>Propriedades  
@@ -75,7 +75,7 @@ adoStrConstruct->put_Stream(pUnk);
 ## <a name="requirements"></a>Requisitos  
  **Versão:** ADO 2.0 ou posterior  
   
- **Library:** msado15.dll  
+ **Biblioteca:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

@@ -17,11 +17,12 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: e4328da10d2ec51083f3b1dbc23d6b0f5fa5da21
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6de9d9493178689a29cc90e79e228a9cb07aaace
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW instalação e configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,4 +78,4 @@ O banco de dados de exemplo pode fazer uso do PolyBase para arquivos de consulta
 1. No SQL Server Management Studio, conecte-se ao banco de dados WideWorldImportersDW e abrir uma nova janela de consulta.
 2. Execute o seguinte comando T-SQL para permitir o uso do PolyBase no banco de dados:
 
-   EXECUTE [Application].[Configuration_ApplyPolyBase]
+   EXECUTE [aplicativo]. [Configuration_ApplyPolyBase]
