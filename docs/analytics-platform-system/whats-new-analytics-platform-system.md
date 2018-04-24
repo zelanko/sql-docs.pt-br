@@ -1,23 +1,19 @@
 ---
-title: O que há de novo no Analytics Platform System – um depósito de dados de expansão
-author: happynicolle
-ms.author: nicw;barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: O que há de novo no Analytics Platform System – um depósito de dados de expansão | Microsoft Docs
 description: Veja o que há de novo no Microsoft® Analytics Platform System, um aplicativo de expansão no local que hospeda MPP SQL Server Parallel Data Warehouse.
-ms.date: 11/28/2016
-ms.topic: article
-ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4beb44ac45d95aa0338dc9dc0be0796a223d3243
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System 2016, um data warehouse de MPP de expansão
 Consulte o que há de novo no Microsoft® Analytics Platform System (APS) 2016, a atualização mais recente do dispositivo de um dispositivo de expansão no local que hospeda MPP SQL Server Parallel Data Warehouse. 
