@@ -3,7 +3,7 @@ title: Tipos definidos pelo usuário CLR grandes | Microsoft Docs
 description: Tipos CLR grandes definidos pelo usuário no OLE DB Driver para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - large CLR user-defined types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b15b2992cb82da368a7aa0786a37e23b6c100cf9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 98efe44495c73aef6baf030eb2ea4b4b11ab4e7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types"></a>Tipos de dados CLR grandes definidos pelo usuário
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/06/2018
   
 ## <a name="use-cases"></a>Casos de uso   
   
- Para OLE DB, suporte a UDTs grandes inclui a capacidade de transmitir valores UDT para e do servidor usando a associação de ISequentialStream.  
+ Para o OLE DB, o suporte a UDTs grandes inclui a capacidade de transmitir valores UDT para e do servidor usando a associação .  
   
  Os UDTs inferiores ou iguais a 8.000 bytes se comportarão como no SQL Server 2005. Para OLE DB, você ainda pode transmitir UDTs pequenos usando associação de ISequentialStream.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/06/2018
   
  Para aplicativos com código de acesso a dados existente, você pode explorar o comportamento de UDTs CLR no cliente recuperando UDTs através de APIs nativas e criando instâncias deles com C++ CLI interop em aplicativos de modo misto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do Driver do OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
   
   

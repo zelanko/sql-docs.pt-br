@@ -1,28 +1,28 @@
 ---
 title: Propriedades de TCP/IP (guia Protocolos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f83362998d192f3910a8da5da7d351a8c32ff538
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
@@ -45,8 +45,8 @@ Use a caixa de diálogo **Propriedades do TCP/IP** para configurar as opções d
  **No Delay**  
  O SQL Server não implementa alterações a esta propriedade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Criando uma cadeia de Conexão válida usando TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
+ [Criando uma cadeia de conexão válida usando TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

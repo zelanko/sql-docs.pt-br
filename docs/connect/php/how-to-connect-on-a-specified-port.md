@@ -2,7 +2,7 @@
 title: 'Como: conectar-se em uma porta especificada | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connecting to the server, specifying a port
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b3c8f76026c7065cf6d790b323f559e1b101126
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b17dd2bb8df3f7274cb8eea36faf3ee5f320f983
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Como se conectar a uma porta especificada
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,16 +33,16 @@ Este tópico descreve como se conectar ao SQL Server em uma porta especificada c
   
 ### <a name="to-connect-on-a-specified-port"></a>Para se conectar em uma porta especificada  
   
-1.  Verifique a porta na qual o servidor está configurado para aceitar conexões. Para obter informações sobre como configurar um servidor para aceitar conexões em uma porta especificada, consulte [como: configurar um servidor para escutar em uma porta de TCP específica (SQL Server Configuration Manager)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
+1.  Verifique a porta na qual o servidor está configurado para aceitar conexões. Para obter informações sobre como configurar um servidor para aceitar conexões em uma porta especificada, consulte [How to: Configure a Server to Listen on a Specific TCP Port ](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)SQL Server Configuration Manager (Como configurar um servidor para escuta em uma porta TCP específica (SQL Server Configuration Manager)).  
   
-2.  Adicione a porta desejada para o *$serverName* parâmetro o [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) função. Separe o nome do servidor e a porta com uma vírgula. Por exemplo, as seguintes linhas de código usam o driver SQLSRV para demonstrar como se conectar a um servidor chamado *myServer* na porta 1521:  
+2.  Adicione a porta desejada ao parâmetro *$serverName* da função [sqlsrv](../../connect/php/sqlsrv-connect.md)connect. Separe o nome do servidor e a porta com uma vírgula. Por exemplo, as seguintes linhas de código usam o driver SQLSRV para demonstrar como se conectar a um servidor chamado *myServer* na porta 1521:  
   
     ```  
     $serverName = "myServer, 1521";  
     sqlsrv_connect( $serverName );  
     ```  
   
-    As seguintes linhas de código usam o driver PDO_SQLSRV para demonstrar como se conectar a um servidor chamado *myServer* na porta 1521:  
+    As linhas de código a seguir usam o driver PDO*SQLSRV para demonstrar como se conectar a um servidor chamado* myServer na porta 1521:  
   
     ```  
     $serverName = "(local), 1521";  
@@ -50,7 +50,7 @@ Este tópico descreve como se conectar ao SQL Server em uma porta especificada c
     $conn = new PDO( "sqlsrv:server=$serverName;Database=$database", "", "");  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)
 
 [Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

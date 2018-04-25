@@ -1,32 +1,33 @@
 ---
 title: Tipos de cursor (Driver SQLSRV) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22307b0c750e0d860711695ff42031b36c31a731
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c95beace96484b53d6786f8df24b55878a1ab8e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (Driver SQLSRV)
+# <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O driver SQLSRV permite que você crie um conjunto de resultados com linhas que você pode acessar em qualquer ordem, dependendo do tipo de cursor.  Este tópico descreverá (em buffer) do cliente e do servidor (sem buffer) cursores.  
+Você pode criar um conjunto de resultados com linhas que pode acessar em qualquer ordem, dependendo do tipo de cursor.  Este tópico descreverá (em buffer) do cliente e do servidor (sem buffer) cursores.  
   
 ## <a name="cursor-types"></a>Tipos de cursor  
 Quando você cria um conjunto de resultados com [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou com [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md), você pode especificar o tipo de cursor. Por padrão, um cursor somente de avanço é usado, o que permite mover uma linha por vez, começando na primeira linha do resultado definido até chegar ao final do conjunto de resultados.  
@@ -38,7 +39,7 @@ Você pode criar um conjunto de resultados com um cursor rolável, o que permite
 |SQLSRV_CURSOR_FORWARD|Permite mover uma linha por vez, começando na primeira linha do resultado definido até chegar ao final do conjunto de resultados.<br /><br />Este é o tipo de cursor padrão.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) retorna um erro para conjuntos de resultados criados com esse tipo de cursor.<br /><br />**Encaminhar** é a forma abreviada de SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Permite acessar linhas em qualquer ordem, mas não refletirá as alterações no banco de dados.<br /><br />**estático** é a forma abreviada de SQLSRV_CURSOR_STATIC.|  
 |SQLSRV_CURSOR_DYNAMIC|Permite que você acessar linhas em qualquer ordem e que refletirá as alterações no banco de dados.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) retorna um erro para conjuntos de resultados criados com esse tipo de cursor.<br /><br />**dinâmico** é a forma abreviada de SQLSRV_CURSOR_DYNAMIC.|  
-|SQLSRV_CURSOR_KEYSET|Permite acessar linhas em qualquer ordem. No entanto, um cursor de conjunto de chaves não atualiza a contagem de linhas se uma linha for excluída da tabela (uma linha excluída será retornada sem valores).<br /><br />**conjunto de chaves** é a forma abreviada de SQLSRV_CURSOR_KEYSET.|  
+|SQLSRV_CURSOR_KEYSET|Permite acessar linhas em qualquer ordem. Um cursor de conjunto de chaves não atualiza a contagem de linhas se uma linha for excluída da tabela uma linha excluída será retornada sem valores.<br /><br />**conjunto de chaves** é a forma abreviada de SQLSRV_CURSOR_KEYSET.|  
 |SQLSRV_CURSOR_CLIENT_BUFFERED|Permite acessar linhas em qualquer ordem. Cria uma consulta de cursor do lado do cliente.<br /><br />**com buffer** é a forma abreviada de SQLSRV_CURSOR_CLIENT_BUFFERED.|  
   
 Se uma consulta gera vários conjuntos de resultados, o **rolável** opção se aplica a todos os conjuntos de resultados.  
@@ -52,7 +53,7 @@ A tabela a seguir descreve os valores que você pode especificar o *linha* parâ
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Especifica a próxima linha. Este é o valor padrão, se você não especificar o *linha* parâmetro para um conjunto de resultados roláveis.|  
 |SQLSRV_SCROLL_PRIOR|Especifica a linha antes da linha atual.|  
-|SQLSRV_SCROLL_FIRST|Especifica a primeira linha no conjunto de resultados.|  
+|SQLSRV_SCROLL_FIRST|Especifica a primeira linha no resultado.|  
 |SQLSRV_SCROLL_LAST|Especifica a última linha no conjunto de resultados.|  
 |SQLSRV_SCROLL_ABSOLUTE|Especifica a linha especificada com o *deslocamento* parâmetro.|  
 |SQLSRV_SCROLL_RELATIVE|Especifica a linha especificada com o *deslocamento* parâmetro da linha atual.|  
@@ -230,6 +231,6 @@ if ($row ) {
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
   

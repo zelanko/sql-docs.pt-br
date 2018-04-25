@@ -1,8 +1,8 @@
 ---
-title: PDOStatement::bindParam | Microsoft Docs
+title: 'Pdostatement:: Bindparam | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2017
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,21 +37,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*parâmetro*: um identificador do parâmetro (misto). Para uma instrução que usa espaços reservados nomeados, use um nome de parâmetro (: name). Para uma instrução preparada usando a sintaxe de ponto de interrogação, é o índice baseado em 1 do parâmetro.  
+$parameter *: um identificador do parâmetro* misto. Para uma instrução que usa espaços reservados nomeados, um nome de parâmetro :name. Para uma instrução preparada usando a sintaxe de ponto de interrogação, esse será o índice de base 1 do parâmetro.  
   
-&$*variável*: O nome (misto) da variável do PHP para associar ao parâmetro da instrução SQL.  
+&$variable *: o nome* misto da variável do PHP a ser associada ao parâmetro da instrução SQL.  
   
-$*data_type*: uma constante PDO::PARAM_ * opcional (inteiro). O padrão é PDO:: param_str.  
+$data*type*: uma constante inteira PDO::PARAM opcional. O padrão é PDO::PARAM_STR.  
   
-$*comprimento*: um comprimento opcional (inteiro) do tipo de dados. Você pode especificar PDO:: sqlsrv_param_out_default_size para indicar o tamanho padrão ao usar PDO:: param_int ou PDO:: param_bool em $*data_type*.  
+$length *: um comprimento opcional* inteiro do tipo de dados. Você pode especificar PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE para indicar o tamanho padrão ao usar PDO::PARAM_INT ou PDO::PARAM_BOOL em $*.  
   
 $*driver_options*: as opções específicas do driver (mistas) opcionais. Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
   
 ## <a name="remarks"></a>Remarks  
-Ao associar dados nulos a colunas do servidor do tipo varbinary, binary ou varbinary (max) você deve especificar a codificação binária (PDO:: sqlsrv_encoding_binary) usando $*driver_options*. Para obter mais informações sobre codificação de constantes, consulte [constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Ao associar dados nulos a colunas do servidor do tipo varbinary, binary ou varbinary(max), você deve especificar a codificação binária (PDO::SQLSRV_ENCODING_BINARY) usando $*. Consulte [Constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) para obter mais informações sobre a codificação de constantes.  
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
@@ -105,6 +105,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> Ao associar um parâmetro de saída para um tipo bigint, se o valor pode acabar fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), usando o PDO:: param_int com PDO:: sqlsrv_param_out_default_size pode resultar em uma exceção de "valor fora do intervalo". Portanto, use o default PDO:: param_str e fornecem o tamanho da cadeia de caracteres resultante, no máximo é 21. É o número máximo de dígitos, incluindo o sinal negativo, de qualquer valor bigint. 
+
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como usar um parâmetro de entrada/saída.  
   
@@ -125,7 +128,7 @@ Este exemplo de código mostra como usar um parâmetro de entrada/saída.
 ```  
 
 > [!NOTE]
-> É recomendável usar cadeias de caracteres como entradas ao associar valores para um [coluna decimal ou numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php).
+> É recomendável usar cadeias de caracteres como entradas ao associar valores para um [coluna decimal ou numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php).
 
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como associar um valor decimal como um parâmetro de entrada.  
@@ -146,7 +149,7 @@ $stmt->execute();
 ```
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

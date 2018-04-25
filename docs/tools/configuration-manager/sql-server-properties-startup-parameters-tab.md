@@ -1,26 +1,26 @@
 ---
-title: "Propriedades do SQL Server (guia de parâmetros de inicialização) | Microsoft Docs"
-ms.custom: 
+title: Propriedades do SQL Server (guia de parâmetros de inicialização) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
@@ -38,7 +38,7 @@ Use esta caixa de diálogo para adicionar ou remover parâmetros de inicializaç
  Para remover um parâmetro, selecione um parâmetro e clique em **Remover**.  
   
 ## <a name="parameter-format"></a>Formato do parâmetro  
- Não insira um separador entre parâmetros. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager adiciona o separador automaticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager impõe os seguintes requisitos de parâmetro.  
+ Não insira um separador entre parâmetros. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager adiciona o separador automaticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager impõe os seguintes requisitos de parâmetros.  
   
 -   Espaços à direita e à esquerda são cortados de qualquer parâmetro de inicialização.  
   
@@ -68,7 +68,7 @@ Use esta caixa de diálogo para adicionar ou remover parâmetros de inicializaç
   
 |Parâmetro|Descrição breve|  
 |---------------|-----------------------|  
-|-m|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único.|  
+|-M|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único.|  
 |-T1204|Retorna os recursos e tipos de bloqueios que participam de um deadlock e também o comando atual afetado.|  
 |-T1224|Desabilita o escalonamento de bloqueios com base no número de bloqueios.|  
 |-T3608|Impede que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie ou recupere automaticamente qualquer banco de dados, exceto o banco de dados mestre.|  

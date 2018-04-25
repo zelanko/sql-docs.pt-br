@@ -2,7 +2,7 @@
 title: PDOStatement::bindValue | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5974992934c574eb070c211320f57df169fca9b3
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: eaad375b8f537e7d220adc8e1779ebdd8c9da07f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +37,13 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*parâmetro*: um identificador do parâmetro (misto). Para uma instrução que usa espaços reservados nomeados, use um nome de parâmetro (: name). Para uma instrução preparada usando a sintaxe de ponto de interrogação, é o índice baseado em 1 do parâmetro.
+$parameter *: um identificador do parâmetro* misto. Para uma instrução que usa espaços reservados nomeados, um nome de parâmetro :name. Para uma instrução preparada usando a sintaxe de ponto de interrogação, esse será o índice de base 1 do parâmetro.
   
-$*valor*: O valor (misto) para associar ao parâmetro.  
+$value *: o valor* misto a ser associado ao parâmetro.  
   
-$*data_type*: O tipo de dados opcional (inteiro) representado por uma constante PDO::PARAM_ *. O padrão é PDO::PARAM_STR.  
+$data*type*: o tipo de dados Integer opcional representado por uma constante PDO::PARAM. O padrão é PDO::PARAM_STR.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
   
 ## <a name="remarks"></a>Remarks  
@@ -103,7 +103,7 @@ $stmt->bindValue(1, $input, PDO::PARAM_STR);
 $stmt->execute();
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

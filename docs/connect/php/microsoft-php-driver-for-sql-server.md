@@ -2,7 +2,7 @@
 title: Drivers da Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: php
 ms.reviewer: ''
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a78c55a54c5e020b26cee82e2e5a08ff09f5e0
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f66227c67a4cd84fbd1fdaafbbdcf457df7b3b2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Drivers da Microsoft para PHP para SQL Server
 
@@ -42,13 +42,13 @@ Os Drivers da Microsoft para PHP para SQL Server habilitar a integração com o 
 * [Considerações sobre segurança](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>Comunidade  
-* [Recursos de suporte para os Drivers da Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
+* [Matriz de suporte para os drivers da Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Download  
 * ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver do PHP para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   
 ## <a name="samples"></a>Exemplos  
-* [Exemplos de código para os Drivers da Microsoft para PHP para SQL Server](code-samples-for-php-sql-driver.md)
+* [Matriz de suporte para os drivers da Microsoft para PHP para SQL Server](code-samples-for-php-sql-driver.md)
 * [Guia de Introdução do PHP no Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Introdução aos PHP macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Guia de Introdução do PHP no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

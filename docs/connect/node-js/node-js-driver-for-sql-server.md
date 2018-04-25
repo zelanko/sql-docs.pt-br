@@ -2,7 +2,7 @@
 title: Driver do Node.js para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: node-js
 ms.reviewer: ''
@@ -12,27 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: MT
+ms.openlocfilehash: 66682188467eaac9305a991765166532877f0050
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="nodejs-driver-for-sql-server"></a>Driver do Node.js para SQL Server
+# <a name="nodejs-driver-for-sql-server"></a>Driver Node.js para SQL Server
 
 ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver SQL do Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-O módulo entediante é uma implementação de javascript do protocolo TDS, que tem suporte em todas as versões atuais do SQL Server. O driver é um projeto de código-fonte aberto, disponível no Github.  
+O driver SQL JDBC é uma implementação Java do protocolo TDS, que tem suporte em todas as versões atuais do SQL Server. O driver é um projeto de código-fonte aberto, disponível no Github.  
   
 Você pode se conectar a um banco de dados SQL usando o Node.js no Windows, Linux ou Mac.  
   
 ## <a name="getting-started"></a>Guia de introdução  
-* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de Node. js](step-1-configure-development-environment-for-node-js-development.md)  
+* [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
 * [Etapa 2: Criar um banco de dados SQL para o desenvolvimento de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
 * [Etapa 3: Prova de conceito da conexão ao SQL usando o Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   

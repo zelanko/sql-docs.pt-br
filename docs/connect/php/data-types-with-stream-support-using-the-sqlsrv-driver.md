@@ -1,8 +1,8 @@
 ---
-title: Tipos de dados com suporte a fluxo usando o Driver SQLSRV | Microsoft Docs
+title: Tipos de dados com suporte a fluxo usando o driver SQLSRV
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,21 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - streaming data
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1282bff80266a765af5e74553293289206f7ec01
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: c8d4e97c1312f41b13fe529c97245005c157ba9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>Tipos de dados com suporte a fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recuperação de dados como um fluxo só está disponível no driver SQLSRV do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]e não está disponível no driver PDO_SQLSRV.  
+A recuperação de dados como um fluxo só está disponível no driver SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], e não está disponível no driver PDO_SQLSRV.  
   
 Os seguintes tipos de dados do SQL Server podem ser recuperados como fluxos com o driver SQLSRV:  
   
@@ -43,7 +43,7 @@ Os seguintes tipos de dados do SQL Server podem ser recuperados como fluxos com 
   
 -   ntext  
   
--   nvarchar  
+-   NVARCHAR  
   
 -   text  
   
@@ -55,7 +55,7 @@ Os seguintes tipos de dados do SQL Server podem ser recuperados como fluxos com 
   
 -   XML  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Recuperando dados como um fluxo usando o driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [Tipos de dados padrão do PHP](../../connect/php/default-php-data-types.md)

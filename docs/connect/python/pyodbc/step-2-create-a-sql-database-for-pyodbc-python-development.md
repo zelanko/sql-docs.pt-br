@@ -1,28 +1,29 @@
 ---
-title: 'Etapa 2: Criar um banco de dados SQL pyodbc desenvolvimento do Python | Microsoft Docs'
-ms.custom: 
+title: 'Etapa 2: Criar um banco de dados SQL para o desenvolvimento Python pyodbc'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2f3f08569576358ebda95ad006f26aec39715c0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d51e87f2f21a0d3197d76019409bb8328be8817e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>Etapa 2: Criar um banco de dados SQL pyodbc desenvolvimento do Python
+# <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>Etapa 2: Criar um banco de dados SQL para o desenvolvimento Python pyodbc
 
 [!INCLUDE[CreateDatabase](../../../includes/createdatabase.md)]

@@ -1,34 +1,35 @@
 ---
-title: "Exemplo de execução assíncrona (método de notificação) | Microsoft Docs"
-ms.custom: 
+title: Exemplo de execução assíncrona (método de notificação)
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62d8485bec26053efd84891407255eeba2103492
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e971ee6725f27afcd8f8b9c8accdd37176f1cf6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Exemplo de execução assíncrona (método de notificação)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Os exemplos de código neste tópico demonstram como usar o [execução assíncrona (método de notificação)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  Os exemplos de código neste tópico demonstram como usar a [Execução Assíncrona ](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)Método de Notificação.  
   
- Essa função usa a notificação assíncrona para abrir cinco conexões e executa uma consulta em uma instrução de cada conexão.  
+ Esta função usa a notificação assíncrona para abrir cinco conexões e executa uma consulta na instrução de cada conexão.  
   
 ```  
   
@@ -356,7 +357,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Microsoft ODBC Driver for SQL Server no Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

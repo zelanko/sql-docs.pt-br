@@ -1,35 +1,36 @@
 ---
-title: "Etapa 3: Prova de conceito da conexão ao SQL usando o Node. js | Microsoft Docs"
-ms.custom: 
+title: 'Etapa 3: Prova de conceito da conexão ao SQL usando o Node.js'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c786e36fc9938fca34f71cffb9b50d3c2e1c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o Node. js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o Node.js
 
 ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver SQL do Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Este exemplo deve ser considerado uma prova de conceito apenas.  O código de exemplo é simplificado para maior clareza e não representa necessariamente práticas recomendadas pela Microsoft. Outros exemplos que usam as mesmas funções essenciais estão disponíveis no Github:
 
-- [https://GitHub.com/tediousjs/tedious/blob/Master/Examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
+- [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>Etapa 1: conectar-se  
   
@@ -51,7 +52,7 @@ O **nova Conexão** função é usada para se conectar ao banco de dados SQL.
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Etapa 2: Executar uma consulta  
+## <a name="step-2--execute-a-query"></a>Execute uma consulta.  
   
   
 Todas as instruções SQL são executadas usando o **Request() novo** função. Se a instrução retorna linhas, como uma instrução select, você pode recuperá-los usando o **request.on()** função. Se não houver nenhuma linha, a função request.on() retorna listas vazias.  

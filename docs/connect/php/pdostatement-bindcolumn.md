@@ -1,8 +1,8 @@
 ---
-title: PDOStatement::bindColumn | Microsoft Docs
+title: 'Pdostatement:: Bindcolumn | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5f85c59eec602a483dd68da5df030f4d5cf18d6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f77fdb089f83d1d8d8f866be4a0a7ef99b9fa155
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,17 +37,17 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*coluna*: O número (misto) da coluna (índice de base 1) ou o nome da coluna no conjunto de resultados.  
+$$: o número da coluna (misto, índice baseado em 1) ou o nome da coluna no conjunto de resultados.  
   
-&$*param*: O nome (misto) da variável PHP à qual a coluna será associada.  
+&$param *: o nome* misto da variável PHP à qual a coluna será associada.  
   
-$*tipo*: O tipo de dados opcional do parâmetro, representado por uma constante PDO::PARAM_ *.  
+$type *: o tipo de dados opcional do parâmetro, representando por uma constante PDO::PARAM*.  
   
 $*maxLen*: inteiro opcional, não usado pelos Drivers da Microsoft para PHP para SQL Server.  
   
-$*driverdata*: mistos opcionais parâmetros para o driver. Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
+$driverdata *: um ou mais parâmetros mistos opcionais para o driver.* Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 TRUE se bem-sucedido; caso contrário, FALSE.  
   
 ## <a name="remarks"></a>Remarks  
@@ -73,7 +73,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

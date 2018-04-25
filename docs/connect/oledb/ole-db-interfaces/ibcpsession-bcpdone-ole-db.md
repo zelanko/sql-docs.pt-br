@@ -3,7 +3,7 @@ title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - BCPDone method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0195d193614894085b5d4ddc1dc8dee3372fb24c
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 0fd48f79a9c56f69d00eef7205e3904a1352f5e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Nenhuma outra operação pode ser chamada no [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) interface depois de chamar o **BCPDone** método. A única possibilidade é chamar o [ibcpsession:: BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) método para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o [IRowsetFastLoad:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
+ Nenhuma outra operação pode ser chamada na interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) depois de chamar o método **BCPDone** . A única possibilidade é chamar o método [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o método [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -69,9 +69,9 @@ insert into fltest values (4, 4, 0xFAD)
   
  Você pode usar BCP para adicionar estes dados novamente à tabela com o comando a seguir:  
   
- **BCP master... fltest em outfile.dat - n -T -S** *server*  
+ bcp master..fltest em outfile.dat -n -T -S  
   
- Você precisará especificar msoledbsql.lib ao compilar este exemplo.  
+ É necessário especificar sqlncli11.lib ao compilar este exemplo.  
   
 ```  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
@@ -468,7 +468,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md)  
   

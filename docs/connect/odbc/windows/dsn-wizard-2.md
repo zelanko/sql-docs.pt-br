@@ -2,7 +2,7 @@
 title: Tela 2 (Driver ODBC para SQL Server) do Assistente de fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,39 +16,39 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: d8b1aedf25af40b9b910506afacb1a43e1c779a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Tela 2 do Assistente de Fonte de Dados
 
-Especifique o método de autenticação e configurar entradas de cliente avançado do Microsoft SQL Server e o logon e a senha que o driver ODBC do SQL Server usará para se conectar ao SQL Server ao configurar a fonte de dados.
+Especifique o método de autenticação, configure entradas de cliente avançadas do Microsoft , e o logon e a senha que o driver ODBC do  Native Client usará para se conectar ao  durante a configuração da fonte de dados.
 
 ## <a name="options"></a>Opções
 
-### <a name="with-integrated-windows-authentication"></a>Com a autenticação integrada do Windows
+### <a name="with-integrated-windows-authentication"></a>&Com Autenticação Integrada do Windows.
 
 Especifica que o driver solicita uma conexão segura (ou confiável) com um SQL Server. Quando essa opção está selecionada, o SQL Server usa segurança de logon integrada para estabelecer conexões utilizando essa fonte de dados, independentemente do modo de segurança de logon atual no servidor. Qualquer ID de logon ou senha fornecida é ignorada. O administrador do sistema do SQL Server deve ter associado seu logon do Windows com uma ID de logon do SQL Server (por exemplo, usando o SQL Server Management Studio).
 
 Se desejar, você pode especificar um SPN (nome da entidade de serviço) do servidor.
 
-### <a name="with-active-directory-integrated-authentication"></a>Com a autenticação integrada do Active Directory
+### <a name="with-active-directory-integrated-authentication"></a>Com autenticação &integrada ao Active Directory.
 
-Especifica que o driver se autenticar ao SQL Server usando o Active Directory do Azure. Quando selecionada, o SQL Server usa segurança de logon do Azure Active Directory integrado para estabelecer uma conexão usando essa fonte de dados, independentemente do modo de segurança de logon atual no servidor.
+Especifica que o driver se autenticar ao SQL Server usando o Active Directory do Azure. Quando essa opção está selecionada, o SQL Server usa segurança de logon integrada para estabelecer conexões utilizando essa fonte de dados, independentemente do modo de segurança de logon atual no servidor.
 
-### <a name="with-sql-server-authentication"></a>Com a autenticação do SQL Server
+### <a name="with-sql-server-authentication"></a>Usar Autenticação do SQL Server
 
 Especifica que o driver se autenticar ao SQL Server usando uma ID de logon e senha.
 
-### <a name="with-active-directory-password-authentication"></a>Com a autenticação de senha do Active Directory
+### <a name="with-active-directory-password-authentication"></a>Autenticação da Senha do Active Directory
 
 Especifica que o driver autenticar usando uma ID de logon do Active Directory do Azure e a senha do SQL Server.
 
-### <a name="with-active-directory-interactive-authentication"></a>Com a autenticação do Active Directory interativo
+### <a name="with-active-directory-interactive-authentication"></a>Autenticação Interativa do Active Directory
 
 Especifica que o driver autenticar para o SQL Server usando o modo interativo do Active Directory do Azure, fornecendo a ID de logon. Isso vai disparar a caixa de diálogo de aviso de autenticação do Windows Azure.
 
@@ -74,5 +74,5 @@ Retorna para a tela anterior do assistente.
 
 [Tela 1 do Assistente de fonte de dados](../../../connect/odbc/windows/dsn-wizard-1.md)
 
-[Tela de Assistente de fonte de dados 3](../../../connect/odbc/windows/dsn-wizard-3.md)
+[Tela 3 do Assistente de fonte de dados](../../../connect/odbc/windows/dsn-wizard-3.md)
 

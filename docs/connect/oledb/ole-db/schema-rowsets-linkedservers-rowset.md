@@ -3,7 +3,7 @@ title: Conjunto de linhas LINKEDSERVERS (OLE DB) | Microsoft Docs
 description: Conjunto de linhas LINKEDSERVERS (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - enumerating data sources [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b00a600f2690981f152c75c92dc467c1d6d13aed
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 0f8a7d4619cc6036490e9e9d4147641f3ce935c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas de esquema - conjunto de linhas LINKEDSERVERS
+# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas do esquema – Conjunto de linhas LINKEDSERVERS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O **LINKEDSERVERS** linhas enumera fontes de dados da organização que podem participar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuídas.  
+  O conjunto de linhas **LINKEDSERVERS** enumera fontes de dados da organização que podem participar de consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/06/2018
   
  O conjunto de linhas é classificado em SRV_NAME, havendo suporte a uma única restrição em SRV_NAME.  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Suporte a conjunto de linhas de esquema](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

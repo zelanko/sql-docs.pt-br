@@ -2,7 +2,7 @@
 title: Direcionar instrução - preparado instrução execução PDO_SQLSRV Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,21 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7967e4f2c888ccdb90c56ac3b1504187b77b48a
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: ca5e180f38ad82621880e1e6aaab9cdc4b43cfc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Este tópico discute o uso do atributo PDO:: sqlsrv_attr_direct_query para especificar a execução de instrução direta em vez do padrão, que é a execução da instrução preparada. Usar uma instrução preparada pode resultar em melhor desempenho se a instrução for executada mais de uma vez usando a associação de parâmetro.  
+Discute como usar o atributo PDO::SQLSRV_ATTR_DIRECT_QUERY para especificar a execução de instrução direta em vez do padrão, que é a execução da instrução preparada. Usar uma instrução preparada pode resultar em melhor desempenho se a instrução for executada mais de uma vez usando a associação de parâmetro.  
   
 ## <a name="remarks"></a>Remarks  
 Se você quiser enviar um [!INCLUDE[tsql](../../includes/tsql_md.md)] instrução diretamente para o servidor sem preparação de instrução pelo driver, você pode definir o atributo PDO:: sqlsrv_attr_direct_query com [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) (ou como uma opção de driver passados para [PDO::__construct](../../connect/php/pdo-construct.md)) ou quando você chama [PDO](../../connect/php/pdo-prepare.md). Por padrão, o valor de PDO:: sqlsrv_attr_direct_query for False (use a execução da instrução preparada).  
@@ -72,6 +72,6 @@ O exemplo a seguir mostra que, quando o contexto de uma instrução anterior é 
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   
