@@ -1,26 +1,26 @@
 ---
-title: "Propriedades (guia serviço) do servidor de relatório | Microsoft Docs"
-ms.custom: 
+title: Propriedades (guia serviço) do servidor de relatório | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b55a991a48bcae34cea1bfbc834d7a6e6891c786
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
@@ -38,7 +38,7 @@ Este é o serviço Servidor de Relatório do [!INCLUDE[msCoName](../../includes/
  **Código de Saída**  
  Quando ocorre um erro, o número do erro é exibido nesta caixa. Use esse número para solucionar problemas de falhas procurando-o na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou forneça o número à sua equipe de suporte técnico.  
   
- **Host Name**  
+ **Nome do Host**  
  Exibe o nome do computador ou cluster que está executando a pesquisa de texto completo.  
   
  **Nome**  
@@ -62,7 +62,7 @@ Este é o serviço Servidor de Relatório do [!INCLUDE[msCoName](../../includes/
  **Estado**  
  Indica se este serviço está sendo executado, se está parado ou desabilitado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Serviços do SQL Server](../../tools/configuration-manager/sql-server-services.md)  
   
   
