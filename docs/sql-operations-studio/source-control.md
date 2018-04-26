@@ -1,9 +1,9 @@
 ---
-title: Fonte de controle no SQL Operations Studio (preview) | Microsoft Docs
-description: Saiba como configurar o controle de origem no SQL Operations Studio (preview).
+title: Fonte de controle no Studio de operações do SQL (visualização) | Microsoft Docs
+description: Saiba como configurar o controle de origem no Studio de operações do SQL (visualização).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f28199262b087ad5362da0ddf56827216aec748
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fec13868004469b02f3117b9b8d70e1ec26ff3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Usando o controle de origem no[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Usando o controle de origem no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]suporta Git para controle de versão/origem.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] suporta Git para controle de versão/origem.
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Suporte do Git em[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Suporte do Git em [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]é fornecido com um Gerenciador de controle do código-fonte Git (SCM), mas você ainda precisa [instale o Git (versão 2.0.0 ou superior)](https://git-scm.com/download) antes que esses recursos estão disponíveis. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] é fornecido com um Gerenciador de controle do código-fonte Git (SCM), mas você ainda precisa [instale o Git (versão 2.0.0 ou superior)](https://git-scm.com/download) antes que esses recursos estão disponíveis. 
 
 
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="working-with-git-repositories"></a>Trabalhando com repositórios Git
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]herda sua implementação do Git de código VS, mas não oferece suporte a provedores SCM adicionais. Para obter detalhes sobre como trabalhar com Git, depois que você abre ou inicializar um repositório, consulte [Git suporte no código VS](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua implementação do Git de código VS, mas não oferece suporte a provedores SCM adicionais. Para obter detalhes sobre como trabalhar com Git, depois que você abre ou inicializar um repositório, consulte [Git suporte no código VS](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## <a name="additional-resources"></a>Recursos adicionais

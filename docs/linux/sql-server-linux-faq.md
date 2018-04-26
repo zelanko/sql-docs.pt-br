@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 03/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4d59b7f4d2c88640f3f925949f8938e689d1e029
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server no Linux perguntas frequentes (FAQ)
 
@@ -78,7 +78,7 @@ As seções a seguir fornecem as perguntas e respostas comuns para o SQL Server 
 
 1. **Há uma ferramenta como o SSMS que executa no Linux?**
 
-   O novo Microsoft SQL operações Studio (visualização) é uma ferramenta de plataforma cruzada para o gerenciamento do SQL Server. Para obter mais informações, consulte [o que é o Studio de operações do Microsoft SQL (visualização)](../sql-operations-studio/what-is.md).
+   O novo Microsoft SQL Operations Studio (preview) é uma ferramenta de plataforma cruzada para o gerenciamento do SQL Server. Para obter mais informações, consulte [o que é o Studio de operações do Microsoft SQL (visualização)](../sql-operations-studio/what-is.md).
 
 1. **Os comandos sqlcmd e bcp estão disponíveis no Linux?**
 

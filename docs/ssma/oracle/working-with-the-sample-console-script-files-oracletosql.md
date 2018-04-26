@@ -1,31 +1,32 @@
 ---
 title: Trabalhando com os arquivos de Script do Console de exemplo (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Sample Console Script Files, ServersConnectionFileSample.xml
 - Sample Console Script Files, SqlStatementConversionSample.xml
 - Sample Console Script Files,VariableValueFileSample.xml
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ed17f63dedb91eb41eea2cc991771daf35af48fc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 71096d59164c9e6245bdac91a6a64665c256c89d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Trabalhando com os arquivos de Script do Console de exemplo (OracleToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência de usuário e uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para se adequar às necessidades do usuário final.  
@@ -49,11 +50,11 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     -   O usuário pode se conectar ao banco de dados necessário, simplesmente alterando os valores para a origem necessários e definições de servidor de destino. No exemplo fornecido todos os valores foram fornecidos valores de variáveis como que estão disponíveis no **VariableValueFileSample.xml**.  Todos os outros parâmetros de conexão podem ser removidos do arquivo de conexão de servidor de trabalho do usuário.  
   
-    -   Para obter mais informações sobre a conexão com o servidor de origem e de destino, consulte [criar os arquivos de Conexão do servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) .  
+    -   Para obter mais informações sobre a conexão com o servidor de origem e de destino, consulte [criar os arquivos de Conexão de servidor &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) .  
   
 -   **VariableValueFileSample.xml:** arquivos de script de todas as variáveis que foram usadas no console de exemplo e `ServersConnectionFileSample.xml` foram agrupadas nesse arquivo. Para executar os scripts de console de exemplo que o usuário tem para simplesmente substituir a variável de exemplo valores com usuário definido aqueles em passam esse arquivo como um argumento de linha de comando adicionais, juntamente com o arquivo de script.  
   
-    Para obter mais informações sobre o arquivo de valor de variável, consulte [criando arquivos de valor variável &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
+    Para obter mais informações sobre o arquivo de valor de variável, consulte [criando arquivos de valor variável &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
 -   **AssessmentReportGenerationSample.xml:** Este exemplo permite que o usuário gerar um relatório de avaliação de xml que pode ser usado pelo usuário para análise antes de ele começa a converter e migrar dados.  
   
@@ -61,7 +62,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     Se o usuário tem que avaliar a vários objetos de bancos de dados pode especificar vários `metabase-object` nós, conforme ilustrado a `generate-assessment-report` exemplo 4 do comando do arquivo de script de console de exemplo.  
   
-    Para obter mais informações sobre como gerar relatórios, consulte [gerando relatórios &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
+    Para obter mais informações sobre como gerar relatórios, consulte [gerando relatórios &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
   
     > [!NOTE]  
     > -   Certifique-se de que o argumento de linha de comando do arquivo de valor da variável é passado para o aplicativo de console e VariableValueFileSample.xml é atualizado com o usuário especificado valores.  
@@ -88,7 +89,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     **Atributo**  
   
-    -   `source-schema:`Especifica o banco de dados de origem que requer a ser convertido.  
+    -   `source-schema:` Especifica o banco de dados de origem que requer a ser convertido.  
   
     -   `sql-server-schema`: Especifica o banco de dados de destino que deve ser migrada para  
   
@@ -102,7 +103,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     **Atributo**  
   
-    `object-name`: Especifique o banco de dados de origem / object name que requer a ser convertido. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`  
+    `object-name`: Especifique o banco de dados de origem / object name que requer a ser convertido. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do `object-name`  
   
     **Nome de comando**  
   
@@ -114,7 +115,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     **Atributo**  
   
-    `object-name:`Especifique o banco de dados do sql server / nome que requer a criação do objeto. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`  
+    `object-name:` Especifique o banco de dados do sql server / nome que requer a criação do objeto. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do `object-name`  
   
     **Nome de comando**  
   
@@ -126,10 +127,10 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     **Atributo**  
   
-    `object-name:`Especifica o banco de dados de origem / tabelas nome que requer a serem migradas. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`  
+    `object-name:` Especifica o banco de dados de origem / tabelas nome que requer a serem migradas. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do `object-name`  
   
-## <a name="see-also"></a>Consulte Também  
-[Criando arquivos do valor da variável &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
-[Criar os arquivos de Conexão do servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
-[Gerando relatórios &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Criando arquivos do valor da variável &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[Criar os arquivos de Conexão de servidor &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+[Gerando relatórios &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
   

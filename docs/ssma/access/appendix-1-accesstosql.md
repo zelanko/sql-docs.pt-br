@@ -1,6 +1,6 @@
 ---
 title: Apêndice a-1 (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,16 +21,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a90c11d100546febc943ad192a24bd9501aceeae
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6db58f77ada43baf8235d1f87a4de32a5463516b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="appendix---1-accesstosql"></a>Apêndice a-1 (AccessToSQL)
 Visão geral das opções de linha de comando do Console do SSMA:  
   
-|Sl. Nenhum.|Opção|Obrigatório?|Argumento de opção|Valores permitidos|  
+|SL. Nenhum.|Opção|Obrigatório?|Argumento de opção|Valores permitidos|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Sim|scriptfile|Nome do arquivo XML válido.<br /><br />Arquivo de definição de Script do console.|  
 |2|-v/variável|não|variablevaluefile|Nome do arquivo XML válido. Se a variável for usada no arquivo de script, esse arquivo deve ser especificado.|  
@@ -38,7 +38,7 @@ Visão geral das opções de linha de comando do Console do SSMA:
 |4|-x/xmloutput|não|xmloutputfile|Esta opção indica a saída do console no formato XML. Se essa opção não for especificada, a saída padrão está no formato de texto.<br /><br />Se xmloutputfile não for especificado, a saída XML é direcionada para STDOUT.<br /><br />Xmloutputfile é o nome do arquivo para o qual a saída do console é gravada no formato XML.|  
 |5|-l/log|não|logfile|Nome de arquivo válido.|  
 |6|-e/projectenvironment|não|projectenvironmentfolder|Nome de pasta válido que contém os arquivos do ambiente de projeto SSMA.|  
-|7|-p/securepassword|não|-a ou adicionar {< server_id > [,... n] &#124; todos os} – c&#124;serverconnection < arquivo de conexão servidor > [-v&#124;variável < arquivo de valor variável >] [-s/substituir]<br /><br />ou<br /><br />-a ou adicionar {< server_id > [,... n] &#124; todos os} – s&#124;script < arquivo de script > [-v&#124;variável < arquivo de valor variável >] [-s/substituir]<br /><br />–r/remove {<server_id> [, …n] &#124; all}<br /><br />lista / -l<br /><br />– e /Export {< server-id > [,... n] &#124; todos os} < senha criptografada - arquivo ><br /><br />– i / importação {< server-id > [,... n] &#124; todos os} < criptografado-senha-file >|Se especificado, essa opção não deve ser combinada com outras opções.<br /><br />id do servidor: fornecida uma ID exclusiva para um servidor {string}<br /><br />arquivo de conexão de servidor: arquivo de definição de servidor (serverconnectionfile ou scriptfile).<br /><br />arquivo de valores de variável: ele é um arquivo de definição da variável e usado no arquivo de conexão de servidor.<br /><br />senha – arquivo criptografado: é um arquivo de senhas do servidor criptografado usando uma frase secreta especificada pelo usuário.|  
+|7|-p/securepassword|não|-a ou adicionar {< server_id > [,... n] &#124; todos os} – c&#124;serverconnection < arquivo de conexão servidor > [-v&#124;variável < arquivo de valor variável >] [-s/substituir]<br /><br />ou<br /><br />-a ou adicionar {< server_id > [,... n] &#124; todos os} – s&#124;script < arquivo de script > [-v&#124;variável < arquivo de valor variável >] [-s/substituir]<br /><br />– r/remover {< server_id > [,... n] &#124; todos os}<br /><br />lista / -l<br /><br />– e /Export {< server-id > [,... n] &#124; todos os} < senha criptografada - arquivo ><br /><br />– i / importação {< server-id > [,... n] &#124; todos os} < criptografado-senha-file >|Se especificado, essa opção não deve ser combinada com outras opções.<br /><br />id do servidor: fornecida uma ID exclusiva para um servidor {string}<br /><br />arquivo de conexão de servidor: arquivo de definição de servidor (serverconnectionfile ou scriptfile).<br /><br />arquivo de valores de variável: ele é um arquivo de definição da variável e usado no arquivo de conexão de servidor.<br /><br />senha – arquivo criptografado: é um arquivo de senhas do servidor criptografado usando uma frase secreta especificada pelo usuário.|  
 |8|-?|não|Não Aplicável|Não Aplicável|  
   
 ## <a name="see-also"></a>Consulte também  

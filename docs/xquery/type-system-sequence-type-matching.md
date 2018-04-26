@@ -1,16 +1,16 @@
 ---
-title: "Correspondência de tipo de sequência | Microsoft Docs"
-ms.custom: 
+title: Correspondência de tipo de sequência | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>Tipo de sistema - correspondência de tipo de sequência
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 -   Você pode querer saber se a expressão retorna um elemento XML ou um nó de atributo de um nome e tipo específicos.  
   
- Você pode usar o operador Booliano `instance of` na correspondência do tipo de sequência. Para obter mais informações sobre o `instance of` expressão, consulte [expressões SequenceType &#40; XQuery &#41; ](../xquery/sequencetype-expressions-xquery.md).  
+ Você pode usar o operador Booliano `instance of` na correspondência do tipo de sequência. Para obter mais informações sobre o `instance of` expressão, consulte [expressões SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Comparando o tipo do valor atômico retornado por uma expressão  
  Se uma expressão retornar uma sequência de valores atômicos, você terá que achar o tipo do valor na sequência. Os exemplos a seguir ilustram como o tipo da sintaxe de sequência pode ser usado para avaliar o tipo de valor atômico retornado por uma expressão.  
@@ -442,6 +442,6 @@ RETURN
 -   Consultando explicitamente **xsi: Type** ou **xsi: nil** não tem suporte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Digite sistema &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

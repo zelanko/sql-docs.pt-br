@@ -1,6 +1,6 @@
 ---
 title: Executar o Console do SSMA (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b8946a6abdce48e55624965d1dea8b17c40760ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o Console do SSMA (MySQLToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA.  
@@ -43,7 +43,7 @@ O aplicativo de console usa alguns comandos do arquivo de script padrão como en
 ## <a name="project--script-file-commands"></a>Comandos do arquivo de Script de projeto  
 **Comando**  
   
-create-new-project:   
+Criar novo-projeto:   
                    Cria um novo projeto SSMA.  
   
 Os comandos de projeto lidar com a criação de projetos, abrir, salvar e sair de projetos.  
@@ -115,7 +115,7 @@ projeto salvar: salva o projeto de migração.
 ```  
 **Comando**  
   
-close-project  
+projeto de fechamento  
                   : Fecha o projeto de migração.  
   
 **Script**  
@@ -127,7 +127,7 @@ close-project
 ```  
 **Comando**  
   
-close-project  
+projeto de fechamento  
                   : Fecha o projeto de migração.  
   
 **Script**  
@@ -154,7 +154,7 @@ Os comandos de Conexão de banco de dados ajudam a conectar-se ao banco de dados
   
 **Comando**  
   
-connect-source-database  
+Conecte-se-origem-banco de dados  
   
 -   Executa a conexão à fonte de dados e carrega os metadados de nível alto de banco de dados de origem, mas não todos os metadados.  
   
@@ -171,7 +171,7 @@ Definição de servidor é recuperada do atributo do nome definido para cada con
 ```  
 **Comando**  
   
-force-load-source/target-database  
+Force-carga-origem/destino-banco de dados  
   
 -   Carrega os metadados de origem.  
   
@@ -194,7 +194,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
 ```  
 **Comando**  
   
-reconnect-source-database  
+Reconecte-origem-banco de dados  
   
 1.  Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando de conexão de fonte de dados.  
   
@@ -245,7 +245,7 @@ Os comandos de relatório geram relatórios sobre o desempenho de várias ativid
   
 **Comando**  
   
-generate-assessment-report  
+relatório gerar de avaliação  
   
 1.  Gera relatórios de avaliação no banco de dados de origem.  
   
@@ -387,7 +387,7 @@ ou
 ```  
 **Comando**  
   
-migrate-data  
+migrar dados  
   
 1.  Migra os dados de origem para o destino.  
   
@@ -497,7 +497,7 @@ Sincronizar de destino
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   Falha de script  
   
 4.  `report-errors-to:` Especifica o local do relatório de erro para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for dado, do arquivo pelo nome **TargetSynchronizationReport.XML** é criado.  
   
@@ -542,7 +542,7 @@ ou
 ```  
 **Comando**  
   
-refresh-from-database  
+atualização do banco de dados  
   
 1.  Atualiza os objetos de origem do banco de dados.  
   
@@ -560,7 +560,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   Falha de script  
   
 4.  `report-errors-to:` Especifica o local do relatório de erro para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for dado, do arquivo pelo nome **SourceDBRefreshReport.XML** é criado.  
   
@@ -607,7 +607,7 @@ Os comandos de geração de Script executam duas tarefas: elas ajudam a salvar o
   
 **Comando**  
   
-save-as-script  
+Salvar como script  
   
 Usado para salvar os Scripts de objetos em um arquivo mencionado quando metabase = target, essa é uma alternativa ao comando de sincronização em que vamos obter os scripts e executar o mesmo do banco de dados de destino.  
   

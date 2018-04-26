@@ -1,38 +1,39 @@
 ---
-title: "Guia de Introdução com o SSMA para Oracle (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Guia de Introdução com o SSMA para Oracle (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 1765ceb5cb1f4100d60a0f429635f9fc80d14e82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 761afabb604025c7c1f6472d09c8b3acf630915c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Guia de Introdução com o SSMA para Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Assistente de migração (SSMA) para Oracle permite a rápida converter esquemas de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, carregue os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e migrar dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Assistente de migração (SSMA) para Oracle permite a rápida converter esquemas de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, carregue os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e migrar dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 Este tópico apresenta o processo de instalação e, em seguida, ajuda a se familiarizar com a interface de usuário do SSMA.  
   
 ## <a name="installing-ssma"></a>Instalando o SSMA  
-Para usar o SSMA, primeiro instale o programa de cliente do SSMA em um computador que pode acessar o banco de dados do Oracle de origem e a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você deve instalar um pacote de extensão e pelo menos um dos provedores de Oracle (OLE DB ou [!INCLUDE[vstecado](../../includes/vstecado_md.md)]) no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Esses componentes oferecem suporte a migração de dados e a emulação de funções do sistema Oracle. Para obter instruções de instalação, consulte [instalando SSMA para Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md).  
+Para usar o SSMA, primeiro instale o programa de cliente do SSMA em um computador que pode acessar o banco de dados do Oracle de origem e a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você deve instalar um pacote de extensão e pelo menos um dos provedores de Oracle (OLE DB ou [!INCLUDE[vstecado](../../includes/vstecado_md.md)]) no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Esses componentes oferecem suporte a migração de dados e a emulação de funções do sistema Oracle. Para obter instruções de instalação, consulte [instalando SSMA para Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md).  
   
 Para iniciar o SSMA, clique em **iniciar**, aponte para **todos os programas**, aponte para  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Assistente de migração para Oracle**e, em seguida, clique em  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Assistente de migração para Oracle**.  
   
@@ -47,7 +48,7 @@ Você também deve se conectar a uma instância de [!INCLUDE[ssNoVersion](../../
   
 Depois de sincronizar convertidas esquemas com [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode retornar ao Gerenciador de metadados do Oracle e migrar dados de esquemas Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bancos de dados.  
   
-Para obter mais informações sobre essas tarefas e como executá-los, consulte [migração de bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md).  
+Para obter mais informações sobre essas tarefas e como executá-los, consulte [migração de bancos de dados Oracle para o SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md).  
   
 As seções a seguir descrevem os recursos da interface de usuário do SSMA.  
   
@@ -59,16 +60,16 @@ Gerenciador de metadados do Oracle mostra informações sobre esquemas de Oracle
   
 -   Procure os objetos em cada esquema.  
   
--   Selecionar objetos para a conversão e, em seguida, converter os objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxe. Para obter mais informações, consulte [convertendo esquemas de Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   Selecionar objetos para a conversão e, em seguida, converter os objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxe. Para obter mais informações, consulte [convertendo esquemas de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
--   Selecionar tabelas para migração de dados e, em seguida, migrar os dados dessas tabelas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obter mais informações, consulte [migrando dados do Oracle no SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md).  
+-   Selecionar tabelas para migração de dados e, em seguida, migrar os dados dessas tabelas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obter mais informações, consulte [migrando dados do Oracle no SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md).  
   
 #### <a name="sql-server-metadata-explorer"></a>Gerenciador de metadados do SQL Server  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Gerenciador de metadados mostra informações sobre uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando você se conectar a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA recupera metadados sobre essa instância e o armazena no arquivo de projeto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados mostra informações sobre uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando você se conectar a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA recupera metadados sobre essa instância e o armazena no arquivo de projeto.  
   
 Você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados para selecionar objetos de banco de dados Oracle convertidos e, em seguida, sincronizar os objetos com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-Para obter mais informações, consulte [carregar objetos de banco de dados convertidos no SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md).  
+Para obter mais informações, consulte [carregar objetos de banco de dados convertidos para o SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ### <a name="metadata"></a>Metadados  
 À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do Oracle, seis guias aparecerá: **tabela**, **SQL**, **mapeamento de tipo, o relatório**, **propriedades**, e **dados**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados, as três guias serão exibidas: **tabela**, **SQL**, e **dados**.  
@@ -102,7 +103,7 @@ A tabela a seguir mostra os menus do SSMA.
   
 |Menu|Description|  
 |----|-----------|  
-|**File**|Contém comandos para trabalhar com projetos, conectando-se ao Oracle e para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Arquivo**|Contém comandos para trabalhar com projetos, conectando-se ao Oracle e para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql_md.md)] do painel de detalhes do SQL. Também contém o **gerenciar indicadores** opção, onde você poderá ver uma lista de indicadores. Você pode usar os botões à direita da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados de pesquisadores** comando. Que sincroniza os objetos entre o Gerenciador de metadados do Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados. Também contém comandos para mostrar e ocultar o **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios e migrar objetos e dados. Também fornece acesso a **configurações globais** e **configurações de projeto** caixas de diálogo.|  
@@ -116,7 +117,7 @@ O **exibição** menu fornece comandos para alternar a visibilidade do painel de
   
 -   O painel de lista de erros mostra erro, aviso e mensagens informativas em uma lista classificável.  
   
-## <a name="see-also"></a>Consulte Também  
-[Migração de dados Oracle no SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
-[Referência de Interface do usuário &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Migração de dados Oracle no SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
+[Referência da Interface de usuário &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

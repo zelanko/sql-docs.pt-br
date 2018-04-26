@@ -1,9 +1,9 @@
 ---
-title: Grupos de servidores no SQL Operations Studio (preview) | Microsoft Docs
-description: Saiba mais sobre grupos de servidores no SQL Operations Studio (preview).
+title: Grupos de servidores no Studio de operações do SQL (visualização) | Microsoft Docs
+description: Saiba mais sobre grupos de servidores no Studio de operações do SQL (visualização).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eec4684b1a06e5226029a3a2409f831bffff04f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 07db639c5cd4f4b90ffa78a3d4677d9f5f17ade2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Grupos de servidores no[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Grupos de servidores no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Grupos de servidor fornecem uma maneira de organizar suas conexões aos servidores e trabalhar com os bancos de dados. Quando você cria grupos de servidores, os detalhes de configuração são salvas em *as configurações de usuário*.
 

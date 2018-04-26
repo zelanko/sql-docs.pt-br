@@ -1,25 +1,25 @@
 ---
 title: Novidades do SQL Server de 2017 no Linux | Microsoft Docs
-description: "Este artigo destaca o que há de novo para 2017 do SQL Server no Linux."
+description: Este artigo destaca o que há de novo para 2017 do SQL Server no Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: a0a92f4061bcc82384348344e30bd3436052ed38
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novidades do SQL Server 2017 no Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/24/2018
 Este artigo descreve os principais recursos e serviços disponíveis para 2017 do SQL Server em execução no Linux.
 
 > [!NOTE]
-> Além dessas capacidades neste artigo, as atualizações cumulativas são lançadas em intervalos regulares após o lançamento. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a versão mais recente de atualizações Cumulativas, consulte [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Para baixar os pacotes e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
+> Além dessas capacidades neste artigo, as atualizações cumulativas são lançadas em intervalos regulares após o lançamento. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a versão mais recente de atualizações Cumulativas, consulte [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Para baixar os pacotes e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Mecanismo de Banco de Dados do SQL Server
 

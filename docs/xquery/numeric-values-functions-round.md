@@ -1,16 +1,16 @@
 ---
-title: "Função Round (XQuery) | Microsoft Docs"
-ms.custom: 
+title: Função Round (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - fn:round function
 - round function [XQuery]
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85be02ca3d43acee4972eab8efc4b9ec88fd3b49
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cd4fa2060667fc914e8ef52f998f162bb8b27976
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-values-functions---round"></a>Funções de valores numéricas - arredondar
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ fn:round ( $arg as numeric?) as numeric?
 -   O **Round ()** função dos valores xs: Double e xs: float entre - 0.5 E0 e - 0e0 são mapeadas para 0e0 em vez de - 0e0.  
   
 ## <a name="see-also"></a>Consulte também  
- [Floor função &#40; XQuery &#41;](../xquery/numeric-values-functions-floor.md)   
- [limite de função &#40; XQuery &#41;](../xquery/numeric-values-functions-ceiling.md)  
+ [Função Floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [Função Ceiling &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   

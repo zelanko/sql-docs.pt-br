@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 69b56cf027a1c7d8f536b4d9ad80e5ef3b627469
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
@@ -100,7 +100,7 @@ Para atualizar o **mssql server** para a versão mais recente do pacote, use um 
 
 Esses comandos baixar o pacote mais recente e substitua os binários localizados em `/opt/mssql/`. O usuário gerou bancos de dados e bancos de dados do sistema não são afetados por essa operação.
 
-## <a id="rollback"></a> Rollback SQL Server
+## <a id="rollback"></a> Reversão SQL Server
 
 A reversão ou fazer downgrade do SQL Server para uma versão anterior, use as seguintes etapas:
 

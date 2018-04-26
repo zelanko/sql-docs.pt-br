@@ -1,6 +1,6 @@
 ---
 title: Conectando ao SQL Server (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d35db5eb35e4e27a2ea9724cdc2d5d017a8e02e8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9edacaa537f2df61dcdf131a5930bf5bfb92c1a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Conectando ao SQL Server (MySQLToSQL)
 Para migrar bancos de dados MySQL para o SQL Server, você deve se conectar à instância de destino do SQL Server. Quando você se conectar, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Server e exibe os metadados de banco de dados no Gerenciador de metadados de SQL Server. O SSMA armazena informações da instância do SQL Server está conectado, mas não armazena as senhas.  

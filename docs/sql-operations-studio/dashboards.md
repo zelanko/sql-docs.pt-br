@@ -1,9 +1,9 @@
 ---
-title: Acessar rapidamente informações e tarefas comuns no SQL Operations Studio (preview) | Microsoft Docs
-description: Saiba mais sobre como exibir widgets criteriosos no SQL Operations Studio (preview).
+title: Acessar rapidamente informações e tarefas comuns no Studio de operações do SQL (visualização) | Microsoft Docs
+description: Saiba mais sobre como exibir widgets criteriosos no Studio de operações do SQL (visualização).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Painéis no[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Painéis no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Para exibir um painel, com o botão direito um servidor ou banco de dados e selecione **gerenciar**.
 
@@ -107,11 +107,11 @@ Usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]da configuração de a
 
 ## <a name="sample-insight-action-definition"></a>Definição de ação de análise de exemplo
 
-```"actions"{}```define uma ação de análise. Ação pode ser definida em um escopo específico, como ```"server"```, ```"database"``` e assim por diante e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa as informações de contexto de conexão atual para a ação. 
+```"actions"{}``` define uma ação de análise. Ação pode ser definida em um escopo específico, como ```"server"```, ```"database"``` e assim por diante e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa as informações de contexto de conexão atual para a ação. 
 
-Por exemplo, quando a ação de restauração é iniciada do banco de dados de WideWorldImporters ```"database": "${Database}"``` definição indica para passar ```Database``` valor da coluna no seu resultado de consulta para a ação de restauração. Ação de restauração inicia para o banco de dados. ```"types"```é uma matriz json e várias ações podem ser listadas na matriz. É basicamente um menu de contexto na caixa de diálogo de detalhes de informações que o usuário pode clicar em e executar a ação. 
+Por exemplo, quando a ação de restauração é iniciada do banco de dados de WideWorldImporters ```"database": "${Database}"``` definição indica para passar ```Database``` valor da coluna no seu resultado de consulta para a ação de restauração. Ação de restauração inicia para o banco de dados. ```"types"``` é uma matriz json e várias ações podem ser listadas na matriz. É basicamente um menu de contexto na caixa de diálogo de detalhes de informações que o usuário pode clicar em e executar a ação. 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]visualização 0.17.1 habilitou "backup", "restore", "nova consulta" e "novo banco de dados" como tipos de ação.
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] visualização 0.17.1 habilitou "backup", "restore", "nova consulta" e "novo banco de dados" como tipos de ação.
 
 ```json
 "details": {

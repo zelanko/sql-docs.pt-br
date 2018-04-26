@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02fec5c45a9cc4e928a5f2f9074d7e520aefd605
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0118022e8e9c24e2e26c4a559068fc02aaef79e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,18 +111,18 @@ ms.lasthandoff: 04/16/2018
 |**last_used_threads**|**bigint**|O número de threads de paralelos usados quando esse plano executado última vez. Sempre será 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|O número mínimo de threads paralelos usados que esse plano já usado durante uma execução. Sempre será 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|O número máximo de threads paralelos usados que esse plano já usado durante uma execução. Sempre será 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**total_columnstore_segment_reads**|**bigint**|A soma total de segmentos de columnstore lidas pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|O número de segmentos de columnstore lido pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|O número mínimo de segmentos de columnstore já lidas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|O número máximo de segmentos de columnstore já lidas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|A soma total de segmentos de columnstore ignorada pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|O número de segmentos de columnstore ignorada pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|O número mínimo de segmentos de columnstore nunca ignorado pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|O número máximo de segmentos de columnstore nunca ignorado pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-|**total_spills**|**bigint**|O número total de páginas vazados pela execução dessa consulta, desde que ele foi compilado.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|O número de páginas vazadas a última vez em que a consulta foi executada.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|O número máximo de páginas que essa consulta já tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_columnstore_segment_reads**|**bigint**|A soma total de segmentos de columnstore lidas pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|O número de segmentos de columnstore lido pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|O número mínimo de segmentos de columnstore já lidas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|O número máximo de segmentos de columnstore já lidas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|A soma total de segmentos de columnstore ignorada pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|O número de segmentos de columnstore ignorada pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|O número mínimo de segmentos de columnstore nunca ignorado pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|O número máximo de segmentos de columnstore nunca ignorado pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_spills**|**bigint**|O número total de páginas vazados pela execução dessa consulta, desde que ele foi compilado.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|O número de páginas vazadas a última vez em que a consulta foi executada.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|O número máximo de páginas que essa consulta já tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**Int**|O identificador para o nó que essa distribuição é no.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]

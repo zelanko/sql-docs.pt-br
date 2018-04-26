@@ -1,27 +1,28 @@
 ---
-title: "Configurações globais (log) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Configurações globais (log) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df2e8fd5376ddf37d02380ba1a4f1c516f023e7a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configurações globais (log) (OracleToSQL)
 Use o **configurações globais** caixa de diálogo para especificar as configurações de log para o SSMA. Normalmente, altere essas configurações apenas ao trabalhar com o suporte ao produto.  
@@ -54,7 +55,7 @@ Para cada opção em **mensagens nível**, configure um dos seguintes níveis de
 |**Erro fatal**|Grave somente mensagens de erro fatal no log.|  
 |**Erro**|Grave no log de erro e mensagens de erro fatal.|  
 |**Aviso**|Grave mensagens de erro fatal, de aviso e erro no log.|  
-|**Informações de**|Gravação informativos, de aviso, erro e mensagens de erro fatal para o log.|  
+|**informações de**|Gravação informativos, de aviso, erro e mensagens de erro fatal para o log.|  
 |**Depurador**|Grave todas as mensagens, incluindo mensagens, o log de depuração.|  
   
 **Caminho do arquivo de log**  

@@ -1,9 +1,9 @@
 ---
-title: Notas de versão do Microsoft SQL Operations Studio (preview) | Microsoft Docs
-description: Notas de versão do Microsoft SQL Operations Studio (preview)
+title: Notas de versão do Microsoft SQL operações Studio (visualização) | Microsoft Docs
+description: Notas de versão do Microsoft SQL operações Studio (visualização)
 ms.custom: tools|sos
-ms.date: 03/28/2018
-ms.prod: sql-non-specified
+ms.date: 04/25/2018
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,15 +14,66 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 233572c87f785e10a0cde4ac78a7c8ee75c5a801
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Operations Studio (preview)
+# <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Studio de operações (visualização)
 
-**[Baixe a visualização pública de março](download.md)**
+**[Baixe a visualização de abril público](download.md)**
+
+
+## <a name="april-2018-april-public-preview"></a>De 2018 de abril (visualização pública de abril)
+
+Data de lançamento: 25 de abril de 2018  
+versão: 0.28.6
+
+O *visualização pública abril* contém correções e aprimoramentos. 
+
+- Melhorias para a extensão de visualização do agente SQL.
+- Maior suporte a arquivos grandes e protegido para salvar Admin protegido e > 256 milhões de arquivos no Studio de operações do SQL.
+- Integrado a divisão de Terminal para trabalhar com vários terminais abertos ao mesmo tempo.
+- Imprimir pé de contagem de arquivos no disco reduzido de instalação para instalações mais rápidas e tempos de inicialização.
+- Continue corrigir problemas do GitHub:
+   - Corrigir [emitir 37](https://github.com/Microsoft/sqlopsstudio/issues/37): quando o Visualizador gráfico gera um erro, ocorrerá um comportamento inesperado.
+   - Corrigir [emitir 462](https://github.com/Microsoft/sqlopsstudio/issues/462): solicitação de recurso: opção para grupos de servidor a ser expandido por padrão.
+   - Corrigir [emitir 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - sugestão incorreta para o comando 'Atualizar'.
+   - Corrigir [emitir 967](https://github.com/Microsoft/sqlopsstudio/issues/967): espera que o plano de consulta quando seleciona showplan XML na grade de resultados.
+   - Corrigir [emitir 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): Adicionar colchetes para chamada ms_foreachdb de flyfishingdba.
+   - Corrigir [emitir 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): erro de handshake de PRÉ-LOGON SSL/TLS.
+   - Corrigir [emitir 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): Exibir insights criptografado antes de mostrar o erro.
+   - Corrigir [emitir 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): novas ações de consulta no Gerenciador de widget e restauração são interrompidas.
+   - Corrigir [emitir 1068](https://github.com/Microsoft/sqlopsstudio/issues/1068): painel Saída windows pops-up com a mensagem de erro para o banco de dados do SQL Azure.
+   - Corrigir [emitir 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069): caixa de diálogo de Conexão mostra erro de servidor necessária quando inicialmente exibido.
+   - Corrigir [emitir 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070): grupos de servidores agora precisam de um clique duplo para expandir.
+   - Corrigir [emitir 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072): plano de fundo do controle de seleção é semitransparente.
+   - Corrigir [emitir 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115): corrigir problemas de acessibilidade de todos os alto contraste no Studio de operações do SQL.
+   - Corrigir [emitir 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101): falha de extensão para atualização "baixar manualmente" link vai para um local incorreto.
+   - Corrigir [emitir 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103): rolagem V não está funcionando na guia página inicial.
+   - Corrigir [emitir 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): guias de extensão SQL parou de funcionar.
+
+
+Um realce significativo para a visualização pública de abril é a atualização de código de origem de plataforma 1.21 de código do Visual Studio. Isso coloca em várias atualizações para o editor de núcleo e o workbench do ponto de 1.19 sincronização anterior. Alguns exemplos incluem o seguinte:
+
+- [Nova interface do usuário de notificações](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) - facilmente gerenciar e revisar as notificações do SQL Studio de operações.
+- [Integrado a divisão de Terminal](https://code.visualstudio.com/updates/v1_21#_split-terminals) -trabalhar com vários terminais abertos ao mesmo tempo.
+- [Salvar arquivos grandes e protegidos](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) - salve Admin protegidos e > 256 milhões de arquivos no Studio de operações do SQL.
+- [Maior suporte a grandes arquivos](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements) -otimizações de buffer de texto para arquivos grandes.
+- [Pesquisa de configurações melhorada](https://code.visualstudio.com/updates/v1_20#_settings-search) - facilmente encontrar a configuração direita com a pesquisa de idioma natural.
+- [Trechos de código global](https://code.visualstudio.com/updates/v1_20#_global-snippets) -criar trechos de código que você pode usar em todos os tipos de arquivo.
+- [Seleção múltipla do Explorer](https://code.visualstudio.com/updates/v1_20#_multi-select-in-the-explorer) -executar ações em vários arquivos ao mesmo tempo.
+- [Erros e avisos no Explorer](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer) - rapidamente navegar para erros em sua base de código.
+- [Arrastar e soltar, copiar e cole em windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) -mover arquivos entre janelas abertas do SQL Studio de operações.
+- [Suporte de submódulo Git](https://code.visualstudio.com/updates/v1_20#_git-submodules) -Git executar operações em repositórios do Git aninhadas.
+- [Suporte de leitor de tela de terminal](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) -Terminal integrado agora tem o modo de "Otimização de leitor de tela".
+- [Layout de editor centralizado](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout) -maximizar seu código exibindo o estado real da tela.
+- [Resultados da pesquisa horizontal (visualização)](https://code.visualstudio.com/updates/v1_21#_horizontal-search) -você pode agora exibir resultados da pesquisa em um painel horizontal.
+
+Para obter detalhes adicionais, check-out de [notas de versão de fevereiro do Visual Studio código](https://code.visualstudio.com/updates/v1_21)e o [notas de versão de janeiro do Visual Studio código](https://code.visualstudio.com/updates/v1_20).
+
+Para obter mais informações, consulte o [Log de alterações](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 ## <a name="march-2018-march-public-preview"></a>De 2018 de março (março visualização pública)
 
@@ -34,11 +85,9 @@ O *Public Preview de março* continua a atender os principais problemas do GitHu
 - Melhorar o modelo de extensibilidade do painel para oferecer suporte a insights com guias e painéis de configuração.
    - Gerenciador de extensões permite simple aquisição das extensões.
    - Extensões de painel para sp_whoisactive de [whoisactive.com](http://www.whoisactive.com).
-   - Para obter detalhes, consulte [estender a funcionalidade do SQL Operations Studio](extensions.md).
+   - Para obter detalhes, consulte [estender a funcionalidade do SQL operações Studio](extensions.md).
 - Adicionar outras [APIs de extensibilidade para o Gerenciador de conexão e objeto](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) gerenciamento.
 - Continuar corrigir o cliente importante [GitHub problemas](https://github.com/Microsoft/sqlopsstudio/issues).
-
-Para obter mais informações, consulte o [Log de alterações](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## <a name="february-2018-february-public-preview"></a>De 2018 fevereiro (fevereiro visualização pública)

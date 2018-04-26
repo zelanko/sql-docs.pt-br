@@ -1,16 +1,16 @@
 ---
-title: "Expressões de comparação (XQuery) | Microsoft Docs"
-ms.custom: 
+title: Expressões de comparação (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 361a600ec8033cbd0e10af75e7782b1b86b343cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comparison-expressions-xquery"></a>Expressões de comparação (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -227,9 +227,9 @@ ProductModelID       Result
   
  Estas são as comparações feitas, com base na ordem do documento:  
   
--   `<<`: **Operando 1** preceder **operando 2** na ordem do documento.  
+-   `<<` : **Operando 1** preceder **operando 2** na ordem do documento.  
   
--   `>>`: **Operando 1** siga **operando 2** na ordem do documento.  
+-   `>>` : **Operando 1** siga **operando 2** na ordem do documento.  
   
  A consulta a seguir retorna True se a descrição do catálogo de produto tem a \<garantia > elemento que aparecem antes do \<manutenção > elemento na ordem do documento de um produto específico.  
   
@@ -254,7 +254,7 @@ where ProductModelID=19
 -   A consulta retorna True.  
   
 ## <a name="see-also"></a>Consulte também  
- [Digite sistema &#40; XQuery &#41;](../xquery/type-system-xquery.md)   
+ [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Expressões XQuery](../xquery/xquery-expressions.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Guia de Introdução com o SSMA para MySQL (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efe3b32103e655213cecedbc9312233d5fd2c2d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: eac1a3e0b45669194dc78c34fbe28526f17c005b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Guia de Introdução com o SSMA para MySQL (MySQLToSQL)
 Migration Assistant SSMA (SQL Server) para MySQL permite converter esquemas de banco de dados MySQL para esquemas SQL Server ou banco de dados do Azure SQL rapidamente, carregar os esquemas resultantes no SQL Server ou banco de dados de SQL do Azure e migrar dados do MySQL para o SQL Server ou banco de dados de SQL do Azure.  
@@ -107,7 +107,7 @@ A tabela a seguir mostra a migração comandos da barra de ferramentas:
   
 |||  
 |-|-|  
-|**Button**|**Função**|  
+|**botão**|**Função**|  
 |**Criar relatório**|Converte os objetos selecionados do MySQL para objetos do SQL Server ou banco de dados do Azure SQL e, em seguida, cria um relatório que mostra a conversão foi como bem-sucedida.<br /><br />Este comando está desabilitado, a menos que os objetos selecionados no Gerenciador de metadados do MySQL.|  
 |**Converter esquema**|Converte os objetos selecionados do MySQL em objetos do SQL Server ou banco de dados de SQL do Azure.<br /><br />Este comando está desabilitado, a menos que os objetos selecionados no Gerenciador de metadados do MySQL.|  
 |**Migrar dados**|Migra os dados do banco de dados MySQL para o SQL Server ou banco de dados de SQL do Azure. Antes de executar esse comando, converter os esquemas do MySQL para esquemas SQL Server ou banco de dados de SQL do Azure e, em seguida, carregue os objetos no SQL Server ou banco de dados de SQL do Azure.<br /><br />Este comando está desabilitado, a menos que os objetos selecionados no Gerenciador de metadados do MySQL.|  

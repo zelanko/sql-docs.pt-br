@@ -2,7 +2,7 @@
 title: Configurações (mapeamento de tipo) do projeto (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d113993ad9cbfa46e471748ae5840fab3c96d26b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configurações (mapeamento de tipo) do projeto (SybaseToSQL)
 A página mapeamento de tipo do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte tipos de dados do Sybase Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
@@ -64,25 +64,25 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binary[\*..8000]**|**binary[\*]**|  
+|**binário [\*... 8000]**|**binary[\*]**|  
 |**binary[8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
 |**variável de char [\*... 8000]**|**varchar[\*]**|  
 |**variável de char [8001...\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
+|**char [\*... 8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**variável de caractere**|**varchar**|  
 |**variável de caractere [\*... 8000]**|**varchar[\*]**|  
 |**variável de caractere [8001...\*]**|**varchar(max)**|  
 |**caracteres [\*... 8000]**|**char[\*]**|  
-|**character[8001..\*]**|**varchar(max)**|  
+|**caracteres [8001...\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
 |**dec**|**decimal**|  
-|**dec[\*..\*]**|**decimal[\*]**|  
+|**DEC [\*... \*]**|**decimal[\*]**|  
 |**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
 |**decimal[\*..\*]**|**decimal[\*]**|  
@@ -90,7 +90,7 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**precisão dupla**|**float[53]**|  
 |**float**|**float[53]**|  
 |**float [\*... 15]**|**float[24]**|  
-|**float[16..\*]**|**float[53]**|  
+|**float [16 …\*]**|**float[53]**|  
 |**image**|**image**|  
 |**Int**|**Int**|  
 |**inteiro**|**Int**|  
@@ -115,20 +115,20 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**nchar variados**|**nvarchar**|  
 |**nchar variados [\*... 4000]**|**nvarchar[\*]**|  
 |**nchar variados [4001.\*]**|**nvarchar(max)**|  
-|**nchar[\*..4000]**|**nchar[\*]**|  
+|**nchar [\*... 4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
 |**numeric[\*..\*]**|**numeric[\*]**|  
 |**numeric[\*..\*][\*..\*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar[\*..4000]**|**nvarchar[\*]**|  
+|**nvarchar [\*... 4000]**|**nvarchar[\*]**|  
 |**nvarchar[4001..\*]**|**nvarchar(max)**|  
 |**real**|**float[24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar[128]**|  
-|**sysname[\*..\*]**|**nvarchar[255]**|  
+|**sysname [\*... \*]**|**nvarchar[255]**|  
 |**text**|**text**|  
 |**time**|**time[3]**|  
 |**timestamp**|**rowversion**|  
@@ -148,9 +148,9 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**smallint não assinado**|**Int**|  
 |**tinyint não assinado**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary[\*..8000]**|**varbinary[\*]**|  
+|**varbinary [\*... 8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
 |**varchar [\*... 8000]**|**varchar[\*]**|  
-|**varchar[8001..\*]**|**varchar(max)**|  
+|**varchar [8001...\*]**|**varchar(max)**|  
   

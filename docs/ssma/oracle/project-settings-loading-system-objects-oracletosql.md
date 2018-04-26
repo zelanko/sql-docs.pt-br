@@ -1,27 +1,28 @@
 ---
-title: "Configurações (objetos de sistema de carregamento) do projeto (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Configurações (objetos de sistema de carregamento) do projeto (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 28736a939c3ad2a73c0924901b79ce8f9954982b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 598f7726c2bb01b2b57cc98817716821b9112ca1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Configurações (objetos de sistema de carregamento) do projeto (OracleToSQL)
 A página carregar objetos do sistema do **configurações de projeto** caixa de diálogo permite que você especifique quais objetos de sistema Oracle SSMA converte e carrega em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -35,21 +36,21 @@ O painel ao carregar objetos do sistema está disponível na **configurações d
 ## <a name="default-settings"></a>Configurações padrão  
 Converter objetos de sistema consome recursos do sistema e leva tempo. Para melhorar o desempenho, o SSMA seleciona somente os objetos de sistema usados com mais frequência, conforme mostrado na lista a seguir:  
   
--   SYS. DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS. DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
--   SYS. DBMS_UTILITY  
+-   SYS.DBMS_UTILITY  
   
 -   SYS. PADRÃO  
   
 -   SYS. UTL_FILE  
   
--   SYS. DBMS_LOB  
+-   SYS.DBMS_LOB  
   
--   SYS. DBMS_SQL  
+-   SYS.DBMS_SQL  
   
--   SYS. DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 Se os objetos Oracle se referem a objetos de sistema adicionais, você deve selecionar os objetos. Se você não selecionar os objetos do sistema que são referenciados por seus objetos de banco de dados Oracle, o SSMA relatará erros de conversão. Se você receber erros de conversão causados pela falta de objetos do sistema, selecione os objetos ausentes na caixa de diálogo. Você pode repetir a conversão conforme necessário.  
   

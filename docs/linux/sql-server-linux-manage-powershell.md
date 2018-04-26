@@ -1,25 +1,25 @@
 ---
 title: Gerenciar o SQL Server no Linux com o PowerShell | Microsoft Docs
-description: "Este artigo fornece uma visão geral do uso do PowerShell no Windows com o SQL Server no Linux."
+description: Este artigo fornece uma visão geral do uso do PowerShell no Windows com o SQL Server no Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8869f87ec6e69844155a2bf0361a90e07b30de24
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Use o PowerShell no Windows para gerenciar o SQL Server no Linux
 
@@ -76,7 +76,7 @@ Copie e cole os seguintes comandos no prompt do PowerShell. Quando você executa
 - Criar uma instância do [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) objeto
 - Conecte-se para o **Server** e exibir algumas propriedades
 
-Lembre-se de substituir  **\<your_server_instance\>**  com o endereço IP ou o nome do host de sua instância do SQL Server 2017 no Linux.
+Lembre-se de substituir **\<your_server_instance\>** com o endereço IP ou o nome do host de sua instância do SQL Server 2017 no Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -116,7 +116,7 @@ Copie e cole os seguintes comandos no prompt do PowerShell. Ele podem levar algu
 - Use o **Get-SqlErrorLog** cmdlet para se conectar à instância do SQL Server 2017 no Linux e recuperar erro logs desde **ontem**
 - Direcionar a saída para o **Out-GridView** cmdlet
 
-Lembre-se de substituir  **\<your_server_instance\>**  com o endereço IP ou o nome do host de sua instância do SQL Server 2017 no Linux.
+Lembre-se de substituir **\<your_server_instance\>** com o endereço IP ou o nome do host de sua instância do SQL Server 2017 no Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

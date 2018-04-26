@@ -1,6 +1,6 @@
 ---
 title: Trabalhando com projetos do SSMA (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 230e3b73b1903a4a74c98fed108600ffd9d5a523
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e34ac2455e6de1f35925045504e0e3224ee56560
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Trabalhando com projetos do SSMA (OracleToSQL)
 Para migrar bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você primeiro crie um projeto SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -33,11 +33,11 @@ Para migrar bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ss
   
 -   Metadados sobre a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que receberá os dados e os objetos migrados.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]informações de conexão.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Informações de Conexão.  
   
 -   Configurações de projeto.  
   
-Quando você abre um projeto, ele é desconectado do Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Que lhe permite trabalhar offline. Para obter informações sobre reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [se conectar ao SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).  
+Quando você abre um projeto, ele é desconectado do Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Que lhe permite trabalhar offline. Para obter informações sobre reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [conectando ao SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Revisando parâmetros de projeto padrão  
 O SSMA contém várias configurações de conversão e carregamento de objetos de banco de dados, migração de dados e sincronizando SSMA com Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. As configurações padrão são apropriadas para vários usuários. No entanto, antes de criar um novo projeto SSMA, você deve examinar as configurações. Se desejar, você pode alterar as configurações padrão que serão usadas para todos os seus projetos novos.  
@@ -50,19 +50,19 @@ O SSMA contém várias configurações de conversão e carregamento de objetos d
   
 3.  No painel esquerdo, clique em **conversão**.  
   
-4.  No painel direito, revise e altere as configurações conforme necessário. Para obter mais informações sobre essas configurações, consulte [configurações de projeto &#40; Conversão de &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+4.  No painel direito, revise e altere as configurações conforme necessário. Para obter mais informações sobre essas configurações, consulte [configurações de projeto &#40;conversão&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 5.  Repita as etapas 1 a 3 para as páginas de migração, sincronização, carregar objetos do sistema, GUI e mapeamento de tipo.  
   
-    -   Para obter informações sobre as configurações de migração, consulte [configurações de projeto &#40; Migração de &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-migration-oracletosql.md).  
+    -   Para obter informações sobre as configurações de migração, consulte [configurações de projeto &#40;migração&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md).  
   
-    -   Para obter informações sobre as configurações de objeto de sistema, consulte [configurações de projeto &#40; Carregando objetos do sistema &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md).  
+    -   Para obter informações sobre as configurações de objeto de sistema, consulte [configurações de projeto&#40;objetos do sistema carregar&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md).  
   
-    -   Para obter informações sobre as configurações de sincronização para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [configurações de projeto &#40; Sincronização &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+    -   Para obter informações sobre as configurações de sincronização para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [configurações de projeto&#40;sincronização&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
-    -   Para obter informações sobre configurações de interface gráfica do usuário, consulte [configurações de projeto &#40; Interface gráfica do usuário &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-gui-oracletosql.md).  
+    -   Para obter informações sobre configurações de interface gráfica do usuário, consulte [configurações de projeto &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md).  
   
-    -   Para obter informações sobre configurações de mapeamento de tipo de dados, consulte [configurações de projeto &#40; Mapeamento de tipo de &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+    -   Para obter informações sobre configurações de mapeamento de tipo de dados, consulte [configurações de projeto &#40;mapeamento de tipo&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
 ## <a name="creating-new-projects"></a>Criar novos projetos  
 Para migrar dados de bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve primeiro criar um projeto.  
@@ -87,12 +87,12 @@ Para migrar dados de bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../in
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
   
-    -   Banco de dados SQL do Azure  
+    -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>Personalizando configurações de projeto  
-Além de definir configurações de projeto padrão que se aplicam a todos os novos projetos do SSMA, você pode personalizar as configurações para cada projeto. Para obter mais informações, consulte [definindo opções de projeto &#40; OracleToSQL &#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
+Além de definir configurações de projeto padrão que se aplicam a todos os novos projetos do SSMA, você pode personalizar as configurações para cada projeto. Para obter mais informações, consulte [definindo opções de projeto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
   
-Quando você personalizar mapeamentos de tipo de dados entre bancos de dados de origem e de destino, você pode definir mapeamentos no projeto, no banco de dados ou no nível de objeto. Para obter mais informações, consulte [mapeamento Oracle e tipos de dados do SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+Quando você personalizar mapeamentos de tipo de dados entre bancos de dados de origem e de destino, você pode definir mapeamentos no projeto, no banco de dados ou no nível de objeto. Para obter mais informações, consulte [mapeamento Oracle e tipos de dados do SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
 ## <a name="saving-projects"></a>Salvando projetos  
 Quando você salvar um projeto, o SSMA retém as configurações do projeto e, opcionalmente, os metadados do banco de dados, para o arquivo de projeto.  
@@ -129,8 +129,8 @@ Quando você abre um projeto, ele é desconectado da Oracle e do [!INCLUDE[ssNoV
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [se conectar ao banco de dados Oracle (OracleToSQL)](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
   
-## <a name="see-also"></a>Consulte Também  
-[Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-[Conectar-se ao banco de dados Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
-[Conectar-se ao SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Bancos de dados Oracle migrando para o SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Conectar-se ao banco de dados Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
+[Conectando ao SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
   

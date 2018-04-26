@@ -1,6 +1,6 @@
 ---
 title: Configurações (mapeamento de tipo) do projeto (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a268c4a080248028d8eeb399db68f0de57412b01
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: be9c30338806ada2c4a74ef73cb5d8725a15dabf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configurações (mapeamento de tipo) do projeto (DB2ToSQL)
 A página mapeamento de tipo do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte tipos de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
@@ -70,8 +70,8 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_integer|int|  
 |blob|varbinary(max)|  
 |booleano|bit|  
@@ -79,12 +79,12 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |char varying|varchar(max)|  
 |character|varchar(max)|  
 |character varying|varchar(max)|  
-|clob|varchar(max)|  
+|CLOB|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|Decimal|float[53]|  
-|precisão dupla|float[53]|  
-|float|float[53]|  
+|Decimal|float [53]|  
+|precisão dupla|float [53]|  
+|float|float [53]|  
 |int|int|  
 |inteiro|int|  
 |long|varchar(max)|  
@@ -98,12 +98,12 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |variável de caracteres nacionais<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|float[53]|  
-|numeric|float[53]|  
-|nvarchar2|nvarchar(max)|  
+|number|float [53]|  
+|numeric|float [53]|  
+|NVARCHAR2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
-|real|float[53]|  
+|real|float [53]|  
 |RowId|uniqueidentifier|  
 |Signtype|smallint|  
 |smallint|smallint|  
@@ -113,8 +113,8 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |carimbo de hora com o fuso horário|datetimeoffset|  
 |Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
-|varchar2|varchar(max)|  
-|xmltype|xml|  
+|VARCHAR2|varchar(max)|  
+|Tipo XML|xml|  
   
 <sup>*</sup> Aplica-se para retornar o mapeamento de tipo de valor apenas.  
   
@@ -126,27 +126,27 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|variável de char [*... \*]|varchar[*]|  
+|variável de char [*... \*]|varchar [*]|  
 |char [*... \*]|char [*]|  
 |character|char|  
-|variável de caractere [*... \*]|varchar[*]|  
+|variável de caractere [*... \*]|varchar [*]|  
 |caracteres [*... \*]|char [*]|  
-|clob|varchar(max)|  
+|CLOB|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
 |DEC [*... \*]|dec[*][0]|  
 |DEC [*... \*][\*.. \*]|dec[*][\*]|  
 |Decimal|decimal[38][0]|  
 |decimal [*... \*]|decimal[*][0]|  
-|decimal[*..\*][\*..\*]|decimal[*][\*]|  
-|precisão dupla|float[53]|  
-|float|float[53]|  
-|float[*..53]|float[*]|  
-|float [54... *]|float[53]|  
+|decimal [*... \*][\*.. \*]|decimal[*][\*]|  
+|precisão dupla|float [53]|  
+|float|float [53]|  
+|float [*... 53]|float[*]|  
+|float [54... *]|float [53]|  
 |int|int|  
 |inteiro|int|  
 |long|varchar(max)|  
@@ -154,26 +154,26 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |Long raw [*... 8000]|varbinary[*]|  
 |Long raw [8001... *]|varbinary(max)|  
 |Long varchar|varchar(max)|  
-|tempo [*... 8000]|varchar[*]|  
-|long[8001..*]|varchar(max)|  
+|tempo [*... 8000]|varchar [*]|  
+|tempo [8001... *]|varchar(max)|  
 |National char|NCHAR|  
-|variável de caractere nacional [*... \*]|nvarchar[*]|  
-|National char [*... \*]|nchar[*]|  
+|variável de caractere nacional [*... \*]|nvarchar [*]|  
+|National char [*... \*]|nchar [*]|  
 |caracteres nacionais|NCHAR|  
-|variável de caractere nacional [*... \*]|nvarchar[*]|  
-|caracteres nacionais [*... \*]|nchar[*]|  
+|variável de caractere nacional [*... \*]|nvarchar [*]|  
+|caracteres nacionais [*... \*]|nchar [*]|  
 |NCHAR|NCHAR|  
-|nchar[*]|nchar[*]|  
+|nchar [*]|nchar [*]|  
 |NCLOB|nvarchar(max)|  
-|number|float[53]|  
-|número [*... \*]|numeric[*]|  
+|number|float [53]|  
+|número [*... \*]|numérico [*]|  
 |número [*... \*][\*.. \*]|numeric[*][\*]|  
 |numeric|numeric|  
-|numérico [*... \*]|numeric[*]|  
-|numeric[*..\*][\*..\*]|numeric[*][\*]|  
-|NVARCHAR2 [*... \*]|nvarchar[*]|  
+|numérico [*... \*]|numérico [*]|  
+|numérico [*... \*][\*.. \*]|numeric[*][\*]|  
+|NVARCHAR2 [*... \*]|nvarchar [*]|  
 |RAW [*... \*]|varbinary[*]|  
-|real|float[53]|  
+|real|float [53]|  
 |RowId|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
@@ -184,9 +184,9 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |carimbo de hora [*... \*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
 |urowid [*... \*]|uniqueidentifier|  
-|varchar [*... \*]|varchar[*]|  
-|VARCHAR2 [*... \*]|varchar[*]|  
-|Xmltype|xml|  
+|varchar [*... \*]|varchar [*]|  
+|VARCHAR2 [*... \*]|varchar [*]|  
+|Tipo XML|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mapeamento de tipo de variável Local padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.  
@@ -194,33 +194,33 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_interger|int|  
 |Blob|varbinary(max)|  
 |Booliano|bit|  
 |Char|char|  
-|variável de char [*... 8000]|varchar[*]|  
+|variável de char [*... 8000]|varchar [*]|  
 |variável de char [8001... *]|varchar(max)|  
 |char [*... 8000]|char [*]|  
 |char [8001... *]|varchar(max)|  
 |Caractere|char|  
-|variável de caractere [*... 8000]|varchar[*]|  
+|variável de caractere [*... 8000]|varchar [*]|  
 |variável de caractere [8001... *]|varchar(max)|  
 |caracteres [*... 8000]|char [*]|  
 |caracteres [8001... *]|varchar(max)|  
-|clob|varchar(max)|  
+|CLOB|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
 |DEC [*... \*]|dec[*][0]|  
 |DEC [*... \*][\*.. \*]|dec[*][\*]|  
 |Decimal|decimal[38][0]|  
 |decimal [*... \*]|decimal[*][0]|  
-|decimal[*..\*][\*..\*]|decimal[*][\*]|  
-|precisão dupla|float[53]|  
-|Valor Flutuante|float[53]|  
-|float[*..53]|float[*]|  
-|float [54... *]|float[53]|  
+|decimal [*... \*][\*.. \*]|decimal[*][\*]|  
+|precisão dupla|float [53]|  
+|Valor Flutuante|float [53]|  
+|float [*... 53]|float[*]|  
+|float [54... *]|float [53]|  
 |Int|int|  
 |Integer|int|  
 |inteiro [*... \*]|numeric[*][0]|  
@@ -229,38 +229,38 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |Long raw [*... 8000]|varbinary[*]|  
 |Long raw [8001... *]|varbinary(max)|  
 |National char|NCHAR|  
-|variável de caractere nacional [*... 4000]|nvarchar[*]|  
+|variável de caractere nacional [*... 4000]|nvarchar [*]|  
 |variável de caractere nacional [4001... *]|nvarchar(max)|  
-|National char [*... 4000]|nchar[*]|  
+|National char [*... 4000]|nchar [*]|  
 |National char [4001... *]|nvarchar(max)|  
 |caracteres nacionais|NCHAR|  
-|caracteres nacionais [*... 4000]|nvarchar[*]|  
+|caracteres nacionais [*... 4000]|nvarchar [*]|  
 |caracteres nacionais [4001... *]|nvarchar(max)|  
-|variável de caractere nacional [*... 4000]|nvarchar[*]|  
+|variável de caractere nacional [*... 4000]|nvarchar [*]|  
 |variável de caractere nacional [4001... *]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar [*... 4000]|nchar[*]|  
-|nchar[4001..*]|nvarchar(max)|  
-|nchar variados [*... 4000]|nvarchar[*]|  
+|nchar [*... 4000]|nchar [*]|  
+|nchar [4001... *]|nvarchar(max)|  
+|nchar variados [*... 4000]|nvarchar [*]|  
 |nchar variados [4001... *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Número|float[53]|  
-|número [*... \*]|numeric[*]|  
+|Número|float [53]|  
+|número [*... \*]|numérico [*]|  
 |número [*... \*][\*.. \*]|numeric[*][\*]|  
 |Numérico|numeric[38][0]|  
-|numérico [*... \*]|numeric[*]|  
-|numeric[*..\*][\*..\*]|numeric[*][\*]|  
-|nvarchar2[*..4000]|nvarchar[*]|  
-|nvarchar2[4001..*]|nvarchar(max)|  
+|numérico [*... \*]|numérico [*]|  
+|numérico [*... \*][\*.. \*]|numeric[*][\*]|  
+|NVARCHAR2 [*... 4000]|nvarchar [*]|  
+|NVARCHAR2 [4001... *]|nvarchar(max)|  
 |pls_integer|int|  
 |RAW [*... 8000]|varbinary[*]|  
 |RAW [8001... *]|varbinary(max)|  
-|Real|float[53]|  
+|Real|float [53]|  
 |RowId|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
-|string[*..8000]|varchar[*]|  
-|string[8001..*]|varchar(max)|  
+|cadeia de caracteres [*... 8000]|varchar [*]|  
+|cadeia de caracteres [8001... *]|varchar(max)|  
 |timestamp|datetime2|  
 |carimbo de hora com o fuso horário local|datetimeoffset|  
 |carimbo de hora com o fuso horário|datetimeoffset|  
@@ -269,11 +269,11 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |carimbo de hora [*... \*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
 |urowid [*... \*]|uniqueidentifier|  
-|varchar [*... 8000]|varchar[*]|  
+|varchar [*... 8000]|varchar [*]|  
 |varchar [8001... *]|varchar(max)|  
-|VARCHAR2 [*... 8000]|varchar[*]|  
-|varchar2[8001..*]|varcha(max)|  
-|Xmltype|xml|  
+|VARCHAR2 [*... 8000]|varchar [*]|  
+|VARCHAR2 [8001... *]|varcha(max)|  
+|Tipo XML|xml|  
   
 ## <a name="see-also"></a>Consulte também  
 [Referência da Interface de usuário &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

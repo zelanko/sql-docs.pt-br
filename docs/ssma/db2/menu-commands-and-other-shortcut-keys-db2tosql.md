@@ -1,6 +1,6 @@
 ---
 title: Comandos de menu e outras teclas de atalho (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b81e9aae756b94302d2a70db4b66a2c3933e10c7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 43b92985f3423defe6ef2c5a2e6a62d032474829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menu e outras teclas de atalho (DB2ToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para aplicativo do DB2.  
@@ -77,7 +77,7 @@ Para acessar o menu de exibição, o atalho de teclado usado é ALT + V. A tabel
 |Mostre painel de lista de erros.|ALT + V + eletrônico ou CTRL + E|  
 |Mostre painel de saída.|ALT + V + O ou CTRL + S|  
 |Submenu de layouts de acesso.|ALT + V + L|  
-|Adicione o layout atual.|ALT + V + L + A|  
+|Adicione o layout atual.|ALT + V + A + L|  
 |Selecione o layout padrão.|ALT + V + L + D ou CTRL + ALT + 1|  
 |Selecione sem layout pesquisadores.|ALT + V + L + W ou CTRL + ALT + 2|  
 |Exiba a caixa de diálogo Gerenciar layouts.|ALT + V + L + M|  

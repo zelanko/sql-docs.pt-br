@@ -1,6 +1,6 @@
 ---
 title: Convertendo esquemas de DB2 (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ef7efc485836b6b65b6f2236bd2a7682422b78e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Convertendo esquemas de DB2 (DB2ToSQL)
 Depois de se conectar ao DB2, conectado à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e o conjunto de projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de banco de dados.  
@@ -79,7 +79,7 @@ A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!IN
 |Cursores|**O SSMA mapeia CURSORES com as seguintes exceções:**<br /><br />Instrução de CURSOR ALLOCATE - não é mapeado para a semântica do SQL Server<br /><br />Instrução de LOCALIZADORES ASSOCIAR - não é mapeado para a semântica do SQL Server<br /><br />Instrução DECLARE CURSOR - cláusula Returnability não está mapeada para a semântica do SQL server<br /><br />Instrução FETCH – um mapeamento parcial. Variáveis como destino têm suporte apenas. DESCRITOR de sqlda não não está mapeada para a semântica do SQL server|  
 |Variáveis|São mapeados.|  
 |Exceções, manipuladores e condições|**O SSMA mapeia "tratamento de exceção" com as seguintes exceções:**<br /><br />Manipuladores de saída – são mapeados.<br /><br />Desfazer manipuladores – são mapeados.<br /><br />CONTINUAR manipuladores – não estão mapeados.<br /><br />Condições - ele não mapeia a semântica do SQL server.|  
-|Dynamic SQL|Não mapeado.|  
+|SQL dinâmico|Não mapeado.|  
 |Aliases|São mapeados.|  
 |Apelidos|Mapeamento parcial. Processamento manual é necessário para o objeto subjacente|  
 |Sinônimos|São mapeados.|  

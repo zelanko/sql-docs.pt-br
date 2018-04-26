@@ -1,25 +1,25 @@
 ---
-title: "Começar com recursos de desempenho do SQL Server no Linux | Microsoft Docs"
-description: "Este artigo fornece uma introdução dos recursos de desempenho do SQL Server para os usuários do Linux que são novos para o SQL Server. Muitos desses exemplos funcionam em todas as plataformas, mas o contexto deste artigo é Linux."
+title: Começar com recursos de desempenho do SQL Server no Linux | Microsoft Docs
+description: Este artigo fornece uma introdução dos recursos de desempenho do SQL Server para os usuários do Linux que são novos para o SQL Server. Muitos desses exemplos funcionam em todas as plataformas, mas o contexto deste artigo é Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 375f1ef49688f2c85facfab52ffca3322ad53747
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de desempenho do SQL Server no Linux
 

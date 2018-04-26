@@ -1,30 +1,31 @@
 ---
 title: Criando arquivos de Script (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b249b133ffb2316046f65786e0ac41f3a034e0e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-accesstosql"></a>Criando arquivos de script (AccessToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -348,7 +349,7 @@ A opção não configurável é:
 -   **Número máximo de tentativas de reconexão:** quando uma conexão estabelecida expira ou quebras devido à falha de rede, o servidor é necessário ser reconectado. As tentativas de reconexão são permitidas para um máximo de **5** tentativas após o qual o console executa automaticamente a reconexão. O recurso de reconexão automática reduz o esforço de executar novamente o script.  
   
 ## <a name="server-connection-parameters"></a>Parâmetros de Conexão de servidor  
-Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte o [criar os arquivos de Conexão do servidor &#40; AccessToSQL &#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) seção para obter mais detalhes.  
+Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte o [criar os arquivos de Conexão de servidor &#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) seção para obter mais detalhes.  
   
 ## <a name="script-commands"></a>Comandos de script  
 O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console SSMA processa a migração na ordem os comandos que aparecem no arquivo de script.  
@@ -394,14 +395,14 @@ Modelos que consiste em 3 de arquivos de script (para executar vários cenários
   
 Você pode executar os modelos (arquivos) depois de alterar os parâmetros exibidos para relevância.  
   
-Lista completa de comandos de script pode ser encontrada no [executando o Console SSMA &#40; AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+Lista completa de comandos de script pode ser encontrada em [executando o Console SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="script-file-validation"></a>Validação de arquivo de script  
 O usuário pode facilmente validar seu arquivo de script no arquivo de definição de esquema **'A2SSConsoleScriptSchema.xsd'** disponíveis na pasta 'Esquemas'.  
   
 ## <a name="next-step"></a>Próxima etapa
-A próxima etapa no operando o console é [criando arquivos de valor variável &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
+A próxima etapa no operando o console é [criando arquivos de valor variável &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Criando arquivos do valor da variável &#40; AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+[Criando arquivos do valor da variável &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

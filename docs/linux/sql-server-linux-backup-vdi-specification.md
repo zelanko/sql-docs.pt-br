@@ -1,25 +1,25 @@
 ---
-title: "Especificação de Backup VDI - SQL Server no Linux | Microsoft Docs"
-description: "Especificação de Interface de dispositivo Virtual de Backup do SQL Server."
+title: Especificação de Backup VDI - SQL Server no Linux | Microsoft Docs
+description: Especificação de Interface de dispositivo Virtual de Backup do SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 52792f4ef8734afbc45d491277e8671af19b234c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server no cliente do Linux VDI especificação do SDK
 
@@ -69,7 +69,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 - Finalidade de função
 - Sintaxe de função
 - Lista de parâmetros
-- Valores de retorno
+- Valores retornados
 - Remarks
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
@@ -146,7 +146,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 | |**VD_E_INVALID** |O nome do dispositivo é inválido. Não é um dos nomes de conhecido que compõem o conjunto.
 
 **Comentários** VD_E_OPEN podem ser retornados sem problema. O cliente pode chamar OpenDevice por meio de um loop até que este código é retornado.
-Se mais de um dispositivo estiver configurado, por exemplo * n * dispositivos, o conjunto de dispositivo virtual retornará * n * interfaces de dispositivo exclusivo.
+Se mais de um dispositivo estiver configurado, por exemplo *n* dispositivos, o conjunto de dispositivo virtual retornará *n* interfaces de dispositivo exclusivo.
 
 O `GetConfiguration` função pode ser usada para aguardar até que os dispositivos podem ser abertos.
 Se essa função não for bem-sucedida, um valor nulo é retornado por meio de ppVirtualDevice.

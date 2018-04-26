@@ -1,9 +1,9 @@
 ---
-title: Usar widgets Insight para monitorar servidores e bancos de dados no SQL Operations Studio (preview) | Microsoft Docs
-description: Saiba mais sobre widgets insight no SQL Operations Studio (preview).
+title: Usar widgets Insight para monitorar servidores e bancos de dados no Studio de operações do SQL (visualização) | Microsoft Docs
+description: Saiba mais sobre widgets insight no Studio de operações do SQL (visualização).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d810e0b5ed89b93ac3d56a12758285fbd297092b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 076bca7864a6111a5fa4758d5ecd074b01812d65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com os widgets de informações de[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com os widgets de informações de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Widgets Insight levar as consultas Transact-SQL (T-SQL) que você pode usar para monitorar servidores e bancos de dados e as transforma em visualizações criteriosos. 
 
@@ -41,7 +41,7 @@ Para entrar e iniciar a criação de tipos diferentes de widgets de informaçõe
 
 ## <a name="sql-queries"></a>Consultas SQL 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]tenta evitar introduzir ainda outro usuário de idioma ou pesadas interface para que ele tentará usar o máximo possível de T-SQL com a configuração mínima do JSON. Configurando widgets insight com T-SQL aproveita o inúmeros número de fontes de consultas T-SQL úteis que podem ser convertidas em widgets criteriosos existentes.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta evitar introduzir ainda outro usuário de idioma ou pesadas interface para que ele tentará usar o máximo possível de T-SQL com a configuração mínima do JSON. Configurando widgets insight com T-SQL aproveita o inúmeros número de fontes de consultas T-SQL úteis que podem ser convertidas em widgets criteriosos existentes.
 
 Widgets Insight são compostas de uma ou duas consultas do T-SQL:
 * *Consulta de widget Insight* é obrigatório e é a consulta que retorna os dados que aparecem no widget.
@@ -49,7 +49,7 @@ Widgets Insight são compostas de uma ou duas consultas do T-SQL:
 
 Uma consulta de widget insight define um conjunto de dados que processa uma contagem ou um gráfico. Consulta de detalhes de informações é usada para listar informações de detalhe de informações relevantes em um formato tabular no painel de detalhes de análise. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]executa consultas de widget insight e mapeia o conjunto de resultados de consulta ao conjunto de dados do gráfico e é processada. Quando os usuários abrem os detalhes da perspectiva, ele executa a consulta de detalhes do insight e imprime o resultado em uma exibição da grade a caixa de diálogo.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] executa consultas de widget insight e mapeia o conjunto de resultados de consulta ao conjunto de dados do gráfico e é processada. Quando os usuários abrem os detalhes da perspectiva, ele executa a consulta de detalhes do insight e imprime o resultado em uma exibição da grade a caixa de diálogo.
 
 A ideia básica é gravar uma consulta T-SQL de uma maneira para que ele pode ser usado como um conjunto de dados de uma contagem, o gráfico e o widget de gráfico. 
 
@@ -60,5 +60,5 @@ A consulta T-SQL e seu conjunto de resultados determinam o comportamento de widg
 
 
 ## <a name="additional-resources"></a>Recursos adicionais
-- [Editor de consultas](tutorial-sql-editor.md)
+- [Editor de Consultas](tutorial-sql-editor.md)
 

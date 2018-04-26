@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea0f427b3a88179f41a928830787b043c245934
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,8 +174,8 @@ Esse comando redefine todos os contadores como 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Isso é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consulta e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** na [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET refere-se apenas para sincronizar o iterador de troca do processador de consulta e produzindo linhas para threads de consumidor. Threads de consumidor são rastreadas separadamente no tipo de espera CXCONSUMER.| 
+|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Isso é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consulta e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET refere-se apenas para sincronizar o iterador de troca do processador de consulta e produzindo linhas para threads de consumidor. Threads de consumidor são rastreadas separadamente no tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Ocorre durante um exame de intervalo paralelo.| 
 |DAC_INIT |Ocorre enquanto a conexão de administrador dedicada estiver inicializando.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

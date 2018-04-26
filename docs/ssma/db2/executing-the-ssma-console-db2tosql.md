@@ -1,6 +1,6 @@
 ---
 title: Executar o Console do SSMA (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 816c37c3ac9c26c80d0f3a95ed27af135b9e874c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Executar o Console do SSMA (DB2ToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos. O aplicativo de console usa alguns comandos do arquivo de script padrão como enumerada nesta seção.  
@@ -95,7 +95,7 @@ SSMA para aplicativo de Console do DB2 oferece suporte a compatibilidade com ver
   
 **Comando**  
   
-save-project  
+Salvar projeto  
   
 Salva o projeto de migração.  
   
@@ -108,7 +108,7 @@ Salva o projeto de migração.
 ```  
 **Comando**  
   
-close-project  
+projeto de fechamento  
   
 Fecha o projeto de migração.  
   
@@ -133,7 +133,7 @@ Os comandos de Conexão de banco de dados ajudam a conectar-se ao banco de dados
   
 **Comando**  
   
-connect-source-database  
+Conecte-se-origem-banco de dados  
   
 -   Executa a conexão à fonte de dados e carrega os metadados de nível alto de banco de dados de origem, mas não todos os metadados.  
   
@@ -150,7 +150,7 @@ Definição de servidor é recuperada do atributo do nome definido para cada con
 ```  
 **Comando**  
   
-force-load-source/target-database  
+Force-carga-origem/destino-banco de dados  
   
 -   Carrega os metadados de origem.  
   
@@ -180,7 +180,7 @@ ou
 ```  
 **Comando**  
   
-reconnect-source-database  
+Reconecte-origem-banco de dados  
   
 -   Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando de conexão de fonte de dados.  
   
@@ -231,7 +231,7 @@ Os comandos de relatório geram relatórios sobre o desempenho de várias ativid
   
 **Comando**  
   
-generate-assessment-report  
+relatório gerar de avaliação  
   
 -   Gera relatórios de avaliação no banco de dados de origem.  
   
@@ -509,7 +509,7 @@ Sincronizar de destino
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   Falha de script  
   
 -   `report-errors-to:` Especifica o local do relatório de erro para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for dado, do arquivo pelo nome **TargetSynchronizationReport.XML** é criado.  
   
@@ -554,7 +554,7 @@ ou
 ```  
 **Comando**  
   
-refresh-from-database  
+atualização do banco de dados  
   
 -   Atualiza os objetos de origem do banco de dados.  
   
@@ -574,7 +574,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   Falha de script  
   
 -   `report-errors-to:` Especifica o local do relatório de erro para a operação de atualização (atributo opcional) se apenas o caminho da pasta for dado, do arquivo pelo nome **SourceDBRefreshReport.XML** é criado.  
   
@@ -619,7 +619,7 @@ Os comandos de geração de Script executam duas tarefas: elas ajudam a salvar o
   
 **Comando**  
   
-save-as-script  
+Salvar como script  
   
 Usado para salvar os scripts de objetos em um arquivo mencionado quando metabase = target, essa é uma alternativa ao comando de sincronização em que vamos obter os scripts e executar o mesmo do banco de dados de destino.  
   

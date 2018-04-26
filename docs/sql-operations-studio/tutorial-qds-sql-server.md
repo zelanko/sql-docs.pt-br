@@ -1,9 +1,9 @@
 ---
-title: 'Tutorial: Exemplo de consultas mais lentas de habilitar os cinco widget - SQL Operations Studio (preview) | Microsoft Docs'
+title: 'Tutorial: Exemplo de consultas mais lentas de habilitar os cinco widget - Studio de operações do SQL (visualização) | Microsoft Docs'
 description: Este tutorial demonstra como habilitar o widget de exemplo de consultas mais lentos cinco no painel de banco de dados.
 ms.custom: tools|sos
 ms.date: 03/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78c6ad929a3eea55669e9ebdcef149e605d594ef
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4c0597adca9897d69503bba3d08d9cdafd859c1c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Adicionar o *cinco consultas mais lentas* widget de exemplo para o painel de banco de dados
 

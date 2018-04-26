@@ -1,31 +1,31 @@
 ---
 title: Novidades do SSMA para MySQL (MySQLToSql) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 503e6c5a6c2d06a5c6a98ae1e9f45faebc40ae34
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: dc25a8b1b0c83ae5322aec85c000cb48b560a7f2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novidades do SSMA para MySQL (MySQLToSql)
 Este tópico lista SSMA para MySQL alterações em cada versão. 
@@ -51,7 +51,7 @@ A versão v 7.5 do SSMA para MySQL foi aprimorada com vários aprimoramentos par
 > [!IMPORTANT]
 > O .net 4.5.2 é um pré-requisito de instalação v SSMA 7.5. Além disso, começando com v 7.4, a versão de 32 bits do SSMA está sendo descontinuada.
 
-## <a name="ssma-v74"></a>SSMA v7.4
+## <a name="ssma-v74"></a>V 7.4 do SSMA
 A versão v 7.4 do SSMA para MySQL contém as seguintes alterações:
 - O **tempo limite da consulta** opção agora está disponível durante a descoberta de objeto de esquema na origem e no destino.
 ![opção de tempo limite de consulta](../media/query-timeout_red.png)
@@ -60,7 +60,7 @@ A versão v 7.4 do SSMA para MySQL contém as seguintes alterações:
 > [!IMPORTANT]
 > O .net 4.5.2 é um pré-requisito de instalação v 7.4 do SSMA. Além disso, começando com v 7.4, a versão de 32 bits do SSMA está sendo descontinuada. 
 
-## <a name="ssma-v73"></a>SSMA v7.3
+## <a name="ssma-v73"></a>O SSMA 7.3
 A versão 7.3 do SSMA para MySQL contém as seguintes alterações:
 - Métrica de qualidade e conversão aprimorada com correções de destino com base nos comentários dos clientes.
 - Estrutura de extensibilidade do SSMA exposta por meio de itens a seguir:
@@ -72,7 +72,7 @@ A versão 7.3 do SSMA para MySQL contém as seguintes alterações:
       - Instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, [recursos de conversão do estendendo o SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       - Projeto de exemplo para a conversão pode ser baixar este [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>V 7.2 do SSMA
 A versão v 7.2 do SSMA para MySQL contém as seguintes alterações:
 - Métrica de qualidade e conversão aprimorada com correções de destino com base nos comentários dos clientes.
 - Aprimoramentos de telemetria para fornecer melhor pontos de dados para solucionar problemas do cliente e melhorar as taxas de conversão do SSMA.

@@ -1,24 +1,24 @@
 ---
-title: "Práticas recomendadas de desempenho para o SQL Server no Linux | Microsoft Docs"
-description: "Este artigo fornece diretrizes e práticas recomendadas de desempenho para a execução de 2017 do SQL Server no Linux."
+title: Práticas recomendadas de desempenho para o SQL Server no Linux | Microsoft Docs
+description: Este artigo fornece diretrizes e práticas recomendadas de desempenho para a execução de 2017 do SQL Server no Linux.
 author: rgward
 ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0e9c5dde8f5bc9ef2e8a7ac285a8152b0c34e9c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Práticas recomendadas e diretrizes de configuração para 2017 do SQL Server no Linux
 

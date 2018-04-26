@@ -1,27 +1,28 @@
 ---
-title: "Configurações globais (Editor) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Configurações globais (Editor) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 3fad4c5437b998b6a8d13957fad529fb82c7a91c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 34d160cf3e2e6ff66dd9df0bfa3bd9f5fe76e553
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-editor-oracletosql"></a>Configurações globais (Editor) (OracleToSQL)
 Use a página do Editor do **configurações globais** caixa de diálogo para especificar configurações de janelas do editor de código.  

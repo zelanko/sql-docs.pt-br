@@ -1,6 +1,6 @@
 ---
 title: Selecionando e Configurando objetos para teste (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2186b7c2e52cbba438dd48b32a2f884e3ccf04fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Selecionando e Configurando objetos para teste (OracleToSQL)
 Nesta etapa, você seleciona objetos a testar e definir configurações para a comparação dos procedimentos e dos funções parâmetros de saída, bem como os valores de retorno de funções.  
   
 ## <a name="selection-of-objects-to-test"></a>Seleção de objetos para teste  
-Na árvore de objetos de Oracle localizado no lado esquerdo da janela, verifique os objetos que você deseja invocar durante o processo de teste. Consulte a lista completa de objetos podem ser testados no [teste objetos migrados do banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) tópico.  
+Na árvore de objetos de Oracle localizado no lado esquerdo da janela, verifique os objetos que você deseja invocar durante o processo de teste. Consulte a lista completa de objetos podem ser testados no [teste objetos de banco de dados migrados &#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) tópico.  
   
 Se o SSMA Tester não dá suporte a qualquer um dos objetos selecionados para teste, você verá o link rotulado **alguns objetos selecionados contêm erros** na árvore de objetos. Clique neste link para exibir as razões por que esses objetos não podem ser testados e desmarque a seleção de objetos errados.  
   
@@ -87,8 +87,8 @@ Controla os espaços à direita como são tratados durante a comparação.
 Você pode especificar valores de parâmetro de entrada no **valores chamar** página. O **adicionar chamar** botão adiciona uma nova chamada com valores de parâmetros vazia. O **remover chamadas** botão remove a chamada atual.  
   
 ## <a name="next-step"></a>Próxima etapa  
-[Selecionando e configurando afetados objetos &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Selecionar e configurar objetos afetados &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Teste de objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

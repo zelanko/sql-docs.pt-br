@@ -1,25 +1,25 @@
 ---
 title: Configurar SLES Cluster para o grupo de disponibilidade do SQL Server | Microsoft Docs
-description: 
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar SLES Cluster para o grupo de disponibilidade do SQL Server
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre a configuração de cluster, opções do rec
 >Neste ponto, a integração do SQL Server com Pacemaker no Linux não é como acoplada como com o WSFC no Windows. O serviço do SQL Server no Linux não está ciente do cluster. Pacemaker controla todas a orquestração os recursos de cluster, incluindo o recurso de grupo de disponibilidade. No Linux, você não deve depender sempre em disponibilidade grupo exibições de gerenciamento dinâmico (DMVs) que fornecem informações de cluster, como sys.DM hadr_cluster. Além disso, o nome de rede virtual é específico para o WSFC, não há nenhum equivalente do mesmo em Pacemaker. Você ainda pode criar um ouvinte para usá-lo para a reconexão depois do failover transparente, mas você terá que registrar manualmente o nome do ouvinte no servidor DNS com o IP usado para criar o recurso IP virtual (conforme explicado nas seções a seguir).
 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Roteiro
 
 O procedimento para criar um grupo de disponibilidade para alta disponibilidade difere entre servidores Linux e um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto nível: 
 

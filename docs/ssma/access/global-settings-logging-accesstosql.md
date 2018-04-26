@@ -1,6 +1,6 @@
 ---
 title: Configurações globais (log) (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a349ef1a4ef3d0f628b32aa72dc1cba239cb1893
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f2600699c34fe2f965b0a7f7157854ae4696746f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-accesstosql"></a>Configurações globais (log) (AccessToSQL)
 Use o **configurações globais** caixa de diálogo para especificar as configurações de log para o SSMA. Normalmente, altere essas configurações apenas ao trabalhar com o suporte ao produto.  
@@ -42,12 +42,12 @@ As seguintes opções estão disponíveis em **nível mensagens**:
 |**Coletor**|Metadados sobre o esquema de origem de coleta e salva-o ao projeto.|  
 |**Conversor**|Converte a estruturas de objetos de banco de dados de origem, como tabelas e procedimentos armazenados, em correspondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] estruturas.|  
 |**Migrator de dados**|Migra os dados do banco de dados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formatter**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.|  
+|**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.|  
 |**Interface gráfica do usuário**|Mensagens que aparecem quando você usar a ferramenta SSMA.|  
-|**Linker**|Resolve os identificadores SQL e fornece informações para outros componentes.|  
+|**Vinculador**|Resolve os identificadores SQL e fornece informações para outros componentes.|  
 |**Outro**|Todas as mensagens que não estão em qualquer outra categoria.|  
 |**Analisador**|Analisa o esquema de origem.|  
-|**Synchronizer**|Objetos de banco de dados da fonte de cargas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Sincronizador**|Objetos de banco de dados da fonte de cargas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**TreeConverter**|Converte objetos em uma fonte de metadados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadados.|  
   
 Para cada opção em **mensagens nível**, configure um dos seguintes níveis de log para o SSMA:  

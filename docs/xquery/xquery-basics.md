@@ -1,16 +1,16 @@
 ---
 title: Fundamentos de XQuery | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - XQuery, about XQuery
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2cafafe39eeb1efd8dbca66215ae26c991a1823
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2b179d4a8202897232d11ff124773eacd962459d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-basics"></a>Fundamentos de XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,22 +36,22 @@ ms.lasthandoff: 02/09/2018
   Esta seção descreve os fundamentos de XQuery.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Sequência e QNames &#40; XQuery &#41;](../xquery/sequence-and-qnames-xquery.md)  
+ [Sequência e QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  Descreve a sequência e também QNames e namespaces predefinidos.  
   
- [Contexto de expressão e avaliação de consulta &#40; XQuery &#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [Contexto de expressão e avaliação de consulta &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  Descreve os dois contextos nos quais XQuery é avaliada. Esses dois contextos são estático e dinâmico.  
   
- [Atomização &#40; XQuery &#41;](../xquery/atomization-xquery.md)  
+ [Atomização &#40;XQuery&#41;](../xquery/atomization-xquery.md)  
  Descreve a atomização, que é um processo de extrair o valor digitado de um item.  
   
- [Valor booliano efetivo &#40; XQuery &#41;](../xquery/effective-boolean-value-xquery.md)  
+ [Valor booliano efetivo &#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
  Descreve o valor Booliano efetivo. Esse valor pode ser calculado para expressões que retornem um único valor Booliano, uma sequência de nó ou uma sequência vazia.  
   
- [Digite sistema &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  Descreve o sistema de tipo de XQuery com vários tipos predefinidos. XQuery é uma linguagem com rigidez de tipos para tipos de esquemas, e uma linguagem fraca em tipos para dados não digitados.  
   
- [Tratamento de erro &#40; XQuery &#41;](../xquery/error-handling-xquery.md)  
+ [Tratamento de erros &#40;XQuery&#41;](../xquery/error-handling-xquery.md)  
  Descreve o tratamento de erros estáticos, dinâmicos e de tipo em XQuery.  
   
  [Comentários no XQuery](../xquery/comments-in-xquery.md)  

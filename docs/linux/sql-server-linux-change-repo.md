@@ -1,24 +1,24 @@
 ---
-title: "Configurar repositórios para o SQL Server no Linux | Microsoft Docs"
-description: "Verifique e configure os repositórios de origem para o SQL Server 2017 no Linux. O repositório de origem afeta a versão do SQL Server que é aplicada durante a instalação e atualização."
+title: Configurar repositórios para o SQL Server no Linux | Microsoft Docs
+description: Verifique e configure os repositórios de origem para o SQL Server 2017 no Linux. O repositório de origem afeta a versão do SQL Server que é aplicada durante a instalação e atualização.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6983e361ff26f2c6a7e17b1706f414005d38a34
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configure repositórios para instalar e atualizar o SQL Server no Linux
 

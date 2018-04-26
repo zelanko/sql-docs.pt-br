@@ -1,25 +1,25 @@
 ---
 title: Configurar SSIS em Linux com o ssis conf | Microsoft Docs
-description: "Este artigo descreve como configurar o SQL Server Integration Services (SSIS) no Linux com o utilitário de ssis conf."
+description: Este artigo descreve como configurar o SQL Server Integration Services (SSIS) no Linux com o utilitário de ssis conf.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: feaca28a2b59dbae0ebbae8ef86f7723daf0e072
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurar o SQL Server Integration Services no Linux com conf ssis
 
@@ -31,7 +31,7 @@ Você também pode usar o `ssis-conf` utilitário para configurar as seguintes p
 
 | Comando | Description |
 |-------------|---------------------------------------------------------------------|
-| set-edition | Definir a edição do SQL Server                                       |
+| edição de conjunto | Definir a edição do SQL Server                                       |
 | Telemetria   | Habilitar ou desabilitar o serviço de telemetria do SQL Server Integration Services |
 | instalação       | Inicializar e configurar o Microsoft SQL Server Integration Services      |
 |||

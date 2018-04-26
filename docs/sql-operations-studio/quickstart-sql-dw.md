@@ -1,9 +1,9 @@
 ---
-title: 'Início rápido: Conectar e consultar um Azure SQL Data Warehouse usando o SQL Operations Studio (preview) | Microsoft Docs'
-description: Este guia de início rápido mostra como usar o SQL Operations Studio (preview) para se conectar a um banco de dados SQL e executar uma consulta
+title: 'Início rápido: Conectar e consultar um Azure SQL Data Warehouse usando o Studio de operações do SQL (visualização) | Microsoft Docs'
+description: Este guia de início rápido mostra como usar o Studio de operações do SQL (visualização) para se conectar a um banco de dados SQL e executar uma consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d4ed7d25abb2780c719c5b8201ecae54e8e86bf
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 5bfa47c53b0810e5ec9002543717fbc4899dfbb5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início rápido: Usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar dados no Azure SQL Data Warehouse
 
@@ -56,7 +56,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma con
 
    ![Novo ícone de Conexão](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Se o servidor não tiver uma regra de firewall permitindo SQL Operations Studio para se conectar, o **criar nova regra de firewall** é aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, consulte [as regras de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Se o servidor não tiver uma regra de firewall permitindo operações de SQL Studio para se conectar, o **criar nova regra de firewall** é aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, consulte [as regras de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nova regra de firewall](media/quickstart-sql-dw/firewall.png)  
 

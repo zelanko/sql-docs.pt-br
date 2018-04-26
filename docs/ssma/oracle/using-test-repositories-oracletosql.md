@@ -1,30 +1,31 @@
 ---
-title: "Usando repositórios de teste (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Usando repositórios de teste (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Test Cases Repository
 - Test Results Repository
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4412d7de5cd86071f2d1c25354e85266f33bccc7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 451567181f1963dd049b5dac6bb0177583993e78
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositórios de teste (OracleToSQL)
 Os repositórios de repositório de teste do SSMA SSMA Tester casos de teste e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** de **ssmatesterdb** banco de dados.  
@@ -77,11 +78,11 @@ As seguintes informações sobre resultados de teste são exibidas na grade.
   
 Os botões a seguir estão disponíveis na página de resultados de teste:  
   
--   Clique o **exibição** para abrir [exibindo relatórios de caso de teste &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) de resultado de caso de teste atual.  
+-   Clique o **exibição** para abrir [exibindo relatórios de caso de teste &#40;OracleToSQL&#41; ](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) de resultado de caso de teste atual.  
   
 -   Clique o **excluir** botão para excluir o resultado do teste selecionado  
   
-## <a name="see-also"></a>Consulte Também  
-[Executar casos de teste &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Casos de teste de execução &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Teste de objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

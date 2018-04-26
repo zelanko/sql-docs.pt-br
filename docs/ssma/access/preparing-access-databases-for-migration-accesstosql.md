@@ -1,15 +1,16 @@
 ---
-title: "Preparar bancos de dados do Access para a migração (AccessToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Preparar bancos de dados do Access para a migração (AccessToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e427612a8d0dea7020b1d58bced56e7350110d4e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Preparar bancos de dados do Access para a migração (AccessToSQL)
 Antes de migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve determinar quais bancos de dados para migrar e certifique-se de que esses bancos de dados estão prontos para a migração.  
@@ -46,7 +47,7 @@ O mecanismo de banco de dados Jet, que é usado como o mecanismo de banco de dad
 Depois de migrar os bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode continuar a usar o acesso usando tabelas vinculadas ou manualmente, você pode migrar seus aplicativos para [!INCLUDE[msCoName](../../includes/msconame_md.md)] código baseado no .NET Framework que interagem diretamente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="determining-which-databases-to-migrate"></a>Determinando quais bancos de dados para migrar  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA (Migration Assistant) para acesso possam localizar bancos de dados para você. Em seguida, você pode exportar metadados sobre os bancos de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obter mais informações sobre como exportar e metadados de consulta, consulte [exportando um inventário de acesso](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSMA (Migration Assistant) para acesso possam localizar bancos de dados para você. Em seguida, você pode exportar metadados sobre os bancos de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obter mais informações sobre como exportar e metadados de consulta, consulte [exportando um inventário de acesso](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
 
    > [!NOTE]
    > Nem todos os recursos do Access e as configurações com suporte, ou podem ser convertidas facilmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Antes de iniciar a migração de bancos de dados, consulte [recursos incompatíveis de acesso](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1).

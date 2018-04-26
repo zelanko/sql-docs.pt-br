@@ -1,16 +1,16 @@
 ---
 title: Tipo de sistema (XQuery) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d84021e20c56be6d889ba1936d385432a5d8e481
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 02/09/2018
   
 -   O valor digitado contra o valor da cadeia de caracteres de um nó.  
   
--   O [dados função &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) e [Function &#40; de cadeia de caracteres XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md).  
+-   O [dados função &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) e [função string &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Correspondendo o tipo de sequência retornado por uma expressão.  
   
 ## <a name="built-in-types-of-xml-schema"></a>Tipos internos do esquema XML  
  Os tipos internos do esquema XML têm um prefixo de namespace predefinido de xs. Alguns desses tipos incluem **xs: Integer** e **xs: string**. Há suporte para todos esses tipos internos. Você pode usar esses tipos ao criar uma coleção de esquemas XML.  
   
- Ao consultar XML digitado, o tipo estático e dinâmico dos nós é determinado pela coleção de esquemas XML associada à coluna ou variável sendo consultada. Para obter mais informações sobre os tipos estáticos e dinâmicos, consulte [contexto de expressão e avaliação de consulta &#40; XQuery &#41; ](../xquery/expression-context-and-query-evaluation-xquery.md). Por exemplo, a consulta a seguir é especificada em relação a um tipo **xml** coluna (`Instructions`). A expressão usa `instance of` para verificar se o valor digitado do atributo `LotSize` retornado é do tipo `xs:decimal`.  
+ Ao consultar XML digitado, o tipo estático e dinâmico dos nós é determinado pela coleção de esquemas XML associada à coluna ou variável sendo consultada. Para obter mais informações sobre os tipos estáticos e dinâmicos, consulte [contexto de expressão e avaliação de consulta &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Por exemplo, a consulta a seguir é especificada em relação a um tipo **xml** coluna (`Instructions`). A expressão usa `instance of` para verificar se o valor digitado do atributo `LotSize` retornado é do tipo `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -110,9 +110,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  Você pode usar o **Data ()** ou **String ()** função para recuperar o valor de um nó:  
   
--   O [dados função &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) retorna o valor digitado de um nó.  
+-   O [dados função &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) retorna o valor digitado de um nó.  
   
--   O [Function &#40; de cadeia de caracteres XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md) retorna o valor de cadeia de caracteres do nó.  
+-   O [função string &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) retorna o valor de cadeia de caracteres do nó.  
   
  Na coleção de esquemas XML a seguir, o elemento <`root`> do tipo inteiro é definida:  
   

@@ -2,7 +2,7 @@
 title: Geração de relatórios (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53dc69221ad1fff391db85987628e14f798c73e7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4855e73b947c46c21cdb4c966d93c406a9e6fe46
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-sybasetosql"></a>Geração de relatórios (SybaseToSQL)
 Os relatórios de certas atividades executadas usando os comandos são gerados no Console SSMA no nível de árvore de objeto.  
@@ -43,12 +43,12 @@ Use o procedimento a seguir para gerar relatórios:
     ||||  
     |-|-|-|  
     |**Sl. Não.**|**Comando**|**Título do relatório**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |1|relatório gerar de avaliação|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
+    |3|migrar dados|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
     |5|Sincronizar de destino|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |6|atualização do banco de dados|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > Um relatório de saída é diferente do relatório de avaliação. O primeiro é um relatório sobre o desempenho de um comando executado ao mesmo tempo, o segundo é um relatório XML para o consumo de programação.  
@@ -71,7 +71,7 @@ Use o procedimento a seguir para gerar relatórios:
     ||||  
     |-|-|-|  
     |**Sl. Não.**|**Comando e parâmetro**|**Descrição de saída**|  
-    |1|report-errors=”false”|Nenhum detalhe de erro / aviso / mensagens de informações.|  
+    |1|relatório de erros = "false"|Nenhum detalhe de erro / aviso / mensagens de informações.|  
     |2|relatório de erros = "true"|Detalhes do erro / aviso / mensagens de informações.|  
   
     > [!NOTE]  
@@ -123,9 +123,9 @@ O comando **destino sincronizar** tem **erros de relatório para** parâmetro, q
   
 -   report-each-as-warning  
   
--   fail-script  
+-   Falha de script  
   
-### <a name="refresh-from-database"></a>refresh-from-database:  
+### <a name="refresh-from-database"></a>atualização-do-banco de dados:  
 O comando **atualização de banco de dados** tem **erros de relatório para** parâmetro, que especifica o local do relatório de erros para a operação de atualização. Em seguida, um arquivo com nome **SourceDBRefreshReport&lt;n&gt;. XML** é criado no local especificado, onde **&lt;n&gt;** é o número de arquivo exclusivo que é incrementada com um dígito com cada execução do mesmo comando.  
   
 **Observação:** se o caminho da pasta é fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o comando 'Sincronizar-target'.  
@@ -153,7 +153,7 @@ O comando **atualização de banco de dados** tem **erros de relatório para** p
   
 -   report-each-as-warning  
   
--   fail-script  
+-   Falha de script  
   
 ## <a name="see-also"></a>Consulte também  
 [Executar o Console do SSMA (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

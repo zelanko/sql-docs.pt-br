@@ -1,6 +1,6 @@
 ---
 title: Comandos de menu e outras teclas de atalho (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd4c36f8542331615e6d711f6780d855db9158aa
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 8721facf7eedd8ed5a9d2f36173cd90e2e89b652
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandos de menu e outras teclas de atalho (AccessToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para aplicativos de acesso.  
@@ -80,10 +80,10 @@ Para acessar o menu de exibição, o atalho de teclado usado é ALT + V. A tabel
 |Mostre painel de lista de erros.|ALT + V + eletrônico ou CTRL + E|  
 |Mostre painel de saída.|ALT + V + O ou CTRL + S|  
 |Submenu de layouts de acesso.|ALT + V + L|  
-|Adicionar o layout atual|ALT + V + L + A|  
+|Adicionar o layout atual|ALT + V + A + L|  
 |Selecione o layout padrão|ALT + V + L + D ou CTRL + ALT + 1|  
 |Selecione sem layout pesquisadores|ALT + V + L + W ou CTRL + ALT + 2|  
-|Exiba a caixa de diálogo Gerenciar layouts.|Alt + V + L + M|  
+|Exiba a caixa de diálogo Gerenciar layouts.|ALT + V + L + M|  
   
 ## <a name="tools-menu-commands"></a>Comandos do menu Ferramentas  
 Para acessar o menu Ferramentas, o atalho de teclado usado é ALT + T. A tabela a seguir descreve o teclado atalhos usados para acessar itens de menu no menu Ferramentas.  

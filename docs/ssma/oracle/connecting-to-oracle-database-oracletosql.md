@@ -1,6 +1,6 @@
 ---
 title: Conectar-se ao banco de dados Oracle (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c0c85182da6de1e2cb80cda8c628788651e89ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Conectar-se ao banco de dados Oracle (OracleToSQL)
 Para migrar bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve se conectar ao banco de dados Oracle que você deseja migrar. Quando você se conectar, o SSMA obtém metadados sobre todos os esquemas do Oracle e exibe no painel Explorador de metadados do Oracle. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena as senhas.  
@@ -98,7 +98,7 @@ Quando você se conectar a um banco de dados, o SSMA lê os metadados do banco d
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    Para obter mais informações, consulte [conectar-se ao Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
+    Para obter mais informações, consulte [conectar-se ao Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-oracle"></a>Reconectar-se ao Oracle  
 Sua conexão com o servidor de banco de dados permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve reconectar se você quiser uma conexão ativa com o banco de dados. Você pode trabalhar offline até que você deseja atualizar os metadados, carregue os objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e migrar dados.  
@@ -132,6 +132,6 @@ Metadados sobre o banco de dados Oracle não será atualizado automaticamente. O
   
 -   A próxima etapa no processo de migração é [conectar-se a uma instância do SQL Server](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f).  
   
-## <a name="see-also"></a>Consulte Também  
-[Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Consulte também  
+[Bancos de dados Oracle migrando para o SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

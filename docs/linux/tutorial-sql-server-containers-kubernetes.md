@@ -1,24 +1,24 @@
 ---
-title: "Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade | Microsoft Docs"
-description: "Este tutorial mostra como implantar uma solução de alta disponibilidade do SQL Server com Kubernetes no serviço de contêiner do Azure."
+title: Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade | Microsoft Docs
+description: Este tutorial mostra como implantar uma solução de alta disponibilidade do SQL Server com Kubernetes no serviço de contêiner do Azure.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9e9925268f46007155c3a6851b250a57d9b02298
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade
 

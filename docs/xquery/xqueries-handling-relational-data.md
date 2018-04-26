@@ -1,16 +1,16 @@
 ---
-title: "Manipulação de dados relacionais de XQueries | Microsoft Docs"
-ms.custom: 
+title: Manipulação de dados relacionais de XQueries | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - relational data [XQuery]
 - XQuery, relational data
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 420caf1620974293f279e72892f0da2cad6a140b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aceaa381086773d4a01dbea1b2a50c5ab05034c3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries que manipulam dados relacionais
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,17 @@ ms.lasthandoff: 02/09/2018
   
 -   **sql:column()** function  
   
--   **sql:variable()** function  
+-   **SQL: Variable** função  
   
  Você pode usar essas extensões XQuery ao especificar um XQuery no **Query ()** método o **xml** tipo de dados. Como resultado, o **Query ()** método pode produzir XML que combina dados de XML e não-**xml** tipos de dados.  
   
- Você também pode usar essas funções quando você usa o **xml** métodos de tipo de dados **Modify ()**, **Value ()**, **Query ()**, e  **exist ()**para expor um valor relacional dentro do XML.  
+ Você também pode usar essas funções quando você usa o **xml** métodos de tipo de dados **Modify ()**, **Value ()**, **Query ()**, e  **exist ()** para expor um valor relacional dentro do XML.  
   
  Para obter mais informações, consulte [função SQL: Column (XQuery)](../xquery/xquery-extension-functions-sql-column.md) e [função SQL: Variable (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [Construção XML &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [Construção XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

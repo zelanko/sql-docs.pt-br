@@ -1,10 +1,10 @@
 ---
-title: Criar trechos de código no SQL Operations Studio (preview) | Microsoft Docs
-description: Saiba como criar e usar trechos de código SQL no SQL Operations Studio (preview)
+title: Criar trechos de código no Studio de operações do SQL (visualização) | Microsoft Docs
+description: Saiba como criar e usar trechos de código SQL no Studio de operações do SQL (visualização)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Criar e usar trechos de código para criar rapidamente scripts Transact-SQL (T-SQL)[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Criar e usar trechos de código para criar rapidamente scripts Transact-SQL (T-SQL) [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Trechos de código de código [!INCLUDE[name-sos](../includes/name-sos-short.md)] são modelos que tornam mais fácil criar bancos de dados e objetos de banco de dados. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]fornece vários trechos de código do T-SQL para ajudar a gerar rapidamente a sintaxe apropriada. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece vários trechos de código do T-SQL para ajudar a gerar rapidamente a sintaxe apropriada. 
 
 Trechos de código definido pelo usuário também podem ser criados.
 
@@ -61,7 +61,7 @@ Você pode definir seus próprios trechos. Para abrir o arquivo de trecho de có
 1. Selecione **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]herda sua funcionalidade de trecho de código do código do Visual Studio para que este artigo aborda especificamente usando trechos de código do SQL. Para obter mais informações, consulte [criar seus próprios trechos](https://code.visualstudio.com/docs/editor/userdefinedsnippets) na documentação do código do Visual Studio. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua funcionalidade de trecho de código do código do Visual Studio para que este artigo aborda especificamente usando trechos de código do SQL. Para obter mais informações, consulte [criar seus próprios trechos](https://code.visualstudio.com/docs/editor/userdefinedsnippets) na documentação do código do Visual Studio. 
 
    ![Substitua o campo de modelo](media/code-snippets/select-sql.png)
 

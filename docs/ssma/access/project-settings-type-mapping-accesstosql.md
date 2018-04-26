@@ -1,6 +1,6 @@
 ---
 title: Configurações (mapeamento de tipo) do projeto (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ea7789abd2395615471ecde8934104e85780ae6a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configurações (mapeamento de tipo) do projeto (AccessToSQL)
 As configurações de mapeamento de tipo de projeto permitem definir mapeamentos de tipo de padrão para o projeto SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [tipos de dados de destino e origem do mapeamento](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -54,7 +54,7 @@ A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e d
   
 |Tipo de dados do Access|Tipo de dados do SQL Server|  
 |--------------------|------------------------|  
-|**binary[\*..\*]**|**varbinary[\*]**|  
+|**binário [\*... \*]**|**varbinary[\*]**|  
 |**booleano**|**bit**|  
 |**byte**|**tinyint**|  
 |**currency**|**money**|  

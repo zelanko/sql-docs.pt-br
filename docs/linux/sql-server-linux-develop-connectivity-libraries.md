@@ -1,25 +1,25 @@
 ---
 title: Estruturas e bibliotecas de conectividade | Microsoft Docs
-description: "Lista os drivers de conectividade que os aplicativos cliente podem usar de vários idiomas para se conectar ao Microsoft SQL Server em execução no local ou na nuvem, no Linux, o Windows ou o Docker e também para o banco de dados do SQL Azure e o Azure SQL Data Warehouse."
+description: Lista os drivers de conectividade que os aplicativos cliente podem usar de vários idiomas para se conectar ao Microsoft SQL Server em execução no local ou na nuvem, no Linux, o Windows ou o Docker e também para o banco de dados do SQL Azure e o Azure SQL Data Warehouse.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e74d5804d5a6fef00696b62d7f4606dc8fa7599e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Bibliotecas de conectividade e estruturas para o Microsoft SQL Server
 
@@ -45,7 +45,7 @@ A tabela a seguir lista alguns exemplos de estruturas de mapeamento relacional o
 | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/en-us/ef)<br>[Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/index) |
 | Java | Windows, Linux, macOS |[No modo de hibernação ORM](http://hibernate.org/orm)|
-| PHP | Windows, Linux | [Laravel (Eloquent)](https://laravel.com/docs/5.0/eloquent) |
+| PHP | Windows, Linux | [Laravel (eloquente)](https://laravel.com/docs/5.0/eloquent) |
 | Node.js | Windows, Linux, macOS | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | Windows, Linux, macOS |[Django](https://www.djangoproject.com/) |
 | Ruby | Windows, Linux, macOS | [Ruby nos trilhos](http://rubyonrails.org/) |

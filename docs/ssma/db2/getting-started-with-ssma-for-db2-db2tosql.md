@@ -1,6 +1,6 @@
 ---
 title: Guia de Introdução com o SSMA para DB2 (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc731bb0b202fbec4b7eeccc4de60cf9a4943404
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 11e0869f3e15c01337f2e86cb3294cbf9c94eb5b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Guia de Introdução com o SSMA para DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Assistente de migração (SSMA) para DB2 permite que você rapidamente converter esquemas de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, carregue os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e migrar dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -55,7 +55,7 @@ As seções a seguir descrevem os recursos da interface de usuário do SSMA.
 ### <a name="metadata-explorers"></a>Gerenciadores de metadados  
 O SSMA contém dois gerenciadores de metadados para procurar e executar ações no DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bancos de dados.  
   
-#### <a name="db2-metadata-explorer"></a>DB2 Metadata Explorer  
+#### <a name="db2-metadata-explorer"></a>DB2 Gerenciador de metadados  
 Gerenciador de metadados de DB2 mostra informações sobre esquemas de DB2. Usando o Gerenciador de metadados do DB2, você pode executar as seguintes tarefas:  
   
 -   Procure os objetos em cada esquema.  

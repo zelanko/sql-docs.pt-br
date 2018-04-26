@@ -2,7 +2,7 @@
 title: Executar o Console do SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o Console do SSMA (SybaseToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  
@@ -95,7 +95,7 @@ Esse comando abre o projeto.
 > [!NOTE]  
 > O SSMA para aplicativo de Console do SAP ASE dá suporte à compatibilidade com versões anteriores. Você pode usar isso para abrir projetos criados por uma versão anterior do SSMA.  
   
-### <a name="save-project"></a>save-project  
+### <a name="save-project"></a>Salvar projeto  
 Este comando salva o projeto de migração.  
   
 **Exemplo de sintaxe:**  
@@ -104,7 +104,7 @@ Este comando salva o projeto de migração.
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>close-project  
+### <a name="close-project"></a>projeto de fechamento  
 Esse comando fecha o projeto de migração.  
   
 **Exemplo de sintaxe:**  
@@ -123,7 +123,7 @@ Os comandos de Conexão de banco de dados ajudam a conectar-se ao banco de dados
 > - O **procurar** recurso da interface do usuário não tem suporte no console.  
 > - Para obter mais informações sobre 'Criando arquivos de Script', consulte [criando arquivos de Script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
-### <a name="connect-source-database"></a>connect-source-database  
+### <a name="connect-source-database"></a>Conecte-se-origem-banco de dados  
 Esse comando executa a conexão à fonte de dados e carrega os metadados de alto nível do banco de dados de origem, mas não todos os metadados.
   
 Se a conexão com a fonte não pode ser estabelecida, será gerado um erro e o aplicativo de console adicional para a execução.
@@ -136,7 +136,7 @@ A definição de servidor é recuperada do atributo do nome definido para cada c
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
+### <a name="force-load-sourcetarget-database"></a>Force-carga-origem/destino-banco de dados  
 Esse comando carrega os metadados de origem, e é útil para trabalhar no projeto de migração offline.  
   
 Se a conexão para o origem/destino não puder ser estabelecida, será gerado um erro e o aplicativo de console adicional para a execução.  
@@ -153,7 +153,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>reconnect-source-database  
+### <a name="reconnect-source-database"></a>Reconecte-origem-banco de dados  
 Esse comando reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando de conexão de fonte de dados.  
   
 Se não é possível estabelecer (conexão com a fonte de re), um erro será gerado e o aplicativo de console adicional para a execução.  
@@ -192,7 +192,7 @@ Se a (re) conexão para o destino não puder ser estabelecida, será gerado um e
 ## <a name="report-commands"></a>Comandos de relatório  
 Os comandos de relatório geram relatórios sobre o desempenho de várias atividades do Console SSMA.  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>relatório gerar de avaliação  
   
 Este comando gera relatórios de avaliação no banco de dados de origem.  
   
@@ -322,7 +322,7 @@ ou
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>migrate-data  
+### <a name="migrate-data"></a>migrar dados  
 Esse comando migra os dados de origem para o destino.  
   
 -   `object-name:` Especifica os objetos de origem considerados para a migração de dados (dá suporte a nomes de objeto individual ou um nome de objeto de grupo).  
@@ -420,7 +420,7 @@ Se a conexão de banco de dados de destino não é executada antes de executar e
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   Falha de script  
   
 -   `report-errors-to:` Especifica o local do relatório de erro para a operação de sincronização (atributo opcional). Se apenas o caminho da pasta for especificado, arquivo, em seguida, por nome **TargetSynchronizationReport.XML** é criado.  
   
@@ -464,7 +464,7 @@ ou
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>refresh-from-database  
+### <a name="refresh-from-database"></a>atualização do banco de dados  
 Esse comando atualiza os objetos de origem do banco de dados.  
   
 Se esse comando é executado no banco de dados de destino, um erro será gerado.  
@@ -481,7 +481,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   Falha de script  
   
 -   `report-errors-to:` Especifica o local do relatório de erro para a operação de atualização (atributo opcional). Se apenas o caminho da pasta for especificado, arquivo, em seguida, por nome **SourceDBRefreshReport.XML** é criado.  
   
@@ -524,7 +524,7 @@ ou
 ## <a name="script-generation-commands"></a>Comandos de geração de script  
 Os comandos de geração de Script executam duas tarefas: elas ajudam a salvar a saída em um arquivo de script do console e registram a saída do T-SQL para o console ou um arquivo com base no parâmetro que você especificar.  
   
-### <a name="save-as-script"></a>save-as-script  
+### <a name="save-as-script"></a>Salvar como script  
 Esse comando é usado para salvar os Scripts de objetos em um arquivo mencionado quando metabase = destino. Essa é uma alternativa ao comando de sincronização que podemos obter os scripts e executar o mesmo do banco de dados de destino.  
   
 Este comando requer um ou vários nós de metabase como parâmetro de linha de comando.  

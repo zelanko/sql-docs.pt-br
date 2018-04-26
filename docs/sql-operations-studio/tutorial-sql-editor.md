@@ -1,9 +1,9 @@
 ---
-title: 'Tutorial: Usar o editor do Transact-SQL SQL Operations Studio (preview) para criar objetos de banco de dados | Microsoft Docs'
-description: Este tutorial demonstra os principais recursos no SQL Operations Studio (preview) que simplificam o uso de T-SQL.
+title: 'Tutorial: Usar o editor do Transact-SQL Studio de operações do SQL (visualização) para criar objetos de banco de dados | Microsoft Docs'
+description: Este tutorial demonstra os principais recursos no Studio de operações do SQL (visualização) que simplificam o uso de T-SQL.
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Usar o editor do Transact-SQL para criar objetos de banco de dados- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -63,7 +63,7 @@ Este tutorial requer o SQL Server ou banco de dados do SQL Azure *TutorialDB*. P
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usar trechos de código do T-SQL para criar procedimentos armazenados
 
-SQL Operations Studio fornece vários trechos de código internos do T-SQL para criar rapidamente instruções.
+Operações de SQL Studio fornece vários trechos de código internos do T-SQL para criar rapidamente instruções.
 
 
 1. Abra um novo editor de consulta pressionando **Ctrl + N**.
@@ -117,7 +117,7 @@ O procedimento armazenado é criado e o **resultados** painel exibe o cliente re
 
 ## <a name="use-peek-definition"></a>Use a janela Inspecionar definição 
 
-SQL Operations Studio fornece a capacidade de exibir uma definição de objetos usando o recurso de definição de pico. Esta seção cria um segundo procedimento armazenado e usa a janela Inspecionar definição para visualizar quais colunas em uma tabela para criar rapidamente o corpo do procedimento armazenado.
+Operações de SQL Studio fornece a capacidade de exibir uma definição de objetos usando o recurso de definição de pico. Esta seção cria um segundo procedimento armazenado e usa a janela Inspecionar definição para visualizar quais colunas em uma tabela para criar rapidamente o corpo do procedimento armazenado.
 
 1. Abra um novo editor pressionando **Ctrl + N**. 
 
