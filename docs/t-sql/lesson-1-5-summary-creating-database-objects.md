@@ -1,35 +1,37 @@
 ---
 title: 'Resumo: Criando objetos de banco de dados | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - creating database objects
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03ac714977d38e84191a2b0b22343f090f7f463e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8586fdd16d4860715800122590a3160f371e8b13
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-5---summary---creating-database-objects"></a>Lição 1-5 – resumo – criando objetos de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Neste tutorial, você criou um banco de dados, criou uma tabela no banco de dados, inseriu dados na tabela, alterou os dados e, em seguida, leu os dados da tabela. A sintaxe para as instruções que foram usadas é somente a sintaxe básica e muitas opções de sintaxe não foram abordadas neste tutorial. Para saber mais sobre essas instruções, leia a sintaxe completa para as instruções nos Manuais online do SQL Server e analise os vários exemplos fornecidos nestes tópicos.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+Neste tutorial, você criou um banco de dados, criou uma tabela no banco de dados, inseriu dados na tabela, alterou os dados e, em seguida, leu os dados da tabela. A sintaxe para as instruções que foram usadas é somente a sintaxe básica e muitas opções de sintaxe não foram abordadas neste tutorial. Para saber mais sobre essas instruções, leia a sintaxe completa para as instruções nos Manuais online do SQL Server e analise os vários exemplos fornecidos nestes tópicos.  
   
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 2: configurando permissões em objetos de banco de dados](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  

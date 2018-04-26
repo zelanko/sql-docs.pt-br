@@ -1,16 +1,16 @@
 ---
 title: SYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYMKEYPROPERTY_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - SYMKEYPROPERTY
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12f285530db5557acb4b1317656bc53abbe59df0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 43881d37f855b7014596a51ec0cf2827d22ff90d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o algoritmo de uma chave simétrica criada com base em um módulo EKM.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
  *Key_ID*  
  É o atributo Key_ID de uma chave simétrica do banco de dados. Para localizar a Key_ID quando você souber apenas o nome da chave, use SYMKEY_ID. *Key_ID* é um tipo de dados **int**.  
   
- **'**algorithm_desc**'**  
+ **'** algorithm_desc **'**  
  Especifica que a saída retorna a descrição do algoritmo da chave simétrica. Disponível somente para chaves simétricas criadas de um módulo EKM.  
   
 ## <a name="return-types"></a>Tipos de retorno  
