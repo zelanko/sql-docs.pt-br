@@ -1,30 +1,30 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5356a2578b5c5d25dba440729e4f902ecb886dc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
  Fique tranquilo para ampliar seus aplicativos mais importantes com segurança para a nuvem. O Sempre Criptografado do SQL Server fornece a criptografia para seus dados em movimentação. A Segurança em Nível de Linha e outros recursos de segurança avançados do SQL Server também funcionam com o Stretch Database para proteger seus dados.  
   
 ## <a name="what-does-stretch-database-do"></a>O que faz o Stretch Database?  
- Depois de habilitar o Stretch Database para uma instância do SQL Server, um banco de dados e, pelo menos, uma tabela, ele começa silenciosamente a migrar os dados frios para o Azure.  
+ Depois de habilitar o Stretch Database para uma instância do SQL Server e um banco de dados, e selecionar pelo menos uma tabela, ele começa silenciosamente a migrar os dados frios para o Azure.  
   
 -   Se você armazenar dados frios em uma tabela separada, poderá migrar a tabela inteira.  
   

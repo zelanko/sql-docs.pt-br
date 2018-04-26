@@ -1,24 +1,19 @@
 ---
-title: Documentação do produto (Analytics Platform System)
+title: Documentação do Sistema de Plataforma de Análise | Microsoft Docs
 description: O Microsoft APS (Analytics Platform System), uma plataforma de dados projetada para data warehouse e análise de Big Data, oferece integração de dados profunda, processamento de consulta de ala velocidade, armazenamento altamente escalonável e manutenção simples para sua solução de business intelligence de ponta a ponta.
-author: barbkess
-ms.author: barbkess
+author: mzaman1
 manager: craigg
-ms.suite: sql
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 713516fc-3101-4a03-a331-d817c29c7703
-caps.latest.revision: 49
-ms.openlocfilehash: 15fa4f0cf02565510ea888183feec52bf640aa36
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 26c59dc36d0ba3714dca4dbca10e8ec7b09b9235
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 O Microsoft APS (Analytics Platform System), uma plataforma de dados projetada para data warehouse e análise de Big Data, oferece integração de dados profunda, processamento de consulta de ala velocidade, armazenamento altamente escalonável e manutenção simples para sua solução de business intelligence de ponta a ponta.  

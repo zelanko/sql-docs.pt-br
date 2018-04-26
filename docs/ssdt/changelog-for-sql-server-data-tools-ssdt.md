@@ -1,34 +1,66 @@
 ---
-title: "Log de mudanças para o SSDT (SQL Server Data Tools) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/09/2018
+title: Log de mudanças para o SSDT (SQL Server Data Tools) | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este log de alterações é para o [SSDT (SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver postagens detalhadas sobre as novidades e alterações, visite [o blog da Equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT para Visual Studio 2017 (15.6.0)
+Número de build: 14.0.16162.0  
+Data do lançamento: 10 de março de 2018
+  
+### <a name="whats-new"></a>Novidades
+
+**SSIS:**
+
+1.  Correção de um problema em que a tarefa de processamento AS não registra quaisquer etapas de processamento ao direcionar para o SQLServer2016 e SQLServer2017.
+2.  Correção de um problema em que a violação de acesso acontecerá ao abrir o dtsx com nomes de tarefa muitos longos e que não estejam em inglês no SSDT.
+3.  Correção de um problema em que, às vezes, uma lista variável de ScriptTask desaparecerá na interface do usuário da tarefa.
+4.  Correção de um problema em que a adição de uma cópia de um pacote existente falhará quando o local do pacote for o SQL Server.
+5.  Correção de um problema em que o foco fica paralisado ao acessar a caixa de combinação em uma caixa de diálogo do editor.
+6.  Correção de um problema em que a tela de fundo não será alterada ao modificar o tema do VS.
+7.  Correção de um problema em que os rótulos de anotação e carregamento ficam invisíveis no tema escuro.
+8.  Correção de um problema em que a propriedade de estado não está definida corretamente para os itens desabilitados da caixa de ferramentas do SSIS.
+9.  Correção de um problema em que sempre há falha ao executar WebServiceTask.
+10. Correção de um problema em que a implantação de pacote falhará se a cadeia de conexão estiver definida como variável com expressão dependente de parâmetros do projeto.
+
+**Instalador:**
+
+1.  Adicione o link do "Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools" ao aviso de isenção de responsabilidade de privacidade.
+2.  Correção de um problema em que a janela de instalação do VS é exibida ao selecionar "Instale uma nova instância do SQL Server Data Tools para Visual Studio 2017".
+
+### <a name="known-issues"></a>Problemas conhecidos:
+1.  A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT para Visual Studio 2017 (15.5.2)
 Número de build: 14.0.16156.0
@@ -46,10 +78,10 @@ Número de build: 14.0.16156.0
 8.  Correção de um problema em que algumas cadeias de caracteres são truncadas na janela do Assistente de Implantação do Integration Services. 
 
 **Instalador**
-- Correção de um problema em que algumas vezes baixar a carga falhará com o erro "O sistema não pode localizar o arquivo especificado (0x80070002)"  
+- Correção de um problema em que algumas vezes baixar o conteúdo falhará com o erro "O sistema não pode localizar o arquivo especificado (0x80070002)".  
 
 ### <a name="known-issues"></a>Problemas conhecidos
-- A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
+- A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando *ExecuteOutOfProcess* está definido como *True*. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
 
 
 

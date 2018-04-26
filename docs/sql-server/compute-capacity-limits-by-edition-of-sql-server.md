@@ -1,40 +1,42 @@
 ---
-title: "Computar limites de capacidade por edição do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Computar limites de capacidade por edição do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 50adedb266ef265f7e829826bb4acc54cd60dfbb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Computar limites de capacidade por edição do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este artigo discute os limites de capacidade de computação das edições diferentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e quais suas diferenças em ambientes físicos e virtualizados com processadores com hyperthreading.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este artigo discute os limites de capacidade de computação das edições diferentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e quais suas diferenças em ambientes físicos e virtuais com processadores com hyperthreading.  
   
  ![Mapeamentos para calcular limites de capacidade](../sql-server/media/compute-capacity-limits.gif "Mapeamentos para calcular limites de capacidade")  
   
  Esta tabela descreve as notações do diagrama anterior:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0..1|Zero ou um|  
 |1|Exatamente um|  
@@ -98,11 +100,12 @@ Por exemplo, um servidor com quatro soquetes preenchidos com processadores com n
   
 Quando o desempenho de cada processador virtual for importante, você poderá desabilitar o hyperthreading. Você pode habilitar ou desabilitar o hyperthreading usando uma configuração do BIOS para o processador durante a instalação do BIOS. No entanto, isso normalmente é uma operação com escopo do servidor que afetará todas as cargas de trabalho em execução no servidor. Isso pode sugerir separar as cargas de trabalho que serão executadas em ambientes virtualizados daquelas que se beneficiariam do aumento de desempenho do hyperthreading em um ambiente de sistema operacional físico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Edições e componentes do SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Recursos compatíveis nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Especificações de capacidade máxima do SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Instalação de Início Rápido do SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

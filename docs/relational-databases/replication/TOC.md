@@ -29,8 +29,10 @@
 #### [Topologias para sincronização da Web](topologies-for-web-synchronization.md)  
 ### [Configurar o IIS para sincronização da Web](configure-iis-for-web-synchronization.md)  
 ### [Configurar o IIS 7 para sincronização da Web](configure-iis-7-for-web-synchronization.md)  
+
 ## [Configurar Distribuição](configure-distribution.md)  
 ### [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)  
+### [Configurar a distribuição no AG](configure-distribution-availability-group.md)
 ### [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Desabilitar a publicação e a distribuição](disable-publishing-and-distribution.md)  
 ### [Habilitar um banco de dados para replicação (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [Especificar o local padrão do instantâneo (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [Definir o período de retenção de distribuição para publicações transacionais (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [Definir o período de retenção do histórico (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [Assinar publicações](subscribe-to-publications.md)  
 ### [Criar uma assinatura pull](create-a-pull-subscription.md)  
 ### [Create a Push Subscription](create-a-push-subscription.md)  
@@ -171,7 +174,7 @@
 #### [Snapshot Agent (Assistente para Nova Publicação)](snapshot-agent-new-publication-wizard.md)  
 ### [Assistente para Nova Assinatura (referência de interface do usuário)](new-subscription-wizard-ui-reference.md)  
 #### [<AgentName> Local do agente](agentname-agent-location.md)  
-#### [Assinantes](subscribers.md)  
+#### [Publicadores](subscribers.md)  
 #### [Add Non-SQL Server Subscriber (Adicionar assinante não SQL Server)](add-non-sql-server-subscriber.md)  
 #### [<AgentName> Segurança do agente](agentname-agent-security.md)  
 #### [Assinaturas Atualizáveis](updatable-subscriptions.md)  

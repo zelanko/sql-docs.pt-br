@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,7 @@ Você pode definir um operador como o alias de um grupo de indivíduos. Desse mo
 Membros das funções de banco de dados fixas **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** no banco de dados **msdb**e membros da função de servidor fixa **sysadmin** têm acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Um usuário que não pertença a nenhuma dessas funções não pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Para obter mais informações sobre as funções usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, consulte [Implementar segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsistemas  
-Um subsistema é um objeto predefinido que representa a funcionalidade disponível a uma etapa de trabalho. Cada proxy tem acesso a um ou mais subsistemas. Os subsistemas propiciam segurança, porque delimitam o acesso à funcionalidade disponível a um proxy. Cada etapa de trabalho é executada no contexto de um proxy, com exceção das etapas de trabalho [!INCLUDE[tsql](../../includes/tsql_md.md)] . [!INCLUDE[tsql](../../includes/tsql_md.md)] usam o comando EXECUTE AS para definir o contexto de segurança.  
+Um subsistema é um objeto predefinido que representa a funcionalidade disponível a uma etapa de trabalho. Cada proxy tem acesso a um ou mais subsistemas. Os subsistemas propiciam segurança, porque delimitam o acesso à funcionalidade disponível a um proxy. Cada etapa de trabalho é executada no contexto de um proxy, com exceção das etapas de trabalho [!INCLUDE[tsql](../../includes/tsql_md.md)] . As etapas do trabalho [!INCLUDE[tsql](../../includes/tsql_md.md)] usam o comando EXECUTE AS para definir o contexto de segurança para o proprietário do Trabalho.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] define os subsistemas que estão listados nesta tabela:  
   

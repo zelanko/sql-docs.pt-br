@@ -19,7 +19,7 @@
 ## [sys.dm_cdc_errors](change-data-capture-sys-dm-cdc-errors.md)  
 ## [sys.dm_cdc_log_scan_sessions](change-data-capture-sys-dm-cdc-log-scan-sessions.md)  
 
-# Controle de alterações
+# controle de alterações
 ## [sys.dm_tran_commit_table](change-tracking-sys-dm-tran-commit-table.md)
 
 # [Common Language Runtime](common-language-runtime-related-dynamic-management-views-transact-sql.md)  
@@ -45,7 +45,7 @@
 ## [sys.dm_database_copies (Banco de Dados SQL do Azure)](sys-dm-database-copies-azure-sql-database.md)  
 ## [sys.dm_db_resource_stats (Banco de Dados SQL do Azure)](sys-dm-db-resource-stats-azure-sql-database.md)  
 
-# Espelhamento de Banco de Dados
+# Espelhamento de banco de dados
 ## [sys.dm_db_mirroring_auto_page_repair](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)  
 ## [sys.dm_db_mirroring_connections](database-mirroring-sys-dm-db-mirroring-connections.md)  
 
@@ -185,7 +185,7 @@
 ## [sys.dm_repl_tranhash](sys-dm-repl-tranhash-transact-sql.md)  
 ## [sys.dm_repl_traninfo](sys-dm-repl-traninfo-transact-sql.md)  
 
-# [Administrador de Recursos](resource-governor-related-dynamic-management-views-transact-sql.md)  
+# [Resource Governor](resource-governor-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_resource_governor_configuration](sys-dm-resource-governor-configuration-transact-sql.md)  
 ## [sys.dm_resource_governor_external_resource_pool_affinity](sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
 ## [sys.dm_resource_governor_resource_pool_affinity](sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)  
@@ -255,6 +255,7 @@
 ## [sys.dm_os_dispatcher_pools](sys-dm-os-dispatcher-pools-transact-sql.md)  
 ## [sys.dm_os_host_info](sys-dm-os-host-info-transact-sql.md)  
 ## [sys.dm_os_hosts](sys-dm-os-hosts-transact-sql.md)  
+## [sys.dm_os_job_object](sys-dm-os-job-object-transact-sql.md)
 ## [sys.dm_os_latch_stats](sys-dm-os-latch-stats-transact-sql.md)  
 ## [sys.dm_os_loaded_modules](sys-dm-os-loaded-modules-transact-sql.md)  
 ## [sys.dm_os_memory_brokers](sys-dm-os-memory-brokers-transact-sql.md)  

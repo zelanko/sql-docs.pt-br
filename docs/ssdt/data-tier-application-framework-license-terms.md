@@ -1,27 +1,29 @@
 ---
-title: "Estrutura de aplicativo da camada de dados – termos de licença | Microsoft Docs"
-ms.custom: 
+title: Estrutura de aplicativo da camada de dados – termos de licença | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e1984a2e71de0a605346d23b0b99ac8a7aed0afb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Estrutura de aplicativo da camada de dados – termos de licença
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +85,7 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
     -   transferir o software ou este contrato a terceiros; ou  
     -   usar o software para serviços de hospedagem de software comerciais.  
       
-4.  **NOTIFICAÇÕES DE TERCEIROS.** O software poderá incluir código de terceiros que a Microsoft, não o terceiro, licencie a você de acordo os termos deste contrato. Os avisos, se houver, relativos a códigos de terceiros, são incluídos apenas para sua informação. Além disso, quaisquer scripts de terceiros vinculados a este software, chamados ou referenciados com base nele, são licenciados a você pelos terceiros que são os proprietários do código e não pela Microsoft. Consulte os Termos de Uso da CDN do ASP.NET Ajax: http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **NOTIFICAÇÕES DE TERCEIROS.** O software poderá incluir código de terceiros que a Microsoft, não o terceiro, licencie a você de acordo os termos deste contrato. Os avisos, se houver, relativos a códigos de terceiros, são incluídos apenas para sua informação. Além disso, quaisquer scripts de terceiros vinculados a este software, chamados ou referenciados com base nele, são licenciados a você pelos terceiros proprietários do código, e não pela Microsoft. Consulte os Termos de Uso da CDN do ASP.NET Ajax: http://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **CÓPIA DE BACKUP.** É possível fazer uma cópia do software para backup. Essa cópia poderá ser usada apenas para reinstalar o software.  
   

@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriais do SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,24 +52,24 @@ Os tutoriais abordarão o seguinte:
   
 - [Tutorial: conectar e consultar o SQL Server usando o SSMS](connect-query-sql-server.md)
 
-    Nesta seção, você aprenderá como conectar à instância do SQL Server. Você também aprenderá alguns comandos básicos do T-SQL (Transact-SQL) para criar e consultar um novo banco de dados. 
+    Neste tutorial, você aprenderá como se conectar à Instância do SQL Server. Você também aprenderá alguns comandos básicos do T-SQL (Transact-SQL) para criar e consultar um novo banco de dados. 
 
 - [Tutorial: gerando scripts de objetos no SSMS](scripting-ssms.md)
 
-    Nesta seção, você aprenderá como gerar scripts de vários objetos no SSMS, incluindo bancos de dados e consultas. 
+    Neste tutorial, você aprenderá a gerar scripts de vários objetos no SSMS, incluindo bancos de dados e consultas. 
 
 - [Tutorial: usando modelos no SSMS](templates-ssms.md)
    
-    Nesta seção, você aprenderá como trabalhar com os Modelos predefinidos no SSMS. 
+    Neste tutorial, você aprenderá como trabalhar com os Modelos predefinidos no SSMS. Os modelos são um recurso pouco conhecido que armazenam diversos trechos de código Transact-SQL para várias tarefas de administração de banco de dados. 
 
 - [Tutorial: configuração do SSMS](ssms-configuration.md)
 
-    Nesta seção, você aprenderá os conceitos básicos sobre como configurar seu ambiente do SSMS. 
+    Neste tutorial, você aprenderá os conceitos básicos de como configurar o ambiente do SSMS, como a alterar o layout do ambiente. Este tutorial também explica quais são os diferentes componentes do SSMS. 
   
 
 - [Tutorial: mais dicas e truques para usar o SSMS](ssms-tricks.md)
 
-    Nesta seção, você aprenderá mais dicas e truques para usar o SSMS. Este tutorial inclui o seguinte:
+    Neste tutorial, você aprenderá mais dicas e truques para usar o SSMS. Este tutorial inclui o seguinte:
     - Comentar e remover marca de comentário do texto
     - Recuando texto
     - Filtrando objetos no Pesquisador de Objetos

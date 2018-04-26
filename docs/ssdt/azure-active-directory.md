@@ -1,26 +1,27 @@
 ---
 title: Suporte do Azure Active Directory no SSDT (SQL Server Data Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14a6ae78a0ed5969ce3ab65dbd09b81680076fdb
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Suporte do Azure Active Directory no SSDT (SQL Server Data Tools)
 
@@ -64,7 +65,7 @@ A imposição da MFA é fornecida pelo Microsoft Azure AD por meio dessa janela 
 - O recurso *Autenticação Interativa do Active Directory* tem suporte apenas para conexão com um Banco de Dados SQL do Azure. Ele não tem suporte para SQL Server (local ou em uma VM) nem para SQL Data Warehouse do Azure.
 - A *Autenticação Interativa do Active Directory* não tem suporte na Caixa de Diálogo de Conexão do *Gerenciador de Servidores*, portanto você deve se conectar usando o SSDT com o *Pesquisador de Objetos do SQL Server*.
 - A integração de logon único com a conta conectada do Visual Studio não tem suporte para SSDT.
-- O SQLPackage.exe instalado nas Extensões do Diretório durante a instalação do Visual Studio não deve ser usado nesse local. Para usar o SQLpackage.exe com o AAD, vá para https://www.microsoft.com/pt-br/download/details.aspx?id=55088 
+- O SQLPackage.exe instalado nas Extensões do Diretório durante a instalação do Visual Studio não deve ser usado nesse local. Para usar SQLpackage.exe com o AAD, vá para https://www.microsoft.com/en-us/download/details.aspx?id=55088. 
 - A Comparação de Dados do SSDT não tem suporte para a autenticação do AAD nem para o novo método de autenticação.  
 
 

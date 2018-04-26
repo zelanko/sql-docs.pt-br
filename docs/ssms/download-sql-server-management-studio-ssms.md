@@ -1,7 +1,7 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28606246c37a4a081b1dd9766519c837db41f5d9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4343fe350d541a04b5aad44df457d09f69af3bcb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,6 +50,9 @@ O SSMS 17.X é a última geração do *SQL Server Management Studio* e é compat
 **[![download](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![download](../ssdt/media/download.png) Baixar o Pacote de Atualização do SQL Server Management Studio 17.6 (atualiza o 17.x para o 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> Há um problema conhecido em que o SSMS 17.6 se torna instável e falha ao usar [Planos de Manutenção](../relational-databases/maintenance-plans/maintenance-plans.md). Se você usa Planos de Manutenção, não instale o SSMS 17.6. Faça downgrade para o SSMS 17.5 se você já tiver instalado o 17.6 e esse problema estiver afetando você. 
 
 **Informações da versão**
 
@@ -161,13 +164,9 @@ Há um problema conhecido, no momento, em que o SSMS 17.6 falha ao configurar o 
 
 ## <a name="feedback"></a>Comentários
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Fórum das ferramentas de cliente do SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Fórum das ferramentas de cliente do SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -175,3 +174,5 @@ Há um problema conhecido, no momento, em que o SSMS 17.6 falha ao configurar o 
 - [Documentação do SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Pacotes de serviço e atualizações adicionais](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Baixar o SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

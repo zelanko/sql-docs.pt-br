@@ -1,10 +1,8 @@
 ---
 title: Notas de versão do SQL Server 2012 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: supportability
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -14,19 +12,20 @@ ms.topic: article
 helpviewer_keywords:
 - Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 6786ab20e983647a9b83ee383017fc8bd106d8a4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Este documento de Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2012 ([clique aqui para baixá-lo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Este documento Notas de versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2012 ([clique aqui para baixá-lo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
   
 Para obter informações sobre como iniciar e instalar o SQL Server 2012, consulte o Leiame do SQL Server 2012. O documento Leiame está disponível na mídia de instalação e na página de download [Leiame](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Você também pode encontrar mais informações em [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) e nos [Fóruns do SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -69,7 +68,7 @@ Antes de instalar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-ou  
+ou em  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -99,7 +98,7 @@ Você pode instalar o SQL Server no Windows Server 2008 R2 Server Core SP1 com a
   
 **Solução alternativa:** para configurar o banco de dados de estatísticas semânticas de idioma como um pré-requisito para a indexação semântica, realize as seguintes tarefas:  
   
-1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) e execute o pacote do Windows Installer.  
+1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)) e execute o pacote do Windows Installer.  
   
 2.  Mova o banco de dados para uma pasta de dados apropriada. Se você deixar o banco de dados no local padrão, deverá alterar as permissões antes de anexá-lo com êxito.  
   
@@ -234,7 +233,7 @@ Para saber mais sobre como reparar uma instância do SQL Server, veja [Reparar u
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**Solução alternativa:**repare sua instalação do .NET Framework 4 depois de atualizar seu sistema operacional. Para saber mais, veja [Como reparar uma instalação existente do .NET Framework](http://support.microsoft.com/kb/306160).  
+**Solução alternativa:** repare sua instalação do .NET Framework 4 depois de atualizar seu sistema operacional. Para saber mais, veja [Como reparar uma instalação existente do .NET Framework](http://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 A atualização da edição do SQL Server exige reiniciar o computador  
 **Problema**: quando você faz a atualização de edição de uma instância do SQL Server 2012, algumas das funcionalidades associadas com a nova edição podem não ser ativadas imediatamente.  
@@ -327,7 +326,7 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 O DQS não tem suporte em um cluster  
 **Problema:** não há suporte para o DQS em uma instalação de cluster do SQL Server. Se você estiver instalando uma instância de cluster do SQL Server, não deverá marcar as caixas de seleção **Data Quality Services** e **Cliente Data Quality** na página de **Seleção de Recursos** . Se estas caixas de seleção estiverem marcadas durante a instalação da instância de cluster (e você concluir a instalação do Data Quality Server executando o arquivo DQSInstaller.exe), o DQS será instalado neste nó, mas não estará disponível em nós adicionais quando você adicionar mais nós ao cluster e, consequentemente, não funcionará em nós adicionais.  
   
-**Solução alternativa:** instale a atualização cumulativa 1 do SQL Server 2012 para resolver este problema. Para obter instruções, veja [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817).  
+**Solução alternativa:** instale a atualização cumulativa 1 do SQL Server 2012 para resolver este problema. Para obter instruções, consulte [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817).  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Para reinstalar o Data Quality Server, exclua os objetos DQS depois de desinstalar o Data Quality Server  
 **Problema:** se você desinstalar o servidor Data Quality Server, os objetos DQS (bancos de dados DQS, logons DQS e um procedimento armazenado DQS) não serão excluídos da instância do SQL Server.  
@@ -347,7 +346,7 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 Os controles não são dimensionados corretamente em tamanhos de fontes grandes  
 **Problema:** se você alterar o tamanho do texto para “Maior – 150%” (no Windows Server 2008 ou Windows 7) ou alterar a configuração de DPI Personalizada para 200% (no Windows 7), os botões **Cancelar** e **Criar** na página **Nova Base de Dados de Conhecimento** não ficarão acessíveis.  
   
-**Solução alternativa:**para resolver o problema, defina a tela para um tamanho menor.  
+**Solução alternativa:** para resolver o problema, defina a tela para um tamanho menor.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 Não há suporte para a resolução de tela de 800 x 600  
 **Problema:** o aplicativo cliente Data Quality não será exibido corretamente se a resolução da tela estiver definida como 800 x 600.  
@@ -478,7 +477,7 @@ Nome de objeto 'sys.federations' inválido. (Microsoft SQL Server, Error: 208)</
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 O novo layout do plano de manutenção não é compatível com as ferramentas do SQL Server anteriores  
 **Problema:** quando as ferramentas de gerenciamento do SQL Server 2012 são usadas para modificar um plano de manutenção existente criado em uma versão anterior das ferramentas de gerenciamento do SQL Server (SQL Server 2008 R2, SQL Server 2008 ou SQL Server 2005), o plano de manutenção é salvo em um novo formato. As versões anteriores das ferramentas de gerenciamento do SQL Server não dão suporte a esse formato novo.  
   
-**Solução alternativa:**não há  
+**Solução alternativa:** não há  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 O Intellisense tem limitações quando conectado a um banco de dados independente  
 Problema: o Intellisense no SQL Server Management Studio (SSMS) e no SQL Server Data Tools (SSDT) não funciona conforme o esperado quando usuários independentes estão conectados a bancos de dados independentes. O comportamento a seguir é visto nesses casos:  
@@ -489,7 +488,7 @@ Problema: o Intellisense no SQL Server Management Studio (SSMS) e no SQL Server 
   
 3.  A ajuda para dica de ferramenta para funções internas não funciona.  
   
-**Solução alternativa:**não há  
+**Solução alternativa:** não há  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 Grupos de disponibilidade AlwaysOn  
 Antes de tentar criar um grupo de disponibilidade, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn (SQL Server)](http://go.microsoft.com/?linkid=9753168) nos Manuais Online. Para obter uma introdução aos Grupos de Disponibilidade AlwaysOn, veja [Grupos de Disponibilidade AlwaysOn (SQL Server)](http://go.microsoft.com/?linkid=9753166)nos Manuais Online.  
@@ -506,14 +505,14 @@ A tabela a seguir resume o suporte de driver para Grupos de Disponibilidade Alwa
 |Driver|Failover de várias sub-redes|Tentativa de aplicativo|Roteamento somente leitura|Failover de várias sub-redes: failover mais rápido de ponto de extremidade de sub-rede simples|Failover de várias sub-redes: resolução de instância nomeada para instâncias clusterizadas SQL|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sim|Sim|Sim|Sim|Sim|  
-|SQL Native Client 11.0 OLEDB|Não|Sim|Sim|Não|Não|  
+|SQL Native Client 11.0 OLEDB|não|Sim|Sim|não|não|  
 |ADO .NET com .NET Framework 4.0 com patch de conectividade**\&#42;**|Sim|Sim|Sim|Sim|Sim|  
 |ADO .NET com .NET Framework 3.5 SP1 com patch de conectividade **\&#42;\&#42;**|Sim|Sim|Sim|Sim|Sim|  
 |Microsoft JDBC driver 4.0 para SQL Server|Sim|Sim|Sim|Sim|Sim|  
   
-**\&#42;** Baixe o patch de conectividade para ADO .NET com .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+**\&#42;** Baixe o patch de conectividade para ADO .NET com o .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Baixe o patch de conectividade para ADO .NET com .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+**\&#42;\&#42;** Baixe o patch de conectividade para ADO.NET com o .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
   
 **Palavra-chave MultiSubnetFailover e recursos associados**  
   
@@ -611,10 +610,10 @@ O Serviço CDC para Oracle é um Serviço do Windows que examina os logs de tran
   
 3.  Instale o SQL Server 2012 com o recurso MDS no nó de cluster primário e, em seguida, instale o SQL Server 2012 com o recurso MDS em qualquer um dos nós de cluster adicionais.  
   
-Para saber mais sobre os problemas e informações sobre como realizar as etapas acima, veja [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
+Para saber mais sobre os problemas e obter informações sobre como realizar as etapas acima, consulte [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 obrigatório  
-Para trabalhar no aplicativo Web do Master Data Manager o Silverlight 5.0 deverá estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 em [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096).  
+Para trabalhar no aplicativo Web do Master Data Manager o Silverlight 5.0 deverá estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

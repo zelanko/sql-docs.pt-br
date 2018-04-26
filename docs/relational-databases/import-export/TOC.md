@@ -30,6 +30,7 @@
 ### [Usar um arquivo de formato para ignorar um campo de dados](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 # [Importar arquivo simples com o assistente Importar Arquivo Simples](import-flat-file-wizard.md)
+## [Relatório de falhas de importação de arquivo simples](reporting-import-flat-file-failures.md)
 # [Importar e exportar com o Assistente de Importação e Exportação](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [Importar do Excel](import-data-from-excel-to-sql.md) 
 # [Importar documentos JSON](../json/import-json-documents-into-sql-server.md)
