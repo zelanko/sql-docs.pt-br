@@ -2,7 +2,7 @@
 title: Propriedades do SQL Server (guia de parâmetros de inicialização) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 84ab7e42151bcd83aea60f46374e8f88fab62bec
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Use esta caixa de diálogo para adicionar ou remover parâmetros de inicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os parâmetros de inicialização podem ter um grande efeito no desempenho do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de adicionar ou alterar os parâmetros de inicialização, consulte o tópico "Usando as opções de inicialização do Serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Use esta caixa de diálogo para adicionar ou remover parâmetros de inicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os parâmetros de inicialização podem ter um grande efeito no desempenho do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de adicionar ou alterar os parâmetros de inicialização, consulte o tópico "Usando as opções de inicialização do Serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
  **Especificar um parâmetro de inicialização**  

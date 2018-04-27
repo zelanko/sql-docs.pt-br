@@ -1,6 +1,6 @@
 ---
 title: Atualizado - conectar-se com documentos do SQL Server | Microsoft Docs
-description: Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação, para conectar-se ao Microsoft SQL Server.
+description: Exiba trechos do conteúdo atualizado com alterações recentes na documentação "Conectar-se ao Microsoft SQL Server".
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -12,7 +12,7 @@ ms.component: connect
 ms.date: 02/03/2018
 ms.openlocfilehash: da7ff58d5930acb084220c8d0364147ae93ed963
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/08/2018
 ---
@@ -20,11 +20,11 @@ ms.lasthandoff: 04/08/2018
 
 
 
-Quase todos os dias Microsoft atualiza alguns de seus artigos existentes em seu [Docs.Microsoft.com](http://docs.microsoft.com/) site de documentação. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
+Quase todos os dias a Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/). Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
 
-Este artigo é gerado por um programa que é executado novamente periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita, ou como a redução do artigo de origem. Imagens nunca são exibidas aqui.
+Este artigo é gerado por um programa que é reexecutado periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita ou como markdown do artigo de origem. Imagens nunca são exibidas aqui.
 
-Atualizações recentes são relatadas para o intervalo de data a seguir e o assunto:
+Atualizações recentes são relatadas para o intervalo de datas e o assunto a seguir:
 
 
 
@@ -41,7 +41,7 @@ Atualizações recentes são relatadas para o intervalo de data a seguir e o ass
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-***Não existem novos artigos a serem listados, no momento.***
+***Não existem novos artigos a serem listados no momento.***
 
 
 
@@ -51,9 +51,9 @@ Os links a seguir direcionam para novos artigos que foram adicionados recentemen
 
 Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma atualização extensa recentemente.
 
-Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes, um trecho é separado da sintaxe de markdown importantes que circunda no artigo real. Portanto, esses trechos são para apenas diretrizes gerais. Os trechos só permitem que você saber se seus interesses garantem a pena clique e visite o artigo real.
+Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes um trecho é separado da sintaxe de markdown importante que circunda no artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
 
-Para essas e outras razões, não copiar o código desses trechos e não em como verdadeiro exato qualquer trecho de texto. Em vez disso, consulte o artigo real.
+Por essas e outras razões, não copie o código desses trechos, nem considere-os como verdade exata. Em vez disso, visite o artigo real.
 
 
 
@@ -67,7 +67,7 @@ Para essas e outras razões, não copiar o código desses trechos e não em como
 
 Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
 
-1. [Use sempre criptografado com o Driver ODBC para SQL Server](#TitleNum_1)
+1. [Usando o recurso Always Encrypted com o Microsoft ODBC Driver for SQL Server](#TitleNum_1)
 
 
 
@@ -78,9 +78,9 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1. &nbsp; [Use sempre criptografado com o Driver ODBC para SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
+### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1. &nbsp; [Usando o recurso Always Encrypted com o Microsoft ODBC Driver for SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
 
-*Atualizado em: 2018-01-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Atualizado em: 22-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
 <!-- Source markdown line 524.  ms.author= "v-chojas".  -->
 
@@ -149,16 +149,16 @@ Esta seção lista artigos muito semelhantes a artigos atualizados recentemente 
 
 
 - [Novo + Atualizado (0 + 0): documentos sobre **DMA (Assistente de Migração de Dados) para o SQL**](../dma/new-updated-dma.md)
-- [Novo + atualizado (0 + 0): **ActiveX Data Objects (ADO) para o SQL** documentos](../ado/new-updated-ado.md)
+- [Novo + atualizado (0 + 0): documentos do **ADO (ActiveX Data Objects) para SQL**](../ado/new-updated-ado.md)
 - [Novo + Atualizado (0+0): documentos sobre o **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Novo + atualizado (0 + 0): **Data Quality Services para SQL** documentos](../data-quality-services/new-updated-data-quality-services.md)
-- [Novo + atualizado (0 + 0): **extensões DMX (Data Mining) para o SQL** documentos](../dmx/new-updated-dmx.md)
+- [Novo + atualizado (0 + 0): documentos do **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
+- [Novo + atualizado (0 + 0): documentos de **Extensões DMX (Data Mining) para SQL**](../dmx/new-updated-dmx.md)
 - [Novo + Atualizado (0+0): documentos sobre o **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Novo + atualizado (0 + 0): **MDX (Multidimensional Expressions) para SQL** documentos](../mdx/new-updated-mdx.md)
-- [Novo + atualizado (0 + 0): **ODBC (conectividade aberta de banco de dados) para o SQL** documentos](../odbc/new-updated-odbc.md)
-- [Novo + atualizado (0 + 0): **exemplos para SQL** documentos](../samples/new-updated-samples.md)
-- [Novo + atualizado (0 + 0): **Migration Assistant SSMA (SQL Server)** documentos](../ssma/new-updated-ssma.md)
+- [Novo + atualizado (0 + 0): documentos de **Expressão MDX para SQL**](../mdx/new-updated-mdx.md)
+- [Novo + atualizado (0 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
+- [Novo + atualizado (0 + 0): documentos de **Exemplos para SQL**](../samples/new-updated-samples.md)
+- [Novo + atualizado (0 + 0): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
 - [Novo + Atualizado (0 + 0): documentos de **Ferramentas para SQL**](../tools/new-updated-tools.md)
-- [Novo + atualizado (0 + 0): **XQuery para o SQL** documentos](../xquery/new-updated-xquery.md)
+- [Novo + atualizado (0 + 0): documentos do **XQuery para SQL**](../xquery/new-updated-xquery.md)
 
 
