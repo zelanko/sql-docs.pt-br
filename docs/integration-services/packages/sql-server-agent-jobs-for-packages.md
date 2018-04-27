@@ -1,16 +1,16 @@
 ---
 title: Trabalhos do SQL Server Agent para pacotes | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - jobs [Integration Services]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50d8803f21ddb9687bfcc861a683932a0ba53f44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabalhos do SQL Server Agent para pacotes
   Você pode automatizar e agendar a execução de pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Você pode agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos.  
@@ -153,7 +153,7 @@ ms.lasthandoff: 01/25/2018
     |**Avançado**<br /><br /> Localizado na guia **Configuração** .|Defina as seguintes configurações adicionais para a execução do pacote:|  
     ||**Substituições de propriedades**:<br /><br /> Clique em **Adicionar** para digitar um novo valor para uma propriedade de pacote, especificar o caminho da propriedade e indicar se o valor da propriedade é confidencial. O servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criptografa dados confidenciais. Para editar ou remover as configurações de uma propriedade, clique em uma linha na caixa das substituições **Propriedade** e clique em **Editar** ou em **Remover**. Você pode encontrar o caminho da propriedade seguindo um destes procedimentos:<br /><br /> -Copie o caminho da propriedade do arquivo de configuração XML (\*.dtsconfig). O caminho é listado na seção Configuração do arquivo como um valor do atributo Caminho. Veja a seguir um exemplo de caminho para a propriedade MaximumErrorCount: \Package.Properties[MaximumErrorCount]<br /><br /> Execute o **Assistente de Configuração de Pacotes** e copie os caminhos da propriedade da página final **Conclusão do Assistente** . Então, você pode cancelar o assistente.<br /><br /> <br /><br /> Observação: a opção de **Substituições de Propriedades** é destinada a pacotes com configurações atualizadas de uma versão anterior de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pacotes que você cria usando [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] e implanta para o servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam parâmetros em vez de configurações.|  
     ||**Nível de log**<br /><br /> Selecione um dos seguintes níveis de log para a execução do pacote. Observe que a seleção do nível de log **Desempenho** ou **Detalhado** pode afetar o desempenho da execução do pacote.<br /><br /> **None**:<br />                          O log está desativado. Apenas o status da execução do pacote é registrado em log.<br /><br /> **Basic**:<br />                          Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão do nível de log.<br /><br /> **Desempenho**:<br />                          Apenas estatísticas de desempenho e eventos OnError e OnWarning são registrados em log.<br /><br /> **Detalhado**:<br />                          Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico.<br /><br /> O nível de log selecionado determina quais informações são exibidas em exibições SSISDB e nos relatórios do servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Log do SSIS (Integration Services)](../../integration-services/performance/integration-services-ssis-logging.md).|  
-    ||**Despejar quando ocorrerem erros**<br /><br /> Especifique se os arquivos de despejo de depuração são gerados quando ocorre um erro durante a execução do pacote. O arquivo contém informações sobre a execução do pacote que pode ajudar a solucionar problemas de execução. Quando você seleciona essa opção e ocorre um erro durante a execução, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um arquivo .mdmp (arquivo binário) e um arquivo .tmp (arquivo de texto). Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos na pasta *\<drive>:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
+    ||**Despejar quando ocorrerem erros**<br /><br /> Especifique se os arquivos de despejo de depuração são gerados quando ocorre um erro durante a execução do pacote. O arquivo contém informações sobre a execução do pacote que pode ajudar a solucionar problemas de execução. Quando você seleciona essa opção e ocorre um erro durante a execução, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um arquivo .mdmp (arquivo binário) e um arquivo .tmp (arquivo de texto). Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos na pasta *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Tempo de execução de 32 bits**<br /><br /> Indique se o pacote será executado usando a versão de 32 bits do utilitário dtexec em um computador de 64 bits que tenha a versão de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent instalada.<br /><br /> Você pode precisar executar o pacote usando uma versão de 32 bits do dtexec, por exemplo, se o pacote usar um provedor OLE DB nativo que não esteja disponível em uma versão de 64 bits. Para obter mais informações, consulte [Considerações do Integration Services sobre versões de 64 bits](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Por padrão, quando você seleciona o tipo de etapa de trabalho **Pacote do SQL Server Integration Services** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa o pacote usando a versão do utilitário dtexec invocada automaticamente pelo sistema. O sistema invoca a versão de 32 bits ou de 64 bits do utilitário, dependendo do processador do computador, e a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que está sendo executada no computador.|  
   
      **Origem do pacote**:  SQL Server, armazenamento de pacotes SSIS ou sistema de arquivos  

@@ -2,7 +2,7 @@
 title: Caixa de diálogo Lista de Colunas (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12131847bea81558f979516b413c9e6db0e2ecc7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 841c5c8ffd80ea335a96628009ce4aab185876ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ao escrever consultas, pode ser útil exibir a lista de colunas disponíveis nos objetos com valores de tabela selecionados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Ao escrever consultas, pode ser útil exibir a lista de colunas disponíveis nos objetos com valores de tabela selecionados.  
   
 Para acessar essa caixa de diálogo, no menu **Designer de Consultas** , no Painel Diagrama, clique com o botão direito do mouse no cabeçalho do objeto com valor de tabela e, em seguida, clique em **Propriedades**. Na janela **Propriedades** , clique no campo **Lista de Colunas** . Em seguida, clique nas reticências **(…)** à direita do campo.  
   

@@ -2,7 +2,7 @@
 title: Configurar o Firewall do Windows para permitir acesso ao SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64e8f497247a0c670c4091dca5c0531ed5715cb6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ Defina as configurações do Firewall do Windows com o **Console de Gerenciament
   
 -   **netsh**  
   
-     A ferramenta **netsh.exe** pode ser usada por um administrador para configurar e monitorar computadores baseados no Windows em um prompt de comando ou por meio de um arquivo em lotes**.** Com a ferramenta **netsh** , você pode direcionar os comandos de contexto inseridos para o auxiliar apropriado que, em seguida, executará o comando. Um auxiliar é um arquivo .dll (Dynamic Link Library) que estende a funcionalidade da ferramenta **netsh** fornecendo configuração, monitoramento e suporte para um ou mais serviços, utilitários ou protocolos. Todos os sistemas operacionais que dão suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm um auxiliar de firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] também possui um auxiliar avançado de firewall chamado **advfirewall**. Os detalhes sobre como usar o **netsh** não são abordados neste artigo. No entanto, muitas das opções de configuração descritas podem ser configuradas usando o **netsh**. Por exemplo, execute o seguinte script em um prompt de comando para abrir a porta TCP 1433:  
+     A ferramenta **netsh.exe** pode ser usada por um administrador para configurar e monitorar computadores baseados no Windows em um prompt de comando ou por meio de um arquivo em lotes **.** Com a ferramenta **netsh** , você pode direcionar os comandos de contexto inseridos para o auxiliar apropriado que, em seguida, executará o comando. Um auxiliar é um arquivo .dll (Dynamic Link Library) que estende a funcionalidade da ferramenta **netsh** fornecendo configuração, monitoramento e suporte para um ou mais serviços, utilitários ou protocolos. Todos os sistemas operacionais que dão suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm um auxiliar de firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] também possui um auxiliar avançado de firewall chamado **advfirewall**. Os detalhes sobre como usar o **netsh** não são abordados neste artigo. No entanto, muitas das opções de configuração descritas podem ser configuradas usando o **netsh**. Por exemplo, execute o seguinte script em um prompt de comando para abrir a porta TCP 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  

@@ -2,7 +2,7 @@
 title: Caixa de diálogo Cores (Ferramentas de Banco de Dados Visual) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f94edb00fc680bdfb3731e2d492c79e2f7cb09f2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 41249a4893235f23f1c7e4cab2c116dcfacdc5c7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Caixa de diálogo Cores (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A **Caixa de Diálogo Cores** retorna o valor RGB da cor selecionada pelo usuário. O usuário pode selecionar um conjunto de cores básicas determinado pelo driver de vídeo ou um conjunto de cores personalizadas. Selecionar em Cores básicas ou criar cores personalizadas. Defina as cores clicando na matriz de cores, digitando nas caixas **Matiz**, **Saturação**, **Luminosidade**, **Vermelho**, **Verde**e **Azul** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+A **Caixa de diálogo Cores** retorna o valor RGB da cor selecionada pelo usuário. O usuário pode selecionar um conjunto de cores básicas determinado pelo driver de vídeo ou um conjunto de cores personalizadas. Selecionar em Cores básicas ou criar cores personalizadas. Defina as cores clicando na matriz de cores, digitando nas caixas **Matiz**, **Saturação**, **Luminosidade**, **Vermelho**, **Verde**e **Azul** .  
   
 ## <a name="options"></a>Opções  
 **Cores básicas**  

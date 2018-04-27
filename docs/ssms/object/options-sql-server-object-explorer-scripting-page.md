@@ -1,33 +1,35 @@
 ---
-title: "Opções (página Pesquisador de Objetos do SQL Server – Scripts) | Microsoft Docs"
-ms.custom: 
+title: Opções (página Pesquisador de Objetos do SQL Server – Scripts) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d2e378f807925b467f0ec01575678a31e548360
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 51df717752e4cca8c76a1681ba62322a79c18ebc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opções (página Pesquisador de Objetos do SQL Server – Scripts)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
   
 -   Comandos **Editar** para tabelas de usuário e exibições.  
   
@@ -154,6 +156,6 @@ Inclui nomes de restrições geradas pelo sistema para forçar a integridade ref
 **Script para a versão do servidor**  
 Scripts gerados serão direcionados para a versão especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Recursos que são novos no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] não podem ter seu script executado em versões anteriores. Alguns scripts criados para o [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] não podem ser executados em servidores que estão executando uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ou em um banco de dados que tem uma [configuração de nível de compatibilidade do banco de dados](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)anterior.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Gerar scripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

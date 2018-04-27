@@ -2,7 +2,7 @@
 title: Criar consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 11e7ac99b1d9f54c6ed16e58fba7572f3a04d39b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>Criar consultas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As consultas permitem que você recupere dados das tabelas e exibições em seu banco de dados. Você cria e trabalha com consultas no **Designer de Consulta e Exibição**, que é composto por quatro painéis: o [Painel de Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), o [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), o [Painel de Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e o [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+As consultas permitem que você recupere dados das tabelas e exibições em seu banco de dados. Você cria e trabalha com consultas no **Designer de Consulta e Exibição**, que é composto por quatro painéis: o [Painel de Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), o [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), o [Painel de Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e o [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### <a name="to-create-a-new-query"></a>Para criar uma consulta  
   

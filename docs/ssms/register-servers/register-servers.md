@@ -1,16 +1,16 @@
 ---
 title: Registrar servidores | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlserverregisteredserver.dhelp
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4770ad54ceef6901c28a3d71bfde4370dd01e301
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1f8d56b42372b0a57e7cf16242affa20884831b2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="register-servers"></a>Registrar servidores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-O registro de um servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lhe permite armazenar as informações de conexão de servidor para conexões futuras. Há três modos de registrar um servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  O registro de um servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lhe permite armazenar as informações de conexão de servidor para conexões futuras. Há três modos de registrar um servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  As instâncias locais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são registradas automaticamente durante a primeira inicialização do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] após sua instalação.  
   

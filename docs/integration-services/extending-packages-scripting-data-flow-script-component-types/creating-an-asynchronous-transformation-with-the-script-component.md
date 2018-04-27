@@ -1,15 +1,15 @@
 ---
-title: "Criando uma transformação assíncrona com o componente Script | Microsoft Docs"
-ms.custom: 
+title: Criando uma transformação assíncrona com o componente Script | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-data-flow-script-component-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a7d607fda10fa8e3ae020e6b702867e9f8ef0a2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c7a8ecd16aa8ea4957b54195feb66b3b8824d6b1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Criando uma transformação assíncrona com o componente Script
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas pode aguardar para concluir seu processamento depois de receber todas as linhas de entrada ou ela pode gerar algumas linhas antes de receber todas as linhas de entrada. Esse tópico discute uma transformação assíncrona. Se o processamento exigir uma transformação síncrona, consulte [Criando uma transformação síncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Para obter mais informações sobre as diferenças entre componentes síncronos e assíncronos, consulte [Compreendendo as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/25/2018
   
  Em uma transformação assíncrona, você pode usar o método AddRow para adicionar linhas à saída, conforme apropriado, dentro do método ProcessInputRow ou ProcessInput. Você não precisa usar o método CreateNewOutputRows. Se estiver escrevendo uma única linha de resultados, como resultados de agregação, para determinada saída, crie a linha de saída antecipadamente usando o método CreateNewOutputRows e preencha seus valores posteriormente, depois de processar todas as linhas de entrada. Contudo, não é útil criar múltiplas linhas no método CreateNewOutputRows, pois o componente Script só permite o uso da linha atual em uma entrada ou saída. O método CreateNewOutputRows é mais importante em um componente de origem em que não há linhas de entrada a serem processadas.  
   
- É recomendável substituir o próprio método ProcessInput. Isso permite executar um processamento preliminar ou final adicional antes ou depois de executar um loop no buffer de entrada e chamar ProcessInputRow para cada linha. Por exemplo, um dos exemplos de código deste tópico substitui ProcessInput para contar o número de endereços em uma cidade específica, conforme ProcessInputRow executa um loop pelas linhas**.** O exemplo grava o valor de resumo na segunda saída depois que todas as linhas foram processadas. O exemplo completa a saída em ProcessInput porque os buffers de saída não estão mais disponíveis quando PostExecute é chamado.  
+ É recomendável substituir o próprio método ProcessInput. Isso permite executar um processamento preliminar ou final adicional antes ou depois de executar um loop no buffer de entrada e chamar ProcessInputRow para cada linha. Por exemplo, um dos exemplos de código deste tópico substitui ProcessInput para contar o número de endereços em uma cidade específica, conforme ProcessInputRow executa um loop pelas linhas **.** O exemplo grava o valor de resumo na segunda saída depois que todas as linhas foram processadas. O exemplo completa a saída em ProcessInput porque os buffers de saída não estão mais disponíveis quando PostExecute é chamado.  
   
  Dependendo dos requisitos, é recomendável escrever o script nos métodos PreExecute e PostExecute disponíveis na classe ScriptMain para executar qualquer processamento preliminar ou final.  
   

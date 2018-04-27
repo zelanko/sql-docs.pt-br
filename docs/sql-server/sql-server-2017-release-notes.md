@@ -3,7 +3,7 @@ title: Notas de Versão do SQL Server 2017 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -15,11 +15,11 @@ ms.author: craigg
 manager: craigg
 ms.workload: Active
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 15e778c6b38f61905a7bf4167cf3ce65d418e942
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 33e55dfeb1123dc5528cfc358600d06ecaede364
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de Versão do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -154,5 +154,7 @@ Não há nenhuma nota de versão do SQL Server no Windows relacionada a essa ver
 - [Centro de atualização do SQL Server – links e informações para todas as versões com suporte](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

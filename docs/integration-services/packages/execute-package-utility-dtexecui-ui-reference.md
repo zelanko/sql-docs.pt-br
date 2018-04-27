@@ -2,7 +2,7 @@
 title: Utilitário de Execução de Pacotes (dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: packages
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: de1484e04318c45057213226016379326e670304
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: dd6097e9c173196466870fea63a0c1334c7a37b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitário de Execução de Pacotes (dtexecui)
   Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando **dtexecui** em um prompt de comando, é uma alternativa à execução de pacotes por meio da ferramenta de prompt de comando **DTExec** .  
@@ -73,14 +73,14 @@ ms.lasthandoff: 04/10/2018
   
 |||  
 |-|-|  
-|Value|Description|  
+|Valor|Description|  
 |**SQL Server**|Selecione esta opção quando o pacote estiver no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** *nome de usuário* e **/PASSWORD** *senha* options to the comme prompt.|  
 |**Sistema de arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
 |**Armazenamento de Pacotes SSIS**|Selecione esta opção quando o pacote estiver no Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Cada uma dessas seleções apresenta o seguinte conjunto de opções.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **Remover**  
  Selecione um arquivo de configuração na lista e clique em **Remover**.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -168,7 +168,7 @@ ms.lasthandoff: 04/10/2018
  **Remover**  
  Selecione um arquivo de comandos na caixa de texto e remova-o usando o botão **Remover** .  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -181,13 +181,13 @@ ms.lasthandoff: 04/10/2018
  **Gerenciador de Conexões**  
  Marque a caixa de seleção para que a coluna **Cadeia de Conexão** possa ser editada.  
   
- **Description**  
+ **Descrição**  
  Exiba uma descrição para cada gerenciador de conexões. As descrições não podem ser editadas.  
   
  **Cadeia de Conexão**  
  Edite a cadeia de caracteres de conexão para um gerenciador de conexões. Este campo só permitirá edições quando a caixa de seleção **Gerenciador de Conexões** estiver marcada.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -234,7 +234,7 @@ ms.lasthandoff: 04/10/2018
  **Eventos do console**  
  Indique os eventos e os tipos de mensagens a serem relatados.  
   
- **Nenhum.**  
+ **Nenhuma**  
  Selecione para não gerar relatórios.  
   
  **Erros**  
@@ -282,7 +282,7 @@ ms.lasthandoff: 04/10/2018
  **Hora de início e Hora de término**  
  Selecione para informar quando o pacote começou e quando terminou.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -301,7 +301,7 @@ ms.lasthandoff: 04/10/2018
  **Remover**  
  Selecione um provedor de log e clique para removê-lo.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -320,7 +320,7 @@ ms.lasthandoff: 04/10/2018
  **Remover**  
  Selecione o caminho da propriedade e clique para removê-lo.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -351,7 +351,7 @@ ms.lasthandoff: 04/10/2018
  ID da Versão  
  Especifique o número de identificação da versão.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -370,13 +370,13 @@ ms.lasthandoff: 04/10/2018
  **Command line**  
  Exibe a linha de comando atual. Se você selecionou a opção para editar a linha de comando manualmente, ela será editável.  
   
- **Execute (executar)**  
+ **Executar**  
  Clique para executar o pacote.  
   
  **Fechar**  
  Clique para fechar a caixa de diálogo **Utilitário do Pacote de Execução** .  
   
-## <a name="see-also"></a>Consulte também  
- [Utilitário DTExec](../../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário dtexec](../../integration-services/packages/dtexec-utility.md)  
   
   

@@ -2,7 +2,7 @@
 title: Gerenciar objetos usando o Pesquisador de Objetos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0469b79c9e5f53fe4a11d3c54ad9f313307f303b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 22c57aa3c643c83c9ecd23316aab18e48fc5a07a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gerenciar objetos usando o Pesquisador de Objetos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode usar o Pesquisador de Objetos para gerenciar objetos como bancos de dados, tabelas e procedimentos armazenados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Você pode usar o Pesquisador de Objetos para gerenciar objetos como bancos de dados, tabelas e procedimentos armazenados.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Exibindo objetos no Pesquisador de Objetos  
 O Pesquisador de Objetos usa uma estrutura de árvore para agrupar informações em pastas. Para expandir pastas, clique no sinal de mais (+) ou clique duas vezes na pasta. Expanda pastas para mostrar informações mais detalhadas. Clique com o botão direito do mouse em pastas ou objetos para executar tarefas comuns. Clique duas vezes nos objetos para executar a tarefa mais comum.  
