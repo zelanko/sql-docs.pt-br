@@ -1,27 +1,28 @@
 ---
 title: Membros de SQLServerDatabaseMetaData | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a467dca2697056235c1ac4584f6eea299d5f0e17
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d8552b0a4e59e1eed892dae11b37daa18e85288b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>Membros de SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,10 +30,10 @@ ms.lasthandoff: 11/18/2017
   As tabelas a seguir listam os membros expostos pelo [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) classe.  
   
 ## <a name="constructors"></a>Construtores  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="fields"></a>Campos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="inherited-fields"></a>Campos herdados  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|Recupera se o banco de dados em questão ignora uma instrução de definição de dados em uma transação.|  
 |[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|Recupera a excluir ou não de uma linha visível pode ser detectada chamando o [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) método o [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|Recupera se o valor de retorno para o [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) método inclui os tipos de dados SQL LONGVARCHAR e LONGVARBINARY.|  
-|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Recupera uma descrição do atributo especificado do tipo fornecido, para um tipo definido pelo usuário que está disponível no esquema e no catálogo fornecidos.|  
+|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Recupera uma descrição do atributo especificado do tipo fornecido, para um tipo definido pelo usuário que está disponível no esquema e no catálogo fornecidos.|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|Recupera uma descrição do conjunto de colunas ideal de uma tabela que identifica exclusivamente uma linha.|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|Recupera os nomes de catálogo disponíveis no servidor conectado.|  
 |[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|Recupera o **cadeia de caracteres** que usa esse banco de dados como o separador entre um nome de catálogo e da tabela.|  
@@ -119,10 +120,10 @@ ms.lasthandoff: 11/18/2017
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|Recupera uma descrição das tabelas disponíveis no padrão de nome de catálogo, esquema ou tabela fornecido.|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|Recupera os tipos de tabela disponíveis no banco de dados atual.|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|Recupera uma lista separada por vírgulas de funções de hora e data disponíveis com esse banco de dados.|  
-|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Recupera uma descrição de todos os tipos SQL padrão que têm o suporte do banco de dados atual.|  
+|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Recupera uma descrição de todos os tipos SQL padrão que têm o suporte do banco de dados atual.|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|Recupera uma descrição de tipos definidos pelo usuário em um esquema específico.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|Recupera a URL do banco de dados.|  
-|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Recupera o nome de usuário como é conhecido para este banco de dados.|  
+|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Recupera o nome de usuário como é conhecido para este banco de dados.|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|Recupera uma descrição das colunas de uma tabela que é atualizada automaticamente quando qualquer valor em uma linha é atualizado.|  
 |[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|Recupera se uma inserção de linha visível pode ser detectada chamando o método [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) método o [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|Recupera se um catálogo aparece no início de um nome de tabela totalmente qualificado.|  

@@ -1,30 +1,33 @@
 ---
-title: "Método getSuperTypes (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método getSuperTypes (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getSuperTypes
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getSuperTypes
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99c91c2745c427c04330e876a74603afdb422261
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6b53989571e1ea6ea302f987ebd36a534a977ab1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getsupertypes-method-sqlserverdatabasemetadata"></a>Método getSuperTypes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public java.sql.ResultSet getSuperTypes(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Catálogo*  
+ *catalog*  
   
  Um **cadeia de caracteres** que contém o nome do catálogo.  
   
@@ -62,7 +65,7 @@ public java.sql.ResultSet getSuperTypes(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getSuperTypes é especificado pelo método getSuperTypes na interface DatabaseMetadata.  
   
 ## <a name="see-also"></a>Consulte também  

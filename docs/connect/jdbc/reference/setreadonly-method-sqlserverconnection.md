@@ -1,30 +1,33 @@
 ---
-title: "Método setReadOnly (SQLServerConnection) | Microsoft Docs"
-ms.custom: 
+title: Método setReadOnly (SQLServerConnection) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnection.setReadOnly
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnection.setReadOnly
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7acd45c0594d53e4121f1162c98a91a183b650a8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 60fb9cd61dd6acdd0a3c920df4219239a203e2b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>Método setReadOnly (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,14 +45,14 @@ public void setReadOnly(boolean readOnly)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *somente leitura*  
+ *Somente leitura*  
   
  **True** se a conexão for somente leitura. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método setReadOnly é especificado pelo método setReadOnly na interface Java.SQL.  
   
 ## <a name="see-also"></a>Consulte também  

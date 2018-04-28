@@ -1,27 +1,28 @@
 ---
 title: Membros DateTimeOffset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d6d81c7a0a853123467ba09adc01c48bcdac089
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7c43f0a62e25fdee7e8e972e681ba2761f952e41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetimeoffset-members"></a>Membros DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,21 +30,21 @@ ms.lasthandoff: 11/18/2017
   As tabelas a seguir listam os membros expostos pelo [DateTimeOffset classe](../../../connect/jdbc/reference/datetimeoffset-class.md) classe.  
   
 ## <a name="constructors"></a>Construtores  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="fields"></a>Campos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="methods"></a>Métodos  
   
 |Nome|Description|  
 |----------|-----------------|  
-|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Compara este **DateTimeOffset** objeto para outro **DateTimeOffset** objeto com base na sua hora GMT.|  
+|[CompareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Compara este **DateTimeOffset** objeto para outro **DateTimeOffset** objeto com base na sua hora GMT.|  
 |[é igual a](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Compara este **DateTimeOffset** objeto para outro **objeto**.|  
 |[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Retorna o deslocamento em minutos GMT, isso **DateTimeOffset** objeto.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|Retorna o ponto no tempo representado por esse **DateTimeOffset** objeto como um Java.SQL. timestamp.|  
 |[código hash](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|Retorna um valor de código hash para o objeto.|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Retorna uma representação de cadeia de caracteres da **DateTimeOffset** objeto.|  
+|[ToString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Retorna uma representação de cadeia de caracteres da **DateTimeOffset** objeto.|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|Cria um **DateTimeOffset** objeto que representa um ponto no tempo em um deslocamento específico do GMT.|  
   
 ## <a name="inherited-methods"></a>Métodos herdados  

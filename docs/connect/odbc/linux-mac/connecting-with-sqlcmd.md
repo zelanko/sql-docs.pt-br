@@ -2,7 +2,7 @@
 title: Conectando com sqlcmd | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>Conectando com sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,21 +70,21 @@ Na versão atual, as seguintes opções estão disponíveis:
   
 - -k remover ou substituir caracteres de controle.  
   
-- **-K***application_intent*  
+- **-K * application_intent*  
 Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, `sqlcmd` não oferece suporte a conectividade com uma réplica secundária em um grupo de disponibilidade do AlwaysOn. Para obter mais informações, consulte [Driver ODBC no Linux e macOS - alta disponibilidade e recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
-> Não há suporte para**-K** no CTP para SUSE Linux. No entanto, você pode especificar o **ApplicationIntent = ReadOnly** palavra-chave em um arquivo DSN passado para `sqlcmd`. Para obter mais informações, consulte "sn Support in `sqlcmd` e `bcp`" no final deste tópico.  
+> Não há suporte para **-K** no CTP para SUSE Linux. No entanto, você pode especificar o **ApplicationIntent = ReadOnly** palavra-chave em um arquivo DSN passado para `sqlcmd`. Para obter mais informações, consulte "sn Support in `sqlcmd` e `bcp`" no final deste tópico.  
   
 - -l *timeout* especifique o número de segundos antes que um `sqlcmd` logon expire quando você tentar se conectar a um servidor.
 
 - -m *error_level* controle quais mensagens de erro são enviadas para stdout.  
   
-- **-M***multisubnet_failover*  
+- **-M * multisubnet_failover*  
 Sempre especifique **-M** ao se conectar ao ouvinte do grupo de disponibilidade de um grupo de disponibilidade do [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] ou de uma Instância de Cluster de Failover do [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** fornece detecção mais rápida de failovers e conexão ao servidor ativo (atualmente). Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte [Driver ODBC no Linux e macOS - alta disponibilidade e recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
-> Não há suporte para**-M** no CTP para SUSE Linux. No entanto, você pode especificar o **MultiSubnetFailover = Yes** palavra-chave em um arquivo DSN passado para `sqlcmd`. Para obter mais informações, consulte "sn Support in `sqlcmd` e `bcp`" no final deste tópico.  
+> Não há suporte para **-M** no CTP para SUSE Linux. No entanto, você pode especificar o **MultiSubnetFailover = Yes** palavra-chave em um arquivo DSN passado para `sqlcmd`. Para obter mais informações, consulte "sn Support in `sqlcmd` e `bcp`" no final deste tópico.  
   
 - -N criptografar a conexão.  
   
@@ -96,7 +96,7 @@ Sempre especifique **-M** ao se conectar ao ouvinte do grupo de disponibilidade 
   
 - -q *commandline_query* executar uma consulta quando `sqlcmd` é iniciado, mas não sair quando a consulta for concluída.  
 
-- -Q *commandline_query* executar uma consulta quando `sqlcmd` é iniciado. `sqlcmd`será fechado quando a consulta for concluída.  
+- -Q *commandline_query* executar uma consulta quando `sqlcmd` é iniciado. `sqlcmd` será fechado quando a consulta for concluída.  
 
 - mensagens de erro de redirecionamentos - r para stderr.
 
@@ -104,7 +104,7 @@ Sempre especifique **-M** ao se conectar ao ouvinte do grupo de disponibilidade 
   
 - -s *column_separator_char* especifique o caractere separador de coluna.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*protocolo*:] *servidor*[**, * * * porta*]  
 Especifique a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para se conectar, ou se -D for usado, um DSN. O driver ODBC no Linux e macOS requer - S. Observe que **tcp** é o único protocolo válido.  
   
 - -t *query_timeout* especificar o número de segundos antes que um comando (ou instrução SQL) expire.  
@@ -216,13 +216,13 @@ As entradas a seguir têm suporte em um DSN no Linux ou macOS:
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **Banco de dados =***database_name*  
+-   **Banco de dados = * database_name*  
   
 -   **Driver = ODBC Driver 11 para SQL Server** ou **Driver = ODBC Driver 13 para SQL Server**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **Server =***server_name_or_IP_address*  
+-   **Server = * server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   

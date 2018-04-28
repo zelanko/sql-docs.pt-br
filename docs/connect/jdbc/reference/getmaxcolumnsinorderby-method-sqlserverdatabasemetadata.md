@@ -1,30 +1,33 @@
 ---
-title: "Método getMaxColumnsInOrderBy (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método getMaxColumnsInOrderBy (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getMaxColumnsInOrderBy
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getMaxColumnsInOrderBy
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: d6af9bb4-c55d-41f4-a266-d10ebee61194
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46e9c0d0ffd1f333118b482b05dfdfade7ab378f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fd65ae7288cb98ba388a8dde7f22a93ff0393e7a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getmaxcolumnsinorderby-method-sqlserverdatabasemetadata"></a>Método getMaxColumnsInOrderBy (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public int getMaxColumnsInOrderBy()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getMaxColumnsInOrderBy é especificado pelo método getMaxColumnsInOrderBy na interface DatabaseMetadata.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,30 +1,33 @@
 ---
-title: "Método setNull (int, int, Java) | Microsoft Docs"
-ms.custom: 
+title: Método setNull (int, int, Java) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.setNull (int, int, java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.setNull (int, int, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbf616a9d4ea79f3a8413c143d3430ac199fef68
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 00c05d00e61755148ffba462316ea9c5bdefb30f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>Método setNull (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +48,7 @@ public final void setNull(int paramIndex,
   
  Um **int** que indica o número do parâmetro.  
   
- *sqlType*  
+ *SQLtype*  
   
  Um código do tipo de JDBC definido pelo java.sql.Types.  
   
@@ -56,11 +59,11 @@ public final void setNull(int paramIndex,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método setNull é especificado pelo método na interface PreparedStatement setNull.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método setNull &#40; SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
+ [Método setNull &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

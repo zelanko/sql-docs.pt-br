@@ -1,27 +1,28 @@
 ---
 title: Conectando-se a um banco de dados SQL do Azure | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7e7452a001f96b38b8e2a6047a144a82b5f957a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectando-se a um banco de dados SQL do Azure
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="details"></a>Detalhes  
  Ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve se conectar ao banco de dados mestre para chamar **GetCatalogs**.  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]não oferece suporte a retornar o conjunto inteiro de catálogos de um banco de dados do usuário. **GetCatalogs** usa a exibição de sys. Databases para obter os catálogos. Consulte a discussão de permissões em [sys. Databases (banco de dados do SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) entender **GetCatalogs** comportamento em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não oferece suporte a retornar o conjunto inteiro de catálogos de um banco de dados do usuário. **GetCatalogs** usa a exibição de sys. Databases para obter os catálogos. Consulte a discussão de permissões em [sys. Databases (banco de dados do SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) entender **GetCatalogs** comportamento em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
  Conexões removidas  
  Ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], conexões ociosas podem ser finalizadas por um componente de rede (como um firewall) após um período de inatividade. Existem dois tipos de conexões ociosas nesse contexto:  

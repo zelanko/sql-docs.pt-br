@@ -1,30 +1,33 @@
 ---
-title: "Método (SQLServerResultSet) getStatement | Microsoft Docs"
-ms.custom: 
+title: Método (SQLServerResultSet) getStatement | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getStatement
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getStatement
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f92bc576db1b5f175ba6586b762349f1a39ea153
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 63d6eb206e597f4d1225622c5152579401533bb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement método (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public java.sql.Statement getStatement()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getStatement é especificado pelo método getStatement na interface Java.SQL. resultset.  
   
  Se o conjunto de resultados foi gerado alguma outra maneira, como por uma [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) método, esse método retornará nulo.  

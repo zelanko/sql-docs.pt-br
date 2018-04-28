@@ -1,27 +1,28 @@
 ---
-title: "Método unwrap (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: 
+title: Método unwrap (SQLServerCallableStatement) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50ce32ceb12f89e83bfb8135609b4234ee8074
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f44e0964641c8adcb87f6e48d495e231c051ffdb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Método unwrap (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) método é definido pela interface Java.SQL, introduzida no JDBC 4.0 Spec.  
   
  Aplicativos talvez precisem acessar extensões para a API do JDBC que são específicas para o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. O método unwrap oferece suporte ao desencapsulamento em classes públicas que estende a esse objeto, caso as classes exponham extensões do fornecedor.  
@@ -112,7 +113,7 @@ public static void executeStoredProcedure(Connection con) {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Método isWrapperFor &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
+ [Método isWrapperFor &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

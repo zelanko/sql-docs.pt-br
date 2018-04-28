@@ -3,7 +3,7 @@ title: BLOBs e objetos OLE | Microsoft Docs
 description: BLOBs e objetos OLE
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-blobs
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 2b3e367533e8e3c4ad4fcedbc9c15d49ecd19518
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/06/2018
 -   [Suporte de streaming para parâmetros de saída BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)        
+ [Driver do OLE DB para programação do SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Usando tipos de valor grande](../../oledb/features/using-large-value-types.md)  
   
   

@@ -1,30 +1,33 @@
 ---
-title: "Método registerOutParameter para o tipo e o nome | Microsoft Docs"
-ms.custom: 
+title: Método registerOutParameter para o tipo e o nome | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.registerOutParameter
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.registerOutParameter
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 693b1c7caa667514f058ff9cb9d087566c22eb38
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a7096a808e66b063e3a384907184c3c707494e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>Método registerOutParameter (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +44,7 @@ public void registerOutParameter(java.lang.String s,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *s*  
+ *S*  
   
  Um **cadeia de caracteres** que contém o nome do parâmetro.  
   
@@ -56,11 +59,11 @@ public void registerOutParameter(java.lang.String s,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método registerOutParameter é especificado pelo método registerOutParameter na interface do CallableStatement.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método registerOutParameter &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
+ [Método registerOutParameter &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

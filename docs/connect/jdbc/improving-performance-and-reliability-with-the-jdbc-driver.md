@@ -1,28 +1,28 @@
 ---
 title: Melhorar o desempenho e confiabilidade com o Driver JDBC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8b2d716ada4cb786eb141c0f49dcad41c5231c4
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: d9333af182b7d4fdd8edfe983a6b3874845ba979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Melhorando o desempenho e a confiabilidade com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/02/2018
 |[Trabalhando com instruções e conjuntos de resultados](../../connect/jdbc/working-with-statements-and-result-sets.md)|Descreve técnicas para melhorar o desempenho ao usar os objetos de instrução ou conjunto de resultados.|  
 |[Usando buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md)|Descreve um recurso de buffer adaptável, que foi desenvolvido para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor.|  
 |[Colunas esparsas](../../connect/jdbc/sparse-columns.md)|Aborda o suporte do driver JDBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] colunas esparsas.|  
-|[Metadados de instrução preparada cache para o Driver JDBC](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discute as técnicas para melhorar o desempenho com consultas de instrução preparada.|
+|[Metadados de instrução em cache preparados para o JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discute as técnicas para melhorar o desempenho com consultas de instrução preparada.|
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -3,7 +3,7 @@ title: Adicionar uma coluna a uma tabela do SQL Server | Microsoft Docs
 description: Adicionar uma coluna a uma tabela do SQL Server usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-tables-indexes
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e386383c6274ce018ee8b77e2c93242c14cdce08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: f9c66f780c23548e1aab73888e6db14a4af9469c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Adicionando uma coluna a uma tabela do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

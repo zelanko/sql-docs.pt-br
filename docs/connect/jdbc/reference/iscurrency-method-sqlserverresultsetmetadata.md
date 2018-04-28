@@ -1,30 +1,33 @@
 ---
-title: "Método isCurrency (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método isCurrency (SQLServerResultSetMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.isCurrency
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.isCurrency
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b3138fc8d5e4b12c1144385d84d8c6ed564e50b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d8fd88cac8df43ae6a5e7cfbc47d65a9db127b6f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Método isCurrency (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean isCurrency(int column)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *coluna*  
+ *column*  
   
  Um **int** que indica o índice da coluna.  
   
@@ -49,7 +52,7 @@ public boolean isCurrency(int column)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método isCurrency é especificado pelo método isCurrency na interface Java.SQL. resultsetmetadata.  
   
  Esse método retornará **true** somente com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de dados money e smallmoney.  

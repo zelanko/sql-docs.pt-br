@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f40d61dc2a01e965f124e66254feb680d06cc105
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
   Para obter informações sobre os membros de [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md), consulte [membros SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Classe SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

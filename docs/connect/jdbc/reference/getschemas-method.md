@@ -1,30 +1,33 @@
 ---
-title: "Método getSchemas () | Microsoft Docs"
-ms.custom: 
+title: Método getSchemas () | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getSchemas
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getSchemas
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 675d5ab7e20a5d7364721319aba56a7919a255d9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d5fe7c17a0b717d17f082383713355c67582e7f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getschemas-method-"></a>Método getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,15 +47,15 @@ public java.sql.ResultSet getSchemas()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getSchemas é especificado pelo método getSchemas na interface DatabaseMetadata.  
   
  O conjunto de resultados retornado pelo método getSchemas contém as seguintes informações:  
   
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema.|  
-|TABLE_CATALOG|**Cadeia de caracteres**|O nome de catálogo para o esquema.|  
+|TABLE_SCHEM|**String**|O nome do esquema.|  
+|TABLE_CATALOG|**String**|O nome de catálogo para o esquema.|  
   
  Os resultados são ordenados por TABLE_CATALOG e, em seguida, por TABLE_SCHEM. Cada linha tem TABLE_SCHEM como a primeira coluna e TABLE_CATALOG como a segunda coluna.  
   

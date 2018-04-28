@@ -1,30 +1,33 @@
 ---
-title: "Método (SQLServerPreparedStatement) setDouble | Microsoft Docs"
-ms.custom: 
+title: Método (SQLServerPreparedStatement) setDouble | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.setDouble
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.setDouble
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 295c16b7-1532-40e1-93ef-64462a2c0ab6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 911510438ed7faa03ff8fa9aa272b7f2b3358946
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 78f0f657b841564c15575e20cd65b7b1ef19db59
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setdouble-method-sqlserverpreparedstatement"></a>Método (SQLServerPreparedStatement) setDouble
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +54,7 @@ public final void setDouble(int n,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método setDouble é especificado pelo método setDouble na interface PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte também  

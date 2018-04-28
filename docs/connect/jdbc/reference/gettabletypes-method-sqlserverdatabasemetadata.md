@@ -1,30 +1,33 @@
 ---
-title: "Método getTableTypes (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método getTableTypes (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTableTypes
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTableTypes
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4bda5e46fac353d28458eabb2090eb3915e84c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4c477b1626725eb3a9734e21438104fad81c3929
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Método getTableTypes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,14 +47,14 @@ public java.sql.ResultSet getTableTypes()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getTableTypes é especificado pelo método getTableTypes na interface DatabaseMetadata.  
   
  O conjunto de resultados retornado pelo método getTableTypes conterá as seguintes informações:  
   
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
-|TABLE_TYPE|**Cadeia de caracteres**|O tipo de tabela.|  
+|TABLE_TYPE|**String**|O tipo de tabela.|  
   
 > [!NOTE]  
 >  Para obter mais informações sobre os dados retornados pelo método getTableTypes, consulte "sp_tables (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.  

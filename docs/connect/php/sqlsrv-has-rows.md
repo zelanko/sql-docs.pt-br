@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9e8bdb5c51dd30682fdbd93754dce2f68722a1cc
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -42,7 +42,7 @@ sqlsrv_has_rows( resource $stmt )
 #### <a name="parameters"></a>Parâmetros  
 *$stmt*: a instrução executada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Se houver linhas no conjunto de resultados, o valor de retorno será **true**. Se não houver linhas ou se a chamada de função falhar, o valor de retorno será **false**.  
   
 ## <a name="example"></a>Exemplo  
@@ -65,6 +65,6 @@ Se houver linhas no conjunto de resultados, o valor de retorno será **true**. S
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

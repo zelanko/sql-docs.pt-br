@@ -1,27 +1,28 @@
 ---
-title: "Método getHoldability (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: Método getHoldability (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4508d90f-c3c4-4eac-8001-fb0b93b66734
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d413613719a5ea0adc8e323cfd8aaea205219d2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0c15ef2e33c0071f67ee12d571cbd410365f3f89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getholdability-method-sqlserverresultset"></a>Método getHoldability (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public int getHoldability()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getHoldability é especificado pelo método getHoldability na interface Java.SQL. resultset.  
   
  Para definir a suspensão do conjunto de resultados, os aplicativos podem usar o [setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) método o [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) classe. Após o [setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) método é chamado e o objeto de instrução e seu objeto de conjunto de resultados são criados e a instrução é executada, o aplicativo pode precisar alterar a suspensão novamente.  

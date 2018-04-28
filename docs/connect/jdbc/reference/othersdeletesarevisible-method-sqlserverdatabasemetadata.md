@@ -1,30 +1,33 @@
 ---
-title: "Método othersDeletesAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método othersDeletesAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.othersDeletesAreVisible
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.othersDeletesAreVisible
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 309b20e623b80b42d0ece8301cd647c7d778449a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: bfa593fa73aa9cab09eea69ef0bdaa11595160df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>Método othersDeletesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean othersDeletesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *tipo*  
+ *type*  
   
  Um **int** que indica o conjunto de resultados tipo, que pode ser um dos seguintes valores conforme definido em Java.SQL. ResultSet ou SQLServerResultSet:  
   
@@ -67,7 +70,7 @@ public boolean othersDeletesAreVisible(int type)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método othersDeletesAreVisible é especificado pelo método othersDeletesAreVisible na interface DatabaseMetadata.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,30 +1,33 @@
 ---
-title: "Método getBytes (SQLServerBlob) | Microsoft Docs"
-ms.custom: 
+title: Método getBytes (SQLServerBlob) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerBlob.getBytes
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerBlob.getBytes
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6125a23f0c66e7e24533cacf1ce77d829003ce8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: de779901296d3199e6bb01cd7f0ba454360930e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbytes-method-sqlserverblob"></a>Método getBytes (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public byte[] getBytes(long pos,
   
  A posição inicial, iniciando em 1 (não em 0).  
   
- *length*  
+ *Comprimento*  
   
  O comprimento dos dados a serem obtidos.  
   
@@ -54,7 +57,7 @@ public byte[] getBytes(long pos,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getBytes é especificado pelo método getBytes na interface Java.SQL.  
   
  Se você tiver um valor nulo ou ter comprimento zero BLOB e tentar obter exatamente zero bytes na posição 1, vazio **bytes** matriz é retornada (matriz de bytes de comprimento 0).  

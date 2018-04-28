@@ -3,7 +3,7 @@ title: Fonte de dados de objetos (OLE DB) | Microsoft Docs
 description: Objetos de fonte de dados (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-source-objects
@@ -23,13 +23,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2913250e527da871dbb7a1ebea37d38dbd98538e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 0bb61761984d6f50450961ff02fec7db6921b1df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de fonte de dados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,6 +96,6 @@ else
 -   [Persistente de objetos de fonte de dados](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [Programação no Driver do OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

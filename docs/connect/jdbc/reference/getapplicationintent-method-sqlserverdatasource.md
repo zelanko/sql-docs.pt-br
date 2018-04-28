@@ -1,27 +1,28 @@
 ---
-title: "Método getApplicationIntent (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: Método getApplicationIntent (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19411e6c-c456-4533-8252-54569a2a6b1f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ed9d8ca5c8de75c96cbc06a24928c36512c0647
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d6f76d5e1e17eff2ea1838af97ccb17eb0218da8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getapplicationintent-method-sqlserverdatasource"></a>Método getApplicationIntent (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ public java.lang.String getApplicationIntent();
 ## <a name="return-value"></a>Valor de retorno  
  Retorna o valor da **applicationIntent** propriedade de conexão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter mais informações sobre o **applicationIntent** propriedade de conexão, consulte [definindo as propriedades de Conexão](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  

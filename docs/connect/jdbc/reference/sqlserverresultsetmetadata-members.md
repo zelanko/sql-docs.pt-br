@@ -1,27 +1,28 @@
 ---
 title: Membros de SQLServerResultSetMetaData | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df2f0fbfe57b258bf0ad314377f0d11925ac03b9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f59c3d4b46395b931cd2ad68400c9c9b707b4d14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>Membros de SQLServerResultSetMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,10 +30,10 @@ ms.lasthandoff: 11/18/2017
   As tabelas a seguir listam os membros expostos pelo [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) classe.  
   
 ## <a name="constructors"></a>Construtores  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="fields"></a>Campos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="inherited-fields"></a>Campos herdados  
   
@@ -56,13 +57,13 @@ ms.lasthandoff: 11/18/2017
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverresultsetmetadata.md)|Obtém o número de dígitos à direita da vírgula decimal da coluna designada.|  
 |[getSchemaName](../../../connect/jdbc/reference/getschemaname-method-sqlserverresultsetmetadata.md)|Obtém o nome de esquema de tabela da coluna designada.|  
 |[getTableName](../../../connect/jdbc/reference/gettablename-method-sqlserverresultsetmetadata.md)|Obtém o nome de tabela da coluna designada.|  
-|[isAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|Indica se a coluna designada é numerada automaticamente, o que a torna somente leitura.|  
-|[isCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Indica se uma coluna diferencia maiusculas de minúsculas.|  
+|[IsAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|Indica se a coluna designada é numerada automaticamente, o que a torna somente leitura.|  
+|[IsCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Indica se uma coluna diferencia maiusculas de minúsculas.|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|Indica se a coluna designada é um valor monetário.|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|Indica se uma gravação na coluna designada terá sucesso definitivamente.|  
-|[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Indica a nulidade de valores na coluna designada.|  
+|[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Indica a nulidade de valores na coluna designada.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverresultsetmetadata.md)|Indica se a coluna designada é definitivamente não gravável.|  
-|[isSearchable](../../../connect/jdbc/reference/issearchable-method-sqlserverresultsetmetadata.md)|Indica se a coluna designada pode ser usada em uma cláusula SQL WHERE.|  
+|[IsSearchable](../../../connect/jdbc/reference/issearchable-method-sqlserverresultsetmetadata.md)|Indica se a coluna designada pode ser usada em uma cláusula SQL WHERE.|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverresultsetmetadata.md)|Indica se os valores da coluna designada são números com sinal.|  
 |[isSparseColumnSet](../../../connect/jdbc/reference/issparsecolumnset-method-sqlserverresultsetmetadata.md)|Indica se uma coluna em um conjunto de resultados é um conjunto de colunas esparsas.|  
 |[isWritable](../../../connect/jdbc/reference/iswritable-method-sqlserverresultsetmetadata.md)|Indica se é possível que uma gravação na coluna designada seja bem-sucedida.|  

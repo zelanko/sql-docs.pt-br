@@ -1,32 +1,33 @@
 ---
-title: "Noções básicas sobre os tipos de dados do Driver JDBC | Microsoft Docs"
-ms.custom: 
+title: Noções básicas sobre os tipos de dados do Driver JDBC | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9599a6e71ee0fbf171ba9c8619cafac8332cc5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8aedc06687d574be4392157d667fde74325be431
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Entendendo os tipos de dados do JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]oferece suporte ao uso de tipos de dados básicos e avançados do JDBC dentro de um aplicativo Java que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como seu banco de dados.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte ao uso de tipos de dados básicos e avançados do JDBC dentro de um aplicativo Java que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como seu banco de dados.  
   
  O sistema de tipos do JDBC atua como mediador da conversão entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados e tipos de linguagem Java e objetos. Os tipos JDBC são modelados nos tipos SQL-92 e SQL-99. O driver JDBC segue a especificação de JDBC e é criado para fornecer o equilíbrio certo entre previsibilidade e flexibilidade.  
   

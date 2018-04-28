@@ -1,30 +1,33 @@
 ---
-title: "Método getFetchDirection (SQLServerStatement) | Microsoft Docs"
-ms.custom: 
+title: Método getFetchDirection (SQLServerStatement) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.getFetchDirection
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.getFetchDirection
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: ceb4ae68-decc-46d3-83f1-0bbd23aaf58c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff5ec8aa9e65c3c2881bef50f25dd8be726d8908
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5f21cbe1c98e24e38e1bbdaa236471d2d16d790f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfetchdirection-method-sqlserverstatement"></a>Método getFetchDirection (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public final int getFetchDirection()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getFetchDirection é especificado pelo método getFetchDirection na interface Java.SQL. Statement.  
   
 ## <a name="see-also"></a>Consulte também  

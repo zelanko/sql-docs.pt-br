@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4a760475dfd439e57883a1bd6c6f2b82a0437dcb
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
   Para obter informações sobre os membros de DateTimeOffset, consulte [DateTimeOffset membros](../../../connect/jdbc/reference/datetimeoffset-members.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   

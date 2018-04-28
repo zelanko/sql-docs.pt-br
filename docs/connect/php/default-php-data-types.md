@@ -2,7 +2,7 @@
 title: Default PHP Data Types | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 7229fe738950549fb6089ba8481658228397afa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-php-data-types"></a>Tipos de dados padrão do PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,14 +45,14 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
 |bit|Integer|caracteres de 8 bits<sup>1</sup>|  
 |char|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
 |date<sup>4</sup>|Datetime|Não aplicável|  
-|datetime<sup>4</sup>|Datetime|Não aplicável|  
+|DateTime<sup>4</sup>|Datetime|Não aplicável|  
 |datetime2<sup>4</sup>|Datetime|Não aplicável|  
 |datetimeoffset<sup>4</sup>|Datetime|Não aplicável|  
 |Decimal|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
 |float|Valor Flutuante|caracteres de 8 bits<sup>1</sup>|  
 |geografia|Fluxo|Binário<sup>3</sup>|  
 |geometria|Fluxo|Binário<sup>3</sup>|  
-|image<sup>5</sup>|Fluxo<sup>2</sup>|Binário<sup>3</sup>|  
+|imagem<sup>5</sup>|Fluxo<sup>2</sup>|Binário<sup>3</sup>|  
 |int|Integer|caracteres de 8 bits<sup>1</sup>|  
 |money|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
 |NCHAR|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
@@ -65,7 +65,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
 |smallint|Integer|caracteres de 8 bits<sup>1</sup>|  
 |smallmoney|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
 |sql_variant<sup>7</sup>|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|text<sup>8</sup>|Fluxo<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
+|texto<sup>8</sup>|Fluxo<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
 |time<sup>4</sup>|Datetime|Não aplicável|  
 |timestamp|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
 |tinyint|Integer|caracteres de 8 bits<sup>1</sup>|  
@@ -121,7 +121,7 @@ O suporte a tipo parcial significa que você não pode consultar programaticamen
 
 [Tipos do PHP](http://php.net/manual/en/language.types.php)
 
-[Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+[Tipos de dados (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

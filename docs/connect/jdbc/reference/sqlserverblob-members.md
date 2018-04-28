@@ -1,27 +1,28 @@
 ---
 title: Membros SQLServerBlob | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ef29d1bcd35511df7caa0ef728513ba70e7624d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: bdcb7495e5f57670ad9b75aee3d6db4aebc43b55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverblob-members"></a>Membros SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,22 +36,22 @@ ms.lasthandoff: 11/18/2017
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Inicializa uma nova instância da classe SQLServerBlob.|  
   
 ## <a name="fields"></a>Campos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="inherited-fields"></a>Campos herdados  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="methods"></a>Métodos  
   
 |Nome|Description|  
 |----------|-----------------|  
-|[livre](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Esse método libera o objeto BLOB e os recursos que ele contém.|  
+|[Livre](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Esse método libera o objeto BLOB e os recursos que ele contém.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|Retorna um fluxo de entrada para ler dados do BLOB.|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|Obtém os dados do BLOB como uma matriz de bytes.|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|Obtém os dados do BLOB como uma matriz de bytes.|  
 |[comprimento](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|Retorna o número de bytes no objeto BLOB.|  
-|[posição](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|Retorna a posição de um padrão especificado no BLOB com base no padrão fornecido e o índice inicial.|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|Retorna a posição de um padrão especificado no BLOB com base no padrão fornecido e o índice inicial.|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-method-sqlserverblob.md)|Recupera um fluxo que pode ser usado para gravar no valor do BLOB.|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|Grava a matriz de bytes fornecida no BLOB iniciando na posição determinada e, em seguida, retorna o número de bytes gravados.|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|Grava a matriz de bytes fornecida no BLOB iniciando na posição determinada e, em seguida, retorna o número de bytes gravados.|  
 |[Truncar](../../../connect/jdbc/reference/truncate-method-sqlserverblob.md)|Trunca um BLOB, dado o comprimento.|  
   
 ## <a name="inherited-methods"></a>Métodos herdados  

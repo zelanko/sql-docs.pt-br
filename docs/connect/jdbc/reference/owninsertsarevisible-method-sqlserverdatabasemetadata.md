@@ -1,30 +1,33 @@
 ---
-title: "Método ownInsertsAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método ownInsertsAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.ownInsertsAreVisible
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.ownInsertsAreVisible
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1966a02d6bda0e0956464ec0e79e4a4e7ce5b68f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2b9f4abf86ff7f411d48e3fa14841e7752a6447b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>Método ownInsertsAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean ownInsertsAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *tipo*  
+ *type*  
   
  Um **int** que indica o conjunto de resultados tipo, que pode ser um dos seguintes valores conforme definido em Java.SQL. ResultSet ou SQLServerResultSet:  
   
@@ -67,7 +70,7 @@ public boolean ownInsertsAreVisible(int type)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método ownInsertsAreVisible é especificado pelo método ownInsertsAreVisible na interface DatabaseMetadata.  
   
 ## <a name="see-also"></a>Consulte também  

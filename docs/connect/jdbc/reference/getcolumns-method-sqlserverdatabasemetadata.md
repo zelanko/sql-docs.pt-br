@@ -1,30 +1,33 @@
 ---
-title: "Método getColumns (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método getColumns (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0df43a82b288f475c1325c66670cf6290933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Método getColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Catálogo*  
+ *catalog*  
   
  Um **cadeia de caracteres** que contém o nome do catálogo.  
   
- *esquema*  
+ *schema*  
   
  Um **cadeia de caracteres** que contém o padrão de nome de esquema.  
   
@@ -64,41 +67,41 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getColumns é especificado pelo método getColumns na interface DatabaseMetadata.  
   
  O conjunto de resultados retornado pelo método getColumns conterá as seguintes informações:  
   
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**Cadeia de caracteres**|O nome do catálogo.|  
-|TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela.|  
-|TABLE_NAME|**Cadeia de caracteres**|O nome da tabela.|  
-|COLUMN_NAME|**Cadeia de caracteres**|O nome da coluna.|  
+|TABLE_CAT|**String**|O nome do catálogo.|  
+|TABLE_SCHEM|**String**|O nome do esquema da tabela.|  
+|TABLE_NAME|**String**|O nome da tabela.|  
+|COLUMN_NAME|**String**|O nome da coluna.|  
 |DATA_TYPE|**smallint**|O tipo de dados SQL de java.sql.Types.|  
-|TYPE_NAME|**Cadeia de caracteres**|O nome do tipo de dados.|  
-|COLUMN_SIZE|**int**|A precisão da coluna.|  
+|TYPE_NAME|**String**|O nome do tipo de dados.|  
+|COLUMN_SIZE|**Int**|A precisão da coluna.|  
 |BUFFER_LENGTH|**smallint**|Tamanho da transferência dos dados.|  
 |DECIMAL_DIGITS|**smallint**|A escala da coluna.|  
 |NUM_PREC_RADIX|**smallint**|A base da coluna.|  
 |NULLABLE|**smallint**|Indica se a coluna é anulável. Pode ser um dos seguintes valores:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**Cadeia de caracteres**|Os comentários associados à coluna.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna null para essa coluna.|  
-|COLUMN_DEF|**Cadeia de caracteres**|O valor padrão da coluna.|  
+|REMARKS|**String**|Os comentários associados à coluna.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna null para essa coluna.  |  
+|COLUMN_DEF|**String**|O valor padrão da coluna.|  
 |SQL_DATA_TYPE|**smallint**|Valor do tipo de dados SQL conforme exibido no campo TYPE do descritor. Esta coluna é igual à coluna DATA_TYPE, com exceção dos tipos de dados datetime e interval do SQL-92. Esta coluna sempre retorna um valor.|  
 |SQL_DATETIME_SUB|**smallint**|Código de subtipo para os tipos de dados datetime e interval do SQL-92. Para outros tipos de dados, esta coluna retorna NULL.|  
-|CHAR_OCTET_LENGTH|**int**|O número máximo de bytes na coluna.|  
-|ORDINAL_POSITION|**int**|O índice da coluna na tabela.|  
-|IS_NULLABLE|**Cadeia de caracteres**|Indica se a coluna permite valores nulos.|  
+|CHAR_OCTET_LENGTH|**Int**|O número máximo de bytes na coluna.|  
+|ORDINAL_POSITION|**Int**|O índice da coluna na tabela.|  
+|IS_NULLABLE|**String**|Indica se a coluna permite valores nulos.|  
 |SS_IS_SPARSE|**smallint**|Se a coluna for uma coluna esparsa, isso tem o valor 1; Caso contrário, 0. <sup>1</sup>|  
 |SS_IS_COLUMN_SET|**smallint**|Se a coluna for a coluna esparsa column_set, seu valor será 1; caso contrário, será 0. <sup>1</sup>|  
 |SS_IS_COMPUTED|**smallint**|Indica se uma coluna em um TABLE_TYPE é uma coluna computada. <sup>1</sup>|  
-|IS_AUTOINCREMENT|**Cadeia de caracteres**|"YES" se a coluna for incrementada automaticamente. "NO" se a coluna não for incrementada automaticamente. " "(cadeia de caracteres vazia) se o driver não puder determinar se a coluna foi incrementada automaticamente. <sup>1</sup>|  
-|SS_UDT_CATALOG_NAME|**Cadeia de caracteres**|O nome do catálogo que contém o tipo definido pelo usuário (UDT). <sup>1</sup>|  
-|SS_UDT_SCHEMA_NAME|**Cadeia de caracteres**|O nome do esquema que contém o UDT (tipo definido pelo usuário). <sup>1</sup>|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**Cadeia de caracteres**|O UDT (tipo definido pelo usuário) do nome totalmente qualificado. <sup>1</sup>|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**Cadeia de caracteres**|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se o nome do catálogo não pode ser encontrado, essa variável conterá uma cadeia de caracteres vazia. <sup>1</sup>|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**Cadeia de caracteres**|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa cadeia de caracteres estará vazia. <sup>1</sup>|  
-|SS_XML_SCHEMACOLLECTION_NAME|**Cadeia de caracteres**|O nome de uma coleção de esquemas XML. Se não for possível localizar o nome, essa cadeia de caracteres estará vazia. <sup>1</sup>|  
+|IS_AUTOINCREMENT|**String**|"YES" se a coluna for incrementada automaticamente. "NO" se a coluna não for incrementada automaticamente. " "(cadeia de caracteres vazia) se o driver não puder determinar se a coluna foi incrementada automaticamente. <sup>1</sup>|  
+|SS_UDT_CATALOG_NAME|**String**|O nome do catálogo que contém o tipo definido pelo usuário (UDT). <sup>1</sup>|  
+|SS_UDT_SCHEMA_NAME|**String**|O nome do esquema que contém o UDT (tipo definido pelo usuário). <sup>1</sup>|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|O UDT (tipo definido pelo usuário) do nome totalmente qualificado. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se o nome do catálogo não pode ser encontrado, essa variável conterá uma cadeia de caracteres vazia. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa cadeia de caracteres estará vazia. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_NAME|**String**|O nome de uma coleção de esquemas XML. Se não for possível localizar o nome, essa cadeia de caracteres estará vazia. <sup>1</sup>|  
 |SS_DATA_TYPE|**tinyint**|O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de dados que é usado pelos procedimentos armazenados estendidos.<br /><br /> **Observação** para obter mais informações sobre os tipos de dados retornado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], consulte "Tipos de dados (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.|  
   
  (1) essa coluna não estará presente se você estiver se conectando [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)].  
@@ -110,7 +113,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  A coluna DATA_TYPE tem as seguintes alterações:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de dados|Tipo de retorno no JDBC Driver 2.0 (ou, se conectado a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) e constante numérica associada|Tipo de retorno no JDBC Driver 3.0 quando conectado a [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] ou posterior|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de dados|Tipo de retorno no JDBC Driver 2.0 (ou, se conectado a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) e constante numérica associada|Tipo de retorno no JDBC Driver 3.0 quando conectado a [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] ou posterior|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |tipo definido pelo usuário superior a 8 KB|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geografia|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -125,7 +128,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  A coluna COLUMN_SIZE tem as seguintes alterações:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de dados|Tipo de retorno no JDBC Driver 2.0|Tipo de retorno no JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de dados|Tipo de retorno no JDBC Driver 2.0|Tipo de retorno no JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (metadados do banco de dados)|  
 |xml|1073741823|2147483647 (metadados do banco de dados)|  
@@ -137,13 +140,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  A coluna BUFFER_LENGTH tem a seguinte alteração:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de dados|Tipo de retorno no JDBC Driver 2.0|Tipo de retorno no JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de dados|Tipo de retorno no JDBC Driver 2.0|Tipo de retorno no JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |tipo definido pelo usuário superior a 8 KB||2147483647|  
   
  A coluna TYPE_NAME tem as seguintes alterações:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de dados|Tipo de retorno no JDBC Driver 2.0|Tipo de retorno no JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de dados|Tipo de retorno no JDBC Driver 2.0|Tipo de retorno no JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|image|varbinary|  
@@ -159,7 +162,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  A coluna SQL_DATA_TYPE tem as seguintes alterações:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de dados|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008 valor de dados em Driver JDBC 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008 valor de dados no JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de dados|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 valor de dados em Driver JDBC 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 valor de dados no JDBC Driver 3.0|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  

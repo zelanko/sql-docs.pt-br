@@ -1,27 +1,28 @@
 ---
-title: "Resiliência de Conexão no Driver ODBC do Windows | Microsoft Docs"
-ms.custom: 
+title: Resiliência de Conexão no Driver ODBC do Windows | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
-ms.translationtype: MT
+ms.openlocfilehash: f74ff01124e9efdb855f356f1951f29e531944f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resiliência de conexão no driver ODBC do Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -178,7 +179,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Microsoft ODBC Driver for SQL Server no Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

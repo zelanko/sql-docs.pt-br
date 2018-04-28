@@ -1,27 +1,28 @@
 ---
-title: "Método getFunctions (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método getFunctions (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d09162647b6d5a4076bb60b3bf05e1e90eb27dee
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7cafae4dcdbe9102da3ef4e27ee20b41b231667e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>Método getFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Catálogo*  
+ *catalog*  
   
  O nome de um catálogo no banco de dados. Se for uma cadeia de caracteres vazia "", o resultado incluirá as funções sem um catálogo. Se for **nulo**, o nome do catálogo não é usado para pesquisa.  
   
@@ -56,7 +57,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getFunctions é especificado pelo método getFunctions na interface DatabaseMetadata.  
   
  Esse método retorna apenas as funções de sistema e de usuário que correspondem ao nome de esquema e de função especificados.  
@@ -68,14 +69,14 @@ public ResultSet getFunctions(java.lang.String catalog,
   
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**Cadeia de caracteres**|O nome do banco de dados no qual a função reside.|  
-|FUNCTION_SCHEM|**Cadeia de caracteres**|O nome do esquema no qual a função reside.|  
-|FUNCTION_NAME|**Cadeia de caracteres**|O nome da função.|  
-|NUM_INPUT_PARAMS|**int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
-|NUM_OUTPUT_PARAMS|**int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
-|NUM_RESULT_SETS|**int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
-|REMARKS|**Cadeia de caracteres**|Os comentários sobre a função.|  
-|FUNCTION_TYPE|**curto**|O tipo da função. Pode ser um dos seguintes valores:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|FUNCTION_CAT|**String**|O nome do banco de dados no qual a função reside.|  
+|FUNCTION_SCHEM|**String**|O nome do esquema no qual a função reside.|  
+|FUNCTION_NAME|**String**|O nome da função.|  
+|NUM_INPUT_PARAMS|**Int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
+|NUM_OUTPUT_PARAMS|**Int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
+|NUM_RESULT_SETS|**Int**|Reservado para uso futuro, atualmente retorna um valor -1.|  
+|REMARKS|**String**|Os comentários sobre a função.|  
+|FUNCTION_TYPE|**short**|O tipo da função. Pode ser um dos seguintes valores:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  Todas as descrições no conjunto de resultados retornado são ordenadas por FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME e SPECIFIC_NAME.  
   

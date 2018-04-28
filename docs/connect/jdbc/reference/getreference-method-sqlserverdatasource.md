@@ -1,30 +1,33 @@
 ---
-title: "Método getReference (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: Método getReference (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.getReference
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.getReference
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0d24fa8c02c24c8d35a031bf0e7b49c35b12424
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 005a9054539c75cd606e4cef86de7ffc3dfa78e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Método getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +44,7 @@ public javax.naming.Reference getReference()
 ## <a name="return-value"></a>Valor de retorno  
  Um objeto de referência.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getReference é especificado pelo método getReference na interface javax.  
   
  Antes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0, se Settruststorepassword fosse chamado em um objeto SQLServerDataSource, a senha estaria presente no objeto retornado pelo sqlserverdatasource. Getreference, permitindo que o objeto a ser usado para fazer conexões adicionais. No JDBC Driver 3.0, será necessário definir a senha no objeto retornado pelo SQLServerDataSource.getReference antes de fazer conexões com o objeto.  

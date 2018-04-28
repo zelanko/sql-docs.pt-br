@@ -1,27 +1,28 @@
 ---
-title: "Método setString (long, Java, int, int) - NClob | Microsoft Docs"
-ms.custom: 
+title: Método setString (long, Java, int, int) - NClob | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a5945b09f75fefde2b87387d02ca45ad58b0cc0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a464993f85073458f5b2310cf667e1eb55c7bc8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>Método setString (long, java.lang.String, int, int) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,18 +48,18 @@ int setString(long pos,
   
  A cadeia de caracteres a serem gravados para o **NCLOB**.  
   
- *deslocamento*  
+ *offset*  
   
  O deslocamento em *str* para iniciar a leitura dos caracteres a serem gravados.  
   
- *Len*  
+ *len*  
   
  O número de caracteres a serem gravados.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método setString é especificado pelo método setString na interface Java.SQL. NCLOB.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,30 +1,33 @@
 ---
-title: "Método othersUpdatesAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método othersUpdatesAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.othersUpdatesAreVisible
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.othersUpdatesAreVisible
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0879ea2ae06be8918bac7e1eaf2c33002018d461
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: be62d4ec9a6d571f0be9473483f532333909d1cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>Método othersUpdatesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean othersUpdatesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *tipo*  
+ *type*  
   
  Um **int** que indica o conjunto de resultados tipo, que pode ser um dos seguintes valores conforme definido em Java.SQL. ResultSet ou SQLServerResultSet:  
   
@@ -67,7 +70,7 @@ public boolean othersUpdatesAreVisible(int type)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método othersUpdatesAreVisible é especificado pelo método othersUpdatesAreVisible na interface DatabaseMetadata.  
   
 ## <a name="see-also"></a>Consulte também  

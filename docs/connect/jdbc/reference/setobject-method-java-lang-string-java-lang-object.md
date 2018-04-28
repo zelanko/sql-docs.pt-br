@@ -1,30 +1,33 @@
 ---
-title: "Método setObject (Java, java.lang.Object) | Microsoft Docs"
-ms.custom: 
+title: Método setObject (Java, java.lang.Object) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setObject (java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setObject (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8c6d664616a000acfb628ebcb15ba1eb917f059
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9fbb881498a18e6ac992db565ad36b853b258015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>Método setObject (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +54,7 @@ public void setObject(java.lang.String sCol,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método setObject é especificado pelo método setObject na interface do CallableStatement.  
   
  Esse método converte o parâmetro especificado para um CHAR se um NULL for dado, antes de enviá-lo ao banco de dados. Se o parâmetro for declarado como binário, varbinary ou um tipo SQL de imagem, uma exceção será lançada quando a instrução for executada.  
@@ -61,7 +64,7 @@ public void setObject(java.lang.String sCol,
  Para obter mais informações, consulte [Java.SQL. time configurando como os valores são enviados para o servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Método setObject &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
+ [Método setObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

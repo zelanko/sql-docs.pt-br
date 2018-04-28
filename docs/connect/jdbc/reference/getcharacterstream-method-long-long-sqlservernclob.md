@@ -1,27 +1,28 @@
 ---
-title: "Método getCharacterStream (long, long) (SQLServerNClob) | Microsoft Docs"
-ms.custom: 
+title: Método getCharacterStream (long, long) (SQLServerNClob) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee42e6ef541b8f3c8298d467b6eb72237016efb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 80d1afb430aa5f6cefcf18e7927e07261e1ee6e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>Método getCharacterStream (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ public java.io.Reader getCharacterStream(long pos,
   
  Um **longo** que indica o deslocamento para o primeiro caractere do valor parcial a ser recuperado.  
   
- *length*  
+ *Comprimento*  
   
  Um **longo** que indica o comprimento em caracteres do valor parcial a ser recuperado.  
   
@@ -51,11 +52,11 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getCharacterStream é especificado pelo método getCharacterStream na interface Java.SQL. NCLOB.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método getCharacterStream &#40; SQLServerNClob &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
+ [Método getCharacterStream &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [Membros SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [Classe SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)  

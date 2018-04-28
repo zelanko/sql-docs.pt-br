@@ -1,30 +1,33 @@
 ---
-title: "Método getIndexInfo (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método getIndexInfo (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getIndexInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getIndexInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7ae3de9c4d636d27b802437b1787e6b28c31387b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Um **cadeia de caracteres** que contém o nome do catálogo.  
   
- *esquema*  
+ *schema*  
   
  Um **cadeia de caracteres** que contém o nome do esquema.  
   
@@ -55,7 +58,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Um **cadeia de caracteres** que contém o nome da tabela.  
   
- *exclusivo*  
+ *Exclusivo*  
   
  **True** se apenas índices de valores exclusivos forem retornados. **False** se todos os índices são retornados.  
   
@@ -69,26 +72,26 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getIndexInfo é especificado pelo método getIndexInfo na interface DatabaseMetadata.  
   
  O conjunto de resultados retornado pelo método getIndexInfo conterá as seguintes informações:  
   
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**Cadeia de caracteres**|O nome do banco de dados no qual a tabela especificada reside.|  
-|TABLE_SCHEM|**Cadeia de caracteres**|O esquema da tabela.|  
-|TABLE_NAME|**Cadeia de caracteres**|O nome da tabela.|  
+|TABLE_CAT|**String**|O nome do banco de dados no qual a tabela especificada reside.|  
+|TABLE_SCHEM|**String**|O esquema da tabela.|  
+|TABLE_NAME|**String**|O nome da tabela.|  
 |NON_UNIQUE|**booleano**|Indica se os valores de índice podem ser não exclusivos.|  
-|INDEX_QUALIFIER|**Cadeia de caracteres**|O nome do proprietário do índice. Ele será nulo quando TYPE for tableIndexStatistic.|  
-|INDEX_NAME|**Cadeia de caracteres**|O nome do índice.|  
-|TYPE|**curto**|O tipo do índice. Pode ser um dos seguintes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
-|ORDINAL_POSITION|**curto**|A posição ordinal da coluna no índice. A primeira coluna no índice é 1.|  
-|COLUMN_NAME|**Cadeia de caracteres**|O nome da coluna.|  
-|ASC_OR_DESC|**Cadeia de caracteres**|A ordem usada no agrupamento do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna "A".|  
-|CARDINALITY|**int**|O número de linhas na tabela ou os valores exclusivos no índice.|  
-|PAGES|**int**|O número de páginas usadas para armazenar o índice ou a tabela.|  
-|FILTER_CONDITION|**Cadeia de caracteres**|A condição do filtro.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna null.|  
+|INDEX_QUALIFIER|**String**|O nome do proprietário do índice. Ele será nulo quando TYPE for tableIndexStatistic.|  
+|INDEX_NAME|**String**|O nome do índice.|  
+|TYPE|**short**|O tipo do índice. Pode ser um dos seguintes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|ORDINAL_POSITION|**short**|A posição ordinal da coluna no índice. A primeira coluna no índice é 1.|  
+|COLUMN_NAME|**String**|O nome da coluna.|  
+|ASC_OR_DESC|**String**|A ordem usada no agrupamento do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna "A".  |  
+|CARDINALITY|**Int**|O número de linhas na tabela ou os valores exclusivos no índice.|  
+|PAGES|**Int**|O número de páginas usadas para armazenar o índice ou a tabela.|  
+|FILTER_CONDITION|**String**|A condição do filtro.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna null.  |  
   
 > [!NOTE]  
 >  Para obter mais informações sobre os dados retornados pelo método getIndexInfo, consulte "sp_indexes (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.  

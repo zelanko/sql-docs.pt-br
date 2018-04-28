@@ -3,7 +3,7 @@ title: Em massa copia alterações para aprimorados tipos de data e hora (OLE DB
 description: Alterações de cópia em massa para aprimorados tipos de data e hora (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61d04588991764edb1d470f190ebd9b3ce08636c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: bebddc7a9ad8dc7d59f60fab73bcdca8b1192dab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Alterações de cópia em massa para aprimorados tipos de data e hora (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/06/2018
 |tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Digite msoledbsql.h para uso com ibcpsession:: BCPColFmt|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
-|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
+|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
 |Data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Hora|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
@@ -119,17 +119,17 @@ ms.lasthandoff: 04/06/2018
 |Símbolo|Significado|  
 |------------|-------------|  
 |-|Não há suporte a nenhuma conversão.<br />|  
-|1|Se os dados fornecidos não forem válidos, um registro de diagnóstico de ODBC será gerado com SQLSTATE 22007 e a mensagem "Formato de datetime inválido". Para valores datetimeoffset, a parte time deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC. Por isso, o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC.|  
+|1|Se os dados fornecidos não são válidos, um erro será lançado. Para valores datetimeoffset, a parte time deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC. Por isso, o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC.|  
 |2|O componente time é ignorado.|  
-|3|Para ODBC, se ocorrer o truncamento com a perda de dados, será gerado um registro de diagnóstico com SQLSTATE 22001 e a mensagem 'Dados de cadeia de caracteres truncados à direita'. O número de dígitos de segundos fracionais (a escala) é determinado pelo tamanho da coluna de destino de acordo com a tabela a seguir. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 7. Essa conversão deve permitir até nove dígitos de segundos fracionários, o máximo permitido pelo ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Implícito na escala de 0** 8<br /><br /> **Implícito na escala 1..7** 10,16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Implícito na escala de 0:** 19<br /><br /> **Implícito na escala 1..7:** 21..27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Implícito na escala de 0:** 26<br /><br /> **Implícito na escala 1..7:** 28..34<br /><br /> Para OLE DB, se ocorrer o truncamento com a perda de dados, será postado um erro. Para datetime2, o número de dígitos de segundos fracionários (a escala) é determinado pelo tamanho da coluna de destino de acordo com a tabela a seguir. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Implícito na escala de 0** 8<br /><br /> **Implícito na escala 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Implícito na escala de 0:** 19<br /><br /> **Implícito na escala 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Implícito na escala de 0:** 26<br /><br /> **Implícito na escala 1..9:** 28..36|  
+|3|Se ocorrer o truncamento com perda de dados, um erro será lançado. Para datetime2, o número de dígitos de segundos fracionários (a escala) é determinado pelo tamanho da coluna de destino de acordo com a tabela a seguir. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Implícito na escala de 0** 8<br /><br /> **Implícito na escala 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Implícito na escala de 0:** 19<br /><br /> **Implícito na escala 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Implícito na escala de 0:** 26<br /><br /> **Implícito na escala 1..9:** 28..36|  
 |4|O componente de data é ignorado.|  
 |5|O timezone é definido como UTC (por exemplo, 00:00).|  
 |6|A hora é definida como zero.|  
 |7|O componente date é definido como 1900-01-01.|  
 |8|O deslocamento de timezone é ignorado.|  
-|9|A cadeia de caracteres é analisada e convertida em um valor date, datetime, datetimeoffset ou time, dependendo do primeiro caractere de pontuação encontrado e da presença dos componentes restantes. A cadeia de caracteres é convertida para o tipo de destino, seguindo as regras na tabela no final deste artigo para o tipo de origem descoberto por esse processo. Se não for possível analisar sem erro os dados fornecidos ou se qualquer parte do componente estive fora do intervalo permitido ou ainda se não houver nenhuma conversão do tipo literal para o tipo de destino, será postado um erro (OLE DB) ou gerado um registro de diagnóstico de ODBC com SQLSTATE 22018 e a mensagem "Valor de caractere inválido para a especificação de difusão". Para os parâmetros datetime e smalldatetime, se o ano estiver fora do intervalo com suporte nesses tipos, será postado um erro (OLE DB) ou gerado um registro de diagnóstico de ODBC com SQLSATE 22007 e a mensagem "Formato de datetime inválido".<br /><br /> Para datetimeoffset, o valor deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC, por isso o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC. Se o valor não estiver dentro do intervalo UTC com suporte, será postado um erro (OLE DB) ou gerado um registro de diagnóstico de ODBC com SQLSTATE 22007 e a mensagem "Formato de datetime inválido".|  
-|10|Se ocorrer o truncamento com a perda de dados em uma conversão de cliente para servidor, será postado um erro (OLE DB) ou gerado um registro de diagnóstico de ODBC com SQLSTATE 22008 e a mensagem "Estouro no campo de data e hora". Esse erro também ocorrerá se o valor estiver fora do intervalo que pode ser representado pelo intervalo UTC usado pelo servidor. Se ocorrer o truncamento de segundos ou de segundos fracionários em uma conversão de cliente para servidor, somente um aviso será emitido.|  
-|11|Se ocorrer o truncamento com a perda de dados, será gerado um registro de diagnóstico.<br /><br /> Em uma conversão de servidor para cliente, isso é uma advertência (ODBC SQLSTATE S1000).<br /><br /> Em uma conversão de cliente para servidor, isso é um erro (ODBC SQLSTATE 22001).|  
+|9|A cadeia de caracteres é analisada e convertida em um valor date, datetime, datetimeoffset ou time, dependendo do primeiro caractere de pontuação encontrado e da presença dos componentes restantes. A cadeia de caracteres é convertida para o tipo de destino, seguindo as regras na tabela no final deste artigo para o tipo de origem descoberto por esse processo. Se os dados fornecidos não podem ser analisados sem erro, ou se qualquer parte do componente está fora do intervalo permitido, ou se não houver nenhuma conversão de tipo de literal para o tipo de destino, será postado um erro. Para os parâmetros datetime e smalldatetime, se o ano estiver fora do intervalo de que oferecer suporte a esses tipos, um erro será lançado.<br /><br /> Para datetimeoffset, o valor deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC, por isso o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC. Se o valor não está dentro do intervalo UTC com suporte, um erro será lançado.|  
+|10|Para conversões de servidor cliente, se ocorrer truncamento com perda de dados será postado um erro. Esse erro também ocorrerá se o valor estiver fora do intervalo que pode ser representado pelo intervalo UTC usado pelo servidor. Se ocorrer o truncamento de segundos ou de segundos fracionários em uma conversão de cliente para servidor, somente um aviso será emitido.|  
+|11|Para conversões de servidor cliente, se ocorrer truncamento com perda de dados será postado um erro.|
 |12|Os segundos são definidos como zero e os segundos fracionários são descartados. Nenhum erro de truncamento é possível.|  
 |N/A|O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] existente e o comportamento anterior é mantido.|  
   

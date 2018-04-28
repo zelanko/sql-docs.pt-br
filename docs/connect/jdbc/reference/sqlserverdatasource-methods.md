@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: df9698bf303a104786a1bd3e7268def976dee60f
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
   Para obter informações sobre os membros de SQLServerDataSource, consulte [membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   

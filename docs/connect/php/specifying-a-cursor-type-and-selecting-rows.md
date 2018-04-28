@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 59e0ec142bf0ab2ba29b31d0771d27a432aa7c5f
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,6 +36,6 @@ Você pode criar um conjunto de resultados com linhas que pode acessar em qualqu
   
 -   [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Recuperando dados](../../connect/php/retrieving-data.md)  
   

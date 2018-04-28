@@ -1,30 +1,33 @@
 ---
-title: "Método (Java) (SQLServerResultSet) getObject | Microsoft Docs"
-ms.custom: 
+title: Método (Java) (SQLServerResultSet) getObject | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getObject (java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getObject (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd6012f7fd0a75941ca2a2be7d22052a6b1a92cb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6c49821e6a212ac619465bb9169113513fef8030
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>getObject método (Java) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public java.lang.Object getObject(java.lang.String columnName)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getObject é especificado pelo método getObject na interface Java.SQL. resultset.  
   
  Esse método retornará o valor da coluna fornecida como um objeto Java. O tipo desse objeto será o tipo de objeto Java padrão correspondente ao tipo SQL da coluna, seguindo o mapeamento para tipos internos constante na especificação do JDBC. Se o valor for um SQL NULL, o driver retornará um Java nulo.  
@@ -67,7 +70,7 @@ public java.lang.Object getObject(java.lang.String columnName)
 -   Um valor de datetimeoffset de tipo será retornado como um objeto microsoft.sql.DateTimeOffset.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método getObject &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
+ [Método getObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

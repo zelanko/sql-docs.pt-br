@@ -1,30 +1,33 @@
 ---
-title: "Método getObject (int, java.util.Map) | Microsoft Docs"
-ms.custom: 
+title: Método getObject (int, java.util.Map) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getObject (int, java.util.Map)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getObject (int, java.util.Map)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8d96cc3e1ea30bd42ca820ffa40437802908e73
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 61b54f35b7d429fdde4d99bc1ee02730ca793271
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getobject-method-int-javautilmap"></a>Método getObject (int, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +46,7 @@ public java.lang.Object getObject(int index,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *índice*  
+ *index*  
   
  Um **int** que indica o índice do parâmetro.  
   
@@ -57,7 +60,7 @@ public java.lang.Object getObject(int index,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getObject é especificado pelo método na interface do CallableStatement getObject.  
   
  Esse método retornará o valor da coluna fornecida como um objeto Java. O tipo desse objeto será o tipo de objeto Java padrão correspondente ao tipo SQL da coluna, seguindo o mapeamento para tipos internos constante na especificação do JDBC. Se o valor for um SQL NULL, o driver retornará um Java nulo.  
@@ -75,7 +78,7 @@ public java.lang.Object getObject(int index,
 -   Um valor de datetimeoffset de tipo será retornado como um objeto microsoft.sql.DateTimeOffset.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método getObject &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+ [Método getObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

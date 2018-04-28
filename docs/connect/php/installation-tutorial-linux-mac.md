@@ -1,7 +1,7 @@
 ---
 title: Linux e macOS Tutorial de instalação para os Drivers da Microsoft para PHP para SQL Server | Microsoft Docs
-ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.date: 04/11/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.workload: Inactive
-ms.openlocfilehash: f7c9542294be520b6861262e814b9fda31b06d5d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 4ab3f815063a537b25b776b6b98fd26e74b7d2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux e macOS Tutorial de instalação para os Drivers da Microsoft para PHP para SQL Server
 As instruções a seguir pressupõem a um ambiente limpo e mostram como instalar o PHP 7. x, o driver ODBC da Microsoft, Apache e os Drivers da Microsoft para PHP para SQL Server no Ubuntu 16.04 e 17.10, RedHat 7, Debian 8 e 9, Suse 12 e macOS X 10.11 e 10.12. Essas instruções aconselhar instalar os drivers usando PECL, mas você também pode baixar os binários pré-compilada do [Drivers da Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases) Github página do projeto e instalá-lo seguindo as instruções em [ Carregando os Drivers da Microsoft para PHP para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obter uma explicação de carregamento de extensão e por que não adicionamos as extensões ao php.ini, consulte a seção sobre [carregando os drivers](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -35,8 +35,8 @@ Esses instalação instrução 7.2 PHP por padrão — consulte as notas no iní
 
 ## <a name="installing-the-drivers-on-ubuntu-1604-and-1710"></a>Instalar os drivers no Ubuntu 16.04 e 17.10
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 with 7.0 or 7.1 in the following commands.
+> [!NOTE]
+> Para instalar o PHP 7.0 ou 7.1, substitua 7.2 7.0 ou 7.1 nos comandos a seguir.
 
 ### <a name="step-1-install-php"></a>Etapa 1. Instalar o PHP
 ```
@@ -75,8 +75,8 @@ Para testar a instalação, consulte [testar a instalação do](#testing-your-in
 
 ## <a name="installing-the-drivers-on-red-hat-7"></a>Instalando os drivers em Red Hat 7
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace remi-php72 with remi-php70 or remi-php71 respectively in the following commands.
+> [!NOTE]
+> Para instalar o PHP 7.0 ou 7.1, substitua remi php72 remi php70 ou remi-php71 respectivamente nos comandos a seguir.
 
 ### <a name="step-1-install-php"></a>Etapa 1. Instalar o PHP
 
@@ -138,8 +138,8 @@ Para testar a instalação, consulte [testar a instalação do](#testing-your-in
 
 ## <a name="installing-the-drivers-on-debian-8-and-9"></a>Instalar os drivers no Debian 8 e 9
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 in the following commands with 7.0 or 7.1.
+> [!NOTE]
+> Para instalar o PHP 7.0 ou 7.1, substitua 7.2 nos comandos a seguir 7.0 ou 7.1.
 
 ### <a name="step-1-install-php"></a>Etapa 1. Instalar o PHP
 ```
@@ -187,10 +187,9 @@ Para testar a instalação, consulte [testar a instalação do](#testing-your-in
 
 ## <a name="installing-the-drivers-on-suse-12"></a>Instalando os drivers em 12 Suse
 
-    > [!NOTE]
-    > To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
-    > To install PHP 7.1, replace the repository URL below with the following URL:
-      `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> [!NOTE]
+> Para instalar o PHP 7.0, ignorar o comando a seguir adicionando o repositório - 7.0 é o padrão PHP no suse 12.
+> Para instalar o PHP 7.1, substitua a URL do repositório abaixo com a seguinte URL: `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### <a name="step-1-install-php"></a>Etapa 1. Instalar o PHP
 ```
@@ -232,21 +231,21 @@ Se você ainda não tivê-lo, instale o brew da seguinte maneira:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace php72 with php70 or php71 respectively in the following commands.
+> [!NOTE]
+> Para instalar o PHP 7.0 ou 7.1, substitua php@7.2 com php@7.0 ou php@7.1 respectivamente nos comandos a seguir.
 
 ### <a name="step-1-install-php"></a>Etapa 1. Instalar o PHP
 
 ```
 brew tap
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/homebrew-php
-brew install php72 --with-pear --with-httpd24 --with-cgi
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+brew tap homebrew/core
+brew install php@7.2
 ```
+PHP agora deve estar no seu caminho--executar `php -v` para verificar se estão executando a versão correta do PHP. Se o PHP não está no caminho ou não é a versão correta, execute o seguinte:
+```
+brew link --force --overwrite php@7.2
+```
+
 ### <a name="step-2-install-prerequisites"></a>Etapa 2. Instale os pré-requisitos
 Instalar o driver ODBC macOS, seguindo as instruções [página de instalação do Linux e macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
@@ -257,13 +256,20 @@ brew install autoconf automake libtool
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Etapa 3. Instale os drivers PHP para Microsoft SQL Server
 ```
-chmod -R ug+w /usr/local/opt/php72/lib/php
-pear config-set php_ini /usr/local/etc/php/7.2/php.ini system
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Etapa 4. Instalar o Apache e configurar o carregamento do driver
 ```
+brew install apache2
+```
+Para localizar o Apache arquivo de configuração para a instalação do Apache, execute 
+```
+apachectl -V | grep SERVER_CONFIG_FILE
+``` 
+e substitua o caminho para `httpd.conf` nos comandos a seguir:
+```
+echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Etapa 5. Reinicie o Apache e testar o script de exemplo

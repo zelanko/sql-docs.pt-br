@@ -1,30 +1,33 @@
 ---
-title: "Método getURL (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: Método getURL (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.getURL
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.getURL
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5859a931b0319b486870427acf15bcddd30ddaea
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: de57d25020c1e796a6d56df9169b10759c7eb685
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="geturl-method-sqlserverdatasource"></a>Método getURL (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +44,7 @@ public java.lang.String getURL()
 ## <a name="return-value"></a>Valor de retorno  
  Um **cadeia de caracteres** que contém a URL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Por motivos de segurança, você não deve incluir a senha na URL que é fornecida para o [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) método. Isso porque os Servidores de Aplicativos Java de terceiros muito frequentemente exibirão o valor definido para a propriedade URL em suas respectivas interfaces de usuário da configuração da fonte de dados. Em vez disso, use o [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) método para definir o valor da senha. Os Servidores de Aplicativos Java não exibirão uma senha que é definida em suas respectivas fontes de dados na interface de usuário da configuração.  
   
 > [!NOTE]  

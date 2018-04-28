@@ -1,28 +1,29 @@
 ---
 title: Membros SQLServerCallableStatement | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a930408957d61c61738c271914dca734920908f4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 45981047ce8b09d6b8f70b7d9e3f2872c8767c76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlservercallablestatement-members"></a>Membros SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   As tabelas a seguir listam os membros expostos pelo [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) classe.  
   
 ## <a name="constructors"></a>Construtores  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="fields"></a>Campos  
   
@@ -39,19 +40,19 @@ ms.lasthandoff: 11/18/2017
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="inherited-fields"></a>Campos herdados  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="methods"></a>Métodos  
   
 |Nome|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Adiciona um conjunto de parâmetros ao lote de comandos para este objeto CallableStatement.|  
-|[Cancelar](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Cancela a instrução SQL que está sendo executada pelo objeto CallableStatement.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Cancela a instrução SQL que está sendo executada pelo objeto CallableStatement.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Esvazia a lista atual de comandos SQL para esse objeto CallableStatement.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Limpa os valores de parâmetros atuais imediatamente.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Limpa todos os avisos que são relatados no objeto CallableStatement.|  
-|[Fechar](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Libera o banco de dados e os recursos do JDBC do objeto CallableStatement imediatamente em vez de aguardar que eles sejam liberados automaticamente.|  
-|[executar](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Executa a instrução SQL no objeto CallableStatement, que pode ser qualquer tipo de instrução SQL.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Libera o banco de dados e os recursos do JDBC do objeto CallableStatement imediatamente em vez de aguardar que eles sejam liberados automaticamente.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Executa a instrução SQL no objeto CallableStatement, que pode ser qualquer tipo de instrução SQL.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Envia um lote de comandos ao banco de dados a ser executado. Se todos os comandos forem executados com êxito, uma matriz de contagens de atualização será retornada.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Executa a consulta SQL no objeto CallableStatement e retorna o [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto gerado pela consulta.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Executa a instrução SQL no objeto CallableStatement, que deve ser um SQL INSERT, UPDATE, MERGE ou DELETE instrução; ou uma instrução SQL que não retorne nada, como uma instrução DDL.|  
@@ -69,22 +70,22 @@ ms.lasthandoff: 11/18/2017
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um fluxo de **ASCII** caracteres.|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como java.math.BigDecimal.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um fluxo binário de bytes ininterruptos.|  
-|[getBlob](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro JDBC Blob designado como um objeto de Blob na linguagem de programação Java.|  
+|[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro JDBC Blob designado como um objeto de Blob na linguagem de programação Java.|  
 |[getboolean](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **booliano** valor.|  
-|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **bytes** valor.|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como uma matriz de bytes.|  
+|[GetByte](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **bytes** valor.|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como uma matriz de bytes.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto java.io.Reader.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro JDBC Blob designado como um objeto Clob na linguagem de programação Java.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto java.sql.Date na linguagem de programação Java.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Recupera o valor da coluna especificada como um[DateTimeOffset classe](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **duplo** na linguagem de programação Java.|  
-|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **float** na linguagem de programação Java.|  
+|[GetDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **duplo** na linguagem de programação Java.|  
+|[GetFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **float** na linguagem de programação Java.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **int** na linguagem de programação Java.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **longo** na linguagem de programação Java.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto do leitor.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|Recupera o valor do JDBC designado **NCLOB** parâmetro como um **NClob** objeto na linguagem de programação Java.|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Recupera o valor de designado **NCHAR**, **NVARCHAR** ou **LONGNVARCHAR** parâmetro como uma cadeia de caracteres no Java linguagem de programação.|  
-|[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto na linguagem de programação Java.|  
+|[GetObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto na linguagem de programação Java.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Recupera o número de segundos a [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] irá aguardar a execução deste objeto CallableStatement.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto de referência na linguagem de programação Java.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Recupera a modo de buffer para esta resposta [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto.|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/18/2017
 |[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Recupera a suspensão do conjunto de resultado [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objetos que são gerados pelo objeto CallableStatement.|  
 |[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Recupera o conjunto de resultados tipo para [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objetos que são gerados pelo objeto CallableStatement.|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **curto** na linguagem de programação Java.|  
-|[getString](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **cadeia de caracteres** na linguagem de programação Java.|  
+|[GetString](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um **cadeia de caracteres** na linguagem de programação Java.|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto java.sql.SQLXML.|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto java.sql.Time na linguagem de programação Java.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)|Recupera o valor do parâmetro designado como um objeto java.sql.Timestamp na linguagem de programação Java.|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Define o parâmetro designado como o objeto Blob fornecido.|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlservercallablestatement.md)|Define o parâmetro designado como o determinado **booliano** valor.|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlservercallablestatement.md)|Define o parâmetro designado como o determinado **bytes** valor.|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlservercallablestatement.md)|Define o parâmetro designado como a matriz fornecida de **bytes** valores.|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlservercallablestatement.md)|Define o parâmetro designado como a matriz fornecida de **bytes** valores.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)|Define o parâmetro designado como o objeto de leitor fornecido.|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(Herdado de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Define o parâmetro designado como o objeto especificado.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Herdado de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Define o nome do cursor SQL como a cadeia de caracteres especificada, que será usada por métodos de execução subsequentes.|  

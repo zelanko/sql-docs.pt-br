@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a91ed021b749a0f23c08b1b4d01ef4d60d073814
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  Se usar informações sobre a cadeia de conexão de uma fonte externa, como um usuário que forneça uma ID de usuário e senha, você deverá validar todas as entradas na fonte para garantir que elas tenham o formato correto e não contenham parâmetros adicionais que afetem a conexão.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Protegendo aplicativos do JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

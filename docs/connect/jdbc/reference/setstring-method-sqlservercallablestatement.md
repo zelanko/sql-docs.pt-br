@@ -1,30 +1,33 @@
 ---
-title: "Método setString (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: 
+title: Método setString (SQLServerCallableStatement) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setString
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setString
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb2a0b29e765c2160e4fa21e78f6b19a707a9c0b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a8df75c0b82ad0cc8a1598bda8ddf856635d5bf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>Método setString (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,14 +47,14 @@ public void setString(java.lang.String sCol,
   
  Um **cadeia de caracteres** que contém o nome do parâmetro.  
   
- *s*  
+ *S*  
   
  Um **cadeia de caracteres** valor.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método setString é especificado pelo método setString na interface do CallableStatement.  
   
  Cadeia de caracteres para conversões de binários são executadas somente quando [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sabe que o tipo de destino é binário. Em casos onde o driver JDBC não souber o tipo subjacente, ele passará o **cadeia de caracteres** literal e retornará um erro de servidor se o servidor não pode realizar a conversão.  

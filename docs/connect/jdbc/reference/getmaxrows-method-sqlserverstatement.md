@@ -1,30 +1,33 @@
 ---
-title: "Método (SQLServerStatement) getMaxRows | Microsoft Docs"
-ms.custom: 
+title: Método (SQLServerStatement) getMaxRows | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.getMaxRows
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.getMaxRows
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8211894887356f993067bc214e101f171f1d490e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3af453b1e82984e06da41a03b289107d72d0ce88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows método (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public final int getMaxRows()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getMaxRows é especificado pelo método getMaxRows na interface Java.SQL. Statement.  
   
  Esse método getMaxRows sempre retorna 0 para cursores roláveis dinâmicos.  

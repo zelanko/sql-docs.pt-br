@@ -1,30 +1,33 @@
 ---
-title: "Método getSelectMethod (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: Método getSelectMethod (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.getSelectMethod
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.getSelectMethod
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6255d2e-0028-474a-afa8-553ef092243e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 123c8849983984779940deea46da69ece55de90d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c0364a431020ff73bc5590dbbfa12d20f401b9ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getselectmethod-method-sqlserverdatasource"></a>Método getSelectMethod (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +44,7 @@ public java.lang.String getSelectMethod()
 ## <a name="return-value"></a>Valor de retorno  
  Um **cadeia de caracteres** valor que contém o tipo de cursor padrão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A propriedade selectMethod especifica o tipo de cursor padrão que é usado para um conjunto de resultados. Essa propriedade é útil quando você está lidando com conjuntos de resultados grandes e não deseja armazenar o resultado inteiro na memória no lado do cliente. Ao definir a propriedade como "cursor", você pode criar um cursor do lado do servidor que pode buscar partes menores de dados por vez. Se a propriedade selectMethod não for definida, getSelectMethod retornará o valor padrão "direto".  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,30 +1,33 @@
 ---
-title: "Método Close (SQLServerPooledConnection) | Microsoft Docs"
-ms.custom: 
+title: Método Close (SQLServerPooledConnection) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPooledConnection.close
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPooledConnection.close
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 149719869ba63a4ce6c7b239fde4756d5056b60e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fc157c90b0d068f08a415ad64b33fa68bca5de2f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>Método close (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +44,7 @@ public void close()
 ## <a name="exceptions"></a>Exceções  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método fechar é especificado pelo método na interface javax.SQL. pooledconnection fechar.  
   
 ## <a name="see-also"></a>Consulte também  

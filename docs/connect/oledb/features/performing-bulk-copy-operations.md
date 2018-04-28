@@ -3,7 +3,7 @@ title: Executando operações de cópia em massa | Microsoft Docs
 description: Executando operações de cópia em massa usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6e5c5bf1ecb76a0d0e2c59b16a4900f3ec4e8f8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: fdfb6066692c2d15aa44fa8671cb590f8b009c2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>Executando operações de cópia em massa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,30 +1,33 @@
 ---
-title: "Método setURL (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: Método setURL (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.setURL
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.setURL
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 222948f40537e84e0c294f05fd8d953b61f53f65
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fefd8718b40dd5ce8528315228ec389c6e5d7de9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>Método setURL (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +46,7 @@ public void setURL(java.lang.String url)
   
  Um **cadeia de caracteres** que contém a URL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Por motivos de segurança, você não deve incluir a senha na URL fornecida ao método setURL. Isso porque os Servidores de Aplicativos Java de terceiros muito frequentemente exibirão o valor definido para a propriedade URL em suas respectivas interfaces de usuário da configuração da fonte de dados. Em vez disso, use o [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) método para definir o valor da senha. Os Servidores de Aplicativos Java não exibirão uma senha que é definida em suas respectivas fontes de dados na interface de usuário da configuração.  
   
 > [!NOTE]  

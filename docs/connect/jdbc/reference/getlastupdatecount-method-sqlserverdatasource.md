@@ -1,30 +1,33 @@
 ---
-title: "Método getLastUpdateCount (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: Método getLastUpdateCount (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.getLastUpdateCount
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.getLastUpdateCount
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db133035f7145c61fb856fcfa308550d9883da17
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5a22f963d409657b645ad04b50c260fc1576b980
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getlastupdatecount-method-sqlserverdatasource"></a>Método getLastUpdateCount (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +44,7 @@ public boolean getLastUpdateCount()
 ## <a name="return-value"></a>Valor de retorno  
  **True** se lastUpdateCount estiver habilitada. Caso contrário, **false**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se a propriedade lastUpdateCount estiver definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] retornará apenas a última contagem de atualização de uma instrução SQL passada para o servidor. Se a propriedade lastUpdateCount estiver definida como **false**, o driver retornará todas as contagens, inclusive as retornadas por gatilhos que tenham disparado de atualização. Se a propriedade lastUpdateCount não estiver definida, o método getLastUpdateCount retornará o valor padrão de **true**.  
   
 ## <a name="see-also"></a>Consulte também  

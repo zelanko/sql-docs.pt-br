@@ -1,27 +1,28 @@
 ---
-title: "Método (Java.SQL. NCLOB, long) Position | Microsoft Docs"
-ms.custom: 
+title: Método (Java.SQL. NCLOB, long) Position | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a4007d3e734210f8a60a56884898dfb48c7a970
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 45346eb400d07f3b236601c871897723b8f07bc8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="position-method-javasqlnclob-long"></a>Método position (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ long position(java.sql.NClob searchstr,
   
  Um objeto NClob para pesquisa.  
   
- *Iniciar*  
+ *Início*  
   
  A posição em que a pesquisa deve ser iniciada; a primeira posição é 1.  
   
@@ -51,11 +52,11 @@ long position(java.sql.NClob searchstr,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método de posição é especificado pelo método na interface Java.SQL. NCLOB posição.  
   
 ## <a name="see-also"></a>Consulte também  
- [Posicione o método &#40; SQLServerNClob &#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
+ [Método Position &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [Membros SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [Classe SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)  

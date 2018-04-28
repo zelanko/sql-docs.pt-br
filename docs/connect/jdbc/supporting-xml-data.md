@@ -1,37 +1,38 @@
 ---
 title: Dando suporte a dados XML | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ec535a43cf79b10e25d3c0fd7108d3c9a40dd0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d23e602f9e1323f96bc350d2501dccf6e06b03ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supporting-xml-data"></a>Dando suporte a dados XML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Fornece um **xml** tipo de dados que permite armazenar documentos XML e fragmentos em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados. O **xml** tipo de dados é um tipo de dados internos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]e é em algumas semelhanças com outros tipos internos, como **int** e **varchar**. Como outros tipos internos, você pode usar o **xml** como tipo de dados: um tipo de variável, um tipo de parâmetro, um tipo de retorno de função ou uma coluna de tipo quando você cria uma tabela; ou em [!INCLUDE[tsql](../../includes/tsql_md.md)] funções CAST e CONVERT. No driver JDBC, o **xml** tipo de dados pode ser mapeado como uma cadeia de caracteres, a matriz de bytes, o fluxo, o objeto CLOB, BLOB ou SQLXML. String é o mapeamento padrão.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Fornece um **xml** tipo de dados que permite armazenar documentos XML e fragmentos em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados. O **xml** tipo de dados é um tipo de dados internos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]e é em algumas semelhanças com outros tipos internos, como **int** e **varchar**. Como outros tipos internos, você pode usar o **xml** como tipo de dados: um tipo de variável, um tipo de parâmetro, um tipo de retorno de função ou uma coluna de tipo quando você cria uma tabela; ou em [!INCLUDE[tsql](../../includes/tsql_md.md)] funções CAST e CONVERT. No driver JDBC, o **xml** tipo de dados pode ser mapeado como uma cadeia de caracteres, a matriz de bytes, o fluxo, o objeto CLOB, BLOB ou SQLXML. String é o mapeamento padrão.  
   
  O driver JDBC fornece suporte para a API do JDBC 4.0, que apresenta a interface SQLXML. A interface SQLXML define métodos para interagir com dados XML e manipulá-los. O **SQLXML** é um tipo de dados do JDBC 4.0 e ele mapeia para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo de dados. Portanto, para usar o tipo de dados SQLXML nos aplicativos, você deve definir o classpath para incluir o arquivo sqljdbc4.jar. Se o aplicativo tentar usar o sqljdbc3.jar ao acessar o objeto SQLXML e seus métodos, uma exceção será lançada.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]sempre valida os dados XML antes de armazená-lo na coluna de banco de dados. Os aplicativos podem usar **SQLXML** tipo de dados, pois o driver JDBC mapeia para o **xml** automaticamente, o tipo de dados. O **SQLXML** suporte está disponível na sqljdbc4.jar. Consulte [requisitos do sistema para o Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para a lista de versões do JRE com suporte a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sempre valida os dados XML antes de armazená-lo na coluna de banco de dados. Os aplicativos podem usar **SQLXML** tipo de dados, pois o driver JDBC mapeia para o **xml** automaticamente, o tipo de dados. O **SQLXML** suporte está disponível na sqljdbc4.jar. Consulte [requisitos do sistema para o Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para a lista de versões do JRE com suporte a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  Os tópicos nesta seção descrevem a interface SQLXML e como programar em relação a **SQLXML** tipo de dados usando os métodos da API do JDBC.  
   

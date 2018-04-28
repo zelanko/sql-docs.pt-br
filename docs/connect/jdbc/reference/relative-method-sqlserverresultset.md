@@ -1,30 +1,33 @@
 ---
-title: "Método Relative (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: Método Relative (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.relative
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.relative
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6d936c5e44996a56ac6d9c653cc25ba7176aa4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d210c40ac0c288ef57e74f37218515e21148fdb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="relative-method-sqlserverresultset"></a>Método Relative (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public boolean relative(int nRows)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método relativo é especificado pelo método na interface Java.SQL. ResultSet relativo.  
   
  Ao tentar se mover além da primeira ou última linha no conjunto de resultados, o cursor será posicionado antes ou depois da primeira ou última coluna. Chamando `relative(0)` é válido, mas não altera a posição do cursor.  

@@ -1,30 +1,33 @@
 ---
-title: "Método (Java) getString | Microsoft Docs"
-ms.custom: 
+title: Método (Java) getString | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getString (java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getString (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6d9437a7fbba96fc92908fdd875dae964ee3bbb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 58fc8d577c2d9048bed52a78539b2dfcfd8031ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getstring-method-javalangstring"></a>Método getString (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public java.lang.String getString(java.lang.String sCol)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getString é especificado pelo método getString na interface do CallableStatement.  
   
  Todas as colunas na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] pode ser retornado como uma cadeia de caracteres. Isso significa que uma representação da cadeia de caracteres de todos os tipos baseados em número e em caractere, e uma representação da cadeia de caracteres hexadecimais de colunas binárias, como binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier, podem ser retornadas.  
@@ -59,7 +62,7 @@ public java.lang.String getString(java.lang.String sCol)
  Os tipos definidos pelo usuário são retornados como valores de cadeia de caracteres hexadecimais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método getString &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)   
+ [Método getString &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

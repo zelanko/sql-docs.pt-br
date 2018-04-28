@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8c33d12978a48ca982c53f81c2dbae9d2f73534f
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
   Para obter informações sobre os membros de SQLServerResultSet, consulte [membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

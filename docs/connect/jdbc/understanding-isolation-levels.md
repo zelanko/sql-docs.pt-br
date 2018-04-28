@@ -1,27 +1,28 @@
 ---
-title: "Noções básicas sobre níveis de isolamento | Microsoft Docs"
-ms.custom: 
+title: Noções básicas sobre níveis de isolamento | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0115d8c16c63882990a462c0fde8d146e91dbf88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-isolation-levels"></a>Compreendendo os níveis de isolamento
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,16 +47,16 @@ ms.lasthandoff: 11/18/2017
   
  Um nível de isolamento mais baixo aumenta a capacidade de muitos usuários acessarem os dados ao mesmo tempo, porém aumenta o número de efeitos de simultaneidade, como leituras sujas ou atualizações perdidas, que podem afetar os usuários. Por outro lado, um nível de isolamento mais alto reduz os tipos de efeitos de simultaneidade que os usuários podem encontrar, porém requer mais recursos do sistema e aumenta as chances de uma transação bloquear outra. Escolher o nível de isolamento apropriado depende de equilibrar os requisitos de integridade de dados do aplicativo em relação à sobrecarga de cada nível de isolamento. O nível de isolamento mais alto, serializável, garante que uma transação recuperará exatamente os mesmos dados toda vez que repetir uma operação de leitura, mas faz isto executando um nível de bloqueio que provavelmente causará impacto em outros usuários em sistemas multiusuários. O nível de isolamento mais baixo, leitura não confirmada, pode recuperar dados que foram modificados mas não confirmados por outras transações. Todos os efeitos colaterais da simultaneidade podem ocorrer na leitura não confirmada, mas não há nenhum bloqueio de leitura ou controle de versão, portanto, a sobrecarga é minimizada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir mostra os efeitos colaterais da simultaneidade permitidos pelos diferentes níveis de isolamento.  
   
 |Nível de Isolamento|Leitura suja|Leitura não repetível|Fantasma|  
 |---------------------|----------------|-------------------------|-------------|  
 |Leitura não confirmada|Sim|Sim|Sim|  
-|Leitura confirmada|Não|Sim|Sim|  
-|Leitura repetida|Não|Não|Sim|  
-|Instantâneo|Não|Não|Não|  
-|Serializável|Não|Não|Não|  
+|Leitura confirmada|não|Sim|Sim|  
+|Leitura repetida|não|Não|Sim|  
+|Instantâneo|não|Não|não|  
+|Serializável|não|Não|não|  
   
  As transações devem ser executadas em um nível de isolamento de pelo menos leitura repetível para impedir atualizações perdidas que podem ocorrer quando duas transações recuperam a mesma linha e, em seguida, atualizam a linha com base nos valores originalmente recuperados. Se as duas transações atualizarem as linhas usando uma única instrução UPDATE e não basearem a atualização nos valores previamente recuperados, as atualizações perdidas não poderão ocorrer no nível de isolamento padrão de leitura confirmada.  
   

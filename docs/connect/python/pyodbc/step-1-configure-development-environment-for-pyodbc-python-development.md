@@ -1,27 +1,28 @@
 ---
 title: 'Etapa 1: Configurar o ambiente de desenvolvimento do Python pyodbc | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 886cf420228b622fb9c269423ce9a71c2c25ecaa
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 64ce99a11d0942efaaaee2ba70831cd0f5e6b236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para pyodbc desenvolvimento do Python
 
@@ -31,7 +32,7 @@ Conecte-se ao banco de dados SQL usando Python - pyodbc no Windows:
 1. **Baixar o instalador do Python**  
   Se seu computador não tiver Python instale-o. Acesse o [página de download do Python](https://www.python.org/downloads/windows/) e baixar o instalador apropriado. Por exemplo, se você estiver usando um computador de 64 bits, baixe o instalador de Python 2.7 ou 3.5 (x64).  
   
-2. **Instalar o Python** depois que o instalador é baixado, faça o seguinte: uma. Clique duas vezes no arquivo para iniciar o instalador. b. Selecione seu idioma e concordar com os termos. c. Siga as instruções na tela e Python deve ser instalado em seu computador. d. Você pode verificar que é Python é instalado, vá para C:\Python27 ou C:\Python35 e execute o python - v ou piar - v (para 3. x) 
+2. **Instalar o Python** depois que o instalador é baixado, faça o seguinte: uma. Clique duas vezes no arquivo para iniciar o instalador. B. Selecione seu idioma e concordar com os termos. c. Siga as instruções na tela e Python deve ser instalado em seu computador. d. Você pode verificar que é Python é instalado, vá para C:\Python27 ou C:\Python35 e execute o python - v ou piar - v (para 3. x) 
       
 3. [**Instalar o Driver ODBC da Microsoft**](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   

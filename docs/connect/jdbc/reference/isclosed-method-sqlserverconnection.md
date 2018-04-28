@@ -1,30 +1,33 @@
 ---
-title: "Método (SQLServerConnection) isClosed | Microsoft Docs"
-ms.custom: 
+title: Método (SQLServerConnection) isClosed | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnection.isClosed
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnection.isClosed
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f8c264171a4e91c4dd449f1ea8fa19830fb4ca1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6c503df8443c4ec08631660f4f144c77f97a0ed9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed método (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public boolean isClosed()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método isClosed é especificado pelo método isClosed na interface Java.SQL.  
   
  Verifica o estado do objeto SQLServerConnection chamado. Uma conexão é fechada se o [fechar](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) método foi chamado, ou se ocorreram alguns erros fatais. Esse método retornará **true** apenas quando ele é chamado após o método close ter sido chamado.  

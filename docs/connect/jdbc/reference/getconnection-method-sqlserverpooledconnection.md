@@ -1,30 +1,33 @@
 ---
-title: "Método getConnection (SQLServerPooledConnection) | Microsoft Docs"
-ms.custom: 
+title: Método getConnection (SQLServerPooledConnection) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPooledConnection.getConnection
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPooledConnection.getConnection
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9baae3e22e7476396305276c15c8d8f4d71e921b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b1dca9d2d0f97d01cb3f8a4400b4013c3a701372
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>Método getConnection (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public java.sql.Connection getConnection()
 ## <a name="exceptions"></a>Exceções  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getConnection é especificado pelo método getConnection na interface javax.SQL. pooledconnection.  
   
 ## <a name="see-also"></a>Consulte também  

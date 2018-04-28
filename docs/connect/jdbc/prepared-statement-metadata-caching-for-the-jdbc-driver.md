@@ -1,28 +1,28 @@
 ---
-title: "Preparar o cache para o Driver JDBC de metadados de instrução | Microsoft Docs"
-ms.custom: 
+title: Preparar o cache para o Driver JDBC de metadados de instrução | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13d4c0766552d9472038ffe7f2ff7fed6d73584d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: eb093c9102cbafde8e43fc69f2860831634bfee5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Metadados de instrução preparada cache para o Driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,18 +79,18 @@ Por exemplo: `connection.setStatementPoolingCacheSize(10)`
 |Novo método|Description|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|Define o pooling de instrução como true ou false.|
-|boolean getDisableStatementPooling()|Retorna VERDADEIRO se o pool de instrução está desabilitado.|
+|getDisableStatementPooling() booliano|Retorna VERDADEIRO se o pool de instrução está desabilitado.|
 |void setStatementPoolingCacheSize(int value)|Especifica o tamanho do cache de instrução preparada para esta conexão. Um valor menor que 1 não significa que nenhum cache.|
 |int getStatementPoolingCacheSize()|Retorna o tamanho do cache de instrução preparada para esta conexão. Um valor menor que 1 não significa que nenhum cache.|
 |int getStatementHandleCacheEntryCount()|Retorna o número atual de identificadores de instrução preparada em pool.|
-|boolean isPreparedStatementCachingEnabled()|Se o pool de instrução está habilitado ou não para essa conexão.|
+|isPreparedStatementCachingEnabled() booliano|Se o pool de instrução está habilitado ou não para essa conexão.|
 
  **SQLServerDataSource**
  
 |Novo método|Description|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|Define a instrução pool como true ou false|
-|boolean getDisableStatementPooling()|Retorna VERDADEIRO se o pool de instrução está desabilitado.|
+|getDisableStatementPooling() booliano|Retorna VERDADEIRO se o pool de instrução está desabilitado.|
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Especifica o tamanho do cache de instrução preparada para esta conexão. Um valor menor que 1 não significa que nenhum cache.|
 |int getStatementPoolingCacheSize()|Retorna o tamanho do cache de instrução preparada para esta conexão. Um valor menor que 1 não significa que nenhum cache.|
 

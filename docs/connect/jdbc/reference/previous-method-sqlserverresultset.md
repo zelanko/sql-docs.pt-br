@@ -1,30 +1,33 @@
 ---
-title: "Método anterior (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: Método anterior (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.previous
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.previous
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc342d86e8edb3a1b8fece519e76861c5383ad4a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: aa3931ac827eca4cc765dd45d78629109b2c8206
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="previous-method-sqlserverresultset"></a>Método anterior (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public boolean previous()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método anterior é especificado pelo método na interface Java.SQL. ResultSet anterior.  
   
 ## <a name="see-also"></a>Consulte também  

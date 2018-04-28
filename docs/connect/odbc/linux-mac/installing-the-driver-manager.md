@@ -1,30 +1,30 @@
 ---
 title: Instalando o Gerenciador de Driver (Driver ODBC para SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36f432e883b56759d46304239715a00c06334d3a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: a396bd0cab8ad6298eec79c48fdf541178194c8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-driver-manager"></a>Instalando o Gerenciador de Driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -58,7 +58,7 @@ Para instalar o gerenciador de driver:
   
 5.  Quando você estiver pronto para instalar, e se o computador pode acessar um site externo por meio de FTP, execute o seguinte comando: **./build_dm.sh**.
 
-Se o computador não pode acessar um site externo por meio de FTP, obtenha `unixODBC-2.3.0.tar.gz`. Você pode obter `unixODBC-2.3.0.tar.gz` de [http://www.unixodbc.org](http://www.unixodbc.org/). Clique o **baixar** link no lado esquerdo da página para ir para a página de download. Em seguida, clique no link apropriado para baixar o unixODBC-2.3.0 (não o unixODBC-2.3.1). UnixODBC-2.3.1 não é compatível com esta versão do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Execute o seguinte comando para iniciar a instalação do Gerenciador de Driver unixODBC: **./build_dm.sh – url de download = file://unixODBC-2.3.0.tar.gz**.  
+Se o computador não pode acessar um site externo por meio de FTP, obtenha `unixODBC-2.3.0.tar.gz`. Você pode obter `unixODBC-2.3.0.tar.gz` de [ http://www.unixodbc.org ](http://www.unixodbc.org/). Clique o **baixar** link no lado esquerdo da página para ir para a página de download. Em seguida, clique no link apropriado para baixar o unixODBC-2.3.0 (não o unixODBC-2.3.1). UnixODBC-2.3.1 não é compatível com esta versão do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Execute o seguinte comando para iniciar a instalação do Gerenciador de Driver unixODBC: **./build_dm.sh – url de download = file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Tipo **Sim** para prosseguir com a descompactação dos arquivos. Esta parte do processo pode levar até cinco minutos para ser concluída.  
 
@@ -72,7 +72,7 @@ Se não for possível concluir o script de instalação, configure e compile o g
 
 1.  Remova qualquer versão mais antiga do unixODBC instalada (por exemplo, unixODBC 2.2.11). No Red Hat Enterprise Linux 5 ou 6, execute o seguinte comando: **yum remover unixODBC**. No SUSE Linux Enterprise, **zypper remover unixODBC**.  
   
-2.  Vá para [http://www.unixodbc.org](http://www.unixodbc.org/). Clique o **baixar** link no lado esquerdo da página para ir para a página de download. Em seguida, clique no link apropriado para salvar o arquivo unixODBC-2.3.0.tar.gz no seu computador. UnixODBC-2.3.1 não é compatível com esta versão do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+2.  Vá para [ http://www.unixodbc.org ](http://www.unixodbc.org/). Clique o **baixar** link no lado esquerdo da página para ir para a página de download. Em seguida, clique no link apropriado para salvar o arquivo unixODBC-2.3.0.tar.gz no seu computador. UnixODBC-2.3.1 não é compatível com esta versão do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 3.  No seu computador Linux, execute o comando: **tar xvzf unixodbc-2.3.0.tar.gz**.  
   
