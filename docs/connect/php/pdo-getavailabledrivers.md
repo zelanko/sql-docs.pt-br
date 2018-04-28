@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 65a4fae954faa708346b3c63a516bcc6e4a349f0
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,7 +36,7 @@ Retorna uma matriz dos drivers de PDO na sua instalação do PHP.
 array PDO::getAvailableDrivers ();  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma matriz com a lista de drivers de PDO.  
   
 ## <a name="remarks"></a>Remarks  
@@ -54,7 +54,7 @@ print_r(PDO::getAvailableDrivers());
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

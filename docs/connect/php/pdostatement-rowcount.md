@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8ec835b70a3c74d870a84c3b17cc1f4d336134d9
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,7 +36,7 @@ Retorna o número de linhas adicionadas, excluídas ou alteradas pela última in
 int PDOStatement::rowCount ();  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 O número de linhas adicionadas, excluídas ou alteradas.  
   
 ## <a name="remarks"></a>Remarks  
@@ -74,7 +74,7 @@ print $stmt->rowCount();
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

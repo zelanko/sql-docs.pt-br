@@ -2,7 +2,7 @@
 title: Use sempre criptografado com o Driver ODBC para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -15,14 +15,14 @@ ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 653e9680cdaac667f0a00fd84700f07210fffb5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Use sempre criptografado com o Driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -584,10 +584,10 @@ Consulte [migrar dados confidenciais protegidos pelo sempre criptografado](../..
 |Nome|Tipo|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pré-conexão|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) – desabilitar sempre criptografado <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)-- habilitar sempre criptografado|
-|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connect|[Set] Tentativa de carregar CEKeystoreProvider<br>[Get] Retorna um nome de CEKeystoreProvider|
-|`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connect|[Set] Gravação de dados CEKeystoreProvider<br>[Get] Ler dados de CEKeystoreProvider|
-|`SQL_COPT_SS_CEKCACHETTL`|Post-connect|[Set] Definir o cache CEK TTL<br>[Get] Obter o cache CEK TTL atual|
-|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connect|[Set] Definir o ponteiro de caminhos confiável CMK<br>[Get] Obter o ponteiro de caminhos confiável CMK atual|
+|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Após conectar-se|[Set] Tentativa de carregar CEKeystoreProvider<br>[Get] Retorna um nome de CEKeystoreProvider|
+|`SQL_COPT_SS_CEKEYSTOREDATA`|Após conectar-se|[Set] Gravação de dados CEKeystoreProvider<br>[Get] Ler dados de CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Após conectar-se|[Set] Definir o cache CEK TTL<br>[Get] Obter o cache CEK TTL atual|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Após conectar-se|[Set] Definir o ponteiro de caminhos confiável CMK<br>[Get] Obter o ponteiro de caminhos confiável CMK atual|
 
 ### <a name="statement-attributes"></a>Atributos de instrução
 

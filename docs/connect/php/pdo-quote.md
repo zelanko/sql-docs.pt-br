@@ -1,5 +1,5 @@
 ---
-title: Quote | Microsoft Docs
+title: PDO::quote | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: da05a66c4ec449ef34174825dea6488e236b49da
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,9 +39,9 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>Parâmetros  
 $*string*: a cadeia de caracteres a ser colocada entre aspas.  
   
-$parameter*type*: um símbolo opcional inteiro indicando o tipo de dados.  O padrão é PDO::PARAM_STR.  
+$*tipo_de_parâmetro*: um símbolo (inteiro) opcional que indica o tipo de dados.  O padrão é PDO::PARAM_STR.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma cadeia de caracteres entre aspas que pode ser passada para uma instrução SQL, ou false em caso de falha.  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,7 +68,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

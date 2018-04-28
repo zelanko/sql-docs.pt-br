@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: ErrorInfo | Microsoft Docs'
+title: PDO::errorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: aa20f4bb1f833a43f2cfc8ae99423db8d6af7751
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,7 +36,7 @@ Recupera informações de erro estendidas da operação mais recente no identifi
 array PDO::errorInfo();  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma matriz de informações de erro sobre a operação mais recente no identificador do banco de dados. A matriz consiste nos seguintes campos:  
   
 -   O código de erro SQLSTATE.  
@@ -53,7 +53,7 @@ PDO::errorInfo recupera somente informações de erro de operações realizadas 
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Exemplo  
-Neste exemplo, o nome da coluna está incorreto, `Cityx` em vez de `City`, causando um erro, que é, então, relatado.  
+Neste exemplo, o nome da coluna está incorreto (`Cityx` em vez de `City`), causando um erro, que é relatado em seguida.  
   
 ```  
 <?php  
@@ -67,7 +67,7 @@ print_r ($conn->errorInfo());
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

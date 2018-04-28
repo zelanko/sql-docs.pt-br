@@ -1,5 +1,5 @@
 ---
-title: Atualizando dados (Drivers da Microsoft para PHP para SQL Server)
+title: Atualizando dados (Drivers da Microsoft para PHP para SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6d4d0ff4dfc6ab78636a8fa04d6347938338aee0
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -45,7 +45,7 @@ As etapas para usar os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 |[Como enviar dados como um fluxo](../../connect/php/how-to-send-data-as-a-stream.md)|Descreve como transmitir dados para o servidor.|  
 |[Como executar transações](../../connect/php/how-to-perform-transactions.md)|Descreve como usar as funções do **sqlsrv** para executar transações.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Aplicativo de exemplo &#40;driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

@@ -24,7 +24,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0fd48f79a9c56f69d00eef7205e3904a1352f5e6
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Nenhuma outra operação pode ser chamada na interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) depois de chamar o método **BCPDone** . A única possibilidade é chamar o método [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o método [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+ Nenhuma outra operação pode ser chamada no [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) interface depois de chamar o **BCPDone** método. A única possibilidade é chamar o [ibcpsession:: BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) método para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o [IRowsetFastLoad:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -69,9 +69,9 @@ insert into fltest values (4, 4, 0xFAD)
   
  Você pode usar BCP para adicionar estes dados novamente à tabela com o comando a seguir:  
   
- bcp master..fltest em outfile.dat -n -T -S  
+ **BCP master... fltest em outfile.dat - n -T -S** *server*  
   
- É necessário especificar sqlncli11.lib ao compilar este exemplo.  
+ Você precisará especificar msoledbsql.lib ao compilar este exemplo.  
   
 ```  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
@@ -468,7 +468,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md)  
   

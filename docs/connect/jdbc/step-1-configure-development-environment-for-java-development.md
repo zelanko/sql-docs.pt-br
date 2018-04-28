@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Java'
+title: 'Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de Java | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 216f67c94a5f82b59707966b20d4bbaef24cbeb4
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-1-configure-development-environment-for-java-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Java
+# <a name="step-1-configure-development-environment-for-java-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de Java
   
 ## <a name="windows"></a>Windows  
   

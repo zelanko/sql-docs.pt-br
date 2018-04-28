@@ -24,7 +24,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 67759000537b9387df6c0c6dfe85123437a96896
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -43,10 +43,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- O provedor OLE DB do  Native Client processa qualquer uma das duas formas da instrução com êxito, quando é especificada como texto de um comando.  
+ O Driver OLE DB para SQL Server processa o formulário da instrução com êxito quando especificado como o texto de um comando.  
   
 ## <a name="stored-procedures"></a>Procedimentos armazenados  
- Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando um comando do provedor OLE DB do  Native Client, use a sequência de escape CALL do ODBC no texto do comando. Então, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client usa o mecanismo de chamada de procedimento remoto do  para otimizar o processamento do comando. Por exemplo, a seguinte instrução SQL do ODBC é o texto de comando preferido à forma do [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Ao executar uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procedimento armazenado usando um Driver OLE DB para o comando do SQL Server, use a sequência de escape CALL do ODBC no texto do comando. O Driver OLE DB para SQL Server, em seguida, usa o mecanismo de chamada de procedimento remoto de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento do comando. Por exemplo, a seguinte instrução SQL do ODBC é o texto de comando preferido à forma do [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
 -   ODBC SQL  
   
@@ -60,7 +60,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Comandos](../../oledb/ole-db-commands/commands.md)  
   
   

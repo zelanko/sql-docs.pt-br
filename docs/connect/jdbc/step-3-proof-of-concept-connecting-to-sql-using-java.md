@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Prova de conceito da conexão ao SQL usando Java'
+title: 'Etapa 3: Prova de conceito da conexão ao SQL usando o Java | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b4e5d6288a7ac269f60c4c8a0ca37bf52a932f10
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Etapa 3: Prova de conceito da conexão ao SQL usando Java
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o Java
   
 Este exemplo deve ser considerado uma prova de conceito apenas. O código de exemplo é simplificado para maior clareza e não representa necessariamente práticas recomendadas pela Microsoft.  
   
@@ -70,7 +70,7 @@ Use a classe de conexão para se conectar ao banco de dados SQL.
         }  
 ```  
   
-## <a name="step-2-execute-a-query"></a>Execute uma consulta.  
+## <a name="step-2-execute-a-query"></a>Etapa 2: Executar uma consulta  
 Neste exemplo, se conectar ao banco de dados do SQL Azure, executar uma instrução SELECT e retornar linhas selecionadas.   
   
 ```java  

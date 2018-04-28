@@ -1,23 +1,24 @@
 ---
-title: "Resiliência de Conexão ociosa"
+title: Resiliência de Conexão ociosa
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: 6c36086404c8767ea30c85b2ebd77340d11732ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a736fc5dafc3c58401c54ab51d1a11d1753f3479
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idle-connection-resiliency"></a>Resiliência de Conexão ociosa
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,14 +27,14 @@ ms.lasthandoff: 11/18/2017
 
 Resiliência de Conexão é implementada com duas conexão palavras-chave que podem ser adicionadas em cadeias de caracteres de conexão: **ConnectRetryCount** e **ConnectRetryInterval**.
 
-|Palavra-chave|Valores|Default|Description|
+|Palavra-chave|Valores|Padrão|Description|
 |-|-|-|-|
 |**ConnectRetryCount**| Número inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas de restabelecer uma conexão interrompida antes de desistir. Por padrão, um único tenta restabelecer uma conexão quando quebrado. Um valor de 0 significa que nenhum reconexão será tentada.|
 |**ConnectRetryInterval**| Número inteiro entre 1 e 60 (inclusivo)|1| O tempo, em segundos, entre as tentativas de restabelecer uma conexão. O aplicativo tentará reconectar-se imediatamente ao detectar uma conexão interrompida e, em seguida, aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Esta palavra-chave será ignorado se **ConnectRetryCount** é igual a 0.
 
 Se o produto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** é maior do que **LoginTimeout**, em seguida, o cliente deixará de tentar se conectar de uma vez  **LoginTimeout** for atingido; caso contrário, ele continuará a tentar se reconectar até **ConnectRetryCount** for atingido.
 
-#### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Remarks
 
 Resiliência de Conexão se aplica quando a conexão estiver ociosa. Falhas que ocorrem durante a execução de uma transação, por exemplo, não vai disparar tentativas de reconexão – eles falharão, pois caso contrário, deve ser esperado. As seguintes situações, conhecidas como estados de sessão não recuperável, não vai disparar tentativas de reconexão:
 

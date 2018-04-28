@@ -1,30 +1,33 @@
 ---
-title: "Método supportsCorrelatedSubqueries (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método supportsCorrelatedSubqueries (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.supportsCorrelatedSubqueries
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.supportsCorrelatedSubqueries
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85bb1bcc-31ae-4f6b-a103-699724bbb0aa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a47a0a5b1a01e03f67297db86b16057554ae3d8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4cbefef5688212e0b304ddb8e850b90dc43ffb9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportscorrelatedsubqueries-method-sqlserverdatabasemetadata"></a>Método supportsCorrelatedSubqueries (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public boolean supportsCorrelatedSubqueries()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método supportsCorelatedSubqueries é especificado pelo método supportsCorelatedSubqueries na interface DatabaseMetadata.  
   
 ## <a name="see-also"></a>Consulte também  

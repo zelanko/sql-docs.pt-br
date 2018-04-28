@@ -3,7 +3,7 @@ title: Usando o Driver do OLE DB para arquivos de biblioteca e cabeçalho do SQL
 description: Usando o Driver OLE DB para arquivos de biblioteca e cabeçalho do SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 932a5c8d272bf975e4931326b96bea495e927a08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usando o Driver do OLE DB para arquivos de biblioteca e cabeçalho do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   O Driver OLE DB para arquivos de biblioteca e cabeçalho do SQL Server são instalados quando o Driver OLE DB para a opção de SDK do SQL Server é selecionado durante o processo de instalação. Quando você for desenvolver um aplicativo, é importante copiar e instalar todos os arquivos necessários para o desenvolvimento no seu ambiente de desenvolvimento. Para obter mais informações sobre como instalar e redistribuir o Driver do OLE DB para SQL Server, consulte [instalar o OLE DB Driver para SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md).  
   
  O Driver OLE DB para arquivos de biblioteca e cabeçalho do SQL Server são instalados no seguinte local:  
   
- *%PROGRAM FILES%*\Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
+ *% ARQUIVOS de programas %* \Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
   
  O Driver OLE DB para o arquivo de cabeçalho do SQL Server (msoledbsql.h) pode ser usado para adicionar o Driver do OLE DB para a funcionalidade de acesso de dados do SQL Server para seus aplicativos personalizados. O Driver OLE DB para o arquivo de cabeçalho do SQL Server contém todas as definições, atributos, propriedades e interfaces necessárias para tirar proveito dos novos recursos introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

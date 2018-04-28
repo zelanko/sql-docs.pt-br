@@ -1,7 +1,7 @@
 ---
 title: Use sempre criptografado com os Drivers PHP para SQL Server | Microsoft Docs
 ms.date: 01/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.workload: Inactive
-ms.openlocfilehash: 588a0471866b1b33a3e485b321193edfd0c9187d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Use sempre criptografado com os Drivers PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -282,7 +282,7 @@ SQLSRV:
  -   Usando `sqlsrv_query` para o parâmetro de associação sem especificar o tipo de SQL
  -   Usando `sqlsrv_prepare` para parâmetros de associação em um lote de instruções SQL  
  
-PDO_SQLSRV only:
+PDO_SQLSRV:
  -   `PDO::SQLSRV_ATTR_DIRECT_QUERY` atributo de declaração especificado em uma consulta parametrizada
  -   `PDO::ATTR_EMULATE_PREPARE` atributo de declaração especificado em uma consulta parametrizada
  -   parâmetros de associação em um lote de instruções SQL

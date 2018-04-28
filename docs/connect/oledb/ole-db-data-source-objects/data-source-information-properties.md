@@ -1,6 +1,6 @@
 ---
 title: Propriedades de informações da fonte de dados | Microsoft Docs
-description: Propriedades de informações da fonte de dados
+description: Propriedades de informações de fonte de dados
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -25,14 +25,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec3bcee47208212345041513d9b572e461685a05
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-information-properties"></a>Propriedades de informações da fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERDATASOURCEINFO, o provedor OLE DB do  Native Client define as seguintes propriedades de informações da fonte de dados.  
+  No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERDATASOURCEINFO, o Driver OLE DB para SQL Server define as seguintes propriedades de informações de fonte de dados.  
   
 |ID da propriedade|Description|  
 |-----------------|-----------------|  
@@ -40,13 +40,13 @@ ms.lasthandoff: 04/16/2018
 |SSPROP_UNICODELCID|Tipo: VT_I4 Leitura/gravação: leitura<br /><br /> Descrição: ID da localidade Unicode.<br /><br /> Esta é a localidade usada para classificação de dados Unicode.|  
 |SSPROP_UNICODECOMPARISONSTYLE|Tipo: VT_I4 Leitura/gravação: leitura<br /><br /> Descrição: estilo de comparação Unicode.<br /><br /> As opções de classificação usadas para a classificação de dados Unicode.|  
   
- No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERSTREAM, o provedor OLE DB do  Native Client define a seguinte propriedade adicional.  
+ No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERSTREAM, o Driver OLE DB para SQL Server define as seguintes propriedades adicionais.  
   
 |ID da propriedade|Description|  
 |-----------------|-----------------|  
 |SSPROP_STREAM_XMLROOT|Tipo: VT_BSTR Leitura/gravação: leitura/gravação<br /><br /> Descrição: o resultado de uma consulta XML FOR pode não ser um documento bem formado. Quando essa propriedade for especificada, o resultado de um ' Selecionar... para XML' consulta é encapsulada na marca raiz fornecida por essa propriedade para retornar um documento XML bem formado. Se a consulta for executada no navegador, ela pode fazer o navegador exibir erros de analisador ao carregar o resultado. Para evitar o erro, o SQL ISAPI dá suporte à palavra-chave ROOT. Essa palavra-chave é mapeada para a propriedade SSPROP_STREAM_XMLROOT.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Consulte também  
+ [Objetos de fonte de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

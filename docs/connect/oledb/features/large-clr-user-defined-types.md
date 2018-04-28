@@ -21,7 +21,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 98efe44495c73aef6baf030eb2ea4b4b11ab4e7c
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="use-cases"></a>Casos de uso   
   
- Para o OLE DB, o suporte a UDTs grandes inclui a capacidade de transmitir valores UDT para e do servidor usando a associação .  
+ Para OLE DB, suporte a UDTs grandes inclui a capacidade de transmitir valores UDT para e do servidor usando a associação de ISequentialStream.  
   
  Os UDTs inferiores ou iguais a 8.000 bytes se comportarão como no SQL Server 2005. Para OLE DB, você ainda pode transmitir UDTs pequenos usando associação de ISequentialStream.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  Para aplicativos com código de acesso a dados existente, você pode explorar o comportamento de UDTs CLR no cliente recuperando UDTs através de APIs nativas e criando instâncias deles com C++ CLI interop em aplicativos de modo misto.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recursos do Driver do OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
   
   

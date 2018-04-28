@@ -3,7 +3,7 @@ title: Suporte a colunas esparsas no Driver do OLE DB para SQL Server | Microsof
 description: Suporte a colunas esparsas no Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Suporte a colunas esparsas no Driver do OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 04/06/2018
  No entanto, se **queryout** é usado para exportar e fazer referência a colunas esparsas que são membros da coluna esparsa definido por nome, você não pode executar uma importação direta para uma tabela de estrutura semelhante. Isso ocorre porque o BCP usa metadados consistentes com um **selecione \***  operação para a importação e não pode corresponder **column_set** colunas de membro com esses metadados. Para importar **column_set** colunas de membro individualmente, você deve definir uma exibição em uma tabela que faz referência a desejado **column_set** colunas e você deve executar a operação de importação usando o modo de exibição.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação no Driver do OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [Driver do OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

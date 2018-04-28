@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0548f10588754fcf5e9ffbc973118737e50869ec
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -42,11 +42,11 @@ sqlsrv_num_rows( resource $stmt )
 #### <a name="parameters"></a>Parâmetros  
 *$stmt*: o conjunto de resultados cujas linhas serão contadas.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 **false** se houve um erro ao calcular o número de linhas. Caso contrário, representa o número de linhas no conjunto de resultados.  
   
 ## <a name="remarks"></a>Remarks  
-**requer um cursor do lado do cliente, estático ou de conjunto de chaves, e retornará false** se você usar um cursor de avanço ou dinâmico. (O padrão é um cursor de avanço.) Para obter mais informações sobre os cursores, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [Tipos de cursor &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
+sqlsrv_num_rows requer um cliente, estático ou cursor de conjunto de chaves e retornará **false** se você usar um cursor de avanço ou dinâmico. (O padrão é um cursor de avanço.) Para obter mais informações sobre cursores, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [tipos de Cursor &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -99,6 +99,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

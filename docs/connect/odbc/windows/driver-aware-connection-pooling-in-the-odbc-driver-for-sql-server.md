@@ -1,27 +1,28 @@
 ---
-title: "Pooling de Conexão com reconhecimento de driver no Driver ODBC para SQL Server | Microsoft Docs"
-ms.custom: 
+title: Pooling de Conexão com reconhecimento de driver no Driver ODBC para SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67cb0f520c9e75606c7e1ffcae42d20d87a3d9fb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2567b047216edd151197446aaa79822ab19a93ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pooling de conexão com reconhecimento de driver no driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -93,7 +94,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
     |`SQL_COPT_SS_SERVER_SPN`|Sim|Sim|
     |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Sim|Sim|
     |`SSPROP_AUTH_REPL_SERVER_NAME`|Sim|Sim|
-    |`SQL_COPT_SS_TNIR`|Sim|Não|
+    |`SQL_COPT_SS_TNIR`|Sim|não|
  
 -   O driver pode redefinir e ajustar as palavras-chave e os atributos de conexão a seguir sem fazer uma chamada de rede extra. O driver redefine esses parâmetros para garantir que a conexão não contenha informações incorretas.  
   

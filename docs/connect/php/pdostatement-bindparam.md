@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,21 +37,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$parameter *: um identificador do parâmetro* misto. Para uma instrução que usa espaços reservados nomeados, um nome de parâmetro :name. Para uma instrução preparada usando a sintaxe de ponto de interrogação, esse será o índice de base 1 do parâmetro.  
+$*parâmetro*: um identificador do parâmetro (misto). Para uma instrução que usa espaços reservados nomeados, use um nome de parâmetro (: name). Para uma instrução preparada usando a sintaxe de ponto de interrogação, é o índice baseado em 1 do parâmetro.  
   
-&$variable *: o nome* misto da variável do PHP a ser associada ao parâmetro da instrução SQL.  
+&$*variável*: O nome (misto) da variável do PHP para associar ao parâmetro da instrução SQL.  
   
-$data*type*: uma constante inteira PDO::PARAM opcional. O padrão é PDO::PARAM_STR.  
+$*data_type*: uma constante PDO::PARAM_ * opcional (inteiro). O padrão é PDO:: param_str.  
   
-$length *: um comprimento opcional* inteiro do tipo de dados. Você pode especificar PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE para indicar o tamanho padrão ao usar PDO::PARAM_INT ou PDO::PARAM_BOOL em $*.  
+$*comprimento*: um comprimento opcional (inteiro) do tipo de dados. Você pode especificar PDO:: sqlsrv_param_out_default_size para indicar o tamanho padrão ao usar PDO:: param_int ou PDO:: param_bool em $*data_type*.  
   
 $*driver_options*: as opções específicas do driver (mistas) opcionais. Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
   
 ## <a name="remarks"></a>Remarks  
-Ao associar dados nulos a colunas do servidor do tipo varbinary, binary ou varbinary(max), você deve especificar a codificação binária (PDO::SQLSRV_ENCODING_BINARY) usando $*. Consulte [Constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) para obter mais informações sobre a codificação de constantes.  
+Ao associar dados nulos a colunas do servidor do tipo varbinary, binary ou varbinary (max) você deve especificar a codificação binária (PDO:: sqlsrv_encoding_binary) usando $*driver_options*. Para obter mais informações sobre codificação de constantes, consulte [constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
@@ -149,7 +149,7 @@ $stmt->execute();
 ```
 
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -3,7 +3,7 @@ title: Criar aplicativos com o Driver do OLE DB para SQL Server | Microsoft Docs
 description: Criando aplicativos com o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Criando aplicativos com o Driver do OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Ao desenvolver um aplicativo que usa o Driver OLE DB para a biblioteca do SQL Server, há alguns problemas que entram em cena. Os tópicos nesta seção abordam muitos desses problemas, inclusive a atualização do MDAC para o Driver do OLE DB para SQL Server, usando o Driver OLE DB para uma visão geral das várias cadeias de conexão que pode ser usado com o Driver do OLE DB para S e arquivos de biblioteca e cabeçalho do SQL Server QL Server.  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  Aborda como vários componentes de acesso a dados podem ser usados com diferentes versões do Driver do OLE DB para SQL Server.  
 
 ## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para programação do SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [Driver do OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Tópicos de instruções do OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

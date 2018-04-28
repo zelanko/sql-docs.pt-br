@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: Rollback | Microsoft Docs'
+title: PDO::rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c88567a6f22ac77d56a8a3d2da03f9074ddc44a7
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,7 +36,7 @@ Descarta os comandos de banco de dados emitidos depois de chamar [PDO::beginTran
 bool PDO::rollBack ();  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 true se a chamada do método for bem-sucedida; caso contrário, false.  
   
 ## <a name="remarks"></a>Remarks  
@@ -46,7 +46,7 @@ Consulte [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) para
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

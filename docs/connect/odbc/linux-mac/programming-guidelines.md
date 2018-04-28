@@ -1,32 +1,32 @@
 ---
-title: "Diretrizes de programação (Driver ODBC para SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Diretrizes de programação (Driver ODBC para SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: e30ed328931cc33b62dd9d65301dee8921e1cc3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Os recursos de programação do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em macOS e Linux são baseados em ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client é baseado em ODBC no Windows Data Access Components ([referência do programador de ODBC](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+Os recursos de programação do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em macOS e Linux são baseados em ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client é baseado em ODBC no Windows Data Access Components ([referência do programador de ODBC](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 Um aplicativo ODBC pode usar vários conjuntos de MARS (resultados ativos) e outros [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] recursos específicos, incluindo `/usr/local/include/msodbcsql.h` depois de incluir os cabeçalhos de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, e `sqlucode.h`). Em seguida, usar os mesmos nomes simbólicos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-itens específicos que você deseja usar em seus aplicativos de ODBC do Windows.
 
@@ -84,8 +84,8 @@ Para o ODBC Driver 13 e 13.1, os dados SQLCHAR devem ser UTF-8. Não há outras 
 |-|-|
 |UTF-8|Unicode|
 |CP437|Latino MS-DOS dos EUA|
-|CP850|MS-DOS Latin 1|
-|CP874|Latin/Thai|
+|CP850|MS-DOS Latino 1|
+|CP874|Latino/tailandês|
 |CP932|Japonês Shift JIS|
 |CP936|Chinês simplificado, GBK|
 |CP949|Coreano, EUC-KR|
@@ -119,7 +119,7 @@ Para evitar a perda de dados ao associar parâmetros de entrada, especifique um 
 
 Para obter mais informações sobre codificações e agrupamentos, consulte [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
 
-Há algumas diferenças de conversão de codificação entre o Windows e várias versões da biblioteca iconv no Linux e macOS. Dados de texto na página de código 1255 (hebraico) tem um ponto de código (0xCA) que se comporta de maneira diferente após a conversão para Unicode. No Windows, esse caractere converte para o ponto de código UTF-16 de 0x05BA. No macOS e Linux com libiconv versões anteriores ao 1.15, ele converte em 0x00CA. No Linux com iconv bibliotecas que não dão suporte a revisão de 2003 do Big5/CP950 (chamado `BIG5-2003`), caracteres adicionados com essa revisão não converterá corretamente.
+Há algumas diferenças de conversão de codificação entre o Windows e várias versões da biblioteca iconv no Linux e macOS. Dados de texto na página de código 1255 (hebraico) tem um ponto de código (0xCA) que se comporta de maneira diferente após a conversão para Unicode. No Windows, esse caractere converte para o ponto de código UTF-16 de 0x05BA. No macOS e Linux com libiconv versões anteriores ao 1.15, ele converte em 0x00CA. No Linux com iconv bibliotecas que não dão suporte a revisão de 2003 do Big5/CP950 (chamado `BIG5-2003`), caracteres adicionados com essa revisão não converterá corretamente. Na página de código 932 (japonês, Shift JIS), o resultado de decodificação não originalmente definido no padrão de codificação de caracteres também é diferente. Por exemplo, o byte 0x80 converte a U + 0080 no Windows, mas pode se tornar a U + 30FB em Linux e macOS, dependendo da versão iconv.
 
 Em ODBC Driver 13 e 13.1, quando caracteres multibyte UTF-8 ou UTF-16 substitutos são divididos em buffers SQLPutData, isso resulta em corrupção de dados. Use buffers para transmitir SQLPutData que não terminem em codificações parciais de caracteres. Essa limitação foi removida com 17 do Driver ODBC.
 

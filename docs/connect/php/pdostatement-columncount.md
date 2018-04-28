@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6bba828315fe5cdf50893e516165b72e3a637461
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,7 +36,7 @@ Retorna o número de colunas em um conjunto de resultados.
 int PDOStatement::columnCount ();  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Retorna o número de colunas em um conjunto de resultados. Retornará zero se o conjunto de resultados estiver vazio.  
   
 ## <a name="remarks"></a>Remarks  
@@ -64,7 +64,7 @@ print $stmt->columnCount();
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

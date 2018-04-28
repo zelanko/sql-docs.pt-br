@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: de023c9bdd452a4611d28493b37f2a2046d485fe
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,11 +36,11 @@ Fecha o cursor, permitindo que a instrução seja executada novamente.
 bool PDOStatement::closeCursor();  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 true se bem-sucedido; caso contrário, false.  
   
 ## <a name="remarks"></a>Remarks  
-closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, consulte [Como: desabilitar MARS ](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)Vários Conjuntos de Resultados Ativos.  
+closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, consulte [como: desabilitar vários Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Em vez de chamar closeCursor, você pode apenas definir o identificador de instrução como nulo.  
   
@@ -71,7 +71,7 @@ print_r($result);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

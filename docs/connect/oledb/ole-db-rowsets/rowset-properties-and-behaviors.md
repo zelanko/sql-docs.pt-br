@@ -3,7 +3,7 @@ title: Propriedades do conjunto de linhas e os comportamentos | Microsoft Docs
 description: Propriedades do conjunto de linhas e comportamentos do OLE DB Driver para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6724a1f7123be2040fd87d4a14ca4b45b7eb99ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 09b5ad3e392be5ae28511a94068d030eb6c50aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/06/2018
 |DBPROP_MAYWRITECOLUMN|Esta propriedade de conjunto de linhas não é implementada pelo Driver OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_MEMORYUSAGE|Esta propriedade de conjunto de linhas não é implementada pelo Driver OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Esta propriedade de conjunto de linhas não é implementada pelo Driver OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
-|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O Driver OLE DB para SQL Server dá suporte a todas as fases de notificação.|  
+|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O Driver OLE DB para SQL Server dá suporte a todas as fases de notificação.|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|Leitura/gravação: somente leitura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrição: O Driver OLE DB para fases de notificação do SQL Server é cancelável antes de tentar executar a modificação do conjunto de linhas indicada. O Driver OLE DB para SQL Server não oferece suporte ao cancelamento de fase após a conclusão da tentativa.|  
 |DBPROP_ORDEREDBOOKMARKS|Esta propriedade de conjunto de linhas não é implementada pelo Driver OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Propriedades de visibilidade de alteração de configuração faz com que o Driver OLE DB para SQL Server para usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores para dar suporte ao conjunto de linhas. Para obter mais informações, consulte [conjuntos de linhas e cursores do SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  

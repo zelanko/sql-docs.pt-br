@@ -1,5 +1,5 @@
 ---
-title: Como desabilitar vários conjuntos de resultados ativos (MARS)
+title: 'Como: desabilitar vários conjuntos de resultados ativos (MARS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8fd8fefc30efe97c097ebb9a6f880fe326f873c8
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -67,7 +67,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir mostra como desabilitar o suporte de MARS usando o driver PDO_SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+O exemplo a seguir mostra como desabilitar o suporte de MARS usando o driver PDO_SQLSRV do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  
 <?php  
@@ -88,6 +88,6 @@ $conn = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)  
   

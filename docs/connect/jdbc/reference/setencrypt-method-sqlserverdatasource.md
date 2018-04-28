@@ -1,30 +1,33 @@
 ---
-title: "Método setEncrypt (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: Método setEncrypt (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: setEncrypt Method (SQLServerDataSource)
-apilocation: setEncrypt Method (SQLServerDataSource)
+apiname:
+- setEncrypt Method (SQLServerDataSource)
+apilocation:
+- setEncrypt Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e90e49bff2956be8aa6950ec9612ea534921aac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2277daf4b578c4650c75e55b2a6c63ee3e5d938a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Método setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +42,11 @@ public void setEncypt(boolean encrypt)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *criptografar*  
+ *Criptografar*  
   
  **True** se a criptografia Secure Sockets Layer (SSL) estiver habilitada entre o cliente e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Caso contrário, **false**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se a propriedade de criptografia é definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] garante que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usa criptografia SSL para todos os dados enviados entre cliente e servidor se o servidor tem um certificado instalado. O valor padrão é **false**.  
   
  O driver JDBC detecta que a Máquina Virtual Java (JVM) está em execução ao tentar estabelecer um handshake SSL.  

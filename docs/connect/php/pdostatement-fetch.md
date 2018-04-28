@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0ca4ca734983e1611453ed1f0c5468f5c0cb2576
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,17 +37,17 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$fetch*style*: um símbolo inteiro opcional especificando o formato dos dados da linha. Consulte a seção Comentários para obter a lista de valores possíveis para $*fetch*style. O padrão é PDO::FETCH_BOTH.$ $fetch*style* no método de busca substituirá o $*fetch*style especificado no método PDO::query.  
+$*fetch_style*: um símbolo (inteiro) opcional especificando o formato dos dados da linha. Consulte a seção de comentários para a lista de valores possíveis para $*fetch_style*. O padrão é PDO::FETCH_BOTH. $*fetch_style* na busca método substituirá o $*fetch_style* especificada no método PDO:: Query.  
   
-$cursor*orientation*: um símbolo `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`inteiro opcional que indica a linha a ser recuperada quando a instrução prepare especifica . Consulte a seção Comentários para obter a lista de valores possíveis para $*cursor*orientation. Consulte [PDO::prepare](../../connect/php/pdo-prepare.md) para obter um exemplo usando um cursor rolável.  
+$*cursor_orientation*: um símbolo (inteiro) opcional que indica a linha a ser recuperada quando a instrução prepare especifica `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Consulte a seção de comentários para a lista de valores possíveis para $*cursor_orientation*. Consulte [PDO::prepare](../../connect/php/pdo-prepare.md) para obter um exemplo usando um cursor rolável.  
   
-$$: um símbolo (inteiro) opcional que especifica a linha a ser buscada quando $* é PDO::FETCH_ORI_ABS ou PDO::FETCH_ORI_REL e PDO::ATTR_CURSOR é PDO::CURSOR_SCROLL.  
+$*cursor_offset*: um símbolo opcional (inteiro) especificando a linha a ser buscada $*cursor_orientation* é fetch_ori_abs ou fetch_ori_rel e PDO:: attr_cursor é PDO:: cursor_scroll.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Um valor misto que retorna uma linha ou false.  
   
 ## <a name="remarks"></a>Remarks  
-O cursor é avançado automaticamente quando a busca é chamada. A tabela a seguir contém a lista de possíveis valores de $*fetch*style.  
+O cursor é avançado automaticamente quando a busca é chamada. A tabela a seguir contém a lista de possíveis $*fetch_style* valores.  
   
 |$*fetch_style*|Description|  
 |-------------------|---------------|  
@@ -62,7 +62,7 @@ O cursor é avançado automaticamente quando a busca é chamada. A tabela a segu
   
 Se o cursor estiver no fim do conjunto de resultados (a última linha foi recuperada e o cursor avançou além do limite do conjunto de resultados) e se o cursor for somente de avanço (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY), as chamadas de busca subsequentes falharão.  
   
-Se o cursor for rolável (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), a busca moverá o cursor dentro do limite do conjunto de resultados. A tabela a seguir contém a lista de possíveis valores de $*cursor*orientation.  
+Se o cursor for rolável (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), a busca moverá o cursor dentro do limite do conjunto de resultados. A tabela a seguir contém a lista de possíveis $*cursor_orientation* valores.  
   
 |$*cursor_orientation*|Description|  
 |--------------------------|---------------|  
@@ -70,10 +70,10 @@ Se o cursor for rolável (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), a busca mover�
 |PDO::FETCH_ORI_PRIOR|Recupera a linha anterior.|  
 |PDO::FETCH_ORI_FIRST|Recupera a primeira linha.|  
 |PDO::FETCH_ORI_LAST|Recupera a última linha.|  
-|PDO::FETCH_ORI_ABS, *|Recupera a linha solicitada em $*cursor*offset pelo número da linha.|  
-|PDO::FETCH_ORI_REL, *|Recupera a linha solicitada em $*cursor*offset por posição relativa com base na posição atual.|  
+|PDO::FETCH_ORI_ABS, *num*|Recupera a linha solicitada em $*cursor_offset* pelo número da linha.|  
+|PDO::FETCH_ORI_REL, *num*|Recupera a linha solicitada em $*cursor_offset* por posição relativa da posição atual.|  
   
-Se o valor especificado para $*cursor*offset *ou $* cursororientation resultar em uma posição fora do limite do conjunto de resultados, haverá falha na busca.  
+Se o valor especificado para $*cursor_offset* ou $*cursor_orientation* resulta em uma posição fora do limite do conjunto de resultados, haverá falha na busca.  
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -147,7 +147,7 @@ O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../.
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,30 +1,33 @@
 ---
-title: "Método (SQLServerResultSet) getConcurrency | Microsoft Docs"
-ms.custom: 
+title: Método (SQLServerResultSet) getConcurrency | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getConcurrency
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getConcurrency
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec5975c62b4c6161a44ef171c1406ac09df3a439
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5ec09e1ec8c8611c46280a39361b75e652b748d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency método (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +51,7 @@ public int getConcurrency()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getConcurrency é especificado pelo método getConcurrency na interface Java.SQL. resultset.  
   
  A simultaneidade usada é determinada pelo [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto que criou o conjunto de resultados.  

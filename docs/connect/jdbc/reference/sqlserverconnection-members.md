@@ -1,28 +1,28 @@
 ---
 title: Membros de SQLServerConnection | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 181df7c774bdf48b87bfb139d4fcaa272ba25a87
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 15e9af6857ca3a7f4c6695835d19e4900dfbf319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverconnection-members"></a>Membros de SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/02/2018
 |[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|Cria um **Java.SQL** objeto sem dados.|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|Recupera o modo de confirmação automática atual para este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|Recupera o nome do catálogo atual para este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
-|[Método getClientConnectionID &#40; SQLServerConnection &#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Obtém a ID de conexão da última tentativa de conexão, seja a tentativa bem-sucedida ou não.|  
+|[Método getClientConnectionID &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Obtém a ID de conexão da última tentativa de conexão, seja a tentativa bem-sucedida ou não.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|Recupera informações relativas às propriedades de informações de cliente que têm o suporte do driver JDBC.|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Retorna o valor de **disableStatementPooling** propriedade de conexão. Essa configuração controla se o pooling de instrução está habilitada ou não para essa conexão.|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Retorna o número de pendente no momento preparada instrução unprepare ações.|
@@ -80,7 +80,7 @@ ms.lasthandoff: 03/02/2018
 |[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)|Cria um [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) objeto para chamar procedimentos armazenado do banco de dados.|  
 |[prepareStatement](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)|Cria um [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) parametrizadas de objeto para enviar instruções SQL para o banco de dados.|  
 |[releaseSavepoint](../../../connect/jdbc/reference/releasesavepoint-method-sqlserverconnection.md)|Remove o [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) objeto da transação atual.|  
-|[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)|Desfaz todas as alterações feitas na transação atual e libera todos os bloqueios de banco de dados atualmente mantidos por este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
+|[Reversão](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)|Desfaz todas as alterações feitas na transação atual e libera todos os bloqueios de banco de dados atualmente mantidos por este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
 |[setAutoCommit](../../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)|Define o modo de confirmação automática para este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto para o estado especificado.|  
 |[setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md)|Define o nome de catálogo especificado para selecionar um subespaço deste [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) banco de dados do objeto no qual trabalhar.|  
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|Define o valor das propriedades de informações de cliente.|  

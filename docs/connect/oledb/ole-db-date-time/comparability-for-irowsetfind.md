@@ -21,7 +21,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 728604ccae5516f966740664cfb5cfcb5b401716
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
  Se for tentada qualquer outra comparação, DB_E_BADCOMPAREOP será retornado. Isso é consistente com a especificação OLE DB.  
   
-## <a name="see-also"></a>Consulte Também  
- [Aprimoramentos de data e hora](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Consulte também  
+ [Data e hora melhorias & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -20,23 +20,23 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f0269dc584bbc2b6b95deee6de85a3c52d7a731f
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Caixa de diálogo Logon do SQL Server (ODBC)
 
-Quando você chama uma conexão ODBC sem especificar informações suficientes para que o driver se conecte a um SQL Server, o driver ODBC do Microsoft  **Native Client exibe a caixa de diálogo Logon do SQL Server**.
+Quando você chama uma conexão ODBC sem especificar informações suficientes para o driver para se conectar a um SQL Server, o ODBC driver exibe o **logon do SQL Server** caixa de diálogo.
 
 ## <a name="options"></a>Opções
 
 ### <a name="server"></a>Servidor
 
-O nome de uma instância do SQL Server em sua rede. Selecione um nome de servidor\instância na lista ou digite o nome do servidor\instância na caixa Servidor **. Se desejar, crie um alias de servidor no computador cliente usando o SQL Server Configuration Manager **e digite esse nome na caixa Servidor**.
+O nome de uma instância do SQL Server em sua rede. Selecione um nome de servidor \ instância na lista ou digite o nome de servidor \ instância no **Server** caixa. Opcionalmente, você pode criar um alias de servidor no computador cliente usando **SQL Server Configuration Manager**e digite esse nome de **Server** caixa.
 
-Digite "(local)" quando estiver usando o mesmo computador como . Assim, você pode se conectar a uma instância local do , até mesmo ao executar uma versão não em rede do .
+Você pode digitar "(local)" quando você estiver usando o mesmo computador que o SQL Server. Em seguida, você pode se conectar a uma instância local do SQL Server, mesmo se estiver executando uma versão fora da rede do SQL Server.
 
-Para obter mais informações sobre nomes de servidor para diferentes tipos de rede, consulte a documentação de instalação do  nos Manuais Online do .
+Para obter mais informações sobre nomes de servidor para diferentes tipos de redes, consulte a documentação de instalação do SQL Server nos Manuais Online do SQL Server.
 
 ### <a name="authentication-mode"></a>Modo de Autenticação
 
@@ -45,7 +45,7 @@ Seleciona o modo de autenticação de um dos seguintes:
 - **Integrada do Windows** autenticação usando a conta do usuário conectado no momento
 - **Senha do Active Directory** com ID de logon e senha
 - **Integrado ao Active Directory** autenticação usando a conta do usuário conectado no momento
-- Autenticação Interativa do Active Directory (visualização)
+- **Active Directory interativo** autenticação com a ID de logon
 
 Consulte [dados fonte Assistente tela 2](../../../connect/odbc/windows/dsn-wizard-2.md) para obter mais informações sobre os modos de autenticação.
 
@@ -63,11 +63,11 @@ Especifica a senha para a ID de logon do SQL Server ou do Active Directory do Az
 
 ### <a name="options"></a>Opções
 
-Exibe ou oculta o grupo Opções **. O botão Opções **será habilitado se Servidor** tiver um valor.
+Exibe ou oculta o **opções** grupo. O **opções** botão é habilitado se **Server** tem um valor.
 
 ### <a name="change-password"></a>Alterar Senha
 
-Quando essa caixa está selecionada, exibe as caixas Nova Senha **e Confirmar Nova Senha**.
+Quando essa caixa é selecionada, exibe o **nova senha** e **Confirmar nova senha** caixas.
 
 ### <a name="new-password"></a>Nova Senha
 
@@ -89,26 +89,26 @@ Especifica o nome do parceiro de failover do banco de dados a ser espelhado.
 
 Se desejar, especifique um SPN para o servidor espelho. O SPN do servidor espelho é usado para autenticação mútua entre cliente e servidor.
 
-### <a name="language"></a>Linguagem
+### <a name="language"></a>Idioma
 
-Especifica o idioma nacional a ser usado para mensagens de sistema do . O computador que executa o  deve ter o idioma instalado. Essa configuração substitui o idioma padrão especificado para o logon no servidor. Se nenhum idioma for especificado, a conexão usará o idioma padrão especificado para o logon no servidor.
+Especifica o idioma nacional a ser usado para mensagens de sistema do SQL Server. O computador executando o SQL Server deve ter o idioma instalado. Essa configuração substitui o idioma padrão especificado para o logon no servidor. Se nenhum idioma for especificado, a conexão usará o idioma padrão especificado para o logon no servidor.
 
 ### <a name="application-name"></a>Nome do Aplicativo
 
-(Opcional) Especifica o nome do aplicativo a ser armazenado na coluna program_name **na linha dessa conexão em sys.sysprocesses**.
+(Opcional) Especifica o nome do aplicativo a ser armazenado na **program_name** coluna na linha para essa conexão em **sys. sysprocesses**.
 
 ### <a name="workstation-id"></a>ID da Estação de Trabalho
 
-(Opcional) Especifica a ID da estação de trabalho a ser armazenada na coluna hostname **na linha dessa conexão em sys.sysprocesses**.
+(Opcional) Especifica a ID de estação de trabalho a ser armazenado na **hostname** coluna na linha para essa conexão em **sys. sysprocesses**.
 
 ### <a name="use-strong-encryption-for-data"></a>Usar criptografia forte para dados
 
 Quando selecionada, os dados que são passados por meio de conexão serão criptografados. Os logons são criptografados por padrão, até mesmo quando a caixa de seleção está desmarcada.
 
-### <a name="trust-server-certificate"></a>Confiar em Certificado do Servidor
+### <a name="trust-server-certificate"></a>Certificado do servidor confiável
 
 Essa opção é aplicável somente quando **usar criptografia forte para dados** está habilitado. Quando selecionada, o certificado do servidor não será validado para que o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Microsoft ODBC Driver for SQL Server no Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

@@ -1,34 +1,35 @@
 ---
 title: Usando chaves geradas automaticamente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0b4689b22287f2c6bf96d89f5ff0540d513d4de
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b77a2d4dc10c6359fc6d5b27dea1d7c90247c5e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-auto-generated-keys"></a>Usando chaves geradas automaticamente
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte a APIs opcionais do JDBC 3.0 para recuperar automaticamente gerado identificadores de linha. O principal valor deste recurso é fornecer um modo de disponibilizar valores de IDENTITY para um aplicativo que esteja atualizando uma tabela de banco de dados sem precisar de uma consulta e de uma segunda viagem de ida e volta ao servidor.  
   
- Porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] não não suporte para pseudo colunas para identificadores, as atualizações que precisam usar o recurso de chave geradas automaticamente devem operar em uma tabela que contém uma coluna de identidade. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]permite que somente uma única coluna de identidade por tabela. O conjunto de resultados retornado por [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) método o [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) classe terá somente uma coluna, com o nome de coluna retornado de GENERATED_KEYS. Se forem solicitadas chaves geradas em uma tabela que não tenha uma coluna de IDENTITY, o driver JDBC retornará um conjunto de resultados nulo.  
+ Porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] não não suporte para pseudo colunas para identificadores, as atualizações que precisam usar o recurso de chave geradas automaticamente devem operar em uma tabela que contém uma coluna de identidade. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite que somente uma única coluna de identidade por tabela. O conjunto de resultados retornado por [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) método o [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) classe terá somente uma coluna, com o nome de coluna retornado de GENERATED_KEYS. Se forem solicitadas chaves geradas em uma tabela que não tenha uma coluna de IDENTITY, o driver JDBC retornará um conjunto de resultados nulo.  
   
  Por exemplo, crie a seguinte tabela no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo:  
   

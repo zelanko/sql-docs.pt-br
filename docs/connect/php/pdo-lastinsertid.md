@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e48e995b973851db469b267bdbe7b250b60ec187
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,9 +37,9 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*name*: uma cadeia de caracteres opcional que permite especificar a tabela. 
+$*nome*: uma cadeia de caracteres opcional que permite que você especifique um nome de sequência. 
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Se nenhum nome de sequência for fornecido, uma cadeia de caracteres do identificador para a linha adicionada mais recentemente.
 Se um nome de sequência for fornecido, uma cadeia de caracteres do identificador para a sequência adicionada mais recentemente.
 Se a chamada de método falhar, cadeia de caracteres vazia é retornada.
@@ -146,7 +146,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

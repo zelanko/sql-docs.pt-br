@@ -1,30 +1,33 @@
 ---
-title: "Método updateTimestamp (int, Java.SQL. timestamp) | Microsoft Docs"
-ms.custom: 
+title: Método updateTimestamp (int, Java.SQL. timestamp) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateTimestamp (int, java.sql.Timestamp)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateTimestamp (int, java.sql.Timestamp)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: db83d9d7-137b-4a28-a2ca-d4782e0a256e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caad0346179f4af9548f840c0d0745e4df8b19d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d6d84348ee8e89165bd62b223a3b874bb0f0f6e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatetimestamp-method-int-javasqltimestamp"></a>Método updateTimestamp (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +43,7 @@ public void updateTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *índice*  
+ *index*  
   
  Um **int** que indica o índice da coluna.  
   
@@ -51,11 +54,11 @@ public void updateTimestamp(int index,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método updateTimestamp é especificado pelo método updateTimestamp na interface Java.SQL. resultset.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método updateTimestamp &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   
+ [Método updateTimestamp &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

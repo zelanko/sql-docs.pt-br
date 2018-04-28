@@ -1,32 +1,32 @@
 ---
 title: Conectando ao SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source names
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: aff97d687a4519d2451895772ba33f2a2ec3c4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server"></a>Conectar-se ao SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ Como alternativa, você pode adicionar as informações de DSN para um arquivo d
  - **odbcinst -i -s -f** *template_file*  
  
 Você pode verificar se o driver está funcionando usando `isql` testar a conexão, ou você pode usar este comando:
- - **master.INFORMATION_SCHEMA.TABLES BCP out OutFile.dat -S <server> - U <name> - P<password>**  
+ - **master.INFORMATION_SCHEMA.TABLES BCP out OutFile.dat -S <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Usando o protocolo SSL (Secure Sockets Layer)  
 Você pode usar o protocolo (SSL) para criptografar conexões para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. SSL protege [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] nomes de usuário e senhas pela rede. O SSL também verifica a identidade do servidor para proteger contra ataques “man-in-the-middle” (MITM).  
@@ -81,7 +81,7 @@ Independentemente das configurações para **Encrypt** e **TrustServerCertificat
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|  
-|**Encrypt=yes**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em uma entidade CN (nome comum) ou assunto SAN (nome alternativo) em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL deve corresponder exatamente, o servidor nome (ou endereço IP) especificado na cadeia de conexão.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
+|**Criptografar = Sim**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em uma entidade CN (nome comum) ou assunto SAN (nome alternativo) em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL deve corresponder exatamente, o servidor nome (ou endereço IP) especificado na cadeia de conexão.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
 
 Por padrão, conexões criptografadas sempre verificam o certificado do servidor. No entanto, se você se conectar a um servidor que tenha um certificado autoassinado, adicione também a `TrustServerCertificate` opção para ignorar a verificação do certificado com a lista de autoridades de certificação confiáveis:  
 
@@ -95,9 +95,9 @@ O SSL usa a biblioteca OpenSSL. A tabela a seguir mostra as versões mínimas co
 |------------|---------------------------|--------------------------------------------|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/OpenSSL/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/OpenSSL/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/OpenSSL/certs|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|

@@ -1,6 +1,6 @@
 ---
 title: Autenticação integrada do Kerberos (OLE DB) | Microsoft Docs
-description: Autenticação integrada do Kerberos (OLE DB)
+description: Autenticação integrada do kerberos (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -19,7 +19,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c49778d7606807b0c9a89468ecaae2c1ea19e8e3
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -28,14 +28,14 @@ ms.lasthandoff: 04/16/2018
 
   Este exemplo mostra como obter autenticação mútua do Kerberos usando o OLE DB em Driver OLE DB para SQL Server. Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou posterior.  
   
- Para obter mais informações sobre SPNs e autenticação Kerberos, consulte Suporte a SPN (Service Principal Name) em conexões de clientes[ em ](../../oledb/features/service-principal-name-spn-support-in-client-connections.md) Manuais online.  
+ Para obter mais informações sobre autenticação SPNs e Kerberos, consulte [Service Principal Name &#40;SPN&#41; suporte em conexões de cliente](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Exemplo  
  Você deve especificar um servidor. No arquivo .cpp, altere "MyServer" para um nome de máquina que tenha uma instância do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior).  
   
  Você também terá que especificar um SPN fornecido por cliente. No arquivo .cpp, altere "CPSPN" para um SPN fornecido por cliente.  
   
- Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h. Compile com ole32.lib oleaut32.lib.  
+ Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h. Compile com ole32.lib oleaut32.lib.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

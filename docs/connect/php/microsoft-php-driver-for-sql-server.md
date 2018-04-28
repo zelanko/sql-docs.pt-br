@@ -19,7 +19,7 @@ manager: craigg
 ms.workload: Active
 ms.openlocfilehash: f66227c67a4cd84fbd1fdaafbbdcf457df7b3b2e
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -42,13 +42,13 @@ Os Drivers da Microsoft para PHP para SQL Server habilitar a integração com o 
 * [Considerações sobre segurança](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>Comunidade  
-* [Matriz de suporte para os drivers da Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
+* [Recursos de suporte para os Drivers da Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Download  
 * ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver do PHP para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   
 ## <a name="samples"></a>Exemplos  
-* [Matriz de suporte para os drivers da Microsoft para PHP para SQL Server](code-samples-for-php-sql-driver.md)
+* [Exemplos de código para os Drivers da Microsoft para PHP para SQL Server](code-samples-for-php-sql-driver.md)
 * [Guia de Introdução do PHP no Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Introdução aos PHP macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Guia de Introdução do PHP no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

@@ -1,27 +1,28 @@
 ---
 title: Classe SQLServerCallableStatement | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fb8757c3bef90d69d8ea1ea9b42720d64eefa7a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a0ec9d54cb015f5e5673a01969c5e96f8344dd2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlservercallablestatement-class"></a>Classe SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/18/2017
 public final class SQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  SQLServerCallableStatement permite que você especifique o nome do procedimento armazenado para chamar juntamente com os parâmetros de entrada e saídos. SQLServerCallableStatement também fornece a capacidade de recuperar o valor de status de retorno com o `? = call( ?, ..)` sintaxe.  
   
  Esta classe dá suporte ao desencapsulamento para a classe SQLServerCallableStatement, interface de ISQLServerCallableStatement, interface CallableStatement, as classes e interfaces suportadas por SQLServerPreparedStatement para desencapsulamento. Para obter mais informações, consulte [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  

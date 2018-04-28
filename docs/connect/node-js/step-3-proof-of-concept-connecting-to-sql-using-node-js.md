@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Prova de conceito da conexão ao SQL usando o Node.js'
+title: 'Etapa 3: Prova de conceito da conexão ao SQL usando o Node. js | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o Node. js
 
 ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver SQL do Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -52,7 +52,7 @@ O **nova Conexão** função é usada para se conectar ao banco de dados SQL.
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Execute uma consulta.  
+## <a name="step-2--execute-a-query"></a>Etapa 2: Executar uma consulta  
   
   
 Todas as instruções SQL são executadas usando o **Request() novo** função. Se a instrução retorna linhas, como uma instrução select, você pode recuperá-los usando o **request.on()** função. Se não houver nenhuma linha, a função request.on() retorna listas vazias.  

@@ -22,14 +22,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0f8a7d4619cc6036490e9e9d4147641f3ce935c2
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas do esquema – Conjunto de linhas LINKEDSERVERS
+# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas de esquema - conjunto de linhas LINKEDSERVERS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O conjunto de linhas **LINKEDSERVERS** enumera fontes de dados da organização que podem participar de consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  O **LINKEDSERVERS** linhas enumera fontes de dados da organização que podem participar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuídas.  
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/16/2018
   
  O conjunto de linhas é classificado em SRV_NAME, havendo suporte a uma única restrição em SRV_NAME.  
   
-## <a name="see-also"></a>Consulte Também  
- [Suporte a conjunto de linhas de esquema](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>Consulte também  
+ [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

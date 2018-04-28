@@ -1,27 +1,28 @@
 ---
 title: 'Etapa 1: Configurar o ambiente de desenvolvimento do Python pymssql | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 73ebcc99421ef0afcc15d13241c6fb6ffffd10c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para pymssql desenvolvimento do Python
 Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolver um aplicativo usando o Driver do Python para o SQL Server.    
@@ -31,8 +32,8 @@ Observe que os Drivers de SQL do Python usa o protocolo TDS, que é habilitado p
 ## <a name="windows"></a>Windows  
   
 1. **Instalar o tempo de execução do Python e pip Gerenciador de pacotes**  
-a. Vá para [python.org](https://www.python.org/downloads/)  
-b. Clique no link apropriado Windows instalador msi.   
+A. Vá para [python.org](https://www.python.org/downloads/)  
+B. Clique no link apropriado Windows instalador msi.   
 c. Executar uma vez baixado o msi para instalar o tempo de execução do Python  
   
 2. **Baixar o módulo pymssql** de [aqui](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -68,8 +69,8 @@ c. Executar uma vez baixado o msi para instalar o tempo de execução do Python
 ## <a name="mac"></a>Mac  
   
 1. **Instalar o tempo de execução do Python e pip Gerenciador de pacotes**  
-a. Vá para [python.org](https://www.python.org/downloads/)  
-b. Clique no link apropriado Mac instalador pkg.   
+A. Vá para [python.org](https://www.python.org/downloads/)  
+B. Clique no link apropriado Mac instalador pkg.   
 c. Executar uma vez baixado o pacote para instalar o tempo de execução do Python  
   
 2.  **Abra terminal**  

@@ -1,27 +1,28 @@
 ---
 title: Recursos do Microsoft ODBC Driver for SQL Server no Windows | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 204b8ba3c81bae77c6a663e93f2b541c8aca0727
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3ed744446edb7141a8a4b3b970ad7ec866dea794
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Recursos do Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ A opção – l Especifica o número de segundos antes que um `bcp.exe` login [!
 O Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] dá suporte a [Pooling de Conexão com reconhecimento de Driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obter mais informações, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)  
-O Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] dá suporte a [execução assíncrona (método de notificação)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para obter um exemplo de uso, consulte [execução assíncrona &#40; Método de notificação &#41; Exemplo](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+O Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] dá suporte a [execução assíncrona (método de notificação)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para obter um exemplo de uso, consulte [execução assíncrona &#40;método de notificação&#41; exemplo](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Resiliência da conexão
 Para garantir que os aplicativos permaneçam conectados a um Banco de Dados SQL do Microsoft Azure, o driver ODBC no Windows pode restaurar conexões ociosas. Para obter mais informações, consulte [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
@@ -58,7 +59,7 @@ Para garantir que os aplicativos permaneçam conectados a um Banco de Dados SQL 
 
 Em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client, o `-y0` opção `sqlcmd.exe` causou a saída seja truncada em 1 MB se a largura da exibição for 0.
   
-A partir do ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], não há nenhum limite na quantidade de dados que podem ser recuperados em uma única coluna quando `–y0` for especificado. `sqlcmd.exe`Agora fluxos colunas tão grandes quanto 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] máximo do tipo de dados).  
+A partir do ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], não há nenhum limite na quantidade de dados que podem ser recuperados em uma única coluna quando `–y0` for especificado. `sqlcmd.exe` Agora fluxos colunas tão grandes quanto 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] máximo do tipo de dados).  
   
 Outra diferença é que especificar ambos `-h` e `-y0` agora produz um erro relatando que as opções são incompatíveis. `-h`, que especifica o número de linhas a imprimir entre cabeçalhos de coluna e nunca foi compatível com `-y0`, foi ignorado, embora nenhum cabeçalho tenha sido impresso.
   

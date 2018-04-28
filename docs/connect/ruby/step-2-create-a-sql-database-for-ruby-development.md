@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Criar um banco de dados SQL para o desenvolvimento Ruby'
+title: 'Etapa 2: Criar um banco de dados SQL para o desenvolvimento Ruby | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9e001119b50d9fc3968b34e99867091c290a7cad
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---

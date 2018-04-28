@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ee00cfa1322befabd0b21af718516e05290b0405
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="python-sql-driver---pyodbc"></a>Driver SQL Python – pyodbc
+# <a name="python-sql-driver---pyodbc"></a>Driver do SQL do Python - pyodbc
 
 ![Um círculo seta download](../../../ssdt/media/download.png)[para instalar o driver do SQL para Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 

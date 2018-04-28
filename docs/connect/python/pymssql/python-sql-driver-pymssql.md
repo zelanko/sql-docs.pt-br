@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 75afb70108e7f409c5a5088941d368f2a674a043
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="python-sql-driver---pymssql"></a>Driver SQL Python – pymssql
+# <a name="python-sql-driver---pymssql"></a>Driver do SQL do Python - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 ## <a name="getting-started"></a>Introdução

@@ -1,28 +1,28 @@
-﻿---
-title: "Compreendendo transações XA | Microsoft Docs"
-ms.custom: 
+---
+title: Compreendendo transações XA | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: 
+caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1388ca846b426e4b544f991855942abab16e3507
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-xa-transactions"></a>Compreendendo transações XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/18/2017
 > [!WARNING]  
 >  O Microsoft JDBC Driver 4.2 (e posterior) para SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Consulte [Definindo as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) mais adiante neste tópico para obter mais detalhes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As classes para a implementação das transações distribuídas são as seguintes:  
   
 |Classe|Implements|Description|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Diretrizes e limitações ao usar transações XA  
  As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas:  
   
--   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra. 
+-   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
   
      O hotfix fornecido em [MSDTC e transações firmemente acopladas](http://support.microsoft.com/kb/938653) habilita o suporte a ramificações XA firmemente acopladas em que várias ramificações XA com a mesma transação global ID (GTRID) são mapeadas para uma única ID de transação de MS DTC. Esse suporte permite que várias ramificações XA firmemente acopladas vejam as alterações uma da outra no Gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/18/2017
   
 4.  Clique o **segurança** guia o **propriedades de DTC Local** caixa de diálogo.  
   
-5. Selecione a caixa de seleção **Habilitar Transações XA** e, em seguida, clique em **OK** para reinicializar o serviço MS DTC.   
+5.  Selecione a caixa de seleção **Habilitar Transações XA** e, em seguida, clique em **OK** para reinicializar o serviço MS DTC. Isso causará a reinicialização do serviço MS DTC.  
   
 6.  Clique em **OK** novamente para fechar a caixa de diálogo **Propriedades** e, em seguida, feche **Serviços de Componentes**.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  Defina a funcionalidade de registro em log conforme mostrado no exemplo de código na próxima seção. Procure a frase "Server XA DLL version:..." no arquivo de log de saída.  
   
-###  <a name="BKMK_ServerSide"></a>Configurar as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas  
+###  <a name="BKMK_ServerSide"></a> Configurar as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas  
   
 > [!WARNING]  
 >  Essa opção no lado do servidor é nova com o Microsoft JDBC Driver 4.2 (e superior) para o SQL Server. Para obter o comportamento atualizado, verifique se o sqljdbc_xa.dll no servidor está atualizado. Para obter mais detalhes sobre como definir tempos limite do lado do cliente, consulte [Xaresource](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  

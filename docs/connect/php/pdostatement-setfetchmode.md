@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Setfetchmode | Microsoft Docs'
+title: PDOStatement::setFetchMode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e98a22d549362572c84a5256d4f39c30bfaf3b2a
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,9 +37,9 @@ bool PDOStatement::setFetchMode( $mode );
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$modo *: quaisquer parâmetro*s[ que sejam válidos para passar para ](../../connect/php/pdostatement-fetch.md)PDOStatement::fetch.  
+$*modo*: um ou mais parâmetros válidos para passar para [pdostatement:: Fetch](../../connect/php/pdostatement-fetch.md).  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 true se for bem-sucedido; caso contrário, false.  
   
 ## <a name="remarks"></a>Remarks  
@@ -90,7 +90,7 @@ O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../.
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

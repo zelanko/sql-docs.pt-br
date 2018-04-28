@@ -1,27 +1,28 @@
 ---
-title: "Método (long, long) getBinaryStream | Microsoft Docs"
-ms.custom: 
+title: Método (long, long) getBinaryStream | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb9e72d6ec64cd91c8aa6d7cd111093c92303ff0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8d514ab1f095cf51a52993571f801ae81101fa14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbinarystream-method-long-long"></a>Método getBinaryStream (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
   
  O deslocamento para o primeiro byte do valor parcial ser recuperado.  
   
- *length*  
+ *Comprimento*  
   
  O comprimento em bytes do valor parcial a ser recuperado.  
   
@@ -50,7 +51,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getBinaryStream é especificado pelo método getBinaryStream na interface Java.SQL.  
   
 ## <a name="see-also"></a>Consulte também  

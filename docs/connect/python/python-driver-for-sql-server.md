@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3091eb8867b34e37c799e2e035ae9382dded82f7
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -32,8 +32,8 @@ Você pode se conectar a um banco de dados SQL usando Python no Windows, Linux o
   
 ## <a name="getting-started"></a>Introdução  
 Há vários drivers SQL do python disponíveis. No entanto, a Microsoft coloca seus esforços de teste e sua confiança em **pyodbc** driver. Escolha um driver e configurar seu ambiente de desenvolvimento adequadamente:
-* [Driver SQL Python – pyodbc](pyodbc/python-sql-driver-pyodbc.md)
-* [Driver SQL Python – pymssql](pymssql/python-sql-driver-pymssql.md)
+* [Driver SQL do Python - pyodbc](pyodbc/python-sql-driver-pyodbc.md)
+* [Driver SQL do Python - pymssql](pymssql/python-sql-driver-pymssql.md)
   
 ## <a name="documentation"></a>Documentação  
 * [Documentação do Python em Python.org](https://www.python.org/doc/)  

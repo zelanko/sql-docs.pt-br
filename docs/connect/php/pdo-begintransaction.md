@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9f4c785d876629c3a2f95f70f15de6145f50e1af
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,11 +36,11 @@ Desativa o modo de confirmação automática e inicia uma transação.
 bool PDO::beginTransaction();  
 ```  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 true se a chamada do método for bem-sucedida; caso contrário, false.  
   
 ## <a name="remarks"></a>Remarks  
-A transação iniciada com PDO::beginTransaction terminará quando [PDO::commit](../../connect/php/pdo-commit.md) ou [PDO::rollback](../../connect/php/pdo-rollback.md) for chamado.  
+A transação iniciada com PDO:: BeginTransaction termina quando [PDO:: Commit](../../connect/php/pdo-commit.md) ou [PDO:: Rollback](../../connect/php/pdo-rollback.md) é chamado.  
   
 PDO::beginTransaction não é afetado pelo valor de PDO::ATTR_AUTOCOMMIT (e não o afeta).  
   
@@ -66,7 +66,7 @@ O exemplo a seguir usa um banco de dados chamado Test e uma tabela chamada Table
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

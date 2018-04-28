@@ -1,30 +1,33 @@
 ---
-title: "Método getColumnName (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: 
+title: Método getColumnName (SQLServerResultSetMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.getColumnName
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.getColumnName
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 368188be8467693c7048a8d885c50a565f362b11
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 458b4f17eaf115c29a705a659560cdfc42dc5ce3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumnname-method-sqlserverresultsetmetadata"></a>Método getColumnName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public java.lang.String getColumnName(int column)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *coluna*  
+ *column*  
   
  Um **int** que indica o índice da coluna.  
   
@@ -49,7 +52,7 @@ public java.lang.String getColumnName(int column)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método getColumnName é especificado pelo método getColumnName na interface Java.SQL. resultsetmetadata.  
   
 ## <a name="see-also"></a>Consulte também  

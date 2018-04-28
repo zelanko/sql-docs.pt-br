@@ -3,7 +3,7 @@ title: Requisitos do sistema para o Driver do OLE DB para SQL Server | Microsoft
 description: Requisitos para o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -20,16 +20,18 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5169c841784230d1ad4d99472dd636a490c750ce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisitos do sistema para o Driver do OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   Para usar recursos de acesso a dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o MARS, você precisa ter este software instalado:  
 
@@ -69,9 +71,9 @@ ms.lasthandoff: 04/06/2018
 
  IDBInfo::GetKeywords sempre retornará uma lista de palavras-chave que corresponde à versão do servidor em que a conexão e não é afetada por **DataTypeCompatibility**.  
 
-|Tipo de dados|Driver do OLE DB para SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Driver do OLE DB para SQL Server|Windows Data Access Components, MDAC e<br /><br /> OLE DB Driver para aplicativos OLE DB do SQL Server com DataTypeCompatibility = 80|  
+|Tipo de dados|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Driver do OLE DB para SQL Server|Windows Data Access Components, MDAC e<br /><br /> OLE DB Driver para aplicativos OLE DB do SQL Server com DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|Udt|Udt|Varbinary|  
+|CLR UDT (\<= 8 Kb)|udt|Udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Texto|  
 |nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
@@ -83,5 +85,5 @@ ms.lasthandoff: 04/06/2018
 |time|time|varchar|varchar|Varchar|  
 
 ## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para programação do SQL Server](../oledb/oledb-driver-for-sql-server-programming.md)   
+ [Driver do OLE DB para SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [Instalação do Driver do OLE DB para SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

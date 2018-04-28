@@ -1,5 +1,5 @@
 ---
-title: PDO | Microsoft Docs
+title: PDO::exec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ac5a2f7b4411b38e3986e8d547a2959cdb5d6278
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,7 +39,7 @@ int PDO::exec ($statement)
 #### <a name="parameters"></a>Parâmetros  
 *$statement*: uma cadeia de caracteres contendo a instrução SQL a executar.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Um inteiro que informa o número de linhas afetadas.  
   
 ## <a name="remarks"></a>Remarks  
@@ -72,7 +72,7 @@ Este exemplo exclui linhas na tabela 1 com 'xxxyy' na col1. Em seguida, o exempl
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

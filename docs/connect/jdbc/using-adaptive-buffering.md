@@ -1,27 +1,28 @@
 ---
-title: "Usando buffer adaptável | Microsoft Docs"
-ms.custom: 
+title: Usando buffer adaptável | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>Usando buffer adaptável
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **A consulta produz um conjunto de resultados muito grande:** o aplicativo pode executar uma instrução SELECT que produz mais linhas do que o aplicativo pode armazenar na memória. Em versões anteriores, o aplicativo tinha que usar um cursor de servidor para evitar um OutOfMemoryError. O buffer adaptável permite fazer uma passagem somente avanço somente leitura de um conjunto de resultados arbitrariamente grande sem exigir um cursor de servidor.  
   
--   **A consulta gera colunas muito grandes**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colunas ou**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**os valores de parâmetro:**  o aplicativo pode recuperar um único valor (coluna ou parâmetro OUT) que é muito grande para caber inteiramente na memória do aplicativo. O buffer adaptável permite que o aplicativo cliente recupere esse valor como um fluxo usando o getAsciiStream, o getBinaryStream ou os métodos getCharacterStream. O aplicativo recupera o valor da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como ele lê o fluxo.  
+-   **A consulta gera colunas muito grandes**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colunas ou**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**valores de parâmetro OUT:** O aplicativo pode recuperar um único valor (coluna ou parâmetro OUT) que é muito grande para caber inteiramente na memória do aplicativo. O buffer adaptável permite que o aplicativo cliente recupere esse valor como um fluxo usando o getAsciiStream, o getBinaryStream ou os métodos getCharacterStream. O aplicativo recupera o valor da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como ele lê o fluxo.  
   
 > [!NOTE]  
 >  Com buffer adaptável, o JDBC Driver armazena em buffer somente a quantidade de dados que precisa. O driver não fornece nenhum método público para controlar ou limitar o tamanho do buffer.  

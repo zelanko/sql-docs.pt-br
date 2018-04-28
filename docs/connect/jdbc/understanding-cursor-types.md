@@ -1,27 +1,28 @@
 ---
-title: "Noções básicas sobre tipos de Cursor | Microsoft Docs"
-ms.custom: 
+title: Noções básicas sobre tipos de Cursor | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1611575b0f0401b47cf468837f39a6a8dd36aa49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-cursor-types"></a>Compreendendo os tipos de cursor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/18/2017
   
  A especificação do JDBC provê suporte para cursores somente encaminhamento e roláveis que são sensíveis ou insensíveis a alterações feitas por outros trabalhos e podem ser somente leitura ou atualizáveis. Essa funcionalidade é fornecida pelo [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) classe.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O driver JDBC oferece suporte aos seguintes tipos de cursores:  
   
 |Conjunto de resultados<br /><br /> resultados (cursor)|Tipo de cursor do SQL Server|Características|Selecione<br /><br /> Método|Buffer<br /><br /> de resposta|Description|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/18/2017
  Para cursores dinâmicos, as linhas atualizadas reterão sua posição dentro do buffer de busca até que a ação saia da janela definida pelo buffer de busca. Linhas atualizadas podem reaparecer subsequentemente em posições diferentes dentro do conjunto de resultados ou podem desaparecer completamente. Os aplicativos que precisam evitar inconsistências transitórias no conjunto de resultados devem usar um tamanho de busca igual a 1 (o padrão é 8 linhas com simultaneidade de CONCUR_SS_SCROLL_LOCKS e 128 linhas com outras simultaneidades).  
   
 ## <a name="cursor-conversion"></a>Conversão de cursores  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]às vezes, pode optar por implementar um tipo de cursor diferente do solicitado, que é conhecido como uma conversão implícita de cursor (ou degradação de cursor). Para obter mais informações sobre conversão implícita de cursor, consulte o tópico "Usando conversões de Cursor implícitas" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Manuais Online.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] às vezes, pode optar por implementar um tipo de cursor diferente do solicitado, que é conhecido como uma conversão implícita de cursor (ou degradação de cursor). Para obter mais informações sobre conversão implícita de cursor, consulte o tópico "Usando conversões de Cursor implícitas" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Manuais Online.  
   
  Com [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], quando você atualizar os dados por meio do resultado ResultSet.TYPE_SCROLL_SENSITIVE e ResultSet.CONCUR_UPDATABLE definida, uma exceção será lançada com a mensagem "o cursor é READ ONLY". Essa exceção ocorre porque o [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] fez uma conversão implícita de cursor para esse resultado definido e não retornou o cursor atualizável que foi solicitado.  
   
