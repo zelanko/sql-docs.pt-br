@@ -1,28 +1,28 @@
 ---
-title: "Como trabalhar com os serviços CDC | Microsoft Docs"
-ms.custom: 
+title: Como trabalhar com os serviços CDC | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f3d5ba79da0e39806ba9ad9e3d36cb726802efb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1ad2d49ca33b4f4903a13b4d4ff217f4baa0bbb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-work-with-cdc-services"></a>Como trabalhar com os serviços CDC
   Este procedimento descreve como usar o Console de Configuração do Serviço CDC para preparar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para trabalhar com os Serviços Oracle CDC e criar um novo serviço CDC.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
          O caixa de diálogo Novo Serviço do Oracle CDC é aberta.  
   
-         Para obter informações sobre como usar essa caixa de diálogo, consulte [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Para obter informações sobre como criar ou editar um serviço CDC, consulte [Como criar e editar um Serviço CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
+         Para obter informações sobre como usar essa caixa de diálogo, consulte [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Para obter informações sobre como criar ou editar um serviço CDC, consulte [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
          O logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Serviço Oracle CDC somente precisa ser um membro da função `public` de servidor fixa, nenhum outro privilégio será necessário. Porém, para criar o Serviço Oracle CDC, o logon deve ter permissão de gravação no banco de dados MSXDBCDC, por exemplo, a função de banco de dados **db_owner** deve ser atribuída ao logon. Quando um logon sem permissão de gravação para o banco de dados MSXDBDCDC tenta criar uma nova instância Oracle CDC, uma mensagem de erro é exibida. Clique em **OK** nessa caixa de diálogo para exibir a caixa de diálogo Conecte-se ao SQL Server.  
   

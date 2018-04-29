@@ -1,28 +1,28 @@
 ---
-title: "Conectar-se ao Armazenamento de Blobs do Azure (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Conectar-se ao Armazenamento de Blobs do Azure (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a31ba153a87eddb1e65daf0aebacc317e58a455
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7287d5d1342da6c2a43e7013eae60247cf4aabaf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Conectar-se ao Armazenamento de Blobs do Azure (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados do **Armazenamento de Blobs do Azure** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server.
@@ -69,7 +69,7 @@ Insira a chave para a conta de armazenamento do Azure.
  **Use a primeira linha como nomes de colunas**  
  Especifique se a primeira linha de dados contém nomes de coluna.  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Escolher uma Fonte de Dados](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Escolher um Destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

@@ -1,31 +1,31 @@
 ---
 title: Tarefa de Upload do Blob do Azure | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpblobuptask.f1
 - sql14.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94a746cb0b4f0db66ed90fe56348e01d1870d996
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8caf8a55fd29286dd46067a54e95e75ad0c88b54
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-blob-upload-task"></a>Tarefa de Carregamento de Blobs do Azure
 A **Tarefa de Upload de Blobs do Azure** permite que um pacote SSIS carregue arquivos para um armazenamento de blobs do Azure.

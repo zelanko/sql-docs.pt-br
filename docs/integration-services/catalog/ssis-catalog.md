@@ -1,32 +1,32 @@
 ---
-title: "Catálogo do SSIS | Microsoft Docs"
-ms.custom: 
+title: Catálogo do SSIS | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
   O catálogo do **SSISDB** é o ponto central para trabalhar com projetos do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -420,7 +420,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
     1.  No Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó **Segurança** e expanda o nó **Logons**.  
   
-    2.  Clique com o botão direito do mouse em **##MS_SSISServerCleanupJobLogin##**e clique em **Script de Logon como** > **CREATE To** > **Nova Janela do Editor de Consultas**.  
+    2.  Clique com o botão direito do mouse em **##MS_SSISServerCleanupJobLogin##** e clique em **Script de Logon como** > **CREATE To** > **Nova Janela do Editor de Consultas**.  
   
 5.  Se estiver restaurando o banco de dados SSISDB para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual o catálogo do SSISDB nunca foi criado, gere o script de CREATE PROCEDURE para sp_ssis_startup realizando o procedimento a seguir. Para obter mais informações, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   

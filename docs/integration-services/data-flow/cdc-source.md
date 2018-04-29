@@ -2,7 +2,7 @@
 title: Origem CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: f0552a81beb1bce6a578b058953236453bc8e47f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-source"></a>Origem CDC
   A origem CDC lê um intervalo de dados de alteração de tabelas de alteração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e entrega o downstream de alterações a outros SSIS componentes.  
@@ -109,9 +109,9 @@ use <cdc-enabled-database-name>
   
 -   [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Editor de origem CDC & #40; Página colunas & #41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Editor de Origem CDC &#40;página Colunas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [Editor de origem CDC & #40; Página de saída de erro & #41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** contém as propriedades que podem ser definidas programaticamente.  
   
@@ -145,7 +145,7 @@ use <cdc-enabled-database-name>
  **Gerenciador de conexões ADO.NET**  
  Selecione na lista um gerenciador de conexões existente ou clique em **Novo** para criar uma nova conexão. A conexão deve ser a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitado para CDC e onde a tabela de alteração selecionada está localizada.  
   
- **Novo**  
+ **Nova**  
  Clique em **Nova**. A caixa de diálogo **Configurar Editor do Gerenciador de Conexões ADO.NET** é aberta, na qual você pode criar um novo gerenciador de conexões  
   
  **Tabela CDC**  
@@ -229,7 +229,7 @@ use <cdc-enabled-database-name>
  **Truncation**  
  Selecione como a origem CDC deve tratar o truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Description**  
+ **Descrição**  
  Não usado.  
   
  **Definir este valor para células selecionadas**  

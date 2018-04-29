@@ -1,16 +1,16 @@
 ---
 title: Tipos de dados do Integration Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying data types
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 
+caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 929ae55c02aa0e5c5172c072c192b88902a0a07f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
   Quando dados entram em um fluxo de dados em um pacote, a fonte que extrai esses dados converte-os em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Dados numéricos são atribuídos a um tipo de dados numéricos, dados de cadeia são atribuídos a um tipo de dados de caractere e datas são atribuídas a um tipo de dados de data. Outros dados, como GUIDs e BLOBs, também são atribuídos aos tipos de dados apropriados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se dados tiverem um tipo de dados que não pode ser convertido em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ocorrerá um erro.  

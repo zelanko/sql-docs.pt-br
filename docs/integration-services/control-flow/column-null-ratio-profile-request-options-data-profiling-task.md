@@ -1,30 +1,30 @@
 ---
-title: "Opções da solicitação do perfil Razão Nula de Coluna (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
-ms.custom: 
+title: Opções da solicitação do perfil Razão Nula de Coluna (Tarefa Criação de Perfil de Dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edf82eeda2fccb082e27fe5540d0ffe1b383ddba
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef503f632053f45580ddfc3d6ccc004d70db4ec6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Razão Nula de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Razão Nula de Coluna** selecionada no painel de solicitações. O perfil Razão Nula de Coluna informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Por exemplo, um perfil Razão Nula de Coluna pode criar um perfil de uma coluna Código Postal/CEP e descobrir uma porcentagem excessivamente elevada de códigos postais ausentes.  

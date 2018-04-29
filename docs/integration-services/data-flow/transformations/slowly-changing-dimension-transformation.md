@@ -1,16 +1,16 @@
 ---
-title: "Transformação Dimensão de Alteração Lenta | Microsoft Docs"
-ms.custom: 
+title: Transformação Dimensão de Alteração Lenta | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c9dc7013eb987c04417088a0b36af24684edb0d6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
   A transformação Dimensão de Alteração Lenta coordena a atualização e a inserção de registros em tabelas de dimensão do data warehouse. Por exemplo, você pode usar essa transformação para configurar as saídas de transformação que inserem e atualizam registros na tabela DimProduct do banco de dados OLAP da [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] com dados da tabela Production.Products no banco de dados OLTP da AdventureWorks.  

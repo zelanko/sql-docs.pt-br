@@ -1,31 +1,31 @@
 ---
 title: Tarefa do Hive do Azure HDInsight | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afphivetask.f1
 - sql14.dts.designer.afphivetask.f1
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f26c9b682c49da83d77dffa38e79eb385a30ef00
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: af68d13b1391d1e6890f42e8bbba0e0da70ddfed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tarefa do Hive do Azure HDInsight
 Use a **Tarefa do Hive do Azure HDInsight** para executar o script do Hive em um cluster Azure HDInsight.

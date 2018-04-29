@@ -1,30 +1,30 @@
 ---
-title: "Determinar se os dados de alterações estão prontos | Microsoft Docs"
-ms.custom: 
+title: Determinar se os dados de alterações estão prontos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d2f30ddb989c9d92d0972f85af33e3b0496ba56
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 709765fd66e9d10522f2b6e22ca0d7bc013d1df4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar se os dados de alteração estão prontos
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a segunda tarefa serve para garantir que os dados de alteração para o intervalo selecionado estejam prontos. Esta etapa é necessária, pois o processo de captura assíncrono pode ainda não ter processado todas as alterações até o ponto de extremidade selecionado.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
   
  Na seguinte tabela, a primeira coluna mostra os valores retornados da tarefa Executar SQL pela consulta Transact-SQL. A segunda coluna mostra como os outros componentes respondem a estes valores.  
   
-|Valor de retorno|Significado|Resposta|  
+|Valor retornado|Significado|Resposta|  
 |------------------|-------------|--------------|  
 |0|Indica que os dados de alteração não estão prontos.<br /><br /> Não há nenhum registro de captura de dados de alteração posterior ao ponto final do intervalo selecionado.|A execução continua com o componente que implementa um atraso. Em seguida, o controle retorna para o contêiner Loop For, que continua a verificar a tarefa Executar SQL contanto que o valor retornado seja 0.|  
 |1|Pode indicar que os dados de alteração não foram capturados para o intervalo completo ou que foram excluídos. Isso é tratado como uma condição de erro.<br /><br /> Não há nenhum registro de captura de dados de alteração anterior ao ponto inicial do intervalo selecionado|A execução continua com o componente opcional que armazena o erro.|  

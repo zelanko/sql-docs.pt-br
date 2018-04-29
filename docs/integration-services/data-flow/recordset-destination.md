@@ -1,16 +1,16 @@
 ---
 title: Destino do conjunto de registros | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.recordsetdest.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-caps.latest.revision: 
+caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab4bf394d566195b09c3fa3f68f1b69d8d59a9bb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 02668b28877d6ba94691f54db0e83782027c9a67
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="recordset-destination"></a>Destino do Conjunto de Registros
   O destino do conjunto de registros cria e popula um conjunto de registros ADO na memória. A forma do conjunto de registros é definida na entrada para o destino de conjunto de registros no tempo de design.  

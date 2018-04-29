@@ -1,30 +1,30 @@
 ---
-title: "Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66271d8214a96453535a476e43564aa1b03d07d3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcd7c6840a6f4a12293d1c1716350093c676b986
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server)
   Depois de selecionar as tabelas existentes e exibições para copiar ou examinar a consulta que você forneceu, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode mostrar **Converter tipos sem verificar a conversão**. O assistente mostra essa página quando não é possível localizar um ou mais dos arquivos de mapeamento e de conversão de tipo de dados necessários para mapear os tipos de dados entre a origem e o destino. A página inclui informações que ajudam você a compreender o que está faltando.
@@ -44,5 +44,5 @@ As informações desta página não incluem o nome do arquivo de mapeamento ause
 ## <a name="whats-next"></a>O que vem a seguir?  
  Após clicar em **Avançar** para continuar sem saber se as conversões de tipo de dados serão bem-sucedidas, a próxima página será **Salvar e Executar o Pacote**. Nesta página, especifique se deseja executar a operação de cópia imediatamente. Dependendo da sua configuração, você também poderá salvar o pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criado pelo assistente para personalizá-lo e reutilizá-lo posteriormente. Para obter mais informações, consulte [Salvar e Executar o Pacote](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Mapeamento de Tipo de Dados no Assistente para Importação e Exportação do SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

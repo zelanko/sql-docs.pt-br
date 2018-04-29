@@ -1,30 +1,30 @@
 ---
-title: "Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d4adb7bfee3533830b3d806b666ee8866fc57bb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 97c1f0b447b26c2afc1836bed0269eba33d1656c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
   Se você clicar duas vezes na linha de uma coluna individual na página **Revisar Mapeamento de Tipo de Dados** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará a caixa de diálogo **Detalhes de Conversão de Coluna** . Nesta página, você pode examinar as informações detalhadas de conversão de uma coluna individual. Essas informações incluem os itens a seguir.
@@ -46,5 +46,5 @@ Neste exemplo, você vê o que é descrito a seguir.
 ## <a name="whats-next"></a>O que vem a seguir?  
  Depois de revisar os detalhes da conversão de coluna e clicar em **OK**, a caixa de diálogo **Detalhes da conversão de coluna** retornará a página **Revisar mapeamento de tipo de dados** . Para obter mais informações, consulte [Revisar mapeamento de tipo de dados](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Mapeamento de Tipo de Dados no Assistente para Importação e Exportação do SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

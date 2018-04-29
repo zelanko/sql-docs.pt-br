@@ -1,16 +1,16 @@
 ---
 title: Visualizador de Perfil de Dados | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dataprofileviewer.f1
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0328a9dc488d0c66900baea0dc7052e16f3beeb3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
