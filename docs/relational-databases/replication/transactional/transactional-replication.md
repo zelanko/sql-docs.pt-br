@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d6753d2ea8943cc00123dfd7f56328fc5fbe998
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1df3d126c25ab02e5d6be4f9f73347500b3607c4
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="transactional-replication"></a>Replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,6 @@ ms.lasthandoff: 04/16/2018
 -   O Publicador ou Assinante é um banco de dados que não é do tipo[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , como Oracle.  
   
  Por padrão, os Assinantes de publicações transacionais devem ser tratados como somente leitura, porque as alterações não são propagadas de volta para o Publicador. Porém, replicação transacional oferece opções que permitem atualizações ao Assinante.  
-  
- **Neste tópico**  
-  
- [Como a replicação transacional funciona](#HowWorks)  
-  
- [Conjunto de dados inicial](#Dataset)  
-  
- [Snapshot Agent](#SnapshotAgent)  
-  
- [Agente de Leitor de Log](#LogReaderAgent)  
-  
- [Agente de Distribuição](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> Como a replicação transacional funciona  
  A replicação transacional é implementada pelo Agente de Instantâneo, Agente de Leitor de Log e Agente de Distribuição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O Snapshot Agent prepara os arquivos de instantâneo que contêm o esquema e os dados das tabelas publicadas e os objetos do banco de dados, armazena os arquivos na pasta do instantâneo e registra os trabalhos de sincronização do banco de dados de distribuição no Distribuidor.  
