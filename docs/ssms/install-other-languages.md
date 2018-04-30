@@ -1,23 +1,24 @@
 ---
-title: "Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês | Microsoft Docs"
-description: "Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês"
-ms.custom: 
+title: Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês | Microsoft Docs
+description: Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae38d56a3faee88fa688a0b027482713ac07b59
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: 336b26d502d6cb40ab7c3be5de35d52f3d019b8a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês 
 
@@ -41,7 +42,7 @@ As instruções a seguir são diferentes, dependendo da versão do Windows. O co
 2. Agora, para definir a localidade do sistema a fim de usar o pacote de idiomas que instalou na etapa anterior, clique no idioma recém-instalado e escolha **Definir como Padrão**. 
 3. Quando o SO estiver em execução no idioma desejado, [instale a versão do SSMS nesse mesmo idioma](download-sql-server-management-studio-ssms.md#available-languages). Use o pacote completo quando instalar um novo idioma para o SSMS pela primeira vez. É possível usar o pacote de atualização para as instalações posteriores.
 4. Instale o Pacote de Idiomas do Shell do Microsoft Visual Studio 2015 (Isolado) para cada idioma que deseja instalar e que não corresponde ao idioma da primeira versão do SSMS instalada:
-   - Navegue até [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (talvez seja necessário entrar e concluir o processo *Registro do Connect*).
+   - Navegue até [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (talvez seja necessário entrar e concluir o processo *Conectar Registro*).
    - Baixe o Pacote de Idiomas do Shell do Microsoft Visual Studio 2015 (Isolado) desejado e instale-o.
 
    > [!IMPORTANT]

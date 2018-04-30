@@ -3,15 +3,16 @@
 
 # [Guias do SQL Server](sql-server-guides.md)
 ## Guia de solução de problemas e monitoramento dos grupos de disponibilidade Always On
-## [Design de índice](sql-server-index-design-guide.md)
+## [Design e arquitetura de índice](sql-server-index-design-guide.md)
 ## [Arquitetura de gerenciamento de memória](memory-management-architecture-guide.md)
 ### [Lendo páginas](reading-pages.md)  
 ### [Gravando Páginas](writing-pages.md)
 ## [Arquitetura de páginas e extensões](pages-and-extents-architecture-guide.md)
 ## [Validação e otimização após a migração](post-migration-validation-and-optimization-guide.md)
+## [Desempenho](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [Arquitetura de processamento de consultas](query-processing-architecture-guide.md)
 ## [Arquitetura de threads e tarefas](thread-and-task-architecture-guide.md)
-## [Arquitetura e gerenciamento de log de transações](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Guia de gerenciamento e arquitetura do log de transações](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Guia de Controle de Versão de Linha e Bloqueio de Transações](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Backup e restauração](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [Junções](../relational-databases/performance/joins.md)
 # [Partições](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [Desempenho](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Gerenciamento baseado em políticas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [Replicação](../relational-databases/replication/sql-server-replication.md)

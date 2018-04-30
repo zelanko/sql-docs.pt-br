@@ -2,7 +2,7 @@
 title: Salvar como | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d3414012f6873feba14c1701ea72cdd9f998ff2b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-as"></a>Salvar como
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usada para salvar uma instância do item atual em um local específico em um formato de arquivo específico. Clique em **Salvar** *<file>* **como** no menu **Arquivo** (em que *<file>* é o nome do item atual) ou pressione ALT+F, A no Editor de Códigos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Usada para salvar uma instância do item atual em um local específico em um formato de arquivo específico. Clique em **Salvar** *<file>* **como** no menu **Arquivo** (em que *<file>* é o nome do item atual) ou pressione ALT+F, A no Editor de Códigos.  
   
 ## <a name="central-panel"></a>Painel central  
 **Salvar em**  
@@ -39,7 +40,7 @@ Localize a pasta de projeto existente nesse menu suspenso. A seleção de uma pa
 Use esta opção para exibir o nome atual do arquivo, alterar o nome do arquivo ou filtrar os arquivos e pastas que são exibidos. Para filtrar os arquivos e pastas que são exibidos, digite um nome de arquivo completo ou parcial para filtrar. Você pode usar o asterisco (`*`) como um curinga.  
   
 > [!TIP]  
-> Para exibir arquivos na Web e locais de rede, digite uma URL ou um caminho de rede na caixa **Nome do arquivo** . Por exemplo, "http://meusite" exibe os arquivos disponíveis no local "meusite" da Web e "\\\meuservidor\meucompartilhamento" exibe os arquivos disponíveis no local "meucompartilhamento" em "meuservidor".  
+> Para exibir arquivos na Web e locais de rede, digite uma URL ou um caminho de rede na caixa **Nome do arquivo** . Por exemplo, "http://mywebsite" exibe os arquivos disponíveis no local da Web "meusite" e "\\\meuservidor\meucompartilhamento" exibe os arquivos disponíveis no local "meucompartilhamento" em "meuservidor".  
   
 **Salvar como tipo**  
 Use essa opção para selecionar um tipo de arquivo novo para o item selecionado. Os tipos de arquivo exibidos incluem todos os tipos de arquivo disponíveis para os quais o item selecionado pode ser convertido.  
