@@ -1,27 +1,28 @@
 ---
-title: "Usando a cópia em massa com o Driver JDBC | Microsoft Docs"
-ms.custom: 
+title: Usando a cópia em massa com o Driver JDBC | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Usando cópia em massa com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  Os exemplos de código SQLServerBulkCopy são fornecidos para demonstrar a sintaxe para usar o SQLServerBulkCopy apenas. Se as tabelas de origem e destino estiverem localizadas na mesma instância do SQL Server, é mais fácil e mais rápido usar o INSERT do Transact-SQL... Instrução SELECT para copiar os dados.  
   
-###  <a name="BKMK_TableSetup"></a>Configuração da tabela  
+###  <a name="BKMK_TableSetup"></a> Configuração da tabela  
  Para criar as tabelas necessárias para que os exemplos de código sejam executado corretamente, você deve executar as seguintes instruções Transact-SQL em um banco de dados do SQL Server.  
   
 ```  
@@ -460,7 +461,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>Transações e operações de cópia em massa  
+##  <a name="BKMK_TransactionBulk"></a> Transações e operações de cópia em massa  
  Operações de cópia em massa podem ser executadas como operações isoladas ou como parte de uma transação de várias etapas. Essa última opção permite executar mais de uma operação de cópia em massa dentro da mesma transação, bem como executar outras operações de banco de dados (como inserções, atualizações e exclusões), podendo ainda confirmar ou reverter toda a transação.  
   
  Por padrão, uma operação de cópia em massa é executada como uma operação isolada. A operação de cópia em massa ocorre de forma não transacionada, sem a oportunidade de revertê-la novamente. Se você precisar reverter toda ou parte da cópia em massa quando ocorrer um erro, poderá usar uma transação SQLServerBulkCopy gerenciada ou executar a operação de cópia em massa dentro de uma transação existente.  
@@ -868,7 +869,7 @@ public class Program
   
 3.  Para a fonte de dados, selecione o **fonte de dados** que permite que você se conectar ao SQL Server (por exemplo, SQL Server Native Client 11.0), verifique a configuração e, em seguida, **Avançar**  
   
-4.  Para o destino, selecione o **destino de arquivo simples** e insira um **nome de arquivo** com um destino, como c:\test\testbulkcsvexample.csv.. Verifique se o **formato** é delimitada, de **qualificador de texto** é none e habilitar **nomes de coluna na primeira linha de dados**e, em seguida, selecione **Avançar**  
+4.  Para o destino, selecione o **destino de arquivo simples** e insira um **nome de arquivo** com um destino, como c:\test\testbulkcsvexample.csv. Verifique se o **formato** é delimitada, de **qualificador de texto** é none e habilitar **nomes de coluna na primeira linha de dados**e, em seguida, selecione **Avançar**  
   
 5.  Selecione **escrever uma consulta para especificar os dados a serem transferidos** e **próximo**.  Insira seu **instrução SQL** selecione ProductID, nome, ProductNumber de Production. Product e **Avançar**  
   
@@ -1035,7 +1036,7 @@ public class Program
   
  Existem getters e setters para as seguintes opções:  
   
-|Opção|Description|Default|  
+|Opção|Description|Padrão|  
 |------------|-----------------|-------------|  
 |Boolean CheckConstraints|Verificar restrições enquanto os dados são inseridos.|Falso - as restrições não são verificadas|  
 |Boolean FireTriggers|Quando especificados, fazem com que o servidor dispare gatilhos de inserção para as linhas que estão sendo inseridas no banco de dados.|Falso - nenhum gatilho é disparado|  
