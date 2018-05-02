@@ -1,30 +1,31 @@
 ---
 title: Reporting Services com Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69d5529f2e8b563072f0662c4256a163b39756c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
  O principal benefício de usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com fontes de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é aproveitar réplicas secundárias legíveis como uma fonte de dados de relatório enquanto, ao mesmo tempo, as réplicas secundárias estão fornecendo um failover para um banco de dados primário.  
   
- Para obter informações gerais sobre o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja as [Perguntas frequentes sobre o AlwaysOn para SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Para obter informações gerais sobre o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Perguntas frequentes sobre o Always On do SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)).  
   
  **Neste tópico:**  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ReportServerTempDB  
   
- O modo nativo não dá suporte nem usa os bancos de dados de alertas e recursos relacionados. Configure os servidores de relatório de modo nativo no Configuration Manager do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para o modo do SharePoint, configure o nome do banco de dados de aplicativo de serviço para ser o nome do "ponto de acesso para cliente" que você criou como parte da configuração do SharePoint. Para obter mais informações sobre como configurar o SharePoint com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Configurar e gerenciar grupos de disponibilidade do SQL Server para SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ O modo nativo não dá suporte nem usa os bancos de dados de alertas e recursos relacionados. Configure os servidores de relatório de modo nativo no Configuration Manager do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para o modo do SharePoint, configure o nome do banco de dados de aplicativo de serviço para ser o nome do "ponto de acesso para cliente" que você criou como parte da configuração do SharePoint. Para obter mais informações sobre como configurar o SharePoint com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Configurar e gerenciar grupos de disponibilidade do SQL Server para o SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)).  
   
 > [!NOTE]  
 >  Os servidores de relatórios do modo do SharePoint usam um processo de sincronização entre os bancos de dados de aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e os bancos de dados de conteúdo do SharePoint. É importante manter os bancos de dados do servidor de relatório e os bancos de dados de conteúdo juntos. Configure-os nos mesmos grupos de disponibilidade para que eles realizem failover e recuperação como um conjunto. Considere o cenário a seguir.  

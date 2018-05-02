@@ -2,7 +2,7 @@
 title: TOP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/10/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão*  
+ *expressão*  
  É uma expressão numérica válida que especifica o número de linhas a serem retornadas. *expression* será convertido implicitamente em um valor de **float** se PERCENT for especificado, caso contrário, ele será convertido em **bigint**.  
   
  PERCENT  
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a> Limitando as linhas afetadas por DELETE, INSERT ou UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Usando TOP para limitar o número de linhas excluídas  
- Quando um superior (*n*) cláusula é usada com DELETE, a operação de exclusão é executada em uma seleção indefinida de *n* número de linhas. Ou seja, a instrução DELETE escolhe qualquer (*n*) número de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir exclui `20` linhas da tabela `PurchaseOrderDetail` que têm datas de vencimento anteriores a 1º de julho de 2002.  
+ Quando uma cláusula TOP (*n*) é usada com DELETE, a operação de exclusão é executada em uma seleção indefinida de um número *n* de linhas. Ou seja, a instrução DELETE escolhe qualquer número (*n*) de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir exclui `20` linhas da tabela `PurchaseOrderDetail` que têm datas de vencimento anteriores a 1º de julho de 2002.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Usando TOP para limitar o número de linhas atualizadas  
- O exemplo a seguir usa a cláusula TOP para atualizar linhas em uma tabela. Quando um superior (*n*) cláusula é usada com a atualização, a operação de atualização é executada em um número indefinido de linhas. Ou seja, a instrução UPDATE escolhe qualquer (*n*) número de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir atribui 10 clientes de um vendedor para outro.  
+ O exemplo a seguir usa a cláusula TOP para atualizar linhas em uma tabela. Quando uma cláusula TOP (*n*) é usada com UPDATE, a operação de atualização é executada em um número indefinido de linhas. Ou seja, a instrução UPDATE escolhe qualquer número (*n*) de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir atribui 10 clientes de um vendedor para outro.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,9 +343,9 @@ FROM DimEmployee ORDER BY LastName;
   
  Resultado: 33 linhas são retornadas, porque 3 funcionários chamados Brown empatam na linha 31.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)   

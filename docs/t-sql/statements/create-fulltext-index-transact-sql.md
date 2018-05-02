@@ -1,16 +1,16 @@
 ---
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXT_INDEX_TSQL
@@ -24,23 +24,23 @@ helpviewer_keywords:
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: 
+caps.latest.revision: 110
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 47808b1214157b393cae5cfcc193f5b482b53601
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5ac9e0f05e639e74dd83cdea7c8f7030e6249b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria um índice de texto completo em uma tabela ou em uma exibição indexada de um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Somente um índice de texto completo é permitido por tabela ou exibição indexada, e cada índice de texto completo se aplica a uma única tabela ou exibição indexada. O índice de texto completo pode conter até 1024 colunas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ CREATE FULLTEXT INDEX ON table_name
  É o nome da tabela ou exibição indexada que contém a coluna ou colunas incluídas no índice de texto completo.  
   
  *column_name*  
- É o nome da coluna incluída no índice de texto completo. Somente colunas do **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** e **varbinary(max)**podem ser indexadas para pesquisa de texto completo. Para especificar várias colunas, repita a cláusula *column_name* da seguinte forma:  
+ É o nome da coluna incluída no índice de texto completo. Somente colunas do **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** e **varbinary(max)** podem ser indexadas para pesquisa de texto completo. Para especificar várias colunas, repita a cláusula *column_name* da seguinte forma:  
   
  CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
   

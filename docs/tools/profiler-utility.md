@@ -1,15 +1,16 @@
 ---
-title: "Utilitário Profiler | Microsoft Docs"
-ms.custom: 
+title: Utilitário Profiler | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>Utilitário Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **profiler** utilitário inicia o [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ferramenta. Os argumentos opcionais listados posteriormente neste tópico permitem controlar como o aplicativo é iniciado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O utilitário **profiler** inicia a ferramenta [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Os argumentos opcionais listados posteriormente neste tópico permitem controlar como o aplicativo é iniciado.  
   
 > [!NOTE]  
 >  O utilitário **profiler** não foi criado para ser usado para rastreamentos de script. Para saber mais, confira [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -123,14 +124,14 @@ profiler
  **/Z**  *file_size*  
  Especifica o tamanho do arquivo de rastreamento em megabytes (MB). O tamanho padrão é 5 MB. Se a substituição estiver habilitada, todos os arquivos de substituição serão limitados ao valor especificado neste argumento.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para iniciar um rastreamento com um modelo específico, use as opções **/S** e **/T** juntas. Por exemplo, para iniciar um rastreamento usando o modelo Padrão em MyServer\MyInstance, digite o seguinte no prompt de comando:  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

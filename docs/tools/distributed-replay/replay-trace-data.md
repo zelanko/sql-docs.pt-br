@@ -1,30 +1,31 @@
 ---
 title: Reproduzir dados de rastreamento | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1b63690aadee587a51f910cfc43915a04aa39bf4
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-trace-data"></a>Reproduzir dados de rastreamento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode iniciar uma reprodução distribuída com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso Distributed Replay Após preparar os dados de rastreamento de entrada. Para obter mais informações, consulte [Preparar os dados de rastreamento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode iniciar uma reprodução distribuída com o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay depois de preparar os dados de rastreamento de entrada. Para obter mais informações, consulte [Preparar os dados de rastreamento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
   
  Use a opção **replay** da ferramenta de administração para iniciar o estágio de reprodução de evento da reprodução distribuída. Essa fase consiste em duas partes: a expedição de dados de rastreamento e o início e a sincronização da reprodução distribuída.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/17/2018
   
 ### <a name="to-replay-the-trace"></a>Para reproduzir o rastreamento  
   
-1.  **(Opcional) Modifique os parâmetros de configuração da reprodução:**se desejar modificar os parâmetros de configuração da reprodução, como o modo de sequenciamento e vários valores de escala, você deverá modificar o elemento `<ReplayOptions>` do arquivo de configuração da reprodução baseado em XML `DReplay.exe.replay.config`. Você também pode modificar o elemento `<OutputOptions>` para especificar configurações de saída, como, por exemplo, se a contagem de linhas deve ser registrada. Se você modificar o arquivo de configuração de reprodução, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
+1.  **(Opcional) Modifique os parâmetros de configuração da reprodução:** se desejar modificar os parâmetros de configuração da reprodução, como o modo de sequenciamento e vários valores de escala, você deverá modificar o elemento `<ReplayOptions>` do arquivo de configuração da reprodução baseado em XML `DReplay.exe.replay.config`. Você também pode modificar o elemento `<OutputOptions>` para especificar configurações de saída, como, por exemplo, se a contagem de linhas deve ser registrada. Se você modificar o arquivo de configuração de reprodução, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
   
     1.  Faça uma cópia do arquivo de configuração de reprodução padrão, `DReplay.exe.replay.config`, e renomeie o novo arquivo. O arquivo de configuração de reprodução padrão está localizado na pasta de instalação da ferramenta de administração.  
   
@@ -71,9 +72,9 @@ ms.lasthandoff: 01/17/2018
   
 3.  Quando a reprodução distribuída for concluída, a ferramenta de administração retornará informações resumidas. Se você tiver especificado a opção **-o** , a atividade de reprodução terá sido salva nos arquivos de rastreamento de resultado em cada cliente. Para obter mais informações sobre os arquivos de rastreamento de resultados, consulte [Revisar os resultados da reprodução](../../tools/distributed-replay/review-the-replay-results.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

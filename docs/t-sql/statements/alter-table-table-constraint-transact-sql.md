@@ -1,16 +1,16 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TSQL
@@ -19,23 +19,23 @@ dev_langs:
 helpviewer_keywords:
 - table_constraint
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 
+caps.latest.revision: 59
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 464ce13d973f975fe36a73f94ec9b12cd0eb1bf3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7b3c40933f9d2e84ebc4db3aede6c8aa2a26e912
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Especifica as propriedades de uma restrição PRIMARY KEY, UNIQUE, FOREIGN KEY ou CHECK, ou uma definição DEFAULT adicionada a uma tabela usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,12 +92,12 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  A documentação de WITH FILLFACTOR = *fillfactor* como a única opção de índice aplicável às restrições PRIMARY KEY ou UNIQUE é mantida para fins de compatibilidade com versões anteriores, mas não será documentada dessa maneira em versões futuras. Outras opções de índice podem ser especificadas na cláusula [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) de ALTER TABLE.  
   
- ON { *partition_scheme_name***(***partition_column_name***)** | *filegroup*| **"**default**"** }  
+ ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup*| **"** default **"** }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica o local de armazenamento do índice criado para a restrição. Se *partition_scheme_name* for especificado, o índice será particionado e as partições serão mapeadas para os grupos de arquivos especificados pelo *partition_scheme_name*. Se *filegroup* for especificado, o índice será criado no grupo de arquivos nomeado. Se **"**default**"** for especificado ou se ON não for especificado de modo algum, o índice será criado no mesmo grupo de arquivos que a tabela. Se ON for especificado quando um índice clusterizado for adicionado a uma restrição PRIMARY KEY ou UNIQUE, a tabela inteira será movida para o grupo de arquivos especificado quando o índice clusterizado for criado.  
+ Especifica o local de armazenamento do índice criado para a restrição. Se *partition_scheme_name* for especificado, o índice será particionado e as partições serão mapeadas para os grupos de arquivos especificados pelo *partition_scheme_name*. Se *filegroup* for especificado, o índice será criado no grupo de arquivos nomeado. Se **"** default **"** for especificado ou se ON não for especificado de modo algum, o índice será criado no mesmo grupo de arquivos que a tabela. Se ON for especificado quando um índice clusterizado for adicionado a uma restrição PRIMARY KEY ou UNIQUE, a tabela inteira será movida para o grupo de arquivos especificado quando o índice clusterizado for criado.  
   
- Nesse contexto, o padrão não é uma palavra-chave; é um identificador para o grupo de arquivos padrão e deve ser delimitado, como em **"**default**"** ou ON **[**default**]**. Se **"**default**"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão.  
+ Nesse contexto, o padrão não é uma palavra-chave; é um identificador para o grupo de arquivos padrão e deve ser delimitado, como em **"** default **"** ou ON **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão.  
   
  FOREIGN KEY REFERENCES  
  É uma restrição que fornece integridade referencial para obter dados na coluna. Restrições FOREIGN KEY requerem que cada valor na coluna exista na coluna especificada na tabela referenciada.  

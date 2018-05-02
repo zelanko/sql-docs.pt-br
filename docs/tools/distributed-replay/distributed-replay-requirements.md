@@ -1,30 +1,31 @@
 ---
 title: Distributed Replay Requirements | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: ondemand
 ms.openlocfilehash: 3267939b053be638ae40ab33e0e7e02776bf918c
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Antes de usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay de recursos, considere os requisitos de produto que são descritos neste tópico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de usar o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, considere os requisitos de produto que são descritos neste tópico.  
   
 ## <a name="input-trace-requirements"></a>Requisitos de rastreamento de entrada  
  Para repetir dados de rastreamento com êxito, ele deve atender os requisitos de versão e formato e conter os eventos e as colunas necessárias.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/18/2018
 ### <a name="input-trace-versions"></a>Versões de rastreamento de entrada  
  O Distributed Replay oferece suporte a dados de rastreamento de entrada que são coletados nas seguintes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Atualização cumulativa 1 e posterior. Consulte - [2017 cumulativa do SQL Server atualiza](http://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Atualização cumulativa 1 e posterior. Consulte - [2017 cumulativa do SQL Server atualiza](http://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -163,7 +164,7 @@ ms.lasthandoff: 01/18/2018
   
  A repetição de eventos associados com logons faltantes ou incorretos resulta em erros de repetição, mas a operação de repetição continua.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Segurança do Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md)   
  [Instalar o Distributed Replay – Visão geral](../../tools/distributed-replay/install-distributed-replay-overview.md)  

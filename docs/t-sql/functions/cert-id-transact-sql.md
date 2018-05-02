@@ -1,16 +1,16 @@
 ---
 title: CERT_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERT_ID
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - IDs [SQL Server], certificates
 - certificates [SQL Server], IDs
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3abed6a762708581344c189ecf4ef6c0fd5331d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 61b97f46cba26da431f96cb4aa399973f60bcb1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="certid-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna a ID de um certificado.
+Essa função retorna o valor da ID de um certificado.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,26 +49,27 @@ Cert_ID ( 'cert_name' )
   
 ## <a name="arguments"></a>Argumentos  
 **'** *cert_name* **'**  
-É o nome de um certificado no banco de dados.
+
+O nome de um certificado no banco de dados.
   
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-Os nomes de certificados ficam visíveis na exibição do catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
+A exibição de catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) mostra nomes de certificado.
   
 ## <a name="permissions"></a>Permissões  
-Requer algumas permissões no certificado e que a permissão VIEW DEFINITION não seja negada ao chamador no certificado.
+Exige permissões apropriadas no certificado e que a permissão VIEW DEFINITION não tenha sido negada ao chamador no certificado. Consulte [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md#permissions) para obter mais informações sobre permissões de certificado.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir retorna a ID de um certificado denominado `ABerglundCert3`.
+Esse exemplo retorna a ID de um certificado chamada `ABerglundCert3`.
   
 ```sql
 SELECT Cert_ID('ABerglundCert3');  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)

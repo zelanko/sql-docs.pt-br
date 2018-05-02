@@ -1,36 +1,36 @@
 ---
 title: Sobre o Change Data Capture (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6347faf1a4de6590063f892cf44f5d58c90cdc0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Os registros do Change Data Capture inserem, atualizam e excluem atividades aplicadas a uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele também disponibiliza os detalhes das mudanças em um formato relacional facilmente utilizável. As informações de coluna e os metadados exigidos para a aplicação de alterações em um ambiente de destino são capturados para as linhas modificadas e armazenados nas tabelas de alteração que espelham a estrutura da coluna das tabelas de origem rastreadas. As funções avaliadas da tabela são fornecidas para permitir acesso sistemático aos dados de alteração pelos consumidores.  
+  Os registros do Change Data Capture inserem, atualizam e excluem atividades aplicadas a uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele também disponibiliza os detalhes das mudanças em um formato relacional facilmente utilizável. As informações de coluna e os metadados exigidos para a aplicação de alterações em um ambiente de destino são capturados para as linhas modificadas e armazenados nas tabelas de alteração que espelham a estrutura da coluna das tabelas de origem rastreadas. As funções avaliadas da tabela são fornecidas para permitir acesso sistemático aos dados de alteração pelos consumidores.  
   
  Um bom exemplo de um consumidor de dados visado por esta tecnologia é uma extração, transformação e aplicativo de carregamento (ETL). Um aplicativo ETL carrega incrementalmente dados de alteração das tabelas de origem de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um data warehouse ou data mart. Embora a representação das tabelas de fonte dentro do data warehouse deva refletir as alterações nessas tabelas de origem, uma tecnologia ponta-a-ponta que atualize uma réplica da origem não é apropriada. Em vez disso, é necessário um fluxo seguro de dados de alteração, estruturado de forma que consumidores possam aplicá-lo às representações dos dados de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a captura de dados de alterações fornece essa tecnologia.  
   
@@ -113,7 +113,33 @@ Os registros do Change Data Capture inserem, atualizam e excluem atividades apli
  Os dois trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent foram projetados para serem flexíveis e configuráveis o suficiente para atender às necessidades básicas dos ambientes de captura de dados de alterações. Nos dois casos, entretanto, os procedimentos armazenados subjacentes que fornecem funcionalidade principal têm sido expostos para que seja possível a personalização posterior.  
   
  O Change Data Capture não funciona corretamente quando o serviço Mecanismo de Banco de Dados ou o serviço SQL Server Agent está sendo executado na conta NETWORK SERVICE. Isso pode resultar no erro 22832.  
-  
+ 
+## <a name="working-with-database-and-table-collation-differences"></a>Trabalhando com as diferenças de agrupamento de banco de dados e de tabela
+
+É importante estar ciente de uma situação em que há diferentes agrupamentos entre o banco de dados e as colunas de uma tabela configurada para a captura de dados de alterações. A CDA usa um armazenamento provisório para popular tabelas laterais. Se uma tabela tiver colunas CHAR ou VARCHAR com agrupamentos diferentes do agrupamento de banco de dados e se essas colunas armazenarem caracteres não ASCII (como caracteres DBCS de byte duplo), a CDA não poderá persistir os dados alterados de maneira consistente com os dados nas tabelas base. Isso se deve ao fato de que as variáveis do armazenamento provisório não podem ter agrupamentos associados a elas.
+
+Considere uma das seguintes abordagens para garantir que os dados capturados da alteração sejam consistentes com as tabelas base:
+
+- Use o tipo de dados NCHAR ou NVARCHAR para colunas que contêm dados não ASCII.
+
+- Ou use o mesmo agrupamento para colunas e para o banco de dados.
+
+Por exemplo, se você tiver um banco de dados que usa um agrupamento SQL_Latin1_General_CP1_CI_AS, considere a seguinte tabela:
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
+
+A CDA poderá não capturar os dados binários para a coluna C2, porque seu agrupamento é diferente (Chinese_PRC_CI_AI). Use NVARCHAR para evitar esse problema:
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+```
+
 ## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Habilitar e desabilitar a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

@@ -1,16 +1,16 @@
 ---
 title: GROUPING_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUPING_ID_TSQL
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 048ce847992563943a7ff358dcda6ebe249a7310
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aad0f86356e05f41dfe55aa0c4347d08d7e7785d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   É uma função que calcula o nível de agrupamento. GROUPING_ID pode ser usado apenas na lista SELECT \<select> e nas cláusulas HAVING ou ORDER BY quando GROUP BY é especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  A GROUPING_ID \<column_expression> deve corresponder exatamente à expressão na lista GROUP BY. Por exemplo, se você estiver agrupando por DATEPART (yyyy, \<*column name*>), use GROUPING_ID (DATEPART (yyyy, (yyyy, \<*column name*>)); ou se estiver agrupando por \<*column name*>, use GROUPING_ID (\<*column name*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Comparando GROUPING_ID () com GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,**...*n* ]) inclui entradas equivalentes ao retorno de GROUPING (\<column_expression>) para cada coluna em sua lista de colunas em cada linha de saída como uma cadeia de caracteres com números um e zero. GROUPING_ID interpreta a cadeia de caracteres como um número base 2 e retorna o inteiro equivalente. Por exemplo, considere a seguinte instrução: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. A tabela a seguir mostra os valores de entrada e saída de GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,**...*n* ]) insere o equivalente ao retorno de GROUPING (\<column_expression>) para cada coluna em sua lista de colunas em cada linha de saída como uma cadeia de caracteres com números um e zero. GROUPING_ID interpreta a cadeia de caracteres como um número base 2 e retorna o inteiro equivalente. Por exemplo, considere a seguinte instrução: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. A tabela a seguir mostra os valores de entrada e saída de GROUPING_ID ().  
   
 |Colunas agregadas|Entrada de GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Saída de GROUPING_ID ()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -245,7 +245,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Usando GROUPING_ID () com ROLLUP e CUBE para identificar níveis de agrupamento  
  O código nos exemplos a seguir mostram como usar `GROUPING()` para computar a coluna `Bit Vector(base-2)`. `GROUPING_ID()` é usado para computar a coluna `Integer Equivalent` correspondente. A ordem de colunas na função `GROUPING_ID()` é o oposto da ordem de coluna das colunas que estão concatenadas pela função `GROUPING()`.  
   
- Nesses exemplos, `GROUPING_ID()` é usado para criar um valor para cada linha na coluna `Grouping Level` ao identificar o nível de agrupamento. Os níveis de agrupando nem sempre são uma lista consecutiva de inteiros que começam com 1 (0, 1, 2, ...*n*).  
+ Nesses exemplos, `GROUPING_ID()` é usado para criar um valor para cada linha na coluna `Grouping Level` ao identificar o nível de agrupamento. Os níveis de agrupamento nem sempre são uma lista consecutiva de inteiros que começam com 1 (0, 1, 2, ...*n*).  
   
 > [!NOTE]  
 >  GROUPING e GROUPING_ID podem ser usados em uma cláusula HAVING para filtrar um conjunto de resultados.  

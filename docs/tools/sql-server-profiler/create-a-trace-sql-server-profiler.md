@@ -22,20 +22,20 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9b40c4ab9616ec4d7a1271c5e3b5c1a0a36be2e7
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Criar um rastreamento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar um rastreamento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar um rastreamento.  
   
 ### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   
-1.  No menu **Arquivo**, clique em **Novo Rastreamento** e conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  No menu **Arquivo** , clique em **Novo Rastreamento**e conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      É exibida a caixa de diálogo **Propriedades do Rastreamento** .  
   
-    > **OBSERVAÇÃO:** a caixa de diálogo **Propriedades do Rastreamento** não será exibida, e o rastreamento será iniciado, se a opção **Iniciar rastreamento imediatamente após estabelecer a conexão** for selecionada. Para desabilitar essa configuração, no **ferramentas* * menu, clique em **opções**e desmarque o iniciar rastreamento imediatamente após estabelecer a caixa de seleção da conexão.  
+    > **OBSERVAÇÃO:** a caixa de diálogo **Propriedades do Rastreamento** não será exibida, e o rastreamento será iniciado, se a opção **Iniciar rastreamento imediatamente após estabelecer a conexão** for selecionada. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções** e desmarque a caixa de seleção Iniciar rastreamento imediatamente depois de estabelecer a conexão.  
   
 2.  Na caixa **Nome do rastreamento** , digite um nome para o rastreamento.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
          Opcionalmente, clique em **Definir máximo de linhas**e especifique um valor.  
   
-    > **CUIDADO!** Quando você não salva os resultados do rastreamento em um arquivo ou tabela, pode exibir o rastreamento enquanto o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] estiver aberto. No entanto, os resultados serão perdidos depois que o rastreamento for interrompido e o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for fechado. Para evitar perder os resultados do rastreamento dessa forma, clique em **Salvar** no menu **Arquivo** para salvar os resultados antes de fechar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+    > **CUIDADO!** Quando você não salva os resultados do rastreamento em um arquivo ou tabela, pode exibir o rastreamento enquanto o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] estiver aberto. No entanto, os resultados serão perdidos depois que o rastreamento for interrompido e o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]for fechado. Para evitar perder os resultados do rastreamento dessa forma, clique em **Salvar** no menu **Arquivo** para salvar os resultados antes de fechar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 5.  Opcionalmente, marque a caixa de seleção **Habilitar horário de parada do rastreamento** e especifique uma data e hora de parada.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/17/2018
   
 7.  Clique em **Executar** para iniciar o rastreamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Permissões necessárias para executar o SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   

@@ -1,28 +1,28 @@
 ---
 title: Ajuda do SQL Server Configuration Manager | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0730840b194e6ae4d172dcf822f78a86aa6f9c33
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
@@ -36,7 +36,7 @@ Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Ma
  Esta seção contém os tópicos da Ajuda F1 para as caixas de diálogo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager não pode configurar versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Configuration Manager não pode configurar versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="services"></a>Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager gerencia serviços relacionados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Embora muitas dessas tarefas possam ser realizadas com a caixa de diálogo Serviços do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, é importante observar que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager executa operações adicionais nos serviços que gerencia, como aplicar as permissões corretas quando a conta do serviço é alterada. O uso da caixa de diálogo normal Serviços do Windows para configurar quaisquer serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia prejudicar o funcionamento do serviço.  
@@ -79,12 +79,12 @@ Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Ma
 -   No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server** (versão), aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
   
- **Acesse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Configuration Manager[!INCLUDE[win8](../../includes/win8-md.md)]**  
+ **Para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager usando o [!INCLUDE[win8](../../includes/win8-md.md)]**  
   
- Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager é um snap-in do programa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) e não um programa autônomo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager não aparece como um aplicativo ao executar o [!INCLUDE[win8](../../includes/win8-md.md)]. Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Configuration Manager, no **pesquisa** botão em **aplicativos**, tipo **SQLServerManager12.msc** (para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) ou  **SQLServerManager11.msc** (para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e, em seguida, pressione **Enter**.  
+ Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager é um snap-in do programa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) e não um programa autônomo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager não aparece como um aplicativo ao executar o [!INCLUDE[win8](../../includes/win8-md.md)]. Para abrir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no botão **Pesquisar**, em **Aplicativos**, digite **SQLServerManager12.msc** (para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) ou **SQLServerManager11.msc** (para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e pressione **Enter**.  
   
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Serviços do SQL Server](../../tools/configuration-manager/sql-server-services.md)   
  [Configuração de rede do SQL Server](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [Configuração do SQL Native Client 11.0](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   

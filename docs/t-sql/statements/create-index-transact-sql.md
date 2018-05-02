@@ -1,16 +1,16 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -56,16 +56,17 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 
+caps.latest.revision: 223
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 431a26ae4bc8a7a00afcff70f65128e8108b500d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +108,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 -   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)     
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -299,12 +300,12 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Cria o índice especificado no grupo de arquivos especificado. Se nenhum local for especificado e a tabela ou exibição não for particionada, o índice usará o mesmo grupo de arquivos que a tabela ou exibição subjacente. O grupo de arquivos já deve existir.  
   
- ON **"**default**"**  
+ ON **"** default **"**  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
   
  Cria o índice especificado no grupo de arquivos padrão.  
   
- Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"**default**"** ou ON **[**default**]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -338,7 +339,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o objeto pode ser uma tabela armazenada com um índice columnstore clusterizado.  
   
- O [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é compatível com o formato de nome de três partes *database_name***.**[*schema_name*]**.***object_name* quando o *database_name* é o banco de dados atual ou o *database_name* é tempdb e o *object_name* começa com #.  
+ O [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dá suporte ao formato de nome de três partes *database_name***.**[* schema_name *]**.***object_name* quando o *database_name* é o banco de dados atual ou o *database_name* é tempdb e o *object_name* começa com #.  
   
  **\<relational_index_option>::=**  
   

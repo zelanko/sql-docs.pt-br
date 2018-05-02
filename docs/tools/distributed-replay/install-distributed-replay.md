@@ -1,30 +1,31 @@
 ---
 title: Instalar o Distributed Replay | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Instalar o Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode instalar o Distributed Replay de uma das três maneiras:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode instalar o Distributed Replay de uma das três maneiras:  
   
 -   [Instalar o Distributed Replay por meio do Assistente de Instalação](#bkmk_wizard)  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/17/2018
   
      \- OU –  
   
-     \<Compartilhar o diretório de recursos > \Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
+     \<Diretório de Recursos Compartilhados>\Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
   
 -   Em um sistema de 64 bits:  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/17/2018
   
      \- OU –  
   
-     \<Compartilhar o diretório de recursos (x86) > \Tools\\(fornecido pelo usuário alternativo (x86) diretório de recursos compartilhados)  
+     \<Diretório de Recursos Compartilhados (x86)>\Tools\\(diretório de recursos compartilhados [x86] alternativo fornecido pelo usuário)  
   
 #### <a name="to-install-distributed-replay-features"></a>Para instalar recursos do Distributed Replay  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/17/2018
   
     1.  Em computadores de 32 bits, o caminho de instalação padrão é **C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Em computadores de 64 bits, o caminho de instalação padrão é **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  Em computadores de 64 bits, o caminho de instalação padrão é **C:\Arquivos de Programas (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. Ao concluir, clique em **Avançar**.  
   
@@ -220,11 +221,11 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Você deve especificar as duas senhas na linha de comando, porque não é possível configurá-las no arquivo de configuração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

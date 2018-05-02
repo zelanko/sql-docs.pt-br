@@ -1,16 +1,16 @@
 ---
-title: "Introdução ao PolyBase | Microsoft Docs"
-ms.custom: 
+title: Introdução ao PolyBase | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>Introdução ao PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   Um entendimento de como gerenciar objetos PolyBase no SSMS (SQL Server Management Studio)  
   
--   Exemplos de consultas que usam objetos PolyBase  
-  
-## <a name="prerequisites"></a>Prerequisites  
- Uma instância do [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) com o seguinte:  
-  
--   Microsoft .NET Framework 4.5.  
-  
--   Oracle JRE (Java SE RunTime Environment) versão 7.51 ou superior (64 bits). (Qualquer [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) ou [servidor JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funcionará). Vá para [Downloads de Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). O instalador falhará se o JRE não estiver presente.   
-  
--   Memória mínima: 4 GB  
-  
--   Espaço mínimo no disco rígido: 2 GB    
-
--   A conectividade TCP/IP deve estar habilitada. (Veja [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) As edições do SQL Server Developer e Express têm o TCP/IP desabilitado por padrão. O PolyBase pode ser instalado, mas não será totalmente iniciado até que o TCP/IP esteja habilitado. Você deve habilitar manualmente o TCP/IP para ter a funcionalidade PolyBase. 
-  
- 
- Uma fonte de dados externa, uma das seguintes:  
-  
--   Cluster do Hadoop. Para obter as versões com suporte, veja [Configurar o PolyBase](#supported).  
-
--   Armazenamento de blobs do Azure
-
-> [!NOTE]
->   Se pretender usar a funcionalidade de pushdown de computação contra Hadoop, você precisará garantir que o cluster do Hadoop de destino tenha componentes principais do HDFS, Yarn/MapReduce com o servidor Jobhistory habilitado. O PolyBase envia a consulta de aplicação via MapReduce e recebe o status do servidor JobHistory. A consulta falhará se não tiver um desses componentes. 
+-   Exemplos de consultas que usam objetos PolyBase    
 
 ## <a name="install-polybase"></a>Instalar o PolyBase  
- Se você ainda não instalou o PolyBase, consulte [Instalação do PolyBase](../../relational-databases/polybase/polybase-installation.md).  
+Se você ainda não instalou o PolyBase, veja [Instalação do PolyBase](../../relational-databases/polybase/polybase-installation.md). O artigo sobre a instalação explica os pré-requisitos.
   
 ### <a name="how-to-confirm-installation"></a>Como confirmar a instalação  
  Após a instalação, execute o comando a seguir para confirmar que o PolyBase foi instalado com êxito. Se o PolyBase estiver instalado, retornará 1; caso contrário, 0.  

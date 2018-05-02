@@ -2,7 +2,7 @@
 title: Grupos de disponibilidade distribuídos (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ae16c285a4ff77e0f7753f6bc9a0323aed7f37f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Grupos de disponibilidade distribuídos são um novo recurso introduzido no SQL Server 2016, como uma variação do recurso de grupos de disponibilidade Always On existente. Este artigo explica alguns aspectos dos grupos de disponibilidade distribuídos e complementa a [documentação existente do SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Grupos de disponibilidade distribuídos são um novo recurso introduzido no SQL Server 2016, como uma variação do recurso existente grupos de disponibilidade AlwaysOn. Este artigo explica alguns aspectos dos grupos de disponibilidade distribuídos e complementa a [documentação existente do SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > “DAG” não é a abreviação oficial de *grupo de disponibilidade distribuído*, pois a abreviação já é usada para o recurso Grupo de Disponibilidade de Banco de Dados do Exchange. Esse recurso do Exchange não tem nenhuma relação com os grupos de disponibilidade do SQL Server nem com os grupos de disponibilidade distribuídos.
@@ -55,6 +56,9 @@ A única maneira de fazer com que a réplica primária do AG 2 aceite inserçõe
 
 > [!NOTE]
 > Os grupos de disponibilidade distribuídos do SQL Server 2016 dão suporte ao failover somente de um grupo de disponibilidade para outro usando a opção FORCE_FAILOVER_ALLOW_DATA_LOSS.
+
+> [!NOTE]
+> Ao usar a replicação transacional com grupos de disponibilidade distribuídos, a réplica de encaminhador não pode ser configurada como um publicador.
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Requisitos de versão e edição do SQL Server para grupos de disponibilidade distribuídos
 

@@ -1,6 +1,6 @@
 ---
-title: Atualizado – documentos do SSMS para SQL Server | Microsoft Docs
-description: Exiba trechos do conteúdo atualizado com alterações recentes na documentação "Conectar-se ao Microsoft SQL Server".
+title: Atualizado – ferramentas para documentos do SQL Server | Microsoft Docs
+description: Exiba trechos do conteúdo atualizado com alterações recentes na documentação das Ferramentas para Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -12,7 +12,7 @@ ms.component: tools
 ms.date: 02/03/2018
 ms.openlocfilehash: 6527348b7ad1fb6f5443d45fd3e251654c80d5f5
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/08/2018
 ---

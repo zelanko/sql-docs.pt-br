@@ -1,16 +1,16 @@
 ---
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION FUNCTION
@@ -30,23 +30,23 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 0e2cefd0e5687429603ad80c75ee3cb7fa321b51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria uma função no banco de dados atual que mapeia as linhas de uma tabela ou índice em partições com base nos valores de uma coluna especificada. Usar CREATE PARTITION FUNCTION é a primeira etapa na criação de uma tabela particionada ou índice. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], uma tabela ou índice pode ter no máximo 15.000 partições.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,10 +75,10 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 >  Se *boundary_value* consiste em **datetime** ou **smalldatetime** literais, esses literais serão avaliados supondo que us_english é o idioma da sessão. Este comportamento é preterido. Para certificar-se de que a definição da função de partição se comporta conforme esperado para todos os idiomas de sessão, recomendamos usar constantes que sejam interpretadas da mesma maneira para todas as configurações de idioma, tal como o formato aaaammdd; ou converter explicitamente literais em um estilo específico. Para determinar a sessão de idioma de seu servidor, execute `SELECT @@LANGUAGE`.  
   
  *...n*  
- Especifica o número de valores fornecidos por *boundary_value*, não excedendo 14.999. O número de partições criadas é igual a *n* + 1. Os valores não precisam ser listados em ordem. Se os valores não estiverem em ordem, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] os classifica, cria a função e retorna um aviso de que os valores não foram fornecidos em ordem. O Mecanismo de Banco de Dados retornará um erro se *n* incluir qualquer valor duplicado.  
+ Especifica o número de valores fornecidos por *boundary_value*, não excedendo 14.999. O número de partições criadas é igual a *n* + 1. Os valores não precisam ser listados em ordem. Se os valores não estiverem em ordem, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] os classifica, cria a função e retorna um aviso de que os valores não foram fornecidos em ordem. O Mecanismo de Banco de Dados retorna um erro se *n* inclui um valor duplicado.  
   
  **LEFT** | RIGHT  
- Especifica a qual lado de cada intervalo de valor de limite, esquerdo ou direito, o *boundary_value* [ **,***...n* ] pertence quando valores de intervalo são classificados pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] em ordem crescente da esquerda para a direita. Se não for especificado, LEFT será o padrão.  
+ Especifica a qual lado de cada intervalo de valor de limite, esquerdo ou direito, o *boundary_value* [ **,***...n* ] pertence, quando valores de intervalo são classificados pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] em ordem ascendente da esquerda para a direita. Se não for especificado, LEFT será o padrão.  
   
 ## <a name="remarks"></a>Remarks  
  O escopo de uma função de partição é limitado ao banco de dados em que é criado. No banco de dados, as funções das partições residem em um namespace separado das outras funções.  
@@ -111,7 +111,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**Valores**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Criando uma função de partição RANGE RIGHT em uma coluna int  
- A função de partição a seguir usa os mesmos valores para *boundary_value* [ **,***...n* ] que o do exemplo anterior, com exceção de que ela especifica RANGE RIGHT.  
+ A função de partição a seguir usa os mesmos valores para *boundary_value* [ **,***...n* ] do exemplo anterior, com exceção de que ela especifica RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

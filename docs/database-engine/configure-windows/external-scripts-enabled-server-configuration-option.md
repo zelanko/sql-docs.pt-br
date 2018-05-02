@@ -1,7 +1,7 @@
 ---
 title: Opção de configuração de servidor External Scripts Enabled | Microsoft Docs
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -23,11 +23,11 @@ author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: c4459e9c4308e4c8848a2ce0d5178555ad31e0fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Opção de configuração de servidor External Scripts Enabled
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ Você deve reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Para obter mais informações, consulte [Configurar o SQL Server Machine Learning](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 
-[RECONFIGURE & #40; Transact-SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
 
 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 

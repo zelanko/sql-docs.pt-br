@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f251fd08716dcacef95f5af1f5dffcb2788243c3
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Abrir uma tabela de rastreamento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como abrir uma tabela de rastreamento existente usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como abrir uma tabela de rastreamento existente usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-open-a-trace-table"></a>Para abrir uma tabela de rastreamento  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/17/2018
   
 4.  Na lista **Tabela** , selecione o nome da tabela. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
  [Salvar rastreamentos e modelos de rastreamento](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

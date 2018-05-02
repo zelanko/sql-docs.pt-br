@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 70efce8b1aede11f3892b6c20c06fa6d1c143a43
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="testserver-element-dta"></a>Elemento TestServer (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o servidor de teste a ser usado ao ajustar um servidor de produção.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica o servidor de teste a ser usado ao ajustar um servidor de produção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,23 +43,23 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, comprimento ilimitado.|  
-|**Valor padrão**|Nenhuma.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhuma.|  
+|**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Reduzir a carga de ajuste do servidor de produção](../../relational-databases/performance/reduce-the-production-server-tuning-load.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

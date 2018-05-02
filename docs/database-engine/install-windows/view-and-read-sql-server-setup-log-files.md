@@ -1,16 +1,16 @@
 ---
-title: "Exibir e ler arquivos de log da Instalação do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Exibir e ler arquivos de log da Instalação do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 09/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - viewing logs
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ca86119236aecc19868bac5f5846a3363118502
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: de8c06e452f096799deab83d1cbe22353de75cba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Exibir e ler arquivos de log da Instalação do SQL Server
 
@@ -177,7 +177,7 @@ Cada execução da Instalação cria arquivos de log com uma nova pasta de log c
 ### <a name="location"></a>Local  
  Ele está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Instalar o SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 109f9bdd06bf27928450c89ad06dc6d93247b881
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 137f5200829916c69c2cf8fcae4c8490e48b2b6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] A funcionalidade alternativa não está disponível.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,8 +69,8 @@ TEXTPTR ( column )
   
 |Função ou instrução|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**('***%pattern%***' ,** *expression***)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
-|DATALENGTH**(***expression***)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
+|PATINDEX **('***%pattern%***' ,** *expression***)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
+|DATALENGTH **(***expression***)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Retorna o limite, em bytes, dos dados **text**, **ntext** ou **image** a serem retornados com uma instrução SELECT.|  
 |SUBSTRING**(***text_column*, *start*, *length***)**|Retorna uma cadeia de caracteres **varchar** especificada pelo deslocamento *start* e o *length* especificados. O comprimento deve ser menor que 8 KB.|  
   

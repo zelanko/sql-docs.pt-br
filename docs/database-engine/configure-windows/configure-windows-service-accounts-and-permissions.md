@@ -1,8 +1,8 @@
 ---
 title: Configurar contas e permissões do serviço Windows | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -58,11 +58,11 @@ author: MikeRayMSFT
 ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 679dab613a948419e1407e66ef82b907465e1c2b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 20fe8b9065d6026e81e398c063eec0240eb51635
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ A tabela a seguir lista as contas de serviço padrão usadas pela instalação a
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)* **|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
@@ -149,7 +149,8 @@ A tabela a seguir lista as contas de serviço padrão usadas pela instalação a
 |Mecanismo PolyBase  |[SERVIÇO DE REDE](#Network_Service) |[SERVIÇO DE REDE](#Network_Service)  |
 |Serviço de Movimentação de Dados PolyBase |[SERVIÇO DE REDE](#Network_Service) |[SERVIÇO DE REDE](#Network_Service)  |
   
- *Quando recursos externos ao computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são necessários, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda usar uma MSA (Conta de Serviço Gerenciado), configurada com os privilégios mínimos necessários.  
+ *Quando recursos externos ao computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são necessários, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda usar uma MSA (Conta de Serviço Gerenciado), configurada com os privilégios mínimos necessários.   
+ ** Quando instalada em um Controlador de Domínio, não há suporte para uma conta virtual como a conta de serviço.
   
  **Instância de cluster de failover do SQL Server**
   
@@ -295,7 +296,7 @@ O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] habilita o SID por servi�
   
 |Serviço do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Permissões concedidas pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\MSSQLSERVER**. Instância nomeada: **NT SERVICE\MSSQL$**InstanceName.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> Permissão para iniciar o Gravador do SQL<br /><br /> Permissão para ler o serviço Log de Eventos<br /><br /> Permissão para ler o serviço Chamada de Procedimento Remoto|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\MSSQLSERVER**. Instância nomeada: **NT SERVICE\MSSQL$** InstanceName.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> Permissão para iniciar o Gravador do SQL<br /><br /> Permissão para ler o serviço Log de Eventos<br /><br /> Permissão para ler o serviço Chamada de Procedimento Remoto|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** \*<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\SQLSERVERAGENT**. Instância nomeada: **NT Service\SQLAGENT$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. Instância nomeada: **SQLServerMSASUser$***ComputerName***$***InstanceName*. Instância [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$***ComputerName***$***PowerPivot*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Somente tabular:<br /><br /> **Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Bloquear páginas na memória** (SeLockMemoryPrivilege): isso é necessário somente quando a paginação está totalmente desativada.<br /><br /> Somente para instalações de cluster de failover:<br /><br /> **Aumentar a prioridade de planejamento** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **NT SERVICE\\ReportServer$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)|  
@@ -413,15 +414,15 @@ Poderá ser necessário conceder algumas permissões de controle de acesso a con
 ||Somente Administrador|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<nome_da_instância_sql>*|Controle total|  
 ||Administradores, Sistema|\tools\binn\schemas\sqlserver\2004\07\showplan|Controle total|  
 ||Usuários|\tools\binn\schemas\sqlserver\2004\07\showplan|Leitura, Execução|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Report Server Web Service Account>|*\<install>*\Reporting Services\LogFiles|Delete (excluir)<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Identidade do pool de aplicativos do Gerenciador de Relatórios, conta do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , Todos|*\<install>*\Reporting Services\ReportManager, *\<install>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<install>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<install>*\Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|leitura|  
-||Identidade do pool de aplicativos do Gerenciador de Relatórios|*\<install>*\Reporting Services\ReportManager\Pages\\*.\*|leitura|  
-||\<Report Server Web Service Account>|*\<install>*\Reporting Services\ReportServer|leitura|  
-||\<Report Server Web Service Account>|*\<install>*\Reporting Services\ReportServer\global.asax|Completo|  
-||Todos|*\<install>*\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||SERVIÇO DE REDE|*\<install>*\Reporting Services\ReportServer\ReportService.asmx|Completo|  
-||Todos|*\<install>*\Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Conta de Serviços do Windows do ReportServer|*\<install>*\Reporting Services\ReportServer\RSReportServer.config|Delete (excluir)<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Report Server Web Service Account>|*\<install>* \Reporting Services\LogFiles|Delete (excluir)<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Identidade do pool de aplicativos do Gerenciador de Relatórios, conta do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , Todos|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<install>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<install>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|leitura|  
+||Identidade do pool de aplicativos do Gerenciador de Relatórios|*\<install>* \Reporting Services\ReportManager\Pages\\*.\*|leitura|  
+||\<Report Server Web Service Account>|*\<install>* \Reporting Services\ReportServer|leitura|  
+||\<Report Server Web Service Account>|*\<install>* \Reporting Services\ReportServer\global.asax|Completo|  
+||Todos|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||SERVIÇO DE REDE|*\<install>* \Reporting Services\ReportServer\ReportService.asmx|Completo|  
+||Todos|*\<install>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
+||Conta de Serviços do Windows do ReportServer|*\<install>* \Reporting Services\ReportServer\RSReportServer.config|Delete (excluir)<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Todos|Chaves do Servidor de Relatório (ramificação Instid)|Consultar Valor<br /><br /> Enumerar Subchaves<br /><br /> Notificar<br /><br /> Controle de Leitura|  
 ||Usuários dos Serviços de Terminal|Chaves do Servidor de Relatório (ramificação Instid)|Consultar Valor<br /><br /> Definir Valor<br /><br /> Criar Subchave<br /><br /> Enumerar Subchave<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controle de Leitura|  
 ||Usuários Avançados|Chaves do Servidor de Relatório (ramificação Instid)|Consultar Valor<br /><br /> Definir Valor<br /><br /> Criar Subchave<br /><br /> Enumerar Subchaves<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controle de Leitura|  

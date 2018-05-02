@@ -1,16 +1,16 @@
 ---
 title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DecryptByKey_TSQL
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - decryption [SQL Server], symmetric keys
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1275be81fdf2a8405d0f744da962c3cf874eea2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3d3064da25a280e7fe0d2534e7b2b2040094fbc3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Decifra dados usando uma chave simétrica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,9 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  É uma variável que contém dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **varbinary** com um tamanho máximo de 8.000 bytes.  
+ **varbinary** com um tamanho máximo de 8.000 bytes.
+ 
+Retorna NULL se a chave simétrica usada para criptografar os dados não está aberta ou o *ciphertext* é NULL.
   
 ## <a name="remarks"></a>Remarks  
  DecryptByKey usa uma chave simétrica. Essa chave simétrica já deve estar aberta no banco de dados. Podem haver várias chaves abertas ao mesmo tempo. Não é necessário abrir a chave imediatamente antes de descriptografar o texto de codificado.  

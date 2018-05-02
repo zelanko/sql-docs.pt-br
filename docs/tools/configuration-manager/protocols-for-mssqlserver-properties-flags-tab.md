@@ -1,5 +1,5 @@
 ---
-title: Protocolos para propriedades MSSQLSERVER (guia Sinalizadores)
+title: Protocolos para propriedades MSSQLSERVER (guia Sinalizadores) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: eeca5f9ce24cd9ff24663a05344bd8543b1141b7
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
@@ -40,7 +40,7 @@ Quando um certificado estiver instalado no servidor, use a guia **Sinalizadores*
  O processo de logon sempre é criptografado. Quando **ForceEncryption** estiver definido como **Yes**, toda a comunicação cliente/servidor será criptografada, e os clientes que se conectarem ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] deverão estar configurados para confiar na autoridade raiz do certificado do servidor. Para obter mais informações, consulte "Como habilitar conexões criptografadas no [!INCLUDE[ssDE](../../includes/ssde-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="cluster-servers"></a>Servidores clusterizados  
- Para usar criptografia com um cluster de failover, você deve instalar o certificado de servidor com o nome DNS totalmente qualificado do servidor virtual em todos os nós no cluster de failover. Por exemplo, se você tiver um cluster de dois nós, com os nomes "test1.*<sua empresa\<*.com" e "test2.*<sua empresa\<*.com", e um servidor virtual chamado "virtsql", será necessário instalar um certificado para "virtsql.*<sua empresa\<*.com" em ambos os nós. Você então poderá marcar a caixa de seleção **ForceEncryption** no **SQL Server Configuration Manager** para configurar o cluster de failover para criptografia.  
+ Para usar criptografia com um cluster de failover, você deve instalar o certificado de servidor com o nome DNS totalmente qualificado do servidor virtual em todos os nós no cluster de failover. Por exemplo, se você tiver um cluster de dois nós, com os nomes "test1.*\<your company>*.com" e "test2.*\<your company>*.com" e um servidor virtual chamado "virtsql", será necessário instalar um certificado para "virtsql.*\<your company>*.com" em ambos os nós. Você então poderá marcar a caixa de seleção **ForceEncryption** no **SQL Server Configuration Manager** para configurar o cluster de failover para criptografia.  
   
 ## <a name="options"></a>Opções  
  **ForceEncryption**  

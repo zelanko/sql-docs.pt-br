@@ -1,15 +1,16 @@
 ---
-title: "Caixas de diálogo do SQL Server Profiler | Microsoft Docs"
-ms.custom: 
+title: Caixas de diálogo do SQL Server Profiler | Microsoft Docs
+ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.pro.traceproperties.general.f1;
@@ -43,19 +44,19 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propriedades do rastreamento
 ### <a name="general-tab"></a>Guia Geral
 Use a guia **Geral** da caixa de diálogo **Propriedades do Rastreamento** para exibir ou especificar propriedades de um rastreamento.  
@@ -90,7 +91,7 @@ Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastr
 
 ## <a name="trace-template-properties"></a>Propriedades do modelo de rastreamento 
 ### <a name="new-general-tab"></a>Novo (guia Geral)
-Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para criar novos modelos de rastreamento usando as opções a seguir. Para acessar essa caixa de diálogo, no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **arquivo** , aponte para **modelos**e, em seguida, clique em **novo**.
+Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para criar novos modelos de rastreamento usando as opções a seguir. Para acessar essa caixa de diálogo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] aponte para **Modelos** e clique em **Novo**.
 |Item|Description
 |---|---
 |**Selecionar tipo de servidor**|Especifique o tipo de servidor em relação ao qual esse modelo será usado.  
@@ -115,7 +116,7 @@ Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Model
 |Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** .  
 |**Mostrar todos os eventos**|Mostra todos os eventos disponíveis. Essa opção será selecionada por padrão se você estiver criando um novo modelo que não seja baseado em um modelo existente. Desmarque para ocultar todos os eventos não selecionados na grade **Seleção de Eventos** .  
 |**Mostrar todas as colunas**|Mostra todas as colunas de dados disponíveis. Essa opção será selecionada por padrão se você estiver criando um novo modelo que não seja baseado em um modelo existente. Desmarque para ocultar todas as colunas de dados não selecionadas na guia **Seleção de Eventos** .  
-|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro** , que exibe um ícone de filtro à esquerda do rótulo da coluna de dados. Use a caixa de diálogo **Editar Filtro** para editar filtros de coluna de dados.  
+|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro**, que exibe um ícone de filtro à esquerda do rótulo da coluna de dados. Use a caixa de diálogo **Editar Filtro** para editar filtros de coluna de dados.  
 |**Organizar Colunas**|Altera a ordem das colunas no rastreamento e agrupa os resultados em uma ou mais colunas. 
 ## <a name="trace-file-properties"></a>Propriedades do arquivo de rastreamento 
 ### <a name="general-tab"></a>Guia Geral
@@ -153,7 +154,7 @@ Para visualizar esta janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssql
 |Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** .  
 |**Mostrar todos os eventos**|Mostra todos os eventos disponíveis. Por padrão, somente as linhas selecionadas na grade **Seleção de Eventos** são exibidas. Desmarque essa caixa para ocultar todos os eventos não selecionados na grade **Seleção de Eventos** . Se a opção **Mostrar todos os eventos** estiver marcada e você estiver visualizando uma tabela ou arquivo de rastreamento, todos os eventos que foram gravados no rastreamento serão exibidos na janela de rastreamento.  
 |**Mostrar todas as colunas**|Mostra todas as colunas de dados disponíveis. Por padrão, somente colunas de dados selecionadas são exibidas. Desmarque essa caixa para ocultar todas as colunas de dados não selecionadas na grade **Seleção de Eventos** .  
-|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro** , que exibe um ícone de filtro à esquerda do rótulo da coluna. Você pode usar essa caixa de diálogo para editar filtros de coluna de dados.  
+|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro**, que exibe um ícone de filtro à esquerda do rótulo da coluna. Você pode usar essa caixa de diálogo para editar filtros de coluna de dados.  
 |**Organizar Colunas** |Depois de selecionar **Eventos** e colunas de dados a serem rastreados, clique em **Organizar Colunas** para forçar a grade a reclassificar a coluna na janela de resultados do rastreamento.  
 ## <a name="performance-counters-limit"></a>Limite de contadores de desempenho
 Use a caixa de diálogo Limite de Contadores de Desempenho para limitar as informações de um arquivo de log de desempenho do Monitor do Sistema ao correlacioná-lo com um rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Você pode usar essa caixa de diálogo para selecionar os contadores que devem ser exibidos e usados para a correlação.  
@@ -171,26 +172,26 @@ Use a caixa de diálogo **Opções Gerais** para exibir ou especificar as opçõ
 |**Nome da fonte**|Exibe o nome da fonte usada na grade de resultados de rastreamento durante rastreamentos.  
 |**Tamanho da fonte**|Exibe o tamanho da fonte usada na grade de resultados de rastreamento durante rastreamentos.  
 |**Escolher Fonte**|Abre uma caixa de diálogo para alterar as configurações de fonte.  
-|**Usar configurações regionais para exibir valores de data e hora**|Exibe os valores de data e hora com os parâmetros regionais configurados para seu computador. Se você não selecionar essa opção, os valores de data e hora serão exibidos no formato fixo usado pelo Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que inclui milissegundos. Observe que a alternância essa caixa de seleção altera as colunas de hora formato de exibição, como **StartTime** e **EndTime**. Porém, não altera os parâmetros de valores **DateTime** dentro dos eventos de idioma ou RPCs (chamadas de procedimento remoto).  
+|**Usar configurações regionais para exibir valores de data e hora**|Exibe os valores de data e hora com os parâmetros regionais configurados para seu computador. Se você não selecionar essa opção, os valores de data e hora serão exibidos no formato fixo usado pelo Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que inclui milissegundos. Observe que a ativação/desativação desta caixa de seleção altera o formato de exibição das colunas de hora como **StartTime** e **EndTime**. Porém, não altera os parâmetros de valores **DateTime** dentro dos eventos de idioma ou RPCs (chamadas de procedimento remoto).  
 |**Mostrar valores na coluna Duration em microssegundos**|Exibe os valores em microssegundos na coluna de dados **Duration** de rastreamentos. Por padrão, a coluna **Duration** exibe valores em milissegundos.  
 ### <a name="tracing-options"></a>Opções de rastreamento  
 |Item|Description
 |---|---
 |**Iniciar rastreamento imediatamente após estabelecer a conexão.**|Começa a rastrear usando o modelo padrão assim que uma conexão é estabelecida.  
 |**Atualizar a definição de rastreamento quando a versão do provedor for alterada**|Aplica a definição de rastreamento mais recente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o provedor for atualizado. Este item não é verificado por padrão. Isso força o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] a consultar o servidor quanto à definição de rastreamento e a recriar o arquivo em disco, se houver um.  
-### <a name="file-rollover-options"></a>Opções de substituição de arquivo  
+### <a name="file-rollover-options"></a>Opções de sobreposição de arquivo  
 |Item|Description
 |---|---
 |**Carregar todos os arquivos de substituição em sequência, sem avisar**|Carrega automaticamente os arquivos de substituição quando um arquivo de rastreamento é aberto. Se mais de um arquivo foi criado durante o rastreamento, selecionar esta opção carregará automaticamente todos os arquivos de substituição.  
 |**Perguntar antes de carregar arquivos de substituição**|O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pergunta antes de adicionar um arquivo de substituição quando um arquivo de rastreamento é aberto.  
 |**Nunca carregar arquivos de substituição subsequentes**|O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nunca carrega arquivos de substituição subsequentes quando um arquivo de rastreamento é aberto.  
-### <a name="replay-options"></a>Opções de repetição  
+### <a name="replay-options"></a>Opções de reprodução  
 |Item|Description
 |---|---
 |**Número padrão de threads de repetição**|Especifica o número de threads de repetição a usar simultaneamente. Um número mais alto consome mais recursos durante a repetição, porém aumenta a simultaneidade da repetição.  
 |**Intervalo de espera padrão do monitor de integridade (s)**|Especifica o intervalo de espera de repetição, em segundos. O padrão é 3600 segundos (1 hora). Esta configuração afeta o tempo durante o qual um thread pode ser executado antes de ser concluído pelo monitor de integridade.  
 |**Intervalo de sondagem padrão do monitor de integridade (s)**|Especifica o intervalo de sondagem do monitor de integridade durante a repetição, em segundos. O padrão é 60 segundos. Este valor permite que o usuário configure com que frequência o monitor de integridade sonda candidatos a conclusão.
-## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Tabela de origem (tabela de banco de dados mecanismo ajuste supervisor selecione carga de trabalho)
+## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Tabela de origem (tabela de carga de trabalho selecionada do Orientador de Otimização do Mecanismo de Banco de Dados)
 O Microsoft SQL Server Profiler e o Orientador de Otimização usam essa caixa de diálogo para selecionar tabelas.  
 - No Profiler, use a caixa de diálogo **Tabela de Origem** para especificar uma tabela de origem para uma tabela de rastreamento. Essa é uma tabela a partir da qual é carregado um rastreamento e cujo conteúdo é exibido ou usado para repetir o rastreamento.  
 - No Orientador de Otimização, use a caixa de diálogo **Selecionar Tabela de Carga de Trabalho** para selecionar uma tabela de banco de dados que contém informações de rastreamento do criador de perfil para usar como uma carga de trabalho de otimização ou para visualizar o conteúdo da tabela antes de iniciar a análise de otimização.  
@@ -198,7 +199,7 @@ O Microsoft SQL Server Profiler e o Orientador de Otimização usam essa caixa d
 |Item|Description
 |---|---
 |**SQL Server**|Especifica a instância do SQL Server conectada atualmente. Esse campo é populado automaticamente e não pode ser atualizado.  
-|**Banco de dados**|Especifique o banco de dados onde está localizada a tabela de rastreamento.  
+|**Backup de banco de dados**|Especifique o banco de dados onde está localizada a tabela de rastreamento.  
 |**Proprietário**|Specifies the owner of the trace table. Este campo é populado automaticamente como **dbo**.  
 |**Table**|Especifique o nome da tabela de rastreamento a partir da qual deve ser lido o rastreamento.  
 ## <a name="destination-table"></a>Tabela de destino
@@ -206,24 +207,24 @@ Use a caixa de diálogo **Tabela de Destino** para especificar uma tabela em que
 |Item|Description
 |---|---
 |**SQL Server**|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectada atualmente. Esse campo é populado automaticamente e não pode ser atualizado. Para alterar o servidor, clique em **Cancelar** e se conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que você deseja armazenar a tabela de rastreamento.  
-|**Banco de dados**|Especifica o banco de dados em que você quer armazenar a tabela de rastreamento.  
+|**Backup de banco de dados**|Especifica o banco de dados em que você quer armazenar a tabela de rastreamento.  
 |**Proprietário**|Specifies the owner of the trace table. Este campo é populado automaticamente como **dbo**.  
 |**Table**|Especifica o nome da tabela em que você quer armazenar o rastreamento.  
-## <a name="replay-configuration"></a>Configuração de repetição
-### <a name="basic-replay-options"></a>Opções de repetição básicas
+## <a name="replay-configuration"></a>Configuração de reprodução
+### <a name="basic-replay-options"></a>Opções de reprodução básicas
 Na caixa de diálogo **Configuração de Repetição** , use a página **Opções de Repetição Básicas** para especificar como repetir um arquivo ou tabela de rastreamento.  
 Para exibir essa janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para abrir um arquivo ou tabela de rastreamento que contenha os eventos adequados para repetição. Para obter mais informações, consulte [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). Enquanto o arquivo ou tabela de rastreamento está aberto, no menu **Repetição** , clique em **Iniciar**e, então, conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde deseja repetir o rastreamento.  
 |Item|Description
 |---|---
 |**Servidor de repetição**|Exibe a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar para a repetição.  
 |**Alterar...**|Inicia a caixa de diálogo **Conectar ao Servidor** para conectar a outro servidor.  
-|**Salvar no arquivo** |Salva os resultados da repetição para um arquivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Exibe a caixa de diálogo de arquivo padrão, onde você pode especificar o local para salvar o arquivo.  
-|**Salvar na tabela**|Salva os resultados da repetição em uma tabela. O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
+|**Salvar no arquivo** |Salva os resultados da repetição para um arquivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe o diálogo de arquivo padrão, permitindo que se especifique o local para salvar o arquivo.  
+|**Salvar na tabela**|Salva os resultados da repetição em uma tabela. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
 |**Número de threads de repetição**|Especifica o número de threads de repetição a usar simultaneamente. Um número maior consome mais recursos durante a repetição, porém esta será mais rápida e simultânea.  
 |**Repetir eventos na ordem em que foram rastreados**|Repete os eventos sequencialmente. Use esta opção se você estiver repetindo um rastreamento para depuração.  
-|**Repetir eventos usando vários threads** |Repete os eventos simultaneamente. Essa opção é mais rápida que repetir eventos sequencialmente, mas desabilita a depuração. Os eventos são ordenados dentro de seus identificadores de processo de sistema (SPID).  
+|**Reproduzir eventos usando vários threads** |Repete os eventos simultaneamente. Essa opção é mais rápida que repetir eventos sequencialmente, mas desabilita a depuração. Os eventos são ordenados dentro de seus identificadores de processo de sistema (SPID).  
 |**Exibir resultados da repetição**|Exibe os resultados da repetição no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. 
-### <a name="advanced-replay-options"></a>Opções de repetição avançadas
+### <a name="advanced-replay-options"></a>Opções de reprodução avançadas
 Na caixa de diálogo **Configuração de Reprodução** , use a guia **Opções de Reprodução Avançadas** para especificar como reproduzir um arquivo de rastreamento.  
 Para exibir essa janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para abrir um arquivo ou tabela de rastreamento que contenha os eventos adequados para repetição. Para obter mais informações, consulte [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). Enquanto o arquivo ou tabela de rastreamento está aberto, no menu **Reprodução** , clique em **Iniciar**, conecte-se à instância do SQL Server em que você deseja reproduzir o rastreamento e clique na guia **Opções de Reprodução Avançadas** .  
 |Item|Description
@@ -240,11 +241,11 @@ Para exibir essa janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprof
 |**Intervalo de espera do monitor de processos bloqueados (s)**|Configura a frequência com que o monitor de processos bloqueados procura processos bloqueados ou em bloqueio.  
 ## <a name="find-dialog-box"></a>Caixa de diálogo Localizar
 Use a caixa de diálogo **Localizar** para pesquisar um rastreamento para caracteres ou palavras específicos. Para cancelar uma pesquisa em andamento, pressione ESC.  
- Para abrir essa caixa de diálogo no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], no menu **Editar**, clique em **Localizar**.  
+ Para abrir essa caixa de diálogo no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], no menu **Editar** , clique em **Localizar**.  
 |Item|Description
 |---|---
-|**Find what**|Insira o texto que deseja pesquisar. A pesquisa corresponde a qualquer cadeia de caracteres que contenha a cadeia especificada. Por exemplo, a pesquisa por "Concluído" corresponde a "SQL:LoteConcluído". Caracteres curinga (*, ?, etc.) não têm suporte.  
-|**Pesquisar na coluna**|Clique em uma coluna de dados para pesquisar ou em  **\<todas as colunas >** para pesquisar todas as colunas de dados no rastreamento.  
+|**Localizar**|Insira o texto que deseja pesquisar. A pesquisa corresponde a qualquer cadeia de caracteres que contenha a cadeia especificada. Por exemplo, a pesquisa por "Concluído" corresponde a "SQL:LoteConcluído". Caracteres curinga (*, ?, etc.) não têm suporte.  
+|**Pesquisar na coluna**|Clique em uma coluna de dados para pesquisar ou em **\<Todas as colunas>** para pesquisar todas as colunas de dados no rastreamento.  
 |**Diferenciar maiúsculas de minúsculas**|Localiza texto que tem maiúsculas e minúsculas iguais às da caixa **Localizar** . Desmarque essa caixa de seleção para localizar exemplos no rastreamento que tenham caracteres de texto tanto com letras maiúsculas como com minúsculas.  
 |**Coincidir palavra inteira**|Restringe a pesquisa a palavras inteiras. Desmarque a caixa de seleção **Coincidir palavra inteira** para pesquisar caracteres em uma palavra.  
 |**Localizar Próximo**|Localiza o próximo exemplo dos caracteres na caixa **Localizar** .  
@@ -271,13 +272,13 @@ Use a caixa de diálogo **Editar Filtro** para criar e modificar filtros da colu
  >Para colunas de dados do tipo cadeia de caracteres, os critérios de filtro exibirão um valor de cadeia de caracteres LIKE ou NOT LIKE.  
 
 ## <a name="select-template-name"></a>Selecionar Nome do Modelo
-Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], aponte para **Modelos** e clique em **Exportar Modelo**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo** , aponte para **Modelos**, aponte para **Editar Modelo**e, então, clique em **Salvar Como**.  
+Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo** , aponte para **Modelos**, aponte para **Editar Modelo**e, então, clique em **Salvar Como**.  
 |Item|Description
 |---|---
 |**Tipo de servidor**|Selecione o tipo de servidor do qual você quer escolher um modelo. Essa opção só está disponível quando você estiver exportando um modelo.  
 |**Nome do modelo**|Digite um nome de modelo novo ou selecione um nome de modelo da lista. Se estiver exportando um modelo, você poderá selecionar somente um nome de modelo da lista. 
 
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Confira também 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [Monitoramento de desempenho e atividade de servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   

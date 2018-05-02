@@ -1,29 +1,29 @@
 ---
-title: "Protocolos de cliente – propriedades de TCP IP (guia protocolo) | Microsoft Docs"
-ms.custom: 
+title: Protocolos de cliente – propriedades de TCP IP (guia Protocolo) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
 - client protocols [SQL Server]
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1fa2175534441ab464452a1f549833742daaa185
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
@@ -48,9 +48,9 @@ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
  **Intervalo de Atividade**  
  Este parâmetro (em milissegundos) determina o intervalo que separa novas transmissões de **KEEPALIVE** até que uma resposta seja recebida. O padrão é 1.000 milissegundos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [Novo Alias &#40; Guia de alias &#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
+ [Novo Alias &#40;Alias Tab&#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
  [Propriedades &#60;Alias&#62; &#40;Guia Alias&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

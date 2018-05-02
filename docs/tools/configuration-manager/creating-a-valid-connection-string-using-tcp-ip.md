@@ -1,5 +1,5 @@
 ---
-title: Criando uma cadeia de conexão válida usando TCP/IP
+title: Criando uma cadeia de conexão válida usando TCP/IP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 869aff413da127fac11244e8d2613696c963c323
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---

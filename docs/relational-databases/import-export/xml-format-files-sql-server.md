@@ -2,7 +2,7 @@
 title: Arquivos de formato XML (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -22,11 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5a482e155526645fcfa950b323b4642d9884e5d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -189,9 +190,9 @@ ms.lasthandoff: 04/10/2018
   
  ID **="***fieldID***"**  
   
- xsi**:**type **="***fieldType***"**  
+ xsi **:** type **="***fieldType***"**  
   
- [Tamanho **= "***n***"** ]  
+ [ LENGTH **="***n***"** ]  
   
  [ PREFIX_LENGTH **="***p***"** ]  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 04/10/2018
   
 |Atributo FIELD|Descrição|Opcional /<br /><br /> Obrigatório|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Especifica o nome lógico do campo no arquivo de dados. A ID de um campo é a chave para fazer referência ao campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> é mapeado para \<COLUMN SOURCE**="***fieldID***"**/>|Obrigatório|  
+|ID **="***fieldID***"**|Especifica o nome lógico do campo no arquivo de dados. A ID de um campo é a chave para fazer referência ao campo.<br /><br /> \<FIELD ID **="***fieldID***"**/> é mapeado para \<COLUMN SOURCE **="***fieldID***"**/>|Obrigatório|  
 |xsi:type **="***fieldType***"**|Essa é uma construção XML (usada como um atributo) que identifica o tipo da instância do elemento. O valor de *fieldType* determina de quais atributos opcionais (abaixo) você necessita em determinada instância.|Obrigatório (dependendo do tipo de dados)|  
 |LENGTH **="***n***"**|Esse atributo define o comprimento de uma instância de um tipo de dados de comprimento fixo.<br /><br /> O valor de *n* deve ser um inteiro positivo.|Opcional, a menos que exigido pelo valor xsi:type|  
 |PREFIX_LENGTH **="***p***"**|Esse atributo define o comprimento do prefixo para uma representação de dados binária. O valor PREFIX_LENGTH, *p*, deve ser um dos seguintes: 1, 2, 4 ou 8.|Opcional, a menos que exigido pelo valor xsi:type|  
@@ -222,7 +223,7 @@ ms.lasthandoff: 04/10/2018
   
 |Valores de xsi:type de \<FIELD>|Atributos XML obrigatórios<br /><br /> para tipo de dados|Atributos XML opcionais<br /><br /> para tipo de dados|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
-|**NativeFixed**|**LENGTH**|Nenhuma.|  
+|**NativeFixed**|**LENGTH**|Nenhum.|  
 |**NativePrefix**|**PREFIX_LENGTH**|MAX_LENGTH|  
 |**CharFixed**|**LENGTH**|COLLATION|  
 |**NCharFixed**|**LENGTH**|COLLATION|  
@@ -260,13 +261,13 @@ ms.lasthandoff: 04/10/2018
   
 |Atributo COLUMN|Description|Opcional /<br /><br /> Obrigatório|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|Especifica a ID do campo que é mapeado para a coluna.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> é mapeado para \<FIELD ID**="***fieldID***"**/>|Obrigatório|  
+|SOURCE **="***fieldID***"**|Especifica a ID do campo que é mapeado para a coluna.<br /><br /> \<COLUMN SOURCE **="***fieldID***"**/> é mapeado para \<FIELD ID **="***fieldID***"**/>|Obrigatório|  
 |NAME = "*columnName*"|Especifica o nome da coluna no conjunto de linhas representado pelo arquivo de formato. Esse nome de coluna é usado para identificar a coluna no conjunto de resultados e não precisa corresponder ao nome da coluna usado na tabela de destino.|Obrigatório|  
-|xsi**:**type **="***ColumnType***"**|Essa é uma construção XML (usada como um atributo) que identifica o tipo de dados da instância do elemento. O valor de *ColumnType* determina de quais atributos opcionais (abaixo) você necessita em uma determinada instância.<br /><br /> Observação: os valores possíveis de *ColumnType* e seus atributos associados são listados na tabela do elemento \<COLUMN> nos valores [Xsi:type da seção Elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Opcional|  
+|xsi **:** type **="***ColumnType***"**|Essa é uma construção XML (usada como um atributo) que identifica o tipo de dados da instância do elemento. O valor de *ColumnType* determina de quais atributos opcionais (abaixo) você necessita em uma determinada instância.<br /><br /> Observação: os valores possíveis de *ColumnType* e seus atributos associados são listados na tabela do elemento \<COLUMN> nos valores [Xsi:type da seção Elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Opcional|  
 |LENGTH **="***n***"**|Define o comprimento de uma instância de um tipo de dados de comprimento fixo. LENGTH só é usado quando xsi:type é um tipo de dados de cadeia de caracteres.<br /><br /> O valor de *n* deve ser um inteiro positivo.|Opcional (disponível somente se xsi:type for um tipo de dados de cadeia de caracteres)|  
 |PRECISION **="***n***"**|Indica o número de dígitos em um número. Por exemplo, o número 123,45 tem uma precisão de 5.<br /><br /> O valor deve ser um inteiro positivo.|Opcional (disponível somente se xsi:type for um tipo de dados de número variável)|  
 |SCALE **="***int***"**|Indica o número de dígitos à direita da casa decimal em um número. Por exemplo, o número 123,45 tem uma escala de 2.<br /><br /> O valor deve ser um inteiro.|Opcional (disponível somente se xsi:type for um tipo de dados de número variável)|  
-|NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|Indica se uma coluna pode assumir valores NULL. Esse atributo é completamente independente de FIELDS. Porém, se uma coluna não for NULLABLE e campo especificar NULL (não especificando nenhum valor), ocorrerá erro em tempo de execução.<br /><br /> O atributo NULLABLE será usado apenas se você executar uma instrução SELECT FROM OPENROWSET (BULK...) simples.|Opcional (disponível para qualquer tipo de dados)|  
+|NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Indica se uma coluna pode assumir valores NULL. Esse atributo é completamente independente de FIELDS. Porém, se uma coluna não for NULLABLE e campo especificar NULL (não especificando nenhum valor), ocorrerá erro em tempo de execução.<br /><br /> O atributo NULLABLE será usado apenas se você executar uma instrução SELECT FROM OPENROWSET (BULK...) simples.|Opcional (disponível para qualquer tipo de dados)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> Valores de Xsi:type do elemento \<COLUMN>  
  O valor de xsi:type é uma construção XML (usada como um atributo) que identifica o tipo de dados de uma instância de um elemento. Para obter informações sobre como usar o valor de xsi:type, consulte "Colocando o valor de xsi:type em um conjunto de dados", posteriormente nesta seção.  
@@ -275,12 +276,12 @@ ms.lasthandoff: 04/10/2018
   
 |Categoria do tipo|Tipos de dados de \<COLUMN>|Atributos XML obrigatórios<br /><br /> para tipo de dados|Atributos XML opcionais<br /><br /> para tipo de dados|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Fixo|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**, e **SQLUNIQUEID**|Nenhuma.|NULLABLE|  
-|Número variável|**SQLDECIMAL** e **SQLNUMERIC**|Nenhuma.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|Nenhuma.|NULLABLE|  
-|LOB caractere|**SQLNTEXT**|Nenhuma.|NULLABLE|  
-|Cadeia de caracteres binária|**SQLBINARY** e **SQLVARYBIN**|Nenhuma.|NULLABLE, LENGTH|  
-|Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nenhuma.|NULLABLE, LENGTH|  
+|Fixo|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**, e **SQLUNIQUEID**|Nenhum.|NULLABLE|  
+|Número variável|**SQLDECIMAL** e **SQLNUMERIC**|Nenhum.|NULLABLE, PRECISION, SCALE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|Nenhum.|NULLABLE|  
+|LOB caractere|**SQLNTEXT**|Nenhum.|NULLABLE|  
+|Cadeia de caracteres binária|**SQLBINARY** e **SQLVARYBIN**|Nenhum.|NULLABLE, LENGTH|  
+|Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nenhum.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Para importar ou exportar em massa dados SQLXML, use um dos seguinte tipos de dados em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código cliente ou na página de código indicada pelo agrupamento), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode) e SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
@@ -571,8 +572,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
- [Importação e exportação de dados &#40;em massa SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  

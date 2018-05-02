@@ -1,16 +1,16 @@
 ---
 title: CREATE AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVAILABILITY GROUP
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 
+caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 37cb1d34ffa7db4aec6a8ef4457321b4d4601d31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 > [!IMPORTANT]  
 >  Execute CREATE AVAILABILITY GROUP na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pretende usar como a réplica primária inicial de seu novo grupo de disponibilidade. Essa instância de servidor deve residir em um nó WSFC (Windows Server Failover Clustering).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -233,12 +233,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Para obter informações sobre os pré-requisitos para nós WSFC e instâncias de servidor, consulte [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
+ ENDPOINT_URL **='** TCP **://***system-address***:***port***'**  
  Especifica o caminho da URL para o [ponto de extremidade de espelhamento de banco de dados](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda a réplica de disponibilidade que está sendo definida na cláusula REPLICA ON atual.  
   
  A cláusula ENDPOINT_URL é necessária. Para obter mais informações, consulte [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Especifica uma URL para especificar uma URL de ponto de extremidade ou URL de roteamento somente leitura. Os parâmetros de URL são os seguintes:  
   
  *system-address*  
@@ -321,7 +321,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
  Especifica a URL a ser usada para rotear solicitações de conexão de intenção de leitura para esta réplica de disponibilidade. Esta é a URL na qual o Mecanismo de Banco de Dados do SQL Server escuta. Normalmente, a instância padrão do Mecanismo de Banco de Dados do SQL Server escuta na porta TCP 1433.  
   
  Para uma instância nomeada, você pode obter o número da porta consultando as colunas **port** e **type_desc** da exibição de gerenciamento dinâmico [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). A instância do servidor usa o ouvinte Transact-SQL (**type_desc='TSQL'**).  
@@ -345,7 +345,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Todas as conexões são permitidas com os bancos de dados na réplica primária. Esse é o comportamento padrão.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Especifica uma lista separada por vírgula de instâncias de servidor que hospedam réplicas de disponibilidade para este grupo de disponibilidade que atendem aos seguintes requisitos ao serem executados na função secundária:  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Especifica uma lista separada por vírgula de instâncias de servidor que hospedam réplicas de disponibilidade para esse grupo de disponibilidade que atendem aos seguintes requisitos ao serem executadas na função secundária:  
   
 -   Ser configurado para permitir todas as conexões ou conexões somente leitura (veja o argumento ALLOW_CONNECTIONS da opção SECONDARY_ROLE acima).  
   
@@ -377,12 +377,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> Especifica o nome do grupo de disponibilidade que constitui uma metade do grupo de disponibilidade distribuído.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Especifica o caminho da URL para o ouvinte associado ao grupo de disponibilidade.  
   
  A cláusula LISTENER é obrigatória.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Especifica uma URL para o ouvinte associado ao grupo de disponibilidade. Os parâmetros de URL são os seguintes:  
   
  *system-address*  
@@ -451,7 +451,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,**...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
  Especifica que, em vez de usar o DHCP, o ouvinte do grupo de disponibilidade usa um ou mais endereços IP estáticos. Para criar um grupo de disponibilidade em várias sub-redes, cada sub-rede exige um endereço IP estático na configuração de ouvinte. Para determinada sub-rede, o endereço IP estático pode ser um endereço IPv4 ou um endereço IPv6. Contate o administrador de rede para obter um endereço IP estático para cada sub-rede que hospeda uma réplica para o novo grupo de disponibilidade.  
   
  Por exemplo:  

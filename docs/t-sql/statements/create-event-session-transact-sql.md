@@ -1,16 +1,16 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EVENT SESSION
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b5d8b3267ca7021d3d713a33bf66a77d664790c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ON SERVER
 > [!IMPORTANT]  
 >  Se você estiver usando o destino de buffer de anel, recomendamos definir o parâmetro de destino max_memory como 2.048 KB (kilobytes) para ajudar a evitar um possível truncamento de dados da saída XML. Para obter mais informações sobre como usar os diferentes tipos de destino, consulte [Destinos de eventos estendidos do SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
- WITH ( \<event_session_options> [ ,...*n*] ) Especifica opções a serem usadas com a sessão de evento.  
+ WITH ( \<event_session_options> [ ,...*n*] ) Especifica as opções a serem usadas com a sessão de evento.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
  Especifica a quantidade máxima de memória a ser alocada à sessão para buffer de evento. O padrão é 4 MB. *size* é um número inteiro e pode ser um valor de KB (kilobyte) ou MB (megabyte).  

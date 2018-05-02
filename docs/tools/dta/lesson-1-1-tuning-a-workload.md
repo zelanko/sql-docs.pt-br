@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6acb93ddde56546e170b01c093dff843a2ea5968
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-1---tuning-a-workload"></a>Lição 1-1-ajuste uma carga de trabalho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O orientador de otimização do mecanismo de banco de dados pode ser usado para localizar o melhor design de banco de dados físico para o desempenho de consultas em bancos de dados e tabelas que você selecionar para ajuste.  
+# <a name="lesson-1-1---tuning-a-workload"></a>Lição 1-1 – Ajustando uma carga de trabalho
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para encontrar o melhor design de banco de dados físico para desempenho de consulta nos bancos de dados e nas tabelas que você seleciona para ajustar.  
   
 Esta tarefa usa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com).  
   

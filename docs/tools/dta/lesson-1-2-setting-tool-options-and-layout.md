@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lição 1-2-Layout e opções da ferramenta de configuração
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode definir opções que configuram o que a interface gráfica do usuário (GUI) orientador de otimização do mecanismo de banco de dados exibe na inicialização, a fonte usada, e outra ferramenta de funcionalidade para melhor suporte como usá-lo. As práticas nesta página irão familiarizá-lo com as opções de definição e como defini-las.  
+# <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lição 1-2 – Definindo o layout e as opções da ferramenta
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É possível definir as opções que configuram o que a GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados exibe na inicialização, quais fontes ela usa e outras funcionalidades da ferramenta para facilitar seu uso. As práticas nesta página irão familiarizá-lo com as opções de definição e como defini-las.  
   
 ### <a name="set-the-tool-options"></a>Definir as opções de ferramenta  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/17/2018
     -   Por padrão, **Perguntar antes de parar a análise da sessão** está marcada para evitar parar uma sessão de ajuste acidentalmente antes que o Orientador de Otimização do Mecanismo de Banco de Dados termine de analisar uma carga de trabalho.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 2: Usando o orientador de otimização do mecanismo de banco de dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lição 2: usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

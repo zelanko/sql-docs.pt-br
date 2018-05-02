@@ -1,16 +1,16 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 
+caps.latest.revision: 30
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 146fd91bfab0ceb5d9b289ef9be6c7446c77f073
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 352bdf39861d8874f1e7b535c2ef954e65d48339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/24/2018
 >  O PolyBase é compatível apenas com o SQL Server 2016 (ou superior), o SQL Data Warehouse do Azure e o Parallel Data Warehouse. As consultas do Banco de Dados Elástico são compatíveis apenas com o Banco de Dados SQL do Azure v12 ou posterior.  
 
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa tabelas externas para acessar dados armazenados em um cluster Hadoop ou no Armazenamento de Blobs do Azure ou uma tabela externa do PolyBase que referencia os dados armazenados em um cluster Hadoop ou no Armazenamento de Blobs do Azure. Também pode ser usado para criar uma tabela externa para uma [consulta de Banco de Dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
+- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa tabelas externas para acessar os dados armazenados em um cluster Hadoop, um armazenamento de Blobs do Azure ou uma tabela externa do PolyBase que referencia os dados armazenados em um cluster Hadoop ou um armazenamento de Blobs do Azure. Também pode ser usado para criar uma tabela externa para uma [consulta de Banco de Dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
  Use uma tabela externa para:  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 02/24/2018
   
  Consulte também [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) e [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -182,6 +183,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  LOCATION = '*folder_or_filepath*'  
  Especifica a pasta ou o caminho do arquivo e o nome de arquivo para os dados reais no Hadoop ou no Armazenamento de Blobs do Azure. O local começa na pasta raiz; a pasta raiz é o local de dados especificado na fonte de dados externa.  
+
+
+No SQL Server, a instrução CREATE EXTERNAL TABLE cria o caminho e a pasta, caso ela ainda não exista. Em seguida, use INSERT INTO para exportar dados de uma tabela local do SQL Server para uma fonte de dados externa. Para obter mais informações, consulte [Consultas do PolyBase](/sql/relational-databases/polybase/polybase-queries). 
+
+No SQL Data Warehouse e no Analytics Platform System, a instrução [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) cria o caminho e a pasta, caso ela não exista. Nesses dois produtos, CREATE EXTERNAL TABLE não cria o caminho e a pasta.
+
   
  Se você especificar LOCATION para que ele seja uma pasta, uma consulta do PolyBase que seleciona por meio da tabela externa recuperará os arquivos da pasta e todas as suas subpastas. Assim como o Hadoop, o PolyBase não retorna pastas ocultas. Ele também não retorna arquivos dos quais o nome do arquivo começa com um sublinhado (_) ou um ponto final (.).  
   

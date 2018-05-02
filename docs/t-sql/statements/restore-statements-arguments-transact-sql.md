@@ -1,16 +1,16 @@
 ---
 title: Argumentos de RESTORE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 
+caps.latest.revision: 154
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d97ddc0e186a4234fcebf895734e00cc37d36ec0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instruções RESTORE – argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico documenta os argumentos descritos nas seções de Sintaxe da instrução RESTORE {DATABASE|LOG} e do conjunto associado de instruções auxiliares: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. Há suporte para a maioria dos argumentos apenas por um subconjunto dessas seis instruções. O suporte a cada argumento é indicado na descrição do argumento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
  Para obter a sintaxe, consulte os seguintes tópicos:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  { *database_name* | **@***database_name_var*}  
  **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- É o banco de dados no qual o log ou banco de dados completo é restaurado. Se for fornecido como uma variável (**@***database_name_var*), esse nome poderá ser especificado como uma constante de cadeia de caracteres (**@***database_name_var* = *database*_*name*) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
+ É o banco de dados no qual o log ou banco de dados completo é restaurado. Se for fornecido como uma variável (**@***database_name_var*), esse nome poderá ser especificado como uma constante de cadeia de caracteres (**@***database_name_var* = *database*_* name*) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -98,7 +98,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  Seleciona todos os grupos de arquivos de leitura/gravação. Essa opção é útil principalmente quando você tem vários grupos de arquivos somente leitura que deseja restaurar após os grupos de arquivos de leitura/gravação.  
   
-PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
+PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
  Especifica uma lista de uma ou mais páginas para uma restauração de página (o que tem suporte apenas para bancos de dados que usam os modelos de recuperação completa ou bulk-logged). Os valores são os seguintes:  
   
 PAGE  
@@ -135,7 +135,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Normalmente, esp
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } É o nome lógico, que deve seguir as regras de identificadores, dos dispositivos de backup criados por **sp_addumpdevice** por meio dos quais o banco de dados é restaurado. Se for fornecido como uma variável (**@***logical_backup_device_name_var*), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres (**@***logical_backup_device_name_var* = *logical_backup_device_name*) ou como uma variável do tipo de dados de cadeia de caracteres, exceto os tipos de dados **ntext** ou **text**.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Permite que os backups sejam restaurados do dispositivo de disco ou de fita nomeado. Os tipos de dispositivo de disco e fita devem ser especificados com o nome real (por exemplo, caminho completo e nome de arquivo) do dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` ou `TAPE ='\\\\.\TAPE0'`. Se for especificado como uma variável (**@***physical_backup_device_name_var*), o nome do dispositivo poderá ser especificado como uma constante de cadeia de caracteres (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') ou como uma variável do tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Permite que os backups sejam restaurados do dispositivo de disco ou de fita nomeado. Os tipos de dispositivo de disco e fita devem ser especificados com o nome real (por exemplo, caminho completo e nome de arquivo) do dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` ou `TAPE ='\\\\.\TAPE0'`. Se for especificado como uma variável (**@***physical_backup_device_name_var*), o nome do dispositivo poderá ser especificado como uma constante de cadeia de caracteres (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*') ou como uma variável do tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
   
  Se usando um servidor de rede com um nome de UNC (que deve conter o nome de máquina), especifique um tipo de dispositivo de disco. Para obter informações sobre como usar nomes UNC, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -250,7 +250,7 @@ MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name
  Para obter mais informações, veja [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 CREDENTIAL  
- **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatível com:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -316,7 +316,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Essas opções funcionam no conjunto de mídias como um todo.  
   
  MEDIANAME **=** { *media_name* | **@***media_name_variable*}  
- **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatível com:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Especifica o nome da mídia. Se fornecido, o nome da mídia deve corresponder ao nome da mídia nos volumes de backup. Caso contrário, a operação de restauração será finalizada. Se nenhum nome de mídia for fornecido na instrução RESTORE, a verificação de um nome de mídia correspondente nos volumes de backup não será executada.  
   
@@ -324,7 +324,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 >  O uso consistente de nomes de mídia em operações de backup e restauração fornece uma verificação extra de segurança para a mídia selecionada para a operação de restauração.  
   
  MEDIAPASSWORD **=** { *mediapassword* | **@***mediapassword_variable* }  
- **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatível com:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Fornece a senha do conjunto de mídias. A senha de um conjunto de mídias é uma cadeia de caracteres.  
   
@@ -354,7 +354,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  Especifica o número total de buffers de E/S a ser usado para a operação de restauração. É possível especificar qualquer inteiro positivo. No entanto, grandes números de buffers podem provocar erros de "memória insuficiente" devido a espaço de endereço virtual inadequado no processo Sqlservr.exe.  
   
- O espaço total usado pelos buffers é determinado por: *buffercount***\****maxtransfersize*.  
+ O espaço total usado pelos buffers é determinado por: *buffercount***\**** maxtransfersize*.  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -367,7 +367,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Essas opções permitem determinar se somas de verificação de backup estão habilitadas para a operação de restauração e se a operação será interrompida quando um erro for encontrado.    
   
  { CHECKSUM | NO_CHECKSUM }  
- **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatível com:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  O comportamento padrão é verificar somas de verificação se elas estiverem presentes e continuar sem verificação se não estiverem presentes.  
   
@@ -385,7 +385,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Desabilita explicitamente a validação de somas de verificação pela operação de restauração.  
   
  { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
- **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatível com:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  STOP_ON_ERROR  
  Especifica que a operação de restauração para com o primeiro erro encontrado. Esse é o comportamento padrão para RESTORE, com exceção de VERIFYONLY que tem CONTINUE_AFTER_ERROR como o padrão.  
@@ -420,7 +420,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Essas opções são usadas apenas para dispositivos TAPE. Se um dispositivo não fita estiver sendo usado, essas opções serão ignoradas.  
   
  REWIND  
- **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatível com:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libera e rebobina a fita. REWIND é o padrão.  
   
@@ -511,7 +511,7 @@ Use KEEP_REPLICATION ao configurar a replicação para trabalhar com envio de lo
   
  Para obter mais informações, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Especifica recuperação para um ponto de recuperação especificado. A transação especificada é incluída na recuperação, mas ela será confirmada apenas se tiver sido confirmada originalmente quando foi realmente gerada.  
   
  RESTORE DATABASE e RESTORE LOG dão suporte ao parâmetro *lsn_number*. Esse parâmetro especifica um número de sequência de log.  
@@ -525,7 +525,7 @@ Use KEEP_REPLICATION ao configurar a replicação para trabalhar com envio de lo
   
  Para obter mais informações, consulte [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;modelo de recuperação completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) e [Recuperar para um número de sequência de log &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Especifica recuperação até o ponto de recuperação especificado. A transação especificada não é incluída na recuperação e é revertida quando WITH RECOVERY for usado.  
   
  RESTORE DATABASE e RESTORE LOG dão suporte ao parâmetro *lsn_number*. Esse parâmetro especifica um número de sequência de log.  

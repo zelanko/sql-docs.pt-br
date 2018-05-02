@@ -1,26 +1,26 @@
 ---
-title: "Propriedades do SQL Server Agent (guia Avançado) | Microsoft Docs"
-ms.custom: 
+title: Propriedades do SQL Server Agent (guia Avançado) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7e704be1826d638b7e2c92b53a21da1b39450ad6
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---

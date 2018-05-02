@@ -1,15 +1,16 @@
 ---
-title: "Secundárias ativas – réplicas secundárias legíveis – disponibilidade AlwaysOn | Microsoft Docs"
-ms.custom: 
+title: Secundárias ativas – réplicas secundárias legíveis – disponibilidade AlwaysOn | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection access to availability replicas
@@ -19,21 +20,21 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e18fc38d0f5baa2c49a487a362dc8612bc61f404
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 211a24d5842cb598021297be23322211d40730ab
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para acesso somente leitura para uma ou mais réplicas secundárias (*réplicas secundárias legíveis*). Uma réplica secundária legível permite acesso somente leitura a todos os seus bancos de dados secundários. No entanto, os bancos de dados secundários legíveis não são definidos como somente leitura. Eles são dinâmicos. Um banco de dados secundário determinado muda conforme as alterações nos dados do banco de dados primário correspondente são aplicadas ao banco de dados secundário. Para uma réplica secundária típica, os dados, incluindo tabelas com otimização de memória durável, nos bancos de dados secundários estão quase em tempo real. Além disso, os índices de texto completo são sincronizados com os bancos de dados secundários. Em muitas circunstâncias, a latência de dados entre um banco de dados primário e o banco de dados secundário correspondente é de somente alguns segundos.  
+  Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para acesso somente leitura para uma ou mais réplicas secundárias (*réplicas secundárias legíveis*). Uma réplica secundária legível pode estar no modo de disponibilidade de confirmação síncrona ou no modo de disponibilidade de confirmação assíncrona. Uma réplica secundária legível permite acesso somente leitura a todos os seus bancos de dados secundários. No entanto, os bancos de dados secundários legíveis não são definidos como somente leitura. Eles são dinâmicos. Um banco de dados secundário determinado muda conforme as alterações nos dados do banco de dados primário correspondente são aplicadas ao banco de dados secundário. Para uma réplica secundária típica, os dados, incluindo tabelas com otimização de memória durável, nos bancos de dados secundários estão quase em tempo real. Além disso, os índices de texto completo são sincronizados com os bancos de dados secundários. Em muitas circunstâncias, a latência de dados entre um banco de dados primário e o banco de dados secundário correspondente é de somente alguns segundos.  
   
  Configurações de segurança que ocorrem nos bancos de dados primários para os bancos de dados secundários são permitidas. Isso inclui os usuários, as funções de banco de dados e de aplicativos junto com suas permissões respectivas e a TDE (criptografia de dados transparente), se habilitada no banco de dados primário.  
   

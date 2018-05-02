@@ -1,33 +1,34 @@
 ---
-title: "Definir um tamanho máximo de arquivo para um arquivo de rastreamento (SQL Server Profiler) | Microsoft Docs"
-ms.custom: 
+title: Definir um tamanho máximo de arquivo para um arquivo de rastreamento (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - maximum file size for traces
 - size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5f3825b505604bb3d80bc640983a00bf9c80ae87
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>Definir um tamanho máximo para um arquivo de rastreamento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o procedimento a seguir para definir o tamanho máximo do arquivo para um arquivo de rastreamento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o procedimento a seguir para definir o tamanho máximo de um arquivo de rastreamento.  
   
 ### <a name="to-set-a-maximum-file-size-for-a-trace-file"></a>Para definir um tamanho máximo para um arquivo de rastreamento  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/17/2018
     > [!NOTE]  
     >  O sistema de arquivos FAT32 limita arquivos a um pouco menos de 4 gigabytes (GB). Quando o arquivo de rastreamento atinge esse tamanho, o rastreamento falha com o erro "Espaço em disco insuficiente". Para criar arquivos maiores, use o sistema de arquivos NTFS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

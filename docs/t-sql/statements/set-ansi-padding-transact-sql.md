@@ -1,16 +1,16 @@
 ---
 title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -26,23 +26,24 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 532df95a03b15d545c682d30b3b4d68e10ea5913
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5150d33ddb663329fda2fa60dc09571bd59d37bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Controla como a coluna armazena valores menores que o tamanho definido da coluna e valores com espaços em branco à direita em dados do tipo **char**, **varchar**, **binary**e **varbinary** .  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe
   
@@ -70,7 +71,7 @@ SET ANSI_PADDING ON
   
 |Configuração|char(*n*) NOT NULL ou binary(*n*) NOT NULL|char(*n*) NULL ou binary(*n*) NULL|varchar(*n*) ou varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Segue as mesmas regras que para **char(***n***)** ou **binary(***n***)** NOT NULL quando SET ANSI_PADDING está ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
+|ON|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Segue as mesmas regras de **char(***n***)** ou **binary(***n***)** NOT NULL quando SET ANSI_PADDING é ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
 |OFF|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Segue as mesmas regras para **varchar** ou **varbinary** quando SET ANSI_PADDING está OFF.|Os espaços em branco à direita em valores de caractere inseridos em uma coluna **varchar** são cortados. Os zeros à direita em valores binários inseridos em uma coluna **varbinary** são cortados.|  
   
 > [!NOTE]  

@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6ff4d9cfc79db9be0e0d766fa141ac71aa8ab4f9
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="partitioning-element-dta"></a>Elemento de particionamento (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contém o esquema de particionamento que você deseja que o orientador de otimização do mecanismo de banco de dados a ser usado durante a análise.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contém o esquema de particionamento que você deseja que o Orientador de Otimização do Mecanismo de Banco de Dados use durante a análise.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, nenhum tamanho máximo.|  
 |**Valores permitidos**|**NONE**<br /> Sem particionamento<br /><br /> **FULL**<br /> Particionamento completo (Aprimora o desempenho.)<br /><br /> **ALIGNED**<br /> Somente o particionamento alinhado (Aprimora a capacidade de gerenciamento máxima).<br /><br /> Use apenas um desses valores com este elemento.<br /><br /> **ALIGNED** significa que na recomendação gerada pelo Database Engine Tuning Advisor cada índice proposto é particionado exatamente do mesmo modo da tabela subjacente para a qual o índice está definido. Índices não clusterizados em uma exibição indexada são alinhados com a exibição indexada.|  
@@ -54,13 +54,13 @@ ms.lasthandoff: 01/17/2018
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhuma.|  
+|**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivos de entrada XML simples &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

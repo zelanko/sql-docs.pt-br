@@ -1,5 +1,5 @@
 ---
-title: Navegador do SQL Server (SQL Server Configuration Manager)
+title: SQL Server Browser (SQL Server Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b7c85930f7ceb25a441dd650d23855bbbb2576d8
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---

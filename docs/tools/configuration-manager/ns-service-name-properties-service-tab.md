@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 59203f010913252abf05201df0f92a2d1b639c18
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
-# <a name="nsltservice-namegt-properties-service-tab"></a>NS$ <nome do serviço> Propriedades (guia de Serviço)
+# <a name="nsltservice-namegt-properties-service-tab"></a>Propriedades do NS$&lt;nome do serviço&gt; (guia Serviço)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 Este é o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
   

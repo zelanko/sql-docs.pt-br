@@ -1,16 +1,16 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,23 +40,24 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e9de41bb284045477426e6044f2449f62f1d58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Altera dados existentes em uma tabela ou exibição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter exemplos, confira [Exemplos](#UpdateExamples).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -192,7 +193,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  É um método modificador público não estático de *udt_column_name* que usa um ou mais argumentos.  
   
- **.**WRITE **(***expressão***,***@Offset***,***@Length***)**  
+ **.** WRITE **(***expressão***,***@Offset***,***@Length***)**  
  Especifica que uma seção do valor de *column_name* deve ser modificada. A *expressão* substitui as unidades de *@Length* de *@Offset* do *column_name*. Somente colunas de **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** podem ser especificadas com esta cláusula. *column_name* não pode ser NULL e não pode ser qualificado com um nome de tabela nem com um alias de tabela.  
   
  A *expressão* é o valor que é copiado para *column_name*. A *expressão* precisa ser avaliada ou ter a capacidade de ser convertida implicitamente no tipo *column_name*. Se a *expressão* for definida como NULL, *@Length* será ignorado e o valor em *column_name* será truncado no *@Offset* especificado.  
@@ -336,21 +337,21 @@ GO
 >  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Atualizando tipos de dados de valor grande  
- Use a cláusula **.**WRITE (*expression***,** *@Offset***,***@Length*) para executar uma atualização parcial ou completa dos tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Por exemplo, talvez uma atualização parcial de uma coluna **varchar(max)** poderá excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa excluirá ou modificará todos os dados na coluna. As atualizações de **.**WRITE que inserem ou acrescentam novos dados serão registradas em log minimamente se o modelo de recuperação do banco de dados estiver definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Use a cláusula **.** WRITE (*expression***,** *@Offset ***,***@Length*) para executar uma atualização parcial ou completa dos tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Por exemplo, talvez uma atualização parcial de uma coluna **varchar(max)** poderá excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa excluirá ou modificará todos os dados na coluna. As atualizações de **.** WRITE que inserem ou acrescentam novos dados serão registradas em log minimamente se o modelo de recuperação do banco de dados estiver definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte uma atualização parcial em uma atualização completa quando a instrução UPDATE provoca uma destas ações:  
 -   Altera uma coluna de chave da exibição ou tabela particionada.  
 -   Modifica mais de uma linha e também atualiza a chave de um índice clusterizado não exclusivo para um valor não constante.  
   
-Não é possível usar a cláusula **.**WRITE para atualizar uma coluna NULL nem para definir o valor de *column_name* como NULL.  
+Não é possível usar a cláusula **.** WRITE para atualizar uma coluna NULL nem para definir o valor de *column_name* como NULL.  
   
 *@Offset* e *@Length* são especificados em bytes para os tipos de dados **varbinary** e **varchar** e em caracteres para o tipo de dados **nvarchar**. Os deslocamentos apropriados são computados para agrupamentos de DBCS (conjunto de caracteres de dois bytes).  
   
 Para obter melhor desempenho, é recomendável que os dados sejam inseridos ou atualizados em tamanhos de blocos que sejam múltiplos de 8040 bytes.  
   
-Se a coluna modificada pela cláusula **.**WRITE for referenciada em uma cláusula OUTPUT, o valor completo da coluna, na imagem anterior em **deleted.***column_name* ou na imagem posterior em **inserted.***column_name*, será retornado para a coluna especificada na variável de tabela. Veja o exemplo R a seguir.  
+Se a coluna modificada pela cláusula **.** WRITE for referenciada em uma cláusula OUTPUT, o valor completo da coluna, na imagem anterior em **deleted.***column_name* ou na imagem posterior em **inserted.***column_name*, será retornado para a coluna especificada na variável de tabela. Veja o exemplo R a seguir.  
   
-Para obter a mesma funcionalidade de **.**WRITE com outros tipos de dados de caractere ou binários, use [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
+Para obter a mesma funcionalidade de **.** WRITE com outros tipos de dados de caractere ou binários, use [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
 ### <a name="updating-user-defined-type-columns"></a>Atualizando colunas de tipo definido pelo usuário  
  A atualização de valores em colunas de tipo definido pelo usuário pode ser realizada de uma das seguintes maneiras:  
@@ -464,7 +465,7 @@ ID     Value
  Uma instrução UPDATE sempre adquire um bloqueio exclusivo (X) na tabela que modifica e mantém esse bloqueio até que a transação seja concluída. Com um bloqueio exclusivo, nenhuma outra transação pode modificar dados. Você pode especificar dicas de tabela para substituir esse comportamento padrão durante a instrução UPDATE especificando outro método de bloqueio; entretanto, é recomendável que as dicas só sejam usadas como último recurso por desenvolvedores experientes e administradores de bancos de dados. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportamento de log  
- A instrução UPDATE é registrada em log, no entanto, as atualizações parciais de tipos de dados de valor grande que usam a cláusula **.**WRITE são registradas minimamente. Para obter mais informações, consulte "Atualizando tipos de dados de valor grande" na seção anterior "Tipos de dados".  
+ A instrução UPDATE é registrada em log, no entanto, as atualizações parciais de tipos de dados de valor grande que usam a cláusula **.** WRITE são registradas minimamente. Para obter mais informações, consulte "Atualizando tipos de dados de valor grande" na seção anterior "Tipos de dados".  
   
 ## <a name="security"></a>Segurança  
   

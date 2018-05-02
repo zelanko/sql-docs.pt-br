@@ -1,16 +1,16 @@
 ---
 title: DATEADD (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEADD
@@ -28,25 +28,26 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: 
+caps.latest.revision: 71
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dd7dd81f8e12b0c14048fd8ab550e7edfd780cf5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Retorna uma *date* especificada com um intervalo de *number* especificado (inteiro com sinal) adicionada a uma *datepart* especificada dessa *date*.
   
-Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Para obter uma visão geral das funções e dos tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], confira [Funções e tipos de dados de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +57,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argumentos  
 *datepart*  
-É a parte de *date* à qual um **integer***number* é adicionado. A tabela a seguir lista todos os argumentos *datepart* válidos. Equivalentes de variável definidos pelo usuário não são válidos.
+É a parte de *date* à qual um **integer***number* é adicionado. A tabela a seguir lista todos os argumentos válidos de *datepart*. Equivalentes de variável definidos pelo usuário não são válidos.
   
 |*datepart*|Abreviações|  
 |---|---|
@@ -79,13 +80,13 @@ DATEADD (datepart , number , date )
 Se você especificar um valor com uma fração decimal, a fração será truncada e não arredondada.
   
 *date*  
-É uma expressão que pode ser resolvida em um valor **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. *date* pode ser uma expressão, uma expressão de coluna, uma variável definida pelo usuário ou um literal de cadeia de caracteres. Se a expressão for uma cadeia de caracteres literal, ela deverá ser resolvida para uma **datetime**. Para evitar ambiguidade, use anos de quatro dígitos. Para obter mais informações sobre anos de dois dígitos, consulte [Configurar a opção two digit year cutoff de configuração do servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+É uma expressão que pode ser resolvida em um valor de **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. *date* pode ser uma expressão, uma expressão de coluna, uma variável definida pelo usuário ou um literal de cadeia de caracteres. Se a expressão for uma cadeia de caracteres literal, ela deverá ser resolvida para uma **datetime**. Para evitar ambiguidade, use anos de quatro dígitos. Para obter mais informações sobre anos de dois dígitos, consulte [Configurar a opção two digit year cutoff de configuração do servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-types"></a>Tipos de retorno
 O tipo de dados de retorno é o tipo de dados do argumento de *date*, com exceção de literais de cadeia de caracteres.
 O tipo de dados de retorno para um literal de cadeia de caracteres é **datetime**. Um erro será gerado se a escala de segundos do literal de cadeia de caracteres tiver mais de três posições (.nnn) ou tiver a parte de deslocamento de fuso horário.
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 ## <a name="datepart-argument"></a>Argumento datepart  
 **dayofyear**, **day** e **weekday** retornam o mesmo valor.
@@ -350,7 +351,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SPATIAL INDEX
@@ -25,23 +25,23 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 05e551350da60132741be91d1a9bc22cc0dd7748
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria um índice espacial em uma tabela e coluna especificadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um índice pode ser criado antes que haja dados na tabela. Podem ser criados índices em tabelas ou exibições em outro banco de dados mediante a especificação de um nome de banco de dados qualificado. Índices espaciais exigem que a tabela tenha uma chave primária clusterizada. Para obter informações sobre índices espaciais, veja [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -365,7 +365,7 @@ Define a densidade da grade em cada nível de um esquema de mosaico. Quando GEOM
 > Se uma densidade inválida for especificada, um erro será gerado.  
   
 CELLS_PER_OBJECT =*n*  
-Especifica o número de células de mosaico por objeto, que pode ser usado para um único objeto espacial no índice pelo processo de mosaico. *n* pode ser qualquer inteiro entre 1 e 8.192, inclusive. Se um número inválido for passado ou se o número for maior que o máximo de células para o mosaico especificado, um erro será gerado.  
+Especifica o número de células de mosaico por objeto, que pode ser usado para um único objeto espacial no índice pelo processo de mosaico. *n* pode ser qualquer inteiro entre 1 e 8192, inclusive. Se um número inválido for passado ou se o número for maior que o máximo de células para o mosaico especificado, um erro será gerado.  
   
  CELLS_PER_OBJECT tem os seguintes valores padrão:  
   

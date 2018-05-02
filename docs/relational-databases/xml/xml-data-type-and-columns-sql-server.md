@@ -1,32 +1,32 @@
 ---
 title: Colunas e tipos de dados XML (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4fa1ea2ba7eb9742d4596a1ce403a42038d2d842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Este tópico discute as vantagens e as limitações do tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o ajuda a escolher como armazenar dados XML.  
+  Este tópico discute as vantagens e as limitações do tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o ajuda a escolher como armazenar dados XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modelo de dados relacional ou XML  
  Se os dados estiverem altamente estruturados com esquema conhecido, o modelo relacional provavelmente funcionará melhor para armazenamento de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a funcionalidade exigida e ferramentas que podem ser necessárias. Por outro lado, se a estrutura estiver semiestruturada, desestruturada ou desconhecida, será necessário considerar a modelagem desses dados.  
@@ -69,7 +69,7 @@ Este tópico discute as vantagens e as limitações do tipo de dados **xml** no 
   
      Os dados são armazenados em uma representação interna que preserva o conteúdo XML dos dados. Essa representação interna inclui informações sobre a hierarquia de confinamento, a ordem dos documentos e os valores do elemento e do atributo. Especificamente, o conteúdo de InfoSet dos dados XML é preservado. Para obter mais informações sobre InfoSet, visite [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). O conteúdo de InfoSet não pode ser uma cópia idêntica do XML de texto porque as seguintes informações não são mantidas: espaços em branco insuficientes, ordem dos atributos, prefixos de namespace e declaração XML.  
   
-     Para o tipo de dados **xml** com tipo, um tipo de dados **xml** associado a esquemas XML, a PSVI (post-schema validation InfoSet) adiciona informações de tipo ao InfoSet e é codificada na representação interna. Isto melhora a velocidade da análise significativamente. Para obter mais informações, consulte as especificações de Esquema XML da W3C em [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Para o tipo de dados **xml** com tipo, um tipo de dados **xml** associado a esquemas XML, a PSVI (post-schema validation InfoSet) adiciona informações de tipo ao InfoSet e é codificada na representação interna. Isto melhora a velocidade da análise significativamente. Para obter mais informações, consulte as especificações de Esquema XML do W3C em [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapeando entre XML e armazenamento relacional  
   

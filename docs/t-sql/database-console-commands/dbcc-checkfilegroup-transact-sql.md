@@ -1,16 +1,16 @@
 ---
 title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKFILEGROUP_TSQL
@@ -28,20 +28,21 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 
+caps.latest.revision: 60
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cd26ee5bce3329d9685beffc2627ace43663c804
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Verifica a alocação e a integridade estrutural de todas as tabelas e exibições indexadas no grupo de arquivos especificado do banco de dados atual.
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Verifica a alocação e a integridade estrutural de todas as tabelas e exibições indexadas no grupo de arquivos especificado do banco de dados atual.
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -147,7 +148,7 @@ Depois que o comando DBCC CHECKFILEGROUP é concluído, uma mensagem é gravada 
 |5|Ocorreu um erro desconhecido que finalizou o comando DBCC.|  
   
 ## <a name="error-reporting"></a>Relatório de Erros  
-Um arquivo de minidespejo (SQLDUMP*nnnn*.txt) é criado no diretório de LOG do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre que DBCC CHECKFILEGROUP detecta um erro de corrupção. Quando os recursos de coleta de dados Uso de Recursos e Relatório de Erros são habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo é encaminhado automaticamente à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Os dados coletados são usados para aprimorar a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Um miniarquivo de despejo (SQLDUMP*nnnn*.txt) é criado no diretório LOG do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre que DBCC CHECKFILEGROUP detecta um erro de corrupção. Quando os recursos de coleta de dados Uso de Recursos e Relatório de Erros são habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo é encaminhado automaticamente à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Os dados coletados são usados para aprimorar a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 O arquivo de despejo contém os resultados do comando DBCC CHECKFILEGROUP e saídas de diagnóstico adicionais. O arquivo tem DACLs (listas de controle de acesso discricionário) restritas. O acesso é limitado à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aos membros da função **sysadmin**. Por padrão, a função **sysadmin** contém todos os membros do grupo BUILTIN\Administradores do Windows e do grupo do administrador local. O comando DBCC não falhará se o processo de coleta de dados falhar.
   
 ## <a name="resolving-errors"></a>Resolvendo erros  

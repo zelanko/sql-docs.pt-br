@@ -1,16 +1,16 @@
 ---
-title: "Administrar servidores com Gerenciamento Baseado em Políticas | Microsoft Docs"
-ms.custom: 
+title: Administrar servidores com Gerenciamento Baseado em Políticas | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - facet See facets
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 
+caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 096ad11f9bd1fafb7ce09fc1a8775d90b935e40f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciamento Baseado em Políticas é um sistema baseado em política para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usado para criar condições que contêm expressões de condição. Em seguida, crie políticas que se aplicam as condições a objetos de destino de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+   O Gerenciamento Baseado em Políticas é um sistema baseado em política para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usado para criar condições que contêm expressões de condição. Em seguida, crie políticas que se aplicam as condições a objetos de destino de banco de dados.  
 
 Por exemplo, como o administrador de banco de dados, é recomendável garantir que alguns servidores não tenham o Database Mail habilitado, para que você possa criar uma condição e uma política que define essa opção do servidor. 
    
@@ -53,7 +54,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
   
  Para as políticas com falha, o Pesquisador de Objetos indica um aviso de integridade crítica como um ícone vermelho ao lado do destino e dos nós superiores na árvore do Pesquisador de Objetos.  
   
-> **OBSERVAÇÃO:** quando o sistema calcula o objeto definido para uma política, por padrão, os objetos do sistema são excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, confira [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **OBSERVAÇÃO:** quando o sistema calcula o objeto definido para uma política, por padrão, os objetos do sistema são excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="three-policy-based-management-components"></a>Três componentes do Gerenciamento Baseado em Políticas  
  O Gerenciamento Baseado em Políticas tem três componentes:  
@@ -124,7 +125,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
  ## <a name="examples"></a>Exemplos
  - [Criar a política desativada por padrão](lesson-1-1-create-the-off-by-default-policy.md)
   - [Configurar um servidor para executar a política desativada por padrão](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

@@ -1,34 +1,35 @@
 ---
 title: Mover um banco de dados protegido por TDE para outro SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df6d9dfb912e4a425f44008a982b8c18fdc54f7c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c7cf3c269522f35f2ba64bb7e81c9910bdd95869
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico descreve como proteger um banco de dados usando TDE (criptografia de dados transparente) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
    
 ##  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -178,7 +179,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá *<number_of_active_connections>***Conexão(ões) ativa(s)** — por exemplo: **1 conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá *<number_of_active_connections>***Conexão(ões) ativa(s)** — por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   
@@ -196,7 +197,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
-9. Na caixa de diálogo **Localizar Arquivos de Banco de Dados –***server_name* , selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
+9. Na caixa de diálogo *Localizar Arquivos de Banco de Dados –***server_name*, selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Anexar Bancos de Dados** .  
   
@@ -221,11 +222,11 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
      **Status**  
      Exibe o status do banco de dados de acordo com a seguinte tabela.  
   
-    |Ícone|Texto de status|Descrição|  
+    |Ícone|Texto de status|Description|  
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
-    |Sinal de verificação verde|Success|O objeto foi anexado com êxito.|  
+    |Sinal de verificação verde|Êxito|O objeto foi anexado com êxito.|  
     |Círculo vermelho contendo uma cruz branca|Erro|A operação de anexação encontrou um erro e não foi concluída com êxito.|  
     |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Stopped (parado)|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
@@ -308,7 +309,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   

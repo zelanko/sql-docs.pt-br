@@ -1,16 +1,16 @@
 ---
 title: '@@ROWCOUNT (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@ROWCOUNT_TSQL'
@@ -24,23 +24,23 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd23d2af2f35dd0d76557723639f1870ee22e0ee
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 78ffb0d32bb5f87b31f3dd24fa51dfcbeb36889d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o número de linhas afetadas pela última instrução. Se o número de linhas for maior que 2 bilhões, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Redefina @@ROWCOUNT como 0, mas não retorne o valor ao cliente.  
   
- Instruções que fazem uma atribuição simples sempre definem o valor de @@ROWCOUNT como 1. Nenhuma linha é enviada ao cliente. Exemplos dessas instruções são: @*local_variable*, RETURN, READTEXT e select sem instruções de consulta, como SELECT GETDATE() ou SELECT **'***Generic Text***'**.  
+ Instruções que fazem uma atribuição simples sempre definem o valor de @@ROWCOUNT como 1. Nenhuma linha é enviada ao cliente. Exemplos dessas instruções são: SET @*local_variable*, RETURN, READTEXT e select sem instruções de consulta, como SELECT GETDATE() ou SELECT **'***Generic Text***'**.  
   
  Instruções que fazem uma atribuição em uma consulta ou usam RETURN em uma consulta definem o valor de @@ROWCOUNT como o número de linhas afetadas ou lidas pela consulta, por exemplo: SELECT @*local_variable* = c1 FROM t1.  
   

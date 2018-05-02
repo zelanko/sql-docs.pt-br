@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0f39cc50aa258df595bd7c010d992740a0a68976
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica a carga de trabalho a ser usado para uma sessão de ajuste.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica a carga de trabalho a ser usada para uma sessão de ajuste.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +43,10 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhuma.|  
-|**Valor padrão**|Nenhuma.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Necessário uma vez para cada elemento **DTAInput** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -54,9 +54,9 @@ ms.lasthandoff: 01/17/2018
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Elementos filho**|[Elemento File &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Elemento Database para Workload &#40; DTA &#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**Elementos filho**|[Elemento File &#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Elemento Database para Workload &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. O Orientador de Otimização do Mecanismo de Banco de Dados pode usar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , arquivos de rastreamento e tabelas de rastreamento como cargas de trabalho.  
   
  Se você especificar uma carga de trabalho em arquivo de entrada XML e uma carga de trabalho na linha de comando com a ferramenta **dta** , a carga de trabalho especificada na linha de comando será usada para ajuste. Todas as opções de ajuste especificadas na linha de comando substituem as que foram especificadas no arquivo de entrada XML. A única exceção será se uma configuração especificada pelo usuário for digitada dentro do modo de avaliação no arquivo de entrada XML. Por exemplo, se a configuração digitada no elemento **Configuration** do arquivo de entrada XML do elemento **EvaluateConfiguration** também for especificada como uma das opções de ajuste, as opções de ajuste especificadas no arquivo de entrada XML substituirão todas as opções de ajuste da linha de comando.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 01/17/2018
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

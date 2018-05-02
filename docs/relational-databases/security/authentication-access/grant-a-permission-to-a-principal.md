@@ -1,33 +1,35 @@
 ---
-title: "Conceder uma permissão a uma entidade de segurança | Microsoft Docs"
-ms.custom: 
+title: Conceder uma permissão a uma entidade de segurança | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d22ba04e498423840ea77a40d17949980887da7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5a69323028abbd3c7684614593a1dba98dfb87c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como conceder permissão a uma entidade de segurança no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Este tópico descreve como conceder permissão a uma entidade de segurança no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   
@@ -72,11 +74,11 @@ ms.lasthandoff: 11/21/2017
   
 4.  Clique com o botão direito do mouse em um procedimento armazenado e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Procedimento Armazenado –***stored_procedure_name* , em selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
+5.  Na caixa de diálogo *Propriedades do Procedimento Armazenado –***stored_procedure_name*, em Selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
   
 6.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Para conceder permissão a uma entidade de segurança  
   
@@ -97,7 +99,7 @@ ms.lasthandoff: 11/21/2017
   
  Para obter mais informações, veja [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) e [Permissões de objeto GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

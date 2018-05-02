@@ -1,16 +1,16 @@
 ---
 title: CHOOSE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 47c1b132f83999e752f9f16392f521323d546663
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="logical-functions---choose-transact-sql"></a>Funções lógicas - CHOOSE (Transact-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>Funções lógicas – CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Retorna o item ao índice especificado de uma lista de valores no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,18 +46,18 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *índice*  
+ *index*  
  É uma expressão de inteiro que representa um índice de base 1 na lista dos itens que o seguem.  
   
- Se o valor de índice fornecido tem um tipo de dados numérico diferente de **int**, em seguida, o valor é convertido implicitamente em um número inteiro. Se o valor de índice exceder os limites da matriz de valores, CHOOSE retornará nulo.  
+ Se o valor de índice fornecido tiver um tipo de dados numérico diferente de **int**, o valor será convertido implicitamente em um inteiro. Se o valor de índice exceder os limites da matriz de valores, CHOOSE retornará nulo.  
   
- *... val_1 val_n*  
+ *val_1 … val_n*  
  Lista de valores separados por vírgulas de qualquer tipo de dados.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o tipo de dados com a precedência mais alta do conjunto de tipos transmitido à função. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  CHOOSE age como um índice em uma matriz, onde a matriz é composta pelos argumentos que acompanham o argumento de índice. O argumento de índice determina qual dos valores a seguir será retornado.  
   
 ## <a name="examples"></a>Exemplos  
@@ -129,7 +129,7 @@ Sales Representative                               2007-07-01 Summer
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

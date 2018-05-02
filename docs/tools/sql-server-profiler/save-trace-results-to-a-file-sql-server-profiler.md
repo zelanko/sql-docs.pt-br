@@ -1,33 +1,34 @@
 ---
 title: Salvar resultados de rastreamento em um arquivo (SQL Server Profiler) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e62a693466ac0de9a7ce67e9bbcbeec1c17b7af3
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>Salvar resultados de rastreamento em um arquivo (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como salvar resultados de rastreamento em um arquivo usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como salvar resultados de rastreamento em um arquivo usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-save-trace-results-to-a-file"></a>Para salvar resultados de rastreamento em um arquivo  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/17/2018
         > [!NOTE]  
         >  Quando a opção **Dados de rastreamento de processos do servidor**está desmarcada, o servidor não registrará eventos caso eles degradem significativamente o desempenho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

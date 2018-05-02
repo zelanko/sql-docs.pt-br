@@ -1,8 +1,8 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: ''
+caps.latest.revision: 130
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ee158cdc30d1c083151bc07c58ba7ddea515a308
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 79de823fc3e413bff1b8538f2641a741c4524e9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/17/2018
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -132,7 +133,10 @@ Começando pelo [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, 
   
  CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }  
  Especifica a página de código dos dados no arquivo de dados. CODEPAGE apenas será relevante se os dados contiverem colunas **char**, **varchar** ou **text** com valores de caractere maiores que 127 ou menores que 32.  
-  
+
+> [!IMPORTANT]
+> CODEPAGE não é uma opção compatível com o Linux.
+
 > [!NOTE]  
 >  Recomendamos a especificação de um nome de agrupamento para cada coluna em um arquivo de formato, exceto quando você desejar que a opção 65001 tenha prioridade sobre a especificação de agrupamento/página de código.  
   
@@ -230,7 +234,7 @@ Especifica um caractere que será usado como o caractere de aspas no arquivo CSV
   
  No acesso a fontes de dados OLE DB remotas, a identidade de logon das conexões confiáveis não são delegadas automaticamente do servidor no qual o cliente é conectado ao servidor que está sendo consultado. A delegação de autenticação deve ser configurada.  
   
- Serão necessários os nomes de catálogo e de esquema, se o provedor OLE DB oferecer suporte a vários catálogos e esquemas na fonte de dados especificada. Os valores de *catalog* e *schema* poderão ser omitidos quando o Provedor OLE DB não der suporte a eles. Se o provedor for compatível apenas com nomes de esquema, será necessário especificar um nome de duas partes no formato *esquema***.***objeto*. Se o provedor for compatível apenas com nomes de catálogo, será necessário especificar um nome de três partes no formato *catálogo***.***esquema***.***objeto*. Devem ser especificados nomes de três partes para consultas de passagem que usam o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obter mais informações, consulte [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Serão necessários os nomes de catálogo e de esquema, se o provedor OLE DB oferecer suporte a vários catálogos e esquemas na fonte de dados especificada. Os valores de *catalog* e *schema* poderão ser omitidos quando o Provedor OLE DB não der suporte a eles. Se o provedor for compatível apenas com nomes de esquema, será necessário especificar um nome de duas partes no formato *esquema ***.*** objeto*. Se o provedor for compatível apenas com nomes de catálogo, será necessário especificar um nome de três partes no formato *catálogo ***.*** esquema ***.*** objeto*. Devem ser especificados nomes de três partes para consultas de passagem que usam o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obter mais informações, consulte [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  `OPENROWSET` não aceita variáveis para seus argumentos.  
   

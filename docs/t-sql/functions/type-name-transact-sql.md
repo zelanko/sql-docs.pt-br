@@ -1,16 +1,16 @@
 ---
 title: TYPE_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TYPE_NAME_TSQL
@@ -24,23 +24,24 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efd210bc036ed301f426e81feb6c783984f9fb4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4c080a7c88d977651e9a3447f05f4e05558631f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o nome de tipo não qualificado de um ID de tipo especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,7 +64,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  TYPE_NAME retornará NULL quando *type_id* não for válido ou quando o chamador não tiver permissão suficiente para fazer referência ao tipo.  
   
- TYPE_NAME funciona para tipos de dados de sistema e também para tipos de dados definidos pelo usuário. O tipo pode estar contido em qualquer esquema, mas um nome de tipo não qualificado sempre será retornado. Isto significa o nome não tem o prefixo *schema***.** .  
+ TYPE_NAME funciona para tipos de dados de sistema e também para tipos de dados definidos pelo usuário. O tipo pode estar contido em qualquer esquema, mas um nome de tipo não qualificado sempre será retornado. Isto significa que o nome não tem o prefixo *schema***.**.  
   
  As funções de sistema podem ser usadas na lista de seleção, na cláusula WHERE e em qualquer local onde uma expressão for permitida. Para obter mais informações, consulte [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   

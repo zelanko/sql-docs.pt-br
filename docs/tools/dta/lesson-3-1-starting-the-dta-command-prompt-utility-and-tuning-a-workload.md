@@ -1,5 +1,5 @@
 ---
-title: Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho
+title: Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lição 3-1 – iniciar o utilitário de prompt de comando dta e ajustar uma carga de trabalho
-Essa tarefa descreve a inicialização do utilitário [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]dta** , a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md)da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados.  
+# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lição 3-1 – Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Essa tarefa descreve a inicialização do utilitário **dta**, a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho usando o prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md)da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
 O tutorial usa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por motivos de segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com).  
   

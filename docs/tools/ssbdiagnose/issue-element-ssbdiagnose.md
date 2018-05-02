@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e4f82ff987d465b6dc765d06b83652e398069274
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
-Reporta um problema que foi encontrado pelo utilitário [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]ssbdiagnose** . O arquivo de saída XML de **ssbdiagnose** tem um elemento Issue por problema reportado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Relata um problema que foi encontrado pelo utilitário **ssbdiagnose**. O arquivo de saída XML de **ssbdiagnose** tem um elemento Issue por problema reportado.  
   
 ## <a name="syntax"></a>Sintaxe  
   

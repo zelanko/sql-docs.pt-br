@@ -1,5 +1,5 @@
 ---
-title: Criando uma cadeia de conexão válida usando o protocolo de memória compartilhada
+title: Criando uma cadeia de conexão válida usando o protocolo de memória compartilhada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 74a28bc30fd179e22b362ad4cfd1e77fa2a54bfa
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---

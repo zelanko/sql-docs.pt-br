@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_ENCRYPTION_KEY_TSQL
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - database encryption key, alter
 - ALTER DATABASE ENCRYPTION KEY
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bafdb9f6abbf6b51262ce977d155416c9bb183ac
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0350808e490692f28423be07752181876d8f9273
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Altera uma chave de criptografia e de certificado usada para criptografar um banco de dados transparentemente. Para obter mais informações sobre criptografia de banco de dados transparente, consulte [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ ALTER DATABASE ENCRYPTION KEY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  
     {  
@@ -85,7 +85,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## <a name="remarks"></a>Remarks  
  O certificado ou a chave assimétrica usados para criptografar a chave de criptografia de banco de dados devem estar localizados no banco de dados do sistema mestre.  
   
- A chave de criptografia de banco de dados não precisa ser gerada novamente quando um dbo (proprietário de banco de dados) é alterado.  
+ Quando um dbo (proprietário do banco de dados) é alterado, a chave de criptografia de banco de dados não precisa ser regenerada.
   
  Depois que uma chave de criptografia de banco de dados foi modificada duas vezes, um backup de log deve ser executado para que a chave de criptografia de banco de dados possa ser modificada novamente.  
   

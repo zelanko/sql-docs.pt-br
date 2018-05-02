@@ -1,23 +1,26 @@
 ---
 title: SET XACT_ABORT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - XACT_ABORT_TSQL
 - XACT_ABORT
 - SET XACT_ABORT
 - SET_XACT_ABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - XACT_ABORT option
@@ -27,27 +30,28 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - SET XACT_ABORT statement
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c12ab84986210f559fe5d3b1a8842b70a885108e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38e51f72122f4c20c566398fca8dc5d5e58f3fa1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
     
 > [!NOTE]  
->  O **gerar** instrução segue **definir XACT_ABORT RAISERROR** não. Novos aplicativos devem usar **gerar** em vez de **RAISERROR**.  
+>  A instrução **THROW** segue **SET XACT_ABORT**. Isso não ocorre com **RAISERROR**. Os novos aplicativos devem usar **THROW** em vez de **RAISERROR**.  
   
  Especifica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reverte automaticamente a transação atual quando uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] gerar um erro em tempo de execução.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,7 +67,7 @@ SET XACT_ABORT { ON | OFF }
 SET XACT_ABORT ON   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET XACT_ABORT for ON, se uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] gerar um erro em tempo de execução, a transação inteira será encerrada e revertida.  
   
  Quando SET XACT_ABORT é OFF, em alguns casos, somente a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que gerou o erro é revertida e a transação continua a ser processada. Dependendo da gravidade do erro, a transação inteira pode ser revertida mesmo quando SET XACT_ABORT é OFF. OFF é a configuração padrão.  
@@ -134,8 +138,8 @@ SELECT *
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [THROW &#40; Transact-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   

@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>Elemento StorageBoundInMB (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o espaço máximo em megabytes que podem ser consumidos pela recomendação de ajuste do Orientador de otimização do mecanismo de banco de dados (índice e conjunto de particionamento).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica o espaço de máximo em megabytes que pode ser consumido pela recomendação de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados (índice e conjunto de particionamento).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,20 +43,20 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**unsignedInt**, comprimento ilimitado.|  
-|**Valor padrão**|Nenhuma.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Só pode ser usado uma vez para o elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhuma|  
+|**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elementos filho**|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando múltiplos bancos de dados são ajustados, as recomendações para todos os bancos de dados são consideradas no cálculo do espaço. Por padrão, o Orientador de Otimização do Mecanismo de Banco de Dados assume o menor dos seguintes tamanhos de armazenamento:  
   
 -   Três vezes o tamanho de dados brutos atuais, o que inclui o tamanho total de heaps e índices clusterizados em tabelas.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>Description  
  O seguinte exemplo de código mostra como definir um limite de 1500 megabytes como o espaço de disco de máximo que uma recomendação de ajuste pode consumir:  
   
 ## <a name="code"></a>Código  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/17/2018
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

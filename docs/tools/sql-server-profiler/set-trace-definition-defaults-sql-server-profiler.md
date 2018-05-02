@@ -1,5 +1,5 @@
 ---
-title: Definir padrões de definição de rastreamento (SQL Server Profiler) | Microsoft Docs
+title: Definir padrões de definição de rastreamento (SQL Server Profiler)| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5d2f8cc04f6024f106f396a6674f88fbac9a41a7
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Definir padrões de definição de rastreamento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O padrão de definição de rastreamento é o modelo de rastreamento padrão que é usado para cada provedor ou servidor. Você pode definir modelos de rastreamento padrão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O padrão de definição de rastreamento é o modelo de rastreamento padrão usado para cada provedor ou servidor. Você pode definir modelos de rastreamento padrão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="to-set-trace-definition-defaults"></a>Para definir padrões de definição de rastreamento  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 6.  Clique em **Salvar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelos do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

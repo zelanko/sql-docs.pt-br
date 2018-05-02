@@ -1,27 +1,27 @@
 ---
 title: Instalar o SQL Server 2016 no Server Core | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7de58227a8da5f90921b1e973a63949f71a25b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ac142899ecabd2e3d322be70de5f0ff14fd8913c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/09/2018
 
 Instale o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.   
   
-A opção de instalação do Server Core oferece um ambiente mínimo para a execução de funções de servidor específicas. Isso ajuda a reduzir os requisitos de manutenção e gerenciamento e a superfície de ataque para essas funções de servidor. Para obter mais informações sobre o Server Core, consulte [Instalar o Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Para obter mais informações sobre a implementação do Server Core no [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consulte [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (Server Core para Windows Server 2012) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+A opção de instalação do Server Core oferece um ambiente mínimo para a execução de funções de servidor específicas. Isso ajuda a reduzir os requisitos de manutenção e gerenciamento e a superfície de ataque para essas funções de servidor. Para obter mais informações sobre o Server Core, consulte [Instalar o Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Para obter mais informações sobre o Server Core implementado no [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consulte [Server Core para Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)).  
   
  Para obter informações sobre os sistemas operacionais com suporte no momento, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -47,15 +47,15 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
 |Recurso|Tem suporte|Informações adicionais|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Services|Sim||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serviços|Sim||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replicação|Sim||  
 |Pesquisa de Texto Completo|Sim||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Sim||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Sim||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|não||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|não||  
+|SSDT ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|não||  
 |Conectividade das ferramentas de cliente|Sim||  
-|Servidor do Integration Services|Sim|Para saber mais sobre o novo servidor do Integration Services e seus recursos no [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).|  
+|Servidor do Integration Services|Sim||  
 |Compatibilidade das ferramentas de cliente com versões anteriores|não||  
 |SDK de Ferramentas de cliente|não||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|não||  
@@ -64,7 +64,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 |Distributed Replay Controller|não||  
 |Distributed Replay Client|Apenas remoto|Não há suporte para a instalação desses recursos no Server Core. Esses componentes podem ser instalados em um servidor diferente que não seja o Server Core e conectados aos serviços do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados no Server Core.|  
 |SDK de Conectividade de Cliente do SQL|Sim||  
-|Microsoft Sync Framework|Sim|O Microsoft Sync Framework não está incluído no pacote de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Baixe a versão apropriada do Sync Framework nesta página do [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) e instale-a em um computador que executa o Server Core.|  
+|Microsoft Sync Framework|Sim|O Microsoft Sync Framework não está incluído no pacote de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Baixe a versão apropriada do Sync Framework nesta página do [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788)) e instale-a em um computador que executa o Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|não||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|não||  
   
@@ -73,16 +73,16 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições|Todas as edições de 64 bits do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|Todos os idiomas|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] idioma no idioma/localidade do sistema operacional (combinação)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em japonês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em alemão<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em chinês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em árabe<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em tailandês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em turco<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em português (Portugal)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em inglês|  
+|Edições do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Todas as edições de 64 bits do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
+|Idioma do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Todos os idiomas|  
+|Idioma do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na combinação de idioma/localidade do sistema operacional|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em japonês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em alemão<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em chinês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em árabe<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em tailandês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em turco<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em português (Portugal)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em inglês|  
 |Windows Edition|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>UPGRADE 
  Em instalações do Server Core, atualizar de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tem suporte.  
   
 ## <a name="install"></a>Instalar  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não tem suporte para a instalação por meio do assistente de instalação no sistema operacional Server Core. Quando você faz a instalação no Server Core, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao modo silencioso completo usando o parâmetro /Q ou o modo Silencioso Simples usando o parâmetro /QS. Para obter mais informações, consulte [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não tem suporte para a instalação por meio do assistente de instalação no sistema operacional Server Core. Quando você faz a instalação no Server Core, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao modo silencioso completo usando o parâmetro /Q ou o modo Silencioso Simples usando o parâmetro /QS. Para obter mais informações, consulte [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
  Independentemente do método de instalação, é necessário confirmar a aceitação dos termos da licença de software como indivíduo ou em nome de uma entidade, a menos que o uso do software seja governado por um contrato separado, como um contrato de licenciamento por volume da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um contrato de terceiros com um ISV ou OEM.  
   
@@ -332,7 +332,7 @@ Se você fechar acidentalmente o prompt de comando, siga estas etapas para inici
 2.  Na guia **Aplicativos** , clique em **Nova Tarefa**.  
 3.  Na caixa de diálogo **Criar Nova Tarefa** , digite **cmd** no campo **Abrir** e [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Instalar o SQL Server usando um arquivo de configuração](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   

@@ -1,16 +1,16 @@
 ---
-title: "Unir uma função | Microsoft Docs"
-ms.custom: 
+title: Unir uma função | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12899d16a1055b4b6a63cb880df1829fc61b4c6e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1a422023129646f855b29ec5a6eb1587a54c0ed3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="join-a-role"></a>unir uma função
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como atribuir funções a logons e usuários de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use funções em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para gerenciar permissões de maneira eficiente. Atribua permissões a funções e adicione e remova usuários e logons de funções. Com o uso de funções, as permissões não precisam ser mantidas individualmente para cada usuário.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Este tópico descreve como atribuir funções a logons e usuários de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use funções em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para gerenciar permissões de maneira eficiente. Atribua permissões a funções e adicione e remova usuários e logons de funções. Com o uso de funções, as permissões não precisam ser mantidas individualmente para cada usuário.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a quatro tipos de função.  
   
@@ -83,9 +85,9 @@ ms.lasthandoff: 11/21/2017
   
 4.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades de Função de Servidor –***server_role_name* , na página **Membros** , clique em **Adicionar**.  
+5.  Na caixa de diálogo **Propriedades de Função de Servidor –***server_role_name*, na página **Membros**, clique em **Adicionar**.  
   
-6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Servidor –***server_role_name* .  
+6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Servidor –***server_role_name*.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -105,13 +107,13 @@ ms.lasthandoff: 11/21/2017
   
 7.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-8.  Na caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name* , na página **Geral** , clique em **Adicionar**.  
+8.  Na caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name*, na página **Geral**, clique em **Adicionar**.  
   
-9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name* .  
+9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name*.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>Para adicionar um membro a uma função de servidor fixa  
   
@@ -143,7 +145,7 @@ ms.lasthandoff: 11/21/2017
   
  Para obter mais informações, consulte [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de nível de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Funções de nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Funções de aplicativo](../../../relational-databases/security/authentication-access/application-roles.md)  

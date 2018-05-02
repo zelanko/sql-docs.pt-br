@@ -1,16 +1,16 @@
 ---
-title: "Estatísticas | Microsoft Docs"
-ms.custom: 
+title: Estatísticas | Microsoft Docs
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: statistics
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-statistics
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
@@ -26,19 +26,21 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 
+caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: aadb78f147f67afba5434490364ec60577518501
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statistics"></a>Estatísticas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Otimizador de Consulta usa estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade. Em alguns casos, é necessário criar estatísticas adicionais ou modificar o design da consulta para obter melhores resultados. Este tópico aborda os conceitos de estatísticas e fornece diretrizes para o uso eficiente de estatísticas de otimização de consultas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  O otimizador de consulta usa estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade. Em alguns casos, é necessário criar estatísticas adicionais ou modificar o design da consulta para obter melhores resultados. Este tópico aborda os conceitos de estatísticas e fornece diretrizes para o uso eficiente de estatísticas de otimização de consultas.  
   
 ##  <a name="DefinitionQOStatistics"></a> Componentes e conceitos  
 ### <a name="statistics"></a>Estatísticas  
@@ -117,7 +119,7 @@ ORDER BY s.name;
     * Se a cardinalidade da tabela era de 500 ou menos quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 modificações.
     * Se a cardinalidade da tabela era inferior a 500 quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 + 20% de modificações.
 
-* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Ele é calculado como a raiz quadrada de 1.000 multiplicado pela cardinalidade da tabela atual. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Isso é calculado como a raiz quadrada do produto de 1000 e da cardinalidade da tabela atual. Por exemplo, se a tabela contiver 2 milhões de linhas, o cálculo será sqrt (1.000 * 2.000.000) = 44.721,359. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 > [!IMPORTANT]
 > Começando com o [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inferior a 130, use o [sinalizador de rastreamento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela.

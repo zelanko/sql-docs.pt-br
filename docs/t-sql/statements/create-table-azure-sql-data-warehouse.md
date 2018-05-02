@@ -1,30 +1,31 @@
 ---
 title: CREATE TABLE (SQL Data Warehouse do Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
+caps.latest.revision: 59
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ Para entender as tabelas e como usá-las, confira [Tabelas no SQL Data Warehouse
 
 Observação: as discussões sobre o SQL Data Warehouse neste artigo aplicam-se ao SQL Data Warehouse e ao Parallel Data Warehouse, a menos que haja alguma indicação contrária. 
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>   
 ## <a name="syntax"></a>Sintaxe  
@@ -174,12 +175,12 @@ O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] é compatível com os tipos de d
 Para ver uma tabela de conversões de tipo de dados, confira a seção Conversões implícitas de [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
- O valor padrão para *n* é 7.  
+ O valor padrão de *n* é 7.  
   
  `datetime2` [ ( *n* ) ]  
-Igual a `datetime`, exceto que você pode especificar o número de segundos fracionários. O valor padrão para *n* é `7`.  
+Igual a `datetime`, exceto que você pode especificar o número de segundos fracionários. O valor padrão de *n* é `7`.  
   
-|Valor *n*|Precisão|Escala|  
+|Valor de *n*|Precisão|Escala|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -200,17 +201,17 @@ Igual a `datetime`, exceto que você pode especificar o número de segundos frac
  Armazena uma data usando no máximo 10 caracteres para o ano, mês e dia, de acordo com o calendário gregoriano. O tamanho do armazenamento é 3 bytes. A data é armazenada como um inteiro.  
   
  `time` [ ( *n* ) ]  
- O valor padrão para *n* é `7`.  
+ O valor padrão de *n* é `7`.  
   
  `float` [ ( *n* ) ]  
- Tipo de dados do número aproximado para ser usado com os dados numéricos de ponto flutuante. Os dados de ponto flutuante são aproximados, o que significa que nem todos os valores no intervalo de tipo de dados podem ser representados exatamente. *n* especifica o número de bits usados para armazenar a mantissa do `float` em notação científica. Portanto,  *n*  determina o tamanho do armazenamento e a precisão. Se *n* for especificado, ele precisará ser um valor entre `1` e `53`. O valor padrão de *n* é `53`.  
+ Tipo de dados do número aproximado para ser usado com os dados numéricos de ponto flutuante. Os dados de ponto flutuante são aproximados, o que significa que nem todos os valores no intervalo de tipo de dados podem ser representados exatamente. *n* especifica o número de bits usados para armazenar a mantissa do `float` em notação científica. Portanto, *n* determina o tamanho do armazenamento e a precisão. Se *n* for especificado, ele precisará ser um valor entre `1` e `53`. O valor padrão de *n* é `53`.  
   
-| Valor *n* | Precisão | Tamanho de armazenamento |  
+| Valor de *n* | Precisão | Tamanho de armazenamento |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 dígitos  | 4 bytes      |  
 | 25-53  | 15 dígitos | 8 bytes      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] trata *n* como um dos dois valores possíveis. Se `1`<= *n* <= `24`, *n* será tratado como `24`. Se `25` <= *n* <= `53`, *n* será tratado como `53`.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] trata *n* como um dos dois valores possíveis. Se `1`<= *n* <= `24`, *n* é tratado como `24`. Se `25` <= *n* <= `53`, *n* é tratado como `53`.  
   
  O tipo de dados [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` está em conformidade com o padrão ISO para todos os valores de *n* de `1` a `53`. O sinônimo de precisão dupla é `float(53)`.  
   
@@ -229,8 +230,8 @@ Igual a `datetime`, exceto que você pode especificar o número de segundos frac
 | Precisão | Bytes de armazenamento  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
-| 10 – 19      |             9 |  
-| 20-28      |            13 |  
+| 10–19      |             9 |  
+| 20–28      |            13 |  
 | 29-38      |            17 |  
   
  `money` | `smallmoney`  
@@ -254,23 +255,23 @@ Igual a `datetime`, exceto que você pode especificar o número de segundos frac
  `bit`  
  Um tipo de dados Integer que pode ter o valor `1`, `0` ou NULL. O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] otimiza o armazenamento de colunas de bit. Se houver 8 ou menos colunas de bit em uma tabela, as colunas serão armazenadas como 1 byte. Se houver colunas de 9 a 16 bits, as colunas serão armazenadas como 2 bytes e assim por diante.  
   
- `nvarchar` [ ( *n* | `max` ) ] -- `max` aplica-se apenas ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ `nvarchar` [ ( *n* | `max` ) ] – `max` aplica-se somente ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
  Dados de caracteres Unicode de comprimento variável. *n* pode ser um valor de 1 a 4000. `max` indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). O tamanho do armazenamento, em bytes, é duas vezes o número de caracteres inseridos + 2 bytes. Os dados digitados podem ter 0 caractere de comprimento.  
   
  `nchar` [ ( *n* ) ]  
- Dados de caractere Unicode de comprimento fixo com um comprimento de *n* caracteres. *n* precisa ser um valor de `1` a `4000`. O tamanho do armazenamento é duas vezes *n* bytes.  
+ Dados de caractere Unicode de comprimento fixo com um tamanho de *n* caracteres. *n* precisa ser um valor de `1` a `4000`. O tamanho do armazenamento é duas vezes *n* bytes.  
   
- `varchar` [ ( *n*  | `max` ) ] -- `max` aplica-se apenas ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
- Dados de caractere não Unicode de comprimento variável com um comprimento de *n* bytes. *n* precisa ser um valor de `1` a `8000`. `max` indica que o tamanho máximo do armazenamento é de 2^31-1 bytes (2 GB). O tamanho do armazenamento é o comprimento real dos dados inseridos + 2 bytes.  
+ `varchar` [ ( *n*  | `max` ) ] – `max` aplica-se somente ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
+ Dados de caractere não Unicode de comprimento variável com um tamanho de *n* bytes. *n* precisa ser um valor de `1` a `8000`. `max` indica que o tamanho máximo do armazenamento é de 2^31-1 bytes (2 GB). O tamanho do armazenamento é o comprimento real dos dados inseridos + 2 bytes.  
   
  `char` [ ( *n* ) ]  
- Dados de caractere não Unicode de comprimento fixo com um comprimento de *n* bytes. *n* precisa ser um valor de `1` a `8000`. O tamanho do armazenamento é *n* bytes. O padrão para *n* é `1`.  
+ Dados de caractere não Unicode de comprimento fixo com um tamanho de *n* bytes. *n* precisa ser um valor de `1` a `8000`. O tamanho do armazenamento é *n* bytes. O padrão para *n* é `1`.  
   
- `varbinary` [ ( *n*  | `max` ) ] -- `max` aplica-se apenas ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
- Dados binários de comprimento variável. *n* pode ser um valor de `1` a `8000`. `max` indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). O tamanho de armazenamento é o comprimento real dos dados inseridos + 2 bytes. O valor padrão para *n* é 7.  
+ `varbinary` [ ( *n*  | `max` ) ] – `max` aplica-se somente ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Dados binários de comprimento variável. *n* pode ser um valor de `1` a `8000`. `max` indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). O tamanho de armazenamento é o comprimento real dos dados inseridos + 2 bytes. O valor padrão de *n* é 7.  
   
  `binary` [ ( *n* ) ]  
- Dados binários de comprimento fixo com um comprimento de *n* bytes. *n* pode ser um valor de `1` a `8000`. O tamanho do armazenamento é *n* bytes. O valor padrão para *n* é `7`.  
+ Dados binários de comprimento fixo com um tamanho de *n* bytes. *n* pode ser um valor de `1` a `8000`. O tamanho do armazenamento é *n* bytes. O valor padrão de *n* é `7`.  
   
  `uniqueidentifier`  
  É um GUID de 16 bytes.  
@@ -559,7 +560,7 @@ WITH
 ```  
   
 <a name="SeeAlso"></a>    
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Confira também 
  
  [CREATE TABLE AS SELECT &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   

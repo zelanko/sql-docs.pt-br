@@ -1,16 +1,16 @@
 ---
 title: Restaurar um banco de dados em um novo local (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 
+caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: fbe4821e83b274ab3a8fae04b0ea50c450183d25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
+  Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
     
 ##  <a name="BeforeYouBegin"></a> Antes de começar.  
   
@@ -205,7 +205,7 @@ GO
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  

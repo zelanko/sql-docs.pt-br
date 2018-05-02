@@ -1,16 +1,16 @@
 ---
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EVENT_NOTIFICATION_TSQL
@@ -26,23 +26,23 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2528104adb090ceb67476708cd8470d247e35a3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um objeto que envia informações sobre um banco de dados ou evento de servidor para um serviço do Service Broker. As notificações de evento são criadas somente com instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -137,7 +137,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Nos exemplos A e B abaixo, o GUID na cláusula `TO SERVICE 'NotifyService'` ('8140a771-3c4b-4479-8ac0-81008ab17984') é específico do computador no qual o exemplo foi configurado. Para essa instância, esse era o GUID para o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Para copiar e executar esses exemplos, é necessário substituir esse GUID pelo GUID do seu computador e pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conforme explicado na seção Argumentos acima, você pode adquirir **'***broker_instance_specifier***'** consultando a coluna service_broker_guid da exibição do catálogo sys.databases.  
+>  Para copiar e executar esses exemplos, é necessário substituir esse GUID pelo GUID do seu computador e pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conforme explicado na seção Argumentos acima, você pode adquirir **'***broker_instance_specifier***'** consultando a coluna service_broker_guid da exibição de catálogo sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Criando uma notificação de eventos no escopo do servidor  
  O exemplo a seguir cria os objetos obrigatórios para configurar um serviço de destino usando o [!INCLUDE[ssSB](../../includes/sssb-md.md)]. O serviço de destino faz referência ao tipo de mensagem e ao contrato do serviço de inicialização específico para notificações de eventos. Em seguida, uma notificação de evento é criada nesse serviço de destino, que envia uma notificação sempre que um evento de rastreamento `Object_Created` acontece na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

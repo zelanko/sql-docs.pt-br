@@ -2,7 +2,7 @@
 title: 'Exemplo: solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: xml
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc4ba3242b22ac168b1469d1bd3870218839ea7b
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 34786573aa50fc70ff6e6d0b3c2f3fe4d5cca668
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ GO
 ```  
   
 > [!NOTE]  
->  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador do namespace é composto de **esquema * n*** onde ***n*** é um inteiro.  
+>  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema*n***, em que ***n*** é um inteiro.  
   
  Com a especificação da opção `XMLSCHEMA` , é possível solicitar o esquema XSD para o resultado.  
   
@@ -131,7 +131,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

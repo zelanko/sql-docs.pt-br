@@ -1,16 +1,16 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FUNCTION
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 
+caps.latest.revision: 162
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 072d8fabf26e99137e29f6d1eb42556a6f6ad225
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]  
 >  A integração do CLR do .NET Framework ao SQL Server é discutida neste tópico. A integração CLR não se aplica ao Banco de Dados SQL do Azure.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -368,9 +368,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.  
+ *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.  
   
- \< clr_table_type_definition > ( { *column_name**data_type* } [ ,...*n* ] ) **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Define os tipos de dados de tabela para uma função CLR. A declaração de tabela inclui somente nomes de colunas e tipos de dados. A tabela sempre é colocada no grupo de arquivos primário.  
   
@@ -540,7 +540,7 @@ RETURNS return_data_type
   
  Para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referencie o método correto quando estiver sobrecarregado em uma classe, o método indicado em \<method_specifier> deve ter as seguintes características: 
   
--   Receber o mesmo número de parâmetros como especificado em [ ,...*n* ].  
+-   Receber o mesmo número de parâmetros, conforme especificado em [ , ...*n* ].  
   
 -   Receber todos os parâmetros por valor, não por referência.  
   

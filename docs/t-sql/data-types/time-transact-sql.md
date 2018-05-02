@@ -1,16 +1,16 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 6/7/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81a0b19c21ac231e49dd6c6dad23de7beaaa6b35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |*escala de segundos fracionários*|Especifica o número de dígitos para a parte fracionária dos segundos.<br /><br /> Pode ser um inteiro de 0 a 7. Para o Informatica, isso pode ser um inteiro de 0 a 3.<br /><br /> A escala fracionária padrão é de 7 (100ns).|  
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|hh:mm:ss[.nnnnnnn] para o Informatica)<br /><br /> Para obter mais informações, consulte a seção "Compatibilidade com versões anteriores de clientes de nível inferior" a seguir.|  
 |Intervalo|00:00:00.0000000 a 23:59:59.9999999 (00:00:00.000 a 23:59:59.999 para o Informatica)|  
-|Intervalos de elementos|hh são dois dígitos, variando de 0 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 0 a 59, que representam o segundo.<br /><br /> n\* é de zero a sete dígitos, variando de 0 a 9999999, que representa os segundos fracionários. Para o Informatica, n\* é de zero a três dígitos, variando de 0 a 999.|  
+|Intervalos de elementos|hh são dois dígitos, variando de 0 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 0 a 59, que representam o segundo.<br /><br /> n\* é de zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. Para o Informatica, n\* é de zero a três dígitos, variando de 0 a 999.|  
 |Comprimento de caracteres|Mínimo de 8 posições (hh:mm:ss) até um máximo de 16 (hh:mm:ss.nnnnnnn). Para o Informatica, o máximo é de 12 (hh:mm:ss.nnn).|  
 |Precisão, escala<br /><br /> (usuário especifica apenas escala)|Veja a tabela abaixo.|  
 |Tamanho de armazenamento|5 bytes, fixos, são o padrão com o padrão de precisão de frações de segundo de 100 ns. No Informatica, o padrão é de 4 bytes, fixos, com o padrão de precisão de segundos fracionários de 1ms.|  

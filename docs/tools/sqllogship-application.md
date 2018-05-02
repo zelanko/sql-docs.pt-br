@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
-O aplicativo [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas de uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O aplicativo **sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas para uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
   
  ![Ícone de link do tópico](../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") para as convenções de sintaxe, consulte [referência de utilitários de Prompt de comando &#40;mecanismo de banco de dados&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
@@ -69,10 +69,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Emite todas as mensagens de depuração e de rastreamento.|  
   
  **–logintimeout** *timeout_value*  
- Especifica o tempo designado para tentar efetuar o login à instância do servidor antes da tentativa expirar. O padrão é 15 segundos. *timeout_value* é *int*.  
+ Especifica o tempo designado para tentar efetuar o login à instância do servidor antes da tentativa expirar. O padrão é 15 segundos. *timeout_value* é **int***.*  
   
  **-querytimeout** *timeout_value*  
- Especifica o tempo designado para iniciar a operação especificada antes da tentativa expirar. O padrão é sem período de expiração. *timeout_value* é *int*.  
+ Especifica o tempo designado para iniciar a operação especificada antes da tentativa expirar. O padrão é sem período de expiração. *timeout_value* é **int***.*  
   
 ## <a name="remarks"></a>Remarks  
  Recomendamos a utilização das opções de backup, copiar e restaurar para realizar as tarefas de backup, copiar e restaurar quando for possível. Para iniciar esses trabalhos em uma operação em lote ou em outro aplicativo, chame o procedimento armazenado [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  

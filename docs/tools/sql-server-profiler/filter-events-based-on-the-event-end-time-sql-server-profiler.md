@@ -1,15 +1,16 @@
 ---
-title: "Filtrar eventos com base na hora de término do evento (SQL Server Profiler) | Microsoft Docs"
-ms.custom: 
+title: Filtrar eventos com base na hora de término do evento (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event end times [SQL Server]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d254a5eaaf2c509e25925bd9fa2ad18378ce489a
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtrar eventos com base na hora de término do evento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como filtrar eventos de rastreamento com base no evento de hora de término usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como filtrar eventos de rastreamento com base na hora de término do evento usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-filter-events-based-on-the-event-end-time"></a>Para filtrar eventos com base na hora de término do evento  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
 6.  Expanda **Maior que** ou **Menor que**e insira um valor **datetime**no campo que aparece abaixo do operador de comparação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

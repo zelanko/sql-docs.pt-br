@@ -1,16 +1,16 @@
 ---
 title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CATALOG_TSQL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - CREATE FULLTEXT CATALOG statement
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65872ec24d605e61bf284446c976c51b053e999c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d03296f2a050139712814b3e9340710cfd07669b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um catálogo de texto completo é um objeto virtual e não pertence a nenhum grupo de arquivos. Um catálogo de texto completo é um conceito lógico que faz referência a um grupo de índices de texto completo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   

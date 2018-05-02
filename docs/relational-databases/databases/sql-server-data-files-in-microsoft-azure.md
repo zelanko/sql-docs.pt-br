@@ -1,30 +1,31 @@
 ---
 title: Arquivos de dados do SQL Server no Microsoft Azure | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a66db6640daa6df0ffb3b285f9f92e8b1a340711
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Arquivos de dados no Azure](../../relational-databases/databases/media/data-files-on-azure.png "Arquivos de dados no Azure")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ![Arquivos de dados no Azure](../../relational-databases/databases/media/data-files-on-azure.png "Arquivos de dados no Azure")  
   
  Arquivos de dados do SQL Server no Microsoft Azure permitem o suporte nativo para os arquivos de banco de dados do SQL Server armazenados como Blobs do Microsoft Azure. Ele permite que você crie um banco de dados do SQL Server executado localmente ou em uma máquina virtual no Microsoft Azure com um local de armazenamento dedicado a seus dados no Armazenamento de Blobs do Microsoft Azure. Esse aprimoramento simplifica especialmente a movimentação de bancos de dados entre computadores usando operações de anexação e desanexação. Além disso, ele fornece um local de armazenamento alternativo para os arquivos de backup de banco de dados ao permitir que você restaure de ou para o Armazenamento do Microsoft Azure. Em virtude disso, ele permite várias soluções híbridas ao fornecer vários benefícios para virtualização de dados, movimentação de dados, segurança e disponibilidade, baixo custo e facilidade de manutenção, o que proporciona alta disponibilidade e dimensionamento elástico.
  
@@ -132,7 +133,7 @@ ON
  A partir do SQL Server 2014, um novo objeto SQL Server foi adicionado para ser usado com o recurso Arquivos de Dados do SQL Server no Armazenamento do Azure. O novo objeto SQL Server é chamado de [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) e pode ser usado pelo Monitor do Sistema para monitorar a atividade ao executar o SQL Server com o Armazenamento do Microsoft Azure.  
   
 ### <a name="sql-server-management-studio-support"></a>Suporte ao SQL Server Management Studio  
- O SQL Server Management Studio permite usar esse recurso por meio de várias janelas da caixa de diálogo. Por exemplo, você pode digitar o caminho da URL do contêiner de armazenamento, como > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
+ O SQL Server Management Studio permite usar esse recurso por meio de várias janelas da caixa de diálogo. Por exemplo, digite o caminho da URL do contêiner de armazenamento, como > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
  como um **Caminho** em várias janelas de diálogo, como **Novo Banco de Dados**, **Anexar Banco de Dados**e **Restaurar Banco de Dados**. Para obter mais informações, consulte [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   

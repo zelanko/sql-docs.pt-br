@@ -1,40 +1,41 @@
 ---
-title: Organizar colunas exibidas em um rastreamento (SQL Server Profiler) | Microsoft Docs
-ms.custom: 
+title: Organizar as colunas exibidas em um rastreamento (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar colunas exibidas em um rastreamento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode agrupar as colunas de dados em um rastreamento selecionando **organizar colunas** na tabela de rastreamento ou **propriedades do arquivo de rastreamento** caixa de diálogo, ou quando você define um rastreamento. Agrupar as colunas de dados permite-lhe analisar melhor a saída de rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Para obter mais informações, veja [Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode agrupar as colunas de dados em um rastreamento selecionando **Organizar Colunas** na tabela de rastreamento ou na caixa de diálogo **Propriedades do Arquivo de Rastreamento**, ou ao definir um rastreamento. Agrupar as colunas de dados permite-lhe analisar melhor a saída de rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Para obter mais informações, veja [Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  **Organizar Colunas** permite agrupar os eventos do rastreamento ou agrupá-los e agregá-los pelas colunas de dados que você selecionar.  
   
 -   Escolha várias colunas de dados para agrupar apenas eventos de rastreamento. Quando várias colunas de dados são selecionadas para o agrupamento, a janela de rastreamento exibe os eventos agrupados pelos valores nas colunas de dados escolhidas. O exemplo a seguir mostra como a grade da janela de rastreamento apareceria se você selecionasse as colunas **Duration** e **StartTime** para agrupamento. Observe que os valores da coluna **Duration** são exibidos em ordem crescente, seguidos dos valores de **StartTime** .  
   
-|Duration|StartTime|EventClass|ClientProcessID|  
+|Duração|StartTime|EventClass|ClientProcessID|  
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Selecione apenas uma coluna para agrupar e agregar os eventos do rastreamento. Quando uma única coluna de dados é selecionada para o agrupamento, a janela de rastreamento exibe os eventos agrupados pelos valores nessa coluna de dados e recolhe todos os eventos debaixo dela. Um sinal de adição (**+**) aparece à esquerda do evento na coluna de dados selecionada para o agrupamento com o número de eventos recolhidos sob ela entre parênteses, à direita do evento. O exemplo a seguir mostra como a grade da janela de rastreamento apareceria se você selecionasse apenas a coluna **EventClass** para agrupamento. Observe que todos os eventos estão organizados sob a coluna de dados **EventClass** . Para visualizar todos os eventos, clique no sinal mais para expandir e exibir todas as classes de evento daquele tipo.  
   
-|EventClass|StartTime|Duration|ClientProcessID|  
+|EventClass|StartTime|Duração|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
 |+ ExistingConnection (6)||||  
 |+ SQL:BatchStarting (25)||||  
@@ -88,9 +89,9 @@ ms.lasthandoff: 01/17/2018
   
 7.  Para voltar à exibição normal dos dados do rastreamento, clique em **Exibição Agregada** no menu **Exibir** para cancelar a seleção. Se desejar voltar à exibição agregada, clique outra vez em **Exibição Agregada** no menu **Exibir** para selecioná-la novamente. Note que você também pode clicar em **Exibição Agrupada** no menu **Exibir** para exibir os eventos do rastreamento agrupado sem que eles sejam recolhidos.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Abrir uma tabela de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   

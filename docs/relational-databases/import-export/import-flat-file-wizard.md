@@ -1,16 +1,16 @@
 ---
 title: Importar Arquivo Simples para SQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.importflatfile.f1
@@ -18,11 +18,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistente Importar Arquivo Simples para SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,13 +34,13 @@ O Assistente Importar Arquivo Simples fornece uma maneira simples de copiar dado
 ## <a name="why-would-i-use-this-wizard"></a>Por que usar esse assistente?
 Esse assistente foi criado para melhorar a experiência de importação atual usando uma estrutura inteligente conhecida como [PROSE](https://microsoft.github.io/prose/) (Program Synthesis using Examples). Para um usuário sem conhecimento especializado de domínio, a importação de dados normalmente pode ser uma tarefa complexa, propensa a erros e entediante. Esse assistente simplifica tanto o processo de importação de modo que é necessário apenas selecionar um arquivo de entrada e o nome exclusivo da tabela, deixando que a estrutura PROSE cuide do restante.
 
-O PROSE analisa os padrões de dados no arquivo de entrada para inferir os nomes das colunas, bem como os tipos, os delimitadores e muito mais. Essa estrutura aprende a estrutura do arquivo e faz todo o trabalho pesado de modo que os usuários não precisam fazê-lo.
+O PROSE analisa os padrões de dados no arquivo de entrada para inferir os nomes das colunas, bem como os tipos, os delimitadores e muito mais. Essa estrutura aprende a estrutura do arquivo e faz todo o trabalho pesado, de modo que os usuários não precisem fazê-lo.
 
 Para entender melhor a melhoria na experiência do usuário do Assistente Importar Arquivo Simples, confira este vídeo:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 Esse recurso só está disponível no SSMS (SQL Server Management Studio) v17.3 ou posterior. Verifique se você está usando a versão mais recente. É possível encontrar a versão mais recente [aqui.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a id="started"></a>Introdução
@@ -51,10 +52,10 @@ Para acessar o Assistente Importar Arquivo Simples, siga estas etapas:
 
 ![Menu do assistente](media/import-flat-file-wizard/importffmenu.png)
 
-Para saber mais sobre as diferentes funções do assistente, consulte o tutorial a seguir.
+Para saber mais sobre as diferentes funções do assistente, consulte o seguinte tutorial:
 
 ## <a name="tutorial"></a>Tutorial
-Para os fins deste tutorial, sinta-se à vontade para usar seu próprio arquivo simples. Caso contrário, este tutorial usará o seguinte CSV do Excel, o qual você pode copiar. Se você usar esse CSV, nomeie-o como **example.csv** e não se esqueça de salvá-lo como um CSV em um local fácil, como a área de trabalho.
+Para os fins deste tutorial, sinta-se à vontade para usar seu próprio arquivo simples. Caso contrário, este tutorial usará o seguinte CSV do Excel, o qual você pode copiar. Se você usar esse CSV, nomeie-o **example.csv** e salve-o como um CSV em um local fácil, como a área de trabalho.
 
 ![Excel do assistente](media/import-flat-file-wizard/importffexample.png)
 
@@ -94,10 +95,15 @@ Esta página indica se a importação foi bem-sucedida. Se uma marca de seleçã
 
 ![Resultados do assistente](media/import-flat-file-wizard/importffresults.png)
 
+## <a name="reporting-import-flat-file-failures"></a>Relatando falhas de importação de arquivo simples
+Em caso de falhas, envie um email para sqltoolsprosesupport@microsoft.com
+
+Para obter mais informações, [consulte estas instruções.](reporting-import-flat-file-failures.md)
+
 ## <a name="learn-more"></a>Saiba mais
 
 Saiba mais sobre o assistente.
-
+ 
 - **Saiba mais sobre como importar outras fontes.** Se desejar importar outros itens que não sejam arquivos simples, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **Saiba mais sobre como conectar-se a fontes de arquivos simples.** Se desejar obter mais informações sobre como conectar-se a fontes de arquivos simples, consulte [Conectar a uma fonte de dados de arquivo simples](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **Saiba mais sobre o PROSE.** Se desejar uma visão geral da estrutura inteligente usada por esse assistente, consulte [PROSE SDK](https://microsoft.github.io/prose/).

@@ -15,16 +15,17 @@ ms.custom: ''
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 04/10/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: fd5186e4a069b76108ad0c8cd4e91497e618a195
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparent Data Encryption para Data Warehouse e Banco de Dados SQL
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 A Transparent Data Encryption ajuda a proteger o Banco de Dados SQL do Azure e o Data Warehouse do Azure contra a ameaça de atividades mal-intencionadas. Ela executa criptografia e descriptografia em tempo real do banco de dados, backups associados e arquivos de log de transações em repouso sem exigir alterações no aplicativo.
 
@@ -44,9 +45,9 @@ A Microsoft também move e gerencia diretamente as chaves conforme necessário p
 > Todos os bancos de dados SQL recém-criados são criptografados por padrão usando a Transparent Data Encryption gerenciada por serviço. Os bancos de dados existentes antes de maio de 2017 e bancos de dados criados por meio de restauração, de replicação geográfica e de cópia de banco de dados, não são criptografados por padrão.
 >
 
-## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (versão prévia)
+## <a name="bring-your-own-key"></a>Bring Your Own Key
 
-Com o suporte do Bring Your Own Key (versão prévia), você obtém o controle das suas chaves de Transparent Data Encryption e controla quem pode acessá-las e quando. O Key Vault, que é o sistema de gerenciamento de chave externa baseado em nuvem do Azure, é o primeiro serviço de gerenciamento de chaves que a Transparent Data Encryption integrou com o suporte do Bring Your Own Key. Com o suporte do Bring Your Own Key, a chave de criptografia do banco de dados é protegida por uma chave assimétrica armazenada no Key Vault. A chave assimétrica nunca deixa o Key Vault. Depois que o servidor tem permissões para um cofre de chaves, o servidor envia solicitações básicas de operação de chave para ele por meio do Key Vault. Você define a chave assimétrica no nível do servidor e todos os bancos de dados nesse servidor a herdam.
+Com o suporte do Bring Your Own Key, você obtém o controle de suas chaves de Transparent Data Encryption e controla quem pode acessá-las e quando. O Key Vault, que é o sistema de gerenciamento de chave externa baseado em nuvem do Azure, é o primeiro serviço de gerenciamento de chaves que a Transparent Data Encryption integrou com o suporte do Bring Your Own Key. Com o suporte do Bring Your Own Key, a chave de criptografia do banco de dados é protegida por uma chave assimétrica armazenada no Key Vault. A chave assimétrica nunca deixa o Key Vault. Depois que o servidor tem permissões para um cofre de chaves, o servidor envia solicitações básicas de operação de chave para ele por meio do Key Vault. Você define a chave assimétrica no nível do servidor e todos os bancos de dados nesse servidor a herdam.
 
 Com o suporte do Bring Your Own Key, agora você pode controlar tarefas de gerenciamento de chaves, como rotações de chave e permissões do cofre de chaves. Você também pode excluir chaves e habilitar auditoria/relatórios em todas as chaves de criptografia. O Key Vault oferece gerenciamento de chaves central e usa módulos de segurança de hardware rigorosamente monitorados. O Key Vault promove a separação do gerenciamento de chaves e dados para ajudar a atender à conformidade regulatória. Para saber mais sobre o Key Vault, veja a [página de documentação do Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 

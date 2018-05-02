@@ -1,32 +1,32 @@
 ---
-title: "Configurar a política de failover automático flexível | Microsoft Docs"
-ms.custom: 
+title: Configurar a política de failover automático flexível | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b1a512a3b4d22582c717afc3f77853d9f32281b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurar a política de failover automático flexível
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/23/2018
   
          Para obter mais informações sobre os níveis de condição de failover, consulte [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-    -   Para configurar o tempo limite de verificação de integridade, use a opção HEALTH_CHECK_TIMEOUT = *n* , em que *n* é um número inteiro de 15000 milissegundos (15 segundos) a 4294967295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
+    -   Para configurar o tempo limite de verificação de integridade, use a opção HEALTH_CHECK_TIMEOUT = *n*, em que *n* é um número inteiro de 15000 milissegundos (15 segundos) a 4294967295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
   
          Por exemplo, a instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir altera o limite de tempo limite de verificação de integridade de um grupo de disponibilidade existente, `AG1`, para 60.000 milissegundos (um minuto).  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 02/23/2018
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Para definir o tempo limite de verificação de integridade, use o parâmetro **HealthCheckTimeout***n* parameter, em que *n* é um número inteiro de 15000 milissegundos (15 segundos) a 4294967295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
+    -   Para definir o tempo limite de verificação de integridade, use o parâmetro **HealthCheckTimeout***n*, em que *n* é um inteiro de 15.000 milissegundos (15 segundos) a 4.294.967.295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
   
          Por exemplo, o comando a seguir altera o tempo limite de verificação de integridade de um grupo de disponibilidade existente, `AG1`, para 120.000 milissegundos (dois minutos).  
   

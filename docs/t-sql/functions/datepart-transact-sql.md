@@ -2,7 +2,7 @@
 title: DATEPART (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|functions
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: ''
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af3b28322a1d0080202cfc42c3381f8d82d0f535
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +90,7 @@ Cada *datepart* retorna o mesmo valor das abreviações dela.
   
 O valor retornado depende do ambiente de idioma definido por meio da instrução [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e da etapa [Configurar Idioma Padrão do servidor](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) do logon. Se *date* for uma cadeia de caracteres literal para alguns formatos, o valor retornado dependerá do formato especificado por meio de [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md). SET DATEFORMAT não afeta o valor retornado quando a data é uma expressão de coluna de um tipo de dados de data de hora.
   
-A tabela a seguir lista todos os argumentos de *datepart* com valores retornados correspondentes para a instrução `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. O tipo de dados do argumento de *date* é **datetimeoffset(7)**. O valor retornado da *datepart* **nanosecond** tem uma escala de 9 (0,123456700) e as últimas duas posições sempre são 00.
+A tabela a seguir lista todos os argumentos de *datepart* com valores retornados correspondentes para a instrução `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. O tipo de dados do argumento de *date* é **datetimeoffset(7)**. O valor retornado de **nanosecond***datepart* tem uma escala de 9 (0,123456700) e as últimas duas posições sempre são 00.
   
 |*datepart*|Valor retornado|  
 |---|---|
@@ -111,9 +112,9 @@ A tabela a seguir lista todos os argumentos de *datepart* com valores retornados
 ## <a name="week-and-weekday-datepart-arguments"></a>Argumentos week e weekday de datepart
 Quando *datepart* é **week** (**wk**, **ww**) ou **weekday** (**dw**), o valor retornado depende do valor definido usando [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-O dia 1º de janeiro de qualquer ano define o número inicial da *datepart* **week**, por exemplo: DATEPART (**wk**, 'Jan 1, *xxx*x') = 1, em que *xxxx* é qualquer ano.
+O dia 1º de janeiro de qualquer ano define o número inicial de **week***datepart*, por exemplo: DATEPART (** wk**, 'Jan 1, *xxx*x') = 1, em que *xxxx* é qualquer ano.
   
-A tabela a seguir lista o valor retornado pelas *dateparts* **week** e **weekday** para '2007-04-21 ' em cada argumento de SET DATEFIRST. 1º de janeiro foi uma segunda-feira em 2007. 21 de abril foi um sábado em 2007. SET DATEFIRST 7, domingo, é o padrão para inglês norte-americano.
+A tabela a seguir lista o valor retornado por **week** e **weekday***datepart* para '2007-04-21', para cada argumento SET DATEFIRST. 1º de janeiro foi uma segunda-feira em 2007. 21 de abril foi um sábado em 2007. SET DATEFIRST 7, domingo, é o padrão para inglês norte-americano.
   
 |SET DATEFIRST<br /><br /> argumento|week<br /><br /> retornado|weekday<br /><br /> retornado|  
 |---|---|---|
@@ -137,8 +138,8 @@ O sistema de numeração em países/regiões diferentes pode não estar em confo
 |---|---|---|---|
 |Domingo|1º de janeiro,<br /><br /> Primeiro sábado,<br /><br /> 1 a 7 dias do ano|Sim|Estados Unidos|  
 |Segunda-feira|1º de janeiro,<br /><br /> Primeiro domingo,<br /><br /> 1 a 7 dias do ano|Sim|A maior parte da Europa e do Reino Unido|  
-|Segunda-feira|4 de janeiro,<br /><br /> Primeira quinta-feira,<br /><br /> 4 a 7 dias do ano|Não|ISO 8601, Noruega e Suécia|  
-|Segunda-feira|7 de janeiro,<br /><br /> Primeira segunda-feira,<br /><br /> 7 dias do ano|Não||  
+|Segunda-feira|4 de janeiro,<br /><br /> Primeira quinta-feira,<br /><br /> 4 a 7 dias do ano|não|ISO 8601, Noruega e Suécia|  
+|Segunda-feira|7 de janeiro,<br /><br /> Primeira segunda-feira,<br /><br /> 7 dias do ano|não||  
 |Quarta-feira|1º de janeiro,<br /><br /> Primeira terça-feira,<br /><br /> 1 a 7 dias do ano|Sim||  
 |Sábado|1º de janeiro,<br /><br /> Primeira sexta-feira,<br /><br /> 1 a 7 dias do ano|Sim||  
   

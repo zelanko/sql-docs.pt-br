@@ -1,5 +1,5 @@
 ---
-title: Protocolos de Cliente – Propriedades de Memória Compartilhada (guia Protocolo)
+title: Protocolos de cliente – Propriedades de memória compartilhada (guia Protocolo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 663d96f61c9491b8d53b0f6c994939a6b8085fe4
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/10/2018
 ---

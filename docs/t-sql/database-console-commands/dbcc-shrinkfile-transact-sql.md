@@ -1,16 +1,16 @@
 ---
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHRINKFILE
@@ -32,23 +32,23 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 
+caps.latest.revision: 87
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5225b9c6da68489845921f6351e86eb36a02358a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Reduz o tamanho dos dados especificados ou do arquivo de log do banco de dados atual ou esvazia um arquivo movendo os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos, o que permite que o arquivo seja removido do banco de dados. Você pode reduzir um arquivo a um tamanho menor que o tamanho especificado no momento de sua criação. Isso redefine o tamanho mínimo de arquivo para o valor novo.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -114,7 +114,7 @@ A tabela a seguir descreve as colunas do conjunto de resultados.
 ## <a name="remarks"></a>Remarks  
 DBCC SHRINKFILE aplica-se aos arquivos do banco de dados atual. Para obter mais informações sobre como alterar o banco de dados atual, consulte [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
-Operações DBCC SHRINKFILE podem ser interrompidas a qualquer momento do processo e todo o trabalho concluído será mantido.
+Operações DBCC SHRINKFILE podem ser interrompidas a qualquer momento do processo e todo o trabalho concluído será mantido. Se o parâmetro EMPTYFILE for usado em um arquivo e a operação for cancelada, o arquivo não será marcado, para impedir a adição de dados adicionais.
   
 Quando ocorre uma falha na operação DBCC SHRINKFILE, um erro é gerado.
   

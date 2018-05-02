@@ -1,16 +1,16 @@
 ---
 title: UPDATE() (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
@@ -28,23 +28,23 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b91d175788e3f67e8a4e4cc1484e9648072c4cef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="update---trigger-functions-transact-sql"></a>UPDATE - funções de gatilho (Transact-SQL)
+# <a name="update---trigger-functions-transact-sql"></a>UPDATE – Funções de gatilho (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna um valor booliano que indica se foi feita uma tentativa de INSERT ou UPDATE em uma coluna especificada de uma tabela ou exibição. UPDATE() é usado em qualquer lugar no corpo de um gatilho INSERT ou UPDATE do [!INCLUDE[tsql](../../includes/tsql-md.md)] para testar se o gatilho deve executar determinadas ações.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,23 +54,23 @@ UPDATE ( column )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *coluna*  
- É o nome da coluna a ser testada para uma ação INSERT ou UPDATE. Como o nome da tabela está especificado na cláusula ON do gatilho, não inclua o nome da tabela antes do nome da coluna. A coluna pode ser de qualquer [tipo de dados](../../t-sql/data-types/data-types-transact-sql.md) suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Entretanto, não é possível usar colunas computadas nesse contexto.  
+ *column*  
+ É o nome da coluna a ser testada para uma ação INSERT ou UPDATE. Como o nome da tabela está especificado na cláusula ON do gatilho, não inclua o nome da tabela antes do nome da coluna. A coluna pode ser de qualquer [tipo de dados](../../t-sql/data-types/data-types-transact-sql.md) compatível com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Entretanto, não é possível usar colunas computadas nesse contexto.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Booliano  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  UPDATE() retorna TRUE, independentemente de uma tentativa de INSERT ou UPDATE ter êxito.  
   
- Para testar uma ação INSERT ou UPDATE para mais de uma coluna, especifique uma atualização individual (*coluna*) após o primeiro deles. Também é possível testar várias colunas para ações INSERT ou UPDATE usando COLUMNS_UPDATED. Isto retorna um padrão de bits que indica quais colunas foram inseridas ou atualizadas.  
+ Para testar uma ação INSERT ou UPDATE para mais de uma coluna, especifique uma cláusula UPDATE(*column*) separada após a primeira. Também é possível testar várias colunas para ações INSERT ou UPDATE usando COLUMNS_UPDATED. Isto retorna um padrão de bits que indica quais colunas foram inseridas ou atualizadas.  
   
  IF UPDATE retorna o valor TRUE em ações INSERT porque as colunas tiverem valores explícitos ou implícitos (NULL) inseridos.  
   
 > [!NOTE]  
->  IF UPDATE (*coluna*n) cláusula funciona como um se se... Caso contrário, ou cláusula WHILE e pode usar o BEGIN... Bloco final. Para obter mais informações, consulte [linguagem de controle de fluxo &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+>  A cláusula IF UPDATE(*colum*n) funciona da mesma forma que uma cláusula IF, IF...ELSE ou WHILE, podendo usar o bloco BEGIN...END. Para obter mais informações, consulte [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
- ATUALIZAÇÃO (*coluna*) pode ser usado em qualquer lugar dentro do corpo de um [!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho.  
+ UPDATE(*column*) pode ser usado em qualquer lugar do corpo de um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um gatilho que imprime uma mensagem para o cliente quando qualquer pessoa tentar atualizar as colunas `StateProvinceID` ou `PostalCode` da tabela `Address`.  
@@ -98,8 +98,8 @@ WHERE PostalCode = '12345';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [COLUMNS_UPDATED &#40; Transact-SQL &#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

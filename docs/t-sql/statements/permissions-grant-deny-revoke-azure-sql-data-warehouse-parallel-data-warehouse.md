@@ -1,30 +1,31 @@
 ---
-title: "Permissões GRANT-DENY-REVOKE – SQL Data do Azure e Parallel Data Warehouses | Microsoft Docs"
-ms.custom: 
+title: Permissões GRANT-DENY-REVOKE – SQL Data do Azure e Parallel Data Warehouses | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 45026cd63aa7461db65cb1927738cc1cc71295e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permissões: GRANT, DENY, REVOKE (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

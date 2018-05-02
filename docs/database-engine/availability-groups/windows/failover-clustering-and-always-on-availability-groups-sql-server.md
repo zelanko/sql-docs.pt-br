@@ -1,15 +1,16 @@
 ---
 title: Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 20cd2f3d0b8a034a1f7f1d689f106216b161ec38
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/18/2018
  **As configurações de política de failover do grupo de disponibilidade se aplicam a todas as réplicas, sejam elas armazenadas em uma instância autônoma ou em uma instância FCI.  
   
 > [!NOTE]  
->  Para obter mais informações sobre **número de nós** no Clustering de Failover e **grupos de disponibilidade AlwaysOn** para edições diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obter mais informações sobre o **Número de nós** no Clustering de Failover e nos **Grupos de Disponibilidade Always On** para edições diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerações para hospedar uma réplica de disponibilidade em uma FCI  
   

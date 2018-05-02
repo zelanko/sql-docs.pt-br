@@ -1,16 +1,16 @@
 ---
 title: ALTER FUNCTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -22,23 +22,24 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b1008715d9cfd3e48945d0651f454253bc4e4bc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 13b02ea1e24744ee6f5fb6748405be8f6a92fd2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Altera uma função CLR ou [!INCLUDE[tsql](../../includes/tsql-md.md)] existente que foi criada anteriormente executando a instrução CREATE FUNCTION, sem alterar as permissões e sem afetar nenhuma função, procedimento armazenado ou gatilho dependente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -280,10 +281,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- *\<*table_type_definition*>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ *\<* table_type_definition *>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
  Define o tipo de dados de tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela.  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Define os tipos de dados de tabela para uma função CLR. A declaração de tabela inclui somente nomes de colunas e tipos de dados.  
   

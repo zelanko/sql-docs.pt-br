@@ -1,16 +1,16 @@
 ---
 title: LOG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LOG
@@ -22,23 +22,24 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab2d021e583c3f4bec009e7959ea4fccfea8c5a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5b9efa668d25194040cdaebc1ae38c57f68aba31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o logaritmo natural da expressão **float** especificada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +72,7 @@ LOG ( float_expression )
   
  O logaritmo natural é o logaritmo na base **e**, em que **e** é uma constante irracional aproximadamente igual a 2,718281828.  
   
- O logaritmo natural do exponencial de um número é o próprio número: LOG( EXP( *n* ) ) = *n*. E o exponencial do logaritmo natural de um número é o próprio número: EXP( LOG( *n* ) ) = *n*.  
+ O logaritmo natural do exponencial de um número é o próprio número: LOG( EXP( *n* ) ) = *n*. Além disso, o exponencial do logaritmo natural de um número é o próprio número: EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Exemplos  
   

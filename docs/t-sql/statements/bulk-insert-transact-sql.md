@@ -1,8 +1,8 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: ''
+caps.latest.revision: 153
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7569b89a9ceffd99e15d11a5ef06c880411a479
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: d6ac507a908d77618aa4171bc222e60cbd051ed0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/17/2018
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -125,9 +125,12 @@ Começando com o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, 
 > [!NOTE]  
 >  A opção de MAXERRORS não se aplica à verificação de restrição.  
   
- CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'***code_page***'** }  
+ CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
  Especifica a página de código dos dados no arquivo de dados. CODEPAGE só será relevante se os dados contiverem colunas **char**, **varchar** ou **text** com valores de caractere maiores que **127** ou menores que **32**.  
-  
+
+> [!IMPORTANT]
+> CODEPAGE não é uma opção compatível com o Linux.
+
 > [!NOTE]  
 >  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você especifique um nome de agrupamento para cada coluna em um [arquivo de formato](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   

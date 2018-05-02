@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e4d9d8aaf26114afae1bcf35ab1ea0288e6893d1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-input-file-samples-dta"></a>Exemplos de arquivos de entrada XML (DTA)
-Esta seção contém arquivos de entrada XML de exemplo que você pode usar com a ferramenta de linha de comando [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]dta** . Essa ferramenta é uma das interfaces de usuário com o Orientador de Otimização do Mecanismo de Banco de Dados e pode ser usada para ajustar bancos de dados a fim de melhorar o desempenho das consultas. O Orientador de Otimização do Mecanismo de Banco de Dados analisa os efeitos de uma carga de trabalho em um ou em vários bancos de dados. A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas nos bancos de dados a serem ajustados. Depois de analisar os efeitos da carga de trabalho, o Orientador de Otimização do Mecanismo de Banco de Dados cria uma recomendação para a adição de índices, exibições indexadas ou estratégias de particionamento que melhorarão o desempenho das consultas em seus bancos de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção contém arquivos de entrada XML de exemplo que você pode usar com a ferramenta de linha de comando **dta**. Essa ferramenta é uma das interfaces de usuário com o Orientador de Otimização do Mecanismo de Banco de Dados e pode ser usada para ajustar bancos de dados a fim de melhorar o desempenho das consultas. O Orientador de Otimização do Mecanismo de Banco de Dados analisa os efeitos de uma carga de trabalho em um ou em vários bancos de dados. A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas nos bancos de dados a serem ajustados. Depois de analisar os efeitos da carga de trabalho, o Orientador de Otimização do Mecanismo de Banco de Dados cria uma recomendação para a adição de índices, exibições indexadas ou estratégias de particionamento que melhorarão o desempenho das consultas em seus bancos de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -39,16 +39,17 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 
+caps.latest.revision: 85
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 633179d7540ba4a6515c3614724a4849f40de391
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ecdb971d79ed8ced7112da1c73ff65fd66fe079
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Para fornecer uma interface compatível com versões anteriores para emular uma tabela cujo esquema foi alterado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -148,12 +149,12 @@ OR ALTER
 >  Qualquer atualização executada diretamente em tabelas subjacentes de uma exibição não são verificadas na exibição, mesmo que CHECK OPTION seja especificada.  
   
  ENCRYPTION  
- **Aplica-se a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Criptografa as entradas em [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contêm o texto da instrução CREATE VIEW. Usar WITH ENCRYPTION impede que a exibição seja publicada como parte da Replicação do SQL Server.  
   
  SCHEMABINDING  
- Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, a tabela ou tabelas base não poderão ser modificadas de um modo que possam afetar a definição da exibição. A própria definição da exibição, primeiro, deve ser modificada ou descartada para remover as dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, o *select_statement* deve incluir os nomes de duas partes (*esquema***.***objeto*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
+ Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, a tabela ou tabelas base não poderão ser modificadas de um modo que possam afetar a definição da exibição. A própria definição da exibição, primeiro, deve ser modificada ou descartada para remover as dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, a *select_statement* deve incluir os nomes de duas partes (*schema ***.*** object*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
   
  As exibições ou tabelas que participam de uma exibição criada com a cláusula SCHEMABINDING não podem ser descartadas, a menos que a exibição seja descartada ou alterada de modo a não ter mais associação de esquema. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro. Além disso, haverá falha na execução de instruções ALTER TABLE nas tabelas que participam de exibições com associação de esquema quando essas instruções afetarem a definição da exibição.  
   
@@ -375,7 +376,7 @@ GO
 ### <a name="b-using-with-encryption"></a>B. Usando WITH ENCRYPTION  
  O exemplo a seguir usa a opção `WITH ENCRYPTION` e mostra colunas computadas, colunas renomeadas e várias colunas.  
   
-**Aplica-se a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  

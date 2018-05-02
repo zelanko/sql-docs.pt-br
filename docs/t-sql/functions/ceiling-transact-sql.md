@@ -1,16 +1,16 @@
 ---
 title: CEILING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CEILING_TSQL
@@ -22,23 +22,24 @@ helpviewer_keywords:
 - integers [SQL Server]
 - CEILING function [Transact-SQL]
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8859077710b51556a9c61c546b91f37795afd8d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cc2871d3cdb81cfd4f93000bab0b166a829b490e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna o menor inteiro maior que ou igual a expressão numérica especificada.
+Essa função retorna o menor inteiro maior que ou igual à expressão numérica especificada.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,13 +49,13 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *numeric_expression*  
-É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**.
+Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados. Para essa função, o tipo de dados **bit** é inválido.
   
 ## <a name="return-types"></a>Tipos de retorno
-Retorna o mesmo tipo que *numeric_expression*.
+Os valores retornados têm o mesmo tipo que *numeric_expression*.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir mostra valores numéricos positivos, numéricos negativos e valores zero com a função CEILING.
+Esse exemplo mostra entradas de valor numérico positivo, numérico negativo e zero para a função CEILING.
   
 ```sql
 SELECT CEILING($123.45), CEILING($-123.45), CEILING($0.0);  
@@ -70,7 +71,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   

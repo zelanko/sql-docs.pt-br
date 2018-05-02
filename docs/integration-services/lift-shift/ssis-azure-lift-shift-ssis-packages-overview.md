@@ -1,6 +1,6 @@
 ---
 title: Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 8fb064a5efe77b9b273234f8ccd4f9760a128d92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem
 Agora você pode mover suas cargas de trabalho e pacotes do SQL Server Integration Services (SSIS) para a nuvem do Azure.
@@ -85,7 +85,7 @@ Para obter informações sobre como conectar-se aos arquivos e compartilhamentos
 
 Quando você provisiona uma instância do Banco de Dados SQL para hospedar o SSISDB, o Azure Feature Pack para SSIS e o Access Redistribuível também são instalados. Esses componentes fornecem conectividade com várias fontes de dados do **Azure** e com os arquivos do **Excel e do Access**, além das fontes de dados compatíveis com os componentes internos.
 
-No momento, não é possível instalar nem usar **componentes de terceiros** para o SSIS (incluindo os componentes de terceiros da Microsoft, como os componentes do Oracle e Teradata da Attunity e da SAP BI).
+Instale também outros componentes. Para obter mais informações, consulte [Instalação personalizada para o tempo de execução de integração do Azure-SSIS](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
 
 ## <a name="deploy-and-run-packages"></a>Implantar e executar pacotes
 É necessário usar o **modelo de implantação de projeto**, não o modelo de implantação de pacote, quando você implanta projetos no SSISDB no Azure.

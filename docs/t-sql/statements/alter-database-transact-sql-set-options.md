@@ -1,17 +1,17 @@
 ---
-title: "Opções ALTER DATABASE SET (Transact-SQL) | Microsoft Docs"
-description: "Saiba mais sobre como definir opções de banco de dados, como criptografia e ajuste automáticos, repositório de consultas em um Banco de Dados SQL do Azure ou SQL Server"
-ms.custom: 
+title: Opções ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
+description: Saiba mais sobre como definir opções de banco de dados, como criptografia e ajuste automáticos, repositório de consultas em um Banco de Dados SQL do Azure ou SQL Server
+ms.custom: ''
 ms.date: 12/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 
+caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5432a43a2e9207666cc88da722425006454cdd0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ O espelhamento de banco de dados, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)
 > [!NOTE]  
 > Muitas opções de definição de banco de dados podem ser configuradas para a sessão atual usando [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) e são configuradas com frequência por aplicativos quando eles são conectados. As opções definidas no nível de sessão substituem os valores de **ALTER DATABASE SET** . As opções de banco de dados descritas abaixo são os valores que podem ser definidos para as sessões que não fornecem explicitamente outros valores de definição de conjunto.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -990,7 +990,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | OFF
 > [!IMPORTANT]  
 >  Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING sempre será ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável sempre definir ANSI_PADDING como ON. ANSI_PADDING deve ser ON ao criar ou manipular índices em colunas computadas ou exibições indexadas.  
   
- As colunas **char(*n*)** e **binary(*n*)** que permitem nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON, mas brancos à direita e zeros são cortados quando ANSI_PADDING está definido como OFF. As colunas **char(*n*)** e **binary(*n*)** que não permitem nulos sempre são preenchidas até o comprimento da coluna.  
+ As colunas **char(*n*)** e **binary(*n*)** que permitem valores nulos são preenchidas até o tamanho da coluna quando ANSI_PADDING está definido como ON, mas os brancos à direita e os zeros são cortados quando ANSI_PADDING está definido como OFF. As colunas **char(*n*)** e **binary(*n*)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.  
   
  As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_PADDING. Por padrão, clientes ODBC e OLE DB emitem uma configuração ANSI_PADDING da instrução SET no nível da conexão como ON para a sessão ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   

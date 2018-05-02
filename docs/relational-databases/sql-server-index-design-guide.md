@@ -1,8 +1,8 @@
 ---
-title: Guia de design de índice do SQL Server | Microsoft Docs
+title: Guia de arquitetura e design de índices do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -29,16 +29,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 405482e0cc8fdf8e545ee8fffab9edc678d1612e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
+# <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Os índices criados inadequadamente e a falta de índices são as principais fontes de gargalos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de design de índice do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém informações e as melhores práticas para ajudar você a criar índices efetivos de acordo com as necessidades de seu aplicativo.  
+Os índices criados inadequadamente e a falta de índices são as principais fontes de gargalos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de design de índices do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém informações sobre a arquitetura de índices e as melhores práticas para ajudá-lo a criar índices efetivos de acordo com as necessidades de seu aplicativo.  
     
 Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](../relational-databases/indexes/indexes.md).  
 
@@ -121,7 +122,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
   
 -   Mantenha o comprimento da chave de índice curto para os índices clusterizados. Além disso, os índices clusterizados se beneficiam de serem criados em colunas exclusivas ou não nulas.  
   
--   Colunas que são dos tipos de dados **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**e **varbinary(max)** não podem ser especificadas como colunas de chave de índice. Entretanto, os tipos de dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**e **xml** podem participar de um índice não clusterizado, como colunas de índice não chave. Para obter mais informações, consulte a seção ['Índice com colunas incluídas](#Included_Columns)' neste guia.  
+-   Colunas que são dos tipos de dados **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)** não podem ser especificadas como colunas de chave de índice. Entretanto, os tipos de dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** podem participar de um índice não clusterizado, como colunas de índice não chave. Para obter mais informações, consulte a seção ['Índice com colunas incluídas](#Included_Columns)' neste guia.  
   
 -   Um tipo de dados **xml** só pode ser uma coluna de chave em um índice XML. Para obter mais informações, consulte [Índices XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). O SQL Server 2012 SP1 apresenta um novo tipo de índice XML conhecido como um índice XML seletivo. Esse novo índice pode melhorar o desempenho da consulta dos dados armazenados como XML no SQL Server, permitir uma indexação muito mais rápida de cargas de trabalho de dados XML grandes e melhorar a escalabilidade ao reduzir os custos de armazenamento do próprio índice. Para obter mais informações, consulte [Índices XML seletivos &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -456,7 +457,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Poucas filas de índice se ajustarão em uma página. Isto poderia criar aumentos de E/S e eficiência de cache reduzida.  
   
--   Será necessário mais espaço em disco para armazenar o índice. Em particular, acrescentar os tipos de dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**ou **xml** como colunas de índice não chave pode aumentar significativamente os requisitos de espaço em disco. Isto porque os valores de coluna são copiados no nível folha de índice. Portanto, eles residem no índice e na tabela base.  
+-   Será necessário mais espaço em disco para armazenar o índice. Em particular, acrescentar os tipos de dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)** ou **xml** como colunas de índice não chave pode aumentar significativamente os requisitos de espaço em disco. Isto porque os valores de coluna são copiados no nível folha de índice. Portanto, eles residem no índice e na tabela base.  
   
 -   A manutenção do índice pode aumentar o tempo necessário para executar modificações, inserções, atualizações ou exclusões, para a tabela subjacente ou exibição indexada.  
   

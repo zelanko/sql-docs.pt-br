@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec9be70ff9d3605159bd47c4a4fd77f5bb1c6111
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-element-for-index-dta"></a>Elemento de coluna para índice (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica as colunas em que o índice é criado para uma configuração especificada pelo usuário.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica as colunas nas quais o índice é criado para uma configuração especificada pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,23 +75,23 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhuma.|  
-|**Valor padrão**|Nenhuma.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Pode especificar até 1024 colunas para o elemento **Index** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento index &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
-|**Elementos filho**|[Elemento Name para coluna &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)|  
+|**Elemento pai**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
+|**Elementos filho**|[Elemento Name para coluna &#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivo de entrada XML com configuração especificada pelo usuário (DTA)](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "Criar uma função de servidor | Microsoft Docs"
-ms.custom: 
+title: Criar uma função de servidor | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -19,19 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca312c8c2d5d83b7e8fb233f9d9dfac3c37fcaab
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8e74d591eff94f3a4f4fb9b58944573d976e4342
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-server-role"></a>Criar uma função de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)] Este tópico descreve como criar uma nova função de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
+  Este tópico descreve como criar uma nova função de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...**.  
   
-4.  Na caixa de diálogo **Nova Função de Servidor –***server_role_name* , na página **Geral** , insira um nome para a nova função de servidor na caixa **Nome da função de servidor** .  
+4.  Na caixa de diálogo **Nova Função de Servidor –***server_role_name*, na página **Geral**, insira um nome para a nova função de servidor na caixa **Nome da função de servidor**.  
   
 5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor** .  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 11/21/2017
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-new-server-role"></a>Para criar uma nova função de servidor  
   

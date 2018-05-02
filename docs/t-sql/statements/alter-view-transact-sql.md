@@ -1,16 +1,16 @@
 ---
 title: ALTER VIEW (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f20a6326f33f0cd41116d3a3c20dcdfad163eea2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Modifica uma exibição criada anteriormente. Isto inclui uma exibição indexada. ALTER VIEW não afeta disparadores ou procedimentos armazenados dependentes e não altera permissões.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -79,7 +79,7 @@ AS select_statement
  Criptografa as entradas em [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contêm o texto da instrução ALTER VIEW. O uso de WITH ENCRYPTION impede que a exibição seja publicada como parte da replicação do SQL Server.  
   
  SCHEMABINDING  
- Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, as tabelas base não poderão ser modificadas de um modo que possa afetar a definição da exibição. A própria definição da exibição deve primeiramente ser modificada ou descartada a fim de remover dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, o *select_statement* deve incluir os nomes de duas partes (*esquema***.***objeto*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
+ Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, as tabelas base não poderão ser modificadas de um modo que possa afetar a definição da exibição. A própria definição da exibição deve primeiramente ser modificada ou descartada a fim de remover dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, a *select_statement* deve incluir os nomes de duas partes (*schema ***.*** object*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
   
  As exibições ou tabelas que participam de uma exibição, criadas com a cláusula SCHEMABINDING não podem ser descartadas, a menos que a exibição seja descartada ou alterada, de tal forma que não mais tenha associação de esquema. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro. Além disso, haverá falha na execução de instruções ALTER TABLE nas tabelas que participam de exibições com associação de esquema se essas instruções afetarem a definição da exibição.  
   

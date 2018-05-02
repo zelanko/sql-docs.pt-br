@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Elemento de índice (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contém informações sobre um índice que você deseja criar ou descartar para uma configuração especificada pelo usuário.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contém informações sobre um índice que você quer criar ou remover para uma configuração especificada pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,23 +62,23 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhuma.|  
-|**Valor padrão**|Nenhuma.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Exigido uma vez para cada um dos elementos **Create** ou **Drop** se nenhuma outra estrutura física de design for especificada com os elementos **Statistics** ou **Heap** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Criar elemento &#40; DTA &#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento**Drop** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
-|**Elementos filho**|[Elemento Name para Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column para Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Elemento**PartitionColumn** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> [Elemento Filegroup para o índice &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Elemento**PercentUsage** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
+|**Elemento pai**|[Elemento Create &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento**Drop** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
+|**Elementos filho**|[Elemento Name para o índice &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column para Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Elemento**PartitionColumn** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> [Elemento Filegroup para o índice &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Elemento**PercentUsage** . Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja a [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

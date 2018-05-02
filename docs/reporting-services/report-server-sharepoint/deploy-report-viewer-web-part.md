@@ -1,25 +1,25 @@
 ---
-title: "Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint | Microsoft Docs"
-ms.custom: 
+title: Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df39b0b38363f7990609214abddeda8b5b6e54a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint
 
@@ -33,7 +33,11 @@ Use as instruções a seguir para implantar manualmente o pacote de solução qu
 
 ## <a name="requirements"></a>Requisitos
 
-**Dar suporte a versões do SharePoint Server:**  
+> [!IMPORTANT]
+> No momento, não será possível instalar essa web part se você já configurou o modo integrado do SharePoint do Reporting Services.
+>
+
+**Dar suporte a versões do SharePoint Server:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -148,6 +152,26 @@ Há suporte para os seguintes idiomas com a web part:
 * Russo (ru)
 * Chinês (simplificado – zh-HANS e zh-CHS)
 * Chinês (tradicional – zh-HANT e zh-CHT)
+
+## <a name="troubleshoot"></a>Solucionar problemas
+
+* Erro ao desinstalar o SSRS se você configurou o modo integrado do SharePoint:
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService não pode ser convertido em [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. O Tipo A é proveniente de 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' no contexto 'Default' e no local 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. O Tipo B é proveniente de 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' no contexto 'Default' e no local 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
+    
+    Solução:
+    1. Remover a web part do Visualizador de Relatórios
+    2. Desinstalar o SSRS
+    3. Reinstalar a web part do Visualizador de Relatórios
+
+* Erro ao tentar atualizar o SharePoint se você configurou o modo integrado do SharePoint:
+
+    Não foi possível carregar o arquivo ou o assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' ou uma de suas dependências. O sistema não pôde localizar o arquivo especificado. 00000000-0000-0000-0000-000000000000
+    
+    Solução:
+    1. Remover a web part do Visualizador de Relatórios
+    2. Desinstalar o SSRS
+    3. Reinstalar a web part do Visualizador de Relatórios
 
 ## <a name="next-steps"></a>Próximas etapas
 

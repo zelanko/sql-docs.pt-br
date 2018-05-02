@@ -22,11 +22,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 79ff20cdb03305824f4c5766412ca0733a82f642
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---
-# <a name="ltaliasgt-properties-alias-tab"></a>Propriedades de <Alias> (guia Alias)
+# <a name="ltaliasgt-properties-alias-tab"></a>Propriedades de &lt;alias&gt; (guia Alias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 O alias é um nome alternativo que pode ser usado para fazer uma conexão. Ele encapsula os elementos necessários de uma cadeia de conexão, expondo-os com um nome escolhido pelo usuário. Use a página **Alias** na caixa de diálogo de **\<** Nome do alias **> Propriedades** para exibir ou especificar os elementos da cadeia de conexão de um Alias.  
   

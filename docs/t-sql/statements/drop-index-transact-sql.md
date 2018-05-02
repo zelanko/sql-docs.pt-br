@@ -1,16 +1,16 @@
 ---
 title: DROP INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 
+caps.latest.revision: 99
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 821782102f7c9c6014c3ec46c5e9f9223eca98a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 042a2baab09ef96e1f89b71359e50ce6c933ea8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  A sintaxe definida em `<drop_backward_compatible_index>` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar essa sintaxe em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que usam atualmente o recurso. Em vez disso, use a sintaxe especificada em `<drop_relational_or_xml_index>`. Índices XML não podem ser descartados usando sintaxe compatível com versões anteriores.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -185,7 +186,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
+ MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] dá suporte a "padrão" como o nome do grupo de arquivos.  
   
  Especifica o local para onde mover as linhas de dados que atualmente estão no nível folha do índice clusterizado. Os dados são movidos para o novo local no formulário de um heap. É possível especificar um esquema de partição ou um grupo de arquivos como o novo local, mas o esquema de partição ou o grupo de arquivos deve existir. MOVE TO não é válido para exibições indexadas ou índices não clusterizados. Se um esquema de partição ou grupo de arquivos não estiver especificado, a tabela resultante estará localizada no mesmo esquema de partição ou grupo de arquivos definido para o índice clusterizado.  
@@ -204,13 +205,13 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Especifica um grupo de arquivos como o local para a tabela resultante. Se nenhum local estiver especificado e a tabela não estiver particionada, a tabela resultante será incluída no mesmo grupo de arquivos que o índice clusterizado. O grupo de arquivos já deve existir.  
   
- **"**default**"**  
+ **"** default **"**  
  Especifica o local padrão para a tabela resultante.  
   
 > [!NOTE]  
->  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"**default**"** ou MOVE TO **[**default**]**. Se **"**default**"** for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o local para onde mover a tabela FILESTREAM que atualmente está no nível folha do índice clusterizado. Os dados são movidos para o novo local no formulário de um heap. É possível especificar um esquema de partição ou um grupo de arquivos como o novo local, mas o esquema de partição ou o grupo de arquivos deve existir. FILESTREAM ON não é válido para exibições indexadas nem índices não clusterizados. Se um esquema de partição não estiver especificado, os dados estarão localizados no mesmo esquema de partição definido para o índice clusterizado.  
@@ -223,11 +224,11 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *filestream_filegroup_name*  
  Especifica um grupo de arquivos FILESTREAM para dados FILESTREAM. Se nenhum local estiver especificado e a tabela não estiver particionada, os dados serão incluídos no grupo de arquivos FILESTREAM padrão.  
   
- **"**default**"**  
+ **"** default **"**  
  Especifica o local padrão para os dados FILESTREAM.  
   
 > [!NOTE]  
->  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"**default**"** ou MOVE TO **[**default**]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  Quando um índice não clusterizado é descartado, a definição do índice é removida dos metadados e as páginas de dados do índice (a árvore B) são removidas dos arquivos do banco de dados. Quando um índice clusterizado é descartado, a definição do índice é removida dos metadados e as linhas de dados armazenadas no nível folha do índice clusterizado são armazenadas na tabela não ordenada resultante, um heap. Todo o espaço ocupado anteriormente pelo índice é recuperado. Em seguida, esse espaço pode ser usado para qualquer objeto de banco de dados.  
@@ -236,7 +237,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Quando o índice clusterizado de uma exibição indexada é descartado, todos os índices não clusterizados e estatísticas criadas automaticamente na mesma exibição são descartados automaticamente. As estatísticas criadas manualmente não são descartadas.  
   
- A sintaxe *table_or_view_name***.***index_name* é mantida para compatibilidade com versões anteriores. Um índice XML ou espacial não pode ser descartado usando a sintaxe compatível com versões anteriores.  
+ A sintaxe *table_or_view_name ***.*** index_name* é mantida para compatibilidade com versões anteriores. Um índice XML ou espacial não pode ser descartado usando a sintaxe compatível com versões anteriores.  
   
  Quando índices com 128 extensões ou mais são descartados, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados até depois da confirmação da transação.  
   
@@ -266,7 +267,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 Quando um índice clusterizado é descartado OFFLINE, apenas os níveis superiores dos índices clusterizados são removidos, portanto, a operação é bastante rápida. Quando um índice clusterizado é removido ONLINE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recria o heap duas vezes, uma para a etapa 1 e outra para a etapa 2. Para obter mais informações sobre a compactação de dados, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>Índices XML  
- Não é possível especificar opções ao remover um índice XML. Além disso, não é possível usar a sintaxe *table_or_view_name***.***index_name*. Quando um índice XML primário é descartado, todos os índices XML secundários associados são descartados automaticamente. Para obter mais informações, veja [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Não é possível especificar opções ao remover um índice XML. Além disso, não é possível usar a sintaxe *table_or_view_name ***.*** index_name*. Quando um índice XML primário é descartado, todos os índices XML secundários associados são descartados automaticamente. Para obter mais informações, veja [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Índices espaciais  
  Índices espaciais têm suporte apenas em tabelas. Ao remover um índice espacial, você não pode especificar nenhuma opção nem usar **.***index_name*. A sintaxe correta é a seguinte:  

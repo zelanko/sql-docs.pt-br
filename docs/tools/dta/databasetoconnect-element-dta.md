@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1e57133b7158ba1fae461f2d058f9cd8065226c8
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o primeiro banco de dados ao qual o orientador de otimização do mecanismo de banco de dados se conecta ao ajustar uma carga de trabalho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica o primeiro banco de dados ao qual o Orientador de Otimização do Mecanismo de Banco de Dados se conecta ao ajustar uma carga de trabalho.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, comprimento ilimitado.|  
-|**Valor padrão**|Nenhuma.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhuma|  
+|**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elementos filho**|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
  Use o **DatabaseToConnect** para especificar o nome do primeiro banco de dados que o Orientador de Otimização do Mecanismo de Banco de Dados conectará quando iniciar a sessão de ajuste. Você pode especificar apenas um banco de dados com esse elemento. Se forem especificados vários nomes de banco de dados, o Orientador de Otimização do Mecanismo de Banco de Dados retornará um erro.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso, veja a [Amostra do arquivo de entrada XML com carga de trabalho embutida &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

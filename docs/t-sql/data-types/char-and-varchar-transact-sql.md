@@ -1,16 +1,16 @@
 ---
 title: char e varchar (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - varchar
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - variable-length data types [SQL Server]
 - varchar data type
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c383e3b3ff5b79604454f80443c9042633797bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2147de81da2779ecec2369e59a4a67db49e8dc0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,12 +43,12 @@ ms.lasthandoff: 11/21/2017
 Esses tipos de dados são de comprimento variável ou fixo.  
   
 ## <a name="arguments"></a>Argumentos  
-**char** [ ( *n* ) ] Dados de cadeia de caracteres não Unicode de comprimento fixo. *n* define o comprimento da cadeia de caracteres e deve ser um valor de 1 a 8.000. O tamanho do armazenamento é *n* bytes. O sinônimo ISO para **char** é **character**.
+**char** [ ( *n* ) ] Dados de cadeia de caracteres não Unicode de comprimento fixo. *n* define o tamanho da cadeia de caracteres e deve ser um valor de 1 a 8.000. O tamanho do armazenamento é *n* bytes. O sinônimo ISO para **char** é **character**.
   
-**varchar** [ ( *n* | **max** ) ] Dados de cadeia de caracteres não Unicode de comprimento variável. *n* define o comprimento da cadeia de caracteres e pode ser um valor de 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). O tamanho do armazenamento é o tamanho real dos dados inseridos + 2 bytes. Os sinônimos ISO para **varchar** são **charvarying** ou **charactervarying**.
+**varchar** [ ( *n* | **max** ) ] Dados de cadeia de caracteres não Unicode de tamanho variável. *n* define o tamanho da cadeia de caracteres e pode ser um valor de 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). O tamanho do armazenamento é o tamanho real dos dados inseridos + 2 bytes. Os sinônimos ISO para **varchar** são **charvarying** ou **charactervarying**.
   
 ## <a name="remarks"></a>Remarks  
-Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado ao usar as funções CAST e CONVERT, o comprimento padrão é 30.
+Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado ao usar as funções CAST e CONVERT, o tamanho padrão é 30.
   
 Os objetos que usam **char** ou **varchar** são atribuídos ao agrupamento padrão do banco de dados, a menos que um agrupamento específico seja atribuído usando da cláusula COLLATE. O agrupamento controla a página de código que é usada para armazenar os dados de caractere.
   
@@ -81,7 +82,7 @@ As expressões character que estão sendo convertidas em tipo de dados **money**
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. Mostrando o valor padrão de n quando usado em declaração variável.  
-O exemplo a seguir mostra que o valor padrão de *n* é 1 para os tipos de dados `char` e `varchar` são usados em uma declaração variável.
+O exemplo a seguir mostra que o valor padrão de *n* é 1 para os tipos de dados `char` e `varchar` quando eles são usados em uma declaração de variável.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -157,7 +158,7 @@ String                                       TruncatedValue
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  

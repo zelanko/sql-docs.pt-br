@@ -1,16 +1,16 @@
 ---
 title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c393479727eae943a512b0e2953028a90a3dd123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retorna o valor de uma propriedade de certificado especificada.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,42 +52,42 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>Argumentos  
 *Cert_ID*  
-É a ID do certificado. *Cert_ID* é um int.
+O valor da ID de certificado, do tipo de dados int.
   
 *Expiry_Date*  
-É a data de expiração do certificado.
+A data de expiração do certificado.
   
 *Start_Date*  
-É a data em que o certificado se torna válido.
+A data em que o certificado se torna válido.
   
 *Issuer_Name*  
-É o nome do emissor do certificado.
+O nome do emissor do certificado.
   
 *Cert_Serial_Number*  
-É o número de série do certificado.
+O número de série do certificado.
   
 *Assunto*  
-É o assunto do certificado.
+A entidade do certificado.
   
  *SID*  
-É o SID do certificado. Também é o SID de qualquer logon ou usuário mapeado para esse certificado.
+O SID do certificado. Também é o SID de qualquer logon ou usuário mapeado para esse certificado.
   
 *String_SID*  
-É o SID do certificado como uma cadeia de caracteres. Também é o SID de qualquer logon ou usuário mapeado para o certificado.
+O SID do certificado como uma cadeia de caracteres. Também é o SID de qualquer logon ou usuário mapeado para o certificado.
   
 ## <a name="return-types"></a>Tipos de retorno
-A especificação de propriedade deve ser incluída entre aspas simples.
+Aspas simples devem incluir a especificação da propriedade.
   
-O tipo de retorno depende da propriedade especificada na chamada de função. Todos os valores retornados são encapsulados no tipo de retorno de **sql_variant**.
+O tipo de retorno depende da propriedade especificada na chamada de função. O tipo de retorno **sql_variant** encapsula todos os valores retornados.
 -   *Expiry_Date* e *Start_Date* retornam **datetime**.  
--   *Cert_Serial_Number*, *Issuer_Name*, *Subject* e *String_SID* retornam **nvarchar**.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* e *Subject* retornam **nvarchar**.  
 -   *SID* retorna **varbinary**.  
   
 ## <a name="remarks"></a>Remarks  
-As informações sobre certificados são visíveis na exibição do catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
+Consulte as informações de certificado na exibição de catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Permissões  
-Requer algumas permissões no certificado e que a permissão VIEW DEFINITION não seja negada ao chamador no certificado.
+Exige as permissões apropriadas no certificado e que a permissão VIEW não tenha sido negada ao chamador no certificado. Consulte [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) e [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md) para obter mais informações sobre permissões de certificado.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir retorna o assunto do certificado.
@@ -96,7 +96,7 @@ O exemplo a seguir retorna o assunto do certificado.
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   
@@ -108,7 +108,7 @@ PRINT CONVERT(nvarchar, @CertSubject);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
 [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)

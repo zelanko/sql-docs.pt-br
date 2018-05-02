@@ -1,30 +1,31 @@
 ---
 title: Configurar Distributed Replay | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a2ded636f3ded5a8821b6675ef5d18c21a31b968
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalhes de configuração de Distributed Replay são especificados em arquivos XML no controlador do Distributed Replay, clientes e onde a ferramenta de administração estiver instalada. Esses arquivos incluem o seguinte:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os detalhes de configuração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay são especificados em arquivos XML no controlador do Distributed Replay, nos clientes e onde a ferramenta de administração está instalada. Esses arquivos incluem o seguinte:  
   
 -   [Arquivo de configuração do controlador](#DReplayController)  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="DReplayController"></a> Arquivo de configuração do controlador: DReplayController.config  
  Quando o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller é iniciado, ele carrega o nível de log do arquivo de configuração do controlador, `DReplayController.config`. Esse arquivo está localizado na pasta em que você instalou o serviço de controlador de reprodução distribuída:  
   
- **\<caminho de instalação > \DReplayController.config**  
+ **\<caminho de instalação do controlador>\DReplayController.config**  
   
  O nível de log especificado pelo arquivo de configuração do controlador inclui o seguinte:  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="DReplayClient"></a> Arquivo de configuração de cliente: DReplayClient.config  
  Quando o serviço cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay é iniciado, ele carrega as definições de configuração do arquivo de configuração de cliente, `DReplayClient.config`. Esse arquivo está localizado em cada cliente, na pasta em que você instalou o serviço de cliente de reprodução distribuída:  
   
- **\<caminho de instalação do cliente > \DReplayClient.config**  
+ **\<caminho de instalação do cliente> \DReplayClient.config**  
   
  As configurações especificadas pelo arquivo de configuração de cliente incluem o seguinte:  
   
@@ -85,11 +86,11 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="PreprocessConfig"></a> Arquivo de configuração de pré-processamento: DReplay.exe.preprocess.config  
  Quando você usar a ferramenta de administração para iniciar o estágio de pré-processamento, ela carregará as configurações de pré-processamento do arquivo de configuração de pré-processamento, `DReplay.exe.preprocess.config`.  
   
- Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de pré-processamento modificado. Para obter mais informações sobre como usar a opção de pré-processamento da ferramenta de administração, consulte [opção de pré-processamento &#40; ferramenta de administração do Distributed Replay &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+ Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de pré-processamento modificado. Para obter mais informações de como usar a opção de pré-processamento da ferramenta de administração, confira [Opção de pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
  O arquivo de configuração de pré-processamento padrão está localizado na pasta em que você instalou a ferramenta de administração:  
   
- **\<caminho de instalação da ferramenta de Administração > \DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<caminho de instalação da ferramenta de administração>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  As definições de configuração de pré-processamento são especificadas em elementos XML que são filhos do elemento `<PreprocessModifiers>` no arquivo de configuração de pré-processamento. Essas configurações incluem:  
   
@@ -114,11 +115,11 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="ReplayConfig"></a> Arquivo de configuração de reprodução: DReplay.exe.replay.config  
  Quando você usar a ferramenta de administração para iniciar o estágio de reprodução do evento, ela carregará as configurações de reprodução do arquivo de configuração de reprodução, `DReplay.exe.replay.config`.  
   
- Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de reprodução modificado. Para obter mais informações sobre como usar a opção de reprodução da ferramenta de administração, consulte [opção reprodução &#40; ferramenta de administração Distributed Replay &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+ Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de reprodução modificado. Para obter mais informações de como usar a opção de reprodução da ferramenta de administração, confira [Opção de reprodução &#40;ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  O arquivo de configuração de reprodução padrão está localizado na pasta em que você instalou a ferramenta de administração:  
   
- **\<caminho de instalação da ferramenta de Administração > \DReplayAdmin\DReplay.exe.replay.config**  
+ **\<caminho de instalação da ferramenta de administração>\DReplayAdmin\DReplay.exe.replay.config**  
   
  As definições de configuração de reprodução são especificadas em elementos XML que são filhos dos elementos `<ReplayOptions>` e `<OutputOptions>` do arquivo de configuração de reprodução.  
   
@@ -127,7 +128,7 @@ ms.lasthandoff: 01/17/2018
   
 |Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o servidor de teste)|`<Server>`|Especifica o nome do servidor e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão.|*server_name*[\\*instance_name*]<br /><br /> Você não pode usar "`localhost`" ou "`.`" para representar o host local.|Não, se o nome do servidor já é especificado usando o **-s * servidor de destino* parâmetro com o **repetir** opção da ferramenta de administração.|  
+|Instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o servidor de teste)|`<Server>`|Especifica o nome do servidor e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão.|*server_name*[\\*instance_name*]<br /><br /> Você não pode usar "`localhost`" ou "`.`" para representar o host local.|Não, se o nome do servidor já tiver sido especificado usando o parâmetro **-s***target server* com a opção **replay** da ferramenta de administração.|  
 |Modo de sequenciamento|`<SequencingMode>`|Especifica o modo usado para o agendamento de eventos.|`synchronization` &#124; `stress`|Nenhum. Por padrão, o valor é `stress`.|  
 |Granularidade de escala de tensão|`<StressScaleGranularity>`|Especifica se deveriam ser dimensionadas todas as conexões no Identificador de Perfil de Serviço (SPID) junto (SPID) ou independentemente (Conexão) sob modo de tensão.|SPID &#124; Conexão|Sim. Por padrão, o valor é `SPID`.|  
 |Escala de tempo de conexão|`<ConnectTimeScale>`|É usada para dimensionar o tempo de conexão em modo de estresse.|Um inteiro entre `1` e `100`.|Nenhum. Por padrão, o valor é `100`.|  
@@ -169,11 +170,11 @@ ms.lasthandoff: 01/17/2018
 </Options>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Fórum do SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Usando o Distributed Replay para teste de carga do SQL Server – parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Usando o Distributed Replay para teste de carga do SQL Server – parte 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Usando o Distributed Replay para teste de carga do SQL Server – Parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

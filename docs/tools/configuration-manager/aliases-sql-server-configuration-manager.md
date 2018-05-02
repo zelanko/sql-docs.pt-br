@@ -1,5 +1,5 @@
 ---
-title: SQL Server Configuration Manager | Microsoft Docs
+title: Aliases (SQL Server Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a7b48b05fceeb18c7eac2930bef8c5dbac335227
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/03/2018
 ---

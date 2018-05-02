@@ -1,16 +1,16 @@
 ---
 title: ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_EXTERNAL_RESOURCE_POOL_TSQL
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER EXTERNAL RESOURCE POOL statement
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-caps.latest.revision: 
+caps.latest.revision: 10
 author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb4073a8114e953dc9df87614a63e074ab8c9683
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a0e15c7848fd7c91f48b4ef9e73c134980eaff54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Governança de recursos para o aprendizado de máquina no SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
 

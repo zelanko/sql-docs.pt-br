@@ -1,28 +1,29 @@
 ---
 title: Banco de dados de exemplo para OLTP in-memory | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 85285889b4bd41bdca10091217254a4079202dba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,12 +54,12 @@ ms.lasthandoff: 02/12/2018
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP in-memory, consulte a seguinte postagem de blog:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP In-Memory, confira a seguinte postagem no blog: [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Siga estas etapas para instalar o exemplo:  
   
-1.  Baixe AdventureWorks2016CTP3.bak e SQLServer2016CTP3Samples.zip em: [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) para uma pasta local, por exemplo, 'c:\temp'.  
+1.  Baixe AdventureWorks2016CTP3.bak e SQLServer2016CTP3Samples.zip localizado em [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) em uma pasta local, por exemplo, 'c:\temp'.  
   
 2.  Restaure o backup de banco de dados usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
@@ -318,7 +319,7 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  Etapas da instalação:  
   
-1.  Baixe e execute o pacote de instalação x64 para os utilitários de RML da seguinte página: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Baixe e execute o pacote de instalação do x64 para os utilitários do RML na seguinte página: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  Se houver uma caixa de diálogo indicando que alguns arquivos estão em uso, clique em “Continuar”  
   

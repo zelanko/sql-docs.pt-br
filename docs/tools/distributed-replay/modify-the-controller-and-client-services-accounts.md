@@ -1,36 +1,37 @@
 ---
-title: "Modificar o controlador e contas de serviços | Microsoft Docs"
-ms.custom: 
+title: Modificar as contas dos serviços controlador e cliente | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6b43b611e45de9da98954417d5e7a1bfad009eac
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificar as contas dos serviços controlador e cliente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Neste tópico, você aprenderá a modificar as contas de serviço do cliente e o controlador do Distributed Replay e depois reaplicar as listas de controle de acesso (ACLs).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Neste tópico, você aprenderá a modificar as contas dos serviços controlador e cliente do Distributed Replay e, em seguida, reaplicar as ACLs (listas de controle de acesso).  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>Para iniciar ou parar os serviços Distributed Replay usando o gerenciamento do computador  
   
 1.  No computador em que os serviços Distributed Replay estão instalados, no prompt de comando, digite **dcomcnfg**.  
   
-2.  Clique duas vezes em **serviços**, role para baixo e clique  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<nome do serviço >**e, em seguida, clique em **iniciar** ou **parar**.  
+2.  Clique duas vezes em **Serviços**, role para baixo e clique com o botão direito do mouse em **<nome do serviço> do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<** e clique em **Iniciar** ou em **Parar**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Para modificar o serviço controlador Distributed Replay  
   

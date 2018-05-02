@@ -1,30 +1,31 @@
 ---
 title: Preparar os dados de rastreamento de entrada | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar os dados de rastreamento de entrada
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Antes de iniciar uma reprodução distribuída com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso Distributed Replay, você deve preparar os dados de rastreamento de entrada iniciando o estágio de pré-processamento da ferramenta de administração de reprodução distribuída. No estágio de pré-processamento, o controlador de reprodução distribuída processa os dados de rastreamento e gera um arquivo intermediário:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de iniciar uma reprodução distribuída com o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, é necessário preparar os dados de rastreamento de entrada iniciando o estágio de pré-processamento com a ferramenta de administração do Distributed Replay. No estágio de pré-processamento, o controlador de reprodução distribuída processa os dados de rastreamento e gera um arquivo intermediário:  
   
  ![Estágio de pré-processamento de reprodução distribuída](../../tools/distributed-replay/media/preprocess.gif "estágio de pré-processamento de reprodução distribuída")  
   
@@ -63,10 +64,10 @@ ms.lasthandoff: 01/17/2018
   
 3.  Depois que o estágio de pré-processamento for concluído, o arquivo intermediário é armazenado no diretório de trabalho do controlador. Para iniciar o estágio de reprodução do evento, execute a ferramenta de administração com a opção **replay** . Para obter mais informações, veja [Reproduzir dados de rastreamento](../../tools/distributed-replay/replay-trace-data.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

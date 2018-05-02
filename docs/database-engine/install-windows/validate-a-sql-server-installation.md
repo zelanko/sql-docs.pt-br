@@ -1,30 +1,30 @@
 ---
-title: "Validar uma instalação do SQL Server | Microsoft Docs"
-ms.custom: 
+title: Validar uma instalação do SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - validating installations [SQL Server]
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a972d62e4abf74560f9a85d9de281e9aa50ee76d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a1be5921ca3ca8f8613d74cc558775cbf39bf22f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-a-sql-server-installation"></a>Validar uma instalação do SQL Server
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
  Você também pode gerar o relatório de descoberta através da linha de comando. Execute “Setup.exe /Action=RunDiscovery” em um prompt de comando. Se você adicionar “/q” à linha de comando acima, nenhuma interface do usuário será mostrada, mas o relatório ainda será criado em %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<last Setup Session\>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -2,7 +2,7 @@
 title: Criar um logon | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03a4f993deace5c4714e17667b00eee99b4811a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **Mapeamento**  
  Permita que o logon acesse os bancos de dados listados abaixo.  
   
- **Banco de dados**  
+ **Backup de banco de dados**  
  Liste os bancos de dados disponíveis no servidor.  
   
  **Usuário**  
@@ -170,9 +171,9 @@ ms.lasthandoff: 04/10/2018
   
 1.  Clique em **Pesquisar**.  
   
-2.  No **adicionar objetos** caixa de diálogo, selecione uma das seguintes opções: **objetos específicos...** , **Todos os objetos dos tipos...** , ou **o servidor * nome_do_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...**, **Todos os objetos dos tipos...** ou **O servidor***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **Observação:** selecionar **o servidor * nome_do_servidor* preenche automaticamente a grade superior com todos os objetos protegíveis de servidores.  
+    > **OBSERVAÇÃO:** a seleção de **The server***server_name* preenche automaticamente a grade superior com todos os objetos protegíveis desses servidores.  
   
 3.  Se você selecionar **Objetos específicos…**:  
   
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/10/2018
   
 -   Para conceder uma permissão a um logon, veja [Conceder uma permissão a uma entidade](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_33081 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33081 (Database Engine error)
 ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb38e41684109a9199ff5ae65e54612bec5eeb4e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 364182de23d57db1665b3fc28b8ecb027e1485ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver33081"></a>MSSQLSERVER_33081
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## <a name="user-action"></a>Ação do usuário  
-Para investigar o problema, procure o código de erro do Windows no MSDN (http://msdn.microsoft.com/). Resolva o erro ou contate o [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS para obter mais informações. Se for necessário contatar o CSS, colete as informações a seguir para nossa equipe de suporte.  
+Para investigar o problema, pesquise o código de erro do Windows no MSDN (http://msdn.microsoft.com/)). Resolva o erro ou contate o [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS para obter mais informações. Se for necessário contatar o CSS, colete as informações a seguir para nossa equipe de suporte.  
   
 -   O log de erros que mostra a erro de falha no carregamento do provedor criptográfico.  
   

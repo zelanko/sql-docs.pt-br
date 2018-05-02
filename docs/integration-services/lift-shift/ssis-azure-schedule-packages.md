@@ -1,30 +1,31 @@
 ---
-title: "Agendar execução de pacote SSIS no Azure | Microsoft Docs"
-ms.date: 01/16/2018
+title: Agendar execução de pacote SSIS no Azure | Microsoft Docs
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 94d0bb3462fe2dac81194e881521299f2b8c6e38
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Agendar a execução de um pacote do SSIS no Azure
 Você pode agendar a execução de pacotes armazenados no banco de dados de catálogo do SSISDB em um servidor de Banco de Dados SQL do Azure, escolhendo uma das seguintes opções de agendamento:
 -   [SQL Server Agent](#agent)
 -   [Trabalhos Elásticos de Banco de Dados SQL](#elastic)
--   [A atividade de procedimento armazenado do Azure Data Factory SQL Server](#sproc)
+-   [A atividade Executar Pacote SSIS do Azure Data Factory](#activities)
+-   [A atividade de procedimento armazenado do Azure Data Factory SQL Server](#activities)
 
 ## <a name="agent"></a> Agendar um pacote com o SQL Server Agent
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Agende um pacote com a atividade de procedimento armazenado do Azure Data Factory SQL Server
+## <a name="activities"></a> Agendar um pacote com o Azure Data Factory
 
-Para obter informações sobre como agendar um pacote do SSIS usando a atividade de Procedimento Armazenado do Azure Data Factory, consulte os seguintes artigos:
+Para obter informações sobre como agendar um pacote SSIS usando atividades do Azure Data Factory, consulte os seguintes artigos:
 
--   Para o Data Factory versão 2: [Invocar um pacote do SSIS usando a atividade de procedimento armazenado no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Para o Data Factory versão 2: [Executar um pacote SSIS usando a atividade do SSIS no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   Para o Data Factory versão 1: [Invocar um pacote do SSIS usando a atividade de procedimento armazenado no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Para o Data Factory versão 2: [Executar um pacote SSIS usando a atividade de procedimento armazenado no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   Para o Data Factory versão 1: [Executar um pacote SSIS usando a atividade de procedimento armazenado no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre o SQL Server Agent, consulte [Trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).

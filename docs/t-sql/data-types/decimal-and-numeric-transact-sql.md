@@ -1,16 +1,16 @@
 ---
 title: decimal e numeric (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decimal
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - numeric data type
 - numeric data type, about numeric data type
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 614025c21f0f021a4b1ad3a193afec8f5115b845
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 629e74bfffef65546c15ea6aa4c3404bbdafa972
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +43,8 @@ ms.lasthandoff: 11/21/2017
 Tipos de dados numéricos que têm precisão e escala fixos. Decimal e numeric são sinônimos e podem ser usados intercambiavelmente.
   
 ## <a name="arguments"></a>Argumentos  
-**decimal**[ **(***p*[ **,***s*] **)**] e **numeric**[ **(***p*[ **,***s*] **)**]  
-Números de precisão e escala fixos. Quando a precisão máxima for usada, os valores válidos serão de - 10^38 +1 a 10^38 - 1. Os sinônimos ISO para **decimal** são **dez** e **dec(***p*, *s***)**. **numeric** é funcionalmente equivalente a **decimal**.
+**decimal**[ **(***p*[ **,***s*] **)**] and **numeric**[ **(***p*[ **,***s*] **)**]  
+Números de precisão e escala fixos. Quando a precisão máxima for usada, os valores válidos serão de - 10^38 +1 a 10^38 - 1. Os sinônimos ISO para **decimal** são **dec** e **dec(***p*, *s***)**. **numeric** é funcionalmente equivalente a **decimal**.
   
 p (precisão)  
 O número máximo total de dígitos decimais que poderão ser armazenados, à esquerda e à direita do ponto decimal. A precisão deve ser um valor de 1 até a precisão máxima de 38. A precisão padrão é 18.
@@ -59,7 +60,7 @@ O número máximo de dígitos decimais que poderão ser armazenados à direita d
 |1 - 9|5|  
 |10–19|9|  
 |20–28|13|  
-|29–38|17|  
+|29-38|17|  
   
 > [!NOTE]  
 >  Informatica (conectado por meio do conector do SQL Server PDW Informatica) é compatível apenas com 16 dígitos significativos, independentemente da precisão e da escala especificadas.  
@@ -105,7 +106,7 @@ MyDecimalColumn                         MyNumericColumn
   
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

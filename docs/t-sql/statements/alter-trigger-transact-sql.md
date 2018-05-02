@@ -1,16 +1,16 @@
 ---
 title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER TRIGGER
@@ -24,23 +24,23 @@ helpviewer_keywords:
 - ALTER TRIGGER statement
 - DML triggers, modifying
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-caps.latest.revision: 
+caps.latest.revision: 74
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29808a6c96bfcdef3bc892463604a474b567878f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 22022df96f4ea0093bc5353a8384a54bc79e148e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Modifica a definição de um gatilho DML, DDL ou de logon que foi criado anteriormente pela instrução CREATE TRIGGER. Os gatilhos são criados com o uso de CREATE TRIGGER. Eles podem ser criados diretamente com base em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou em métodos de assemblies criados no CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e carregados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre os parâmetros usados na instrução ALTER TRIGGER, consulte [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -144,7 +144,7 @@ AS { sql_statement
   
 ## <a name="arguments"></a>Argumentos  
  *schema_name*  
- É o nome do esquema ao qual o gatilho DML pertence. Os gatilhos DML são definidos no escopo do esquema da tabela ou na exibição na qual são criados. *schema**_name* será opcional apenas se o gatilho DML e sua tabela ou exibição correspondente pertencerem ao esquema padrão. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
+ É o nome do esquema ao qual o gatilho DML pertence. Os gatilhos DML são definidos no escopo do esquema da tabela ou na exibição na qual são criados. *schema**_name* é opcional apenas se o gatilho DML e sua tabela ou exibição correspondente pertencem ao esquema padrão. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
   
  *trigger_name*  
  É o gatilho existente a ser modificado.  

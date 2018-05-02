@@ -2,7 +2,7 @@
 title: Habilitar a opção Bloquear Páginas na Memória (Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad766a982b180e6fad72ec0ca3314648be81315f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac244ae7479f48e08d035ab67d904a74528a00e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Habilitar a opção Bloquear Páginas na Memória (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco.  
   
 > [!NOTE]  
 >  O bloqueio de páginas na memória pode aumentar o desempenho quando se espera paginar a memória em disco.  
@@ -50,9 +51,9 @@ ms.lasthandoff: 01/18/2018
   
 6.  Na caixa de diálogo **Configuração de Segurança Local – Bloquear páginas na memória** , clique em **Adicionar Usuário ou Grupo**.  
   
-7.  Na caixa de diálogo **Selecionar Usuários, Contas de Serviço ou Grupos** , adicione uma conta com privilégios para executar sqlservr.exe.  
+7.  Na caixa de diálogo **Selecionar Usuários, Contas de Serviço ou Grupos**, selecione a conta do Serviço SQL Server.  
   
-8.  Reinicie o serviço de Mecanismo de Dados do SQL Server para que esta configuração entre em vigor.
+8.  Reinicie o Serviço SQL Server para que essa configuração tenha efeito.
   
 ## <a name="see-also"></a>Consulte Também  
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

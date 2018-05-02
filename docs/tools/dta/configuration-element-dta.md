@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e9e3fbf76ffab1eea6baf7ea5cc8d2f6972379a5
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuration-element-dta"></a>Elemento de configuração (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica uma configuração especificada pelo usuário que consiste em estruturas de design físico existentes e hipotéticas para o orientador de otimização do mecanismo de banco de dados analisar ao ajustar uma carga de trabalho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Determina uma configuração especificada pelo usuário, que consiste em estruturas existentes e hipotéticas de design físico do Orientador de Otimização do Mecanismo de Banco de Dados para análise, quando uma carga de trabalho é analisada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,23 +53,23 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhuma.|  
-|**Valor padrão**|Nenhuma.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento **DTAInput** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento DTAInput &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**Elementos filho**|[Elemento Server para Configuration &#40; DTA &#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
+|**Elemento pai**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**Elementos filho**|[Elemento Server para Configuration &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivo de entrada XML com configuração especificada pelo usuário (DTA)](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

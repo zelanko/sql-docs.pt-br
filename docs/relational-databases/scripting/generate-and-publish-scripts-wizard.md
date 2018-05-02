@@ -1,16 +1,16 @@
 ---
 title: Assistente para Gerar e Publicar Scripts | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql9.swb.generatescriptswizard.chooseviews.f1
@@ -45,23 +45,25 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e2396034590be1d904988265a29a4f223f96eaad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode usar o **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.  
-  
-1.  **Antes de iniciar:**  [Publicando em um serviço hospedado](#PubHostSvc), [Permissões](#Permissions)  
-  
-2.  **Para gerar ou publicar um script, usando:**  [Assistente para Gerar e Publicar Scripts](#GenPubScriptWiz)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Você pode usar **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.  
+
+Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e Publicar Scripts, consulte [Tutorial: Assistente para Gerar Scripts](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+
+
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Os bancos de dados de origem e destino podem estar no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ou em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja executando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
@@ -82,25 +84,19 @@ ms.lasthandoff: 01/24/2018
 1.  No **Pesquisador de Objetos**, expanda o nó da instância que contém o banco de dados a ser incluído no script.  
   
 2.  Aponte para **Tarefas**e clique em **Gerar Scripts**.  
+
+    ![Assistente para Gerar Scripts](media/generate-and-publish-scripts-wizard/generatescripts.png)
   
 3.  Conclua as etapas das caixas de diálogo do assistente:  
   
     -   [Página de Introdução](#Introduction)  
-  
-    -   [Página Escolher Objetos](#ChooseObjects)  
-  
+    -   [Página Escolher Objetos](#ChooseObjects)   
     -   [Página Definir Opções de Script](#SetScriptOpt)  
-  
     -   [Página Opções de Script Avançadas](#AdvScriptOpt)  
-  
-    -   [Página Gerenciar Provedores](#MgProviders)  
-  
+    -   [Página Gerenciar Provedores](#MgProviders)   
     -   [Página Opções de Publicação Avançadas](#AdvPubOpts)  
-  
     -   [Página Configuração do Provedor](#ProvConfig)  
-  
-    -   [Página de Resumo](#Summary)  
-  
+    -   [Página de Resumo](#Summary)   
     -   [Página Salvar ou Publicar Scripts](#SavePubScripts)  
   
 ###  <a name="Introduction"></a> Página de Introdução  
@@ -108,14 +104,14 @@ ms.lasthandoff: 01/24/2018
   
  **Não mostrar esta página novamente** – Ignore esta página na próxima vez que iniciar o **Assistente para Gerar e Publicar Scripts**.  
   
- **Avançar >**: continua para a página **Escolher Método**.  
-  
- **Cancelar** – Encerra o assistente sem gerar nem publicar um script do banco de dados.  
+  ![Página de Introdução](media/generate-and-publish-scripts-wizard/intro.png)
   
 ###  <a name="ChooseObjects"></a> Página Escolher Objetos  
  Use esta página para escolher quais objetos você deseja incluir nos scripts gerados por este assistente. Na página do assistente a seguir, você terá a opção de salvar esses scripts no local de sua escolha ou usá-los para publicar objetos de banco de dados em um provedor remoto de hospedagem Web que tenha instalados os [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
   
- **Opção Gerar Script de Todo o Banco de Dados** – Clique para gerar scripts para todos os objetos do banco de dados e incluir um script para o próprio banco de dados.  
+ **Opção Gerar Script de Todo o Banco de Dados** – Clique para gerar scripts para todos os objetos do banco de dados e incluir um script para o próprio banco de dados. 
+
+   ![Gerar script de todo o BD](media/generate-and-publish-scripts-wizard/scriptall.png) 
   
  **Selecionar objetos de banco de dados específicos** – Clique para limitar o assistente para gerar scripts somente para os objetos específicos no banco de dados escolhido:  
   
@@ -124,15 +120,17 @@ ms.lasthandoff: 01/24/2018
 -   **Selecionar Tudo** – Marca todas as caixas de seleção disponíveis.  
   
 -   **Desmarcar Tudo** – Limpa todas as caixas de seleção. Para continuar, selecione pelo menos um objeto de banco de dados.  
+
+   ![Gerar um script específico](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
 ###  <a name="SetScriptOpt"></a> Página Definir Opções de Script  
  Use esta página para especificar se você deseja que o assistente salve scripts no local de sua escolha ou use os scripts para publicar objetos de banco de dados em um provedor remoto de hospedagem Web. Para publicar, você precisa ter acesso a um serviço Web instalado usando os Serviços de Publicação de Banco de Dados.  
   
  **Opções** – Se desejar que o assistente salve scripts em um local de sua preferência, selecione **Salvar scripts em um local específico**. Você pode executar os scripts posteriormente em relação a uma instância do Mecanismo de Banco de Dados ou em relação ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Se você desejar que o assistente publique seus objetos de banco de dados em um provedor remoto de hospedagem Web, selecione **Publicar no serviço Web**.  
   
- **Salvar Scripts em um Local Específico** – Salve um ou mais arquivos de script Transact-SQL em um local especificado por você.  
-  
--   **Avançado** – Exiba a caixa de diálogo **Opções de Script Avançadas** em que você pode selecionar opções avançadas para gerar scripts.  
+ **Salvar Scripts em um Local Específico** – salve um ou mais arquivos de script Transact-SQL em um local especificado.  
+
+  ![Salvar](media/generate-and-publish-scripts-wizard/save.png)   
   
 -   **Salvar em arquivo** – Salve o script em um ou mais arquivos .sql. Clique no botão Procurar (**…**) para especificar um nome e um local para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Clique em **Arquivo único** ou **Arquivo único por objeto** para especificar como os scripts devem ser gerados. Clique **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.  
   
@@ -152,6 +150,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvScriptOpt"></a> Página Opções de Script Avançadas  
  Use essa página para especificar como você deseja que esse assistente gere scripts. Muitas opções diferentes estão disponíveis. As opções ficarão acinzentadas se não tiverem suporte da versão do SQL Server ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] especificado no **Tipo de mecanismo de banco de dados**.  
+
+![Opções Avançadas](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **Opções** – Especifique opções avançadas selecionando um valor da lista de configurações disponíveis à direita de cada opção.  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/24/2018
   
 -   **Incluir se NOT EXISTS** – Se for **True**, o script incluirá uma instrução para verificar se o objeto já existe no banco de dados e não tentará criar um novo objeto se já existir um. O padrão é **False**.  
   
--   **Incluir nomes de restrição de sistema** – Se for **False**, o valor padrão de restrições que foram nomeadas automaticamente no banco de dados de origem será renomeado automaticamente no banco de dados de destino. Se for **True**, as restrições terão o mesmo nome nos bancos de dados de origem e de destino.  
+-   **Incluir nomes de restrição do sistema** – quando essa opção é definida como **False**, o valor padrão de restrições que foram nomeadas automaticamente no banco de dados de origem é renomeado automaticamente no banco de dados de destino. Se for **True**, as restrições terão o mesmo nome nos bancos de dados de origem e de destino.  
   
 -   **Incluir instruções sem suporte** – Se for **False**, o script não conterá instruções para objetos sem suporte na versão de servidor selecionada ou no tipo de mecanismo. Se for **True**, o script conterá os objetos sem suporte. Cada instrução para um objeto sem suporte terá um comentário de que a instrução deve ser editada antes de o script ser executado em relação à versão do SQL Server selecionada ou ao tipo de mecanismo. O padrão é **False**.  
   
@@ -240,6 +240,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvPubOpts"></a> Página Opções de Publicação Avançadas  
  Use essa página para especificar como você deseja que esse assistente publique um banco de dados. Muitas opções diferentes estão disponíveis. As opções ficarão acinzentadas se não tiverem suporte da versão do SQL Server ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] especificado no **Tipo de mecanismo de banco de dados**.  
+
+  ![Publicação avançada](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
  **Opções** – Especifique opções avançadas selecionando um valor da lista de configurações disponíveis à direita de cada opção.  
   
