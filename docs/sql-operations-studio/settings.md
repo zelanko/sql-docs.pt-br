@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) usuário e configurações de espaço de trabalho | Microsoft Docs
-description: Como modificar o SQL Operations Studio (preview) usuário e configurações de espaço de trabalho.
+title: Operações do SQL Studio (visualização) usuário e configurações de espaço de trabalho | Microsoft Docs
+description: Como modificar o Studio de operações do SQL (visualização) usuário e configurações de espaço de trabalho.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>Configurações do usuário e espaço de trabalho
 
 É fácil de configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] de sua preferência por meio de configurações. Quase todas as partes do [!INCLUDE[name-sos](../includes/name-sos-short.md)]do editor de interface do usuário e comportamento funcional tem opções você pode modificar.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]fornece dois escopos diferentes configurações:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece dois escopos diferentes configurações:
 
 * **Usuário** essas configurações se aplicam globalmente a qualquer instância do [!INCLUDE[name-sos](../includes/name-sos-short.md)] abrir.
 * **Espaço de trabalho** configurações de espaço de trabalho são configurações específicas para uma pasta no seu computador e estão disponíveis somente quando a pasta é aberta na barra lateral do Explorer. As configurações definidas neste escopo substituem o escopo do usuário.
@@ -55,7 +55,7 @@ O arquivo de configuração do espaço de trabalho está localizado sob o `.[!IN
 
 ## <a name="hot-exit"></a>Saída ativa
 
-SQL Operations Studio será Lembre-se de alterações não salvas arquivos quando você sair por padrão. Isso é o mesmo que o recurso de saída ativa no código do Visual Studio.
+Operações de SQL Studio será Lembre-se de alterações não salvas arquivos quando você sair por padrão. Isso é o mesmo que o recurso de saída ativa no código do Visual Studio.
 
 Por padrão, a saída ativa está desativado. Habilitar acesso saída editando o `files.hotExit` configuração. Para obter detalhes, consulte [Hot Exit (na documentação do Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
