@@ -2,7 +2,7 @@
 title: Conectar-se a uma fonte de dados do Excel (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9cbf7499236daba8ab87e46a6f7cea39016e672
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 113dd9821b8f86aaabb8880520c70ed1db9f0b4b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Excel (Assistente de Importação e Exportação do SQL Server)
 Este artigo mostra como se conectar a uma fonte de dados do **Microsoft Excel** por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server.

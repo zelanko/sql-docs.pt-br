@@ -1,30 +1,30 @@
 ---
-title: "Lição 2: Conectando em outro computador | Microsoft Docs"
-ms.custom: 
+title: 'Lição 2: Conectando em outro computador | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 465d8d500030e49b7b3e462d6da3be256d82ca3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: Conectando de outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Se você planejar conectar-se ao [!INCLUDE[ssDE](../includes/ssde-md.md)] de out
 Para aprimorar a segurança, o Windows Server 2008, o [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]e o Windows 7 ativam o Firewall do Windows. Para se conectar à esta instância a partir de outro computador, abra uma porta de comunicação no firewall. A instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] escuta na porta 1433; portanto, não é preciso configurar uma porta fixa. No entanto, instâncias nomeadas incluindo [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escutam em portas dinâmicas. Antes de abrir uma porta no firewall, você deve primeiro configurar o [!INCLUDE[ssDE](../includes/ssde-md.md)] para escutar em uma porta específica conhecida como fixa ou estática; caso contrário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] poderia escutar em uma porta diferente toda vez que fosse iniciado. Para obter mais informações sobre firewalls, as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
-> As atribuições de número da porta são gerenciadas pela IANA (Internet Assigned Numbers Authority) e são listadas em [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Os números de porta devem ser atribuídos de 49152 a 65535.  
+> As atribuições de número da porta são gerenciadas pela Internet Assigned Numbers Authority e são listadas em [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Os números de porta devem ser atribuídos de 49152 a 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configure o SQL Server para escutar em uma porta específica  
   
