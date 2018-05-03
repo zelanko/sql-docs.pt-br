@@ -2,7 +2,7 @@
 title: Definir padrões de exibição de rastreamento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea66415c239ddceeb7ee75997b3052a3f34a472f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: a2290e35a0900d980fcb6a04320d5582ff1f3e2c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Definir padrões de exibição de rastreamento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como definir opções da ferramenta que especificam os tipos, o tamanho e o estilo de fontes que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa para exibir rastreamentos na janela de rastreamento. Também é possível especificar que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exiba todas as datas e horas com as configurações regionais definidas para seu sistema operacional.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico descreve como definir opções de ferramentas que especificam tipos, tamanho e estilo da fonte utilizada pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir rastreamentos na janela de rastreamento. Também é possível especificar que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exiba todas as datas e horas com as configurações regionais definidas para seu sistema operacional.  
   
 ### <a name="to-set-trace-display-defaults"></a>Para definir padrões de exibição de rastreamento  
   

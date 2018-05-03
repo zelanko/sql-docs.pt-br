@@ -2,7 +2,7 @@
 title: Interromper um rastreamento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a25d344bb188b457b70baebffcfe70678000007
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 197d1911b8f59b0ecdad5053722339b8daa06f04
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>Interromper um rastreamento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como parar um rastreamento que está sendo executado usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tópico descreve como interromper um rastreamento que está sendo executado, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Interromper um rastreamento impede que os dados sejam capturados. Depois que um rastreamento é interrompido, ele não pode ser reiniciado sem a perda dos dados já capturados, a menos que eles se encontrem em um arquivo ou tabela de rastreamento. Você também pode salvar os dados coletados em uma tabela ou arquivo após interromper o rastreamento. Todas as propriedades de rastreamento selecionadas anteriormente são preservadas quando um rastreamento é interrompido. Quando um rastreamento é interrompido, você pode alterar o nome, os eventos, as colunas e os filtros.  
   

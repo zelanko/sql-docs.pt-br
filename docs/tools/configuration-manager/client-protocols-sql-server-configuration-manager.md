@@ -2,7 +2,7 @@
 title: Protocolos de cliente (SQL Server Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a86ac148ae0020fe2cae42284459c03acd29a496
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: bb0a0232213e134a4e24562ea0bc5021810684b1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>Protocolos de cliente (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Para configurar a ordem em que os protocolos são usados pelos clientes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neste computador, clique com o botão direito do mouse em **Protocolos de Cliente** no painel do console e, em seguida, clique em **Propriedades**ou clique com o botão direito do mouse em um protocolo no painel de detalhes e clique em **Ordem**.  
+  Para configurar a ordem em que os protocolos são usados pelos clientes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neste computador, clique com o botão direito do mouse em **Protocolos de Cliente** no painel do console e, em seguida, clique em **Propriedades**ou clique com o botão direito do mouse em um protocolo no painel de detalhes e clique em **Ordem**.  
   
  Para configurar as propriedades dos protocolos de cliente usados pelos clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neste computador, no painel de console, clique em **Protocolos de Cliente**, no painel de detalhes clique com o botão direito do mouse no protocolo desejado e, em seguida, clique em **Propriedades**.  
   

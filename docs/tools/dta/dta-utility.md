@@ -2,7 +2,7 @@
 title: Utilitário dta | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -28,14 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 7e9849894a011294f63f9e50a0b79eff3ce10897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dta-utility"></a>utilitário dta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O utilitário **dta** é a versão de prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
   
  Assim como o Orientador de Otimização do Mecanismo de Banco de Dados, o utilitário **dta** analisa uma carga de trabalho e recomenda estruturas de design físico para melhorar o desempenho do servidor para a carga de trabalho. A carga de trabalho pode ser um cache de plano, um arquivo de rastreamento ou tabela do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , ou um script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Estruturas de design físico incluem índices, exibições indexadas e particionamento. Depois de analisar uma carga de trabalho, o utilitário **dta** produz uma recomendação para o design físico de bancos de dados e gera o script necessário para implementar a recomendação. Podem ser especificadas cargas de trabalho no prompt de comando com o argumento **-if** ou **-it** . Também é possível especificar um arquivo de entrada XML no prompt de comando com o argumento **-ix** . Nesse caso, a carga de trabalho é especificada no arquivo de entrada XML.  
   
