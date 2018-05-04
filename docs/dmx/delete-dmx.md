@@ -27,12 +27,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 566ae835ad06e99edbf624ab6d25611c0a8427f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e35257cd784ed2ed9778a66742b73e8e3821fb35
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,11 +60,11 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |de|Resultado|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<estrutura >*<br /><br /> ou em<br /><br /> DELETE FROM MINING STRUCTURE*\<estrutura >*. CONTEÚDO|Executa ProcessClear na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração e de seus modelos de mineração associados.|  
+|DELETE FROM MINING STRUCTURE*\<estrutura >*<br /><br /> ou<br /><br /> DELETE FROM MINING STRUCTURE*\<estrutura >*. CONTEÚDO|Executa ProcessClear na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração e de seus modelos de mineração associados.|  
 |DELETE FROM MINING STRUCTURE*\<estrutura >*. CASOS|Executa ProcessClearStructureOnly na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração, deixando intactos os modelos de mineração associados. O detalhamento dos modelos de mineração associados falhará após a estrutura de mineração ter sido desmarcada.|  
-|Excluir de MINING MODEL*\<modelo >*<br /><br /> ou em<br /><br /> Excluir de MINING MODEL*\<modelo >*. CONTEÚDO|Executa ProcessClear no modelo de mineração, mas deixa os valores de estado intacto. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
+|Excluir de MINING MODEL*\<modelo >*<br /><br /> ou<br /><br /> Excluir de MINING MODEL*\<modelo >*. CONTEÚDO|Executa ProcessClear no modelo de mineração, mas deixa os valores de estado intacto. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
   
- Para obter mais informações sobre tipos de processamento, consulte [tipo de elemento &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
+ Para obter mais informações sobre tipos de processamento, consulte [tipo de elemento &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove todo o conteúdo do modelo de NB_Sample.  
@@ -74,9 +73,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 DELETE FROM NB_Sample.CONTENT  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensões de mineração de dados & #40; DMX & #41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

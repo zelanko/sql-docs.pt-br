@@ -23,12 +23,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4bc79c9a1c641f625a6a0dae11c17aba4188b5e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5c1cef419c1c53426f403a8758df396f622ed2ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributions-dmx"></a>Distribuições (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,19 +45,19 @@ ms.lasthandoff: 01/08/2018
  **UNIFORME**  
  Os valores para a coluna contínua formam uma curva plana, na qual todos os valores são igualmente prováveis.  
   
- Para obter mais informações sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados, consulte [algoritmos de mineração de dados &#40; Analysis Services – mineração de dados &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Provedores de algoritmo de terceiros podem oferecer suporte a tipos de distribuição adicionais. Para determinar os tipos de distribuição um algoritmo oferece suporte, use o **SUPPORTED_DISTRIBUTION_FLAGS** de linhas de esquema.  
+ Para obter mais informações sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Provedores de algoritmo de terceiros podem oferecer suporte a tipos de distribuição adicionais. Para determinar os tipos de distribuição um algoritmo oferece suporte, use o **SUPPORTED_DISTRIBUTION_FLAGS** de linhas de esquema.  
   
- Para obter mais informações sobre tipos de distribuição, consulte [distribuições de coluna &#40; mineração de dados &#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
+ Para obter mais informações sobre tipos de distribuição, consulte [distribuições de coluna &#40;mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Conteúdo tipos &#40; mineração de dados &#41;](../analysis-services/data-mining/content-types-data-mining.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>Consulte também  
+ [Conteúdo tipos & #40; mineração de dados & #41;](../analysis-services/data-mining/content-types-data-mining.md)   
+ [Extensões de mineração de dados & #40; DMX & #41; Referência](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensões de mineração de dados & #40; DMX & #41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

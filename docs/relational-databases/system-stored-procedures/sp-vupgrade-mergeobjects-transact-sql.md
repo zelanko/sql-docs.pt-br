@@ -24,12 +24,11 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10a03aebfdd4b22bf0e2e63f4ad4a9c1337a1201
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 991c8f5d6e94724fec85370f354cd19bf6584ffe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +53,13 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ ** @login=**] **'***login***'**  
+ [  **@login=**] **'***login***'**  
  É o logon do administrador do sistema a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não será necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
- [ ** @password=**] **'***senha***'**  
+ [  **@password=**] **'***senha***'**  
  É a senha do administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de distribuição. *senha* é **sysname**, com um padrão de **'** (cadeia de caracteres vazia). Esse parâmetro não será necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
- [ ** @security_mode=**] **'***security_mode***'**  
+ [  **@security_mode=**] **'***security_mode***'**  
  É o modo de segurança do logon a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *security_mode* é **bit** com um valor padrão de **1**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, a autenticação do Windows será usada. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

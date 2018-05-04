@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e75e8c17baba84bd690ec51605ffac9f577de35c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c7d06d5e417b97b42791acb3dc16c939a347e2ba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingstructures-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_STRUCTURES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera informações sobre as estruturas de mineração no catálogo atual.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enumera informações sobre as estruturas de mineração no catálogo atual.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DMSCHEMA_MINING_STRUCTURES** contém as colunas a seguir.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Opcional.|  
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**|Opcional.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [Linhas do esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

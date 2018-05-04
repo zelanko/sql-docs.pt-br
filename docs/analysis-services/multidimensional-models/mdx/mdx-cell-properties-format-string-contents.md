@@ -1,37 +1,23 @@
 ---
-title: "Conteúdo de FORMAT_STRING (MDX) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Conteúdo de FORMAT_STRING (MDX) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- formats [Analysis Services], string values
-- VALUE property
-- formats [Analysis Services], numeric values
-- FORMATTED_VALUE property
-- FORMAT_STRING contents
-ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0abbc6911435f77466a647eac13304fda12b22b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propriedades de célula MDX - conteúdo de FORMAT_STRING
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-A propriedade de célula **FORMAT_STRING** formata a propriedade de célula **VALUE** , criando o valor da propriedade de célula **FORMATTED_VALUE** . A propriedade de célula **FORMAT_STRING** lida com valores numéricos e cadeias de caracteres, aplicando a expressão de formato ao valor para retornar um valor formatado para a propriedade de célula **FORMATTED_VALUE** . As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
+  A propriedade de célula **FORMAT_STRING** formata a propriedade de célula **VALUE** , criando o valor da propriedade de célula **FORMATTED_VALUE** . A propriedade de célula **FORMAT_STRING** lida com valores numéricos e cadeias de caracteres, aplicando a expressão de formato ao valor para retornar um valor formatado para a propriedade de célula **FORMATTED_VALUE** . As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
   
 ## <a name="string-values"></a>Valores de cadeia de caracteres  
  Uma expressão de formato para cadeias de caracteres pode ter uma seção ou duas seções separadas por ponto-e-vírgula (;).  
@@ -85,9 +71,9 @@ A propriedade de célula **FORMAT_STRING** formata a propriedade de célula **VA
 |**,**|Representa um separador de milhar que separa os milhares das centenas em um número com quatro ou mais casas à esquerda do separador decimal.<br /><br /> O uso padrão do separador de milhar será especificado se o formato contiver um separador de milhar encerrado em espaços reservados para dígitos (**0** ou **#**).<br /><br /> Dois separadores de milhar adjacentes, ou um separador de milhar imediatamente à esquerda do separador decimal (independentemente de um decimal ter sido especificado), significa "escalar o número dividindo-o por 1000, arredondando se necessário". Por exemplo, você pode usar a cadeia de caracteres de formato "**##0**", para representar 100 milhões como 100. Números menores que 1 milhão são exibido como 0. Dois separadores de milhar adjacentes em uma posição que não seja imediatamente à esquerda do separador decimal são tratados como se estivessem especificando o uso de um separador de milhar.<br /><br /> O caractere real usado como separador de milhar na saída formatada depende do formato numérico reconhecido pelo sistema do computador.<br /><br /> Observação: em algumas localidades, um ponto é usado como separador de milhar.|  
 |**:**|Representa um separador de tempo que separa horas, minutos e segundos quando são formatados valores de tempo.<br /><br /> Observação: em algumas localidades, podem ser usados outros caracteres como separador de tempo.<br /><br /> O caractere real usado como separador de tempo na saída formatada é determinado pelas configurações do sistema do computador.|  
 |**/**|Representa um separador de data que separa dia, mês e ano quando são formatados valores de data.<br /><br /> O caractere real usado como separador de data na saída formatada é determinado pelas configurações do sistema do computador.<br /><br /> Observação: em algumas localidades, podem ser usados outros caracteres como separador de data.|  
-|**E - E+ e - e+**|Representa formato científico.<br /><br /> Se a expressão de formato contiver pelo menos um espaço reservado para dígito (**0** ou **#**) à direita de **E-**, **E+**, **e-**ou **e+**, o valor formatado será exibo em formato científico e E ou e será inserido entre o número e seu exponente. O número de espaços reservados para dígito determina o número de dígitos do exponente. Use **E-** ou **e-** para incluir um sinal de menos junto a exponentes negativos. Use **E+** ou **e+** para incluir um sinal de menos junto a exponentes negativos e um sinal de mais junto a exponentes positivos.|  
+|**E - E+ e - e+**|Representa formato científico.<br /><br /> Se a expressão de formato contiver pelo menos um espaço reservado para dígito (**0** ou **#**) à direita de **E-**, **E+**, **e-** ou **e+**, o valor formatado será exibo em formato científico e E ou e será inserido entre o número e seu exponente. O número de espaços reservados para dígito determina o número de dígitos do exponente. Use **E-** ou **e-** para incluir um sinal de menos junto a exponentes negativos. Use **E+** ou **e+** para incluir um sinal de menos junto a exponentes negativos e um sinal de mais junto a exponentes positivos.|  
 |**- + $ ( )**|Exibe um caractere literal.<br /><br /> Para exibir um outro caractere que não seja um dos listados, coloque uma barra invertida (**\\**) antes do caractere ou coloque-o entre aspas duplas (**" "**).|  
-|**\\**|Exibe o próximo caractere da cadeia de caracteres de formato.<br /><br /> Para exibir um caractere que tem um significado especial como um caractere literal, coloque uma barra invertida (**\\**) antes dele. A barra invertida não é exibida. Usar uma barra invertida é o mesmo que colocar o próximo caractere entre aspas duplas. Para exibir uma barra invertida, use duas barras invertidas (**\\\\**). Estes são exemplos de caracteres que não podem ser exibidos como caracteres literais:<br /><br /> <br /><br /> Os caracteres de formatação de data e hora—**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/**e **:**<br /><br /> Os caracteres de formatação numérica—**#**, **0**, **%**, **E**, **e**, **vírgula**e **ponto**<br /><br /> Os caracteres de formatação de cadeias de caracteres—**@**, **&**, **\<**, **>**e **!**|  
+|**\\**|Exibe o próximo caractere da cadeia de caracteres de formato.<br /><br /> Para exibir um caractere que tem um significado especial como um caractere literal, coloque uma barra invertida (**\\**) antes dele. A barra invertida não é exibida. Usar uma barra invertida é o mesmo que colocar o próximo caractere entre aspas duplas. Para exibir uma barra invertida, use duas barras invertidas (**\\\\**). Estes são exemplos de caracteres que não podem ser exibidos como caracteres literais:<br /><br /> <br /><br /> Os caracteres de formatação de data e hora—**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** e **:**<br /><br /> Os caracteres de formatação numérica—**#**, **0**, **%**, **E**, **e**, **vírgula**e **ponto**<br /><br /> Os caracteres de formatação de cadeias de caracteres—**@**, **&**, **\<**, **>** e **!**|  
 |**"ABC"**|Exibe a cadeia de caracteres entre aspas duplas (**" "**).<br /><br /> Para incluir uma cadeia de caracteres em formato de um código, use Chr (**34**) para incluir o texto. (O código de caractere para aspas duplas é **34**.)|  
   
 ### <a name="named-numeric-formats"></a>Formatos numéricos nomeados  
@@ -157,8 +143,8 @@ A propriedade de célula **FORMAT_STRING** formata a propriedade de célula **VA
   
 ## <a name="see-also"></a>Consulte também  
  [LANGUAGE e FORMAT_STRING em FORMATTED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
- [Usando propriedades de célula &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Criando e usando valores de propriedade &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Conceitos básicos de consulta MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Usando propriedades de célula & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Criando e usando valores de propriedade & #40; MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,38 +1,19 @@
 ---
 title: As Classes fundamentais AMO | Microsoft Docs
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data sources [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-- AMO, data sources
-- Analysis Management Objects, data sources
-ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ffa7973757ce41a3975bcbb70170679109527e42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-fundamental-classes"></a>Classes fundamentais AMO
   As classes fundamentais são o ponto de partida para o trabalho com o AMO (Objetos de Gerenciamento de Análise). Por meio dessas classes você estabelece o ambiente para o resto dos objetos que serão usados em seu aplicativo. As classes fundamentais incluem os seguintes objetos: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>.  
@@ -73,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Database> em <xref:Microsoft.AnalysisServices>.  
   
-##  <a name="DSandDSV">Objetos DataSource e DataSourceView</a>  
+##  <a name="DSandDSV"></a> Objetos DataSource e DataSourceView  
  As fontes de dados são gerenciadas por meio de <xref:Microsoft.AnalysisServices.DataSourceCollection> da classe do banco de dados. Uma instância de <xref:Microsoft.AnalysisServices.DataSource> pode ser criada usando o método Add de um objeto <xref:Microsoft.AnalysisServices.DataSourceCollection>. Uma instância de <xref:Microsoft.AnalysisServices.DataSource> pode ser excluída usando o método Remove de um objeto <xref:Microsoft.AnalysisServices.DataSourceCollection>.  
   
  Os objetos <xref:Microsoft.AnalysisServices.DataSourceView> são gerenciados a partir do objeto <xref:Microsoft.AnalysisServices.DataSourceViewCollection> na classe do banco de dados.  

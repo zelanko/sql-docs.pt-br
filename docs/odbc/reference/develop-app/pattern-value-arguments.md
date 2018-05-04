@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 39e6bf4734a63c79b09a78178e567900ff636bd3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69440a593dabb61c2578ec75c2f381c46f70e32e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor padrão
 Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLTables**, aceite os padrões de pesquisa. Esses argumentos aceitam padrões de pesquisa se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_FALSE; são argumentos de identificador que não aceitam um padrão de pesquisa se esse atributo é definido como SQL_TRUE.  
@@ -51,6 +50,6 @@ Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLT
  Deve ter especial cuidado como escape de caracteres de padrão de pesquisa em argumentos que aceitam os padrões de pesquisa. Isso é especialmente verdadeiro para o caractere de sublinhado, que é normalmente usado em identificadores. É um erro comum em aplicativos recuperar um valor de uma função de catálogo e passar esse valor para um argumento de padrão de pesquisa em outra função de catálogo. Por exemplo, suponha que um aplicativo recupera o nome da tabela MY_TABLE do resultado definido para **SQLTables** e passa para **SQLColumns** para recuperar uma lista de colunas em MY_TABLE. Em vez de obter as colunas para MY_TABLE, o aplicativo obterá as colunas de todas as tabelas que correspondem ao padrão de pesquisa MY_TABLE, como MY_TABLE, MY1TABLE, MY2TABLE e assim por diante.  
   
 > [!NOTE]  
->  ODBC 2. *x* drivers não oferecem suporte a padrões de pesquisa a *CatalogName* argumento **SQLTables**. ODBC 3*. x* drivers aceitam os padrões de pesquisa esse argumento se o atributo de ambiente sql_attr ODBC_VERSION é definido como SQL_OV_ODBC3; não aceitar os padrões de pesquisa esse argumento se ele for definido como SQL_OV_ODBC2.  
+>  ODBC 2. *x* drivers não oferecem suporte a padrões de pesquisa a *CatalogName* argumento **SQLTables**. ODBC 3 *. x* drivers aceitam os padrões de pesquisa esse argumento se o atributo de ambiente sql_attr ODBC_VERSION é definido como SQL_OV_ODBC3; não aceitar os padrões de pesquisa esse argumento se ele for definido como SQL_OV_ODBC2.  
   
  Transmitindo um ponteiro nulo para um argumento de padrão de pesquisa não restringe a pesquisa para o argumento; ou seja, um ponteiro nulo e o padrão de pesquisa % (caracteres) são equivalentes. No entanto, um comprimento zero Pesquisar padrão — ou seja, um ponteiro válido para uma cadeia de caracteres de comprimento zero — corresponde apenas a cadeia de caracteres vazia ("").

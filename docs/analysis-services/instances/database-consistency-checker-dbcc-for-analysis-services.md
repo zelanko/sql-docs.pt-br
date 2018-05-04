@@ -1,31 +1,23 @@
 ---
-title: "Banco de dados (DBCC) do verificador de consistência para o Analysis Services | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Banco de dados (DBCC) do verificador de consistência para o Analysis Services | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4a25919df6cb26609e008b6910ae6fb67bafba84
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-O DBCC fornece validação de banco de dados sob demanda para bancos de dados Multidimensionais e Tabulares em uma instância do Analysis Services. Você pode executar o DBCC em uma janela de consulta MDX ou XMLA no SSMS (SQL Server Management Studio) e rastrear a saída do DBCC no SQL Server Profiler ou nas sessões do xEvent no SSMS.  
+  O DBCC fornece validação de banco de dados sob demanda para bancos de dados Multidimensionais e Tabulares em uma instância do Analysis Services. Você pode executar o DBCC em uma janela de consulta MDX ou XMLA no SSMS (SQL Server Management Studio) e rastrear a saída do DBCC no SQL Server Profiler ou nas sessões do xEvent no SSMS.  
 O comando usa uma definição de objeto e retornará um conjunto de resultados vazio ou informações de erro detalhadas se o objeto estiver corrompido.   Neste artigo, você vai aprender a executar o comando, interpretar os resultados e resolver os problemas que surgirem.  
   
  Para bancos de dados tabulares, verificações de consistência executadas pelo DBCC são equivalentes à validação interna que ocorre automaticamente sempre que você recarrega, sincroniza ou restaura um banco de dados.  Por outro lado, verificações de consistência de bancos de dados multidimensionais ocorrem somente quando você executa o DBCC sob demanda.  
@@ -291,9 +283,9 @@ Execution complete
   
  Estes são os valores válidos:  
   
--   O DBCC**-2** (padrão) está habilitado. Se o servidor puder resolver o erro logicamente com um alto grau de certeza, uma correção será aplicada automaticamente. Caso contrário, um erro será registrado.  
+-   O DBCC **-2** (padrão) está habilitado. Se o servidor puder resolver o erro logicamente com um alto grau de certeza, uma correção será aplicada automaticamente. Caso contrário, um erro será registrado.  
   
--   O DBCC**-1** está parcialmente habilitado. Ele é habilitado para restauração e em validações de pré-confirmação que verificam o estado do banco de dados ao final de uma transação.  
+-   O DBCC **-1** está parcialmente habilitado. Ele é habilitado para restauração e em validações de pré-confirmação que verificam o estado do banco de dados ao final de uma transação.  
   
 -   O DBCC do**0** está parcialmente habilitado. Verificações de consistência do banco de dados são executadas durante as operações RESTORE, IMAGELOAD, LOCALCUBELOAD e ATTACH  
          .  

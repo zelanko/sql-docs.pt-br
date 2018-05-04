@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f386bd758a9b8c247197418448914904560cd1b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-function"></a>Função SQLFetch
 **Conformidade**  
@@ -64,10 +63,10 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem de informação específica do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Cadeia de caracteres ou dados binários retornados para uma coluna resultaram em truncamento de caracteres não vazia ou dados binários não nulo. Se fosse um valor de cadeia de caracteres, foi truncado à direita.|  
-|01S01|Erro na linha|Ocorreu um erro ao buscar uma ou mais linhas.<br /><br /> (Se este SQLSTATE é retornado quando um ODBC 3*. x* aplicativo estiver trabalhando com um ODBC 2*. x* driver, ele pode ser ignorado.)|  
+|01S01|Erro na linha|Ocorreu um erro ao buscar uma ou mais linhas.<br /><br /> (Se este SQLSTATE é retornado quando um ODBC 3 *. x* aplicativo estiver trabalhando com um ODBC 2 *. x* driver, ele pode ser ignorado.)|  
 |01S07|Truncamento fracionário|Os dados retornados de uma coluna foi truncados. Para tipos de dados numéricos, a parte fracionária do número foi truncada. Para o tempo, carimbo de hora e tipos de dados de intervalo que contêm um componente de tempo, a parte fracionária do tempo foi truncada.<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violação do atributo de tipo de dados restrito|O valor dos dados de uma coluna no conjunto de resultados não pôde ser convertido para o tipo de dados especificado por *TargetType* na **SQLBindCol**.<br /><br /> A coluna 0 foi associada com um tipo de dados de SQL_C_BOOKMARK, e o atributo da instrução SQL_ATTR_USE_BOOKMARKS foi definido como SQL_UB_VARIABLE.<br /><br /> A coluna 0 foi associada com um tipo de dados de SQL_C_VARBOOKMARK, e o atributo de instrução SQL_ATTR_USE_BOOKMARKS não foi definido para SQL_UB_VARIABLE.|  
-|07009|Índice do descritor inválido|O driver foi um ODBC 2*. x* driver não oferece suporte a **SQLExtendedFetch**, e um número de coluna especificado na associação para uma coluna era 0.<br /><br /> A coluna 0 foi associada e o atributo de instrução SQL_ATTR_USE_BOOKMARKS foi definido como SQL_UB_OFF.|  
+|07009|Índice do descritor inválido|O driver foi um ODBC 2 *. x* driver não oferece suporte a **SQLExtendedFetch**, e um número de coluna especificado na associação para uma coluna era 0.<br /><br /> A coluna 0 foi associada e o atributo de instrução SQL_ATTR_USE_BOOKMARKS foi definido como SQL_UB_OFF.|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
 |22001|Dados de cadeia de caracteres truncados à direita|Um indicador de comprimento variável retornado para uma coluna foi truncado.|  
 |22002|Variável de indicador exigida mas não fornecida|Dados nulos foi encontrados em uma coluna cujo *StrLen_or_IndPtr* definido por **SQLBindCol** (ou SQL_DESC_INDICATOR_PTR definido por **SQLSetDescField** ou  **SQLSetDescRec**) foi um ponteiro nulo.|  
@@ -97,7 +96,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>Comentários  
  **SQLFetch** retorna o próximo conjunto de linhas no conjunto de resultados. Ele pode ser chamado apenas enquanto existe um conjunto de resultados: ou seja, depois de uma chamada que cria um conjunto de resultados e antes do cursor é fechado por que o conjunto de resultados. Se todas as colunas associadas, ele retorna os dados nessas colunas. Se o aplicativo tiver especificado um ponteiro para uma matriz de status de linha ou um buffer no qual retornar o número de linhas buscadas, **SQLFetch** também retorna essas informações. Chamadas para **SQLFetch** podem ser misturadas a chamadas para **SQLFetchScroll** , mas não podem ser misturadas a chamadas para **SQLExtendedFetch**. Para obter mais informações, consulte [buscar uma linha de dados](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- Se um ODBC 3*. x* aplicativo funciona com um ODBC 2*. x* driver, o Gerenciador de Driver mapeia **SQLFetch** chamadas para **SQLExtendedFetch** para um ODBC 2*. x* driver dá suporte a **SQLExtendedFetch**. Se o ODBC 2*. x* driver não dá suporte **SQLExtendedFetch**, o Gerenciador de Driver mapeia **SQLFetch** chamadas para **SQLFetch** no ODBC 2 *. x* driver, que pode buscar somente uma única linha.  
+ Se um ODBC 3 *. x* aplicativo funciona com um ODBC 2 *. x* driver, o Gerenciador de Driver mapeia **SQLFetch** chamadas para **SQLExtendedFetch** para um ODBC 2 *. x* driver dá suporte a **SQLExtendedFetch**. Se o ODBC 2 *. x* driver não dá suporte **SQLExtendedFetch**, o Gerenciador de Driver mapeia **SQLFetch** chamadas para **SQLFetch** no ODBC 2 *. x* driver, que pode buscar somente uma única linha.  
   
  Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   

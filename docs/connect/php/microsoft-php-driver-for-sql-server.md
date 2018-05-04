@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f66227c67a4cd84fbd1fdaafbbdcf457df7b3b2e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e57c57acf704a2b9f6e9366733b88e15216ae89d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Drivers da Microsoft para PHP para SQL Server
 
-![Um círculo seta download](../../ssdt/media/download.png)[para baixar drivers de PHP para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Os Drivers da Microsoft para PHP para SQL Server habilitar a integração com o SQL Server para aplicativos PHP. Os drivers são extensões PHP que permitem a leitura e gravação de dados do SQL Server em scripts PHP. Os drivers fornecem interfaces para acessar dados em bancos de dados do SQL Azure e em todas as edições do SQL Server 2005 e posterior (incluindo as edições Express). Os drivers de fazer uso de recursos PHP, incluindo fluxos PHP para ler e gravar objetos grandes.  
   
@@ -45,7 +44,7 @@ Os Drivers da Microsoft para PHP para SQL Server habilitar a integração com o 
 * [Recursos de suporte para os Drivers da Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Download  
-* ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver do PHP para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+* ![Um círculo seta download](../../ssdt/media/download.png)[para baixar drivers de PHP para SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Exemplos  
 * [Exemplos de código para os Drivers da Microsoft para PHP para SQL Server](code-samples-for-php-sql-driver.md)

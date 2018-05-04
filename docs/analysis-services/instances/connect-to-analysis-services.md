@@ -1,32 +1,23 @@
 ---
 title: Conecte-se ao Analysis Services | Microsoft Docs
-ms.custom: ''
-ms.date: 01/23/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- instances of Analysis Services, connections
-ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
-caps.latest.revision: 46
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7dbadb28b56be49197f530e735f68238d13bc101
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: a7874a45b8cd11ed288448ff025b6c3918251539
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-analysis-services"></a>Conectar ao Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use as informações desta seção para saber mais sobre as propriedades de cadeia de caracteres de conexão, as bibliotecas de cliente usadas para conexões, os métodos de autenticação são suportados pelo Analysis Services e como definir ou limpar conexões antes de colocar um servidor offline.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Utilize as informações desta seção para saber mais sobre as propriedades de cadeia de conexão, as bibliotecas de cliente utilizadas para conexões, os métodos de autenticação com suporte pelo Analysis Services e como definir ou limpar conexões antes de colocar um servidor offline.  
 
 Para obter informações sobre como se conectar ao Azure Analysis Services, consulte [conectar a um servidor](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect).
   
@@ -39,17 +30,17 @@ Para obter informações sobre como se conectar ao Azure Analysis Services, cons
   
 |Link|Descrição da tarefa|  
 |----------|----------------------|  
-|[Conecte-se de aplicativos cliente &#40; Analysis Services &#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|Se você é novato no Analysis Services, leia este tópico para conhecer as ferramentas e os aplicativos mais usados no Analysis Services.|  
-|[Propriedades de cadeia de caracteres de Conexão &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)|O Analysis Services inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado.|  
+|[Conecte-se de aplicativos cliente & #40; Analysis Services & #41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|Se você é novato no Analysis Services, leia este tópico para conhecer as ferramentas e os aplicativos mais usados no Analysis Services.|  
+|[Propriedades de cadeia de caracteres de Conexão & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)|O Analysis Services inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado.|  
 |[Metodologias de autenticação com suporte no Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)|Este tópico é uma breve introdução aos métodos de autenticação usados pelo Analysis Services.|  
 |[Configurar o Analysis Services para delegação restringido de Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)|Muitas soluções de business intelligence exigem a representação garantir que apenas os dados autorizados sejam retornados a cada usuário. Neste tópico, você conhecerá os requisitos para o uso da representação. Este tópico também explica as etapas de configuração do Analysis Services para autenticação restrita de Kerberos.|  
 |[Registro de SPN de uma instância do Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)|A autenticação Kerberos requer um nome de entidade de serviço (SPN) válido para os serviços que representam ou delegam identidades de usuário em soluções de vários servidores. Use as informações deste tópico para conhecer a construção e as etapas do registro de SPN do Analysis Services.|  
-|[Configurar o acesso HTTP ao Analysis Services no Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|A autenticação Básica ou os limites entre domínios são dois motivos importantes para configurar o Analysis Services para acesso HTTP.|  
+|[Configurar o acesso HTTP ao Analysis Services no Internet Information Services & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|A autenticação Básica ou os limites entre domínios são dois motivos importantes para configurar o Analysis Services para acesso HTTP.|  
 |[Provedores de dados usados para conexões do Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)|O Analysis Services fornece três bibliotecas de cliente para acessar operações do servidor ou dados do Analysis Services. Este tópico oferece uma breve introdução ao ADOMD.NET, Analysis Services Management Objects (AMO) e provedor OLE DB do Analysis Services (MSOLAP).|  
 |[Desconectar usuários e sessões no servidor do Analysis Services](../../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md)|Limpe as conexões e sessões existentes antes de colocar um servidor offline ou de realizar testes de desempenho de linha de base.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuração de pós-instalação &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
+ [Configuração de pós-instalação & #40; Analysis Services & #41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   
   

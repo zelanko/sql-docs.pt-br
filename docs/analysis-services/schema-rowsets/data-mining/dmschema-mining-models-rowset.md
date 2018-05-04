@@ -23,17 +23,17 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 07f3e7e80b36f2739bf5d4df23404e5ab396ec72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_MODELS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera os modelos de mineração de dados no catálogo atual. O **DMSCHEMA_MINING_MODELS** conjunto de linhas inclui informações como nomes de modelo, data de processamento e o algoritmo de mineração associados a cada modelo de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enumera os modelos de mineração de dados no catálogo atual. O **DMSCHEMA_MINING_MODELS** conjunto de linhas inclui informações como nomes de modelo, data de processamento e o algoritmo de mineração associados a cada modelo de mineração.  
   
- para obter informações sobre a ferramenta de configuração e recursos adicionais. O **DMSCHEMA_MINING_MODELS** de linhas de esquema é muito semelhante do [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) de linhas de esquema e podem ser usados da mesma maneira.  
+ . O **DMSCHEMA_MINING_MODELS** de linhas de esquema é muito semelhante do [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) de linhas de esquema e podem ser usados da mesma maneira.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DMSCHEMA_MINING_MODELS** linhas contém as seguintes colunas.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter exemplos de como consultar esse conjunto de linhas, consulte [consultar os parâmetros usados para criar um modelo de mineração](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [Linhas do esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

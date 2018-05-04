@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getarray-method-javalangstring"></a>Método getArray (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um objeto de matriz, considerando o nome do parâmetro.  
+  Recupera o valor do parâmetro designado como um objeto Array, considerando o nome do parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,9 +44,9 @@ public java.sql.Array getArray(java.lang.String sCol)
 #### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
- Um **cadeia de caracteres** que contém o nome do parâmetro.  
+ Uma **String** que contém o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto de matriz.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -55,7 +55,7 @@ public java.sql.Array getArray(java.lang.String sCol)
 ## <a name="remarks"></a>Remarks  
  Esse método getArray é especificado pelo método getArray na interface do CallableStatement.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método getArray &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

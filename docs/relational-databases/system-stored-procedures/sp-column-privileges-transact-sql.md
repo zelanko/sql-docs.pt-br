@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f3791722797f9c735e7801c989bc155fa9aafc0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41f6cc18687e6491295e2843632e0bd6badbc95a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,10 +58,10 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *table_owner* não for especificado e o usuário atual não possuir uma tabela com especificado *table_name*, sp_column privilégios procurará uma tabela com especificado *table_name* pertencente ao proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
   
  [ @table_qualifier=] '*table_qualifier*'  
- É o nome do qualificador da tabela. *table_qualifier* é *sysname*, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.*** proprietário***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela. *table_qualifier* é *sysname*, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [ @column_name=] '*coluna*'  
- É uma única coluna usada quando somente uma coluna de informações do catálogo é obtida. *coluna* é **nvarchar (**384**)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na tabela sys. Columns. *coluna* pode incluir caracteres curinga usando padrões do DBMS subjacente de correspondência de curingas. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
+ É uma única coluna usada quando somente uma coluna de informações do catálogo é obtida. *coluna* é **nvarchar (** 384 **)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na tabela sys. Columns. *coluna* pode incluir caracteres curinga usando padrões do DBMS subjacente de correspondência de curingas. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  sp_column_privileges é equivalente a SQLColumnPrivileges no ODBC. Os resultados retornados são ordenados por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME e PRIVILEGE.  
@@ -75,8 +74,8 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|Nome de cada coluna do TABLE_NAME retornado. Esse campo sempre retorna um valor.|  
 |GRANTOR|**sysname**|Nome de usuário do banco de dados que concedeu permissões neste COLUMN_NAME para o GRANTEE listado. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre igual a TABLE_OWNER. Esse campo sempre retorna um valor.<br /><br /> A coluna GRANTOR pode ser o proprietário do banco de dados (TABLE_OWNER) ou um usuário ao qual o proprietário do banco de dados concedeu permissões usando a cláusula WITH GRANT OPTION na instrução GRANT.|  
 |GRANTEE|**sysname**|O nome de usuário do banco de dados ao qual as permissões neste COLUMN_NAME foram concedidas pelo GRANTEE listado. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna sempre inclui um usuário de banco de dados da tabela sysusers. Esse campo sempre retorna um valor.|  
-|PRIVILEGE|**varchar(**32**)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> SELECT = GRANTEE pode recuperar dados para as colunas.<br /><br /> INSERT = GRANTEE pode fornecer dados para esta coluna quando novas linhas são inseridas (pelo GRANTEE) na tabela.<br /><br /> UPDATE = GRANTEE pode modificar os dados existentes na coluna.<br /><br /> REFERENCES = GRANTEE pode referenciar uma coluna em uma tabela estrangeira em uma relação de chave primária/chave estrangeira. As relações de chave primária/chave estrangeira são definidas usando restrições de tabela.|  
-|IS_GRANTABLE|**varchar (**3**)**|Indica se GRANTEE tem permissão para conceder permissões a outros usuários (em geral, referenciada como permissão de "concessão com concessão"). Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados para a qual a "concessão com concessão" não é aplicável.|  
+|PRIVILEGE|**varchar(** 32 **)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> SELECT = GRANTEE pode recuperar dados para as colunas.<br /><br /> INSERT = GRANTEE pode fornecer dados para esta coluna quando novas linhas são inseridas (pelo GRANTEE) na tabela.<br /><br /> UPDATE = GRANTEE pode modificar os dados existentes na coluna.<br /><br /> REFERENCES = GRANTEE pode referenciar uma coluna em uma tabela estrangeira em uma relação de chave primária/chave estrangeira. As relações de chave primária/chave estrangeira são definidas usando restrições de tabela.|  
+|IS_GRANTABLE|**varchar (** 3 **)**|Indica se GRANTEE tem permissão para conceder permissões a outros usuários (em geral, referenciada como permissão de "concessão com concessão"). Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados para a qual a "concessão com concessão" não é aplicável.|  
   
 ## <a name="remarks"></a>Remarks  
  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as permissões são concedidas com a instrução GRANT e retiradas com a instrução REVOKE.  

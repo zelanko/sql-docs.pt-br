@@ -1,34 +1,19 @@
 ---
-title: "Dimensões habilitadas para gravação | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords:
-- write-enabled dimensions [Analysis Services]
-- dimensions [Analysis Services], write-enabled
-- dimension writeback [Analysis Services]
-- write-enabled cubes [Analysis Services]
-- writeback [Analysis Services], dimensions
-ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: "38"
-author: Minewiskan
+title: Dimensões habilitadas para gravação | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8fddc4501d692f4b11ade511f5f56066b81af8c8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="write-enabled-dimensions"></a>Dimensões habilitadas para gravação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,13 +48,13 @@ ms.lasthandoff: 01/08/2018
 >  Não há suporte para o write-back das dimensões vinculadas.  
   
 ## <a name="security"></a>Segurança  
- Os únicos usuários empresariais que podem atualizar um write-back da dimensão habilitada para gravação são aqueles nas funções de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , para os quais foram concedidas as permissões de leitura/gravação na dimensão. Para cada função, você pode controlar quais membros podem ou não serem atualizados. Para que usuários empresariais atualizem dimensões habilitadas para gravação, o aplicativo cliente deve oferecer suporte a esse recurso. Para esses usuários, uma dimensão habilitada para gravação deve estar incluída em um cubo processado desde a última alteração da dimensão. Para saber mais, veja [Autorizar o acesso a objetos e operações &#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
+ Os únicos usuários empresariais que podem atualizar um write-back da dimensão habilitada para gravação são aqueles nas funções de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , para os quais foram concedidas as permissões de leitura/gravação na dimensão. Para cada função, você pode controlar quais membros podem ou não serem atualizados. Para que usuários empresariais atualizem dimensões habilitadas para gravação, o aplicativo cliente deve oferecer suporte a esse recurso. Para esses usuários, uma dimensão habilitada para gravação deve estar incluída em um cubo processado desde a última alteração da dimensão. Para saber mais, veja [Autorizar o acesso a objetos e operações &amp;#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Usuários e grupos incluídos em uma função de Administrador podem atualizar os membros de atributo de uma dimensão habilitada para gravação, mesmo se a dimensão não estiver incluída em um cubo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades de dimensão de banco de dados](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Partições habilitadas para gravação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões & #40; Analysis Services - dados multidimensionais & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

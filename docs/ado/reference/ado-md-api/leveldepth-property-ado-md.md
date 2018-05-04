@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cf684f0de2a8fd4b2bd2cb85e421937ec90b82f6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c1def2ec857aafbd3886b530ba7bf426a7b9107d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="leveldepth-property-ado-md"></a>Propriedade LevelDepth (ADO MD)
 Indica o número de níveis entre a raiz da hierarquia e um [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

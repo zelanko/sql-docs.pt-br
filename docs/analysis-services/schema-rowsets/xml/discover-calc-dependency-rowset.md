@@ -20,15 +20,15 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39e8c2f6aa89e83de104862a22d8b8fefcab5fd0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b4651aa538ed9eec11a98a06884f7b037342ae22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovercalcdependency-rowset"></a>Conjunto de linhas DISCOVER_CALC_DEPENDENCY
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Relatórios sobre as dependências entre cálculos e sobre os objetos referenciados nesses cálculos. Você pode usar essas informações em um aplicativo cliente para gerar relatórios sobre problemas com fórmulas complexas ou para advertir quando objetos relacionados forem excluídos ou modificados. Você também pode usar o conjunto de linhas para extrair as expressões DAX usadas em medidas ou colunas calculadas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Cria relatórios sobre as dependências entre cálculos e sobre os objetos referenciados nesses cálculos. Você pode usar essas informações em um aplicativo cliente para gerar relatórios sobre problemas com fórmulas complexas ou para advertir quando objetos relacionados forem excluídos ou modificados. Você também pode usar o conjunto de linhas para extrair as expressões DAX usadas em medidas ou colunas calculadas.  
   
  **Aplica-se a:** modelos tabulares  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|Sim|Indica o tipo do objeto para o qual análise de dependência é solicitada. O objeto deve ter um dos seguintes tipos:<br /><br /> **ACTIVE_RELATIONSHIP**: uma relação ativa<br /><br /> **CALC_COLUMN**: coluna calculada<br /><br /> **HIERARCHY**: uma hierarquia<br /><br /> **MEASURE**: uma medida<br /><br /> **RELATIONSHIP**: uma relação<br /><br /> **KPI**: um KPI (indicador chave de desempenho)<br /><br /> <br /><br /> Observe que o **DISCOVER_DEPENDENCY_CALC** linhas pode ser restringido usando esta coluna.|  
 |**CONSULTA**|**DBTYPE_WSTR**|Sim|Para modelos tabulares criados no [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], você pode incluir uma consulta ou expressão DAX para mostrar o grafo de dependência para essa consulta ou expressão. A restrição QUERY fornece aplicativos cliente com uma maneira de determinar quais objetos são usados por uma consulta DAX.<br /><br /> A restrição **QUERY** pode ser especificada no XMLA ou na cláusula WHERE de uma consulta DMV. Consulte a seção de exemplos para obter mais informações.|  
 |**TABLE**|**DBTYPE_WSTR**||O nome da tabela que contém o objeto para o qual as informações sobre dependência são geradas.|  
-|**OBJETO**|**DBTYPE_WSTR**||O nome do objeto para o qual as informações de dependência são geradas. Se o objeto for uma medida ou coluna calculada, use o nome da medida. Se o objeto for uma relação, o nome da tabela (ou dimensão de cubo) que contém a coluna que participa da relação.|  
+|**OBJECT**|**DBTYPE_WSTR**||O nome do objeto para o qual as informações de dependência são geradas. Se o objeto for uma medida ou coluna calculada, use o nome da medida. Se o objeto for uma relação, o nome da tabela (ou dimensão de cubo) que contém a coluna que participa da relação.|  
 |**EXPRESSÃO**|**DBTYPE_WSTR**||A fórmula que contém o objeto para o qual são buscadas dependências.|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||Retorna o tipo do objeto que tem uma dependência no objeto referenciado. Os objetos retornados podem ter os seguintes tipos:<br /><br /> **CALC_COLUMN**: uma coluna calculada<br /><br /> **COLUMN**: uma coluna de dados<br /><br /> **MEASURE**: uma medida<br /><br /> **RELATIONSHIP**: uma relação<br /><br /> **KPI**: um KPI (indicador chave de desempenho)|  
 |**REFERENCED_TABLE**|**DBTYPE _ WSTR**||O nome da tabela que contém o objeto dependente.|  
@@ -131,8 +131,8 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 |GUID|a07ccd46-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|DependencyGraph|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conjuntos de linhas do esquema do Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [Usar dinâmico exibições de gerenciamento &#40; DMVs &#41; para monitorar o Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usar dinâmico exibições de gerenciamento & #40; DMVs & #41; para monitorar o Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

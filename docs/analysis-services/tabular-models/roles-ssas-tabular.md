@@ -1,31 +1,30 @@
 ---
-title: "Funções | Microsoft Docs"
-ms.custom: 
+title: Funções | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: c23948ae3a3326a6d8139b7e9556164108b9e1d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles"></a>Funções
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Funções, em modelos tabulares, definem permissões de membro para um modelo. Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha. 
+  Funções, em modelos tabulares, definem permissões de membro para um modelo. Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha. 
   
  Para o SQL Server Analysis Services, funções contêm membros de usuário por nome de usuário do Windows ou grupo do Windows e permissões (leitura, processo, administrador). Para o Azure Analysis Services, os usuários devem ser no seu Active Directory do Azure e os nomes de usuário e grupos especificados devem ser com o endereço de email organizacional ou UPN. 
   
@@ -79,7 +78,7 @@ Funções, em modelos tabulares, definem permissões de membro para um modelo. M
   
  O efeito líquido destas permissões na tabela de Transações é que os membros terão permissão de consultar as linhas de dados quando o cliente estiver nos EUA, e a categoria de produto for bicicletas e o ano for 2008. Os usuários não poderiam consultar nenhuma transação fora dos EUA ou nenhuma transação que não fosse bicicletas nem em 2008, a menos que fossem membros de outra função que concede estas permissões.  
   
- Você pode usar o filtro *=FALSE()*para negar acesso a todas as linhas para uma tabela inteira.  
+ Você pode usar o filtro *=FALSE()* para negar acesso a todas as linhas para uma tabela inteira.  
   
 ### <a name="dynamic-security"></a>Segurança dinâmica  
  A segurança dinâmica é um modo de definir a segurança de nível de linha com base no nome de usuário do usuário conectado no momento ou a propriedade CustomData retornada de uma cadeia de conexão. A fim de implementar uma segurança dinâmica, você deve incluir em seu modelo uma tabela com valores de logon (nome de usuário do Windows) para usuários, assim como um campo que pode ser usado para definir uma permissão específica; por exemplo, uma tabela dimEmployees com uma ID de logon (domínio\nome de usuário) e também um valor de departamento para cada funcionário.  

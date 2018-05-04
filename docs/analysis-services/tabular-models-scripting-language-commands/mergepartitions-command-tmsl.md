@@ -1,31 +1,30 @@
 ---
 title: Comando MergePartitions (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 510baf2b4fdbebf7a6e4b33022ba15ced4b18ef3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>Comando MergePartitions (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Mescla os dados de uma ou mais partições de origem em uma partição de destino e, em seguida, exclui a partição de origem. A consulta SQL da partição de destino não será atualizada como parte da mesclagem. Para garantir que o processamento subsequente da partição recupera todos os dados, você deve revisar a consulta para que ele seleciona todos os dados na partição mesclada.  
+  Mescla os dados de uma ou mais partições de origem em uma partição de destino e, em seguida, exclui a partição de origem. A consulta SQL da partição de destino não será atualizada como parte da mesclagem. Para garantir que o processamento subsequente da partição recupera todos os dados, você deve revisar a consulta para que ele seleciona todos os dados na partição mesclada.  
   
 ## <a name="request"></a>Solicitação  
  Você deve especificar o banco de dados, tabela e partições de origem e destino. Só é possível mesclar partições da mesma tabela.  
@@ -59,7 +58,7 @@ Mescla os dados de uma ou mais partições de origem em uma partição de destin
  Retorna um resultado vazio quando o comando terá êxito. Caso contrário, uma exceção XMLA é retornada.  
   
 ## <a name="usage-endpoints"></a>Uso (pontos de extremidade)  
- Esse elemento de comando é usado em uma instrução do [executar método &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada por um ponto de extremidade do XMLA, exposto das seguintes maneiras:  
+ Esse elemento de comando é usado em uma instrução do [executar método &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada por um ponto de extremidade do XMLA, exposto das seguintes maneiras:  
   
 -   Como uma janela de XMLA no SQL Server Management Studio (SSMS)  
   
@@ -69,7 +68,7 @@ Mescla os dados de uma ou mais partições de origem em uma partição de destin
   
  Você pode gerar um script pronto para este comando do SSMS.  Por exemplo, você pode clicar no **Script** na caixa de diálogo de gerenciamento de partição.  
   
- O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico [linguagem de script de modelo de tabela &#40; TMSL &#41; Referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para fins de esclarecimento sobre o que tem suporte  
+ O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico [linguagem de script de modelo de tabela &#40;TMSL&#41; referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para fins de esclarecimento sobre o que tem suporte  
 
 ## <a name="see-also"></a>Consulte também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   

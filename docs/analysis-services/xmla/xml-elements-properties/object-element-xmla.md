@@ -29,15 +29,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cf077a2eba1e1d37a52536e77815839795ac7849
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 506f0333085f7eff46029d8f960e21d0fea13f7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-element-xmla"></a>Elemento Object (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma referência de objeto usada pelo elemento pai.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contém uma referência de objeto usada pelo elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,15 +54,15 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
-|Cardinalidade|Consulte a tabela a seguir.|  
+|Comprimento e tipo de dados|Nenhuma|  
+|Valor padrão|Nenhuma|  
+|Cardinalidade|Veja a tabela abaixo.|  
   
 |Ancestral ou pai|Cardinalidade|  
 |------------------------|-----------------|  
-|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
 |Todos os outros|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  Para **Alter** elementos, a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é usado como o objeto padrão se o **objeto** elemento não for especificado.  
   
-## <a name="see-also"></a>Consulte Também  
- [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

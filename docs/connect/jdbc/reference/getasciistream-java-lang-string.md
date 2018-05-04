@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getAsciiStream(String paramName)
 apilocation:
@@ -22,17 +22,16 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8665ab3b0f4687eaf95f1db75402ec8cddb83e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ab473df5fc28d88a573c8bdf0276d582a9aef0f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getasciistream-javalangstring"></a>getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um fluxo de **ASCII** caracteres, considerando o nome do parâmetro.  
+  Recupera o valor do parâmetro designado como um fluxo de caracteres **ASCII**, considerando o nome do parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +43,7 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
 #### <a name="parameters"></a>Parâmetros  
  *paramName*  
   
- Um **cadeia de caracteres** que indica o nome do parâmetro.  
+ Uma **String** que indica o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um objeto InputStream.  

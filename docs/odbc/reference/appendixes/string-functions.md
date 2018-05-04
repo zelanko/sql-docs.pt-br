@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>Funções de cadeia de caracteres
 A tabela a seguir lista as funções de manipulação de cadeia de caracteres. Um aplicativo pode determinar quais funções de cadeia de caracteres são suportadas por um driver chamando **SQLGetInfo** com um *tipo de informação* de SQL_STRING_FUNCTIONS.  
@@ -64,5 +63,5 @@ A tabela a seguir lista as funções de manipulação de cadeia de caracteres. U
 |**RTRIM (** *string_exp* **)** (ODBC 1.0)|Retorna os caracteres do *string_exp* com à direita de espaços em branco removidos.|  
 |**SOUNDEX (** *string_exp* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres de origem dependente de dados que representa o som das palavras na *string_exp*. Por exemplo, o SQL Server retorna um código SOUNDEX de 4 dígitos; Oracle retorna uma representação fonética de cada palavra.|  
 |**ESPAÇO (** *contagem* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres que consiste em *contagem* espaços.|  
-|**SUBSTRING (** *string_exp*, *iniciar*, comprimento**)** (ODBC 1.0)|Retorna uma cadeia de caracteres que é derivada de *string_exp*, começando na posição do caractere especificada por *iniciar* para *comprimento* caracteres.|  
+|**SUBSTRING (** *string_exp*, *iniciar*, comprimento **)** (ODBC 1.0)|Retorna uma cadeia de caracteres que é derivada de *string_exp*, começando na posição do caractere especificada por *iniciar* para *comprimento* caracteres.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|Retorna uma cadeia de caracteres igual de *string_exp*, com todos os caracteres convertidos em letras maiusculas de minúsculas.|

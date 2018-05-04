@@ -1,33 +1,32 @@
 ---
-title: DISCOVER_MEMORYUSAGE Rowset | Microsoft Docs
-ms.custom: 
+title: Conjunto de linhas DISCOVER_MEMORYUSAGE | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 832017b2efa7d1d788a74a20332160cffea63764
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>Conjunto de linhas DISCOVER_MEMORYUSAGE
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo servidor.  
+  Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo servidor.  
   
 > [!WARNING]  
 >  Este conjunto de linhas pode gerar conjuntos de resultados muito grandes. Se não for possível exibir os resultados porque eles exigem mais memória de exibição do que o permitido pelo SQL Server Management Studio, os resultados serão gravados em um arquivo temporário, no seguinte local padrão:  
@@ -50,8 +49,8 @@ Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo s
 |**MemoryAllocated**|**DBTYPE_UI8**||A quantidade de memória alocada para uso pelo objeto, que pode ser superior à quantidade de memória realmente usada pelo objeto.|  
 |**MemoryAllocBase**|**DBTYPE_UI8**||Os bytes alocados inicialmente para o próprio objeto (excluindo as alocações adicionais para conteúdos de objeto).|  
 |**MemoryAllocFromAlloc**|**DBTYPE_UI8**||A memória alocada para o conteúdo deste objeto.|  
-|**ElementCount**|**DBTYPE_UI4**||Para um objeto contêiner, este é o número de objetos contido por esse objeto.|  
-|**Shrinkable**|**DBTYPE_BOOL**|Sim|Um booliano que indica se a memória é reduzível (pode ser removida devido à pressão de memória). Se true, a memória será reduzível; se false, a memória não será reduzível.|  
+|**elementCount**|**DBTYPE_UI4**||Para um objeto contêiner, este é o número de objetos contido por esse objeto.|  
+|**Reduzível**|**DBTYPE_BOOL**|Sim|Um booliano que indica se a memória é reduzível (pode ser removida devido à pressão de memória). Se true, a memória será reduzível; se false, a memória não será reduzível.|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||Uma cadeia de caracteres que identifica o caminho completo deste objeto.|  
 |**ObjectID**|**DBTYPE_WSTR**||Uma cadeia de caracteres que identifica o objeto. O caminho completo do objeto é representado pela cadeia de caracteres: (ObjectParentPath + '.' + ObjectId).|  
   

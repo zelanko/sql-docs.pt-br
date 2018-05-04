@@ -20,15 +20,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 13c64a8c30b3be6a6c31ad9856299a1f3b80ecb2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readwritemode-element"></a>Elemento ReadWriteMode
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]O **ReadWriteMode** propriedade de banco de dados especifica se o banco de dados está no **ReadWrite** modo ou **ReadOnly** modo. Estes são os únicos dois possíveis valores da propriedade.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  A propriedade do banco de dados **ReadWriteMode** especifica se o banco de dados está no modo **ReadWrite** ou no modo **ReadOnly** . Estes são os únicos dois possíveis valores da propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
 |Valor padrão|ReadWrite|  
@@ -54,19 +54,19 @@ ms.lasthandoff: 01/08/2018
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Banco de dados](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|Nenhuma|  
   
 ## <a name="remarks"></a>Remarks  
  Bancos de dados são criados somente no modo **ReadWrite** . Não podem ser criados Bancos de dados em modo **ReadOnly** .  
   
  O valor do elemento **ReadWriteMode** é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*Somente leitura*|Nenhuma alteração nem atualização pode ser aplicada ao banco de dados.|  
 |*ReadWrite*|Alterações e atualizações podem ser aplicadas ao banco de dados.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Elemento Attach](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Anexar e desanexar bancos de dados do Analysis Services](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Mover um banco de dados do Analysis Services](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

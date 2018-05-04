@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 610ace1ea15f69277cba1e4bd37b365a2c3e1cc9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f8b89a2fa6131229470720120decaf9587456007
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverresultset-members"></a>Membros de SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,12 +60,12 @@ ms.lasthandoff: 04/16/2018
 |[cancelRowUpdates](../../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md)|Cancela as atualizações feitas na linha atual nesta [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverresultset.md)|Limpa todos os avisos relatados sobre isso [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverresultset.md)|Libera isso [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) do objeto banco de dados e recursos do JDBC imediatamente em vez de aguardar que isso aconteça quando ele é fechado automaticamente.|  
-|[deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md)|Exclui a linha atual deste[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto e do banco de dados subjacente.|  
+|[deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md)|Exclui a linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) e do banco de dados subjacente.|  
 |[Finalizar](../../../connect/jdbc/reference/finalize-method-sqlserverresultset.md)|Fecha explicitamente isso [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[findColumn](../../../connect/jdbc/reference/findcolumn-method-sqlserverresultset.md)|Recupera o índice da primeira coluna correspondente para o nome de coluna especificado neste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[first](../../../connect/jdbc/reference/first-method-sqlserverresultset.md)|Move o cursor para a primeira linha desse [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)|Recupera o valor da coluna designada na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como um objeto de matriz.|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)|Recupera o valor da coluna designada na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como um fluxo de caracteres ASCII.|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)|Recupera o valor da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) em questão como um fluxo de caracteres ASCII.|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)|Recupera o valor do índice de coluna designada na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como um BigDecimal.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)|Recupera o valor da coluna designada na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como um fluxo binário de bytes não interpretados.|  
 |[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|Recupera o valor da coluna designada na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como um objeto de Blob na linguagem de programação Java.|  

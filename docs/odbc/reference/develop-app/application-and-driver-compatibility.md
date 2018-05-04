@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - backward compatibility [ODBC], application and driver compatibility
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42e7afdb31f9eb9a4cb59a0bfcfdc37b165f179d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 29f31b920f23a035f78ea6fe62cdccd3f53183fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilidade de aplicativos e Driver
 Os aplicativos ODBC e o driver se enquadram em um número de categorias, além de sua versão. Alguns desses aplicativos são incompatíveis com alguns drivers; em outros casos, o tipo do aplicativo ou driver pode ter uma relevância sobre os problemas de compatibilidade com versões anteriores entre eles.  

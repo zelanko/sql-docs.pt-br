@@ -1,31 +1,23 @@
 ---
 title: Cmdlet Set-PowerPivotServiceApplication | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0b25a6f38a4de815ee3d8b39defcc95f0ad065b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Cmdlet Set-PowerPivotServiceApplication
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Define as propriedades de um aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  Define as propriedades de um aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -45,7 +37,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind >  
  Especifica o aplicativo de serviço a ser atualizado. O tipo deve ser um GUID válido ou uma instância de um objeto de aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] válido. Você pode usar Get-PowerPivotServiceApplication para retornar uma instância do objeto.  
   
 |||  
@@ -67,7 +59,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-allowcustomwindowscredentials-switchparameter"></a>-AllowCustomWindowsCredentials [\<SwitchParameter>]  
+### <a name="-allowcustomwindowscredentials-switchparameter"></a>-AllowCustomWindowsCredentials [\<SwitchParameter >]  
  Especifica se os proprietários do agendamento podem inserir credenciais arbitrárias do Windows para executar um agendamento de atualização de dados. Se você marcar essa caixa de seleção, o aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] criará e gerenciará um aplicativo de destino para cada conjunto de credenciais armazenadas. O padrão é definido como true. Para desativar esse recurso, defina AllowCustomWindowsCredentials:$false.  
   
 |||  
@@ -91,7 +83,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-businesshoursstarttime-string"></a>-BusinessHoursStartTime \<string>  
+### <a name="-businesshoursstarttime-string"></a>-BusinessHoursStartTime \<cadeia de caracteres >  
  Especifica o ponto inicial em um intervalo de horas que define um dia útil. Os agendamentos de atualização de dados podem ser realizados depois do fim de um dia útil para escolher dados transacionais que foram gerados durante o horário comercial normal. O padrão é 4:00 a.m.  Valores válidos são especificados entre aspas, no formato a.m. ou p.m. (por exemplo, "04:00AM". O intervalo de horas deve ficar entre 1 e 12. O intervalo de minutos deve ficar entre 1 e 59.  
   
  Para especificar o intervalo total de horas de um dia útil, você deve definir BusinessHoursStartTime e BusinessHoursEndTime. Os dois parâmetros definem o intervalo de horas que constituem um dia útil.  
@@ -104,7 +96,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-cacheddatabaseholdlimit-int"></a>-CachedDatabaseholdLimit \<int>  
+### <a name="-cacheddatabaseholdlimit-int"></a>-CachedDatabaseholdLimit \<int >  
  Especifica a quantidade de horas que um banco de dados Inativo permanece no sistema de arquivos depois de ser descarregado da memória. O padrão é 120 horas. O trabalho de limpeza usa esta configuração para determinar os arquivos a serem excluídos. Todos os bancos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que estiverem inativos por 168 horas (48 horas em memória e 120 horas no cache) serão excluídos do disco pelo trabalho de limpeza.  
   
 |||  
@@ -194,7 +186,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-healthbasedallocation-switch"></a>-HealthBasedAllocation \<switch>  
+### <a name="-healthbasedallocation-switch"></a>-HealthBasedAllocation \<alternar >  
  Especifica o algoritmo de alocação baseado em integridade que encaminha solicitações de conexão ao servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que tem mais recursos de CPU e memória disponíveis. Esse é o algoritmo de alocação padrão. HealthBasedAllocation e RoundRobinBasedAllocation são mutuamente exclusivos. Você deve especificar um ou outro. Se você definir ambos como false, HealthBasedAllocation será usado porque é o padrão. Se você definir ambos como true, receberá um erro de validação. A sintaxe desses parâmetros inclui a inserção apenas do nome do parâmetro ou parameter:$true ou parameter:$false.  
   
 |||  
@@ -271,7 +263,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-usagedataretentionperiod-int"></a>-UsageDataRetentionPeriod \<int>  
+### <a name="-usagedataretentionperiod-int"></a>-UsageDataRetentionPeriod \<int >  
  Especifica o número de dias para manter um histórico de dados de uso e estatísticas de integridade de servidor. O padrão é 365 dias. A definição desse valor como 0 mantém todo o histórico indefinidamente.  
   
 |||  
@@ -304,7 +296,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-usagequickresponseupperlimit-int"></a>-UsageQuickResponseUpperLimit \<int>  
+### <a name="-usagequickresponseupperlimit-int"></a>-UsageQuickResponseUpperLimit \<int >  
  Define um limite superior que define uma troca de solicitação-resposta rápida. O padrão é 1.000 milissegundos. Qualquer solicitação concluída entre 500 e 1.000 milissegundos é considerada uma resposta rápida para fins de relatórios.  
   
 |||  
@@ -315,7 +307,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-usagetrivialresponseupperlimit-int"></a>-UsageTrivialResponseUpperLimit \<int>  
+### <a name="-usagetrivialresponseupperlimit-int"></a>-UsageTrivialResponseUpperLimit \<int >  
  Especifica uma categoria de tempos de resposta muito pequenos para serem considerados relevantes para fins de coleta de dados. A maioria das respostas nessa categoria é constituída por comunicação de servidor-para-servidor. Por padrão, esse valor é 500 milissegundos. Qualquer solicitação concluída entre 0 e 500 milissegundos é uma solicitação trivial e ignorada para fins de relatórios.  
   
 |||  
@@ -337,7 +329,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  

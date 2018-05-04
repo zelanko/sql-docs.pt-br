@@ -1,36 +1,35 @@
 ---
 title: Algoritmo msc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - algorithms [data mining]
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 95f9737ae3ce74d319cc636e7ffacc4cf1e0825b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo MSC
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-O algoritmo de Clustering de Sequência do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo exclusivo que combina a análise de sequência com o cluster. Você pode usá-lo para explorar dados que contêm eventos que podem ser vinculados em uma *sequência*. O algoritmo localiza as sequências mais comuns e realiza clustering para encontrar sequências que são similares. Os exemplos a seguir ilustram os tipos de sequências das quais você pode capturar dados de aprendizado de máquina para fornecer informações sobre problemas comuns ou cenários comerciais:  
+  O algoritmo de Clustering de Sequência do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo exclusivo que combina a análise de sequência com o cluster. Você pode usá-lo para explorar dados que contêm eventos que podem ser vinculados em uma *sequência*. O algoritmo localiza as sequências mais comuns e realiza clustering para encontrar sequências que são similares. Os exemplos a seguir ilustram os tipos de sequências das quais você pode capturar dados de aprendizado de máquina para fornecer informações sobre problemas comuns ou cenários comerciais:  
   
 -   Fluxos ou caminhos de cliques gerados quando os usuários navegam em um site  
   

@@ -22,17 +22,16 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0fed4b46d2ed14a45073d7c25ace252c427fba3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 28b75d9b7bb728eb5794892917a3075095adde15
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Palavras-chave reservadas (Sintaxe MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reserva determinadas palavras-chave para seu uso exclusivo. Para obter uma lista de palavras-chave reservadas, consulte [palavras reservadas MDX](../mdx/mdx-reserved-words.md).  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reserva determinadas palavras-chave para seu uso exclusivo. Para obter uma lista de palavras-chave reservadas, consulte [palavras reservadas MDX](../mdx/mdx-reserved-words.md).  
   
  As palavras-chave reservadas seguem essas diretrizes:  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Use uma convenção de nomenclatura que evite o uso de palavras-chave reservadas. Consoantes ou vogais podem ser removidas se o nome de um objeto precisar ser parecido com uma palavra-chave reservada.  
   
-## <a name="see-also"></a>Consulte Também  
- [Elementos de sintaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

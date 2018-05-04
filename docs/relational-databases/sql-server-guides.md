@@ -22,11 +22,11 @@ ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 647626aa8b261dd565b41b88dabffb2878d53c19
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2701c3dc77dc77a5e80f70c6ec8e95e26dca8496
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-guides"></a>Guias do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/18/2018
 Os guias a seguir estão disponíveis. Eles abordam conceitos gerais e se aplicam a todas as versões do SQL Server, salvo indicação em contrário no respectivo guia. 
 
 [Guia de solução de problemas e monitoramento dos grupos de disponibilidade Always On](http://msdn.microsoft.com/library/dn135328)  
-[Guia de arquitetura e design de índices](../relational-databases/sql-server-index-design-guide.md)  
+[Guia de Arquitetura e Design de Índice](../relational-databases/sql-server-index-design-guide.md)  
 [Guia de arquitetura de gerenciamento de memória](../relational-databases/memory-management-architecture-guide.md)  
 [Guia de arquitetura de página e extensões](../relational-databases/pages-and-extents-architecture-guide.md)  
 [Validação pós-migração e guia de otimização](../relational-databases/post-migration-validation-and-optimization-guide.md)  

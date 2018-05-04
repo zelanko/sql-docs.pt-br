@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9d740654a701ebc4a81e1bf9e2b5084f706dfbbb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3abfe75505b2eba397a75b0d996a868df01caefe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deletewithdescendants-element-xmla"></a>Elemento DeleteWithDescendants (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Indica se os descendentes de membros de atributo também são excluídos pelo pai [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) comando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Indica se os descendentes de membros de atributo também são excluídos pelo comando pai [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,18 +52,18 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Booliano|  
-|Valor padrão|Falso|  
-|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|Comprimento e tipo de dados|Boolean|  
+|Valor padrão|False|  
+|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos pai|[drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
+|Elementos filho|Nenhuma|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento **DeleteWithDescendants** determina se o comando **Drop** não deve apenas excluir os membros de atributo identificados pelo elemento [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) , mas também que os descendentes daqueles membros de atributo devem ser descartados.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter mais informações sobre a exclusão e atualização de membros de atributo, consulte [Inserindo, atualizando e descartando membros &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

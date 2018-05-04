@@ -22,12 +22,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4b3f50c791d7cc53d3fa3161aaf8293abbd8b62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Atualizando um aplicativo para o Driver do OLE DB para SQL Server do MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +58,6 @@ ms.lasthandoff: 04/16/2018
 -   OLE DB Driver para SQL Server não contém integração XML. OLE DB Driver para SQL Server dá suporte a selecione... Consultas, XML, mas não oferece suporte a qualquer outra funcionalidade XML. No entanto, o OLE DB Driver para SQL Server oferece suporte a **xml** tipo de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   OLE DB Driver para SQL Server dá suporte à configuração de bibliotecas de rede do cliente usando somente atributos de cadeia de caracteres de conexão. Caso precise de uma configuração de biblioteca de rede mais completa, você deve usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
-
--   OLE DB Driver para SQL Server não é compatível com odbcbcp.dll. Aplicativos devem ser recriados para vincular com msoledbsql.lib para usar o Driver do OLE DB para SQL Server.    
 
 -   Cadeias de caracteres de conexão MDAC permitem um valor booliano (**true**) para o **Trusted_Connection** palavra-chave. Um Driver OLE DB para a cadeia de conexão do SQL Server deve usar **Sim** ou **sem**.  
 

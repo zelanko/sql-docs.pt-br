@@ -27,12 +27,11 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d413a9a07af247a62611946bf687c53e6f42d878
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74f62d7f55ac1ad62d7b5fdd1a04f3fb574a3532
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ ms.lasthandoff: 04/16/2018
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|Número de identificação de segurança do servidor.|  
-|**rmtloginame**|**nvarchar(**128**)**|Nome de logon remoto que **loginsid** mapeia para vinculado **rmtservid**.|  
-|**rmtpassword**|**nvarchar(**128**)**|Retorna NULL.|  
-|**loginsid**|**varbinary(**85**)**|Identificação de segurança do logon local que será mapeado.|  
+|**rmtloginame**|**nvarchar(** 128 **)**|Nome de logon remoto que **loginsid** mapeia para vinculado **rmtservid**.|  
+|**rmtpassword**|**nvarchar(** 128 **)**|Retorna NULL.|  
+|**loginsid**|**varbinary(** 85 **)**|Identificação de segurança do logon local que será mapeado.|  
 |**status**|**smallint**|Se 1, o mapeamento deve usar as credenciais do usuário.|  
 |**changedate**|**datetime**|Data da última alteração feita nas informações do mapeamento.|  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetInfo
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fca7aaa6278bfc7ab6a21b89c620a28297bf9da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-function"></a>Função SQLGetInfo
 **Conformidade**  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetInfo(
  Todas as chamadas para **SQLGetInfo** exigem uma conexão aberta, exceto quando o *informação* é SQL_ODBC_VER, que retorna a versão do Gerenciador de Driver.  
   
 ## <a name="information-types"></a>Tipos de informações  
- Esta seção lista os tipos de informações com suporte pelo **SQLGetInfo**. Tipos de informações são agrupados categoricamente e listados em ordem alfabética. Tipos de informações que foram adicionados ou renomeados para ODBC 3*. x* também são listados.  
+ Esta seção lista os tipos de informações com suporte pelo **SQLGetInfo**. Tipos de informações são agrupados categoricamente e listados em ordem alfabética. Tipos de informações que foram adicionados ou renomeados para ODBC 3 *. x* também são listados.  
   
 ## <a name="driver-information"></a>Informações sobre o driver  
  Os seguintes valores da *informação* argumento retornar informações sobre o driver ODBC, como o número de instruções ativas, o nome da fonte de dados e o nível de conformidade de padrões de interface:  
@@ -277,7 +276,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
 ## <a name="information-types-added-for-odbc-3x"></a>Tipos de informações adicionadas para ODBC 3. x  
- Os seguintes valores da *informação* argumento foram adicionadas para ODBC 3*. x*:  
+ Os seguintes valores da *informação* argumento foram adicionadas para ODBC 3 *. x*:  
   
 |||  
 |-|-|  
@@ -308,7 +307,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
 ## <a name="information-types-renamed-for-odbc-3x"></a>Tipos de informações renomeados para ODBC 3. x  
- Os seguintes valores da *informação* argumento foram renomeados para ODBC 3*. x*.  
+ Os seguintes valores da *informação* argumento foram renomeados para ODBC 3 *. x*.  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -344,7 +343,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Tipos de informações obsoletas no ODBC 3. x  
- Os seguintes valores da *informação* argumento foram substituídos no ODBC 3*. x*. ODBC 3*. x* drivers devem continuar a oferecer suporte a esses tipos de informações para fins de compatibilidade com o ODBC 2*. x* aplicativos. (Para obter mais informações sobre esses tipos, consulte [suporte SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.)  
+ Os seguintes valores da *informação* argumento foram substituídos no ODBC 3 *. x*. ODBC 3 *. x* drivers devem continuar a oferecer suporte a esses tipos de informações para fins de compatibilidade com o ODBC 2 *. x* aplicativos. (Para obter mais informações sobre esses tipos, consulte [suporte SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.)  
   
 |||  
 |-|-|  
@@ -732,7 +731,7 @@ SQLRETURN SQLGetInfo(
  Uma cadeia de caracteres com o nome do banco de dados atual em uso, se a fonte de dados define um objeto nomeado chamado "database".  
   
 > [!NOTE]  
->  Em ODBC 3*. x*, o valor retornado para este *informação* também pode ser retornado ao chamar **SQLGetConnectAttr** com um *atributo* argumento de SQL_ATTR_CURRENT_CATALOG.  
+>  Em ODBC 3 *. x*, o valor retornado para este *informação* também pode ser retornado ao chamar **SQLGetConnectAttr** com um *atributo* argumento de SQL_ATTR_CURRENT_CATALOG.  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  Um bitmask SQLUINTEGER ao enumerar os literais de data/hora do SQL-92 suportados pela fonte de dados. Observe que esses são os literais de data e hora listados na especificação SQL-92 e são separadas de cláusulas de fuga literal de data e hora definidas pelo ODBC. Para obter mais informações sobre as cláusulas de fuga ODBC datetime literal, consulte [data, hora e literais de carimbo de hora](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
@@ -1337,7 +1336,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_NUM_ABS (ODBC 1.0) SQL_FN_NUM_ACOS (ODBC 1.0) SQL_FN_NUM_ASIN (ODBC 1.0) SQL_FN_NUM_ATAN (ODBC 1.0) SQL_FN_NUM_ATAN2 SQL _ DO (ODBC 1.0) SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) SQL_FN_NUM_COT (ODBC 1.0) SQL_FN_NUM_DEGREES (ODBC 2.0) FN_NUM_EXP (ODBC 1.0) SQL_FN_NUM_FLOOR (ODBC 1.0) SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 SQL_FN_ DE SQL_FN_NUM_RAND (ODBC 1.0) (ODBC 2.0) SQL_FN_NUM_MOD (ODBC 1.0) SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_POWER (ODBC 2.0) SQL_FN_NUM_RADIANS (ODBC 2.0) NUM_ROUND (ODBC 2.0) SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) SQL_FN_NUM_SQRT (ODBC 1.0) SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
- Um valor SQLUINTEGER que indica o nível de ODBC 3*. x* interface que é compatível com o driver.  
+ Um valor SQLUINTEGER que indica o nível de ODBC 3 *. x* interface que é compatível com o driver.  
   
  SQL_OIC_CORE: O nível mínimo que todos os drivers ODBC são deve cumprir. Esse nível inclui elementos de interface básica, como funções de conexão, funções para preparar e executar uma instrução SQL, funções de metadados do conjunto de resultados básica, funções básicas de catálogo e assim por diante.  
   

@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7df4670e57def09628b0ccca1be2c2b567aef3bb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f7aa6bf39c27a16cd70b222b6417d7059445dd44
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-member-functions"></a>Usando as funções de membro
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,8 +57,8 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte Também  
- [Funções &#40; Sintaxe MDX &#41;](../mdx/functions-mdx-syntax.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usando funções de tupla](../mdx/using-tuple-functions.md)   
  [Usando funções de conjunto](../mdx/using-set-functions.md)  
   

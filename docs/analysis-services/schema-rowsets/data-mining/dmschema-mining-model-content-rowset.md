@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d1ca8915889fbc7edb9e31c2e0adbb2154980f5f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Permite que o aplicativo cliente procurar o conteúdo de um modelo de mineração de dados. Os aplicativos cliente podem usar as restrições de operação de árvore especiais descritas no fim deste tópico para navegar no conteúdo do modelo de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Permite que o aplicativo cliente procure o conteúdo de um modelo de mineração de dados. Os aplicativos cliente podem usar as restrições de operação de árvore especiais descritas no fim deste tópico para navegar no conteúdo do modelo de mineração.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DMSCHEMA_MINING_MODEL_CONTENT** linhas contém as seguintes colunas.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||O nome do catálogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] preenche essa coluna com o nome do banco de dados do qual o modelo é um membro.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||O nome do catálogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] preenche essa coluna com o nome do banco de dados do qual o modelo é um membro.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||O nome do esquema não qualificado. Esta coluna não é suportada pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá **VT_NULL**.|  
 |**NOME_DO_MODELO**|**DBTYPE_WSTR**||O nome do modelo ao qual o conteúdo descrito por esta linha é associado.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Os nomes dos atributos que correspondem a este nó.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  A restrição, **TREE_OPERATION**, não está em qualquer coluna específica do **DMSCHEMA_MINING_MODEL_CONTENT** linhas; em vez disso, ele especifica um operador de árvore. O consumidor pode especificar um **NODE_UNIQUE_NAME** restrição e o operador de árvore (**ancestrais**, **FILHOS**, **irmãos**,  **PAI**, **descendentes**, **SELF**) para obter o conjunto de membros solicitado. O **SELF** operador inclui a linha para o próprio nó na lista de linhas retornadas. A tabela a seguir descreve as constantes que compõem a definição de bitmap para o **TREE_OPERATION** restrição. Eles podem ser combinados usando lógico **ou** operador.  
   
-|Constante|Valor|  
+|Constante|Value|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0x00000020**|  
 |**DMTREEOP_CHILDREN**|**0x00000001**|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/08/2018
 |**DMTREEOP_SELF**|**0x00000008**|  
 |**DMTREEOP_DESCENDANTS**|**0x00000010**|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [Linhas do esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

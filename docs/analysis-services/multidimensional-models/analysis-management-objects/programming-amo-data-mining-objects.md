@@ -1,34 +1,19 @@
 ---
-title: "Programando objetos de mineração de dados AMO | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 
-author: Minewiskan
+title: Programando objetos de mineração de dados AMO | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programando objetos de mineração de dados AMO
   A programação de objetos de mineração de dados usando AMO é simples e direta. A primeira etapa é criar o modelo de estrutura de dados para dar suporte ao projeto de mineração. Em seguida, você cria o modelo de mineração que dá suporte ao algoritmo de mineração que deseja usar para prever ou para localizar os relacionamentos despercebidos subjacentes aos seus dados. Com o seu projeto de mineração criado (incluindo a estrutura e os algoritmos), você poderá processar os modelos de mineração para obter os modelos treinados que usará mais tarde ao consultar e fazer previsões a partir do aplicativo cliente.  
@@ -41,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Objetos MiningModel](#MiningModel)  
   
-##  <a name="MiningStructure">Objetos MiningStructure</a>  
+##  <a name="MiningStructure"></a> Objetos MiningStructure  
  Uma estrutura de mineração é a definição da estrutura de dados usada para criar todos os modelos de mineração. Uma estrutura de mineração contém uma ligação a uma exibição de fonte de dados definida no banco de dados e contém definições para todas as colunas que participam dos modelos de mineração. Uma estrutura de mineração pode ter mais de um modelo de mineração.  
   
  A criação de um objeto <xref:Microsoft.AnalysisServices.MiningStructure> exige as seguintes etapas:  
@@ -94,7 +79,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel">Objetos MiningModel</a>  
+##  <a name="MiningModel"></a> Objetos MiningModel  
  Um modelo de mineração é um repositório para todas as colunas e definições de coluna que serão usadas em um algoritmo de mineração.  
   
  A criação de um objeto <xref:Microsoft.AnalysisServices.MiningModel> exige as seguintes etapas:  

@@ -24,12 +24,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 26eb846b1744fcf8616228ca1bf95b80c4e4d33c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -234,7 +233,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Especifica se a publicação está habilitada para sincronização da Web. *allow_web_synchronization* é **nvarchar (5)**, com um padrão de FALSE. **True** Especifica que as assinaturas dessa publicação podem ser sincronizadas pelo HTTPS. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Para dar suporte a [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **true**.  
   
  [  **@web_synchronization_url=** ] **'***web_synchronization_url***'**  
- Especifica o valor padrão da URL da Internet usado para sincronização da Web. *web_synchronization_url,*s **nvarchar (500)**, com um padrão NULL. Define a URL de Internet padrão, se um não for explicitamente definido quando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) é executado.  
+ Especifica o valor padrão da URL da Internet usado para sincronização da Web. *web_synchronization_url,* s **nvarchar (500)**, com um padrão NULL. Define a URL de Internet padrão, se um não for explicitamente definido quando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) é executado.  
   
  [  **@allow_partition_realignment =** ] **'***allow_partition_realignment***'**  
  Determina se exclusões serão enviadas para o Assinante quando modificação da linha no Publicador causar a mudança de sua partição. *allow_partition_realignment* é **nvarchar (5)**, com um padrão de TRUE. **True** envia exclusões no assinante para refletir os resultados de uma alteração de partição, removendo dados que não faz parte da partição do assinante. **False** deixa os dados de uma partição antiga no assinante, onde as alterações feitas aos dados no publicador não serão replicadas para esse assinante, mas as alterações feitas no assinante serão replicadas para o publicador. Configuração *allow_partition_realignment* para **false** é usado para manter os dados em uma assinatura de uma partição antiga quando os dados precisam estar acessíveis para fins históricos.  

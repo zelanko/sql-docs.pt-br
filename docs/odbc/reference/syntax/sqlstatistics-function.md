@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLStatistics
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d18b910da6bf23aa507c3fecc7994a59cf74e705
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6f91845e85a9af9f99e137368f6bdb7f8570a2cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-function"></a>Função SQLStatistics
 **Conformidade**  
@@ -92,7 +91,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE solicita que o driver recupere as estatísticas incondicionalmente. (Drivers de acordo com apenas o padrão Open Group e não oferecem suporte a extensões ODBC não será capazes de dar suporte a SQL_ENSURE.)  
   
- SQL_QUICK solicita que o driver recuperar a CARDINALIDADE e as páginas somente se elas estiverem prontamente disponíveis do servidor. Nesse caso, o driver não assegura que os valores são atuais. (Aplicativos que são gravados para o padrão Open Group sempre obterão o comportamento SQL_QUICK do ODBC 3*. x*-drivers compatíveis.)  
+ SQL_QUICK solicita que o driver recuperar a CARDINALIDADE e as páginas somente se elas estiverem prontamente disponíveis do servidor. Nesse caso, o driver não assegura que os valores são atuais. (Aplicativos que são gravados para o padrão Open Group sempre obterão o comportamento SQL_QUICK do ODBC 3 *. x*-drivers compatíveis.)  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -132,9 +131,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  Para obter mais informações sobre o uso geral, os argumentos e os dados retornados de funções de catálogo ODBC, consulte [funções de catálogo](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- As seguintes colunas foram renomeadas para ODBC 3*. x*. As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar pelo número de coluna.  
+ As seguintes colunas foram renomeadas para ODBC 3 *. x*. As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar pelo número de coluna.  
   
-|Coluna de ODBC 2.0|ODBC 3*. x* coluna|  
+|Coluna de ODBC 2.0|ODBC 3 *. x* coluna|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

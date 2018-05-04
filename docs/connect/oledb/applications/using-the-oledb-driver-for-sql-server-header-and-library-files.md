@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usando o Driver do OLE DB para arquivos de biblioteca e cabeçalho do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  O Driver OLE DB para o arquivo de cabeçalho do SQL Server (msoledbsql.h) pode ser usado para adicionar o Driver do OLE DB para a funcionalidade de acesso de dados do SQL Server para seus aplicativos personalizados. O Driver OLE DB para o arquivo de cabeçalho do SQL Server contém todas as definições, atributos, propriedades e interfaces necessárias para tirar proveito dos novos recursos introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Além do OLE DB Driver para o arquivo de cabeçalho do SQL Server, também há um arquivo de biblioteca msoledbsql.lib que é a biblioteca de exportação para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funcionalidade do programa de cópia em massa (BCP).  
+ Além do OLE DB Driver para o arquivo de cabeçalho do SQL Server, também há um arquivo de biblioteca msoledbsql.lib que é a biblioteca de exportação para [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) funcionalidade.  
   
  O Driver OLE DB para o arquivo de cabeçalho do SQL Server é compatível com o arquivo de cabeçalho SQLOLEDB usado com o Microsoft Data Access Components (MDAC), mas não contém o CLSIDs para SQLOLEDB (o provedor OLE DB para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluído com o MDAC) ou símbolos para Funcionalidade XML (que não é suportada pelo Driver do OLE DB para SQL Server).    
   

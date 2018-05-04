@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Pooling de Conexão de Gerenciador de driver
 O pool de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecida para cada uso. Depois que uma conexão foi criado e colocado em um pool, um aplicativo pode reutilizar essa conexão sem executar o processo de conexão completa.  
@@ -45,7 +44,7 @@ O pool de Conexão permite que um aplicativo para usar uma conexão de um pool d
   
  O Gerenciador de Driver determina se uma conexão específica em um pool de deve ser usado de acordo com os argumentos passados em **SQLConnect** ou **SQLDriverConnect**e de acordo com os atributos de conexão Defina após a conexão foi alocada.  
   
- Quando o Gerenciador de Driver é pooling de conexões, ele precisa ser capaz de determinar se uma conexão ainda está funcionando antes de enviar a conexão. Caso contrário, o Gerenciador de Driver mantém em enviar a conexão inativa para o aplicativo sempre que ocorrer uma falha de rede transitório. Um novo atributo de conexão foi definido em ODBC 3*. x*: SQL_ATTR_CONNECTION_DEAD. Este é um atributo de conexão somente leitura que retornará SQL_CD_TRUE ou SQL_CD_FALSE. O valor SQL_CD_TRUE significa que a conexão foi perdida, enquanto o valor SQL_CD_FALSE significa que a conexão ainda está ativa. (Drivers de acordo com as versões anteriores do ODBC podem também dar suporte a esse atributo.)  
+ Quando o Gerenciador de Driver é pooling de conexões, ele precisa ser capaz de determinar se uma conexão ainda está funcionando antes de enviar a conexão. Caso contrário, o Gerenciador de Driver mantém em enviar a conexão inativa para o aplicativo sempre que ocorrer uma falha de rede transitório. Um novo atributo de conexão foi definido em ODBC 3 *. x*: SQL_ATTR_CONNECTION_DEAD. Este é um atributo de conexão somente leitura que retornará SQL_CD_TRUE ou SQL_CD_FALSE. O valor SQL_CD_TRUE significa que a conexão foi perdida, enquanto o valor SQL_CD_FALSE significa que a conexão ainda está ativa. (Drivers de acordo com as versões anteriores do ODBC podem também dar suporte a esse atributo.)  
   
  Um driver deve implementar essa opção com eficiência, ou ele será prejudicar o desempenho do pool de conexão. Especificamente, uma chamada para obter esse atributo de conexão não deve causar uma viagem para o servidor. Em vez disso, um driver de apenas deve retornar o último estado de conexão. A conexão é inativa se o último processamento para o servidor falhou e não inativo se o último processamento foi bem-sucedida.  
   

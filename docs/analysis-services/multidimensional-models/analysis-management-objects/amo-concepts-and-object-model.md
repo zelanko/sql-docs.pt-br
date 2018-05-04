@@ -1,38 +1,19 @@
 ---
 title: Conceitos de AMO e o modelo de objeto | Microsoft Docs
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AMO, classes
-- Analysis Management Objects, classes
-- objects [Analysis Management Objects]
-- AMO, objects
-- classes [AMO]
-- AMO
-- Analysis Management Objects
-- Analysis Management Objects, objects
-ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fb57ba499669e09d177892eb861ad8994819e85
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 778007f9cdf5b2c0eea94d9d202545e95476d1c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-concepts-and-object-model"></a>Conceitos e modelo de objeto AMO
   Este tópico fornece uma definição de Analysis Management Objects (AMO), como ele se relaciona com outras ferramentas e bibliotecas da arquitetura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e uma explicação conceitual de todos os objetos principais AMO.  
@@ -53,10 +34,10 @@ ms.lasthandoff: 02/15/2018
   
  [Automatizando tarefas administrativas com AMO](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture">AMO na arquitetura do Analysis Services</a>  
+##  <a name="AMOintheAnalysisServicesArchitecture"></a> AMO na arquitetura do Analysis Services  
  Por design, o AMO foi criado somente para o gerenciamento de objetos e não para a consulta de dados. Se o usuário precisa consulta [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dados de um aplicativo cliente, o aplicativo cliente deve usar [desenvolvendo com ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
-##  <a name="AMOArchitecture">Arquitetura do AMO</a>  
+##  <a name="AMOArchitecture"></a> Arquitetura do AMO  
  O AMO é uma biblioteca de classes criada para gerenciar uma instância do completa [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de um aplicativo cliente em código gerenciado no .NET Framework versão 2.0.  
   
  A biblioteca de classes AMO foi criada como uma hierarquia de classes, onde certas classes devem ser instanciadas antes de outras para que possam ser usadas em seu código. Existem também classes auxiliares que podem ser instanciadas em seu código em qualquer ocasião, mas provavelmente você instanciará uma ou mais das classes de hierarquia antes de usar qualquer uma delas.  
@@ -86,11 +67,11 @@ ms.lasthandoff: 02/15/2018
 |[Classes de segurança AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Classes que permitem a você controlar o acesso a outros objetos e a manter a segurança.|  
 |[Outras classes e métodos AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Classes e métodos que ajudam os administradores de OLAP ou de mineração de dados a concluírem suas tarefas diárias.|  
   
-##  <a name="bkmk_UsingAMO">Usando o AMO</a>  
+##  <a name="bkmk_UsingAMO"></a> Usando o AMO  
  O AMO é especialmente útil para a automação de tarefas repetitivas, como por exemplo a criação de novas partições em um grupo de medidas baseado em dados novos da tabela de fatos, ou em um novo treinamento de um modelo de mineração baseado em dados novos. Essas tarefas que criam objetos novos são normalmente executadas por mês, por semana ou por trimestre, e os novos objetos podem ser facilmente nomeados, com base nos dados novos, pelo aplicativo.  
   
 ##### <a name="analysis-services-administrators"></a>Administradores do Analysis Services  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] os administradores podem usar o AMO para automatizar o processamento de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] bancos de dados. Por criar e implantar bancos de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], use o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Os administradores [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] podem usar o AMO para automatizar o processamento de bancos de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Por criar e implantar bancos de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], use o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ##### <a name="developers"></a>Desenvolvedores  
  Os desenvolvedores podem usar AMO para desenvolver interfaces administrativas para conjuntos especificados de usuários. Essas interfaces podem restringir acesso a objetos do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e podem limitar os usuários a certas tarefas. Por exemplo, usando o AMO, é possível criar um aplicativo Backup para permitir que um usuário veja todos os objetos de banco de dados, selecione qualquer um dos bancos de dados e faça backup em qualquer conjunto de dispositivos especificado.  
@@ -103,7 +84,7 @@ ms.lasthandoff: 02/15/2018
 ##### <a name="data-mining-advanced-users"></a>Usuários avançados de mineração de dados  
  Para usuários avançados de mineração de dados, o AMO será muito útil se você tiver grandes conjuntos de modelos que devam ser periodicamente treinados outra vez.  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO">Automatizando tarefas administrativas com AMO</a>  
+##  <a name="AutomatingAdministrativeTaskswithAMO"></a> Automatizando tarefas administrativas com AMO  
  A maioria das tarefas repetitivas será melhor criada, implantada e mantida se for desenvolvida usando o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] em vez de ser desenvolvida como um aplicativo em qualquer linguagem de sua escolha. No entanto, para as tarefas repetitivas que não puderem ser automatizadas com o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], é possível usar o AMO. O AMO também será útil para quando você quiser desenvolver um aplicativo especializado para business intelligence usando o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##### <a name="automatic-object-management"></a>Gerenciamento automático de objetos  

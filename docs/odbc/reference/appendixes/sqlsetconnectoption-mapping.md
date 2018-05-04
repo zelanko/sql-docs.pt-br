@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f00b06d0a4a64f1c699267020e20f2ca1d74b220
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 255e59c3c9da81dfcc8dba13be46fc902e7a81b2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Mapeamento de SQLSetConnectOption
-Quando um ODBC 2. *x* aplicativo chama **SQLSetConnectOption** por meio de um ODBC 3*. x* driver, a chamada para  
+Quando um ODBC 2. *x* aplicativo chama **SQLSetConnectOption** por meio de um ODBC 3 *. x* driver, a chamada para  
   
 ```  
 SQLSetConnectOption(hdbc, fOption, vParam)  
@@ -58,11 +57,11 @@ SQLSetConnectOption(hdbc, fOption, vParam)
   
  Porque o Gerenciador de Driver não sabe se o atributo de conexão definidos pelo driver precisa de uma cadeia de caracteres ou um valor inteiro de 32 bits, ele deve passar um valor válido para o *BufferLength* argumento de **SQLSetConnectAttr**. Se o driver definiu semântica especial para definidos pelo driver conectar atributos e precisa ser chamado usando **SQLSetConnectOption**, deverá dar suporte a **SQLSetConnectOption**.  
   
- Se um ODBC 2. *x* aplicativo chama **SQLSetConnectOption** para definir uma opção de instrução específicos de driver em um ODBC 3*. x* driver e a opção foi definida em um ODBC 2. *x* a versão do driver, uma nova constante de manifesto deve ser definida para a opção ODBC 3*. x* driver. Se a constante de manifesto antiga é usada na chamada para **SQLSetConnectOption**, o Gerenciador de Driver chamará **SQLSetConnectAttr** com o **StringLength** argumento definido como 0.  
+ Se um ODBC 2. *x* aplicativo chama **SQLSetConnectOption** para definir uma opção de instrução específicos de driver em um ODBC 3 *. x* driver e a opção foi definida em um ODBC 2. *x* a versão do driver, uma nova constante de manifesto deve ser definida para a opção ODBC 3 *. x* driver. Se a constante de manifesto antiga é usada na chamada para **SQLSetConnectOption**, o Gerenciador de Driver chamará **SQLSetConnectAttr** com o **StringLength** argumento definido como 0.  
   
- Para um ODBC 3*. x* driver, o Gerenciador de Driver não verifica se *fOption* é entre SQL_CONN_OPT_MIN e SQL_CONN_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START.  
+ Para um ODBC 3 *. x* driver, o Gerenciador de Driver não verifica se *fOption* é entre SQL_CONN_OPT_MIN e SQL_CONN_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START.  
   
 ## <a name="setting-statement-options-on-the-connection-level"></a>Definir opções de instrução em nível de Conexão  
  No ODBC 2. *x*, um aplicativo pode chamar **SQLSetConnectOption** para definir uma opção de instrução. Quando isso for feito, o driver estabelece a opção de instrução como padrão para todas as instruções posteriormente alocadas para essa conexão. Ele é definido pelo driver se o driver define a opção de instrução para qualquer instrução existente associado com a conexão especificada.  
   
- Essa capacidade foi preterida no ODBC 3*. x*. ODBC 3*. x* drivers precisam apenas oferece suporte à definição do ODBC 2. *x* atributos de instrução em nível de conexão se desejar trabalhar com ODBC 2. *x* aplicativos que fazem isso. ODBC 3*. x* aplicativos nunca devem definir atributos de instrução no nível de conexão. ODBC 3*. x* atributos de instrução não podem ser definidos no nível de conexão, com exceção dos atributos SQL_ATTR_METADATA_ID e SQL_ATTR_ASYNC_ENABLE, que são atributos de conexão e atributos de instrução e pode ser definir o nível de conexão ou o nível de instrução.
+ Essa capacidade foi preterida no ODBC 3 *. x*. ODBC 3 *. x* drivers precisam apenas oferece suporte à definição do ODBC 2. *x* atributos de instrução em nível de conexão se desejar trabalhar com ODBC 2. *x* aplicativos que fazem isso. ODBC 3 *. x* aplicativos nunca devem definir atributos de instrução no nível de conexão. ODBC 3 *. x* atributos de instrução não podem ser definidos no nível de conexão, com exceção dos atributos SQL_ATTR_METADATA_ID e SQL_ATTR_ASYNC_ENABLE, que são atributos de conexão e atributos de instrução e pode ser definir o nível de conexão ou o nível de instrução.

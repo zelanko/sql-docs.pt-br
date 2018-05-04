@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34316cba593d433d240dc67360d802e3deaddd2f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b5b1fd1295586e69f9db0f4084f74540163f45ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Mapeamento de SQLSetStmtOption
-Quando um aplicativo chama **SQLSetStmtOption** por meio de um ODBC 3*. x* driver, a chamada para  
+Quando um aplicativo chama **SQLSetStmtOption** por meio de um ODBC 3 *. x* driver, a chamada para  
   
 ```  
 SQLSetStmtOption(StatementHandle, fOption, vParam)  
@@ -58,8 +57,8 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
   
  Porque o Gerenciador de Driver não sabe se o atributo de instrução definidos pelo driver precisa de uma cadeia de caracteres ou um valor inteiro de 32 bits, ele deve passar um valor válido para o *StringLength* argumento de **SQLSetStmtAttr**. Se o driver definiu semântica especial para atributos de instrução definidos pelo driver e precisa ser chamado usando **SQLSetStmtOption**, deverá dar suporte a **SQLSetStmtOption**.  
   
- Se um aplicativo chamar **SQLSetStmtOption** para definir uma opção de instrução específicos de driver em um ODBC 3*. x* driver e a opção foi definida em um ODBC 2. *x* a versão do driver, uma nova constante de manifesto deve ser definida para a opção ODBC 3*. x* driver. Se a constante de manifesto antiga é usada na chamada para **SQLSetStmtOption**, o Gerenciador de Driver chamará **SQLSetStmtAttr** com o *StringLength* argumento definido como 0.  
+ Se um aplicativo chamar **SQLSetStmtOption** para definir uma opção de instrução específicos de driver em um ODBC 3 *. x* driver e a opção foi definida em um ODBC 2. *x* a versão do driver, uma nova constante de manifesto deve ser definida para a opção ODBC 3 *. x* driver. Se a constante de manifesto antiga é usada na chamada para **SQLSetStmtOption**, o Gerenciador de Driver chamará **SQLSetStmtAttr** com o *StringLength* argumento definido como 0.  
   
- Quando um aplicativo chama **SQLSetStmtAttr** para definir SQL_ATTR_USE_BOOKMARKS como SQL_UB_ON em um ODBC 3*. x* driver, o atributo da instrução SQL_ATTR_USE_BOOKMARKS está definido como SQL_UB_FIXED. SQL_UB_ON é a mesma constante como SQL_UB_FIXED. O Gerenciador de Driver passa SQL_UB_FIXED por meio do driver. SQL_UB_FIXED foi preterido no ODBC 3*. x*, mas um ODBC 3*. x* driver deve implementá-lo para trabalhar com ODBC 2. *x* aplicativos que usam marcadores de comprimento fixo.  
+ Quando um aplicativo chama **SQLSetStmtAttr** para definir SQL_ATTR_USE_BOOKMARKS como SQL_UB_ON em um ODBC 3 *. x* driver, o atributo da instrução SQL_ATTR_USE_BOOKMARKS está definido como SQL_UB_FIXED. SQL_UB_ON é a mesma constante como SQL_UB_FIXED. O Gerenciador de Driver passa SQL_UB_FIXED por meio do driver. SQL_UB_FIXED foi preterido no ODBC 3 *. x*, mas um ODBC 3 *. x* driver deve implementá-lo para trabalhar com ODBC 2. *x* aplicativos que usam marcadores de comprimento fixo.  
   
- Para um ODBC 3*. x* driver, o Gerenciador de Driver não verifica se *opção* é entre SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START.
+ Para um ODBC 3 *. x* driver, o Gerenciador de Driver não verifica se *opção* é entre SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START.

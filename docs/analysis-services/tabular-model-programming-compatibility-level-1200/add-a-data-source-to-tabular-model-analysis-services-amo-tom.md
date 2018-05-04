@@ -1,30 +1,30 @@
 ---
 title: Adicionar uma fonte de dados ao modelo de tabela (Analysis Services AMO-TOM) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3892601961f95b0d4dd4f0de0d3767eff01186d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>Adicionar uma fonte de dados ao modelo de tabela (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]O **DataSource** classe no namespace AnalysisServices é uma abstração de um modelo de tabela fonte de dados que especifica o tipo e o local dos dados importados durante uma operação de atualização de dados. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+O **DataSource** classe no namespace AnalysisServices é uma abstração de um modelo de tabela fonte de dados que especifica o tipo e o local dos dados importados durante uma operação de atualização de dados. 
 
 Você pode adicionar uma fonte de dados para o modelo de tabela ao instanciar um objeto de uma classe derivada de **DataSource**e, em seguida, adicioná-lo para o **fontes de dados** coleção do objeto de modelo. Para confirmar as alterações para o servidor, chame **Model.SaveChanges()** ou **Database.Update(UpdateOptions.ExpandFull)**. 
 

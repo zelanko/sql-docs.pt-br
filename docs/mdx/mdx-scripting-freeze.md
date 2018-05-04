@@ -23,12 +23,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 981baf5a25d77884444320e832e35d8b16623c46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f122428b224f22dfd1899a77787ec86e65314280
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---freeze"></a>Script MDX - CONGELAR
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +69,7 @@ B = 3
   
  Agora, A é igual a 2 e B é igual a 3.  
   
-## <a name="see-also"></a>Consulte Também  
- [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Instruções de script MDX & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

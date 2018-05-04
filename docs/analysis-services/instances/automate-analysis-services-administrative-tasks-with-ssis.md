@@ -1,36 +1,25 @@
 ---
 title: Automatizar tarefas administrativas do Analysis Services com SSIS | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- Execute DDL Task [Analysis Services]
-- Analysis Services Processing task
-ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 98a501bc6b4231a8dbc1a3cabb99edbaab9e25d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tarefas administrativas do Analysis Services com SSIS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite automatizar a execução de scripts DDL, cubo e processamento de tarefas e tarefas de consulta de mineração de dados de modelo de mineração. O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser considerado como uma coleção de tarefas de manutenção e de fluxo de controle, que podem ser vinculadas para formar trabalhos de processamento de dados sequenciais e paralelos.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foi projetado para executar operações de limpeza de dados durante as tarefas de processamento de dados e reunir dados de fonte de dados diferentes. Ao trabalhar com cubos e modelos de mineração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode transformar dados não numéricos em numéricos e garantir que os valores dos dados fiquem dentro dos limites previstos, criando assim dados limpos que serão usados para preencher tabelas de fatos e dimensões.  
+ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foi projetado para executar operações de limpeza de dados durante as tarefas de processamento de dados e reunir dados de fonte de dados diferentes. Ao trabalhar com cubos e modelos de mineração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode transformar dados não numéricos em numéricos e garantir que os valores dos dados fiquem dentro dos limites previstos, criando assim dados limpos que serão usados para preencher tabelas de fatos e dimensões.  
   
 ## <a name="integration-services-tasks"></a>Tarefas do Integration Services  
  Há dois elementos principais em qualquer tarefa ou trabalho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : elementos de fluxo de controle e de fluxo de dados. Os elementos de fluxo de controle definem a ordenação lógica da progressão do trabalho aplicando restrições de precedência. Os elementos de fluxo de dados referem-se à conectividade entre a saída de um componente para a entrada do componente seguinte, além de qualquer transformação de dados que possa ocorrer no intermédio. Com relação à decisão sobre para onde vão os dados, as restrições de precedência contêm a lógica para especificar qual componente receberá a saída. As tarefas do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mais relevantes ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluem a Tarefa Executar DDL, a Tarefa Processamento do Analysis Services e a Tarefa Consulta de Mining de Dados. Para cada uma delas, a Tarefa Enviar Email pode ser usada para enviar ao administrador uma mensagem de email contendo os resultados da tarefa.  

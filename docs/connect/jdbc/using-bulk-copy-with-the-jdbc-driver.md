@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f1a53821f6a8e0354b992b8110d300e96633b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Usando cópia em massa com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -873,7 +872,7 @@ public class Program
   
 5.  Selecione **escrever uma consulta para especificar os dados a serem transferidos** e **próximo**.  Insira seu **instrução SQL** selecione ProductID, nome, ProductNumber de Production. Product e **Avançar**  
   
-6.  Verifique a configuração: você pode deixar o Delimitador de Linha como {CR}{LF} e o Delimitador de Coluna como Vírgula {,}.  Selecione **editar mapeamentos**... e verifique se os dados **tipo** está correto para cada coluna (por exemplo, inteiro para ProductID e Unicode de cadeia de caracteres para os outros).  
+6.  Verifique a configuração: você pode deixar o delimitador de linha como {CR} {LF} e o delimitador de coluna como vírgula {,}.  Selecione **editar mapeamentos**... e verifique se os dados **tipo** está correto para cada coluna (por exemplo, inteiro para ProductID e Unicode de cadeia de caracteres para os outros).  
   
 7.  Vá para **concluir** e execute a exportação.  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - variable-length bookmarks [ODBC]
@@ -22,16 +22,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: df609d905923200f7eda7477fb5bc941f8af12cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a9a8f6fb698e55e2a5de623bfa4252468ba655ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-types"></a>Tipos de indicador
-Todos os indicadores em ODBC 3*. x* são indicadores de comprimento variável. Isso permite que uma chave primária ou um índice exclusivo associado a uma tabela a ser usado como um indicador. O indicador também pode ser um valor de 32 bits, que foi usada no ODBC 2. *x*. Para especificar que um indicador é usado com um cursor, um ODBC 3*. x* aplicativo define o atributo de instrução SQL_ATTR_USE_BOOKMARK para SQL_UB_VARIABLE. Um indicador de comprimento variável será usado automaticamente.  
+Todos os indicadores em ODBC 3 *. x* são indicadores de comprimento variável. Isso permite que uma chave primária ou um índice exclusivo associado a uma tabela a ser usado como um indicador. O indicador também pode ser um valor de 32 bits, que foi usada no ODBC 2. *x*. Para especificar que um indicador é usado com um cursor, um ODBC 3 *. x* aplicativo define o atributo de instrução SQL_ATTR_USE_BOOKMARK para SQL_UB_VARIABLE. Um indicador de comprimento variável será usado automaticamente.  
   
  Um aplicativo pode chamar **SQLColAttribute** com o *FieldIdentifier* argumento definido como SQL_DESC_OCTET_LENGTH para obter o comprimento do indicador. Como um indicador de comprimento variável pode ser um valor longo, um aplicativo não deve associar a coluna 0, a menos que ele usará o indicador para muitas das linhas no conjunto de linhas.  
   
- Indicadores de comprimento fixo têm suporte somente para compatibilidade com versões anteriores. Se um ODBC 2. *x* aplicativo trabalhando com um ODBC 3*. x* driver chama **SQLSetStmtOption** para definir SQL_USE_BOOKMARKS para SQL_UB_ON, ele é mapeado para SQL_UB_VARIABLE no Gerenciador de Driver . Um indicador de comprimento variável será usado, mesmo se somente 32 bits dele são preenchidos. Se um driver dá suporte a indicadores de comprimento fixo, ela dará suporte a indicadores de comprimento variável. Se um ODBC 3*. x* aplicativo trabalhando com um ODBC 2. *x* driver chama **SQLSetStmtAttr** para definir SQL_ATTR_USE_BOOKMARKS para SQL_UB_VARIABLE, ele é mapeado para SQL_UB_ON no Gerenciador de Driver e um indicador de comprimento fixo de 32 bits é usado. O atributo da instrução SQL_ATTR_FETCH_BOOKMARK_PTR, em seguida, deve apontar para um indicador de 32 bits. Se os marcadores usados são mais de 32 bits, como quando as chaves primárias são usadas como indicadores, o cursor deve mapear os valores reais para valores de 32 bits. Ele pode, por exemplo, criar uma tabela de hash deles. Quando um ODBC 3*. x* aplicativo trabalhando com um ODBC 2. *x* driver associa um indicador, o tamanho do buffer deve ser 4.
+ Indicadores de comprimento fixo têm suporte somente para compatibilidade com versões anteriores. Se um ODBC 2. *x* aplicativo trabalhando com um ODBC 3 *. x* driver chama **SQLSetStmtOption** para definir SQL_USE_BOOKMARKS para SQL_UB_ON, ele é mapeado para SQL_UB_VARIABLE no Gerenciador de Driver . Um indicador de comprimento variável será usado, mesmo se somente 32 bits dele são preenchidos. Se um driver dá suporte a indicadores de comprimento fixo, ela dará suporte a indicadores de comprimento variável. Se um ODBC 3 *. x* aplicativo trabalhando com um ODBC 2. *x* driver chama **SQLSetStmtAttr** para definir SQL_ATTR_USE_BOOKMARKS para SQL_UB_VARIABLE, ele é mapeado para SQL_UB_ON no Gerenciador de Driver e um indicador de comprimento fixo de 32 bits é usado. O atributo da instrução SQL_ATTR_FETCH_BOOKMARK_PTR, em seguida, deve apontar para um indicador de 32 bits. Se os marcadores usados são mais de 32 bits, como quando as chaves primárias são usadas como indicadores, o cursor deve mapear os valores reais para valores de 32 bits. Ele pode, por exemplo, criar uma tabela de hash deles. Quando um ODBC 3 *. x* aplicativo trabalhando com um ODBC 2. *x* driver associa um indicador, o tamanho do buffer deve ser 4.

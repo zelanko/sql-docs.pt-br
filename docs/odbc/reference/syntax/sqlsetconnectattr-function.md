@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetConnectAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 52fe25460bc4eafa3c415cbf926aa8e016d1fad0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>Função SQLSetConnectAttr
 **Conformidade**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLSetConnectAttr** define os atributos que controlam aspectos de conexões.  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 3*. x* aplicativo estiver trabalhando com um ODBC 2*. x* driver, consulte [mapeamento de funções de substituição para recuar Compatibilidade de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 3 *. x* aplicativo estiver trabalhando com um ODBC 2 *. x* driver, consulte [mapeamento de funções de substituição para recuar Compatibilidade de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -126,9 +125,9 @@ SQLRETURN SQLSetConnectAttr(
  Os atributos definidos atualmente e a versão do ODBC no qual eles foram apresentados são mostrados na tabela mais adiante nesta seção; espera-se que mais atributos serão definidos para tirar proveito de diferentes fontes de dados. Um intervalo de atributos é reservado pelo ODBC; os desenvolvedores de driver devem reservar valores para seu próprio uso específico do driver do Open Group.  
   
 > [!NOTE]  
->  A capacidade de definir atributos de instrução no nível de conexão chamando **SQLSetConnectAttr** foi preterido no ODBC 3*. x*. ODBC 3*. x* aplicativos nunca devem definir atributos de instrução no nível de conexão. ODBC 3*. x* atributos de instrução não podem ser definidos no nível de conexão, com exceção dos atributos SQL_ATTR_METADATA_ID e SQL_ATTR_ASYNC_ENABLE, que são atributos de conexão e atributos de instrução e pode ser definir o nível de conexão ou o nível de instrução.  
+>  A capacidade de definir atributos de instrução no nível de conexão chamando **SQLSetConnectAttr** foi preterido no ODBC 3 *. x*. ODBC 3 *. x* aplicativos nunca devem definir atributos de instrução no nível de conexão. ODBC 3 *. x* atributos de instrução não podem ser definidos no nível de conexão, com exceção dos atributos SQL_ATTR_METADATA_ID e SQL_ATTR_ASYNC_ENABLE, que são atributos de conexão e atributos de instrução e pode ser definir o nível de conexão ou o nível de instrução.  
 >   
->  ODBC 3*. x* drivers necessitam suporte para essa funcionalidade somente se eles devem funcionar com ODBC 2*. x* aplicativos que definam o ODBC 2*. x* opções da instrução no nível de conexão. Para obter mais informações, consulte [SQLSetConnectOption mapeamento](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  ODBC 3 *. x* drivers necessitam suporte para essa funcionalidade somente se eles devem funcionar com ODBC 2 *. x* aplicativos que definam o ODBC 2 *. x* opções da instrução no nível de conexão. Para obter mais informações, consulte [SQLSetConnectOption mapeamento](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
  Um aplicativo pode chamar **SQLSetConnectAttr** a qualquer momento entre o momento em que a conexão é alocada e liberado. Todos os atributos de conexão e instrução definidos com êxito pelo aplicativo para a conexão persistem até **SQLFreeHandle** é chamado de conexão. Por exemplo, se um aplicativo chamar **SQLSetConnectAttr** antes de se conectar a uma fonte de dados, o atributo persiste mesmo se **SQLSetConnectAttr** falha no driver quando o aplicativo se conecta à fonte de dados; Se um aplicativo define um atributo específico do driver, o atributo persiste mesmo se o aplicativo se conecta a um driver diferente em que a conexão.  
   
@@ -172,7 +171,7 @@ SQLRETURN SQLSetConnectAttr(
   
  O formato do conjunto informações de \* *ValuePtr* buffer depende de especificado *atributo*. **SQLSetConnectAttr** aceitará as informações de atributo em um dos dois formatos diferentes: uma cadeia de caracteres terminada em nulo ou um valor inteiro. O formato de cada um é indicado na descrição do atributo. Apontada por cadeias de caracteres de *ValuePtr* argumento de **SQLSetConnectAttr** ter um comprimento de *StringLength* bytes.  
   
- O *StringLength* argumento será ignorado se o comprimento é definido pelo atributo, como é o caso para todos os atributos introduzidas no ODBC 2*. x* ou anterior.  
+ O *StringLength* argumento será ignorado se o comprimento é definido pelo atributo, como é o caso para todos os atributos introduzidas no ODBC 2 *. x* ou anterior.  
   
 |*Atributo*|*ValuePtr* conteúdo|  
 |-----------------|-------------------------|  

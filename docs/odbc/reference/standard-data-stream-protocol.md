@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56d4da0d330b83baebffbf28a825bf3c5108c6d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2de08aec6bd4a0bf876775e6d88546e720b6c46
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-data-stream-protocol"></a>Protocolo de fluxo de dados padrão
 Um protocolo de fluxo de dados padrão é uma maneira de acessar dados em DBMSs heterogêneos. Na verdade, protocolos de fluxo de dados padrão já existem: o padrão de acesso de banco de dados remoto (RDA) ANSI/ISO ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) e o IBM DRDA Distributed Relational Database Architecture () ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Embora ambos os sistemas mostram promessa, não é amplamente implementado hoje.

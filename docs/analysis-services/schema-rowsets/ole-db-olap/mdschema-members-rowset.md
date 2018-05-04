@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a199a80277c56825dad9d5ac00909244b57844d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Conjunto de linhas MDSCHEMA_MEMBERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve os membros dentro de um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descreve os membros dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_MEMBERS** linhas contém as seguintes colunas.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |**TREE_OP**|**DBTYPE_I4**|(Opcional) Só se aplica a um único membro:<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) retorna todos os ancestrais.<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) retorna somente os filhos imediatos.<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) Retorna membros no mesmo nível.<br /><br /> **MDTREEOP_PARENT** (**0x04**) retorna somente o pai imediato.<br /><br /> **MDTREEOP_SELF** (**0x08**) retorna ele mesmo na lista de linhas retornadas.<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) retorna todos os descendentes.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) A restrição padrão é um valor de 1. Um bitmap com um dos seguintes valores válidos:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSÃO|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

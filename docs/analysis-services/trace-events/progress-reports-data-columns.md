@@ -18,15 +18,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eb8a5e4ba89eb9fc56b3498829e2ab2733c74b18
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 65e1c17fed698cfc38b993c5b369037cfe63c963
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="progress-reports-data-columns"></a>Colunas de dados de relatórios de andamento
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento Progress Reports tem as seguintes classes de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  A categoria de evento Progress Reports tem as seguintes classes de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
 |------------------|--------------------|---------------------------|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contém a hora atual do evento relatado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duração|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
+|Duration|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Contém a quantidade de tempo da CPU (em milissegundos) usado pelo evento.|  
 |JobID|7|1|Contém a ID de trabalho associada ao evento relatado.|  
 |SessionType|8|8|Contém o tipo de sessão (a entidade que causa o evento) associado ao evento relatado. Para o processamento de eventos, os valores são:<br /><br /> 1 = Usuário<br /><br /> 2 = Cache pró-ativo<br /><br /> 3= Processamento lento|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contém a hora atual do evento relatado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duração|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
+|Duration|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
 |JobID|7|1|Contém a ID de trabalho associada ao evento relatado.|  
 |SessionType|8|8|Contém o tipo de sessão (a entidade que causa o evento) associado ao evento relatado. Para o processamento de eventos, os valores são:<br /><br /> 1 = Usuário<br /><br /> 2 = Cache pró-ativo<br /><br /> 3= Processamento lento|  
 |ProgressTotal|9|1|Contém o total de andamento do evento relatado.|  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/08/2018
 |TextData|42|9|Contém os dados de texto associados ao evento relatado.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que o evento relatado ocorreu.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>Consulte também  
+ [Categoria de evento de relatórios de andamento](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

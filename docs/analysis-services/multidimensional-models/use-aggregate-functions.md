@@ -1,32 +1,23 @@
 ---
 title: Use as funções de agregação | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
-ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2f882fb21fddd829be4cdc13793c4ca8b7f3cd02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-aggregate-functions"></a>Usar funções de agregação
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é **Soma**. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é **Soma**. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
   
  No Analysis Services, cada medida que você cria é apoiada por uma função de agregação que determina a operação da medida. Os tipos de agregação predefinidos incluem **Soma**, **Mín**, **Máx**, **Contagem**, **Contagem Distinta**e várias outras funções mais especializadas. Como alternativa, se você precisar de agregações com base em fórmulas complexas ou personalizadas, poderá criar um cálculo de MDX em vez de usar uma função de agregação pré-compilada. Por exemplo, se você quiser definir uma medida para um valor de porcentagem, faria isso no MDX, usando uma medida calculada. Consulte [Instrução CREATE MEMBER &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   
@@ -72,9 +63,9 @@ ms.lasthandoff: 01/08/2018
   
  Uma medida de contagem distinta que conta membros baseia-se m uma coluna de chave estrangeira da tabela de fatos. (Ou seja, a propriedade **Source Column** da medida identifica essa coluna.) Essa coluna une a coluna da tabela de dimensões que identifica os membros contados pela medida de contagem distinta.  
   
-## <a name="see-also"></a>Consulte Também  
- [Medidas e Grupos de Medidas](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Referência de função MDX &#40; MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
- [Definir um comportamento semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+## <a name="see-also"></a>Consulte também  
+ [Medidas e grupos de medidas](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Referência de função MDX & #40; MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Definir comportamento Semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Reservado limitações do Word | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,21 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14229cd0487b8beb663be255ce54f76f4fb6b5b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac61a7aa818ef3593fddc630d5027fbf7e4aa211
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="reserved-word-limitations"></a>Limitações de palavra reservada
-Não use palavras reservadas listadas na gramática SQL no Apêndice C do *referência do programador de ODBC* (ou a forma abreviada dessas palavras reservadas) como identificadores (ou seja, nomes tabela ou coluna), a menos que envolvem a palavra em aspas (').
+# <a name="reserved-keyword-limitations"></a>Limitações de palavra-chave reservada
+
+Evite usar palavras-chave reservada de ODBC como identificadores nas suas tabelas SQL ou objetos relacionados. Se um caso ímpar surgir em que você deve usar uma palavra-chave reservada como identificador, você deve delimitar o identificador com um par de *backticks* ('). Outro nome para *acento grave* é *aspa*.
+
+A limitação de palavra-chave reservada também se aplica a qualquer forma abreviada as palavras-chave reservadas.
+
+Uma lista de palavras-chave reservada de ODBC está disponível em:
+
+- [Palavras-chave reservadas de ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+
+- No *guia de referência do programador de ODBC*, consulte [gramática de SQL do apêndice c:](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+

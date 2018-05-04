@@ -1,36 +1,25 @@
 ---
 title: As regras de nomenclatura (Analysis Services) do objeto | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], naming
-ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fd846b5c3441eb653017e843e4064dd464cf7556
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras reservadas e caracteres que não podem ser usados em nomes de objetos, no código ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_Names"></a>Convenções de nomenclatura  
+##  <a name="bkmk_Names"></a> Convenções de nomenclatura  
  Todo objeto tem as propriedades **Name** e **ID** que devem ser exclusivas no escopo da coleção pai. Por exemplo, duas dimensões podem ter o mesmo nome, desde que cada uma resida em um banco de dados diferente.  
   
  Embora você possa especificar isso manualmente, a **ID** costuma ser gerada automaticamente quando o objeto é criado. Após começar a criar um modelo, nunca altere a **ID** . Todas as referências de objeto em um modelo se baseiam na **ID**. Então, a alteração de uma **ID** pode facilmente resultar na corrupção do modelo.  
@@ -47,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Não há nenhum requisito especial para o primeiro caractere de um identificador. O primeiro caractere pode ser qualquer caractere válido.  
   
-##  <a name="bkmk_reserved"></a>Caracteres e palavras reservadas  
+##  <a name="bkmk_reserved"></a> Caracteres e palavras reservadas  
  As palavras reservadas estão em inglês e se aplicam a nomes de objetos, e não a legendas. Se você usar inadvertidamente uma palavra reservada em um nome de objeto, ocorrerá um erro de validação. Nos modelos multidimensionais e de mineração de dados, as palavras reservadas descritas a seguir não podem ser usadas em qualquer objeto, a qualquer momento.  
   
  Em modelos de tabela, em que a compatibilidade do banco de dados é definida como 1103, as regras de validação foram atenuadas para certos objetos, fora de conformidade para os requisitos de caracteres estendidos e convenções de nomenclatura de determinados aplicativos cliente. Os bancos de dados que atendem a esses critérios estão sujeitos a regras de validação menos rigorosas. Nesse caso, é possível que um nome de objeto inclua um caractere restrito e ainda passe na validação.  
@@ -74,13 +63,13 @@ ms.lasthandoff: 01/08/2018
   
  A tabela a seguir lista caracteres inválidos para objetos específicos.  
   
-|Object|Caracteres inválidos|  
+|Objeto|Caracteres inválidos|  
 |------------|------------------------|  
 |**Servidor**|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
-|**DataSource**|: / \ * &#124; ? " () [] {} <>|  
-|**Level** ou **Attribute**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** ou **Hierarchy**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|Todos os outros objetos|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
+|**DataSource**|: / \ * &#124; ? "[()] {} <>|  
+|**Level** ou **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  
+|Todos os outros objetos|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} < >|  
   
  **Exceções: Quando caracteres reservados são permitidos**  
   
@@ -95,9 +84,9 @@ ms.lasthandoff: 01/08/2018
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Palavras reservadas para MDX](../../../mdx/mdx-reserved-words.md)   
  [Suporte a tradução no Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis conformidade &#40; XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [Conformidade XML for Analysis &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   

@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a32854d6619cc053d9dc9cfc28a9f17cba479f34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar SLES Cluster para o grupo de disponibilidade do SQL Server
 
@@ -189,16 +188,31 @@ Se você tiver configurado os nós de cluster existentes com o `YaST` módulo de
 
 Depois de adicionar todos os nós, verifique se você precisa ajustar a política não de quorum nas opções de cluster global. Isso é especialmente importante para clusters de dois nós. Para obter mais informações, consulte a seção de 4.1.2, opção nenhum quorum política. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Defina a propriedade cluster Iniciar falha-for-fatal como false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Definir propriedade de cluster cluster-nova verificação-intervalo
 
-`Start-failure-is-fatal` Indica se uma falha ao iniciar um recurso em um nó adicional impede as tentativas de iniciar nesse nó. Quando definido como `false`, o cluster decide se tentar iniciar no mesmo nó novamente com base no limite do recurso atual falha contagem e a migração. Assim, após o failover, começando a disponibilidade de repetições de Pacemaker recurso de grupo no primeiro primário depois que a instância do SQL está disponível. Pacemaker cuida de rebaixamento a réplica secundária e ele retoma automaticamente o grupo de disponibilidade. Além disso, se `start-failure-is-fatal` é definido como `false`, o cluster de volta aos limites configurados failcount configurados com o limite de migração. Verifique se o padrão para o limite de migração é atualizado adequadamente.
+`cluster-recheck-interval` indica o intervalo de sondagem em que o cluster verifica para alterações nos parâmetros de recursos, restrições ou outras opções de cluster. Se uma réplica falhar, o cluster tenta reiniciar a réplica em um intervalo que está vinculado a `failure-timeout` valor e o `cluster-recheck-interval` valor. Por exemplo, se `failure-timeout` é definido como 60 segundos e `cluster-recheck-interval` é definido como 120 segundos, a reinicialização é tentada em um intervalo maior que 60 segundos, mas com menos de 120 segundos. É recomendável que você defina o tempo limite de falha para 60 e cluster--intervalo de nova verificação para um valor maior que 60 segundos. Não é recomendável definir o intervalo da nova verificação de cluster para um valor pequeno.
 
-Para atualizar o valor da propriedade para executar false:
+Para atualizar o valor da propriedade `2 minutes` executar:
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-Se a propriedade tem o valor padrão de `true`, se a primeira tentativa de iniciar o recurso falhar, a intervenção do usuário é necessária após um failover automático para limpar a contagem de falhas de recurso e redefinir a configuração usando: `sudo crm resource cleanup <resourceName>` comando.
+
+> [!IMPORTANT] 
+> Se você já tiver um recurso de grupo de disponibilidade gerenciado por um cluster Pacemaker, observe que todas as distribuições que usam o mais recente disponível Pacemaker pacote 1.1.18-11.el7 introduzem uma alteração de comportamento para o cluster Iniciar falha-for-fatal configuração quando seu valor é false. Esta alteração afeta o fluxo de trabalho de failover. Se uma réplica primária passa por uma interrupção, o cluster é esperado para failover em uma das réplicas secundárias disponíveis. Em vez disso, os usuários vai notar que o cluster continua tentando iniciar a réplica primária com falha. Se esse primário nunca ficar online (devido a uma interrupção permanente), o cluster nunca failover para outra réplica secundária disponível. Devido a essa alteração, uma configuração recomendada anteriormente para definir o início falha-for-fatal não é mais válida e a configuração deve ser revertido para seu valor padrão de `true`. Além disso, o recurso de grupo de disponibilidade precisa ser atualizado para incluir o `failover-timeout` propriedade. 
+>
+>Para atualizar o valor da propriedade `true` executar:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>Atualizar a propriedade de recurso existente do AG `failure-timeout` para `60s` executado (substituir `ag1` com o nome do recurso de grupo de disponibilidade): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 Para obter mais informações sobre propriedades de cluster Pacemaker, consulte [configurar recursos de Cluster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
@@ -239,22 +253,23 @@ Execute o comando em um de nós no cluster:
 1. No prompt do crm, execute o seguinte comando para configurar as propriedades do recurso.
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

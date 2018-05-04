@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bd1841fa5f4f64e05a6ba4e82464c83d89596f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Tipo de retorno  
  \<referência de coluna escalar >  
   
- ou em  
+ ou  
   
  \<referência de coluna de tabela >  
   
@@ -65,7 +64,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  O parâmetro INCLUDE_NODE_ID retorna a coluna $NODEID no resultado. NODE_ID é o nó de conteúdo no qual a previsão é executada para um caso particular. Esse parâmetro é opcional ao usar a previsão em colunas de tabela.  
   
- O  *n*  parâmetro se aplica a colunas de tabela. Define o número de linhas retornadas com base no tipo de previsão. Se a coluna subjacente for sequência, chamará o **PredictSequence** função. Se a coluna subjacente for série temporal, chamará o **PredictTimeSeries** função. Para tipos associativos de previsão, ele chama o **PredictAssociation** função.  
+ O *n* parâmetro se aplica a colunas de tabela. Define o número de linhas retornadas com base no tipo de previsão. Se a coluna subjacente for sequência, chamará o **PredictSequence** função. Se a coluna subjacente for série temporal, chamará o **PredictTimeSeries** função. Para tipos associativos de previsão, ele chama o **PredictAssociation** função.  
   
  O **prever** função oferece suporte a polimorfismo.  
   
@@ -100,9 +99,9 @@ FROM     [Association]
 |Patch Kit|2113|0.142012232004839|0.132389356196586|  
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
-## <a name="see-also"></a>Consulte Também  
- [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

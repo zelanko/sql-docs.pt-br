@@ -1,31 +1,23 @@
 ---
-title: "Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5748a659aad37878869135c6a3d8358880979fe7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma instância de serviço compartilhado do Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicativo de serviço tem sua própria identidade, definições de configuração, propriedades e armazenamento de dados interno.  
+  Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma instância de serviço compartilhado do Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicativo de serviço tem sua própria identidade, definições de configuração, propriedades e armazenamento de dados interno.  
   
  Este tópico contém as seguintes seções:  
   

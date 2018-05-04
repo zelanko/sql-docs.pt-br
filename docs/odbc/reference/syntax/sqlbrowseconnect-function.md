@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBrowseConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 34fbd05bcdec421ee9a00474f939d54219f7b321
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Função SQLBrowseConnect
 **Conformidade**  
@@ -124,7 +123,7 @@ SQLRETURN SQLBrowseConnect(
  *attribute-value* ::= *character-string*<br>
  *driver-defined-attribute-keyword* ::= *identifier*<br>
   
- onde *cadeia de caracteres* tem zero ou mais caracteres; *identificador* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; *atributo-valor* pode diferenciar maiusculas de minúsculas; e o valor da **DSN** palavra-chave não ser formado apenas por espaços em branco. Devido à conexão cadeia de caracteres e inicialização gramática, palavras-chave e atributo valores do arquivo que contenha os caracteres **[] {} (),? \*=! @** devem ser evitadas. Devido a gramática nas informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres. Para ODBC 2. *x* driver, chaves são necessárias ao redor do valor de atributo para a palavra-chave DRIVER.  
+ onde *cadeia de caracteres* tem zero ou mais caracteres; *identificador* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; *atributo-valor* pode diferenciar maiusculas de minúsculas; e o valor da **DSN** palavra-chave não ser formado apenas por espaços em branco. Devido à conexão cadeia de caracteres e inicialização gramática, palavras-chave e atributo valores do arquivo que contenha os caracteres **[]{}(),? \*=! @** devem ser evitadas. Devido a gramática nas informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres. Para ODBC 2. *x* driver, chaves são necessárias ao redor do valor de atributo para a palavra-chave DRIVER.  
   
  Se quaisquer palavras-chave é repetidos na cadeia de conexão de solicitação de procura, o driver usará o valor associado com a primeira ocorrência da palavra-chave. Se o **DSN** e **DRIVER** palavras-chave são incluídas na mesma cadeia de conexão de solicitação de procura, o Gerenciador de Driver e o driver usam a palavra-chave aparece primeiro.  
   
@@ -139,7 +138,7 @@ SQLRETURN SQLBrowseConnect(
  *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
  *lista de valores de atributo* :: = *cadeia de caracteres* [`:`*cadeia de caracteres localizada*] &#124; *cadeia de caracteres* [`:` *cadeia de caracteres localizada*] `,` *lista de valores de atributo*<br>
   
- onde *cadeia de caracteres* e *cadeia de caracteres localizada* ter zero ou mais caracteres; *identificador* e *identificador localizado* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; e *atributo-valor* pode diferenciar maiusculas de minúsculas. Devido à conexão cadeia de caracteres de inicialização gramática, palavras-chave, localizados identificadores de arquivo e valores de atributo que contém os caracteres **[] {} (),? \*=! @** devem ser evitadas. Devido a gramática nas informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
+ onde *cadeia de caracteres* e *cadeia de caracteres localizada* ter zero ou mais caracteres; *identificador* e *identificador localizado* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; e *atributo-valor* pode diferenciar maiusculas de minúsculas. Devido à conexão cadeia de caracteres de inicialização gramática, palavras-chave, localizados identificadores de arquivo e valores de atributo que contém os caracteres **[]{}(),? \*=! @** devem ser evitadas. Devido a gramática nas informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
   
  A sintaxe de cadeia de conexão de resultado de procura é usada de acordo com as regras semânticas a seguir:  
   
@@ -151,7 +150,7 @@ SQLRETURN SQLBrowseConnect(
   
 -   *ODBC-atributo-palavras-chave* e *-definido-atributo-palavras-chave driver* incluem uma versão localizada ou amigável da palavra-chave. Isso pode ser usado por aplicativos como um rótulo na caixa de diálogo. No entanto, **UID**, **PWD**, ou o *identificador* sozinho, deve ser usado ao passar uma cadeia de caracteres de solicitação de navegação para o driver.  
   
--   O {*lista de valores de atributo*} é uma enumeração dos valores reais válido para o correspondente *palavra-chave de atributo*. Observe que as chaves ({}) não indicam uma lista de opções; eles são retornados pelo driver. Por exemplo, ele pode ser uma lista de nomes de servidor ou uma lista de nomes de banco de dados.  
+-   O {*lista de valores de atributo*} é uma enumeração dos valores reais válido para o correspondente *palavra-chave de atributo*. Observe que as chaves ({}) não indicam uma lista de opções; elas são retornadas pelo driver. Por exemplo, ele pode ser uma lista de nomes de servidor ou uma lista de nomes de banco de dados.  
   
 -   Se o *atributo-valor* é um ponto único de interrogação (?), um único valor corresponde do *palavra-chave de atributo*. Por exemplo, UID = JohnS; PWD = Sesame.  
   

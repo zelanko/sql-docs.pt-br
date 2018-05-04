@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 402d5b6c01142334ed38a73b96da9f0eb635f1c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2e3f1dc1e8f0e8cf67ac97c33a7ab6b7137cdd7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>Mapeamentos de SQLSTATE
 Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e ODBC 3. *x*. Para obter mais informações sobre ODBC 3. *x* valores SQLSTATE, consulte [códigos de erro de ODBC do apêndice a:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -35,7 +34,7 @@ Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e ODBC 3. *x*. Para
   
  Quando um ODBC 2. *x* aplicativo é atualizado para um ODBC 3. *x* aplicativo, o aplicativo deve ser alterada para esperar o ODBC 3. *x* SQLSTATEs, em vez de ODBC 2. *x* SQLSTATEs. A tabela a seguir lista o ODBC 3. *x* SQLSTATEs que cada ODBC 2. *x* SQLSTATE é mapeado para.  
   
- Quando o atributo de ambiente SQL_ATTR_ODBC_VERSION é definido como SQL_OV_ODBC2, o driver envia o ODBC 2. *x* SQLSTATEs, em vez de ODBC 3. *x* SQLSTATEs quando **SQLGetDiagField** ou **SQLGetDiagRec** é chamado. Um mapeamento específico pode ser determinado observando o ODBC 2*. x* SQLSTATE na coluna 1 da tabela a seguir que corresponde ao ODBC 3. *x* SQLSTATE na coluna 2.  
+ Quando o atributo de ambiente SQL_ATTR_ODBC_VERSION é definido como SQL_OV_ODBC2, o driver envia o ODBC 2. *x* SQLSTATEs, em vez de ODBC 3. *x* SQLSTATEs quando **SQLGetDiagField** ou **SQLGetDiagRec** é chamado. Um mapeamento específico pode ser determinado observando o ODBC 2 *. x* SQLSTATE na coluna 1 da tabela a seguir que corresponde ao ODBC 3. *x* SQLSTATE na coluna 2.  
   
 |ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Comentários|  
 |-------------------------|-------------------------|--------------|  

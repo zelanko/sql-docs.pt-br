@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Função SQLGetDiagField
 **Conformidade**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  Drivers podem definir o cabeçalho específico do driver e campos de registro na estrutura de dados de diagnóstico.  
   
- Um ODBC 3*. x* aplicativo trabalhando com um ODBC 2*. x* driver poderá chamar **SQLGetDiagField** somente com um *DiagIdentifier* argumento de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Todos os outros campos de diagnósticos retornará SQL_ERROR.  
+ Um ODBC 3 *. x* aplicativo trabalhando com um ODBC 2 *. x* driver poderá chamar **SQLGetDiagField** somente com um *DiagIdentifier* argumento de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Todos os outros campos de diagnósticos retornará SQL_ERROR.  
   
 ## <a name="header-fields"></a>Campos de cabeçalho  
  Os campos de cabeçalho listados na tabela a seguir podem ser incluídos no *DiagIdentifier* argumento.  
@@ -240,7 +239,7 @@ n-definição *|"CRIAR DOMÍNIO"|SQL_DIAG_CREATE_DOMAIN|
 -   Para todos os registros que pertencem às linhas específicas, os registros são classificados pelo valor no campo SQL_DIAG_ROW_NUMBER. Todos os erros e avisos da primeira linha afetados são listados e, em seguida, todos os erros e avisos da próxima linha afetada e assim por diante.  
   
 > [!NOTE]  
->  O ODBC 3*. x* Gerenciador de Driver não solicitar registros de status na fila de diagnóstico se SQLSTATE 01S01 (erro na linha) é retornado por um ODBC 2*. x* driver ou se SQLSTATE 01S01 (linha) será retornado pelo ODBC 3*. x* driver quando **SQLExtendedFetch** é chamado ou **SQLSetPos** é chamado em um cursor que tenha sido posicionado com **SQLExtendedFetch** .  
+>  O ODBC 3 *. x* Gerenciador de Driver não solicitar registros de status na fila de diagnóstico se SQLSTATE 01S01 (erro na linha) é retornado por um ODBC 2 *. x* driver ou se SQLSTATE 01S01 (linha) será retornado pelo ODBC 3 *. x* driver quando **SQLExtendedFetch** é chamado ou **SQLSetPos** é chamado em um cursor que tenha sido posicionado com **SQLExtendedFetch** .  
   
  Em cada linha, ou para todos os registros que não correspondem a uma linha ou para o qual o número de linhas é desconhecido, ou para todos os registros com um número de linhas igual a SQL_NO_ROW_NUMBER, o primeiro registro listado é determinado por meio de um conjunto de regras de classificação. Após o primeiro registro, a ordem dos outros registros que afeta uma linha é indefinida. Um aplicativo não pode assumir que os erros precedem avisos após o primeiro registro. Examine a estrutura de dados de diagnóstico completo para obter informações completas sobre uma chamada bem-sucedida para uma função de aplicativos.  
   

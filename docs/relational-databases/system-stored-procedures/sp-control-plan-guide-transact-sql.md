@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Permite que o guia de plano especificado por *plan_guide_name*. Um guia de plano pode ser vinculado a uma consulta elegível após ser habilitado. Por padrão, os guias de plano são habilitados no momento de sua criação.  
   
  ENABLE ALL  
- Habilita todos os guias de plano no banco de dados atual. **N'***plan_guide_name***'**não pode ser especificado quando ENABLE ALL está especificado.  
+ Habilita todos os guias de plano no banco de dados atual. **N'***plan_guide_name***'** não pode ser especificado quando ENABLE ALL está especificado.  
   
 ## <a name="remarks"></a>Remarks  
  A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro.  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Guias de planos não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). No entanto, você pode executar **sp_control_plan_guide** com a opção DROP ou DROP ALL em qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Permissões  
- Para executar **sp_control_plan_guide** em um guia de plano do tipo OBJECT (criado especificando  **@type ='**objeto**'** ) requer a permissão ALTER no objeto que é referenciado pelo guia de plano. Todos os outros guias de plano requerem permissão ALTER DATABASE.  
+ Para executar **sp_control_plan_guide** em um guia de plano do tipo OBJECT (criado especificando  **@type ='** objeto **'** ) requer a permissão ALTER no objeto que é referenciado pelo guia de plano. Todos os outros guias de plano requerem permissão ALTER DATABASE.  
   
 ## <a name="examples"></a>Exemplos  
   

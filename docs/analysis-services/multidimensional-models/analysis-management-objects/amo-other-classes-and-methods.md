@@ -1,38 +1,19 @@
 ---
-title: "AMO outras Classes e métodos | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- AmoException class [AMO]
-- Analysis Management Objects, backup and restore
-- assembly objects [AMO]
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 
-author: Minewiskan
+title: AMO outras Classes e métodos | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9923daa4b7cb9b504fde047f073579279b3d05e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Outras classes e métodos AMO
   Esta seção contém classes comuns que não são específicas ao OLAP ou à mineração de dados e que são úteis para administrar ou gerenciar objetos em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Essas classes abordam recursos como procedimentos armazenados, rastreamento, exceções e backup e restauração.  
@@ -53,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
  ![Outras Classes no AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "outras Classes no AMO")  
   
-##  <a name="Assembly">Objetos de assembly</a>  
+##  <a name="Assembly"></a> Objetos de assembly  
  Um objeto <xref:Microsoft.AnalysisServices.Assembly> é criado ao ser adicionado à coleção de assemblies do servidor e pela atualização do objeto <xref:Microsoft.AnalysisServices.Assembly> para o servidor por meio do método Update.  
   
  Para remover um <xref:Microsoft.AnalysisServices.Assembly> do objeto, ele terá de ser descartado por meio do método Drop do <xref:Microsoft.AnalysisServices.Assembly> objeto. Remover um objeto <xref:Microsoft.AnalysisServices.Assembly> da coleção de assemblies do banco de dados não descartará o assembly, só impedirá que você o veja em seu aplicativo até a próxima vez em que ele for executado.  
@@ -63,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 > [!IMPORTANT]  
 >  Os assemblies COM podem representar um risco à segurança. Devido a esse risco e outras considerações, os assemblies COM foram preteridos no [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]. Talvez não haja suporte para assemblies COM em versões futuras.  
   
-##  <a name="Backup">Métodos de backup e restauração</a>  
+##  <a name="Backup"></a> Métodos de backup e restauração  
  Backup e Restore são métodos que podem ser usados na criação de cópias de um banco de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e na recuperação do banco de dados usando a cópia. O método Backup pertence ao objeto <xref:Microsoft.AnalysisServices.Database> e o método Restore pertence ao objeto <xref:Microsoft.AnalysisServices.Server>.  
   
  Somente os administradores de servidor e de banco de dados podem executar um backup de um banco de dados. Somente os administradores de servidor podem restaurar um banco de dados em um servidor diferente de onde foi feito o backup. Os administradores de banco de dados só poderão restaurar um banco de dados substituindo o banco de dados existente se forem proprietários do banco de dados que será substituído. Depois de uma restauração, o administrador de banco de dados poderá perder acesso ao banco de dados restaurado se ele for restaurado com suas definições de segurança originais.  
@@ -116,7 +97,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **Senha**, caso não esteja em branco, especifica que o servidor criptografará o arquivo de backup.  
   
-##  <a name="Traces">Objetos de rastreamento</a>  
+##  <a name="Traces"></a> Objetos de rastreamento  
  O rastreamento é uma estrutura usada por monitorar, reproduzir novamente e gerenciar uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Um aplicativo cliente, como [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], assina um rastreamento e o servidor retorna eventos de rastreamento como especificado na definição de rastreamento.  
   
  Cada evento é descrito por uma classe de evento. O tipo de classe de evento descreve o tipo de evento gerado. Em uma classe de evento, as subclasses descrevem um nível mais refinado de categorização. Cada evento é descrito por um número de colunas. As colunas que descrevem um evento de rastreamento são consistentes para todos os eventos e são compatíveis com a estrutura de rastreamento do SQL. As informações registradas em cada coluna podem variar dependendo da classe de evento; ou seja, um conjunto predefinido de colunas é definido para cada rastreamento, mas o significado da coluna pode variar dependendo da classe de evento. Por exemplo, a coluna TextData é usada para registrar a ASSL original para todos os eventos de instrução.  
@@ -155,14 +136,14 @@ ms.lasthandoff: 02/15/2018
   
 6.  Prossiga com o seu aplicativo.  
   
-##  <a name="CaptureLog">Classe CaptureLog e atributo CaptureXML</a>  
+##  <a name="CaptureLog"></a> Classe CaptureLog e atributo CaptureXML  
  Todas as ações a serem executadas pelo AMO são enviadas para o servidor como mensagens XMLA. O AMO oferece os meios para a captura de todas essas mensagens sem os cabeçalhos SOAP. Para obter mais informações, consulte [apresentando as Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md). CaptureLog é o mecanismo do AMO para a geração de scripts para objetos e operações; os objetos e as operações serão incluídos em scripts no XMLA.  
   
  Para iniciar a captura do XML, a propriedade do objeto de servidor CaptureXML precisa ser definido como **true**. Em seguida, todas as ações que precisam ser enviadas ao servidor começarão a ser capturadas na classe CaptureLog, sem serem enviadas ao servidor. CaptureLog é considerada como classe porque possui um método, Clear, usado para limpar o log de captura.  
   
  Para ler o log, obtenha a a coleção de cadeias de caracteres e inicie a iteração pelas cadeias de caracteres. Além disso, você pode concatenar todos os logs em uma cadeia de caracteres usando o método de objeto de servidor ConcatenateCaptureLog. ConcatenateCaptureLog possui três parâmetros, dois deles obrigatórios. Os parâmetros necessários são *transacional*, do tipo booliano, e *paralela*, do tipo booliano. Se *transacional* é definido como **true**, ele indica que o arquivo em lotes XML será criado como uma única transação em vez de cada comando ser tratado como uma transação separada. Se *paralela* é definido como **true**, ele indica que todos os comandos no arquivo de lote serão registrados para a execução simultânea em vez de sequencialmente como foram registrados.  
   
-##  <a name="AMO">Classe de exceção AMOException</a>  
+##  <a name="AMO"></a> Classe de exceção AMOException  
  Você pode usar a classe de exceção AMOException para capturar facilmente as exceções em seu lançadas em seu aplicativo pelo AMO.  
   
  O AMO lançará exceções quando problemas diferentes forem encontrados. A tabela a seguir lista o tipo de exceções manipuladas pelo AMO. As exceções são derivadas da classe de <xref:Microsoft.AnalysisServices.AmoException>.  
@@ -178,7 +159,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices>   
  [Introdução às Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Arquitetura lógica &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Arquitetura lógica & #40; Analysis Services - dados multidimensionais & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

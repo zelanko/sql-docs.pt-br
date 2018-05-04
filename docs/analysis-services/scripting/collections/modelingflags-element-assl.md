@@ -27,15 +27,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87e7f0360b5a36fd6e4b31ddd36579fa845787f1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0e0f2f181a7d4379f7768f23f35b56f80e042b05
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modelingflags-element-assl"></a>Elemento ModelingFlags (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém a coleção de [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) elementos de uma coluna em uma [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) ou um [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contém a coleção de [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) elementos de uma coluna em uma [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) ou um [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
-|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|Comprimento e tipo de dados|Nenhuma|  
+|Valor padrão|Nenhuma|  
+|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   
-## <a name="see-also"></a>Consulte Também  
- [Coleções de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Coleções de & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

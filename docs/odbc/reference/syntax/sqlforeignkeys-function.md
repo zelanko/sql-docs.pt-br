@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLForeignKeys
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 935c3236085794ef0d9cb4acb18568c4309fd191
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02608a02190062b3530d27466d6ec319cf71b8f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlforeignkeys-function"></a>Função SQLForeignKeys
 **Conformidade**  
@@ -164,9 +163,9 @@ SQLRETURN SQLForeignKeys(
   
  Os comprimentos das colunas VARCHAR não são mostrados na tabela; os comprimentos reais dependem da fonte de dados. Para determinar os comprimentos reais do PKTABLE_CAT ou FKTABLE_CAT, PKTABLE_SCHEM ou FKTABLE_SCHEM, PKTABLE_NAME ou FKTABLE_NAME e PKCOLUMN_NAME ou FKCOLUMN_NAME colunas, um aplicativo pode chamar **SQLGetInfo** com o SQL_MAX_ Opções de CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN e SQL_MAX_COLUMN_NAME_LEN.  
   
- As seguintes colunas foram renomeadas para ODBC 3*. x.* As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar pelo número de coluna.  
+ As seguintes colunas foram renomeadas para ODBC 3 *. x.* As alterações de nome de coluna não afetam a compatibilidade com versões anteriores, porque aplicativos associar pelo número de coluna.  
   
-|Coluna de ODBC 2.0|ODBC 3*. x* coluna|  
+|Coluna de ODBC 2.0|ODBC 3 *. x* coluna|  
 |---------------------|-----------------------|  
 |PKTABLE_QUALIFIER|PKTABLE_CAT|  
 |PKTABLE_OWNER|PKTABLE_SCHEM|  
@@ -186,8 +185,8 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_NAME (ODBC 1.0)|7|Varchar não nulo|Nome da tabela de chave estrangeira.|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|Varchar não nulo|Nome da coluna de chave estrangeira. O driver retorna uma cadeia de caracteres vazia para uma coluna que não tem um nome.|  
 |KEY_SEQ (ODBC 1.0)|9|Smallint não NULL|Número de sequência da coluna na chave (começando com 1).|  
-|UPDATE_RULE (ODBC 1.0)|10|Smallint|Ação a ser aplicado à chave estrangeira quando a operação SQL é **atualização**. Pode ter um dos valores a seguir. (A tabela referenciada é a tabela que tem a chave primária; a tabela de referência é a tabela que tem a chave estrangeira).<br /><br /> SQL_CASCADE: Quando a chave primária da tabela referenciada for atualizada, a chave estrangeira da tabela de referência também é atualizada.<br /><br /> SQL_NO_ACTION: Se uma atualização da chave primária da tabela de referência causaria uma "referência pendentes" na tabela de referência (isto é, linhas na tabela de referência teria não correspondentes na tabela de referência), a atualização será rejeitada. Se uma atualização da chave estrangeira da tabela de referência introduziria um valor que não existe como um valor da chave primária da tabela referenciada, a atualização será rejeitada. (Essa ação é o mesmo que a ação de SQL_RESTRICT no ODBC 2*. x*.)<br /><br /> SQL_SET_NULL: Quando uma ou mais linhas na tabela de referência são atualizadas de forma que um ou mais componentes da chave primária são alterados, os componentes da chave estrangeira na tabela de referência que correspondem aos componentes alterados da chave primária são definidos como NULL em todas as linhas correspondentes da tabela de referência.<br /><br /> SQL_SET_DEFAULT: Quando uma ou mais linhas na tabela de referência são atualizadas de forma que um ou mais componentes da chave primária são alterados, os componentes da chave estrangeira na tabela de referência que correspondem aos componentes alterados da chave primária são Defina como os valores padrão aplicáveis em todas as linhas correspondentes da tabela de referência.<br /><br /> NULL se não for aplicável à fonte de dados.|  
-|DELETE_RULE (ODBC 1.0)|11|Smallint|Ação a ser aplicado à chave estrangeira quando a operação SQL é **excluir**. Pode ter um dos valores a seguir. (A tabela referenciada é a tabela que tem a chave primária; a tabela de referência é a tabela que tem a chave estrangeira).<br /><br /> SQL_CASCADE: Quando uma linha na tabela referenciada for excluída, todas as linhas correspondentes nas tabelas de referência também são excluídas.<br /><br /> SQL_NO_ACTION: Se uma exclusão de uma linha na tabela de referência causaria uma "pendentes referência" na tabela de referência (isto é, linhas na tabela de referência teria não correspondentes na tabela de referência), a atualização será rejeitada. (Essa ação é o mesmo que a ação de SQL_RESTRICT no ODBC 2*. x*.)<br /><br /> SQL_SET_NULL: Quando uma ou mais linhas na tabela de referência são excluídas, cada componente da chave estrangeira da tabela de referência é definida como NULL em todas as linhas correspondentes da tabela de referência.<br /><br /> SQL_SET_DEFAULT: Quando uma ou mais linhas na tabela de referência são excluídas, cada componente da chave estrangeira da tabela de referência é definida como o padrão aplicável em todas as linhas correspondentes da tabela de referência.<br /><br /> NULL se não for aplicável à fonte de dados.|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|Ação a ser aplicado à chave estrangeira quando a operação SQL é **atualização**. Pode ter um dos valores a seguir. (A tabela referenciada é a tabela que tem a chave primária; a tabela de referência é a tabela que tem a chave estrangeira).<br /><br /> SQL_CASCADE: Quando a chave primária da tabela referenciada for atualizada, a chave estrangeira da tabela de referência também é atualizada.<br /><br /> SQL_NO_ACTION: Se uma atualização da chave primária da tabela de referência causaria uma "referência pendentes" na tabela de referência (isto é, linhas na tabela de referência teria não correspondentes na tabela de referência), a atualização será rejeitada. Se uma atualização da chave estrangeira da tabela de referência introduziria um valor que não existe como um valor da chave primária da tabela referenciada, a atualização será rejeitada. (Essa ação é o mesmo que a ação de SQL_RESTRICT no ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL: Quando uma ou mais linhas na tabela de referência são atualizadas de forma que um ou mais componentes da chave primária são alterados, os componentes da chave estrangeira na tabela de referência que correspondem aos componentes alterados da chave primária são definidos como NULL em todas as linhas correspondentes da tabela de referência.<br /><br /> SQL_SET_DEFAULT: Quando uma ou mais linhas na tabela de referência são atualizadas de forma que um ou mais componentes da chave primária são alterados, os componentes da chave estrangeira na tabela de referência que correspondem aos componentes alterados da chave primária são Defina como os valores padrão aplicáveis em todas as linhas correspondentes da tabela de referência.<br /><br /> NULL se não for aplicável à fonte de dados.|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|Ação a ser aplicado à chave estrangeira quando a operação SQL é **excluir**. Pode ter um dos valores a seguir. (A tabela referenciada é a tabela que tem a chave primária; a tabela de referência é a tabela que tem a chave estrangeira).<br /><br /> SQL_CASCADE: Quando uma linha na tabela referenciada for excluída, todas as linhas correspondentes nas tabelas de referência também são excluídas.<br /><br /> SQL_NO_ACTION: Se uma exclusão de uma linha na tabela de referência causaria uma "pendentes referência" na tabela de referência (isto é, linhas na tabela de referência teria não correspondentes na tabela de referência), a atualização será rejeitada. (Essa ação é o mesmo que a ação de SQL_RESTRICT no ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL: Quando uma ou mais linhas na tabela de referência são excluídas, cada componente da chave estrangeira da tabela de referência é definida como NULL em todas as linhas correspondentes da tabela de referência.<br /><br /> SQL_SET_DEFAULT: Quando uma ou mais linhas na tabela de referência são excluídas, cada componente da chave estrangeira da tabela de referência é definida como o padrão aplicável em todas as linhas correspondentes da tabela de referência.<br /><br /> NULL se não for aplicável à fonte de dados.|  
 |COLUNAS FK_NAME (ODBC 2.0)|12|Varchar|Nome da chave estrangeira. NULL se não for aplicável à fonte de dados.|  
 |PK_NAME (ODBC 2.0)|13|Varchar|Nome da chave primária. NULL se não for aplicável à fonte de dados.|  
 |ADIAMENTO (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE.|  

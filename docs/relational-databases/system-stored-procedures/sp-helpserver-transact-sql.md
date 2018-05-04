@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0b385ddfdb140f38614e4082b45ada8a8140e4f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  É o servidor sobre o qual as informações são relatadas. Quando *servidor* não for especificado, relatórios sobre todos os servidores em **Master.sys**. *servidor* é **sysname**, com um padrão NULL.  
   
  [  **@optname =** ] **'***opção***'**  
- É a opção que descreve o servidor. *opção* é **varchar (**35**)**, com um padrão NULL, e deve ser um destes valores.  
+ É a opção que descreve o servidor. *opção* é **varchar (** 35 **)**, com um padrão NULL, e deve ser um destes valores.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -69,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**usar agrupamento remoto**|Usa o agrupamento de uma coluna remota em vez do servidor local.|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- É a relação do servidor especificado com outros servidores. *show_topology* é **varchar (**1**)**, com um padrão NULL. Se *show_topology* não é igual a **t** ou for NULL, **sp_helpserver** retornará as colunas listadas na seção de conjuntos de resultados. Se *show_topology* é igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retorna **topx** e **topy** informações.  
+ É a relação do servidor especificado com outros servidores. *show_topology* é **varchar (** 1 **)**, com um padrão NULL. Se *show_topology* não é igual a **t** ou for NULL, **sp_helpserver** retornará as colunas listadas na seção de conjuntos de resultados. Se *show_topology* é igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retorna **topx** e **topy** informações.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha).  
@@ -80,8 +79,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome de servidor.|  
 |**network_name**|**sysname**|Nome da rede do servidor.|  
-|**status**|**varchar (**70**)**|Status do servidor.|  
-|**id**|**char (**4**)**|Número de identificação do servidor.|  
+|**status**|**varchar (** 70 **)**|Status do servidor.|  
+|**id**|**char (** 4 **)**|Número de identificação do servidor.|  
 |**collation_name**|**sysname**|Agrupamento do servidor.|  
 |**connect_timeout**|**Int**|O valor do tempo limite para conexão com um servidor vinculado.|  
 |**query_timeout**|**Int**|O valor do tempo limite para as consultas em servidor vinculado.|  

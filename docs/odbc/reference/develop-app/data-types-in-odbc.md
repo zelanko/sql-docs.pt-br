@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6be1e147ad1e2b59f8742f7656ca24c86c055f2b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d61cf3aa4d755f93ddf5603d9a25a96cb020a0fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-in-odbc"></a>Tipos de dados ODBC
 ODBC usa dois conjuntos de tipos de dados: SQL tipos de dados e tipos de dados C. Tipos de dados SQL são usados na fonte de dados e tipos de dados C são usados no código C no aplicativo.  

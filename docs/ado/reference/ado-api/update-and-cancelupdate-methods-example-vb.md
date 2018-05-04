@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af532ecc0bd593639513dfae0c7e06d05388592a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: fc28c3beaf0bca23f086a33331dd15691ad7fe83
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Exemplo dos métodos CancelUpdate (VB) e atualização
 Este exemplo demonstra o [atualização](../../../ado/reference/ado-api/update-method.md) método junto com o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  

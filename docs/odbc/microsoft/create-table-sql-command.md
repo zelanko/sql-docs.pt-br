@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d9a5156a3de623b34976fbc0422bb82f67692c1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table---sql-command"></a>Criar tabela - comando SQL
 Cria uma tabela com os campos especificados.  
@@ -127,7 +126,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Uma tabela pode ter vários índices de candidato.  
   
  CHAVE estrangeira *eExpression4*marca *TagName4*[NODUP]  
- Cria um índice (as) externo e estabelece uma relação com uma tabela pai. *eExpression4* Especifica a expressão de chave estrangeira de índice, e *TagName4* Especifica o nome da marca chave estrangeira de índice é criado*.* Nomes de marca de índice podem conter até 10 caracteres. Inclua NODUP para criar um índice externo do candidato.  
+ Cria um índice (as) externo e estabelece uma relação com uma tabela pai. *eExpression4* Especifica a expressão de chave estrangeira de índice, e *TagName4* Especifica o nome da marca chave estrangeira de índice é criado *.* Nomes de marca de índice podem conter até 10 caracteres. Inclua NODUP para criar um índice externo do candidato.  
   
  Você pode criar vários índices da tabela externos, mas as expressões de índice externa devem especificar campos diferentes na tabela.  
   

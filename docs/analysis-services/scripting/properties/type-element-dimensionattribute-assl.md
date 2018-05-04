@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 652e0ca8726ba1e5b6ddfec11225929ea6416675
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém o tipo do atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contém o tipo do atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,20 +50,20 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
 |Valor padrão|*Regular*|  
-|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|Nenhuma|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/08/2018
 |*AddressStreet*|O atributo representa a rua do endereço.|  
 |*AddressZip*|O atributo representa o código postal (CEP) do endereço.|  
 |*BOMResource*|O atributo representa um recurso de uma conta de materiais (BOM).|  
-|*Legenda*|O atributo representa uma legenda.|  
+|*Caption*|O atributo representa uma legenda.|  
 |*CaptionAbbreviation*|O atributo representa uma abreviação.|  
 |*CaptionDescription*|O atributo representa uma descrição.|  
 |*Canal*|O atributo representa um canal.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/08/2018
 |*CurrencySource*|O atributo representa a moeda de origem de um câmbio monetário.|  
 |*CustomerGroup*|O atributo representa um grupo de clientes.|  
 |*CustomerHousehold*|O atributo representa uma casa de clientes.|  
-|*Clientes*|O atributo representa um cliente.|  
+|*Customers*|O atributo representa um cliente.|  
 |*Data*|O atributo representa uma data.|  
 |*DateCanceled*|O atributo representa uma data de cancelamento.|  
 |*DateDuration*|O atributo representa uma duração.|  
@@ -160,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 |*HalfYears*|O atributo representa semestres.|  
 |*HalfYearsOfYear*|O atributo representa o ordinal de semestre de um ano.|  
 |*Horas*|O atributo representa horas.|  
-|*ID*|O atributo representa um identificador ou chave.|  
+|*Id*|O atributo representa um identificador ou chave.|  
 |*IsHoliday*|O atributo indica se uma data é um feriado.|  
 |*ISO8601DayOfWeek*|O atributo representa o ordinal de dia de uma semana em um calendário ISO 8601.|  
 |*ISO8601DayOfYear*|O atributo representa o ordinal de dia de um ano em um calendário ISO 8601.|  
@@ -202,7 +202,7 @@ ms.lasthandoff: 01/08/2018
 |*MonthOfTrimester*|O atributo representa o ordinal de mês de um quadrimestre.|  
 |*MonthOfYear*|O atributo representa o ordinal de mês de um ano.|  
 |*Meses*|O atributo representa meses.|  
-|*OrganizationalUnit*|O atributo representa uma unidade organizacional.|  
+|*organizationalUnit*|O atributo representa uma unidade organizacional.|  
 |*OrgTitle*|O atributo representa um cargo organizacional.|  
 |*PercentOwnership*|O atributo representa uma porcentagem da propriedade.|  
 |*PercentVoteRight*|O atributo representa uma porcentagem dos direitos de voto.|  
@@ -221,8 +221,8 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalVolume*|O atributo representa volume.|  
 |*PhysicalWeight*|O atributo representa peso.|  
 |*PhysicalWidth*|O atributo representa largura.|  
-|*Ponto*|O atributo representa um ponto.|  
-|*CEP*|O atributo representa um CEP.|  
+|*Point*|O atributo representa um ponto.|  
+|*PostalCode*|O atributo representa um CEP.|  
 |*Product*|O atributo representa um produto.|  
 |*ProductBrand*|O atributo representa a marca de um produto.|  
 |*ProductCategory*|O atributo representa a categoria de um produto.|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 01/08/2018
 |*Promoção*|O atributo representa uma promoção.|  
 |*QtyRangeHigh*|O atributo representa o valor mais alto de um intervalo de quantidades.|  
 |*QtyRangeLow*|O atributo representa o valor mais baixo de um intervalo de quantidades.|  
-|*Quantitativa*|O atributo representa um atributo quantitativo.|  
+|*Quantitative*|O atributo representa um atributo quantitativo.|  
 |*QuarterOfHalfYear*|O atributo representa o ordinal de trimestre de um semestre.|  
 |*QuarterOfYear*|O atributo representa o ordinal de trimestre de um ano.|  
 |*Trimestres*|O atributo representa trimestres.|  
@@ -304,9 +304,9 @@ ms.lasthandoff: 01/08/2018
   
  O elemento que corresponde ao pai do **tipo** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
-## <a name="see-also"></a>Consulte Também  
- [Atributos de elemento &#40; ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Elemento Dimension &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Atributos de elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Elemento Dimension & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Propriedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

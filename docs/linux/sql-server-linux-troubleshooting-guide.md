@@ -4,7 +4,7 @@ description: Fornece dicas de solução de problemas para usar o SQL Server 2017
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: On Demand
-ms.openlocfilehash: 2be739569e240bfecd7e18fecae52a6f15d24e0f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e699d921a6100c3f8381b4a5ad1ba3054c258961
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas do SQL Server no Linux
 
@@ -160,6 +159,41 @@ Se você acidentalmente iniciou do SQL Server com outro usuário, você deve alt
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
+## <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
+Como último recurso, você pode escolher recriar o mestre e bancos de dados modelo de volta para versões padrão.
+
+> [!WARNING]
+> Essas etapas serão **excluir todos os dados de sistema do SQL Server** que você tenha configurado! Isso inclui informações sobre os bancos de dados do usuário (mas não os usuário próprios bancos de dados). Isso também excluirá outras informações armazenadas nos bancos de dados system, incluindo o seguinte: informações de chave mestra, quaisquer certificados carregados no mestre, a senha de logon de SA, informações relacionada ao trabalho do msdb, informações de email de banco de dados do msdb e opções de sp_configure. Use apenas se você compreender as implicações!
+
+1. Interrompa o SQL Server.
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Executar **sqlservr** com o **Forçar instalação** parâmetro. 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > Consulte o aviso anterior! Além disso, você deve executar este como o **mssql** usuário conforme mostrado aqui.
+
+1. Depois de ver a mensagem "A recuperação foi concluída", pressione CTRL + C. Isso desligará do SQL Server
+
+1. Reconfigure a senha de SA.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. Iniciar o SQL Server e reconfigurar o servidor. Isso inclui restaurar ou anexar novamente a qualquer banco de dados do usuário.
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
 ## <a name="common-issues"></a>Problemas comuns
 
 1. Você não pode se conectar à instância do SQL Server remota.
@@ -186,7 +220,7 @@ Se você acidentalmente iniciou do SQL Server com outro usuário, você deve alt
 
 4. Usar caracteres especiais na senha.
 
-   Se você usar alguns caracteres na senha de logon do SQL Server, você precisará reservá-los quando usá-los no terminal Linux. Você deve escapar a $ a qualquer momento usando o caractere de barra invertida é usado em um script de shell de comando/terminal:
+   Se você usar alguns caracteres na senha de logon do SQL Server, você precisará reservá-los com uma barra invertida, quando você usá-los em um comando do Linux no terminal. Por exemplo, você deve substituir o símbolo de cifrão ($) sempre que você usá-lo em um script de shell de comando/terminal:
 
    Não funciona:
 

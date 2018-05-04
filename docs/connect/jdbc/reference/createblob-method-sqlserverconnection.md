@@ -27,7 +27,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="createblob-method-sqlserverconnection"></a>Método createBlob (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Cria um objeto de Blob sem dados.  
+  Cria um objeto Blob sem dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/16/2018
 public java.sql.Blob createBlob()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto de Blob.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -47,7 +47,7 @@ public java.sql.Blob createBlob()
   
  Esse método substitui a necessidade de [construtor SQLServerBlob &#40;SQLServerConnection, byte&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd98336d35b5c113abf4c08595d9dbb1ef2316b7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a1d0c4eac85cc07e9a507d206f76a9cbc2dc418c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Exemplo dos métodos WriteText (VB), ReadText, gravação e leitura
 Este exemplo demonstra como ler o conteúdo de uma caixa de texto em ambos os texto [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) e um binário **fluxo**. Outras propriedades e métodos mostrados incluem [posição](../../../ado/reference/ado-api/position-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

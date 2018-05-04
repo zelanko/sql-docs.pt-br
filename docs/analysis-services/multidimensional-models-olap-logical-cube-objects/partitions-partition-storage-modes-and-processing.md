@@ -1,44 +1,23 @@
 ---
-title: "Modos de armazenamento e processamento de partição | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+title: Modos de armazenamento e processamento de partição | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partições - modos de armazenamento de partição e processamento
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-O modo de armazenamento de uma partição afeta o desempenho de consulta e processamento, requisitos de armazenamento e locais de armazenamento da partição e seu grupo de medidas e cubo pai. A escolha do modo de armazenamento também afeta escolhas de processamento.  
+  O modo de armazenamento de uma partição afeta o desempenho de consulta e processamento, requisitos de armazenamento e locais de armazenamento da partição e seu grupo de medidas e cubo pai. A escolha do modo de armazenamento também afeta escolhas de processamento.  
   
  Uma partição pode usar um de três modos de armazenamento básicos:  
   
@@ -53,7 +32,7 @@ O modo de armazenamento de uma partição afeta o desempenho de consulta e proce
 ## <a name="molap"></a>MOLAP  
  O modo de armazenamento MOLAP faz com que as agregações da partição e uma cópia dos dados de origem sejam armazenados em uma estrutura multidimensional no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando a partição for processada. Essa estrutura MOLAP é altamente otimizada para maximizar o desempenho de consulta. O local de armazenamento pode ser o computador onde a partição foi definida ou em outro computador executando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Como uma cópia dos dados fonte reside na estrutura multidimensional, as consultas podem ser resolvidas sem acessar os dados de origem da partição. Os tempos de resposta de consulta podem ser diminuídos substancialmente usando agregações. Os dados na estrutura MOLAP da partição são apenas atuais como o mais recente processamento da partição.  
   
- Conforme os dados de origem mudam, os objetos no armazenamento MOLAP devem ser processados periodicamente para incorporar essas alterações e torná-los disponíveis aos usuários. O processamento atualiza os dados na estrutura MOLAP completa ou incrementalmente. O tempo entre um processamento e o próximo, cria um período de latência durante o qual os dados nos objetos OLAP podem não corresponder aos dados de origem. Você pode atualizar objetos incremental ou completamente no armazenamento MOLAP sem tornar a partição ou o cubo offline. Entretanto, há situações que podem requerer que você torne o cubo offline para processar determinadas alterações estruturais em objetos OLAP. Você pode minimizar o tempo de inatividade necessário para atualizar o armazenamento MOLAP, atualizando e processando cubos em um servidor temporário e usando a sincronização de banco de dados para copiar os objetos processados para o servidor de produção.  Você também pode usar o cachê pró-ativo para minimizar a latência e maximizar a disponibilidade tirando vantagem do desempenho do armazenamento MOLAP. Para obter mais informações, consulte [cache pró-ativo &#40; Partições &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [Sincronizar o Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), e [processando um modelo multidimensional &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Conforme os dados de origem mudam, os objetos no armazenamento MOLAP devem ser processados periodicamente para incorporar essas alterações e torná-los disponíveis aos usuários. O processamento atualiza os dados na estrutura MOLAP completa ou incrementalmente. O tempo entre um processamento e o próximo, cria um período de latência durante o qual os dados nos objetos OLAP podem não corresponder aos dados de origem. Você pode atualizar objetos incremental ou completamente no armazenamento MOLAP sem tornar a partição ou o cubo offline. Entretanto, há situações que podem requerer que você torne o cubo offline para processar determinadas alterações estruturais em objetos OLAP. Você pode minimizar o tempo de inatividade necessário para atualizar o armazenamento MOLAP, atualizando e processando cubos em um servidor temporário e usando a sincronização de banco de dados para copiar os objetos processados para o servidor de produção.  Você também pode usar o cachê pró-ativo para minimizar a latência e maximizar a disponibilidade tirando vantagem do desempenho do armazenamento MOLAP. Para obter mais informações, consulte [cache pró-ativo &#40;partições&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [sincronizar o Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), e [processando um modelo multidimensional &#40; Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="rolap"></a>ROLAP  
  O modo de armazenamento ROLAP faz com que as agregações da partição sejam armazenadas em exibições indexadas no banco de dados relacional especificado na fonte de dados da partição. Diferentemente do modo de armazenamento MOLAP, o ROLAP não faz com que uma cópia dos dados fonte seja armazenada nas pastas de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Em vez disso, quando os resultados não podem ser derivados do cache de consulta, as exibições indexadas na fonte de dados são acessadas para responder as consultas. Resposta da consulta é geralmente mais lenta com o armazenamento ROLAP que os modos MOLAP ou HOLAP. Geralmente, o tempo de processamento é também mais lento no ROLAP. Entretanto, o ROLAP permite que os usuários exibam os dados em tempo real e economizem espaço de armazenamento ao trabalharem com grandes conjuntos de dados consultados raramente, como os dados puramente históricos.  
@@ -93,8 +72,8 @@ O modo de armazenamento de uma partição afeta o desempenho de consulta e proce
  As partições armazenadas como HOLAP são menores que as partições MOLAP equivalentes, pois elas não contêm dados de origem e respondem mais rapidamente que as partições ROLAP para consultas envolvendo dados resumidos. O modo de armazenamento HOLAP é geralmente adequado a partições em cubos que requerem resposta rápida a consultas de resumos com base em uma grande quantidade de dados de origem. Entretanto, quando os usuários geram consultas que atingem os dados no nível folha, como ao calcular valores de média, o MOLAP geralmente é a melhor escolha.  
   
 ## <a name="see-also"></a>Consulte também  
- [O cache pró-ativo &#40; Partições &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [O cache pró-ativo & #40; Partições & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partições &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partições & #40; Analysis Services - dados multidimensionais & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

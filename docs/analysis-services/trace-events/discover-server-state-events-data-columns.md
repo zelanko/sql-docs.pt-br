@@ -18,15 +18,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 192c9bc97a67f5690619ac0b0ef667e9de6c99d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 61657f591b73e9a2fa7082618f7bc800f2e41650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discover-server-state-events-data-columns"></a>Colunas de dados de eventos de identificação do estado do servidor
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento Discover Server State tem as seguintes classes de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  A categoria de evento Discover Server State tem as seguintes classes de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
 |------------------|--------------------|---------------------------|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contém a hora atual do evento de descoberta de estado do servidor, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duração|5|2|Contém a quantidade de tempo (em milissegundos) utilizado pelo evento.|  
+|Duration|5|2|Contém a quantidade de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Contém a quantidade de tempo da CPU (em milissegundos) usada pelo evento de descoberta de estado do servidor.|  
 |ConnectionID|25|1|Contém a ID de conexão exclusiva associada ao evento de identificação do estado do servidor.|  
 |NTUserName|32|8|Contém a conta de usuário do Windows associada ao evento de identificação do estado do servidor.|  
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 |TextData|42|9|Contém os dados de texto associados à resposta do servidor à solicitação de identificação.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual o evento de identificação do estado do servidor ocorreu.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+## <a name="see-also"></a>Consulte também  
+ [Descobrir a categoria de evento de estado do servidor](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2501a747df22295cd42b9820e7b80b1ee9716333
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2c9c8ffbcd8c53054bfc3ce1638aa0f5f1bec8c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetcursorname-function"></a>Função SQLSetCursorName
 **Conformidade**  
@@ -86,7 +85,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="comments"></a>Comentários  
  Nomes de cursor são usados somente em atualização posicionada e instruções delete (por exemplo, **atualizar** *nome de tabela* ... **WHERE CURRENT OF** *nome de cursor*). Para obter mais informações, consulte [posicionado instruções Update e excluir](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se o aplicativo não chamar **SQLSetCursorName** para definir um nome de cursor na execução de uma instrução de consulta, o driver gerará um nome que começa com as letras SQL_CUR e não excede 18 caracteres de comprimento.  
   
- Todos os nomes de cursor dentro de conexão devem ser exclusivos. O comprimento máximo de um nome de cursor é definido pelo driver. Para interoperabilidade máxima, recomenda-se que os aplicativos limitam nomes de cursor para não mais de 18 caracteres. Em ODBC 3*. x*, se um nome de cursor é um identificador entre aspas, ele será tratado de maiusculas e minúsculas e pode conter caracteres que a sintaxe de SQL não permitiria trataria especialmente, como espaços em branco ou palavras-chave reservadas. Se um nome de cursor deve ser tratado em maiusculas e minúsculas, ele deve ser passado como um identificador entre aspas.  
+ Todos os nomes de cursor dentro de conexão devem ser exclusivos. O comprimento máximo de um nome de cursor é definido pelo driver. Para interoperabilidade máxima, recomenda-se que os aplicativos limitam nomes de cursor para não mais de 18 caracteres. Em ODBC 3 *. x*, se um nome de cursor é um identificador entre aspas, ele será tratado de maiusculas e minúsculas e pode conter caracteres que a sintaxe de SQL não permitiria trataria especialmente, como espaços em branco ou palavras-chave reservadas. Se um nome de cursor deve ser tratado em maiusculas e minúsculas, ele deve ser passado como um identificador entre aspas.  
   
  Um nome de cursor que é definido explicitamente ou implicitamente permanece definido até que a instrução com o qual ele está associado é removida, usando **SQLFreeHandle**. **SQLSetCursorName** pode ser chamado para renomear um cursor em uma instrução, enquanto o cursor estiver em um estado preparado ou alocado.  
   

@@ -1,5 +1,5 @@
 ---
-title: '&lt;(Menor que) (MDX) | Microsoft Docs'
+title: '&lt; (Menor que) (MDX) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 99be3c9f3896f84dbee770859c14725f299b63ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4f1b4b0698461f04c3bddd7ce60195cbba2a7508
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lt-less-than-mdx"></a>&lt;(Menor que) (MDX)
+# <a name="lt-less-than-mdx"></a>&lt; (Menor que) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Realiza uma operação de comparação que determina se o valor de uma expressão MDX (Multidimensional Expressions) é menor do que o valor de outra expressão MDX.  
@@ -75,7 +74,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

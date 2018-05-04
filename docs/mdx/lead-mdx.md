@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c53f5c6c240404975318764716a1b6a333064536
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fee382cd27de7bbe1435b4c509dc38a5c068423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Member_Expression.Lead( Index )
   
  Se o lead especificado for negativo, o **levar** função retorna um membro anterior.  
   
- `Lead(1)`é equivalente a [NextMember](../mdx/nextmember-mdx.md) função. `Lead(-1)`é equivalente a [PrevMember](../mdx/prevmember-mdx.md) função.  
+ `Lead(1)` é equivalente a [NextMember](../mdx/nextmember-mdx.md) função. `Lead(-1)` é equivalente a [PrevMember](../mdx/prevmember-mdx.md) função.  
   
  O **levar** função é semelhante ao [latência](../mdx/lag-mdx.md) funcionar, exceto que o **latência** função procura na direção oposta a **levar** função. Ou seja, `Lead(n)` é equivalente a `Lag(-n)`.  
   
@@ -76,7 +75,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

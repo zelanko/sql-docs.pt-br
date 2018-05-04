@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  É o nome do servidor vinculado a ser criado. *server* é **sysname**, sem padrão.  
   
  [  **@srvproduct=** ] **'***product_name***'**  
- É o nome do produto da fonte de dados OLE DB a ser adicionado como um servidor vinculado. *product_name* é **nvarchar (**128**)**, com um padrão NULL. Se **do SQL Server**, *provider_name*, *data_source*, *local*, *provider_string*, e *catálogo* não precisa ser especificado.  
+ É o nome do produto da fonte de dados OLE DB a ser adicionado como um servidor vinculado. *product_name* é **nvarchar (** 128 **)**, com um padrão NULL. Se **do SQL Server**, *provider_name*, *data_source*, *local*, *provider_string*, e *catálogo* não precisa ser especificado.  
   
  [  **@provider=** ] **'***provider_name***'**  
- É o identificador programático exclusivo (PROGID) do provedor OLE DB que corresponde a essa fonte de dados. *provider_name* devem ser exclusivos para o provedor OLE DB especificado instalado no computador atual. *provider_name* é **nvarchar (**128**)**, com um padrão de NULL; no entanto, se *provider_name* é omitido, SQLNCLI será usado. (Use SQLNCLI, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará o redirecionamento para a última versão do provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Espera-se que o provedor OLE DB seja registrado com o PROGID especificado fornecido no Registro.  
+ É o identificador programático exclusivo (PROGID) do provedor OLE DB que corresponde a essa fonte de dados. *provider_name* devem ser exclusivos para o provedor OLE DB especificado instalado no computador atual. *provider_name* é **nvarchar (** 128 **)**, com um padrão de NULL; no entanto, se *provider_name* é omitido, SQLNCLI será usado. (Use SQLNCLI, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará o redirecionamento para a última versão do provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Espera-se que o provedor OLE DB seja registrado com o PROGID especificado fornecido no Registro.  
   
  [  **@datasrc=** ] **'***data_source***'**  
- É o nome da fonte de dados conforme interpretada pelo provedor OLE DB. *data_source* é **nvarchar (**4000**)**. *data_source* é passado como a propriedade DBPROP_INIT_DATASOURCE para inicializar o provedor OLE DB.  
+ É o nome da fonte de dados conforme interpretada pelo provedor OLE DB. *data_source* é **nvarchar (** 4000 **)**. *data_source* é passado como a propriedade DBPROP_INIT_DATASOURCE para inicializar o provedor OLE DB.  
   
  [  **@location=** ] **'***local***'**  
- É o local do banco de dados conforme interpretado pelo provedor OLE DB. *local* é **nvarchar (**4000**)**, com um padrão NULL. *local* é passado como a propriedade DBPROP_INIT_LOCATION para inicializar o provedor OLE DB.  
+ É o local do banco de dados conforme interpretado pelo provedor OLE DB. *local* é **nvarchar (** 4000 **)**, com um padrão NULL. *local* é passado como a propriedade DBPROP_INIT_LOCATION para inicializar o provedor OLE DB.  
   
  [  **@provstr=** ] **'***provider_string***'**  
- É a cadeia de conexão específica ao provedor OLE DB que identifica uma fonte de dados exclusiva. *provider_string* é **nvarchar (**4000**)**, com um padrão NULL. *provstr* é passado para IDataInitialize ou definido como a propriedade DBPROP_INIT_PROVIDERSTRING para inicializar o provedor OLE DB.  
+ É a cadeia de conexão específica ao provedor OLE DB que identifica uma fonte de dados exclusiva. *provider_string* é **nvarchar (** 4000 **)**, com um padrão NULL. *provstr* é passado para IDataInitialize ou definido como a propriedade DBPROP_INIT_PROVIDERSTRING para inicializar o provedor OLE DB.  
   
  Quando o servidor vinculado é criado em relação a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, a instância pode ser especificada usando a palavra-chave SERVER como SERVER =*servername*\\*instancename*para especificar uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* é o nome do computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução, e *instancename* é o nome da instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual o usuário será conectado.  
   

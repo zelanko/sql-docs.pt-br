@@ -1,27 +1,26 @@
 ---
-title: "Programação de modelo de tabela para o nível de compatibilidade 1200 | Microsoft Docs"
-ms.custom: 
+title: Programação de modelo de tabela para o nível de compatibilidade 1200 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: abebb8fe13d40f17f3757fec4c47c9d699372a66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Tabela de modelo de programação para 1200 de nível de compatibilidade e superior
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,13 +40,13 @@ Atualizar uma solução de tabela existente é recomendado, mas não é necessá
   
  PowerShell do AMO aceita script TMSL como entrada.  
   
- Consulte [Scripting Language &#40; modelo de tabela TMSL &#41; Referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) e [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) para obter mais informações.  
+ Consulte [linguagem de script de modelo de tabela &#40;TMSL&#41; referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) e [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) para obter mais informações.  
   
 ## <a name="query-languages"></a>Linguagens de consulta  
  DAX e MDX têm suporte para todos os modelos de tabela.  
   
 ## <a name="expression-language"></a>Linguagem de expressão  
- Filtros e as expressões usadas para criar objetos calculados, incluindo medidas e KPIs são formuladas no DAX. Consulte [compreensão do DAX em modelos de tabela](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) e [expressões de análise de dados &#40; DAX &#41; no Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
+ Filtros e as expressões usadas para criar objetos calculados, incluindo medidas e KPIs são formuladas no DAX. Consulte [compreensão do DAX em modelos de tabela](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) e [Data Analysis Expressions &#40;DAX&#41; no Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
   
 ## <a name="managed-code-for-tabular-models-and-databases"></a>Código gerenciado para bancos de dados e modelos de tabela  
  AMO inclui um novo namespace, AnalysisServices, para trabalhar com modelos programaticamente. Consulte [Namespace Microsoft. AnalysisServices](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) para obter mais informações.  

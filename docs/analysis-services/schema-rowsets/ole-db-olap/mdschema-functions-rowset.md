@@ -23,15 +23,15 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c26528fd259dbb950d29b36271cd60be6bb05b5a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>Conjunto de linhas MDSCHEMA_FUNCTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as funções disponíveis para aplicativos cliente conectados ao banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descreve as funções disponíveis para aplicativos cliente conectados ao banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_FUNCTIONS** linhas contém as seguintes colunas.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |**DLL_NAME**|**DBTYPE_WSTR**|(Opcional) O nome do assembly que implementa a função definida pelo usuário.<br /><br /> Retorna **VT_NULL** para funções MDX.|  
 |**HELP_FILE**|**DBTYPE_WSTR**|(Opcional) O nome do arquivo que contém a documentação de ajuda para a função definida pelo usuário.<br /><br /> Retorna **VT_NULL** para funções MDX.|  
 |**HELP_CONTEXT**|**DBTYPE_I4**|(Opcional) Retorna a ID de contexto da Ajuda para esta função.|  
-|**OBJETO**|**DBTYPE_WSTR**|(Opcional) O nome genérico da classe de objeto à qual se aplica uma propriedade. Por exemplo, o conjunto de linhas correspondente para o < level_name >. Membros da função retorna "**nível**".<br /><br /> Retorna **VT_NULL** para funções definidas pelo usuário ou funções MDX de propriedade não.|  
+|**OBJECT**|**DBTYPE_WSTR**|(Opcional) O nome genérico da classe de objeto à qual se aplica uma propriedade. Por exemplo, o conjunto de linhas correspondente para o < level_name >. Membros da função retorna "**nível**".<br /><br /> Retorna **VT_NULL** para funções definidas pelo usuário ou funções MDX de propriedade não.|  
 |**LEGENDA**|**DBTYPE_WSTR**|A legenda de exibição da função.|  
   
  O conjunto de linhas é classificado em **origem**, **INTERFACE_NAME**, **FUNCTION_NAME**.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |**NOME_DA_FUNÇÃO**|**DBTYPE_WSTR**|Opcional.|  
 |**ORIGEM**|**DBTYPE_I4**|Opcional.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

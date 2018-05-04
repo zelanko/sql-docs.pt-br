@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eee22f6b4845abb0cc9a3afb68b7dc89c87a2c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-glossary"></a>Glossário do ODBC
 ## <a name="a"></a>A  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="b"></a>B  
  **alteração de comportamento**  
- Uma alteração em determinada funcionalidade do ODBC 3*. x* comportamento para ODBC 2. *x* comportamento, ou vice-versa. Causada pela alteração do atributo de ambiente SQL_ATTR_ODBC_VERSION.  
+ Uma alteração em determinada funcionalidade do ODBC 3 *. x* comportamento para ODBC 2. *x* comportamento, ou vice-versa. Causada pela alteração do atributo de ambiente SQL_ATTR_ODBC_VERSION.  
   
  **objeto binário grande (BLOB)**  
  Quaisquer dados binários durante um determinado número de bytes, como 255. Geralmente é muito mais. Geralmente, esses dados são enviados e recuperados da fonte de dados em partes. Também conhecido como *dados long*.  

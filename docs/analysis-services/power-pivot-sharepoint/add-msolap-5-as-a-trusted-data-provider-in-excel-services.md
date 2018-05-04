@@ -1,31 +1,23 @@
 ---
-title: "Adicionar MSOLAP. 5 como um provedor de dados confiável em serviços do Excel | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Adicionar MSOLAP. 5 como um provedor de dados confiável em serviços do Excel | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbf52055cb77be6a740fc5186c69d55c352d5cc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 55727f3452d2bf406ab78fa7982a0c65e48f6052
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-MSOLAP.5 se refere ao provedor OLE DB do Analysis Services para SQL Server 2012. Os Serviços do Excel devem confiar neste provedor antes de fazer a solicitação de conexão que resulta na disponibilidade de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um servidor.  
+  MSOLAP.5 se refere ao provedor OLE DB do Analysis Services para SQL Server 2012. Os Serviços do Excel devem confiar neste provedor antes de fazer a solicitação de conexão que resulta na disponibilidade de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um servidor.  
   
  Se você configurou o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usando a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , o MSOLAP.5 já poderá ser um provedor confiável porque a ferramenta inclui uma ação que atende a este requisito. No entanto, se você estiver usando o PowerShell, a Administração Central ou caso tenha excluído a ação do provedor confiável na ferramenta de configuração, o provedor deverá não existir e, nesse caso, você deverá adicioná-lo agora como parte da configuração do farm para o acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

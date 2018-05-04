@@ -20,12 +20,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5ef44399a37c1b404e4ec9693baedb3a97d413f6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5aa920ccc64ad0d5236574283529fbf934c3db92
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-logical-functions"></a>Usando funções lógicas
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte Também  
- [Funções &#40; Sintaxe MDX &#41;](../mdx/functions-mdx-syntax.md)  
+## <a name="see-also"></a>Consulte também  
+ [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)  
   
   

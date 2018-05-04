@@ -27,15 +27,15 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f9d0cd4dc1e60a59af3b8d3e976eeff888d24aa1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3cdcb3eef5de54ad1b83495708e710473f0ee5c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-element-assl"></a>Elemento Content (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve o conteúdo da coluna no [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descreve o conteúdo da coluna no [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|Nenhuma|  
 |Cardinalidade|1-1: elemento obrigatório que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,19 +61,19 @@ ms.lasthandoff: 01/08/2018
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|Nenhuma|  
   
 ## <a name="remarks"></a>Remarks  
  Essa enumeração descreve o tipo de conteúdo representado por uma coluna da estrutura de mineração e pode ser estendida conforme necessário pelos provedores de algoritmo de mineração. Para obter mais informações sobre tipos de conteúdo, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../../analysis-services/data-mining/content-types-data-mining.md).  
   
  Os valores listados na tabela a seguir normalmente têm suporte em todos os provedores de algoritmo de mineração.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*Discreto*|A coluna contém valores discretos.|  
 |*Contínua*|Os valores para a coluna definem um conjunto contínuo de dados numéricos.|  
 |*Dados discretos*|Os valores da coluna representam grupos (ou blocos) de valores derivados de uma coluna contínua.|  
-|*Ordenados*|Os valores da coluna definem um conjunto ordenado.|  
+|*ordenados*|Os valores da coluna definem um conjunto ordenado.|  
 |*Cíclico*|Os valores da coluna definem um conjunto ordenado cíclico.|  
 |*Probabilidade*|Os valores da coluna especificam uma probabilidade para as colunas contidas no [ClassifiedColumns](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md) elemento do pai **ScalarMiningStructureColumn**.|  
 |*Variance*|Os valores da coluna especificam uma variância para as colunas contidas no **ClassifiedColumns** elemento do pai **ScalarMiningStructureColumn**.|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
  Além desses valores padrão, os provedores de algoritmo incluídos de mineração [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] suporte os valores na tabela a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*Sequência de teclas*|A coluna é uma coluna de chave e os valores da coluna representam uma sequência de eventos.<br /><br /> Observação: Esse tipo de conteúdo é aplicável somente às colunas de chave, no qual o **IsKey** é definido como **True**.|  
 |*Chave de tempo*|A coluna é uma coluna de chave e os valores da coluna representam unidades de medição de tempo.<br /><br /> Observação: Esse tipo de conteúdo é aplicável somente às colunas de chave, no qual o **IsKey** é definido como **True**.|  
@@ -94,8 +94,8 @@ ms.lasthandoff: 01/08/2018
   
  A enumeração que corresponde aos valores permitidos para **conteúdo** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
-## <a name="see-also"></a>Consulte Também  
- [Elemento ClassifiedColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
- [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Elemento ClassifiedColumns &#40;ASSL&#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
+ [Propriedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

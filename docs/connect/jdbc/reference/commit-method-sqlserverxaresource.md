@@ -49,15 +49,15 @@ public void commit(javax.transaction.xa.Xid xid,
   
  *onePhase*  
   
- Um **booliano** valor.  
+ Um valor **booliano**.  
   
 ## <a name="exceptions"></a>Exceções  
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- Esse método de confirmação é especificado pelo método na interface javax confirmação.  
+ Esse método commit é especificado pelo método commit na interface javax.transaction.xa.XAResource.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [Membros SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [Classe SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

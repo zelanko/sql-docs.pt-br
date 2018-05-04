@@ -33,12 +33,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e84207fc0354c7599feb823f0b54b27fdc164619
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0286e36fb53ee35fdcc61af8c37c6915d7a8f906
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-cell-calculation"></a>Definição de dados MDX - DROP CELL CALCULATION
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,8 +58,8 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  *CellCalc_Name*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do cálculo de célula a ser descartado.  
   
-## <a name="see-also"></a>Consulte Também  
- [Criar instrução de CÁLCULO de CÉLULA &#40; MDX &#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
- [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Criar instrução de CÁLCULO de CÉLULA & #40; MDX & #41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

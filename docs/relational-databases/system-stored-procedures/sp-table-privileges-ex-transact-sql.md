@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad7d7746c1bd436a6473d7d25921c7a3437e75a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +71,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.*** proprietário***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário de tabela. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**CONCESSOR**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **TABLE_NAME** para listado **usuário autorizado**. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que o **TABLE_OWNER**. Esse campo sempre retorna um valor. Além disso, a coluna GRANTOR pode ser o proprietário do banco de dados (**TABLE_OWNER**) ou um usuário a quem o proprietário do banco de dados concedeu permissão usando a cláusula WITH GRANT OPTION na instrução GRANT.|  
 |**USUÁRIO AUTORIZADO**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **TABLE_NAME** por listado **CONCESSOR**. Esse campo sempre retorna um valor.|  
-|**PRIVILÉGIO**|**varchar(**32**)**|Uma das permissões de tabela disponíveis. As permissões de tabela podem ter um dos valores a seguir, ou outros valores que tenham suporte na fonte de dados quando a implementação é definida.<br /><br /> Selecione = **usuário autorizado** pode recuperar dados para um ou mais das colunas.<br /><br /> INSERT = **usuário autorizado** pode fornecer dados para novas linhas para uma ou mais das colunas.<br /><br /> UPDATE = **usuário autorizado** pode modificar dados existentes para uma ou mais das colunas.<br /><br /> Excluir = **usuário autorizado** pode remover linhas da tabela.<br /><br /> REFERÊNCIAS = **usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/de chave primária. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as relações de chave primária/chave estrangeira são definidas usando restrições de tabela.<br /><br /> O escopo de ação dado ao **usuário autorizado** por uma tabela específica privilégio é dependente da fonte de dados. Por exemplo, a permissão UPDATE pode habilitar o **usuário autorizado** para atualizar todas as colunas em uma tabela em uma fonte de dados e somente aquelas colunas para as quais o **CONCESSOR** possui permissão UPDATE em outra fonte de dados.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indica se o **usuário autorizado** tem permissão para conceder permissões a outros usuários. Isso é frequentemente chamado de permissão de "concessão com concessão". Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados na qual a "concessão com concessão" não é aplicável.|  
+|**PRIVILÉGIO**|**varchar(** 32 **)**|Uma das permissões de tabela disponíveis. As permissões de tabela podem ter um dos valores a seguir, ou outros valores que tenham suporte na fonte de dados quando a implementação é definida.<br /><br /> Selecione = **usuário autorizado** pode recuperar dados para um ou mais das colunas.<br /><br /> INSERT = **usuário autorizado** pode fornecer dados para novas linhas para uma ou mais das colunas.<br /><br /> UPDATE = **usuário autorizado** pode modificar dados existentes para uma ou mais das colunas.<br /><br /> Excluir = **usuário autorizado** pode remover linhas da tabela.<br /><br /> REFERÊNCIAS = **usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/de chave primária. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as relações de chave primária/chave estrangeira são definidas usando restrições de tabela.<br /><br /> O escopo de ação dado ao **usuário autorizado** por uma tabela específica privilégio é dependente da fonte de dados. Por exemplo, a permissão UPDATE pode habilitar o **usuário autorizado** para atualizar todas as colunas em uma tabela em uma fonte de dados e somente aquelas colunas para as quais o **CONCESSOR** possui permissão UPDATE em outra fonte de dados.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se o **usuário autorizado** tem permissão para conceder permissões a outros usuários. Isso é frequentemente chamado de permissão de "concessão com concessão". Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados na qual a "concessão com concessão" não é aplicável.|  
   
 ## <a name="remarks"></a>Remarks  
  Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, e **PRIVILÉGIO**.  

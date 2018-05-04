@@ -1,30 +1,23 @@
 ---
 title: Iniciar ou parar um PowerPivot para SharePoint Server | Microsoft Docs
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: "8"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6c581135e13811e82535fa7735f1116f413d6752
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Iniciar ou parar um Power Pivot para SharePoint Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o serviço do sistema e um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância operam juntos no mesmo servidor de aplicativo local para dar suporte a solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O Serviço de Sistema e uma instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] funcionam em conjunto no mesmo servidor de aplicativos local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
   
  Este tópico contém as seguintes seções:  
   
@@ -67,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |Novas solicitações para consultas ou atualização de dados|Se você estiver parando somente o servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no farm, novas solicitações para dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não serão manipuladas e uma solicitação de dados resultará em um erro de dados não encontrados.<br /><br /> Se você tiver servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint adicionais, a solicitação irá para um dos servidores disponíveis.|  
 |Dados de uso|Não serão coletados dados de uso enquanto os serviços estiverem parados.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

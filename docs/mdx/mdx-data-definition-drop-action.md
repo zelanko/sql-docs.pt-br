@@ -29,12 +29,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 13d2ee822aaa50c58f64446dc3c21bf89a0ab824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd8e7776899331a089fb12157a072e4ade673655
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-action"></a>Definição de dados MDX - ação de SOLTAR
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,8 +55,8 @@ DROP ACTION CURRENTCUBE | Cube_Name
  *Action_Name*  
  Uma expressão de cadeia de caracteres válida que fornece o nome da ação que está sendo descartada.  
   
-## <a name="see-also"></a>Consulte Também  
- [Criar ação instrução &#40; MDX &#41;](../mdx/mdx-data-definition-create-action.md)   
- [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Instrução CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
+ [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

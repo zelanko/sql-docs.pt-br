@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f63bbab9dd5b74c23f3f76b2c851e49a7094e9dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors"></a>Cursores em bloco
 Muitos aplicativos gastam uma quantidade significativa de tempo para trazer os dados pela rede. Parte desse tempo é gasto na verdade trazer os dados pela rede e parte dele é gasto na sobrecarga de rede, como a chamada feita pelo driver para solicitar uma linha de dados. A última hora pode ser reduzida se o aplicativo faça uso eficiente de *bloco,* ou *fat,* *cursores,* que pode retornar mais de uma linha por vez.  

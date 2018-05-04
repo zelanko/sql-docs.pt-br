@@ -10,24 +10,23 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 47e7eba43c09d52c75c9a3f42b77db304be7ee35
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 96e2d0831c064a1da2f23b34befc38bf34ade6f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver para SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Em nosso compromisso contínuo com a interoperabilidade, a Microsoft fornece um driver Java Database Connectivity (JDBC) para uso com o SQL Server e banco de dados do SQL Azure. O driver está disponível sem custo adicional e fornece conectividade de banco de dados Java de qualquer aplicativo Java, servidor de aplicativos Java, ou miniaplicativo habilitado para Java. Esse é um driver JDBC Tipo 4 que fornece conectividade de banco de dados por meio das interfaces de programa aplicativo (APIs) JDBC padrão.
+Cumprindo o nosso compromisso contínuo com a interoperabilidade, a Microsoft fornece um driver JDBC (Java Database Connectivity) para uso com o SQL Server e o Banco de Dados SQL do Azure. O driver está disponível sem custo adicional e fornece conectividade de banco de dados Java de qualquer aplicativo Java, servidor de aplicativos Java, ou miniaplicativo habilitado para Java. Esse é um driver JDBC Tipo 4 que fornece conectividade de banco de dados por meio das interfaces de programa aplicativo (APIs) JDBC padrão.
 
 O Microsoft JDBC Driver para SQL Server foi testado com os principais servidores de aplicativos, como IBM WebSphere e SAP NetWeaver.
   

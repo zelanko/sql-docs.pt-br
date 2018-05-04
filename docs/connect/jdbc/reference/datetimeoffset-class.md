@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0b2aed540184f06e2db336f0b838de80a39b9ac1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4bc028f66fc3146c505c69bc4ab9bd48249b41ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetimeoffset-class"></a>Classe DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
  **Estende:** java.lang.Object  
   
- **Implementa:** java.lang.Comparable\<DateTimeOffset >, Java.IO. Serializable  
+ **Implementa:** java.lang.Comparable\<DateTimeOffset>, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +45,7 @@ public final class DateTimeOffset
  Para obter mais informações sobre tipos de dados, consulte [Noções básicas sobre os tipos de dados do Driver JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da API do Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   
+ [Referência de API do JDBC Driver](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   
  [Membros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   

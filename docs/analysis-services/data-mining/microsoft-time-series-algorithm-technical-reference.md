@@ -1,16 +1,16 @@
 ---
-title: "Referência técnica do algoritmo Microsoft Time Series | Microsoft Docs"
-ms.custom: 
+title: Referência técnica do algoritmo Microsoft Time Series | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -29,16 +29,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: f6c9d811d35191ba604e54859b7a73efd068a94e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Referência técnica do algoritmo MTS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -148,7 +147,7 @@ ms.lasthandoff: 03/20/2018
 |*MINIMUM_SERIES_VALUE*|Especifica o valor mínimo que pode ser previsto. Esse parâmetro é usado, juntamente com *MAXIMUM_SERIES_VALUE*, para restringir as previsões a algum intervalo esperado. Por exemplo, você pode especificar que a quantidade de vendas prevista nunca deve ser um número negativo.<br /><br /> Observação: esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Especifica o número mínimo de intervalos de tempo necessário para gerar uma divisão em cada árvore de série temporal. O padrão é 10.|  
 |*MISSING_VALUE_SUBSTITUTION*|Especifica como falhas em dados do histórico são resolvidas. Por padrão, não são permitidas falhas nos dados. A tabela a seguir lista os possíveis valores para esse parâmetro:<br /><br /> **Anterior**: repete o valor do intervalo da fração de tempo anterior.<br /><br /> **Média**: usa uma média de movimentação de intervalos de tempo usada no treinamento.<br /><br /> Constante numérica: usa o número especificado para substituir todos os valores ausentes.<br /><br /> **Nenhum**: padrão Substitui valores ausentes por valores plotados ao longo da curva do modelo treinado.<br /><br /> <br /><br /> Observe que se os seus dados tiverem várias séries, as séries não poderão ter extremidades desbalanceadas. Isso quer dizer que todas as séries devem ter os mesmos pontos de início e de extremidade. <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também usa o valor desse parâmetro para preencher as falhas em novos dados quando você realiza **PREDICTION JOIN** no modelo de série temporal.|  
-|*PERIODICITY_HINT*|Fornece uma dica para o algoritmo sobre a periodicidade dos dados. Por exemplo, se as vendas variam de acordo com o ano e a unidade de medida da série são meses, a periodicidade é 12. O parâmetro assume o formato de {n [, n]}, em que n é qualquer número positivo.<br /><br /> O n nos colchetes [] é opcional e pode ser repetido sempre que necessário. Por exemplo, para criar várias dicas de periodicidade para dados fornecidos mensalmente, você pode inserir {12, 3, 1} para detectar parâmetros para o ano, trimestre e mês. Entretanto, a periodicidade tem um efeito mais visível na qualidade do modelo. Se a dica que você dá diferir da periodicidade atual, seus resultados poderão ser afetados adversamente.<br /><br /> O padrão é \{1\}.<br /><br /> Observe que as chaves são obrigatórias. Além disso, esse parâmetro tem um tipo de dados de cadeia de caracteres. Com isso, se você digitar esse parâmetro como parte de uma instrução DMX (Data Mining Extensions), deve colocar o número e as chaves entre aspas.|  
+|*PERIODICITY_HINT*|Fornece uma dica para o algoritmo sobre a periodicidade dos dados. Por exemplo, se as vendas variam de acordo com o ano e a unidade de medida da série são meses, a periodicidade é 12. O parâmetro assume o formato de {n [, n]}, em que n é qualquer número positivo.<br /><br /> O n nos colchetes [] é opcional e pode ser repetido sempre que necessário. Por exemplo, para criar várias dicas de periodicidade para dados fornecidos mensalmente, você pode inserir {12, 3, 1} para detectar parâmetros para o ano, trimestre e mês. Entretanto, a periodicidade tem um efeito mais visível na qualidade do modelo. Se a dica que você dá diferir da periodicidade atual, seus resultados poderão ser afetados adversamente.<br /><br /> O padrão é {1}.<br /><br /> Observe que as chaves são obrigatórias. Além disso, esse parâmetro tem um tipo de dados de cadeia de caracteres. Com isso, se você digitar esse parâmetro como parte de uma instrução DMX (Data Mining Extensions), deve colocar o número e as chaves entre aspas.|  
 |*PREDICTION_SMOOTHING*|Especifica como o modelo deveria ser mesclado para otimizar a previsão. Você pode digitar qualquer valor entre [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] e 1 ou pode usar um dos seguintes valores:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]:<br />                          Especifica que a previsão usa somente ARTXP. A previsão é otimizada para poucos casos.<br /><br /> 1: Especifica que a previsão usa somente ARIMA. A previsão é otimizada para vários casos.<br /><br /> 0.5: Padrão Especifica que ambos os algoritmos da previsão devem ser usados para a previsão e os resultados mesclados.<br /><br /> <br /><br /> Ao fazer a suavização da previsão, use o parâmetro *FORECAST_METHOD* para controlar o treinamento.   Observe que esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
@@ -176,6 +175,6 @@ ms.lasthandoff: 03/20/2018
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de série temporal &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de série temporal & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

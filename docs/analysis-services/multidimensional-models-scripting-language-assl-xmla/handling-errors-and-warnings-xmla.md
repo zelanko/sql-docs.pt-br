@@ -1,39 +1,19 @@
 ---
 title: Tratamento de erros e avisos (XMLA) | Microsoft Docs
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- inline errors [XMLA]
-- SOAP faults [XML for Analysis]
-- XML for Analysis, errors
-- faults [XML for Analysis]
-- messages [XML for Analysis]
-- XMLA, errors
-- warnings [XML for Analysis]
-- inline warnings [XMLA]
-ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e5aa002079080e8c4e3fc4816539fda866e8293b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: de925e6bb83f7219ec1bd453f47d63a3fb3624a1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Manipulando erros e avisos (XMLA)
   Tratamento de erros é necessário quando um XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método não é executado, é executado com êxito, mas gera erros ou avisos, ou seja executado com êxito mas retorna resultados que contêm erros.  
@@ -45,7 +25,7 @@ ms.lasthandoff: 02/15/2018
 |Erros no resultado de uma chamada de método com êxito|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um embutido **erro** ou **aviso** elemento para o erro ou aviso, respectivamente, no apropriada [célula](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) ou [linha](../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md) elemento dos resultados da chamada de método.<br /><br /> Para obter mais informações, consulte a seção [tratamento de erros e avisos embutidos](#handling_inline_errors_and_warnings).|  
   
 ##  <a name="handling_soap_faults"></a> Tratamento de falhas de SOAP  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Retorna uma falha SOAP quando ocorrem as seguintes situações:  
+ O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retorna uma falha SOAP quando ocorrem as seguintes situações:  
   
 -   A mensagem SOAP que contém o método XMLA não foi bem formada ou não pôde ser validada pela instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -64,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 |**WarningCode**|**UnsignedInt**|Código de retorno que indica uma condição de aviso. O valor hexadecimal deve ser convertido em um **UnsignedInt** valor.|Sim|  
 |**Descrição**|**String**|Texto e descrição de erro ou de aviso retornadas pelo componente que gerou o erro.|Sim|  
 |**Origem**|**String**|Nome do componente que gerou o erro ou o aviso.|Sim|  
-|**HelpFile**|**String**|Caminho ou URL para o arquivo de Ajuda ou tópico que descreve o erro ou o aviso.|Sim|  
+|**Arquivo de ajuda**|**String**|Caminho ou URL para o arquivo de Ajuda ou tópico que descreve o erro ou o aviso.|Sim|  
   
  <sup>1</sup> indica se os dados são necessários e devem ser retornados ou se os dados são opcionais e uma cadeia de caracteres nula será permitida se a coluna não se aplica.  
   
@@ -99,7 +79,7 @@ HelpFile="" />
   
  O **mensagens** propriedade segue todas as outras propriedades que são contidas pelo **raiz** elemento e pode conter um ou mais **mensagem** elementos. Por sua vez, cada **mensagem** elemento pode conter um único **erro** ou **aviso** elemento descrevendo erros ou avisos, respectivamente, ocorridos para o comando especificado.  
   
- Para obter mais informações sobre erros e avisos contidos no **mensagens** propriedade, consulte [elemento Messages &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md).  
+ Para obter mais informações sobre erros e avisos contidos no **mensagens** propriedade, consulte [mensagens elemento &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md).  
   
 ### <a name="handling-errors-during-serialization"></a>Manipulando erros durante a serialização  
  Se ocorrer um erro após o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância já ter começado a serializar a saída de um comando executado com êxito, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retorna um [exceção](../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md) elemento em um namespace diferente no ponto do erro. A instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fechará todos os elementos abertos para que o documento XML enviado ao cliente seja um documento válido. A instância também retornará um **mensagens** elemento que contém a descrição do erro.  

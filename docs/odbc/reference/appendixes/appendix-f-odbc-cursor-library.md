@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
 - ODBC cursor library [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7152428dc38f2310cbda7cc70a8a2e4435c5182
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab6ea0ba91b8d62c094a965faaa522b033e05336
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Apêndice f: biblioteca de cursores ODBC
 > [!IMPORTANT]  
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
  A biblioteca de cursores é uma biblioteca de vínculo dinâmico (DLL) que reside entre o Gerenciador de Driver e o driver. Quando um aplicativo chama uma função, o Gerenciador de Driver chama a função na biblioteca de cursor, que executa a função ou chamá-lo no driver especificado. Para uma determinada conexão, um aplicativo especifica se a biblioteca de cursores é sempre usada, usada se o driver não dá suporte a cursores roláveis ou nunca foi usada.  
   
- A biblioteca de cursor aparece como um driver para o Gerenciador de Driver. Se a biblioteca de cursores reside entre o Gerenciador de Driver e um ODBC 2. *x* driver, a biblioteca de cursor aparece como um ODBC 2. *x* driver. Se a biblioteca de cursores reside entre o Gerenciador de Driver e um ODBC 3*. x* driver, a biblioteca de cursor aparece como um ODBC 3*. x* driver. O comportamento exibido pela biblioteca de cursor depende da versão do driver está funcionando, com exceção de deslocamentos de associação, que tem suporte para ambos os ODBC 2. *x* e ODBC 3. *x* drivers.  
+ A biblioteca de cursor aparece como um driver para o Gerenciador de Driver. Se a biblioteca de cursores reside entre o Gerenciador de Driver e um ODBC 2. *x* driver, a biblioteca de cursor aparece como um ODBC 2. *x* driver. Se a biblioteca de cursores reside entre o Gerenciador de Driver e um ODBC 3 *. x* driver, a biblioteca de cursor aparece como um ODBC 3 *. x* driver. O comportamento exibido pela biblioteca de cursor depende da versão do driver está funcionando, com exceção de deslocamentos de associação, que tem suporte para ambos os ODBC 2. *x* e ODBC 3. *x* drivers.  
   
  Para implementar cursores em bloco **SQLFetch** e **SQLFetchScroll**, a biblioteca de cursores chama repetidamente **SQLFetch** no driver. Para implementar a rolagem, ele armazena em cache os dados que ele recuperou na memória e nos arquivos de disco. Quando um aplicativo solicita um novo conjunto de linhas, a biblioteca de cursores recupera conforme a necessidade do driver ou o cache.  
   

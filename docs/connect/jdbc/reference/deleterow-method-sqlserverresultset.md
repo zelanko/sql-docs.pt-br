@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSet.deleteRow
 apilocation:
@@ -22,17 +22,16 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 959bd0d9b9a9e2db9378f7228e34b2fe672d7e08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 92a1035fbd1c368583011d3dec7cd2984c8978d0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="deleterow-method-sqlserverresultset"></a>deleteRow método (SQLServerResultSet)
+# <a name="deleterow-method-sqlserverresultset"></a>Método deleteRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Exclui a linha atual deste[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto e do banco de dados subjacente.  
+  Exclui a linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) e do banco de dados subjacente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +48,7 @@ public void deleteRow()
   
  Esse método não pode ser chamado quando o cursor estiver na linha de inserção.  
   
- Ao usar cursores do conjunto de chaves, esse método deixará um buraco no conjunto de resultados. Você pode testar esse buraco usando o [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) método. Os números de linha das linhas no conjunto de resultados não se alteram.  
+ Ao usar cursores do conjunto de chaves, esse método deixará um buraco no conjunto de resultados. Você pode testar esse buraco usando o método [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md). Os números de linha das linhas no conjunto de resultados não se alteram.  
   
 ## <a name="see-also"></a>Consulte também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

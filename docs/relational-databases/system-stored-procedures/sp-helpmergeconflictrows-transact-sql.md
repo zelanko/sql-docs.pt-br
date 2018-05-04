@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação. Por exemplo, se o **MSmerge_conflict_Customers** tabela tem linhas de conflito para o **WA** e **CA** publicações, passando um nome de publicação **autoridade de certificação**  recuperará os conflitos que pertencem ao **CA** publicação.  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- É o nome da tabela de conflito. *conflict_table* é **sysname**, sem padrão. Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores, as tabelas de conflitos são nomeadas usando nomes de formato com **msmerge_conflict _*publicação*_*artigo *, com uma tabela para cada publicação artigo.  
+ É o nome da tabela de conflito. *conflict_table* é **sysname**, sem padrão. Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores, as tabelas de conflitos são nomeadas usando nomes de formato com **msmerge_conflict _* publicação *_* artigo *, com uma tabela para cada publicação artigo.  
   
  [  **@publisher=**] **'***publicador***'**  
  É o nome do Publicador. *publicador* é **sysname**, com um padrão NULL.  

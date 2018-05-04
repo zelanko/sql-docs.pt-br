@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 05769a0a060de4a78bdcf425e20d004ef9ae9099
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@lang =** ] **'***idioma***'**  
  É o idioma desta mensagem. *idioma* é **sysname** com um padrão NULL. Como vários idiomas podem ser instalados no mesmo servidor, *idioma* Especifica o idioma em que cada mensagem é gravada. Quando *idioma* for omitido, o idioma é o idioma padrão para a sessão.  
   
- [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
+ [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
  Especifica se a mensagem deve ser gravada no log do aplicativo do Windows quando ocorrer. **@with_log** é **varchar(5)** com um padrão de FALSE. Se for TRUE, o erro sempre será gravado no log do aplicativo do Windows. Se for FALSE, o erro nem sempre será gravado no log do aplicativo do Windows, mas poderá ser gravado dependendo de como foi gerado. Somente membros do **sysadmin** função de servidor pode usar essa opção.  
   
 > [!NOTE]  

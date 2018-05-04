@@ -10,18 +10,17 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: 7a854dd2925304203fb5b0ed36666b32278bb82d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,11 +108,11 @@ ms.lasthandoff: 04/03/2018
   
  Para obter informações sobre como usar o Reporting Services com consultas DMX como fonte de dados, consulte esses links:  
   
- [Recuperar dados de um modelo de mineração de dados &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperar dados de um modelo de mineração de dados & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interface de usuário do Designer de consulta DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo de Conexão do Analysis Services para DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de Conexão do Analysis Services para DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Porém, não é necessário usar DMX como a fonte de dados. Os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para mineração de dados também dão suporte a gravar os resultados de uma consulta de previsão em um banco de dados relacional. Se você tiver um fluxo de trabalho estabelecido para atualizar modelos usando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], persistir previsões e outros resultados da consulta de mineração de dados para o SQL Server permitirá que você use o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para relatório, assim como outras ferramentas que não fazem interface com DMX.  
   

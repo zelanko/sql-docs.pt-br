@@ -1,27 +1,26 @@
 ---
-title: "Comparando soluções tabulares e multidimensionais (SSAS) | Microsoft Docs"
-ms.custom: 
+title: Comparando soluções tabulares e multidimensionais (SSAS) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4f7e75c9a5f31d37b32bade54dd9bd108de21e9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparando soluções tabulares e multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +150,9 @@ ms.lasthandoff: 02/23/2018
   
 -   Bancos de dados modelo multidimensionais podem usar dimensão e segurança em nível de célula, usando permissões baseadas em função.  
 
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] são protegidas no nível de arquivo, usando permissões do SharePoint.  
+-   As pastas de trabalho[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] são protegidas no nível de arquivo, usando permissões do SharePoint.  
   
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] podem ser restauradas para um servidor de modo tabular. Quando o arquivo for restaurado, ele será desacoplado do SharePoint, permitindo que você use todos os recursos de modelagem de tabela, incluindo segurança em nível de linha.  
+ As pastas de trabalho[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] podem ser restauradas para um servidor de modo tabular. Quando o arquivo for restaurado, ele será desacoplado do SharePoint, permitindo que você use todos os recursos de modelagem de tabela, incluindo segurança em nível de linha.  
   
 ##  <a name="bkmk_designer"></a> Ferramentas de design  
  As habilidades de modelagem de dados e a experiência técnica podem variar amplamente entre usuários que têm a tarefa de criar modelos analíticos. Se a familiaridade com a ferramenta ou a experiência do usuário for uma consideração para sua solução, compare as seguintes experiências para a criação do modelo.  

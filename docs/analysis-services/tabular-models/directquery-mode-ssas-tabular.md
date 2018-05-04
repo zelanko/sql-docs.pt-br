@@ -1,33 +1,32 @@
 ---
 title: O modo DirectQuery | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 
+caps.latest.revision: 64
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4d71b1854680abe9584cf2d5d4d928b86804070b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="directquery-mode"></a>Modo DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Este artigo descreve *o modo DirectQuery* para modelos de tabela do Analysis Services nos níveis de compatibilidade 1200 e superior. O modo DirectQuery pode ser ativado para modelos que estão sendo criados no SSDT; para modelos de tabela que já foram implantados, você pode alterar para o modo DirectQuery no SSMS. Antes de escolher o modo DirectQuery, é importante entender os benefícios e as restrições.
+  Este artigo descreve *o modo DirectQuery* para modelos de tabela do Analysis Services nos níveis de compatibilidade 1200 e superior. O modo DirectQuery pode ser ativado para modelos que estão sendo criados no SSDT; para modelos de tabela que já foram implantados, você pode alterar para o modo DirectQuery no SSMS. Antes de escolher o modo DirectQuery, é importante entender os benefícios e as restrições.
   
 ##  <a name="bkmk_Benefits"></a> Benefícios
  Por padrão, modelos de tabela usam um cache na memória para armazenar e consultar dados. Quando os modelos de tabela usam dados de consulta que residem na memória, até mesmo consultas complexas podem ser inacreditavelmente rápidas. No entanto, há algumas limitações no uso de dados armazenados em cache. São elas: grandes conjuntos de dados podem exceder a memória disponível, e pode ser difícil, se não impossível, atender aos requisitos de atualização dos dados em uma agenda regular de processamento.  

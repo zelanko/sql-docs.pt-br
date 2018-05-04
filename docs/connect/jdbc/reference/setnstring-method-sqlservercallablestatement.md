@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6494300b-7fc0-4076-8311-22d35a96cdc6
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74060b7cd76a8e9cdc366bb2c15f0cea57942ce4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fd56d8386dfa3114c4761b1237aef9964f027707
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setnstring-method-sqlservercallablestatement"></a>Método setNString (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
 #### <a name="parameters"></a>Parâmetros  
  *nome do parâmetro*  
   
- Um **cadeia de caracteres** que indica o nome do parâmetro.  
+ Uma **String** que indica o nome do parâmetro.  
   
  *value*  
   

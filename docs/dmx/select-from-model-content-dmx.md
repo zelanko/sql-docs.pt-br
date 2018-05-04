@@ -25,12 +25,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d0421998c359dbf40eb2afa36d2487b200bca52f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTEÚDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,19 +55,19 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *modelo*  
  Identificador de modelo.  
   
- *expressão de condição*  
+ *Expressão de condição*  
  Opcional. Uma condição para restringir os valores retornados da lista de colunas.  
   
- *expressão*  
+ *Expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Remarks  
- The **SELECT FROM** *\<model>***. CONTEÚDO** instrução retorna o conteúdo que é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar valores na coluna NODE_RULE do modelo.  
+ O **SELECT FROM**  *\<modelo > * * *. CONTEÚDO** instrução retorna o conteúdo que é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar valores na coluna NODE_RULE do modelo.  
   
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
   
 > [!NOTE]  
->  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do modelo de mineração conteúdo para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo para cada tipo de modelo do modelo de mineração, consulte [conteúdo do modelo de mineração &#40; Analysis Services – mineração de dados &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do modelo de mineração conteúdo para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo para cada tipo de modelo do modelo de mineração, consulte [conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 |Coluna de conjunto de linhas DE CONTEÚDO|Description|  
 |---------------------------|-----------------|  
@@ -78,7 +77,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|O nome do atributo que corresponde ao nó.|  
 |NODE_NAME|O nome do nó.|  
 |NODE_UNIQUE_NAME|O nome exclusivo do nó no modelo.|  
-|NODE_TYPE|Um número inteiro que representa o tipo do nó. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|NODE_TYPE|Um número inteiro que representa o tipo do nó. .|  
 |NODE_GUID|Nó GUID. NULL se não houver GUID.|  
 |NODE_CAPTION|Rótulo ou legenda associada ao nó. Usado principalmente para fins de exibição. Se não houver legenda, NODE_NAME é retornado.|  
 |CHILDREN_CARDINALITY|Número de filhos do nó.|  
@@ -159,9 +158,9 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>Consulte Também  
- [SELECIONAR &#40; DMX &#41;](../dmx/select-dmx.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte também  
+ [SELECIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensões de mineração de dados & #40; DMX & #41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

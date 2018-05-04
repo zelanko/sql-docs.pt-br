@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 213fa7b4c8a46966fa7054c6c20fbf79c5896d74
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="was-a-result-set-created"></a>Foi um conjunto criado de resultados?
 Na maioria das situações, os programadores de aplicativos saber se as instruções que executa o aplicativo criará um conjunto de resultados. Esse é o caso se o aplicativo usa instruções SQL embutidas gravadas pelo programador. Geralmente é o caso quando o aplicativo construa instruções SQL em tempo de execução: O programador facilmente pode incluir o código que indica se um **selecione** instrução ou um **inserir** instrução está sendo construído. Em algumas situações, o programador não é possível saber se uma instrução criará um conjunto de resultados. Isso é verdadeiro se o aplicativo fornece uma maneira para que o usuário insira e executar uma instrução SQL. Ele também é verdadeiro quando o aplicativo cria uma instrução em tempo de execução para executar um procedimento.  

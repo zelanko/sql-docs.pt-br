@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aac5535e8d94cdd602b139bd9046b77a15cbad5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 075ebc645c67f496d7e6946035371244dd229c88
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimension-assl"></a>Elemento Type (Dimension) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações sobre o conteúdo da dimensão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fornece informações sobre o conteúdo da dimensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,18 +50,18 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
 |Valor padrão|*Regular*|  
-|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elemento pai|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elemento pai|[Dimensão](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|Elementos filho|Nenhuma|  
   
 ## <a name="remarks"></a>Remarks  
  Alguns valores para **Type**, por exemplo *Accounts*, determinam um comportamento específico.  
@@ -76,10 +76,10 @@ ms.lasthandoff: 01/08/2018
 |*Organização*|A dimensão contém atributos organizacionais.|  
 |*BillOfMaterials*|A dimensão contém uma conta de atributos de materiais.|  
 |*Contas*|A dimensão contém atributos relacionados à conta.<br /><br /> Observação: Esse valor indica que a dimensão oferece suporte a funcionalidades específicas de dimensões de conta.|  
-|*Clientes*|A dimensão contém atributos relacionados ao cliente.|  
+|*Customers*|A dimensão contém atributos relacionados ao cliente.|  
 |*Produtos*|A dimensão contém atributos relacionados ao produto.|  
 |*Cenário*|A dimensão contém atributos relacionados ao cenário.|  
-|*Quantitativa*|A dimensão contém atributos quantitativos.|  
+|*Quantitative*|A dimensão contém atributos quantitativos.|  
 |*Utilitário*|A dimensão contém atributos de utilitário.|  
 |*Moeda*|A dimensão contém atributos de moeda.|  
 |*Taxas*|A dimensão contém atributos de taxa de câmbio.|  
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
  O elemento que corresponde ao pai do **tipo** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
-## <a name="see-also"></a>Consulte Também  
- [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

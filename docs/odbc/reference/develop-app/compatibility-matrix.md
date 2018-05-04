@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -25,12 +25,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce98e3471f3bf14ada77fcbb67291ba8a4dff166
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidade
 A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers definidas anteriormente nesta seção.  
@@ -53,7 +52,7 @@ A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers 
   
  [3] essa configuração potencialmente pode não funcionar porque não há recursos no ODBC 2. *x* que não estão em padrões, como indicadores.  
   
- [4] esta configuração pode potencialmente não funcionará porque não há recursos no ODBC 3*. x* que não estão em padrões, como indicadores.  
+ [4] esta configuração pode potencialmente não funcionará porque não há recursos no ODBC 3 *. x* que não estão em padrões, como indicadores.  
   
  [5] esta configuração pode potencialmente falhar porque não há recursos que não estão no ODBC 2. x ou 3. x drivers, como específicos do driver no ODBC 3.8 [tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

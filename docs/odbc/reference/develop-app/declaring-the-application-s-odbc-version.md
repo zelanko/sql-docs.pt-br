@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
 - data sources [ODBC], declaring ODBC version
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 89e3363eeefaf85aa81c29266bdf565066c626a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declarando o aplicativo&#39;s versão do ODBC
 Antes de um aplicativo aloca uma conexão, ele deve definir o atributo de ambiente SQL_ATTR_ODBC_VERSION. Esse atributo indica que o aplicativo segue o ODBC 2. *x* ou ODBC 3. *x* especificação ao usar os seguintes itens:  
@@ -49,9 +48,9 @@ Antes de um aplicativo aloca uma conexão, ele deve definir o atributo de ambien
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***argumento SQLTables**.   No ODBC 2. *x*, os caracteres curinga ("%" e "_") no *CatalogName* argumento são tratados literalmente. Em ODBC 3. *x*, eles são tratados como caracteres curinga. Assim, um aplicativo que segue o ODBC 2. *x* especificação não é possível usá-los como escape-los não quando usá-los como literais e caracteres curinga. Um aplicativo que segue o ODBC 3. *x* especificação pode usá-los como caracteres curinga ou reservá-los e usá-los como literais. Para obter mais informações, consulte [argumentos em funções de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   *CatalogName***argumento SQLTables**. No ODBC 2. *x*, os caracteres curinga ("%" e "_") no *CatalogName* argumento são tratados literalmente. Em ODBC 3. *x*, eles são tratados como caracteres curinga. Assim, um aplicativo que segue o ODBC 2. *x* especificação não é possível usá-los como escape-los não quando usá-los como literais e caracteres curinga. Um aplicativo que segue o ODBC 3. *x* especificação pode usá-los como caracteres curinga ou reservá-los e usá-los como literais. Para obter mais informações, consulte [argumentos em funções de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- O ODBC 3*. x* Gerenciador de Driver e o ODBC 3*. x* drivers verificar a versão da especificação do ODBC para o qual um aplicativo é escrito e respondam adequadamente. Por exemplo, se o aplicativo segue o ODBC 2. *x* especificação e chamadas **SQLExecute** antes de chamar **SQLPrepare**, o ODBC 3*. x* Gerenciador de Driver retornará SQLSTATE S1010 ( Erro de sequência de função). Se o aplicativo segue o ODBC 3*. x* especificação, o Gerenciador de Driver retornará SQLSTATE HY010 (erro de sequência de função). Para obter mais informações, consulte [compatibilidade com versões anteriores e a conformidade com padrões](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ O ODBC 3 *. x* Gerenciador de Driver e o ODBC 3 *. x* drivers verificar a versão da especificação do ODBC para o qual um aplicativo é escrito e respondam adequadamente. Por exemplo, se o aplicativo segue o ODBC 2. *x* especificação e chamadas **SQLExecute** antes de chamar **SQLPrepare**, o ODBC 3 *. x* Gerenciador de Driver retornará SQLSTATE S1010 ( Erro de sequência de função). Se o aplicativo segue o ODBC 3 *. x* especificação, o Gerenciador de Driver retornará SQLSTATE HY010 (erro de sequência de função). Para obter mais informações, consulte [compatibilidade com versões anteriores e a conformidade com padrões](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
 >  Aplicativos que seguem o ODBC 3. *x* especificação deve usar o código condicional para evitar o uso de funcionalidade nova para ODBC 3. *x* ao trabalhar com ODBC 2. *x* drivers. ODBC 2. *x* drivers não oferecem suporte a funcionalidade nova para ODBC 3. *x* apenas porque o aplicativo declara que ele segue o ODBC 3. *x* especificação. Além disso, o ODBC 3. *x* drivers não dão suporte à funcionalidade nova para ODBC 3. *x* apenas porque o aplicativo declara que ele segue o ODBC 2. *x* especificação.

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverToDataSource
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1dcb53a08e3e20457a3ad616cd7b3d45fec2962
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 996b2a717933f9e7da1cd16ffd39f8bf40156642
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldrivertodatasource-function"></a>Função SQLDriverToDataSource
 **SQLDriverToDataSource** oferece suporte a conversões para drivers ODBC. Essa função não é chamada por aplicativos habilitados para ODBC. os aplicativos solicitam tradução por meio de **SQLSetConnectAttr**. O driver associado a *identificador da conexão* especificado em **SQLSetConnectAttr** chama o DLL especificado para realizar conversões de todos os dados que fluem do driver para a fonte de dados. Uma DLL de conversão padrão pode ser especificado no arquivo de inicialização de ODBC.  

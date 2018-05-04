@@ -1,16 +1,16 @@
 ---
-title: "Tarefa Criação de Perfil de Dados | Microsoft Docs"
-ms.custom: 
+title: Tarefa Criação de Perfil de Dados | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.f1
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: f13b87b12f22b05984574a41b4b74d9ef1c748cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/20/2018
 |----------------------------------------------|-----------------|  
 |Perfil Distribuição de Comprimento de Coluna|Reporta todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como valores que não são válidos. Por exemplo, você cria o perfil de uma coluna com códigos de estados dos Estados Unidos que devem ter dois caracteres e descobre valores maiores que dois caracteres.|  
 |Perfil Razão Nula de Coluna|Informa a porcentagem de valores nulos na coluna selecionada.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como uma razão alta de valores nulos inesperada em uma coluna. Por exemplo, você cria um perfil de uma coluna de Zip/Código Postal e descobre uma porcentagem alta e inaceitável de códigos ausentes.|  
-|Perfil Padrão de Coluna|Informa um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como cadeias de caracteres que não são válidas. Este perfil também pode sugerir expressões regulares que podem ser usadas no futuro para validar novos valores. Por exemplo, um perfil de padrão de uma coluna CEP dos Estados Unidos pode gerar as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se você vir outras expressões regulares, seus dados provavelmente conterão valores inválidos ou que estão em um formato incorreto.|  
+|Perfil Padrão de Coluna|Informa um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como cadeias de caracteres que não são válidas. Este perfil também pode sugerir expressões regulares que podem ser usadas no futuro para validar novos valores. Por exemplo, um perfil de padrão de uma coluna CEP dos Estados Unidos pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se você vir outras expressões regulares, seus dados provavelmente conterão valores inválidos ou que estão em um formato incorreto.|  
 |Perfil Estatísticas de Coluna|Informa estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas **datetime** .<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como datas inválidas. Por exemplo, você cria o perfil de uma coluna de datas de histórico e descobre uma data máxima no futuro.|  
 |Perfil Distribuição de Valor de Coluna|Reporta todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. Também pode informar valores que representam mais que uma porcentagem especificada de linhas na tabela.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como um número incorreto ou valores distintos em uma coluna. Por exemplo, você cria o perfil de uma coluna que supostamente contém estados dos Estados Unidos e descobre mais de 50 valores distintos.|  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 03/20/2018
 |**DataProfilingTaskTrace**|Fornece informações descritivas sobre o status da tarefa. As mensagens incluem as seguintes informações:<br /><br /> Solicitações de processamento inicial<br /><br /> Início da consulta<br /><br /> Query End<br /><br /> Concluir solicitação de computação|  
   
 ## <a name="output-and-its-schema"></a>Saída e seu esquema  
- A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
+ A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
   
  Com relação às informações sobre a qualidade de dados, o esquema pode ser útil para:  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 03/20/2018
   
 -   Construir ferramentas personalizadas que trabalhem com informações de qualidade de dados.  
   
- O namespace de destino é identificado no esquema como [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ O namespace de destino é identificado no esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Saída no fluxo de trabalho condicional de um pacote  
  Os componentes de criação de perfil de dados, não incluem funcionalidade interna pronta para implementar lógica condicional no fluxo de trabalho do pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , com base na saída da tarefa de Criação de Perfil de Dados. Porém, você pode adicionar facilmente esta lógica, com uma quantidade mínima de programação, em uma tarefa de Script. Este código poderia efetuar uma consulta XPath contra a saída da XML e salvar o resultado em uma variável de pacote. Restrições de precedência que conectam a tarefa Script a tarefas subsequentes, podem usar uma expressão para determinar o fluxo de trabalho. Por exemplo, a tarefa Script detecta que a porcentagem de valores nulos em uma coluna excede um certo limite. Quando esta condição for verdade, você poderia querer interromper o pacote e resolver o problema antes de continuar.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 03/20/2018
  [Página de Solicitações de perfil](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  Na página **Solicitações de Perfil** , você especifica a fonte de dados e seleciona e configura os perfis de dados que quer computar. Para obter mais informações sobre os vários perfis que podem ser configurados, consulte os tópicos a seguir:  
   
--   [Opções de solicitação do perfil chave de candidato &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Chave de Candidato &#40;tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [Opções da solicitação de perfil Distribuição de Tamanho de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   

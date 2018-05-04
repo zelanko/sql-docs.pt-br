@@ -31,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-method-javalangstring-int"></a>Método execute (java.lang.String, int[])
 
-  Executa a instrução SQL fornecida, que pode retornar vários resultados e sinaliza [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)] que as chaves geradas automaticamente indicadas na matriz fornecida devem ser disponibilizadas para recuperação.
+  Executa a instrução SQL fornecida, que pode retornar diversos resultados, e sinaliza ao [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)] que as chaves geradas automaticamente indicadas na matriz fornecida devem ser disponibilizadas para recuperação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,7 +50,7 @@ Um **cadeia de caracteres** que contém uma instrução SQL.
 
 Uma matriz de **int**s que indica os índices de coluna das chaves geradas automaticamente que devem ser disponibilizados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 **True** se o primeiro resultado é um conjunto de resultados. Caso contrário, **false**.
   
 ## <a name="exceptions"></a>Exceções
@@ -59,7 +59,7 @@ Uma matriz de **int**s que indica os índices de coluna das chaves geradas autom
 ## <a name="remarks"></a>Remarks
 Esse método execute é especificado pelo método execute na interface Java.SQL. Statement.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Método Execute &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 

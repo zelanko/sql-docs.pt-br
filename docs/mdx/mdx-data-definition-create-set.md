@@ -26,12 +26,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0b7c9464085c99ff9d04be0c7c6a27d6f216c22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>Definição de dados MDX - criar conjunto
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,9 +66,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>Remarks  
  Um conjunto nomeado é um conjunto de membros de dimensão (ou uma expressão que define um conjunto) que você cria para usar novamente. Por exemplo, um conjunto nomeado possibilita a definição de um conjunto de membros de dimensão que consiste no conjunto das dez principais lojas por vendas. Esse conjunto pode ser definido estaticamente, ou por meio de uma função como [TopCount](../mdx/topcount-mdx.md). Esse conjunto nomeado pode ser usado onde quer que o conjunto das 10 lojas principais se faça necessário.  
   
- A instrução CREATE SET cria um conjunto nomeado que permanece disponível durante a sessão e, portanto, pode ser usada em várias consultas em uma sessão. Para obter mais informações, consulte [membros calculados do Creating Session-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ A instrução CREATE SET cria um conjunto nomeado que permanece disponível durante a sessão e, portanto, pode ser usada em várias consultas em uma sessão. Para obter mais informações, consulte [membros calculados do Creating Session-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- Também é possível definir um conjunto nomeado para ser usado por uma consulta única. Para definir tal conjunto, use a cláusula WITH na instrução SELECT. Para obter mais informações sobre a cláusula WITH, consulte [conjuntos nomeados de Creating Query-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ Também é possível definir um conjunto nomeado para ser usado por uma consulta única. Para definir tal conjunto, use a cláusula WITH na instrução SELECT. Para obter mais informações sobre a cláusula WITH, consulte [conjuntos nomeados de Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  O *Set_Expression* cláusula pode conter qualquer função que oferece suporte à sintaxe MDX. Conjuntos criados com a instrução CREATE SET que não especifiquem a cláusula SESSION têm escopo de sessão. Use a cláusula WITH para criar um conjunto com escopo de consulta.  
   
@@ -79,7 +78,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  Um conjunto definido pelo usuário pode ocorrer dentro de um dos escopos listados na tabela a seguir.  
   
  Escopo de consulta  
- A visibilidade e o tempo de vida do conjunto estão limitados à consulta. O conjunto é definido como uma consulta individual. Escopo de consulta substitui escopo de sessão. Para obter mais informações, consulte [conjuntos nomeados de Creating Query-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ A visibilidade e o tempo de vida do conjunto estão limitados à consulta. O conjunto é definido como uma consulta individual. Escopo de consulta substitui escopo de sessão. Para obter mais informações, consulte [conjuntos nomeados de Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  Escopo de sessão  
  A visibilidade e o tempo de vida do conjunto estão limitados à sessão em que são criados. (O tempo de vida é menor do que a duração de sessão se uma instrução DROP SET for emitida no conjunto.) A instrução CREATE SET cria um conjunto com escopo de sessão. Use a cláusula WITH para criar um conjunto com escopo de consulta.  
@@ -117,8 +116,8 @@ SELECT [Core Products] ON 0
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o conjunto.|  
 |DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o conjunto. O separador de nível de pasta é definido pelo aplicativo cliente. Para ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição para um conjunto definido, use um ponto e vírgula (;) para separar as pastas.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Remova a instrução SET &#40; MDX &#41;](../mdx/mdx-data-definition-drop-set.md)   
- [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Instrução SET de SOLTAR &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

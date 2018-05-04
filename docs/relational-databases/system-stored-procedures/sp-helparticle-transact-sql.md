@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25fcce9f83befaeed78abd62ea2e0ad088460756
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0aee19c773e85f5dfe0782384441afa6ac959f23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +49,22 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ ** @publication =**] **'***publicação***'**  
+ [  **@publication =**] **'***publicação***'**  
  É o nome da publicação. *publicação* é **sysname**, sem padrão.  
   
- [ ** @article=**] **'***artigo***'**  
- É o nome de um artigo na publicação. *artigo* é **sysname**, com um padrão de ** % **. Se *artigo* não é fornecido, serão retornadas informações sobre todos os artigos da publicação especificada.  
+ [  **@article=**] **'***artigo***'**  
+ É o nome de um artigo na publicação. *artigo* é **sysname**, com um padrão de **%**. Se *artigo* não é fornecido, serão retornadas informações sobre todos os artigos da publicação especificada.  
   
- [ ** @returnfilter=**] *returnfilter*  
+ [  **@returnfilter=**] *returnfilter*  
  Especifica se a cláusula de filtro deve ser retornada. *returnfilter* é **bit**, com um padrão de **1**, que retorna a cláusula de filtro.  
   
- [ ** @publisher **=] **'***publicador***'**  
+ [ **@publisher**=] **'***publicador***'**  
  Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *publicador* não deve ser especificado ao solicitar informações sobre um artigo publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [ ** @found=** ] *encontrado* saída  
+ [  **@found=** ] *encontrado* saída  
  Somente para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -97,8 +96,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**filter_owner**|**sysname**|Proprietário do filtro.|  
 |**unqua_filter**|**sysname**|Nome do filtro, sem o nome do proprietário.|  
 |**auto_identity_range**|**Int**|Sinalizador que indica se o tratamento de um intervalo de identidade automático foi ativado na publicação no momento em que foi criado. **1** significa que o intervalo de identidade automático está habilitado; **0** significa que ele está desabilitado.|  
-|**publisher_identity_range**|**Int**|Tamanho do intervalo de identidade no publicador de intervalo, se o artigo tiver *identityrangemanagementoption* definida como **automática** ou **auto_identity_range** definido como ** True**.|  
-|**identity_range**|**bigint**|Tamanho do intervalo de identidade no assinante de intervalo, se o artigo tiver *identityrangemanagementoption* definida como **automática** ou **auto_identity_range** definido como ** True**.|  
+|**publisher_identity_range**|**Int**|Tamanho do intervalo de identidade no publicador de intervalo, se o artigo tiver *identityrangemanagementoption* definida como **automática** ou **auto_identity_range** definido como  **True**.|  
+|**identity_range**|**bigint**|Tamanho do intervalo de identidade no assinante de intervalo, se o artigo tiver *identityrangemanagementoption* definida como **automática** ou **auto_identity_range** definido como  **True**.|  
 |**threshold**|**bigint**|Valor de porcentagem que indica quando o Distribution Agent atribui um novo intervalo de identidade.|  
 |**identityrangemanagementoption**|**Int**|Indica o gerenciamento de intervalo de identidade tratado para o artigo.|  
 |**fire_triggers_on_snapshot**|**bit**|Se os gatilhos de usuário replicados forem executados quando o instantâneo inicial for aplicado.<br /><br /> **1** = usuário gatilhos são executados.<br /><br /> **0** = usuário gatilhos não são executados.|  

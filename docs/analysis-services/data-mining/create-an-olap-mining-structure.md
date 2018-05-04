@@ -1,31 +1,23 @@
 ---
-title: "Criar uma estrutura de mineração OLAP | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Criar uma estrutura de mineração OLAP | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b5ad8add984db3c83cfc6b3af99f430035f56d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>Criar uma estrutura de mineração OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Há muitas vantagens na criação de um modelo de mineração de dados baseado em um cubo OLAP ou em outro repositório de dados multidimensional. Uma solução de OLAP já contém grandes volumes de dados que estão bem-organizados, limpos e corretamente formatados; contudo, a complexidade dos dados é tamanha que é pouco provável que usuários localizem padrões significativos pela exploração ad hoc. A mineração de dados permite descobrir novas correlações e apresenta ideias acionáveis.  
+  Há muitas vantagens na criação de um modelo de mineração de dados baseado em um cubo OLAP ou em outro repositório de dados multidimensional. Uma solução de OLAP já contém grandes volumes de dados que estão bem-organizados, limpos e corretamente formatados; contudo, a complexidade dos dados é tamanha que é pouco provável que usuários localizem padrões significativos pela exploração ad hoc. A mineração de dados permite descobrir novas correlações e apresenta ideias acionáveis.  
   
  Este tópico descreve como criar uma estrutura de mineração OLAP, com base em uma dimensão e em medidas relacionadas em uma solução multidimensional existente.  
   
@@ -116,9 +108,9 @@ Há muitas vantagens na criação de um modelo de mineração de dados baseado e
 |Tarefa|Cenário de exemplo|Algoritmo|  
 |----------|---------------------|---------------|  
 |Agrupar membros em clusters|Segmente uma dimensão de cliente com base nas propriedades do membro do cliente, os produtos que os clientes compram e a quantidade de dinheiro que eles gastam.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de Cluster|  
-|Localizar membros interessantes ou anormais|Identifique lojas interessantes ou anormais em uma dimensão de loja com base em vendas, lucros, local da loja e tamanho da loja.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de Árvores de Decisão|  
-|Localizar células interessantes ou anormais|Identifique as vendas por loja que contradizem as tendências típicas com o tempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series|  
-|Localize correlações|Identifique fatores relacionados ao tempo de inatividade do servidor, inclusive região, tipo de computador, SO ou data de compra.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes|  
+|Localizar membros interessantes ou anormais|Identifique lojas interessantes ou anormais em uma dimensão de loja com base em vendas, lucros, local da loja e tamanho da loja.|Algoritmo de Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|Localizar células interessantes ou anormais|Identifique as vendas por loja que contradizem as tendências típicas com o tempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Algoritmo de série temporal|  
+|Localize correlações|Identifique fatores relacionados ao tempo de inatividade do servidor, inclusive região, tipo de computador, SO ou data de compra.|Algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes|  
   
 ##  <a name="bkmk_Filters"></a>Dividindo um cubo versus. Filtrando modelos  
  Fatiar o cubo enquanto cria um modelo é como criar um filtro em um modelo de mineração relacional. Em um modelo relacional, o filtro na fonte de dados é definido como uma cláusula WHERE em uma instrução SQL; em um cubo, você usa o editor para criar instruções de filtro que usam MDX.  

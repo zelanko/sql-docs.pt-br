@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>Função SQLDriverConnect
 **Conformidade**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  onde *cadeia de caracteres* tem zero ou mais caracteres; *identificador* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; *atributo-valor* pode diferenciar maiusculas de minúsculas; e o valor da **DSN** palavra-chave não ser formado apenas por espaços em branco.  
   
- Devido à conexão cadeia de caracteres e inicialização gramática, palavras-chave e atributo valores do arquivo que contenha os caracteres **[] {} (),? \*=! @** não incluídos com chaves devem ser evitadas. O valor de **DSN** palavra-chave não pode consistir apenas de espaços em branco e não deve conter espaços em branco à esquerda. Devido a gramática as informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
+ Devido à conexão cadeia de caracteres e inicialização gramática, palavras-chave e atributo valores do arquivo que contenha os caracteres **[]{}(),? \*=! @** não incluídos com chaves devem ser evitadas. O valor de **DSN** palavra-chave não pode consistir apenas de espaços em branco e não deve conter espaços em branco à esquerda. Devido a gramática as informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
   
  Aplicativos não é necessário adicionar chaves ao redor do valor do atributo após o **DRIVER** palavra-chave, a menos que o atributo contém um ponto e vírgula (;), caso em que as chaves são necessárias. Se o valor do atributo que o driver recebe inclui chaves, o driver não deve removê-los, mas eles devem ser parte da cadeia de conexão retornado.  
   
- Um valor de cadeia de caracteres DSN ou conexão entre chaves ({}) que contém os caracteres **[] {} (),? \*=! @** é passado intacto para o driver. No entanto, ao usar esses caracteres em uma palavra-chave, o Gerenciador de Driver retornará um erro ao trabalhar com DSNs de arquivos mas passa a cadeia de caracteres de conexão para o driver para cadeias de caracteres de conexão regular. Evite usar chaves inseridas em um valor de palavra-chave.  
+ Um valor de cadeia de caracteres DSN ou conexão entre chaves ({}) que contém os caracteres **[]{}(),? \*=! @** é passado intacto para o driver. No entanto, ao usar esses caracteres em uma palavra-chave, o Gerenciador de Driver retornará um erro ao trabalhar com DSNs de arquivos mas passa a cadeia de caracteres de conexão para o driver para cadeias de caracteres de conexão regular. Evite usar chaves inseridas em um valor de palavra-chave.  
   
  A cadeia de caracteres de conexão pode incluir qualquer número de palavras-chave definidos pelo driver. Porque o **DRIVER** palavra-chave não usar as informações das informações do sistema, o driver deve definir palavras-chave suficientes para que um driver pode se conectar a uma fonte de dados usando apenas as informações na cadeia de conexão. (Para obter mais informações, consulte "Diretrizes de Driver", posteriormente nesta seção.) O driver define quais palavras-chave é necessárias para se conectar à fonte de dados.  
   

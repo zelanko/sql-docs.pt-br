@@ -23,12 +23,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 501f3a53b5c9ccaee8229ed99f0a37dc50b05e88
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bfcef7bf28ff702841a2f365e735f4c416beda55
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Instruções de definição de dados MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,24 +38,24 @@ ms.lasthandoff: 01/08/2018
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Instrução ALTER CUBE &#40; MDX &#41;](../mdx/mdx-data-definition-alter-cube.md)|Altera a estrutura de um cubo especificado.|  
-|[Criar ação instrução &#40; MDX &#41;](../mdx/mdx-data-definition-create-action.md)|Cria uma ação que pode ser associada a um cubo, uma dimensão, uma hierarquia ou um objeto subordinado.|  
-|[Criar instrução de CÁLCULO de CÉLULA &#40; MDX &#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Cria um cálculo que avalia uma linguagem MDX em um conjunto de tuplas especificado em um cubo.|  
-|[Criar cubo GLOBAL instrução &#40; MDX &#41;](../mdx/mdx-data-definition-create-global-cube.md)|Cria e popula um cubo localmente persistente, com base em um subcubo a partir de um cubo no servidor. Uma conexão com o servidor não é exigida para a conexão com o cubo localmente persistente.|  
-|[Criar declaração de membro &#40; MDX &#41;](../mdx/mdx-data-definition-create-member.md)|Cria um membro calculado.|  
-|[Criar instrução de cubo de sessão &#40; MDX &#41;](../mdx/mdx-data-definition-create-session-cube.md)|Cria e popula um cubo disponível para todas as consultas da mesma sessão, com base nos cubos no servidor.|  
-|[CRIAR a instrução SET &#40; MDX &#41;](../mdx/mdx-data-definition-create-set.md)|Cria um conjunto nomeado para um cubo especificado.|  
-|[Criar SUBCUBO instrução &#40; MDX &#41;](../mdx/mdx-data-definition-create-subcube.md)|Redefine o espaço de cubo de um cubo ou subcubo especificado em um subcubo especificado.|  
-|[Instrução de ação DROP &#40; MDX &#41;](../mdx/mdx-data-definition-drop-action.md)|Exclui uma ação especificada de um cubo especificado.|  
-|[Remova a instrução de CÁLCULO de CÉLULA &#40; MDX &#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|Remove o cálculo de célula especificado.|  
-|[Remover membro instrução &#40; MDX &#41;](../mdx/mdx-data-definition-drop-member.md)|Remove um membro calculado.|  
-|[Remova a instrução SET &#40; MDX &#41;](../mdx/mdx-data-definition-drop-set.md)|Remove um conjunto nomeado.|  
-|[Remova a instrução de SUBCUBO &#40; MDX &#41;](../mdx/mdx-data-definition-drop-subcube.md)|Descarta um subcubo especificado, revertendo para o cubo previamente definido ou para a definição de subcubo com o nome especificado.|  
-|[Instrução do cubo de atualização de &#40; MDX &#41;](../mdx/mdx-data-definition-refresh-cube.md)|Atualiza o cache de cliente para um cubo.|  
+|[Instrução ALTER CUBE & #40; MDX & #41;](../mdx/mdx-data-definition-alter-cube.md)|Altera a estrutura de um cubo especificado.|  
+|[Instrução CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Cria uma ação que pode ser associada a um cubo, uma dimensão, uma hierarquia ou um objeto subordinado.|  
+|[Criar instrução de CÁLCULO de CÉLULA & #40; MDX & #41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Cria um cálculo que avalia uma linguagem MDX em um conjunto de tuplas especificado em um cubo.|  
+|[Instrução CREATE GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)|Cria e popula um cubo localmente persistente, com base em um subcubo a partir de um cubo no servidor. Uma conexão com o servidor não é exigida para a conexão com o cubo localmente persistente.|  
+|[Criar declaração de membro & #40; MDX & #41;](../mdx/mdx-data-definition-create-member.md)|Cria um membro calculado.|  
+|[Instrução CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)|Cria e popula um cubo disponível para todas as consultas da mesma sessão, com base nos cubos no servidor.|  
+|[CRIAR a instrução SET & #40; MDX & #41;](../mdx/mdx-data-definition-create-set.md)|Cria um conjunto nomeado para um cubo especificado.|  
+|[Instrução CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)|Redefine o espaço de cubo de um cubo ou subcubo especificado em um subcubo especificado.|  
+|[Instrução de ação DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|Exclui uma ação especificada de um cubo especificado.|  
+|[Instrução de CÁLCULO de CÉLULA DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|Remove o cálculo de célula especificado.|  
+|[Instrução de membro DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)|Remove um membro calculado.|  
+|[Instrução SET de SOLTAR &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|Remove um conjunto nomeado.|  
+|[Instrução de SUBCUBO DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)|Descarta um subcubo especificado, revertendo para o cubo previamente definido ou para a definição de subcubo com o nome especificado.|  
+|[ATUALIZAÇÃO de cubo instrução &#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|Atualiza o cache de cliente para um cubo.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência de instrução MDX &#40; MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Instruções MDX de manipulação de dados &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de instrução MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Instruções de manipulação de dados MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Instruções de script MDX & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

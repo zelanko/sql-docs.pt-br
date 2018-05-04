@@ -23,15 +23,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 64fe5c240808b727c0985f432bb634d83cb68e91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c3c20290bc36ef7fd91d720ed8605e873111e86b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverxmlmetadata-rowset"></a>Conjunto de linhas DISCOVER_XML_METADATA
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna um documento XML que descreve um objeto solicitado. O conjunto de linhas que sempre é retornado consiste em uma linha e em uma coluna.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Retorna um documento XML que descreve um objeto solicitado. O conjunto de linhas que sempre é retornado consiste em uma linha e em uma coluna.  
   
  Se você chamar o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método com o **DISCOVER_XML_METATDATA** valor de enumeração no [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, o **Discover**método retorna o **DISCOVER_XML_METATDATA** conjunto de linhas.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**METADADOS**|**DBTYPE_WSTR**||Um documento de XML que descreve o objeto solicitada pela restrição.|  
+|**METADATA**|**DBTYPE_WSTR**||Um documento de XML que descreve o objeto solicitada pela restrição.|  
   
  Este conjunto de linhas do esquema não é classificado.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 |**DataSourcePermissionID**|**DBTYPE_WSTR**|Opcional.|  
 |**ObjectExpansion**|**DBTYPE_WSTR**|Opcional.|  
   
- A restrição, **ObjectExpansion**, está disponível para cada objeto principal de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Normalmente, o cliente usa as restrições para descrever os objetos OLAP para os quais o DDL deve ser retornada e usa a restrição **ObjectExpansion** para definir o grau de expansão no DDL retornado. A tabela a seguir indica se o valor de enumeração é permitido para [elemento Alter &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) comandos.  
+ A restrição, **ObjectExpansion**, está disponível para cada objeto principal de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Normalmente, o cliente usa as restrições para descrever os objetos OLAP para os quais o DDL deve ser retornada e usa a restrição **ObjectExpansion** para definir o grau de expansão no DDL retornado. A tabela a seguir indica se o valor de enumeração é permitido para [Alter elemento &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) comandos.  
   
 |Valor de enumeração|Description|  
 |-----------------------|-----------------|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |**ExpandObject**|Igual a *ObjectProperties*, mas também retorna o nome, a ID e o carimbo de data/hora para os principais objetos contidos.|  
 |**ExpandFull**|Expande completamente o objeto solicitado de forma recursiva até a parte inferior de todos os objetos contidos.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

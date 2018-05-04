@@ -1,38 +1,19 @@
 ---
 title: Gerenciamento de Assemblies de modelo multidimensional | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], assemblies
-- calling user-defined functions
-- user impersonation [Analysis Services]
-- impersonation [Analysis Services]
-- Data Mining Extensions [Analysis Services], assemblies
-- MDX [Analysis Services], assemblies
-- user-defined functions [Analysis Services]
-- Analysis Services objects, assemblies
-- assemblies [Analysis Services]
-- application domains [Analysis Services]
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 89678cac9febb3adbed049e859876d646b3ddf82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +72,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Para os assemblies, a permissão de execução é passada com a propriedade **PermissionSet** no objeto **Assembly** . As permissões que o código gerenciado recebe são determinadas pela política de segurança em vigor. Existem três níveis de política que estão em vigor em um ambiente de host não[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : empresa, computador e usuário. A lista efetiva de permissões que o código recebe é determinada pela interseção das permissões obtidas por esses três níveis.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  A política de nível host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma combinação de política fixa do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para assemblies de sistema e política específica de usuário para assemblies de usuário. A parte especificada pelo usuário da política host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se no proprietário do assembly especificando um de três recipientes de permissão para cada assembly.  
   

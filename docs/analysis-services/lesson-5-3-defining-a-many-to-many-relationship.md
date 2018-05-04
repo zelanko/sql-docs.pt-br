@@ -1,29 +1,28 @@
 ---
-title: "Definindo uma relação muitos-para-muitos | Microsoft Docs"
-ms.custom: 
+title: Definindo uma relação muitos-para-muitos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1fee68a19ece5eab139211939602254db4acff77
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lição 5-3-definir uma relação muitos-para-muitos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +66,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
     Observe que os tipos de dados das outras duas colunas nessa tabela são numéricos.  
   
-10. No painel **Tabelas** , clique com o botão direito do mouse em **InternetSalesReason (dbo.FactInternetSalesReason)**e clique em **Explorar Dados**.  
+10. No painel **Tabelas** , clique com o botão direito do mouse em **InternetSalesReason (dbo.FactInternetSalesReason)** e clique em **Explorar Dados**.  
   
     Observe que, para cada número de linha dentro de cada pedido, um valor de chave identifica o motivo das vendas para a compra daquele item de linha, como mostra a imagem a seguir:  
   
@@ -183,7 +182,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
 [Definir a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Trabalhar com diagramas em Designer de exibição de fonte de dados &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Trabalhar com diagramas em Designer de exibição de fonte de dados & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

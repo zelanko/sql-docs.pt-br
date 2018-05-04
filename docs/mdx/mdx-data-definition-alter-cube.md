@@ -27,12 +27,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1db5a0a41669c97728cdb12107d18b0467481a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definição de dados MDX - ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -136,7 +135,7 @@ CELL CALCULATION Calculation_Name
  Se a cláusula WITH DESCENDANTS não for utilizada, os filhos de um membro descartado se tornam filhos do pai do membro descartado. Se a cláusula WITH DESCENDENTES for utilizada, todos os descendentes e suas linhas na tabela de dimensões também serão descartados.  
   
 > [!NOTE]  
->  Para obter informações sobre como descartar membros calculados, conjuntos nomeados, ações e cálculos de célula, consulte [a instrução DROP do membro &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-member.md), [Remover instrução SET &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-set.md), [Remover instrução ação &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-action.md), e [remover instrução de CÁLCULO de CÉLULA &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Para obter informações sobre como descartar membros calculados, conjuntos nomeados, ações e cálculos de célula, consulte [a instrução DROP do membro &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [remover instrução SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instrução de ação DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [instrução de CÁLCULO de CÉLULA DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Atualizando o membro de dimensão padrão  
  Essa cláusula atualiza o membro padrão de um cubo e é usada no script de cálculo MDX para definir um membro padrão. O membro padrão pode ser especificado para a dimensão de banco de dados, uma dimensão de cubo ou para o logon de um usuário. O membro padrão também pode ser alterado durante uma sessão.  
@@ -180,9 +179,9 @@ CELL CALCULATION Calculation_Name
  Uma expressão MDX escalar válida que define o valor de propriedade do membro calculado.  
   
 ## <a name="creating-a-cell-calculation"></a>Criando um cálculo de célula  
- Para obter mais informações sobre como criar um cálculo de célula usando a instrução ALTER CUBE, consulte [instrução DROP de CÁLCULO de CÉLULA &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Para obter mais informações sobre como criar um cálculo de célula usando a instrução ALTER CUBE, consulte [instrução DROP de CÁLCULO de CÉLULA &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

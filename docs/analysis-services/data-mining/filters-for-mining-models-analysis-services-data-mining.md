@@ -1,16 +1,16 @@
 ---
-title: "Filtros para modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
-ms.custom: 
+title: Filtros para modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 27451144f102bba571cd0034ca8e002ff6096671
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-A filtragem de modelos com base em dados ajuda na criação de modelos de mineração que usam subconjuntos de dados em uma estrutura de mineração. A filtragem proporciona flexibilidade quando você projeta suas estruturas de mineração e fontes de dados porque você pode criar uma única estrutura de mineração, com base em uma exibição da fonte de dados abrangente. Em seguida, é possível criar filtros que serão usados somente como parte dos dados para treinar e testar uma variedade de modelos, em vez de criar uma estrutura diferente e um modelo relacionado para cada subconjunto de dados.  
+  A filtragem de modelos com base em dados ajuda na criação de modelos de mineração que usam subconjuntos de dados em uma estrutura de mineração. A filtragem proporciona flexibilidade quando você projeta suas estruturas de mineração e fontes de dados porque você pode criar uma única estrutura de mineração, com base em uma exibição da fonte de dados abrangente. Em seguida, é possível criar filtros que serão usados somente como parte dos dados para treinar e testar uma variedade de modelos, em vez de criar uma estrutura diferente e um modelo relacionado para cada subconjunto de dados.  
   
  Por exemplo, você define a exibição da fonte de dados na tabela Clientes e nas tabelas relacionadas. Em seguida, define uma única estrutura de mineração que inclui todos os campos necessários. Finalmente, você cria um modelo filtrado em um atributo de cliente particular, como Região. Você pode fazer facilmente uma cópia desse modelo e alterar apenas a condição de filtro para gerar um novo modelo com base em uma região diferente.  
   
@@ -57,7 +56,7 @@ A filtragem de modelos com base em dados ajuda na criação de modelos de minera
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Criando filtros de modelo usando o Designer de Mineração de Dados  
  Você filtra um modelo no Designer de Mineração de Dados alterando a propriedade **Filter** do modelo de mineração. É possível digitar uma expressão de filtro diretamente no painel **Propriedades** ou abrir uma caixa de diálogo de filtros para criar condições.  
   
- Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode unir várias condições usando os operadores **AND**/**OR** . Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar os operadores **maior** e **menor** . No entanto, para valores discretos, você pode apenas usar os operadores **= (igual a)**, **! = (não igual a)**e **é nulo** .  
+ Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode unir várias condições usando os operadores **AND**/**OR** . Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar os operadores **maior** e **menor** . No entanto, para valores discretos, você pode apenas usar os operadores **= (igual a)**, **! = (não igual a)** e **é nulo** .  
   
 > [!NOTE]  
 >  Não há suporte para a palavra-chave **LIKE** . Se quiser incluir vários atributos discretos, será preciso criar várias condições separadas e vinculá-las usando o operador **OR** .  

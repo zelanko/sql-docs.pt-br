@@ -23,15 +23,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bbfd30d94a7f6ad129eee3ee82e9bb7fb951c19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_STRUCTURE_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as colunas individuais de todas as estruturas de mineração implantadas em um servidor que esteja executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descreve as colunas individuais de todas as estruturas de mineração implantadas em um servidor que esteja executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DMSCHEMA_MINING_STRUCTURE_COLUMNS** linhas contém as seguintes colunas.  
@@ -39,11 +39,11 @@ ms.lasthandoff: 01/08/2018
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||O nome do catálogo.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||O nome do esquema não qualificado. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]não oferece suporte a esquemas, portanto, esta coluna é sempre **nulo**.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||O nome do esquema não qualificado. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] não oferece suporte a esquemas, portanto, esta coluna é sempre **nulo**.|  
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**||O nome da estrutura. Esta coluna não pode conter um **nulo**.|  
-|**NOME DA COLUNA**|**DBTYPE_WSTR**||O nome da coluna. A exclusividade só é garantida entre colunas que compartilham o mesmo padrão. Por exemplo, duas colunas aninhadas poderão ter o mesmo nome se pertencerem a duas tabelas aninhadas diferentes dentro da mesma estrutura.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**||O nome da coluna. A exclusividade só é garantida entre colunas que compartilham o mesmo padrão. Por exemplo, duas colunas aninhadas poderão ter o mesmo nome se pertencerem a duas tabelas aninhadas diferentes dentro da mesma estrutura.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||O GUID da coluna. Os provedores que não usam GUIDs para identificar colunas devem retornar **nulo** nesta coluna.|  
-|**COLUMN_PROPID**|**DBTYPE_UI4**||A ID de propriedade da coluna. Os provedores que não associam IDs de propriedade a colunas devem retornar **nulo** nesta coluna. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retorna **nulo** para esta coluna.|  
+|**COLUMN_PROPID**|**DBTYPE_UI4**||A ID de propriedade da coluna. Os provedores que não associam IDs de propriedade a colunas devem retornar **nulo** nesta coluna. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Retorna **nulo** para esta coluna.|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||O ordinal da coluna. As colunas são numeradas a partir de 1. **NULO** se não houver nenhum valor ordinal estável para a coluna.|  
 |**COLUMN_HASDEFAULT**|**DBTYPE_BOOL**||Um booliano que indica se esta coluna tem um valor padrão.<br /><br /> **TRUE** se a coluna tiver um valor padrão.<br /><br /> **FALSE** se a coluna não tem um valor padrão ou se não for possível determinar se a coluna tem um valor padrão.|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||O valor padrão da coluna. Um provedor pode expor **DBCOLUMN_DEFAULTVALUE** mas não **DBCOLUMN_HASDEFAULT** (para tabelas ISO) no conjunto de linhas retornado por **Getcolumnsrowset**.<br /><br /> Se o valor padrão é **nulo**, **COLUMN_HASDEFAULT** é **TRUE** e **COLUMN_DEFAULT** coluna é um **NULL** valor.|  
@@ -82,9 +82,9 @@ ms.lasthandoff: 01/08/2018
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Opcional.|  
 |**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Opcional.|  
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**|Opcional.|  
-|**NOME DA COLUNA**|**DBTYPE_WSTR**|Opcional.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Opcional.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [Linhas do esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

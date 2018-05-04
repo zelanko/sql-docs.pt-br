@@ -1,33 +1,32 @@
 ---
 title: Elemento KpiGoal (CSDLBI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4e15a18c55318373b41c8a4fabe7377aad5d9f00
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f54d62233dad9360cfa7e530e7b9dea30ad30f5e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpigoal-element-csdlbi"></a>Elemento KpiGoal (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-O elemento KpiGoal fornece uma referência à coluna que é usada para definir a meta do KPI (Indicador Chave de Desempenho).  
+  O elemento KpiGoal fornece uma referência à coluna que é usada para definir a meta do KPI (Indicador Chave de Desempenho).  
   
  Em um CSDLBI, os KPIs se baseiam em medidas e o elemento Measure contém a fórmula (se houver), enquanto outros metadados associados ao KPI são definidos como parte do [elemento KPI &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md).  O elemento Kpigoal é um subtipo do elemento Kpi.  
   
@@ -86,6 +85,6 @@ O elemento KpiGoal fornece uma referência à coluna que é usada para definir a
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento KPI &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
+ [Elemento KPI & #40; CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
   
   

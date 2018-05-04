@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], about upgrading
 - ODBC drivers [ODBC], backward compatibility
@@ -25,23 +25,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9a713564688e97c4b9b649880e989598a58179f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61809072272ae91c32d4780971735c29c53fe977
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-odbc-3x-applications"></a>Gravação de ODBC 3. x aplicativos
 Quando um ODBC 2. *x* aplicativo é atualizado para o ODBC 3. *x*, ele deve ser escrito, de modo que ele funciona com os dois ODBC 2. *x* e 3. *x* drivers. O aplicativo deve incorporar o código condicional para aproveitar ao máximo o ODBC 3. *x* recursos.  
   
- O atributo de ambiente SQL_ATTR_ODBC_VERSION deve ser definido como SQL_OV_ODBC2. Isso irá garantir que o driver se comporta como um ODBC 2*. x* driver em relação as alterações descritas na seção [alterações de comportamento](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ O atributo de ambiente SQL_ATTR_ODBC_VERSION deve ser definido como SQL_OV_ODBC2. Isso irá garantir que o driver se comporta como um ODBC 2 *. x* driver em relação as alterações descritas na seção [alterações de comportamento](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- Se o aplicativo usar qualquer um dos recursos descritos na seção [novos recursos](../../../odbc/reference/develop-app/new-features.md), código condicional deve ser usado para determinar se o driver é um ODBC 3. *x* ou ODBC 2*. x* driver. O aplicativo usa **SQLGetDiagField** e **SQLGetDiagRec** obter ODBC 3. *x* SQLSTATEs durante esses fragmentos de código condicional de processamento de erro. Os seguintes pontos sobre a nova funcionalidade devem ser considerados:  
+ Se o aplicativo usar qualquer um dos recursos descritos na seção [novos recursos](../../../odbc/reference/develop-app/new-features.md), código condicional deve ser usado para determinar se o driver é um ODBC 3. *x* ou ODBC 2 *. x* driver. O aplicativo usa **SQLGetDiagField** e **SQLGetDiagRec** obter ODBC 3. *x* SQLSTATEs durante esses fragmentos de código condicional de processamento de erro. Os seguintes pontos sobre a nova funcionalidade devem ser considerados:  
   
 -   Um aplicativo afetado pela mudança no comportamento de tamanho do conjunto de linhas deve ter cuidado para não chamar **SQLFetch** quando o tamanho da matriz é maior que 1. Esses aplicativos devem substituir chamadas para **SQLExtendedFetch** com chamadas para **SQLSetStmtAttr** para definir o atributo de instrução SQL_ATTR_ARRAY_STATUS_PTR e **SQLFetchScroll**, de modo que eles têm código comum que funciona com os dois ODBC 3. *x* e ODBC 2. *x* drivers. Porque **SQLSetStmtAttr** com SQL_ATTR_ROW_ARRAY_SIZE serão mapeados para **SQLSetStmtAttr** com SQL_ROWSET_SIZE do ODBC 2. *x* drivers, aplicativos podem apenas definir SQL_ATTR_ROW_ARRAY_SIZE em suas operações de busca multilinha.  
   
--   A maioria dos aplicativos que está atualizando, na verdade, não são afetados pelas alterações nos códigos SQLSTATE. Para os aplicativos que são afetados, podem fazer uma pesquisa mecânica e substituir na maioria dos casos, usando a tabela de conversão de erro na seção "Mapeamento de SQLSTATE" para converter o ODBC 3. *x* códigos de erro de ODBC 2*. x* códigos. Desde o ODBC 3*. x* Gerenciador de Driver irá realizar o mapeamento do ODBC 2. *x* SQLSTATEs ODBC 3. *x* SQLSTATEs, esses programadores precisam somente a seleção para o ODBC 3. *x* SQLSTATEs e não se preocupe incluindo ODBC 2. *x* SQLSTATEs no código condicional.  
+-   A maioria dos aplicativos que está atualizando, na verdade, não são afetados pelas alterações nos códigos SQLSTATE. Para os aplicativos que são afetados, podem fazer uma pesquisa mecânica e substituir na maioria dos casos, usando a tabela de conversão de erro na seção "Mapeamento de SQLSTATE" para converter o ODBC 3. *x* códigos de erro de ODBC 2 *. x* códigos. Desde o ODBC 3 *. x* Gerenciador de Driver irá realizar o mapeamento do ODBC 2. *x* SQLSTATEs ODBC 3. *x* SQLSTATEs, esses programadores precisam somente a seleção para o ODBC 3. *x* SQLSTATEs e não se preocupe incluindo ODBC 2. *x* SQLSTATEs no código condicional.  
   
 -   Se um aplicativo grande uso de data, hora e tipos de dados de carimbo de hora, o aplicativo pode declarar automaticamente para ser um ODBC 2. *x* aplicativo e como usar a existente de código em vez de usar o código de condição.  
   
@@ -63,7 +62,7 @@ Quando um ODBC 2. *x* aplicativo é atualizado para o ODBC 3. *x*, ele deve ser 
   
 -   Substitua todas as chamadas para **SQLTransact** com chamadas para **SQLEndTran**. Se o identificador válido mais à direita no **SQLTransact** chamada é um identificador de ambiente, uma *HandleType* argumento SQL_HANDLE_ENV deve ser usado no **SQLEndTran** chamar com apropriada *tratar* argumento. Se o identificador válido mais à direita em sua **SQLTransact** chamada é um identificador de conexão, um *HandleType* argumento SQL_HANDLE_DBC deve ser usado no **SQLEndTran** chamar com apropriada *tratar* argumento.  
   
--   Substitua todas as chamadas para **SQLColAttributes** com chamadas para **SQLColAttribute**. Se o *FieldIdentifier* argumento é SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, não altere nada diferente do nome da função. Se não estiver, altere *FieldIdentifier* de SQL_COLUMN_XXXX para SQL_DESC_XXXX. Se *FieldIdentifier* é SQL_DESC_CONCISE_TYPE e o tipo de dados é um tipo de dados datetime, altere para o ODBC 3 correspondente*. x* tipo de dados.  
+-   Substitua todas as chamadas para **SQLColAttributes** com chamadas para **SQLColAttribute**. Se o *FieldIdentifier* argumento é SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, não altere nada diferente do nome da função. Se não estiver, altere *FieldIdentifier* de SQL_COLUMN_XXXX para SQL_DESC_XXXX. Se *FieldIdentifier* é SQL_DESC_CONCISE_TYPE e o tipo de dados é um tipo de dados datetime, altere para o ODBC 3 correspondente *. x* tipo de dados.  
   
 -   Se usar cursores em bloco, cursores roláveis ou ambos, o aplicativo faz o seguinte:  
   

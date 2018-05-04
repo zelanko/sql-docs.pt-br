@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15e9af6857ca3a7f4c6695835d19e4900dfbf319
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5017a12a97da6c2207301667d4fb7db6f22bbcfb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverconnection-members"></a>Membros de SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 |[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|Cria um **Java.SQL** objeto sem dados.|  
 |[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|Cria um **CLOB** objeto sem dados.|  
 |[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|Cria um **Java.SQL. NCLOB** objeto sem dados.|  
-|[createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)|Cria um [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto para enviar instruções SQL para o banco de dados.|  
+|[createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)|Cria um objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) para enviar instruções SQL ao banco de dados.|  
 |[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|Cria um **Java.SQL** objeto sem dados.|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|Recupera o modo de confirmação automática atual para este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|Recupera o nome do catálogo atual para este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
