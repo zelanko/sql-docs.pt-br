@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2d230c46ae750a852cb57724675db8c3d15169e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 680a4734055afd0f195a17a7ee70adac1a628169
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="estimatedrows-element-assl"></a>Elemento EstimatedRows (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém o número estimado de linhas representado pelo elemento pai.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contém o número estimado de linhas representadas pelo elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Longo|  
-|Valor padrão|Nenhum|  
-|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|Valor padrão|Nenhuma|  
+|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md), [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md), [partição](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|Nenhuma|  
   
 ## <a name="remarks"></a>Remarks  
  Os elementos que correspondem aos pais de **EstimatedRows** no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.AggregationDesign>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, <xref:Microsoft.AnalysisServices.MeasureGroupBinding>, e <xref:Microsoft.AnalysisServices.Partition>.  
   
-## <a name="see-also"></a>Consulte Também  
- [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

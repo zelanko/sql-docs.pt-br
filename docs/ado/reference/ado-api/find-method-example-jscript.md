@@ -1,11 +1,9 @@
 ---
 title: Localizar o exemplo de método (JScript) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4355a60ff964b33868ed883940e0e1d20ddfc3b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4671755b8ebbe5cf69a0341604f931902dea2d0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-jscript"></a>Localizar o exemplo de método (JScript)
 Este exemplo usa o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [localizar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar e exibir as empresas a ***Northwind*** banco de dados cujo nome começa com a letra G. recortar e colar o seguinte código para o bloco de notas ou outro editor de texto e salve-o como **FindJS.asp**.  

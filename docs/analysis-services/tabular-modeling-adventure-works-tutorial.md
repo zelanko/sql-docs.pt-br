@@ -1,15 +1,15 @@
 ---
-title: "Tabela de modelagem (nível de compatibilidade 1200) | Microsoft Docs"
-ms.custom: 
+title: Tabela de modelagem (nível de compatibilidade 1200) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -19,16 +19,15 @@ keywords:
 - Tutorial
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: 
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: f6416d803a0d5f099e3c568ea29799d0da0857cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modelagem de tabela (nível de compatibilidade 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

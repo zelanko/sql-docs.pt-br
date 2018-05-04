@@ -27,15 +27,15 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60a0c8bd38d280d267b85148e3d40f2bac4967cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e0c23c170fafdecf8223bc477abc93eda7e678da
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-element-assl"></a>Elemento Column (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve uma coluna na coleção de colunas associadas ao elemento pai.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descreve uma coluna na coleção de colunas associada ao elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,9 +78,9 @@ ms.lasthandoff: 01/08/2018
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Colunas](../../../analysis-services/scripting/collections/columns-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|Nenhuma|  
   
-## <a name="see-also"></a>Consulte Também  
- [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Objetos de & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

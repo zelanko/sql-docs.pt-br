@@ -1,32 +1,23 @@
 ---
 title: Traduções em modelos multidimensionais (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
-ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0f767ae138a66bd1237bcac1cfc64ce5998a824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cc30acc4714029cd91a4c35028835ae99d561140
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Traduções em modelos multidimensionais (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode definir traduções em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o designer apropriado para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto a ser convertido. Definir uma tradução cria um objeto **Translation** associado ao objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apropriado que tenha os valores literais explícitos especificados, no idioma especificado, para as propriedades do objeto associado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Você pode definir traduções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o designer apropriado para o objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será traduzido. Definir uma tradução cria um objeto **Translation** associado ao objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apropriado que tenha os valores literais explícitos especificados, no idioma especificado, para as propriedades do objeto associado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>Elementos de um modelo de dados em vários idiomas  
  Um modelo de dados usado em uma solução em vários idiomas precisa de mais do que rótulos (nomes de campo e descrições) traduzidos. Ele também precisa fornecer valores de dados que são articulados em vários scripts de idioma. Para obter uma solução em vários idiomas é necessário que você tenha atributos individuais, associado a colunas em um banco de dados externo que retorna os dados.  
@@ -98,7 +89,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto | **Editar banco de dados** para abrir o designer de banco de dados.  
   
-2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, se você estiver definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
+2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, quer você esteja definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
   
 3.  Na página Propriedades do banco de dados, defina **Language** com o mesmo LCID especificado para a tradução. Opcionalmente, defina **Collation** também se o padrão não fizer mais sentido.  
   
@@ -125,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 -   Para todos os outros identificadores de idioma especificados, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extrai o idioma principal do identificador de idioma especificado e recupera o identificador de idioma indicado pelo Windows como a melhor correspondência para o idioma principal. Se uma tradução para a melhor correspondência de identificador de idioma não puder ser encontrada ou se o identificador de idioma especificado for a melhor correspondência para o idioma principal, então, o idioma padrão será usado.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para o Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Idiomas e agrupamentos &#40; Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [Idiomas e agrupamentos &#40;do Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

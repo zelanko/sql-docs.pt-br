@@ -1,42 +1,23 @@
 ---
-title: "Algoritmos de mineração de dados (Analysis Services – mineração de dados) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Algoritmos de mineração de dados (Analysis Services – mineração de dados) | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- segmentation algorithms [Analysis Services]
-- clustering [Data Mining]
-- learning algorithms
-- data mining [Analysis Services], models
-- algorithms [data mining]
-- mining models [Analysis Services], algorithms
-- inductive learning
-- mining models [Analysis Services], creating
-- data mining [Analysis Services], algorithms
-- machine learning algorithms [Analysis Services]
-ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 43652986e789837299feacf5387cd8b6e6d57a8b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a85e6a07b22f0577b23a0e8bd679050dbe00038a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmos de mineração de dados (Analysis Services – Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Um *algoritmo* na mineração de dados (ou aprendizado de máquina) é um conjunto de heurística e cálculos que cria um modelo com base nos dados. Para criar um modelo, o algoritmo primeiro analisa os dados que você fornece, procurando tipos de padrões ou tendências específicos. O algoritmo usa os resultados dessa análise em muitas iterações para definir os parâmetros ideais para criar o modelo de mineração. Esses parâmetros são aplicados pelo conjunto de dados inteiro para extrair padrões acionáveis e estatísticas detalhadas.  
+  Um *algoritmo* na mineração de dados (ou aprendizado de máquina) é um conjunto de heurística e cálculos que cria um modelo com base nos dados. Para criar um modelo, o algoritmo primeiro analisa os dados que você fornece, procurando tipos de padrões ou tendências específicos. O algoritmo usa os resultados dessa análise em muitas iterações para definir os parâmetros ideais para criar o modelo de mineração. Esses parâmetros são aplicados pelo conjunto de dados inteiro para extrair padrões acionáveis e estatísticas detalhadas.  
   
  O modelo de mineração que um algoritmo cria a partir de seus dados pode assumir vários formatos, incluindo:  
   
@@ -91,7 +72,7 @@ Um *algoritmo* na mineração de dados (ou aprendizado de máquina) é um conjun
 |**Referência técnica**|Fornece detalhes técnicos sobre a implementação do algoritmo, com referências acadêmicas conforme o necessário. Lista os parâmetros que podem ser definidos para controlar o comportamento do algoritmo e personalizar os resultados no modelo. Descreve os requisitos de dados e fornece dicas de desempenho se possível.|  
 ||[Referência técnica do algoritmo de associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)<br /><br /> [Referência técnica do algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referência técnica do algoritmo de árvores de decisão da Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referência Técnica do Algoritmo de Regressão Linear da Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Referência técnica do algoritmo de regressão logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Referência técnica do algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Referência técnica do algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |**Conteúdo do modelo**|Explica como as informações são estruturadas dentro de cada tipo de modelo de mineração de dados, e explica como interpretar as informações armazenadas em cada um dos nós.|  
-||[Conteúdo do modelo de mineração para modelos de associação &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de regressão Linear &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de Clustering de sequência &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[Conteúdo do modelo de mineração para modelos de associação & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de regressão Linear & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de Clustering de sequência & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**Consultas de mineração de dados**|Fornece diversas consultas que você pode usar com cada tipo modelo. Os exemplos incluem consultas de conteúdo que permitem que você saiba mais sobre os padrões no modelo e consultas de previsão que o ajudarão a criar previsões com base nesses padrões.|  
 ||[Exemplos de consulta de modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [Exemplos de consulta de modelo de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [Exemplos de consulta de modelo de árvores de decisão](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [Exemplos de consulta de modelo de regressão linear](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [Exemplos de consulta de modelo de regressão logística](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [Exemplos de consulta do modelo Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [Exemplos de consulta de modelo de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [Exemplos de consulta dos modelos de clustering de sequências](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [Exemplos de consulta de um modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
@@ -103,7 +84,7 @@ Um *algoritmo* na mineração de dados (ou aprendizado de máquina) é um conjun
 |Criar um algoritmo de plug-in personalizado|[Algoritmos de plug-in](../../analysis-services/data-mining/plugin-algorithms.md)|  
 |Explorar um modelo usando um visualizador específico de algoritmo|[Visualizadores do modelo de mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Exibir o conteúdo de um modelo usando um formato de tabela genérico|[Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|Aprender sobre como configurar seus dados e usar algoritmos para criar modelos|[Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [Modelos de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
+|Aprender sobre como configurar seus dados e usar algoritmos para criar modelos|[Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [Modelos de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)  

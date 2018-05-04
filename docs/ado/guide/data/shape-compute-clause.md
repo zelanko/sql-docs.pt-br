@@ -1,11 +1,9 @@
 ---
 title: Formatar a cláusula COMPUTE | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula COMPUTE de forma gera um pai **registros**, cujas colunas consistem em uma referência para o filho **registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **Recordset** ou de forma anteriormente **Recordset**; e todas as colunas de filho **Recordset** listados em opcional pela cláusula.  
@@ -45,7 +42,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  Consiste em uma das seguintes opções:  
   
--   Um comando de consulta dentro de chaves ("{}") que retornará um filho **registros** objeto. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não requer qualquer linguagem de consulta específica.  
+-   Um comando de consulta entre chaves ("{}") que retornará um filho **registros** objeto. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não requer qualquer linguagem de consulta específica.  
   
 -   O nome de um objeto existente em forma de **registros**.  
   

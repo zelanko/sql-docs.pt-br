@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 08147622a6117f01a27e139949e0e244efdd9dd5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 56650e0e1e3de1b3c2444fa1022c78076d7416f7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tablenotifications-element-xmla"></a>Elemento TableNotifications (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma coleção de [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) elementos usados pelo [NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md) comando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contém uma coleção de elementos [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) usada pelo comando [NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
-|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|Comprimento e tipo de dados|Nenhuma|  
+|Valor padrão|Nenhuma|  
+|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Consulte Também  
- [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

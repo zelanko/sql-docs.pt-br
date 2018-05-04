@@ -1,11 +1,9 @@
 ---
 title: Transformações XSLT | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d235ea5208f5c4cbf98f7f5664b1a3b3666b9207
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 18826a213cde63779cbe7b2a625a2de24453dac1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xslt-transformations"></a>Transformações XSLT
 XSLT pode ser aplicado ao XML gerado para transformá-la em outro formato. Noções básicas sobre o formato XML no ADO ajuda a desenvolver modelos XSLT que podem transformar em um formato mais amigável.  

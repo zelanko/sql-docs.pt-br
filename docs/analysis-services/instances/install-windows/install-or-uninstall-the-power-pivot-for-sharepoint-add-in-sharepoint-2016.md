@@ -1,27 +1,19 @@
 ---
 title: Instalar ou desinstalar o PowerPivot para suplemento do SharePoint (SharePoint 2016) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c2f754a253e2c33555712dd456002ed69b608188
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c05cd1f7c4526921154eb2bd379c1a2b3a242e3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>Instalar ou desinstalar o suplemento do Power Pivot para SharePoint (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +29,7 @@ ms.lasthandoff: 02/15/2018
   
      [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] é um pacote do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Installer (**spPowerpivot16.msi**) que implanta bibliotecas de cliente do Analysis Services e copia os arquivos de instalação do [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] no computador. O instalador não implanta nem configura recursos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no SharePoint. Os seguintes componentes são instalados por padrão:  
   
-    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]. Esse componente inclui scripts do PowerShell (arquivos .ps1), pacotes da solução SharePoint (.wsp), e a ferramenta de configuração do [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] para implantar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] em um farm do SharePoint 2016.  
+    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]para obter informações sobre a ferramenta de configuração e recursos adicionais. Esse componente inclui scripts do PowerShell (arquivos .ps1), pacotes da solução SharePoint (.wsp), e a ferramenta de configuração do [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] para implantar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] em um farm do SharePoint 2016.  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Provedor OLE DB para Analysis Services (MSOLAP).  
   

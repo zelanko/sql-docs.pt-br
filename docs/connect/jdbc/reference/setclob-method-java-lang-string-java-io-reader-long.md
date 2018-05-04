@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88c1c780d41f612425743b67321c2245b5204f27
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8bd53f5778b6bab60c232d2f5da3599dbc96d83a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>Método setClob (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final void setClob(java.lang.String parameterName,
 #### <a name="parameters"></a>Parâmetros  
  *nome do parâmetro*  
   
- Um **cadeia de caracteres** que contém o nome do parâmetro.  
+ Uma **String** que contém o nome do parâmetro.  
   
  *value*  
   

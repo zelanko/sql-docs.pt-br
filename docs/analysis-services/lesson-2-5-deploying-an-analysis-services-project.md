@@ -1,29 +1,27 @@
 ---
 title: Implantando um Analysis Services projeto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c797c7f1acffb41de751a022d9c2e36b7fbaab4b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lição 2-5-implantar um projeto do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ Na tarefa a seguir, você revisará as propriedades de implantação do projeto 
     Revise as propriedades de implantação do projeto. Por padrão, o modelo Projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configura um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implantar de forma incremental todos os projeto na instância padrão do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um computador local, criar um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] com o mesmo nome do projeto e processar os objetos depois da implantação usando a opção de processamento padrão. Para obter mais informações, consulte [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Se você deseja implantar o projeto em uma instância nomeada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no computador local ou a uma instância em um servidor remoto, altere o **servidor** nome de propriedade para a instância apropriada, como \<  *ServerName**>\\<**InstanceName * * >*.  
+    > Se você deseja implantar o projeto em uma instância nomeada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no computador local ou a uma instância em um servidor remoto, altere o **servidor** nome de propriedade para a instância apropriada, como \<  *ServerName**>\\<** InstanceName * * >*.  
   
 3.  Clique em **OK**.  
   
@@ -54,7 +52,7 @@ Na tarefa a seguir, você revisará as propriedades de implantação do projeto 
     > [!NOTE]  
     > Se você obtiver erros durante a implantação, use o SQL Server Management Studio para verificar as permissões do banco de dados. A conta especificada para a conexão da fonte de dados deve ter um logon na instância do SQL Server. Clique duas vezes no logon para exibir propriedades de Mapeamento de Usuário. A conta deve ter permissões db_datareader no banco de dados **AdventureWorksDW2012** .  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] cria e implanta o projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na instância especificada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando um script de implantação. O progresso da implantação é exibido em duas janelas: **Saída** e **Progresso da Implantação – Tutorial do Analysis Services** .  
+    O [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] compila e implanta o projeto do Tutorial do  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na instância especificada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando um script de implantação. O progresso da implantação é exibido em duas janelas: **Saída** e **Progresso da Implantação – Tutorial do Analysis Services** .  
   
     Abra a janela Saída, se necessário, clicando em **Saída** no menu **Exibir** . A janela **Saída** exibe o progresso geral da implantação. A janela **Progresso da Implantação – Tutorial do Analysis Services** exibe os detalhes de cada etapa realizada durante a implantação. Para obter mais informações, consulte [Criar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) e [Implantar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   

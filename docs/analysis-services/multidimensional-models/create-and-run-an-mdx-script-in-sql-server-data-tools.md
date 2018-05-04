@@ -1,35 +1,23 @@
 ---
 title: Criar e executar um Script MDX no SQL Server Data Tools | Microsoft Docs
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- MDX [Analysis Services], scripts
-- scripts [Analysis Services], creating
-- scripts [MDX], creating
-ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ec19c9f3c826910b7c5d8a3d5a3737e09228b664
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ab3f83f1dfc99438a0a88bb01fd3e5bf2cdc248a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Criar e executar um script MDX nas Ferramentas de Dados do SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Para criar e executar um script MDX no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é necessário estar no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] com um cubo já criado e pronto para edição.  
+  Para criar e executar um script MDX no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é necessário estar no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] com um cubo já criado e pronto para edição.  
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>Para criar um script MDX  
   
@@ -42,8 +30,8 @@ Para criar e executar um script MDX no [!INCLUDE[ssASnoversion](../../includes/s
 4.  Para executar o script MDX, implante e processe o cubo com as novas alterações do script MDX.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Script básico de MDX &#40; MDX &#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Conceitos básicos de script MDX &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Instruções de script MDX &#40; MDX &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
+ [O Script básico de MDX & #40; MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Conceitos básicos de script MDX & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Instruções de script MDX & #40; MDX & #41;](../../mdx/mdx-scripting-statements-mdx.md)  
   
   

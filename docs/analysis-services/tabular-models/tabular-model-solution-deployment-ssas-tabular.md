@@ -1,31 +1,30 @@
 ---
-title: "Implantação de solução de modelo tabular | Microsoft Docs"
-ms.custom: 
+title: Implantação de solução de modelo tabular | Microsoft Docs
+ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 276ff67a2c3dac1e557d782616bf9096349d3246
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 88dd3a99ff8cac488a74fa42533f40b8118e45c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-solution-deployment"></a>Implantação de solução de modelo de tabela 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Depois de criar um projeto de modelo de tabela, você deve implantá-lo para que os usuários procurem o modelo usando um aplicativo cliente de relatório. Este artigo descreve as várias propriedades e métodos que você pode usar ao implantar soluções de modelo de tabela em seu ambiente.  
+  Depois de criar um projeto de modelo de tabela, você deve implantá-lo para que os usuários procurem o modelo usando um aplicativo cliente de relatório. Este artigo descreve as várias propriedades e métodos que você pode usar ao implantar soluções de modelo de tabela em seu ambiente.  
   
 ##  <a name="bkmk_benefits"></a> Benefícios  
  A implantação de um modelo de tabela cria um banco de dados modelo em um ambiente de produção, teste ou preparo. Os usuários podem então se conectar ao modelo implantado por meio de um arquivo de conexão .bism no Sharepoint ou usando uma conexão de dados diretamente de aplicativos cliente de relatório como o Microsoft Excel, o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]ou um aplicativo personalizado. O banco de dados de espaço de trabalho modelo, criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e usado para criar o modelo, permanecerá na instância de servidor de espaço de trabalho, permitindo fazer alterações no projeto do modelo e, em seguida, reimplantá-lo no ambiente de teste, preparo e produção, quando necessário.  
@@ -70,7 +69,7 @@ Depois de criar um projeto de modelo de tabela, você deve implantá-lo para que
 |Método|Description|Link|  
 |------------|-----------------|----------|  
 |**Implantar comando em Ferramentas de Dados do SQL Server**|O comando Implantar fornece um método simples e intuitivo para implantar um projeto de modelo de tabela do ambiente de criação do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .<br /><br /> **Cuidado** esse método não deve ser usado para implantar servidores de produção. Usando esse método pode substituir determinadas propriedades em uma já implantado existente modelo; Por exemplo, ao usar scripts ou SSMS para modificar as propriedades.|[Implantar do SQL Server Data Tools](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
-|**Usando Automação AMO (Objetos de Gerenciamento de Análise)**|AMO fornece uma interface programática para o conjunto completo de comandos definidos para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo comandos que podem ser usados para implantação de solução. Como uma abordagem para implantação de solução, a automação AMO é a mais flexível, mas também a que exige um esforço de programação.  Uma vantagem importante para usar AMO é que você pode usar o SQL Server Agent com o aplicativo AMO para executar a implantação em uma programação predefinida.|[Desenvolvendo com o Analysis Management Objects &#40; AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**Usando Automação AMO (Objetos de Gerenciamento de Análise)**|AMO fornece uma interface programática para o conjunto completo de comandos definidos para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo comandos que podem ser usados para implantação de solução. Como uma abordagem para implantação de solução, a automação AMO é a mais flexível, mas também a que exige um esforço de programação.  Uma vantagem importante para usar AMO é que você pode usar o SQL Server Agent com o aplicativo AMO para executar a implantação em uma programação predefinida.|[Desenvolvendo com o Analysis Management Objects & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerar um script XMLA dos metadados de um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, em seguida, executar esse script em outro servidor para recriar o banco de dados inicial. Os scripts XMLA são gerados facilmente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ao definir o processo de implantação e, em seguida, codificá-lo e salvá-lo como um script XMLA. Quando o script XMLA está em um arquivo salvo, é possível executá-lo de acordo com uma programação ou inseri-lo em um aplicativo que se conecta diretamente em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Também é possível executar scripts XMLA em uma base predefinida com o SQL Server Agent, mas não haverá a mesma flexibilidade do AMO. O AMO fornece uma amplitude maior de funcionalidade hospedando o espectro completo de comandos administrativos.|[Implantar soluções modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Assistente para Implantação**|Use o Assistente para Implantação para usar os arquivos de saída do XMLA gerados por um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar os metadados do projeto em um servidor de destino. Com o Assistente para Implantação, é possível implantar diretamente a partir do arquivo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , conforme criado pelo diretório de saída do construtor de projetos.<br /><br /> A vantagem principal de usar o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é conveniência. Da mesma maneira que você pode salvar um script XMLA para usar posteriormente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pode salvar scripts do Assistente de Implantação. O Assistente para Implantação pode ser executado de modo interativo e no prompt de comando utilizando o Utilitário de Implantação.|[Implantar soluções modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**Utilitário de Implantação**|O utilitário de Implantação permite iniciar o mecanismo de implantação do Analysis Services de um prompt de comando.|[Implantar soluções modelo com o utilitário de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  

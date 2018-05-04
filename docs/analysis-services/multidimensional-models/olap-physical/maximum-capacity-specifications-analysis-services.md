@@ -1,46 +1,33 @@
 ---
-title: "Especificações de capacidade máxima (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 07/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], maximum number
-- objects [Analysis Services], maximum size
-ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: 
-author: Minewiskan
+title: Especificações de capacidade máxima (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 42cd2e4809ab91fbd672a20b8213dc9fb6d9727c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Especificações de capacidade máxima (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em diferentes modos de implantação de servidor.  
+  As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em diferentes modos de implantação de servidor.  
   
  Este tópico contém as seguintes seções:  
   
  [Multidimensional e mineração de dados (DeploymentMode = 0)](#bkmk_OLAP)  
   
- [SharePoint (DeploymentMode=1)](#bkmk_sharepoint)  
+ [SharePoint (DeploymentMode = 1)](#bkmk_sharepoint)  
   
- [Tabular (DeploymentMode=2)](#bkmk_vertipaq)  
+ [Tabela (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP">Multidimensional e mineração de dados (DeploymentMode = 0)</a>  
+##  <a name="bkmk_OLAP"></a> Multidimensional e mineração de dados (DeploymentMode = 0)  
  O modo de armazenamento MOLAP que armazena dados e metadados tem limites físicos adicionais em tamanhos de arquivos. Os arquivos de repositório de cadeia de caracteres têm, por padrão, um tamanho máximo de 4 GB. Se você precisar de arquivos maiores para repositórios de cadeia de caracteres, poderá especificar outra arquitetura de armazenamento de cadeia de caracteres. Para obter mais informações, consulte [configurar o armazenamento de cadeia de caracteres para dimensões e partições](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
 |Objeto|Tamanho máximo/números|  
@@ -68,7 +55,7 @@ As tabelas a seguir especificam os tamanhos e números máximos de vários objet
   
  Para obter mais informações sobre as diretrizes de nomenclatura de objeto, consulte [objetos e características de objeto ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
- Para obter mais informações sobre limitações da fonte de dados para processamento analítico online (OLAP) e mineração de dados, consulte [suporte para fontes de dados &#40; SSAS Multidimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Suporte para fontes de dados &#40; SSAS Multidimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), e [objetos e características de objeto ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Para obter mais informações sobre limitações da fonte de dados para processamento analítico online (OLAP) e mineração de dados, consulte [suporte para fontes de dados &#40;SSAS - Multidimensional&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [ &#40;SSAS - Multidimensional&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), e [objetos e características de objeto ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   

@@ -1,11 +1,9 @@
 ---
 title: Detectando e resolvendo conflitos | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bb8451f5d4355b521f794501b4a431b02fc2f06
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectando e solucionando conflitos
 Se você estiver lidando com o conjunto de registros no modo imediato, há muito menos chance de problemas de simultaneidade ocorra. Por outro lado, se seu aplicativo usa a atualização do modo de lote, pode haver uma boa chance de que um usuário será alterado um registro antes de salvar as alterações feitas por outro usuário editando o mesmo registro. Nesse caso, você desejará seu aplicativo para lidar com o conflito. Pode ser seu desejo que a última pessoa a enviar uma atualização para o servidor "vence". Ou talvez você queira permitir que o usuário mais recente para decidir qual atualização deve ter precedência, fornecendo-lhe uma opção entre os dois valores conflitantes.  

@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f8a19dd28ce3ef86cd141bf2d6ade7ccf418fd2b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1aa8d850bb77b4bba7ff3bcb0d08a8cb231e4b06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="masterdatasourceid-element-assl"></a>Elemento MasterDatasourceID (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém o identificador de fonte de dados mestre (ID) para um [banco de dados](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contém o identificador de fonte de dados mestre (ID) para um [banco de dados](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,25 +50,25 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
-|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+|Comprimento e tipo de dados|String|  
+|Valor padrão|Nenhuma|  
+|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Banco de dados](../../../analysis-services/scripting/objects/database-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|Nenhuma|  
   
 ## <a name="remarks"></a>Remarks  
  Para bancos de dados em instâncias remotas do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que contêm partições remotas, o **MasterDatasourceID** elemento contém a ID da fonte de dados usada para identificar o mestre de fonte de dados instância de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que gerencia as partições remotas.  
   
  O elemento que corresponde ao pai do **MasterDatasourceID** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Database>.  
   
-## <a name="see-also"></a>Consulte Também  
- [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

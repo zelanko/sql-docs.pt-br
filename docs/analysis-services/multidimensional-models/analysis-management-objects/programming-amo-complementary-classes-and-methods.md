@@ -1,38 +1,19 @@
 ---
-title: "As Classes AMO complementares e métodos de programação | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- assemblies [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- programming [AMO]
-- Analysis Management Objects, backup and restore
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 
-author: Minewiskan
+title: As Classes AMO complementares e métodos de programação | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8972d0659180558689302c77994f0c14f931593d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Programando classes e métodos AMO complementares
   Este tópico contém as seguintes seções:  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Classe CaptureLog e atributo CaptureXML](#CL)  
   
-##  <a name="Assembly">Classe de assembly</a>  
+##  <a name="Assembly"></a> Classe de assembly  
  Assemblies permitem que os usuários estender a funcionalidade de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] adicionando novos procedimentos armazenados ou funções MDX (Multidimensional Expressions). Para obter mais informações, consulte [métodos e as outras Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
   
  A adição e o descarte de assemblies são simples e podem ser executados de forma online. É preciso ser administrador de banco de dados para adicionar um assembly ao banco de dados ou um administrador de servidor para adicionar o assembly ao objeto de servidor.  
@@ -106,7 +87,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC">Classe Trace</a>  
+##  <a name="TRC"></a> Classe Trace  
  O monitoramento da atividade de servidor exige o uso de dois tipos de rastreamentos: Rastreamentos de Sessão e Rastreamentos de Servidor. Rastrear o servidor pode dizer a você como está a execução da sua tarefa atual no servidor (Rastreamentos de Sessão) ou os rastreamentos poderão dizer como está a atividade geral no servidor sem que você tenha de se conectar ao servidor (Rastreamentos de Servidor).  
   
  Durante o rastreamento da atividade atual (Rastreamentos de Sessão), o servidor envia notificações ao aplicativo atual sobre os eventos que estão ocorrendo no servidor e que foram causados pelo aplicativo. Os eventos são capturados por meio de manipuladores de eventos do aplicativo atual. Primeiro você atribui as rotinas de manipulação de eventos ao objeto <xref:Microsoft.AnalysisServices.SessionTrace> e então inicia o Rastreamento de Sessão.  

@@ -1,30 +1,30 @@
 ---
 title: Alterar o comando (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e3e12741988f5d1369e96381a54c15f64ec557
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: aee73b9b0754fae9b801c6b66a4f635e7119e0ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-command-tmsl"></a>Comando ALTER (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Altera um objeto existente, mas não seus filhos em uma instância do Analysis Services no modo de tabela.  Se o objeto não existir, o comando gera um erro.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Altera um objeto existente, mas não seus filhos em uma instância do Analysis Services no modo de tabela.  Se o objeto não existir, o comando gera um erro.  
   
  Use **Alter** comando para atualizações de destino, como definir uma propriedade em uma tabela sem a necessidade de especificar todas as colunas também. Esse comando é semelhante a **CreateOrReplace**, mas sem a necessidade de ter que fornecer uma definição completa do objeto.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  A estrutura da solicitação varia com base no objeto. **ALTER** pode ser usado com qualquer um dos seguintes objetos:  
   
- [Objeto de banco de dados &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Renomear um banco de dados.  
+ [Objeto de banco de dados &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) renomear um banco de dados.  
   
 ```  
 "alter": {   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   }   
 ```  
   
- [Objeto de fonte de dados &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) Renomear uma conexão, o que é um objeto filho do banco de dados.  
+ [Fontes de dados objeto &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) renomear uma conexão, o que é um objeto filho do banco de dados.  
   
 ```  
 {   
@@ -82,11 +82,11 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Objeto Tables &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Consulte **exemplo 1** abaixo.  
+ [Objeto Tables &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) consulte **exemplo 1** abaixo.  
   
- [Objeto de partições &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Consulte **exemplo 2** abaixo.  
+ [Objeto de partições &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) consulte **exemplo 2** abaixo.  
   
- [Objeto de funções &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) Alterar uma propriedade em um objeto de função.  
+ [Objeto de funções &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) alterar uma propriedade em um objeto de função.  
   
 ```  
 {   
@@ -152,7 +152,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>Uso (pontos de extremidade)  
- Esse elemento de comando é usado em uma instrução do [executar método &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada por um ponto de extremidade do XMLA, exposto das seguintes maneiras:  
+ Esse elemento de comando é usado em uma instrução do [executar método &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada por um ponto de extremidade do XMLA, exposto das seguintes maneiras:  
   
 -   Como uma janela de XMLA no SQL Server Management Studio (SSMS)  
   
@@ -162,9 +162,9 @@ ms.lasthandoff: 01/08/2018
   
  Você não pode gerar um script pronto para este comando do SSMS. Em vez disso, você pode começar com um exemplo ou escrever suas próprias.  
   
- O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico ([linguagem de script de modelo de tabela &#40; TMSL &#41; Referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) para fins de esclarecimento sobre o que tem suporte.  
+ O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico ([linguagem de script de modelo de tabela &#40;TMSL&#41; referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) para fins de esclarecimento sobre o que tem suporte.  
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
