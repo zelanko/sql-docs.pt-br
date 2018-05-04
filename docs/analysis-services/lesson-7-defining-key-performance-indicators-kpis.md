@@ -1,29 +1,28 @@
 ---
-title: "Lição 7: Definindo indicadores chave de desempenho (KPIs) | Microsoft Docs"
-ms.custom: 
+title: 'Lição 7: Definindo indicadores chave de desempenho (KPIs) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39ed6ea0106d983c7b70bf2e89e75b57166e7531
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 33c6af9d43864f9a4809ac9d0239263d1659cc1a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lição 7: Definindo KPIs (indicadores chave de desempenho)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ Nesta tarefa, você definirá os KPIs na exibição Formulário e, em seguida, a
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional & #40; Tutorial do Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Indicadores Chave de Desempenho &#40;KPIs&#41; em Modelos Multidimensionais](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
   
   

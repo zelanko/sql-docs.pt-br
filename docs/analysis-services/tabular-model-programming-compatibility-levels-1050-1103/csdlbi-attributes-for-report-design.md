@@ -1,33 +1,32 @@
 ---
-title: "Atributos CSDLBI para Design de relatório | Microsoft Docs"
-ms.custom: 
+title: Atributos CSDLBI para Design de relatório | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: dc31de2ee816712630ddbd5c953248a9cf73d3d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para design de relatórios
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+  Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Atributos de Modelo  
  Estes atributos são definidos em um subelemento de um elemento [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
@@ -42,7 +41,7 @@ Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabe
   
 |Nome do atributo|Tipo de dados|Description|  
 |--------------------|---------------|-----------------|  
-|**ReferenceName**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
+|**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
 |**Caption**|Texto|O nome para exibição da entidade.|  
 |**Documentação**|Texto|Texto descritivo para ajudar os usuários empresariais a compreenderem o significado dos dados.|  
 |**Oculto**|Booliano|Indica se a entidade deve ser exibida. O padrão é **false**.|  
@@ -59,7 +58,7 @@ Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabe
   
 |Nome do atributo|Tipo de dados|Description|  
 |--------------------|---------------|-----------------|  
-|**ReferenceName**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
+|**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
 |**Caption**|Texto|O nome para exibição da entidade. Se ele for omitido, o **ReferenceName** do campo será usado.|  
 |**Documentação**|Texto|Texto descritivo para ajudar os usuários empresariais a compreenderem o significado do campo.|  
 |**Oculto**|Booliano|Indica se o campo deve ser exibido. O padrão é **false**; isso significa que o campo é exibido.|  

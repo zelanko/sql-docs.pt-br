@@ -1,16 +1,16 @@
 ---
 title: Algoritmo rede Neural da Microsoft | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -25,20 +25,19 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 
+caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: daa6df8118e82dcf9fb4409856ee44962fb3f360
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Algoritmo Rede Neural da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-O algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação da popular e adaptável arquitetura de rede neural para aprendizado de máquina.  O algoritmo funciona testando cada estado possível do atributo de entrada com cada estado possível do atributo previsível e calculando probabilidades para cada combinação com base nos dados de treinamento. Essas probabilidades podem ser usadas para tarefas de classificação ou regressão e também para a previsão de um resultado com base em alguns atributos de entrada. Uma rede neural também pode ser usada para análise de associação.  
+  O algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação da popular e adaptável arquitetura de rede neural para aprendizado de máquina.  O algoritmo funciona testando cada estado possível do atributo de entrada com cada estado possível do atributo previsível e calculando probabilidades para cada combinação com base nos dados de treinamento. Essas probabilidades podem ser usadas para tarefas de classificação ou regressão e também para a previsão de um resultado com base em alguns atributos de entrada. Uma rede neural também pode ser usada para análise de associação.  
   
  Quando cria um modelo de mineração usando o algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)] , você pode incluir várias saídas e o algoritmo criará várias redes. O número de redes contidas em um único modelo de mineração depende do número de estados (ou valores de atributo) nas colunas de entrada, bem como do número de colunas previsíveis que o modelo de mineração usa e o número de estados nessas colunas.  
   
@@ -97,7 +96,7 @@ O algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)
   
 ## <a name="see-also"></a>Consulte também  
  [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de rede Neural &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração para modelos de rede Neural & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Algoritmo de regressão logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   

@@ -1,34 +1,23 @@
 ---
-title: "Criando cálculos de célula no escopo da consulta (MDX) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Criando cálculos de célula no escopo da consulta (MDX) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- WITH keyword
-- query-scoped cell calculations [MDX]
-ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 72d0b1bceafcf65ce32dfd746e4498301cbc0afb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Cálculos de célula MDX - cálculos de célula no escopo da consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Use a palavra-chave **WITH** em expressões MDX para descrever células calculadas no contexto de uma consulta. A sintaxe da palavra-chave **WITH** é:  
+  Use a palavra-chave **WITH** em expressões MDX para descrever células calculadas no contexto de uma consulta. A sintaxe da palavra-chave **WITH** é:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -61,6 +50,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Por outro lado, a linguagem MDX processará a fórmula do cálculo sempre que uma consulta MDX for emitida para um cubo que contém células incluídas na definição de células calculadas. Esse processamento ocorre independentemente do escopo de criação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar instrução de CÁLCULO de CÉLULA &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Criar instrução de CÁLCULO de CÉLULA & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

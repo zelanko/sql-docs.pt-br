@@ -18,15 +18,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d827295c68028d54d64bbb91447aa7ab22eaaa77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8ede9e764419a4722f4364654ae5c28680c9218a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-audit-data-columns"></a>Colunas de dados de auditoria de segurança
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento de auditoria de segurança tem as seguintes classes de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  A categoria de evento Security Audit tem as seguintes classes de evento:  
   
 ||||  
 |-|-|-|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |NTUserName|32|8|Nome do usuário do Windows.|  
@@ -66,9 +66,9 @@ ms.lasthandoff: 01/08/2018
 |EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
-|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |NTUserName|32|8|Nome do usuário do Windows.|  
 |NTDomainName|33|8|O domínio do Windows ao qual o usuário pertence.|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/08/2018
 |EventSubclass|1|1|A Subclasse de Evento oferece informações adicionais sobre cada classe de evento:<br /><br /> 1: desligamento da instância<br /><br /> 2: instância iniciada<br /><br /> 3: instância pausada<br /><br /> 4 = continuação da instância|  
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 01/08/2018
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |ObjectReference|15|8|Referência ao objeto. Codificado como XML para todos os pais, usando marcas para descrever o objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -122,7 +122,7 @@ ms.lasthandoff: 01/08/2018
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventSubclass|1|1|A Subclasse de Evento oferece informações adicionais sobre cada classe de evento:<br /><br /> 1: **Backup**<br /><br /> 2: **Restore**<br /><br /> 3: **Synchronize**<br /><br /> 4: **Detach**<br /><br /> 5: **Attach**<br /><br /> 6: **ImageLoad**<br /><br /> 7: **ImageSave**|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -137,7 +137,7 @@ ms.lasthandoff: 01/08/2018
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Categoria de evento de auditoria de segurança](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

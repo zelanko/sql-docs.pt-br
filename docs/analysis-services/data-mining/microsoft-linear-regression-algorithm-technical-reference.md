@@ -1,35 +1,34 @@
 ---
-title: "Referência técnica do algoritmo de regressão Linear de Microsoft | Microsoft Docs"
-ms.custom: 
+title: Referência técnica do algoritmo de regressão Linear de Microsoft | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c5937bb7ee83b1f671adc3e570a9fe9bed719494
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referência Técnica do Algoritmo de Regressão Linear da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma versão especial do algoritmo Árvores de decisão da Microsoft, otimizada para modelagem de pares de atributos contínuos. Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo e fornece links para informações adicionais sobre como consultar modelos.  
+  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma versão especial do algoritmo Árvores de decisão da Microsoft, otimizada para modelagem de pares de atributos contínuos. Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo e fornece links para informações adicionais sobre como consultar modelos.  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>Implementação do algoritmo de Regressão Linear  
  O algoritmo Árvores de Decisão da Microsoft pode ser usado para muitas tarefas: regressão linear, classificação ou análise de associação. Para implementar esse algoritmo para fins de regressão linear, os parâmetros do algoritmo são controlados de modo a restringir o crescimento da árvore e manter todos os dados no modelo em um único nó. Em outras palavras, embora a regressão linear se baseie em uma árvore de decisão, a árvore contém apenas uma única raiz e nenhuma ramificação: todos os dados residem no nó raiz.  
@@ -94,6 +93,6 @@ O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo de regressão Linear da Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Exemplos de consulta de modelo de regressão linear](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de regressão Linear &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de regressão Linear & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

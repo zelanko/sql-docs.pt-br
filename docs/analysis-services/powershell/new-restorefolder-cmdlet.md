@@ -1,31 +1,23 @@
 ---
 title: Cmdlet New-RestoreFolder | Microsoft Docs
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3aaf4630511f792a5ecb3ce5437bf2486db6549a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>Cmdlet New-RestoreFolder
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Restaura uma pasta original em uma nova pasta.  
+  Restaura uma pasta original em uma nova pasta.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -42,7 +34,7 @@ Restaura uma pasta original em uma nova pasta.
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-originalfolder-string"></a>-OriginalFolder \<string>  
+### <a name="-originalfolder-string"></a>-OriginalFolder \<cadeia de caracteres >  
  Obtém o local da pasta original.  
   
 |||  
@@ -87,7 +79,7 @@ Restaura uma pasta original em uma nova pasta.
 |Aceitar caracteres curinga?|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- Este parâmetro é usado para passar um nome de usuário e senha ao usar uma conexão HTTP para uma instância do Analysis Services, para uma instância que você configurou para acesso HTTP. Para obter mais informações, consulte [configurar o acesso HTTP ao Analysis Services no Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) para conexões HTTP.  
+ Este parâmetro é usado para passar um nome de usuário e senha ao usar uma conexão HTTP para uma instância do Analysis Services, para uma instância que você configurou para acesso HTTP. Para obter mais informações, consulte [configurar o acesso HTTP ao Analysis Services nos serviços de informações da Internet &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) para conexões HTTP.  
   
  Se este parâmetro for especificado, o nome de usuário e a senha serão usados para conectar à instância do Analysis Server especificado. Se nenhuma credencial for especificada, será usada a conta do Windows padrão do usuário que está executando a ferramenta.  
   

@@ -1,31 +1,23 @@
 ---
-title: "Configuração de referência (PowerPivot para SharePoint) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Configuração de referência (PowerPivot para SharePoint) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4c3c7b19acab1757f8f691c6a32afdb96445b83a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Referência de parâmetro de configuração (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Este tópico fornece documentação de referência para os parâmetros de configuração usados por aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do SharePoint. Se você estiver usando script do PowerShell para configurar um servidor ou se desejar procurar informações para uma configuração específica, as informações deste tópico fornecerão descrições detalhadas.  
+  Este tópico fornece documentação de referência para os parâmetros de configuração usados por aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do SharePoint. Se você estiver usando script do PowerShell para configurar um servidor ou se desejar procurar informações para uma configuração específica, as informações deste tópico fornecerão descrições detalhadas.  
   
  Os parâmetros de configuração são definidos para cada aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Em um farm, você pode criar diversos aplicativos de serviço como uma maneira de configurar instâncias lógicas independentes da mesma instância física de serviço. Os parâmetros de configuração são armazenados no banco de dados de aplicativo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] criado para cada aplicativo de serviço configurado.  
   

@@ -23,15 +23,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 71c95b5f3f1f2f8475659bf75c3f146e1cfdcdb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_SERVICES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece uma descrição de cada algoritmo de mineração de dados que o provedor oferece suporte.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Oferece uma descrição de cada algoritmo de mineração de dados suportado pelo provedor.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DMSCHEMA_MINING_SERVICES** linhas contém as seguintes colunas.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 |Nome da coluna|Indicador de tipo|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|O nome do algoritmo. Esta coluna é específica do provedor.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Essa coluna contém um bitmap que descreve o serviço de mineração. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] preenche essa coluna com um dos seguintes valores:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Essa coluna contém um bitmap que descreve o serviço de mineração. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] preenche essa coluna com um dos seguintes valores:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|Um nome para exibição localizável para o algoritmo.|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|O GUID para o algoritmo.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Uma descrição amigável do algoritmo.|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 |**SERVICE_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Opcional.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [Linhas do esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

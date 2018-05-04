@@ -1,37 +1,23 @@
 ---
 title: Usando Cube Writebacks (MDX) | Microsoft Docs
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- writeback [Analysis Services], cubes
-- cubes [Analysis Services], modifying
-- modifying cubes
-- UPDATE CUBE statement
-- cubes [Analysis Services], writeback
-ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8e390718230c64cea5a7fd44011e1508410dc586
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>Modificação de dados MDX - usando Cube Writebacks
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Você atualiza um cubo usando a instrução [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md). Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  
+  Você atualiza um cubo usando a instrução [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md). Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  
   
 ## <a name="update-cube-statement-syntax"></a>Sintaxe da instrução UPDATE CUBE  
  A seguinte sintaxe descreve a instrução UPDATE CUBE:  
@@ -124,6 +110,6 @@ USE_EQUAL_ALLOCATION
 -   Alterando a granularidade da dimensão da dimensão incluída no write-back.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modificando dados &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Modificando dados & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

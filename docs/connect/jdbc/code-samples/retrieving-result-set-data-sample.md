@@ -26,22 +26,22 @@ ms.lasthandoff: 04/16/2018
 # <a name="retrieving-result-set-data-sample"></a>Exemplo de recuperação de dados do conjunto de resultados
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Isso [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] aplicativo de exemplo demonstra como recuperar um conjunto de dados de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] de banco de dados e, em seguida, exibir os dados.  
+  Este aplicativo de exemplo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto de dados em um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e, em seguida, exibi-los.  
   
  O arquivo de código deste exemplo chama-se retrieveRS.java e pode ser encontrado neste local:  
   
  \<*diretório de instalação*> \sqljdbc_\<*versão*>\\<*idioma*> \samples\resultsets  
   
 ## <a name="requirements"></a>Requisitos  
- Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo sqljdbc.jar ou o arquivo sqljdbc4.jar. Se no classpath faltar uma entrada para sqljdbc.jar ou sqljdbc4.jar, o aplicativo de exemplo lançará a exceção comum "Class not found". Você também precisará acessar o [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] banco de dados de exemplo. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo sqljdbc.jar ou o arquivo sqljdbc4.jar. Se no classpath faltar uma entrada para sqljdbc.jar ou sqljdbc4.jar, o aplicativo de exemplo lançará a exceção comum "Class not found". Também será necessário o acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece sqljdbc.jar e sqljdbc4.jar os arquivos de biblioteca de classes a serem usados dependendo das suas configurações preferidas do Java Runtime Environment (JRE). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes sqljdbc.jar e sqljdbc4.jar a serem usados, dependendo das configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, o código de exemplo faz uma conexão para o [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] banco de dados de exemplo. Em seguida, usando uma instrução SQL com o [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) do objeto, ele executa a instrução SQL e coloca os dados retornados em uma [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ No exemplo a seguir, o código de exemplo faz uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Em seguida, usando uma instrução SQL com o objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ele executa a instrução SQL e coloca os dados retornados em um objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Em seguida, o código de exemplo chama o método displayRow personalizado para iterar pelas linhas de dados que estão contidas no conjunto de resultados e usa o [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) método para exibir alguns dos dados que ele contém.  
+ A seguir, o código de exemplo chama o método personalizado displayRow para iterar por meio das linhas de dados contidas no conjunto de resultados e usa o método [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) para exibir alguns dos dados que ele contém.  
   
 ```java
 import java.sql.*;  
@@ -98,7 +98,7 @@ public class retrieveRS {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com conjuntos de resultados](../../../connect/jdbc/working-with-result-sets.md)  
   
   
