@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c017d5b0e510147b668eeab458841ebcbf15de00
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 217350ed772c731d8a23e1a859e8dc95f02220a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +52,11 @@ sp_linkedservers
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nome do servidor vinculado.|  
-|**SRV_PROVIDERNAME**|**nvarchar(**128**)**|Nome amigável do provedor de OLE DB que gerencia o acesso ao servidor vinculado especificado.|  
-|**SRV_PRODUCT**|**nvarchar(**128**)**|Nome de produto do servidor vinculado.|  
-|**SRV_DATASOURCE**|**nvarchar (**4000**)**|Propriedade da fonte de dados OLE DB que corresponde ao servidor vinculado especificado.|  
-|**SRV_PROVIDERSTRING**|**nvarchar (**4000**)**|Propriedade de cadeia de caracteres do provedor OLE DB que corresponde ao servidor vinculado.|  
-|**SRV_LOCATION**|**nvarchar (**4000**)**|Propriedade de local OLE DB que corresponde ao servidor vinculado especificado.|  
+|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Nome amigável do provedor de OLE DB que gerencia o acesso ao servidor vinculado especificado.|  
+|**SRV_PRODUCT**|**nvarchar(** 128 **)**|Nome de produto do servidor vinculado.|  
+|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Propriedade da fonte de dados OLE DB que corresponde ao servidor vinculado especificado.|  
+|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Propriedade de cadeia de caracteres do provedor OLE DB que corresponde ao servidor vinculado.|  
+|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Propriedade de local OLE DB que corresponde ao servidor vinculado especificado.|  
 |**SRV_CAT**|**sysname**|Propriedade de catálogo OLE DB que corresponde ao servidor vinculado especificado.|  
   
 ## <a name="permissions"></a>Permissões  

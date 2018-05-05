@@ -1,33 +1,31 @@
 ---
 title: Elemento EntityType (CSDLBI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d154816ae6aa2d540961721a6a0a84e454085242
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>Elemento EntityType (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-O elemento **EntityType** é um tipo complexo que representa a estrutura de uma entidade de alto nível, como um cliente ou pedido, em um modelo de dados. O elemento **bi:EntityType** estende a definição de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usada na [Estrutura de Dados de Entidade](http://msdn.microsoft.com/library/bb399567.aspx).  
+  O elemento **EntityType** é um tipo complexo que representa a estrutura de uma entidade de alto nível, como um cliente ou pedido, em um modelo de dados. O elemento **bi:EntityType** estende a definição de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usada na [Estrutura de Dados de Entidade](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Um elemento EntityType deve ser especificado para cada uma das entidades incluídas no modelo de dados. Os subelementos de EntityType descrevem as colunas e medidas na tabela. As relações entre as tabelas são incluídas no **EntityContainer**.  
   
@@ -37,11 +35,11 @@ O elemento **EntityType** é um tipo complexo que representa a estrutura de uma 
 |Nome|É obrigatório|Descrição|  
 |----------|-----------------|-----------------|  
 |Sumário|Não|Uma cadeia de caracteres que contém os possíveis tipos de dados em uma coluna. O valor é derivado do valor de DimensionAttributeTypeEnumType no modelo de dados.<br /><br /> Se o valor de DimensionAttributeTypeEnumType for "ExtendedType", o valor de Contents será derivado do elemento ExtendedType de DimensionAttribute. O cliente não é necessário para responder a esses valores.|  
-|DefaultDetails|Não|Uma lista de referências de propriedade que representam o conjunto de colunas na tabela.<br /><br /> Consulte [elemento DefaultDetails &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
-|DefaultImage|Não|Uma referência a uma coluna que contém a imagem que ilustra a entidade.<br /><br /> Em modelos multidimensionais, esse elemento corresponde a um atributo binário no atributo de dimensão. Se esse atributo estiver presente, o elemento deverá conter exatamente um elemento MemberRef.<br /><br /> Consulte [elemento MemberRef &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DefaultMeasure|Não|Uma referência a uma medida na entidade que deve ser usada como o padrão ao fazer cálculos sobre a entidade. Se não for especificado, SUM será o padrão.<br /><br /> Consulte [elemento MemberRef &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DisplayKey|Não|Uma lista de referências a colunas ou a extremidades de função que constituem um identificador forte que identifica exclusivamente uma instância de entidade.<br /><br /> Consulte [elemento DisplayKey &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
-|Hierarquia|Não|Uma lista de hierarquias no modelo.<br /><br /> Consulte [elemento Hierarchy &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
+|DefaultDetails|Não|Uma lista de referências de propriedade que representam o conjunto de colunas na tabela.<br /><br /> Consulte [elemento DefaultDetails & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
+|DefaultImage|Não|Uma referência a uma coluna que contém a imagem que ilustra a entidade.<br /><br /> Em modelos multidimensionais, esse elemento corresponde a um atributo binário no atributo de dimensão. Se esse atributo estiver presente, o elemento deverá conter exatamente um elemento MemberRef.<br /><br /> Consulte [elemento MemberRef & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DefaultMeasure|Não|Uma referência a uma medida na entidade que deve ser usada como o padrão ao fazer cálculos sobre a entidade. Se não for especificado, SUM será o padrão.<br /><br /> Consulte [elemento MemberRef & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DisplayKey|Não|Uma lista de referências a colunas ou a extremidades de função que constituem um identificador forte que identifica exclusivamente uma instância de entidade.<br /><br /> Consulte [elemento DisplayKey & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
+|Hierarquia|Não|Uma lista de hierarquias no modelo.<br /><br /> Consulte [elemento Hierarchy & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
 |ReferenceName|Sim|Um identificador que pode ser usado para fazer referência a essa entidade em uma consulta DAX (Expressões de Análise de Dados).<br /><br /> Se esse atributo não estiver presente, será usado o nome do campo totalmente qualificado da entidade.|  
 |SortMembers|Não|Uma lista de propriedades na qual classificar. O atributo SortDirection indica se a ordem é crescente ou decrescente.|  
   

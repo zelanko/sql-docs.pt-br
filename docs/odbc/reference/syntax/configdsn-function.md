@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2d7ae36927ef95bcfb96846b5f266da56e5f3bec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>Função ConfigDSN
 **Conformidade**  
@@ -88,7 +87,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>Comentários  
  **ConfigDSN** recebe informações de conexão do instalador do DLL como uma lista de atributos na forma de pares de valor de palavra-chave. Cada par é encerrada com um byte nulo e a lista inteira é encerrada com um byte nulo. (Ou seja, dois bytes nulos marcar o fim da lista.) Não são permitidos espaços em torno do sinal de igual do par de valor de palavra-chave. **ConfigDSN** pode aceitar as palavras-chave que não são palavras-chave válidas para **SQLBrowseConnect** e **SQLDriverConnect**. **ConfigDSN** não necessariamente suporte a todas as palavras-chave que são palavras-chave válidas para **SQLBrowseConnect** e **SQLDriverConnect**. (**ConfigDSN** não aceita o **DRIVER** palavra-chave.) As palavras-chave usadas pelo **ConfigDSN** função deve oferecer suporte a todas as opções necessárias para recriar a fonte de dados usando o recurso de configuração automática do instalador. Quando os usos do **ConfigDSN** valores e os valores de cadeia de caracteres de conexão são os mesmos, as mesmas palavras-chave devem ser usadas.  
   
- Como em **SQLBrowseConnect** e **SQLDriverConnect**, as palavras-chave e seus valores não devem conter o **[] {} (),? \*=! @** caracteres e o valor da **DSN** palavra-chave não pode consistir apenas de espaços em branco. Devido a gramática do registro, nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
+ Como em **SQLBrowseConnect** e **SQLDriverConnect**, as palavras-chave e seus valores não devem conter o **[]{}(),? \*=! @** caracteres e o valor da **DSN** palavra-chave não pode consistir apenas de espaços em branco. Devido a gramática do registro, nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
   
  **ConfigDSN** devem chamar **SQLValidDSN** para verificar se o comprimento do nome de fonte de dados e verificar que não há caracteres inválidos são incluídos no nome. Se o nome da fonte de dados é maior do que SQL_MAX_DSN_LENGTH ou contém caracteres inválidos, **SQLValidDSN** retorna um erro e **ConfigDSN** retornará um erro. O comprimento do nome de fonte de dados também é verificado por **SQLWriteDSNToIni**.  
   

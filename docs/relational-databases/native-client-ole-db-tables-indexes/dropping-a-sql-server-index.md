@@ -23,12 +23,11 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1017a728e2c83eccbf8019446aa63dd918df5b03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 200e4038bc028ad8e4ecf9c628cc027b5654f2b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dropping-a-sql-server-index"></a>Descartando um índice do SQL Server
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

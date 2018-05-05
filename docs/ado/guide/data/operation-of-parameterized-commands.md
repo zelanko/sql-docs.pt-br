@@ -1,11 +1,9 @@
 ---
 title: Operação de comandos parametrizados | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Operação de comandos com parâmetros
 Se você estiver trabalhando com um grande filho **registros**, especialmente em comparação com o tamanho do pai **registros**, mas que precisam acessar apenas alguns capítulos de filho, talvez seja mais eficiente usar um comando com parâmetros.  
@@ -42,7 +39,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- As tabelas pai e filho têm um nome de coluna em comum, cust_id*.* O *filho comando* tem um "?" espaço reservado, ao qual se refere a cláusula RELATE (ou seja, "... PARÂMETRO 0").  
+ As tabelas pai e filho têm um nome de coluna em comum, cust_id *.* O *filho comando* tem um "?" espaço reservado, ao qual se refere a cláusula RELATE (ou seja, "... PARÂMETRO 0").  
   
 > [!NOTE]
 >  A cláusula de parâmetro referem-se exclusivamente para a sintaxe de comando de forma. Ele não está associado com o ADO [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto ou o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção.  

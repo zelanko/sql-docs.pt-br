@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e37841617289eaa71af4d7c2c091459f32a745b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9f43f69d2695c9b73b45e152273a679ad8b17fe2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Conjunto de linhas de DMSCHEMA_MINING_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as colunas individuais de todos os modelos de mineração de dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Este conjunto de linhas é restrito ao catálogo atual.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descreve as colunas individuais de todos os modelos de mineração de dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Este conjunto de linhas é restrito ao catálogo atual.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DMSCHEMA_MINING_COLUMNS** linhas contém as seguintes colunas.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|O nome do catálogo. Preenchido com o nome do banco de dados do qual o modelo é membro.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|O nome do esquema não qualificado. Esta coluna não é suportada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá **nulo**.|  
 |**NOME_DO_MODELO**|**DBTYPE_WSTR**|O nome do modelo de mineração. Esta coluna contém o nome do modelo de mineração ao qual uma coluna é associada, e nunca estará vazia.|  
-|**NOME DA COLUNA**|**DBTYPE_WSTR**|O nome da coluna.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|O nome da coluna.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**|O GUID da coluna. Esta coluna não é suportada pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá **nulo**.|  
 |**COLUMN_PROPID**|**DBTYPE_UI4**|A ID de propriedade da coluna. Esta coluna não é suportada pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá **nulo**.|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**|A posição ordinal da coluna. As colunas são numeradas a partir de 1. Esta coluna contém **nulo** se não houver nenhum valor ordinal estável para a coluna.|  
@@ -88,9 +88,9 @@ ms.lasthandoff: 01/08/2018
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|Opcional.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|Opcional.|  
 |**NOME_DO_MODELO**|**DBTYPE_WSTR**|Opcional.|  
-|**NOME DA COLUNA**|**DBTYPE_WSTR**|Opcional.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Opcional.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [Linhas do esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

@@ -1,11 +1,9 @@
 ---
 title: Atualizar exemplo de método (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af1178b21aa307a4a9132558410cdd4198e540bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3bcc30868c0dfb0c097ebe8057db6a09a27434cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-example-vc"></a>Atualizar exemplo de método (VC + +)
 Este exemplo demonstra como usar o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método para atualizar o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção para um procedimento armazenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  

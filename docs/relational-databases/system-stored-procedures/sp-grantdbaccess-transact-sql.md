@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35cf1ad4a7181ef39b04e355092f98ff1adda230
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c03c8932e8948fde5c0c116d5517f66dda4f407a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ]  **' * logon* **'** é o nome do grupo do Windows, logon do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon a ser mapeada para o novo banco de dados usuário. Nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato *domínio*\\*logon *; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. *logon* é um **sysname**, sem padrão.  
+ [  **@loginame =** ]  **' * logon* **'** é o nome do grupo do Windows, logon do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon a ser mapeada para o novo banco de dados usuário. Nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato *domínio*\\* logon *; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. *logon* é um **sysname**, sem padrão.  
   
  [  **@name_in_db=**] **'***name_in_db***'** [ **saída**]  
  É o nome do novo usuário de banco de dados. *name_in_db* é uma variável de saída com um tipo de dados **sysname**e um padrão NULL. Se não for especificado, *login* é usado. Se for especificado como uma variável de saída com um valor nulo, **@name_in_db** é definido como *logon*. *name_in_db* ainda não deve existir no banco de dados atual.  

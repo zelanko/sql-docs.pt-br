@@ -1,11 +1,9 @@
 ---
 title: BOF, propriedades EOF (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1941b22639091d673bb687c3ae8b2d9ea1fdf063
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, propriedades EOF (ADO)
 -   **BOF** indica que a posição do registro atual é antes do primeiro registro em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  

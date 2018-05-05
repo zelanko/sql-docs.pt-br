@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetData
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba5edc5dc4bfe9ea0deeb40cd5c96e14480ee27b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-function"></a>Função SQLGetData
 **Conformidade**  
@@ -124,10 +123,10 @@ SQLRETURN SQLGetData(
 |HY009|Uso inválido de ponteiro nulo|(DM) o argumento *TargetValuePtr* foi um ponteiro nulo.|  
 |HY010|Erro de sequência de função|(DM) especificado *StatementHandle* não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute** ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando o **SQLGetData** função foi chamada.<br /><br /> (DM) uma função de execução assíncrona (não la) foi chamada para o *StatementHandle* e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retorna SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todas as colunas ou parâmetros de dados em execução.<br /><br /> (DM) a *StatementHandle* estava em um estado executado, mas nenhum conjunto de resultados foi associado a *StatementHandle*.<br /><br /> Uma chamada para **SQLExeceute**, **SQLExecDirect**, ou **SQLMoreResults** retornou SQL_PARAM_DATA_AVAILABLE, mas **SQLGetData** foi chamado , em vez de **SQLParamData**.|  
 |HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o valor especificado para o argumento *BufferLength* era menor do que 0.<br /><br /> O valor especificado para o argumento *BufferLength* era menor que 4, o *Col_or_Param_Num* argumento foi definido como 0 e o driver foi um ODBC 2*. x* driver.|  
+|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o valor especificado para o argumento *BufferLength* era menor do que 0.<br /><br /> O valor especificado para o argumento *BufferLength* era menor que 4, o *Col_or_Param_Num* argumento foi definido como 0 e o driver foi um ODBC 2 *. x* driver.|  
 |HY109|Posição de cursor inválido|O cursor é posicionado (por **SQLSetPos**, **SQLFetch**, **SQLFetchScroll**, ou **SQLBulkOperations**) em uma linha que foi excluída ou não pôde ser obtido.<br /><br /> O cursor foi um cursor de somente avanço e o tamanho do conjunto de linhas foi maior que um.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecido. Somente Desconecte e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Recurso opcional não implementado|A driver ou fonte de dados não suporta o uso de **SQLGetData** com várias linhas em **SQLFetchScroll**. Essa descrição não se aplica a drivers de retornam a máscara de bits para a opção SQL_GETDATA_EXTENSIONS SQL_GD_BLOCK **SQLGetInfo**.<br /><br /> A driver ou fonte de dados não suporta a conversão especificada pela combinação da *TargetType* argumento e o tipo de dados SQL da coluna correspondente. Esse erro se aplica somente quando o tipo de dados SQL da coluna foi mapeado para um tipo de dados SQL específico do driver.<br /><br /> O driver dá suporte somente ODBC 2*. x*e o argumento *TargetType* foi um dos seguintes:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> e qualquer um dos tipos de dados de intervalo C listados na [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) no Apêndice d: os tipos de dados.<br /><br /> O driver só dá suporte a versões ODBC anteriores 3.50 e o argumento *TargetType* foi SQL_C_GUID.|  
+|HYC00|Recurso opcional não implementado|A driver ou fonte de dados não suporta o uso de **SQLGetData** com várias linhas em **SQLFetchScroll**. Essa descrição não se aplica a drivers de retornam a máscara de bits para a opção SQL_GETDATA_EXTENSIONS SQL_GD_BLOCK **SQLGetInfo**.<br /><br /> A driver ou fonte de dados não suporta a conversão especificada pela combinação da *TargetType* argumento e o tipo de dados SQL da coluna correspondente. Esse erro se aplica somente quando o tipo de dados SQL da coluna foi mapeado para um tipo de dados SQL específico do driver.<br /><br /> O driver dá suporte somente ODBC 2 *. x*e o argumento *TargetType* foi um dos seguintes:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> e qualquer um dos tipos de dados de intervalo C listados na [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) no Apêndice d: os tipos de dados.<br /><br /> O driver só dá suporte a versões ODBC anteriores 3.50 e o argumento *TargetType* foi SQL_C_GUID.|  
 |HYT01|Tempo limite de Conexão expirou|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver não dá suporte a esta função|(DM) o driver correspondente a *StatementHandle* não oferece suporte para a função.|  
 |IM017|Sondagem está desabilitada no modo de notificação assíncrona|Sempre que o modelo de notificação é usado, a sondagem está desabilitada.|  
@@ -153,14 +152,14 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_BOUND. Se essa opção for retornada, **SQLGetData** pode ser chamado para colunas associadas, bem como colunas desassociadas.  
   
- Há duas exceções a essas restrições e capacidade do driver relaxá-los. Primeiro, **SQLGetData** nunca deve ser chamado para um cursor de somente avanço, quando o tamanho do conjunto de linhas for maior que 1. Segundo, se um driver dá suporte a indicadores, ele sempre deve suportar a capacidade de chamar **SQLGetData** para a coluna 0, mesmo se ele não permite que aplicativos chamar **SQLGetData** para outras colunas antes que a última coluna associada. (Quando um aplicativo está trabalhando com um ODBC 2*. x* driver, **SQLGetData** retornará com êxito um indicador, quando chamado com *Col_or_Param_Num* igual a 0 após uma chamada para **SQLFetch**, pois **SQLFetch** é mapeado por ODBC 3*. x* Gerenciador de Driver para **SQLExtendedFetch** com um  *FetchOrientation* de SQL_FETCH_NEXT, e **SQLGetData** com um *Col_or_Param_Num* 0 é mapeado por ODBC 3*. x* para o Gerenciador de Driver **SQLGetStmtOption** com um *fOption* de SQL_GET_BOOKMARK.)  
+ Há duas exceções a essas restrições e capacidade do driver relaxá-los. Primeiro, **SQLGetData** nunca deve ser chamado para um cursor de somente avanço, quando o tamanho do conjunto de linhas for maior que 1. Segundo, se um driver dá suporte a indicadores, ele sempre deve suportar a capacidade de chamar **SQLGetData** para a coluna 0, mesmo se ele não permite que aplicativos chamar **SQLGetData** para outras colunas antes que a última coluna associada. (Quando um aplicativo está trabalhando com um ODBC 2 *. x* driver, **SQLGetData** retornará com êxito um indicador, quando chamado com *Col_or_Param_Num* igual a 0 após uma chamada para **SQLFetch**, pois **SQLFetch** é mapeado por ODBC 3 *. x* Gerenciador de Driver para **SQLExtendedFetch** com um  *FetchOrientation* de SQL_FETCH_NEXT, e **SQLGetData** com um *Col_or_Param_Num* 0 é mapeado por ODBC 3 *. x* para o Gerenciador de Driver **SQLGetStmtOption** com um *fOption* de SQL_GET_BOOKMARK.)  
   
  **SQLGetData** não pode ser usado para recuperar o indicador de uma linha recém-inserida chamando **SQLBulkOperations** com a opção SQL_ADD, porque o cursor não está posicionado na linha. Um aplicativo pode recuperar o indicador para essa linha anexando a coluna 0 antes de chamar **SQLBulkOperations** com SQL_ADD, caso em que **SQLBulkOperations** retorna o indicador no buffer associado. **SQLFetchScroll** , em seguida, pode ser chamado com SQL_FETCH_BOOKMARK para reposicionar o cursor na linha.  
   
  Se o *TargetType* argumento for um tipo de dados de intervalo, a precisão de à esquerda do intervalo de padrão (2) e a precisão de segundos de intervalo padrão (6), conforme definido nos campos SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION do Descartar, respectivamente, são usadas para os dados. Se o *TargetType* argumento é um tipo de dados SQL_C_NUMERIC a precisão padrão (definido pelo driver) e padrão de escala (0), conforme definido nos campos SQL_DESC_PRECISION e SQL_DESC_SCALE a descartar, é usado para os dados. Se qualquer escala ou precisão padrão não for apropriada, o aplicativo deve definir explicitamente o campo do descritor apropriado por uma chamada para **SQLSetDescField** ou **SQLSetDescRec**. Ele pode definir o campo SQL_DESC_CONCISE_TYPE como SQL_C_NUMERIC e chame **SQLGetData** com um *TargetType* argumento de SQL_ARD_TYPE, o que fará com que os valores de precisão e escala nos campos de descritor para ser usado.  
   
 > [!NOTE]  
->  No ODBC 2*. x*, conjunto de aplicativos *TargetType* SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP para indicar que \* *TargetValuePtr* for uma data, hora, ou estrutura de carimbo de hora. Em ODBC 3*. x*, conjunto de aplicativos *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. O Gerenciador de Driver torna mapeamentos apropriados se necessário, com base na versão do aplicativo e o driver.  
+>  No ODBC 2 *. x*, conjunto de aplicativos *TargetType* SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP para indicar que \* *TargetValuePtr* for uma data, hora, ou estrutura de carimbo de hora. Em ODBC 3 *. x*, conjunto de aplicativos *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. O Gerenciador de Driver torna mapeamentos apropriados se necessário, com base na versão do aplicativo e o driver.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Recuperando dados de comprimento variável em partes  
  **SQLGetData** pode ser usado para recuperar dados de uma coluna que contém os dados de comprimento variável em partes — ou seja, quando o identificador do tipo de dados SQL da coluna é SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL _ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou um identificador específico do driver para um tipo de comprimento variável.  

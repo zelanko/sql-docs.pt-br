@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28220550d868976aded368a88bdc8268cfad490c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f8e2490321aae6b155da3486cb78b1f5740738c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetcursorname-function"></a>Função SQLGetCursorName
 **Conformidade**  
@@ -80,7 +79,7 @@ SQLRETURN SQLGetCursorName(
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando o **SQLGetCursorName** função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** foi chamado para o *StatementHandle* e retornado SQL_PARAM_DATA_ DISPONÍVEL. Essa função foi chamada antes de recuperação para todos os parâmetros de fluxo de dados.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o *StatementHandle* e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retorna SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todas as colunas ou parâmetros de dados em execução.|  
 |HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY015|Nenhum nome de cursor disponível|(DM) o driver foi um ODBC 2*. x* driver, não havia nenhum cursor aberto na instrução, e nenhum nome de cursor foi definido com **SQLSetCursorName**.|  
+|HY015|Nenhum nome de cursor disponível|(DM) o driver foi um ODBC 2 *. x* driver, não havia nenhum cursor aberto na instrução, e nenhum nome de cursor foi definido com **SQLSetCursorName**.|  
 |HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o valor especificado no argumento *BufferLength* era menor do que 0.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecido. Somente Desconecte e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tempo limite de Conexão expirou|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -90,7 +89,7 @@ SQLRETURN SQLGetCursorName(
  Nomes de cursor são usados somente em atualização posicionada e instruções delete (por exemplo, **atualizar** *nome de tabela* ... **WHERE CURRENT OF** *nome de cursor*). Para obter mais informações, consulte [posicionado instruções Update e excluir](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se o aplicativo não chamar **SQLSetCursorName** para definir um nome de cursor, o driver gerará um nome. Esse nome começa com as letras SQL_CUR.  
   
 > [!NOTE]  
->  No ODBC 2*. x*, quando não havia nenhum cursor aberto e nenhum nome foi definido por uma chamada para **SQLSetCursorName**, uma chamada para **SQLGetCursorName** retornado SQLSTATE HY015 (nenhum nome de cursor disponível). Em ODBC 3*. x*, isso não é mais true; independentemente de quando **SQLGetCursorName** é chamado, o driver retorna o nome do cursor.  
+>  No ODBC 2 *. x*, quando não havia nenhum cursor aberto e nenhum nome foi definido por uma chamada para **SQLSetCursorName**, uma chamada para **SQLGetCursorName** retornado SQLSTATE HY015 (nenhum nome de cursor disponível). Em ODBC 3 *. x*, isso não é mais true; independentemente de quando **SQLGetCursorName** é chamado, o driver retorna o nome do cursor.  
   
  **SQLGetCursorName** retorna o nome de um cursor ou não o nome foi criado implicitamente ou explicitamente. Um nome de cursor implicitamente será gerado se **SQLSetCursorName** não é chamado. **SQLSetCursorName** pode ser chamado para renomear um cursor em uma instrução, enquanto o cursor estiver em um estado preparado ou alocado.  
   

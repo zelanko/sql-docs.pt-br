@@ -2,16 +2,16 @@
 title: O que&#39;novo nos serviços de aprendizado de máquina do SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 405e4636525898268c54f1a3d603c9e5da3dc14d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>O que há de novo nos serviços de aprendizado de máquina do SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,10 +22,12 @@ Recursos de aprendizado de máquina são adicionados ao SQL Server em cada vers�
 
 Esta versão adicionado algoritmos de aprendizado de máquina de setor e suporte de Python. Renomeado para refletir o novo escopo, SQL Server 2017 marcado a introdução de **serviços de aprendizado de máquina do SQL Server (no banco de dados)**, com o suporte de linguagem Python e R. 
 
-Esta versão também introduzida **o servidor de aprendizado de máquina do SQL Server (autônomo)**totalmente independentes do SQL Server, para R e Python cargas de trabalho que você deseja executar em um sistema dedicado. Com o servidor autônomo, você pode distribuir e dimensionar soluções R ou Python sem usar o SQL Server.
+Esta versão também introduzida **o servidor de aprendizado de máquina do SQL Server (autônomo)** totalmente independentes do SQL Server, para R e Python cargas de trabalho que você deseja executar em um sistema dedicado. Com o servidor autônomo, você pode distribuir e dimensionar soluções R ou Python sem usar o SQL Server.
 
 | Versão | Atualização de recurso |
-|---------|---------------|
+|---------|----------------|
+| ATUALIZAÇÃO CUMULATIVA 6 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. Correções incluem suporte para tipos de dados de data/hora na consulta SPEES Python e mensagens de erro aprimoradas no microsoftml quando modelos previamente treinados estão ausentes. |
+| ATUALIZAÇÃO CUMULATIVA 5 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. Correções incluem melhorias para transformar a funções e variáveis no revoscalepy, correção dos erros relacionados a caminho longo em rxInstallPackages, corrigindo conexões em um loopback para RxExec rx_exec funções e revisões de mensagens de aviso. |
 | ATUALIZAÇÃO CUMULATIVA 4 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. |
 | ATUALIZAÇÃO CUMULATIVA 3 | Serialização no revoscalepy, de modelo do Python usando a [rx_serialize_model função](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Pontuação nativo](sql-native-scoring.md) mais aprimoramentos [em tempo real de pontuação](real-time-scoring.md). Com a pontuação no banco de dados, taxa de transferência é um milhão de linhas por segundo usando modelos de R. Nesta atualização, em tempo real de pontuação e pontuação nativo oferecem melhor desempenho em uma linha e a pontuação do lote. Nativo pontuação usa uma função de T-SQL para pontuação rápida que pode ser executada em qualquer edição do SQL Server, mesmo em Linux. A função não requer nenhuma instalação de R ou configuração adicional. Isso significa que você pode treinar um modelo em outro lugar, salvá-lo no SQL Server e, em seguida, executar pontuação sem nunca chamar R. Para obter mais informações sobre as metodologias de pontuação, consulte [como realizar em tempo real de pontuação ou pontuação nativo](r/how-to-do-realtime-scoring.md). |
 | ATUALIZAÇÃO CUMULATIVA 2 | Correções de bugs e atualização de pacote, mas nenhum novo recurso anúncios. |

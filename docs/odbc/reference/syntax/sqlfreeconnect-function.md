@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeConnect
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 493fb290e36e77b86cc8b0996dbe0a043757ba9d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 927c5a7a897e7358cc475da5d32bc53299a5d977
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeconnect-function"></a>Função SQLFreeConnect
 **Conformidade**  
  Versão introduzidas: Conformidade de padrões 1.0 ODBC: Deprecated  
   
  **Resumo**  
- Em ODBC 3*. x*, a função ODBC 2.0 **SQLFreeConnect** foi substituído pelo **SQLFreeHandle**. Para obter mais informações, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ Em ODBC 3 *. x*, a função ODBC 2.0 **SQLFreeConnect** foi substituído pelo **SQLFreeHandle**. Para obter mais informações, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2*. x* aplicativo estiver trabalhando com um ODBC 3*. x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2 *. x* aplicativo estiver trabalhando com um ODBC 3 *. x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

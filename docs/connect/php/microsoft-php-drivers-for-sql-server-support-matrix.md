@@ -3,25 +3,22 @@ title: Matriz de suporte de Drivers da Microsoft para PHP para SQL Server | Micr
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.workload: On Demand
-ms.openlocfilehash: 95b8e0ad1b69431e6f2266babd42f88ea2f4bfcc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: b8f1fad66e906b71ff5ea247ba4615e7be774f63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Drivers de PHP da Microsoft para a matriz de suporte do SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

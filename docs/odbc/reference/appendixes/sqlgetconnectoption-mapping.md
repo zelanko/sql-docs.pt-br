@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d4682ae8fcf0c745816ed9b2155ebf5072a538d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2f2dd621859c6bfa600394b798983a116bb4b86c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectoption-mapping"></a>Mapeamento de SQLGetConnectOption
-Quando um aplicativo chama **SQLGetConnectOption** por meio de um ODBC 3*. x* driver, a chamada para  
+Quando um aplicativo chama **SQLGetConnectOption** por meio de um ODBC 3 *. x* driver, a chamada para  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -58,4 +57,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  Para obter opções de conexão de cadeia de caracteres definidas pelo ODBC, o Gerenciador de Driver define o *BufferLength* argumentos na chamada para **SQLGetConnectAttr** para o tamanho máximo predefinido (SQL_MAX_OPTION_STRING_LENGTH); para uma opção de conexão não-String, *BufferLength* é definido como 0.  
   
- Para um ODBC 3*. x* driver, o Gerenciador de Driver não verifica se *opção* é entre SQL_CONN_OPT_MIN e SQL_CONN_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START. O driver deve verificar a validade dos valores de opção.
+ Para um ODBC 3 *. x* driver, o Gerenciador de Driver não verifica se *opção* é entre SQL_CONN_OPT_MIN e SQL_CONN_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START. O driver deve verificar a validade dos valores de opção.

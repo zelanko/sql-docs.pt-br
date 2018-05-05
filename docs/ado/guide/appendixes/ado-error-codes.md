@@ -1,11 +1,9 @@
 ---
 title: Códigos de erro de ADO | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 55b434f3106e8c4847aeabcec90694bd9d89a7c6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0c20cb78d14f8389c8d79ea8fd3c6d735e52fc89
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capture-ado-error-codes"></a>Capturar os códigos de erro de ADO
 Além de erros do provedor retornados no [erro](../../../ado/reference/ado-api/error-object.md) objetos do [erros](../../../ado/reference/ado-api/errors-collection-ado.md) coleção, o ADO em si pode retornar erros no mecanismo de tratamento de exceção de seu ambiente de tempo de execução. Usar a linguagem de programação, o mecanismo de interceptação de erro, como o **On Error** instrução no Microsoft® Visual Basic, ou o **de try-catch** bloco em Microsoft Visual C++®, para capturar erros de ADO.

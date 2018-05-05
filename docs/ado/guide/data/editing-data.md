@@ -1,11 +1,9 @@
 ---
 title: Editando dados | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61e2d9ecd7d3557b22b1404e574fe51a1cdfc8a7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 915e96df957b3f81c1b9a6d6731ca942b69e8f1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editing-data"></a>Editando dados
 Ter explicamos como usar o ADO para se conectar a uma fonte de dados, executar um comando, obter os resultados em um **Recordset** objeto e, em seguida, navegar dentro a **Recordset**. Esta seção aborda a próxima operação ADO fundamental: edição de dados.  

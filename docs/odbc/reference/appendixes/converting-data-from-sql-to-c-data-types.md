@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -27,19 +27,18 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72fa649a1c894109557c58f79b1590466020c156
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversão de dados do SQL para tipos de dados C
 Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, o driver recupera os dados da fonte de dados. Se necessário, ele converte os dados do tipo de dados no qual o driver recuperá-lo para o tipo de dados especificado pelo *TargetType* argumento **SQLBindCol** ou **SQLGetData.** Finalmente, ele armazena os dados no local apontado pelo *TargetValuePtr* argumento **SQLBindCol** ou **SQLGetData** (e o campo SQL_DESC_DATA_PTR da descartar).  
   
  A tabela a seguir mostra as conversões com suporte do ODBC SQL tipos de dados para tipos de dados ODBC C. Um círculo preenchido indica a conversão padrão para um tipo de dados SQL (o tipo de dados C para o qual os dados serão convertidos quando o valor de *TargetType* é SQL_C_DEFAULT). Um círculo vazio indica uma conversão com suporte.  
   
- Para um ODBC 3*. x* aplicativo trabalhando com um ODBC 2. *x* driver, conversão de dados específica do driver tipos podem não ter suporte.  
+ Para um ODBC 3 *. x* aplicativo trabalhando com um ODBC 2. *x* driver, conversão de dados específica do driver tipos podem não ter suporte.  
   
  O formato dos dados convertidos não é afetado pela configuração de país Windows®.  
   

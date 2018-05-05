@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a158bbcdd77e4a7e1e026db793b46e306d8c6fbe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-mdx"></a>Expressões (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  Uma função de valor escalar retorna um valor simples dentro do contexto de avaliação em MDX. Essa distinção é importante para compreender como o MDX resolve as funções de valores escalares, pois a maioria das expressões, instruções e scripts do MDX é avaliada não sobre o elemento de dados simples, mas de forma iterativa sobre um grupo de elementos de dados, como células ou membros. Entretanto, na ocasião em que a função de valor escalar é avaliada, a função normalmente está revisando um elemento de dados simples.  
   
  Identificador de objeto  
- O MDX é orientado por objeto devido à sua natureza de dados multidimensionais. Os identificadores de objeto são considerados expressões simples em DMX. Para obter mais informações sobre identificadores, consulte [identificadores &#40; MDX &#41; ](../mdx/identifiers-mdx.md).  
+ O MDX é orientado por objeto devido à sua natureza de dados multidimensionais. Os identificadores de objeto são considerados expressões simples em DMX. Para obter mais informações sobre identificadores, consulte [identificadores &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Uma expressão complexa também pode ser criada a partir das combinações dessas entidades unidas por operadores.  
   
@@ -99,8 +98,8 @@ WHERE [Product].[Category].[Bikes]
 |[Usando expressões escalares](../mdx/using-scalar-expressions.md)|Define as expressões de valor escalar.|  
 |[Trabalhando com valores vazios](../mdx/working-with-empty-values.md)|Descreve o que é um valor vazio e como tais valores são controlados.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência de linguagem MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [Conceitos básicos de consulta MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de linguagem MDX & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f7d037b0080b754e8a0ba65efc22a92ce43873b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC é a API de acesso primário dados nativos para aplicativos escritos em C e C++ para o SQL Server. Há um driver ODBC para a maioria das fontes de dados. Outros idiomas que usam o ODBC incluem COBOL, Perl, PHP e Python. ODBC é amplamente usado em cenários de integração de dados.
 
@@ -33,15 +32,15 @@ O driver ODBC é fornecido com ferramentas como [ **sqlcmd** ](../../tools/sqlcm
 
 ## <a name="code-example-in-c"></a>Exemplo de código em C++
 
-Temos um arquivo. zip pequeno que contém o código-fonte de um programa C++ que usa ODBC:
+O exemplo C++ a seguir demonstra como usar as APIs ODBC para conectar e acessar um banco de dados:
 
 - [Exemplo de código C++, usando o ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Download
 
-- ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Um círculo seta download](../../ssdt/media/download.png)[para baixar o driver ODBC](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>Documentação  
+## <a name="documentation"></a>Documentação
 
 ### <a name="features"></a>Recursos
 

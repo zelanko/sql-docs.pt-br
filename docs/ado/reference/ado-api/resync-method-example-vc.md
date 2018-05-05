@@ -1,11 +1,9 @@
 ---
 title: Sincronizar de exemplo do método (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 617b832139e11c40212709bfc55f72dfa935226b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: dc310864a557ae3157d047f0d6fc05dd3e24b729
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resync-method-example-vc"></a>Sincronizar de exemplo do método (VC + +)
 Este exemplo demonstra como usar o [Resync](../../../ado/reference/ado-api/resync-method.md) método para atualizar dados em um conjunto estático.  

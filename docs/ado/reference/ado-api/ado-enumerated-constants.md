@@ -1,11 +1,9 @@
 ---
 title: Constantes enumeradas do ADO | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c77a194ee2eb17779774d92b5452509d86c0fb29
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 151b4e88b3f094cd44ac7078e5d16e0b0730a9e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-enumerated-constants"></a>Constantes enumeradas do ADO
 Para ajudar na depuração, as enumerações de ADO listam um valor para cada constante. No entanto, esse valor é somente informativo e pode alterar de uma versão do ADO para outro. Seu código deve depender apenas o nome, não o valor real de cada constante enumerada.  

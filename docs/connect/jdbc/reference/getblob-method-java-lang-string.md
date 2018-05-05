@@ -3,15 +3,12 @@ title: Método (Java) getBlob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBlob (java.lang.String)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e982dcad17c8a1acc423d55c6179b5cfeddefba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: f6ab25f2dfbfefd3c30a8b80b6e07a80f32f07b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getblob-method-javalangstring"></a>Método getBlob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +40,7 @@ public java.sql.Blob getBlob(java.lang.String sCol)
 #### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
- Um **cadeia de caracteres** que contém o nome do parâmetro.  
+ Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um objeto de Blob.  

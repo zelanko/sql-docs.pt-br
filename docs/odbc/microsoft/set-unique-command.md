@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SET UNIQUE command [ODBC]
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0e73315f1dca11f4b43d743e0b9dd3feb31bbab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dbdb92c553b5d4ff3eae3bf0f0c39fa834bcd913
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-unique-command"></a>Comando exclusivo do conjunto
 Especifica se os registros com valores de chave duplicados de índice são mantidos em um arquivo de índice.  

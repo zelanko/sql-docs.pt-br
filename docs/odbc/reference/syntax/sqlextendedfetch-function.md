@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee25cf1b7b4df806c3ea999205d14117aac3c038
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>Função SQLExtendedFetch
 **Conformidade**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch** busca o conjunto de linhas especificado de dados do conjunto de resultados e retorna dados para todas as colunas associadas. Conjuntos de linhas podem ser especificados em uma posição absoluta ou relativa, ou pelo indicador.  
   
 > [!NOTE]  
->  Em ODBC 3*. x*, **SQLExtendedFetch** foi substituído pelo **SQLFetchScroll**. ODBC 3*. x* aplicativos não devem chamar **SQLExtendedFetch**; em vez disso, eles devem chamar **SQLFetchScroll**. O Gerenciador de Driver mapeia **SQLFetchScroll** para **SQLExtendedFetch** ao trabalhar com um ODBC 2*. x* driver. ODBC 3*. x* devem dar suporte a drivers **SQLExtendedFetch** se desejar trabalhar com ODBC 2*. x* aplicativos que chamá-lo. Para obter mais informações, consulte "Comentários" e [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  Em ODBC 3 *. x*, **SQLExtendedFetch** foi substituído pelo **SQLFetchScroll**. ODBC 3 *. x* aplicativos não devem chamar **SQLExtendedFetch**; em vez disso, eles devem chamar **SQLFetchScroll**. O Gerenciador de Driver mapeia **SQLFetchScroll** para **SQLExtendedFetch** ao trabalhar com um ODBC 2 *. x* driver. ODBC 3 *. x* devem dar suporte a drivers **SQLExtendedFetch** se desejar trabalhar com ODBC 2 *. x* aplicativos que chamá-lo. Para obter mais informações, consulte "Comentários" e [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -129,9 +128,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   Chamadas para **SQLExtendedFetch** não podem ser misturadas a chamadas para **SQLFetch** ou **SQLFetchScroll**e se **SQLBulkOperations** é chamado antes de qualquer função de busca é chamada, **SQLExtendedFetch** não pode ser chamado depois que o cursor for fechado e reaberto. Ou seja, **SQLExtendedFetch** pode ser chamado apenas em estado de instrução S7. Para obter mais informações, consulte [instrução transições](../../../odbc/reference/appendixes/statement-transitions.md) nas tabelas de transição de estado do apêndice b: ODBC.  
   
- Quando um aplicativo chama **SQLFetchScroll** ao usar um ODBC 2*. x* driver, o Gerenciador de Driver mapeia essa chamada para **SQLExtendedFetch**. Para obter mais informações, consulte "SQLFetchScroll e ODBC 2*. x* Drivers" em [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+ Quando um aplicativo chama **SQLFetchScroll** ao usar um ODBC 2 *. x* driver, o Gerenciador de Driver mapeia essa chamada para **SQLExtendedFetch**. Para obter mais informações, consulte "SQLFetchScroll e ODBC 2 *. x* Drivers" em [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
- No ODBC 2*. x*, **SQLExtendedFetch** foi chamado para buscar várias linhas e **SQLFetch** foi chamado para buscar uma única linha. Em ODBC 3*. x*, por outro lado, **SQLFetch** pode ser chamado para buscar várias linhas.  
+ No ODBC 2 *. x*, **SQLExtendedFetch** foi chamado para buscar várias linhas e **SQLFetch** foi chamado para buscar uma única linha. Em ODBC 3 *. x*, por outro lado, **SQLFetch** pode ser chamado para buscar várias linhas.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   

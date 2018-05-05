@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0332ecba1226855d841ba9f8619e660cb72e91af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3ca0d66f6b5a4df2e0d4f4fa79d9eb882159c431
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,10 +78,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  Não use uma senha em branco. Use uma senha forte.  
   
  [  **@working_directory=**] **'***working_directory***'**  
- É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* é **nvarchar (255)**e o padrão é a pasta ReplData para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. O nome deve ser especificado no formato UNC.  
+ É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* é **nvarchar (255)** e o padrão é a pasta ReplData para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. O nome deve ser especificado no formato UNC.  
   
  [  **@trusted=**] **'***confiável***'**  
- Esse parâmetro foi substituído e é fornecido apenas para compatibilidade com versões anteriores. *confiável* é **nvarchar (5)**e configurá-lo como qualquer coisa **false** resultará em erro.  
+ Esse parâmetro foi substituído e é fornecido apenas para compatibilidade com versões anteriores. *confiável* é **nvarchar (5)** e configurá-lo como qualquer coisa **false** resultará em erro.  
   
  [  **@encrypted_password=**] *encrypted_password*  
  Configuração *encrypted_password* não é mais suportada. Tentativa de definir isso **bit** parâmetro **1** resultará em erro.  

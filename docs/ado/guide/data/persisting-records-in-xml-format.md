@@ -1,11 +1,9 @@
 ---
 title: Manter registros em formato XML | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea27e9718ca2fd2814e950e0242625e8c78bb72d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 582e0a0fb3b757f9f9257ebaa199c819068cb2e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-records-in-xml-format"></a>Manter registros em formato XML
 Como o formato ADTG, **registros** persistência em formato XML é implementada com o Microsoft OLE DB provedor de persistência. Este provedor gera um conjunto de linhas de somente avanço, somente leitura de um arquivo XML salvo ou um fluxo que contém as informações de esquema geradas pelo ADO. Da mesma forma, pode levar um ADO **registros**, gerar o XML e salvá-lo em um arquivo ou qualquer objeto que implementa o COM **IStream** interface. (Na verdade, um arquivo é apenas um exemplo de um objeto que oferece suporte a **IStream**.) Para versões 2.5 e superior, ADO baseia-se no Microsoft XML Parser (MSXML) ao carregar o XML para o **registros**; portanto MSXML é necessária.  

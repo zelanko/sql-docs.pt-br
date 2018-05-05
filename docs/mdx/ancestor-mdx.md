@@ -22,12 +22,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f5271c7e096ef7a6b09efc7cc818b31ccd1ec699
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,14 +51,14 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
- *Distância*  
+ *distância*  
  Uma expressão numérica válida que especifica a distância do membro especificado.  
   
 ## <a name="remarks"></a>Remarks  
  Com o **ancestral** função, que você fornecer a função com uma expressão de membro MDX e, em seguida, forneça o uma expressão MDX de um nível que é um ancestral do membro ou uma expressão numérica que representa o número de níveis acima daquele membro. Com essas informações, o **ancestrais** função retorna o membro ancestral nesse nível.  
   
 > [!NOTE]  
->  Para retornar um conjunto que contém o membro ancestral, em vez de apenas o membro ancestral, use o [ancestrais &#40; MDX &#41; ](../mdx/ancestors-mdx.md) função.  
+>  Para retornar um conjunto que contém o membro ancestral, em vez de apenas o membro ancestral, use o [ancestrais &#40;MDX&#41; ](../mdx/ancestors-mdx.md) função.  
   
  Se uma expressão de nível for especificada, o **ancestral** função retorna o ancestral de um membro especificado no nível especificado. Se o membro especificado não estiver dentro da mesma hierarquia que o nível especificado, a função retornará um erro.  
   
@@ -112,7 +111,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   
