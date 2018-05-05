@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b34dcfdf1feba2d2188bb2214d6fbede01acd86
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aadea5e4a373935f0b00dd3604885589afb9bd11
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getnclob-method-javalangstring"></a>Método getNClob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
 #### <a name="parameters"></a>Parâmetros  
  *nome do parâmetro*  
   
- Um **cadeia de caracteres** que contém o nome do parâmetro.  
+ Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
  ANClobobject.  

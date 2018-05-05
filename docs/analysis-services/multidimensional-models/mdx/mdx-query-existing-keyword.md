@@ -1,34 +1,23 @@
 ---
 title: Palavra-chave EXISTING (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-f1_keywords:
-- EXISTING
-helpviewer_keywords:
-- Existing keyword
-ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c3a9ebbb73e8bf2b305a7ab2730439ffd0d53f8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 888c3039c98b36b15f28f6cfac21506547f3940c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-query---existing-keyword"></a>Consulta MDX - palavra-chave existente
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Força a ser avaliada no contexto atual um conjunto especificado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Força a avaliação de um conjunto especificado no contexto atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +30,7 @@ Existing Set_Expression
  *Set_Expression*  
  Uma expressão de conjunto de expressões multidimensionais (MDX) válida.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Por padrão, são avaliados conjuntos no contexto do cubo que contém os membros do conjunto. A palavra-chave **Existing** força a avaliação de um conjunto especificado no contexto atual.  
   
 ## <a name="example"></a>Exemplo  
@@ -82,14 +71,14 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Count &#40;Set&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
- [AddCalculatedMembers &#40; MDX &#41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [Agregação &#40; MDX &#41;](../../../mdx/aggregate-mdx.md)   
- [Filtro &#40; MDX &#41;](../../../mdx/filter-mdx.md)   
- [Propriedades &#40; MDX &#41;](../../../mdx/properties-mdx.md)   
- [DrilldownLevel &#40; MDX &#41;](../../../mdx/drilldownlevel-mdx.md)   
- [Hierarquize &#40; MDX &#41;](../../../mdx/hierarchize-mdx.md)   
- [Referência de função MDX &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Contagem de & #40; Definir & #41; & #40; MDX & #41;](../../../mdx/count-set-mdx.md)   
+ [AddCalculatedMembers & #40; MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [Agregação & #40; MDX & #41;](../../../mdx/aggregate-mdx.md)   
+ [Filtro & #40; MDX & #41;](../../../mdx/filter-mdx.md)   
+ [Propriedades & #40; MDX & #41;](../../../mdx/properties-mdx.md)   
+ [DrilldownLevel & #40; MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Hierarquize & #40; MDX & #41;](../../../mdx/hierarchize-mdx.md)   
+ [Referência de função MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

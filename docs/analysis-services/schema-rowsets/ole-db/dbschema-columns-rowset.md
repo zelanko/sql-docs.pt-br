@@ -23,15 +23,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad15c20b68b3ccc69dee5b39c839f9f8dd0b2fab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>Conjunto de linhas de DBSCHEMA_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações de coluna para todas as colunas que atendem aos critérios de restrição fornecidos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Oferece informações de coluna por todas as colunas que atendem aos critérios de restrição fornecidos.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DBSCHEMA_COLUMNS** linhas contém as seguintes colunas.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 |**TABLE_CATALOG**|**DBTYPE_WSTR**||O nome do Banco de dados.|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**||Sem suporte.|  
 |**TABLE_NAME**|**DBTYPE_WSTR**||O nome do cubo.|  
-|**NOME DA COLUNA**|**DBTYPE_WSTR**||O nome da hierarquia ou da medida do atributo.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**||O nome da hierarquia ou da medida do atributo.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||Sem suporte.|  
 |**COLUMN_PROPID**|**DBTYPE_UI4**||Sem suporte.|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||A posição da coluna, começando por 1.|  
@@ -78,10 +78,10 @@ ms.lasthandoff: 01/08/2018
 |**TABLE_CATALOG**|**DBTYPE_WSTR**|Opcional|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**|Opcional|  
 |**TABLE_NAME**|**DBTYPE_WSTR**|Opcional|  
-|**NOME DA COLUNA**|**DBTYPE_WSTR**|Opcional|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Opcional|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|Opcional|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conjuntos de linhas do esquema OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

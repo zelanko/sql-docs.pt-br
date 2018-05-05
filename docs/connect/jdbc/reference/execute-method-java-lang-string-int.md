@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerStatement.execute (javal.lang.String.int[])
 apilocation:
@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86e02aa3ec56deffefe81ad5ebe4d282ecd10d53
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 046bcaa04b4bbc84faf7d8499618059dc5ed42af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-javalangstring-int"></a>Método execute (java.lang.String, int[])
 
@@ -50,7 +49,7 @@ Um **cadeia de caracteres** que contém uma instrução SQL.
 
 Uma matriz de **int**s que indica os índices de coluna das chaves geradas automaticamente que devem ser disponibilizados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 **True** se o primeiro resultado é um conjunto de resultados. Caso contrário, **false**.
   
 ## <a name="exceptions"></a>Exceções
@@ -59,7 +58,7 @@ Uma matriz de **int**s que indica os índices de coluna das chaves geradas autom
 ## <a name="remarks"></a>Remarks
 Esse método execute é especificado pelo método execute na interface Java.SQL. Statement.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Método Execute &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 

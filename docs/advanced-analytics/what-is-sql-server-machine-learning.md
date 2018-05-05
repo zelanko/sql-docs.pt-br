@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>O que é o serviços de aprendizado de máquina do SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ A proposição de valor de chave dos serviços de aprendizado de máquina é a p
 Há duas opções para o uso de recursos de aprendizado de máquina no SQL Server: 
 
 + [**Serviços de aprendizado de máquina do SQL Server (no banco de dados)** ](r/sql-server-r-services.md) opera na instância do mecanismo de banco de dados, em que o mecanismo de cálculo é totalmente integrado com o mecanismo de banco de dados. A maioria das instalações são essa opção.
-+ [**O servidor de aprendizado de máquina do SQL Server (autônomo)** ](r/r-server-standalone.md) é uma instalação de não-SQL. Apesar de você usar a instalação do SQL Server para instalar o servidor, ele será desacoplado completamente do SQL Server. Funcionalmente, é equivalente a não-SQL [Microsoft Machine Learning Server para Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
++ [**O servidor de aprendizado de máquina do SQL Server (autônomo)** ](r/r-server-standalone.md) é Machine Learning Server para Windows que é executado independentemente do mecanismo de banco de dados. Apesar de você usar a instalação do SQL Server para instalar o servidor, o recurso não está com reconhecimento de instância. Funcionalmente, é equivalente ao não-SQL-Server [Microsoft Machine Learning Server para Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## <a name="r-and-python-packages"></a>Pacotes de R e Python
 

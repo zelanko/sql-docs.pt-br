@@ -1,31 +1,23 @@
 ---
 title: Contadores de desempenho (SSAS) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d440c3f6c663abc4da4a873a85a7173c1e150480
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters-ssas"></a>Contadores de desempenho (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Usando o Monitor de Desempenho, você pode monitorar o desempenho de uma instância do Microsoft SQL Server Analysis Services (SSAS) usando contadores de desempenho.  
+  Usando o Monitor de Desempenho, você pode monitorar o desempenho de uma instância do Microsoft SQL Server Analysis Services (SSAS) usando contadores de desempenho.  
   
  O Monitor de Desempenho é um snap-in do Controle de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MMC) que controla o uso de recursos. Você pode iniciar este snap-in de MMC digitando **PerfMon** no prompt de comando ou, no Painel de Controle, clicando em **Ferramentas Administrativas**e, em seguida, **Monitor de Desempenho**. O Monitor de Desempenho permite o monitoramento de atividade e desempenho do servidor e dos processos usando objetos e contadores predefinidos, bem como o monitoramento de eventos usando contadores definidos pelo usuário. O Monitor de Desempenho coleta as contagens em vez de dados sobre os eventos, por exemplo, uso de memória, número de transações ativas ou atividade de CPU. Você também pode definir limites em contadores específicos para gerar alertas que notificam operadores.  
   

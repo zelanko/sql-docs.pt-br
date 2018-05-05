@@ -23,12 +23,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89e9088aeec78213f7da9a79ba78255de4b94b97
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: fe4ea22c7f2c0e7310c216fee117d9582872e968
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-rds"></a>Atualizar o método (RDS)
 Repete a consulta de fonte de dados especificada no [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propriedade e atualizações os resultados da consulta.  

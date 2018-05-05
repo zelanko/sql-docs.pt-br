@@ -1,33 +1,32 @@
 ---
-title: DISCOVER_STORAGE_TABLE_COLUMNS Rowset | Microsoft Docs
-ms.custom: 
+title: Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMNS | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4fab746408d275f8802cb489ede62587ef092e7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMNS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Fornece informações em nível de coluna sobre tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo de Tabela ou SharePoint.  
+  Fornece informações em nível de coluna sobre tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo de Tabela ou SharePoint.  
   
  **Aplica-se a:** modelos tabulares  
   
@@ -45,7 +44,7 @@ Fornece informações em nível de coluna sobre tabelas de armazenamento usadas 
 |**COLUMN_ID**|**DBTYPE _ WSTR**||A ID da coluna. A ID da coluna é interna ao mecanismo analítico na memória xVelocity (VertiPaq) e é apenas para fins informativos.|  
 |**COLUMN_TYPE**|**DBTYPE_WSTR**||O tipo de coluna. O tipo da coluna é interno ao mecanismo analítico na memória xVelocity (VertiPaq) e é apenas para fins informativos.<br /><br /> BASIC_DATA<br /><br /> HIERARCHY_DATAID_TO_POSITION<br /><br /> HIERARCHY_POSITION_TO_DATAID<br /><br /> RELATIONSHIP|  
 |**COLUMN_ENCODING**|**DBTYPE_UI8**||Um inteiro que representa o tipo de codificação usado para obter dados de coluna.<br /><br /> **0**, usado com **COLUMN_TYPE**: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, relação<br /><br /> **1**, usado com **COLUMN_TYPE**: BASIC_DATA<br /><br /> **2**, usado com **COLUMN_TYPE**: BASIC_DATA|  
-|**DATATYPE**|**DBTYPE_WSTR**||O tipo de dados da coluna. Tem os seguintes valores possíveis:<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> N/A|  
+|**TIPO DE DADOS**|**DBTYPE_WSTR**||O tipo de dados da coluna. Tem os seguintes valores possíveis:<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> N/A|  
 |**ISKEY**|**DBTYPE_BOOL**||**True** se a coluna é usada como uma chave primária ou estrangeira; caso contrário **false**.|  
 |**ISUNIQUE**|**DBTYPE_BOOL**||**True** se os valores na coluna forem exclusivos; caso contrário **false**.|  
 |**ISNULLABLE**|**DBTYPE_BOOL**||**True** se a coluna for anulável; caso contrário **false**.|  
