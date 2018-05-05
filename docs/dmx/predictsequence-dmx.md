@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: aaeb95f70c9afc6872bd56df494a8eba88f98f91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b8ef0b3f0ba361e368695b31d15b26cd013ed6e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +46,9 @@ PredictSequence(\<table column reference, n-start, n-end>)
  Um \<expressão de tabela >.  
   
 ## <a name="remarks"></a>Remarks  
- Se o  *n*  parâmetro for especificado, ele retorna os seguintes valores:  
+ Se o *n* parâmetro for especificado, ele retorna os seguintes valores:  
   
--   Se  *n*  é maior que zero, os valores de sequência mais prováveis nas próximas  *n*  etapas.  
+-   Se *n* é maior que zero, os valores de sequência mais prováveis nas próximas *n* etapas.  
   
 -   Se ambos os *n-start* e *n-end* forem especificados, os valores de sequência de *n-start* para *n-end*.  
   
@@ -63,9 +62,9 @@ From
   [Sequence Clustering]  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

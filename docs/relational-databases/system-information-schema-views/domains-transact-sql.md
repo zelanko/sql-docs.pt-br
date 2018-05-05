@@ -25,13 +25,12 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a13c0a859b642c272a99b2a935b41933b558578d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 931e5e6b59694d261a957d408a617bac984db28e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,23 +41,23 @@ ms.lasthandoff: 04/16/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|Banco de dados no qual o tipo de dados de alias existe.|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|Nome do esquema que contém o tipo de dados de alias.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Banco de dados no qual o tipo de dados de alias existe.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o tipo de dados de alias.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  
 |**NOME_DO_DOMÍNIO**|**sysname**|Tipo de dados de alias.|  
 |**DATA_TYPE**|**sysname**|Tipo de dados fornecido pelo sistema.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**Int**|Comprimento máximo, em caracteres, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, será retornado NULL. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
 |**CHARACTER_OCTET_LENGTH**|**Int**|Comprimento máximo, em bytes, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, será retornado NULL.|  
-|**COLLATION_CATALOG**|**varchar (**6**)**|Sempre retorna NULL.|  
-|**COLLATION_SCHEMA**|**varchar (**3**)**|Sempre retorna NULL.|  
-|**COLLATION_NAME**|**nvarchar(**128**)**|Retorna o nome exclusivo para a ordem de classificação, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
-|**CHARACTER_SET_CATALOG**|**varchar (**6**)**|Retorna **mestre**. Isso indica que o banco de dados no qual o conjunto de caracteres, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
-|**CHARACTER_SET_SCHEMA**|**varchar (**3**)**|Sempre retorna NULL.|  
-|**CHARACTER_SET_NAME**|**nvarchar(**128**)**|Retorna o nome exclusivo para o conjunto de caracteres se essa coluna é dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
+|**COLLATION_CATALOG**|**varchar (** 6 **)**|Sempre retorna NULL.|  
+|**COLLATION_SCHEMA**|**varchar (** 3 **)**|Sempre retorna NULL.|  
+|**COLLATION_NAME**|**nvarchar(** 128 **)**|Retorna o nome exclusivo para a ordem de classificação, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Retorna **mestre**. Isso indica que o banco de dados no qual o conjunto de caracteres, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
+|**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Sempre retorna NULL.|  
+|**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|Retorna o nome exclusivo para o conjunto de caracteres se essa coluna é dados de caractere ou **texto** tipo de dados. Caso contrário, será retornado NULL.|  
 |**NUMERIC_PRECISION**|**tinyint**|Precisão de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, será retornado NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de precisão de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, será retornado NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Escala de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, será retornado NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Código de subtipo para **datetime** e ISO **intervalo** tipo de dados. Para outros tipos de dados, esta coluna retorna um valor nulo.|  
-|**DOMAIN_DEFAULT**|**nvarchar (**4000**)**|Texto real da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] de definição.|  
+|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Texto real da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] de definição.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

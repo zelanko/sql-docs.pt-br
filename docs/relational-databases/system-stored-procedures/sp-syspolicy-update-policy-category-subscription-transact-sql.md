@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  É o identificador da assinatura da categoria de política que você deseja atualizar. *policy_category_subscription_id* é **int**e é necessário.  
   
- [ **@target_type=** ] **'**target_type**'**  
+ [ **@target_type=** ] **'** target_type **'**  
  É o tipo de destino da assinatura da categoria. *target_type* é **sysname**, com um padrão NULL.  
   
  Se você especificar *target_type*, o valor deve ser definido como 'DATABASE'.  
   
- [  **@target_object=** ] **'**target_object**'**  
+ [  **@target_object=** ] **'** target_object **'**  
  É o nome do banco de dados que assinará a categoria de política. *target_object* é **sysname**, com um padrão NULL.  
   
- [  **@policy_category=** ] **'**policy_category**'**  
+ [  **@policy_category=** ] **'** policy_category **'**  
  É o nome da categoria de política que você deseja que o banco de dados assine. *policy_category* é **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

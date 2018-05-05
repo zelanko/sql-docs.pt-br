@@ -3,25 +3,22 @@ title: Baixar os Drivers da Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9bfd529d3b7d33947c12006d42d49ab5c637123a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 86bda1fa1b55800b39d0f116661f1ef52477e37f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Baixar os Drivers da Microsoft para PHP para SQL Server
 

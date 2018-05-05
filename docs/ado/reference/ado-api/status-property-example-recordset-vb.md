@@ -1,11 +1,9 @@
 ---
 title: Exemplo da propriedade status (conjunto de registros) (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70100d9009c2751af10d47c011a6eada263419f9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2e6b2c1473f12db8bdaca18abfe1b33bbb9c01fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-recordset-vb"></a>Exemplo da propriedade status (conjunto de registros) (VB)
 Este exemplo usa o [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriedade para exibir os registros foram modificados em uma operação em lote antes de uma atualização em lotes ocorreu.  

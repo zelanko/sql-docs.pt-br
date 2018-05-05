@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09933a65f19ca025c8a681b068bf31c6fe0e9d7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3a3fd8d22cd601fc26b53af35a4d101ffcaea3e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,13 +56,13 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
   
  INCLUDE_STATISTICS só retorna **$Probability** e **$AdjustedProbability**.  
   
- Se o parâmetro numérico  *n*  for especificado, o **PredictAssociation** função retorna os valores de provavelmente n principais com base na probabilidade:  
+ Se o parâmetro numérico *n* for especificado, o **PredictAssociation** função retorna os valores de provavelmente n principais com base na probabilidade:  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- Se você incluir **$AdjustedProbability**, a instrução retorna a parte superior  *n*  valores com base no **$AdjustedProbability**.  
+ Se você incluir **$AdjustedProbability**, a instrução retorna a parte superior *n* valores com base no **$AdjustedProbability**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa o **PredictAssociation** função para retornar os quatro produtos da Adventure Works de bancos de dados que são mais prováveis de serem vendidos juntos.  
@@ -90,9 +89,9 @@ SHAPE {
 ~~~~  
 
   
-## <a name="see-also"></a>Consulte Também  
- [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

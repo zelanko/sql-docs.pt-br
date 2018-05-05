@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d4b85f18478d1cc34050804845f62e2283b57462
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd1e979a3613dc95566875a57fc422c59dbc5074
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Para obter mais informações sobre como usar essa sintaxe, consulte [SELECT FROM &#60; modelo de &#62;. CONTEÚDO &#40; DMX &#41; ](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas de esquema de conteúdo de modelo de mineração, consulte [de linhas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ Para obter mais informações sobre como usar essa sintaxe, consulte [SELECT FROM &#60;modelo&#62;. CONTEÚDO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas de esquema de conteúdo de modelo de mineração, consulte [de linhas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
   
  Se um \<legenda de nó > não for especificado, a função retornará a probabilidade de que os casos de entrada pertencem ao cluster mais provável. Use o **Cluster** função para retornar o cluster mais provável.  
   
@@ -74,10 +73,10 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

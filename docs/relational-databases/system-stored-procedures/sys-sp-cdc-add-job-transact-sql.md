@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58f17196962c2ca05ebf1c2e56ce78621dbb9ac7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ec45242bef3e7ad510a97d422bf05499b764c9c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Como os trabalhos de limpeza e captura são criados por padrão, este procedimento armazenado será necessário somente quando um trabalho tiver sido explicitamente encerrado e tiver de ser recriado.  
   
- O nome do trabalho é **cdc. ***< nome_do_banco_de_dados >***CleanUp** ou **cdc. ***< nome_do_banco_de_dados >***Capture**, onde *< nome_do_banco_de_dados >* é o nome do banco de dados atual. Se um trabalho com o mesmo nome já existir, o nome é anexado com um período (**.**) seguido por um identificador exclusivo, por exemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ O nome do trabalho é **cdc. ***< nome_do_banco_de_dados >*** CleanUp** ou **cdc. ***< nome_do_banco_de_dados >*** Capture**, onde *< nome_do_banco_de_dados >* é o nome do banco de dados atual. Se um trabalho com o mesmo nome já existir, o nome é anexado com um período (**.**) seguido por um identificador exclusivo, por exemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para exibir a configuração atual de um trabalho de limpeza ou captura, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para alterar a configuração de um trabalho, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

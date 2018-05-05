@@ -1,11 +1,9 @@
 ---
 title: Propriedade ActiveConnection (ADO MD) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9552f02cfb21ed53a703e3b7ddd462b13a94d93c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6a26da86e21799aa18f3c3a4b190eb1636401e5d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>Propriedade ActiveConnection (ADO MD)
 Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) o conjunto de células atual do objeto ou o catálogo ao qual pertence atualmente.  

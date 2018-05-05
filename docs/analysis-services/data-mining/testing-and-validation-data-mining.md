@@ -1,16 +1,15 @@
 ---
-title: "Teste e validação (mineração de dados) | Microsoft Docs"
-ms.custom: 
+title: Teste e validação (mineração de dados) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -30,20 +29,19 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: 
+caps.latest.revision: 61
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 454ab96791dad2bfae21ee8e69d397fc9e62a121
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>Teste e validação (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-A validação é o processo de avaliar como seus modelos de mineração são executados nos dados reais. É importante validar seus modelos de mineração entendendo suas qualidades e características antes de implantá-los em um ambiente de produção.  
+  A validação é o processo de avaliar como seus modelos de mineração são executados nos dados reais. É importante validar seus modelos de mineração entendendo suas qualidades e características antes de implantá-los em um ambiente de produção.  
   
  Esta seção apresenta alguns conceitos básicos relacionados à qualidade do modelo e descreve as estratégias para a validação de modelo fornecidas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter uma visão geral de como a validação de modelo funciona no processo de mineração de dados mais amplo, consulte [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md).  
   
@@ -68,7 +66,7 @@ A validação é o processo de avaliar como seus modelos de mineração são exe
  A*utilidade* inclui várias métricas que informam se o modelo fornece informações úteis. Por exemplo, um modelo de mineração de dados que correlaciona o local da loja com as vendas pode ser exato e confiável, mas não útil, porque você não pode generalizar esse resultado adicionando mais lojas no mesmo local. Além disso, ele não responde à questão empresarial fundamental de por que certos locais têm mais de vendas. Você também pode descobrir que um modelo que parece ter êxito na verdade é insignificante, porque se baseia em correlações cruzadas nos dados.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>Ferramentas para teste e validação de modelos de mineração  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte a várias abordagens para a validação de soluções de mineração de dados, dando suporte a todas as fases da metodologia de teste de mineração de dados.  
+ O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a várias abordagens para a validação de soluções de mineração de dados, que dá suporte a todas as fases da metodologia de teste de mineração de dados.  
   
 -   Particionando dados em conjuntos de treinamento e de teste.  
   
@@ -94,7 +92,7 @@ A validação é o processo de avaliar como seus modelos de mineração são exe
 |------------|-----------|  
 |Saiba configurar um conjunto de dados de testes usando um assistente ou comandos DMX|[Conjuntos de dados de treinamento e teste](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
 |Saiba testar a distribuição e a representatividade dos dados em uma estrutura de mineração|[Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Saiba mais sobre os tipos de gráfico de precisão fornecidos.|[Gráfico de comparação de precisão &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersão &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Saiba mais sobre os tipos de gráfico de precisão fornecidos.|[Gráfico de comparação de precisão &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersão & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Saiba criar uma matriz de classificação, às vezes chamada de matriz de confusão, para avaliar o número de verdadeiros e falsos positivos e negativos.|[Matriz de classificação &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Consulte também  

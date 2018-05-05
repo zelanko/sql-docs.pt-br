@@ -28,13 +28,12 @@ caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a6b6cb757e2944df8a0e50e6e63a1f58cedda11
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 82efa511456eb0340ba2bb717ff9d15acbfbd8f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -83,9 +82,9 @@ ms.lasthandoff: 04/26/2018
 |**sql_memory_model**|**Int**|**Aplica-se a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o modelo de memória usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alocar memória. Não permite valor nulo.<br /><br />1 = o modelo de memória convencional<br />2 = bloquear páginas na memória<br /> 3 = páginas grandes na memória|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Aplica-se a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o modelo de memória usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alocar memória. Não permite valor nulo.<br /><br />**CONVENCIONAL**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando o modelo de memória convencional para alocar memória. Isso é a memória do sql padrão de modelo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço não tem bloquear páginas na privilégios de memória durante a inicialização.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando bloquear páginas na memória para alocar memória. Isso é o Gerenciador de memória do sql padrão quando a conta de serviço do SQL Server possui bloquear páginas na privilégio de memória durante a inicialização do SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando páginas grandes na memória para alocar memória. SQL Server usa o alocador de páginas grandes para alocar memória com o Enterprise edition quando a conta de serviço do SQL Server possui bloquear páginas na privilégio de memória durante a inicialização do servidor e 834 do sinalizador de rastreamento está ativado.|
 |**pdw_node_id**|**Int**|**Aplica-se a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
-|**socket_count** |**Int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de soquetes do processador disponíveis no sistema. |  
-|**cores_per_socket** |**Int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de processadores por soquete disponível no sistema. |  
-|**numa_node_count** |**Int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de nós de numa disponíveis no sistema. Esta coluna inclui nós numa físicos, bem como nós de numa temporário. |  
+|**socket_count** |**Int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de soquetes do processador disponíveis no sistema. |  
+|**cores_per_socket** |**Int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de processadores por soquete disponível no sistema. |  
+|**numa_node_count** |**Int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Especifica o número de nós de numa disponíveis no sistema. Esta coluna inclui nós numa físicos, bem como nós de numa temporário. |  
   
 ## <a name="permissions"></a>Permissões
 

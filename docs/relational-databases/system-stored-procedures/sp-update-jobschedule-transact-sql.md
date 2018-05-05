@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 19736a8afa6339c46c9976e57e1ae24a6cc25fba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21a93aac42dcbbf29d3e5a4a3bb2d4ab2196380c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
  **sp_update_jobschedule** é fornecida para compatibilidade com versões anteriores apenas.  
   
 > [!IMPORTANT]  
->  Para obter mais informações sobre a sintaxe usada em versões anteriores do Microsoft SQL Server, consulte o Microsoft SQL Server 2000 do Transact-SQL Referencefor*.*  
+>  Para obter mais informações sobre a sintaxe usada em versões anteriores do Microsoft SQL Server, consulte o Microsoft SQL Server 2000 do Transact-SQL Referencefor *.*  
   
 ## <a name="remarks"></a>Remarks  
  As agendas de trabalho podem ser gerenciadas independentemente dos trabalhos. Para atualizar uma agenda, use **sp_update_schedule**.  

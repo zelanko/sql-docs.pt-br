@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee9cd8b485584d863e7eac942a7c81792bb22bd7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-function"></a>Função SQLSetDescField
 **Conformidade**  
@@ -99,7 +98,7 @@ SQLRETURN SQLSetDescField(
 |HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY016|Não é possível modificar um descritor de linha de implementação|O *DescriptorHandle* argumento foi associado um IRD e o *FieldIdentifier* argumento não era SQL_DESC_ARRAY_STATUS_PTR ou SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|Informações do descritor inconsistentes|Os campos SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE não formam um tipo válido do ODBC SQL ou um tipo SQL específicos de driver válido (para IPDs) ou um tipo válido do ODBC C (para APDs ou ARDs).<br /><br /> Informações de descritor verificadas durante uma verificação de consistência não estavam consistentes. (Consulte "Verificação de consistência" em **SQLSetDescRec**.)|  
-|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM)  *\*ValuePtr* é uma cadeia de caracteres, e *BufferLength* foi menor que zero, mas não era igual a SQL_NTS.<br /><br /> (DM) o driver foi um ODBC 2*. x* driver, o descritor foi um descartar o *ColumnNumber* argumento foi definido como 0 e o valor especificado para o argumento *BufferLength* foi não é igual a 4.|  
+|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM)  *\*ValuePtr* é uma cadeia de caracteres, e *BufferLength* foi menor que zero, mas não era igual a SQL_NTS.<br /><br /> (DM) o driver foi um ODBC 2 *. x* driver, o descritor foi um descartar o *ColumnNumber* argumento foi definido como 0 e o valor especificado para o argumento *BufferLength* foi não é igual a 4.|  
 |HY091|Identificador de campo de descritor inválido|O valor especificado para o *FieldIdentifier* argumento não era um campo definido pelo ODBC e não era um valor definido pela implementação.<br /><br /> O *FieldIdentifier* argumento era inválido para o *DescriptorHandle* argumento.<br /><br /> O *FieldIdentifier* argumento era um campo somente leitura, definidas pelo ODBC.|  
 |HY092|Identificador de atributo/opção inválido|O valor em  *\*ValuePtr* não era válido para o *FieldIdentifier* argumento.<br /><br /> O *FieldIdentifier* argumento era SQL_DESC_UNNAMED, e *ValuePtr* foi SQL_NAMED.|  
 |HY105|Tipo de parâmetro inválido|(DM) o valor especificado para o campo SQL_DESC_PARAMETER_TYPE era inválido. (Para obter mais informações, consulte o "*InputOutputType* argumento" seção **SQLBindParameter**.)|  
@@ -422,7 +421,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_LENGTH [All]**  
  Este campo de registro SQLULEN é o comprimento máximo ou real de uma cadeia de caracteres em caracteres ou um tipo de dados binários em bytes. É o comprimento máximo para um tipo de dados de comprimento fixo ou o comprimento real de um tipo de dados de comprimento variável. O valor sempre exclui o caractere null de terminação que encerra a cadeia de caracteres. Para valores cujo tipo é SQL_TYPE_DATE, SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP ou um dos tipos de dados SQL do intervalo, este campo tem o comprimento em caracteres da representação da cadeia de caracteres do valor datetime ou intervalo.  
   
- O valor neste campo pode ser diferente do valor de "comprimento" como definido no ODBC 2*. x*. Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ O valor neste campo pode ser diferente do valor de "comprimento" como definido no ODBC 2 *. x*. Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  Este SQLCHAR somente leitura * o campo de registro contém um ou mais caracteres que o driver reconhece como um prefixo para um literal deste tipo de dados. Essa variável conterá uma cadeia de caracteres vazia para um tipo de dados para o qual um prefixo de literal não é aplicável.  
@@ -468,7 +467,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_PRECISION [All]**  
  Este campo de registro SQLSMALLINT contém o número de dígitos para um tipo numérico exato, o número de bits no mantissa (precisão binário) para um tipo numérico aproximado, ou o número de dígitos no componente de segundos fracionários para SQL_TYPE_TIME, SQL_TYPE _TIMESTAMP ou tipo de dados SQL_INTERVAL_SECOND. Este campo é indefinido para todos os outros tipos de dados.  
   
- O valor neste campo pode ser diferente do valor de "precisão" conforme definido no ODBC 2*. x*. Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ O valor neste campo pode ser diferente do valor de "precisão" conforme definido no ODBC 2 *. x*. Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_ROWVER [descritores de implementação]**  
  Este campo SQLSMALLINTrecord indica se uma coluna é modificada automaticamente pelo DBMS quando uma linha é atualizada (por exemplo, uma coluna do tipo "timestamp" no SQL Server). O valor desse campo de registro é definido como SQL_TRUE se a coluna é uma coluna de controle de versão de linha e SQL_FALSE caso contrário. Esse atributo de coluna é semelhante a chamar **SQLSpecialColumns** com IdentifierType de SQL_ROWVER para determinar se uma coluna é atualizada automaticamente.  
@@ -476,7 +475,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SCALE [All]**  
  Este campo de registro SQLSMALLINT contém a escala definida para tipos de dados decimais e numéricos. O campo é indefinido para todos os outros tipos de dados.  
   
- O valor neste campo pode ser diferente do valor de "escala", conforme definido no ODBC 2*. x*. Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ O valor neste campo pode ser diferente do valor de "escala", conforme definido no ODBC 2 *. x*. Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  Este SQLCHAR somente leitura * o campo de registro contém o nome do esquema da tabela base que contém a coluna. O valor de retorno é dependente do driver, se a coluna é uma expressão ou se a coluna faz parte de uma exibição. Se a fonte de dados não dá suporte a esquemas ou o nome do esquema não pode ser determinado, essa variável conterá uma cadeia de caracteres vazia.  
@@ -484,11 +483,11 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SEARCHABLE [IRDs]**  
  Este campo de registro SQLSMALLINT somente leitura é definido como um dos seguintes valores:  
   
--   SQL_PRED_NONE se a coluna não pode ser usada em uma **onde** cláusula. (Isso é o mesmo que o valor SQL_UNSEARCHABLE no ODBC 2*. x*.)  
+-   SQL_PRED_NONE se a coluna não pode ser usada em uma **onde** cláusula. (Isso é o mesmo que o valor SQL_UNSEARCHABLE no ODBC 2 *. x*.)  
   
--   SQL_PRED_CHAR se a coluna pode ser usada em uma **onde** cláusula apenas com o **como** predicado. (Isso é o mesmo que o valor SQL_LIKE_ONLY no ODBC 2*. x*.)  
+-   SQL_PRED_CHAR se a coluna pode ser usada em uma **onde** cláusula apenas com o **como** predicado. (Isso é o mesmo que o valor SQL_LIKE_ONLY no ODBC 2 *. x*.)  
   
--   SQL_PRED_BASIC se a coluna pode ser usada em uma **onde** cláusula com todos os operadores de comparação exceto **como**. (Isso é o mesmo que o valor SQL_EXCEPT_LIKE no ODBC 2*. x*.)  
+-   SQL_PRED_BASIC se a coluna pode ser usada em uma **onde** cláusula com todos os operadores de comparação exceto **como**. (Isso é o mesmo que o valor SQL_EXCEPT_LIKE no ODBC 2 *. x*.)  
   
 -   SQL_PRED_SEARCHABLE se a coluna pode ser usada em uma **onde** cláusula com qualquer operador de comparação.  
   

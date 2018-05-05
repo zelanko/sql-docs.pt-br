@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a032b71e3c2ec400bb402300573df5f6bc4a70ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,13 +62,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>Funções de previsão relacionadas  
  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece as seguintes funções adicionais para consultar modelos de clusterização:  
   
--   Use o [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md) função para retornar o cluster mais provável.  
+-   Use o [Cluster &#40;DMX&#41; ](../dmx/cluster-dmx.md) função para retornar o cluster mais provável.  
   
--   Use o [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md) função para obter a probabilidade de um caso pertence a um determinado cluster. Este valor serve como o inverso da distância de cluster.  
+-   Use o [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) função para obter a probabilidade de um caso pertence a um determinado cluster. Este valor serve como o inverso da distância de cluster.  
   
--   Use o [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) função para retornar um histograma da probabilidade do caso de entrada existir em cada um dos clusters do modelo.  
+-   Use o [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) função para retornar um histograma da probabilidade do caso de entrada existir em cada um dos clusters do modelo.  
   
--   Use o [PredictCaseLikelihood &#40; DMX &#41;](../dmx/predictcaselikelihood-dmx.md) função para retornar uma medida de 0 a 1 que indica como um caso de entrada é existir, considerando o modelo aprendido pelo algoritmo.  
+-   Use o [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) função para retornar uma medida de 0 a 1 que indica como um caso de entrada é existir, considerando o modelo aprendido pelo algoritmo.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Exemplo 1: Obtendo a distância do cluster para um cluster mais provável  
  O exemplo a seguir retorna a distância do caso especificado para o cluster ao qual o caso provavelmente pertence.  
@@ -89,7 +88,7 @@ NATURAL PREDICTION JOIN
   
  Resultados do exemplo:  
   
-|Expression|  
+|Expressão|  
 |----------------|  
 |0.0477390930705145|  
   
@@ -138,10 +137,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>Consulte Também  
- [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Conteúdo do modelo de mineração para Clustering modelos &#40; Analysis Services – mineração de dados &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte também  
+ [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Conteúdo do modelo de mineração para Clustering modelos & #40; Analysis Services – mineração de dados & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

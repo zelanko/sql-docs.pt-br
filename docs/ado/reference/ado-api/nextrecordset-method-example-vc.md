@@ -1,11 +1,9 @@
 ---
 title: Exemplo do método NextRecordset (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4903c7c0da90f13546df67481ef5733b742905c7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 73d8d3fb5c759299306051579153185a0c016ad3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nextrecordset-method-example-vc"></a>Exemplo do método NextRecordset (VC + +)
 Este exemplo usa o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para exibir os dados em um conjunto de registros que usa uma instrução de comando composta composta de três separado **selecione** instruções.  

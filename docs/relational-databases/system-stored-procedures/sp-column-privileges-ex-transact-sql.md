@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 574f0e4e829bfbe92761992e51fd3c3ffd5ef852
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,14 +69,14 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador***.*** proprietário***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário de tabela. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**COLUMN_NAME**|**sysname**|Nome da coluna para cada coluna do **TABLE_NAME** retornado. Esse campo sempre retorna um valor.|  
 |**CONCESSOR**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **COLUMN_NAME** para listado **usuário autorizado**. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que o **TABLE_OWNER**. Esse campo sempre retorna um valor.<br /><br /> O **CONCESSOR** coluna pode ser o proprietário do banco de dados (**TABLE_OWNER**) ou alguém para quem o proprietário do banco de dados concedeu permissões usando a cláusula WITH GRANT OPTION na instrução GRANT.|  
 |**USUÁRIO AUTORIZADO**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **COLUMN_NAME** por listado **CONCESSOR**. Esse campo sempre retorna um valor.|  
-|**PRIVILÉGIO**|**varchar(**32**)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> Selecione = **usuário autorizado** pode recuperar dados para as colunas.<br /><br /> INSERT = **usuário autorizado** pode fornecer dados para esta coluna quando novas linhas são inseridas (pelo **usuário autorizado**) na tabela.<br /><br /> UPDATE = **usuário autorizado** pode modificar dados existentes na coluna.<br /><br /> REFERÊNCIAS = **usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/de chave primária. As relações de chave primária/chave estrangeira são definidas com restrições de tabela.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indica se o **usuário autorizado** tem permissão para conceder permissões a outros usuários (também conhecidos como permissão "concessão com concessão"). Pode ser YES, NO ou NULL. Um desconhecido ou NULL, o valor refere-se a uma fonte de dados onde "concessão com concessão" não é aplicável.|  
+|**PRIVILÉGIO**|**varchar(** 32 **)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> Selecione = **usuário autorizado** pode recuperar dados para as colunas.<br /><br /> INSERT = **usuário autorizado** pode fornecer dados para esta coluna quando novas linhas são inseridas (pelo **usuário autorizado**) na tabela.<br /><br /> UPDATE = **usuário autorizado** pode modificar dados existentes na coluna.<br /><br /> REFERÊNCIAS = **usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/de chave primária. As relações de chave primária/chave estrangeira são definidas com restrições de tabela.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se o **usuário autorizado** tem permissão para conceder permissões a outros usuários (também conhecidos como permissão "concessão com concessão"). Pode ser YES, NO ou NULL. Um desconhecido ou NULL, o valor refere-se a uma fonte de dados onde "concessão com concessão" não é aplicável.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  

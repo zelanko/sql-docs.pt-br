@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e3329d1f5990edae9805538d6e9c5e4c563b028
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f057dd64e65a60fd168acc72903e45e604967621
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>Usando SQLBindCol
 O aplicativo associa colunas chamando **SQLBindCol**. Essa função associa uma coluna por vez. Com ele, o aplicativo especifica o seguinte:  
@@ -41,7 +40,7 @@ O aplicativo associa colunas chamando **SQLBindCol**. Essa função associa uma 
   
  Por exemplo, o código a seguir associa variáveis para as colunas de vendedor e CustID. Dados para as colunas serão retornados no *vendedor* e *CustID*. Porque *vendedor* é um buffer de caractere, o aplicativo especifica o comprimento de byte (11) para que o driver pode determinar se deseja truncar os dados. O comprimento em bytes de retornado título ou, se for NULL, será retornado no *SalesPersonLenOrInd*.  
   
- Porque *CustID* é uma variável de inteiro e corrigiu comprimento, não há necessidade de especificar seu comprimento de byte; o driver pressupõe que ele seja **sizeof (**SQLUINTEGER**)**. O comprimento de bytes do cliente retornado a ID de dados, ou se for NULL, será retornado no *CustIDInd*. Observe que o aplicativo estiver interessado somente se o salário for NULL, porque o comprimento de bytes é sempre **sizeof (**SQLUINTEGER**)**.  
+ Porque *CustID* é uma variável de inteiro e corrigiu comprimento, não há necessidade de especificar seu comprimento de byte; o driver pressupõe que ele seja **sizeof (** SQLUINTEGER **)**. O comprimento de bytes do cliente retornado a ID de dados, ou se for NULL, será retornado no *CustIDInd*. Observe que o aplicativo estiver interessado somente se o salário for NULL, porque o comprimento de bytes é sempre **sizeof (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  

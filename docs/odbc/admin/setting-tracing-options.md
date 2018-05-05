@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer tracing [ODBC]
 - ODBC data source administrator [ODBC], tracing options
@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82a6dd15ba2872ed365c41f5d6e8856da6bc94ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e60f40d0e42e2d5115e036e3552745109d53361d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-tracing-options"></a>Definindo opções de rastreamento
 O **rastreamento** guia o **administrador de fonte de dados ODBC** caixa de diálogo permite que você configure a maneira como as chamadas de função ODBC são rastreadas.  

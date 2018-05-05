@@ -1,11 +1,9 @@
 ---
 title: Erros de ADO | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7319f978370134775d7f89593716beac9fb73fab
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a36f5b96ac0c04b6315ba5a135bbab0dbe75df2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-run-time-errors"></a>Erros de tempo de execução de ADO
 São relatados erros de ADO para o seu programa como erros de tempo de execução. Você pode usar o mecanismo de interceptação de erro da linguagem de programação para interceptar e tratá-los. Por exemplo, no Visual Basic, utilize o **On Error** instrução. No Visual C++, ele depende do método que você está usando para acessar as bibliotecas do ADO. Com #import, use um **de try-catch** bloco. Caso contrário, os programadores do C++ precisará recuperar explicitamente o objeto de erro chamando **GetErrorInfo**. O seguinte procedimento sub Visual Basic demonstra a interceptação de erro de ADO:

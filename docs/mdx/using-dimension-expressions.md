@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>Usando expressões de dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Normalmente, expressões de dimensão e hierarquia são usadas ao passar parâmetros para funções em linguagem MDX para retornar membros, conjuntos ou tuplas a partir de uma hierarquia.  
   
- Expressões de dimensão só podem ser expressões simples porque elas são identificadores de objetos. Consulte [expressões &#40; MDX &#41; ](../mdx/expressions-mdx.md) para obter uma explicação de expressões simples e complexas.  
+ Expressões de dimensão só podem ser expressões simples porque elas são identificadores de objetos. Consulte [expressões &#40;MDX&#41; ](../mdx/expressions-mdx.md) para obter uma explicação de expressões simples e complexas.  
   
 ## <a name="dimension-expressions"></a>Expressões de dimensão  
  Uma expressão de dimensão contém um identificador de dimensão ou uma função de dimensão.  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Um identificador de hierarquia aparece como *Dimension_Name**.* *Hierarchy_Name* na notação BNF usada para descrever instruções MDX.  
+ Um identificador de hierarquia aparece como *Dimension_Name **.** Hierarchy_Name* na notação BNF usada para descrever instruções MDX.  
   
-## <a name="see-also"></a>Consulte Também  
- [Expressões &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

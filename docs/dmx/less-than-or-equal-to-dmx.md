@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a430c03f7e42fb589b071ba4a40528b72f5afda4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5115e57006237b324ecaebe42dcc277865c1127f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= (Menor ou igual a) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +46,9 @@ DMX_Expression <= DMX_Expression
 ## <a name="return-value"></a>Valor de retorno  
  Valor booliano que conterá TRUE se ambos os parâmetros forem não nulos e o valor do primeiro parâmetro for menor do que ou igual ao valor do segundo parâmetro. O valor booliano conterá FALSE se ambos os parâmetros forem não nulos e se o valor do primeiro parâmetro for maior do que o valor do segundo parâmetro. O valor Booliano conterá um valor nulo se um ou ambos os parâmetros forem avaliados como um valor nulo.  
   
-## <a name="see-also"></a>Consulte Também  
- [Operadores de comparação &#40; DMX &#41;](../dmx/operators-comparison.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40; DMX &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Operadores de comparação &#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

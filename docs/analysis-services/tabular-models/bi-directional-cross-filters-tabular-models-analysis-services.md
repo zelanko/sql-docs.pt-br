@@ -1,31 +1,29 @@
 ---
-title: "Replicação bidirecional entre os filtros em modelos de tabela | Microsoft Docs"
-ms.custom: 
+title: Replicação bidirecional entre os filtros em modelos de tabela | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 72a14c23993a3e18c4ca804fab04247090f10596
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados bidirecionais em modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Novo método interno do SQL Server 2016 para habilitação de *filtros cruzados bidirecionais* em modelos de tabela, que elimina a necessidade de soluções alternativas manuais de DAX para a propagação de contextos de filtro em relações da tabela.  
+  Novo método interno do SQL Server 2016 para habilitação de *filtros cruzados bidirecionais* em modelos de tabela, que elimina a necessidade de soluções alternativas manuais de DAX para a propagação de contextos de filtro em relações da tabela.  
   
  Dividindo o conceito pelas respectivas partes componentes: *filtragem cruzada* é a capacidade de definir um contexto de filtro em uma tabela com base nos valores de uma tabela relacionada; *bidirecional* se refere à transferência de um contexto de filtro para uma segunda tabela relacionada do outro lado de uma relação de tabela. Como o próprio nome sugere, você pode fatiar nas duas direções da relação em vez de usar apenas uma.  Internamente, a filtragem bidirecional expande o contexto do filtro para consultar um superconjunto dos dados.  
   
@@ -66,7 +64,7 @@ Novo método interno do SQL Server 2016 para habilitação de *filtros cruzados 
 ## <a name="walkthrough-an-example"></a>Apresentação de exemplo  
  A melhor maneira de avaliar o valor da filtragem cruzada bidirecional é por meio de um exemplo. Considere o seguinte conjunto de dados de [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279), que reflete a cardinalidade e os filtros cruzados criados por padrão.  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![Modelo-de-2-BIDI-SSAS](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "modelo SSAS-BIDI-2")  
   
 > [!NOTE]  
 >  Durante a importação de dados, as relações de tabela são criadas por padrão em configurações de muitos para um, geradas pelas relações da chave estranheira e da chave primária entre a tabela de fatos e as tabelas de dimensões relacionadas.  
@@ -147,7 +145,7 @@ Novo método interno do SQL Server 2016 para habilitação de *filtros cruzados 
 ### <a name="review-default-table-relationships"></a>Revisar as relações de tabela padrão  
  Mude para a Exibição de Diagrama: **Modelo** > **Modelo View** > **Exibição de Diagrama**. A cardinalidade e as relações ativas são indicadas visualmente. Todas as relações são de um-para-muitos entre duas tabelas relacionadas.  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![Modelo-de-2-BIDI-SSAS](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "modelo SSAS-BIDI-2")  
   
  Como alternativa, clique em **Tabela** > **Gerenciar Relações** para exibir as mesmas informações em um layout de tabela.  
   

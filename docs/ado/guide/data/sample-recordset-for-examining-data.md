@@ -1,11 +1,9 @@
 ---
 title: Exemplo de conjunto de registros para examinar dados | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d72ef02cdc7abac1b51fa2450ca9d6766311bda0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ca05161aad6aaaf79f1e1af85d7e83d55e6997ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-recordset-for-examining-data"></a>Exemplo de conjunto de registros para examinar dados
 Primeiro, vamos examinar o **registros** objeto conforme retornadas usando a seguinte consulta SQL, executada em relação aos dados de exemplo Northwind base no Microsoft SQL Server.  

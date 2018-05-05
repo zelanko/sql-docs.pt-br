@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], cursors
 - backward compatibility [ODBC], cursors
@@ -23,17 +23,16 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 116978a182b207f52e879310969a2a5aa5b4eb3c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 670c81a8af1ec229a22ad9a8d52c8bab7164fdd1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores para os aplicativos ODBC 3. x
 A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o primeiro clear dividido em ODBC entre o aplicativo de Interface de programação (API), que é o conjunto de funções de chamadas de aplicativo e o serviço de provedor de Interface (IDA), que é o conjunto de funções implementa o driver. Essa divisão é necessário para equilibrar o requisito em ODBC 3. *x*, que usa **SQLFetchScroll**para alinhar com os padrões e ser compatível com ODBC 2. *x*, que usa **SQLExtendedFetch**.  
   
- O ODBC 3*. x* API, que é o conjunto de funções de aplicativo chama, inclui **SQLFetchScroll** e relacionados a atributos de instrução. O ODBC 3*. x* ida, que é o conjunto de funções o driver implementa, inclui **SQLFetchScroll**, **SQLExtendedFetch**e os atributos de instrução relacionados. Como o ODBC não impõe essa divisão entre a API e o IDA formalmente, é possível para o ODBC 3*. x* aplicativos chamar **SQLExtendedFetch** e relacionados a atributos de instrução. No entanto, não há nenhum motivo para ODBC 3*. x* aplicativos para fazer isso. Para obter mais informações sobre as APIs e SPIs, consulte a introdução [arquitetura ODBC](../../../odbc/reference/odbc-architecture.md).  
+ O ODBC 3 *. x* API, que é o conjunto de funções de aplicativo chama, inclui **SQLFetchScroll** e relacionados a atributos de instrução. O ODBC 3 *. x* ida, que é o conjunto de funções o driver implementa, inclui **SQLFetchScroll**, **SQLExtendedFetch**e os atributos de instrução relacionados. Como o ODBC não impõe essa divisão entre a API e o IDA formalmente, é possível para o ODBC 3 *. x* aplicativos chamar **SQLExtendedFetch** e relacionados a atributos de instrução. No entanto, não há nenhum motivo para ODBC 3 *. x* aplicativos para fazer isso. Para obter mais informações sobre as APIs e SPIs, consulte a introdução [arquitetura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
  Para obter informações sobre como o ODBC 3. *x* Gerenciador de Driver mapeia chamadas para ODBC 2. *x* e ODBC 3. *x* drivers e quais funções e a instrução atributos um ODBC 3. *x* driver deve implementar para bloqueio e cursores roláveis, consulte [que o Driver faz](../../../odbc/reference/appendixes/what-the-driver-does.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
@@ -47,7 +46,7 @@ A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o pr
 |SQL_ATTR_ROW_ARRAY_SIZE|Define o tamanho do conjunto de linhas.<br /><br /> Se um aplicativo chamar **SQLBulkOperations** com um *operação* de SQL_ADD em um ODBC 2. *x* driver, SQL_ROWSET_SIZE será usado para a chamada, não SQL_ATTR_ROW_ARRAY_SIZE, porque a chamada é mapeada para **SQLSetPos** com um *operação* de SQL_ADD, que usa SQL_ROWSET_SIZE.<br /><br /> Chamando **SQLSetPos** com um *operação* de SQL_ADD ou **SQLExtendedFetch** no ODBC 2. *x* SQL_ROWSET_SIZE usa o driver.<br /><br /> Chamando **SQLFetch** ou **SQLFetchScroll** no ODBC 2. *x* driver usa SQL_ATTR_ROW_ARRAY_SIZE.|  
 |**SQLBulkOperations**|Executa operações de inserção e indicador. Quando **SQLBulkOperations** com um *operação* de SQL_ADD é chamado em um ODBC 2. *x* driver, ele é mapeado para **SQLSetPos** com um *operação* de SQL_ADD. A seguir estão os detalhes de implementação:<br /><br /> -Quando estiver trabalhando com um ODBC 2. *x* driver, um aplicativo deve usar somente a descartar alocado implicitamente associado a *StatementHandle*; ele não é possível alocar descartar outro para a adição de linhas, como as operações de descritor explícitas são não tem suporte em um ODBC 2. *x* driver. Um aplicativo deve usar **SQLBindCol** para associar ao descartar, não **SQLSetDescField** ou **SQLSetDescRec**.<br />-Ao chamar um ODBC 3. *x* driver, um aplicativo pode chamar **SQLBulkOperations** com um *operação* de SQL_ADD antes de chamar **SQLFetch** ou **SQLFetchScroll**. Ao chamar um ODBC 2. *x* driver, um aplicativo deve chamar **SQLFetchScroll** antes de chamar **SQLBulkOperations** com uma operação de SQL_ADD.|  
 |**SQLFetch**|Retorna o próximo conjunto de linhas. A seguir estão os detalhes de implementação:<br /><br /> -Quando um aplicativo chama **SQLFetch** em um ODBC 2. *x* driver, ele é mapeado para **SQLExtendedFetch**.<br />-Quando um aplicativo chama **SQLFetch** em um ODBC 3. *x* driver, ele retorna o número de linhas especificado com o atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE.|  
-|**SQLFetchScroll**|Retorna o conjunto de linhas especificado. A seguir estão os detalhes de implementação:<br /><br /> -Quando um aplicativo chama **SQLFetchScroll** em um ODBC 2. *x* driver, ele retornará SQLSTATE 01S01 (erro na linha) antes de cada erro que se aplica a uma única linha. Isso ocorre porque apenas o ODBC 3*. x* Gerenciador de Driver mapeia para **SQLExtendedFetch** e **SQLExtendedFetch** retorna esse SQLSTATE. Quando um aplicativo chama **SQLFetchScroll** em um ODBC 3. *x* driver, ele nunca retorna SQLSTATE 01S01 (erro na linha).<br />-Quando um aplicativo chama **SQLFetchScroll** em um ODBC 2. *x* driver com *FetchOrientation* definida como SQL_FETCH_BOOKMARK, o *FetchOffset* argumento deve ser definido como 0. SQLSTATE HYC00 (recurso opcional não implementado) será retornado se o indicador com base no deslocamento de busca é tentada com um ODBC 2. *x* driver.|  
+|**SQLFetchScroll**|Retorna o conjunto de linhas especificado. A seguir estão os detalhes de implementação:<br /><br /> -Quando um aplicativo chama **SQLFetchScroll** em um ODBC 2. *x* driver, ele retornará SQLSTATE 01S01 (erro na linha) antes de cada erro que se aplica a uma única linha. Isso ocorre porque apenas o ODBC 3 *. x* Gerenciador de Driver mapeia para **SQLExtendedFetch** e **SQLExtendedFetch** retorna esse SQLSTATE. Quando um aplicativo chama **SQLFetchScroll** em um ODBC 3. *x* driver, ele nunca retorna SQLSTATE 01S01 (erro na linha).<br />-Quando um aplicativo chama **SQLFetchScroll** em um ODBC 2. *x* driver com *FetchOrientation* definida como SQL_FETCH_BOOKMARK, o *FetchOffset* argumento deve ser definido como 0. SQLSTATE HYC00 (recurso opcional não implementado) será retornado se o indicador com base no deslocamento de busca é tentada com um ODBC 2. *x* driver.|  
   
 > [!NOTE]  
 >  ODBC 3. *x* aplicativos não devem usar **SQLExtendedFetch** ou o atributo da instrução SQL_ROWSET_SIZE. Em vez disso, eles devem usar **SQLFetchScroll** e o atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE. ODBC 3. *x* aplicativos não devem usar **SQLSetPos** com um *operação* de SQL_ADD, mas deve usar **SQLBulkOperations** com um *Operação* de SQL_ADD.

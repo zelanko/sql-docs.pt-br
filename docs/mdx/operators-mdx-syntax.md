@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxe MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,12 +91,12 @@ ms.lasthandoff: 01/08/2018
   
 -   OU  
   
- Para obter mais informações sobre operadores em MDX, consulte [referência de operador de MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
+ Para obter mais informações sobre operadores em MDX, consulte [referência de operador de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinando resultados  
  Ao combinar expressões simples para formar uma expressão complexa, as regras dos operadores combinadas com as regras de prioridade do tipo de dados determinam o tipo de dados do valor resultante.  
   
- Se o resultado for um caractere ou valor Unicode, as regras dos operadores combinadas com as regras de prioridade dos agrupamentos determinam o agrupamento do resultado. Para obter mais informações sobre agrupamentos, consulte [idiomas e agrupamentos &#40; Analysis Services &#41; ](../analysis-services/languages-and-collations-analysis-services.md).  
+ Se o resultado for um caractere ou valor Unicode, as regras dos operadores combinadas com as regras de prioridade dos agrupamentos determinam o agrupamento do resultado. Para obter mais informações sobre agrupamentos, consulte [idiomas e agrupamentos &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
   
  Há também regras que determinam a precisão, a escala e a extensão do resultado, com base na precisão, na escala e na extensão das expressões simples.  
   
@@ -112,8 +111,8 @@ ms.lasthandoff: 01/08/2018
 |Tupla|Membro|\<tupla > .item(0)|  
 |Tupla|Escalar|\<tupla > Value|  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Elementos de sintaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

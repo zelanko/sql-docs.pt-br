@@ -3,13 +3,10 @@ title: Método (Java) getLong | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4a8b8557518ac2c18924e2e7138f37d4b1268ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5a2f22f105ea3e47b7965338abc6060162de7983
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public long getLong(java.lang.String sCol)
 #### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
- Um **cadeia de caracteres** que contém o nome do parâmetro.  
+ Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um **longo** valor.  

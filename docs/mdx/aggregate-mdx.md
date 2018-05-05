@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2954ccb1ff3affbdd9471ec91629d31b80433faf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-mdx"></a>Função Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |SUM|Retorna a soma dos valores no conjunto.|  
 |Count|Retorna a contagem dos valores no conjunto.|  
 |Max|Retorna o valor máximo no conjunto.|  
-|Mín|Retorna o valor mínimo no conjunto.|  
+|Min|Retorna o valor mínimo no conjunto.|  
 |Funções de agregação semiaditivas|Retorna o cálculo de comportamento semiaditivo no conjunto depois de projetar a forma no eixo de tempo.|  
 |Contagem Distinta|Faz agregações nos dados de fatos que contribuem com o subcubo quando o eixo do slicer inclui um conjunto.<br /><br /> Retorna a contagem distinta para cada membro do conjunto. O resultado depende da segurança das células que estão sendo agregadas e não da segurança das células obrigatórias para o cálculo. A segurança de célula no conjunto gera um erro; a segurança de célula abaixo da granularidade do conjunto especificado é ignorada. Os cálculos no conjunto geram um erro. Os cálculos abaixo da granularidade do conjunto são ignorados. A contagem distinta em um conjunto que inclui um membro e um ou mais filhos retorna a contagem distinta dos fatos que contribuem com o membro filho.|  
 |Atributos que não podem ser agregados|Retorna a soma dos valores.|  
@@ -135,16 +133,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [PeriodsToDate &#40; MDX &#41;](../mdx/periodstodate-mdx.md)   
- [Filhos &#40; MDX &#41;](../mdx/children-mdx.md)   
- [Hierarquize &#40; MDX &#41;](../mdx/hierarchize-mdx.md)   
- [Contagem de &#40; Definir &#41; &#40; MDX &#41;](../mdx/count-set-mdx.md)   
- [Filtro &#40; MDX &#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40; MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [Propriedades &#40; MDX &#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40; MDX &#41;](../mdx/prevmember-mdx.md)   
- [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [Filhos &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Hierarquize & #40; MDX & #41;](../mdx/hierarchize-mdx.md)   
+ [Contagem de & #40; Definir & #41; & #40; MDX & #41;](../mdx/count-set-mdx.md)   
+ [Filtro & #40; MDX & #41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40; MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40; MDX & #41;](../mdx/drilldownlevel-mdx.md)   
+ [Propriedades & #40; MDX & #41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

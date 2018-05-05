@@ -1,11 +1,9 @@
 ---
 title: Exemplo de propriedades de RecordCount (JScript) e filtro | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eefb5a795be9a94e5ea0c174423eebf885e7d240
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cf3f3b971a2dca5a9b51467f42ae028c70ec0793
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Exemplo de propriedades de RecordCount (JScript) e filtro
 Este exemplo abre uma **registros** na tabela de empresas de banco de dados Northwind e, em seguida, usa o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para limitar os registros visíveis para aquelas onde o campo CompanyName começa com a letra D. recortar e colar o código a seguir para o bloco de notas ou outro editor de texto e salve-o como **FilterJS.asp**.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: faae1bf56dd28f83fa3fec5c340bcf67c302def3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 522476043c86b26bc617f13a0704d07c7990e1cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="level-1-interface-conformance"></a>Conformidade de Interface de nível 1
 O nível de conformidade de interface de nível 1 inclui a funcionalidade do nível de conformidade do interface principal mais recursos adicionais, como transações, que geralmente estão disponíveis em um DBMS relacional OLTP. Um driver de interface – em conformidade com o nível 1 permite que o aplicativo faça o seguinte, além dos recursos em nível de conformidade a principal interface:  

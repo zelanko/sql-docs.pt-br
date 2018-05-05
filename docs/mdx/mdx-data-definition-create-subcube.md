@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 364bf7fe910e5073130bef1a75d88bfa560dd9f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definição de dados MDX - criar SUBCUBO
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +51,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Uma expressão SELECT de linguagem MDX válida que não contém as cláusulas WITH, NON EMPTY ou HAVING e não solicita propriedades de dimensão ou célula.  
   
- Consulte [selecionar instrução &#40; MDX &#41; ](../mdx/mdx-data-manipulation-select.md) para obter uma explicação detalhada de sintaxe em instruções Select e o **NON VISUAL** cláusula.  
+ Consulte [instrução SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) para obter uma explicação detalhada de sintaxe em instruções Select e o **NON VISUAL** cláusula.  
   
 ## <a name="remarks"></a>Remarks  
  Quando os membros padrão são excluídos na definição de um subcubo, as coordenadas são alteradas de modo correspondente. Para os atributos que podem ser agregados, o membro padrão é movido para o membro [All]. Para os atributos que não podem ser agregados, o membro padrão é movido para um membro que existe no subcubo. A tabela a seguir contém um exemplo de combinações de subcubo e membro padrão.  
@@ -70,7 +68,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Os objetos de sessão criados no contexto de um subcubo são descartados quando o subcubo é descartado.  
   
- Para obter mais informações sobre subcubos, consulte [criando subcubos em MDX &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Para obter mais informações sobre subcubos, consulte [criando subcubos em MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um subcubo que restringe o espaço de cubo aparente aos membros que existem com o país Canadá. Ele usa o **MEMBROS** função para retornar todos os membros do país da hierarquia Geografia do definido pelo usuário - retornando somente o Canadá.  
@@ -145,10 +143,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  A coluna e a linha [All Products] e [All Resellers], respectivamente, contêm totais de todos os membros, não só dos visíveis.  
   
-## <a name="see-also"></a>Consulte Também  
- [Principais conceitos em MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Remova a instrução de SUBCUBO &#40; MDX &#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Instrução SELECT &#40; MDX &#41;](../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>Consulte também  
+ [Principais conceitos em MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Instrução de SUBCUBO DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Instrução SELECT & #40; MDX & #41;](../mdx/mdx-data-manipulation-select.md)  
   
   

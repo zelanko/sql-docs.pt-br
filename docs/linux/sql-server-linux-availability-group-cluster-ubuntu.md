@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 01/30/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.workload: Inactive
-ms.openlocfilehash: 842e09ffd1a9d219f3d39362f51f18187446a9b2
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 37008fbf209bbdc8a610e5a21bbd599e9783c423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o Cluster Ubuntu e recursos do grupo de disponibilidade
 
@@ -148,19 +147,30 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Desabilitar STONITH é apenas para fins de teste. Se você planeja usar Pacemaker em um ambiente de produção, você deve planejar uma implementação STONITH dependendo do seu ambiente e mantê-lo habilitado. Observe que agora há sem agentes de isolamento para ambientes de nuvem (incluindo o Azure) ou Hyper-V. Consequentemente, o fornecedor do cluster não oferece suporte à execução de clusters de produção nesses ambientes. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Defina a propriedade cluster Iniciar falha-for-fatal como false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Definir propriedade de cluster cluster-nova verificação-intervalo
 
-`start-failure-is-fatal` Indica se uma falha ao iniciar um recurso em um nó adicional impede as tentativas de iniciar nesse nó. Quando definido como `false`, o cluster decide se tentar iniciar no mesmo nó novamente com base no limite do recurso atual falha contagem e a migração. Assim, após o failover, começando a disponibilidade de repetições de Pacemaker recurso de grupo no primeiro primário depois que a instância do SQL está disponível. Pacemaker Rebaixa a réplica secundária e ele retoma automaticamente o grupo de disponibilidade. 
+`cluster-recheck-interval` indica o intervalo de sondagem em que o cluster verifica para alterações nos parâmetros de recursos, restrições ou outras opções de cluster. Se uma réplica falhar, o cluster tenta reiniciar a réplica em um intervalo que está vinculado a `failure-timeout` valor e o `cluster-recheck-interval` valor. Por exemplo, se `failure-timeout` é definido como 60 segundos e `cluster-recheck-interval` é definido como 120 segundos, a reinicialização é tentada em um intervalo maior que 60 segundos, mas com menos de 120 segundos. É recomendável que você defina o tempo limite de falha para 60 e cluster--intervalo de nova verificação para um valor maior que 60 segundos. Não é recomendável definir o intervalo da nova verificação de cluster para um valor pequeno.
 
-Para atualizar o valor da propriedade `false` executar o script a seguir:
+Para atualizar o valor da propriedade `2 minutes` executar:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
-
->[!WARNING]
->Após um failover automático, quando `start-failure-is-fatal = true` o Gerenciador de recursos de tenta iniciar o recurso. Se falhar na primeira tentativa, você precisa executar manualmente `pcs resource cleanup <resourceName>` para limpar a contagem de falhas de recurso e redefinir a configuração.
+> [!IMPORTANT] 
+> Se você já tiver um recurso de grupo de disponibilidade gerenciado por um cluster Pacemaker, observe que todas as distribuições que usam o mais recente disponível Pacemaker pacote 1.1.18-11.el7 introduzem uma alteração de comportamento para o cluster Iniciar falha-for-fatal configuração quando seu valor é false. Esta alteração afeta o fluxo de trabalho de failover. Se uma réplica primária passa por uma interrupção, o cluster é esperado para failover em uma das réplicas secundárias disponíveis. Em vez disso, os usuários vai notar que o cluster continua tentando iniciar a réplica primária com falha. Se esse primário nunca ficar online (devido a uma interrupção permanente), o cluster nunca failover para outra réplica secundária disponível. Devido a essa alteração, uma configuração recomendada anteriormente para definir o início falha-for-fatal não é mais válida e a configuração deve ser revertido para seu valor padrão de `true`. Além disso, o recurso de grupo de disponibilidade precisa ser atualizado para incluir o `failover-timeout` propriedade. 
+>
+>Para atualizar o valor da propriedade `true` executar:
+>
+>```bash
+>sudo pcs property set start-failure-is-fatal=true
+>```
+>
+>Atualizar a propriedade de recurso existente do AG `failure-timeout` para `60s` executado (substituir `ag1` com o nome do recurso de grupo de disponibilidade):
+>
+>```bash
+>pcs resource update ag1 meta failure-timeout=60s
+>```
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Instalar o agente de recursos do SQL Server para integração com Pacemaker
 
@@ -179,7 +189,7 @@ sudo apt-get install mssql-server-ha
 Para criar o recurso de grupo de disponibilidade, use `pcs resource create` de comando e defina as propriedades do recurso. Comando abaixo cria um `ocf:mssql:ag` primário/secundário de recursos para o grupo de disponibilidade com o nome `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
 
 ```
 

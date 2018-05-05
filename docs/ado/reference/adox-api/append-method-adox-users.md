@@ -1,11 +1,9 @@
 ---
 title: Método (usuários ADOX) append | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 267dbd8bc1eb05a1d0f56c9078c5f5518d1e38d7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: bf65ab9c0705019dcc56bae4e605b5cb2247d056
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="append-method-adox-users"></a>Acrescente o método (ADOX usuários)
 Adiciona um novo [usuário](../../../ado/reference/adox-api/user-object-adox.md) o objeto para o [usuários](../../../ado/reference/adox-api/users-collection-adox.md) coleção.  

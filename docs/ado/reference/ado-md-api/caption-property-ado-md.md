@@ -1,11 +1,9 @@
 ---
 title: Legenda da propriedade (ADO MD) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1848f9d2533bb271ed926ebda045336209ebcd07
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8206c3b0c912b880ec0d9fee96f7695b9e95de70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caption-property-ado-md"></a>Propriedade de legenda (ADO MD)
 Indica o texto da legenda a ser usado ao exibir um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) ou [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto.  
