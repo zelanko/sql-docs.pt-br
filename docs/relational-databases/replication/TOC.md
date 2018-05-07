@@ -293,3 +293,6 @@
 ## [Configurar a replicação transacional](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Configurar a replicação de mesclagem](tutorial-replicating-data-with-mobile-clients.md)  
 
+# Solução de problemas
+## [Erros com replicação transacional](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+

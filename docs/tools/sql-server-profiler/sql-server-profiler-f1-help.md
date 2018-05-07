@@ -2,7 +2,7 @@
 title: Caixas de diálogo do SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -49,14 +49,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: eb680ddb08a19f347bfa88e5952e0dd26a62b8d1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propriedades do rastreamento
 ### <a name="general-tab"></a>Guia Geral
 Use a guia **Geral** da caixa de diálogo **Propriedades do Rastreamento** para exibir ou especificar propriedades de um rastreamento.  
@@ -77,7 +78,7 @@ Use a guia **Geral** da caixa de diálogo **Propriedades do Rastreamento** para 
 | **Definir máximo de linhas (em milhares)**|Especifique o número maior de linhas nas quais salvar dados. O padrão é 1000 linhas. 
 |**Habilitar horário de parada do rastreamento**|Defina a data e hora para o rastreamento ser concluído e se fechar. 
 
-### <a name="events-selection-tab"></a>Guia seleção de eventos
+### <a name="events-selection-tab"></a>Guia de seleção de eventos
 Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastreamento** para exibir ou especificar eventos do rastreamento e colunas de dados.  
 |Item|Description
 |---|---
@@ -107,7 +108,7 @@ Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamen
 |**Selecionar Nome do Modelo**|Selecione o modelo que você deseja editar.  
 |**Usar como modelo padrão para o tipo de servidor selecionado**|Use esse modelo por padrão para rastreamentos criados para esse tipo de servidor.  
 
-### <a name="events-selection-tab"></a>Guia seleção de eventos
+### <a name="events-selection-tab"></a>Guia de seleção de eventos
 Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para exibir, editar ou especificar classes de evento e colunas de dados para incluir um modelo de rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
 |Item|Description
 |---|---
@@ -131,7 +132,7 @@ Para exibir essa janela, abra um arquivo de rastreamento. Em seguida, no menu **
 |**Tamanho do arquivo (KB)**|O tamanho do arquivo de rastreamento em kilobyte (KB).  
 |**Criado**|A data e hora em que o arquivo de rastreamento foi criado.  
 |**Modificado** |A data e hora em que o arquivo de rastreamento foi modificado.  
-### <a name="events-selection-tab"></a>Guia seleção de eventos
+### <a name="events-selection-tab"></a>Guia de seleção de eventos
 Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Arquivo de Rastreamento** para exibir as propriedades da coluna do rastreamento ou remover colunas de dados do rastreamento.  
 Para exibir essa janela, abra um arquivo de rastreamento. Em seguida, no menu **Arquivo** , clique em **Propriedades**e, então, clique na guia **Seleção de Eventos** .  
 |Item|Description
@@ -144,7 +145,7 @@ Para exibir essa janela, abra um arquivo de rastreamento. Em seguida, no menu **
 |**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro** , que exibe um ícone de filtro à esquerda do rótulo da coluna para colunas de dados filtrados. Use a caixa de diálogo **Editar Filtro** para editar filtros de coluna de dados.  
 |**Organizar Colunas**|Depois de selecionar **Eventos** e colunas de dados a serem rastreados, clique em **Organizar Colunas** para forçar a grade a reclassificar a coluna na janela de resultados do rastreamento.  
 ## <a name="trace-table-properties"></a>Propriedades da tabela de rastreamento
-### <a name="events-selection-tab"></a>Guia seleção de eventos
+### <a name="events-selection-tab"></a>Guia de seleção de eventos
 Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades da Tabela de Rastreamento** para exibir eventos e propriedades da coluna de dados do rastreamento ou para remover eventos ou colunas do rastreamento.  
 Para visualizar esta janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para abrir uma tabela de rastreamento. Em seguida, no menu **Arquivo** , clique em **Propriedades**e na guia **Seleção de Eventos** .  
 |Item|Description

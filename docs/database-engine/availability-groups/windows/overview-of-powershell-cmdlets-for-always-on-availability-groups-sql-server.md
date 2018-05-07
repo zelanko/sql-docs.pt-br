@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 019664c48635fc96dd3e5151475157e028b858aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6ba43441987a2a9d87a5973501f16ed3e4223fb8
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,18 +58,22 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
 |Cmdlets|Description|Com suporte em|  
-|-------------|-----------------|------------------|  
-|**Disable-SqlAlwaysOn**|Desabilita o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância de servidor.|A instância de servidor especificada pelo parâmetro **Path**, **InputObject**ou **Name** . (Deve ser uma edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
-|**Enable-SqlAlwaysOn**|Habilita o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que dá suporte ao recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter informações sobre suporte para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Pré-requisitos, restrições e recomendações para os grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Qualquer edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
-|**New-SqlHadrEndPoint**|Cria um novo ponto de extremidade de espelhamento de banco de dados em uma instância de servidor. Esse ponto de extremidade é necessário para a movimentação de dados entre os bancos de dados primário e secundário.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
-|**Set-SqlHadrEndpoint**|Altera as propriedades de um ponto de extremidade de espelhamento de banco de dados existente, como o nome, o estado ou as propriedades de autenticação.|Uma instância de servidor que dá suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e não tem um ponto de extremidade de espelhamento de banco de dados.|  
+|-------------|-----------------|------------------|
+|[**Disable-SqlAlwaysOn**](/powershell/module/sqlserver/disable-sqlalwayson)|Desabilita o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância de servidor.|A instância de servidor especificada pelo parâmetro **Path**, **InputObject**ou **Name** . (Deve ser uma edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
+|[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|Habilita o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que dá suporte ao recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter informações sobre suporte para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Pré-requisitos, restrições e recomendações para os grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Qualquer edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|[**New-SqlHadrEndPoint**](/powershell/module/sqlserver/new-sqlhadrendpoint)|Cria um novo ponto de extremidade de espelhamento de banco de dados em uma instância de servidor. Esse ponto de extremidade é necessário para a movimentação de dados entre os bancos de dados primário e secundário.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|Altera as propriedades de um ponto de extremidade de espelhamento de banco de dados existente, como o nome, o estado ou as propriedades de autenticação.|Uma instância de servidor que dá suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e não tem um ponto de extremidade de espelhamento de banco de dados.|  
+
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
-|**Backup-SqlDatabase**|Cria um backup de dados ou de log.|Qualquer banco de dados online (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], um banco de dados na instância do servidor que hospeda a réplica primária).|  
-|**Restore-SqlDatabase**|Restaura um backup.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância de servidor que hospeda uma réplica secundária)<br /><br /> **\*\* Importante \*\*** ao preparar um banco de dados secundário, é necessário usar o parâmetro **-NoRecovery** em cada comando **Restore-SqlDatabase** .|  
+|[**Backup-SqlDatabase**](/powershell/module/sqlserver/backup-sqldatabase)|Cria um backup de dados ou de log.|Qualquer banco de dados online (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], um banco de dados na instância do servidor que hospeda a réplica primária).|  
+|[**Restore-SqlDatabase**](/powershell/module/sqlserver/restore-sqldatabase)|Restaura um backup.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância de servidor que hospeda uma réplica secundária)<br /><br />
+
+  >[!Important]
+  >Ao preparar um banco de dados secundário, é necessário usar o parâmetro **-NoRecovery** em cada comando **Restore-SqlDatabase**. 
   
  Para obter informações sobre como usar esses cmdlets para preparar um banco de dados secundário, veja [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -77,36 +81,36 @@ ms.lasthandoff: 04/16/2018
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityGroup**|Cria um novo grupo de disponibilidade.|Instância de servidor para hospedar a réplica primária|  
-|**Remove-SqlAvailabilityGroup**|Exclui um grupo de disponibilidade.|Instância de servidor habilitada para HADR|  
-|**Set-SqlAvailabilityGroup**|Define as propriedades de um grupo de disponibilidade; coloca um grupo de disponibilidade online/offline|Instância de servidor que hospeda a réplica primária|  
-|**Switch-SqlAvailabilityGroup**|Inicia um dos seguintes formulários de failover:<br /><br /> Um failover forçado de um grupo de disponibilidade (com possível perda de dados).<br /><br /> Um failover manual de um grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária de destino|  
+|[**New-SqlAvailabilityGroup**](/powershell/module/sqlserver/new-sqlavailabilitygroup)|Cria um novo grupo de disponibilidade.|Instância de servidor para hospedar a réplica primária|  
+|[**Remove-SqlAvailabilityGroup**](/powershell/module/sqlserver/remove-sqlavailabilitygroup)|Exclui um grupo de disponibilidade.|Instância de servidor habilitada para HADR|  
+|[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|Define as propriedades de um grupo de disponibilidade; coloca um grupo de disponibilidade online/offline|Instância de servidor que hospeda a réplica primária|  
+|[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|Inicia um dos seguintes formulários de failover:<br /><br /> Um failover forçado de um grupo de disponibilidade (com possível perda de dados).<br /><br /> Um failover manual de um grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária de destino|  
   
 ##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
 |Cmdlet|Description|Com suporte em|  
 |------------|-----------------|------------------|  
-|**New-SqlAvailabilityGroupListener**|Cria um novo ouvinte de grupo de disponibilidade e conecta-o a um grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
-|**Set-SqlAvailabilityGroupListener**|Modifica a configuração de porta em um ouvinte de grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
-|**Add-SqlAvailabilityGroupListenerStaticIp**|Adiciona um endereço IP estático à configuração de um ouvinte de grupo de disponibilidade existente. O endereço IP poderá ser um endereço IPv4 com sub-rede ou um endereço IPv6.|Instância de servidor que hospeda a réplica primária|  
+|[**New-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/new-sqlavailabilitygrouplistener)|Cria um novo ouvinte de grupo de disponibilidade e conecta-o a um grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
+|[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|Modifica a configuração de porta em um ouvinte de grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
+|[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|Adiciona um endereço IP estático à configuração de um ouvinte de grupo de disponibilidade existente. O endereço IP poderá ser um endereço IPv4 com sub-rede ou um endereço IPv6.|Instância de servidor que hospeda a réplica primária|  
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|Cria uma nova réplica de disponibilidade. Você pode usar o parâmetro **-AsTemplate** para criar um objeto de réplica de disponibilidade de memória para cada nova réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
-|**Join-SqlAvailabilityGroup**|Une uma réplica secundária ao grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária|  
-|**Remove-SqlAvailabilityReplica**|Exclui uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
-|**Set-SqlAvailabilityReplica**|Define as propriedades de uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
+|[**New-SqlAvailabilityReplica**](/powershell/module/sqlserver/new-sqlavailabilityreplica)|Cria uma nova réplica de disponibilidade. Você pode usar o parâmetro **-AsTemplate** para criar um objeto de réplica de disponibilidade de memória para cada nova réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
+|[**Join-SqlAvailabilityGroup**](/powershell/module/sqlserver/join-sqlavailabilitygroup)|Une uma réplica secundária ao grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária|  
+|[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|Exclui uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
+|[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|Define as propriedades de uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
   
 ##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
-|**Add-SqlAvailabilityDatabase**|Na réplica primária, adiciona um banco de dados a um grupo de disponibilidade.<br /><br /> Em uma réplica secundária, une um banco de dados secundário a um grupo de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
-|**Remove-SqlAvailabilityDatabase**|Na réplica primária, remove o banco de dados do grupo de disponibilidade.<br /><br /> Em uma réplica secundária, remove o banco de dados secundário da réplica secundária local.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
-|**Resume-SqlAvailabilityDatabase**|Retoma a movimentação de dados para um banco de dados de disponibilidade suspenso.|As instância do servidor na qual o banco de dados é suspenso.|  
-|**Suspend-SqlAvailabilityDatabase**|Suspende a movimentação de dados para um banco de dados de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade.|  
+|[**Add-SqlAvailabilityDatabase**](/powershell/module/sqlserver/add-sqlavailabilitydatabase)|Na réplica primária, adiciona um banco de dados a um grupo de disponibilidade.<br /><br /> Em uma réplica secundária, une um banco de dados secundário a um grupo de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
+|[**Remove-SqlAvailabilityDatabase**](/powershell/module/sqlserver/remove-sqlavailabilitydatabase)|Na réplica primária, remove o banco de dados do grupo de disponibilidade.<br /><br /> Em uma réplica secundária, remove o banco de dados secundário da réplica secundária local.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
+|[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|Retoma a movimentação de dados para um banco de dados de disponibilidade suspenso.|As instância do servidor na qual o banco de dados é suspenso.|  
+|[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|Suspende a movimentação de dados para um banco de dados de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade.|  
   
 ##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
  Os cmdlets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a seguir permitem monitorar a integridade de um grupo de disponibilidade e de suas réplicas e bancos de dados.  
@@ -116,9 +120,9 @@ ms.lasthandoff: 04/16/2018
   
 |Cmdlet|Description|Com suporte em|  
 |------------|-----------------|------------------|  
-|**Test-SqlAvailabilityGroup**|Avalia a integridade de um grupo de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
-|**Test-SqlAvailabilityReplica**|Avalia a integridade de réplicas de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
-|**Test-SqlDatabaseReplicaState**|Avalia a integridade de um banco de dados de disponibilidade em todas as réplicas de disponibilidade unidas avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
+|[**Test-SqlAvailabilityGroup**](/powershell/module/sqlserver/test-sqlavailabilitygroup)|Avalia a integridade de um grupo de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
+|[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|Avalia a integridade de réplicas de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
+|[**Test-SqlDatabaseReplicaState**](/powershell/module/sqlserver/test-sqldatabasereplicastate)|Avalia a integridade de um banco de dados de disponibilidade em todas as réplicas de disponibilidade unidas avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
   
  *Para exibir informações sobre todas as réplicas de disponibilidade em um grupo de disponibilidade, use a instância do servidor que hospeda a réplica primária.  
   
