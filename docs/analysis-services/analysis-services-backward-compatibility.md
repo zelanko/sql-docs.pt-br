@@ -1,15 +1,14 @@
 ---
-title: "Compatibilidade com versões anteriores do SQL Server 2016 Analysis Services | Microsoft Docs"
-ms.custom: 
+title: Compatibilidade com versões anteriores do SQL Server 2016 Analysis Services | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbd33812f2fe78fe50dfddc85c23bd24852b1035
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilidade com versões anteriores do Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,7 +50,7 @@ Os recursos a seguir estão obsoletas nesta versão:
 |Multidimensional|Cubos de sessão. Não há nenhuma substituição.|  
 |Multidimensional|Cubos locais. Não há substituições.|  
 |Tabular|Os níveis de compatibilidade de modelo de tabela 1100 e 1103 não terão suporte em uma versão futura. A substituição é definir modelos de nível de compatibilidade 1200 ou superior, convertendo definições de modelo para metadados tabulares. Consulte [Nível de compatibilidade para modelos de tabela no Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
-|Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitorar o Analysis Services com Eventos Estendidos do SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)|  
 |Ferramentas|Server Profiler para reprodução de rastreamento <br />Substituição. Não há nenhuma substituição.|  
 |APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: Microsoft.SqlServer.Management.XEvent<br />-Leitura de rastreamento: Microsoft.SqlServer.XEvent.Linq<br />-   Reprodução de rastreamento: nenhuma|  
   
@@ -67,11 +65,11 @@ Os recursos a seguir foram preteridos em uma versão anterior e não têm mais s
 |||  
 |-|-|  
 |**Recurso**|**Substituição ou solução alternativa**|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Nenhum. Esse recurso foi preterido no SQL Server 2005.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Nenhum. Esse recurso foi preterido no SQL Server 2005.|  
-|Dica do otimizador de consulta NON_EMPTY_BEHAVIOR|Nenhum. Esse recurso foi preterido no SQL Server 2008.|  
-|Assemblies COM|Nenhum. Esse recurso foi preterido no SQL Server 2008.|  
-|Propriedade de célula intrínseca CELL_EVALUATION_LIST|Nenhum. Esse recurso foi preterido no SQL Server 2005.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Nenhuma. Esse recurso foi preterido no SQL Server 2005.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Nenhuma. Esse recurso foi preterido no SQL Server 2005.|  
+|Dica do otimizador de consulta NON_EMPTY_BEHAVIOR|Nenhuma. Esse recurso foi preterido no SQL Server 2008.|  
+|Assemblies COM|Nenhuma. Esse recurso foi preterido no SQL Server 2008.|  
+|Propriedade de célula intrínseca CELL_EVALUATION_LIST|Nenhuma. Esse recurso foi preterido no SQL Server 2005.|  
   
 > [!NOTE]  
 >  Os anúncios anteriores de recursos preteridos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] permanecem em vigor. Como o código de suporte a esses recursos ainda não foi retirado do produto, muitos desses recursos ainda estão presentes nesta versão. Enquanto os recursos anteriormente preteridos possam ser acessados, que eles ainda são considerados preteridos e podem ser fisicamente removidos do produto a qualquer momento.  
@@ -83,7 +81,7 @@ Um *alteração interruptiva* faz com que um modelo de dados, código do aplicat
  Bibliotecas de cliente do Analysis Services Management Objects (AMO), o ADOMD.NET e o modelo de objeto de tabela (TOM) agora voltados para o tempo de execução do .NET 4.0. Isso pode ser uma alteração interruptiva para aplicativos destinados ao .NET 3.5. Aplicativos que usam versões mais recentes desses assemblies agora devem ser voltados para o .NET 4.0 ou posterior.  
   
 ### <a name="amo-version-upgrade"></a>Atualização de Versão do AMO  
- Esta versão é uma atualização de versão para [Analysis Services Management Objects &#40; AMO &#41; ](https://msdn.microsoft.com/library/mt436122.aspx) e é uma alteração significativa em determinadas circunstâncias.  O código e os scripts existentes que chamam o AMO continuarão a ser executados como antes se você efetuar a atualização a partir de uma versão anterior. No entanto, se você precisar *recompilar* seu aplicativo e você tiver como alvo uma instância do SQL Server 2016 Analysis Services, você deve adicionar o namespace a seguir para tornar o seu código ou script operacional:  
+ Esta versão é uma atualização de versão para [objetos de gerenciamento do Analysis Services &#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx) e é uma alteração significativa em determinadas circunstâncias.  O código e os scripts existentes que chamam o AMO continuarão a ser executados como antes se você efetuar a atualização a partir de uma versão anterior. No entanto, se você precisar *recompilar* seu aplicativo e você tiver como alvo uma instância do SQL Server 2016 Analysis Services, você deve adicionar o namespace a seguir para tornar o seu código ou script operacional:  
   
 ```  
   

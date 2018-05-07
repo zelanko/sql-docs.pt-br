@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data type [ODBC]
 - datetime data types [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2033cd5931278c9a05c62d907d7da73473902e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1fefa994f1902411e18419d8595a314f29ad0f58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-changes"></a>Alterações de tipo de dados datetime
 Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp foram alterados de SQL_DATE, SQL_TIME e SQL_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 9, 10 e 11) para SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 91, 92 e 93), respectivamente. Os identificadores de tipo C correspondentes foram alterados desde SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP, respectivamente.  
@@ -38,7 +37,7 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
   
  Essas alterações afetam **SQLDescribeCol**, **SQLDescribeParam**, e **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, e **SQLGetData**; e **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, e **SQLSpecialColumns**.  
   
- A tabela a seguir mostra como o ODBC 3*. x* executa o Gerenciador de Driver mapeamento de data, hora e carimbo de hora C de tipos de dados inserido no *TargetType* argumentos de **SQLBindCol**e **SQLGetData** ou o *ValueType* argumento de **SQLBindParameter**.  
+ A tabela a seguir mostra como o ODBC 3 *. x* executa o Gerenciador de Driver mapeamento de data, hora e carimbo de hora C de tipos de dados inserido no *TargetType* argumentos de **SQLBindCol**e **SQLGetData** ou o *ValueType* argumento de **SQLBindParameter**.  
   
 |Tipo de dados<br /><br /> código inserido|2.*x* aplicativo<br /><br /> 2.*x* driver|2.*x* aplicativo<br /><br /> 3.*x* driver|3.*x* aplicativo<br /><br /> 2.*x* driver|3.*x* aplicativo<br /><br /> 3.*x* driver|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -51,9 +50,9 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
   
  [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
+ [2]] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- A tabela a seguir mostra como o ODBC 3*. x* executa o Gerenciador de Driver mapeamento dos data, hora e carimbo de hora SQL tipos de dados inserido no *ParameterType* argumento de **SQLBindParameter**  ou o *DataType* argumento de **SQLGetTypeInfo**.  
+ A tabela a seguir mostra como o ODBC 3 *. x* executa o Gerenciador de Driver mapeamento dos data, hora e carimbo de hora SQL tipos de dados inserido no *ParameterType* argumento de **SQLBindParameter**  ou o *DataType* argumento de **SQLGetTypeInfo**.  
   
 |Tipo de dados<br /><br /> código inserido|2.*x* aplicativo<br /><br /> 2.*x* driver|2.*x* aplicativo<br /><br /> 3.*x* driver|3.*x* aplicativo<br /><br /> 2.*x* driver|3.*x* aplicativo<br /><br /> 3.*x* driver|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -66,4 +65,4 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
   
  [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.
+ [2]] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.

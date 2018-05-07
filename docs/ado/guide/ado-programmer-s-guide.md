@@ -5,10 +5,9 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3fa9da99204196279491c89973846804836188b3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0521bd085bd0b370ffb688c021d0cf1422493051
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO programador&#39;s guia para usar objetos de ADO
 Esta documentação fornece uma visão geral de como usar objetos do ADO para trabalhar com dados de várias fontes de dados. Primeiro, a introdução resume os novos recursos e a necessidade de instalar, usar e redistribuir o componente do ADO. As seções a seguir discutem o uso de vários tipos de objetos do ADO. Por fim, os apêndices discutem vários dados fornecidos pela Microsoft e provedores de serviços, mensagens de erro e dicas sobre como usar o ADO em várias linguagens de programação, além de exemplos e obter um glossário.

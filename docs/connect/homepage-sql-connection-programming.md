@@ -1,24 +1,24 @@
 ---
-title: "Home page para programação do cliente SQL | Microsoft Docs"
-description: "Página de hub com anotado links para downloads e documentação para várias combinações de idiomas e sistemas operacionais, para conectar-se ao SQL Server ou para o banco de dados do SQL Azure."
+title: Home page para programação do cliente SQL | Microsoft Docs
+description: Página de hub com anotado links para downloads e documentação para várias combinações de idiomas e sistemas operacionais, para conectar-se ao SQL Server ou para o banco de dados do SQL Azure.
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
-ms.topic: article
+ms.custom: ''
+ms.technology:
+- drivers
+ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
-ms.translationtype: MT
+ms.openlocfilehash: 234ce07b25a0d120e72d8972b8e7b05f32c88201
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page do cliente de programação para o Microsoft SQL Server
 
@@ -31,7 +31,7 @@ Bem-vindo à nossa página inicial sobre o cliente de programação para interag
 - Exibe as áreas e subáreas da documentação hierárquica para determinados idiomas, quando apropriado.
 
 
-#### <a name="azure-sql-database"></a>Banco de dados SQL do Azure
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 Em qualquer idioma, o código que se conecta ao SQL Server é quase idêntico ao código para se conectar ao banco de dados do SQL Azure.
 
@@ -56,9 +56,9 @@ Na tabela a seguir, cada imagem de idioma é um link para detalhes sobre como us
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![C# logotipo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM do Entity Framework, do .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Logotipo Node. js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP grande adição][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![Logotipo PHP][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Logotipo Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Logotipo ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![Logotipo do c#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM do Entity Framework, do .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Logotipo do Node. js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP grande adição][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logotipo do PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Logotipo do Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Logotipo do Ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +107,7 @@ EF não tem relação direta ou indireta com as seguintes tecnologias:
 
 - .NET Framework
 - [O LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), ou [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Aprimoramentos da sintaxe de linguagem, como o  **=>**  operador em c#.
+- Aprimoramentos da sintaxe de linguagem, como o **=>** operador em c#.
 - Programas útil geram código-fonte para classes que mapeiam para as tabelas no banco de dados SQL. Por exemplo, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 

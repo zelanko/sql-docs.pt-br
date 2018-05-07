@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 628efe2628353992667474d8c5cff2b9eb88e228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
  Neste documento,  **\<cliente >** é um nó de elemento, **cid** é um nó de atributo e **"Importante"** é um nó de texto.  
   
- XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de  **\<cliente >** nós, XPath podem selecionar todos os  **\<ordem >** nós com o **data** valordeatributo**"14/7/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
+ XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de  **\<cliente >** nós, XPath podem selecionar todos os  **\<ordem >** nós com o **data** valordeatributo **"14/7/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
   
  XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4.0 implementa um subconjunto da especificação XPath do W3C, que está localizado em http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   

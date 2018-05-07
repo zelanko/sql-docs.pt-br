@@ -1,11 +1,9 @@
 ---
 title: 'Etapa 5: DataControl é feita utilizável (Tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c152323f13f8f21cef1485f81a81f5a01dcde71
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 564c9b1984226c02ab1cb960ff6e4ed32b5527d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Etapa 5: DataControl é feita utilizável (Tutorial de RDS)
 Retornado **registros** objeto está disponível para uso. Você pode examinar, navegue ou editá-la como faria com qualquer outro **registros**. O que você pode fazer com o **registros** depende do ambiente. Visual Basic e Visual C++ tem controles visuais que podem usar um **registros** direta ou indiretamente com a Ajuda de um habilitar o controle de dados.  

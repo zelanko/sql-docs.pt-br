@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificando colunas de chave usando campos sql:key (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Produzir o aninhamento adequado quando \<SQL: Relationship > não fornecer informações suficientes  
  Este exemplo mostra onde **SQL: Key-campos** deve ser especificado.  
   
- Considere o esquema a seguir. O esquema especifica uma hierarquia entre o  **\<ordem >** e  **\<cliente >** elementos no qual o  **\<ordem >**elemento é o pai e o  **\<cliente >** elemento é um filho.  
+ Considere o esquema a seguir. O esquema especifica uma hierarquia entre o  **\<ordem >** e  **\<cliente >** elementos no qual o  **\<ordem >** elemento é o pai e o  **\<cliente >** elemento é um filho.  
   
  O  **\<SQL: Relationship >** marca é usada para especificar a relação pai-filho. Ela identifica CustomerID na tabela Sales.SalesOrderHeader como a chave pai que faz referência à chave filho CustomerID na tabela Sales.Customer. As informações fornecidas no  **\<SQL: Relationship >** não são suficientes para identificar exclusivamente as linhas na tabela pai (Sales. SalesOrderHeader). Portanto, sem o **SQL: Key-campos** anotação, a hierarquia gerada é imprecisa.  
   

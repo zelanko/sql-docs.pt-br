@@ -1,11 +1,9 @@
 ---
 title: Conceitos básicos ADOX | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28ce83932f22d68f7ccddcc65d252b587af7d935
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6d2798c3d8cfeaa2680a794ceb79dfa26f32fbdb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-fundamentals"></a>Conceitos básicos do ADOX
 Microsoft® ActiveX® Data objetos extensões de linguagem de definição de dados e segurança (ADOX) é uma extensão para os objetos do ADO e o modelo de programação. ADOX inclui objetos para criação de esquema e modificação, bem como a segurança. Como é uma abordagem baseada em objeto para manipulação de esquema, você pode escrever código que funciona em dados de várias fontes, independentemente das diferenças nas suas sintaxes nativo.  

@@ -1,11 +1,9 @@
 ---
 title: Ao registrar um objeto de negócios personalizada | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fd6bd1d650f3aedabe1f6b13bc0503e0961b7ffe
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d0102bc6f817c67bc61ef2c4f73d05f1bf86d099
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-a-custom-business-object"></a>Ao registrar um objeto de negócios personalizada
 Para iniciar com êxito um objeto de negócios personalizada (. dll ou .exe) por meio do servidor Web, ProgID do objeto comercial deve ser inserido no registro, conforme explicado neste procedimento. Esse recurso RDS protege a segurança do servidor Web, executando apenas sancionados executáveis.  

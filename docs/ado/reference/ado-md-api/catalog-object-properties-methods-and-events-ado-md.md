@@ -1,11 +1,9 @@
 ---
 title: Catálogo de propriedades do objeto, métodos e eventos (ADO MD) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7df444ab62f4109ad145040c8b6fa2235cdc6594
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d4f32aac2b27b332f3a46f664982b3abfb01df3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Propriedades do objeto de catálogo, métodos e eventos (ADO MD)
 ## <a name="propertiescollections"></a>Propriedades/coleções  

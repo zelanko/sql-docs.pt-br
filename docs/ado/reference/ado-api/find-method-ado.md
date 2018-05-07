@@ -1,11 +1,9 @@
 ---
 title: Localizar o método (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-ado"></a>Localizar o método (ADO)
 Pesquisa um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, linha inicial e o deslocamento da linha inicial pode ser especificada. Se os critérios forem atendidos, a posição da linha atual é definida no registro encontrado; Caso contrário, a posição é definida ao final (ou início) da **registros**.  
@@ -45,10 +42,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Um **cadeia de caracteres** valor que contém uma instrução, especificando o nome da coluna, o operador de comparação e o valor para usar na pesquisa.  
   
  *SkipRows*  
- Opcional*.* Um **longo** valor, cujo valor padrão é zero, que especifica o deslocamento da linha da linha atual ou *iniciar* indicador para iniciar a pesquisa. Por padrão, a pesquisa será iniciada na linha atual.  
+ Opcional *.* Um **longo** valor, cujo valor padrão é zero, que especifica o deslocamento da linha da linha atual ou *iniciar* indicador para iniciar a pesquisa. Por padrão, a pesquisa será iniciada na linha atual.  
   
  *SearchDirection*  
- Opcional*.* Um [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica se a pesquisa deve começar na linha atual ou a próxima linha disponível na direção da pesquisa. Para de pesquisas malsucedidas no final de **registros** se o valor for **adSearchForward**. Uma pesquisa bem-sucedida é interrompida no início do **registros** se o valor for **adSearchBackward**.  
+ Opcional *.* Um [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica se a pesquisa deve começar na linha atual ou a próxima linha disponível na direção da pesquisa. Para de pesquisas malsucedidas no final de **registros** se o valor for **adSearchForward**. Uma pesquisa bem-sucedida é interrompida no início do **registros** se o valor for **adSearchBackward**.  
   
  *Iniciar*  
  Opcional. Um **Variant** indicador que funciona como a posição inicial da pesquisa.  

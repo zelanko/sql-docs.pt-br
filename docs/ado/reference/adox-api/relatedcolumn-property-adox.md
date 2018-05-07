@@ -1,11 +1,9 @@
 ---
 title: Propriedade RelatedColumn (ADOX) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,12 +24,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3728cf25d13a4f1d366b14a3d4b175dc24569c5
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 008daa97837a68acfea9671fd795bae8b8f84d65
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relatedcolumn-property-adox"></a>Propriedade RelatedColumn (ADOX)
 Indica o nome do relacionado [o objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) na tabela relacionada (somente colunas de chave).  

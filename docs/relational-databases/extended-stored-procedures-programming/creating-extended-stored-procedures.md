@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7669ac3c34d1b388ed077dd61e6b493b30ff580
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 21d29aa0ceb7ba16216db3f52e18379f55b775dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>Criando procedimentos armazenados estendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
  Um procedimento armazenado estendido é uma função com um protótipo:  
   
- SRVRETCODE *xp_extendedProcName* **(**SRVPROC **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(** SRVPROC **\*);**  
   
  O uso do prefixo xp_ é opcional. Os nomes de procedimento armazenado estendido fazem distinção de maiúsculas e minúsculas quando mencionados em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], independentemente da página de código/ordem de classificação instalada no servidor. Quando você compila uma DLL:  
   

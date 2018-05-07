@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 49c258efc97554210dc454dbd01314b5bc4a508e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetchscroll-function"></a>Função SQLFetchScroll
 **Conformidade**  
@@ -94,11 +93,11 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem de informação específica do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Cadeia de caracteres ou dados binários retornados para uma coluna resultaram em truncamento de caracteres não vazia ou dados binários não nulo. Se fosse um valor de cadeia de caracteres, foi truncado à direita.|  
-|01S01|Erro na linha|Ocorreu um erro ao buscar uma ou mais linhas.<br /><br /> (Se este SQLSTATE é retornado quando um ODBC 3*. x* aplicativo estiver trabalhando com um ODBC 2*. x* driver, ele pode ser ignorado.)|  
+|01S01|Erro na linha|Ocorreu um erro ao buscar uma ou mais linhas.<br /><br /> (Se este SQLSTATE é retornado quando um ODBC 3 *. x* aplicativo estiver trabalhando com um ODBC 2 *. x* driver, ele pode ser ignorado.)|  
 |01S06|Tentativa de busca antes do conjunto de resultados retornado o primeiro conjunto de linhas|O conjunto de linhas solicitado sobrepostos o início do conjunto de resultados quando FetchOrientation foi SQL_FETCH_PRIOR, a posição atual foi além da primeira linha e o número da linha atual é menor ou igual ao tamanho do conjunto de linhas.<br /><br /> O conjunto de linhas solicitado sobrepostos o início do conjunto de resultados quando FetchOrientation SQL_FETCH_PRIOR, a posição atual foi além do fim do conjunto de resultados, e o tamanho do conjunto de linhas era maior do que o conjunto de resultados tamanho.<br /><br /> O conjunto de linhas solicitado sobrepostos o início do conjunto de resultados quando FetchOrientation SQL_FETCH_RELATIVE, FetchOffset foi negativo, e o valor absoluto de FetchOffset era menor ou igual ao tamanho do conjunto de linhas.<br /><br /> O conjunto de linhas solicitado overlapped o início do conjunto de resultados quando FetchOrientation SQL_FETCH_ABSOLUTE, FetchOffset foi negativo, e o valor absoluto de FetchOffset era maior do que o conjunto de resultados tamanho, mas menor que ou igual ao tamanho do conjunto de linhas.<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01S07|Truncamento fracionário|Os dados retornados de uma coluna foi truncados. Para tipos de dados numéricos, a parte fracionária do número foi truncada. Para o tempo, carimbo de hora e tipos de dados de intervalo que contém um componente de tempo, a parte fracionária do tempo foi truncada.<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violação do atributo de tipo de dados restrito|O valor dos dados de uma coluna no conjunto de resultados não pôde ser convertido para o tipo de dados especificado por *TargetType* na **SQLBindCol**.<br /><br /> A coluna 0 foi associada com um tipo de dados de SQL_C_BOOKMARK, e o atributo da instrução SQL_ATTR_USE_BOOKMARKS foi definido como SQL_UB_VARIABLE.<br /><br /> A coluna 0 foi associada com um tipo de dados de SQL_C_VARBOOKMARK, e o atributo de instrução SQL_ATTR_USE_BOOKMARKS não foi definido para SQL_UB_VARIABLE.|  
-|07009|Índice do descritor inválido|O driver foi um ODBC 2*. x* driver não oferece suporte a **SQLExtendedFetch**, e um número de coluna especificado na associação para uma coluna era 0.<br /><br /> A coluna 0 foi associada e o atributo de instrução SQL_ATTR_USE_BOOKMARKS foi definido como SQL_UB_OFF.|  
+|07009|Índice do descritor inválido|O driver foi um ODBC 2 *. x* driver não oferece suporte a **SQLExtendedFetch**, e um número de coluna especificado na associação para uma coluna era 0.<br /><br /> A coluna 0 foi associada e o atributo de instrução SQL_ATTR_USE_BOOKMARKS foi definido como SQL_UB_OFF.|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
 |22001|Dados de cadeia de caracteres truncados à direita|Um indicador de comprimento variável retornado para uma coluna foi truncado.|  
 |22002|Variável de indicador exigida mas não fornecida|Dados nulos foi encontrados em uma coluna cujo *StrLen_or_IndPtr* definido por **SQLBindCol** (ou SQL_DESC_INDICATOR_PTR definido por **SQLSetDescField** ou  **SQLSetDescRec**) foi um ponteiro nulo.|  
@@ -303,7 +302,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  [1] essa coluna usa os números de linha antes de todas as linhas foram inseridas ou excluídas.  
   
- [2] nesse caso, o cursor tenta retornar linhas começando com a linha 21. Como 21 de linha foi excluída, a primeira linha retorna é 22 de linha.  
+ [2]] nesse caso, o cursor tenta retornar linhas começando com a linha 21. Como 21 de linha foi excluída, a primeira linha retorna é 22 de linha.  
   
  Linhas de erro (ou seja, as linhas com um status de SQL_ROW_ERROR) não afetam o movimento do cursor. Por exemplo, se o conjunto de linhas atual começa com a linha 11 e o status de linha 11 é SQL_ROW_ERROR, chamar **SQLFetchScroll** com FetchOrientation definido como SQL_FETCH_RELATIVE e FetchOffset definido como 5 retorna o conjunto de linhas começando com a linha 16, Assim como seria se o status da linha 11 foi SQL_SUCCESS.  
   

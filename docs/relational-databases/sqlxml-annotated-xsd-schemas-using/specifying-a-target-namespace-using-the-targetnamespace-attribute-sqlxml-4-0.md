@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,13 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9b420ec48a7bc78a55e50dc549c6e06be7e34cb0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0c755e668f5d7360d9d37f352d1cc32295b3cf5c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +106,7 @@ ms.lasthandoff: 04/16/2018
   
  Este documento de instância define o namespace urn: MyNamespace e associa um prefixo (y0) a ele. O prefixo é aplicado apenas ao  **\<cliente >** elemento global. (O elemento é global porque é declarado como um filho do  **\<xsd: schema >** elemento no esquema.)  
   
- O prefixo não é aplicado para os atributos e elementos locais porque o valor de **elementFormDefault** e **attributeFormDefault** atributos é definida como **"unqualified"**no esquema. Observe que o  **\<ordem >** elemento é local, porque sua declaração aparece como um filho de  **\<complexType >** elemento que define o  **\< CustomerType >** elemento. Da mesma forma, os atributos (**CustomerID**, **OrderID**, e **ContactName**) são locais, e não globais.  
+ O prefixo não é aplicado para os atributos e elementos locais porque o valor de **elementFormDefault** e **attributeFormDefault** atributos é definida como **"unqualified"** no esquema. Observe que o  **\<ordem >** elemento é local, porque sua declaração aparece como um filho de  **\<complexType >** elemento que define o  **\< CustomerType >** elemento. Da mesma forma, os atributos (**CustomerID**, **OrderID**, e **ContactName**) são locais, e não globais.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Para criar um exemplo de funcionamento deste esquema  
   

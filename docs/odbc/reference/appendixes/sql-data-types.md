@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas os tipos de dados SQL que define o DBMS associado. Obter informações sobre como um driver mapeia tipos de DBMS SQL para os identificadores de tipo definidas pelo ODBC SQL e como um driver mapeia os tipos de DBMS SQL para seus próprio identificadores de tipo SQL específica do driver é retornado por uma chamada a **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados das colunas e parâmetros por meio de chamadas **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -84,7 +83,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|MINUTOS de intervalo (*p*) para o segundo (*p*)|N
   
  [1] este é o valor retornado na coluna DATA_TYPE por uma chamada para **SQLGetTypeInfo**.  
   
- [2] este é o valor retornado na coluna Nome e criar parâmetros por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação — por exemplo, CHAR, enquanto a coluna criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como a precisão, escala e comprimento.  
+ [2]] este é o valor retornado na coluna Nome e criar parâmetros por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação — por exemplo, CHAR, enquanto a coluna criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como a precisão, escala e comprimento.  
   
  [3] um aplicativo usa **SQLGetTypeInfo** ou **SQLColAttribute** para determinar se um determinado tipo de dados ou uma coluna específica em um conjunto de resultados é não assinada.  
   
@@ -92,7 +91,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|MINUTOS de intervalo (*p*) para o segundo (*p*)|N
   
  [5] dependendo da implementação, a precisão de SQL_FLOAT pode ser 24 ou 53: se for 24, o tipo de dados SQL_FLOAT é o mesmo que SQL_REAL; Se for 53, o tipo de dados SQL_FLOAT é o mesmo que SQL_DOUBLE.  
   
- [6] em ODBC 3*. x*, os tipos de dados de data, hora e carimbo de hora do SQL são SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, respectivamente; no ODBC 2. *x*, os tipos de dados são SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
+ [6] em ODBC 3 *. x*, os tipos de dados de data, hora e carimbo de hora do SQL são SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, respectivamente; no ODBC 2. *x*, os tipos de dados são SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
   
  [7] para obter mais informações sobre os tipos de dados SQL do intervalo, consulte o [tipos de dados de intervalo](../../../odbc/reference/appendixes/interval-data-types.md) seção mais adiante neste apêndice.  
   

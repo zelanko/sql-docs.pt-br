@@ -1,11 +1,9 @@
 ---
 title: O provedor do OLE DB para publicação na Internet | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3dfd95a9df4e67effa659e3d76d92ce1927d778
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: bd7a8d2fd50cd5eb1317cdb102f9052197a925a4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>O provedor do OLE DB para publicação na Internet
 O ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) e [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objetos podem ser usados com o Microsoft OLE DB Provider para publicação de Internet (provedor de publicação de Internet) para acessar e manipular os recursos, como arquivos ou pastas da Web atendido pelo Microsoft FrontPage. Com o ADO, você pode especificar a origem de um **registro**, **fluxo**, ou [registros](../../../ado/reference/ado-api/recordset-object-ado.md) ser uma URL. Você pode, em seguida, carregar, baixar, mover, copiar e excluir recursos ou manipular diretamente as propriedades do recurso.  

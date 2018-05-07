@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>Transições de instrução
 Instruções de ODBC tem os seguintes estados.  
@@ -128,7 +127,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] a instrução foi temporariamente no estado S11 enquanto uma função estava em execução. **SQLCancel** foi chamado de um thread diferente.  
   
- [2] a instrução estava no estado S11 porque uma função chamada assíncrona retornou SQL_STILL_EXECUTING.  
+ [2]] a instrução estava no estado S11 porque uma função chamada assíncrona retornou SQL_STILL_EXECUTING.  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
@@ -245,7 +244,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] o erro foi retornado pelo Gerenciador de Driver.  
   
- [2] o erro não foi retornado pelo Gerenciador de Driver.  
+ [2]] o erro não foi retornado pelo Gerenciador de Driver.  
   
  [3], o resultado atual é o último ou apenas os resultados ou nenhum resultado atual. Para obter mais informações sobre vários resultados, consulte [vários resultados](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -330,7 +329,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] essa linha mostra transições quando *opção* foi SQL_CLOSE.  
   
- [2] essa linha mostra transições quando *opção* foi SQL_UNBIND ou SQL_RESET_PARAMS. Se o *opção* argumento era SQL_DROP e o driver subjacente é um ODBC 3*. x* driver, o Gerenciador de Driver mapeia isso para uma chamada para **SQLFreeHandle** com  *HandleType* definido como SQL_HANDLE_STMT. Para obter mais informações, consulte a tabela de transição para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] essa linha mostra transições quando *opção* foi SQL_UNBIND ou SQL_RESET_PARAMS. Se o *opção* argumento era SQL_DROP e o driver subjacente é um ODBC 3 *. x* driver, o Gerenciador de Driver mapeia isso para uma chamada para **SQLFreeHandle** com  *HandleType* definido como SQL_HANDLE_STMT. Para obter mais informações, consulte a tabela de transição para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
@@ -497,7 +496,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] a preparação falha por um motivo diferente de validar a instrução (o SQLSTATE foi HY009 [valor de argumento inválido] ou HY090 [comprimento inválido de cadeia de caracteres ou buffer]).  
   
- [2] a preparação da falha ao validar a instrução (o SQLSTATE não era HY009 [valor de argumento inválido] ou HY090 [comprimento inválido de cadeia de caracteres ou buffer]).  
+ [2]] a preparação da falha ao validar a instrução (o SQLSTATE não era HY009 [valor de argumento inválido] ou HY090 [comprimento inválido de cadeia de caracteres ou buffer]).  
   
  [3], o resultado atual é o último ou apenas os resultados ou nenhum resultado atual. Para obter mais informações sobre vários resultados, consulte [vários resultados](../../../odbc/reference/develop-app/multiple-results.md).  
   

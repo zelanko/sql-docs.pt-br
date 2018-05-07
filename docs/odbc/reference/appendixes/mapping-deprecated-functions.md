@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
 - backward compatibility [ODBC], mapping deprecated functions
@@ -24,21 +24,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddde5411238efb7104931e05f34752ab6f52e014
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-deprecated-functions"></a>Mapeamento de funções de preteridas
-Esta seção descreve como preteridas funções são mapeados por ODBC 3*. x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC 3*. x* drivers que são usados com o ODBC 2. *x* aplicativos. O Gerenciador de Driver executa esse mapeamento, independentemente da versão do aplicativo. Como cada ODBC 2. *x* funções na lista a seguir é mapeado para o ODBC 3 correspondente*. x* função quando chamado em um ODBC 3*. x* driver, o ODBC 3*. x*driver não precisa implementar o ODBC 2. *x* funções.  
+Esta seção descreve como preteridas funções são mapeados por ODBC 3 *. x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC 3 *. x* drivers que são usados com o ODBC 2. *x* aplicativos. O Gerenciador de Driver executa esse mapeamento, independentemente da versão do aplicativo. Como cada ODBC 2. *x* funções na lista a seguir é mapeado para o ODBC 3 correspondente *. x* função quando chamado em um ODBC 3 *. x* driver, o ODBC 3 *. x*driver não precisa implementar o ODBC 2. *x* funções.  
   
- O mapeamento da lista é disparado quando o driver é um ODBC 3*. x* driver e o driver não oferece suporte para a função que está sendo mapeada.  
+ O mapeamento da lista é disparado quando o driver é um ODBC 3 *. x* driver e o driver não oferece suporte para a função que está sendo mapeada.  
   
- A tabela a seguir lista todos os duplicados funcionalidade que foi introduzida no ODBC 3*. x*.  
+ A tabela a seguir lista todos os duplicados funcionalidade que foi introduzida no ODBC 3 *. x*.  
   
-|ODBC 2. *x* função|ODBC 3*. x* função|  
+|ODBC 2. *x* função|ODBC 3 *. x* função|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -58,9 +57,9 @@ Esta seção descreve como preteridas funções são mapeados por ODBC 3*. x* Ge
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1], embora essa função não existe no ODBC 2*. x*, é nos padrões ISO e Open Group.  
+ [1], embora essa função não existe no ODBC 2 *. x*, é nos padrões ISO e Open Group.  
   
- [2] Essa é uma função de ODBC 1.0.  
+ [2]] Essa é uma função de ODBC 1.0.  
   
  Esta seção contém os tópicos a seguir.  
   

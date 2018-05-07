@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 59ec68c1c2c321f45940eace9ef1f6a3dc9be9c8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Registrar processo de geração (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +152,7 @@ ms.lasthandoff: 04/16/2018
   
  Os dados XML de exemplo e as etapas para criar um exemplo de funcionamento são dados a seguir.  
   
--   Quando um  **\<cliente >** nó de elemento no arquivo de dados XML entra no escopo, o XML Bulk Load gera um registro para a tabela Cust. Carregamento em massa XML, em seguida, copia os valores de colunas necessárias (CustomerID, CompanyName e City) do  **\<CustomerID >**,  **\<CompanyName >**e o  **\<Cidade >** elementos filho como esses elementos entrarem no escopo.  
+-   Quando um  **\<cliente >** nó de elemento no arquivo de dados XML entra no escopo, o XML Bulk Load gera um registro para a tabela Cust. Carregamento em massa XML, em seguida, copia os valores de colunas necessárias (CustomerID, CompanyName e City) do  **\<CustomerID >**,  **\<CompanyName >** e o  **\<Cidade >** elementos filho como esses elementos entrarem no escopo.  
   
 -   Quando um  **\<ordem >** nó de elemento entra no escopo, o XML Bulk Load gera um registro para a tabela CustOrder. Carregamento em massa XML copia o valor de **OrderID** atributo para este registro. O valor necessário para a coluna CustomerID é obtida a partir de  **\<CustomerID >** elemento filho do  **\<cliente >** elemento. O XML Bulk Load usa as informações que são especificadas no  **\<SQL: Relationship >** para obter o valor da chave estrangeiro CustomerID para este registro, a menos que o **CustomerID** foi de atributo especificado no  **\<ordem >** elemento. A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeiro, o XML Bulk Load usa esse valor e não obtém o valor do elemento pai usando especificado **\<SQL: Relationship >**. Como isso  **\<ordem >** nó de elemento sai do escopo, o carregamento em massa XML envia o registro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os próximos  **\<ordem >** nós de elemento da mesma maneira.  
   
