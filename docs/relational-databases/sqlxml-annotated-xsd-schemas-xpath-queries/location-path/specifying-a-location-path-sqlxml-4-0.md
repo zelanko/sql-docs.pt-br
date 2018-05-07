@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificando um caminho para o local (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
      Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Cada eixo (**filho**, **pai**, **atributo**, e **self**) tem um tipo de nó principal. Para o **atributo** eixo, o tipo de nó principal é  **\<atributo >**. Para o **pai**, **filho**, e **self** eixos, o tipo de nó principal é  **\<elemento >**.  
   
-     Por exemplo, se o caminho do local especifica **child::**, o  **\<cliente >** elementos filhos do nó de contexto são selecionados. Porque o **filho** eixo tem  **\<elemento >** como seu tipo de nó principal, o teste de nó, o cliente, é TRUE se o cliente for um  **\<elemento >**nó.  
+     Por exemplo, se o caminho do local especifica **child::**, o  **\<cliente >** elementos filhos do nó de contexto são selecionados. Porque o **filho** eixo tem  **\<elemento >** como seu tipo de nó principal, o teste de nó, o cliente, é TRUE se o cliente for um  **\<elemento >** nó.  
   
 -   **Predicados de seleção (zero ou mais)**  
   
