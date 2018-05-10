@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.extractdacwizard.validationandsummary.f1
 - sql13.swb.extractdacwizard.introduction.f1
@@ -28,12 +27,11 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 35745b0b3e167a34ceb73f8e7cee7f9af7d8d3d6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f7141252a11e4391d14a4b8aff5240e849ad27d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ Selecione os dados de referência que você deseja incluir em seu arquivo de pac
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  Nesta página, o assistente valida se todos os objetos de banco de dados têm suporte de um DAC (aplicativo da camada de dados). Também verifica dependências entre objetos de banco de dados para determinar o conjunto de objetos que podem ser incluídos com êxito no DAC. Depois disso, exibe o relatório de validação e resume as opções que você selecionou neste assistente. Para alterar uma opção, clique em **Anterior**. Para iniciar a extração de um DAC, clique em **Avançar**.  
   
-> **OBSERVAÇÃO:**se um ou mais objetos não tiverem suporte em um DAC, o botão **Avançar** será desabilitado e o processo de extração talvez não continue. Nesses casos, é recomendável remover os objetos sem suporte e, em seguida, executar esse assistente novamente.  
+> **OBSERVAÇÃO:** se um ou mais objetos não tiverem suporte em um DAC, o botão **Avançar** será desabilitado e o processo de extração talvez não continue. Nesses casos, é recomendável remover os objetos sem suporte e, em seguida, executar esse assistente novamente.  
   
  **Resumo** – Um resumo das opções que você selecionou é listado em **Propriedades do DAC**. Os resultados da validação são listados em **Objetos do DAC**. Há três tipos de resultados da validação:  
   

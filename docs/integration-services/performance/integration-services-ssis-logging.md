@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
 - sql13.dts.designer.configuredtslogs.loggingdetails.f1
@@ -36,17 +35,16 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
   
- Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
+ Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Habilitar o log para a execução do pacote no servidor SSIS](#server_logging).  
   
  Você também pode incluir o log ao executar um pacote por meio do utilitário de prompt de comando **dtexec** . Para obter mais informações sobre os argumentos do prompt de comando que oferecem suporte para registros, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
@@ -385,7 +383,7 @@ ms.lasthandoff: 04/26/2018
   
 9. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
 
-## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
+## <a name="server_logging"></a> Habilitar o log para a execução do pacote no servidor SSIS
   Este tópico descreve como definir ou alterar o nível de registro em log de um pacote quando você executa um pacote implantado no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O nível de registro em log que você define ao executar o pacote anula o registro em log do pacote configurado no momento do design no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Consulte [Habilitar o log de pacote no SQL Server Data Tools](#ssdt) para obter mais informações.  
   
  Nas **Propriedades do Servidor**do SQL Server, na propriedade **Nível de registro em log do servidor** , você pode selecionar um nível de registro em log padrão para todo o servidor. Você pode escolher entre um dos níveis de registro em log internos descritos neste tópico, ou pode escolher um nível de registro em log personalizado existente. O nível de registro em log selecionado se aplica por padrão a todos os pacotes implantados no Catálogo do SSIS. Ele também se aplica por padrão a uma etapa de trabalho do SQL Agent, que executa um pacote do SSIS.  

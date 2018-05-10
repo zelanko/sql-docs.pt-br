@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Instalar componentes de aprendizado de máquina do SQL Server a partir da linha de comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ Análise de no banco de dados está disponível para instâncias do mecanismo de
 
 Para exibir informações sobre o andamento sem o interativo na tela prompts, use o argumento /qs.
 
-> [!Important]
+> [!IMPORTANT]
 > Após a instalação, as duas etapas de configuração adicionais permanecem. Integração não é completa até que essas tarefas são executadas. Consulte [tarefas pós-instalação](#post-install) para obter instruções.
 
 ### <a name="sql-server-2017-database-engine-advanced-analytics-with-python-and-r"></a>Do SQL Server de 2017: mecanismo de banco de dados advanced analytics com Python e R
