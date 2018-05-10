@@ -3,15 +3,12 @@ title: Conectar-se ao Mecanismo de Banco de Dados usando a Proteção Estendida 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
 - service binding
@@ -24,12 +21,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f0eae05397ebe6ce2c73841e9c27746e9a946dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  No menu **Iniciar** , escolha **Todos os Programas**, aponte para **Microsoft SQL Server** e clique em **SQL Server Configuration Manager**.  
   
-2.  Expanda **Configuração de Rede do SQL Server**e clique com o botão direito do mouse em **Protocolos do** *\<*InstanceName*>*e clique em **Propriedades**.  
+2.  Expanda **Configuração de Rede do SQL Server**e clique com o botão direito do mouse em **Protocolos do** *\<* InstanceName*>* e clique em **Propriedades**.  
   
 3.  Para associação de canal e associação de serviço, na guia **Avançado** , defina a **Proteção Estendida** com a configuração apropriada.  
   

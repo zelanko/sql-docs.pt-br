@@ -1,27 +1,25 @@
 ---
-title: "Adicionar medidores a relatórios móveis | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Adicionar medidores a relatórios móveis | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e06346c3562f438e962eda3ff01a4068bafa750
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 985bde62deff88231ff889e1f403ad82edc55a0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Adicionar medidores a relatórios móveis | Reporting Services
 Medidores são os visuais mais básicos e amplamente usados em relatórios móveis. Eles exibem um único valor de um conjunto de dados – apenas o valor ou o valor comparado a uma meta.
@@ -89,7 +87,7 @@ Outra propriedade sem dados do elemento de medidor que é compartilhada por muit
 
 Ela determina como os números exibidos no medidor são formatados – por exemplo, moeda, percentual, hora ou geral. Você define a formatação dos números em cada elemento do relatório móvel.
   
-### <a name="see-also"></a>Consulte também 
+### <a name="see-also"></a>Confira também 
 
 * [Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
 * [Mapas nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

@@ -1,29 +1,27 @@
 ---
-title: "Instalar o Reporting Services 2016 no prompt de comando – SSRS | Microsoft Docs"
-ms.custom: 
+title: Instalar o Reporting Services 2016 no prompt de comando – SSRS | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - command line
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-caps.latest.revision: 
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 66248bb4a109f6c1f70918c9f3b798568b97beee
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: d81e8c8d8b75fd9557afdb99897b543eb8f9a6ff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Instalar o Reporting Services 2016 no prompt de comando
 
@@ -46,9 +44,9 @@ ms.lasthandoff: 03/02/2018
   
 -   O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   SQL Server Agent, que é necessário para os recursos de assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   SQL Server Agent, que é necessário para os recursos de assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para obter informações sobre a ferramenta de configuração e recursos adicionais.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ```  
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  

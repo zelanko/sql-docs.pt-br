@@ -1,25 +1,24 @@
 ---
-title: Exibindo R ou pacotes Python instalados no SQL Server | Microsoft Docs
+title: Obter informações de pacote de R e Python no aprendizado de máquina do SQL Server | Microsoft Docs
+description: Determinar a versão do pacote de R e Python, verifique se a instalação e obter uma lista de pacotes instalados no SQL Server R Services ou serviços de aprendizado de máquina.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>Exibindo R ou pacotes Python instalados no SQL Server
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Obter informações de pacote de R e Python no aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Se você instalou vários ambientes de Python, ou usa várias ferramentas de R, é fácil de instalar um pacote para a biblioteca incorreta ou o ambiente e, em seguida, não poderá encontrá-lo mais tarde. 
-
-Este artigo fornece algumas consultas que você pode usar para determinar a versão atual e para listar os pacotes que estão instalados no ambiente atual do SQL Server.
+Se você instalou vários ambientes de Python, ou usa várias ferramentas de R, é fácil de instalar um pacote para a biblioteca incorreta ou o ambiente e, em seguida, não poderá encontrá-lo mais tarde. Este artigo fornece consultas e orientação útil para a versão do pacote determininga e para listar os pacotes que estão instalados no ambiente atual do SQL Server.
 
 ## <a name="verify-the-current-default-library"></a>Verifique se a biblioteca padrão atual
 

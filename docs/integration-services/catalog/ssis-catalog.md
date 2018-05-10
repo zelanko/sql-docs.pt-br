@@ -1,17 +1,16 @@
 ---
 title: Catálogo do SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
   O catálogo do **SSISDB** é o ponto central para trabalhar com projetos do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -619,9 +617,7 @@ Adicionar o banco de dados do SSISDB a um Grupo de Disponibilidade Always On é 
   
 Forneça a senha especificada ao criar o Catálogo do SSIS na página **Selecionar Bancos de Dados** do assistente **Novo Grupo de Disponibilidade**.
 
-Quando solicitado a **Selecionar sua preferência de sincronização de dados**, selecione **Ignorar sincronização de dados inicial**.
-  
- ![Novo Grupo de Disponibilidade](../../integration-services/service/media/ssis-newavailabilitygroup.png "Novo Grupo de Disponibilidade")  
+![Novo Grupo de Disponibilidade](../../integration-services/service/media/ssis-newavailabilitygroup.png "Novo Grupo de Disponibilidade")  
   
 ####  <a name="Step3"></a> Etapa 3: Habilitar o suporte do SSIS para o Always On  
  Depois de criar o Catálogo do Integration Services, clique com o botão direito do mouse no nó **Catálogos do Integration Services** e clique em **Habilitar Suporte do Always On.** Você deve ver a seguinte caixa de diálogo **Habilitar Suporte para Always On** . Se esse item de menu estiver desabilitado, verifique se você tem todos os pré-requisitos instalados e clique em **Atualizar**.  
