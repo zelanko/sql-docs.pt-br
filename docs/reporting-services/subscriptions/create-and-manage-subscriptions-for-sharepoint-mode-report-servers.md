@@ -1,31 +1,29 @@
 ---
-title: "Criar e gerenciar assinaturas de servidores de relatório no modo do SharePoint | Microsoft Docs"
-ms.custom: 
+title: Criar e gerenciar assinaturas de servidores de relatório no modo do SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], creating
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 67991ac7def0691b3d2df38ce54ea34766dbd574
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint
   Você pode criar assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar relatórios de um aplicativo Web do SharePoint que esteja integrado com um servidor de relatório no modo do SharePoint. As assinaturas podem entregar relatórios a uma biblioteca de documentos, pasta de arquivo ou como email. Este tópico resume os requisitos e as etapas para criar uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/09/2018
   
  Quando você cria uma assinatura, pode selecionar um formato de arquivo de saída. Nem todo relatório funciona bem em qualquer formato. Antes de selecionar o formato de uma assinatura, abra o relatório e exporte-o em formatos diferentes para verificar se ele é exibido como esperado.  
   
- Os usuários precisam da permissão de lista **Editar Itens** no SharePoint se quiserem criar assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Referência à permissão de sites e listas para itens do servidor de relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Os usuários precisam da permissão de lista **Editar Itens** no SharePoint se quiserem criar assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 > [!IMPORTANT]  
 >  Uma assinatura que entrega um relatório a uma biblioteca ou uma pasta compartilhada cria um novo arquivo estático baseado no relatório original, mas que não é uma definição de relatório verdadeira executada na Web Part do Visualizador de Relatórios. Se o relatório original tiver recursos interativos (por exemplo, links de detalhamento) ou conteúdo dinâmico, esses recursos não ficarão disponíveis no arquivo estático entregue no local de destino. Se você selecionar uma “página da Web”, poderá preservar alguma interatividade, mais, como o documento não é um arquivo .rdl executado no Visualizador de Relatórios, clicar em um relatório criará novas páginas na sessão do navegador que devem ser percorridas para voltar ao site.  

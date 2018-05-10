@@ -1,10 +1,9 @@
 ---
 title: Validar pacotes do SSIS implantados no Azure | Microsoft Docs
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Validar pacotes do SSIS implantados no Azure
 Quando você implanta um projeto do SSIS (SQL Server Integration Services) no SSISDB (Banco de Dados do Catálogo do SSIS) em um servidor do Azure, o assistente de implantação do pacote adiciona uma etapa de validação adicional após a página **Análise**. Essa etapa de validação verifica se há problemas conhecidos nos pacotes do projeto que possam impedir que os pacotes sejam executados conforme o esperado no Azure SSIS Integration Runtime. Em seguida, o assistente exibe avisos aplicáveis na página **Validar**.

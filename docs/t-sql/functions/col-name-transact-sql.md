@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,18 +25,17 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4438a86353a8fdbc6174a718d401656bf05df4fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c79414874a166ad005a2caf9e65ca0a051a732de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna o nome de uma coluna de um número de identificação de tabela correspondente especificado e o número de identificação de coluna.
+Essa função retorna o nome de uma coluna de tabela com base nos valores de número de identificação de tabela e número de identificação de coluna daquela coluna da tabela.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,26 +47,26 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>Argumentos  
 *table_id*  
-É o número de identificação da tabela que contém a coluna. *table_id* é do tipo **int**.
+O número de identificação da tabela que contém aquela coluna. O argumento *table_id* tem um tipo de dados **int**.
   
 *column_id*  
-É o número de identificação da coluna. O parâmetro de *column_id* é do tipo **int**.
+O número de identificação da coluna. O argumento *column_id* tem um tipo de dados **int**.
   
 ## <a name="return-types"></a>Tipos de retorno
 **sysname**
   
 ## <a name="exceptions"></a>Exceções  
-Retornará NULL em caso de erro ou se um chamador não tiver permissão para exibir o objeto.
+Retornará NULL em caso de erro ou se um chamador não tiver a permissão correta para exibir o objeto.
   
-Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que funções internas que emitem metadados, como COL_NAME, poderão retornar NULL se o usuário não tiver permissão para o objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário pode exibir apenas os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha recebido permissão. Isso significa que as funções internas que emitem metadados, como `COL_NAME`, poderão retornar NULL se o usuário não tiver as permissões corretas para o objeto. Veja [Configuração de Visibilidade de Metadados](../../relational-databases/security/metadata-visibility-configuration.md) para obter mais informações.
   
 ## <a name="remarks"></a>Remarks  
 Os parâmetros de *table_id* e *column_id* juntos produzem uma cadeia de caracteres de nome de coluna.
   
-Para obter mais informações sobre como obter números de identificação de tabela e de coluna, consulte [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
+Veja [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md) para obter mais informações sobre como obter números de identificação de tabela e de coluna.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir retorna o nome da primeira coluna em uma tabela `Employee` de exemplo.
+Este exemplo retorna o nome da primeira coluna em uma tabela `Employee` de amostra.
   
 ```sql
 -- Uses AdventureWorks  
