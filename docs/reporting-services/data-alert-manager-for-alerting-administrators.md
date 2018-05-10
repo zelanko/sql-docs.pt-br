@@ -1,30 +1,28 @@
 ---
 title: Gerenciador de Alertas de Dados para administradores de alertas | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: db92638d0dc02085e238a4702daa933dd8691107
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b551310752346de912c6b38147b79473bbbaebea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gerenciador de Alertas de dados para administradores de alertas
 
@@ -53,7 +51,7 @@ O SQL Server Reporting Services fornece o Gerenciador de Alertas de Dados para o
   
  ![Seção Reporting Services da página Configurações de Site](../reporting-services/media/rs-sitesettings.gif "Seção Reporting Services da página Configurações de Site")  
   
- O Gerenciador de Alertas de dados inclui uma tabela que lista o nome do alerta, o nome do relatório, o nome do proprietário do alerta, o número da mensagem de alerta enviada, a última execução do alerta, a última vez que a definição do alerta foi modificada e o status da mensagem de alerta. Se a mensagem de alerta não puder ser gerada ou enviada, a coluna de status conterá informações sobre o erro e ajudará a solucionar problemas do alerta. Para obter mais informações, consulte [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ O Gerenciador de Alertas de dados inclui uma tabela que lista o nome do alerta, o nome do relatório, o nome do proprietário do alerta, o número da mensagem de alerta enviada, a última execução do alerta, a última vez que a definição do alerta foi modificada e o status da mensagem de alerta. Se a mensagem de alerta não puder ser gerada ou enviada, a coluna de status conterá informações sobre o erro e ajudará a solucionar problemas do alerta. Para obter mais informações, consulte [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  A tabela a seguir mostra dados de exemplo de uma tabela no Gerenciador de Alertas de Dados. Quando um erro ocorre, a mensagem de erro e o identificador da entrada no log (um GUID) são incluídos no campo **Status** na tabela.  
   
@@ -80,7 +78,7 @@ O SQL Server Reporting Services fornece o Gerenciador de Alertas de Dados para o
 ##  <a name="HowTo"></a> Tarefas relacionadas  
  Esta seção lista um procedimento que mostra como gerenciar seus alertas.  
   
--   [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
 ## <a name="see-also"></a>Consulte Também
 

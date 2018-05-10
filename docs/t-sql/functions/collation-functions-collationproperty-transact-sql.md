@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,18 +23,17 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76baefbaf0fc156d782c705e8a81683770bedc68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d1c121184b4d2af48a547b06fec38b89fa2335da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funções de agrupamento – COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna a propriedade de um agrupamento especificado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Essa função retorna a propriedade de um agrupamento especificado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,17 +45,17 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Argumentos  
 *collation_name*  
-É o nome do agrupamento. *collation_name* é **nvarchar(128)** e não tem padrão.
+O nome do agrupamento. O argumento *collation_name* tem um tipo de dados **nvarchar (128)** sem nenhum valor padrão.
   
 *property*  
-É a propriedade do agrupamento. *property* é **varchar(128)** e pode ser um dos seguintes valores:
+A propriedade Collation. O argumento *property* tem um tipo de dados **varchar (128)** e pode ter qualquer um dos seguintes valores:
   
 |Nome da propriedade|Description|  
 |---|---|
-|**CodePage**|Página de código de não Unicode do agrupamento. Consulte [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) e [Apêndice H: Páginas de código](https://msdn.microsoft.com/en-us/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
-|**LCID**|Windows LCID do agrupamento. Consulte [Estrutura de LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).|  
-|**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários, (\_BIN) e (\_BIN2), bem como quando todas as propriedades são confidenciais. Valores de bitmask:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: embora isso afete o comportamento da comparação, a opção diferenciação de seletor de variação (\_VSS) não é representada nesse valor.|  
-|**Versão**|A versão do agrupamento, extraída do campo de versão da identificação do agrupamento. Retorna um valor inteiro entre 0 e 3.<br /><br /> Agrupamentos com "140" no nome retornam 3.<br /><br /> Agrupamentos com "100" no nome retornam 2.<br /><br /> Agrupamentos com "90" no nome retornam 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
+|**CodePage**|Página de código de não Unicode do agrupamento. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) e o [Apêndice H: Páginas de código](https://msdn.microsoft.com/en-us/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
+|**LCID**|Windows LCID do agrupamento. Veja a [Estrutura de LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).|  
+|**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários, tanto (\_BIN) quanto (\_BIN2), bem como quando todas as propriedades diferenciam maiúsculas e minúsculas. Valores de bitmask:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: a opção \_VSS (seletor sensível à variação) não é representada nesse valor, embora afete o comportamento da comparação.|  
+|**Versão**|A versão do agrupamento, derivada do campo de versão de ID do agrupamento. Retorna um valor inteiro entre 0 e 3.<br /><br /> Agrupamentos com "140" no nome retornam 3.<br /><br /> Agrupamentos com "100" no nome retornam 2.<br /><br /> Agrupamentos com "90" no nome retornam 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
   
 ## <a name="return-types"></a>Tipos de retorno
 **sql_variant**

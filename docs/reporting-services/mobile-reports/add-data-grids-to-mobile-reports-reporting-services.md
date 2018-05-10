@@ -1,27 +1,25 @@
 ---
-title: "Adicionar grades de dados a relatórios móveis | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Adicionar grades de dados a relatórios móveis | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 656c40ea8c8bc7d20fd2fe9de0a189f451731ae5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0c08955e837eec891a44982f930c6e76eb8b4671
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Adicionar grades de dados aos relatórios móveis | Reporting Services
 Às vezes, a melhor visualização são os próprios dados. Saiba mais sobre as três *grades de dados*, ou tabelas, para exibir dados em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:
@@ -84,7 +82,7 @@ Quando você adiciona uma coluna de gráfico a uma grade de dados, você precisa
    * **Pesquisa de destino** é o campo na tabela de dados **Dados de referência para visualizações de gráfico**. Os dados do gráfico em cada linha serão unido nesses dois campos.   
    * O**Campo de dados do gráfico** determina qual métrica na tabela de dados **Dados de referência para visualizações do gráfico** será usada como o valor do eixo y ou série no gráfico em cada linha.  
 
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Confira também 
 * [Mapas nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navegadores nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizações nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

@@ -1,27 +1,25 @@
 ---
-title: "Implantação e suporte de versão no SSDT (SQL Server Data Tools) | Microsoft Docs"
-ms.custom: 
+title: Implantação e suporte de versão no SSDT (SQL Server Data Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7c14da7b43746339b2dfde48be558c0b53a3d5fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oferece suporte aos seguintes cenários:  
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_SupportedVersions"></a> Versões com suporte  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
   
  A tabela a seguir descreve as versões com suporte para criação e publicação de relatórios em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

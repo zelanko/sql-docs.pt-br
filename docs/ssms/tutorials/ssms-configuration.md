@@ -7,14 +7,16 @@ ms.author: mathoma
 ms.date: 03/16/2018
 ms.topic: Tutorial
 ms.suite: sql
+ms.prod: sql
+ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: b2c850ac32aebf78441234327ec33b6223dc447b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: componentes e configuração do SQL Server Management Studio
 Este Tutorial descreve os diferentes componentes de janela no SSMS (SQL Server Management Studio) e algumas opções de configuração básicas para seu espaço de trabalho. Neste artigo, você aprenderá sobre como: 

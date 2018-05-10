@@ -1,27 +1,25 @@
 ---
-title: "Criar um relatório móvel do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Criar um relatório móvel do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 73de345a79e96800bf194c73bc17d70de7bd4055
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 65f20d39e13c3c388b5fbe873d5a3c7491a6da38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Criar um relatório móvel do Reporting Services
 Com o Publicador de Relatórios Móveis do SQL Server, você pode criar relatórios móveis do SQL Server 2016 Reporting Services com rapidez que se ajustam à qualquer tamanho de tela, em uma superfície de design com colunas e linhas de grade ajustáveis e elementos flexíveis de relatório móvel.  
@@ -72,7 +70,7 @@ Na primeira vez que você criar um relatório móvel, instale o Publicador de Re
   
    Para salvá-lo em um servidor, você precisa ter acesso a um servidor de relatório do SQL Server 2016 Reporting Services.  
      
-   ### <a name="see-also"></a>Consulte também  
+   ### <a name="see-also"></a>Confira também  
      
 -   [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [Formatar um relatório móvel do Reporting Services para telefone ou tablet](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  

@@ -1,29 +1,27 @@
 ---
-title: "Log HTTP do Servidor de Relatório | Microsoft Docs"
-ms.custom: 
+title: Log HTTP do Servidor de Relatório | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 03/05/2018
 |||  
 |-|-|  
 |Nome do arquivo|Por padrão, o nome do arquivo é ReportServerService_HTTP_\<timestamp>.log. Você pode personalizar o prefixo do nome do arquivo modificando o atributo HttpTraceFileName no arquivo ReportingServicesService.exe.config. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado).|  
-|Local do arquivo|O arquivo está localizado em \Microsoft SQL Server\\*\<SQL Server Instance>*\Reporting Services\LogFiles.|  
+|Local do arquivo|O arquivo está localizado em \Microsoft SQL Server\\*\<SQL Server Instance>* \Reporting Services\LogFiles.|  
 |Formato do arquivo|O arquivo está em formato pt-BR. É um arquivo de texto ASCII.|  
 |Criação e retenção do arquivo|O log HTTP é criado quando você o habilita no arquivo de configuração, reinicia o serviço e o servidor de relatório manipula uma solicitação HTTP. Se você definir as configurações, mas o arquivo de log não aparecer, abra um relatório ou inicie um aplicativo do servidor de relatório (como o Gerenciador de Relatórios) para gerar uma solicitação HTTP e criar o arquivo.<br /><br /> Uma nova instância do arquivo de log será criada após cada reinicialização do serviço e o envio subsequente da solicitação HTTP para o servidor de relatório.<br /><br /> Por padrão, os logs de rastreamento são limitados a 32 megabytes e excluídos depois de 14 dias.|  
   

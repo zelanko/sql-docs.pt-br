@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,18 +22,17 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71f52ba08f2fd5fe94af4b16dbcac06746564e09
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9d312408089cefdcc947b8b85b28a0ece85edb2e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retorna uma cadeia de caracteres que é o resultado da concatenação de dois ou mais valores. (Para adicionar um valor de separação durante a concatenação, consulte [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
+Essa função retorna uma cadeia de caracteres resultante de concatenação ou junção de dois ou mais valores de cadeia de caracteres de ponta a ponta. (Para adicionar um valor de separação durante a concatenação, consulte [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,28 +44,29 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
 ## <a name="arguments"></a>Argumentos  
 *string_value*  
-Um valor de cadeia de caracteres para concatenação com outros valores.
+Um valor de cadeia de caracteres para concatenação com outros valores. A função `CONCAT` requer pelo menos dois argumentos *string_value* e não mais do que 254 argumentos *string_value*.
   
-## <a name="return-types"></a>Tipos de retorno
-Cadeia de caracteres, comprimento e tipo dos quais a entrada depende.
+## <a name="return-types"></a>Tipos de retorno  
+*string_value*  
+Um valor de cadeia de caracteres cujos comprimento e tipo dependem da entrada.
   
 ## <a name="remarks"></a>Remarks  
-**CONCAT** usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Exige um mínimo de dois valores de entrada; caso contrário, é gerado um erro. Todos os argumentos são convertidos implicitamente em tipos de cadeia de caracteres e depois concatenados. Os valores nulos são convertidos implicitamente em uma cadeia de caracteres vazia. Se todos os argumentos forem nulos, uma cadeia de caracteres vazia do tipo **varchar**(1) será retornada. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+`CONCAT` usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Exige um mínimo de dois valores de entrada; caso contrário, `CONCAT` gerará um erro. `CONCAT` converte implicitamente todos os argumentos nos tipos de cadeia de caracteres antes da concatenação. `CONCAT` converte implicitamente os valores nulos em cadeias de caracteres vazias. Se `CONCAT` receber argumentos com todos os valores **nulo**, retornará uma cadeia de caracteres vazia do tipo **varchar**(1). A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) para obter mais informações sobre conversões de tipo de dados.
   
-O tipo de retorno depende do tipo dos argumentos. A tabela a seguir ilustra o mapeamento.
+O tipo de retorno depende do tipo dos argumentos. Esta tabela ilustra o mapeamento:
   
 |Tipo de entrada|Tipo e comprimento da saída|  
 |---|---|
-|Se qualquer argumento for um tipo do sistema SQL-CLR, um SQL-CLR UDT ou um `nvarchar(max)`|**nvarchar(max)**|  
-|Caso contrário, se qualquer argumento for **varbinary(max)** ou **varchar(max)**|**varchar(max)**, a menos que um dos parâmetros seja um **nvarchar** de qualquer comprimento. Nesse caso, o resultado será **nvarchar(max)**.|  
-|Caso contrário, se qualquer argumento for **nvarchar**(<= 4000)|**nvarchar**(<= 4000)|  
-|Caso contrário, em todos os outros casos|**varchar**(<= 8000), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Nesse caso, o resultado será **nvarchar(max)**.|  
+|1. Qualquer argumento de<br><br />um tipo de sistema do SQL-CLR<br><br />a UDT SQL-CLR<br><br />ou em<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2. Caso contrário, qualquer argumento de tipo<br><br />**varbinary(max)**<br><br />ou em<br><br />**varchar(max)**|**varchar(max)**, a menos que um dos parâmetros seja um **nvarchar** de qualquer comprimento. Nesse caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)**.|  
+|3. Caso contrário, qualquer argumento de tipo **nvarchar** de no máximo 4.000 caracteres<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
+|4. Em todos os outros casos|**varchar**(<=8.000) (um **varchar** de no máximo 8.000 caracteres), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Naquele caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)**.|  
   
-Quando os argumentos forem <= 4000 para **nvarchar** ou <= 8000 para **varchar**, as conversões implícitas poderão afetar o comprimento do resultado. Outros tipos de dados têm comprimentos diferentes quando eles são convertidos implicitamente em cadeias de caracteres. Por exemplo, um **int** (14) tem um comprimento de cadeia de caracteres de 12, enquanto um **float** tem um comprimento de 32. Portanto, o resultado da concatenação de dois inteiros tem um comprimento não menor que 24.
+Quando `CONCAT` recebe argumentos de entrada **nvarchar** de comprimento <=4.000 caracteres, ou argumentos de entrada **varchar** de comprimento <=8.000 caracteres, conversões implícitas poderão afetar o comprimento das resultado. Outros tipos de dados têm comprimentos diferentes quando são convertidos implicitamente em cadeias de caracteres. Por exemplo, um **int** (14) tem um comprimento de cadeia de caracteres de 12, enquanto um **float** tem um comprimento de 32. Portanto, uma concatenação de dois inteiros retornará um resultado com um comprimento não inferior a 24.
   
-Se nenhum dos argumentos de entrada for de um tipo LOB (large object, objeto grande) com suporte, o tipo de retorno será truncado para 8000 de comprimento, independentemente do tipo de retorno. Esse truncamento preserva espaço e dá suporte à eficiência na geração do plano.
+Se nenhum dos argumentos de entrada tiver um tipo LOB (objeto grande) com suporte, o tipo retornado será truncado para 8.000 caracteres, independentemente do tipo retornado. Esse truncamento preserva espaço e dá suporte à eficiência na geração do plano.
   
-A função CONCAT pode ser executada remotamente em um servidor vinculado que seja da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e superiores. Para servidores vinculados mais antigos, a operação CONCAT será executada localmente depois que os valores não concatenados forem retornados do servidor vinculado.
+A função CONCAT pode ser executada remotamente em um servidor vinculado da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e superiores. Para servidores vinculados mais antigos, a operação CONCAT ocorrerá localmente, depois que o servidor vinculado retornar os valores não concatenados.
   
 ## <a name="examples"></a>Exemplos  
   
@@ -100,7 +98,7 @@ INSERT INTO #temp VALUES( 'Name', NULL, 'Lastname' );
 SELECT CONCAT( emp_name, emp_middlename, emp_lastname ) AS Result  
 FROM #temp;  
 ```  
-  
+
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```sql
