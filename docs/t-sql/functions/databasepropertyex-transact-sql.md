@@ -1,15 +1,13 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,13 +24,12 @@ caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4331e2c3e4b68a3c439ed72a16f0941068b76802
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7525291002bb22109c05600e25fdcd551c86b9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +67,10 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], deve ser o nome do banco de 
 |IsArithmeticAbortEnabled|Consultas são encerradas quando um erro de estouro ou divisão por zero ocorre durante a execução da consulta.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsAutoClose|O banco de dados é desligado corretamente e libera recursos depois da saída do último usuário.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsAutoCreateStatistics|O otimizador de consulta cria estatísticas de coluna única, conforme necessário, para melhorar o desempenho de consulta.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
-|IsAutoCreateStatisticsIncremental|As estatísticas e coluna única criadas automaticamente são incrementais quando possível.|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
+|IsAutoCreateStatisticsIncremental|As estatísticas e coluna única criadas automaticamente são incrementais quando possível.|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsAutoShrink|Os arquivos de banco de dados são candidatos à redução automática periódica.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsAutoUpdateStatistics|O otimizador de consulta atualiza estatísticas existentes quando elas são usadas por uma consulta, podendo ficar desatualizadas.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|
-|IsClone|Banco de dados é uma cópia somente de esquema e estatísticas de um banco de dados do usuário.|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**| 
+|IsClone|O banco de dados é uma cópia somente de esquema e estatísticas de um banco de dados de usuário criado com DBCC CLONEDATABASE. Para obter mais informações, veja este [Artigo de Suporte da Microsoft](http://support.microsoft.com/help/3177838).|**Aplica-se a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**| 
 |IsCloseCursorsOnCommitEnabled|Os cursores que estão abertos quando uma transação é confirmada são fechados.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsFulltextEnabled|O banco de dados está habilitado para indexação de texto completo e semântica.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**<br /><br /> **Observação:** o valor dessa propriedade não tem nenhum efeito. Os bancos de dados de usuário são sempre habilitados para pesquisa de texto completo. Essa coluna será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não a utilize em novos desenvolvimentos e, assim que possível, modifique os aplicativos que atualmente utilizam alguma dessas colunas.|  
 |IsInStandBy|O banco de dados está online como somente leitura, com o log de restauração permitido.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
@@ -88,8 +85,10 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], deve ser o nome do banco de 
 |IsRecursiveTriggersEnabled|O acionamento recursivo dos disparadores está habilitado.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsSubscribed|O banco de dados é assinado para uma publicação.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
 |IsSyncWithBackup|O banco de dados é um banco de dados publicado ou um banco de dados de distribuição e pode ser restaurado sem romper replicação transacional.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
-|IsTornPageDetectionEnabled|O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta operações de E/S incompletas causadas por falhas de energia ou outros problemas no sistema.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**|  
-|IsXTPSupported|Indica se o banco de dados dá suporte a OLTP in-memory, ou seja, criação e uso de tabelas com otimização de memória e módulos compilados nativamente.<br /><br /> Específico ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported não depende da existência de um grupo de arquivos MEMORY_OPTIMIZED_DATA, que é necessário para a criação de objetos OLTP in-memory.|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada inválida, um erro ou não aplicável<br /><br /> Tipo de dados base: **int**|  
+|IsTornPageDetectionEnabled|O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta operações de E/S incompletas causadas por falhas de energia ou outros problemas no sistema.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**| 
+|IsVerifiedClone|O banco de dados é uma cópia somente de esquema e estatísticas de um banco de dados de usuário criado usando a opção WITH VERIFY_CLONEDB de DBCC CLONEDATABASE. Para obter mais informações, veja este [Artigo de Suporte da Microsoft](http://support.microsoft.com/help/3177838).|**Aplica-se a:** começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **int**| 
+|IsXTPSupported|Indica se o banco de dados dá suporte a OLTP in-memory, ou seja, criação e uso de tabelas com otimização de memória e módulos compilados nativamente.<br /><br /> Específico ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported não depende da existência de um grupo de arquivos MEMORY_OPTIMIZED_DATA, que é necessário para a criação de objetos OLTP in-memory.|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrada inválida, um erro ou não aplicável<br /><br /> Tipo de dados base: **int**|  
+|LastGoodCheckDbTime|A data e hora do último DBCC CHECKDB com êxito a ser executado no banco de dados especificado.|**Aplica-se a:** começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> NULL = Entrada não válida<br /><br /> Tipo de dados base: **datetime**| 
 |LCID|O identificador de localidade do Windows (LCID) do agrupamento.|Valor LCID (em formato decimal).<br /><br /> Tipo de dados base: **int**|  
 |MaxSizeInBytes|Tamanho máximo do banco de dados em bytes.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = Banco de dados não foi iniciado<br /><br /> Tipo de dados base: **bigint**|  
 |Recuperação|Modelo de recuperação do banco de dados.|FULL = Modelo de recuperação completa<br /><br /> BULK_LOGGED = Modelo de log de transações em massa<br /><br /> SIMPLE = Modelo de recuperação simples<br /><br /> Tipo de dados base: **nvarchar(128)**|  

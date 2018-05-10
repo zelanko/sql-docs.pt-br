@@ -1,32 +1,31 @@
 ---
-title: "Documentação do desenvolvedor do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Documentação do desenvolvedor do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 508253c11026074dc19ce93f173c036ae2751786
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d11e62a8a0a1f90d894c32c82aef938f89a61851
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentação do desenvolvedor do Reporting Services
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece várias interfaces de programação que você pode usar em seus próprios aplicativos. Você pode usar os recursos e as capacidades existentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para criar relatório personalizado e ferramentas de gerenciamento nos sites da Web e nos aplicativos do Windows ou você poderá estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -40,9 +39,12 @@ ms.lasthandoff: 01/09/2018
  [Integração do Reporting Services em aplicativos](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  Fornece uma visão geral de como usar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para integrar o relatório em aplicativos personalizados. Descreve quando usar acesso de URL direto e quando usar o serviço Web para acessar o servidor de relatório.  
   
- [Serviço Web do Servidor de Relatório](../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Serviço Web do Servidor de Relatório para aplicativos ASP.NET e tradicionais](../reporting-services/report-server-web-service/report-server-web-service.md)  
  O serviço Web do servidor de relatório fornece acesso à funcionalidade completa do servidor de relatório. O serviço Web usa o SOAP por meio de HTTP e é criado para agir como uma interface de comunicações entre programas cliente e o servidor de relatório. O serviço Web e seus métodos expõem a funcionalidade do servidor de relatório e permite que você crie ferramentas personalizadas para qualquer parte do ciclo e vida do relatório do gerenciamento até a execução.  
-  
+ 
+ [Desenvolver com APIs REST para aplicativos modernos](developer/rest-api.md)</br>
+ As APIs REST do Reporting Services dão acesso programático aos objetos no catálogo do servidor de relatório do Reporting Services. Ao usar APIs REST, você pode navegar pela hierarquia de pastas, descobrir o conteúdo de uma pasta ou baixar uma definição de relatório. Você também pode criar, atualizar e excluir objetos.
+
  [Acesso à URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a um conjunto completo de solicitações baseadas na URL que você pode usar como um ponto de acesso rápido e fácil para navegação e exibição de relatório. Você pode usar esta tecnologia junto com o serviço Web do servidor de relatório para integrar uma solução de relatório completa em seus aplicativos comerciais personalizados. O acesso de URL será particularmente útil quando você estiver integrando relatórios como parte de um portal de Web ou exibindo relatórios de um navegador da Web.  
   

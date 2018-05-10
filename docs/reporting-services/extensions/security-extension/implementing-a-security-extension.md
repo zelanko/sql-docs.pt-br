@@ -1,33 +1,32 @@
 ---
-title: "Implementando uma extensão de segurança | Microsoft Docs"
-ms.custom: 
+title: Implementando uma extensão de segurança | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - forms-based authentication [Reporting Services]
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8ea0868671791715dd9312eacdc9d8a75e1da7fc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8b6a81d2171a013af5b02684ca0e4e1f2372ac5f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-security-extension"></a>Implementando uma extensão de segurança
   A Autenticação do Windows do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] é o principal sistema para proteger os relatórios no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Em determinados casos, entretanto, você pode precisar estender o sistema de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para acomodar a segurança personalizada em sua empresa. Você pode fazer isso usando a plataforma de desenvolvimento fornecida pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API. Esta seção apresentará uma visão geral de extensões de segurança no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

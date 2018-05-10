@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -25,12 +24,11 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e0468d1fe76619f91a9d1fe73f7216962c4f5f0d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c951c969708b343b3570fbdc9e6e470d9751e58b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Adicionando componentes de fluxo de dados programaticamente
   Ao compilar um fluxo de dados, comece adicionando componentes. Em seguida, configure esses componentes e os conecte para estabelecer o fluxo de dados em tempo de execução. Esta seção descreve como adicionar um componente à tarefa de fluxo de dados, criar a instância tempo de design do componente e configurar o componente. Para obter informaçõessobre como conectar componentes, consulte [Conectar componentes do fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

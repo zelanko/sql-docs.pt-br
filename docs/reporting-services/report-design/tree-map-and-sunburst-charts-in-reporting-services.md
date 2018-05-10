@@ -1,30 +1,29 @@
 ---
-title: "Gráficos de mapa de árvore e explosão solar no SQL Server Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Gráficos de mapa de árvore e explosão solar no SQL Server Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] As visualizações de mapa de árvore e explosão solar do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são ótimas para representar dados hierárquicos visualmente. Este artigo é uma visão geral de como adicionar um gráfico de mapa de árvore ou explosão solar a um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O artigo também inclui uma consulta de exemplo do AdventureWorks para ajudá-lo a começar.  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+As visualizações de mapa de árvore e explosão solar do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são ótimas para representar dados hierárquicos visualmente. Este artigo é uma visão geral de como adicionar um gráfico de mapa de árvore ou explosão solar a um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O artigo também inclui uma consulta de exemplo do AdventureWorks para ajudá-lo a começar.  
   
 ##  <a name="bkmk_treemap_chart"></a> Gráfico de mapa de árvore  
 
@@ -180,7 +179,7 @@ Em um gráfico de explosão solar, a hierarquia é representada por uma série d
      Para obter mais informações sobre como criar um conjunto de dados, consulte [Criar um conjunto de dados compartilhado ou inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 * [Modo de exibição de Design de conjunto de dados compartilhado &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [Mostrar ToolTips em uma série &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [Tutorial: Mapas de árvore no Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)

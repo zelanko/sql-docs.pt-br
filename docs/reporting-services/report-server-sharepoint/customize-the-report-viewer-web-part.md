@@ -1,25 +1,23 @@
 ---
-title: "Personalizar a web part do Visualizador de Relatórios | Microsoft Docs"
-ms.custom: 
+title: Personalizar a web part do Visualizador de Relatórios | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 234f87e2bcb222e318a5c935a7d8addca1d8c2fc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a web part do Visualizador de Relatórios
 
@@ -105,7 +103,7 @@ Use a web part do Visualizador de Relatórios para exibir relatórios executados
   
  A área Parâmetros fornece campos para digitar valores antes de executar o relatório. Ela só é usada quando a definição de um relatório inclui parâmetros. Quando as áreas de Parâmetros ou Credenciais são exibidas, a exibição de relatório é ajustada para usar a largura restante da web part. Defina as propriedades na web part para personalizar a largura de Parâmetros. Também pode definir os rótulos exibidos ao lado dos parâmetros individuais na página. Para obter mais informações sobre como modificar rótulos de parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
  [Web part do Visualizador de Relatórios em um Site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Adicionar a web part do Visualizador de Relatórios a uma página da Web](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  

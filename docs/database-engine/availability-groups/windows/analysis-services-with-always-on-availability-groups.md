@@ -3,29 +3,27 @@ title: Analysis Services com Grupos de Disponibilidade AlwaysOn | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a5bb795ae4d5c772e34f3ef4483934994799cb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Um grupo de disponibilidade AlwaysOn é uma coleção predefinida de bancos de dados relacionais do SQL Server que faz failover junto quando condições disparam um failover em qualquer um dos bancos de dados, redirecionando solicitações para um banco de dados espelhado em outra instância no mesmo grupo de disponibilidade. Se você estiver usando grupos de disponibilidade como sua solução de alta disponibilidade, poderá usar um banco de dados nesse grupo como uma fonte de dados em uma solução de tabela do Analysis Services ou multidimensional. Todas as operações do Analysis Services a seguir funcionam como esperado ao usar um banco de dados de disponibilidade: processando ou importando dados, consultando dados relacionais diretamente (usando o armazenamento de ROLAP ou o modo DirectQuery), e writeback.  
   

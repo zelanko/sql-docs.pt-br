@@ -2,23 +2,22 @@
 title: Guia de solução de problemas e monitoramento dos Grupos de Disponibilidade Always On (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 05/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guia de solução de problemas e monitoramento dos Grupos de Disponibilidade Always On
  Este guia ajuda você a começar a monitorar Grupos de Disponibilidade Always On e solucionar alguns dos problemas comuns em grupos de disponibilidade. Ele fornece o conteúdo original, bem como uma página inicial com informações úteis que são publicadas em outros lugares. Embora este guia não aborde completamente todos os problemas que podem ocorrer no vasto campo dos grupos de disponibilidade, ele pode indicar a direção correta para sua análise de causa raiz e para a solução de problemas. 

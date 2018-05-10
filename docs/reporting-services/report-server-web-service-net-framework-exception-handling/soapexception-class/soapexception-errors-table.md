@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: report-server-web-service-net-framework-exception-handling
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d77de099eca482d012ab6925e709d719c950e84
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 075cd7c49d17a96970921ee2f31eb615ccc546ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="soapexception-errors-table"></a>Tabela de erros SoapException
   O servidor de relatório gera erros e mensagens de erro na exceção SOAP baseada em erros que ocorrem no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. A tabela a seguir mostra os erros que podem ser acessados de métodos por meio de uma **SoapException** no serviço Web Servidor de Relatórios. Ela foi organizada pelo método ou métodos que lançam a exceção.  

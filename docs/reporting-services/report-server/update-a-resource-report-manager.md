@@ -1,30 +1,28 @@
 ---
-title: "Atualizar um recurso (Gerenciador de Relatórios) | Microsoft Docs"
-ms.custom: 
+title: Atualizar um recurso (Gerenciador de Relatórios) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0a7662d051951a32d15138b8c47c7cf5e6451729
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f994471cffe26d346c8a747fd1460df6bb8319a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-a-resource-report-manager"></a>Atualizar um recurso (Gerenciador de Relatórios)
   É possível atualizar um recurso substituindo-o por uma versão mais recente. Recursos são itens armazenados em um servidor de relatório com conteúdo de um arquivo carregado pelo usuário. Você pode substituir um recurso existente importando conteúdo de arquivo novo ou diferente no recurso existente. A atualização de um recurso fornece um modo de atualizar conteúdo e ao mesmo tempo preservar as propriedades e configurações de segurança já existentes no recurso.  

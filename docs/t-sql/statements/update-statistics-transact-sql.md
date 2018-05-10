@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,13 +25,12 @@ caps.latest.revision: 74
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 99794bf5f9adc7da4106ebffa7ffc27e6b469cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d662031dec5912311d252b3c5a44e2abc5059eba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +147,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
  Para reabilitar o comportamento da opção AUTO_UPDATE_STATISTICS, execute UPDATE STATISTICS novamente sem a opção NORECOMPUTE ou execute **sp_autostats**.  
   
 > [!WARNING]  
->  O uso dessa opção pode produzir planos de consulta de qualidade inferior. É recomendável usar essa opção moderadamente e somente por um administrador de sistema qualificado.  
+> O uso dessa opção pode produzir planos de consulta de qualidade inferior. É recomendável usar essa opção moderadamente e somente por um administrador de sistema qualificado.  
   
  Para obter mais informações sobre a opção AUTO_STATISTICS_UPDATE, veja [Opções de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
@@ -170,7 +167,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
 **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = *max_degree_of_parallelism*  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação estatística. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   

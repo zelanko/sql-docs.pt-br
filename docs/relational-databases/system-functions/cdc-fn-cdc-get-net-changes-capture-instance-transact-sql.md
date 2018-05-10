@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Requer associação na função de servidor fixa sysadmin ou na função de banco de dados fixa db_owner. Para todos os outros usuários, requer a permissão SELECT em todas as colunas capturadas na tabela de origem e, se uma função associada para a instância de captura tiver sido definida, faça associação nessa função de banco de dados. Quando o chamador não tiver permissão para exibir os dados de origem, a função retornará o erro 208 (Nome de objeto inválido).  
   
 ## <a name="remarks"></a>Remarks  
- Se o intervalo de LSN especificado não cair dentro da linha do tempo do rastreamento de alterações da instância de captura, a função retornará o erro 208 (Nome de objeto inválido).  
+ Se o intervalo de LSN especificado não cair dentro da linha do tempo do rastreamento de alterações da instância de captura, a função retornará o erro 208 (Nome de objeto inválido).
+
+ As modificações no identificador exclusivo de uma linha fará com que fn_cdc_get_net_changes mostrar o comando de atualização inicial com uma exclusão e, em seguida, inserir o comando em vez disso.  Esse comportamento é necessário para acompanhar a chave antes e depois da alteração.
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa a função `cdc.fn_cdc_get_net_changes_HR_Department` para relatar as alterações líquidas efetuadas na tabela de origem `HumanResources.Department` durante um intervalo de tempo específico.  

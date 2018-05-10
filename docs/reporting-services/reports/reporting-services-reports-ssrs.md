@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reports
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,12 +17,11 @@ caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 514a36e61bc452a76accdcc6319046ff168aa117
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os relatórios paginados são definições de relatório baseadas em XML que incluem dados de relatório e elementos de layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que você publica um relatório paginado, ele é um item de relatório armazenado no servidor de relatório ou site do SharePoint. Os relatórios paginados são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você também pode [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  

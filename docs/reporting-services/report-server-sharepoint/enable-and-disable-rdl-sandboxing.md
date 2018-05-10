@@ -1,25 +1,23 @@
 ---
 title: Habilitar e desabilitar o RDL Sandboxing para o Reporting Services no modo integrado do SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar e desabilitar o RDL Sandboxing para o Reporting Services no modo integrado do SharePoint
 
@@ -181,7 +179,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
 -   Acrescente a classe à lista de permissões.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
  [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  

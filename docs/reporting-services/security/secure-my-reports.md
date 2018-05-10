@@ -1,16 +1,15 @@
 ---
-title: "Proteger Meus Relatórios | Microsoft Docs"
-ms.custom: 
+title: Proteger Meus Relatórios | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
 - private folders [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1777c84f25373806c3aab4f1c05a0a676b78097f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: db7ab6718c89132a0aabbfdda826db786628dc68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-my-reports"></a>Proteger Meus Relatórios
   O recurso Meus Relatórios fornece uma área de trabalho gerenciada pelo usuário para trabalhar com relatórios. Para funcionar conforme pretendido, a pasta Meus Relatórios requer permissões menos restritivas do que as outras pastas que estão disponíveis para uso geral. Os usuários que têm permissões apenas para exibir e executar relatórios em outras pastas podem precisar de um conjunto maior de permissões para gerenciar suas pastas Meus Relatórios e seu próprio conteúdo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma atribuição de função especializada e uma definição de função para essa finalidade.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
   
  Uma atribuição de função de **Meus Relatórios** consiste nos seguintes elementos:  
   
--   A pasta Meus Relatórios do usuário, que está localizada na pasta Pastas dos Usuários\\*\<username>*\Meus Relatórios.  
+-   A pasta Meus Relatórios do usuário, que está localizada na pasta Pastas dos Usuários\\*\<username>* \Meus Relatórios.  
   
 -   A conta de usuário, que é determinada quando a pasta Meus Relatórios é ativada. Uma pasta é ativada quando o usuário clica em uma pasta Meus Relatórios no Gerenciador de Relatórios ou publica um relatório em uma pasta Meus Relatórios a partir do Designer de Relatórios. Essa pasta também é ativada quando o usuário solicita propriedades no link Meus Relatórios.  
   

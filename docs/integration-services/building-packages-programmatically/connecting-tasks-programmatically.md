@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -25,12 +24,11 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68a62828a3806493f587db281c8622ef04a0fca9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 3bfa1f25ed3dbedf92340112a806bd91de6c0158
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>Conectando tarefas programaticamente
   Uma restrição de precedência, representada no modelo de objeto pela classe <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, estabelece a ordem na qual objetos <xref:Microsoft.SqlServer.Dts.Runtime.Executable> são executados em um pacote. A restrição de precedência permite que a execução dos contêineres e tarefas de um pacote dependam do resultado da execução de uma tarefa ou contêiner anterior. Restrições de precedência são estabelecidas entre pares de objetos <xref:Microsoft.SqlServer.Dts.Runtime.Executable> através da chamada ao método <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> da coleção <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> no objeto contêiner. Depois de criar uma restrição entre dois objetos executáveis, defina a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> para estabelecer os critérios para executar o segundo executável definido na restrição.  

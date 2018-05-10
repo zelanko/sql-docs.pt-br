@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2bf3df5733c9b427f7c34459b95404768d4520d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bbf4b982faa988290573368818f4d75961fd38c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +62,13 @@ WAITFOR
  É o período de tempo especificado que deve decorrer, até no máximo 24 horas, antes que a execução de um lote, procedimento armazenado ou transação prossiga.  
   
  '*time_to_pass*'  
- É o período de tempo a ser aguardado. *time_to_pass* pode ser especificado em um dos formatos aceitáveis para dados de **datetime** ou pode ser especificado como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida.  
+ É o período de tempo a ser aguardado. *time_to_pass* pode ser especificado em um dos formatos aceitáveis para dados de **datetime** ou pode ser especificado como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida. Isso é formatado como hh:mm[[:ss].mss].
   
  TIME  
  É a hora especificada em que o lote, o procedimento armazenado ou a transação é executada.  
   
  '*time_to_execute*'  
- É a hora na qual a instrução WAITFOR é concluída. *time_to_execute* pode ser especificado em um dos formatos aceitáveis para dados de **datetime** ou pode ser especificado como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida.  
+ É a hora na qual a instrução WAITFOR é concluída. *time_to_execute* pode ser especificado em um dos formatos aceitáveis para dados de **datetime** ou pode ser especificado como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida. Isso é formatado como hh:mm[[:ss].mss] e, opcionalmente, pode incluir a data de 1900-01-01.
   
  *receive_statement*  
  É uma instrução RECEIVE válida.  

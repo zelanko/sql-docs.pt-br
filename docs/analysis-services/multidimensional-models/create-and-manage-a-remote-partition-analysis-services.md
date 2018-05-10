@@ -1,34 +1,23 @@
 ---
-title: "Criar e gerenciar uma partição remota (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Criar e gerenciar uma partição remota (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], remote
-- remote partitions [Analysis Services]
-ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb19c147010f0492122e88b21bd12efb43c05376
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Criar e gerenciar uma partição remota (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  
+  Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  
   
  Partições remotas para um cubo (chamado de banco de dados mestre), são armazenadas em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dedicado na instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (chamado de banco de dados secundário).  
   
@@ -131,7 +120,7 @@ Ao particionar um grupo de medidas, você pode configurar um banco de dados secu
 5.  No servidor mestre: clique com o botão direito do mouse no nome do cubo no Gerenciador de Soluções, selecione **Processar** e processe totalmente o cubo.  
   
 ## <a name="administering-remote-partitions"></a>Administrando partições remotas  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte ao processamento paralelo e sequencial de partições remotas. O banco de dados mestre, onde as partições foram definidas, coordena as transações entre todas as instâncias que participam no processamento das partições de um cubo. Os relatórios de processamento são então enviados a todas as instâncias que processaram uma partição.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dá suporte ao processamento paralelo e sequencial de partições remotas. O banco de dados mestre, onde as partições foram definidas, coordena as transações entre todas as instâncias que participam no processamento das partições de um cubo. Os relatórios de processamento são então enviados a todas as instâncias que processaram uma partição.  
   
  Um cubo que contém partições remotas pode ser administrado junto com suas partições em uma única instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Porém, os metadados para a partição remota podem ser exibidos e atualizados somente na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] onde foram definidos a partição e seu cubo pai. A partição remota não pode ser exibida ou atualizada na instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -139,6 +128,6 @@ Ao particionar um grupo de medidas, você pode configurar um banco de dados secu
 >  Embora bancos de dados dedicados a armazenamento de partições remotas não seja exposto a conjuntos de linhas de esquema, os aplicativos que usam AMO (Objetos de Gerenciamento de Análise) ainda podem descobrir um banco de dados dedicado usando o comando Discover do XML for Analysis. Qualquer comando CREATE ou DELETE que é enviado diretamente a um banco de dados dedicado usando um TCP ou cliente de HTTP terá sucesso, mas o servidor retornará um aviso indicando que a ação pode danificar o banco de dados gerenciado de perto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partições & #40; Analysis Services - dados multidimensionais & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

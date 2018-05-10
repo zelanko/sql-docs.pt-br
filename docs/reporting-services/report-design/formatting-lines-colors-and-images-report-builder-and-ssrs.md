@@ -1,16 +1,15 @@
 ---
-title: "Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.textboxproperties.border.f1
 - "10502"
@@ -25,16 +24,15 @@ f1_keywords:
 - "10066"
 - sql13.rtp.rptdesigner.subreportproperties.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 99dbf2e386831ec182c9c3c98680388fdb122314
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1d5774048b8a5e0d0a08869282435f89dca7695c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite formatar linhas, cores, regiões de dados, imagens e outros itens de relatório.  

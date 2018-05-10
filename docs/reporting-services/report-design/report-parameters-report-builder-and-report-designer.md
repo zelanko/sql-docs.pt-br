@@ -1,16 +1,15 @@
 ---
-title: "Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios) | Microsoft Docs"
-ms.custom: 
+title: Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
 - sql13.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -19,16 +18,15 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
   Este tópico descreve os usos comuns dos parâmetros de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , as propriedades que você pode definir e muito mais. Parâmetros de relatório o habilitam a controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório. Você pode usar parâmetros de relatório em relatórios paginados criados no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e no Designer de Relatórios e, também, em relatórios móveis criados no [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Leia mais sobre os [Conceitos de parâmetros de relatório](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
@@ -79,11 +77,11 @@ ms.lasthandoff: 01/09/2018
   
 2.  **parâmetro @SalesDate** O parâmetro @SalesDate é o tipo de dados **DateTime**. O prompt Selecionar uma data é exibido ao lado da caixa de texto. Para modificar a data, digite uma nova data na caixa de texto ou use o controle de calendário.  
   
-3.   **parâmetro@ShowAll** O parâmetro @ShowAll é o tipo de dados **Booliano**. Use os botões de opção para especificar **True** ou **False**.  
+3.  **parâmetro@ShowAll** O parâmetro @ShowAll é o tipo de dados **Booliano**. Use os botões de opção para especificar **True** ou **False**.  
   
 4.  **Identificador Mostrar ou Ocultar Área de Parâmetros** Na barra de ferramentas do visualizador de relatórios, clique nessa seta para mostrar ou ocultar o painel de parâmetros.  
   
-5.   **parâmetro@CategoryQuota** O parâmetro @CategoryQuota é o tipo de dados **Float** e, portanto, usa um valor numérico.  @CategoryQuota está definido para permitir vários valores.  
+5.  **parâmetro@CategoryQuota** O parâmetro @CategoryQuota é o tipo de dados **Float** e, portanto, usa um valor numérico.  @CategoryQuota está definido para permitir vários valores.  
   
 6.  **Exibir Relatório**  Após inserir os valores de parâmetro, clique em **Exibir Relatório** para executar o relatório. Se todos os parâmetros tiverem valores padrão, o relatório será executado automaticamente na primeira exibição.  
   

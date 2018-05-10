@@ -1,27 +1,25 @@
 ---
-title: "Região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3e08fe0bcf2fd5c2285eea6c0c43e494e8a0f50
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0d5360091fbf0ece381b8b7444fdd8e225238563
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Região de dados Tablix (Construtor de Relatórios e SSRS)
   No, [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], a região de dados Tablix é um item de relatório de layout generalizado que exibe dados de relatórios paginados em células organizadas em linhas e em colunas. Os dados do relatório podem ser dados detalhados, já que são recuperados da fonte de dados, ou dados detalhados agregados, organizados em grupos especificados. Cada célula tablix pode conter um item de relatório, como uma caixa de texto ou uma imagem, ou outra região de dados, como uma região, um gráfico ou um medidor tablix. Para adicionar vários itens de relatório a uma célula, adicione primeiro um retângulo para atuar como contêiner. Em seguida, adicione os itens de relatório ao retângulo.  

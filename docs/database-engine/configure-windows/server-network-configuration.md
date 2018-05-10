@@ -3,15 +3,12 @@ title: Configuração de rede do servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -25,12 +22,11 @@ caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 43467af34ad8e6fde2fc8874ace1e6f7f2fa17e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-network-configuration"></a>Configuração de rede do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.lasthandoff: 04/16/2018
  Quando configurado para portas dinâmicas, a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá ser alterada sempre que o programa for iniciado. Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um firewall, é necessário abrir a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar uma porta específica, assim você pode configurar o firewall para permitir a comunicação com o servidor. Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Alterando um pipe nomeado  
- É possível configurar o protocolo de pipe nomeado para escutar em um pipe nomeado designado. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta no pipe \\\\.\pipe\sql\query da instância padrão e \\\\.\pipe\MSSQL$*\<instancename>*\sql\query de uma instância nomeada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode escutar somente em um pipe nomeado, mas, se desejar, é possível alterar o pipe para outro nome. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar o pipe no momento da conexão. Para obter mais informações, veja [Como configurar um servidor para escuta em um pipe alternativo &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ É possível configurar o protocolo de pipe nomeado para escutar em um pipe nomeado designado. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta no pipe \\\\.\pipe\sql\query da instância padrão e \\\\.\pipe\MSSQL$*\<instancename>* \sql\query de uma instância nomeada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode escutar somente em um pipe nomeado, mas, se desejar, é possível alterar o pipe para outro nome. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar o pipe no momento da conexão. Para obter mais informações, veja [Como configurar um servidor para escuta em um pipe alternativo &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forçar criptografia  
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser configurado para exigir criptografia ao comunicar-se com aplicativos cliente. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

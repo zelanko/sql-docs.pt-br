@@ -3,15 +3,13 @@ title: Espelhamento de Banco de Dados – estabelecer a sessão – Autenticaç�
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
@@ -20,12 +18,11 @@ caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a3f3693577ca93afe7379f3924a67b844afdc5e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 882dbea7185d4e2aa5f14e7e4abd61ffcfbc0521
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Espelhamento de Banco de Dados – estabelecer a sessão – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
-     Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância do servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você poderá atribuir a função de parceiro ao ponto de extremidade (ROLE**=**PARTNER). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
+     Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância do servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você poderá atribuir a função de parceiro ao ponto de extremidade (ROLE**=** PARTNER). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
   
      Para executar uma instrução SET PARTNER, o STATE dos pontos de extremidade de ambos os parceiros deve ser definido como STARTED.  
   
@@ -77,7 +74,7 @@ ms.lasthandoff: 04/16/2018
   
      A sintaxe para um endereço de rede do servidor é a seguinte:  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
      em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

@@ -1,30 +1,28 @@
 ---
-title: "Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f0429e82811f1acc05d50f579f9b8d46e975246
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cd2c743dbff40d700bf50533028994bf78fb40fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos termos para descrever um relatório paginado em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  

@@ -1,31 +1,23 @@
 ---
-title: "Membros calculados em subseleções e subcubos | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Membros calculados em subseleções e subcubos | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 87571f35126108d164293b2791ec13f90921de6f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membros calculados em subseleções e subcubos
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Um membro calculado é um membro da dimensão cujo valor é calculado a partir de uma expressão em tempo de execução e pode ser usado em subseleções e subcubos para definir com mais precisão o cubespace de uma consulta.  
+  Um membro calculado é um membro da dimensão cujo valor é calculado a partir de uma expressão em tempo de execução e pode ser usado em subseleções e subcubos para definir com mais precisão o cubespace de uma consulta.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Permissão de membros calculados no subespaço  
  A propriedade de cadeia de conexão **SubQueries** na propriedade <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROPMSMDSUBQUERIES** em [Propriedades XMLA com suporte &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) define o comportamento ou a permissão de membros ou conjuntos calculados em subseleções ou subcubos. No contexto deste documento, subseleção se refere a subseleções e subcubos, exceto quando indicado o contrário.  
@@ -132,6 +124,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Subseleções em consultas](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Propriedades XMLA suportadas &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Propriedades XMLA suportadas & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

@@ -1,27 +1,25 @@
 ---
-title: "Planejar um relatório de mapa (Construtor de Relatórios e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Planejar um relatório de mapa (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d934c4314aa149c4e220fc0b91a9cc182083f6d6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0e70da5054e3a5211f98dffedcf9eafff7c4b3b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
 Bons relatórios apresentam informações que levam a ações ou ideias. Para apresentar dados analíticos como totais de vendas ou dados demográficos em relação a uma tela de fundo geográfica, você pode adicionar um mapa a seu relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Um mapa pode conter várias camadas, onde cada uma exibe elementos de mapas que são definidos por um tipo específico de dados espaciais: pontos que representam locais, linhas que representam rotas ou polígonos que representam áreas. Você pode associar seus dados analíticos a elementos de mapas em cada camada.  

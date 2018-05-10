@@ -1,16 +1,15 @@
 ---
-title: "Gerar scripts com o utilitário rs.exe e o serviço Web | Microsoft Docs"
-ms.custom: 
+title: Gerar scripts com o utilitário rs.exe e o serviço Web | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Web service [Reporting Services], scripts
 - rs utility
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 19a8ddb14a675d691fc2b13871584c769ad2abd8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 39b5c111ceab0c9b27a5c0153556b2e2560f3b2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Gerar scripts com o utilitário rs.exe e o serviço Web
   Desenvolvedores e administradores de servidor de relatório podem executar operações em um servidor de relatório por meio do utilitário **rs** (RS.exe). Com esse utilitário, é possível administrar de forma programática um servidor de relatório usando scripts gravados com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
   
  Para exemplos de script, consulte o seguinte:  
   
- [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

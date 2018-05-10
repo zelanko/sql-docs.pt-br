@@ -1,33 +1,32 @@
 ---
-title: "Identificando o estado de execução | Microsoft Docs"
-ms.custom: 
+title: Identificando o estado de execução | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service-net-framework-soap-headers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b3d94c2de26ebdb1256812b4aad40f8a2c1f1653
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8982468d41b93dd669005011e22d2765d06b0083
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-execution-state"></a>Identificando o estado de execução
   O HTTP (Hypertext Transfer Protocol) é um protocolo sem-conexão e sem-estado, o que significa que ele não indica automaticamente se diferentes solicitações provêm do mesmo cliente ou até se uma única instância de navegador ainda está visualizando ativamente uma página ou site. As sessões criam uma conexão lógica para manter o estado entre servidor e cliente por meio do HTTP. As informações específicas para o usuário, pertinentes a uma sessão específica, são conhecidas como o estado da sessão.  

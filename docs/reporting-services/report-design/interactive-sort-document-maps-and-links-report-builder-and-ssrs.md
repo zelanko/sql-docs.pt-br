@@ -1,27 +1,25 @@
 ---
-title: "Classificação interativa, mapas do documento e links (Construtor de Relatórios e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Classificação interativa, mapas do documento e links (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31065c6544f6c93e913ceb9f55a5bc8a804db983
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1f1e305dbb657fcb675767e2489cc12bc30fdd50
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Classificação interativa, mapas de documentos e links (Construtor de Relatórios e SSRS)
   Em ambientes baseados na Web, você pode adicionar alguns recursos que permitem aos usuários interagir com relatórios. Seus usuários podem alterar a ordem de classificação de valores no relatório, mostrar ou ocultar itens no relatório ou clicar em links que vão para outros relatórios ou páginas da Web. Você também pode adicionar um índice ou um mapa do documento. Seus usuários de relatório podem clicar em itens do sumário ou do mapa do documento e ir diretamente para áreas de um relatório.  
