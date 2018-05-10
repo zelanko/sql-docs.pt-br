@@ -1,16 +1,15 @@
 ---
-title: "Adicionar e remover chaves de criptografia para implantação escalável | Microsoft Docs"
-ms.custom: 
+title: Adicionar e remover chaves de criptografia para implantação escalável | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - deleting encryption keys
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0b7c90c1760c555f0099d9a6ea8fc675d0bd0719
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c2da984572976c511a2d373b7f2d50a923a96ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Adicionar e remover chaves de criptografia para implantação em expansão
   É possível executar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um modelo de implantação de expansão com a configuração de vários servidores de relatório para usarem um banco de dados do servidor de relatório compartilhado. A associação em uma implantação de expansão tem como base o fato de o servidor de relatório armazenar uma chave de criptografia no banco de dados do servidor de relatório. Você pode controlar a associação de implantação de expansão pela adição ou remoção de chaves de criptografia para instâncias específicas do servidor de relatório. Se estiver removendo nós da implantação, você poderá os removê-los em qualquer ordem. Se estiver adicionando nós a uma implantação, você deverá unir quaisquer novas instâncias de um servidor de relatório que já faça parte da implantação.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  Execute **rskeymgmt.exe** localmente no computador que hospeda um servidor de relatório que já seja um membro da implantação de expansão do servidor de relatório.  
   
-2.  Use o argumento **-j** para unir um servidor de relatório ao banco de dados do servidor de relatório. Use o utilitário **-m** r **-n** para especificar a instância do servidor de relatório remoto que deseja adicionar à implantação. Use os argumentos **-u** e **-v** para especificar uma conta de administrador no computador remoto. Se estiver criando uma implantação de expansão com o uso de várias instâncias de servidor de relatório no mesmo computador, a sintaxe a ser usada é um pouco diferente. Para obter mais informações sobre a sintaxe que deve ser usada, consulte [Utilitário rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Use o argumento **-j** para unir um servidor de relatório ao banco de dados do servidor de relatório. Use os argumentos **-m** r **-n** para especificar a instância do servidor de relatório remoto que deseja adicionar à implantação. Use os argumentos **-u** e **-v** para especificar uma conta de administrador no computador remoto. Se estiver criando uma implantação de expansão com o uso de várias instâncias de servidor de relatório no mesmo computador, a sintaxe a ser usada é um pouco diferente. Para obter mais informações sobre a sintaxe que deve ser usada, consulte [Utilitário rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      O exemplo a seguir ilustra os argumentos que devem ser especificados se você estiver associando um servidor de relatório remoto a uma implantação de expansão (essas credenciais podem ser omitidas se você tiver permissões de administrador no computador remoto):  
   

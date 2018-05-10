@@ -1,27 +1,25 @@
 ---
-title: "Relatórios móveis do SQL Server: Passo a passo completo | Microsoft Docs"
-ms.custom: 
+title: 'Relatórios móveis do SQL Server: Passo a passo completo | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.
@@ -31,7 +29,7 @@ Crie relatórios móveis em uma superfície de design com linhas de grade e colu
 Este artigo orienta você pela:   
   
 - Criação de uma fonte de dados e conjunto de dados compartilhados no portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , usando o banco de dados AdventureWorks como uma fonte de dados de exemplo.  
-- Criar um relatório móvel do Reporting Services no [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- Criação de um relatório móvel do Reporting Services no [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - Publicação do relatório móvel no portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
 - Exibição do relatório móvel no aplicativo móvel do Power BI.  
   
@@ -151,7 +149,7 @@ Ao abrir pela primeira vez o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilerep
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
-   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] é aberto na grade de layout mestre.  
+   O[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] é aberto na grade de layout mestre.  
   
 2. Na guia **Layout** , role para baixo até a seção Gráficos.  
   
@@ -305,7 +303,7 @@ Toque na guia **KPIs** ou **Relatórios Móveis** .
   
 Os KPIs e os relatórios móveis são exibidos nas mesmas pastas que estão no portal da Web do Reporting Services.   
   
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>Confira também  
  
 -  Exibir [KPIs e relatórios móveis do Reporting Services no aplicativo de iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
 -  Exibir [KPIs e relatórios móveis do Reporting Services no aplicativo de iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  

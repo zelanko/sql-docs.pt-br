@@ -1,27 +1,25 @@
 ---
-title: "Adicionar navegadores a relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Adicionar navegadores a relatórios móveis do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 672e1d91d042900da427e357d630eacbb98052b0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a4a4b4c717ae7a8d7fffa772738c6bdb4aeb2fee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 Em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], adicione os *navegadores* para filtrar os dados nas visualizações por hora ou por seleção. 
@@ -127,7 +125,7 @@ Você pode decidir quais visualizações no relatório móvel um navegador filtr
   
 Os filtros também podem ser colocados em cascata para que o valor selecionado em um filtre os valores disponíveis em outro. Para colocar os filtros em cascata, aplique os filtros à coluna de chave, como faria em um elemento comum da galeria.  
 
-### <a name="see-also"></a>Consulte também 
+### <a name="see-also"></a>Confira também 
   
 * [Mapas nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Visualizações nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

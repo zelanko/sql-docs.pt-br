@@ -1,28 +1,27 @@
 ---
-title: "Tutorial: Formatar texto (Construtor de Relatórios) | Microsoft Docs"
-ms.custom: 
+title: 'Tutorial: Formatar texto (Construtor de Relatórios) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e5791f58be1674011744036de4c6ddd5c5c90754
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c4135b411028d38a8c3ac91ed381e8c1708a8a66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
 
@@ -227,7 +226,7 @@ Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterio
   
 3.  Na guia **Ação** , clique em **Ir para URL**.  
   
-5.  Na caixa **Selecionar URL** , clique em **[URL]**e em **OK**.  
+5.  Na caixa **Selecionar URL** , clique em **[URL]** e em **OK**.  
   
 6.  Observe que o texto não parece diferente. Você precisa fazê-lo parecer um texto de link.  
   

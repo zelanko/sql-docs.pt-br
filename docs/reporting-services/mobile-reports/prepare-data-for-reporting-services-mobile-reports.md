@@ -1,27 +1,25 @@
 ---
-title: "Preparar dados para relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Preparar dados para relatórios móveis do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f995ee637ce4a05f3f4339abf363e02ff96f6f95
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 731b28c5f2f269d9527a7ba846beec747680ffe5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparar dados para relatórios móveis do Reporting Services
   
@@ -89,7 +87,7 @@ Nesta tabela, os itens de ParentKey primeiro são listados na coluna ItemKey, em
 | Hardware e equipamentos de tecnologia   | Tecnologia da informação |  
 | Serviços de telecomunicação |Tecnologia da informação |  
   
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>Confira também  
 - [Preparar dados do Excel para relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [Reter a formatação de data para Analysis Services em relatórios móveis](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)

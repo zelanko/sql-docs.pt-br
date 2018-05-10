@@ -1,28 +1,26 @@
 ---
-title: "Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server | Microsoft Docs"
-description: "Saiba mais sobre os relatórios móveis do Reporting Services para dispositivos móveis, conectados a dados locais, com uma variedade de visualizações de dados."
-ms.custom: 
+title: Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server | Microsoft Docs
+description: Saiba mais sobre os relatórios móveis do Reporting Services para dispositivos móveis, conectados a dados locais, com uma variedade de visualizações de dados.
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5109bc0d5fddfa5a69f0880b2167615ac860f3ba
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ef6d130944b67f35140652fcf81be27d1e4aae91
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server
 Saiba mais sobre relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , otimizados para dispositivos móveis e conectados a dados locais, com uma variedade de visualizações de dados. 

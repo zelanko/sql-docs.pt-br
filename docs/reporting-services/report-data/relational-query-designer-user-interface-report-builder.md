@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-data
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -22,12 +21,11 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 23924ef7630d41ea1d60d34a4a131d004b2d8aa7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta relacional (Construtor de Relatórios)
   O Construtor de Relatórios e o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fornecem um designer de consulta gráfica e um designer de consulta com base em texto para ajudá-lo a criar uma consulta que especifique os dados a serem recuperados dos bancos de dados relacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/09/2018
   
      Use o painel de dados do relatório para exibir o conjunto de campos de um conjunto de dados de relatório. Esses campos representam os dados que você pode exibir em tabelas, gráficos e outros itens de relatório ao exibir um relatório.  
   
--   **Grupo e Agregação** Alterna o uso do agrupamento e das agregações na consulta. Se você desativar o recurso de agrupamento e agregação depois de adicionar o agrupamento e as agregações, eles serão removidos. O texto **(nenhum)**indica que não é usado nenhum agrupamento ou agregação. Se você reativar o recurso de agrupamento e agregação, o agrupamento e as agregações anteriores serão restaurados.  
+-   **Grupo e Agregação** Alterna o uso do agrupamento e das agregações na consulta. Se você desativar o recurso de agrupamento e agregação depois de adicionar o agrupamento e as agregações, eles serão removidos. O texto **(nenhum)** indica que não é usado nenhum agrupamento ou agregação. Se você reativar o recurso de agrupamento e agregação, o agrupamento e as agregações anteriores serão restaurados.  
   
 -   **Excluir Campo** Exclui o campo selecionado.  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **Editar Campos** Abre a caixa de diálogo **Editar Campos Relacionados** na qual você adiciona e modifica relações entre tabelas. Você escolheu os campos nas tabelas direita e esquerda a serem unidos. É possível unir vários campos da tabela esquerda e da tabela direita para especificar várias condições de junção em uma relação. Os dois campos que unem as tabelas esquerda e direita não precisam ter o mesmo nome. Os campos unidos devem ter tipos de dados compatíveis.  
   
--   **Excluir Relação**  Exclui a relação selecionada**.**  
+-   **Excluir Relação**  Exclui a relação selecionada **.**  
   
 -   **Mover para Cima** e **Mover para Baixo** Move relações para cima ou para baixo na lista de **Relações** . A sequência na qual as relações são colocadas na consulta pode afetar os resultados da consulta. As relações são adicionadas à consulta na ordem em que são exibidas na lista de **Relações** .  
   

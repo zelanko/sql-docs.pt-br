@@ -1,27 +1,25 @@
 ---
-title: "Modo de exibição de Design do conjunto de dados compartilhado (Construtor de Relatórios) | Microsoft Docs"
-ms.custom: 
+title: Modo de exibição de Design do conjunto de dados compartilhado (Construtor de Relatórios) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1301fbcb05441ea09d6eb6e7450ce0d050aaa65
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7348789d794cb10892ed4a6c7f22c68b1bfb75cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Exibição do design de conjunto de dados compartilhados (Construtor de Relatórios)
   Em um relatório, um conjunto de dados representa dados de relatório retornados em virtude da execução de um consulta em uma fonte de dados externa. Conjuntos de dados compartilhados são publicados em um servidor de relatório e podem ser usados por vários relatórios. Você pode criar conjuntos de dados para compartilhar com outras pessoas. Na janela Design de Conjunto de Dados Compartilhado, você pode selecionar uma fonte de dados compartilhada, especificar as propriedades do conjunto de dados compartilhado e criar uma consulta no designer de consultas.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 01/09/2018
   
  Quando um autor de relatório adiciona esse conjunto de dados compartilhado a um relatório, um ponteiro para a definição de conjunto de dados no servidor de relatório é adicionado. No relatório, a coleção de campos de conjunto de dados é exibida no painel de dados do relatório. O texto da consulta não está disponível.  
   
- As credenciais que você usa para executar uma consulta são independentes das credenciais usadas para visualizar um relatório ou executar um relatório do servidor de relatório. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+ As credenciais que você usa para executar uma consulta são independentes das credenciais usadas para visualizar um relatório ou executar um relatório do servidor de relatório. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Executando um relatório com parâmetros  
  Quando uma consulta inclui variáveis de consulta, os parâmetros de conjunto de dados são criados automaticamente. Por sua vez, quando você conclui a criação da consulta de conjunto de dados, os parâmetros da consulta definidos como parâmetros de conjunto de dados são criados automaticamente.  

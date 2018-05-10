@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 00ed2233653ea5a98fdc389bbfc470f65c817f3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,8 @@ column_name AS computed_column_expression
     >  Como cada linha de uma tabela pode ter valores diferentes para as colunas envolvidas em uma coluna computada, a coluna computada poderá não ter o mesmo resultado para cada linha.  
   
 PERSISTED  
- Especifica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazenará fisicamente os valores computados na tabela e atualizará os valores quando for atualizada qualquer outra coluna da qual a coluna computada depende. Marcar uma coluna computada como PERSISTED permite que um índice seja criado em uma coluna computada que é determinística, mas não precisa. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Qualquer coluna computada usada como coluna de particionamento de uma tabela particionada deve ser marcada explicitamente PERSISTED. *computed_column_expression* deve ser determinística quando PERSISTED é especificado.  
+ Especifica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazenará fisicamente os valores computados na tabela e atualizará os valores quando for atualizada qualquer outra coluna da qual a coluna computada depende. Marcar uma coluna computada como PERSISTED permite que um índice seja criado em uma coluna computada que é determinística, mas não precisa. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Qualquer coluna computada usada como coluna de particionamento de uma tabela particionada deve ser marcada explicitamente PERSISTED. *computed_column_expression* deve ser determinística quando PERSISTED é especificado. 
+
 NULL | NOT NULL  
  Especifica se são permitidos valores nulos na coluna. NULL não é estritamente uma restrição, mas pode ser especificado como NOT NULL. NOT NULL poderá ser especificado para colunas computadas somente se PERSISTED também for especificado.  
   
@@ -116,7 +114,8 @@ ON DELETE { **NO ACTION** | CASCADE }
  Especifica a ação que acontece nas linhas da tabela, se essas linhas tiverem uma relação referencial e a linha referenciada for excluída da tabela pai. O padrão é NO ACTION.  
   
 NO ACTION  
- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro e a ação de excluir na linha da tabela pai é revertida.  
+ O [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro e a ação de excluir na linha da tabela pai é revertida.
+
 CASCADE  
  As linhas correspondentes serão excluídas da tabela de referência se aquela linha for excluída da tabela pai.  
   
@@ -155,5 +154,3 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  
