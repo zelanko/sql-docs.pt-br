@@ -1,27 +1,25 @@
 ---
-title: "Habilitar um servidor de relatório para acesso ao Power BI Mobile | Microsoft Docs"
+title: Habilitar um servidor de relatório para acesso ao Power BI Mobile | Microsoft Docs
 ms.date: 12/17/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 50223aba5cb1fecaf8da2ef7f09e8f6ddd36e3d1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 75c076dc02b7f268472a61270f8a1053d1a391cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Habilitar um servidor de relatórios para acesso ao Power BI Móvel
 Você pode usar o aplicativo Power BI Móvel para consumir relatórios móveis. Há algumas coisas que você precisa configurar para permitir que o aplicativo Power BI Móvel conecte-se ao Reporting Services.  
@@ -55,7 +53,7 @@ Para obter mais informações sobre como habilitar o SSL, consulte [Configurar c
   
 Para obter mais informações sobre como configurar o Firewall do Windows, consulte [Configurar um firewall para acesso ao servidor de relatórios](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
   
 [Configurar autenticação básica no Servidor de Relatório](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 [Configurar conexões SSL em um servidor de relatórios do modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  

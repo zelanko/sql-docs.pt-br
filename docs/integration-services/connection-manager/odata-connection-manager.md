@@ -3,7 +3,6 @@ title: Gerenciador de Conexões OData | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
@@ -11,7 +10,7 @@ ms.custom: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 9
 f1_keywords:
@@ -20,12 +19,11 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 67bb8489c9dd702f26f8d17ec85e8f59f353476b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 124877025d9e01c7d00f8693093a4227680c145d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
  Conecte-se a uma fonte de dados OData com um gerenciador de conexões OData. Um Componente do OData Source usa um gerenciador de conexões OData para se conectar a uma fonte de dados OData e consumir dados do serviço. Para obter mais informações, consulte [OData Source](../../integration-services/data-flow/odata-source.md).  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
@@ -30,12 +29,11 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf3b65d6edc62d54cde5a9734b75be329f0427cd
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 92a4dc48daa318821dc1849094f66b046d80da20
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desenvolvendo uma interface do usuário para um componente de fluxo de dados
   Os desenvolvedores de componentes podem fornecer uma interface de usuário personalizada para um componente, que é exibida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando o componente é editado. A implementação de uma interface de usuário personalizada fornece a você uma notificação quando o componente é adicionado a ou excluído de uma tarefa de fluxo de dados, e quando é solicitada ajuda para o componente.  

@@ -1,31 +1,29 @@
 ---
-title: "Abrir e fechar um relatório (Gerenciador de Relatórios) | Microsoft Docs"
-ms.custom: 
+title: Abrir e fechar um relatório (Gerenciador de Relatórios) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 739f52788b8f8d4d47e8aa0a6b20f9479f087e1d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 034e566858cda5fcc150d807d4a74ff3937e16b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir e fechar um relatório (Gerenciador de Relatórios)
   Você pode usar o Gerenciador de Relatórios para exibir relatórios publicados em um servidor de relatório. Por padrão, todos os relatórios são abertos em HTML. Depois de abrir um relatório, é possível exportá-lo para exibi-lo em outros formatos de aplicativo. Se o relatório possuir recursos interativos ou se for um relatório do Construtor de Relatórios que contiver dados interativos, clique nos links para exibir relatórios ou dados adicionais.  

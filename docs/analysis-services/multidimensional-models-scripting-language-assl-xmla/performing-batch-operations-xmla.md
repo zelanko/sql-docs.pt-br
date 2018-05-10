@@ -1,38 +1,19 @@
 ---
-title: "Executando operações em lote (XMLA) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- multiple projects
-- XML for Analysis, batches
-- parallel batch execution [XMLA]
-- transactional batches
-- serial batch execution [XMLA]
-- XMLA, batches
-- batches [XML for Analysis]
-- nontransactional batches
-ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 
-author: Minewiskan
+title: Executando operações em lote (XMLA) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7fcf1074de0d233c3df24ddf1696e26a8d3bd84a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
   Você pode usar o [lote](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) do XML for Analysis (XMLA) para executar vários comandos XMLA usando um único XMLA [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) método. Você pode executar vários comandos contidos no **lote** comando como uma única transação ou em transações individuais para cada comando, em série ou em paralelo. Você também pode especificar associações fora de linha e outras propriedades no **lote** comando para processar vários [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
  Se qualquer comando falhar em um lote transacional, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reverterá qualquer comando no **lote** comandos executados antes do comando que falhou e o **lote** comando encerra imediatamente. Quaisquer comandos no **lote** comando que ainda não foram executados não são executados. Após o **lote** comando termina, o **lote** comando relata os erros que ocorreram para o comando falha.  
   
- **Nontransactional**  
+ **Não transacional**  
  Se o **transação** atributo é definido como false, o **lote** comando executa cada comando contido pelo **lote** comando em uma transação separada – um  *não transacionais* em lotes. Se qualquer comando falhar em um lote não transacional, o **lote** comando continuará a executar comandos após o comando que falhou. Após o **lote** comando tenta executar todos os comandos que o **lote** comando contém, o **lote** comando relata os erros que ocorreram.  
   
  Todos os resultados retornados por comandos contidos em um **lote** comando são retornados na mesma ordem em que os comandos contidos no **lote** comando. Os resultados retornados por uma **lote** comando variam com base em se o **lote** comando é transacional ou não transacional.  
@@ -128,8 +109,8 @@ ms.lasthandoff: 02/15/2018
     >  Um **processo** comando não pode incluir o **associações**, **DataSource**, **DataSourceView**, ou **ErrorConfiguration**  propriedades, se o **processo** comando está contido em um **lote** comando. Se for necessário especificar essas propriedades para um **processo** command, forneça as informações necessárias nas propriedades correspondentes do **lote** comando que contém o **processo** comando.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento batch &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Elemento Process &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
+ [Elemento batch & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Processar o elemento &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

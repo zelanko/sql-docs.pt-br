@@ -1,37 +1,23 @@
 ---
-title: "Implantação de soluções de mineração de dados | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Implantação de soluções de mineração de dados | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], deploying
-- deploying [Analysis Services], production environments
-- deploying [Analysis Services - data mining]
-- solutions [Analysis Services], deploying
-- models [Analysis Services], data mining
-ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 192601b35384308e4c75e8a62294cf383c75f29c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implantação de soluções de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-A última etapa no processo de mineração de dados é implantar os modelos para um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
+  A última etapa no processo de mineração de dados é implantar os modelos para um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
   
 -   Use os modelos para criar previsões e tomar decisões comerciais. Para obter informações sobre as ferramentas que você pode usar para criar consultas, consulte [Ferramentas de Consulta de Data Mining](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -91,6 +77,6 @@ A última etapa no processo de mineração de dados é implantar os modelos para
 ## <a name="see-also"></a>Consulte também  
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Ferramentas de Consulta de Mineração de Dados](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Processamento de requisitos e considerações sobre &#40; mineração de dados &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Processamento de requisitos e considerações sobre & #40; mineração de dados & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

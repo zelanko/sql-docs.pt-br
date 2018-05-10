@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
@@ -18,12 +17,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: dd313455388e0447f3ddf0acba5203110086090c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ba428db233723e060ceb62886ac0bf748794893
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatando itens de relatório (Construtor de Relatórios e SSRS)
   A formatação dos itens do relatório torna-o mais atraente e legível. Você pode formatar as caixas de texto e itens específicos das caixas de texto, as imagens, as expressões e os dados no modo de design de relatório.  

@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
@@ -18,12 +17,11 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 5753323aaf5d0dad99354441a6d44bbaecb2e845
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5a2f13d7a3931656ba166a14a71ef45f7c8b83ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
   Antes de poder usar o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou o serviço Web Servidor de Relatório, é necessário configurar, pelo menos, uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo “somente arquivos” (ou seja, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo.  

@@ -1,32 +1,30 @@
 ---
-title: "Solução de problemas de relatório do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Solução de problemas de relatório do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9546aaea0b177552fa83095c342a24a2e0f954e9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cb93c59cec663a99ebc0460d948f4c2bd0a78f94
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solucionar problemas de relatório do Reporting Services
 Este tópico ajuda você a solucionar problemas com design de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , visualização de um relatório, publicação de um relatório em um servidor de relatório em modo nativo ou em modo SharePoint, exibindo um relatório no servidor de relatório ou exportando um relatório para um formato de arquivo diferente.  
 ## <a name="monitor-report-servers"></a>Monitorar Servidores de Relatório  
-Você pode usar ferramentas de sistema e de banco de dados para monitorar a atividade do servidor de relatório. Você também pode exibir arquivos de log de rastreamento do servidor de relatório ou consultar o log de execução do servidor de relatório para obter informações detalhadas sobre relatórios específicos. Se estiver usando o Monitor de Desempenho, você poderá adicionar contadores de desempenho para o serviço Web Servidor de Relatórios e o serviço do Windows para identificar afunilamentos em processamentos sob demanda ou agendados.  
+Você pode usar ferramentas de sistema e de banco de dados para monitorar a atividade do servidor de relatório. Você também pode exibir arquivos de log de rastreamento do servidor de relatório ou consultar o log de execução do servidor de relatório para obter informações detalhadas sobre relatórios específicos. Se estiver usando o Monitor de Desempenho, você poderá adicionar contadores de desempenho para o serviço Web Servidor de Relatórios e o serviço do Windows para identificar gargalos em processamentos sob demanda ou agendados.  
 Para obter mais informações, consulte [Monitoramento do Desempenho do Servidor de Relatório](../../reporting-services/report-server/monitoring-report-server-performance.md).  
   
   

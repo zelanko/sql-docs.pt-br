@@ -1,16 +1,15 @@
 ---
-title: "Criar e gerenciar atribuições de função | Microsoft Docs"
-ms.custom: 
+title: Criar e gerenciar atribuições de função | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - roles [Reporting Services], assignments
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0e8cc3d577c678b60ead9a5e5e7983980059a728
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d247f3cc6e469eec21d92a4cb337d68ece8fd6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
   Uma *atribuição de função* é uma política de segurança que determina se um usuário ou grupo pode acessar um item de servidor de relatório específico ou executar uma operação. Uma atribuição de função consiste em um único nome de conta de usuário ou grupo e em uma ou mais definições de função.  

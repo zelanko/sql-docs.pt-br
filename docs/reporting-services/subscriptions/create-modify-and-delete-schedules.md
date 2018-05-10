@@ -1,16 +1,15 @@
 ---
 title: Criar, modificar e excluir agendamentos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6d89557d71739545d4f119363273951a20953429
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 560b4fff1069b2e29ca5847d5bf00f1a363976a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Use este tópico para aprender a criar, modificar e excluir agendas compartilhadas do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Para gerenciar agendas programadas para modo nativo, use a página Agendas no portal da Web ou a pasta Agendas Compartilhadas no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para o modo do SharePoint, use as páginas de gerenciamento para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

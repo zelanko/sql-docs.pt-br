@@ -1,28 +1,26 @@
 ---
 title: Os bancos de dados Oracle CDC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Os bancos de dados Oracle CDC
   Uma Instância do Oracle CDC está associada a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo mesmo nome na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados é chamado de banco de dados Oracle CDC (ou banco de dados CDC).  
@@ -104,7 +102,7 @@ ms.lasthandoff: 02/15/2018
 |Item|Description|  
 |----------|-----------------|  
 |version|Isto mantém o controle da versão da configuração de instância CDC. Ela é atualizada a cada hora que a tabela é atualizada e a cada hora que uma nova instância de captura é adicionada ou uma instância de captura existente é removida.|  
-|connect_string|Uma cadeia de conexão da Oracle. Um exemplo básico é:<br /><br /> `<server>:<port>/<instance>` (por exemplo, `erp.contoso.com:1521/orcl`).<br /><br /> A cadeia de conexão também pode especificar um descritor de conexão do Oracle Net, por exemplo, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se estiver usando um servidor de diretório ou tnsnames, a cadeia de conexão pode ser o nome da conexão.<br /><br /> Para obter mais informações sobre cadeias de conexão de banco de dados da Oracle, consulte [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) para o Oracle Instant Client que é usado pelo Serviço Oracle CDC.|  
+|connect_string|Uma cadeia de conexão da Oracle. Um exemplo básico é:<br /><br /> `<server>:<port>/<instance>` (por exemplo, `erp.contoso.com:1521/orcl`).<br /><br /> A cadeia de conexão também pode especificar um descritor de conexão do Oracle Net, por exemplo, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se estiver usando um servidor de diretório ou tnsnames, a cadeia de conexão pode ser o nome da conexão.<br /><br /> Para obter mais informações sobre cadeias de conexão de banco de dados da Oracle, veja [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) para o Oracle Instant Client que é usado pelo Serviço Oracle CDC.|  
 |use_windows_authentication|Um valor booliano que pode ser:<br /><br /> **0**: um nome de usuário da Oracle e senha é fornecida para autenticação (o padrão)<br /><br /> **1**: a autenticação do Windows é usada para conectar ao banco de dados da Oracle. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.|  
 |username|O nome do usuário do banco de dados de mineração de logs da Oracle. Isso só será obrigatório se **use_windows_authentication = 0**.|  
 |password|A senha para o usuário do banco de dados de mineração de logs da Oracle. Isso só será obrigatório se **use_windows_authentication = 0**.|  

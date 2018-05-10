@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
@@ -18,12 +17,11 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8faf295d4afa2967adaa1bcb922f8b360bbc138e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f556e8d26ab7652edfdef620d30de00bd0a0b7db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos (Gerenciador de Configurações)
   Use a página **Configurações de Assinatura** do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma conta de compartilhamento de arquivos para servidores de relatório no modo nativo e assinaturas de compartilhamento de arquivos. A conta de compartilhamento de arquivos permite que você use um único conjunto de credenciais em várias assinaturas que enviam relatórios para um compartilhamento de arquivos. Quando for o momento de alterar as credenciais, você configura a alteração da conta de compartilhamento de arquivos e não precisa atualizar cada assinatura individual.  

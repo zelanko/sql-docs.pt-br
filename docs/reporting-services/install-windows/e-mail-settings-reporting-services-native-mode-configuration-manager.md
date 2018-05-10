@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
 helpviewer_keywords:
@@ -20,12 +19,11 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 84fc2d366101e410f301bf76cbccc8e61eea6b38
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 722890bcdd6b8f412052f87f38eea279b8f0c05f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configurações de email - Modo Nativo do Reporting Services (Gerenciador de Configurações)
 O Reporting Services inclui uma extensão de entrega de email, para que você possa distribuir relatórios por email. Dependendo de como você definir a assinatura de email, uma entrega pode consistir em uma notificação, um link, um anexo ou um relatório inserido. A extensão de entrega de email funciona com sua tecnologia de servidor de email existente. O servidor de email deve ser um encaminhador ou servidor SMTP. O servidor de relatório se conecta a um servidor SMTP por meio de bibliotecas (cdosys.dll) de CDO (Collaboration Data Objects) que são fornecidas pelo sistema operacional.

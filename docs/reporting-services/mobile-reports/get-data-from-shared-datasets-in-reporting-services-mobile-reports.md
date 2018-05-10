@@ -1,27 +1,25 @@
 ---
-title: "Obter dados de conjuntos de dados compartilhados em relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Obter dados de conjuntos de dados compartilhados em relatórios móveis do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2cfe0cdb9290b4de7fdeac76ad2319807422693
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fb83dd013101b14ad45da1fb9ef091dcbea727d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obter dados de conjuntos de dados compartilhados nos relatórios móveis do Reporting Services
 Além do [carregamento de dados de arquivos do Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), o Publicador de Relatórios Móveis do Microsoft SQL Server também pode acessar dados de praticamente qualquer origem. O acesso aos dados exige uma fonte de dados compartilhada, configurada em um portal da Web do Reporting Services. Leia mais sobre como [criar fontes de dados compartilhadas](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [criar conjuntos de dados compartilhados](../../reporting-services/report-data/manage-shared-datasets.md).  
@@ -65,7 +63,7 @@ Se você já estiver se conectado a um servidor de relatório, quando você sele
      
 2. Adicione uma nova conexão de servidor, editar ou remova conexões existentes.  
   
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>Confira também  
 - [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [Portal da Web (modo nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  Exibir [relatórios móveis do SQL Server e KPIs no aplicativo de iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  

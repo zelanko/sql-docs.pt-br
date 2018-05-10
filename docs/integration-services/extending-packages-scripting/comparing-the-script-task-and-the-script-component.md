@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,12 +22,11 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 806031144d6668dbfeeb0ae95ab2a6e2d4a459ea
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 194f4ded206617e7cb97e3cffb85f02019b5bb3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparando a tarefa Script e o componente Script
   A tarefa Script, disponível na janela Fluxo de Controle do designer do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o componente Script, disponível na janela Fluxo de Dados, têm finalidades bem distintas em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tarefa é uma ferramenta de fluxo de controle de uso general, enquanto o componente serve como uma origem, transformação ou destino no fluxo de dados. Apesar das diferentes finalidades, a tarefa Script e o componente Script possuem algumas semelhanças nas ferramentas de codificação que eles usam e nos objetos do pacote que são disponibilizados para o desenvolvedor. A compreensão dessas semelhanças e diferenças pode ajudá-lo a usar a tarefa e o componente de forma mais eficaz.  

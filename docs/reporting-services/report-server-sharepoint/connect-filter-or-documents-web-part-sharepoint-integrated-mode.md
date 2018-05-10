@@ -1,25 +1,23 @@
 ---
-title: "Conectar uma web part de Filtro ou de Documentos a uma web part do Visualizador de Relatórios do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Conectar uma web part de Filtro ou de Documentos a uma web part do Visualizador de Relatórios do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 36b8f813a8b0da1195413dde61b4de1f4ca71e69
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f736a1bd51628f5a03dc2fb29b53b1a3a8eb3b26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Conectar uma web part de Filtro ou de Documentos a uma web part do Visualizador de Relatórios do Reporting Services
 
@@ -82,7 +80,7 @@ Se você estiver usando um produto do SharePoint, poderá criar um painel ou uma
   
 11. Verifique suas alterações e salve a página.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
  [Adicionar a web part do Visualizador de Relatórios a uma página da Web](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
  [Web part do Visualizador de Relatórios em um Site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   

@@ -1,32 +1,30 @@
 ---
-title: "Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório | Microsoft Docs"
-ms.custom: 
+title: Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2f7a54c6f2cb7f404635971edd3650b2d9e92ae
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 79bfc468d44f86fad3aca24637ab66b25700cb39
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório
   Este tópico fornece uma referência das permissões no SharePoint que podem ser usadas para conceder acesso a operações do servidor de relatório para um servidor de relatório executado em modo integrado do SharePoint. Se você estiver criando níveis de permissão personalizados, este tópico poderá ajudá-lo a escolher as permissões a serem usadas.  

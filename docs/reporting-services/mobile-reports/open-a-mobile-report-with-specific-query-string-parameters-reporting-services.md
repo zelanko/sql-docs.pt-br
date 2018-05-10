@@ -1,27 +1,25 @@
 ---
-title: "Abrir um relatório móvel com parâmetros de cadeia de consulta específicos | Microsoft Docs"
-ms.custom: 
+title: Abrir um relatório móvel com parâmetros de cadeia de consulta específicos | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6f7b4c90b317cbf31ce1414a9910798e149b5794
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f94a0f5bf75f3f3b1b3cdff067835006eaa6d063
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Abrir um relatório móvel com parâmetros de cadeia de consulta específicos | Reporting Services
 Se você tiver um relatório móvel [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com parâmetros e uma fonte de dados [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] , poderá incluir parâmetros de cadeia de consulta na URL do relatório, para que ele seja aberto automaticamente com os valores especificados. 
@@ -56,7 +54,7 @@ Se você tiver um relatório móvel [!INCLUDE[ssRSnoversion_md](../../includes/s
 
     ![mobile-report-publisher-parameter-web-portal-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Confira também
 
 [Adicionar parâmetros a um relatório móvel](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 

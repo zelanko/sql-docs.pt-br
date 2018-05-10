@@ -1,15 +1,14 @@
 ---
-title: "Referência de recursos (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: Referência de recursos (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8c0339ff6e6662c4deb271cf38b744ac33678f2f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7feb24933727c6d107404888f5c3fa5ca58a6a74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="feature-reference-reporting-services"></a>Referência de recurso (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir relatórios. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo, as páginas da Web e os assistentes dessas ferramentas e desses aplicativos.  

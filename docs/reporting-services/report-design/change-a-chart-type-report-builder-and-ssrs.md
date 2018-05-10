@@ -1,27 +1,25 @@
 ---
-title: "Alterar um tipo de gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Alterar um tipo de gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fe6550f5138d78dbab0515f5aa060dabcacfb16
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a8328bc042b7f16e4ea37f4c7f13b49c7b329958
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Alterar um tipo de gráfico (Construtor de Relatórios e SSRS)
 Na primeira vez que você inserir um gráfico em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , a caixa de diálogo **Selecionar Tipo de Gráfico** aparecerá. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  

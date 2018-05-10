@@ -1,33 +1,32 @@
 ---
-title: "Autenticação no Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Autenticação no Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 641d257227cbb91421ddcc1929661c39f1fe5f94
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b84994cb993c061f006880e4a1f4f727be864ec9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticação no Reporting Services
   A autenticação é o processo de estabelecimento do direito de um usuário a uma identidade. Existem muitas técnicas que você pode usar para autenticar um usuário. O modo mais comum é usar senhas. Quando você implementa a Autenticação de Formulários, por exemplo, deseja uma implementação que solicite credenciais dos usuários (normalmente por meio de alguma interface que solicita um nome de login e uma senha) e depois valide os usuários em um repositório de dados, como uma tabela de banco de dados ou um arquivo de configuração. Se as credenciais não puderem ser validadas, o processo de autenticação falhará e o usuário assumirá uma identidade anônima.  

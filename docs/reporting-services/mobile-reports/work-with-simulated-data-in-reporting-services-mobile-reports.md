@@ -1,27 +1,25 @@
 ---
-title: "Trabalhar com os dados simulados em relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Trabalhar com os dados simulados em relatórios móveis do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 347abee7c61c43e8453f27df2c6bb3147c4d677c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6d6561f725477cef44d4794d74559f562e85f7e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Trabalhar com dados simulados em relatórios do Reporting Services móveis
 Quando você coloca um elemento de galeria na superfície do design, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] gera imediatamente dados simulados para esse elemento. Esses dados servem para várias finalidades úteis ao criar relatórios móveis.   
@@ -48,7 +46,7 @@ Depois que todos os controles são associados a dados reais, as tabelas simulada
   
 >**Observação**: dados simulados não acrescentam à superfície geral móvel do relatório porque não são serializados com o relatório móvel, mas geradas dinamicamente em tempo de execução.  
   
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>Confira também  
 - [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  Exibir [relatórios móveis do SQL Server e KPIs no aplicativo de iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
 -  Exibir [relatórios móveis do SQL Server e KPIs no aplicativo do iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  

@@ -1,28 +1,27 @@
 ---
-title: "Programação da web part do Visualizador de Relatórios na integração do SharePoint | Microsoft Docs"
-ms.custom: 
+title: Programação da web part do Visualizador de Relatórios na integração do SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ded31cca0464d16657d095b6f3fac5344cbd33c0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7a953b61175d6790c5d0504e0e6bbb74ccfc2d9f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programabilidade do Web Part do Visualizador de Relatórios na Integração do SharePoint
   A Web Part do Visualizador de Relatórios é um controle de servidor, que contém um conjunto de APIs (interfaces de programação de aplicativo) públicas, permitindo que os desenvolvedores criem aplicativos personalizados do SharePoint. Você pode criar Web Parts personalizadas que fornecem o caminho do relatório e parâmetros para a Web Part do Visualizador de Relatórios que usa conexões de Web Part. Você também pode inserir a Web Part em uma página personalizada de Web Parts do SharePoint e personalizá-la usando a API pública.  

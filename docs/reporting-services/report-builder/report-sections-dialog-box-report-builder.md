@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-builder
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,12 +17,11 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ca9b9e53d2324d52344a8f915fc115bbed1a9bc1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ef727cf519f4d55dd40aa9f1cf6630ca8efbf224
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Caixa de diálogo Seções do Relatório (Construtor de Relatórios)
   Quando você abre um relatório, o Construtor de Relatórios verifica se o relatório contém apenas um elemento **\<Section>** de linguagem RDL. Não há suporte para a abertura de um relatório com vários elementos **\<Section>**.  

@@ -1,27 +1,25 @@
 ---
-title: "Solução de problemas de conexão de banco de dados e de servidor com o Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Solução de problemas de conexão de banco de dados e de servidor com o Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solucionar problemas de conexão de banco de dados e servidor com o Reporting Services
 Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado". Para saber mais sobre configuração de fonte de dados e como configurar a conexão do servidor de relatório, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -58,7 +56,7 @@ Para resolver este erro, modifique a cadeia de conexão para usar o nome do serv
 3. Selecione **Protocolos do MSSQLSERVER**.  
 4. Clique com o botão direito do mouse em **TCP/IP**e escolha **Habilitar**.  
 5. Escolha **Serviços do SQL Server**.  
-6. Clique com o botão direito do mouse em **SQL Server (MSSQLSERVER)**e escolha **Reiniciar**.  
+6. Clique com o botão direito do mouse em **SQL Server (MSSQLSERVER)** e escolha **Reiniciar**.  
   
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Erro de WMI ao conectar-se a um servidor de relatório no Management Studio  
 Por padrão, o Management Studio usa o provedor de WMI (Instrumentação de Gerenciamento do Windows) do Reporting Services para estabelecer uma conexão com o servidor de relatório. Se o provedor WMI não estiver instalado corretamente, o seguinte erro ocorrerá quando você tentar se conectar ao servidor de relatório:  

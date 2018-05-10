@@ -1,27 +1,25 @@
 ---
-title: "Referência de funções de agregação (Construtor de Relatórios e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Referência de funções de agregação (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
   Para incluir valores agregados no relatório, é possível usar funções de agregação internas em expressões. A função de agregação padrão para campos numéricos é SUM. É possível editar a expressão e usar uma função de agregação interna diferente ou especificar outro escopo. O escopo identifica qual conjunto de dados deve ser usado no cálculo.  

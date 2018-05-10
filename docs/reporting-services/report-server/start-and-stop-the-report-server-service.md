@@ -1,32 +1,30 @@
 ---
-title: "Iniciar e parar o serviço do Servidor de Relatório | Microsoft Docs"
-ms.custom: 
+title: Iniciar e parar o serviço do Servidor de Relatório | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - stopping Report Server service
 - Report Server Windows service, starting
 - Report Server service, starting
 - starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-caps.latest.revision: "55"
+caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 48d0f1dddabd461401027633a70a0d51b9efa345
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5a93f4759fb0c079b843235bd7fb0491fa802e95
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Iniciar e parar o serviço Servidor de Relatório
   O servidor de relatório é implementado como um serviço do Windows que contém o serviço Web do servidor de relatório, o Gerenciador de Relatórios e um aplicativo executado em segundo plano. O serviço deve ser executado se você desejar usar alguma funcionalidade do servidor de relatório. Parar o serviço para todas as operações do servidor de relatório.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-start-or-stop-the-service-using-services-in-administrative-tools"></a>Para iniciar ou parar o serviço usando Serviços em Ferramentas Administrativas  
   
--   Em Ferramentas Administrativas, abra Serviços, clique com o botão direito do mouse em **SQL Server Reporting Services (MSSQLSERVER)**e clique em **Parar** ou **Reiniciar**.  
+-   Em Ferramentas Administrativas, abra Serviços, clique com o botão direito do mouse em **SQL Server Reporting Services (MSSQLSERVER)** e clique em **Parar** ou **Reiniciar**.  
   
  Se estiver executando várias instâncias ou se o servidor de relatório for executado como uma instância nomeada, verifique se o nome da instância entre parênteses corresponde à instância do servidor de relatório que deseja parar ou reiniciar.  
   

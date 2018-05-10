@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: wmi-provider-library-reference
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RemoveSSLCertificateBindings method
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
@@ -18,12 +17,11 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 16d9205b7eea945bc08176174a8e1c2ee7dc441b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1ace3a19b111f92c62e64f3cdd015075d30ed0b0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Método de ConfigurationSetting – RemoveSSLCertificateBinding
   Remove uma associação de Certificado SSL.  
@@ -65,7 +63,7 @@ public void RemoveSSLCertificateBindings(string Application,
  *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método foi bem-sucedida; um código de erro indica que a chamada não foi bem-sucedida.  
   
 ## <a name="remarks"></a>Remarks  

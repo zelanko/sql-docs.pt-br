@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: extensions
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1202e4df00651505d7177ec960c2c35b70266ec9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8f210359c57cee94ff60e77538c6ec7725ea9888
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="authorization-in-reporting-services"></a>Autorização no Reporting Services
   Autorização é o processo de determinar se uma identidade deve receber o tipo de acesso solicitado a um determinado recurso no banco de dados de servidor de relatório. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma arquitetura de autorização baseada em função que concede um acesso de usuário a um determinado recurso com base na atribuição de função do usuário para o aplicativo. As extensões de segurança para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contêm uma implementação de um componente de autorização usado para conceder acesso a usuários assim que eles se autenticam no servidor de relatório. A autorização é invocada quando um usuário tenta executar uma operação no sistema ou um item de servidor de relatório por meio da API SOAP e via acesso à URL. Isso é possível por meio da interface de extensão de segurança **IAuthorizationExtension2**. Como foi dito anteriormente, todas as extensões herdam de **IExtension** , a interface base para qualquer extensão que você implanta. **IExtension** e **IAuthorizationExtension2** são membros do namespace **Microsoft.ReportingServices.Interfaces**.  

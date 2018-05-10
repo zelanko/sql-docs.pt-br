@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: application-integration
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: d7ba5ace49e8990322e119cce01426578a017cd7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8a7ffa6628932498f26f9fa6188a8a502e981b15
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usando o controle WebForms ReportViewer
   Para exibir relatórios implantados para um servidor de relatório ou relatórios que existem no sistema de arquivos local, você poderá usar o controle ReportViewer do WebForms para renderizá-los em um aplicativo Web.  
