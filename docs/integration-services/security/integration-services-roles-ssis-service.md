@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
@@ -27,12 +26,11 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 79b84fc3f52cb12a77d1a2e51acbc074f810c6d0
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 2a4ff7652fb572a5981f32bb71b5fdfb713befc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Funções do Integration Services (Serviço do SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece certas funções fixas no nível de banco de dados para ajudar a proteger o acesso a pacotes armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As funções disponíveis são diferentes dependendo se você estiver salvando pacotes no SSISDB (banco de dados de Catálogo do SSIS) ou no banco de dados msdb.  

@@ -1,28 +1,26 @@
 ---
-title: "Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bc6221ec311e5836f94ef5fd2d865f1fc91e0588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados do **PostgreSQL** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. 
@@ -38,7 +36,7 @@ Execute o construtor de pilha para adicionar o driver ODBC PostgreSQL (psqlODBC)
 ![Instalar o PostgreSQL ODBC com o construtor de pilha](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
 ### <a name="or-download-the-latest-odbc-driver"></a>Ou então, baixar o driver ODBC mais recente
-Ou então, baixe o Windows Installer para a versão mais recente do driver ODBC PostgreSQL (psqlODBC) diretamente deste site FTP – [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Extraia os arquivos do arquivo .zip e execute o arquivo .msi.
+Ou baixe o Windows Installer para obter a versão mais recente do driver do ODBC PostgreSQL (psqlODBC) diretamente deste site FTP: [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Extraia os arquivos do arquivo .zip e execute o arquivo .msi.
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Conecte-se ao PostgreSQL com o driver ODBC PostgreSQL (psqlODBC)
 Drivers ODBC não estão listados na lista suspensa de fontes de dados. Para se conectar com um driver ODBC, comece selecionando o **Provedor de Dados do .NET Framework para ODBC** como a fonte de dados na página **Escolher uma Fonte de Dados** ou **Escolher um Destino**. Esse provedor atua como um wrapper em torno do driver ODBC.
@@ -95,7 +93,7 @@ Esta é a tela que você vê depois de inserir a cadeia de conexão.
 ## <a name="other-data-providers-and-more-info"></a>Outros provedores de dados e obter mais informações
 Para obter informações sobre como se conectar ao PostgreSQL com um provedor de dados que não está listado aqui, consulte [Cadeias de conexão PostgreSQL](https://www.connectionstrings.com/postgresql/). Este site de terceiros também contém mais informações sobre os provedores de dados e os parâmetros de conexão descritos nesta página.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Escolher uma Fonte de Dados](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Escolher um Destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

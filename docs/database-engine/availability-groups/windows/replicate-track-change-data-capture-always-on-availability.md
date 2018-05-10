@@ -1,17 +1,14 @@
 ---
 title: Replicação, Controle de Alterações e Change Data Capture – grupos de disponibilidade | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -22,12 +19,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60f20c48befbd5dcb24db4e1c7e247cf9b8346c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +95,7 @@ ms.lasthandoff: 04/16/2018
   
      No exemplo a seguir, é criado o trabalho de captura.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +107,7 @@ ms.lasthandoff: 04/16/2018
   
      Para garantir que a limpeza apropriada ocorra no novo banco de dados primário, um trabalho de limpeza local sempre deve ser criado. No exemplo a seguir, é criado o trabalho de limpeza.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +133,7 @@ ms.lasthandoff: 04/16/2018
   
      Use a consulta a seguir para determinar se um nome do ouvinte do grupo de disponibilidade foi definido para o grupo de disponibilidade que hospeda um banco de dados do CDC. A consulta retornará o nome do ouvinte do grupo de disponibilidade se ele tiver sido criado.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +149,7 @@ ms.lasthandoff: 04/16/2018
   
      A consulta a seguir pode ser usada para determinar se a intenção somente leitura é necessária para estabelecer a conexão com uma réplica secundária legível.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +161,7 @@ ms.lasthandoff: 04/16/2018
   
      Quando **sp_addlinkedserver** é usado para criar um servidor vinculado para acessar o secundário, o parâmetro *@datasrc* é usado para o nome do ouvinte do grupo de disponibilidade ou o nome do servidor explícito e o parâmetro *@provstr* é usado para especificar intenção somente leitura.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +203,6 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
     -   Assinatura pull: o publicador, o distribuidor e os bancos de dados do assinante devem estar pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
   
--   Não há suporte à colocação do banco de dados de distribuição em um grupo de disponibilidade.  
-  
 -   As instâncias do Publicador satisfazem todos os pré-requisitos necessários para participar de um grupo de disponibilidade AlwaysOn. Para obter mais informações consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="restrictions"></a>Restrictions  
@@ -224,7 +218,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
  *O failover no banco de dados de réplica é um procedimento manual. O failover automático não é fornecido.  
   
- **Não há suporte para o uso do banco do dados de distribuidor com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados.  
+ **Não há suporte para o uso do banco de dados de distribuidor com espelhamento de banco de dados.  
   
 ### <a name="considerations"></a>Considerações  
   

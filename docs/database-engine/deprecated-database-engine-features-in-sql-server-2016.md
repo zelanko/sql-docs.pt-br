@@ -3,15 +3,14 @@ title: Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2016 | M
 ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
@@ -21,12 +20,11 @@ caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f062de9b5ace5629a4c6b2a5eb2660727b802092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5daaf2d0fadd131799cfa0c14244fbe576cafcdd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +76,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Tipos de dados|Sintaxe de**timestamp** para o tipo de dados **rowversion** |Sintaxe do tipo de dados**rowversion** |timestamp|158|  
 |Tipos de dados|Capacidade para inserir valores nulos em colunas **timestamp** .|Em vez disso, use um DEFAULT.|INSERT NULL em colunas TIMESTAMP|179|  
 |Tipos de dados|Opção de tabela 'text in row'|Use os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opção de tabela 'text in row'|9|  
-|Tipos de dados|Tipos de dados:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagem**|Use os tipos de dados **varchar(max)**, **nvarchar(max)**e **varbinary(max)** .|Tipos de dados: **text** **ntext** ou **image**|4|  
+|Tipos de dados|Tipos de dados:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagem**|Use os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** .|Tipos de dados: **text** **ntext** ou **image**|4|  
 |Gerenciamento de banco de dados|sp_attach_db<br /><br /> sp_attach_single_file_db|Instrução CREATE DATABASE com a opção FOR ATTACH. Para recriar vários arquivos de log quando um ou mais tiver um novo local, use a opção FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Objetos de banco de dados|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|Palavra-chave DEFAULT em CREATE TABLE e ALTER TABLE|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Objetos de banco de dados|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Palavra-chave CHECK em CREATE TABLE e ALTER TABLE|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  

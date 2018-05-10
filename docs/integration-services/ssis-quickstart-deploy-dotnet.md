@@ -1,10 +1,9 @@
 ---
 title: Implantar um projeto do SSIS com código .NET (C#) | Microsoft Docs
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
@@ -13,12 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3971add40fcd60bdce9e9dc7c3f3d02b99fbf0f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0fc40c9db57dece328a8bcc205115c0570a167e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implantar um projeto do SSIS com o código C# em um aplicativo .NET
 Este tutorial de início rápido demonstra como gravar código C# para se conectar a um servidor de banco de dados e implantar um projeto do SSIS.

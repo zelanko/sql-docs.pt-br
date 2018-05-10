@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.toolboxfavorites.F1
 - sql13.dts.designer.toolbox.F1
@@ -21,12 +20,11 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ce420ba44f9ce86aba7ef26fd90f639537556996
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c689bc362d704bd4c8ea8ea997afebc4035fb4ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-toolbox"></a>Caixa de Ferramentas do SSIS
   Todos os componentes instalados automaticamente no computador local serão exibidos na **Caixa de Ferramentas do SSIS**. Quando você instalar componentes adicionais, clique com o botão direito do mouse dentro da caixa de ferramentas e clique em **Atualizar Caixa de Ferramentas** para adicionar os componentes.  

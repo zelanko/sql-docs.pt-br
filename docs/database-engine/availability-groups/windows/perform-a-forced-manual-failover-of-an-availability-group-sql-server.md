@@ -3,15 +3,12 @@ title: Executar um failover manual forçado de um grupo de disponibilidade (SQL 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -22,12 +19,11 @@ caps.latest.revision: 83
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 91c5899208288042efa2a73c13bd18a463a10693
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fa61e85b6e8db7a1e3dc967230ea2c939c13f2cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Executar um failover manual forçado de um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -227,7 +223,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Depois de um failover forçado, a réplica secundária na qual foi feito o failover se torna a nova réplica primária. No entanto, para tornar essa réplica de disponibilidade acessível aos clientes, você pode precisar reconfigurar o quorum WSFC ou ajustar a configuração do modo de disponibilidade do grupo de disponibilidade, da seguinte maneira:  
   
-    -   **Se o failover foi feito fora do [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]:** ajuste os votos de quórum WSFC para refletir a configuração do novo grupo de disponibilidade. Se o nó WSFC, que hospeda a réplica secundária de destino, não tiver um voto de quorum WSFC, você poderá precisar forçar o quorum WSFC.  
+    -   **Se o failover foi feito fora do [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]:**  ajuste os votos de quórum WSFC para refletir a configuração do novo grupo de disponibilidade. Se o nó WSFC, que hospeda a réplica secundária de destino, não tiver um voto de quorum WSFC, você poderá precisar forçar o quorum WSFC.  
   
         > [!NOTE]  
         >  Um [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] existirá apenas se duas réplicas de disponibilidade (inclusive a réplica primária anterior) estiverem configuradas para modo de confirmação síncrona com failover automático.  
