@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7520d77de1ab099cde2a5560924a13e2627ee46e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: fa020fa58cbb254d79490c79528691039f1d4e50
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adomdnet-server-programming"></a>Programando o servidor no ADOMD.NET
   Os componentes de servidor do ADOMD.NET residem dentro de **adomdserver** namespace (em msmgdsrv.dll). Use estes componentes do servidor para criar funções personalizadas de MDX (Multidimensional Expressions) e procedimentos armazenados que são executados em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os objetos de servidor oferecem os recursos para a consulta de cubos e de modelos de mineração e para a avaliação de expressões em um determinado contexto. Os benefícios da criação de funções e de procedimentos armazenados personalizados incluem execução rápida, implantação centralizada e maior facilidade de manutenção.  

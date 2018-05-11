@@ -2,9 +2,9 @@
 title: Notas de versão do Microsoft SQL operações Studio (visualização) | Microsoft Docs
 description: Notas de versão do Microsoft SQL operações Studio (visualização)
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Studio de operações (visualização)
 
-**[Baixe a visualização de abril público](download.md)**
+**[Baixe a visualização pública pode](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>De 2018 de maio (maio de visualização pública)
+
+Data de lançamento: 7 de maio de 2018  
+versão: 0.29.3
+
+O *visualização pública pode* se concentra na estabilização e correções de bugs. Esta compilação contém destaca a seguinte:  
+
+- Anunciando a extensão de pesquisa do SQL Redgate disponível no Gerenciador de extensões.
+- Localização de comunidade disponível para 10 idiomas: alemão, espanhol, francês, italiano, japonês, coreano, português, russo, chinês simplificado e chinês tradicional.
+- Compilação GDPR compatíveis reduziu a coleção de telemetria, experiência aprimorada de recusa e links do produto a declaração de privacidade.
+- Gerenciador de extensões tiver Marketplace melhor experiência para descobrir facilmente as extensões de comunidade.
+- Trabalhos de extensão do SQL Agent e histórico do trabalho de exibição aperfeiçoamento.
+- Atualizações para whoisactive e extensões de servidor de relatórios.
+- Melhore a rolagem gerenciar propriedades do painel.
+- Solucionar problemas do GitHub:
+   - Corrigir [emitir 703](https://github.com/Microsoft/sqlopsstudio/issues/703): inserir texto em forma de HTML em dados de edição faz com que o valor a ser exibido incorretamente até que a atualização
+   - Corrigir [emitir 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb de dependência de pacote
+   - Corrigir [emitir 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): palavra-chave 'distinct' não realçado
+   - Corrigir [emitir 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): dados de edição reverter linha não funciona
+   - Corrigir [emitir 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): extensão do SQL Agent e a barra de status
+   - Corrigir [emitir 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent não redimensionar depois de alterar o tamanho do windows
+
+
+Para obter mais informações, consulte o [Log de alterações](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versões](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 
 ## <a name="april-2018-april-public-preview"></a>De 2018 de abril (visualização pública de abril)

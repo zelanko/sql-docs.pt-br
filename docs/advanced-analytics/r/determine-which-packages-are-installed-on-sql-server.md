@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: e19217fb00cba1f9369bf79a09790f58f9dc2e66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 #  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Obter informações de pacote de R e Python no aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Se você instalou vários ambientes de Python, ou usa várias ferramentas de R, é fácil de instalar um pacote para a biblioteca incorreta ou o ambiente e, em seguida, não poderá encontrá-lo mais tarde. Este artigo fornece consultas e orientação útil para a versão do pacote determininga e para listar os pacotes que estão instalados no ambiente atual do SQL Server.
+Se você instalou vários ambientes de Python, ou usa várias ferramentas de R, é fácil de instalar um pacote para a biblioteca incorreta ou o ambiente e, em seguida, não poderá encontrá-lo mais tarde. Este artigo fornece consultas e orientação útil para a versão do pacote de ga determinin e para listar os pacotes que estão instalados no ambiente atual do SQL Server.
 
 ## <a name="verify-the-current-default-library"></a>Verifique se a biblioteca padrão atual
 

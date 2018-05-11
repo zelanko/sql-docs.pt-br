@@ -1,22 +1,23 @@
 ---
-title: Instalar e gerenciar pacotes de aprendizado de máquina no SQL Server | Microsoft Docs
+title: R e Python pacote de gerenciamento no aprendizado de máquina do SQL Server | Microsoft Docs
+description: Obter informações de pacote de R e Python, adicionar novos pacotes e habilitar o acesso de cliente em uma instância do SQL Server configurado para o aprendizado de máquina.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cbab4687dd0d5a8cb250fa38fc4c4c7dbb9d68a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abc77eee8d803fd94a58abfdab6f1c3cbe6621dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="install-and-manage-machine-learning-packages-in-sql-server"></a>Instalar e gerenciar pacotes de aprendizado de máquina no SQL Server
+# <a name="r-and-python-package-management-in-sql-server-machine-learning"></a>Gerenciamento de pacotes de R e Python no aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve como você pode instalar novos pacotes de R ou Python no SQL Server 2017 e no SQL Server 2016. Ele também descreve as limitações nos pacotes que podem ser instalados no SQL Server.
+Este artigo apresenta R e Python pacote de gerenciamento no aprendizado de máquina de 2017 do SQL Server e SQL Server 2016 R Services. Ele também descreve as limitações nos pacotes que podem ser instalados no SQL Server.
 
 ## <a name="overview-of-package-management-methods-and-requirements"></a>Visão geral dos métodos de gerenciamento de pacote e requisitos
 
@@ -28,7 +29,7 @@ Ao contrário de um desenvolvimento de R ou Python típico, pacotes usados pelo 
 
 No entanto, essas restrições significa necessariamente que algumas alterações da maneira que os analistas e cientistas de dados funcionam:
 
-+ Geralmente, o acesso administrativo ao servidor é necessário. No SQL Server de 2017, o administrador de banco de dados pode usar funções para conceder a determinados usuários a capacidade de instalar os pacotes para uso particular, mas o administrador deve habilitar esse recurso.
++ Geralmente, a instalação do pacote no SQL Server requer acesso administrativo. No SQL Server de 2017, o administrador de banco de dados pode usar funções para conceder a determinados usuários a capacidade de instalar os pacotes para uso particular, mas o administrador deve habilitar esse recurso.
 + Muitos servidores não tem acesso à Internet. A instalação de pacotes para esses computadores requer alguma preparação adicional.
 + Os pacotes são instalados em uma biblioteca de instância. Pacotes não podem ser compartilhados entre instâncias.
 + Os usuários não podem executar qualquer pacote que foi instalado em uma biblioteca do usuário.
@@ -37,7 +38,7 @@ No entanto, essas restrições significa necessariamente que algumas alteraçõe
 
 Consulte os seguintes artigos para obter etapas detalhadas sobre como instalar novos pacotes de R ou Python. 
 
-### <a name="install-new-r-packages"></a>Instalar novos pacotes de R
+### <a name="r-packages"></a>Pacotes de R
 
 + [Instalar pacotes R adicionais no SQL Server](install-additional-r-packages-on-sql-server.md)
 
@@ -47,7 +48,7 @@ Consulte os seguintes artigos para obter etapas detalhadas sobre como instalar n
 
     Você também pode instalar pacotes de R no SQL Server 2017 usando instruções DDL.
 
-### <a name="install-new-python-packages"></a>Instalar novos pacotes do Python
+### <a name="python-packages"></a>Pacotes do Python
 
 + [Instalar os novos pacotes Python no SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -55,7 +56,7 @@ Consulte os seguintes artigos para obter etapas detalhadas sobre como instalar n
 
 Antes de tentar baixar ou instalar qualquer pacote novo, revise os requisitos:
 
-+ Certifique-se de que há uma versão do Windows do pacote: [obter a versão correta do pacote e o formato](#packageVersion)
++ Certifique-se de que há uma versão do pacote do Windows.
 
 + Identificar todas as dependências de pacote e determinar sua compatibilidade com o ambiente do SQL Server.
 
@@ -84,4 +85,4 @@ Em geral, os servidores que hospedam os bancos de dados de produção não permi
 
 Identificar todas as dependências pode ser complicado. Para R, é recomendável que você use [miniCRAN](create-a-local-package-repository-using-minicran.md) para preparar um repositório de pacotes offline.
 
-Para Python, da mesma forma você deve preparar todas as dependências e salvá-los localmente. Certifique-se de usar um binários compatível com o Windows e use o formato WHL.
+Para Python, da mesma forma você deve preparar todas as dependências e salvá-los localmente. Certifique-se de usar binários compatível com o Windows e o formato WHL.

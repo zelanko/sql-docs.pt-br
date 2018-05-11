@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d69c53f0f34ba19e822b45f618fe1f799ef69ad6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 077d6b14f87cf7207c9a81486a3efc30ab4772c4
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="canceling-commands-xmla"></a>Cancelando comandos (XMLA)
   Dependendo das permissões administrativas do usuário que emite o comando, o [Cancelar](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) comando em XML for Analysis (XMLA) pode cancelar um comando em uma sessão, uma sessão, uma conexão, um processo de servidor ou uma sessão associada ou conexão.  
