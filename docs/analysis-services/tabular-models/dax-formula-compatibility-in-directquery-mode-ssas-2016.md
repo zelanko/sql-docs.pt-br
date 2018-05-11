@@ -1,26 +1,19 @@
 ---
 title: Compatibilidade de fórmula do DAX no modo DirectQuery | Microsoft Docs
-ms.custom: ''
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
-ms.component: multidimensional-tabular
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
-ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: 10
-author: Minewiskan
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 106e22e43ec0bb6003869cc264388c741d7528d0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: c22e69c2b3bf2fbaaa89095483ed5f250c7aa201
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidade de fórmula do DAX no modo DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
