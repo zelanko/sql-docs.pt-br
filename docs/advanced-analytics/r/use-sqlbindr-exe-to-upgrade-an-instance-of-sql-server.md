@@ -8,8 +8,8 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
@@ -98,13 +98,23 @@ Em termos de experiência do usuário, a tecnologia e como trabalhar com ele per
 
 Instalação de aprendizado de máquina do Microsoft detecta os recursos existentes e a versão do SQL Server e invoca um utilitário chamado SqlBindR.exe para alterar a associação. Internamente, SqlBindR é encadeada para a instalação e usada indiretamente. Posteriormente, você pode chamar SqlBindR diretamente da linha de comando para exercer opções específicas.
 
-1. Verifique se que o servidor atende aos requisitos de compilação mínima. Para serviços do SQL Server 2016 R, é o mínimo [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) e [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). No SSMS, execute `SELECT @@version` para retornar informações de versão do servidor. 
+1. No SSMS, execute `SELECT @@version` para verificar se o servidor atende aos requisitos mínimos de compilação. 
 
-1. Verifique a versão do R e o RevoScaleR para confirmar que as versões existentes são menores do que você planeja substituí-los por. Para serviços do SQL Server 2016 R, é de pacote básico de R 3.2.2 e RevoScaleR é 8.0.3.
+   Para serviços do SQL Server 2016 R, é o mínimo [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) e [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1).
 
-    + Vá para \Program Files\Microsoft SQL mssql13. MSSQLSERVER\R_SERVICES\bin
-    + Clique duas vezes em **R** para abrir o console.
-    + Para obter versões de pacote, use `library(help="base")` e `library(help="RevoScaleR")`. 
+1. Verifique a versão de base de R e pacotes de RevoScaleR para confirmar as versões existentes são menores do que você planeja substituí-los por. Para serviços do SQL Server 2016 R, é de pacote básico de R 3.2.2 e RevoScaleR é 8.0.3.
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. Baixe o Microsoft Server de aprendizado de máquina no computador que tem a instância que você deseja atualizar. É recomendável a [versão mais recente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
 
@@ -138,15 +148,23 @@ Verifique se a atualização falhar, [códigos de erro SqlBindR](#sqlbindr-error
 
 Verificar a versão do R e o RevoScaleR para confirmar que você tem as versões mais recentes. Use o console de R distribuído com os pacotes de R em sua instância do mecanismo de banco de dados para obter informações de pacote:
 
-+ Vá para \Program Files\Microsoft SQL mssql13. MSSQLSERVER\R_SERVICES\bin
-+ Clique duas vezes em **R** para abrir o console.
-+ Para obter versões de pacote, use `library(help="base")` e `library(help="RevoScaleR")`. 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 Para SQL Server 2016 R Services associado ao 9.3 de servidor de aprendizado de máquina, pacote R Base deve ser 3.4.1 RevoScaleR deve ser 9.3 e você também deve ter MicrosoftML 9.3. 
 
 Se você adicionou os modelos previamente treinados, os modelos são inseridos na biblioteca do MicrosoftML e você pode chamá-los por meio das funções MicrosoftML. Para obter mais informações, consulte [exemplos de R para MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
-## <a name="offline-no-internet-access"></a>Offline (sem acesso à internet)
+## <a name="offline-binding-no-internet-access"></a>Associação offline (sem acesso à internet)
 
 Para sistemas com nenhuma conectividade com a internet, você pode baixar os arquivos. cab e de instalador para um computador conectado à internet e, em seguida, transferir arquivos para o servidor isolado. 
 
@@ -168,7 +186,7 @@ As instruções a seguir explicam como colocar os arquivos para uma instalação
 
 1. No servidor, digite `%temp%` no comando executar para obter o local físico do diretório temporário. O caminho físico varia por máquina, mas é normalmente `C:\Users\<your-user-name>\AppData\Local\Temp`.
 
-1. Place.cab arquivos na pasta % temp %.
+1. Coloque os arquivos. cab na pasta % temp %.
 
 1. Descompacte o instalador.
 
@@ -285,7 +303,7 @@ Se você encontrar pastas com um nome assim, você poderá removê-lo após a co
 |*bind*| Atualiza a instância do Banco de Dados SQL especificada para a última versão do R Server e garante que a instância obtém automaticamente as atualizações futuras do R Server|
 |*unbind*|Desinstala a última versão do R Server da instância do Banco de Dados SQL especificada e impede que atualizações futuras do R Server afetem a instância|
 
-< um name = "códigos de erro sqlbinder"<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### <a name="errors"></a>Erros
 
@@ -299,10 +317,10 @@ A ferramenta retorna as seguintes mensagens de erro:
 |Associar o erro 3 | Instância inválida | Uma instância existe, mas não é válida para associação. |
 |Associar o erro 4 | Não associável | |
 |Associar o erro 5 | Já vinculado | Você executou o comando *bind* , mas a instância especificada já está associada. |
-|Associar o erro 6 | Falha na ligação | Ocorreu um erro ao desconectar a instância. |
+|Associar o erro 6 | Falha na ligação | Ocorreu um erro ao desconectar a instância. Esse erro pode ocorrer se você executar o instalador MLS sem selecionar todos os recursos.|
 |Associar o erro 7 | Não associado | A instância do mecanismo de banco de dados tem R Services ou serviços de aprendizado de máquina do SQL Server. A instância não está associada ao servidor de aprendizado de máquina do Microsoft. |
 |Associar o erro 8 | Desassocie falha | Ocorreu um erro ao desconectar a instância. |
-|Associar o erro 9 | Nenhuma instância encontrada | Nenhuma instância foi encontrada neste computador. |
+|Associar o erro 9 | Nenhuma instância encontrada | Nenhuma instância do mecanismo de banco de dados foi encontrada neste computador. |
 
 
 ## <a name="see-also"></a>Consulte também
