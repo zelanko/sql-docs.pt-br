@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
 - sql13.swb.new.datatype.properties.general.f1
@@ -22,13 +21,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 435137451447ffa28f95befc098e1a1eb9358571
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 411b717866ff137b498d12aff3994e2a7436101d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
      **Comprimento/Precisão**  
      Exibe o comprimento ou a precisão do tipo de dados, conforme aplicável. **Tamanho** se aplica a tipos de dados definidos pelo usuário com base em caracteres; **Precisão** se aplica apenas a tipos de dados definidos pelo usuário com base numérica. O rótulo se altera dependendo do tipo de dados selecionado anteriormente. Essa caixa não será editável se o comprimento ou a precisão do tipo de dados selecionado for fixo.  
   
-     O tamanho não é exibido para os tipos de dados **nvarchar(max)**, **varchar(max)**ou **varbinary(max)** .  
+     O tamanho não é exibido para os tipos de dados **nvarchar(max)**, **varchar(max)** ou **varbinary(max)** .  
   
      **Nome**  
      Se você estiver criando um novo alias de tipo de dados definido pelo usuário, digite um nome exclusivo a ser usado no banco de dados para representar o tipo de dados definido pelo usuário. O número máximo de caracteres deve corresponder ao tipo de dados **sysname** do sistema. O nome de um alias de tipo de dados definido pelo usuário existente não é editável.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 04/16/2018
   
      Para tipos de dados **nchar** e **nvarchar** , o valor de armazenamento sempre é duas vezes o valor de **Comprimento**.  
   
-     O armazenamento não é exibido para os tipos de dados **nvarchar(max)**, **varchar(max)**ou **varbinary(max)** .  
+     O armazenamento não é exibido para os tipos de dados **nvarchar(max)**, **varchar(max)** ou **varbinary(max)** .  
   
 2.  Na caixa de diálogo **Tipo de Dados Definido pelo Usuário** , na caixa **Esquema** , digite o esquema próprio para esse alias de tipo de dados ou use o botão Procurar para selecionar o esquema.  
   

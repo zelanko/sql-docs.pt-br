@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: logs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
@@ -20,12 +18,11 @@ caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dde3ddfb7c994144c1fe85e3a6929667329b7ffd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 26b2085e6947b33b77779b1eb4785e3854db3e21
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +73,13 @@ ms.lasthandoff: 04/16/2018
   
      Se você desejar conectar-se a um computador remoto, siga estas etapas:  
   
-    1.  Clique com o botão direito do mouse em **Controle WMI (Local)**e clique em **Conectar-se a outro computador**.  
+    1.  Clique com o botão direito do mouse em **Controle WMI (Local)** e clique em **Conectar-se a outro computador**.  
   
     2.  Na caixa de diálogo **Alterar computador gerenciado** , clique em **Outro computador**.  
   
     3.  Insira o novo nome do computador remoto e clique em **OK**.  
   
-3.  Clique com o botão direito do mouse em **Controle WMI (Local)** ou **Controle WMI (***RemoteComputerName***)**e clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em **Controle WMI (Local)** ou **Controle WMI (***RemoteComputerName***)** e clique em **Propriedades**.  
   
 4.  Na caixa de diálogo **Propriedades do Controle WMI** , clique na guia **Segurança** .  
   

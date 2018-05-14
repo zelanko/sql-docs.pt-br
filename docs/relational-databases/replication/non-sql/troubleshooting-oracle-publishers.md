@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
@@ -20,12 +19,11 @@ caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5ada9a491160ae119ac4792f26640854fcacc0f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d849d3fdf5c0242c8d3b5f09af78d3649cb1d1f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionando problemas de Publicadores Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +161,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  Na caixa de diálogo **Executar** , digite **regedit**e, então, clique em **OK**.  
   
-3.  Navegue até HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>*\Providers.  
+3.  Navegue até HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers.  
   
      Incluída em Provedores deve haver uma pasta nomeada OraOLEDB.Oracle. Dentro dessa pasta deve haver o nome do valor DWORD **AllowInProcess**, com valor **1**.  
   
@@ -239,7 +237,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>São feitas alterações que requerem reconfiguração do publicador  
  Alterações às tabelas de metadados de replicação ou a procedimentos requerem que você descarte e reconfigure o Publicador. Para reconfigurar o Publicador, você deve descartar e configurá-lo novamente usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL ou RMO. Para obter informações sobre como configurar o Publicador, consulte [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
- **Para descartar um Publicador Oracle (**SQL Server Management Studio**)**  
+ **Para descartar um Publicador Oracle (** SQL Server Management Studio **)**  
   
 1.  Conecte-se ao Distribuidor para o Publicador Oracle no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e expanda o nó do servidor.  
   

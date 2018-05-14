@@ -3,27 +3,23 @@ title: Introdução ao Columnstore para análise operacional em tempo real | Mic
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 59ce255693bd9148b5f63d18ec26eb522f52a181
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b23d666eda366913b6b1a22ed60804f28fb87fc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -206,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  Veja as práticas recomendadas  
   
--   **Inserir/consultar a carga de trabalho:**se a carga de trabalho for basicamente inserir dados e consultá-los, o padrão COMPRESSION_DELAY de 0 será a opção recomendada. As linhas recentemente inseridas serão compactadas uma vez que 1 milhão de linhas foram inseridas em um único rowgroup delta.  
+-   **Inserir/consultar a carga de trabalho:** se a carga de trabalho for basicamente inserir dados e consultá-los, o padrão COMPRESSION_DELAY de 0 será a opção recomendada. As linhas recentemente inseridas serão compactadas uma vez que 1 milhão de linhas foram inseridas em um único rowgroup delta.  
     Alguns exemplos de tal carga de trabalho são (a) carga de trabalho DW tradicional (b) análise de fluxo de clique quando você precisa analisar o padrão de clique em um aplicativo Web.  
   
 -   **Carga de trabalho OLTP:** se a carga de trabalho for DML pesada (isto é, combinação pesada de Atualizar, Excluir e Inserir), você poderá ver a fragmentação do índice columnstore examinando o sys DMV. dm_db_column_store_row_group_physical_stats. Caso veja que mais de 10% das linhas são marcadas como excluídas em rowgroups recentemente compactados, você poderá usar a opção COMPRESSION_DELAY para adicionar atraso quando as linhas se tornarem qualificadas para compactação. Por exemplo, se para sua carga de trabalho, os dados recentemente inseridos permanecerem "ativos" (isto é, forem atualizados várias vezes) digamos que por 60 minutos, você deverá escolher COMPRESSION_DELAY para ser 60.  

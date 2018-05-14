@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 09/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
@@ -20,13 +18,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7bf18d9a0cff7b9185b66e3cfecebbcb2d5c443
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 994dbd67b155d791cc7d4ee25dc8525c471a5f11
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere para importar ou exportar dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -131,7 +128,7 @@ Notepad D:\BCP\myChar.fmt
 Os exemplos abaixo usam o banco de dados e os arquivos de formato criados acima.
 
 ### **Usando bcp e formato de caractere para exportar dados**<a name="bcp_char_export"></a>
-Opção**-c** e comando **OUT** .  Observação: o arquivo de dados criado neste exemplo será usado em todos os exemplos subsequentes.  No prompt de comando, digite o seguinte comando:
+Opção **-c** e comando **OUT** .  Observação: o arquivo de dados criado neste exemplo será usado em todos os exemplos subsequentes.  No prompt de comando, digite o seguinte comando:
 
 ```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
@@ -141,7 +138,7 @@ NOTEPAD D:\BCP\myChar.bcp
 ```
 
 ### **Usando bcp e formato de caractere para importar dados sem um arquivo de formato**<a name="bcp_char_import"></a>
-Opção**-c** e comando **IN** .  No prompt de comando, digite o seguinte comando:
+Opção **-c** e comando **IN** .  No prompt de comando, digite o seguinte comando:
 
 ```cmd
 REM Truncate table (for testing)
@@ -155,7 +152,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **Usando bcp e formato de caractere para importar dados com um arquivo de formato não XML**<a name="bcp_char_import_fmt"></a>
-Opções**-c** e **-f** switches e **IN** comme.  No prompt de comando, digite o seguinte comando:
+Opções **-c** e **-f** switches e **IN** comme.  No prompt de comando, digite o seguinte comando:
 
 ```cmd
 REM Truncate table (for testing)
