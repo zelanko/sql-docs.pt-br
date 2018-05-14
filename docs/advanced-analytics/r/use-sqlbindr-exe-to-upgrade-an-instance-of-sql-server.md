@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Atualizar os componentes da máquina de aprendizado (R e Python) em instâncias do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Se você encontrar pastas com um nome assim, você poderá removê-lo após a co
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>Erros
+## <a name="binding-errors"></a>Erros de associação
 
-A ferramenta retorna as seguintes mensagens de erro:
+Instalador de MLS e SqlBindR retornam os seguintes códigos de erro e mensagens.
 
 |Código do erro  | Mensagem           | Detalhes               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ A ferramenta retorna as seguintes mensagens de erro:
 |Associar o erro 3 | Instância inválida | Uma instância existe, mas não é válida para associação. |
 |Associar o erro 4 | Não associável | |
 |Associar o erro 5 | Já vinculado | Você executou o comando *bind* , mas a instância especificada já está associada. |
-|Associar o erro 6 | Falha na ligação | Ocorreu um erro ao desconectar a instância. Esse erro pode ocorrer se você executar o instalador MLS sem selecionar todos os recursos.|
+|Associar o erro 6 | Falha na ligação | Ocorreu um erro ao desconectar a instância. Esse erro pode ocorrer se você executar o instalador MLS sem selecionar todos os recursos. Associação requer que você selecionar uma instância MSSQL e R e Python, supondo que a instância do SQL Server 2017.|
 |Associar o erro 7 | Não associado | A instância do mecanismo de banco de dados tem R Services ou serviços de aprendizado de máquina do SQL Server. A instância não está associada ao servidor de aprendizado de máquina do Microsoft. |
 |Associar o erro 8 | Desassocie falha | Ocorreu um erro ao desconectar a instância. |
 |Associar o erro 9 | Nenhuma instância encontrada | Nenhuma instância do mecanismo de banco de dados foi encontrada neste computador. |

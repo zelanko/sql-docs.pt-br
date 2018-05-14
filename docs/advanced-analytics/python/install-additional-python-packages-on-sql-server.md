@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar novos pacotes de Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>Como exibir pacotes instalados usando conda
+## <a name="list-installed-packages-using-conda"></a>Listar os pacotes instalados usando conda
 
 Há diferentes maneiras como você pode obter uma lista de pacotes instalados. Por exemplo, você pode exibir os pacotes instalados no **Python ambientes** windows do Visual Studio.
 
-Se você estiver usando a linha de comando do Python, você pode usar o **conda** package manager, que está incluído com o ambiente Anaconda Python adicionado pela instalação do SQL Server.
+Se você estiver usando a linha de comando do Python, você pode usar **Pip** ou **conda** Gerenciador de pacotes, incluído com o ambiente Anaconda Python adicionado pela instalação do SQL Server.
 
-Supondo que você adicionou a pasta de Scripts para a variável de ambiente PATH, execute este comando no prompt de comando do administrador para listar os pacotes em seu ambiente de Python.
+Supondo que você adicionou a pasta de Scripts para a variável de ambiente PATH, execute este comando no prompt de comando do administrador para listar os pacotes em seu ambiente de Python. Caso contrário, consulte [informações de pacote de R obtenha e Python](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda) ponteiros sobre como executar as ferramentas Python no SQL Server.
 
 ```python
 conda list

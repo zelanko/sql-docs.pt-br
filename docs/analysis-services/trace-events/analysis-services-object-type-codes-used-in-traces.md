@@ -3,15 +3,15 @@ title: Usado em traços de códigos de tipo de objeto de Analysis Services | Mic
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: trace-events
+ms.custom: trace-events
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c21695966f39e0b1629ad58e0616aa42495d1caa
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 4d451b0348604c4b824bb5bf77c0e719990b1643
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
 ---

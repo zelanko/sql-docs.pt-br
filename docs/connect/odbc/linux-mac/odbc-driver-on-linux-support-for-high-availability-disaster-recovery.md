@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d39d96a32223e9ebe90315dc01c0cd7ab82c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC no Linux e macOS suporte para alta disponibilidade e recuperação de desastres
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Se o primeiro endereço IP retornado do servidor DNS não é conectável, essas 
 
 ## <a name="connecting-with-multisubnetfailover"></a>Conectando-se ao MultiSubnetFailover
 
-Sempre especifique **MultiSubnetFailover = Yes** (ou **= True**) ao se conectar a um [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] ouvinte do grupo de disponibilidade ou [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] instância de Cluster de Failover. **MultiSubnetFailover** permite failover mais rápido para todos os grupos de disponibilidade e instância de cluster de failover no [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** também reduz significativamente o tempo de failover para topologias AlwaysOn únicas e de várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o driver agressivamente a conexão TCP.
+Sempre especifique **MultiSubnetFailover = Yes** ao se conectar a um [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] ouvinte do grupo de disponibilidade ou [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] instância de Cluster de Failover. **MultiSubnetFailover** permite failover mais rápido para todos os grupos de disponibilidade e instância de cluster de failover no [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** também reduz significativamente o tempo de failover para topologias AlwaysOn únicas e de várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o driver agressivamente a conexão TCP.
 
 A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de cluster de failover. O driver tenta se conectar ao banco de dados primário [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instância tentando se conectar a todos os IPs de endereços. Ao se conectar com **MultiSubnetFailover = Yes**, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão de TCP do sistema operacional padrão. **MultiSubnetFailover = Yes** permite uma reconexão mais rápida após o failover de um grupo de disponibilidade AlwaysOn ou uma instância de cluster de failover AlwaysOn. **MultiSubnetFailover = Yes** aplica-se ao sub-redes único e vários grupos de disponibilidade e instâncias de Cluster de Failover.  
 
