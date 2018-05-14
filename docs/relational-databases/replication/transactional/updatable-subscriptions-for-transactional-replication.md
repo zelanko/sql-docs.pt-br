@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -24,12 +23,11 @@ caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d33ebae50e932efe39bd062d96ab1af46f2e2969
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d52ee6d23418e83fb19a9029efe615b0f796f5e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Assinaturas atualizáveis – para a replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +87,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Assinantes não podem atualizar ou inserir valores **text**, **ntext** ou **image** uma vez que não é possível ler das tabelas inseridas ou excluídas dentro dos gatilhos de replicação de controle de alterações. Da mesma forma, Assinantes não podem atualizar ou inserir valores **text** ou **image** usando **WRITETEXT** ou **UPDATETEXT** , porque os dados são substituídos pelo Publicador. Em vez disso, é possível particionar as colunas **text** e **image** em uma tabela separada e modificar as duas tabelas na transação.  
   
-     Para atualizar objetos grandes em um assinante, use os tipos de dados **varchar(max)**, **nvarchar(max)**e **varbinary(max)** em vez dos tipos de dados **text**, **ntext**e **image** , respectivamente.  
+     Para atualizar objetos grandes em um assinante, use os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** em vez dos tipos de dados **text**, **ntext**e **image** , respectivamente.  
   
 -   Atualizações em chaves exclusivas (incluindo chaves primárias) que geram duplicatas (por exemplo, uma atualização do formato `UPDATE <column> SET <column> =<column>+1` ) não são permitidas e serão rejeitadas devido a uma violação de exclusividade. Isso ocorre porque atualizações configuradas feitas no Assinante são propagadas por replicação como instruções **UPDATE** individuais para cada linha afetada.  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
 - merge replication join filters [SQL Server replication]
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1635b5e35a6056b9c44db159ae6ba4c58d4c0fbe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bf7d996475800dfc34e472b42e76aa86696c0345
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir e modificar um filtro de junção entre artigos de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção.  
   
-         Cada coluna da grade contém uma caixa de combinação suspensa que permite a seleção de duas colunas e um operador (**=**, **<>**, **<=**, **\<**, **>=**, **>**e **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione a conjunção (AND ou OR) na coluna **Conjunção** e, depois, insira mais duas colunas e um operador.  
+         Cada coluna da grade contém uma caixa de combinação suspensa que permite a seleção de duas colunas e um operador (**=**, **<>**, **<=**, **\<**, **>=**, **>** e **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione a conjunção (AND ou OR) na coluna **Conjunção** e, depois, insira mais duas colunas e um operador.  
   
     -   Se você selecionar para gravar a instrução manualmente, grave a instrução de junção na área de texto **Instrução de Junção** . Use as caixas de listagens **Colunas da tabela filtrada** e **Colunas da tabela unida** para arrastar e soltar colunas na área de texto **Instrução de junção** .  
   

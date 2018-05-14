@@ -3,15 +3,13 @@ title: Configurar e gerenciar filtros para pesquisa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
@@ -20,13 +18,12 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4126ea66d0c05c495eda630dfdb7a1c83e299944
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d5581011c38ace01ab61acf62c1d084893d8b9de
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar e gerenciar filtros para pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="filters-and-document-types"></a>Filtros e tipos de documento
 Um determinado filtro é específico a um determinado tipo de documento (.doc, .pdf, .xls, .xml e assim por diante). Estes filtros implementam a interface IFilter. Para obter mais informações sobre estes tipos de documento, veja a exibição de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
-Documentos binários podem ser armazenados em uma única coluna **varbinary(max)** ou **image** . Para cada documento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe o filtro correto com base na extensão de arquivo. Como a extensão de arquivo não é visível quando o arquivo é armazenado em uma coluna **varbinary(max)** ou **image** , a extensão de arquivo (.doc, .xls, .pdf e assim por diante) deve ser armazenada em outra coluna da tabela, chamada de coluna de tipo. Essa coluna de tipo pode ser do tipo de dados com base em quaisquer caracteres e contém a extensão do arquivo de documento, como .doc para um documento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Na tabela **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], a coluna **Document** é do tipo **varbinary(max)**e a coluna de tipo **FileExtension**é do tipo **nvarchar(8)**.  
+Documentos binários podem ser armazenados em uma única coluna **varbinary(max)** ou **image** . Para cada documento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe o filtro correto com base na extensão de arquivo. Como a extensão de arquivo não é visível quando o arquivo é armazenado em uma coluna **varbinary(max)** ou **image** , a extensão de arquivo (.doc, .xls, .pdf e assim por diante) deve ser armazenada em outra coluna da tabela, chamada de coluna de tipo. Essa coluna de tipo pode ser do tipo de dados com base em quaisquer caracteres e contém a extensão do arquivo de documento, como .doc para um documento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Na tabela **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], a coluna **Document** é do tipo **varbinary(max)** e a coluna de tipo **FileExtension**é do tipo **nvarchar(8)**.  
 
 **Para exibir a coluna de tipo em um índice de texto completo existente**  
   

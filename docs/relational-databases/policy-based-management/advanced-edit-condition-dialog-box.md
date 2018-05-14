@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
@@ -19,12 +18,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Caixa de diálogo Edição Avançada (Condição)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,15 +89,15 @@ ms.lasthandoff: 04/16/2018
 |**Guid()**|Guid Guid(String *guidString*)|Retorna um GUID de uma cadeia de caracteres.|*guidString* – A representação de cadeia de caracteres do GUID a ser criado.|Retorna o GUID criado a partir da cadeia de caracteres.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|O valor de *check_expression* será retornado se não for NULL; caso contrário, *replacement_value* será retornado. Se os tipos forem diferentes, *replacement_value* será implicitamente convertido para o tipo *check_expression*.|*check_expression* – A expressão a ser verificada quanto a NULL. *check_expression* pode ser qualquer um dos tipos de Gerenciamento Baseado em Políticas com suporte: Numeric, String, Bool, DateTime, Array e Guid.<br /><br /> *replacement_value* – A expressão a ser retornada se *check_expression* for NULL. *replacement_value* deve ser de um tipo que seja implicitamente convertido para o tipo *check_expression*.|O tipo de retorno será o tipo de *check_expression* se *check_expression* não for NULL; caso contrário, o tipo de *replacement_value* será retornado.||  
 |**Len()**|Numeric Len (*string_expression*)|Retorna o número de caracteres, da expressão da cadeia de caracteres atribuída, excluindo espaços em branco à direita.|*string_expression* – A expressão de cadeia de caracteres a ser avaliada.|Retorna um valor da categoria de tipo de dados integer.|`Len('Hello')` retorna `5` neste exemplo.|  
-|**Lower()**|String Lower (String*_expression*)|Retorna a cadeia de caracteres após converter todas as maiúsculas em minúsculas.|*expression* – A expressão de cadeia de caracteres de origem.|Retorna uma cadeia de caracteres que representa a expressão da cadeia de caracteres de origem após a conversão de todas as maiúsculas em minúsculas.|`Len('HeLlO')` retorna `'hello'` neste exemplo.|  
+|**Lower()**|String Lower (String *_expression*)|Retorna a cadeia de caracteres após converter todas as maiúsculas em minúsculas.|*expression* – A expressão de cadeia de caracteres de origem.|Retorna uma cadeia de caracteres que representa a expressão da cadeia de caracteres de origem após a conversão de todas as maiúsculas em minúsculas.|`Len('HeLlO')` retorna `'hello'` neste exemplo.|  
 |**Mod()**|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)|Fornece o resto inteiro após dividir a primeira expressão numérica pela segunda expressão numérica.|*expression_dividend* –Expressão numérica a ser dividida. *expression_dividend* deve ser qualquer expressão válida de qualquer um dos tipos de dados nas categorias de tipos de dados integer ou numeric.<br /><br /> *expression_divisor* – A expressão numérica pela qual o dividendo será dividido. *expression_divisor* deve ser qualquer expressão válida de qualquer um dos tipos de dados nas categorias de tipos de dados integer ou numeric.|Retorna um valor da categoria de tipo de dados integer.|`Mod(Property1, 3)`|  
 |**Multiply()**|Numeric Multiply (Numeric *expression1*, Numeric *expression2*)|Multiplica duas expressões.|*expression1* e *expression2* – Qualquer expressão válida de qualquer um dos tipos de dados na categoria numeric, exceto pelo tipo de dados **datetime** .|Retorna o tipo de dados do argumento que tem a maior precedência.|`Multiply(Property1, .20)`|  
 |**Power()**|Numeric Power (Numeric *numeric_expression*, Numeric *expression_power*)|Retorna o valor da expressão especificada elevada à potência especificada.|*numeric_expression* – Uma expressão da categoria de tipo de dados exact numeric ou approximate numeric data, exceto pelo tipo de dados bit.<br /><br /> *expression_power* – A potência à qual *numeric_expression*será elevada. *expression_power* pode ser uma expressão da categoria de tipo de dados exact numeric ou approximate numeric data, exceto pelo tipo de dados **bit** .|O tipo de retorno é o mesmo que *numeric_expression*.|`Power(Property1, 3)`|  
 |**Round()**|Numeric Round (Numeric *expression*, Numeric *expression_precision*)|Retorna uma expressão numérica arredondada ao comprimento ou precisão especificados.|*expression* – Uma expressão da categoria de tipo de dados exact numeric ou approximate numeric data, exceto pelo tipo de dados **bit** .<br /><br /> *expression_precision* – A precisão para a qual a expressão deve ser arredondada. Quando *expression_precision* é um número positivo, *numeric_expression* é arredondado para o número de posições decimais especificado pelo tamanho. Quando *expression_precision* é um número negativo, *numeric_expression* é arredondado à esquerda da vírgula decimal, conforme especificado por *expression_precision*.|Retorna o mesmo tipo que *numeric_expression*.|`Round(5.333, 0)`|  
-|**String()**|String String (Variant*_expression*)|Converte uma variante em uma cadeia de caracteres.|*expression* – A expressão variante a ser convertida em uma cadeia de caracteres.|Retorna o valor da cadeia de caracteres da expressão variável.|`String(4)`|  
+|**String()**|String String (Variant *_expression*)|Converte uma variante em uma cadeia de caracteres.|*expression* – A expressão variante a ser convertida em uma cadeia de caracteres.|Retorna o valor da cadeia de caracteres da expressão variável.|`String(4)`|  
 |**Sum()**|Numeric Sum (*VarArgs*)|Retorna a soma de todos os valores da lista de argumentos. Sum pode ser usada com valores numéricos.|*VarArgs*– Uma lista da expressão Variant da categoria de tipo de dados numeric ou approximate numeric exata, exceto pelo tipo de dados **bit** .|Retorna a adição de todos os valores da expressão no tipo de dados de expressão mais preciso.<br /><br /> Se o resultado da expressão for as categorias **integer**, **numeric**, **money** e **small money**, **float** e **real** , os tipos de retorno serão **int**, **numeric**, **money**e **float**, respectivamente.|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)` retorna `15` neste exemplo.|  
 |**True()**|Bool TRUE()|Retorna um valor booliano TRUE.||Retorna um valor booliano TRUE.|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper (String*_expression*)|Retorna a cadeia de caracteres após converter todas as minúsculas em maiúsculas.|*expression* – A expressão de cadeia de caracteres de origem.|Retorna uma cadeia de caracteres que representa a expressão da cadeia de caracteres de origem após a conversão de todas as minúsculas em maiúsculas.|`Upper('HeLlO')` retorna `'HELLO'` neste exemplo.|  
+|**Upper()**|String Upper (String *_expression*)|Retorna a cadeia de caracteres após converter todas as minúsculas em maiúsculas.|*expression* – A expressão de cadeia de caracteres de origem.|Retorna uma cadeia de caracteres que representa a expressão da cadeia de caracteres de origem após a conversão de todas as minúsculas em maiúsculas.|`Upper('HeLlO')` retorna `'HELLO'` neste exemplo.|  
   
 ## <a name="see-also"></a>Confira também  
  [Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

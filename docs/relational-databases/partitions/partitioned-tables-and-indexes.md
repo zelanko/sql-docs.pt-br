@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: partitions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
 - partitioned indexes [SQL Server], architecture
@@ -22,13 +21,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8af645cee08f550eb8d22ba06d6ab68da50312e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd4402ca30b3f99e8470282aea9fa46a4667cb05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 04/16/2018
  Um objeto de banco de dados que mapeia as partições de uma função de partição para um conjunto de grupos de arquivos. O principal motivo para colocar suas partições em grupos de arquivos separados é para garantir que poderá efetuar operações de backup em partições de forma independente. Isso porque se pode executar backups em grupos de arquivos individuais.  
   
  Coluna de particionamento  
- A coluna de uma tabela ou índice que uma função de partição usa para particionar a tabela ou índice. Colunas computadas que participam de uma função de partição devem ser marcadas explicitamente como PERSISTED. Todos os tipos de dados que são válidos para uso como colunas de índice podem ser usados como uma coluna de particionamento, exceto **timestamp**. Os tipos de dados **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**ou **varbinary(max)** não podem ser especificados. Também, não podem ser especificados o tipo definido pelo usuário do CLR (Common Language Runtime) do Microsoft .NET Framework e colunas de tipo de dados do alias.  
+ A coluna de uma tabela ou índice que uma função de partição usa para particionar a tabela ou índice. Colunas computadas que participam de uma função de partição devem ser marcadas explicitamente como PERSISTED. Todos os tipos de dados que são válidos para uso como colunas de índice podem ser usados como uma coluna de particionamento, exceto **timestamp**. Os tipos de dados **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** não podem ser especificados. Também, não podem ser especificados o tipo definido pelo usuário do CLR (Common Language Runtime) do Microsoft .NET Framework e colunas de tipo de dados do alias.  
   
  Índice alinhado  
  Um índice que é baseado no mesmo esquema de partição que sua tabela correspondente. Quando uma tabela e seus índices estão em alinhamento, o SQL Server pode alternar partições rápida e eficientemente e, ao mesmo tempo, manter a estrutura de partição da tabela e de seus índices. Um índice não precisa participar na mesma função de partição nomeada para ser alinhado com sua tabela base. Entretanto, a função de partição de um índice e a tabela base devem ser essencialmente as mesmas, em que 1) os argumentos das funções de partição têm o mesmo tipo de dados, 2) eles definem o mesmo número de partições, e 3) eles definem os mesmos valores de limite para as partições.  

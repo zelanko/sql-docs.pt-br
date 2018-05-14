@@ -3,13 +3,13 @@ title: Pesquisa de texto completo | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
@@ -17,13 +17,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 31862df0971da8de6e6ced430f7095587f9f7926
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5464c11f7c9594e613bb4385731736a3204c08f9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
 ###  <a name="indexing"></a> Processo de indexação de texto completo  
  Quando uma população de texto completo (também conhecida como rastreamento) é iniciada, o mecanismo de texto completo entrega grandes lotes de dados à memória e notifica o host do daemon de filtro. O host filtra e o Word divide os dados e converte os dados convertidos em listas de palavras invertidas. A pesquisa de texto completo pega os dados convertidos nas listas de palavras, processa-os para remover palavras irrelevantes e mantém as listas de palavras para um lote em um ou mais índices invertidos.  
   
- Durante a indexação de dados armazenados em uma coluna **varbinary(max)** ou **image** , o filtro, que implementa a interface **IFilter** , extrai texto com base no formato de arquivo especificado para aqueles dados (por exemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Em alguns casos, os componentes de filtro exigem que os dados de **varbinary(max)**ou **image** sejam gravados fora da pasta de dados do filtro, em vez de serem postos na memória.  
+ Durante a indexação de dados armazenados em uma coluna **varbinary(max)** ou **image** , o filtro, que implementa a interface **IFilter** , extrai texto com base no formato de arquivo especificado para aqueles dados (por exemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Em alguns casos, os componentes de filtro exigem que os dados de **varbinary(max)** ou **image** sejam gravados fora da pasta de dados do filtro, em vez de serem postos na memória.  
   
  Como parte do processamento, os dados de texto reunidos são passados por um separador de palavras para que o texto seja separado em tokens individuais ou palavras-chave. A linguagem usada para geração de tokens é especificada no nível da coluna, podendo ser identificada em dados **varbinary(max)**, **image**ou **xml** , pelo componente de filtro.  
   
