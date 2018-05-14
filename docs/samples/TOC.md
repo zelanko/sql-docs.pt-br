@@ -1,6 +1,6 @@
 # [Onde estão os exemplos?](sql-samples-where-are.md)
 # Documentação de importadores mundiais
-## [O que é?](wide-world-importers-what-is.md)
+## [O que é WWI?](wide-world-importers-what-is.md)
 ## [OLTP – Catálogo do banco de dados](wide-world-importers-oltp-database-catalog.md)
 ## [OLTP – Instalar e configurar](wide-world-importers-oltp-install-configure.md)
 ## [OLTP – Recursos do SQL Server](wide-world-importers-oltp-use-of-sql-server-features.md)
@@ -12,3 +12,4 @@
 ## [Fluxo de trabalho ETL](wide-world-importers-perform-etl.md)
 
 ## [Artigos novos e atualizados](new-updated-samples.md) 
+# [Exemplos de código no GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples)

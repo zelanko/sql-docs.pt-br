@@ -29,9 +29,9 @@
 ## SQL Server 2016
 ### [R Services (no Banco de Dados)](install/sql-r-services-windows-install.md)
 ### [R Server (Autônomo)](install/sql-r-standalone-windows-install.md)
-### [Associar ao Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [Instalação de prompt de comando](install/sql-ml-component-commandline-install.md)
 ## [Instalação offline (sem Internet)](install/sql-ml-component-install-without-internet-access.md)
+## [Atualizar R e Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [Configurar ferramentas R](r/set-up-a-data-science-client.md)
 ## [Configurar ferramentas Python](python/setup-python-client-tools-sql.md)
 
@@ -95,15 +95,16 @@
 # [Instruções](r/sql-server-machine-learning-tasks.md)
 
 ## [Gerenciamento de pacote](r/r-package-management-for-sql-server-r-services.md)
-### [Instalar os novos pacotes R no SQL Server](r/install-additional-r-packages-on-sql-server.md)
-### [Instalar os novos pacotes Python no SQL Server](python/install-additional-python-packages-on-sql-server.md)
-### [Habilitar o gerenciamento de pacotes R para uma instância do SQL Server](r/r-package-how-to-enable-or-disable.md)
-### [Determinar quais pacotes estão instalados no SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Usar as funções do RevoScaleR para localizar ou instalar pacotes R no SQL Server](r/use-revoscaler-to-manage-r-packages.md)
-### [Sincronizar pacotes R instalados no SQL Server](r/package-install-uninstall-and-sync.md)
-### [Pacotes R instalados com o SQL Server](r/installing-and-managing-r-packages.md)
-### [Usar miniCRAN para criar um repositório de pacotes local](r/create-a-local-package-repository-using-minicran.md)
-### [Evitar erros com as bibliotecas de pacote de usuário para R](r/packages-installed-in-user-libraries.md)
+### [Pacotes padrão](r/installing-and-managing-r-packages.md)
+### [Obter informações sobre o pacote](r/determine-which-packages-are-installed-on-sql-server.md)
+### [Instalar os novos pacotes R](r/install-additional-r-packages-on-sql-server.md)
+### [Instalar os novos pacotes Python](python/install-additional-python-packages-on-sql-server.md)
+### Somente R
+#### [Habilitar o gerenciamento remoto de pacotes R](r/r-package-how-to-enable-or-disable.md)
+#### [Funções de RevoScaleR para o gerenciamento de pacotes R](r/use-revoscaler-to-manage-r-packages.md)
+#### [Sincronização de pacotes R](r/package-install-uninstall-and-sync.md)
+#### [miniCRAN para o repositório local de pacotes R](r/create-a-local-package-repository-using-minicran.md)
+#### [Soluções alternativas para "bibliotecas de usuário" do R](r/packages-installed-in-user-libraries.md)
 
 ## Exploração de dados e modelagem
 ### [Tipos de dados e bibliotecas do R](r/r-libraries-and-data-types.md)
@@ -155,7 +156,6 @@
 ## [Problemas conhecidos](known-issues-for-sql-server-machine-learning-services.md)
 ## [Notas de versão](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 ## [Artigos novos e atualizados](new-updated-advanced-analytics.md)
-## [Usando o R em Bancos de Dados SQL do Azure](r/using-r-in-azure-sql-database.md)
 
 ## [Dicas de instalação e de solução de problemas](machine-learning-troubleshooting-faq.md)
 ### [Configurar uma máquina virtual](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)

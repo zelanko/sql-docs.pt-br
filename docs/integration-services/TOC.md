@@ -30,6 +30,7 @@
 ## [Validar pacotes implantados no Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Conectar-se ao catálogo do SSIS no Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Agendar a execução do pacote no Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Agendar a execução de pacotes no Azure com SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [Instalar ou atualizar](../integration-services/install-windows/install-integration-services.md)
 
