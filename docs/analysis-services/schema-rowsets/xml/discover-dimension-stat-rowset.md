@@ -3,17 +3,17 @@ title: Conjunto de linhas DISCOVER_DIMENSION_STAT | Microsoft Docs
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: schema-rowsets
+ms.custom: schema-rowsets
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e70810469afe11b6f63c21a9c040e1a3bd32549
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 450c461afd471226193de4f51e4d54289b004270
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>Conjunto de linhas DISCOVER_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

@@ -3,17 +3,17 @@ title: Tipo de dados ProactiveCachingIncrementalProcessingBinding (ASSL) | Micro
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 133d9cf8ca59b04453ca95ef3956c6c320f5b84b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d1a06c26dbef341a6605d9244e3b04d8169f076b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="proactivecachingincrementalprocessingbinding-data-type-assl"></a>Tipo de dados ProactiveCachingIncrementalProcessingBinding (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
