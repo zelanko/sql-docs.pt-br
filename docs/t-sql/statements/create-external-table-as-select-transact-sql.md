@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Cria uma tabela externa e, em seguida, exporta, em paralelo, os resultados de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para o Hadoop ou o Azure Storage Blob.  
-  
- Use a instrução CETAS (CREATE EXTERNAL TABLE AS SELECT) para:  
-  
--   Exportar uma tabela de banco de dados para o Hadoop ou o Armazenamento de Blobs do Azure.  
-  
--   Importar dados do Hadoop ou do Armazenamento de Blobs do Azure e armazená-los no banco de dados.  
-  
--   Consultar dados do Hadoop ou do Armazenamento de Blobs do Azure, associá-los a tabelas de banco de dados relacional e gravar os resultados novamente no Hadoop ou no Armazenamento de Blobs do Azure.  
-  
--   Consultar dados do Hadoop ou do Armazenamento de Blobs do Azure, transformá-los usando as funcionalidades de processamento rápido do banco de dados e gravá-los novamente no Hadoop ou no Armazenamento de Blobs do Azure.  
-  
- Para obter mais informações, consulte [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

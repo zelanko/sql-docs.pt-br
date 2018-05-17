@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
@@ -21,18 +20,16 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71d5c75e27a71a76f014376ad61a04a13bac389c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f967039ead6e8ef7377cfc069ae4d7e9afca5f56
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 Este artigo ilustra como você pode avaliar e escolher a melhor configuração de CE (estimativa de cardinalidade) para o sistema SQL. A maior parte dos sistemas se beneficia da CE mais recente, pois ela é a mais precisa. A CE prevê o número de linhas que sua consulta provavelmente retornará. A previsão de cardinalidade é usada pelo Otimizador de Consulta para gerar o plano de consulta ideal. Com estimativas mais precisas, o Otimizador de Consulta normalmente pode fazer um trabalho melhor de produção de um plano de consulta melhor.  
   
 Provavelmente, seu sistema de aplicativos poderia ter uma consulta importante cujo plano é alterado para um plano mais lento devido à nova CE. Uma consulta desse tipo pode ser parecida com esta:  
@@ -40,84 +37,92 @@ Provavelmente, seu sistema de aplicativos poderia ter uma consulta importante cu
 - Uma consulta OLTP (processamento de transações online) executada com tanta frequência que várias instâncias dessa geralmente são executadas ao mesmo tempo.  
 - SELECT com agregação significativa que é executado durante o horário comercial do OLTP.  
   
-Você tem técnicas para identificar uma consulta que tem um desempenho mais lento com a nova CE. Além disso, você tem opções para resolver o problema de desempenho.  
-  
+Você tem técnicas para identificar uma consulta que tem um desempenho mais lento com a nova CE. Além disso, você tem opções para resolver o problema de desempenho.     
   
 ## <a name="versions-of-the-ce"></a>Versões da CE  
+Em 1998, uma importante atualização da CE fez parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, para o qual o nível de compatibilidade era 70. Essa versão do modelo da CE é definida em quatro suposições básicas:
+
+-  **Independência:** as distribuições de dados em diferentes colunas devem ser independentes entre si, a menos que as informações de correlação estejam disponíveis e sejam utilizáveis.
+-  **Uniformidade:** diferentes valores são espaçados uniformemente e todos eles têm a mesma frequência. Mais precisamente, dentro de cada etapa de [histograma](../../relational-databases/statistics/statistics.md#histogram), diferentes valores são distribuídos uniformemente e cada valor tem a mesma frequência. 
+-  **Confinamento (simples):** os usuários consultam dados existente. Por exemplo, para uma junção de igualdade entre duas tabelas, considere a seletividade de predicados<sup>1</sup> em cada histograma de entrada antes de ingressar histogramas para estimar a seletividade da junção. 
+-  **Inclusão:** para filtrar predicados em que `Column = Constant`, supõe-se que a constante realmente exista para a coluna associada. Se uma etapa do histograma correspondente não estiver vazia, presume-se que um dos valores diferentes da etapa corresponda ao valor do predicado.
+
+  <sup>1</sup> Contagem de linhas que satisfaz o predicado.
+
+Atualizações posteriores iniciadas com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], significando níveis de compatibilidade 120 e acima. As atualizações da CE dos níveis 120 e acima incorporam suposições e algoritmos atualizados que funcionam bem em data warehousing moderno e em cargas de trabalho OLTP. De suposições da CE 70, as seguintes suposições de modelo foram alteradas a partir da CE 120:
+
+-  A **independência** se torna **correlação:** a combinação dos diferentes valores de coluna não é necessariamente independente. Isso poderia parecer mais com uma consulta de dados da vida real.
+-  O **confinamento simples** torna-se **confinamento básico:** os usuários podem consultar dados que não existem. Por exemplo, para que haja uma junção de igualdade entre duas tabelas, usamos histogramas de tabelas básicos para calcular a seletividade da junção e, sem seguida, consideramos a seletividade de predicados.
   
- Em 1998, uma atualização importante da CE fazia parte do Microsoft SQL Server 7.0, para o qual o nível de compatibilidade era 70. Atualizações posteriores iniciadas com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], significando níveis de compatibilidade 120 e acima. As atualizações da CE dos níveis 120 e acima incorporam suposições e algoritmos que funcionam bem em data warehousing moderno e em cargas de trabalho OLTP.  
-  
- **Nível de compatibilidade:** você pode garantir que seu banco de dados está em determinado nível usando o seguinte código Transact-SQL para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Nível de compatibilidade:** é possível garantir que seu banco de dados esteja em determinado nível usando o seguinte código do [!INCLUDE[tsql](../../includes/tsql-md.md)] para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
-go  
+GO  
   
 ALTER DATABASE <yourDatabase>  
-    SET COMPATIBILITY_LEVEL = 130;  
-go  
+SET COMPATIBILITY_LEVEL = 130;  
+GO  
   
 SELECT d.name, d.compatibility_level  
-    FROM sys.databases AS d  
-    WHERE d.name = 'yourDatabase';  
-go  
+FROM sys.databases AS d  
+WHERE d.name = 'yourDatabase';  
+GO  
 ```  
   
- Para um banco de dados do SQL Server definido no nível de compatibilidade 120 ou acima, a ativação do [sinalizador de rastreamento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) força o sistema a usar o CE versão 70.  
+Para um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 ou superior, a ativação do [sinalizador de rastreamento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) força o sistema a usar a CE versão 70.  
   
- **CE herdada:** para um banco de dados do SQL Server definido no nível de compatibilidade 120 e acima, o CE versão 70 pode ser ativado usando o nível do banco de dados usando [ALTERAR A CONFIGURAÇÃO NO ESCOPO DO BANCO DE DADOS](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**CE herdada:** para um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 e acima, a CE versão 70 pode ser ativada usando o nível do banco de dados usando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
-ALTER DATABASE
-    SCOPED CONFIGURATION  
-        SET LEGACY_CARDINALITY_ESTIMATION = ON;  
-go  
+ALTER DATABASE SCOPED CONFIGURATION 
+SET LEGACY_CARDINALITY_ESTIMATION = ON;  
+GO  
   
 SELECT name, value  
-    FROM sys.database_scoped_configurations  
-    WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
+FROM sys.database_scoped_configurations  
+WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
+GO
 ```  
  
- Ou a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o [Dica de Consulta](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+Ou a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o [Dica de Consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01'; 
-    OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Repositório de consultas:** a começar no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o repositório de consultas é uma ferramenta útil para examinar o desempenho de suas consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
+**Repositório de consultas:** a começar no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o repositório de consultas é uma ferramenta útil para examinar o desempenho de suas consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
-    SET QUERY_STORE = ON;  
-go  
+SET QUERY_STORE = ON;  
+GO  
   
-SELECT  
-        q.actual_state_desc AS [actual_state_desc-ofQueryStore],  
+SELECT q.actual_state_desc AS [actual_state_desc_of_QueryStore],  
         q.desired_state_desc,  
         q.query_capture_mode_desc  
-    FROM  
-        sys.database_query_store_options  AS q;  
-go  
+FROM sys.database_query_store_options AS q;  
+GO  
   
 ALTER DATABASE <yourDatabase>  
-    SET QUERY_STORE CLEAR;  
+SET QUERY_STORE CLEAR;  
 ```  
   
- > [!TIP] 
- > É recomendado instalar a versão mais recente do [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) e atualizá-lo com frequência.  
+> [!TIP] 
+> É recomendado instalar a versão mais recente do [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) e atualizá-lo com frequência.  
   
- Outra opção para acompanhar o processo de estimativa de cardinalidade é usar o evento estendido chamado **query_optimizer_estimate_cardinality**. O exemplo de código T-SQL a seguir é executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele grava um arquivo .xel em C:\Temp\ (embora o caminho possa ser alterado). Quando você abre o arquivo .xel no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], as informações detalhadas são exibidas de forma amigável.  
+Outra opção para acompanhar o processo de estimativa de cardinalidade é usar o evento estendido chamado **query_optimizer_estimate_cardinality**. O exemplo de código [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir é executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele grava um arquivo .xel em `C:\Temp\` (embora o caminho possa ser alterado). Quando você abre o arquivo .xel no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], as informações detalhadas são exibidas de forma amigável.  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
 CREATE EVENT SESSION Test_the_CE_qoec_1  
-    ON SERVER  
-    ADD EVENT sqlserver.query_optimizer_estimate_cardinality  
+ON SERVER  
+ADD EVENT sqlserver.query_optimizer_estimate_cardinality  
     (  
         ACTION (sqlserver.sql_text)  
             WHERE (  
@@ -125,25 +130,24 @@ CREATE EVENT SESSION Test_the_CE_qoec_1
                 and sql_text LIKE '%SUM(%'  
             )  
     )  
-    ADD TARGET package0.asynchronous_file_target   
+ADD TARGET package0.asynchronous_file_target   
         (SET  
             filename = 'c:\temp\xe_qoec_1.xel',  
             metadatafile = 'c:\temp\xe_qoec_1.xem'  
         );  
-go  
+GO  
   
 ALTER EVENT SESSION Test_the_CE_qoec_1  
-    ON SERVER  
-    STATE = START;  --STOP;  
-go  
+ON SERVER  
+STATE = START;  --STOP;  
+GO  
 ```  
   
- Para obter informações sobre eventos estendidos adaptados para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
-  
+Para obter informações sobre eventos estendidos adaptados para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Etapas para avaliar a versão da CE  
   
- A seguir, veja as etapas que você pode usar para avaliar se qualquer uma das suas consultas mais importantes tem um desempenho inferior na CE mais recente. Algumas das etapas são realizadas com a execução de um exemplo de código apresentado em uma seção anterior.  
+A seguir, veja as etapas que você pode usar para avaliar se qualquer uma das suas consultas mais importantes tem um desempenho inferior na CE mais recente. Algumas das etapas são realizadas com a execução de um exemplo de código apresentado em uma seção anterior.  
   
 1.  Abra o [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]banco de dados é definido como o mais alto nível de compatibilidade disponível.  
   
@@ -205,17 +209,19 @@ go
   
 ## <a name="how-to-activate-the-best-query-plan"></a>Como ativar o melhor plano de consulta  
   
-Suponha que, com a nova CE, um plano de consulta mais lento seja gerado para sua consulta. Aqui estão algumas opções para ativar o plano mais rápido.  
+Suponha que, com a CE 120 ou superior, um plano de consulta menos eficiente é gerado para sua consulta. Aqui estão algumas opções para ativar o plano melhor:  
   
-Você pode definir o nível de compatibilidade de todo o seu banco de dados com um valor menor do que o valor mais recente disponível.  
+1. Você pode definir o nível de compatibilidade de todo o seu banco de dados com um valor menor do que o valor mais recente disponível.  
   
-- Isso ativa a CE herdada, mas faz com que todas as consultas fiquem sujeitas à CE antiga e menos precisa.  
+   - Por exemplo, configurar o nível de compatibilidade 110 ou inferior ativa a CE 70, mas deixa todas as consultas sujeitas ao modelo de CE anterior.  
   
-- Além disso, a compatibilidade do nível anterior também perde excelente melhorias no otimizador de consultas.  
+   - Além disso, configurar um nível de compatibilidade inferior também faz inúmeras melhorias no otimizador de consulta para as versões mais recentes serem perdidas.  
   
-Você poderá usar `LEGACY_CARDINALITY_ESTIMATION` para fazer com que todo o banco de dados use a CE mais antiga ou apenas uma consulta específica, enquanto mantém as melhorias no otimizador de consulta.  
+2. Você poderá usar a opção de banco de dados `LEGACY_CARDINALITY_ESTIMATION` para fazer com que todo o banco de dados use a CE mais antiga, mantendo outras melhorias no otimizador de consulta.   
+
+3. Você poderá usar a dica de consulta `LEGACY_CARDINALITY_ESTIMATION` para fazer com que uma única consulta use a CE mais antiga, mantendo outras melhorias no otimizador de consulta.  
   
-Para o controle mais refinado, você poderá *forçar* o sistema SQL a usar o plano gerado com a CE antiga durante o teste. Depois de *fixar* seu plano preferido, você poderá definir o banco de dados inteiro para usar o nível de compatibilidade e a CE mais recentes. A opção é elaborada a seguir.  
+Para obter o controle mais refinado, você pode *forçar* o sistema a usar o plano gerado com a CE 70 durante o teste. Depois de *fixar* seu plano preferido, você poderá definir o banco de dados inteiro para usar o nível de compatibilidade e a CE mais recentes. A opção é elaborada a seguir.  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>Como forçar um plano de consulta específico  
   
@@ -225,8 +231,7 @@ O repositório de consultas oferece diferentes maneiras pelas quais você pode f
   
 - No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expanda o nó **Repositório de Consultas**, clique com o botão direito do mouse em **Nós que Consomem Mais Recursos** e clique em **Exibir Nós que Consomem Mais Recursos**. A exibição mostra os botões rotulados **Forçar Plano** e **Não Forçar Plano**.  
   
- Para obter mais informações sobre o repositório de consultas, veja [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
-  
+Para obter mais informações sobre o repositório de consultas, veja [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="examples-of-ce-improvements"></a>Exemplos de melhorias de CE  
   
@@ -234,7 +239,7 @@ Esta seção descreve consultas de exemplo que se beneficiam das melhorias imple
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>Exemplo A. A CE entende que o valor máximo pode ser maior do que quando as estatísticas foram coletadas pela última vez  
   
-Suponha que as estatísticas para OrderTable foram coletadas pela última vez em 30/04/2016, quando a OrderAddedDate máxima era 30/04/2016. A CE de nível de compatibilidade 120 (e para níveis mais altos) entende que as colunas em OrderTable que contêm dados *crescentes* podem ter valores maiores do que o máximo registrado pelas estatísticas. Essa compreensão melhora o plano de consulta para SQL SELECTs como a mostrada a seguir.  
+Suponha que as estatísticas foram coletadas pela última vez para `OrderTable` em `2016-04-30`, quando o `OrderAddedDate` máximo era `2016-04-30`. A CE 120 (e versão superior) entende que as colunas em `OrderTable` que têm dados *crescentes* pode ter valores maiores do que o máximo registrado pelas estatísticas. Esse entendimento melhora o plano de consulta para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT como a seguinte.  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -244,33 +249,32 @@ WHERE OrderAddedDate >= '2016-05-01';
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Exemplo B. A CE entende que os predicados filtrados na mesma tabela estão frequentemente correlacionados  
   
-Na instrução SELECT a seguir, vemos predicados filtrados em Model e ModelVariant. Intuitivamente, entendemos que quando Model é 'Xbox' há uma possibilidade de ModelVariant ser 'One', uma vez que o Xbox tem uma variante chamada One.  
+Na SELECT a seguir, vemos predicados filtrados em `Model` e em `ModelVariant`. Intuitivamente, entendemos que quando `Model` é 'Xbox' há uma possibilidade de `ModelVariant` ser 'One', uma vez que o Xbox tem uma variante chamada One.  
   
-A CE de nível 120 entende que pode haver uma correlação entre as duas colunas na mesma tabela, Model e ModelVariant. A CE faz uma estimativa mais precisa de quantas linhas serão retornadas pela consulta, e o otimizador de consulta gera um plano melhor.  
+A partir da CE 120, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entende que pode haver uma correlação entre as duas colunas na mesma tabela, `Model` e `ModelVariant`. A CE faz uma estimativa mais precisa de quantas linhas serão retornadas pela consulta, e o [otimizador de consulta](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) gera um plano melhor.  
   
 ```sql  
 SELECT Model, Purchase_Price  
 FROM dbo.Hardware  
-WHERE Model  = 'Xbox'  AND  
+WHERE Model = 'Xbox' AND  
       ModelVariant = 'One';  
 ```  
   
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Exemplo C. A CE não pressupõe mais nenhuma correlação entre os predicados filtrados de tabelas diferentes 
-Com a nova e ampla pesquisa sobre cargas de trabalho modernas e dados corporativos reais, descobriu-se que, em geral, não há correlação entre os filtros de predicado de diferentes tabelas. Na consulta a seguir, a CE pressupõe que não há nenhuma correlação entre s.type e r.date. Portanto, a CE faz uma estimativa inferior do número de linhas retornadas.  
+Com a nova e ampla pesquisa sobre cargas de trabalho modernas e dados corporativos reais, descobriu-se que, em geral, não há correlação entre os filtros de predicado de diferentes tabelas. Na consulta a seguir, a CE pressupõe que não há nenhuma correlação entre `s.type` e `r.date`. Portanto, a CE faz uma estimativa inferior do número de linhas retornadas.  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
 FROM dbo.Sales    AS s  
 CROSS JOIN dbo.Returns  AS r  
-WHERE s.ticket = r.ticket  AND  
-      s.type   = 'toy'     AND  
-      r.date   = '2016-05-11';  
+WHERE s.ticket = r.ticket AND  
+      s.type = 'toy' AND  
+      r.date = '2016-05-11';  
 ```  
-  
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Otimizar os planos de consulta com o avaliador de cardinalidade do SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Dicas de consulta](../../t-sql/queries/hints-transact-sql-query.md)    
+ [Dicas de consulta](../../t-sql/queries/hints-transact-sql-query.md) [USAR DICA Dicas de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)   

@@ -3,13 +3,10 @@ title: Função SQLFetchScroll | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -26,9 +23,9 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49c258efc97554210dc454dbd01314b5bc4a508e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 439639255cc41fc22f94c5a1605dee8fc68a06ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
 ---
@@ -302,7 +299,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  [1] essa coluna usa os números de linha antes de todas as linhas foram inseridas ou excluídas.  
   
- [2]] nesse caso, o cursor tenta retornar linhas começando com a linha 21. Como 21 de linha foi excluída, a primeira linha retorna é 22 de linha.  
+ [2] nesse caso, o cursor tenta retornar linhas começando com a linha 21. Como 21 de linha foi excluída, a primeira linha retorna é 22 de linha.  
   
  Linhas de erro (ou seja, as linhas com um status de SQL_ROW_ERROR) não afetam o movimento do cursor. Por exemplo, se o conjunto de linhas atual começa com a linha 11 e o status de linha 11 é SQL_ROW_ERROR, chamar **SQLFetchScroll** com FetchOrientation definido como SQL_FETCH_RELATIVE e FetchOffset definido como 5 retorna o conjunto de linhas começando com a linha 16, Assim como seria se o status da linha 11 foi SQL_SUCCESS.  
   

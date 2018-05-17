@@ -3,13 +3,10 @@ title: Tipos de dados SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,9 +18,9 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: ba122ccbc873603b434a8541fe44aee10a5104e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
 ---
@@ -83,7 +80,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|MINUTOS de intervalo (*p*) para o segundo (*p*)|N
   
  [1] este é o valor retornado na coluna DATA_TYPE por uma chamada para **SQLGetTypeInfo**.  
   
- [2]] este é o valor retornado na coluna Nome e criar parâmetros por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação — por exemplo, CHAR, enquanto a coluna criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como a precisão, escala e comprimento.  
+ [2] este é o valor retornado na coluna Nome e criar parâmetros por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação — por exemplo, CHAR, enquanto a coluna criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como a precisão, escala e comprimento.  
   
  [3] um aplicativo usa **SQLGetTypeInfo** ou **SQLColAttribute** para determinar se um determinado tipo de dados ou uma coluna específica em um conjunto de resultados é não assinada.  
   

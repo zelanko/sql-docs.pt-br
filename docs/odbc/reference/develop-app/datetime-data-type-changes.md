@@ -3,13 +3,10 @@ title: Altera o tipo de dados datetime | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,9 +21,9 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1fefa994f1902411e18419d8595a314f29ad0f58
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 00e5fb8092d8bdcb0bce4067e4b694b6282ab340
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
 ---
@@ -50,7 +47,7 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
   
  [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- [2]] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
+ [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
  A tabela a seguir mostra como o ODBC 3 *. x* executa o Gerenciador de Driver mapeamento dos data, hora e carimbo de hora SQL tipos de dados inserido no *ParameterType* argumento de **SQLBindParameter**  ou o *DataType* argumento de **SQLGetTypeInfo**.  
   
@@ -65,4 +62,4 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
   
  [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- [2]] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.
+ [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.

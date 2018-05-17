@@ -40,11 +40,11 @@ caps.latest.revision: 50
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a244e1e6a1f0c32f56e183f389ac4940b25cb00f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6dbf227ec42614e77cb4129c273ec55609781b2f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ A exibição de catálogo **sys.dm_exec_requests** contém informações sobre o
   
 A definição de uma unidade de andamento depende da fase atual de execução do comando DBCC. O andamento é informado ocasionalmente na granularidade de uma página de banco de dados. Em outras fases ele é informado da granularidade de um único banco de dados ou correção de alocação. A tabela a seguir descreve cada fase da execução e a granularidade em que o comando informa sobre o andamento.
   
-|Fase de execução|Description|Granularidade do relatório de andamento|  
+|Fase de execução|Descrição|Granularidade do relatório de andamento|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|A consistência lógica e física dos objetos no banco de dados é verificada nessa fase.|Andamento relatado no nível da página do banco de dados.<br /><br /> O valor do relatório de andamento é atualizado a cada 1000 páginas do banco de dados verificadas.|  
 |DBCC TABLE REPAIR|As correções de banco de dados são executadas nessa fase, se REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS for especificado e houver erros de objeto que precisem ser corrigidos.|Andamento relatado no nível de correção individual.<br /><br /> O contador é atualizado para todas as correções concluídas.|  
@@ -146,6 +146,6 @@ A definição de uma unidade de andamento depende da fase atual de execução do
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Aplica-se a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

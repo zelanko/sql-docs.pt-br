@@ -3,13 +3,10 @@ title: Instrução transições | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,9 +18,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5f20ec0efb42e877695c44f4d62c4ffc1ae79806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
 ---
@@ -127,7 +124,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] a instrução foi temporariamente no estado S11 enquanto uma função estava em execução. **SQLCancel** foi chamado de um thread diferente.  
   
- [2]] a instrução estava no estado S11 porque uma função chamada assíncrona retornou SQL_STILL_EXECUTING.  
+ [2] a instrução estava no estado S11 porque uma função chamada assíncrona retornou SQL_STILL_EXECUTING.  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
@@ -244,7 +241,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] o erro foi retornado pelo Gerenciador de Driver.  
   
- [2]] o erro não foi retornado pelo Gerenciador de Driver.  
+ [2] o erro não foi retornado pelo Gerenciador de Driver.  
   
  [3], o resultado atual é o último ou apenas os resultados ou nenhum resultado atual. Para obter mais informações sobre vários resultados, consulte [vários resultados](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -496,7 +493,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] a preparação falha por um motivo diferente de validar a instrução (o SQLSTATE foi HY009 [valor de argumento inválido] ou HY090 [comprimento inválido de cadeia de caracteres ou buffer]).  
   
- [2]] a preparação da falha ao validar a instrução (o SQLSTATE não era HY009 [valor de argumento inválido] ou HY090 [comprimento inválido de cadeia de caracteres ou buffer]).  
+ [2] a preparação da falha ao validar a instrução (o SQLSTATE não era HY009 [valor de argumento inválido] ou HY090 [comprimento inválido de cadeia de caracteres ou buffer]).  
   
  [3], o resultado atual é o último ou apenas os resultados ou nenhum resultado atual. Para obter mais informações sobre vários resultados, consulte [vários resultados](../../../odbc/reference/develop-app/multiple-results.md).  
   

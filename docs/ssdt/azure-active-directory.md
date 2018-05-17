@@ -1,27 +1,24 @@
 ---
 title: Suporte do Azure Active Directory no SSDT (SQL Server Data Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
-ms.prod: sql
+ms.date: 04/09/2018
+ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssdt
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: ssdt
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1e8f19c1dcc629ec6e97aa02cd23be1c101ad596
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 62ed13f6bb3eb5859976b5a5d970f3297c42304e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Suporte do Azure Active Directory no SSDT (SQL Server Data Tools)
 
@@ -39,13 +36,13 @@ A Autenticação de Senha do Active Directory é um mecanismo de conexão com o 
 
 A Autenticação Integrada do Active Directory é um mecanismo de conexão com o Banco de Dados SQL do Azure que usa identidades no Azure Active Directory (Microsoft Azure AD). Use esse método para se conectar, caso você entre no Windows com as credenciais de um domínio federado do Azure Active Directory. Para obter mais informações, veja [Conectar-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
-## <a name="active-directory-interactive-authentication-preview"></a>Autenticação Interativa do Active Directory (visualização)
+## <a name="active-directory-interactive-authentication"></a>Autenticação Interativa do Active Directory
 
 O SSDT fornece um novo método de autenticação para conexão com o Banco de Dados SQL do Azure: a **Autenticação Interativa do Active Directory**.
 
 
 > [!NOTE]
-> A Autenticação Interativa do Active Directory está disponível durante a conexão com o SSDT na [visualização do Visual Studio 2017](https://www.visualstudio.com/vs/preview/) e exige instalar a [visualização do .NET 4.7.2 (KB4038188)](https://go.microsoft.com/fwlink/?linkid=867317) no computador com SSDT. Se não instalar a visualização do .NET 4.7.2 (KB4038188), a opção do recurso Autenticação Interativa do Active Directory não estará disponível.
+> A Autenticação Interativa do Active Directory está disponível ao se conectar ao SSDT no [Visual Studio 2017 versão 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), e requer um [download e instalação do .NET Framework 4.7.2](https://www.microsoft.com/net/download/all) no computador que está executando o SSDT. Se o [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) não estiver instalado, a opção Autenticação Interativa do Active Directory não estará disponível.
 
 
 A Autenticação Interativa do Active Directory tem suporte para uma autenticação interativa que permite usar a MFA (Autenticação Multifator) do Azure AD (Active Directory) para se autenticar no Banco de Dados SQL do Azure. Este método tem suporte para usuários federados e nativos do Microsoft Azure AD e para usuários convidados de outras contas (inclusive usuários B2B, contas da Microsoft e de outras plataformas, como @outlook.com, @hotmail.com, @live.com e @gmail.com). Se este método estiver especificado, é necessário especificar o **nome de usuário** e o campo Senha será desabilitado. 

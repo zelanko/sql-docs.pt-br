@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -29,12 +28,11 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3cccb42d089124c5d57eaad656ff00676b385f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-administration"></a>Administração do agente de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +94,8 @@ ms.lasthandoff: 04/16/2018
 |Limpar o trabalho|Description|Cronograma padrão|  
 |------------------|-----------------|----------------------|  
 |Limpeza do histórico do agente: Distribuição|Remove o histórico do agente de replicação do banco de dados de distribuição.|Executa a cada dez minutos|  
-|Limpeza de distribuição: Distribuição|Remove transações replicadas do banco de dados de distribuição. Desativa assinaturas que não foram sincronizadas dentro do período máximo de retenção da distribuição.|Executa a cada dez minutos|  
-|Limpeza de assinaturas expiradas|Detecta e remove assinaturas expiradas dos bancos de dados de publicação.|Executa diariamente à 1h00.|  
+|Limpeza de distribuição: Distribuição|Remove transações replicadas do banco de dados de distribuição. |Executa a cada dez minutos|  
+|Limpeza de assinaturas expiradas|Detecta e remove assinaturas expiradas dos bancos de dados de publicação. No distribuidor, desativa assinaturas que não foram sincronizadas dentro do período máximo de retenção da distribuição.|Executa diariamente à 1h00.| 
 |Reinicializar as assinaturas que possuem falhas de validação de dados|Detectar todas as assinaturas que têm falhas de validação de dados marcando-as para reinicialização. A próxima vez que o Merge Agent ou que o Distribution Agent executarem, um instantâneo novo será aplicado aos Assinantes.|Nenhum cronograma padrão (desativado por padrão).|  
 |Verificação dos agentes de replicação|Detecta agentes de replicação que não estão ativamente fazendo log no histórico. Comunica ao log do evento do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows se uma etapa do trabalho falhar.|Executa a cada dez minutos.|  
 |Atualizador de monitoração de replicação para distribuição|Atualiza as consultas armazenadas usadas pelo Replication Monitor.|Executa continuamente.|  

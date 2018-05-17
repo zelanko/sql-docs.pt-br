@@ -1,1 +1,1 @@
-![Baixar](../ssdt/media/download.png)[Baixar o driver JDBC](https://go.microsoft.com/fwlink/?linkid=868287)
+![Baixar](../ssdt/media/download.png)[Baixar o driver JDBC](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)
