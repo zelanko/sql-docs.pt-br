@@ -1,7 +1,7 @@
 ---
 title: Diretrizes para operações de índice online | Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 05/14/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 03b9ea68c0c0139a3faca89fb0e3c5c59e5b11f8
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,16 @@ Em geral, não há nenhuma diferença de desempenho entre a recompilação de í
 - Para cargas de trabalho com atualização intensa, você pode observar certa degradação da taxa de transferência (nossos testes mostram menos de 10% de degradação).
 
 Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a recompilação de índice online retomável e não retomável.
+
+## <a name="online-default-options"></a>Opções online padrão 
+
+Você pode definir opções padrão para online ou retomáveis em um nível de banco de dados, definindo as opções de configuração com escopo do banco de dados ELEVATE_ONLINE ou ELEVATE_RESUMABLE. Com essas opções padrão, você pode evitar a execução acidental de uma operação que usa o banco de dados offline. Ambas as opções farão com que o mecanismo eleve automaticamente determinadas operações para execução online ou retomável.  
+Você pode definir a opção como FAIL_UNSUPPORTED, WHEN_SUPPORTED ou NEVER. Você pode definir valores diferentes para online e retomável. 
+
+ELEVATE_ONLINE e ELEVATE_RESUMABLE são aplicáveis somente a instruções DDL que dão suporte à sintaxe online e retomável respectivamente. Por exemplo, se você tenta criar um índice XML com ELEVATE_ONLINE=FAIL_UNSUPORTED, a operação é executada offline, pois os índices XML não são suporte à sintaxe ONLINE=. As opções somente afetam as instruções DDL enviadas sem especificar uma opção ONLINE ou RESUMABLE. Por exemplo, ao enviar uma instrução com ONLINE=OFF ou RESUMABLE=OFF, o usuário pode substituir uma configuração FAIL_UNSUPPORTED e executar uma instrução offline e/ou de modo não retomável. 
+ 
+> [!NOTE]
+> ELEVATE_ONLINE e ELEVATE_RESUMABLE não se aplicam a operações de índice XML. 
  
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md)  

@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7d913d7cf3214acb8683bca2bb0a7ebca0e7b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbd5a65f85fa7b54964abf60e01c24a94969753e
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -242,7 +242,7 @@ PARTITION
  PARTITION = ALL recria todas as partições.  
   
 > [!WARNING]
->  É possível criar e reconstruir índices não alinhados em uma tabela com mais de 1.000 partições, mas não há suporte para isso. Fazer isso pode provocar degradação do desempenho ou consumo excessivo de memória durante essas operações. É recomendável usar índices alinhados apenas quando o número de partições for maior que 1.000.  
+> É possível criar e reconstruir índices não alinhados em uma tabela com mais de 1.000 partições, mas não há suporte para isso. Fazer isso pode provocar degradação do desempenho ou consumo excessivo de memória durante essas operações. É recomendável usar índices alinhados apenas quando o número de partições for maior que 1.000.  
   
  *partition_number*  
    
@@ -260,14 +260,11 @@ PARTITION
  Marca o índice como desabilitado e indisponível para uso pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Qualquer índice pode ser desabilitado. A definição de um índice desabilitado permanece no catálogo do sistema sem nenhum dado de índice subjacente. Desabilitar um índice clusterizado evita que o usuário acesse os dados da tabela subjacente. Para habilitar um índice, use ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING. Para obter mais informações, consulte [Desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md) e [Habilitar índices e restrições](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
   
  REORGANIZE um índice rowstore  
- Para índices rowstore, REORGANIZE especifica reorganizar o nível folha do índice.  A operação de REORGANIZE é:  
+ Para índices rowstore, REORGANIZE especifica reorganizar o nível folha do índice. A operação de REORGANIZE é:  
   
 -   sempre executada online. Isso significa que os bloqueios de tabela de longo prazo não são mantidos e que as consultas ou atualizações da tabela subjacente podem continuar durante a transação ALTER INDEX REORGANIZE.  
-  
 -   Não é permitida para um índice desabilitado  
-  
 -   Não é permitida quando ALLOW_PAGE_LOCKS está definido como OFF  
-  
 -   Não é revertida quando é executada em uma transação e a transação é revertida.  
   
 REORGANIZE WITH **(** LOB_COMPACTION = { **ON** | OFF } **)**  
@@ -289,10 +286,8 @@ LOB_COMPACTION = OFF
   
 -   OFF não tem nenhum efeito em um heap.  
   
-REORGANIZE um índice columnstore  
-REORGANIZE é executada online.  
-  
-Para índices columnstore, REORGANIZE compacta cada rowgroup delta CLOSED no columnstore como um rowgroup compactado.  
+ REORGANIZE um índice columnstore  
+ Para índices columnstore, REORGANIZE compacta cada rowgroup delta CLOSED no columnstore como um rowgroup compactado. A operação REORGANIZE sempre é executada online. Isso significa que os bloqueios de tabela de longo prazo não são mantidos e que as consultas ou atualizações da tabela subjacente podem continuar durante a transação ALTER INDEX REORGANIZE. 
   
 -   REORGANIZE não é necessário para mover rowgroups delta CLOSED para rowgroups compactados. O processo TM (motor de tupla) em segundo plano é ativado periodicamente para compactar rowgroups delta CLOSED. É recomendável usar REORGANIZE quando o motor de tupla está ficando para trás. REORGANIZE pode compactar rowgroups de maneira mais agressiva.  
   
@@ -304,7 +299,7 @@ Para índices columnstore em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 -   Combina um ou mais rowgroups compactados para aumentar linhas por rowgroup até o máximo de 1.024.576 linhas. Por exemplo, se você importar em massa cinco lotes de 102.400 linhas, obterá cinco rowgroups compactados. Se você executar REORGANIZE, esses rowgroups serão mesclados em um grupo de linhas compactado de 512 mil linhas de tamanho. Isso pressupõe que não havia nenhuma limitação de tamanho ou memória de dicionário.  
   
--   Para rowgroups em que 10% ou mais linhas foram excluídas logicamente, o SQL Server tenta combinar esse grupo de linhas com um ou mais rowgroups.    Por exemplo, o rowgroup 1 é compactado com 500 mil linhas e o rowgroup 21 é compactado com o máximo de 1.048.576 linhas.  O rowgroup 21 tem 60% das linhas excluídas, o que deixa 409.830 linhas. O SQL Server favorece combinar esses dois rowgroups para compactar um novo rowgroup com 909.830 linhas.  
+-   Para rowgroups em que 10% ou mais linhas foram excluídas logicamente, o SQL Server tenta combinar esse grupo de linhas com um ou mais rowgroups. Por exemplo, o rowgroup 1 é compactado com 500 mil linhas e o rowgroup 21 é compactado com o máximo de 1.048.576 linhas.  O rowgroup 21 tem 60% das linhas excluídas, o que deixa 409.830 linhas. O SQL Server favorece combinar esses dois rowgroups para compactar um novo rowgroup com 909.830 linhas.  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
@@ -344,7 +339,7 @@ FILLFACTOR = *fillfactor*
  Para exibir a configuração do fator de preenchimento, use **sys.indexes**.  
   
 > [!IMPORTANT]
->  A criação ou alteração de um índice clusterizado com um valor FILLFACTOR afeta a quantidade de espaço de armazenamento que os dados ocupam, pois o [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistribui os dados quando cria o índice clusterizado.  
+> A criação ou alteração de um índice clusterizado com um valor FILLFACTOR afeta a quantidade de espaço de armazenamento que os dados ocupam, pois o [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistribui os dados quando cria o índice clusterizado.  
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  
@@ -633,27 +628,34 @@ ABORT
 Anule uma operação de índice em execução ou em pausa declarada como retomável. Você precisa executar explicitamente uma operação **ABORT** para terminar uma operação de recompilação de índice retomável. Falha ou pausar uma operação de índice retomável não termina sua execução; em vez disso, deixa a operação em um estado de pausa indefinido.
   
 ## <a name="remarks"></a>Remarks  
- ALTER INDEX não pode ser usado para reparticionar um índice ou movê-lo para um grupo de arquivos diferente. Essa instrução não pode ser usada para modificar a definição de índice, como adicionar ou excluir colunas ou alterar a ordem das colunas. Use CREATE INDEX com a cláusula DROP_EXISTING para executar essas operações.  
+`ALTER INDEX` não pode ser usado para reparticionar um índice ou movê-lo para um grupo de arquivos diferente. Essa instrução não pode ser usada para modificar a definição de índice, como adicionar ou excluir colunas ou alterar a ordem das colunas. Use `CREATE INDEX` com a cláusula `DROP_EXISTING` para executar essas operações.  
   
- Quando uma opção não for especificada explicitamente, a configuração atual será aplicada. Por exemplo, se uma configuração FILLFACTOR não for especificada na cláusula REBUILD, o valor do fator de preenchimento armazenado no catálogo do sistema será usado durante o processo de recriação. Para exibir as configurações de opção de índice atuais, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+Quando uma opção não for especificada explicitamente, a configuração atual será aplicada. Por exemplo, se uma configuração `FILLFACTOR` não for especificada na cláusula `REBUILD`, o valor do fator de preenchimento armazenado no catálogo do sistema será usado durante o processo de recriação. Para exibir as configurações de opção de índice atuais, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-> [!NOTE]
-> Os valores de ONLINE, MAXDOP e SORT_IN_TEMPDB não são armazenados no catálogo do sistema. A menos que especificado na instrução de índice, o valor padrão da opção será usado.
+Os valores para `ONLINE`, `MAXDOP` e `SORT_IN_TEMPDB` não são armazenados no catálogo do sistema. A menos que especificado na instrução de índice, o valor padrão da opção será usado.
   
- Em computadores multiprocessador, assim como acontece em outras consultas, ALTER INDEX REBUILD usa automaticamente mais processadores para executar operações de exame e classificação associadas à modificação do índice. Quando você executar ALTER INDEX REORGANIZE, com ou sem LOB_COMPACTION, o valor **grau máximo de paralelismo** é uma operação encadeada única. Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+Em computadores multiprocessadores, assim como acontece em outras consultas, `ALTER INDEX ... REBUILD` usa automaticamente mais processadores para executar operações de exame e classificação associadas à modificação do índice. Quando você executar `ALTER INDEX ... REORGANIZE`, com ou sem `LOB_COMPACTION`, o valor **grau máximo de paralelismo** será uma operação de thread único. Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
- Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no qual ele está localizado estiver offline ou definido como somente leitura. Quando a palavra-chave ALL for especificada e um ou mais índices estiver em um grupo de arquivos offline ou somente leitura, a instrução falhará.  
+> [!IMPORTANT]
+> Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no qual ele está localizado estiver offline ou definido como somente leitura. Quando a palavra-chave `ALL` for especificada e um ou mais índices estiver em um grupo de arquivos offline ou somente leitura, a instrução falhará.  
   
 ## <a name="rebuilding-indexes"></a> Recompilando índices  
- A recriação de um índice descarta e recria o índice. Isso remove a fragmentação, recupera espaço em disco ao compactar as páginas com base na configuração do fator de preenchimento especificada ou existente, e reclassifica as linhas do índice em páginas contíguas. Quando ALL é especificado, todos os índices da tabela são descartados e recriados em uma única transação. As restrições FOREIGN KEY não precisam ser descartadas com antecedência. Quando índices com 128 extensões ou mais são recriados, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados até depois da confirmação da transação.  
+A recriação de um índice descarta e recria o índice. Isso remove a fragmentação, recupera espaço em disco ao compactar as páginas com base na configuração do fator de preenchimento especificada ou existente, e reclassifica as linhas do índice em páginas contíguas. Quando `ALL` é especificado, todos os índices da tabela são descartados e recriados em uma única transação. As restrições de chave estrangeira não precisam ser descartadas com antecedência. Quando índices com 128 extensões ou mais são recriados, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados até depois da confirmação da transação.  
+ 
+Para obter mais informações, veja [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
- A recriação ou reorganização de índices pequenos geralmente não reduz a fragmentação. As páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação.  
+> [!NOTE]
+> A recriação ou reorganização de índices pequenos geralmente não reduz a fragmentação. As páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação.  
   
- Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], as estatísticas não são criadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o otimizador de consultas usa o algoritmo de amostragem padrão para gerar estatísticas. Para obter estatísticas em índices particionados por meio do exame de todas as linhas da tabela, use CREATE STATISTICS ou UPDATE STATISTICS com a cláusula FULLSCAN.  
+> [!IMPORTANT]
+> Quando um índice for criado ou reconstruído no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as estatísticas serão criadas ou atualizadas por meio do exame de todas as linhas da tabela.
+> 
+> No entanto, começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], as estatísticas não são criadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o otimizador de consultas usa o algoritmo de amostragem padrão para gerar essas estatísticas. Para obter as estatísticas dos índices particionados ao examinar todas as linhas da tabela, use `CREATE STATISTICS` ou `UPDATE STATISTICS` com a cláusula `FULLSCAN`.  
   
- Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], às vezes, era possível recriar um índice não clusterizado para corrigir as inconsistências causadas por falhas de hardware. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posteriores, ainda é possível reparar essas inconsistências entre o índice e o índice clusterizado recriando um índice não clusterizado offline. Entretanto, não é possível reparar inconsistências de índice não clusterizado recriando o índice online, porque o mecanismo de recriação online usará o índice não clusterizado existente como base para a recriação e, portanto, a inconsistência persistirá. A recriação do índice offline poderá forçar, algumas vezes, um exame do índice clusterizado (ou heap) e, consequentemente, remover a inconsistência. Para garantir uma recompilação do índice clusterizado, remova e recrie o índice não clusterizado. Como nas versões anteriores, é recomendável que a recuperação de inconsistências seja feita com a restauração dos dados afetados de um backup; porém, talvez seja possível reparar as inconsistências do índice recriando o índice não clusterizado offline. Para obter mais informações, veja [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], às vezes, era possível recriar um índice não clusterizado para corrigir as inconsistências causadas por falhas de hardware.    
+No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posteriores, ainda é possível reparar essas inconsistências entre o índice e o índice clusterizado recriando um índice não clusterizado offline. Entretanto, não é possível reparar inconsistências de índice não clusterizado recriando o índice online, porque o mecanismo de recriação online usará o índice não clusterizado existente como base para a recriação e, portanto, a inconsistência persistirá. A recriação do índice offline poderá forçar, algumas vezes, um exame do índice clusterizado (ou heap) e, consequentemente, remover a inconsistência. Para garantir uma recompilação do índice clusterizado, remova e recrie o índice não clusterizado. Como nas versões anteriores, é recomendável que a recuperação de inconsistências seja feita com a restauração dos dados afetados de um backup; porém, talvez seja possível reparar as inconsistências do índice recriando o índice não clusterizado offline. Para obter mais informações, veja [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
   
- Para recompilar um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+Para recompilar um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação. Os dados estão “offline” e indisponíveis durante a recompilação.  
   
@@ -664,28 +666,31 @@ Anule uma operação de índice em execução ou em pausa declarada como retomá
 4.  Requer espaço no meio físico para armazenar duas cópias do índice columnstore durante a recriação. Quando a recompilação é concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui o índice columnstore clusterizado original.  
   
 ## <a name="reorganizing-indexes"></a> Reorganizando índices  
- A reorganização de um índice utiliza recursos mínimos do sistema. Ela desfragmenta o nível folha de índices clusterizados e não clusterizados em tabelas e exibições, reordenando fisicamente as páginas de nível folha para que correspondam à ordem lógica, da esquerda para a direita, dos nós folha. A reorganização também compacta as páginas de índice. A compactação baseia-se no valor do fator de preenchimento existente. Para exibir a configuração do fator de preenchimento, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+A reorganização de um índice utiliza recursos mínimos do sistema. Ela desfragmenta o nível folha de índices clusterizados e não clusterizados em tabelas e exibições, reordenando fisicamente as páginas de nível folha para que correspondam à ordem lógica, da esquerda para a direita, dos nós folha. A reorganização também compacta as páginas de índice. A compactação baseia-se no valor do fator de preenchimento existente. Para exibir a configuração do fator de preenchimento, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
- Quando ALL for especificado, os índices relacionais, clusterizados e não clusterizados e os índices XML da tabela serão reorganizados. Algumas restrições se aplicam quando ALL é especificado; consulte a definição de ALL na seção Argumentos.  
+Quando `ALL` for especificado, os índices relacionais, clusterizados e não clusterizados e os índices XML da tabela serão reorganizados. Algumas restrições se aplicam quando `ALL` é especificado; veja a definição de `ALL` na seção Argumentos deste artigo.  
   
- Para obter mais informações, veja [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+Para obter mais informações, veja [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+ 
+> [!IMPORTANT]
+> Quando um índice é reorganizado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as estatísticas não são atualizadas.
   
 ## <a name="disabling-indexes"></a> Desabilitando índices  
- A desabilitação de um índice impede o acesso do usuário ao índice, e, para índices clusterizados, aos dados da tabela subjacente. A definição de índice permanece no catálogo do sistema. A desabilitação de um índice não clusterizado ou clusterizado em uma exibição exclui fisicamente os dados do índice. A desabilitação de um índice clusterizado impede o acesso aos dados, mas eles permanecem inalterados na árvore B até que o índice seja descartado ou recriado. Para exibir o status de um índice habilitado ou desabilitado, consulte a coluna **is_disabled** na exibição do catálogo **sys.indexes**.  
+A desabilitação de um índice impede o acesso do usuário ao índice, e, para índices clusterizados, aos dados da tabela subjacente. A definição de índice permanece no catálogo do sistema. A desabilitação de um índice não clusterizado ou clusterizado em uma exibição exclui fisicamente os dados do índice. A desabilitação de um índice clusterizado impede o acesso aos dados, mas eles permanecem inalterados na árvore B até que o índice seja descartado ou recriado. Para exibir o status de um índice habilitado ou desabilitado, consulte a coluna **is_disabled** na exibição do catálogo **sys.indexes**.  
   
- Se uma tabela estiver em uma publicação de replicação transacional, não será possível desabilitar nenhum índice associado a colunas de chave primária. Esses índices são necessários para a replicação. Para desabilitar um índice, você deve primeiramente descartar a tabela da publicação. Para obter mais informações, consulte [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+Se uma tabela estiver em uma publicação de replicação transacional, não será possível desabilitar nenhum índice associado a colunas de chave primária. Esses índices são necessários para a replicação. Para desabilitar um índice, você deve primeiramente descartar a tabela da publicação. Para obter mais informações, consulte [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- Use a instrução ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING para habilitar o índice. A recriação de um índice clusterizado desabilitado não pode ser executada com a opção ONLINE definida como ON. Para obter mais informações, consulte [Desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
+Use a instrução ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING para habilitar o índice. A recriação de um índice clusterizado desabilitado não pode ser executada com a opção ONLINE definida como ON. Para obter mais informações, consulte [Desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Opções de configuração  
- É possível definir as opções ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE para um índice especificado sem recriá-lo ou reorganizá-lo. Os valores modificados são aplicados imediatamente ao índice. Para exibir essas configurações, use **sys.indexes**. Para obter mais informações sobre opções de índice, consulte [Definir opções de índice](../../relational-databases/indexes/set-index-options.md).  
+Você pode definir as opções de `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `IGNORE_DUP_KEY` e `STATISTICS_NORECOMPUTE` para um índice especificado sem recriar nem reorganizar o índice. Os valores modificados são aplicados imediatamente ao índice. Para exibir essas configurações, use **sys.indexes**. Para obter mais informações sobre opções de índice, consulte [Definir opções de índice](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Opções de bloqueios de linha e de página  
- Quando ALLOW_ROW_LOCKS = ON e ALLOW_PAGE_LOCK = ON, os bloqueios em nível de linha, página e tabela são permitidos quando você acessa o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] escolhe o bloqueio apropriado e pode escalar o bloqueio de uma linha ou página para um bloqueio de tabela.  
+Quando `ALLOW_ROW_LOCKS = ON` e `ALLOW_PAGE_LOCK = ON`, os bloqueios em nível de linha, página e tabela são permitidos quando você acessa o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] escolhe o bloqueio apropriado e pode escalar o bloqueio de uma linha ou página para um bloqueio de tabela.  
   
- Quando ALLOW_ROW_LOCKS = OFF e ALLOW_PAGE_LOCK = OFF, somente um bloqueio em nível de tabela é permitido ao acessar o índice.  
+Quando `ALLOW_ROW_LOCKS = OFF` e `ALLOW_PAGE_LOCK = OFF`, o bloqueio em nível de tabela é permitido quando você acessa o índice.  
   
- Se ALL for especificado quando as opções de bloqueio de linha ou de página forem definidas, as configurações serão aplicadas a todos os índices. Quando a tabela subjacente é um heap, as configurações são aplicadas das seguintes maneiras:  
+Se `ALL` for especificado quando as opções de bloqueio de linha ou de página forem definidas, as configurações serão aplicadas a todos os índices. Quando a tabela subjacente é um heap, as configurações são aplicadas das seguintes maneiras:  
   
 |||  
 |-|-|  
@@ -694,28 +699,27 @@ Anule uma operação de índice em execução ou em pausa declarada como retomá
 |ALLOW_PAGE_LOCKS = OFF|Totalmente aos índices não clusterizados. Isso significa que todos os bloqueios de página não são permitidos nos índices não clusterizados. No heap, somente os bloqueios S (compartilhados), U (atualização) e X (exclusivos) da página não são permitidos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] ainda pode adquirir um bloqueio de página intencional (IS, IU ou IX) para fins internos.|  
   
 ## <a name="online-index-operations"></a> Operações de índice online  
- Ao recriar um índice, se a opção ONLINE estiver definida como ON, os objetos, as tabelas e os índices associados subjacentes estarão disponíveis para consultas e modificação de dados. Você também pode recriar online uma parte de um índice que reside em uma única partição. Os bloqueios de tabela exclusivos são mantidos por pouco tempo durante o processo de alteração.  
+Ao recriar um índice, se a opção ONLINE estiver definida como ON, os objetos, as tabelas e os índices associados subjacentes estarão disponíveis para consultas e modificação de dados. Você também pode recriar online uma parte de um índice que reside em uma única partição. Os bloqueios de tabela exclusivos são mantidos por pouco tempo durante o processo de alteração.  
   
- A reorganização de um índice sempre é executada online. O processo não mantém bloqueios de longo prazo e, portanto, não bloqueia consultas ou atualizações em execução.  
+A reorganização de um índice sempre é executada online. O processo não mantém bloqueios de longo prazo e, portanto, não bloqueia consultas ou atualizações em execução.  
   
- É possível executar operações de índice online simultâneas na mesma tabela ou partição de tabela somente ao fazer o seguinte:  
+É possível executar operações de índice online simultâneas na mesma tabela ou partição de tabela somente ao fazer o seguinte:  
   
 -   Criar vários índices não clusterizados.  
 -   Reorganizar índices diferentes na mesma tabela.  
 -   Reorganizar índices diferentes ao recriar índices não sobrepostos na mesma tabela.  
   
- Todas as outras operações de índice online executadas ao mesmo tempo falham. Por exemplo, não é possível recriar dois ou mais índices na mesma tabela ao mesmo tempo, ou criar um novo índice ao recriar um índice existente na mesma tabela.  
+Todas as outras operações de índice online executadas ao mesmo tempo falham. Por exemplo, não é possível recriar dois ou mais índices na mesma tabela ao mesmo tempo, ou criar um novo índice ao recriar um índice existente na mesma tabela.  
 
 ### <a name="resumable-indexes"></a>Operações de índice retomáveis
 
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
-ONLINE INDEX REBUILD é especificado como retomável usando a opção RESUMABLE=ON. 
--  A opção RESUMABLE não persiste nos metadados para um determinado índice e se aplica somente à duração de uma instrução DDL atual.  Portanto, a cláusula RESUMABLE=ON deve ser especificada explicitamente para habilitar a capacidade de retomada.
--  Observe que duas opções diferentes de MAX_DURATION. Uma está relacionada a low_priority_lock_wait e outra está relacionada à opção RESUMABLE=ON.
-   -  A opção MAX_DURATION é compatível com a opção RESUMABLE=ON ou com a opção de argumento **low_priority_lock_wait**. 
+A recriação de índice online é especificada como retomável usando a opção `RESUMABLE = ON`. 
+-  A opção `RESUMABLE` não persiste nos metadados para um determinado índice e se aplica somente à duração de uma instrução DDL atual. Portanto, a cláusula `RESUMABLE = ON` deve ser especificada explicitamente para habilitar a capacidade de retomada.
+-  A opção MAX_DURATION é compatível com a opção RESUMABLE=ON ou com a opção de argumento **low_priority_lock_wait**. 
    -  A opção MAX_DURATION para RESUMABLE especifica o intervalo para um índice que está sendo recompilado. Depois que esse tempo é consumido, a recompilação de índice é colocada em pausa ou conclui sua execução. O usuário decide quando uma recompilação de um índice em pausa pode ser retomada. O **time** em minutos para MAX_DURATION deve ser maior que 0 minutos e menor ou igual uma semana (7 * 24 * 60 = 10.080 minutos). Ter uma longa pausa para uma operação de índice pode afetar o desempenho de DML em uma tabela específica, bem como a capacidade de disco de banco de dados, já que tanto o original quanto o recém-criado exigem espaço em disco e precisam ser atualizados durante as operações DML. Se a opção MAX_DURATION for omitida, a operação de índice continuará até sua conclusão ou até que ocorra uma falha. 
--   A opção de argumento \<low_priority_lock_wait > permite que você decida como a operação de índice pode continuar quando bloqueada no bloqueio SCH-M.
+   -  A opção de argumento \<low_priority_lock_wait > permite que você decida como a operação de índice pode continuar quando bloqueada no bloqueio SCH-M.
  
 -  Executar novamente a instrução ALTER INDEX REBUILD original com os mesmos parâmetros retoma uma operação de recompilação de índice em pausa. Você também pode retomar uma operação de recompilação de índice em pausa executando a instrução ALTER INDEX RESUME.
 -  A opção SORT_IN_TEMPDB=ON não é compatível com índice retomável 

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 05/142018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9d9f156deb3fa8b59de0703da2b7f1f309862c16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,6 +45,8 @@ ms.lasthandoff: 05/03/2018
 - Habilitar ou desabilitar o cache de identidade no nível do banco de dados.
 - Habilitar ou desabilitar um stub de plano compilado para ser armazenado em cache quando um lote for compilado pela primeira vez.  
 - Habilite ou desabilite a coleta de estatísticas de execução para módulos T-SQL compilados nativamente.
+- Habilitar ou desabilitar online pelas opções padrão para instruções DDL que dão suporte à sintaxe ONLINE=
+- Habilitar ou desabilitar retomáveis pelas opções padrão para instruções DDL que dão suporte à sintaxe RESUMABLE= 
   
  ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +70,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
-    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
 }  
 ```  
   
@@ -164,6 +168,40 @@ As estatísticas de execução de nível de instrução para módulos T-SQL comp
 
 Para ver mais detalhes sobre monitoramento de desempenho de módulos T-SQL compilados nativamente, consulte [Monitorando o desempenho de procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+
+Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para online. O padrão é OFF, o que significa que as operações não serão elevadas para online, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_ONLINE. Essas opções serão aplicadas somente a operações que geralmente têm suporte para online.  
+
+FAIL_UNSUPPORTED
+
+Este valor eleva todas as operações DDL com suporte para ONLINE. Operações que não oferecem suporte à execução online falharão e gerarão um aviso.
+
+WHEN_SUPPORTED  
+
+Este valor eleva operações que dão suporte a ONLINE. As operações sem suporte online serão executadas offline.
+
+> [!NOTE]
+> Você pode substituir a configuração padrão ao enviar uma instrução com a opção ONLINE especificada. 
+ 
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+
+Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para retomáveis. O padrão é OFF, o que significa que as operações não serão elevadas para retomáveis, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_RESUMABLE. Essas opções serão aplicadas somente a operações que geralmente têm suporte para retomável. 
+
+FAIL_UNSUPPORTED
+
+Este valor eleva todas as operações DDL com suporte para RESUMABLE. Operações que não oferecem suporte à execução retomável falharão e gerarão um aviso.
+
+WHEN_SUPPORTED  
+
+Este valor eleva operações que dão suporte a RESUMABLE. As operações que não dão suporte a retomáveis são executadas de modo não retomável.  
+
+> [!NOTE]
+> Você pode substituir a configuração padrão ao enviar uma instrução com a opção RESUMABLE especificada. 
+
 ##  <a name="Permissions"></a> Permissões  
  Requer ALTER ANY DATABASE SCOPE CONFIGURATION   
 no banco de dados. Essa permissão pode ser concedida por um usuário com a permissão CONTROL em um banco de dados.  
@@ -205,6 +243,15 @@ no banco de dados. Essa permissão pode ser concedida por um usuário com a perm
 **DacFx**  
   
  Como ALTER DATABASE SCOPED CONFIGURATION é um novo recurso no Banco de Dados SQL do Azure e no SQL Server, começando com o SQL Server 2016, que afeta o esquema do banco de dados, as exportações do esquema (com ou sem dados) não podem importadas para uma versão mais antiga do SQL Server, por exemplo, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por exemplo, uma exportação para um [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) ou um [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) de um [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou de um banco de dados do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que tiver usado esse novo recurso não poderá ser importada em um servidor de nível inferior.  
+
+**ELEVATE_ONLINE** 
+
+Essa opção é aplicável somente a instruções DDL que dão suporte à sintaxe WITH(ONLINE=. Índices XML não são afetados 
+
+**ELEVATE_RESUMABLE**
+
+Essa opção é aplicável somente a instruções DDL que dão suporte à sintaxe WITH(ONLINE=. Índices XML não são afetados 
+
   
 ## <a name="metadata"></a>Metadados  
 
@@ -307,6 +354,63 @@ Este exemplo habilita um stub de plano compilado para ser armazenado em cache qu
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
+### <a name="i--set-elevateonline"></a>I.  Definir ELEVATE_ONLINE 
+
+**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+ 
+Este exemplo define ELEVATE_ONLINE como FAIL_UNSUPPORTED.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+```  
+
+### <a name="j-set-elevateresumable"></a>J. Definir ELEVATE_RESUMABLE 
+
+**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+
+Este exemplo define ELEVATE_RESUMABLE como FAIL_UNSUPPORTED.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
+``` 
+
+### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>K. Estado da consulta de DATABASE SCOPED CONFIGURATION com base em instruções diferentes
+
+**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|OFF|NULL|1|
+|12|ELEVATE_RESUMABLE|OFF|NULL|1|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
+
+```
+
 ## <a name="additional-resources"></a>Recursos adicionais
 
 ### <a name="maxdop-resources"></a>Recursos de MAXDOP 
@@ -325,6 +429,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [Modelo de serviço do sinalizador de rastreamento 4199 de hotfix do otimizador de consulta do SQL Server](https://support.microsoft.com/en-us/kb/974006)
 
+### <a name="elevateonline-resources"></a>Recursos ELEVATE_ONLINE 
+
+- [Diretrizes para operações de índice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+
+### <a name="elevateresumable-resources"></a>Recursos ELEVATE_RESUMABLE 
+
+- [Diretrizes para operações de índice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+ 
 ## <a name="more-information"></a>Mais informações  
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   

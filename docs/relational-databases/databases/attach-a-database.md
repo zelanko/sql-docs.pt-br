@@ -21,11 +21,11 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9536b898df7a0f232d81dc85be3f3d6526f0741d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-a-database"></a>Anexar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
      **Status**  
      Exibe o status do banco de dados de acordo com a seguinte tabela.  
   
-    |Ícone|Texto de status|Description|  
+    |Ícone|Texto de status|Descrição|  
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
@@ -163,7 +163,8 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
   ``` 
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ <br>[Gerenciar metadados ao disponibilizar um banco de dados em outro servidor](/manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Desanexar um banco de dados](../../relational-databases/databases/detach-a-database.md)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>Manutenção do banco de dados  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>Por que não consigo executar TRUNCATE TABLE em uma tabela publicada?  
- TRUNCATE TABLE é uma operação não registrada que não ativa os gatilhos. Isso não é permitido, pois a replicação não pode rastrear as alterações causadas pela operação: a replicação transacional rastreia as alterações por meio do log de transações; a replicação de mesclagem rastreia as alterações por meio de gatilhos, nas tabelas publicadas.  
+ TRUNCATE TABLE é uma instrução DDL que não registra exclusões de linha individuais e não aciona os gatilhos DML. Isso não é permitido, pois a replicação não pode rastrear as alterações causadas pela operação: a replicação transacional rastreia as alterações por meio do log de transações; a replicação de mesclagem rastreia as alterações por meio de gatilhos DML nas tabelas publicadas.  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>Qual é o efeito de se executar um comando de inserção em massa em um banco de dados replicado?  
  Para a replicação transacional, as inserções em massa são rastreadas e replicadas como as demais inserções. Para a replicação de mesclagem, você deve certificar-se de que os metadados de rastreamento de alterações estejam corretamente atualizados.  

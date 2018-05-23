@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico é pertinente nas seguintes situações:  
+  Este artigo é pertinente nas seguintes situações:  
   
 -   Configuração das réplicas de disponibilidade de um grupo de disponibilidade do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  Ao mover o banco de dados de um aplicativo para outra instância de servidor, é necessário recriar todos os metadados dos objetos e entidades dependentes do **mestre** e do **msdb** na instância do servidor de destino. Por exemplo, se um aplicativo de banco de dados usar gatilhos em nível de servidor, apenas a anexação ou a restauração do banco de dados no novo sistema não será suficiente. O banco de dados não funcionará conforme esperado a não ser que os metadados desses gatilhos sejam recriados manualmente no banco de dados **mestre** .  
   
 ##  <a name="information_entities_and_objects"></a> Informações, entidades e objetos que são armazenados fora de bancos de dados de usuário  
- O restante deste tópico resume os problemas potenciais que podem afetar um banco de dados que está sendo disponibilizado em outra instância de servidor. Talvez você precise recriar um ou mais dos tipos de informações, entidades ou objetos apresentados na lista a seguir. Para ver um resumo, clique no link do item.  
+ O restante deste artigo resume os problemas potenciais que podem afetar um banco de dados que está sendo disponibilizado em outra instância de servidor. Talvez você precise recriar um ou mais dos tipos de informações, entidades ou objetos apresentados na lista a seguir. Para ver um resumo, clique no link do item.  
   
 -   [Parâmetros de configuração de servidor](#server_configuration_settings)  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### <a name="server-level-event-notifications"></a>Notificações de eventos em nível de servidor  
- Notificações de eventos em nível de servidor são armazenadas no **msdb**. Portanto, se um aplicativo de banco de dados depender de uma notificação de eventos em nível de servidor, essa notificação de evento deve ser recriada na instância do servidor de destino. Para exibir as notificações de eventos em uma instância do servidor, use a exibição de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Para obter mais informações, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Notificações de eventos em nível de servidor são armazenadas no **msdb**. Portanto, se um aplicativo de banco de dados depender de uma notificação de eventos em nível de servidor, essa notificação de evento deverá ser recriada na instância do servidor de destino. Para exibir as notificações de eventos em uma instância do servidor, use a exibição de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Para obter mais informações, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  Além disso, notificações de eventos são entregues usando [!INCLUDE[ssSB](../../includes/sssb-md.md)]. As rotas para mensagens recebidas não estão incluídas no banco de dados que contém um serviço. Em vez disso, rotas explícitas são armazenadas no **msdb**. Se o serviço usar uma rota explícita no banco de dados **msdb** para encaminhar mensagens de entrada para o serviço, quando você anexar um banco de dados em uma instância diferente, será necessário recriar essa rota.  
   
@@ -188,7 +188,8 @@ ms.lasthandoff: 05/03/2018
   
  Os procedimentos armazenados estendidos executam diretamente no espaço de endereço de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e podem produzir vazamentos de memória ou outros problemas que reduzem o desempenho e a confiabilidade do servidor. Você deve pensar em armazenar procedimentos armazenados estendidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja separada da instância que contém os dados referenciados. Você também deve considerar o uso de consultas distribuídas para acessar o banco de dados.  
   
-> **IMPORTANTE:** Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.   
+  > [!IMPORTANT]
+  > Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.   
   
  Para obter mais informações, veja [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) e [REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
@@ -258,7 +259,7 @@ ms.lasthandoff: 05/03/2018
 -   [Criar um trabalho](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Práticas recomendadas para usar um script para recriar um trabalho  
- Recomendamos iniciar gerando o script de um trabalho simples, recriando o trabalho no outro serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e executando-o para ver se ele funciona conforme pretendido. Isto permitirá identificar incompatibilidades e tentar resolvê-las. Se um trabalho com script não funcionar conforme pretendido no novo ambiente, é recomendável criar um trabalho equivalente que funcione corretamente naquele ambiente.  
+ Recomendamos iniciar gerando o script de um trabalho simples, recriando o trabalho no outro serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e executando-o para ver se ele funciona conforme pretendido. Isso permite identificar incompatibilidades e tentar resolvê-las. Se um trabalho com script não funcionar conforme pretendido no novo ambiente, é recomendável criar um trabalho equivalente que funcione corretamente naquele ambiente.  
   
 
 ##  <a name="logins"></a> Logons  
@@ -279,9 +280,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Permissões GRANT, REVOKE e DENY em objetos do sistema  
  Permissões para objetos do sistema, como procedimentos armazenados, procedimentos armazenados estendidos, funções e exibições, são armazenadas no banco de dados **mestre** e devem ser configuradas na instância do servidor de destino.  
   
- Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script**, configurar a opção **Gerar Script de Permissões em Nível de Objeto** como **True**.  
+ Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script** , configurar a opção **Gerar Script de Permissões em Nível de Objeto** como **True**.  
   
-> **IMPORTANTE:** Se você gerar script de logons, as senhas não serão geradas no script. Se você tiver logons que usam a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário modificar o script no destino.  
+   > [!IMPORTANT]
+   > Se você gerar script de logons, as senhas não serão geradas no script. Se você tiver logons que usam a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário modificar o script no destino.  
   
  Os objetos do sistema são visíveis na exibição de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . As permissões em objetos do sistema são visíveis na exibição de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) do banco de dados **mestre**. Para obter informações sobre como consultar essas exibições de catálogo e conceder as permissões de objeto do sistema, veja [Permissões de objeto do sistema GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obter mais informações, veja [Permissões de objeto do sistema REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) e [Permissões de objeto do sistema DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
@@ -313,7 +315,10 @@ ms.lasthandoff: 05/03/2018
   
  Para obter mais informações sobre certificados e chaves assimétricas, consulte [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-  
+## <a name="trustworthy-property"></a>Propriedade Trustworthy
+A propriedade de banco de dados TRUSTWORTHY é usada para indicar se a instância do SQL Server confia no banco de dados e em seu conteúdo. Quando um banco de dados é anexado, por padrão e por segurança, essa opção é definida como OFF, mesmo se essa opção foi definida como ON no servidor original. Para obter mais informações sobre essa propriedade, veja [Propriedade de banco de dados TRUSTWORTHY](../security/trustworthy-database-property.md) e para obter informações sobre como ativar essa opção, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  Se você restaurar um backup de um banco de dados replicado para outro servidor ou banco de dados, as configurações de replicação não poderão ser preservadas. Nesse caso, é necessário recriar todas as publicações e assinaturas depois que os backups forem restaurados. Para facilitar esse processo, crie scripts para suas configurações de replicação atuais e também para a habilitação e desabilitação da replicação. Para ajudar a recriar as configurações de replicação, copie esses scripts e altere as referências ao nome do servidor para funcionarem para a instância do servidor de destino.  
   
@@ -321,7 +326,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- Muitos aspectos de um aplicativo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] são movidos com o banco de dados. No entanto alguns aspectos do aplicativo devem ser recriados ou reconfigurados no novo local.  
+ Muitos aspectos de um aplicativo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] são movidos com o banco de dados. No entanto alguns aspectos do aplicativo devem ser recriados ou reconfigurados no novo local.  Por padrão e por segurança, quando um banco de dados é anexo de outro servidor, as opções para *is_broker_enabled* e *is_honor_broker_priority_on* são definidas como OFF. Para obter informações sobre como definir essas opções como ON, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções de bug para as versões atuais e anteriores do SSMS. Baixe [versões anteriores do SSMS abaixo](#previous-ssms-releases).
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Número da versão: 17.6<br>
+Número da versão: 17.7<br>
+Número de build: 14.0.17254.0<br>
+Data do lançamento: 09 de maio de 2018
+
+### <a name="whats-new"></a>Novidades
+
+**SSMS geral**
+
+Replication Monitor:   
+- Agora, o Replication Monitor dá suporte ao registro de um ouvinte para cenários nos quais o banco de dados publicador e/ou o banco de dados distribuidor faz parte do grupo de disponibilidade. Agora você pode monitorar ambientes de replicação nos quais o banco de dados publicador e/ou o banco de dados de distribuição faz parte do Always On. 
+ 
+SQL Data Warehouse do Azure: 
+- Adicione suporte de localização da linha rejeitada a tabelas externas no SQL Data Warehouse do Azure. 
+
+**IS (Integration Services)**
+
+- Inclusão de um recurso de agendamento de pacotes SSIS implantado no Banco de Dados SQL do Azure. Ao contrário do SQL Server local e da Instância Gerenciada do Banco de Dados SQL (versão prévia), que tem o SQL Server Agent como um agendador de trabalhos de primeira classe, o Banco de Dados SQL não tem um agendador interno. Esse novo recurso do SSMS fornece uma interface do usuário familiar que é semelhante ao SQL Server Agent para agendar pacotes implantados no Banco de Dados SQL. Se você estiver usando o Banco de Dados SQL para hospedar o banco de dados de catálogo SSIS, o SSISDB, poderá usar esse recurso do SSMS para gerar os pipelines de data factory, as atividades e os gatilhos necessários para agendar pacotes do SSIS. Em seguida, você pode editar e estender esses objetos no data factory. Para obter mais informações, veja [Agendar execução de pacote SSIS no Banco de Dados SQL do Azure com SSMS](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md). Para saber mais sobre pipelines do Azure Data Factory, atividades e gatilhos, veja [Pipelines e atividades no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) e [Execução de pipelines e gatilhos no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
+- Suporte para o agendamento do pacote SSIS no SQL Agent na instância gerenciada do SQL. Agora é possível criar trabalhos do SQL Agent para executar pacotes SSIS na instância gerenciada. 
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**SSMS geral** 
+
+Plano de manutenção:   
+- Corrigido um problema em que a tentativa de alterar o agendamento de um plano de manutenção existente lançava uma exceção. Para obter detalhes, veja [Falha do SSMS 17.6 ao clicar em um agendamento em um plano de manutenção](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
+
+Always On: 
+- Corrigido um problema em que o painel de latência Always On não estava funcionando com o SQL Server 2012.
+ 
+Script: 
+- Corrigido um problema em que o script de procedimento armazenado no SQL Data Warehouse do Azure não está funcionando para o usuário não administrador.
+- Corrigido um problema em que o script de um banco de dados no Banco de Dados SQL do Azure não gerava scripts das propriedades *SCOPED CONFIGURATION*.
+ 
+Telemetria: 
+- Corrigido o problema de falha no SSMS ao tentar se conectar a um servidor, depois de recusar sem enviar telemetria.
+ 
+Banco de Dados SQL do Azure: 
+- Corrigido um problema em que o usuário não conseguia definir nem alterar o nível de compatibilidade (na lista suspensa de vazio). Observação: para definir o nível de compatibilidade como 150, o usuário ainda precisa usar o botão *Script* e editar manualmente o script. 
+ 
+SMO: 
+- A configuração de tamanho do log de erros foi exposta no SMO. Para obter detalhes, veja [Definir o tamanho máximo dos logs de erros do SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
+- Corrija o script de avanço de linha no SMO no Linux.
+- Melhoria do desempenho de diversos ao recuperar propriedades usadas raramente.  
+
+IntelliSense: 
+- Melhoria do desempenho: volume reduzido de consultas do IntelliSense para dados de coluna. Isso é especialmente útil ao trabalhar em tabelas com grande número de colunas. 
+
+Configurações do usuário do SSMS:
+- Corrigido um problema em que a página de opções não era redimensionada corretamente.
+
+Diversos:  
+- Melhoria na exibição do texto na página *Detalhes de estatísticas*. 
+
+**IS (Integration Services)**
+
+- Melhor suporte à Instância Gerenciada do Banco de Dados SQL do Azure.
+- Corrigido um problema em que o usuário não conseguia criar um catálogo para o SQL Server 2014 ou anterior.
+- Dois problemas foram corrigidos com relatórios:
+   - Nome do computador removido para servidores do Azure.
+   - Melhor manipulação do nome de objeto localizada.
+
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com novas edições *Uso Geral* ou *Comercialmente Crítico* do Banco de Dados SQL do Azure.
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![baixar](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 Número de build: 14.0.17230.0<br>
 Data do lançamento: 20 de março de 2018
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>Novidades
 

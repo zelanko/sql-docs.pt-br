@@ -33,11 +33,11 @@ caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7254b34f1664953d92723371f26c3c58fdd168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anexar e desanexar bancos de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,10 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Metadata"></a> Alterações de metadados na anexação de um banco de dados  
  Quando um banco de dados somente leitura é desanexado e reanexado, as informações de backup sobre a base diferencial atual são perdidas. A *base diferencial* é o backup completo mais recente de todos os dados no banco de dados ou em um subconjunto dos arquivos ou de grupos de arquivos do banco de dados. Sem a informações de backup de base, o banco de dados **master** se torna não sincronizado com o banco de dados somente leitura, portanto backups diferenciais utilizados posteriormente podem fornecer resultados inesperados. Portanto, se você estiver usando backups diferenciais com um banco de dados somente leitura, deverá estabelecer uma nova base diferencial obtendo um backup completo após reanexar o banco de dados. Para obter informações sobre backups diferenciais, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
- Na anexação, ocorre inicialização do banco de dados. Geralmente, a anexação de um banco de dados coloca-o no mesmo estado em que estava quando foi desanexado ou copiado. No entanto, as operações de anexação e desanexação desabilitam o encadeamento de propriedades de bancos de dados para o banco de dados. Para obter informações sobre como habilitar o encadeamento, veja [Opção cross db ownership chaining de configuração de servidor](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Além disso, TRUSTWORTHY é definido como OFF sempre que o banco de dados for anexado. Para obter informações sobre como definir TRUSTWORTHY como ON, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Na anexação, ocorre inicialização do banco de dados. Geralmente, a anexação de um banco de dados coloca-o no mesmo estado em que estava quando foi desanexado ou copiado. No entanto, as operações de anexação e desanexação desabilitam o encadeamento de propriedades de bancos de dados para o banco de dados. Para obter informações sobre como habilitar o encadeamento, veja [Opção cross db ownership chaining de configuração de servidor](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
+
+ >[!IMPORTANT]
+ > Por padrão e por segurança, as opções para *is_broker_enabled*, *is_honor_broker_priority_on* e *is_db_trustworthy_on* são definidas como OFF sempre que o banco de dados está anexado. Para obter informações sobre como definir essas opções como ON, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  Para obter mais informações sobre metadados, veja [Gerenciar metadados ao disponibilizar um banco de dados em outro servidor](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 ### <a name="backup-and-restore-and-attach"></a>Backup e restauração e anexação  
  Como qualquer banco de dados que esteja offline total ou parcialmente, um banco de dados com arquivos de restauração não pode ser anexado. Se você interromper a sequência de restauração, poderá anexar o banco de dados. Em seguida, você poderá reiniciar a sequência de restauração.  
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  Um banco de dados criado por uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser anexado em versões anteriores.  
   
- Quando você anexa um banco de dados a outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, talvez precise recriar alguns ou todos os metadados para o banco de dados, como logons e trabalhos, na outra instância de servidor. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Quando você anexa um banco de dados a outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, talvez precise recriar alguns ou todos os metadados para o banco de dados, como logons e trabalhos, na outra instância de servidor. Para obter mais informações, veja [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para desanexar um banco de dados**  

@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e63134bbf85d2894140d8640fb5ade10daa4340f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Não há suporte para backup em armazenamento premium.  
   
--   O tamanho máximo do backup com suporte usando um blob de páginas é limitado pelo tamanho máximo de um único blob de páginas, que é 1 TB. O tamanho máximo de backup com suporte por meio do uso de blobs de bloco não é limitado pelo tamanho máximo de um blob de bloco, que é de 200 GB, pois o backup em blobs de bloco oferece suporte à distribuição a fim de oferecer suporte a tamanhos de backup substancialmente maiores.  
+-   O SQL Server limita para 1 TB o tamanho máximo de backup com suporte usando um blob de páginas. O tamanho máximo de backup com suporte usando blobs de blocos é limitado a aproximadamente 200 MB (50.000 blocos * MAXTRANSFERSIZE de 4 MB). Suporte à distribuição de blobs de blocos para dar suporte a tamanhos de backup consideravelmente maiores.  
   
 -   Você pode emitir as instruções de backup ou restauração usando o TSQL, SMO, cmdlets do PowerShell, assistente de backup ou restauração do SQL Server Management Studio.   
   

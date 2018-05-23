@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
 Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-se à instância do SQL Server e executar alguns comandos T-SQL (Transact-SQL) básicos. O artigo demonstra como fazer o seguinte:
@@ -33,17 +33,16 @@ Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
-- **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>Conectar a uma instância do SQL Server
 
-1. Inicie o SQL Server Management Studio.  
-    Na primeira vez em que você executar o SSMS, a janela **Conectar-se ao Servidor** será aberta. Se ela não for aberta, você poderá abri-la manualmente selecionando **Pesquisador de Objetos** > **Conectar** > **Mecanismo de Banco de Dados**.
+1. Inicie o SQL Server Management Studio. Na primeira vez em que você executar o SSMS, a janela **Conectar-se ao Servidor** será aberta. Se ela não for aberta, você poderá abri-la manualmente selecionando **Pesquisador de Objetos** > **Conectar** > **Mecanismo de Banco de Dados**.
 
     ![O link de conexão no Pesquisador de Objetos](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ Se você não tiver acesso a uma instância do SQL Server, selecione sua platafo
 
     ![Campo "Nome do servidor" com a opção de usar a instância do SQL Server](media/connect-query-sql-server/connection2.png)
 
-    - Para **Autenticação**, selecione **Autenticação do Windows**. Este artigo usa a Autenticação do Windows, mas também é possível fazer o logon do SQL Server. Se você selecionar **Logon do SQL**, você deverá inserir um nome de usuário e uma senha. Para obter mais informações sobre os tipos de autenticação, confira [Conectar ao servidor (mecanismo de banco de dados)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+    - Para **Autenticação**, selecione **Autenticação do Windows**. Este artigo usa a Autenticação do Windows, mas também é possível fazer o logon do SQL Server. Se você selecionar **Logon do SQL**, você deverá inserir um nome de usuário e uma senha. Para obter mais informações sobre os tipos de autenticação, confira [Conectar ao servidor (mecanismo de banco de dados)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
     Você também pode modificar as opções de conexão adicionais selecionando **Opções**. Exemplos de opções de conexão são o banco de dados ao qual você está se conectando, o valor do tempo limite de conexão e o protocolo de rede. Este artigo usa os valores padrão para todas as opções. 
 
 3. Depois de preencher todos os campos, selecione **Conectar**. 
 
-4. Verifique se a conexão com a instância do SQL Server foi bem-sucedida explorando os objetos no Pesquisador de Objetos, conforme é mostrado aqui: 
+### <a name="examples-of-successful-connections"></a>Exemplos de conexões bem-sucedidas
+Para verificar se a conexão do SQL Server foi bem-sucedida, expanda e explore os objetos no **Pesquisador de Objetos**. Esses objetos serão diferentes dependendo do tipo de servidor com o qual você está conectado. 
 
-   ![Conexão bem-sucedida](media/connect-query-sql-server/successfulconnection.png)
+- Conectando a um SQL Server local – nesse caso NODE5\SQL2016ST: ![Como se conectar a um servidor local](media/connect-query-sql-server/connect-on-prem.png)
+
+- Conectando ao banco de dados SQL do Azure – nesse caso msftestserver.database.windows.net: ![Como se conectar a um banco de dados SQL do Azure](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > Neste tutorial, você usava a *autenticação do Windows* para se conectar ao SQL Server local, mas não há suporte para esse método para o banco de dados SQL do Azure. Como tal, essa imagem mostra o uso da autenticação do SQL para se conectar ao banco de dados SQL do Azure. Para obter mais informações, veja [Autenticação do SQL local](../../relational-databases/security/choose-an-authentication-mode.md) e [Autenticação do SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## <a name="create-a-database"></a>Criar um banco de dados
 Crie um banco de dados chamado TutorialDB fazendo o seguinte: 
@@ -170,8 +175,7 @@ Você pode encontrar informações sobre as propriedades de conexão nos resulta
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Alterar o servidor ao qual a janela de consulta está conectada
 É possível alterar o servidor ao qual a janela de consulta atual está conectada, fazendo o seguinte:
 
-1. Clique com o botão direito do mouse na janela de consulta e, em seguida, selecione **Conexão** > **Alterar conexão**.  
-    A janela **Conectar-se ao servidor** será aberta novamente.
+1. Clique com o botão direito do mouse na janela de consulta e, em seguida, selecione **Conexão** > **Alterar conexão**. A janela **Conectar-se ao servidor** será aberta novamente.
 2. Altere o servidor ao qual a consulta está conectada. 
  
    ![O comando Alterar Conexão](media/connect-query-sql-server/changeconnection.png)

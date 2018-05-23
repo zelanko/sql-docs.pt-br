@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets do PowerShell para o modo do SharePoint do Reporting Services
 
@@ -73,7 +73,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
 
  A tabela a seguir contém os cmdlets do PowerShell do serviço compartilhado SharePoint e Reporting Services.  
   
-|Cmdlet|Description|  
+|Cmdlet|Descrição|  
 |------------|-----------------|  
 |Install-SPRSService|Instala e registra, ou desinstala, o serviço compartilhado Reporting Services. Isso só pode ser feito em um computador que tem o SQL Server Reporting Services instalado no modo do SharePoint. Para instalação, há duas operações:<br /><br /> - O serviço Reporting Services é instalado no farm.<br /><br /> - A instância do serviço Reporting Services é instalada no computador atual.<br /><br /> Para desinstalação, há duas operações:<br /><br /> - O serviço Reporting Services é desinstalado do computador atual.<br /><br /> - O serviço Reporting Services é desinstalado do farm.<br /><br /> <br /><br /> Se houver outros computadores no farm que têm o serviço Reporting Services instalado ou, se ainda houver aplicativos de serviço Reporting Services em execução no farm, será exibida uma mensagem de aviso.|  
 |Install-SPRSServiceProxy|Instala e registra, ou desinstala, o proxy do serviço Reporting Services no farm do SharePoint.|  
@@ -84,7 +84,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
 
  A tabela a seguir contém cmdlets do PowerShell para aplicativos do serviço Reporting Services e seus proxies associados.  
   
-|cmdlet|Description|  
+|cmdlet|Descrição|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Obtém um ou mais objetos de aplicativo do serviço Reporting Services.|  
 |New-SPRSServiceApplication|Cria um novo aplicativo do serviço Reporting Services e os bancos de dados associados.<br /><br /> Parâmetro LogonType: especifica se o servidor de relatório usa a conta do Pool de Aplicativos do SSRS ou um logon do SQL Server para acessar o banco de dados do servidor de relatório. Os valores válidos são:<br /><br /> 0 Autenticação do Windows<br /><br /> 1 SQL Server<br /><br /> 2 Conta do pool de aplicativos (padrão)|  
@@ -102,9 +102,9 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
 |Get-SPRSDatabaseRightsScript|Gera o script de direitos de banco de dados na tela de um aplicativo do serviço Reporting Services. O usuário e o banco de dados desejados serão solicitados e o transact SQL que você pode executar para modificar permissões é retornado. Assim, você pode executar esse script no SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Gera um script de atualização de banco de dados na tela. O script atualizará os bancos de dados do aplicativo do serviço Reporting Services para a versão de banco de dados da instalação atual do Reporting Services.|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Cmdlets de funcionalidade personalizada do Reporting Services
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Cmdlets de funcionalidade personalizada do Reporting Services
   
-|Cmdlet|Description|  
+|Cmdlet|Descrição|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|Atualiza a chave de criptografia do aplicativo do serviço Reporting Services especificado e recriptografa seus dados.|  
 |Restore-SPRSEncryptionKey|Restaura a chave de criptografia com backup anterior para um aplicativo do serviço Reporting Services.|  

@@ -1,7 +1,7 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8a10829deda74850da86bfb066ad95a6effac83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -44,18 +44,16 @@ Use o SQL Server Management Studio (SSMS) para consultar, criar e gerenciar seus
 
 O SSMS 17.X é a última geração do *SQL Server Management Studio* e é compatível com o SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
+**[![download](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.7](https://go.microsoft.com/fwlink/?linkid=873126)**
 
-**[![download](../ssdt/media/download.png) Baixar o Pacote de Atualização do SQL Server Management Studio 17.6 (atualiza o 17.x para o 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+**[![download](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.7 (atualiza o 17.x para o 17.7)](https://go.microsoft.com/fwlink/?linkid=873128)**
 
-> [!WARNING]
-> Há um problema conhecido em que o SSMS 17.6 se torna instável e falha ao usar [Planos de Manutenção](../relational-databases/maintenance-plans/maintenance-plans.md). Se você usa Planos de Manutenção, não instale o SSMS 17.6. Faça downgrade para o SSMS 17.5 se você já tiver instalado o 17.6 e esse problema estiver afetando você. 
 
 **Informações da versão**
 
-Número da versão: 17.6<br>
-Número de build: 14.0.17230.0<br>
-Data do lançamento: 20 de março de 2018
+Número da versão: 17.7<br>
+Número de build: 14.0.17254.0<br>
+Data do lançamento: 09 de maio de 2018
 
 A instalação do SSMS 17.x não atualiza nem substitui versões do SSMS 16.x ou anteriores. O SSMS 17.x é instalado lado a lado com versões anteriores para que ambas versões estejam disponíveis para uso.
 Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada *Microsoft SQL Server Management Studio 17* e tem um novo ícone: 
@@ -71,11 +69,11 @@ Se um computador contiver instalações lado a lado do SSMS, verifique se você 
 
 Esta versão do SSMS pode ser instalada nos seguintes idiomas:
 
-SQL Server Management Studio 17.6:<br>
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+SQL Server Management Studio 17.7:<br>
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
-Pacote de Atualização do SQL Server Management Studio 17.6 (atualiza o 17.x para o 17.6):<br>
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40a)
+Pacote de atualização do SQL Server Management Studio 17.7 (atualiza o 17.x para o 17.7):<br>
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40a)
 
 > [!NOTE]
 > O módulo do SQL Server PowerShell agora é uma instalação separada por meio da Galeria do PowerShell. Para obter mais informações, consulte [Baixar o Módulo SQL Server PowerShell](download-sql-server-ps-module.md).
@@ -84,36 +82,23 @@ Pacote de Atualização do SQL Server Management Studio 17.6 (atualiza o 17.x pa
 
 ## <a name="new-in-this-release"></a>Novo nesta versão
 
-O SSMS 17.6 é a versão mais recente do SQL Server Management Studio. A geração 17.X do SSMS oferece suporte a quase todas as áreas de recursos do SQL Server 2008 por meio do SQL Server 2017. A Versão 17.x também oferece suporte ao PaaS do SQL Analysis Service.
+O SSMS 17.7 é a versão mais recente do SQL Server Management Studio. A geração 17.X do SSMS oferece suporte a quase todas as áreas de recursos do SQL Server 2008 por meio do SQL Server 2017. A Versão 17.x também oferece suporte ao PaaS do SQL Analysis Service.
 
-A versão 17.6 inclui:
+A versão 17.7 inclui:
 
 **SSMS geral**
 
-Instância Gerenciada do Banco de Dados SQL:
-
-- Suporte adicionado à [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance). Instância Gerenciada do Banco de Dados SQL do Azure (versão prévia) é um novo tipo do Banco de Dados SQL do Azure, fornecendo quase 100% de compatibilidade com o SQL Server local, uma implementação [VNet (rede virtual)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) nativa que aborda questões comuns de segurança e um [modelo de negócios](https://azure.microsoft.com/pricing/details/sql-database/) favorável para clientes do SQL Server local.
-- Suporte para cenários comuns de gerenciamento, como:
-   - Criar e alterar bancos de dados.
-   - Fazer backup e restauração de bancos de dados.
-   - Importar, exportar, extrair e publicar Aplicativos da Camada de Dados.
-   - Exibir e alterar as propriedades do servidor.
-   - Suporte completo para o Pesquisador de Objetos.
-   - Gerando scripts de objetos de banco de dados.
-   - Suporte para trabalhos do SQL Agent.
-   - Suporte para servidores vinculados.
-- Saiba mais sobre Instâncias Gerenciadas [aqui](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
-
-
-Pesquisador de Objetos:
-- Configurações adicionadas para não forçar colchetes em volta de nomes ao arrastar e soltar do Pesquisador de Objetos para a Janela de Consulta. (Sugestões do usuário [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) e [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051).)
-
-Classificação de dados:
-- Melhorias e correções de bug gerais.
+Replication Monitor:   
+- Agora, o Replication Monitor dá suporte ao registro de um ouvinte para cenários nos quais o banco de dados publicador e/ou o banco de dados distribuidor faz parte do grupo de disponibilidade. Agora você pode monitorar ambientes de replicação nos quais o banco de dados publicador e/ou o banco de dados de distribuição faz parte do Always On. 
+ 
+SQL Data Warehouse do Azure: 
+- Adicione suporte de localização da linha rejeitada a tabelas externas no SQL Data Warehouse do Azure. 
 
 **IS (Integration Services)**
 
-- Suporte adicionado para implantar pacotes em uma [Instância Gerenciada do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+- Inclusão de um recurso de agendamento de pacotes SSIS implantado no Banco de Dados SQL do Azure. Ao contrário do SQL Server local e da Instância Gerenciada do Banco de Dados SQL (versão prévia), que tem o SQL Server Agent como um agendador de trabalhos de primeira classe, o Banco de Dados SQL não tem um agendador interno. Esse novo recurso do SSMS fornece uma interface do usuário familiar que é semelhante ao SQL Server Agent para agendar pacotes implantados no Banco de Dados SQL. Se você estiver usando o Banco de Dados SQL para hospedar o banco de dados de catálogo SSIS, o SSISDB, poderá usar esse recurso do SSMS para gerar os pipelines de data factory, as atividades e os gatilhos necessários para agendar pacotes do SSIS. Em seguida, você pode editar e estender esses objetos no data factory. Para obter mais informações, veja [Agendar execução de pacote SSIS no Banco de Dados SQL do Azure com SSMS](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md). Para saber mais sobre pipelines do Azure Data Factory, atividades e gatilhos, veja [Pipelines e atividades no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) e [Execução de pipelines e gatilhos no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
+- Suporte para o agendamento do pacote SSIS no SQL Agent na instância gerenciada do SQL. Agora é possível criar trabalhos do SQL Agent para executar pacotes SSIS na instância gerenciada. 
+
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL com suporte
 
@@ -150,9 +135,9 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 
 ## <a name="release-notes"></a>Notas de Versão
 
-A seguir estão os problemas e as limitações desta versão 17.6:
+A seguir estão os problemas e as limitações desta versão 17.7:
 
-Há um problema conhecido, no momento, em que o SSMS 17.6 falha ao configurar o agendamento em um plano de manutenção.
+Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com novas edições *Uso Geral* ou *Comercialmente Crítico* do Banco de Dados SQL do Azure.
 
 
 ## <a name="previous-releases"></a>Versões anteriores

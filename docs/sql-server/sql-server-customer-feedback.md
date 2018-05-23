@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurar o SQL Server para enviar comentários à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Lembre-se de que esse processo enfoca os mecanismos necessários para fornecer v
 - Usando o aplicativo de Relatório de Uso e Erro
 - Definindo sub-chaves de registro no servidor
 
-Para o SQL Server no Linux, confira [Comentários de Clientes para o SQL Server no Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)
+Para o SQL Server no Linux, confira [Comentários de Clientes para o SQL Server no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)
 
 > [!NOTE]
 > Você só pode desabilitar o envio de informações para a Microsoft em versões pagas do SQL Server.
@@ -107,15 +106,15 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
 
     Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
 
-Além disso, para desativar os relatórios de erro e uso no nível do Visual Studio, defina a seguinte sub-chave de registro e configurações:
+    Além disso, o SSMS 17.x baseia-se no shell do Visual Studio 2015, e a instalação do Visual Studio permite comentários do cliente por padrão.  
 
--    Subchave = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    Para configurar o Visual Studio para desabilitar os comentários do cliente em computadores individuais, altere o valor da seguinte subchave do Registro para a cadeia de caracteres "0":  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    Nome da RegEntry = TurnOffSwitch
+    Por exemplo, altere a subchave para o seguinte:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
- 
-A política de grupo baseada em registros nessas sub-chaves de registro é cumprida pela coleta de dados de uso do SQL Server 2017.
+    A política de grupo baseada em registros nessas sub-chaves de registro é cumprida pela coleta de dados de uso do SQL Server 2017.
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Definir as sub-chaves de registro para a coleta de despejo de memória
 

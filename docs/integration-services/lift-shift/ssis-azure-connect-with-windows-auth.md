@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a07cd66ebc67b5885ce535425ce8984f0181dc04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Conectar-se às fontes de dados e compartilhamentos de arquivo do Azure locais com a Autenticação do Windows
+# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>Conecte-se às fontes de dados e aos compartilhamentos de arquivo do Azure locais com a Autenticação do Windows no SSIS
 Este artigo descreve como configurar o catálogo do SSIS no Banco de Dados SQL do Azure para executar pacotes que usam a autenticação do Windows para se conectar a compartilhamentos de arquivos do Azure e fontes de dados locais. Você pode usar a autenticação do Windows para se conectar a fontes de dados na mesma rede virtual usada pelo Azure SSIS Integration Runtime, tanto localmente quanto em máquinas virtuais do Azure e em Arquivos do Azure.
 
 > [!WARNING]

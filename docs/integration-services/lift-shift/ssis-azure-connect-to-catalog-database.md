@@ -1,5 +1,5 @@
 ---
-title: Conectar-se ao banco de dados do Catálogo do SSISDB no Azure | Microsoft Docs
+title: Conectar-se ao SSISDB (banco de dados do Catálogo do SSIS) no Azure | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Conectar-se ao banco de dados do Catálogo do SSISDB no Azure
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Conectar-se ao SSISDB (banco de dados do Catálogo do SSIS) no Azure
 
 Obtenha as informações de conexão necessárias para se conectar ao banco de dados de catálogo SSISDB hospedado no servidor de Banco de Dados SQL do Azure. Você precisa dos seguintes itens para se conectar:
 - nome do servidor totalmente qualificado
@@ -45,11 +45,11 @@ Antes de começar, verifique se você tem a versão 17.2 ou posterior do SSMS (S
 
 2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar-se ao Servidor**, insira as seguintes informações:
 
-   | Configuração       | Valor sugerido | Description | 
+   | Configuração       | Valor sugerido | Descrição | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de Banco de Dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve estar neste formato: **mysqldbserver.database.windows.net**. |
-   | **Autenticação** | Autenticação do SQL Server | Este guia de início rápido usa a autenticação do SQL. |
+   | **Autenticação** | Autenticação do SQL Server | |
    | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
    | **Senha** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
 

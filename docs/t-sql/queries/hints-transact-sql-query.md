@@ -1,7 +1,7 @@
 ---
 title: Dicas de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|queries
@@ -59,11 +59,11 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b7db0c558788f168324b121237181237dcb98e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -279,6 +279,9 @@ ms.lasthandoff: 05/03/2018
  Faz com que o SQL Server gere um plano de consulta usando a suposição de confinamento simples em vez da suposição de confinamento de base padrão para junções, no modelo de [estimativa de cardinalidade](../../relational-databases/performance/cardinality-estimation-sql-server.md) do otimizador de consulta do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou mais recente. É equivalente ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
  Força o otimizador de consulta a usar o modelo de [estimativa de cardinalidade](../../relational-databases/performance/cardinality-estimation-sql-server.md) que corresponde ao nível de compatibilidade do banco de dados atual. Use essa dica para substituir a definição da [Configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON ou o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+* "DISABLE_INTERLEAVED_EXECUTION_TVF" desabilita a execução intercalada para funções com valor de tabela de várias instruções.
+* "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK" desabilita comentários de concessão de memória em modo de lote.
+* "DISABLE_BATCH_MODE_ADAPTIVE_JOINS" desabilita junções adaptáveis em do modo de lote.
  
 > [!TIP]
 > Os nomes de dica diferenciam maiúsculas de minúsculas.

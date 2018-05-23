@@ -1,6 +1,6 @@
 ---
-title: Agendar execução de pacote SSIS no Azure | Microsoft Docs
-ms.date: 05/07/2018
+title: Agendar pacote SSIS no Azure | Microsoft Docs
+ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,25 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Agendar a execução de um pacote do SSIS no Azure
+# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Agendar a execução de um pacote SSIS no Azure
 Você pode agendar a execução de pacotes armazenados no banco de dados de catálogo do SSISDB em um servidor de Banco de Dados SQL do Azure, escolhendo uma das seguintes opções de agendamento:
 -   [A opção Agendar no SSMS (SQL Server Management Studio)](#ssms)
 -   [A atividade Executar Pacote SSIS do Azure Data Factory](#execute)
--   [A atividade de procedimento armazenado do Azure Data Factory SQL Server](#stored proc)
+-   [A atividade de procedimento armazenado do Azure Data Factory SQL Server](#storedproc)
 -   [Trabalhos Elásticos de Banco de Dados SQL](#elastic)
 -   [SQL Server Agent](#agent)
 
 ## <a name="ssms"></a> Agendar um pacote com o SSMS
 
-No SSMS (SQL Server Management Studio), é possível clicar com o botão direito do mouse em um pacote implantado no banco de dados do Catálogo do SSIS, SSISDB, e selecionar **Agendar** para abrir a caixa de diálogo **Nova agenda**.
+No SSMS (SQL Server Management Studio), é possível clicar com o botão direito do mouse em um pacote implantado no banco de dados do Catálogo do SSIS, SSISDB, e selecionar **Agendar** para abrir a caixa de diálogo **Nova agenda**. Para saber mais, confira [Agendar a execução de um pacote SSIS no Azure com SSMS](ssis-azure-schedule-packages-ssms.md).
+
+Esse recurso exige o SQL Server Management Studio versão 17.7 ou superior. Para obter a versão mais recente do SSMS, confira [Fazer o download do SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## <a name="execute"></a> Agendar um pacote com a atividade Executar pacote SSIS
 

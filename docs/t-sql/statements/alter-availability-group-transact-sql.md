@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  Para obter mais informações, veja [Unir uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
- Inicia um failover manual do grupo de disponibilidade sem perda de dados para a réplica secundária à qual você está conectado. A réplica na qual você insere um comando de failover de destino de failover é conhecida como o destino de failover.  O destino de failover assumirá a função primária, recuperará sua cópia de cada banco de dados e as colocará online como os novos bancos de dados primários. A réplica principal antiga faz a transição concorrente para a função secundária, seus bancos de dados se tornam bancos de dados secundários e são imediatamente suspensos. Potencialmente, estas funções podem ser alternadas de um lado para outro por uma série de falhas.  
+Inicia um failover manual do grupo de disponibilidade sem perda de dados para a réplica secundária à qual você está conectado. A réplica que hospedará a réplica primária é o *destino de failover*.  O destino de failover assumirá a função primária, recuperará sua cópia de cada banco de dados e as colocará online como os novos bancos de dados primários. A réplica principal antiga faz a transição concorrente para a função secundária, seus bancos de dados se tornam bancos de dados secundários e são imediatamente suspensos. Potencialmente, estas funções podem ser alternadas de um lado para outro por uma série de falhas.  
   
  Com suporte apenas em uma réplica secundária de confirmação síncrona que esteja sincronizada com a réplica principal. Observe que para que a réplica secundária seja sincronizada, a réplica principal também precisará estar sendo executada em modo de confirmação síncrona.  
   
@@ -574,7 +574,7 @@ ALTER AVAILABILITY GROUP group_name
  \<modify_listener_option>  
  MODIFY LISTENER escolhe uma das seguintes opções:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
  Adiciona o endereço IP especificado ao ouvinte do grupo de disponibilidade especificado por *dns_name*.  
   
  PORT **=** *listener_port*  

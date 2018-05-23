@@ -1,5 +1,5 @@
 ---
-title: Implantar, executar e monitorar um pacote do SSIS no Azure | Microsoft Docs
+title: Implantar e executar um pacote SSIS no Azure | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implantar, executar e monitorar um pacote do SSIS no Azure
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Implantar e executar um pacote SSIS no Azure
 Este tutorial mostra como implantar um projeto do SQL Server Integration Services no banco de dados de catálogo do SSISDB no Banco de Dados SQL do Azure, executar um pacote no Azure-SSIS Integration Runtime e monitorar o pacote em execução.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -45,7 +45,7 @@ Aqui estão as duas coisas mais importantes para lembrar. Essas etapas estão de
 
 2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar-se ao Servidor**, insira as seguintes informações:
 
-   | Configuração       | Valor sugerido | Description | 
+   | Configuração       | Valor sugerido | Descrição | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de Banco de Dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve estar neste formato: **mysqldbserver.database.windows.net**. Se você precisar do nome do servidor, consulte [Conectar-se ao banco de dados do Catálogo do SSISDB no Azure](ssis-azure-connect-to-catalog-database.md). |

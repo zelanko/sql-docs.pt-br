@@ -2,10 +2,9 @@
 title: Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,11 +16,11 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2874e8bb59a47b5732d716924ec3d49a9f80992d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +82,31 @@ Você pode acompanhar os eventos de comentários de concessão de memória usand
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Comentários de concessão de memória, administrador de recursos e dicas de consulta
 A memória real concedida cumpre o limite de memória de consulta determinado pela dica de consulta ou pelo administrador de recursos.
 
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Desabilitar comentários de concessão de memória sem alterar o nível de compatibilidade
+Comentários de concessão de memória podem ser desabilitados no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. Para desabilitar os comentários de concessão de memória em modo de lotes para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+Quando habilitada, essa configuração aparecerá como habilitada em sys.database_scoped_configurations.
+
+Para reabilitar os comentários de concessão de memória em modo de lotes para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+Você também pode desabilitar os comentários de concessão de memória em modo de lote para uma consulta específica, especificando DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK como uma dica de consulta USE HINT.  Por exemplo:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
+
 ## <a name="batch-mode-adaptive-joins"></a>Junções Adaptáveis de modo de lote
 O recurso de Junções Adaptáveis de modo de lote permite a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.
 Aqui está como isso funciona:
@@ -139,7 +163,7 @@ As Junções Adaptáveis de modo de lote funcionam para a execução inicial de 
 ### <a name="tracking-adaptive-join-activity"></a>Controlando a atividade da Junção Adaptável
 O operador de Junção Adaptável tem os seguintes atributos de operador de plano:
 
-| Atributo de plano | Description |
+| Atributo de plano | Descrição |
 |--- |--- |
 | AdaptiveThresholdRows | Mostra o uso de limite para alternar de uma junção hash para uma junção de loops aninhados. |
 | EstimatedJoinType | Qual é o provável tipo de junção. |
@@ -165,6 +189,36 @@ Se uma Junção Adaptável alterna para uma operação de Loops Aninhados, ela u
 O gráfico a seguir mostra uma interseção de exemplo entre o custo de uma Junção Hash e o custo de uma alternativa de Junção de Loops Aninhados.  Neste ponto de interseção, o limite é determinado e, por sua vez, ele determina o algoritmo real usado para a operação de junção.
 
 ![Limite de junção](./media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Desabilitar junções adaptáveis sem alterar o nível de compatibilidade
+
+Junções adaptáveis podem ser desabilitadas no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior.  
+Para desabilitar as junções adaptáveis para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Quando habilitada, essa configuração aparecerá como habilitada em sys.database_scoped_configurations.
+Para reabilitar as junções adaptáveis para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+Você também pode desabilitar junções adaptáveis para uma consulta específica, especificando DISABLE_BATCH_MODE_ADAPTIVE_JOINS como uma dica de consulta USE HINT.  Por exemplo:
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Execução intercalada para funções com valor de tabela de várias instruções
 A execução intercalada altera o limite unidirecional entre as fases de execução e de otimização para a execução de uma única consulta e permite que os planos se adaptem com base nas estimativas de cardinalidade revisadas. Durante a otimização, se encontrarmos uma candidata para execução intercalada, que são atualmente **MSTVFs (funções com valor de tabela de várias instruções)**, pausaremos a otimização, executaremos a subárvore aplicável, capturaremos as estimativas de cardinalidade precisas e retomaremos a otimização para operações de downstream.
@@ -205,14 +259,14 @@ Depois que um plano de execução intercalada é armazenado em cache, o plano co
 ### <a name="tracking-interleaved-execution-activity"></a>Controlando a atividade de execução intercalada
 Você pode ver os atributos de uso no plano de execução de consulta real:
 
-| Atributo de Plano de execução | Description |
+| Atributo de Plano de execução | Descrição |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Aplica-se ao nó *QueryPlan*. Quando é *true*, significa que o plano contém candidatos a execução intercalada. |
 | IsInterleavedExecuted | Atributo do elemento *RuntimeInformation* em RelOp para o nó TVF. Quando *true*, significa que a operação foi materializada como parte de uma operação de execução intercalada. |
 
 Você também pode controlar as ocorrências de execução intercalada por meio dos xEvents a seguir:
 
-| xEvent | Description |
+| xEvent | Descrição |
 | ---- | --- |
 | interleaved_exec_status | Esse evento é disparado quando a execução intercalada está ocorrendo. |
 | interleaved_exec_stats_update | Esse evento descreve as estimativas de cardinalidade atualizadas por execução intercalada. |
@@ -226,6 +280,41 @@ Uma instrução que usar `OPTION (RECOMPILE)` criará um plano usando a execuç�
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Interoperabilidade entre execução intercalada e repositório de consultas
 Os planos que usam execução intercalada podem ser forçados. O plano é a versão que tem as estimativas de cardinalidade corrigidas com base na execução inicial.    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>Desabilitar execução intercalada sem alterar o nível de compatibilidade
+
+A execução intercalada pode ser desabilitada no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior.  Para desabilitar a execução intercalada para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+Quando habilitada, essa configuração aparecerá como habilitada em sys.database_scoped_configurations.
+Para reabilitar a execução intercalada para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+Você também pode desabilitar a execução intercalada para uma consulta específica, especificando DISABLE_INTERLEAVED_EXECUTION_TVF como uma dica de consulta USE HINT.  Por exemplo:
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
 
 ## <a name="see-also"></a>Consulte Também
 [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
