@@ -3,12 +3,9 @@ title: Classe de evento Broker:Conversation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 36dbc61ba7241092d717a0d446f7bc437e44b59c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a61baa09c40042ad027f784531ce7989280419
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="brokerconversation-event-class"></a>Classe de evento Broker:Conversation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Conversation  
   
-|Coluna de dados|Tipo|Description|Número da coluna|Filtrável|  
+|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
@@ -65,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|Description|  
+|ID|Subclasse|Descrição|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **SEND Message** quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa uma instrução SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **END CONVERSATION** quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa uma instrução END CONVERSATION que não inclui a cláusula WITH ERROR.|  

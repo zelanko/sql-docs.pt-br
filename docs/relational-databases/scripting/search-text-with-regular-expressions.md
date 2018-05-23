@@ -3,9 +3,7 @@ title: Pesquisar texto com expressões regulares | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -24,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +39,11 @@ ms.lasthandoff: 05/03/2018
 2.  O botão triangular **Lista de Referências** próximo ao campo **Localizar** torna-se disponível. Clique no botão para exibir uma lista das expressões regulares usadas frequentemente. Quando você seleciona qualquer item do Construtor de Expressões, o item é inserido na cadeia de caracteres **Localizar** .  
   
 > [!NOTE]  
->  Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir**a notação de chaves {} é usada para expressões marcadas. Então a expressão "zo {1}" corresponde a todas as ocorrências de "zo" seguidas pela marca 1, como em "Alonzo1" e "Gonzo1". Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Então a expressão "zo{1}" corresponde a todas as ocorrências de "z" seguidas exatamente por um "o", como em "zone" e não "zoo".  
+>  Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir**a notação de chaves {} é usada para expressões marcadas. Então a expressão "zo {1}" corresponde a todas as ocorrências de "zo" seguidas pela marca 1, como em "Alonzo1" e "Gonzo1". Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Então a expressão "zo{1}" corresponde a todas as ocorrências de "z" seguidas exatamente por um “o”, como em "zone" e não "zoo".  
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere|para obter informações sobre a ferramenta de configuração e recursos adicionais.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 |Quebra de linha|\n|Faz a correspondência a uma quebra de linha independente de plataforma. Em uma expressão de substituição, insere uma quebra de linha.|  
 |Qualquer caractere no conjunto|[]|Faz a correspondência de qualquer um dos caracteres dentro de []. Para especificar um intervalo de caracteres, relacione o caractere de início e término separado por um traço (-), como em [a-z].|  
 |Qualquer caractere que não faz parte do conjunto|[^...]|Faz a correspondência de qualquer caractere que não pertence ao conjunto de caracteres depois de ^.|  
-|Ou|&#124;|Faz a correspondência da expressão antes ou depois do símbolo OR (&#124;). Usada principalmente dentro de grupos. Por exemplo, banho (esponja&#124;lama) corresponde a "banho de esponja" e "banho de lama".|  
+|Ou|&#124;|Faz a correspondência da expressão antes ou depois do símbolo OR (&#124;). Usada principalmente dentro de grupos. Por exemplo, banho (esponja&#124;lama) corresponde a “banho de esponja” e “banho de lama”.|  
 |Escape|\|Faz a correspondência do caractere que segue a barra invertida (\\) como um literal. Isso permite que você encontre os caracteres usados em notação de expressão regular, como { e ^. Por exemplo, \\^ pesquisa pelo caractere ^.|  
 |Expressão marcada|{}|Corresponde o texto marcado com a expressão anexada.|  
 |Identificador do C/C++|:i|Faz a correspondência da expressão ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Mínimo — zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo - um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir relaciona a sintaxe para correspondência por propriedades de caracteres Unicode padrão. A abreviação de duas letras é igual à relacionada no banco de dados de propriedades de caractere Unicode. Elas podem ser especificadas como parte de um conjunto de caracteres. Por exemplo, a expressão [:Nd:Nl:No] faz a correspondência de qualquer tipo de dígito.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Letra maiúscula|:Lu|Faz a correspondência de qualquer letra maiúscula. Por exemplo, Luhe faz a correspondência de "The" mas não "the".|  
 |Letra minúscula|:Ll|Faz a correspondência de qualquer letra minúscula. Por exemplo, Llhe faz a correspondência de "the" mas não "The".|  
@@ -126,7 +124,7 @@ ms.lasthandoff: 05/03/2018
   
  Além das propriedades de caracteres Unicode padrão, as propriedades adicionais a seguir podem ser especificadas como parte de um conjunto de caracteres.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Alfa|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
 |Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  

@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ Se o SQL Server Agent não estava em execução quando a publicação foi criada
 
 ![Botão "Iniciar" e a alteração na mensagem de status para mostrar que o Agente de Instantâneo foi executado](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Se encontrar um erro, veja [Solução de erros com o Agente de Instantâneo](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent). 
+Se encontrar um erro, veja [Solução de erros com o Agente de Instantâneo](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent). 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Adicionar o logon Distribution Agent à PAL  
@@ -231,7 +231,7 @@ Nesta seção, você usará os tokens de rastreamento para verificar se as alter
   
    A. Selecione a guia **Tokens de Rastreamento**.  
    B. Selecione **Inserir Rastreamento**.    
-   c. Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou determinado ponto.
+   c. Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou determinado ponto.
 
    ![Informações para o token de rastreamento](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 

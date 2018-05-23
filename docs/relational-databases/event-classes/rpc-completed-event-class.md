@@ -3,12 +3,9 @@ title: Classe de evento RPC:Completed | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 89add05030fb2ef26194609bf2665043aaf91bc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0faf036f55d554dc42d9be9d0d44a0a51087f86
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="rpccompleted-event-class"></a>classe de evento RPC:Completed
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Colunas de dados da classe de evento RPC:Completed  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Valor binário dependente da classe de evento capturada no rastreamento.|2|Sim|  

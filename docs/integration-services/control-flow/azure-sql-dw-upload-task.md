@@ -19,14 +19,14 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: e9dc3062b902074f052475f5c63130244e9a582e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da49de795c0a0fbc8d6da2cf28374a07d7f8778
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
-A **Tarefa de Upload do SQL DW do Azure** permite que um pacote do SSIS carregue dados locais em uma tabela no SQL Data Warehouse (DW) do Azure. O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8. O processo de carregamento segue a abordagem PolyBase eficiente conforme descrito no artigo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Padrões e estratégias de carregamento do SQL Data Warehouse do Azure). Especificamente, os dados serão primeiro carregados no Armazenamento de Blobs do Azure e, em seguida, no SQL DW do Azure. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure para usar essa tarefa.
+A **Tarefa de Upload do SQL DW do Azure** permite que um pacote do SSIS carregue dados locais em uma tabela no SQL Data Warehouse (DW) do Azure. O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8. O processo de carregamento segue a abordagem PolyBase eficiente conforme descrito no artigo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Padrões e estratégias de carregamento do SQL Data Warehouse do Azure). Especificamente, os dados serão primeiro carregados no Armazenamento de Blobs do Azure e, em seguida, no SQL DW do Azure. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure para usar essa tarefa.
 
 A **Tarefa de Upload de DW SQL do Azure** é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para o Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -34,7 +34,7 @@ Para adicionar uma **Tarefa de Upload do SQL DW do Azure**, arraste-a da Caixa d
 
 Na página **Geral** , defina as propriedades a seguir.
 
-Campo|Description
+Campo|Descrição
 -----|-----------
 LocalDirectory|Especifica o diretório local que contém os arquivos de dados a serem carregados.
 Recursivamente|Especifica se os subdiretórios devem ser pesquisados recursivamente.

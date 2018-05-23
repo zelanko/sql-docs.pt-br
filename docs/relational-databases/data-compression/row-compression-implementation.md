@@ -13,16 +13,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91cf1a6e8889e210f0d1e64145af64aa83ba70ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74e3b96d96fa0906e92b3aa6df5f10fcdd248847
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="row-compression-implementation"></a>Implementação da compactação de linha
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="how-row-compression-affects-storage"></a>Como a compactação de linha afeta o armazenamento  
  A tabela a seguir descreve como a compactação de linha afeta os tipos existentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]. A tabela não inclui o aumento que pode ser gerado usando a compactação de página.  
   
-|Tipo de dados|O armazenamento é afetado?|Description|  
+|Tipo de dados|O armazenamento é afetado?|Descrição|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|não|1 byte é o armazenamento mínimo necessário.|  
 |**smallint**|Sim|Se o valor couber em 1 byte, apenas 1 byte será usado.|  

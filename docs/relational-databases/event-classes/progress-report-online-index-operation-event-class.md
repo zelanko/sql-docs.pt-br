@@ -3,12 +3,9 @@ title: 'Relatório de andamento: classe de evento de operação de índice onlin
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f9d7aec25ce6ac24cf47d0c34f856e586fdce28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0518736801a15d26658e43dbe0f9d635f97c680
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Classe de evento Progress Report: Online Index Operation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Colunas de dados de classe de evento Progress Report: Online Index Operation  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|**bigint**|Número de linhas inseridas.|52|Sim|  

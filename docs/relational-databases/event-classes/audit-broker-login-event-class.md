@@ -3,12 +3,9 @@ title: Classe de evento Audit Broker Login | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73220c28a2a5399247ff7c7aab96adbab9cd3b8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1064f0902369f81cff96f94ee68520ded419d39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-broker-login-event-class"></a>Classe de evento Audit Broker Login
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Login  
   
-|Coluna de dados|Tipo|Description|Número da coluna|Filtrável|  
+|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Não usado nessa classe de evento.|10|Sim|  
 |**ClientProcessID**|**int**|Não usado nessa classe de evento.|9|Sim|  
@@ -58,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|Description|  
+|ID|Subclasse|Descrição|  
 |--------|--------------|-----------------|  
 |1|Login Success|Um evento Login Success informa que o processo de logon do agente adjacente foi concluído com êxito.|  
 |2|Login Protocol Error|Um evento Login Protocol Error informa que o agente recebe uma mensagem bem formada, mas não válida para o estado atual do processo de logon. A mensagem pode ter sido perdida ou enviada fora de sequência.|  

@@ -3,12 +3,9 @@ title: Classe de evento FT:Crawl Started | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 935bb327adbc64bb6a8ff66b85d8e87c7815bbd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f0af32779cf1ac372a98db1d27eaa07a92ed887
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="ftcrawl-started-event-class"></a>Classe de evento FT:Crawl Started
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>Colunas de dados da classe de evento FT:Crawl Started  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados no qual o rastreamento de texto completo foi iniciado. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**EventClass**|**int**|Tipo de evento = 155.|27|não|  

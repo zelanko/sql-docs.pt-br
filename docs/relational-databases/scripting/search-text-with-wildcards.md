@@ -3,9 +3,7 @@ title: Pesquisar texto com curingas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -23,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8157a9ad0d36b5a5a153eb44415b82108f64cca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5897acf16b7be6f6dbae52fb71f79d398a1f34f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve os curingas disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere único|?|Corresponde a qualquer caractere único.|  
 |Qualquer dígito único|#|Corresponde a qualquer dígito único. Por exemplo, 7# corresponde a números que incluem 7 seguidos por outro número, como 71, mas não 17.|  

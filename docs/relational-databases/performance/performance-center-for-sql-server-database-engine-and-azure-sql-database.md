@@ -3,12 +3,9 @@ title: Controle de Desempenho do Mecanismo de Banco de Dados do SQL Server e do 
 ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
-ms.component: performance
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +23,11 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4f95779084ebec71ed169abdb5d4461c7532d288
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dc039e723483777fee9d670ca943fb101a29aa5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Central de desempenho do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 09/13/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dafc740c11cf79294786440204e8e284dcbd518e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3e839b220bb8a3464d8dfbc9a7f4afa8bbcb416
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="how-query-store-collects-data"></a>Como o Repositório de Consultas coleta dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  **Descrições de exibições**  
   
-|Exibição|Description|  
+|Exibição|Descrição|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Apresenta os textos de consulta exclusivos executados no banco de dados. Comentários e espaços antes e depois o texto da consulta são ignorados. Comentários e espaços dentro do texto não são ignorados. Cada instrução no lote gera uma entrada de texto de consulta separada.|  
 |**sys.query_context_settings**|Apresenta as combinações exclusivas do plano que afetam as configurações em que as consultas são executadas. O mesmo texto de consulta executado com um plano diferente, afetando as configurações produz a entrada de consulta separada no Repositório de Consultas porque `context_settings_id` faz parte da chave de consulta.|  

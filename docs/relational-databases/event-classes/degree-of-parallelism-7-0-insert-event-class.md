@@ -3,12 +3,9 @@ title: Classe de evento Degree of Parallelism (7.0 Insert) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 33171b25d40b444c0f5f89c6f54bbcf15345937c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e20a8f03b3bf076abcae7602cf098068f6325c31
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe de evento Degree of Parallelism (7.0 Insert)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Colunas de dados de classe de evento Degree of Parallelism (7.0 Insert)  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BinaryData**|**imagem**|Número de CPUs usadas para completar o processo com base nos seguintes valores:<br /><br /> 0x00000000, indica um plano em série sendo executado em série.<br /><br /> 0x01000000, indica um plano paralelo sendo executado em série.<br /><br /> >= 0x02000000 indica um plano paralelo sendo executado em paralelo.|2|não|  

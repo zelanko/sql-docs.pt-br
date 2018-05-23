@@ -3,8 +3,6 @@ title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49aeb80c984dd3b01f300e38d81e423a1fee56d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ Falha no logon do usuário '<nome_do_usuário>'."
 ## <a name="additional-error-information"></a>Informações adicionais de erro  
 Para aumentar a segurança, a mensagem de erro que é retornada ao cliente oculta deliberadamente a natureza do erro de autenticação. No entanto, no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um erro correspondente contém um estado de erro que mapeia até uma condição de falha na autenticação. Compare o estado de erro com a lista a seguir para determinar a razão da falha no logon.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |---------|---------------|  
 |1|Informações de erro não disponíveis. Esse estado geralmente significa que você não tem permissão para receber os detalhes do erro. Contate o administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obter mais informações.|  
 |2|A ID do usuário não é válida.|  

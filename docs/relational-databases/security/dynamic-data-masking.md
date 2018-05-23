@@ -13,11 +13,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bdd58460e8dc3c9d763f92a335b0d2a0cee850b2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../..
 ## <a name="defining-a-dynamic-data-mask"></a>Definir uma máscara de dados dinâmicos  
  Uma regra de mascaramento pode ser definida em uma coluna de tabela para ocultar os dados dessa coluna. Há quatro tipos de máscaras disponíveis.  
   
-|Função|Description|Exemplos|  
+|Função|Descrição|Exemplos|  
 |--------------|-----------------|--------------|  
 |Padrão|Mascaramento completo de acordo com os tipos de dados dos campos designados.<br /><br /> Para os tipos de dados string, use XXXX ou menos Xs se o tamanho do campo for inferior a quatro caracteres (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Para os tipos de dados numeric, use um valor zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Para os tipos de dados data e hora, use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Para os tipos de dados binary, use um único byte de valor ASCII 0 (**binary**, **varbinary**, **image**).|Exemplo da sintaxe de definição de coluna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|O método de mascaramento que expõe a primeira letra de um endereço de email e o sufixo constante ".com", na forma de um endereço de email. para obter informações sobre a ferramenta de configuração e recursos adicionais. `aXXX@XXXX.com`.|Exemplo da sintaxe de definição: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
@@ -127,10 +127,10 @@ CREATE TABLE Membership
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
    LastName varchar(100) NOT NULL,  
-   Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
+   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
    Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
   
-INSERT Membership (FirstName, LastName, Phone#, Email) VALUES   
+INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
 ('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
 ('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
 ('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  

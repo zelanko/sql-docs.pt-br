@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e9f652b23295e47842981035348771125b627bd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3edda9ebc4f356302c1e6a01c87d026bdb8f5e9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

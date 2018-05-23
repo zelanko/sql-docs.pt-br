@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f258adcc432f932dcc88a816eff17d9f89124199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 647bf6e7d60b30fb3a698232552f0b3760c6a8e3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ As tabelas baseadas em disco indiretamente têm um sistema de controle de versã
   
 A tabela a seguir lista os possíveis níveis de isolamento da transação, na sequência de isolamento do menor para o maior. Para obter detalhes sobre os conflitos que podem ocorrer e a lógica de repetição para lidar com esses conflitos, veja [Detecção de conflito e lógica de repetição](#confdetretry34ni). 
   
-| Nível de Isolamento | Description |   
+| Nível de Isolamento | Descrição |   
 | :-- | :-- |   
 | READ UNCOMMITTED | Indisponível: as tabelas com otimização de memória não podem ser acessadas com isolamento Read Uncommitted. Ainda é possível acessar tabelas com otimização de memória no isolamento SNAPSHOT se TRANSACTION ISOLATION LEVEL no nível da sessão é definido como READ UNCOMMITTED, usando a dica de tabela WITH (SNAPSHOT) ou definindo a configuração de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON. | 
 | READ COMMITTED | Suporte para tabelas com otimização de memória somente quando o modo de confirmação automática está em vigor. Ainda é possível acessar tabelas com otimização de memória no isolamento SNAPSHOT se TRANSACTION ISOLATION LEVEL no nível da sessão é definido como READ COMMITTED, usando a dica de tabela WITH (SNAPSHOT) ou definindo a configuração de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON.<br/><br/>Se a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON, não será permitido acessar uma tabela com otimização de memória e uma tabela baseada em disco em isolamento READ COMMITTED na mesma instrução. |  
@@ -164,7 +163,7 @@ Há dois tipos de condições de erro relacionadas à transação que causam a f
 
 Veja abaixo as condições de erro que podem causar falhas nas transações ao acessarem as tabelas com otimização de memória.
 
-| Código do Erro | Description | Causa |
+| Código do Erro | Descrição | Causa |
 | :-- | :-- | :-- |
 | **41302** | Tentou atualizar uma linha que foi atualizada em uma transação diferente desde o início da transação atual. | Essa condição de erro ocorre se duas transações simultâneas tentam atualizar ou excluir a mesma linha ao mesmo tempo. Uma das duas transações recebe essa mensagem de erro e precisará ser repetida. <br/><br/>  | 
 | **41305**| Falha de validação de leitura repetida. Uma linha lida de uma tabela com otimização de memória – esta transação foi atualizada por outra transação que foi confirmada antes da confirmação dessa transação. | Esse erro pode ocorrer ao usar o isolamento REPEATABLE READ ou SERIALIZABLE e também se as ações de uma transação simultânea causam a violação de uma restrição FOREIGN KEY. <br/><br/>Em geral, uma violação simultânea de restrições de chave estrangeira desse tipo é rara e, normalmente, indica um problema com a lógica do aplicativo ou a entrada de dados. No entanto, o erro também pode ocorrer se não há nenhum índice nas colunas envolvidas com a restrição FOREIGN KEY. Portanto, a orientação é sempre criar um índice em colunas de chave estrangeira em uma tabela com otimização de memória. <br/><br/> Para obter considerações mais detalhadas sobre as falhas de validação causadas por violações de chave estrangeira, confira [esta postagem no blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) da Equipe de Consultoria ao Cliente do SQL Server. |  

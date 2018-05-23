@@ -3,12 +3,9 @@ title: Categoria de evento de auditoria de segurança (SQL Server Profiler) | Mi
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d200e1fc2b4cb3a08f04b26af419b51450d638b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f99a32daae5f79517fe0fdca82ac8ee9dd7e04e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria de evento de auditoria de segurança (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Audit Add DB User](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|Indica que um logon foi adicionado ou removido como um usuário de banco de dados para um banco de dados.|  
 |[Classe de evento Audit Add Login to Server Role](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|Indica que um logon foi adicionado ou removido de uma função de servidor fixa.|  

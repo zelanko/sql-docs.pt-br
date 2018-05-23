@@ -3,9 +3,7 @@ title: Sintaxe Transact-SQL com suporte no IntelliSense | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -21,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64d21a74fe80fc3f311e58097463120337f0ff3b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f5050b0def51df6ded38aa69c9eb8d45f2ccd70
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxe Transact-SQL com suporte do IntelliSense
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

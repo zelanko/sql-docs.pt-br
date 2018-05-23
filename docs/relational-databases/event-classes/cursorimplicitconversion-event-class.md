@@ -3,12 +3,9 @@ title: Classe de evento CursorImplicitConversion | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 59c0e57a891712eae25267421d0d702ee527f067
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be68048f2af13be22d610abaca36c93f830b8e1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cursorimplicitconversion-event-class"></a>classe de evento CursorImplicitConversion
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="cursorimplicitconversion-event-class-data-columns"></a>Colunas de dados de classe de evento CursorImplicitConversion  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BinaryData**|**imagem**|Tipo de cursor resultante. Os valores são:<br /><br /> 1 = Keyset<br /><br /> 2 = Dinâmico<br /><br /> 4 = Somente avanço<br /><br /> 8 = Estático<br /><br /> 16 = De avanço rápido|2|Sim|  

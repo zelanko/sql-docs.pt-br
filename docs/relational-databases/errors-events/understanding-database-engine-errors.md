@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -21,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5deba5923535da8a349b5bc45b2c988f1190bc3e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5ed21ec6de1f739eec94d3b47bc31eb9de2b9ebb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="understanding-database-engine-errors"></a>Compreendendo os erros do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Os erros gerados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] têm os atributos descritos na tabela abaixo.  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
 |Número do erro|Cada mensagem de erro tem um número de erro exclusivo.|  
 |Error message string|A mensagem de erro contém informações de diagnóstico sobre a causa do erro. Muitas mensagens de erro têm variáveis de substituição nas quais são inseridas informações, como o nome do objeto que gera o erro.|  
