@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0d4c7392b58f3277317e3bf9b8077239510bb0c3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 893790448524a844b488478230db0f5141173ffd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Argumentos  
 *expressão*  
-Uma expressão
+Um
 
 * **binary(***n***)**
 * **char(***n***)**
@@ -55,11 +52,11 @@ Uma expressão
 * **varbinary(***n***)**
 * **varchar(max)**
 
-ou
+ou em
 
 * **varchar(***n***)**
 
-. Para saber mais, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+expressão. Para saber mais, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary(max)** representa o conteúdo compactado da entrada.

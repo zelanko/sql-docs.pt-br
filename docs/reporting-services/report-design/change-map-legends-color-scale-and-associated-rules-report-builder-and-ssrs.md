@@ -1,16 +1,15 @@
 ---
-title: "Alterar legendas de mapa, escala de cores e regras associadas no Construtor de Relatórios-SSRS | Microsoft Docs"
-ms.custom: 
+title: Alterar legendas de mapa, escala de cores e regras associadas no Construtor de Relatórios-SSRS | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1
 - sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1
@@ -35,16 +34,15 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5f252d1bc68c8b9f9e44b2d1741c88060210d90e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 96de567e40763ca1db0b2aae8f13af3d8a17ffb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um mapa pode conter legendas de mapa, uma escala de cores e uma escala de distância. Essas partes de um mapa ajudam os usuários a interpretar a visualização de dados no mapa.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para alterar a posição de uma legenda em relação ao visor  
   
-1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página *\<item de relatório>***Propriedades**.  
+1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página *\<report item>***Propriedades**.  
   
 2.  Em **Posição**, clique no local que especifica onde exibir a legenda em relação ao visor.  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
   
 3.  Clique em **Legenda**.  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
   
 3.  Clique em **Aplicar estilo do modelo**.  
   
@@ -137,7 +135,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando a paleta de cores**.  
   
@@ -155,7 +153,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando intervalos de cores**.  
   
@@ -177,7 +175,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando cores personalizadas**.  
   
@@ -195,7 +193,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
   
 3.  Selecione a opção **Visualizar dados usando** \<tipo de regra>. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
   
@@ -227,7 +225,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra**.  
   
 3.  Verifique se a opção **Visualizar dados usando** \<*tipo de regra*> está selecionada.  
   
@@ -248,7 +246,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
   
 3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções de **Visualizar dados usando** \<tipo de regra>.  
   
@@ -269,7 +267,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra**.  
   
 3.  Clique em **Legenda**.  
   
@@ -282,7 +280,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra**.  
   
 3.  Clique em **Legenda**.  
   

@@ -1,16 +1,15 @@
 ---
 title: Fontes e arquivos de log do Reporting Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
 - logs [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b36566dce410fff0122e66c735a3058061e2af8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d2bbaf2046f8cf62264005e787938a8d61fee6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Fontes e arquivos de log do Reporting Services
   Um servidor de relatório e um ambiente de servidor de relatório usam uma variedade de destinos de log para registrar informações sobre operações e status do servidor. Há duas categorias básicas de registro em log, log de execução e log de rastreamento. O log de execução inclui informações sobre estatística de execução de relatório, auditoria, diagnóstico de desempenho e otimização. O log de rastreamento são informações sobre mensagens de erro e diagnóstico em geral.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 |[Log de aplicativo do Windows](../../reporting-services/report-server/windows-application-log.md)|O log de aplicativos de Microsoft Windows contém informações sobre eventos de servidor de relatório.|  
 |Logs de desempenho do Windows|Os logs de desempenho do Windows contêm dados de desempenho do servidor de relatório. Você pode criar logs de desempenho e escolher contadores que determinam quais dados devem ser coletados. Para obter mais informações, consulte [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md).|  
 |Arquivos de log de Instalação do SQL Server|Arquivos de log também são criados durante a instalação. Se a instalação falhar ou for bem-sucedida com avisos ou outras mensagens, você poderá examinar os arquivos de log para solucionar o problema. Para obter mais informações, consulte [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|  
-|Logs de IIS|Arquivos de log criados por Serviços de Informações da Internet da Microsoft (IIS). Para obter mais informações, consulte [Como habilitar o log no IIS (Serviços de Informações da Internet)](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437).|  
+|Logs de IIS|Arquivos de log criados por Serviços de Informações da Internet da Microsoft (IIS). Para saber mais, veja [Como habilitar o log em Serviços de Informações da Internet (IIS)](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437).|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

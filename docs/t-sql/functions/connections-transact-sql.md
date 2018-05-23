@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,17 +26,16 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1cc0d866a576d0236b2a429b6266eeda155b5114
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 39767751186028fd5cd8b93621d7465094d99264
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Retorna o número de tentativas de conexão, bem-sucedidas ou não, desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Essa função retorna o número de tentativas de conexão, bem-sucedidas ou não, desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,14 +49,14 @@ Retorna o número de tentativas de conexão, bem-sucedidas ou não, desde a últ
 **inteiro**
   
 ## <a name="remarks"></a>Remarks  
-Conexões são diferentes de usuários. Por exemplo, aplicativos podem abrir várias conexões em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem que o usuário perceba.
+Conexões são diferentes de usuários. Por exemplo, um aplicativo pode abrir várias conexões em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem que o usuário perceba.
   
-Para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo tentativas de conexão, execute **sp_monitor**.
+Execute **sp_monitor** para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo tentativas de contagem de conexão.
   
-@@MAX_CONNECTIONS é o número máximo de conexões permitidas simultaneamente com o servidor. @@CONNECTIONS é incrementado a cada tentativa de logon e, portanto, @@CONNECTIONS pode ser maior que @@MAX_CONNECTIONS.
+@@MAX_CONNECTIONS é o número máximo permitido de conexões simultâneas com o servidor. @@CONNECTIONS é incrementado a cada tentativa de logon e, portanto, @@CONNECTIONS pode exceder @@MAX_CONNECTIONS.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir mostra o retorno do número de tentativas de logon a partir da data e hora atuais.
+Este exemplo retorna a contagem de tentativas de logon a partir de data e da hora atuais.
   
 ```sql
 SELECT GETDATE() AS 'Today''s Date and Time',   

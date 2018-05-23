@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
@@ -18,11 +17,11 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0eead8d73153621430037141e0a509adac4cd1fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexões SSL em um servidor de relatórios do modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] O modo Nativo usa o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório. Se você tiver um arquivo de certificado (.cer) instalado em um repositório de certificados local no computador do servidor de relatório, poderá associá-lo a uma reserva de URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para dar suporte a conexões do servidor de relatório por meio de um canal criptografado.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 01/09/2018
   
  As associações SSL são um recurso compartilhado no Microsoft Windows. As alterações feitas pelo Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou outras ferramentas como o Gerenciador do IIS podem afetar outros aplicativos no mesmo computador. É uma prática recomendada usar a mesma ferramenta para editar associações que você usou para criar as associações.  Por exemplo se você criou associações de SSL usando o Gerenciador de Configurações, então é recomendado que você use o Gerenciador de Configurações para gerenciar o ciclo de vida das associações. Se você usar o Gerenciador do IIS para criar associações, é recomendado usar o Gerenciador do IIS para gerenciar o ciclo de vida das associações. Se o IIS estiver instalado no computador antes de o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ser instalado, será uma prática recomendada revisar a configuração do SSL no IIS antes de configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Se você remover as associações do SSL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando o Gerenciador de Configurações do Reporting Services, o SSL poderá não mais funcionar para sites em um servidor que está executando o IIS (Serviços de Informações da Internet) ou em outro servidor de HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] remove a chave do Registro a seguir. Quando esta chave do Registro é removida, a associação do SSL para o IIS também é removida. Sem esta associação, o SSL não é fornecido para o protocolo HTTP. Para diagnosticar este problema, use o Gerenciador do IIS ou o utilitário da linha de comando HTTPCFG.exe. Para resolver o problema, restaure a associação SSL para seus sites usando o Gerenciador do IIS. Para impedir este problema no futuro, use o Gerenciador do IIS para remover as associações SSL e em seguida use o Gerenciador do IIS para restaurar a associação para os sites desejados. Para obter mais informações, consulte o artigo da base de dados de conhecimento [O SSL não funciona mais depois de remover uma associação SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
+ Se você remover as associações do SSL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando o Gerenciador de Configurações do Reporting Services, o SSL poderá não mais funcionar para sites em um servidor que está executando o IIS (Serviços de Informações da Internet) ou em outro servidor de HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] remove a chave do Registro a seguir. Quando esta chave do Registro é removida, a associação do SSL para o IIS também é removida. Sem esta associação, o SSL não é fornecido para o protocolo HTTP. Para diagnosticar este problema, use o Gerenciador do IIS ou o utilitário da linha de comando HTTPCFG.exe. Para resolver o problema, restaure a associação SSL para seus sites usando o Gerenciador do IIS. Para impedir este problema no futuro, use o Gerenciador do IIS para remover as associações SSL e em seguida use o Gerenciador do IIS para restaurar a associação para os sites desejados. Para saber mais, veja o artigo da base de dados de conhecimento [O SSL não funciona mais depois de remover uma associação SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   

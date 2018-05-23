@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 -   Usando um marcador de parâmetro (?) para especificar parâmetros, associar uma variável de programa ao marcador de parâmetro e, em seguida, inserir o valor dos dados na variável de programa.  
   
 > [!NOTE]  
->  Ao chamar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usam parâmetros denominados com o OLE DB, os nomes de parâmetros devem começar com o caractere '@'. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Driver OLE DB para SQL Server impõe esta restrição mais estritamente que o MDAC.  
+>  Ao chamar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usam parâmetros denominados com o OLE DB, os nomes de parâmetros devem começar com o caractere “\@'”. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Driver OLE DB para SQL Server impõe esta restrição mais estritamente que o MDAC.  
   
  Para dar suporte a parâmetros, o **ICommandWithParameters** interface é exposta no objeto de comando. Para usar parâmetros, o consumidor primeiro descreve os parâmetros para o provedor, chamando o **ICommandWithParameters:: SetParameterInfo** método (ou, opcionalmente, prepara uma instrução de chamada que chama o **GetParameterInfo** método). O consumidor cria um acessador que especifica a estrutura de um buffer e coloca os valores dos parâmetros nesse buffer. Finalmente, ele passa o identificador do acessador e um ponteiro para o buffer de **Execute**. Em chamadas posteriores para **Execute**, o consumidor coloca novos valores de parâmetro no buffer e chama **Execute** com o ponteiro de buffer e o identificador do acessador.  
   

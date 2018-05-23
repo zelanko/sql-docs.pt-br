@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -30,20 +28,19 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da3fd1c4b0e66be485dcf25fdd0b3bdcb0079c6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 27eb30bf1a8b176024610affa368a8db1c6607e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gastou desde que foi iniciado pela última vez. O resultado é indicado em incrementos de tempo de CPU ou "tiques", sendo cumulativo para todas as CPUs; portanto, ele pode exceder o tempo decorrido real. Multiplique por @@TIMETICKS para converter em microssegundos.
+Esta função retorna a quantidade de tempo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gastou em operação ativa desde o início mais recente. `@@CPU_BUSY` retorna um resultado medido em incrementos de tempo de CPU, ou "tiques". Este valor é cumulativo para todas as CPUs; portanto, ele pode exceder o tempo decorrido real. Para converter em microssegundos, multiplique por [@@TIMETICKS](./timeticks-transact-sql.md).
   
 > [!NOTE]  
->  Se o tempo retornado em @@CPU_BUSY ou @@IO_BUSY exceder aproximadamente 49 dias de tempo de CPU cumulativo, você receberá um aviso de estouro aritmético. Nesse caso, o valor das variáveis @@CPU_BUSY, @@IO_BUSY e @@IDLE não é preciso.  
+>  Se o tempo retornado em @@CPU_BUSY ou @@IO_BUSY exceder 49 dias (aproximadamente) de tempo de CPU cumulativo, você receberá um aviso de estouro aritmético. Nesse caso, o valor das variáveis `@@CPU_BUSY`, `@@IO_BUSY` e `@@IDLE` não é preciso.  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,10 +54,10 @@ Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 **inteiro**
   
 ## <a name="remarks"></a>Remarks  
-Para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo a atividade da CPU, execute [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md).
+Para ver um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo a atividade da CPU, execute [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir mostra o retorno de atividade de CPU do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da data e hora atuais. Para evitar estouro aritmético ao converter o valor em microssegundos, o exemplo converte um dos valores no tipo de dados `float`.
+Este exemplo retorna a atividade de CPU do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da data e hora atuais. O exemplo converte um dos valores para o tipo de dados `float`. Isso evita problemas de estouro de capacidade aritmética ao calcular um valor em microssegundos.
   
 ```sql
 SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   

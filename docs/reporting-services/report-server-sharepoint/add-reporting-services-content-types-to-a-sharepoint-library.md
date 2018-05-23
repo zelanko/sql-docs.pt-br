@@ -1,27 +1,25 @@
 ---
-title: "Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint | Microsoft Docs"
-ms.custom: 
+title: Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2fe50a939544eb7f3d58bbd38ad98e9ffcc82733
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 26f53f76d18900158ff0e9d439839c376a991d73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint
 
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 > [!TIP]  
 >  Se você **não** tiver configurado anteriormente tipos de conteúdo para uma biblioteca, primeiro habilite o gerenciamento de tipos de conteúdo e, depois, habilite os tipos de conteúdo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Consulte os procedimentos para habilitar o gerenciamento de tipo de conteúdo em uma única biblioteca de documentos.  
   
- **Vídeo rápido:** [(SSRS) Habilitando tipos de conteúdo em SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Vídeo rápido:** [(SSRS) Habilitando tipos de conteúdo no SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **Neste tópico:**  
   
@@ -176,7 +174,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)  
   

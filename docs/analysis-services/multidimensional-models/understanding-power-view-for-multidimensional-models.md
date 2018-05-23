@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1428f577c1a6094d1fe58cfdcd7cd8f62f8036
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/10/2018
  ![Hierarquia não agregável no Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Hierarquia não agregável no Power View")  
   
 ### <a name="implicit-measures"></a>Medidas implícitas  
- Os modelos tabulares oferece aos usuários a capacidade de criar medidas *implícitas* como contagem, soma ou média em campos. Para os modelos multidimensionais, como os dados de atributo de dimensão são armazenados de forma diferente, a consulta de medidas implícitas poderá demorar mais. Por causa disso, as medidas implícitas não estão disponíveis no Power View.  
+ Os modelos tabulares oferece aos usuários a capacidade de criar medidas *implícitas* como contagem, soma ou média em campos. Para modelos multidimensionais, como dados de atributo de dimensão são armazenados diferente, consultar as medidas implícitas poderá demorar muito. Por causa disso, as medidas implícitas não estão disponíveis no Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensões, atributos e hierarquias  
  As dimensões de cubo são expostas como tabelas em metadados tabulares. Na Lista de Campos do Power View, os atributos de dimensão são mostrados como colunas nas pastas de exibição.  Os atributos de dimensão com a propriedade AttributeHierarchyEnabled definida como false; por exemplo, o atributo Data de Nascimento na dimensão Cliente ou a propriedade AttributeHierarchyVisible definida como false não aparecerão na Lista de Campos do Power View. Hierarquias de vários níveis ou hierarquias de usuário; por exemplo, Geografia do Cliente na dimensão Cliente, são expostas como hierarquias na Lista de Campos do Power View. UnknownMembers ocultos de um atributo de dimensão são expostos em Consultas DAX e no Power View.  

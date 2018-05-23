@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="script-task-editor-general-page"></a>Editor da Tarefa Script (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Script** para nomear e descrever a tarefa Script.  
   
- Para obter mais informações sobre a tarefa Script, consulte [Script Task](../../integration-services/control-flow/script-task.md) e [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obter informações sobre a programação da tarefa Script, consulte [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Para obter mais informações sobre a tarefa Script, consulte [Script Task](../../integration-services/control-flow/script-task.md) e [Configurando a tarefa Script no Editor da Tarefa Script](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obter informações sobre a programação da tarefa Script, consulte [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Opções  
  **Nome**  
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  No [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] e versões posteriores, todos os scripts são pré-compilados. Em versões anteriores, devia ser definida uma propriedade **PrecompileScriptIntoBinaryCode** para especificar que o script estava pré-compilado.  
   
- Para obter mais informações sobre a tarefa Script, consulte [Script Task](../../integration-services/control-flow/script-task.md) e [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obter informações sobre a programação da tarefa Script, consulte [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Para obter mais informações sobre a tarefa Script, consulte [Script Task](../../integration-services/control-flow/script-task.md) e [Configurando a tarefa Script no Editor da Tarefa Script](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obter informações sobre a programação da tarefa Script, consulte [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Opções  
  **ScriptLanguage**  

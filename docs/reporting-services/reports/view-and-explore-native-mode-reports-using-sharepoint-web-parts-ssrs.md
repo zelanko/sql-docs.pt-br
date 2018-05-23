@@ -1,27 +1,25 @@
 ---
-title: "Exibir e explorar os relatórios de Modo Nativo usando Web Parts do SharePoint (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Exibir e explorar os relatórios de Modo Nativo usando Web Parts do SharePoint (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1072350a30a5f28ac16cda48f72720a383012d02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -106,7 +104,7 @@ ms.lasthandoff: 01/09/2018
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     Para obter mais informações sobre como usar o PowerShell, consulte [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     Para saber mais sobre como usar o PowerShell, veja [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>Instale as Web Parts usando STSADM.exe  
   

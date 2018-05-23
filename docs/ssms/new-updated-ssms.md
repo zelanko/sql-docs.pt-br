@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: ssms
-ms.date: 02/03/2018
-ms.openlocfilehash: 8f2ad52b9741a3220a8c5db0a60924a41cc62d27
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: 1ce446219f71baca0f4cdedc835fca929b572a0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Novos e atualizados recentemente: SSMS (SQL Server Management Studio) para SQL Server
 
@@ -28,7 +30,7 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 
 
 
-- *Intervalo de datas das atualizações:* &nbsp; **03-12-2017** &nbsp; até &nbsp; **03-02-2018**
+- *Intervalo de datas das atualizações:* &nbsp; **03-02-2018** &nbsp; até &nbsp; **28-04-2018**
 - *Área de assunto:* &nbsp; **SSMS (SQL Server Management Studio)**.
 
 
@@ -41,7 +43,11 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-1. [Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês](install-other-languages.md)
+1. [Tutorial: Conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio](tutorials/connect-query-sql-server.md)
+2. [Tutorial: gerar script de objetos no SQL Server Management Studio](tutorials/scripting-ssms.md)
+3. [Tutorial: componentes e configuração do SQL Server Management Studio](tutorials/ssms-configuration.md)
+4. [Tutorial: mais dicas e truques para usar o SSMS](tutorials/ssms-tricks.md)
+5. [Tutorial: usando Modelos no SQL Server Management Studio](tutorials/templates-ssms.md)
 
 
 
@@ -67,8 +73,8 @@ Por essas e outras razões, não copie o código desses trechos, nem considere-o
 
 Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
 
-1. [Baixar o SQL Server Management Studio (SSMS)](#TitleNum_1)
-2. [SQL Server Management Studio – Changelog (SSMS)](#TitleNum_2)
+1. [SQL Server Management Studio – Changelog (SSMS)](#TitleNum_1)
+2. [Tutoriais do SQL Server Management Studio (SSMS)](#TitleNum_2)
 
 
 
@@ -79,46 +85,54 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1. &nbsp;[Baixar o SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
+### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1. &nbsp; [SQL Server Management Studio – Log de alterações (SSMS)](sql-server-management-studio-changelog-ssms.md)
 
-*Atualizado: 18-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Próximo](#TitleNum_2))
+*Atualizado: 25-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Próximo](#TitleNum_2))
 
-<!-- Source markdown line 83.  ms.author= "sstein".  -->
+<!-- Source markdown line 27.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0e123e7bdf04f02fcd26ac31fa30ed5f31b19c7d 924246b55d3cad6a5d068da8a41f4be23dcfeb2b  (PR=4652  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 eb641ac39386a26a76dc303f5bd55eb3f9f4c78d f560f09b51ea30b255c10f7eb86857c3090881d9  (PR=5676  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-O SMS 17.4 é a versão mais recente do SQL Server Management Studio. A geração 17.X do SSMS oferece suporte a quase todas as áreas de recursos do SQL Server 2008 por meio do SQL Server 2017. A Versão 17.x também oferece suporte ao PaaS do SQL Analysis Service.
+**SSMS 17.6**
 
-A versão 17.4 inclui:
 
-Avaliação de Vulnerabilidades:
-- Adicionado um novo serviço de Avaliação de Vulnerabilidade de SQL para verificar seus bancos de dados para possíveis vulnerabilidades e desvios das práticas recomendadas, como configurações incorretas, excesso de permissões e dados confidenciais expostos.
-- Os resultados da avaliação incluem etapas práticas para resolver cada problema e scripts de correções personalizadas quando aplicável. O relatório de avaliação pode ser personalizado para cada ambiente e ajustado de acordo com requisitos específicos. Saiba mais em [Avaliação de Vulnerabilidades SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+Número da versão: 17.6<br>
+Número de build: 14.0.17230.0<br>
+Data do lançamento: 20 de março de 2018
 
-SMO:
-- Correção do problema no qual *HasMemoryOptimizedObjects* gerava exceção no Azure.
-- Adicionado suporte para o novo recurso CATALOG_COLLATION.
+**Novidades**
 
-Painel AlwaysOn:
-- Melhorias para análise de latência em Grupos de disponibilidade.
-- Adicionados dois novos relatórios: *AlwaysOn\_Latency\_Primary* e *AlwaysOn\_Latency\_Secondary*.
 
-Plano de execução:
-- Links atualizados para apontar para a documentação correta.
-- Permita a análise de plano único diretamente do plano real produzido.
-- Novo conjunto de ícones.
-- Adicionado suporte para reconhecer "Aplicar operadores lógicos" como GbApply, InnerApply.
+**SSMS geral**
 
-XE Profiler:
-- Renomeado para XEvent Profiler.
-- Os comandos de menu Parar/Iniciar agora param/iniciam a sessão por padrão.
-- Atalhos de teclado habilitados (por exemplo, CTRL-F para pesquisar).
-- Ações de nome de host \_nome e cliente\_ do banco de dados adicionadas a eventos apropriados nas sessões do XEvent Profiler. Para que a alteração entre em vigor, talvez seja necessário excluir instâncias existentes da sessão do QuickSessionStandard ou QuickSessionTSQL nos servidores – [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+Instância Gerenciada do Banco de Dados SQL:
+
+- Suporte adicionado à [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance). Instância Gerenciada do Banco de Dados SQL do Azure (versão prévia) é um novo tipo do Banco de Dados SQL do Azure, fornecendo quase 100% de compatibilidade com o SQL Server local, uma implementação [VNet (rede virtual)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) nativa que aborda questões comuns de segurança e um [modelo de negócios](https://azure.microsoft.com/pricing/details/sql-database/) favorável para clientes do SQL Server local.
+- Suporte para cenários comuns de gerenciamento, como:
+   - Criar e alterar bancos de dados.
+   - Fazer backup e restauração de bancos de dados.
+   - Importar, exportar, extrair e publicar Aplicativos da Camada de Dados.
+   - Exibir e alterar as propriedades do servidor.
+   - Suporte completo para o Pesquisador de Objetos.
+   - Gerando scripts de objetos de banco de dados.
+   - Suporte para trabalhos do SQL Agent.
+   - Suporte para servidores vinculados.
+- Saiba mais sobre Instâncias Gerenciadas [aqui](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
+
+Pesquisador de Objetos:
+- Configurações adicionadas para não forçar colchetes em volta de nomes ao arrastar e soltar do Pesquisador de Objetos para a Janela de Consulta. (Sugestões do usuário [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) e [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051).)
+
+Classificação de dados:
+- Melhorias e correções de bug gerais.
+
+**IS (Integration Services)**
+
+- Suporte adicionado para implantar pacotes em uma [Instância Gerenciada do Banco de Dados SQL](docs/ssms/https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
 
 
@@ -130,54 +144,45 @@ XE Profiler:
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>2. &nbsp; [SQL Server Management Studio – Log de alterações (SSMS)](sql-server-management-studio-changelog-ssms.md)
+### <a name="2-nbsp-tutorials-for-sql-server-management-studio-ssmstutorialstutorial-sql-server-management-studiomd"></a>2. &nbsp; [Tutoriais do SQL Server Management Studio (SSMS)](tutorials/tutorial-sql-server-management-studio.md)
 
-*Atualizado: 29-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_1))
+*Atualizado: 25-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_1))
 
-<!-- Source markdown line 27.  ms.author= "sstein".  -->
+<!-- Source markdown line 49.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 b5096fa8f1ae3f2e4bc040f43cb8810d96f2c69c eb641ac39386a26a76dc303f5bd55eb3f9f4c78d  (PR=0  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=ba4b1c2e5200f2f78786b710da18fd38fedde6c9) -->
+<!-- git diff --ignore-all-space --unified=0 b272c75bab04912ebb706098cf6b6a6c80d9e2b8 d453ebc8251fb83ffcb1af58c9a08bb65b3e9fa2  (PR=5676  ,  Filename=tutorial-sql-server-management-studio.md  ,  Dirpath=docs\ssms\tutorials\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-**[SSMS 17.4](download-sql-server-management-studio-ssms.md)**
+- Tutorial: Como conectar e consultar o SQL Server usando o SSMS
 
-Geralmente disponível| Número de build: 14.0.17213.0
+    Neste tutorial, você aprenderá como se conectar à Instância do SQL Server. Você também aprenderá alguns comandos básicos do T-SQL (Transact-SQL) para criar e consultar um novo banco de dados.
 
-**Novidades**
+- Tutorial: Como gerar scripts de objetos no SSMS
+
+    Neste tutorial, você aprenderá a gerar scripts de vários objetos no SSMS, incluindo bancos de dados e consultas.
+
+- Tutorial: Como usar modelos no SSMS
+
+    Neste tutorial, você aprenderá como trabalhar com os Modelos predefinidos no SSMS. Os modelos são um recurso pouco conhecido que armazenam diversos trechos de código Transact-SQL para várias tarefas de administração de banco de dados.
+
+- Tutorial: Configuração do SSMS
+
+    Neste tutorial, você aprenderá os conceitos básicos de como configurar o ambiente do SSMS, como a alterar o layout do ambiente. Este tutorial também explica quais são os diferentes componentes do SSMS.
 
 
-**SSMS geral**
+- Tutorial: mais dicas e truques para usar o SSMS
 
-Avaliação de Vulnerabilidades:
-- Adicionado um novo serviço de Avaliação de Vulnerabilidade de SQL para verificar seus bancos de dados para possíveis vulnerabilidades e desvios das práticas recomendadas, como configurações incorretas, excesso de permissões e dados confidenciais expostos.
-- Os resultados da avaliação incluem etapas práticas para resolver cada problema e scripts de correções personalizadas quando aplicável. O relatório de avaliação pode ser personalizado para cada ambiente e ajustado de acordo com requisitos específicos. Saiba mais em [Avaliação de Vulnerabilidades SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+    Neste tutorial, você aprenderá mais dicas e truques para usar o SSMS. Este tutorial inclui o seguinte:
+    - Comentar e remover marca de comentário do texto
+    - Recuando texto
+    - Filtrando objetos no Pesquisador de Objetos
+    - Acessar o log de erros do SQL Server
+    - Encontrando o nome da sua instância
 
-SMO:
-- Correção do problema no qual *HasMemoryOptimizedObjects* gerava exceção no Azure.
-- Adicionado suporte para o novo recurso CATALOG_COLLATION.
-
-Painel AlwaysOn:
-- Melhorias para análise de latência em Grupos de disponibilidade.
-- Adicionados dois novos relatórios: *AlwaysOn\_Latency\_Primary* e *AlwaysOn\_Latency\_Secondary*.
-
-Plano de execução:
-- Links atualizados para apontar para a documentação correta.
-- Permita a análise de plano único diretamente do plano real produzido.
-- Novo conjunto de ícones.
-- Adicionado suporte para reconhecer "Aplicar operadores lógicos" como GbApply, InnerApply.
-
-XE Profiler:
-- Renomeado para XEvent Profiler.
-- Os comandos de menu Parar/Iniciar agora param/iniciam a sessão por padrão.
-- Atalhos de teclado habilitados (por exemplo, CTRL-F para pesquisar).
-- Ações de nome de host \_nome e cliente\_ do banco de dados adicionadas a eventos apropriados nas sessões do XEvent Profiler. Para que a alteração entre em vigor, talvez seja necessário excluir instâncias existentes da sessão do QuickSessionStandard ou QuickSessionTSQL nos servidores – [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
-
-Linha de comando:
-- Adicionada uma nova opção de linha de comando ("-G") que pode ser usada para fazer com que o SSMS se conectar automaticamente a um servidor/banco de dados usando a Autenticação do Active Directory ('Integrado' ou 'Senha'). Para obter detalhes, consulte [Utilitário de Ssms](ssms-utility.md).
 
 
 
@@ -190,40 +195,36 @@ Linha de comando:
 Esta seção lista artigos muito semelhantes a artigos atualizados recentemente em outras áreas de assunto, em nosso repositório público GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas de assunto que *têm* artigos novos ou atualizados recentemente
 
-
-- [Novo + Atualizado (1 + 3):&nbsp; documentos sobre a **Análise Avançada para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Novo + Atualizado (0 + 1):&nbsp; documentos sobre o **Sistema de Plataforma Analítica para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Novo + Atualizado (0 + 1):&nbsp; documentos sobre a **Conexão ao SQL**](../connect/new-updated-connect.md)
-- [Novo + Atualizado (0 + 1):&nbsp; documentos sobre o **Mecanismo de Banco de Dados para SQL**](../database-engine/new-updated-database-engine.md)
-- [Novo + Atualizado (12 + 1): **documentos sobre o** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
-- [Novo + Atualizado (6 + 2):&nbsp; documentos sobre o **Linux para SQL**](../linux/new-updated-linux.md)
-- [Novo + atualizado (15 + 0): **documentos sobre o** PowerShell para SQL](../powershell/new-updated-powershell.md)
-- [Novo + Atualizado (2 + 9):&nbsp; documentos sobre **Bancos de Dados Relacionais para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Novo + Atualizado (1 + 0):&nbsp; documentos sobre o **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Novo + Atualizado (1 + 1):&nbsp; documentos sobre o **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Novo + Atualizado (1 + 1):&nbsp; documentos sobre o **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Novo + Atualizado (0+1):&nbsp; documentos sobre o **SSDT (SQL Server Data Tools)**](../ssdt/new-updated-ssdt.md)
-- [Novo + Atualizado (1+2):&nbsp; documentos sobre o **SSMS (SQL Server Management Studio)**](../ssms/new-updated-ssms.md)
-- [Novo + Atualizado (0 + 2):&nbsp; documentos sobre o **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Novo + Atualizado (11+6): &nbsp;documentos sobre a&nbsp; **Análise Avançada para SQL** ](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Novo + Atualizado (18+0): &nbsp; documentos sobre o &nbsp;**Analysis Services para SQL** ](../analysis-services/new-updated-analysis-services.md)
+- [Novo + Atualizado (218+14): documentos sobre a **Conexão ao SQL** ](../connect/new-updated-connect.md)
+- [Novo + Atualizado (14+0): &nbsp;documentos sobre o&nbsp; **Mecanismo de Banco de Dados para SQL** ](../database-engine/new-updated-database-engine.md)
+- [Novo + Atualizado (3+2): &nbsp;documentos sobre o&nbsp; **Integration Services para SQL** ](../integration-services/new-updated-integration-services.md)
+- [Novo + Atualizado (3+3): &nbsp;documentos sobre o&nbsp; **Linux para SQL** ](../linux/new-updated-linux.md)
+- [Novo + Atualizado (7+10): &nbsp;documentos sobre o&nbsp; **Bancos de Dados Relacionais para SQL** ](../relational-databases/new-updated-relational-databases.md)
+- [Novo + Atualizado (0+2): &nbsp;documentos sobre o&nbsp; **Reporting Services para SQL** ](../reporting-services/new-updated-reporting-services.md)
+- [Novo + Atualizado (1+3): &nbsp;documentos sobre o&nbsp; **SQL Operations Studio** ](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Novo + Atualizado (2+3): &nbsp;documentos sobre o&nbsp; **Microsoft SQL Server** ](../sql-server/new-updated-sql-server.md)
+- [Novo + Atualizado (1+1): &nbsp;documentos sobre o&nbsp; **SSDT (SQL Server Data Tools)** ](../ssdt/new-updated-ssdt.md)
+- [Novo + Atualizado (5+2): &nbsp;documentos sobre o&nbsp; **SSMS (SQL Server Management Studio)** ](../ssms/new-updated-ssms.md)
+- [Novo + Atualizado (0+2): &nbsp;documentos sobre o&nbsp; **Transact-SQL** ](../t-sql/new-updated-t-sql.md)
+- [Novo + Atualizado (1+1): &nbsp;documentos sobre as&nbsp; **Ferramentas para SQL** ](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas de assunto que *não* têm nenhum artigo novo ou atualizado recentemente
 
-
-- [Novo + Atualizado (0 + 0): documentos sobre **DMA (Assistente de Migração de Dados) para o SQL**](../dma/new-updated-dma.md)
-- [Novo + atualizado (0 + 0): documentos do **ADO (ActiveX Data Objects) para SQL**](../ado/new-updated-ado.md)
-- [Novo + Atualizado (0+0): documentos sobre o **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Novo + Atualizado (0+0): documentos sobre o **Sistema de Plataforma Analítica para SQL** ](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Novo + atualizado (0 + 0): documentos do **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Extensões DMX (Data Mining) para SQL**](../dmx/new-updated-dmx.md)
 - [Novo + Atualizado (0+0): documentos sobre o **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Expressão MDX para SQL**](../mdx/new-updated-mdx.md)
 - [Novo + atualizado (0 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
+- [Novo + atualizado (0 + 0): documentos do **PowerShell para SQL**](../powershell/new-updated-powershell.md)
 - [Novo + atualizado (0 + 0): documentos de **Exemplos para SQL**](../samples/new-updated-samples.md)
 - [Novo + atualizado (0 + 0): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
-- [Novo + Atualizado (0 + 0): documentos de **Ferramentas para SQL**](../tools/new-updated-tools.md)
 - [Novo + atualizado (0 + 0): documentos do **XQuery para SQL**](../xquery/new-updated-xquery.md)
-
 

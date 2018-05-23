@@ -1,32 +1,30 @@
 ---
-title: "Mapas personalizados em relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Mapas personalizados em relatórios móveis do Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b4143913d2bab5425fede35cea6758f86820236f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ea22c2ea60a681accc747e9426fbecb4aad7b515
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados nos relatórios móveis do Reporting Services
-Os mapas geográficos no Publicador de Relatórios Móveis do SQL Server são definidos em um formato conhecido como *ESRI shapefiles*.  
+Os mapas geográficos no Editor de Relatórios Móveis do SQL Server são definidos em um formato conhecido como *ESRI shapefiles*.  
   
-Criado inicialmente por uma empresa privada, esse é agora um formato semiaberto amplamente usado em grande parte dos aplicativos GIS. De acordo com esse formato, o Publicador de Relatórios Móveis exige que dois arquivos sejam fornecidos ao definir um mapa:  
+Criado inicialmente por uma empresa privada, esse é agora um formato semiaberto amplamente usado em grande parte dos aplicativos GIS. De acordo com esse formato, o Editor de Relatórios Móveis exige que dois arquivos sejam fornecidos ao definir um mapa:  
   
 - Um arquivo .SHP para geometrias de forma  
 - Um arquivo .DBF para metadados  
@@ -49,7 +47,7 @@ Criar e editar shapefiles é um processo complexo que está além do escopo dest
 - ArcGIS: [http://www.arcgis.com/](http://www.arcgis.com/)  
 - Plug-in MAPublisher para Adobe Illustrator: [http://www.avenza.com/mapublisher](http://www.avenza.com/mapublisher)  
 - QuantumGIS (gratuito): [http://www.qgis.org/](http://www.qgis.org/)  
-- Editor de ShapeFile Manco: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
+- Manco ShapeFile Editor: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
   
 ## <a name="existing-shapefiles"></a>Shapefiles existentes  
   
@@ -58,9 +56,9 @@ Muitos shapefiles existentes podem ser baixados da Web, de sites como estes:
 - Diva-GIS: [http://www.diva-gis.org/Data](http://www.diva-gis.org/Data)  
 - OpenStreetMap: [http://openstreetmapdata.com/data](http://openstreetmapdata.com/data)  
   
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>Confira também  
 - [Mapas nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
-- [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
+- [Criar e publicar relatórios móveis com o Editor de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   
   

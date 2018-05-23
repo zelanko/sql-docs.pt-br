@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
@@ -24,18 +22,17 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 171d063e746393709629720dae40eb207d45d584
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Concatena um número variável de argumentos com um delimitador especificado no 1º argumento. (`CONCAT_WS` indica *concatenar com separador*.)
+Essa função retorna uma cadeia de caracteres resultante de concatenação ou junção de dois ou mais valores de cadeia de caracteres de ponta a ponta. Ele separa esses valores de cadeia de caracteres concatenados com o delimitador especificado no argumento da primeira função. (`CONCAT_WS` indica *concatenar com separador*.)
 
 ##  <a name="syntax"></a>Sintaxe   
 ```sql
@@ -44,33 +41,33 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>Argumentos   
 separator  
-É uma expressão de qualquer tipo de caractere (`nvarchar`, `varchar`, `nchar` ou `char`).
+Uma expressão de qualquer tipo de caractere (`char`', `nchar`', `nvarchar` ou `varchar`).
 
 argument1, argument2, argument*N*  
-É uma expressão de qualquer tipo.
+Uma expressão de qualquer tipo.
 
 ## <a name="return-types"></a>Tipos de retorno
-Cadeia de caracteres. O comprimento e o tipo dependem da entrada.
+Um valor de cadeia de caracteres cujos comprimento e tipo dependem da entrada.
 
 ## <a name="remarks"></a>Remarks   
-`CONCAT_WS` aceita um número variável de argumentos e os concatena em uma única cadeia de caracteres usando o primeiro argumento como separador. Ele requer um separador e pelo menos dois argumentos; caso contrário, será gerado um erro. Todos os argumentos são convertidos implicitamente em tipos de cadeia de caracteres e depois concatenados. 
+`CONCAT_WS` usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Ele separa esses valores de cadeia de caracteres concatenados com o delimitador especificado no argumento da primeira função. `CONCAT_WS` exige um argumento separador e um mínimo de dois outros argumentos de valor de cadeia de caracteres; caso contrário, `CONCAT_WS` gerará um erro. `CONCAT_WS` converte implicitamente todos os argumentos nos tipos de cadeia de caracteres antes da concatenação. 
 
-A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados e comportamento, veja [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
+A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Veja [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md) para saber mais sobre conversões de tipo de dados e comportamento.
 
 ### <a name="treatment-of-null-values"></a>Tratamento de valores NULL
 
 `CONCAT_WS` ignora a configuração `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}`.
 
-Se todos os argumentos forem nulos, uma cadeia de caracteres vazia do tipo `varchar(1)` será retornada. 
+Se `CONCAT_WS` receber argumentos com todos os valores nulo, retornará uma cadeia de caracteres vazia do tipo varchar(1).
 
-Valores nulos são ignorados durante a concatenação e não adicionam o separador. Isso facilita o cenário comum da concatenação de cadeias de caracteres que geralmente têm valores em branco, como um segundo campo de endereço. Veja o exemplo B.
+`CONCAT_WS` ignora os valores nulos durante a concatenação e não adicionam o separador entre valores nulos. Portanto, `CONCAT_WS` pode tratar a concatenação de cadeias de caracteres que podem ter valores "em branco", por exemplo, um segundo campo de endereço. Veja o exemplo B para saber mais.
 
-Se o seu cenário exigir que valores nulos sejam incluídos com um separador, veja o exemplo C usando a função `ISNULL`.
+Se um cenário envolver valores nulos, separados por um delimitador, considere a função `ISNULL`. Veja o exemplo C para saber mais.
 
 ## <a name="examples"></a>Exemplos   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  Concatenando valores com separador
-O exemplo a seguir concatena três colunas da tabela sys.databases, separando-os com um `- `.   
+Este exemplo concatena três colunas da tabela sys.databases, separando-os com um `- `.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -88,7 +85,7 @@ FROM sys.databases;
 
 
 ### <a name="b--skipping-null-values"></a>B.  Ignorando valores NULL
-O exemplo a seguir ignora valores `NULL` na lista de argumentos.
+Este exemplo ignora valores `NULL` na lista de argumentos.
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -103,7 +100,7 @@ Address
 ```
 
 ### <a name="c--generating-csv-file-from-table"></a>C.  Gerando arquivo CSV da tabela
-O exemplo a seguir usa uma vírgula como separador e adiciona o caractere de retorno de carro para resultar no formato de valores separados por coluna.
+Este exemplo usa uma vírgula `,` como valor separador e adiciona o caractere de retorno de carro `char(13)` no formato de valores separados por coluna do conjunto de resultados.
 
 ```sql
 SELECT 
@@ -122,7 +119,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS ignorará valores NULL nas colunas. Se algumas das colunas forem anuláveis, encapsule-as com a função `ISNULL` e forneça o valor padrão, como no exemplo a seguir:
+CONCAT_WS ignora valores NULL nas colunas. Encapsule uma coluna anulável com a função `ISNULL` e forneça um valor padrão. Veja este exemplo para saber mais:
 
 ```sql
 SELECT 

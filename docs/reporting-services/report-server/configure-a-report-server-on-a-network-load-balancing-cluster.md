@@ -1,34 +1,32 @@
 ---
-title: "Configurar um servidor de relatório em um cluster com balanceamento de carga de rede | Microsoft Docs"
-ms.custom: 
+title: Configurar um servidor de relatório em um cluster com balanceamento de carga de rede | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: ecf545bf56a9886fa2409b570673ba36ad698eff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
   Se você estiver configurando uma expansão do servidor de relatório a ser executada em um cluster NLB (Balanceamento de Carga de Rede), deverá fazer o seguinte:  
   
--   Verifique se o cluster NLB pode ser acessado através de um nome de servidor virtual que mapeia para o endereço IP do servidor virtual. Um nome de servidor virtual é necessário para que você possa configurar um único ponto de entrada para o cluster NLB. Quando você configurar uma URL para cada instância do servidor de relatório, especificará o nome do servidor virtual como host.  
+-   Verifique se o cluster NLB pode ser acessado através de um nome do servidor virtual que mapeia para o endereço IP do servidor virtual. Um nome do servidor virtual é necessário para que você possa configurar um único ponto de entrada para o cluster NLB. Quando você configurar uma URL para cada instância do servidor de relatório, especificará o nome do servidor virtual como host.  
   
 -   Configure a validação do estado de exibição para permitir a exibição de relatórios interativos. Esses relatórios costumam ser renderizados inúmeras vezes durante uma única sessão de usuário para exibir dados novos ou diferentes em resposta a ações do usuário. Quando você configura a validação do estado de exibição, a continuidade é preservada na sessão de usuário, independentemente dos serviços do servidor de relatório solicitados.  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 03/02/2018
 |----------|-----------------|----------------------|  
 |1|Antes de instalar o Reporting Services em nós de servidor em um cluster NLB, verifique os requisitos de implantação em expansão.|[Implantação escalável: modo Nativo do Reporting Services &#40;Gerenciador de Configurações&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |2|Configure o cluster NLB e verifique se ele está funcionando corretamente.<br /><br /> Mapeie um nome de cabeçalho de host para o IP de servidor virtual do cluster NLB. O nome de cabeçalho de host é usado na URL do servidor de relatório e é mais fácil de lembrar e digitar do que um endereço IP.|Para obter mais informações, consulte a documentação do produto do Windows Server para a versão do sistema operacional Windows que você executa.|  
-|3|Adicionar o NetBIOS e um Nome de Domínio Totalmente Qualificado (FQDN) para o cabeçalho do host para a lista de **BackConnectionHostNames** armazenada no Registro do Windows. Use as etapas em **Método 2: Especifique nomes de hosts** em [KB 896861](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861), com o ajuste a seguir. A**Etapa 7** do artigo da base de dados de conhecimento diz "Encerre o Editor do Registro e reinicie o serviço do IISAdmin". Em vez disso, reinicialize o computador para garantir que as alterações entrem em vigor.<br /><br /> Por exemplo, se o nome do cabeçalho do host \<MyServer> for um nome virtual para o nome do computador do Windows “contoso”, provavelmente, você poderá referenciar o formato FQDN como “contoso.domain.com”. Você precisará adicionar o nome do cabeçalho de host (MyServer) e nome FQDN (contoso.domain.com) à lista em **BackConnectionHostNames**.|Esta etapa é necessária se seu ambiente de servidor envolver autenticação de NTLM no computador local, criando uma conexão de loopback.<br /><br /> Se este for o caso, você verá que as solicitações entre o Gerenciador de Relatórios e Servidor de relatório falharão com 401 (Sem autorização).|  
+|3|Adicionar o NetBIOS e um Nome de Domínio Totalmente Qualificado (FQDN) para o cabeçalho do host para a lista de **BackConnectionHostNames** armazenada no Registro do Windows. Use as etapas em **Método 2: Especifique nomes de hosts** em [KB 896861](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861), com o ajuste a seguir. A**Etapa 7** do artigo da base de dados de conhecimento diz "Encerre o Editor do Registro e reinicie o serviço do IISAdmin". Em vez disso, reinicialize o computador para garantir que as alterações entrem em vigor.<br /><br /> Por exemplo, se o nome do cabeçalho do host \<MyServer> for um nome virtual para o nome do computador do Windows "contoso", provavelmente, você poderá referenciar o formato FQDN como "contoso.domain.com". Você precisará adicionar o nome do cabeçalho de host (MyServer) e nome FQDN (contoso.domain.com) à lista em **BackConnectionHostNames**.|Esta etapa é necessária se seu ambiente de servidor envolver autenticação de NTLM no computador local, criando uma conexão de loopback.<br /><br /> Se este for o caso, você verá que as solicitações entre o Gerenciador de Relatórios e Servidor de relatório falharão com 401 (Sem autorização).|  
 |4|Instale o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo somente arquivos nos nós que já fazem parte de um cluster NLB e configure as instâncias do servidor de relatório para a implantação da expansão.<br /><br /> A expansão configurada poderá não responder às solicitações dirigidas ao IP do servidor virtual. A configuração da expansão para usar o IP do servidor virtual ocorre em uma etapa posterior, depois que você configura a validação do estado de exibição.|[Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configure a validação do estado de exibição.<br /><br /> Para obter os melhores resultados, execute esta etapa depois de configurar a implantação em expansão e antes de configurar as instâncias do servidor de relatório que usarão o IP do servidor virtual. Ao configurar primeiro a validação do estado de exibição, você evitará exceções sobre falha na validação do estado quando usuários tentarem acessar relatórios interativos.|[Como configurar a validação do estado de exibição](#ViewState) neste tópico.|  
 |6|Configure o **Hostname** e o **UrlRoot** para usar o IP do servidor virtual do cluster NLB.|[Como configurar Hostname e UrlRoot](#SpecifyingVirtualServerName) neste tópico.|  
@@ -54,7 +52,7 @@ ms.lasthandoff: 03/02/2018
   
  A validação do estado de exibição é controlada pelo ASP .NET. Por padrão, ela fica habilitada e usa a identidade do serviço Web para efetuar a validação. Porém, em um cenário de cluster NLB, existem várias instâncias de serviço e identidades de serviço Web que são executadas em computadores diferentes. Como a identidade do serviço varia para cada nó, não é possível usar uma única identidade de processo para efetuar a validação.  
   
- Para contornar esse problema, você pode gerar uma chave de validação arbitrária para dar suporte à validação do estado de exibição e, depois, configurar manualmente cada nó do servidor de relatório para usar a mesma chave. É possível usar qualquer sequência hexadecimal gerada aleatoriamente. O algoritmo de validação (como SHA1) determina o comprimento da sequência hexadecimal.  
+ Para contornar esse problema, você pode gerar uma chave de validação arbitrária para dar suporte à validação do estado de exibição e, depois, configurar manualmente cada nó de servidor de relatório para usar a mesma chave. É possível usar qualquer sequência hexadecimal gerada aleatoriamente. O algoritmo de validação (como SHA1) determina o comprimento da sequência hexadecimal.  
 
 1.  Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você deve ter uma única entrada \<**MachineKey**> que pode ser colada no arquivo RSReportServer.config de cada instância do servidor de relatório na implantação escalável.
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 03/02/2018
 4.  Verifique se todos os arquivos RSReportServer.config das pastas \Reporting Services\Servidor de Relatório contêm elementos \<**MachineKey**> idênticos.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Como configurar Hostname e UrlRoot  
- Para configurar uma implantação em expansão do servidor de relatório em um cluster NLB, é necessário definir um único nome de servidor virtual que forneça um único ponto de acesso ao cluster de servidores. Então registre esse nome de servidor virtual com o DNS (Domain Name Server, servidor de nomes de domínio) em seu ambiente.  
+ Para configurar uma implantação em expansão do servidor de relatório em um cluster NLB, é necessário definir um único nome do servidor virtual que forneça um único ponto de acesso ao cluster de servidores. Então registre esse nome do servidor virtual com o DNS (Domain Name Server, servidor de nomes de domínio) em seu ambiente.  
   
  Depois de definir o nome do servidor virtual, você poderá configurar as propriedades **Hostname** e as **UrlRoot** no arquivo RSReportServer.config para incluir o nome do servidor virtual na URL do servidor de relatório.  
   

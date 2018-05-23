@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: be6c818401a74f4f14d6a8381fe696bc02a48e6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>Permissões  
  Exige a permissão CREATE TYPE no banco de dados atual e a permissão ALTER no *schema_name*. Se *schema_name* não for especificado, serão aplicadas as regras de resolução de nome padrão para determinar o esquema do usuário atual. Se *assembly_name* for especificado, um usuário deverá ter o assembly ou ter a permissão REFERENCES nele.  
+
+ Se qualquer coluna na instrução CREATE TABLE for definida como sendo de um tipo definido pelo usuário, a permissão REFERENCES no tipo definido pelo usuário será necessária.
+ 
+   >[!NOTE]
+  > Um usuário que cria uma tabela com uma coluna que usa um tipo definido pelo usuário precisa da permissão REFERENCES no tipo definido pelo usuário.
+  > Se essa tabela tiver que ser criada no TempDB, a permissão REFERENCES precisa ser concedida explicitamente toda vez **antes** de a tabela ser criada, ou este tipo de dados e as permissões REFERENCES precisam ser adicionados ao modelo de banco de dados. Se isso for feito, esse tipo de dados e permissões estarão disponíveis em TempDB permanentemente. Caso contrário, o tipo de dados e as permissões definidos pelo usuário desaparecerão quando o SQL Server for reiniciado. Para saber mais, veja [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)
   
 ## <a name="examples"></a>Exemplos  
   

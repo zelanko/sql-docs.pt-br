@@ -4,7 +4,7 @@ description: Saiba como criar e personalizar atalhos de teclado no Studio de ope
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8fc0bf7481401da9731106a578398a4b02bcd05
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 692d07af3e94eea9c255a5cb464dacd710eddbbb
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos.md)]
 

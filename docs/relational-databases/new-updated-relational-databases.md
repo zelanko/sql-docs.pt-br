@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: relational-databases
-ms.date: 02/03/2018
-ms.openlocfilehash: fc37abbb88aa597a6173fa5579fa320e0024581f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Novos e recém-atualizados: documentos de Bancos de Dados Relacionais
 
@@ -28,7 +30,7 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 
 
 
-- *Intervalo de datas das atualizações:* &nbsp; **03-12-2017** &nbsp; até &nbsp; **03-02-2018**
+- *Intervalo de datas das atualizações:* &nbsp; **03-02-2018** &nbsp; até &nbsp; **28-04-2018**
 - *Área de assunto:* &nbsp; **Bancos de dados relacionais**.
 
 
@@ -41,8 +43,13 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-1. [Armazenar documentos JSON no SQL Server ou no Banco de Dados SQL](json/store-json-documents-in-sql-tables.md)
-2. [Avaliação de Vulnerabilidades SQL](security/sql-vulnerability-assessment.md)
+1. [Joins (SQL Server)](performance/joins.md)
+2. [Subconsultas (SQL Server)](performance/subqueries.md)
+3. [Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On](replication/configure-distribution-availability-group.md)
+4. [Descoberta e classificação de dados SQL](security/sql-data-discovery-and-classification.md)
+5. [Guia de Controle de Versão de Linha e Bloqueio de Transações](sql-server-transaction-locking-and-row-versioning-guide.md)
+6. [sys.dm_os_job_object (Banco de Dados SQL do Microsoft Azure)](system-dynamic-management-views/sys-dm-os-job-object-transact-sql.md)
+7. [Procedimentos armazenados de fluxo de arquivos e FileTable (Transact-SQL)](system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
 
 
 
@@ -68,15 +75,16 @@ Por essas e outras razões, não copie o código desses trechos, nem considere-o
 
 Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
 
-1. [Inicialização de arquivo de bancos de dados](#TitleNum_1)
-2. [Banco de dados tempdb](#TitleNum_2)
-3. [Dados JSON no SQL Server](#TitleNum_3)
-4. [Lição 1: conectando-se ao Mecanismo de Banco de Dados](#TitleNum_4)
-5. [Gerenciar o tamanho do arquivo de log de transações](#TitleNum_5)
-6. [bcp_bind](#TitleNum_6)
-7. [Guia de criação de índice do SQL Server](#TitleNum_7)
-8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
-9. [Criar chaves primárias](#TitleNum_9)
+1. [Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)](#TitleNum_1)
+2. [Dados JSON no SQL Server](#TitleNum_2)
+3. [Guia de arquitetura de processamento de consultas](#TitleNum_3)
+4. [Tutorial: Preparar o SQL Server para replicação – Editor, Distribuidor, Assinante](#TitleNum_4)
+5. [Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)](#TitleNum_5)
+6. [Tutorial: Configurar a replicação entre um servidor e clientes móveis (Mesclagem)](#TitleNum_6)
+7. [Consulta com pesquisa de texto completo](#TitleNum_7)
+8. [Transparent Data Encryption com suporte a Bring Your Own Key para o Data Warehouse e Banco de Dados SQL do Azure](#TitleNum_8)
+9. [PowerShell e CLI: habilitar a Transparent Data Encryption usando sua própria chave no Azure Key Vault](#TitleNum_9)
+10. [Sobre o change data capture (SQL Server)](#TitleNum_10)
 
 
 
@@ -87,32 +95,43 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-database-file-initializationdatabasesdatabase-instant-file-initializationmd"></a>1. &nbsp; [Inicialização de arquivo de bancos de dados](databases/database-instant-file-initialization.md)
+### <a name="1-nbsp-use-a-format-file-to-skip-a-table-column-sql-serverimport-exportuse-a-format-file-to-skip-a-table-column-sql-servermd"></a>1. &nbsp; [Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)](import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 
-*Atualizado: 23-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Próximo](#TitleNum_2))
+*Atualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Próximo](#TitleNum_2))
 
-<!-- Source markdown line 81.  ms.author= "sstein".  -->
+<!-- Source markdown line 221.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
+<!-- git diff --ignore-all-space --unified=0 167916d79c5de1e7f13990cb7acc41ceb541b9a7 cb92eb201292294e3397879c98f353fba45f1c1c  (PR=0  ,  Filename=use-a-format-file-to-skip-a-table-column-sql-server.md  ,  Dirpath=docs\relational-databases\import-export\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
+
+**Como usar OPENROWSET(BULK...)**
+
+
+Para usar um arquivo de formato XML para ignorar uma coluna de tabela usando `OPENROWSET(BULK...)`, é necessário fornecer uma lista de colunas explícita na lista de seleção e também na tabela de destino, como segue:
 
 ```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)
 ```
 
-**Aplica-se a:** SQL Server (começando com o SQL Server 2012 SP4, SQL Server 2014 SP2 e SQL Server 2016 até o SQL Server de 2017)
+O exemplo a seguir usa o provedor de conjunto de linhas em massa `OPENROWSET` e o arquivo de formato `myTestSkipCol2.xml` . O exemplo importa em massa o arquivo de dados `myTestSkipCol2.dat` para a tabela `myTestSkipCol` . A instrução contém uma lista explícita de colunas na lista de seleção e também na tabela de destino, como exigido.
 
-**Considerações sobre segurança**
+No SSMS, execute o seguinte código. Atualize os caminhos do sistema de arquivos do local dos arquivos de exemplo em seu computador.
 
-Ao usar a IFI (Inicialização Instantânea de Arquivo), como o conteúdo excluído do disco é substituído somente à medida que novos dados são gravados nos arquivos, o conteúdo excluído poderá ser acessado por uma entidade de segurança não autorizada, até que outros dados sejam gravados nessa área específica do arquivo de dados. Embora o arquivo de banco de dados esteja associado à instância do SQL Server, esse risco de divulgação de informações é reduzido pela DACL (lista de controle de acesso discricionário) no arquivo. Essa DACL permite acesso de arquivo somente à conta de serviço do SQL Server e ao administrador local. Porém, quando o arquivo é desassociado, ele pode ser acessado por um usuário ou serviço que não tenha SE\_MANAGE\_NOME_DO_VOLUME. Existe uma consideração similar quando é feito o backup do banco de dados: se o arquivo de backup não estiver protegido com uma DACL adequada, o conteúdo excluído poderá ficar disponível para um usuário ou um serviço não autorizado.
-
-Outra consideração é que, quando um arquivo é aumentado usando IFI, um administrador do SQL Server pode, potencialmente, acessar o conteúdo da página bruta e ver o conteúdo excluído anteriormente.
-
-Se os arquivos de banco de dados estão hospedados em uma rede de área de armazenamento, também é possível que a rede de área de armazenamento apresente sempre novas páginas como pré-inicializadas e, fazer com que o sistema operacional reinicialize as páginas, poderá gerar uma sobrecarga desnecessária.
+```
+USE WideWorldImporters;
+GO
+INSERT INTO myTestSkipCol
+  (Col1,Col3)
+    SELECT Col1,Col3
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',
+      FORMATFILE='C:\myTestSkipCol2.Xml'
+       ) as t1 ;
+GO
+```
 
 
 
@@ -124,46 +143,53 @@ Se os arquivos de banco de dados estão hospedados em uma rede de área de armaz
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>2. &nbsp; [Banco de dados tempdb](databases/tempdb-database.md)
+### <a name="2-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>2. &nbsp; [Dados JSON no SQL Server](json/json-data-sql-server.md)
 
-*Atualizado: 17-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_1) | [Próximo](#TitleNum_3))
+*Atualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_1) | [Próximo](#TitleNum_3))
 
-<!-- Source markdown line 100.  ms.author= "sstein".  -->
+<!-- Source markdown line 145.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5 e2f2e8b4732779b3f24561cc0c4da3a958f4edbb  (PR=0  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- Para obter uma descrição dessas opções de banco de dados, consulte [Opções ALTER DATABASE SET (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md).
+Os documentos JSON podem ter subelementos e dados hierárquicos que não podem ser mapeados diretamente nas colunas relacionais padrão. Nesse caso, você poderá mesclar a hierarquia JSON unindo a entidade pai às submatrizes.
 
-**Banco de dados tempdb no Banco de Dados SQL**
+No exemplo a seguir, o segundo objeto na matriz tem uma submatriz que representa as habilidades da pessoa. Cada subobjeto pode ser analisado usando uma chamada adicional à função `OPENJSON`:
 
+```
+DECLARE @json NVARCHAR(MAX)
+SET @json =
+N'[
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }
+ ]'
 
-|SLO|Tamanho máximo do arquivo de dados do tempdb (MBs)|Nº de arquivos de dados do tempdb|Tamanho máximo de dados do tempdb (MB)|
-|---|---:|---:|---:|
-|Basic|14.225|1|14.225|
-|S0|14.225|1|14.225|
-|S1|14.225|1|14.225|
-|S2|14.225| 1|14.225|
-|S3|32.768|1|32.768|
-|S4|32.768|2|65.536|
-|S6|32.768|3|98.304|
-|S7|32.768|6|196.608|
-|S9|32.768|12|393.216|
-|S12|32.768|12|393.216|
-|P1|32.768|12|393.216|
-|P2|32.768|12|393.216|
-|P4|32.768|12|393.216|
-|P6|32.768|12|393.216|
-|P11|32.768|12|393.216|
-|P15|32.768|12|393.216|
-|Pools Elásticos Premium (todas as configurações de DTU)|14.225|12|170.700|
-|Pools Elásticos Standard (todas as configurações de DTU)|14.225|12|170.700|
-|Pools Elásticos Básicos (todas as configurações de DTU)|14.225|12|170.700|
-||||
+SELECT *
+FROM OPENJSON(@json)
+  WITH (id int 'strict $.id',
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json)
+    outer apply openjson( a.skills )
+                     with ( skill nvarchar(8) '$' ) as b
+```
+A matriz **skills** é retornada no primeiro `OPENJSON` como um fragmento de texto JSON original e passada para outra função `OPENJSON` usando o operador `APPLY`. A segunda função `OPENJSON` analisará a matriz JSON e retornará valores de cadeia de caracteres como um único conjunto de linhas de coluna que será associado ao resultado do primeiro `OPENJSON`.
+O resultado dessa consulta é mostrado na seguinte tabela:
+
+**Resultados**
+
+|id|firstName|lastName|age|dateOfBirth|skill|
+|--------|---------------|--------------|---------|-----------------|----------|
+|2|John|Smith|25|||
+|5|Jane|Smith||2005-11-04T12:00:00|SQL|
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` unirá a entidade de primeiro nível à submatriz e retornará um conjunto de resultados mesclado. Devido ao uso de JOIN, a segunda linha será repetida para cada habilidade.
 
 
 
@@ -176,40 +202,54 @@ Se os arquivos de banco de dados estão hospedados em uma rede de área de armaz
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>3. &nbsp; [Dados JSON no SQL Server](json/json-data-sql-server.md)
+### <a name="3-nbsp-query-processing-architecture-guidequery-processing-architecture-guidemd"></a>3. &nbsp; [Guia de arquitetura de processamento de consultas](query-processing-architecture-guide.md)
 
-*Atualizado: 01-02-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_2) | [Próximo](#TitleNum_4))
+*Atualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_2) | [Próximo](#TitleNum_4))
 
-<!-- Source markdown line 233.  ms.author= "douglasl".  -->
+<!-- Source markdown line 34.  ms.author= "jroth".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
+<!-- git diff --ignore-all-space --unified=0 96d91b39acdb2f32aaff323e374e92d6f229d241 2c1d2f8585632ada174388399782dc3ed2721dba  (PR=0  ,  Filename=query-processing-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   [Loading GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/) (Carregando dados GeoJSON no SQL Server 2016)
+**Precedência de operador lógico**
 
-**Analisar dados JSON com consultas SQL**
 
-Se precisar filtrar ou agregar dados JSON para fins de relatório, você poderá usar **OPENJSON** para transformar o JSON em um formato relacional. Você pode usar o Transact-SQL padrão e funções internas para preparar os relatórios.
+Quando mais de um operador lógico é usado em uma instrução, `NOT` é avaliado primeiro, em seguida, `AND` e, finalmente, `OR`. Operadores aritméticos e bit a bit são tratados antes dos operadores lógicos. Para saber mais, confira Operator Precedence (Precedência de operador).
+
+No exemplo a seguir, a condição de cor pertence ao modelo de produto 21 e não ao modelo de produto 20, porque `AND` tem precedência em relação a `OR`.
 
 ```
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
-FROM   SalesOrderRecord AS Tab
-          CROSS APPLY
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
-           WITH (
-              Number   varchar(200) N'$.Order.Number',
-              Date     datetime     N'$.Order.Date',
-              Customer varchar(200) N'$.AccountNumber',
-              Quantity int          N'$.Item.Quantity'
-           )
-  AS SalesOrderJsonData
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
 ```
+
+Você pode alterar o significado da consulta adicionando parênteses para forçar a avaliação de  `OR` primeiro. A consulta a seguir só encontra produtos nos modelos 20 e 21 que são vermelhos.
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+Usar parênteses, até mesmo quando eles não são necessários, pode melhorar a legibilidade das consultas e reduzir a chance de cometer um erro sutil devido à precedência do operador. Não há penalidade de desempenho significativa usando parênteses. O exemplo a seguir é mais legível que o exemplo original, embora eles sejam sintaticamente semelhantes.
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 
 
 
@@ -221,35 +261,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_4"/>
 
-### <a name="4-nbsp-lesson-1-connecting-to-the-database-enginelesson-1-connecting-to-the-database-enginemd"></a>4. &nbsp; [Lição 1: conectando-se ao mecanismo de banco de dados](lesson-1-connecting-to-the-database-engine.md)
+### <a name="4-nbsp-tutorial-prepare-sql-server-for-replication---publisher-distributor-subscriberreplicationtutorial-preparing-the-server-for-replicationmd"></a>4. &nbsp; [Tutorial: Preparar o SQL Server para replicação – Editor, Distribuidor, Assinante](replication/tutorial-preparing-the-server-for-replication.md)
 
-*Atualizado: 13-12-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_3) | [Próximo](#TitleNum_5))
+*Atualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_3) | [Próximo](#TitleNum_5))
 
-<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 56.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+<!-- git diff --ignore-all-space --unified=0 6e5caedacff193ce79bdd98708ae1b9dc91f0a8f 9f7af4d3f8b1cffd048db2a5b29fc9e6013f5ed2  (PR=0  ,  Filename=tutorial-preparing-the-server-for-replication.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-2.  Selecione **Mecanismo de Banco de Dados**.
+- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Baixar [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, consulte [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
-    ![object-explorer](../relational-databases/media/object-explorer.png)
+>[!NOTE]
+> - Não há suporte para replicação em SQL Servers que têm um intervalo de mais de duas versões. Para obter mais informações, consulte [Versões do SQL compatíveis na topologia de replicação](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - No *{Included-Content-Goes-Here}* , você deve se conectar ao Editor e ao Assinante usando um logon que seja membro da função de servidor fixa **sysadmin**. Para obter mais informações sobre a função sysadmin, consulte [Funções de nível de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).
 
-3.  Na caixa **Nome do servidor**, digite o nome da instância do mecanismo de banco de dados. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é *<nome_do_computador>***\\***<nome_da_instância>,* por exemplo, **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do SQL Server em um computador chamado 'PracticeComputer'. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário.
 
-    ![connect-to-server](../relational-databases/media/connect-to-server.png)
+**Tempo estimado para concluir este tutorial: 30 minutos**
 
-4.  Clique em **Conectar**.
+**Criar contas do Windows para replicação**
 
-> [!NOTE]
-> Este tutorial presume que você não esteja familiarizado com o SQL Server e que não tenha problemas específicos em estabelecer a conexão. Isso deve ser suficiente para a maioria das pessoas e mantém este tutorial simples. Para obter as etapas de solução de problemas, consulte [Solucionando problemas de conexão com o Mecanismo de Banco de Dados do SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+Nesta seção, você criará contas do Windows para executar os agentes de replicação. Você criará uma conta de Windows separada no servidor local para os seguintes agentes:
 
-**<a name="additional"></a>Autorizando conexões adicionais**
-
-Agora que você se conectou ao SQL Server como um administrador, uma de suas primeiras tarefas é autorizar que outros usuários se conectem. Você faz isso criando um logon e autorizando esse logon para acessar um banco de dados como um usuário. Logons podem ser de autenticação do Windows, que usam credenciais do Windows ou logons de autenticação do SQL Server, que armazenam informações de autenticação no SQL Server e são independentes de suas credenciais do Windows. Use a autenticação do Windows sempre que possível.
+|Agente|Local|Nome da conta|
+|---------|------------|----------------|
+|Snapshot Agent|Publicador|<*machine_name*>\repl_snapshot|
 
 
 
@@ -261,28 +303,41 @@ Agora que você se conectou ao SQL Server como um administrador, uma de suas pri
 
 <a name="TitleNum_5"/>
 
-### <a name="5-nbsp-manage-the-size-of-the-transaction-log-filelogsmanage-the-size-of-the-transaction-log-filemd"></a>5. &nbsp; [Gerenciar o tamanho do arquivo de log de transações](logs/manage-the-size-of-the-transaction-log-file.md)
+### <a name="5-nbsp-tutorial-configure-replication-between-two-fully-connected-servers-transactionalreplicationtutorial-replicating-data-between-continuously-connected-serversmd"></a>5. &nbsp; [Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)](replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
-*Atualizado: 17-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_4) | [Próximo](#TitleNum_6))
+*Atualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_4) | [Próximo](#TitleNum_6))
 
-<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+<!-- Source markdown line 162.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 0d74f984d0ffc01cce0376837e6d94df3c5654d7 4ecf4d724286130927dd43687d6845059af6f9b7  (PR=0  ,  Filename=tutorial-replicating-data-between-continuously-connected-servers.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   Um pequeno incremento de aumento pode gerar um número excessivo de [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequenos e pode reduzir o desempenho. Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+**Criar uma assinatura na publicação Transacional**
 
--   Um grande incremento de aumento pode gerar um número pequeno de [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) grandes e também pode afetar o desempenho. Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+Nesta seção, você adicionará um assinante à Publicação criada anteriormente. Este tutorial usa um assinante remoto (NODE2\SQL2016), mas uma assinatura também pode ser adicionada localmente ao editor.
 
--   Mesmo com o aumento automático habilitado, você pode receber uma mensagem informando que o log de transações está cheio, caso ele não possa aumentar rápido o suficiente para atender às necessidades da consulta. Para obter mais informações sobre como alterar o incremento de aumento, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+**Para criar a assinatura**
 
--   Ter vários arquivos de log em um banco de dados não melhora o desempenho de forma alguma, porque os arquivos de log de transações não usam o [preenchimento proporcional](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) como arquivos de dados no mesmo grupo de arquivos.
 
--   Os arquivos de log podem ser definidos para serem reduzidos automaticamente. No entanto, isso **não é recomendável** e a propriedade de banco de dados **auto_shrink** é definida como FALSE por padrão. Se **auto_shrink** for definido como TRUE, a redução automática reduzirá o tamanho de um arquivo apenas quando mais de 25% de seu espaço estiver inutilizado.
+1.  Conecte-se ao Publicador no *{Included-Content-Goes-Here}*, expanda o nó de servidor e depois expanda a pasta **Replicação**.
+
+2.  Na pasta **Publicações Locais**, clique com o botão direito do mouse na publicação **AdvWorksProductTrans** e, em seguida, selecione **Novas Assinaturas**.  O Assistente para Nova Assinatura é iniciado:
+
+    Nova Assinatura
+
+3.  Na página Publicação, selecione **AdvWorksProductTrans** e, em seguida, **Avançar**:
+
+    Selecionar o Publicador Tran
+
+4.  Na página Local do Agente de Distribuição, selecione **Executar todos os agentes no Distribuidor** e, em seguida, selecione **Avançar**.  Para obter mais informações sobre assinaturas pull e push, consulte [Assinar publicações](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications):
+
+    Executar agentes em Dist
+
+5.  Na página Assinantes, se o nome da instância de Assinante não for exibido, selecione **Adicionar Assinante** e, em seguida, **Adicionar Assinante do SQL Server** na lista suspensa. Isso iniciará a caixa de diálogo **Conectar ao Servidor**. Insira o nome da instância de Assinante e, em seguida, selecione **Conectar**.
 
 
 
@@ -294,62 +349,39 @@ Agora que você se conectou ao SQL Server como um administrador, uma de suas pri
 
 <a name="TitleNum_6"/>
 
-### <a name="6-nbsp-bcpbindnative-client-odbc-extensions-bulk-copy-functionsbcp-bindmd"></a>6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+### <a name="6-nbsp-tutorial-configure-replication-between-a-server-and-mobile-clients-mergereplicationtutorial-replicating-data-with-mobile-clientsmd"></a>6. &nbsp; [Tutorial: Configurar a replicação entre um servidor e clientes móveis (Mesclagem)](replication/tutorial-replicating-data-with-mobile-clients.md)
 
-*Atualizado: 30-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_5) | [Próximo](#TitleNum_7))
+*Atualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_5) | [Próximo](#TitleNum_7))
 
-<!-- Source markdown line 127.  ms.author= "genemi".  -->
+<!-- Source markdown line 93.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+<!-- git diff --ignore-all-space --unified=0 0eed78dfe83c88358c030539a2b25d11ef5ec2d3 79b2a3f32c940fede94b11ad2a3ef8a00b911a39  (PR=0  ,  Filename=tutorial-replicating-data-with-mobile-clients.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- A tabela a seguir lista os tipos de dados enumerados válidos e os tipos de dados ODBC C correspondentes.
+A tabela Employee contém uma coluna (OrganizationNode) que tem o tipo de dados hierarchyid, compatível apenas com a replicação no SQL 2017. Se estiver usando um build inferior ao SQL 2017, você verá uma mensagem na parte inferior da tela notificando da potencial perda de dados com o uso dessa coluna na replicação bidirecional. Para fins deste tutorial, essa mensagem pode ser ignorada. No entanto, esse tipo de dados não deve ser replicado em um ambiente de produção, a menos que você esteja usando um build compatível. Para obter mais informações sobre como replicar o tipo de dados hierarchyid, consulte [Usando colunas hierarchyid na replicação](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
 
-|eDataType|Tipo de C|
-|-----------------------|------------|
-|SQLTEXT|char *|
-|SQLNTEXT|wchar_t *|
-|SQLCHARACTER|char *|
-|SQLBIGCHAR|char *|
-|SQLVARCHAR|char *|
-|SQLBIGVARCHAR|char *|
-|SQLNCHAR|wchar_t *|
-|SQLNVARCHAR|wchar_t *|
-|SQLBINARY|unsigned char *|
-|SQLBIGBINARY|unsigned char *|
-|SQLVARBINARY|unsigned char *|
-|SQLBIGVARBINARY|unsigned char *|
-|SQLBIT|char|
-|SQLBITN|char|
-|SQLINT1|char|
-|SQLINT2|short int|
-|SQLINT4|INT|
-|SQLINT8|_int64|
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
-|SQLFLT4|FLOAT|
-|SQLFLT8|FLOAT|
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
-|SQLDECIMALN|SQL_NUMERIC_STRUCT|
-|SQLNUMERICN|SQL_NUMERIC_STRUCT|
-|SQLMONEY|DBMONEY|
-|SQLMONEY4|DBMONEY4|
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
-|SQLTIMEN|SQL_SS_TIME2_STRUCT|
-|SQLDATEN|SQL_DATE_STRUCT|
-|SQLDATETIM4|DBDATETIM4|
-|SQLDATETIME|DBDATETIME|
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
-|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
-|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
-|SQLIMAGE|unsigned char *|
-|SQLUDT|unsigned char *|
-|SQLUNIQUEID|SQLGUID|
-|SQLVARIANT|*Qualquer tipo de dados, exceto:*<br />–   text<br />–   ntext<br />–   image<br />–   varchar(max)<br />–   varbinary(max)<br />–   nvarchar(max)<br />–   xml<br />–   timestamp|
-|SQLXML|*Tipos de dados C compatíveis:*<br />–   char*<br />–   wchar_t *<br />–   unsigned char *|
+
+-  Na página Filtrar Linhas da Tabela, selecione **Adicionar** e, em seguida, **Adicionar Filtro**.
+
+-  Na caixa de diálogo **Adicionar Filtro**, selecione **Funcionário (HumanResources)** em **Selecionar a tabela a ser filtrada**. Selecione a coluna **LoginID**, selecione a seta para a direita para adicionar a coluna à cláusula WHERE da consulta de filtro e modifique a cláusula WHERE da seguinte maneira:
+
+    ```
+    WHERE [LoginID] = HOST_NAME()
+    ```
+
+    A. Selecione **Uma linha desta tabela vai para apenas uma assinatura** e **OK**:
+
+    Adicionar Filtro
+
+
+
+- Na página **Filtrar Linhas da Tabela**, selecione **Funcionário (Recursos Humanos)**, **Adicionar** e, em seguida, **Adicionar Junção para Estender o Filtro Selecionado**.
+
+    A. Na caixa de diálogo **Adicionar Junção**, selecione **Sales.SalesOrderHeader** em **Tabela unida**. Selecione **Gravar a instrução de junção manualmente** e conclua a instrução de junção da seguinte maneira:
 
 
 
@@ -361,36 +393,36 @@ Agora que você se conectou ao SQL Server como um administrador, uma de suas pri
 
 <a name="TitleNum_7"/>
 
-### <a name="7-nbsp-sql-server-index-design-guidesql-server-index-design-guidemd"></a>7. &nbsp; [Guia de criação de índice do SQL Server](sql-server-index-design-guide.md)
+### <a name="7-nbsp-query-with-full-text-searchsearchquery-with-full-text-searchmd"></a>7. &nbsp; [Consulta com pesquisa de texto completo](search/query-with-full-text-search.md)
 
-*Atualizado: 02-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_6) | [Próximo](#TitleNum_8))
+*Atualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_6) | [Próximo](#TitleNum_8))
 
-<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 247.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+<!-- git diff --ignore-all-space --unified=0 5ec67b56aa0a6eadadbcfa8b73b6726e75eca2bb 4eb108b202d3dd035a312bac7872cf02bcf31cfa  (PR=0  ,  Filename=query-with-full-text-search.md  ,  Dirpath=docs\relational-databases\search\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-Do SQL Server 2016 em diante, é possível criar um **índice columnstore não clusterizado atualizável em uma tabela rowstore**. O índice columnstore armazena uma cópia dos dados, portanto, você precisa de armazenamento extra. No entanto, os dados no índice columnstore serão compactados em um tamanho menor do que a tabela rowstore precisa.  Com isso, você pode executar análises no índice columnstore e transações no índice rowstore ao mesmo tempo. O repositório de colunas é atualizado quando dados são alterados na tabela rowstore, assim, ambos os índices trabalham com os mesmos dados.
-
-Do SQL Server 2016 em diante, é possível ter **um ou mais índices rowstore não clusterizados em um índice columnstore**. Fazendo isso, você pode executar buscas de tabela eficientes no columnstore subjacente. Outras opções também são disponibilizadas. Por exemplo, você pode impor uma restrição de chave primária usando uma restrição UNIQUE na tabela rowstore. Como um valor não exclusivo não poderá ser inserido na tabela rowstore, o SQL Server não pode inserir o valor no columnstore.
-
-**Considerações sobre desempenho**
+**Mais informações sobre pesquisas de termo de geração**
 
 
--   A definição do índice columnstore não clusterizado oferece suporte ao uso de uma condição filtrada. Para minimizar o impacto no desempenho da adição de um índice columnstore em uma tabela OLTP, use uma condição filtrada para criar um índice columnstore não clusterizado apenas nos dados inativos da sua carga de trabalho operacional.
+As *formas flexionadas* são os diferentes tempos e conjugações de um verbo ou as formas singular e plural de um substantivo.
 
--   Uma tabela na memória pode ter um índice columnstore. Você pode criá-lo quando a tabela for criada ou adicioná-lo mais tarde com [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Antes do SQL Server 2016, somente uma tabela baseada em disco podia ter um índice columnstore.
+Por exemplo, pesquise a forma flexionada da palavra "dirigir". Se várias linhas da tabela contivessem as palavras "dirigir", "dirige", "dirigiu", "dirigindo" e "dirigido", todas elas fariam parte do conjunto de resultados, pois cada uma delas seria uma flexão gerada da palavra dirigir.
 
-Para obter mais informações, consulte [Índices columnstore – desempenho de consultas](../relational-databases/indexes/columnstore-indexes-query-performance.md).
+Por padrão,FREETEXT e FREETEXTTABLE procuram termos flexionados de todas as palavras especificadas. CONTAINS e CONTAINSTABLE são compatíveis com um argumento `INFLECTIONAL` opcional.
 
-**Diretrizes de design**
+**Pesquisar sinônimos de uma palavra específica**
 
 
--   Uma tabela rowstore pode ter um índice columnstore não clusterizado atualizável. Antes do SQL Server 2014, o índice columnstore não clusterizado era somente leitura.
+Um *dicionário de sinônimos* define sinônimos especificados pelo usuário para os termos. Para saber mais sobre arquivos de dicionário de sinônimos, veja [Configurar e gerenciar arquivos do dicionário de sinônimos na pesquisa de texto completo].
+
+Por exemplo, se uma entrada "{carro, automóvel, caminhão, van}" for adicionada ao dicionário de sinônimos, será possível pesquisar o sinônimo da palavra "carro". Todas as linhas da tabela consultada que contiverem as palavras "automóvel", "caminhão", "van" ou "carro" serão exibidas no conjunto de resultados, pois cada uma dessas palavras pertence a um conjunto de expansão de sinônimos contendo a palavra "carro".
+
+FREETEXT e FREETEXTTABLE usam o dicionário de sinônimos por padrão. CONTAINS e CONTAINSTABLE são compatíveis com um argumento `THESAURUS` opcional.
 
 
 
@@ -402,63 +434,37 @@ Para obter mais informações, consulte [Índices columnstore – desempenho de 
 
 <a name="TitleNum_8"/>
 
-### <a name="8-nbsp-spexecuteexternalscript-transact-sqlsystem-stored-proceduressp-execute-external-script-transact-sqlmd"></a>8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+### <a name="8-nbsp-transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehousesecurityencryptiontransparent-data-encryption-byok-azure-sqlmd"></a>8. &nbsp; [Transparent Data Encryption com suporte a Bring Your Own Key para o Data Warehouse e Banco de Dados SQL do Azure](security/encryption/transparent-data-encryption-byok-azure-sql.md)
 
-*Atualizado: 23-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_7) | [Próximo](#TitleNum_9))
+*Atualizado: 24-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_7) | [Próximo](#TitleNum_9))
 
-<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+<!-- Source markdown line 110.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+<!-- git diff --ignore-all-space --unified=0 9527658848d430bf0148be84474a75b232cbd112 70ed2a129c580962384f808e8526673957f00d2c  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-Para gerar um modelo semelhante usando Python, altere o identificador de idioma de `@language=N'R'` para `@language = N'Python'`e faça as modificações necessárias para o argumento `@script`. Caso contrário, todos os parâmetros funcionam do mesmo modo que para o R.
-
-**C. Criar um modelo de Python e gerar pontuações com base nele**
+**Como configurar a recuperação de desastres geográfica com o Azure Key Vault**
 
 
-Este exemplo ilustra como usar sp\_execute\_external\_script para gerar pontuações em um modelo simples de Python.
+Para manter a alta disponibilidade de Protetores TDE para bancos de dados criptografados, é necessário configurar Azure Key Vaults redundantes com base nos grupos de failover ou instâncias de replicação geográfica ativas do Banco de Dados SQL desejado ou existente.  Cada servidor com replicação geográfica requer um cofre de chaves separado, que deve estar colocalizado com o servidor na mesma região do Azure. Caso um banco de dados primário se torne inacessível devido a uma interrupção em uma região e um failover seja acionado, o banco de dados secundário é capaz de assumir usando o cofre de chaves secundário.
 
-```
-CREATE PROCEDURE [dbo].[py_generate_customer_scores]
-AS
-BEGIN
+Para bancos de dados SQL do Azure com replicação geográfica, é necessária a seguinte configuração do Azure Key Vault:
+- Um banco de dados primário com um cofre de chaves na região e um banco de dados secundário com um cofre de chaves na região.
+- Pelo menos um secundário é necessário; há suporte para até quatro secundários.
+- Não há suporte para secundários de secundários (encadeamento).
 
-**Input query to generate the customer data**
+A seção a seguir apresentará as etapas de instalação e de configuração em mais detalhes.
 
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+**Etapas de configuração do Azure Key Vault**
 
-EXEC sp_execute_external_script @language = N'Python', @script = N'
-import pandas as pd
-from sklearn.cluster import KMeans
 
-**Get data from input query**
-
-customer_data = my_input_data
-
-**Define the model**
-
-n_clusters = 4
-est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
-clusters = est.labels_
-customer_data["cluster"] = clusters
-
-OutputDataSet = customer_data
-'
-, @input_data_1 = @input_query
-, @input_data_1_name = N'my_input_data'
-WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
-END;
-GO
-```
-
-Títulos de coluna usados no código Python não são enviados como saída para o SQL Server. Portanto, use a instrução WITH RESULTS para especificar os nomes de coluna e tipos de dados a serem usados pelo SQL.
-
-Para pontuação, você também pode usar a função nativa [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md), que é normalmente mais rápida porque evita que o tempo de execução do Python ou do R seja chamado.
-
+- Instalar o [PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
+- Crie dois Azure Key Vaults em duas regiões diferentes usando o [PowerShell para habilitar a propriedade de "exclusão reversível"](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) nos cofres de chaves (essa opção ainda não está disponível no Portal do AKV – mas é obrigatória no SQL).
+- Ambos os Azure Key Vaults devem estar localizados nas duas regiões disponíveis na mesma Área Geográfica do Azure para que o backup e a restauração de chaves funcione.  Se precisar que os dois cofres de chaves estejam localizados em áreas geográficas diferentes para atender aos requisitos de Geo-DR do SQL, siga o [Processo BYOK](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys) que permite a importação das chaves de um HSM local.
 
 
 
@@ -470,42 +476,89 @@ Para pontuação, você também pode usar a função nativa [PREDICT](system-sto
 
 <a name="TitleNum_9"/>
 
-### <a name="9-nbsp-create-primary-keystablescreate-primary-keysmd"></a>9. &nbsp; [Criar Chaves Primárias](tables/create-primary-keys.md)
+### <a name="9-nbsp-powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vaultsecurityencryptiontransparent-data-encryption-byok-azure-sql-configuremd"></a>9. &nbsp; [PowerShell e CLI: habilitar a Transparent Data Encryption usando sua própria chave no Azure Key Vault](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
 
-*Atualizado: 18-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_8))
+*Atualizado: 24-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_8) | [Próximo](#TitleNum_10))
 
-<!-- Source markdown line 102.  ms.author= "sstein".  -->
+<!-- Source markdown line 196.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 a0e00f5701d9a493f503a477c69097ce65aba174 721e8fb856a55ee1e8e9e7fc06036a03adab647b  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql-configure.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-**Para criar uma chave primária com um índice não clusterizado em uma nova tabela**
+**Pré-requisitos para a CLI**
 
 
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados.
+- Você deve ter uma assinatura do Azure e ser um administrador na assinatura.
+- [Recomendado, mas opcional] Ter um HSM (módulo de segurança de hardware) ou repositório de chaves local para criar uma cópia local do material da chave do Protetor de TDE.
+- Interface de linha de comando versão 2.0 ou posterior. Para instalar a versão mais recente e conectar-se à sua assinatura do Azure, consulte [Instalar e configurar a Interface de linha de comando de plataforma cruzada do Azure 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Criar um Azure Key Vault e uma chave para usar para a TDE.
+   - [Gerenciar o Key Vault usando a CLI 2.0](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [Instruções para usar um HSM (módulo de segurança de hardware) e o Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - O cofre de chaves deve ter as seguintes propriedades para ser usado para TDE:
+   - [exclusão reversível](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Como usar a exclusão reversível do Key Vault com a CLI](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli)
+- A chave deve ter os seguintes atributos para ser usada para TDE:
+   - Nenhuma data de expiração
+   - Não estar desabilitada
+   - Ser capaz de executar as operações *get*, *wrap key* e *unwrap key*
 
-2.  Na barra Padrão, clique em **Nova Consulta**.
+**Etapa: Criar um servidor e atribuir uma identidade do Microsoft Azure AD ao seu servidor**
 
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo cria uma tabela e define uma chave primária na coluna `CustomerID` e um índice clusterizado em `TransactionID`.
+      cli
+      # create server (with identity) and database
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### <a name="10-nbsp-about-change-data-capture-sql-servertrack-changesabout-change-data-capture-sql-servermd"></a>10. &nbsp; [Sobre o change data capture (SQL Server)](track-changes/about-change-data-capture-sql-server.md)
+
+*Atualizado: 17-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_9))
+
+<!-- Source markdown line 112.  ms.author= "jroth".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 588bff652adefd719e799e9777a416b70184c5f8 77ebdbb1b98b24054d5c5afbb3f1d40e94d1e6bc  (PR=5574  ,  Filename=about-change-data-capture-sql-server.md  ,  Dirpath=docs\relational-databases\track-changes\  ,  MergeCommitSha40=bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68) -->
+
+
+
+**Como trabalhar com as diferenças de agrupamento de banco de dados e de tabela**
+
+
+É importante estar ciente de uma situação em que há diferentes agrupamentos entre o banco de dados e as colunas de uma tabela configurada para a captura de dados de alterações. A CDA usa um armazenamento provisório para popular tabelas laterais. Se uma tabela tiver colunas CHAR ou VARCHAR com agrupamentos diferentes do agrupamento de banco de dados e se essas colunas armazenarem caracteres não ASCII (como caracteres DBCS de byte duplo), a CDA não poderá persistir os dados alterados de maneira consistente com os dados nas tabelas base. Isso se deve ao fato de que as variáveis do armazenamento provisório não podem ter agrupamentos associados a elas.
+
+Considere uma das seguintes abordagens para garantir que os dados capturados da alteração sejam consistentes com as tabelas base:
+
+- Use o tipo de dados NCHAR ou NVARCHAR para colunas que contêm dados não ASCII.
+
+- Ou use o mesmo agrupamento para colunas e para o banco de dados.
+
+Por exemplo, se você tiver um banco de dados que usa um agrupamento SQL_Latin1_General_CP1_CI_AS, considere a seguinte tabela:
 
 ```
-    USE AdventureWorks2012;
-    GO
-    CREATE TABLE Production.TransactionHistoryArchive1
-    (
-       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
-       TransactionID int IDENTITY (1,1) NOT NULL,
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
-    );
-    GO
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-    -- Now add the clustered index
-    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
-    GO
+A CDA poderá não capturar os dados binários para a coluna C2, porque seu agrupamento é diferente (Chinese_PRC_CI_AI). Use NVARCHAR para evitar esse problema:
+
+```
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
 
@@ -519,40 +572,36 @@ Para pontuação, você também pode usar a função nativa [PREDICT](system-sto
 Esta seção lista artigos muito semelhantes a artigos atualizados recentemente em outras áreas de assunto, em nosso repositório público GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas de assunto que *têm* artigos novos ou atualizados recentemente
 
-
-- [Novo + Atualizado (1 + 3):&nbsp; documentos sobre a **Análise Avançada para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Novo + Atualizado (0 + 1):&nbsp; documentos sobre o **Sistema de Plataforma Analítica para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Novo + Atualizado (0 + 1):&nbsp; documentos sobre a **Conexão ao SQL**](../connect/new-updated-connect.md)
-- [Novo + Atualizado (0 + 1):&nbsp; documentos sobre o **Mecanismo de Banco de Dados para SQL**](../database-engine/new-updated-database-engine.md)
-- [Novo + Atualizado (12 + 1): **documentos sobre o** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
-- [Novo + Atualizado (6 + 2):&nbsp; documentos sobre o **Linux para SQL**](../linux/new-updated-linux.md)
-- [Novo + atualizado (15 + 0): **documentos sobre o** PowerShell para SQL](../powershell/new-updated-powershell.md)
-- [Novo + Atualizado (2 + 9):&nbsp; documentos sobre **Bancos de Dados Relacionais para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Novo + Atualizado (1 + 0):&nbsp; documentos sobre o **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Novo + Atualizado (1 + 1):&nbsp; documentos sobre o **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Novo + Atualizado (1 + 1):&nbsp; documentos sobre o **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Novo + Atualizado (0+1):&nbsp; documentos sobre o **SSDT (SQL Server Data Tools)**](../ssdt/new-updated-ssdt.md)
-- [Novo + Atualizado (1+2):&nbsp; documentos sobre o **SSMS (SQL Server Management Studio)**](../ssms/new-updated-ssms.md)
-- [Novo + Atualizado (0 + 2):&nbsp; documentos sobre o **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Novo + Atualizado (11+6): &nbsp;documentos sobre a&nbsp; **Análise Avançada para SQL** ](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Novo + Atualizado (18+0): &nbsp; documentos sobre o &nbsp;**Analysis Services para SQL** ](../analysis-services/new-updated-analysis-services.md)
+- [Novo + Atualizado (218+14): documentos sobre a **Conexão ao SQL** ](../connect/new-updated-connect.md)
+- [Novo + Atualizado (14+0): &nbsp;documentos sobre o&nbsp; **Mecanismo de Banco de Dados para SQL** ](../database-engine/new-updated-database-engine.md)
+- [Novo + Atualizado (3+2): &nbsp;documentos sobre o&nbsp; **Integration Services para SQL** ](../integration-services/new-updated-integration-services.md)
+- [Novo + Atualizado (3+3): &nbsp;documentos sobre o&nbsp; **Linux para SQL** ](../linux/new-updated-linux.md)
+- [Novo + Atualizado (7+10): &nbsp;documentos sobre o&nbsp; **Bancos de Dados Relacionais para SQL** ](../relational-databases/new-updated-relational-databases.md)
+- [Novo + Atualizado (0+2): &nbsp;documentos sobre o&nbsp; **Reporting Services para SQL** ](../reporting-services/new-updated-reporting-services.md)
+- [Novo + Atualizado (1+3): &nbsp;documentos sobre o&nbsp; **SQL Operations Studio** ](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Novo + Atualizado (2+3): &nbsp;documentos sobre o&nbsp; **Microsoft SQL Server** ](../sql-server/new-updated-sql-server.md)
+- [Novo + Atualizado (1+1): &nbsp;documentos sobre o&nbsp; **SSDT (SQL Server Data Tools)** ](../ssdt/new-updated-ssdt.md)
+- [Novo + Atualizado (5+2): &nbsp;documentos sobre o&nbsp; **SSMS (SQL Server Management Studio)** ](../ssms/new-updated-ssms.md)
+- [Novo + Atualizado (0+2): &nbsp;documentos sobre o&nbsp; **Transact-SQL** ](../t-sql/new-updated-t-sql.md)
+- [Novo + Atualizado (1+1): &nbsp;documentos sobre as&nbsp; **Ferramentas para SQL** ](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas de assunto que *não* têm nenhum artigo novo ou atualizado recentemente
 
-
-- [Novo + Atualizado (0 + 0): documentos sobre **DMA (Assistente de Migração de Dados) para o SQL**](../dma/new-updated-dma.md)
-- [Novo + atualizado (0 + 0): documentos do **ADO (ActiveX Data Objects) para SQL**](../ado/new-updated-ado.md)
-- [Novo + Atualizado (0+0): documentos sobre o **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Novo + Atualizado (0+0): documentos sobre o **Sistema de Plataforma Analítica para SQL** ](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Novo + atualizado (0 + 0): documentos do **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Extensões DMX (Data Mining) para SQL**](../dmx/new-updated-dmx.md)
 - [Novo + Atualizado (0+0): documentos sobre o **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Expressão MDX para SQL**](../mdx/new-updated-mdx.md)
 - [Novo + atualizado (0 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
+- [Novo + atualizado (0 + 0): documentos do **PowerShell para SQL**](../powershell/new-updated-powershell.md)
 - [Novo + atualizado (0 + 0): documentos de **Exemplos para SQL**](../samples/new-updated-samples.md)
 - [Novo + atualizado (0 + 0): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
-- [Novo + Atualizado (0 + 0): documentos de **Ferramentas para SQL**](../tools/new-updated-tools.md)
 - [Novo + atualizado (0 + 0): documentos do **XQuery para SQL**](../xquery/new-updated-xquery.md)
-
 

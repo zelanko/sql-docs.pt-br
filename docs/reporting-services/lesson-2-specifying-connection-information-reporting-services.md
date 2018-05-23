@@ -54,7 +54,7 @@ Se o painel **Dados do Relatório** não estiver visível, no menu **Exibir** , 
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >Para obter mais informações sobre cadeias de conexão, consulte: [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    >Para obter mais informações sobre cadeias de conexão, consulte: [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
      
   
 6.  Clique em **Credenciais** no painel esquerdo e clique em **Usar Autenticação do Windows (segurança integrada)**.  
@@ -65,7 +65,7 @@ Se o painel **Dados do Relatório** não estiver visível, no menu **Exibir** , 
 Você definiu uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] com êxito. Em seguida, você criará o relatório. Consulte [Lição 3: Definindo um conjunto de dados para o relatório de tabela &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte Também  
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
   

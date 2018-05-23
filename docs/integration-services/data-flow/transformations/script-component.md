@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  O VSTA dá suporte às linguagens de programação [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic.  
   
- Para obter informações sobre como programar o componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md). Para obter mais informações específicas sobre como configurar o componente Script como origem, transformação ou destino, consulte [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Para obter exemplos adicionais como um destino de ODBC que demonstra o uso do componente Script, consulte [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
+ Para obter informações sobre como programar o componente Script, consulte [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md). Para obter mais informações específicas sobre como configurar o componente Script como origem, transformação ou destino, consulte [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Para obter exemplos adicionais como um destino de ODBC que demonstra o uso do componente Script, consulte [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 > [!NOTE]  
 >  Ao contrário das versões anteriores em que você podia indicar se os scripts eram pré-compilados, todos os scripts são pré-compilados no [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] e em versões posteriores. Quando um script é pré-compilado, o mecanismo de linguagem não é carregado no tempo de execução e o pacote é executado mais rapidamente. No entanto, arquivos binários pré-compilados consomem espaço significativo em disco.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="select-script-component-type"></a>Selecionar Tipo de Componente do Script
   Use a caixa de diálogo **Selecionar Tipo de Componente do Script** para especificar se deve ser criada uma Transformação Scripts pré-configurada para uso como origem, transformação ou destino.  
   
- Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opções  
  Sua seleção de **Origem**, **Destino**ou **Transformação** afeta a configuração da Transformação Scripts e as páginas do Editor de Transformação Scripts.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="script-transformation-editor-connection-managers-page"></a>Editor de Transformação Scripts (página Gerenciadores de Conexões)
   Use a página **Gerenciadores de Conexões** do **Editor de Transformação Scripts** para especificar as conexões que serão usadas pelo script.  
   
- Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opções  
  **Connection managers**  
@@ -151,7 +151,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  A página **Colunas de Entrada** não é exibida para componentes de Origem que têm saídas mas não têm entradas.  
   
- Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opções  
  **Nome de entrada**  
@@ -175,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Os componentes de origem possuem saídas e não entradas, enquanto os componentes de destino possuem entradas mas nenhuma saída. Transformações têm entradas e saídas.  
   
- Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opções  
  **Inputs and outputs**  
@@ -200,7 +200,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="script-transformation-editor-script-page"></a>Editor de Transformação Scripts (página Script)
   Use a guia **Script** da caixa de diálogo **Editor de Transformação Scripts** para especificar um script e propriedades relacionadas.  
   
- Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obter mais informações sobre o componente Script, consulte [Configurar o componente Script no Editor de Componentes Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opções  
  **Propriedades**  
@@ -223,6 +223,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
- [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   

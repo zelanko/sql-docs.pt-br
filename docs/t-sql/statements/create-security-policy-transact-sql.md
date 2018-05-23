@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -32,12 +30,11 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8d310e0dc6aa21758f63d8d7dbe755a0cea950d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3270e3e74eb11c2caace27137c8492ecea3e6e93
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 ```     
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
     { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
-      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name    
+      ( { column_name | expression } [ , …n] ) ON table_schema_name. table_name    
       [ <block_dml_operation> ] , [ , …n] 
     [ WITH ( STATE = { ON | OFF }  [,] [ SCHEMABINDING = { ON | OFF } ] ) ]  
     [ NOT FOR REPLICATION ] 
@@ -75,8 +72,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *tvf_schema_name.security_predicate_function_name*  
  É a função de valor de tabela embutida que será usada como um predicado e que serão aplicadas em consultas em uma tabela de destino. No máximo um predicado de segurança pode ser definido para uma determinada operação DML em uma tabela específica. A função de valor de tabela embutida deve ter sido criada usando a opção SCHEMABINDING.  
   
- { *column_name* | *arguments* }  
- O nome da coluna ou expressão usada como parâmetros para a função de predicado de segurança. As colunas na tabela de destino podem ser usadas como argumentos para a função de predicado. Expressões que incluem literais, internos e expressões que usam operadores aritméticos podem ser usadas.  
+ { *column_name* | *expression* }  
+ Um nome da coluna ou expressão usada como um parâmetro para a função de predicado de segurança. Qualquer coluna na tabela de destino pode ser usada. Uma [Expression](../../t-sql/language-elements/expressions-transact-sql.md) pode incluir apenas constantes, funções escalares internas, operadores e colunas da tabela de destino. Um nome de coluna ou expressão precisa ser especificado para cada parâmetro da função.  
   
  *table_schema_name.table_name*  
  É a tabela de destino a qual o predicado de segurança será aplicado. Várias políticas de segurança desabilitadas podem ser direcionadas a uma operação DML específica, mas apenas uma pode ser habilitada em determinado momento.  

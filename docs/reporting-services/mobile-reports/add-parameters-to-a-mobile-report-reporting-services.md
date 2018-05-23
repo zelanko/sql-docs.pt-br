@@ -1,27 +1,25 @@
 ---
-title: "Adicionar parâmetros a um relatório móvel | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Adicionar parâmetros a um relatório móvel | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d531c2f0b5d9b1e01d3d40a61f6f05ce50fe3c29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6b0f444dbae81f05a28ff9cea6102d63aef317f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Adicionar parâmetros a um relatório móvel | Reporting Services
 Você pode criar um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com parâmetros, para que você e os leitores do relatório possam filtrar seus relatórios. Um relatório com parâmetros também pode ser o destino de um [detalhamento de um relatório de origem](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
@@ -62,7 +60,7 @@ Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para 
 
    ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>Confira também  
 -  [Abrir um relatório móvel com parâmetros de cadeia de caracteres de consulta específicos](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)
 -  [Adicionar o detalhamento de um relatório móvel para outros relatórios móveis ou URLs](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)
 -  [Criar um conjunto de dados compartilhado ou inserido](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)

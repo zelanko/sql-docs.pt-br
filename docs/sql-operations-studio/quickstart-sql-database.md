@@ -4,7 +4,7 @@ description: Este guia de início rápido mostra como usar o Studio de operaçõ
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: c8b79d5162b1701bb3ecf37b79949aa9ff071dc2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: c72e6d5b8e3e2770300e6b890b076bf77617849b
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Início rápido: Usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar o banco de dados do SQL Azure
 

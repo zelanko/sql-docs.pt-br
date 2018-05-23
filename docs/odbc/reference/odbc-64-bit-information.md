@@ -14,11 +14,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c891393018f69c47e93e56cd49ddf318756256d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="odbc-64-bit-information"></a>Informações de 64 bits do ODBC
 Começando com o Windows Server 2003, sistemas operacionais da Microsoft têm suporte para as bibliotecas ODBC de 64 bits. Os cabeçalhos ODBC e bibliotecas fornecidas inicialmente com o SDK do MDAC 2.7 contêm alterações para permitir que os programadores a escrever código para novas plataformas de 64 bits. Assegurando que seu código usa os tipos ODBC definido listados abaixo, você pode compilar o código-fonte para plataformas de 64 bits e 32 bits baseadas no mesmo o **Win64** ou **WIN32** macros.  
@@ -397,7 +397,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetDescField**  
   
- Quando o *FieldIdentifier* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido **ValuePtr*:  
+ Quando o *FieldIdentifier* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -421,7 +421,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido **ValuePtr*:  
+ Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -489,7 +489,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- Quando o *opção* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido **valor*:  
+ Quando o *opção* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *valor*:  
   
  SQL_KEYSET_SIZE  
   

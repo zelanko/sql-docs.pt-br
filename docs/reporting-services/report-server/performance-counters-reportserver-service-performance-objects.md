@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-server
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
@@ -18,12 +17,11 @@ caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4f956b1f0dc970529912844681af784e2b495a5e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3a83e69235c79a255d1ba238b6acc24f873d5e51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Contadores de desempenho – serviço ReportServer, objetos de desempenho
   Este tópico descreve contadores de desempenho para os objetos de desempenho **ReportServer:Service** e **ReportServerSharePoint:Service** que fazem parte de uma implantação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -31,7 +29,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]  
 >  Os objetos de desempenho são usados para monitorar eventos no servidor de relatório local. Se você estiver executando um servidor de relatório em uma implantação em expansão, as contagens se aplicarão ao servidor atual e não à implantação em expansão como um todo.  
   
- Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para obter mais informações, consulte a documentação do Windows. [Perfil de tempo de execução](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para obter mais informações, consulte a documentação do Windows. [Criação de perfis de tempo de execução](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Neste tópico:  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 01/09/2018
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName “ReportServerSharePoint:Service”:  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName "ReportServerSharePoint:Service":  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  

@@ -1,7 +1,7 @@
 ---
 title: sys. database_scoped_configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/16/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 015db41a34cdc4f22db79328e91189a77a483418
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 373d2933d362f565799518bfe1af516ad1943276
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,6 +40,8 @@ ms.lasthandoff: 05/04/2018
 |**name**|**nvarchar(60)**|O nome da opção de configuração. Para obter informações sobre as configurações possíveis, consulte [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**value**|**sqlvariant**|O valor definido para essa opção de configuração para a réplica primária.|  
 |**value_for_secondary**|**sqlvariant**|O valor definido para essa opção de configuração para as réplicas secundárias.|  
+|**elevate_online**|**nvarchar(60)** |O banco de dados no escopo padrão definido para a opção online para operações de índice |
+|**elevate_resumable**|nvarchar(60)|O banco de dados no escopo padrão definido para a opção reiniciável para operações de índice| 
   
 ##  <a name="Permissions"></a> Permissões  
  Requer associação à função **pública** .  

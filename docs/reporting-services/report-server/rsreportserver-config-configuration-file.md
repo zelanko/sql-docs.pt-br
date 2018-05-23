@@ -1,27 +1,25 @@
 ---
-title: "Arquivo de Configuração RsReportServer.config | Microsoft Docs"
-ms.custom: 
+title: Arquivo de Configuração RsReportServer.config | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Arquivo de configuração RsReportServer.config
 O arquivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** armazena configurações que são usadas pelo serviço Web Servidor de Relatórios e pelo processamento em segundo plano. Todos os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são executados dentro de um único processo que lê as configurações armazenadas no arquivo RSReportServer.config. Os servidores de relatório nos modos nativo e SharePoint usam o RSReportServer.config, porém os dois modos não usam todas as mesmas configurações do arquivo de configuração. A versão do modo do SharePoint do arquivo é menor, pois muitas das configurações do modo do SharePoint são armazenadas nos bancos de dados de configuração do SharePoint, em vez de no arquivo. Este tópico descreve o arquivo de configuração padrão instalado para o modo Nativo e o modo do SharePoint e algumas das configurações e comportamentos importantes controlados pelo arquivo de configuração.  
@@ -65,7 +63,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
  A tabela a seguir fornece informações sobre as configurações gerais que aparecem na primeira parte do arquivo. As configurações são apresentadas na ordem em que aparecem no arquivo de configuração. A última coluna da tabela indica se a configuração se aplica a um servidor de relatório no modo nativo **(N)** , a um servidor de relatório no modo do PharePoint **(S)** ou a ambos.  
   
 > [!NOTE]  
->  Neste tópico, “o número inteiro máximo” se refere ao valor INT_MAX de 2147483647.  Para obter mais informações, consulte [Limites de números inteiros](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  Neste tópico, "o número inteiro máximo" se refere ao valor INT_MAX de 2147483647.  Para saber mais, veja [Limites de inteiros](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Configuração|Description|Modo|  
 |-------------|-----------------|----------|  
@@ -98,7 +96,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
  **URLReservations** define o acesso HTTP ao serviço Web Servidor de Relatórios e ao portal da Web para a instância atual. Os URLs são reservados e armazenados em HTTP.SYS quando você configura o servidor de relatório.  
   
 > [!WARNING]  
->  Para o modo do SharePoint, as reservas de URL são configuradas na Administração Central do SharePoint. Para obter mais informações, consulte [Configurar mapeamento de acesso alternativo (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Para o modo do SharePoint, as reservas de URL são configuradas na Administração Central do SharePoint. Para saber mais, veja [Configurar o mapeamento de acesso alternativo (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Não modifique as reservas de URL diretamente no arquivo de configuração. Sempre use a ferramenta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager ou o provedor WMI do servidor de relatório para criar ou modificar reservas de URL para um servidor de relatório no modo nativo. Se os valores forem modificados no arquivo de configuração, você pode corromper a reserva, o que causa erros de servidor em tempo de execução ou deixa reservas órfãs em HTTP.SYS que não são removidas se o software é desinstalado. Para obter mais informações, consulte [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) e [URLs em arquivos de configuração &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -258,7 +256,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
 |**SMTPAuthenticate**|Especifica um valor inteiro que indica o tipo de autenticação a ser usado ao enviar mensagens para um serviço SMTP em uma conexão TCP/IP. Os valores válidos são:<br /><br /> 0 = Sem autenticação.<br /><br /> 1 = (sem suporte).<br /><br /> 2 = Autenticação NTLM (NT LanMan). O contexto de segurança do serviço Servidor de Relatório do Windows é usado para se conectar ao servidor SMTP de rede.|  
 |**De**|Especifica um endereço de email do qual são enviados relatórios no formato *abc@host.xyz*. O endereço aparece na linha **De** de uma mensagem de email de saída. Este valor é necessário se você estiver usando um servidor SMTP remoto. Deve ser uma conta de email válida que tenha permissão para enviar email.|  
 |**EmbeddedRenderFormats, RenderingExtension**|Especifica o formato de renderização usado para encapsular um relatório dentro do corpo de uma mensagem de email. As imagens do relatório são inseridas subsequentemente no relatório. Os valores válidos são MHTML e HTML4.0.|  
-|**PrivilegedUserRenderFormats**|Especifica formatos de renderização que um usuário pode selecionar para uma assinatura de relatório quando a assinatura está habilitada por meio da tarefa “Gerenciar todas as assinaturas”. Se este valor não for definido, todos os formatos de processamento que não são excluídos intencionalmente estarão disponíveis para uso.|  
+|**PrivilegedUserRenderFormats**|Especifica formatos de renderização que um usuário pode selecionar para uma assinatura de relatório quando a assinatura está habilitada por meio da tarefa "Gerenciar todas as assinaturas". Se este valor não for definido, todos os formatos de processamento que não são excluídos intencionalmente estarão disponíveis para uso.|  
 |**ExcludedRenderFormats, RenderingExtension**|Exclui propositadamente os formatos que não funcionam bem com uma determinada extensão de entrega. Não é possível excluir várias instâncias da mesma extensão de renderização. A exclusão de várias instâncias resultará em um erro quando o servidor de relatório ler o arquivo de configuração. Por padrão, as seguintes extensões são excluídas para entrega de email:<br /><br /> HTMLOWC<br /><br /> Nulo<br /><br /> RGDI|  
 |**SendEmailToUserAlias**|Esse valor funciona com **DefaultHostName**.<br /><br /> Quando **SendEmailToUserAlias** estiver definido como **True**, os usuários que definirem assinaturas individuais serão especificados automaticamente como destinatários do relatório. O campo **Para** fica oculto. Se esse valor for **False**, o campo **Para** ficará visível. Defina esse valor como **True** se desejar ter máximo controle na distribuição de relatórios. Os valores válidos incluem os seguintes:<br /><br /> **True**= O endereço de email do usuário que está criando a assinatura é usado. Este é o valor padrão.<br /><br /> **False**= Qualquer endereço de email pode ser especificado.|  
 |**DefaultHostName**|Este valor funciona com **SendEmailToUserAlias**.<br /><br /> Especifica um valor de cadeia de caracteres que indica o nome do host a ser anexado ao alias de usuário quando **SendEmailToUserAlias** for verdadeiro. Este valor pode ser um nome DNS (Sistema de Nome de Domínio) ou endereço IP.|  

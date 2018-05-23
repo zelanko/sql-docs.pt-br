@@ -1,25 +1,23 @@
 ---
-title: "Relatórios em modo local vs. modo conectado no Visualizador de Relatórios | Microsoft Docs"
-ms.custom: 
+title: Relatórios em modo local vs. modo conectado no Visualizador de Relatórios | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e637d9494252548081a0cfe7aa8aabd2e61646d4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 380e039f6ac832108c23913d984869b4d4c75602
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Relatórios em modo local vs. modo conectado no Visualizador de Relatórios
 
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/09/2018
   
  Para obter mais informações, consulte o seguinte.  
   
--   [Novidades do Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
+-   [Novidades no Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
   
 -   [Tarefas básicas para um aplicativo do Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 01/09/2018
 
  Para obter as informações mais recentes sobre o uso da extensão ADS com o modo conectado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte [Access Services Report in SharePoint Site shows error in data extension ‘ADS’](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)(Relatório de Serviços do Access no site do SharePoint mostra erro na extensão de dados ‘ADS’).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
  [Fontes de dados com suporte no Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 

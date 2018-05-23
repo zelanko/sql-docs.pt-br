@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 285833fd707c524f3912fa68ca7e44878417f788
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 484b47de33df0f278c082831130bad233a501cf4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (DataType geométrico)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
 |24401|Não válido, motivo desconhecido.|  
 |24402|Não válido porque o ponto {0} é um ponto isolado que não é válido nesse tipo de objeto.|  
 |24403|Não válido porque algum par de bordas de polígono se sobrepõe.|  
-|24404|Não válido porque o anel de polígono {0} apresenta interseção consigo mesmo ou com outro anel.|  
+|24404|Não válido porque um anel de polígono {0} apresenta interseção consigo mesmo ou com outro anel.|  
 |24405|Não válido porque um anel de polígono apresenta interseção consigo mesmo ou com outro anel.|  
 |24406|Não válido porque a curva {0} se degenera em um ponto.|  
 |24407|Não válido porque o anel do polígono {0} é recolhido em uma linha no ponto {1}.|  
@@ -66,7 +63,7 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
 |24413|Não válido devido a duas bordas sobrepostas em curva {0}.|  
 |24414|Não válido porque uma borda da curva {0} se sobrepõe a uma borda da curva {1}.|  
 |24415|Não válido porque algum polígono tem uma estrutura de anel inválida.|  
-|24416|Não válido porque na curva {0} a borda que começa no ponto {1} é uma linha ou um arco degenerado com pontos de extremidade opostos.|  
+|24416|Não válido porque na curva {0} a borda que inicia no ponto {1} é uma linha ou um arco degenerado com pontos de extremidade opostos.|  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir de um objeto espacial inválido ilustra como os métodos **IsValidDetailed()** se comportam.  

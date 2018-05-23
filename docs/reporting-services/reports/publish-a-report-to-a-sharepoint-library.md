@@ -1,31 +1,29 @@
 ---
-title: "Publicar um relatório em uma biblioteca do SharePoint | Microsoft Docs"
-ms.custom: 
+title: Publicar um relatório em uma biblioteca do SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], reports in SharePoint integrated mode
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb63f117cdf9b174b09f52adf66bdc4324cf7ca8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b741eb4091c44341495fb218ea7ae618098ca02b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar um relatório em uma biblioteca do SharePoint
   Para publicar um relatório em um site do SharePoint configurado para integração do SharePoint, você deve definir as propriedades do projeto no Designer de Relatórios. Nas propriedades do projeto, todas as referências a servidores, relatórios e fontes de dados compartilhadas devem ser URLs totalmente qualificadas. Na definição de relatórios, todas as referências a sub-relatórios, relatórios detalhados e recursos como imagens com base na Web devem ser URLs totalmente qualificadas.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra um projeto existente ou novo do Servidor de Relatório.  
   
-2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo *\<project>***Páginas de Propriedades do**  será exibida.  
+2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo *\<project>***Páginas de Propriedades** será exibida.  
   
 3.  Na lista **Configuração** , selecione o nome de uma configuração de build de solução a ser usado para criar e publicar seu relatório. A configuração atual está listada como **Ativa**(*\<configuration>*).  
   

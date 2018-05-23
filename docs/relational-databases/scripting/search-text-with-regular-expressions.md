@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -25,13 +23,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de05d593aa47001a5afd2f698d5d1c181757d4c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 2.  O botão triangular **Lista de Referências** próximo ao campo **Localizar** torna-se disponível. Clique no botão para exibir uma lista das expressões regulares usadas frequentemente. Quando você seleciona qualquer item do Construtor de Expressões, o item é inserido na cadeia de caracteres **Localizar** .  
   
 > [!NOTE]  
->  Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir**a notação de chaves {} é usada para expressões marcadas. Portanto, a expressão “zo{1}” corresponde a todas as ocorrências de “zo” seguidas pela marca 1, como em “Alonzo1” e “Gonzo1”. Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Portanto, a expressão “zo{1}” corresponde a todas as ocorrências de “z” seguidas exatamente por um “o”, como em “zone” e não “zoo”.  
+>  Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir**a notação de chaves {} é usada para expressões marcadas. Então a expressão "zo {1}" corresponde a todas as ocorrências de "zo" seguidas pela marca 1, como em "Alonzo1" e "Gonzo1". Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Então a expressão "zo{1}" corresponde a todas as ocorrências de "z" seguidas exatamente por um "o", como em "zone" e não "zoo".  
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
@@ -60,7 +57,7 @@ ms.lasthandoff: 04/16/2018
 |Quebra de linha|\n|Faz a correspondência a uma quebra de linha independente de plataforma. Em uma expressão de substituição, insere uma quebra de linha.|  
 |Qualquer caractere no conjunto|[]|Faz a correspondência de qualquer um dos caracteres dentro de []. Para especificar um intervalo de caracteres, relacione o caractere de início e término separado por um traço (-), como em [a-z].|  
 |Qualquer caractere que não faz parte do conjunto|[^...]|Faz a correspondência de qualquer caractere que não pertence ao conjunto de caracteres depois de ^.|  
-|Ou|&#124;|Faz a correspondência da expressão antes ou depois do símbolo OR (&#124;). Usada principalmente dentro de grupos. Por exemplo, banho (esponja&#124;lama) corresponde a “banho de esponja” e “banho de lama”.|  
+|Ou|&#124;|Faz a correspondência da expressão antes ou depois do símbolo OR (&#124;). Usada principalmente dentro de grupos. Por exemplo, banho (esponja&#124;lama) corresponde a "banho de esponja" e "banho de lama".|  
 |Escape|\|Faz a correspondência do caractere que segue a barra invertida (\\) como um literal. Isso permite que você encontre os caracteres usados em notação de expressão regular, como { e ^. Por exemplo, \\^ pesquisa pelo caractere ^.|  
 |Expressão marcada|{}|Corresponde o texto marcado com a expressão anexada.|  
 |Identificador do C/C++|:i|Faz a correspondência da expressão ([a-zA-Z_$][a-zA-Z0-9_$]*).|  

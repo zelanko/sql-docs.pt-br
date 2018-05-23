@@ -1,32 +1,30 @@
 ---
-title: "Definir propriedades de implantação (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: Definir propriedades de implantação (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3646d424b9f2f66546369c74a4bb310d0fb6a4cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
   No[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve especificar o servidor de relatório e opcionalmente as pastas para os relatórios e fontes de dados compartilhados, de forma a poder publicar os itens no projeto do Servidor de Relatório para um servidor de relatório. As propriedades e os valores que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] precisa para compilar, visualizar e implantar relatórios são armazenados em configurações de projeto do Servidor de Relatório. Você pode criar vários conjuntos nomeados para essas propriedades de projetos, para que você possa alternar de maneira conveniente entre os conjuntos de propriedades. Cada conjunto de propriedades é uma configuração. Por exemplo, você pode ter uma configuração para publicar relatórios em um servidor de teste e uma configuração diferente para publicar relatórios para um servidor de produção.  

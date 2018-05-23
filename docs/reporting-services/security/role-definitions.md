@@ -1,35 +1,33 @@
 ---
-title: "Definições de função | Microsoft Docs"
-ms.custom: 
+title: Definições de função | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - roles [Reporting Services], security
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7618d07d7329a92c4c059b68f099fb6acbf3e338
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: da412b8111447506dce76b2c5d88569faec1b26a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions"></a>Definições de função
-  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição* de *função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  
+  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição de**função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Usando funções para autorizar o acesso a um servidor de relatório  
  Uma função só se torna operacional quando usada em uma atribuição de função. Para obter mais informações sobre como as funções fornecem segurança, consulte [Atribuições de Função](../../reporting-services/security/role-assignments.md).  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="predefined-roles"></a>Funções predefinidas  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui funções predefinidas que correspondem a níveis diferentes de interação com o usuário. A seguinte lista contém as funções predefinidas que você pode usar:  
   
--   Gerenciador de Conteúdo, Publicador, Navegador, Construtor de Relatórios e Meus Relatórios são definições de função de nível de item que você pode usar ao criar atribuições de função para acessar conteúdo de servidor de relatório.  
+-   Gerenciador de Conteúdo, Editor, Navegador, Construtor de Relatórios e Meus Relatórios são definições de função de nível de item que você pode usar ao criar atribuições de função para acessar conteúdo de servidor de relatório.  
   
 -   Administrador de Sistema e Usuário do Sistema são definições de função em nível de sistema que você pode usar para autorizar o acesso a operações de site.  
   

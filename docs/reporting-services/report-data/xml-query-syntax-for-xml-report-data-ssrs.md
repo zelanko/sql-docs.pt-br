@@ -1,32 +1,30 @@
 ---
-title: "Sintaxe de consulta XML para dados de relatório XML (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Sintaxe de consulta XML para dados de relatório XML (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
 - data processing extensions [Reporting Services], data sources
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0a76ff48f3c6f98f426ee5805898a0a1a9caf716
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 24dd0f5497d89f49234dc53e0ad71a7cf2e9ab47
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, a consulta do conjunto de dados é criada incluindo uma **Query** XML ou um caminho de elemento. Uma **Consulta** XML é iniciada com uma marcação **\<Query>** e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  

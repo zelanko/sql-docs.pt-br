@@ -1,25 +1,23 @@
 ---
-title: "Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint | Microsoft Docs"
-ms.custom: 
+title: Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint
 
@@ -63,7 +61,7 @@ Para configurar a web part para que ela aponte para o relatório específico, re
 
     ![Edite a página da Web por meio do menu suspenso da web part.](media/sharepoint-edit-web-part.png)
 
-2. Insira a **URL do Servidor de Relatório** do servidor de relatório que hospeda o relatório. Isso deverá ser semelhante a *http://myrsserver/reportserver*.
+2. Insira a **URL do Servidor de Relatório** do servidor de relatório que hospeda o relatório. Sua tabela deve ter a seguinte aparência *http://myrsserver/reportserver*.
 
 3. Insira o caminho e o nome do relatório que deseja exibir na web part. Isso será semelhante a */AdventureWorks Sample Reports/Company Sales*. Neste exemplo, o relatório *Vendas da Empresa* está em uma pasta chamada *Relatórios de Exemplo do AdventureWorks*.
 

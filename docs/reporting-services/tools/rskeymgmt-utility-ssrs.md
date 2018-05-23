@@ -1,16 +1,15 @@
 ---
-title: "Utilitário rskeymgmt (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Utilitário rskeymgmt (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c2bdcd2610eb4a4c6d351868a8fbb7aac9a44bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -65,12 +63,12 @@ rskeymgmt {-?}
  **-e**  
  Extrai a chave simétrica usada para criptografar e descriptografar dados da instância do servidor de relatório, para que você possa copiá-los em um arquivo.  
   
- Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para concluir a extração. Os argumentos que você deve especificar incluem **-f** e**-p**.  
+ Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para concluir a extração. Os argumentos que você deve especificar incluem **-f** e **-p**.  
   
  **-a**  
  Substitui uma chave simétrica existente por uma cópia que você fornece em uma senha de arquivo de backup protegido. Todas as instâncias da chave simétrica são atualizadas.  
   
- Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para selecionar o arquivo que contém a chave a ser aplicada. Os argumentos que você pode especificar incluem **-f** e**-p**.  
+ Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para selecionar o arquivo que contém a chave a ser aplicada. Os argumentos que você pode especificar incluem **-f** e **-p**.  
   
  **-d**  
  Exclui todas as instâncias de chave simétrica e todos os dados criptografados em um banco de dados do servidor de relatório. Esse argumento não exige um valor.  

@@ -1,29 +1,23 @@
 ---
 title: Mascaramento de dados dinâmicos | Microsoft Docs
-ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +35,9 @@ O mascaramento de dados dinâmicos ajuda a impedir o acesso não autorizado a da
 
 Por exemplo, um profissional de suporte de call center pode identificar os chamadores usando vários dígitos de seu número do seguro social ou número de cartão de crédito, mas esses itens de dados não devem ser totalmente expostos para o profissional de suporte. Uma regra de mascaramento pode ser definida para mascarar todos exceto os quatro últimos dígitos de qualquer número do seguro social ou número de cartão de crédito no conjunto de resultado de qualquer consulta. Em outro exemplo, ao usar a máscara de dados apropriada para proteger dados de informações de identificação pessoal (PII), um desenvolvedor pode consultar os ambientes de produção para fins de solução de problemas sem violar os regulamentos de conformidade.
 
- A finalidade do mascaramento de dados dinâmicos é limitar a exposição de dados confidenciais, impedindo que os usuários que não devem ter acesso a esses dados os visualizem. O mascaramento de dados dinâmicos não pretende impedir que usuários de banco de dados se conectem diretamente ao banco de dados e executem consultas abrangentes que exponham dados confidenciais. O mascaramento de dados dinâmicos é complementar aos outros recursos de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (auditoria, criptografia, segurança em nível de linha, etc.) e seu uso é altamente recomendável em conjunto com esses outros recursos, a fim de proteger melhor os dados confidenciais no banco de dados.  
+A finalidade do mascaramento de dados dinâmicos é limitar a exposição de dados confidenciais, impedindo que os usuários que não devem ter acesso a esses dados os visualizem. O mascaramento de dados dinâmicos não pretende impedir que usuários de banco de dados se conectem diretamente ao banco de dados e executem consultas abrangentes que exponham dados confidenciais. O mascaramento de dados dinâmicos é complementar aos outros recursos de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (auditoria, criptografia, segurança em nível de linha, etc.) e seu uso é altamente recomendável em conjunto com esses outros recursos, a fim de proteger melhor os dados confidenciais no banco de dados.  
   
- O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], e é configurado usando comandos do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obter informações adicionais sobre como configurar o mascaramento de dados dinâmicos usando o portal do Azure, veja [Introdução ao Mascaramento de Dados Dinâmicos de Bancos de Dados SQL (portal do Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], e é configurado usando comandos do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obter informações adicionais sobre como configurar o mascaramento de dados dinâmicos usando o portal do Azure, veja [Introdução ao Mascaramento de Dados Dinâmicos de Bancos de Dados SQL (portal do Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Definir uma máscara de dados dinâmicos  
  Uma regra de mascaramento pode ser definida em uma coluna de tabela para ocultar os dados dessa coluna. Há quatro tipos de máscaras disponíveis.  
@@ -70,12 +64,12 @@ Por exemplo, um profissional de suporte de call center pode identificar os chama
   
 -   Usar `SELECT INTO` ou `INSERT INTO` para copiar dados de uma coluna mascarada para outra tabela resulta em dados mascarados na tabela de destino.  
   
--   O mascaramento de dados dinâmicos é aplicado durante a execução de importações e exportações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um banco de dados que contém colunas mascaradas resultará em um arquivo de backup com dados mascarados (supondo que ele seja exportado por um usuário sem privilégios de **UNMASK** ) e o banco de dados importado conterá dados estaticamente mascarados.  
+-   O mascaramento de dados dinâmicos é aplicado durante a execução de importações e exportações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um banco de dados que contém colunas mascaradas resultará em um arquivo de dados exportado contendo dados mascarados (supondo que ele seja exportado por um usuário sem privilégios de **UNMASK**) e o banco de dados importado conterá dados estaticamente mascarados.  
   
 ## <a name="querying-for-masked-columns"></a>Consultar colunas mascaradas  
  Use a exibição **sys.masked_columns** para consultar colunas de tabela que tenham uma função de máscara aplicada. Essa exibição herda valores da exibição **sys.columns** . Ela retorna todas as colunas na exibição **sys.columns** , mais as colunas **is_masked** e **masking_function** , indicando se a coluna é mascarada e, em caso positivo, qual função de mascaramento foi definida. Essa exibição só mostra colunas com uma função de máscara aplicada.  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -108,7 +102,7 @@ O Mascaramento de dados dinâmicos foi projetado para simplificar o desenvolvime
 Por exemplo, considere uma entidade de banco de dados principal que tem privilégios suficientes para executar consultas ad hoc no banco de dados e tenta "adivinhar" os dados subjacentes e inferir os valores reais. Suponha que tenhamos uma máscara definida na coluna `[Employee].[Salary]` e esse usuário se conecte diretamente ao banco de dados e comece a adivinhar valores, eventualmente inferindo o valor `[Salary]` de um conjunto de funcionários:
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -128,7 +122,7 @@ Isso demonstra que Mascaramento de dados dinâmicos não deve ser usado como uma
 ### <a name="creating-a-dynamic-data-mask"></a>Criar uma máscara de dados dinâmicos  
  O exemplo a seguir cria uma tabela com três tipos diferentes de máscaras de dados dinâmicos. O exemplo preenche a tabela e faz seleções para mostrar o resultado.  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -145,7 +139,7 @@ SELECT * FROM Membership;
   
  Um novo usuário é criado e recebe a permissão **SELECT** na tabela. As consultas executadas como o `TestUser` exibem os dados mascarados.  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -166,14 +160,14 @@ REVERT;
  Use a instrução **ALTER TABLE** para adicionar uma máscara a uma coluna existente na tabela ou para editar a máscara nessa coluna.  
 O exemplo a seguir adiciona uma função de mascaramento para a coluna `LastName` :  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  O exemplo a seguir altera uma função de mascaramento da coluna `LastName` :  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -181,7 +175,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>Conceder permissões para exibir dados não mascarados  
  Conceder a permissão **UNMASK** permite que `TestUser` visualize os dados não mascarados.  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -194,7 +188,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>Eliminar uma máscara de dados dinâmicos  
  A instrução a seguir elimina a máscara da coluna `LastName` criada no exemplo anterior:  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -205,5 +199,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [Introdução ao mascaramento de dados dinâmicos do Banco de Dados SQL (Versão Prévia do portal do Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  
