@@ -97,13 +97,14 @@
 ## [Gerenciamento de pacote](r/r-package-management-for-sql-server-r-services.md)
 ### [Pacotes padrão](r/installing-and-managing-r-packages.md)
 ### [Obter informações sobre o pacote](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Instalar os novos pacotes R](r/install-additional-r-packages-on-sql-server.md)
 ### [Instalar os novos pacotes Python](python/install-additional-python-packages-on-sql-server.md)
-### Somente R
+### [Instalar os novos pacotes R](r/install-additional-r-packages-on-sql-server.md)
+#### [Usar gerenciadores de pacotes R](r/install-additional-r-packages-on-sql-server.md)
+#### [Usar RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [Usar T-SQL](r/install-r-packages-tsql.md)
+#### [Usar um repositório miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 #### [Habilitar o gerenciamento remoto de pacotes R](r/r-package-how-to-enable-or-disable.md)
-#### [Funções de RevoScaleR para o gerenciamento de pacotes R](r/use-revoscaler-to-manage-r-packages.md)
-#### [Sincronização de pacotes R](r/package-install-uninstall-and-sync.md)
-#### [miniCRAN para o repositório local de pacotes R](r/create-a-local-package-repository-using-minicran.md)
+#### [Sincronizar os pacotes R](r/package-install-uninstall-and-sync.md)
 #### [Soluções alternativas para "bibliotecas de usuário" do R](r/packages-installed-in-user-libraries.md)
 
 ## Exploração de dados e modelagem
