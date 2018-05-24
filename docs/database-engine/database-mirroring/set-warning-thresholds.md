@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="options"></a>Opções  
  *A instância de servidor e seu status de conexão*  
- Nome de uma instância de servidor de parceiro no formato *SYSTEM***\\*** INSTANCE_NAME*. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
+ Nome de uma instância de servidor de parceiro no formato *SYSTEM***\\***INSTANCE_NAME*. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
   
  Esse campo indica também se o monitor está conectado atualmente à instância de servidor. Os status de conexão possíveis são:  
   

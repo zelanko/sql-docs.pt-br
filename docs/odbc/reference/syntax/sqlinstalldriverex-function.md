@@ -102,9 +102,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Comentários  
  O *lpszDriver* argumento é uma lista de atributos na forma de pares de valor de palavra-chave. Cada par é encerrada com um byte nulo e a lista inteira é encerrada com um byte nulo. (Ou seja, dois bytes nulos marcar o fim da lista.) O formato desta lista é da seguinte maneira:  
   
- *driver desc* **\\** 0Driver**=***nome da DLL de driver***\\** 0 [instalação **= ***nome da DLL de instalação***\\** 0]  
+ *driver desc* **\\**0Driver**=***nome da DLL de driver***\\**0 [instalação **= ***nome da DLL de instalação***\\**0]  
   
- [*driver-attr-keyword1***=*** value1 ***\\** 0] [* driver-attr-keyword2***=*** Value2 ***\\** 0]... **\\** 0  
+ [*driver-attr-keyword1***=*** value1 ***\\**0] [* driver-attr-keyword2***=*** Value2 ***\\**0]... **\\**0  
   
  onde \0 é um byte nulo e *driver-attr-keywordn* é qualquer palavra-chave do atributo de driver. As palavras-chave devem aparecer na ordem especificada. Por exemplo, suponha que um driver para arquivos de texto formatado tem driver separado e DLLs de instalação e pode usar arquivos com as extensões. txt e. csv. O *lpszDriver* argumento para esse driver poderia ser como segue:  
   

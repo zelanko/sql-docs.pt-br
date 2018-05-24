@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
     1.  Marque ou desmarque as caixas de seleção de qualquer elemento que você deseja adicionar ou remover.  
   
-    2.  Clique com o botão direito do mouse no painel de diagrama, selecione **Adicionar Tabela…**e selecione as colunas adicionais que deseja incluir na exibição na caixa de diálogo **Adicionar Tabela** .  
+    2.  Clique com o botão direito do mouse no painel de diagrama, selecione **Adicionar Tabela…** e selecione as colunas adicionais que deseja incluir na exibição na caixa de diálogo **Adicionar Tabela** .  
   
     3.  Clique com o botão direito do mouse na barra de título da tabela que deseja remover e selecione **Remove**.  
   

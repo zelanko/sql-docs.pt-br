@@ -65,7 +65,7 @@ Para clientes que optar por configurar o dispositivo para procurar atualizaçõe
   
 3.  Na lista de conexão, clique em **VMSEthernet**e, em seguida, clique em **propriedades**.  
   
-4.  Selecione **Internet Protocol versão 4 (TCP/IPv4)**e, em seguida, clique em **propriedades**.  
+4.  Selecione **Internet Protocol versão 4 (TCP/IPv4)** e, em seguida, clique em **propriedades**.  
   
 5.  No **servidor DNS alternativo** caixa, adicione o endereço IP fornecido pelo administrador de rede do cliente.  
   

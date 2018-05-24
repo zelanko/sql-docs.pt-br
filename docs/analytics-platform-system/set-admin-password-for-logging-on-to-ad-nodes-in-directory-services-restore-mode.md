@@ -20,7 +20,7 @@ Modo de restauração de serviços de diretório (DSRM) é um modo de inicializa
   
 ## <a name="HowToDSRM"></a>Para redefinir a senha de administrador  
   
-1.  Abra uma janela de Prompt de comando em um nó de dispositivo AD ***appliance_domain*– AD*xx***máquina virtual.  
+1.  Abra uma janela de Prompt de comando em um nó de dispositivo AD ***appliance_domain *– AD*xx***máquina virtual.  
   
 2.  No prompt de comando, digite `ntdsutil`.  
   

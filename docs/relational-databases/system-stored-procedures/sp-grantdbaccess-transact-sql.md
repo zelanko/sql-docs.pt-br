@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ]  **' * logon* **'** é o nome do grupo do Windows, logon do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon a ser mapeada para o novo banco de dados usuário. Nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato *domínio*\\* logon *; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. *logon* é um **sysname**, sem padrão.  
+ [  **@loginame =** ]  **' * logon* **'** é o nome do grupo do Windows, logon do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon a ser mapeada para o novo banco de dados usuário. Nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato *domínio*\\*logon *; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. *logon* é um **sysname**, sem padrão.  
   
  [  **@name_in_db=**] **'***name_in_db***'** [ **saída**]  
  É o nome do novo usuário de banco de dados. *name_in_db* é uma variável de saída com um tipo de dados **sysname**e um padrão NULL. Se não for especificado, *login* é usado. Se for especificado como uma variável de saída com um valor nulo, **@name_in_db** é definido como *logon*. *name_in_db* ainda não deve existir no banco de dados atual.  
