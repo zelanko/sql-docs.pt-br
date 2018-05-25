@@ -26,11 +26,11 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 1fc2b483ff3a3b4a60d02c281041bb403485aaa2
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ ms.lasthandoff: 05/15/2018
 - Habilitar ou desabilitar o cache de identidade no nível do banco de dados.
 - Habilitar ou desabilitar um stub de plano compilado para ser armazenado em cache quando um lote for compilado pela primeira vez.  
 - Habilite ou desabilite a coleta de estatísticas de execução para módulos T-SQL compilados nativamente.
-- Habilitar ou desabilitar online pelas opções padrão para instruções DDL que dão suporte à sintaxe ONLINE=
-- Habilitar ou desabilitar retomáveis pelas opções padrão para instruções DDL que dão suporte à sintaxe RESUMABLE= 
-  
+- Habilitar ou desabilitar online pelas opções padrão para instruções DDL compatíveis com a sintaxe ONLINE=.
+- Habilitar ou desabilitar retomáveis pelas opções padrão para instruções DDL compatíveis com a sintaxe RESUMABLE=. 
+
  ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -246,11 +246,11 @@ no banco de dados. Essa permissão pode ser concedida por um usuário com a perm
 
 **ELEVATE_ONLINE** 
 
-Essa opção é aplicável somente a instruções DDL que dão suporte à sintaxe WITH(ONLINE=. Índices XML não são afetados 
+Essa opção é aplicável somente a instruções DDL compatíveis com a sintaxe WITH(ONLINE=). Índices XML não são afetados 
 
 **ELEVATE_RESUMABLE**
 
-Essa opção é aplicável somente a instruções DDL que dão suporte à sintaxe WITH(ONLINE=. Índices XML não são afetados 
+Essa opção é aplicável somente a instruções DDL compatíveis com a sintaxe WITH(ONLINE=). Índices XML não são afetados 
 
   
 ## <a name="metadata"></a>Metadados  
@@ -373,43 +373,6 @@ Este exemplo define ELEVATE_RESUMABLE como FAIL_UNSUPPORTED.  tsqlCopy
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
 ``` 
-
-### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>K. Estado da consulta de DATABASE SCOPED CONFIGURATION com base em instruções diferentes
-
-**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
-
-```sql 
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|OFF|NULL|1|
-|12|ELEVATE_RESUMABLE|OFF|NULL|1|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
-
-```
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

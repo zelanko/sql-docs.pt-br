@@ -1,7 +1,7 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -130,7 +130,7 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
   * Verifique se a versão do .NET Framework no computador é a 4.6.1 (ou superior).
   * Feche todas as outras instâncias do Visual Studio que estão abertas no computador.
   * Verifique se todas as atualizações mais recentes do sistema operacional estão instaladas no computador.
-  * As ações indicadas geralmente são necessárias uma única vez. Há alguns casos em que uma reinicialização é necessária durante as atualizações adicionais para a mesma versão principal do SSMS. Para obter atualizações secundárias, todos os pré-requisitos do SSMS já estarão instalados no computador.
+  * As ações indicadas geralmente são necessárias uma única vez. Há alguns casos em que uma reinicialização é necessária durante as atualizações adicionais para a mesma versão principal do SSMS. Para obter atualizações secundárias, todos os pré-requisitos do SSMS já estão instalados no computador.
 
 
 ## <a name="release-notes"></a>Notas de Versão
@@ -138,6 +138,33 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 A seguir estão os problemas e as limitações desta versão 17.7:
 
 Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com novas edições *Uso Geral* ou *Comercialmente Crítico* do Banco de Dados SQL do Azure.
+
+
+## <a name="uninstall-and-reinstall-ssms"></a>Desinstalar e reinstalar o SSMS
+
+Se a instalação do SSMS estiver tendo problemas e uma desinstalação e reinstalação padrão não os resolver, primeiro tente [reparar](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) o IsoShell do Visual Studio 2015. Se reparar o IsoShell do Visual Studio 2015 não resolver o problema, as etapas a seguir poderão corrigir diversos problemas aleatórios:
+
+1.  Desinstale o SSMS da mesma forma que desinstala qualquer aplicativo (usando *Aplicativos e recursos*, *Programas e recursos* etc. dependendo da versão do Windows).
+
+2.  Desinstale o IsoShell do Visual Studio 2015 **de um prompt de comando com privilégios elevados**:
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3.  Desinstale o Pacote Redistribuível do Microsoft Visual C++ 2015 da mesma maneira que desinstala qualquer aplicativo. Desinstale a versão x86 e a x64 se estiverem no computador.
+
+4.  Reinstale o IsoShell do Visual Studio 2015 **de um prompt de comando com privilégios elevados**:  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+ 
+    ```vs_isoshell.exe /PromptRestart```
+
+5.  Reinstale o SSMS.
+
+6.  Atualize para a [versão mais recente do Pacote Redistribuível do Visual C++ 2015](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) se você não estiver atualizado.
+
+
 
 
 ## <a name="previous-releases"></a>Versões anteriores
