@@ -7,18 +7,16 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a322df3e5f387f45471a96f2ba4779ebd875d7a6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 0275d0004bc02f1e32e7da3630c8a0bd15532d18
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instâncias de Cluster de failover - SQL Server no Linux
 

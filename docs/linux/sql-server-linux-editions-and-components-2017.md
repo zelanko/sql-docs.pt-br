@@ -3,12 +3,9 @@ title: Edições e recursos com suporte do SQL Server 2017 ~ Linux | Microsoft D
 ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: ''
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-linux
+ms.technology: linux
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -33,11 +30,11 @@ caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8e9cc52b1bc459d058c05bbe9e8cd5c570586b51
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8222c0a58c1dbaeeaa5bd3dffedcca254728aae6
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos com suporte do SQL Server 2017 no Linux
 

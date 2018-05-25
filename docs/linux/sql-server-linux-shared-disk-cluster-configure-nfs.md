@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: ddfc1b8546c97e8883730212300c331ed085b476
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.technology: linux
+ms.openlocfilehash: e0432452021919690c4d170f040e183e7de6b635
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar a instância de cluster de failover - NFS - SQL Server no Linux
 

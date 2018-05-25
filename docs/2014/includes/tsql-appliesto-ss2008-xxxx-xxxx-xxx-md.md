@@ -1,0 +1,1 @@
+**Este tópico aplica-se a:** ![Sim](media/yes.png "Sim")do SQL Server \(começando com o 2008\) ![sem](media/no.png "sem")Banco de dados SQL do azure ![sem](media/no.png "sem")Azure SQL Data Warehouse ![sem](media/no.png "sem")Parallel Data Warehouse

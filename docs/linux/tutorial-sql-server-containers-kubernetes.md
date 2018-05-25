@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
-ms.technology: database-engine
-ms.openlocfilehash: 2a2ea574d50d227b74f1143e202caa4f2381c0da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: 4aaaee69ab9c81df2161f465c2c725d5b2be3c17
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade
 
@@ -277,7 +276,7 @@ Se você configurou o contêiner conforme descrito, você pode se conectar com u
 
 Você pode usar os seguintes aplicativos para se conectar à instância do SQL Server. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssms)
+* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
 * [SSDT](http://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-ssdt)
 

@@ -7,18 +7,16 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 46e0e262773ef7a9e405dfe9a428443e80865c4e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover do grupo de disponibilidade AlwaysOn no Linux
 

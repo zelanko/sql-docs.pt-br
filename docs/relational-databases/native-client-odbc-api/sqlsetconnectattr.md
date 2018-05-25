@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b4066a595e7b17f5c5ff70b965aea3ca43a798f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad5c5425427f9bf5b8f7e6177379d91ebd10d6f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_COPT_SS_FAILOVER_PARTNER|Antes de|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|Antes de|  
 |SQL_COPT_SS_MARS_ENABLED|Antes de|  
-|SQL_COPT_SS_MULTISUBMIT_FAILOVER|Antes de|  
+|SQL_COPT_SS_MULTISUBNET_FAILOVER|Antes de|  
 |SQL_COPT_SS_OLDPWD|Antes de|  
 |SQL_COPT_SS_PERF_DATA|After (após)|  
 |SQL_COPT_SS_PERF_DATA_LOG|After (após)|  
@@ -198,7 +198,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  Se o seu aplicativo estiver se conectando a um grupo de disponibilidade [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em várias sub-redes, essa propriedade de conexão configurará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para fornecer detecção mais rápida do servidor ativo (atualmente) e conexão a ele. Por exemplo:  
   
 ```  
-SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
  Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte do Native Client para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] grupos de disponibilidade, consulte [SQL Server Native Client suporte para alta disponibilidade, recuperação de desastres](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  

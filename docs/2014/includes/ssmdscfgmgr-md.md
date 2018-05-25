@@ -1,0 +1,1 @@
+Gerenciador de Configuração do Master Data Services

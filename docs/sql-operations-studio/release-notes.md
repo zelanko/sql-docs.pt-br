@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Studio de operações (visualização)
 
@@ -33,7 +33,7 @@ O *visualização pública pode* se concentra na estabilização e correções d
 
 - Anunciando a extensão de pesquisa do SQL Redgate disponível no Gerenciador de extensões.
 - Localização de comunidade disponível para 10 idiomas: alemão, espanhol, francês, italiano, japonês, coreano, português, russo, chinês simplificado e chinês tradicional.
-- Compilação GDPR compatíveis reduziu a coleção de telemetria, experiência aprimorada de recusa e links do produto a declaração de privacidade.
+- Coleção de telemetria reduzido, experiência aprimorada de recusa e links de dentro do produto a declaração de privacidade.
 - Gerenciador de extensões tiver Marketplace melhor experiência para descobrir facilmente as extensões de comunidade.
 - Trabalhos de extensão do SQL Agent e histórico do trabalho de exibição aperfeiçoamento.
 - Atualizações para whoisactive e extensões de servidor de relatórios.

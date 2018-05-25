@@ -1,0 +1,1 @@
+SQL Server em\-OLTP de memória

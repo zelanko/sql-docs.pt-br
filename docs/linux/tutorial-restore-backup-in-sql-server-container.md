@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux
 
@@ -139,7 +138,7 @@ Este tutorial usa o [banco de dados de exemplo Wide World Importers](../sample/w
 O arquivo de backup agora está localizado dentro do contêiner. Antes de restaurar o backup, é importante saber os nomes de arquivo lógico e tipos de arquivo dentro do backup. Os seguintes comandos Transact-SQL inspecionar o backup e executar a restauração usando **sqlcmd** no contêiner.
 
 > [!TIP]
-> Este tutorial usa **sqlcmd** dentro do contêiner, como o contêiner é fornecido com essa ferramenta pré-instalado. No entanto, você também pode executar instruções Transact-SQL com outro cliente de ferramentas fora do contêiner, como [código do Visual Studio](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Para se conectar, use a porta de host foi mapeada para a porta 1433 no contêiner. Neste exemplo, que é **localhost, 1401** no computador host e **Host_IP_Address, 1401** remotamente.
+> Este tutorial usa **sqlcmd** dentro do contêiner, como o contêiner é fornecido com essa ferramenta pré-instalado. No entanto, você também pode executar instruções Transact-SQL com outro cliente de ferramentas fora do contêiner, como [código do Visual Studio](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para se conectar, use a porta de host foi mapeada para a porta 1433 no contêiner. Neste exemplo, que é **localhost, 1401** no computador host e **Host_IP_Address, 1401** remotamente.
 
 1. Executar **sqlcmd** dentro do contêiner à lista de nomes de arquivo lógicos e caminhos dentro do backup. Isso é feito com o **RESTORE FILELISTONLY** instrução Transact-SQL.
 

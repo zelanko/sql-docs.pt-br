@@ -12,67 +12,59 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dae49099f938baa071149072b277411b99e63dc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36638c4cc2bda58ac277822d5c4a4ce5421ab8b4
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Fluxo de trabalho WideWorldImportersDW ETL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-O pacote ETL WWI_Integration é usado para migrar dados do banco de dados de WideWorldImporters para o banco de dados WideWorldImportersDW como as alterações de dados. O pacote é executado periodicamente (geralmente diariamente).
+Use o *WWI_Integration* pacote ETL para migrar dados do banco de dados de WideWorldImporters para o banco de dados WideWorldImportersDW como alterações de dados. O pacote é executado periodicamente (normalmente diariamente).
 
-## <a name="overview"></a>Visão geral
+O pacote garante um alto desempenho usando o SQL Server Integration Services coordenar operações em massa T-SQL (em vez de transformações separadas no Integration Services).
 
-O design dos usos de pacote SQL Server Integration Services (SSIS) coordenar operações em massa T-SQL (em vez de como transformações separadas no SSIS) para garantir o alto desempenho.
+Dimensões são carregadas primeiro e, em seguida, as tabelas de fatos são carregadas. O pacote pode ser executada depois de uma falha.
 
-Dimensões são carregadas em primeiro lugar, seguidas por tabelas de fatos. O pacote pode ser executado novamente a qualquer momento após uma falha.
-
-O fluxo de trabalho é o seguinte:
+O fluxo de trabalho tem esta aparência:
 
  ![Fluxo de trabalho de WideWorldImporters ETL](media/wide-world-importers/wideworldimporters-etl-workflow.png)
 
-Ele começa com uma tarefa de expressão funciona o tempo limite apropriado. Essa hora é a hora atual menos alguns minutos. (Isso é mais robusto que solicitando dados diretamente para a hora atual). Em seguida, truncará qualquer milissegundos desde o momento.
+O fluxo de trabalho começa com uma tarefa de expressão que determina o tempo limite apropriado. O tempo limite é a hora atual menos de alguns minutos. (Essa abordagem é mais robusta que solicitando dados diretamente para a hora atual). Qualquer milésimos de segundo são truncados da hora.
 
-Inicia o processamento principal popular a tabela de dimensões de data. Isso garante que todas as datas do ano atual foram populadas na tabela.
+Inicia o processamento principal popular a tabela de dimensões de data. O processamento garante que todas as datas do ano atual foram populadas na tabela.
 
-Depois disso, uma série de tarefas de fluxo de dados carrega cada dimensão e, em seguida, cada fato.
+Em seguida, uma série de tarefas de fluxo de dados carrega cada dimensão. Em seguida, ele carregam cada fato.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- SQL Server 2016 (ou superior) com os bancos de dados WideWorldImporters e WideWorldImportersDW. Eles podem ser em iguais ou diferentes instâncias do SQL Server.
-- SQL Server Management Studio (SSMS)
-- SQL Server 2016 Integration Services (SSIS).
-  - Certifique-se de que ter criado um catálogo do SSIS. Se não estiver, clique com botão direito **Integration Services** no Pesquisador de objetos do SSMS e escolha **Adicionar catálogo**. Siga os padrões. Solicitará que você habilitar sqlclr e forneça uma senha.
+- SQL Server 2016 (ou posterior), com WideWorldImporters e WideWorldImportersDW bancos de dados (na mesma ou em diferentes instâncias do SQL Server)
+- SQL Server Management Studio
+- SQL Server 2016 Integration Services
+  - Certifique-se de que você cria um catálogo do Integration Services. Para criar um catálogo do Integration Services, no Pesquisador de objetos do SQL Server Management Studio, clique com botão direito **Integration Services**e, em seguida, selecione **Adicionar catálogo**. Deixe as opções padrão. Você precisará habilitar SQLCLR e forneça uma senha.
 
 
 ## <a name="download"></a>Download
 
-A versão mais recente do exemplo:
+Para obter a versão mais recente da amostra, consulte [wide-world importers versão](http://go.microsoft.com/fwlink/?LinkID=800630). Baixe o *ETL.ispac diário* arquivo de pacote do Integration Services.
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
-
-Baixe o arquivo de pacote SSIS **ETL.ispac diário**.
-
-Código-fonte para recriar o banco de dados de exemplo está disponível no seguinte local.
-
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+Para o código-fonte recriar o banco de dados de exemplo, consulte [world-wide-importadores](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
 
 ## <a name="install"></a>Instalar
 
-1. Implante o pacote do SSIS.
-   - Abra o pacote de "Diário ETL.ispac" do Windows Explorer. Isso iniciará o Assistente de implantação do Integration Services.
-   - Em "Selecionar origem" seguir o padrão de implantação de projeto, com o caminho que aponta para o pacote de "Diário ETL.ispac".
-   - Em "Selecionar destino" Insira o nome do servidor que hospeda o catálogo do SSIS.
-   - Selecione um caminho de catálogo do SSIS, por exemplo, em uma nova pasta "WideWorldImporters".
-   - Finalize o assistente, clique em implantar.
+1. Implante o pacote do Integration Services:
+   1. No Windows Explorer, abra o *ETL.ispac diário* pacote. Isso inicia o Assistente de implantação do SQL Server Integration Services.
+   2. Em **Selecionar origem**, siga os padrões para implantação de projeto, com o caminho que aponta para o *ETL.ispac diário* pacote.
+   3. Em **Selecionar destino**, digite o nome do servidor que hospeda o catálogo do Integration Services.
+   4. Selecione um caminho de catálogo do Integration Services, por exemplo, em uma nova pasta chamada *WideWorldImporters*.
+   5. Selecione **implantar** para concluir o assistente.
 
-2. Crie um trabalho do SQL Server Agent para o processo ETL.
-   - No SSMS, clique com botão direito "SQL Server Agent" e selecione Novo -> trabalho.
-   - Selecione um nome, por exemplo "WideWorldImporters ETL".
-   - Adicione uma etapa de trabalho do tipo "Pacote de serviços de integração do SQL Server".
-   - Selecione o servidor com o catálogo do SSIS e selecione o pacote de "Diário ETL".
-   - Em Configuração -> gerenciadores de Conexão, verifique se as conexões de origem e destino estão configuradas corretamente. O padrão é conectar-se à instância local.
-   - Clique em Okey para criar o trabalho.
+2. Crie um trabalho do SQL Server Agent para o processo ETL:
+   1. No Management Studio, clique com botão direito **do SQL Server Agent**e, em seguida, selecione **novo** > **trabalho**.
+   2. Insira um nome, por exemplo, *WideWorldImporters ETL*.
+   3. Adicionar um **etapa de trabalho** do tipo **pacote do SQL Server Integration Services**.
+   4. Selecione o servidor que tem o catálogo do Integration Services e, em seguida, selecione o *de ETL* pacote.
+   5. Em **configuração** > **gerenciadores de Conexão**, certifique-se de que as conexões de origem e destino estão configuradas corretamente. O padrão é conectar-se à instância local.
+   6. Selecione **Okey** para criar o trabalho.
 
 3. Executar ou agendar o trabalho.

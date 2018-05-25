@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar novos pacotes de R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve como instalar novos pacotes de R em uma instância do SQL Server onde o aprendizado de máquina está habilitado. Há vários métodos para instalar novos pacotes de R, dependendo de qual versão do SQL Server que você tem e se o servidor tem uma conexão de internet.
+Este artigo descreve como instalar novos pacotes de R em uma instância do SQL Server onde o aprendizado de máquina está habilitado. Há vários métodos para instalar novos pacotes de R, dependendo de qual versão do SQL Server que você tem e se o servidor tem uma conexão de internet. As seguintes abordagens para nova instalação de pacote são possíveis.
+
+| Abordagem                           | Permissões  | Remoto/Local |
+|------------------------------------|---------------------------|-------|
+| [Use gerenciadores de pacotes de R convencionais](#bkmk_rInstall)  | Admin | Local |
+| [Usar RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Admin | Local |
+| [Usar o T-SQL (criar biblioteca externa)](install-r-packages-tsql.md) | Administrador de funções de banco de dados posteriormente, a instalação | both 
+| [Use um miniCRAN para criar um repositório local](create-a-local-package-repository-using-minicran.md) | Administrador de funções de banco de dados posteriormente, a instalação | both |
 
 ## <a name="bkmk_rInstall"></a> Instalar pacotes de R em uma conexão de Internet
 
@@ -75,51 +82,6 @@ Este procedimento pressupõe que você preparou todos os pacotes que você preci
     Esse comando extrai o pacote R `mynewpackage` de seu arquivo compactado local, supondo que você salvou a cópia no diretório `C:\Temp\Downloaded packages`e instala o pacote no computador local. Se o pacote tiver quaisquer dependências, o instalador verifica se os pacotes existentes na biblioteca. Se você tiver criado um repositório que inclui as dependências, o instalador instalará os pacotes necessários também.
 
     Se os pacotes necessários não estão presentes na biblioteca de instância e não podem ser encontrados em arquivos compactados, a instalação do pacote de destino falha.
-
-## <a name="bkmk_createlibrary"></a> Use a biblioteca externa criar
-
-**Aplica-se a:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-O [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução, é possível adicionar um pacote ou conjunto de pacotes para uma instância ou um banco de dados sem executar R ou Python code diretamente. No entanto, esse método requer permissões de banco de dados adicionais e preparação de pacote.
-
-+ Todos os pacotes devem estar disponível como um arquivo compactado local, em vez de download sob demanda da internet.
-
-    Se você não tiver acesso ao sistema de arquivos no servidor, você também pode passar um pacote completo como uma variável, usando um formato binário. Para obter mais informações, consulte [criar biblioteca externa](../../t-sql/statements/create-external-library-transact-sql.md).
-
-+ Todas as dependências devem ser identificadas pelo nome e a versão e incluídas no arquivo zip. A instrução falhará se pacotes requeridos não estão disponíveis, incluindo as dependências do pacote de downstream. É recomendável usar **miniCRAN** ou **igraph** para análise de dependências de pacotes. Instalando a versão incorreta do pacote ou de dependência de pacote também pode causar a falha da instrução. 
-
-+ Você deve ter as permissões necessárias no banco de dados. Para obter detalhes, consulte [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
-
-### <a name="prepare-the-packages-in-archive-format"></a>Prepare os pacotes no formato de arquivo
-
-1. Se você estiver instalando um único pacote, baixe o pacote em formato compactado. 
-
-2. Se o pacote exige que todos os outros pacotes, você deve verificar se os pacotes necessários estão disponíveis. Você pode usar miniCRAN para analisar o pacote de destino e identificar todas as suas dependências. 
-
-3. Copie os arquivos compactados ou miniCRAN repositório que contém todos os pacotes em uma pasta local no servidor.
-
-4. Abra um **consulta** janela, usando uma conta com privilégios administrativos.
-
-5. Execute a instrução T-SQL `CREATE EXTERNAL LIBRARY` para carregar a coleção de pacote compactado para o banco de dados.
-
-    Por exemplo, a instrução a seguir nomes como a origem do pacote um repositório de miniCRAN que contém o **randomForest** pacote, juntamente com suas dependências. 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    Você não pode usar um nome arbitrário; o nome da biblioteca externa deve ter o mesmo nome que você pretende usar ao carregar ou chamar o pacote.
-
-6. Se a biblioteca é criada com êxito, você pode executar o pacote no SQL Server, chamando-o dentro de um procedimento armazenado.
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>Dicas para a instalação do pacote
 

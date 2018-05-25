@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 62fc87c6be8bc6a27a184dcb055f10fd72bfb266
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 559ae24a819cfff1172d1829ef3ca5e679a40122
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar um banco de dados do SQL Server do Windows para Linux usando backup e restauração
 
@@ -56,7 +55,7 @@ Há várias maneiras de criar um arquivo de backup de um banco de dados no Windo
 
 1. No Pesquisador de objetos, expanda **bancos de dados**.
 
-1. Clique duas vezes o banco de dados de destino, selecione **tarefas**e, em seguida, clique em **backup...** .
+1. Clique duas vezes o banco de dados de destino, selecione **tarefas**e, em seguida, clique em **backup... **.
 
    ![Use o SSMS para criar um arquivo de backup](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
@@ -102,7 +101,7 @@ Para restaurar o banco de dados, é necessário primeiro transferir o arquivo de
    ![comando SCP](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
 > [!TIP]
-> Existem alternativas para usar o scp para transferência de arquivos. Uma é usar [Samba](https://help.ubuntu.com/community/Samba) para configurar um compartilhamento de rede SMB entre o Windows e Linux. Para obter uma explicação sobre Ubuntu, consulte [como criar um compartilhamento de rede por meio do Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Depois de estabelecida, você pode acessá-lo como um arquivo de rede compartilham do Windows, tais como  **\\ \\machinenameorip\\compartilhar**.
+> Existem alternativas para usar o scp para transferência de arquivos. Uma é usar [Samba](https://help.ubuntu.com/community/Samba) para configurar um compartilhamento de rede SMB entre o Windows e Linux. Para obter uma explicação sobre Ubuntu, consulte [como criar um compartilhamento de rede por meio do Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Depois de estabelecida, você pode acessá-lo como um arquivo de rede compartilham do Windows, tais como ** \\ \\machinenameorip\\compartilhar**.
 
 ## <a name="move-the-backup-file-before-restoring"></a>Mova o arquivo de backup antes de restaurar
 
