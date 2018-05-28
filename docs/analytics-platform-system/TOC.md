@@ -18,6 +18,7 @@
 ## [Configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md)
 
 # Consulta
+## [Configurar estatísticas automáticas](configure-auto-statistics.md)
 ## [Monitorando consultas ativas](monitoring-active-queries.md)
 
 # Carregar
@@ -69,6 +70,7 @@
 ### [Configuração de rede do dispositivo](appliance-network-configuration.md)
 ### [Topologia do PDW](pdw-topology.md)
 ### [Provisionamento de certificado do PDW](pdw-certificate-provisioning.md)
+### [Opção de recurso do PDW](appliance-feature-switch.md)
 ### [Configuração do firewall do PDW](pdw-firewall-configuration.md)
 ### [Status de serviços do PDW](pdw-services-status.md)
 ### [Configuração da inicialização imediata de arquivo](instant-file-initialization-configuration.md)
