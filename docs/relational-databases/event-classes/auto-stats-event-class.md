@@ -1,5 +1,4 @@
-título: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.prod_service: "database-engine, sql-database" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
-  - "database-engine" ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
+título: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.reviewer: "" ms.suite: "sql" ms.technology: supportability ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
   - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: craigg
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
@@ -8,7 +7,7 @@ título: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14
   
 ## <a name="auto-stats-event-class-data-columns"></a>Colunas de dados da classe de evento Auto Stats  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

@@ -34,11 +34,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236137"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +341,8 @@ Se a tabela subjacente tiver uma coluna de um tipo de dados não compatível com
 -   uniqueidentifier (aplica-se ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Índices columnstore não clusterizados:**
--   Não pode ter mais de 1024 colunas.  
--   Uma tabela com um índice columnstore não clusterizado pode ter restrições exclusivas, restrições de chave primária ou restrições de chave estrangeira, mas as restrições não podem ser incluídas no índice columnstore não clusterizado.  
+-   Não pode ter mais de 1024 colunas.
+-   Não pode ser criado como um índice baseado em restrição. É possível ter restrições exclusivas, restrições de chave primária e restrições de chave estrangeira em uma tabela com um índice columnstore. As restrições sempre são impostas com um índice de repositório de linha. As restrições não podem ser impostas com um índice columnstore (clusterizado ou não clusterizado).
 -   Não pode ser criado em uma exibição ou exibição indexada.  
 -   Não pode incluir uma coluna esparsa.  
 -   Não pode ser alterado usando a instrução **ALTER INDEX**. Para alterar o índice não clusterizado, é preciso descartar e recriar o índice columnstore. Você pode usar **ALTER INDEX** para desabilitar e recompilar um índice columnstore.  

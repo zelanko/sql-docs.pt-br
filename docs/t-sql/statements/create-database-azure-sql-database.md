@@ -1,7 +1,7 @@
 ---
 title: CREATE DATABASE (Banco de Dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 05/15/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -33,11 +33,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8de55d9ef9bd940670963b1f2f05ff2b7c27a730
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5d3ff692dc3935bb8791d4c71285b3b7f2a55b7
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225274"
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -65,8 +66,10 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' 
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
+      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
+      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
       | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
 
@@ -81,9 +84,10 @@ CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name  
     [ ( SERVICE_OBJECTIVE = 
       {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
-        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'  
-        | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' 
-        | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
+      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
+      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
         | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
   ]  
  [;] 
@@ -151,15 +155,26 @@ O valor MAXSIZE do modelo baseado em DTU, se especificado, deve ser um valor vá
  
 **Modelo com base em vCore**
 
-**Camada de serviço de Uso Geral**
-|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |
-|Tamanho máximo de dados (GB)|1024|1024|1536|3072|4096|
+**Camada de serviço de Uso Geral – plataforma de computação de Geração 4**
+|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
+|:--- | --: |--: |--: |--: |--: |--:|
+|Tamanho máximo de dados (GB)|1024|1024|1536|3072|4096|4096|
 
-**Camada de serviços Comercialmente Críticos**
+**Camada de serviço de Uso Geral – plataforma de computação de Geração 5**
+|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
+|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
+|Tamanho máximo de dados (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
+
+
+**Camada de serviço Comercialmente Crítica – plataforma de computação de Geração 4**
 |Nível de desempenho|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |
-|Tamanho máximo de dados (GB)|1024|1024|1536|2048|2048|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Tamanho máximo de dados (GB)|1024|1024|1024|1024|1024|1024|
+
+**Camada de serviço Comercialmente Crítica – plataforma de computação de Geração 5**
+|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
+|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
+|Tamanho máximo de dados (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
 Se nenhum `MAXSIZE`valor for definido ao usar o modelo vCore, o padrão será de 32 GB. Para obter detalhes adicionais sobre limitações de recursos para o modelo com base em vCore, veja [Limites de recurso baseado em vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
@@ -170,7 +185,7 @@ As regras a seguir se aplicam aos argumentos MAXSIZE e EDITION:
 
 SERVICE_OBJECTIVE
 
-Especifica o nível de desempenho. Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`. 
+Especifica o nível de desempenho. Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`. 
 
 Para obter descrições do objetivo de serviço e mais informações sobre o tamanho, as edições e as combinações de objetivos de serviço, confira [Camadas de serviço do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers). Se o SERVICE_OBJECTIVE especificado não for compatível com a edição, você receberá um erro. Para alterar o valor SERVICE_OBJECTIVE de uma camada para outra (por exemplo, de S1 para P1), você deve alterar também o valor EDITION. Para obter descrições de objetivos de serviço e mais informações sobre o tamanho, as edições e as combinações de objetivo de serviço, veja [Camadas de serviço e níveis de desempenho do Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Limites de recurso baseado em DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) e [Limites de recurso baseado em vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  O suporte para objetivos de serviço PRS foi removido. Em caso de dúvidas, use este alias de email: premium-rs@microsoft.com. 
   

@@ -20,11 +20,12 @@ caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7da8010a7d5450077f1d6de0676c8c671a2744b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43a7535395f42349e08d2d04d8b76def1a64306c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300234"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Visão geral de Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **Asynchronous-commit mode**  
   
-     Uma réplica de disponibilidade que usa esse modo de disponibilidade é conhecida como uma*réplica da confirmação assíncrona*. No modo de confirmação assíncrona, a réplica primária confirma as transações sem esperar a confirmação de que uma réplica secundária de confirmação assíncrona protegeu o log. O modo de confirmação assíncrona minimiza a latência de transações nos bancos de dados secundários, mas permite que elas atrasem os bancos de dados primários, possibilitando a perda de dados.  
+     Uma réplica de disponibilidade que usa esse modo de disponibilidade é conhecida como *réplica da confirmação assíncrona*. No modo de confirmação assíncrona, a réplica primária confirma as transações sem esperar a confirmação de que uma réplica secundária de confirmação assíncrona protegeu o log. O modo de confirmação assíncrona minimiza a latência de transações nos bancos de dados secundários, mas permite que elas atrasem os bancos de dados primários, possibilitando a perda de dados.  
   
 -   **Synchronous-commit mode**  
   

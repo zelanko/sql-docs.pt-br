@@ -1,6 +1,6 @@
 ---
 title: Implantar um projeto do SSIS com o Transact-SQL (SSMS) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,18 +12,16 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 975bf68b5d3255ff965e9092e84b2dabf982b90b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bbcae0e5aea6521ad75401002d0a1488b5dbdf6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455159"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Implantar um projeto do SSIS por meio do SSMS com o Transact-SQL
 
 Este guia de início rápido demonstra como usar o SSMS (SQL Server Management Studio) para se conectar ao banco de dados do Catálogo do SSIS e, em seguida, usar instruções do Transact-SQL para implantar um projeto do SSIS no Catálogo do SSIS. 
-
-> [!NOTE]
-> O método descrito neste artigo não está disponível quando você se conecta a um servidor de Banco de Dados SQL do Azure com o SSMS. O procedimento armazenado `catalog.deploy_project` espera o caminho para o arquivo `.ispac` no sistema de arquivos local.
 
 O SQL Server Management Studio é um ambiente integrado para gerenciar qualquer infraestrutura do SQL, do SQL Server ao Banco de Dados SQL. Para obter mais informações sobre o SSMS, consulte [SSMS (SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md).
 
@@ -31,12 +29,19 @@ O SQL Server Management Studio é um ambiente integrado para gerenciar qualquer 
 
 Antes de começar, verifique se você tem a última versão do SQL Server Management Studio. Para baixar o SSMS, consulte [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
+## <a name="supported-platforms"></a>Plataformas compatíveis
+
+Você pode usar as informações neste guia de início rápido para implantar um projeto do SSIS nas seguintes plataformas:
+
+-   SQL Server no Windows.
+
+Você não pode usar as informações neste guia de início rápido para implantar um pacote do SSIS para o Banco de Dados SQL do Azure. O procedimento armazenado `catalog.deploy_project` espera o caminho para o arquivo `.ispac` no sistema de arquivos local. Para obter mais informações sobre como implantar e executar pacotes no Azure, veja [Remover e deslocar cargas de trabalho do SQL Server Integration Services para a nuvem](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Você não pode usar as informações neste guia de início rápido para implantar um pacote do SSIS no SQL Server em Linux. Para obter mais informações sobre como executar pacotes no Linux, veja [Extrair, transformar e carregar dados no Linux com o SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Conectar-se ao banco de dados de Catálogo do SSIS
 
 Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo do SSIS. 
-
-> [!NOTE]
-> Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
 1. Abra o SQL Server Management Studio.
 
@@ -46,7 +51,7 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de banco de dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome do servidor totalmente qualificado |  |
-   | **Autenticação** | Autenticação do SQL Server | Este guia de início rápido usa a autenticação do SQL. |
+   | **Autenticação** | Autenticação do SQL Server | |
    | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
    | **Senha** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
 
@@ -61,7 +66,7 @@ Execute o seguinte código Transact-SQL para implantar um projeto do SSIS.
 
 2.  Atualizar os valores de parâmetro no procedimento armazenado `catalog.deploy_project` para seu sistema.
 
-3.  Verifique se o SSISDB é o banco de dados atual.
+3.  Verifique se **SSISDB** é o banco de dados atual.
 
 4.  Execute o script.
 

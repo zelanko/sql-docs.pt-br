@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455549"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +185,7 @@ ALTER TABLE InsurancePolicy
   
 -   A adição de um período executará a verificação de consistência dos dados na tabela atual a fim de se certificar de que os padrões para colunas do período são válidos.  
   
--   Quando uma tabela de histórico existente é especificada ao habilitar **SYSTEM_VERSIONING**, uma verificação de consistência de dados temporais é executada na tabela atual e de histórico. Ela pode ser ignorada se você especificar **DATA_CONISTENCY_CHECK = OFF** como um parâmetro adicional.  
+-   Quando uma tabela de histórico existente é especificada ao habilitar **SYSTEM_VERSIONING**, uma verificação de consistência de dados temporais é executada na tabela atual e de histórico. Ela poderá ser ignorada se você especificar **DATA_CONSISTENCY_CHECK = OFF** como um parâmetro adicional.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Migrar as tabelas existentes para o suporte interno  
  Este exemplo mostra como migrar uma solução existente, com base em gatilhos, para o suporte temporal interno. Para este exemplo, vamos supor que a solução personalizada atual divide os dados atuais e históricos em duas tabelas de usuário separadas (**ProjectTaskCurrent** e **ProjectTaskHistory**). Se a solução existente usa uma única tabela para armazenar as linhas reais e históricas, divida os dados entre duas tabelas antes das etapas de migração mostradas neste exemplo:  

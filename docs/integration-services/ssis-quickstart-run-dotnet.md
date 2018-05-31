@@ -1,6 +1,6 @@
 ---
 title: Executar um projeto do SSIS com código .NET (C#) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d53d460267c8eaee91da326000db806a28e2db39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455240"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Executar um pacote do SSIS com o código C# em um aplicativo .NET
-Este tutorial de início rápido demonstra como gravar código C# para se conectar a um servidor de banco de dados e executar um pacote do SSIS.
+Este guia de início rápido demonstra como gravar código C# para se conectar a um servidor de banco de dados e executar um pacote do SSIS.
 
 Você pode usar o Visual Studio, o Visual Studio Code ou outra ferramenta de sua preferência para criar um aplicativo C#.
 
@@ -27,19 +28,18 @@ Você pode usar o Visual Studio, o Visual Studio Code ou outra ferramenta de sua
 
 Antes de começar, verifique se você tem o Visual Studio ou Visual Studio Code instalado. Baixe a Community Edition gratuita do Visual Studio ou o Visual Studio Code gratuito de [Downloads do Visual Studio](https://www.visualstudio.com/downloads/).
 
-> [!NOTE]
-> Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
+Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>Obter as informações de conexão se implantado no Banco de Dados SQL
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Para o Banco de Dados SQL do Azure, obtenha as informações de conexão
 
-Se os pacotes são implantados em um Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
+Para executar o pacote no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
 1. Faça logon no [portal do Azure](https://portal.azure.com/).
-2. Selecione **Bancos de Dados SQL** no menu à esquerda e clique em banco de dados do SSISDB na página **Bancos de dados SQL**. 
-3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para mostrar a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
+2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
+3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 5. Clique em **Mostrar cadeias de conexão de banco de dados**.
-6. Examine a cadeia de conexão **ADO.NET** completa. O código de exemplo usa um `SqlConnectionStringBuilder` para recriar essa cadeia de conexão com os valores de parâmetro individuais que você fornece.
+6. Examine a cadeia de conexão **ADO.NET** completa. Opcionalmente, seu código pode usar um `SqlConnectionStringBuilder` para recriar essa cadeia de conexão com os valores de parâmetro individuais que você fornece.
 
 ## <a name="create-a-new-visual-studio-project"></a>Criar um novo projeto do Visual Studio
 
@@ -65,7 +65,7 @@ Se os pacotes são implantados em um Banco de Dados SQL do Azure, obtenha as inf
 2. Substitua o conteúdo de **Program.cs** pelo código a seguir. Adicione os valores apropriados para seu servidor, banco de dados, usuário e senha.
 
 > [!NOTE]
-> O exemplo a seguir usa a Autenticação do Windows. Para usar a autenticação do SQL Server, substitua o argumento `Integrated Security=SSPI;` com `User ID=<user name>;Password=<password>;`.
+> O exemplo a seguir usa a Autenticação do Windows. Para usar a autenticação do SQL Server, substitua o argumento `Integrated Security=SSPI;` com `User ID=<user name>;Password=<password>;`. Se você estiver se conectando a um servidor de Banco de Dados SQL do Azure, não poderá usar a autenticação do Windows.
 
 
 ```csharp

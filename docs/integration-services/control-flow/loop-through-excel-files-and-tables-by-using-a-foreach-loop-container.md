@@ -1,7 +1,7 @@
 ---
 title: Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: control-flow
@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d151fd801483bd39188ad3474f95ae9ce0036af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52daa47d99e6b9dab35f12280a7c89c710e1aa17
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235660"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
   Os procedimentos neste tópico descrevem como criar um loop através de pastas de trabalho do Excel ou através de tabelas em uma pasta de trabalho do Excel, usando o contêiner Loop Foreach com o enumerador apropriado.  
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
 1.  Crie uma variável de cadeia que receberá o caminho atual do Excel e nome de arquivo em cada iteração do loop. Para evitar problemas de validação, atribua um caminho de Excel válido e um nome de arquivo como o valor inicial da variável. (A expressão de amostra exibida mais adiante neste procedimento usa o nome da variável, `ExcelFile`.)  
   
-2.  Como alternativa, crie outra variável de cadeia que irá conter o valor do argumento Propriedades Estendidas da cadeia de conexão do Excel. Este argumento contém uma série de valores que especificam a versão do Excel, determinam se a primeira linha contém nomes de coluna e se o modo de importação é usado. (A expressão de amostra exibida mais adiante neste procedimento usa o nome de variável `ExtProperties`, com um valor inicial de “`Excel 8.0;HDR=Yes`”.)  
+2.  Como alternativa, crie outra variável de cadeia que irá conter o valor do argumento Propriedades Estendidas da cadeia de conexão do Excel. Este argumento contém uma série de valores que especificam a versão do Excel, determinam se a primeira linha contém nomes de coluna e se o modo de importação é usado. (A expressão de amostra exibida mais adiante neste procedimento usa o nome de variável `ExtProperties`, com um valor inicial de “`Excel 12.0;HDR=Yes`”.)  
   
      Se você não usar uma variável para o argumento Propriedades Estendidas, adicione-a manualmente à expressão que contém a cadeia de conexão.  
   
 3.  Adicione um contêiner Loop Foreach à guia **Fluxo de Controle** . Para obter informações sobre como configurar um Contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-4.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o enumerador de Arquivo Foreach, especifique a pasta na qual as pastas de trabalho do Excel ficam situadas e especifique o filtro de arquivo (geralmente *.xls).  
+4.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o enumerador de Arquivo Foreach, especifique a pasta na qual as pastas de trabalho do Excel estão situadas e especifique o filtro de arquivo (geralmente *.xlsx).  
   
 5.  Na página **Mapeamento de Variáveis** , mapeie Index 0 para uma variável de cadeia definida pelo usuário que receberá o caminho atual do Excel e o nome de arquivo em cada iteração do loop. (A expressão de amostra exibida mais adiante neste procedimento usa o nome da variável `ExcelFile`.)  
   
@@ -62,22 +63,22 @@ ms.lasthandoff: 05/03/2018
 10. No Construtor de Expressões, digite a expressão a seguir:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
     ```  
   
      Observe o uso do caractere de escape "\\" para não ter que usar as aspas exigidas no valor do argumento Propriedades Estendidas.  
   
-     O argumento Propriedades Estendidas não é opcional. Se você não usar uma variável para conter seu valor, adicione-a manualmente à expressão, como neste exemplo de um arquivo do Excel 2003:  
+     O argumento Propriedades Estendidas não é opcional. Se você não usar uma variável para conter seu valor, será preciso adicioná-la manualmente à expressão, como neste exemplo:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 8.0"  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 12.0"  
     ```  
   
 11. Crie tarefas no contêiner Loop Foreach que usam o gerenciador de conexões do Excel para executar as mesmas operações em cada pasta de trabalho do Excel que corresponde ao local e padrão de arquivo especificado.  
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para criar um loop através de tabelas do Excel usando o enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach  
   
-1.  Crie um gerenciador de conexões ADO.NET que use o provedor OLE DB do Microsoft Jet para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões** , insira o Excel 8.0 como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Crie um gerenciador de conexões ADO.NET que use o Provedor Microsoft ACE OLE DB para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões**, insira a versão do Excel, neste caso, Excel 12.0, como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Crie uma variável de cadeia que receberá o nome da tabela atual em cada iteração do loop.  
   

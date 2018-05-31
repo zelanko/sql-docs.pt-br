@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eeacfa947295ed049cb8ce7aa2af2db32a0c6e47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8bff088048ed6a547eae419a870d32da9ba8112
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300574"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,8 @@ ms.lasthandoff: 05/03/2018
   
  Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Os failovers não são provocados por problemas de banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados, à exclusão de um banco de dados ou à corrupção de um log de transações.  
  
- >[OBSERVAÇÃO] Grupos de disponibilidade Always On são o nome completo e formal desse recurso de disponibilidade. A abreviação é AG, não AOAG ou AAG. 
+ >[!NOTE]
+ >Grupos de disponibilidade Always On são o nome completo e formal desse recurso de disponibilidade. A abreviação é AG, não AOAG ou AAG. 
   
 ##  <a name="Benefits"></a> Benefícios  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornecem um conjunto diversificado de opções que melhoram a disponibilidade do banco de dados e habilitam o uso aprimorado de recursos. Os principais componentes são os seguintes:  

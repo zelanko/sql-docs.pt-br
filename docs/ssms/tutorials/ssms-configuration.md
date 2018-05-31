@@ -1,6 +1,6 @@
 ---
-Title: 'Tutorial: SQL Server Management Studio Components and Configuration'
-description: Um tutorial que descreve os componentes e opções de configuração básicas para seu ambiente do SQL Server Management Studio.
+Title: 'Tutorial: SQL Server Management Studio components and configuration'
+description: Um tutorial descrevendo os componentes e as opções de configuração básica para seu ambiente do SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
@@ -12,130 +12,132 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 51fb197c3b5177c699134a48fc4888cd134e1711
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 645f52265cbb8e80c7265bcae111300f03e0bc7a
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455280"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: componentes e configuração do SQL Server Management Studio
-Este Tutorial descreve os diferentes componentes de janela no SSMS (SQL Server Management Studio) e algumas opções de configuração básicas para seu espaço de trabalho. Neste artigo, você aprenderá sobre como: 
+Este tutorial descreve os diversos componentes de janela no SSMS (SQL Server Management Studio) e algumas opções de configuração básicas para seu espaço de trabalho. Neste artigo, você aprenderá como: 
 
 > [!div class="checklist"]
-> * Os diferentes componentes que formam o ambiente de SSMS
+> * Identificar os componentes que formam o ambiente de SSMS
 > * Alterar o layout do ambiente e redefini-lo para o padrão
 > * Maximizar o editor de consultas
-> * Alterar a fonte 
+> * Alterar fonte 
 > * Configurar as opções de inicialização 
-> * Redefinir a configuração de volta ao padrão 
+> * Redefinir a configuração para o padrão 
 
 ## <a name="prerequisites"></a>Prerequisites
-Para concluir este Tutorial, você precisará do SQL Server Management Studio.  
+Para concluir este tutorial, você precisará do SQL Server Management Studio.  
 
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio
-Esta seção aborda os diferentes componentes de janela disponíveis no espaço de trabalho e sua finalidade. 
+Esta seção descreve os vários componentes de janela que estão disponíveis no espaço de trabalho e como usá-los. 
 
-- Cada componente de janela pode ser fechado clicando no X no canto superior da barra de título e reaberto na lista suspensa **Exibir** no menu principal. 
+- Para fechar uma janela, selecione o **X** no canto direito da barra de título. 
+- Para reabrir uma janela, selecione a janela no menu **Exibir**. 
 
-    ![Menu Exibir](media/ssms-configuration/viewmenu.png)
+    ![No menu Exibir](media/ssms-configuration/viewmenu.png)
 
-- **Pesquisador de Objetos** (F8): o Pesquisador de Objetos é um modo de exibição de árvore de todos os objetos de banco de dados em um servidor. Isso pode incluir bancos de dados do Mecanismo de Banco de Dados do SQL Server, Analysis Services, Reporting Services e Integration Services. O Pesquisador de Objetos inclui informações de todos os servidores aos quais está conectado. 
+- **Pesquisador de Objetos** (F8): o Pesquisador de Objetos é um modo de exibição de árvore de todos os objetos de banco de dados em um servidor. Essa exibição inclui os bancos de dados do Mecanismo de Banco de Dados do SQL Server, SQL Server Analysis Services, SQL Server Reporting Services e SQL Server Integration Services. O Pesquisador de Objetos inclui informações de todos os servidores conectados a ele. 
     
     ![Pesquisador de Objetos](media/ssms-configuration/objectexplorer.png)
-- **Janela de Consulta** (Ctrl+N): depois de clicar em **Nova Consulta**, esta é a janela onde você digitará em suas consultas T-SQL (Transact-SQL). Os resultados das consultas também serão exibidos aqui.
+- **Janela de Consulta** (Ctrl+N): depois de selecionar **Nova Consulta**, insira suas consultas T-SQL (Transact-SQL) nesta janela. Os resultados das suas consultas também são exibidos aqui.
     
     ![Janela Nova Consulta](media/ssms-configuration/newquery.png)
 
-- **Propriedades** (F4): isso fica visível depois que a **Janela de Consulta** é aberta e exibe as propriedades básicas da consulta. Por exemplo, ela mostrará a hora de início de uma consulta, o número de linhas retornado e os detalhes da conexão.  
+- **Propriedades** (F4): você pode ver a exibição Propriedades quando a Janela de Consulta está aberta. A exibição mostra as propriedades básicas da consulta. Por exemplo, mostra a hora em que uma consulta começou, o número de linhas retornadas e os detalhes da conexão.  
 
     ![Propriedades](media/ssms-configuration/properties.png)
 
-- **Navegador de Modelos** (Ctrl+Alt+T): há diversos modelos predefinidos do T-SQL que podem ser encontrados no navegador de modelos. Esses modelos permitem que você execute várias funções, como criar ou fazer backup de um banco de dados. 
+- **Navegador de Modelos** (Ctrl+Alt+T): o Navegador de Modelos tem vários modelos T-SQL predefinidos. Você pode usar esses modelos para executar várias funções, como criar ou fazer backup de um banco de dados. 
 
     ![Navegador de Modelos](media/ssms-configuration/templates.png)
 
-- **Detalhes do Pesquisador de Objetos**(F7): esta é uma exibição mais granular do que está visível no Pesquisador de Objetos, e permite que você manipule vários objetos ao mesmo tempo. Por exemplo, a janela de Detalhes do Pesquisador de Objetos permite que você selecione vários bancos de dados simultaneamente e os exclua ou gere o script deles. 
+- **Detalhes do Pesquisador de Objetos** (F7): essa exibição é mais granular do que a exibição no Pesquisador de Objetos. Você pode usar os Detalhes do Pesquisador de Objetos para manipular vários objetos ao mesmo tempo. Por exemplo, nesta janela, você pode selecionar vários bancos de dados e excluí-los ou criar o script deles simultaneamente. 
 
     ![Detalhes do Pesquisador de Objetos](media/ssms-configuration/objectexplorerdetails.PNG) 
  
-
     
 
-## <a name="change-the-environmental-layout"></a>Alterar o layout do ambiente 
-Esta seção aborda como manipular o layout do ambiente, tal como mover as diversas janelas. 
+## <a name="change-the-environment-layout"></a>Alterar o layout do ambiente 
+Esta seção descreve como alterar o layout do ambiente, por exemplo, como mover várias janelas. 
 
--  Cada componente da janela pode ser movido mantendo pressionado o título e arrastando a janela. 
-- Cada componente da janela pode ser fixado e desafixado selecionando o ícone de pino na barra de título:
+- Para mover uma janela, pressione e segure o título e, em seguida, arraste a janela. 
+- Para fixar ou desafixar uma janela, selecione o ícone de alfinete na barra de título:
     
-    ![Fixar objetos](media/ssms-configuration/pushpin.png)
+    ![Fixar um objeto](media/ssms-configuration/pushpin.png)
 
-- Cada componente de janela tem uma seta suspensa que permite que a janela ser manipulada de diversas maneiras: 
+- Cada componente de janela tem um menu suspenso que você pode usar para manipular a janela de várias maneiras: 
 
     ![Opções de janela](media/ssms-configuration/windowoptions.png)
 
-- Quando você tiver duas ou mais janelas de consulta abertas, elas podem ser navegadas verticalmente ou horizontalmente, para que ambas as janelas de consulta fiquem visíveis ao mesmo tempo. Para fazer isso, clique com o botão direito do mouse no título da consulta e selecione a opção de navegação pelas guias desejada. 
+- Quando duas ou mais janelas de consulta estão abertas, elas podem ser colocadas em guias vertical ou horizontalmente para que ambas as janelas de consulta fiquem visíveis. Para exibir janelas com guias, clique com o botão direito do mouse no título da consulta e, em seguida, selecione a opção com guias que você deseja: 
  
     ![Opções de guia de consulta](media/ssms-configuration/querytabbedoptions.png)
 
-    - Este é o **Agrupamento de guias horizontal**: ![Agrupamento de guias horizontal](media/ssms-configuration/horizontaltab.png)     
+    - Aqui está um Grupo de Guias Horizontais:
+
+      ![Um exemplo de Grupo de Guias Horizontais](media/ssms-configuration/horizontaltab.png)     
     
-    - Este é o **Agrupamento de guias vertical**:  
-        ![Agrupamento de guias horizontal](media/ssms-configuration/verticaltabgroup.png)
+    - Aqui está um Grupo de Guias Verticais:
+
+      ![Um exemplo de Grupo de Guias Verticais](media/ssms-configuration/verticaltabgroup.png)
         
-
-    - Para mesclar as guias novamente, clique com o botão direito do mouse no título da consulta novamente e em **Mover para o próximo grupo de guias** ou **Mover para o grupo de guias anterior**:
+    - Para mesclar as guias, clique com o botão direito do mouse no título da consulta e selecione **Mover para o Grupo de Guias Seguinte** ou **Mover para o Grupo de Guias Anterior**:
     
-        ![Mesclar guias de consulta](media/ssms-configuration/mergetabgroups.png)
+      ![Mesclar guias de consulta](media/ssms-configuration/mergetabgroups.png)
 
-- Para restaurar o layout do ambiente padrão, clique no **Menu de Janela** > **Redefinir Layout da Janela**:
+- Para restaurar o layout do ambiente padrão, no menu **Janela**, selecione **Redefinir Layout da Janela**:
  
-    ![Restaurar Layout de Janela](media/ssms-configuration/resetwindowlayout.png)
+    ![Restaurar o layout da janela](media/ssms-configuration/resetwindowlayout.png)
     
 ## <a name="maximize-query-editor"></a>Maximizar o Editor de Consultas
-O editor de consultas pode ser maximizado para o modo de tela inteira.
+Você pode maximizar o Editor de Consultas para o modo de tela inteira:
 
-1. Clique em qualquer lugar na Janela do Editor de Consultas.
-2. Pressione SHIFT + ALT + ENTER para alternar entre o modo de tela inteira e o modo comum. 
+1. Clique em qualquer lugar na janela do Editor de Consultas.
+2. Pressione Shift+Alt+Enter para alternar entre o modo de tela inteira e o modo comum. 
 
 Esse atalho de teclado funciona com qualquer janela de documentos. 
 
 
 
-## <a name="change-basic-settings"></a>Alterar as configurações básicas
-Esta seção descreve como modificar algumas configurações básicas no SSMS. Essas opções encontram-se a opções do menu **Ferramentas**:
+## <a name="change-basic-settings"></a>Alterar configurações básicas
+Esta seção descreve como modificar algumas configurações básicas no SSMS usando o menu **Ferramentas**.
 
-  ![Menu Ferramentas](media/ssms-configuration/tools.png)
+  ![menu Ferramentas](media/ssms-configuration/tools.png)
 
 
-- A barra de ferramentas realçada pode ser modificada acessando o menu: **Ferramentas** > **Personalizar**:
+- Para modificar a barra de ferramentas realçada, selecione **Ferramentas** > **Personalizar**:
 
-    ![Personalizar Barra de Ferramentas](media/ssms-configuration/toolbar.png)
+    ![Personalizar uma barra de ferramentas](media/ssms-configuration/toolbar.png)
 
 ### <a name="change-the-font"></a>Alterar fonte
-- A fonte pode ser alterada no menu: **Ferramentas** > **Opções** > **Fontes e Cores**:
+- Para alterar a fonte, selecione **Ferramentas** > **Opções** > **Fontes e Cores**:
 
-     ![Fontes e Cores](media/ssms-configuration/fontsandcolors.png)
+     ![Alterar fontes e cores](media/ssms-configuration/fontsandcolors.png)
 
-### <a name="change-the-startup-options"></a>Alterar as opções de inicialização
-- As opções de inicialização determinam como seu espaço de trabalho aparece ao abrir o SSMS pela primeira vez. Elas podem ser configuradas no menu: **Ferramentas** > **Opções** > **Inicialização**:
+### <a name="change-startup-options"></a>Alterar opções de inicialização
+- As opções de inicialização determinam como seu espaço de trabalho aparece ao abrir o SSMS pela primeira vez. Para alterar as opções de inicialização, selecione **Ferramentas** > **Opções** > **Inicialização**:
  
-    ![Opções de inicialização](media/ssms-configuration/startup.png)
+    ![Alterar opções de inicialização](media/ssms-configuration/startup.png)
 
-### <a name="reset-settings-to-default"></a>Redefinir as configurações como o padrão
-- Todas essas configurações podem ser exportadas e importadas no menu: **Ferramentas** > **Importar e Exportar Configurações** 
+### <a name="reset-settings-to-the-default"></a>Redefinir as configurações para o padrão
+- Você pode exportar e importar todas essas configurações do menu. Para importar ou exportar as configurações ou para restaurar as configurações padrão, selecione **Ferramentas** > **Importar e Exportar Configurações** 
 
-    ![Importar + Exportar Configurações](media/ssms-configuration/settings.png)
-    - Também é aqui que você pode redefinir todas as suas configurações para o padrão. 
+    ![Importar e exportar configurações](media/ssms-configuration/settings.png)
+
 
 
 ## <a name="next-steps"></a>Próximas etapas
-O próximo artigo apresentará dicas e truques adicionais para usar o SSMS, como localizar o log de erros do SQL Server e o nome da instância SQL. 
+O próximo artigo ensina mais algumas dicas e truques para usar o SSMS, como localizar o log de erros do SQL Server e o nome da instância SQL. 
 
-Prossiga para o próximo artigo para saber mais
 > [!div class="nextstepaction"]
-> [Botão Próximas etapas](ssms-tricks.md)
+> [Mais dicas e truques para usar o SSMS](ssms-tricks.md)
  
  
 

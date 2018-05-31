@@ -15,18 +15,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c39296fd2ea72e8107c9c1dc558e636810726848
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfdb035f176c2fcdb9e71b5621b76e4ecb72c2b4
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300164"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consultando dados em uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Quando quiser obter o estado mais recente (real) dos dados em uma tabela temporal, você pode fazer uma consulta exatamente da mesma maneira que consulta uma tabela não temporal. Se as colunas PERIOD não estiverem ocultas, seus valores aparecerão em uma consulta SELECT \* . Se você especificou as colunas **PERIOD** como ocultas, seus valores não aparecerão na consulta SELECT \* . Quando as colunas **PERIOD** estiverem ocultas, faça referência às colunas **PERIOD** especificamente na cláusula SELECT para retornar os valores para essas colunas.  
   
- Para executar qualquer tipo de análise baseada em tempo, use a nova cláusula  **FOR SYSTEM_TIME** com quatro subcláusulas específicas temporais para consultar dados entre as tabelas atuais e de histórico. Para obter mais informações sobre essas cláusulas, consulte [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ Para executar qualquer tipo de análise baseada em tempo, use a nova cláusula **FOR SYSTEM_TIME** com quatro subcláusulas específicas temporais para consultar dados entre as tabelas atuais e de histórico. Para obter mais informações sobre essas cláusulas, consulte [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <data_hora>  
   
@@ -41,8 +42,8 @@ ms.lasthandoff: 05/03/2018
  **FOR SYSTEM_TIME** pode ser especificada independentemente para cada tabela em uma consulta. Ela pode ser usada dentro de expressões de tabela comuns, funções com valor de tabela e procedimentos armazenados.  
   
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Consultar um horário específico usando a subcláusula AS OF  
- Use a subcláusula**AS OF** quando você precisar reconstruir o estado dos dados como eram em qualquer momento específico no passado.  Você pode reconstruir os dados com a precisão do tipo datetime2 que foi especificado nas definições da coluna **PERIOD** .    
-A cláusula da subcláusula**AS OF** pode ser usada com literais constantes ou com variáveis, que permitem especificar dinamicamente a condição de tempo. Os valores fornecidos são interpretados como hora UTC.  
+ Use a subcláusula **AS OF** quando você precisar reconstruir o estado dos dados como eram em qualquer momento específico no passado. Você pode reconstruir os dados com a precisão do tipo datetime2 que foi especificado nas definições da coluna **PERIOD** .    
+A cláusula da subcláusula **AS OF** pode ser usada com literais constantes ou com variáveis, que permitem especificar dinamicamente a condição de tempo. Os valores fornecidos são interpretados como hora UTC.  
   
  Este primeiro exemplo retorna o estado da tabela dbo.Department A PARTIR de uma data específica no passado.  
   

@@ -51,11 +51,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225335"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -700,10 +701,11 @@ Ao usar a compactação de backup com bancos de dados habilitados para [TDE (Tra
 Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], isto permite um algoritmo de compactação otimizada para bancos de dados criptografados com TDE que primeiro descriptografa uma página, compacta-a e, em seguida, criptografa-a novamente. Se você estiver usando `MAXTRANSFERSIZE = 65536` (64 KB), a compactação de backup com bancos de dados criptografados com TDE compactará diretamente as páginas criptografadas e poderá não resultar em taxas de compactação satisfatórias. Para obter mais informações, consulte [Compactação de backup para bancos de dados habilitados para TDE](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
-> O algoritmo de compactação otimizado para bancos de dados criptografados com TDE é usado automaticamente quando:
-> * 
->  é usado e, nesse caso, o padrão `MAXTRANSFERSIZE` é alterado para 1048576 (1 MB) e não é forçado para um valor mais baixo.
-> * O banco de dados contém vários arquivos de dados e, nesse caso, o `MAXTRANSFERSIZE` padrão é alterado para um múltiplo de 65.536 (64 KB) e não é alterado para um valor mais baixo (como `MAXTRANSFERSIZE = 65536`). 
+> Há alguns casos em que o padrão `MAXTRANSFERSIZE` é maior que 64 K:
+> * Quando o banco de dados tem vários arquivos de dados criados, ele usa `MAXTRANSFERSIZE` >64 K
+> * Ao executar backup para URL, o padrão `MAXTRANSFERSIZE = 1048576` (1 MB)
+>   
+> Mesmo que uma destas condições se aplique, você deverá definir explicitamente `MAXTRANSFERSIZE` como maior que 64 K no comando de backup para obter o novo algoritmo de compactação de backup.
   
 Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito se acumularão muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   

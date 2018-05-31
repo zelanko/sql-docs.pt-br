@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8292b866a6e3c78296b99e75dd6efb67b735b15a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 360e15e879672fd3fb0568cad22e29e36a0ac45c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300564"
 ---
 # <a name="json-data-in-sql-server"></a>Dados JSON no SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,9 +67,9 @@ As seções a seguir discutem as principais funcionalidades fornecidas pelo SQL 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Extrair valores do texto JSON e usá-los em consultas
 Caso haja texto JSON armazenado em tabelas de banco de dados, é possível ler ou modificar valores no texto JSON usando as seguintes funções internas:  
     
--   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) extrai um valor escalar de uma cadeia de caracteres JSON.
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extrai um objeto ou uma matriz de uma cadeia de caracteres JSON.
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) testa se uma cadeia de caracteres contém um JSON válido.
+-   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) testa se uma cadeia de caracteres contém um JSON válido.
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extrai um valor escalar de uma cadeia de caracteres JSON.
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) extrai um objeto ou uma matriz de uma cadeia de caracteres JSON.
 -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) altera um valor em uma cadeia de caracteres JSON.
 
 **Exemplo**

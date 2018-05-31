@@ -33,11 +33,12 @@ caps.latest.revision: 87
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300334"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +78,8 @@ Essa opção não tem suporte em contêineres de grupo de arquivos FILESTREAM.
 Se *target_size* for especificado, DBCC SHRINKFILE tentará reduzir o arquivo até o tamanho especificado. Páginas usadas na parte do arquivo a ser liberada serão realocadas para o espaço livre disponível na parte do arquivo retida. Por exemplo, se houver um arquivo de dados de 10 MB, uma operação DBCC SHRINKFILE com um *target_size* igual a 8 fará com que todas as páginas usadas nos últimos 2 MB do arquivo sejam realocadas em qualquer página não alocada nos primeiros 8 MB do arquivo. DBCC SHRINKFILE não reduz um arquivo além do tamanho necessário para armazenar os dados no arquivo. Por exemplo, se 7 MB de um arquivo de dados de 10 MB forem usados, uma instrução DBCC SHRINKFILE com *target_size* igual a 6 reduzirá o arquivo somente para 7 MB, não para 6 MB.
   
 EMPTYFILE  
-Migra todos os dados do arquivo especificado para outros arquivos no **mesmo grupo de arquivos**. Em outras palavras, EmptyFile migrará os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos. Emptyfile garante que nenhum dado novo seja adicionado ao arquivo. O arquivo pode ser removido com a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Migra todos os dados do arquivo especificado para outros arquivos no **mesmo grupo de arquivos**. Em outras palavras, EmptyFile migrará os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos. Emptyfile garante que nenhum dado novo seja adicionado ao arquivo, apesar de esse arquivo não estar marcado como somente leitura. O arquivo pode ser removido usando a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Se o tamanho do arquivo for alterado usando a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), o sinalizador somente leitura será redefinido e dados poderão ser adicionados.
+
 Em contêineres de grupo de arquivos FILESTREAM, o arquivo não pode ser removido usando ALTER DATABASE até que o coletor de lixo FILESTREAM tenha sido executado e tenha excluído todos os arquivos do contêiner de grupo de arquivos desnecessários que EMPTYFILE copiou em outro contêiner. Para obter mais informações, consulte [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
@@ -98,7 +100,7 @@ Suprime todas as mensagens informativas.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as colunas do conjunto de resultados.
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |---|---|
 |**DbId**|Número de identificação do banco de dados do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
 |**FileId**|O número de identificação do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  

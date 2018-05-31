@@ -16,15 +16,19 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fb11b0cac1348f6c428e7f2f3822147f10b012b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff25703ca0524f9318c10bafdeff6900312e0764
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455210"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Instalação do Microsoft Connector para SAP BW
   O [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW para SQL Server 2016 é um componente do SQL Server 2016 Feature Pack. Para instalar o Connector for SAP BW e sua documentação, baixe e execute o instalador na [página Web do SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297).  
-  
+
+> [!IMPORTANT]
+> Microsoft não prevê o fornecimento de uma versão atualizada do Connector para SAP BW. A Microsoft não é proprietária do código-fonte para os componentes do SAP BW, que foram desenvolvidos por terceiros, e, portanto, não pode atualizá-los. Considere a possibilidade de adquirir os componentes de conectividade SAP mais recentes de um parceiro de ISV da Microsoft, como a [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). Os parceiros de ISV da Microsoft adaptaram seus componentes de conectividade SAP para SSIS para instalação no Azure.
+
 > [!IMPORTANT]  
 >  A documentação do Microsoft Connector for SAP BW supõe familiaridade com o ambiente do SAP Netweaver BW. Para obter mais informações sobre o SAP Netweaver BW ou para obter informações sobre como configurar objetos e processos do SAP Netweaver BW, consulte sua documentação do SAP.  
   
