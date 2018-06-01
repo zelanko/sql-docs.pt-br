@@ -24,10 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 99f936f0a8d127dd33ebce8b86c0a958cafccf66
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33260942"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_serveroption [@server = ] 'server'
  [  **@optname =** ] **'***option_name***'**  
  É a opção a ser definida para servidor especificado. *option_name* é **varchar (** 35 **)**, sem padrão. *option_name* pode ser qualquer um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**compatível com agrupamento**|Afeta a execução da Consulta Distribuída nos servidores vinculados. Se essa opção é definida como **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presumirá que todos os caracteres no servidor vinculado são compatíveis com o servidor local, em relação a sequência de agrupamento e conjunto de caracteres (ou ordem de classificação). Isso permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envie comparações sobre colunas de caracteres ao provedor. Se essa opção não estiver definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre avaliará comparações sobre colunas de caracteres localmente.<br /><br /> Essa opção deve ser definida somente se você tiver certeza de que a fonte de dados correspondente ao servidor vinculado tem o mesmo conjunto de caracteres e ordem de classificação do servidor local.|  
 |**Nome de agrupamento**|Especifica o nome do agrupamento usado pela fonte de dados remota se **usar agrupamento remoto** é **true** e a fonte de dados não é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados. O nome deve ser um dos agrupamentos que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cujo agrupamento coincide com um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> O servidor vinculado deve fornecer suporte a um único agrupamento a ser usado para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a vários agrupamentos dentro de uma única fonte de dados ou se o agrupamento do servidor vinculado não puder ser determinado para corresponder a um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -96,7 +97,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

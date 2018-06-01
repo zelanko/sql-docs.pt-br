@@ -1,11 +1,9 @@
 ---
 title: Procedimentos de acrescentar o exemplo de método (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a46c7dd2ab095a6bc50dab15cf3a1b9a1cb3024d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 46af14e62769073be33f891bc11a7bf012c8924b
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "32802571"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedimentos de acrescentar o exemplo de método (VB)
 O código a seguir demonstra como usar um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) método para criar um novo procedimento na fonte de dados subjacente.  

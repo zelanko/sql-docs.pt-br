@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36c5433f51191004a994b1afb3486db89a317acb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33220687"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +36,10 @@ ms.lasthandoff: 05/04/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**attachment_id**|**Int**|Identificador do anexo.|  
-|**mailitem_id**|**Int**|Identificador do item de email que continha o anexo.|  
+|**attachment_id**|**int**|Identificador do anexo.|  
+|**mailitem_id**|**int**|Identificador do item de email que continha o anexo.|  
 |**filename**|**nvarchar(520)**|O nome de arquivo do anexo. Quando **attach_query_result** é 1 e **query_attachment_filename** for NULL, o Database Mail cria um nome de arquivo arbitrário.|  
-|**filesize**|**Int**|O tamanho do anexo em bytes.|  
+|**filesize**|**int**|O tamanho do anexo em bytes.|  
 |**attachment**|**varbinary(max)**|O conteúdo do anexo.|  
 |**last_mod_date**|**datetime**|A data e a hora da última modificação da linha.|  
 |**last_mod_user**|**sysname**|O usuário que modificou a linha pela última vez.|  

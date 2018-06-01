@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33179562"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -38,9 +39,9 @@ ms.lasthandoff: 05/04/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**function_id**|**Int**|ID da função de partição para este valor de limite de intervalo.|  
-|**boundary_id**|**Int**|ID (de base 1 ordinal) da tupla de valor de limite, com limite mais à esquerda iniciando com um ID 1.|  
-|**parameter_id**|**Int**|ID do parâmetro da função à qual este valor corresponde. Os valores nesta coluna correspondem do **parameter_id** coluna o **partition_parameters** exibição de qualquer catálogo **function_id**.|  
+|**function_id**|**int**|ID da função de partição para este valor de limite de intervalo.|  
+|**boundary_id**|**int**|ID (de base 1 ordinal) da tupla de valor de limite, com limite mais à esquerda iniciando com um ID 1.|  
+|**parameter_id**|**int**|ID do parâmetro da função à qual este valor corresponde. Os valores nesta coluna correspondem do **parameter_id** coluna o **partition_parameters** exibição de qualquer catálogo **function_id**.|  
 |**value**|**sql_variant**|O valor de limite real.|  
   
 ## <a name="permissions"></a>Permissões  

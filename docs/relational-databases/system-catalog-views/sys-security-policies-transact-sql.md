@@ -30,10 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221127"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys. security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,10 +44,10 @@ ms.lasthandoff: 05/04/2018
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |nome|**sysname**|Nome da política de segurança, exclusivo no banco de dados.|  
-|object_id|**Int**|ID da política de segurança.|  
-|principal_id|**Int**|ID do proprietário da política de segurança, conforme registrado no banco de dados. NULL se o proprietário for determinado por meio do esquema.|  
-|schema_id|**Int**|ID do esquema onde o objeto reside.|  
-|parent_object_id|**Int**|ID do objeto ao qual esta política pertence. Deve ser 0.|  
+|object_id|**int**|ID da política de segurança.|  
+|principal_id|**int**|ID do proprietário da política de segurança, conforme registrado no banco de dados. NULL se o proprietário for determinado por meio do esquema.|  
+|schema_id|**int**|ID do esquema onde o objeto reside.|  
+|parent_object_id|**int**|ID do objeto ao qual esta política pertence. Deve ser 0.|  
 |Tipo|**vachar(2)**|Deve ser **SP**.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|A data UTC em que a política de segurança foi criada.|  

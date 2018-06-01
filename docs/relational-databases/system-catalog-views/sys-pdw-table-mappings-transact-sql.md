@@ -20,10 +20,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 0c0308315d63719814067f732995d7dc1246d85d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33181812"
 ---
 # <a name="syspdwtablemappings-transact-sql"></a>sys.pdw_table_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar(36)**|O nome físico da tabela.<br /><br /> **physical_name** e **object_id** formam a chave para este modo de exibição.||  
-|object_id|**Int**|A ID de objeto para a tabela. Consulte [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formam a chave para este modo de exibição.||  
+|object_id|**int**|A ID de objeto para a tabela. Consulte [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formam a chave para este modo de exibição.||  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Data Warehouse e exibições de catálogo do Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

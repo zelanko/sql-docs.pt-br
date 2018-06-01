@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c22415c34f0e25dc1117b6a5f86839c66f0ba53b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33237997"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +44,14 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|Nome do banco de dados. No [!INCLUDE[ssDE](../../includes/ssde-md.md)], esta coluna representa o nome do banco de dados, conforme armazenado no **sys. Databases** exibição do catálogo.|  
-|**DATABASE_SIZE**|**Int**|Tamanho de banco de dados, em kilobytes.|  
+|**DATABASE_SIZE**|**int**|Tamanho de banco de dados, em kilobytes.|  
 |**COMENTÁRIOS**|**varchar(254)**|Para o [!INCLUDE[ssDE](../../includes/ssde-md.md)], esse campo sempre retorna NULL.|  
   
 ## <a name="remarks"></a>Remarks  

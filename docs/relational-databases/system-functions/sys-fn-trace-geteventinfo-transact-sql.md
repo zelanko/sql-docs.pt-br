@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3c67450da61537edbf8164e343be2f279aa6ac44
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33234502"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +57,8 @@ fn_trace_geteventinfo ( trace_id )
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**eventid**|**Int**|ID do evento rastreado|  
-|**columnid**|**Int**|Números de ID de todas as colunas coletadas para cada evento|  
+|**eventid**|**int**|ID do evento rastreado|  
+|**columnid**|**int**|Números de ID de todas as colunas coletadas para cada evento|  
   
 ## <a name="remarks"></a>Remarks  
  Quando é passada a identificação de um rastreamento específico, **fn_trace_geteventinfo** retorna informações sobre esse rastreamento. Quando é passada uma ID inválida, a função retorna um conjunto de linhas vazio.  
