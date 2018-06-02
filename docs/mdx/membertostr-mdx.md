@@ -1,32 +1,20 @@
 ---
 title: MemberToStr (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- MEMBERTOSTR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MemberToStr function
-ms.assetid: 2076b24a-603a-4d74-91bd-a3d347739bcd
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5f9d5cb18739fd7d84671ce553e1898321ad6cea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ac9998edcf11477a2a4aff1af951d2dc4a17cbbb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581568"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,6 +47,6 @@ MemberToStr(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

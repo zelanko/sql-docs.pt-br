@@ -1,31 +1,20 @@
 ---
 title: MemberValue (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- MEMBERVALUE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MemberValue function
-ms.assetid: f9b2af16-2b81-48e4-ae81-99f64e4bbc98
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 35d3577d2cad1866f93d9800c2db0d0fff14016a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 33e91cadc6a63f6b55403aed552c6a15c8afc03d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580108"
 ---
 # <a name="membervalue-mdx"></a>MemberValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Member_Expression.MemberValue
  *Member_Expression*  
  Uma linguagem MDX válida que é avaliada como um membro.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O valor do membro retornado contém as seguintes informações, listadas na ordem em que essas informações são exibidas no valor de retorno:  
   
 -   A associação de valor, caso ela tenha sido definida.  
@@ -65,6 +54,6 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

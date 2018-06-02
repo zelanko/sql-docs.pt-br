@@ -1,31 +1,20 @@
 ---
 title: Referência de operador MDX (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1cdb8c31-a5f6-4430-b509-f81344f4622a
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05351149c5c4b7e5b639a1d3c6cb16e9894f181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580598"
 ---
 # <a name="mdx-operator-reference-mdx"></a>Referência de operador de MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +25,7 @@ ms.lasthandoff: 05/03/2018
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[– & #40; Comentário & #41; & #40; MDX & #41;](../mdx/comment-mdx-operator-reference.md)|Indica o texto de comentário fornecido pelo usuário.|  
+|[– &#40;Comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|Indica o texto de comentário fornecido pelo usuário.|  
 |[- &#40;Exceto&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|Executa uma operação definida que retorna a diferença entre dois conjuntos, removendo membros duplicados.|  
 |[- &#40;Negativo&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|Executa uma operação unária que retorna o valor negativo de uma expressão numérica.|  
 |[- &#40;Subtrair&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|Realiza uma operação aritmética que subtrai um número do outro.|  
@@ -44,8 +33,8 @@ ms.lasthandoff: 05/03/2018
 |[&#42;&#40;Multiplicar&#41; &#40;MDX&#41;](../mdx/multiply-mdx.md)|Realiza uma operação aritmética que multiplica dois números.|  
 |[&#40;Dividir&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|Realiza uma operação aritmética que divide um número por outro.|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|Executa uma operação aritmética que eleva um número por outro.|  
-|[Comentário & #40; MDX & #41;](../mdx/comment-mdx.md)|Indica o texto de comentário fornecido pelo usuário.|  
-|[& #40; Comentário & #41; & #40; MDX & #41;](../mdx/comment-mdx-double-slash.md)|Indica texto fornecido pelo usuário.|  
+|[Comentário &#40;MDX&#41;](../mdx/comment-mdx.md)|Indica o texto de comentário fornecido pelo usuário.|  
+|[&#40;Comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|Indica texto fornecido pelo usuário.|  
 |[: &#40;Intervalo&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|Executa uma operação definida que retorna um conjunto ordenado naturalmente, com dois membros especificados como pontos de extremidade, e todos os membros entre os dois membros especificados incluídos como membros do conjunto.|  
 |[+ &#40;Adicionar&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|Realiza uma operação aritmética que adiciona dois números.|  
 |[+ &#40;Positivo&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|Executa uma operação unária que retorna o valor positivo de uma expressão numérica.|  
@@ -64,6 +53,6 @@ ms.lasthandoff: 05/03/2018
 |[XOR &AMP;#40;MDX&AMP;#41;](../mdx/xor-mdx.md)|Executa uma exclusão lógica em duas expressões numéricas.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+ [Referência de linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

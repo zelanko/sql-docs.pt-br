@@ -1,30 +1,20 @@
 ---
 title: Elementos de sintaxe MDX (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], syntax
-- MDX [Analysis Services], syntax
-ms.assetid: f4c16e1a-cf1a-4be0-839a-db018430ff14
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3dd0f2ea9e3bd658e95c39c1a255250739568042
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b530205a5165c9be77710bf86e8600174be890dc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581018"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Elementos MDX Syntax (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,6 +33,6 @@ ms.lasthandoff: 05/03/2018
 |[Membros, tuplas e conjuntos](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)|Membros, tuplas e conjuntos são conceitos principais de dados multidimensionais que você deve compreender antes de criar uma consulta MDX.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões multidimensionais & #40; MDX & #41; Referência](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Expressões multidimensionais &#40;MDX&#41; referência](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

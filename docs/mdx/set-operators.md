@@ -1,29 +1,20 @@
 ---
 title: Operadores de conjunto | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- set operators [MDX]
-ms.assetid: 83500d2e-44b3-49eb-a221-3ce5a58277a5
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 161234bf6f72beb7548cfb5dc7ad3602f4903110
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1388c5ef1f263f4ef326485c662a82ee11c569d0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580948"
 ---
 # <a name="set-operators"></a>Operadores de conjunto
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |[+ (União)](../mdx/union-mdx-operator-reference.md)|Retorna uma união de dois conjuntos, exceto membros duplicados.<br /><br /> Esse operador é funcionalmente equivalente ao [união &#40;MDX&#41; ](../mdx/union-mdx.md) função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
