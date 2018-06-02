@@ -24,16 +24,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553796"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Retorna a atividade atual de E/S de nível mais baixo, de bloqueio, de trava e de método de acesso de cada partição de uma tabela ou índice no banco de dados.    
+  Retorna o atual e/s de nível inferior, bloqueio, trava e atividade de método de acesso para cada partição de uma tabela ou índice no banco de dados.    
     
  Os índices com otimização de memória não aparecem nessa DMV.    
     
@@ -86,10 +87,10 @@ sys.dm_db_index_operational_stats (
 |Nome da coluna|Tipo de dados|Description|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID do banco de dados.|    
-|**object_id**|**Int**|ID da tabela ou exibição.|    
-|**index_id**|**Int**|ID do índice ou heap.<br /><br /> 0 = Heap|    
+|**object_id**|**int**|ID da tabela ou exibição.|    
+|**index_id**|**int**|ID do índice ou heap.<br /><br /> 0 = Heap|    
 |**hobt_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID do heap de dados ou conjunto de linhas de árvore B que controla os dados internos para um índice columnstore.<br /><br /> NULO – isso não é um conjunto de linhas do columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**Int**|Número de partição com base 1 no índice ou heap.|    
+|**partition_number**|**int**|Número de partição com base 1 no índice ou heap.|    
 |**leaf_insert_count**|**bigint**|Contagem cumulativa de inserções de nível folha.|    
 |**leaf_delete_count**|**bigint**|Contagem cumulativa de exclusões de nível folha. leaf_delete_count só é incrementada para registros excluídos não são marcados como fantasma primeiro. Para registros excluídos são fantasma primeiro, **leaf_ghost_count** é incrementada em vez disso.|    
 |**leaf_update_count**|**bigint**|Contagem cumulativa de atualizações de nível folha.|    

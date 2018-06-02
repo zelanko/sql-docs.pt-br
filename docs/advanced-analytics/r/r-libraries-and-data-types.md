@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586038"
 ---
 # <a name="r-libraries-and-r-data-types"></a>Tipos de dados de R e bibliotecas de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ Para exibir a versão de R associada a uma determinada instância do SQL Server,
 
 Para localizar a versão de R incluída em uma versão específica do Microsoft R Server, consulte [R Server - What's New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Observe que o sistema de gerenciamento de pacote no SQL Server significa que várias versões de um pacote R podem ser instaladas no mesmo computador, com vários usuários compartilhando o mesmo pacote ou usar versões diferentes do mesmo pacote. Para obter mais informações, consulte [gerenciamento de pacotes de R no SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Observe que o sistema de gerenciamento de pacote no SQL Server significa que várias versões de um pacote R podem ser instaladas no mesmo computador, com vários usuários compartilhando o mesmo pacote ou usar versões diferentes do mesmo pacote. Para obter mais informações, consulte [gerenciamento de pacotes de R no SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>Tipos de dados do SQL e R
 
@@ -56,14 +57,14 @@ A tabela a seguir mostra as alterações em tipos de dados e valores quando dado
 |**date**|`POSIXct`|**datetime**|Representado como GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
-|**Int**|`integer`|**Int**||
+|**int**|`integer`|**int**||
 |**money**|`numeric`|**float**||
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Representado como GMT|
-|**smallint**|`integer`|**Int**||
+|**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**Int**||
+|**tinyint**|`integer`|**int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|

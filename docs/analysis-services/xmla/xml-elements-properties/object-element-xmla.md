@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56de6684969db18c66d57c95e3dec589a48fed89
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9ef2f645895e567d69d06e4e1383e0c477b6ed1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575908"
 ---
 # <a name="object-element-xmla"></a>Elemento Object (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Alter> <!-- or any of the parent elements in the Element Relationships table -->  
+<Alter> <!-- or any of the parent elements in the Element relationships table -->  
 ...  
    <Object>  
       <!-- One or more object identifiers, depending on the parent element -->  
@@ -34,15 +35,15 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|Veja a tabela abaixo.|  
   
 |Ancestral ou pai|Cardinalidade|  
 |------------------------|-----------------|  
-|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
 |Todos os outros|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -55,9 +56,9 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Remarks  
  A ordem na qual os identificadores aparecem não é importante.  
   
- Para **Alter** elementos, a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é usado como o objeto padrão se o **objeto** elemento não for especificado.  
+ Para **Alter** elementos, a instância do Analysis Services é usado como o objeto padrão se o **objeto** elemento não for especificado.  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Confira também
+ [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

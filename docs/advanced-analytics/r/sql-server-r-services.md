@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585958"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>R Services (no banco de dados) e aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -124,8 +125,8 @@ Para aproveitar as vantagens dos recursos de segurança e gerenciamento de recur
 **Recursos**
 
 + [Governança de recursos para R](resource-governance-for-r-services.md)
-+ [Gerenciamento de pacotes de R para o SQL Server](r-package-management-for-sql-server-r-services.md)
++ [Gerenciamento de pacotes de R para o SQL Server](install-additional-r-packages-on-sql-server.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
  [R Server (autônomo) e aprendizado de máquina do SQL Server](sql-server-r-services.md)

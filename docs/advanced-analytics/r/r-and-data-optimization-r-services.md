@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563754"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Desempenho de serviços do R - otimização de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ Ao trabalhar com grandes conjuntos de dados, você sempre deve usar o contexto d
 
 ## <a name="factors"></a>Fatores
 
-A linguagem R tem o conceito de "fatores", que são variáveis especiais para dados categóricos. Os cientistas de dados geralmente usa variáveis de fator em sua fórmula, porque variáveis categóricas como fatores de tratamento assegura que os dados é processado corretamente por funções de aprendizado de máquina. Para obter mais informações, consulte [R para cópias: fator variáveis] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+A linguagem R tem o conceito de "fatores", que são variáveis especiais para dados categóricos. Os cientistas de dados geralmente usa variáveis de fator em sua fórmula, porque variáveis categóricas como fatores de tratamento assegura que os dados é processado corretamente por funções de aprendizado de máquina. Para obter mais informações, consulte [R para cópias: fator de variáveis](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Por design, variáveis de fator podem ser convertidos de cadeias de caracteres para números inteiros e voltar novamente para armazenamento ou processamento. R `data.frame` função manipula todas as cadeias de caracteres como variáveis de fator, a menos que o argumento *stringsAsFactors* é definido como **False**. Isso significa é que cadeias de caracteres são automaticamente convertido em um inteiro para o processamento e, em seguida, mapeado de volta para a cadeia de caracteres original.
 

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 092216f7bc1142125156b3658f035154d809c2e9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586068"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>O que há de novo nos serviços de aprendizado de máquina do SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +36,7 @@ Esta versão também introduzida **o servidor de aprendizado de máquina do SQL 
 | Versão inicial |[**Integração do Python para análise no banco de dados**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>O [revoscalepy](python/what-is-revoscalepy.md) pacote é o equivalente de Python de RevoScaleR. Você pode criar modelos de Python para árvores de decisão, regressão linear e logística, árvores aumentadas e florestas aleatórias, todos os paralelizáveis e é capazes de está sendo executado em contextos de computação remota. Este pacote dá suporte ao uso de várias fontes de dados e contextos de computação remota. O cientista de dados ou o desenvolvedor pode executar o código Python em um servidor SQL remoto, para explorar dados ou criar modelos sem mover os dados. <br/><br/>O [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) pacote é o equivalente de Python do pacote MicrosoftML R.<br/><br/>Integração do T-SQL e Python por meio de [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Você pode chamar qualquer código Python usando esse procedimento armazenado. Essa infraestrutura segura permite a implantação de nível empresarial de scripts que podem ser chamados a partir de um aplicativo usando um procedimento armazenado simples e modelos de Python. São obtidos ganhos de desempenho adicionais por streaming de dados do SQL para paralelização do anel MPI e processos de Python. <br/><br/>Você pode usar o T-SQL [PREVER](../t-sql/queries/predict-transact-sql.md) função para executar [pontuação nativo](sql-native-scoring.md) em um modelo previamente treinado que tenha sido previamente salva em formato binário necessário.|
 | Versão inicial | [**MicrosoftML (R)** ](using-the-microsoftml-package.md) contém algoritmos e transformação de dados que pode ser contextos de computação remota dimensionado ou executados em de aprendizado de máquina de última geração. Algoritmos incluem redes neurais profundas personalizáveis, árvores de decisão rápida e florestas de decisão, regressão linear e regressão logística. |
 | Versão inicial | [**Modelos previamente treinados** ](r/install-pretrained-models-sql-server.md) de reconhecimento de imagem e análise de sentimento positivo negativo. Use esses modelos para gerar previsões em seus próprios dados. |
-| Versão inicial | [**Pacote de gerenciamento**](r/r-package-management-for-sql-server-r-services.md), incluindo os seguintes destaques: funções para ajudar a gerenciar pacotes e atribuir permissões ao instalar pacotes, o DBA do banco de dados [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução T-SQL para ajuda os DBAs gerenciar pacotes sem precisar saber o R e um conjunto avançado de R funções em [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) ajudar a instalar, remover ou listar pacotes pertencentes a usuários. |
+| Versão inicial | [**Gerenciamento de pacotes de R**](r/install-additional-r-packages-on-sql-server.md), incluindo os seguintes destaques: funções para ajudar a gerenciar pacotes e atribuir permissões ao instalar pacotes, o DBA do banco de dados [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução T-SQL para ajuda os DBAs gerenciar pacotes sem precisar saber o R e um conjunto avançado de R funções em [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) ajudar a instalar, remover ou listar pacotes pertencentes a usuários. |
 | Versão inicial | [**Operacionalização por meio de mrsdeploy** ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package) para a implantação e o script de R como um serviço web de hospedagem. Aplica-se a somente script R (nenhum equivalente de Python). Deve ser a opção de servidor (autônomo) evitar a competição do recurso com outras operações do SQL Server. |
 
 

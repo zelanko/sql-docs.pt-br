@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c97f45375464561e8080e5de24201c80fa213c7e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4f0e6130882ea5af6dd0827ed2d5e798d3c11c5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585488"
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>Pré-requisitos para o passo a passo do ciência de dados do SQL Server e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,4 +65,4 @@ Para este passo a passo, usamos o logon do SQL **RTestUser**. Geralmente, é rec
 
 ## <a name="next-lesson"></a>Próxima lição
 
-[Preparar os dados usando o PowerShell](/walkthrough-prepare-the-data.md)
+[Preparar os dados usando o PowerShell](walkthrough-prepare-the-data.md)
