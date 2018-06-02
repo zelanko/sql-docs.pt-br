@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708734"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificando um caminho para o local (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>Etapas de local  
  Um caminho de local (absoluto ou relativo) é composto por etapas de local que contêm três partes:  
   
--   **Eixo**  
+-   **Axis**  
   
      O eixo especifica a relação de árvore entre os nós selecionados pela etapa de local e o nó de contexto. O **pai**, **filho**, **atributo**, e **self** eixos têm suporte. Se um **filho** eixo for especificado no caminho do local, todos os nós selecionados pela consulta são os filhos do nó de contexto. Se um **pai** eixo for especificado, o nó selecionado será o nó pai do nó de contexto. Se um **atributo** eixo for especificado, os nós selecionados são os atributos do nó de contexto.  
   

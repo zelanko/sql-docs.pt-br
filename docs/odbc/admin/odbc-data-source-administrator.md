@@ -17,16 +17,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b31061c3a8c75e5d96d3ac6993ce8d90dd6199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706944"
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de Fonte de Dados ODBC
 O administrador de fonte de dados do Microsoft® ODBC gerencia o banco de dados drivers e fontes de dados. Esse aplicativo está localizado no painel de controle do Windows em **ferramentas administrativas**. Começando no Windows 8, o ícone é chamado **fontes de dados ODBC**, e há uma versão de 32 bits e 64 bits em sistemas operacionais de 64 bits.  
   
- Para obter informações sobre procedimentos detalhados do administrador de ODBC, abra o [administrador de fonte de dados ODBC](http://msdn.microsoft.com/en-us/eea94d94-f53b-4289-ae75-9ccccde15333) caixa de diálogo e clique em **ajuda**.  
+ Para obter informações sobre procedimentos detalhados do administrador de ODBC, abra o [administrador de fonte de dados ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) caixa de diálogo e clique em **ajuda**.  
   
  Você pode usar comandos do PowerShell para gerenciar drivers e fontes de dados. Para obter mais informações sobre esses comandos do PowerShell, consulte [comandos do Windows PowerShell de componentes de acesso de dados](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   

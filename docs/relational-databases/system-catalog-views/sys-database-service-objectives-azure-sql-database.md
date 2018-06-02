@@ -22,11 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a63c3142cdc5ca670117ef7d14c4d6079b575972
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708594"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/19/2018
 Retorna a edição (camada de serviço), o objetivo de serviço (preço) e o nome do pool Elástico, se houver, para um banco de dados do SQL Azure ou um Azure SQL Data Warehouse. Se conectado ao banco de dados mestre em um servidor de banco de dados SQL, retorna informações sobre todos os bancos de dados. Para o Azure SQL Data Warehouse, você deve estar conectado ao banco de dados mestre.  
   
   
- Para obter informações sobre preços, consulte [desempenho e opções de banco de dados SQL: preços de banco de dados do SQL](https://azure.microsoft.com/en-us/pricing/details/sql-database/) e [preços do SQL Data Warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Para obter informações sobre preços, consulte [desempenho e opções de banco de dados SQL: preços de banco de dados do SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [preços do SQL Data Warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Para alterar as configurações de serviço, consulte [ALTER DATABASE (banco de dados do SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) e [ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   
@@ -42,7 +43,7 @@ Retorna a edição (camada de serviço), o objetivo de serviço (preço) e o nom
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|A ID do banco de dados, exclusivo em uma instância do servidor de banco de dados SQL. Junções com [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|INT|A ID do banco de dados, exclusivo em uma instância do servidor de banco de dados SQL. Junções com [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edição|sysname|A camada de serviço para o banco de dados ou de data warehouse: **básica**, **padrão**, **Premium** ou **Data Warehouse**.|  
 |service_objective|sysname|A camada de preços do banco de dados. Retorna se o banco de dados em um pool Elástico, **ElasticPool**.<br /><br /> Sobre o **básica** camada, retorna **básica**.<br /><br /> **Banco de dados único em uma camada de serviço padrão** retorna um dos seguintes: S0, S1, S2 ou S3.<br /><br /> **Banco de dados único em uma camada premium** retorna o seguinte: P1, P2, P4, P6/P3 ou P11.<br /><br /> **SQL Data Warehouse** retorna DW100 por meio de DW10000c.|  
 |elastic_pool_name|sysname|O nome do [pool Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que o banco de dados pertence. Retorna **nulo** se o banco de dados é um banco de dados ou um warehoue de dados.|  

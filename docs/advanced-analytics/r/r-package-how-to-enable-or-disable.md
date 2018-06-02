@@ -8,25 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 88604b48f93a7ec322e5e7f9a9bdba6b9eb2cc3c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707654"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento remoto do pacote do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve como habilitar o gerenciamento de pacotes de R de uma instância remota do servidor de aprendizado de máquina. Após a habilitação do recurso de gerenciamento de pacote, você pode usar comandos de RevoScaleR para instalar os pacotes em um banco de dados de um cliente remoto.
+Este artigo descreve como habilitar o gerenciamento remoto de pacotes de R de uma estação de trabalho cliente ou um servidor de aprendizado de máquina diferente. Após a habilitação do recurso de gerenciamento de pacote no SQL Server, você pode usar comandos de RevoScaleR em um cliente para instalar os pacotes no SQL Server.
 
 > [!NOTE]
 > Atualmente há suporte para gerenciamento de bibliotecas de R; suporte para Python em nossos planos.
 
-Por padrão, o recurso de gerenciamento do pacote externo para o SQL Server está desabilitado, mesmo se os recursos de aprendizado de máquina foram instalados. Você deve executar um script separado para habilitar o recurso conforme descrito na próxima seção.
+Por padrão, o recurso de gerenciamento de pacote externo para o SQL Server está desabilitado. Você deve executar um script separado para habilitar o recurso conforme descrito na próxima seção.
 
 ## <a name="overview-of-process-and-tools"></a>Visão geral do processo e ferramentas
 
-Para habilitar ou desabilitar o gerenciamento de pacote, use o utilitário de linha de comando **RegisterRExt.exe**, que é incluído com o **RevoScaleR** pacote.
+Para habilitar ou desabilitar o gerenciamento de pacote no SQL Server, use o utilitário de linha de comando **RegisterRExt.exe**, que é incluído com o **RevoScaleR** pacote.
 
 [Habilitando](#bkmk_enable) esse recurso é um processo de duas etapas, exigindo que um administrador de banco de dados: habilitar o gerenciamento de pacote na instância do SQL Server (uma vez por instância do SQL Server) e, em seguida, habilitar o gerenciamento de pacote no banco de dados SQL (uma vez por SQL Server banco de dados).
 
@@ -34,7 +35,7 @@ Para habilitar ou desabilitar o gerenciamento de pacote, use o utilitário de li
 
 ## <a name="bkmk_enable"></a> Habilitar o gerenciamento de pacote
 
-1. Abra um prompt de comando com privilégios elevados e navegue até a pasta que contém o utilitário, RegisterRExt.exe. O local padrão é `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+1. No SQL Server, abra um prompt de comando com privilégios elevados e navegue até a pasta que contém o utilitário, RegisterRExt.exe. O local padrão é `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
 2. Execute o comando a seguir, fornecendo argumentos apropriados para seu ambiente:
 
@@ -93,3 +94,8 @@ Depois de habilitar esse recurso, você pode usar a função de RevoScaleR para 
 
     Este comando remove o recurso de gerenciamento de pacote da instância. Talvez seja necessário reiniciar manualmente o serviço Launchpad mais uma vez para ver as alterações.
 
+## <a name="next-steps"></a>Próximas etapas
+
++ [Use RevoScaleR para instalar novos pacotes de R](use-revoscaler-to-manage-r-packages.md)
++ [Dicas para a instalação de pacotes de R](packages-installed-in-user-libraries.md)
++ [Pacotes padrão](installing-and-managing-r-packages.md)

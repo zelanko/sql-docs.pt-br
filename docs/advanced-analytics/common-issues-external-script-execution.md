@@ -1,40 +1,29 @@
 ---
-title: Problemas comuns com a execução do script externo no SQL Server | Microsoft Docs
+title: Problemas comuns com o serviço barra inicial e a execução do script externo no SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b1994227284d395e4a8043c6e272bead5cd6c372
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 08ab6e2db6d6cde5e41f7ddb88c8afd1da241df7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706834"
 ---
-# <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemas comuns com a execução do script externo no SQL Server
+# <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comuns com o serviço barra inicial e a execução do script externo no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo contém uma lista de problemas conhecidos e os problemas comuns com a execução de código de R ou Python no SQL Server.
+ Serviço Launchpad confiável do SQL Server dá suporte à execução de script externo para R e Python. No SQL Server 2016 R Services SP1 fornece o serviço. SQL Server 2017 inclui Nom a barra inicial como parte da instalação inicial.
 
-Antes de começar, é recomendável que você coletar algumas informações sobre o seu sistema. Para saber mais, consulte [coleta de dados para solução de problemas](data-collection-ml-troubleshooting-process.md).
-
-Além disso, examine uma lista dos problemas comuns que são específicos para configuração ou instalação inicial: [perguntas frequentes sobre atualização e instalação](r/upgrade-and-installation-faq-sql-server-r-services.md).
+Vários problemas podem impedir que a barra inicial de início, incluindo problemas de configuração ou as alterações ou falta de protocolos de rede. Este artigo fornece orientação para solução de problemas para muitos problemas. Para qualquer são perdidos, você poderá postar perguntas para o [Fórum do servidor de aprendizado de máquina](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
 
 **Aplica-se a:** R Services do SQL Server 2016, SQL Server 2017 serviços de aprendizado de máquina
 
-## <a name="launchpad-issues"></a>Problemas de barra inicial
-
-O serviço Launchpad confiável do SQL Server gerencia a execução de scripts externos e comunicação com R, Python ou outros tempos de execução externos. Vários problemas podem impedir que a barra inicial de início, incluindo problemas de configuração ou as alterações ou falta de protocolos de rede.
-
-Como parte do processo de solução de problemas, comece responder às seguintes perguntas:
-
-- Barra inicial que sempre falhou ao executar ou ele pare de funcionar?
-- Qual conta de serviço Launchpad está executando sob?
-- Os direitos de usuário que possui a conta de serviço do Launchpad?
-
-### <a name="determine-whether-launchpad-is-running"></a>Determinar se a barra inicial está em execução
+## <a name="determine-whether-launchpad-is-running"></a>Determinar se a barra inicial está em execução
 
 1. Abra o **serviços** painel (Services.msc). Ou, na linha de comando, digite **SQLServerManager13.msc** ou **SQLServerManager14.msc** abrir [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
 
@@ -46,7 +35,7 @@ Como parte do processo de solução de problemas, comece responder às seguintes
 
 5. Para procurar por outros erros, examine o conteúdo do rlauncher.log.
 
-### <a name="check-the-launchpad-service-account"></a>Verificar a conta de serviço barra inicial
+## <a name="check-the-launchpad-service-account"></a>Verificar a conta de serviço barra inicial
 
 A conta de serviço padrão pode ser "NT Service\$SQL2016" ou "serviço NT\$SQL2017". A parte final pode variar, dependendo de seu nome de instância do SQL.
 
@@ -62,32 +51,7 @@ Para obter informações sobre esses direitos de usuário, consulte a seção "W
 > [!TIP]
 > Se você estiver familiarizado com o uso da ferramenta de diagnóstico de suporte à plataforma (SDP) para diagnóstico do SQL Server, você pode usar SDP examine o arquivo de saída com o nome MachineName_UserRights.txt.
 
-### <a name="review-launchpad-requirements"></a>Verifique os requisitos da barra inicial
-
-Qualquer um dos vários problemas pode impedir que o Launchpad iniciando. O serviço Launchpad pode iniciar e parar ou falha, ou o serviço pode parar com um tempo limite de conexão. Nesses casos, o sistema normalmente foi alterado ou configurado de modo que a barra inicial não pode ser executado.
-
-#### <a name="determine-whether-8dot3-notation-is-enabled"></a>Determinar se a notação 8ponto3 está habilitada
-
-Para compatibilidade com R, SQL Server 2016 R Services (no banco de dados) necessária a unidade em que o recurso está instalado para dar suporte a criação de nomes de arquivos curtos usando *8ponto3 notação*. Também é chamado de um nome de 8.3 arquivo um *nome curto de arquivo*, e ele é usado para compatibilidade com versões anteriores do Microsoft Windows ou como uma alternativa para nomes de arquivo longos.
-
-Se o volume em que você está instalando o R não oferece suporte a nomes de arquivos curtos, os processos que inicie R do SQL Server não podem ser capazes de localizar o executável correto e barra inicial não será iniciado.
-
-Como alternativa, você pode habilitar a notação de 8ponto3 no volume em que o SQL Server está instalado e onde R Services está instalado. Em seguida, será necessário fornecer o nome curto para o diretório de trabalho no arquivo de configuração do R Services.
-
-1. Para habilitar a notação 8ponto3, execute o utilitário fsutil com a *8dot3name* argumento conforme descrito aqui: [8dot3name fsutil](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
-
-2. Depois que a notação 8ponto3 estiver habilitada, abra o arquivo RLauncher.config e anote a propriedade de `WORKING_DIRECTORY`. Para obter informações sobre como encontrar esse arquivo, consulte [coleta de dados para a solução de problemas de aprendizado de máquina](data-collection-ml-troubleshooting-process.md).
-
-3. Use o utilitário fsutil com a *arquivo* argumento para especificar um caminho de arquivo curto para a pasta especificada no WORKING_DIRECTORY.
-
-4. Edite o arquivo de configuração para especificar a mesma pasta de trabalho que você inseriu na propriedade WORKING_DIRECTORY. Como alternativa, você pode especificar um diretório de trabalho diferentes e escolha um caminho existente que já é compatível com a notação de 8ponto3.
-
-> [!NOTE] 
-> Essa restrição foi removida em versões posteriores. Se você encontrar esse problema, instale um dos seguintes:
-> * SQL Server 2016 SP1 e CU1: [atualização cumulativa 1 para SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
-> * SQL Server 2016 RTM, a atualização cumulativa 3 e isso [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), que está disponível sob demanda.
-
-#### <a name="the-user-group-for-launchpad-cannot-log-on-locally"></a>O grupo de usuários para a barra inicial não é possível fazer logon localmente
+## <a name="user-group-for-launchpad-cannot-log-on-locally"></a>Grupo de usuários para a barra inicial não é possível fazer logon localmente
 
 Durante a instalação dos serviços de aprendizado de máquina, o SQL Server cria o grupo de usuários do Windows **SQLRUserGroup** e configura com todos os direitos necessários para a barra inicial para se conectar ao SQL Server e executar tarefas de script externo. Se esse grupo de usuário estiver habilitado, ele também é usado para executar scripts de Python.
 
@@ -97,25 +61,7 @@ Para corrigir o problema, garanta que o **SQLRUserGroup** tenha o direito de sis
 
 Para obter mais informações, consulte [permissões e contas de serviço do Windows configurar](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
-#### <a name="improper-setup-leading-to-mismatched-dlls"></a>Instalação inadequada levando a DLLs incompatíveis
-
-Se você instala o mecanismo de banco de dados com outros recursos, o servidor de patch e, em seguida, adicionar o recurso de aprendizado de máquina posteriormente usando a mídia original, a versão incorreta dos componentes de aprendizado de máquina pode ser instalada. Quando a barra inicial detecta uma incompatibilidade de versão, ele é desligado e cria um arquivo de despejo.
-
-Para evitar esse problema, certifique-se de instalar os novos recursos no mesmo nível de patch como a instância do servidor.
-
-**A maneira errada de atualização:**
-
-1. Instale o SQL Server 2016 sem os serviços de R.
-2. Atualize a atualização cumulativa do SQL Server 2016 2.
-3. Instale o R Services (no banco de dados) usando a mídia do RTM.
-
-**A maneira correta de atualização:**
-
-1. Instale o SQL Server 2016 sem os serviços de R.
-2. Atualize o SQL Server 2016 para o nível de patch desejado. Por exemplo, instale o Service Pack 1 e, em seguida, a atualização cumulativa 2.
-3. Para adicionar o recurso no nível do patch correto, execute novamente a instalação do SP1 e CU2 e, em seguida, escolha o R Services (no banco de dados). 
-
-#### <a name="check-whether-a-user-has-rights-to-run-external-scripts"></a>Verifique se um usuário tem direitos para executar scripts externos
+## <a name="permissions-to-run-external-scripts"></a>Permissões para executar scripts externos
 
 Mesmo se a barra inicial é configurado corretamente, ele retornará um erro se o usuário não tem permissão para executar scripts R ou Python.
 
@@ -129,11 +75,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 Para obter mais informações, consulte [GRANT (Transact-SQL](../t-sql/statements/grant-transact-sql.md).
 
-### <a name="common-launchpad-errors"></a>Erros comuns de barra inicial
+## <a name="common-launchpad-errors"></a>Erros comuns de barra inicial
 
 Esta seção lista as mensagens de erro mais comuns que retorna da barra inicial.
 
-#### <a name="error-unable-to-launch-runtime-for-r-script"></a>Erro: *não é possível iniciar o tempo de execução de script R*
+## <a name="unable-to-launch-runtime-for-r-script"></a>"Não é possível iniciar o tempo de execução de script R"
 
 Se o grupo do Windows para usuários de R (também usada para Python) não pode fazer logon para a instância que está executando serviços de R, você poderá ver os seguintes erros:
 
@@ -156,7 +102,7 @@ Para obter informações sobre como conceder as permissões necessárias a este 
 > [!NOTE]
 > Essa limitação não se aplicará se você usar logons SQL para executar scripts do R em uma estação de trabalho remota.
 
-#### <a name="error-logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>Erro: *falha de Logon: o usuário não recebeu o tipo de logon solicitado*
+## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"Falha de logon: o usuário não recebeu o tipo de logon solicitado"
 
 Por padrão, [!INCLUDE[rsql_launchpad_md](../includes/rsql-launchpad-md.md)] usa a seguinte conta durante a inicialização: `NT Service\MSSQLLaunchpad`. A conta é configurada por [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] instalação tenha todas as permissões necessárias.
 
@@ -171,7 +117,7 @@ Para conceder as permissões necessárias para a nova conta de serviço, use o a
 + Fazer logon como um serviço (SeServiceLogonRight)
 + Substituir um token de nível de processo (SeAssignPrimaryTokenPrivilege)
 
-#### <a name="error-unable-to-communicate-with-the-launchpad-service"></a>Erro: *não é possível se comunicar com o serviço barra inicial*
+## <a name="unable-to-communicate-with-the-launchpad-service"></a>"Não é possível se comunicar com o serviço barra inicial"
 
 Se você tiver instalado e, então, aprendizado de máquina, mas você receberá esse erro ao tentar executar um script R ou Python, o serviço barra inicial para a instância pode ter parado em execução.
 
@@ -189,7 +135,7 @@ Se você tiver instalado e, então, aprendizado de máquina, mas você receberá
 
     c. Se você alterar qualquer uma das propriedades do serviço, reinicie o serviço Launchpad.
 
-#### <a name="error-fatal-error-creation-of-tmpfile-failed"></a>Erro: *Falha na criação de Erro Fatal de tmpFile*
+## <a name="fatal-error-creation-of-tmpfile-failed"></a>"Falha na criação de erro fatal de tmpFile"
 
 Nesse cenário, você instalou com êxito os recursos de aprendizado de máquina e barra inicial está em execução. Você tenta executar um código de R ou Python simples, mas Launchpad falhará com um erro semelhante ao seguinte: 
 
@@ -205,82 +151,7 @@ Por padrão, 20 contas são configuradas e associadas ao processo de Launchpad.e
 
 Para resolver o problema, verifique se o grupo tem *permitir logon local* permissões para a instância do local onde os recursos de aprendizado de máquina foi instalados e habilitados. Em alguns ambientes, este nível de permissão pode precisar de uma exceção de GPO do administrador de rede.
 
-## <a name="r-script-issues"></a>Problemas de script R
-
-Esta seção contém alguns problemas comuns que são específicos para a execução de script R e erros de script R. A lista não é abrangente, porque há muitos pacotes de R e erros podem ser diferentes entre versões do mesmo pacote de R. É recomendável que você enviar erros de script do R no [Fórum do Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR), que oferece suporte para a componentes usados em R Services (no banco de dados), serviços de aprendizado de máquina com Python, o cliente do Microsoft R e Microsoft R de aprendizado de máquina Servidor.
-
-### <a name="multiple-r-instances-on-the-same-computer"></a>Várias instâncias de R no mesmo computador
-
-É fácil de encontrar com várias distribuições do R no mesmo computador, bem como várias cópias do mesmo pacote de R em versões diferentes. Por exemplo, se você instalar o servidor de aprendizado de máquina (autônomo) e serviços de aprendizado de máquina (no banco de dados), os instaladores criar versões separadas das bibliotecas de R. 
-
-Essa duplicação se torna um problema quando você tentar executar um script de uma linha de comando e você não tiver certeza sobre quais bibliotecas que você está usando. Ou, você pode instalar um pacote para a biblioteca incorreta e, em seguida, mais tarde esteja se perguntando por que você não pode localizar o pacote do SQL Server.
-
-+ Evite o uso direto de bibliotecas de R e ferramentas que estão instaladas para o uso da instância do SQL Server, exceto em casos limitados, como solução de problemas ou instalação de novos pacotes. 
-+ Se você precisar usar uma ferramenta de linha de comando de R, você pode instalar [Microsoft R cliente](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client). 
-+ SQL Server fornece gerenciamento no banco de dados de pacotes de R. Essa é a maneira mais fácil para criar bibliotecas de pacote de R que podem ser compartilhadas entre usuários. Para obter mais informações, consulte [gerenciamento de pacotes de R para o SQL Server](r/r-package-management-for-sql-server-r-services.md).
-
-### <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>Evite limpando o espaço de trabalho durante a execução do R em um contexto de computação do SQL
-
-Embora seja comum limpar o espaço de trabalho, quando você trabalha no console de R, ele pode ter consequências não intencionais em um SQL contexto de computação.
-
-`revoScriptConnection` é um objeto no espaço de trabalho R que contém informações sobre uma sessão de R chamado a partir do SQL Server. No entanto, se seu código R inclui um comando para limpar o espaço de trabalho (como `rm(list=ls())`), todas as informações sobre a sessão e outros objetos no espaço de trabalho de R são desmarcadas também.
-
-Como alternativa, evite limpando indiscriminado de variáveis e outros objetos durante a execução do R no SQL Server. Você pode excluir variáveis específicas usando o **remover** função:
-
-```R
-remove('name1', 'name2', ...)
-```
-
-Se houver diversas variáveis para excluir, sugerimos que você salve os nomes das variáveis temporárias em uma lista e, em seguida, executar coletas de lixo periódica na lista.
-
-### <a name="implied-authentication-for-remote-execution-via-odbc"></a>Autenticação implícita para execução remota por meio de ODBC
-
-Se você se conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comandos do computador para executar R usando o **RevoScaleR** funções, você poderá receber um erro quando você usa chamadas ODBC que gravam dados no servidor. Esse erro ocorre somente quando você estiver usando a autenticação do Windows.
-
-O motivo é que as contas de trabalho que são criadas para R Services não tem permissão para se conectar ao servidor. Portanto, chamadas de ODBC não podem ser executadas em seu nome. O problema não ocorre com logons do SQL Server porque, com logons do SQL Server, as credenciais são passadas explicitamente do cliente R para a instância do SQL Server e, em seguida, para ODBC. No entanto, também é menos segura do que a autenticação do Windows usar logons do SQL Server.
-
-Para habilitar suas credenciais do Windows a ser passado com segurança de um script que iniciou remotamente, SQL Server deve emular suas credenciais. Esse processo é denominado _autenticação implícita_. Para executar esse trabalho, as contas de trabalho que executam scripts de R ou Python no computador do SQL Server devem ter as permissões corretas.
-
-1. Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como um administrador na instância onde você deseja executar o código R.
-
-2. Execute o script a seguir. Certifique-se de editar o nome de grupo do usuário, se você tiver alterado o padrão e os nomes de computador e a instância.
-
-    ```SQL
-    USE [master]
-    GO
-    
-    CREATE LOGIN [computername\\SQLRUserGroup] FROM WINDOWS WITH
-    DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[language]
-    GO
-    ```
-
-### <a name="the-r-script-works-outside-of-t-sql-but-not-in-a-stored-procedure"></a>O script R funciona fora do T-SQL, mas não em um procedimento armazenado
-
-Antes de encapsular seu código R em um procedimento armazenado, é uma boa ideia executar seu código R em um IDE externo ou em uma das ferramentas de R como RTerm ou RGui. Usando esses métodos, você pode testar e depurar o código usando as mensagens de erro detalhadas que são retornadas por R.
-
-No entanto, às vezes, código que funciona perfeitamente em um IDE externo ou o utilitário pode falhar ao executar em um procedimento armazenado ou contexto de computação em um SQL Server. Se isso acontecer, há uma variedade de problemas para procurar antes de você pode presumir que o pacote não funciona no SQL Server.
-
-1. Verifique se a barra inicial está em execução.
-
-2. Revise as mensagens para verificar se os dados de entrada ou a dados de saída contém colunas com tipos de dados incompatíveis ou sem suporte. Por exemplo, consultas em um banco de dados do SQL geralmente retornam GUIDs ou RowGUIDs, que não têm suporte. Para obter mais informações, consulte [tipos de dados e bibliotecas de R](r/r-libraries-and-data-types.md).
-
-3. Examine as páginas de ajuda para funções R individuais determinar se há suporte para todos os parâmetros para o contexto de computação do SQL Server. Para obter ajuda ScaleR, use os comandos de ajuda embutida R, ou consulte [referência de pacote](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
-
-### <a name="you-get-different-results-from-the-same-script-when-running-in-sql-compared-to-other-environments"></a>Obter resultados diferentes do mesmo script durante a execução no SQL em comparação com outros ambientes
-
-Scripts R podem retornar valores diferentes em um contexto de SQL Server, por vários motivos:
-
-- Conversão implícita de tipo é executado automaticamente em alguns tipos de dados, quando os dados são passados entre o SQL Server e R. Para obter mais informações, consulte [tipos de dados e bibliotecas de R](r/r-libraries-and-data-types.md).
-
-- Determine se o número de bits é um fator. Por exemplo, geralmente há diferenças nos resultados de operações matemáticas de 32 bits e 64 bits bibliotecas de ponto flutuante.
-
-- Determine se NaNs foram produzidas em qualquer operação. Isso pode invalidar os resultados.
-
-- Pequenas diferenças podem ser aumentadas quando você usa um recíproco de um número próximo de zero.
-
-- Erros de arredondamento acumulados podem causar coisas como valores que são menor que zero, em vez de zero.
-
-### <a name="error-not-enough-quota-to-process-this-command"></a>Erro: *não há cota suficiente para processar este comando*
+## <a name="not-enough-quota-to-process-this-command"></a>"Não há cota suficiente para processar este comando"
 
 Esse erro pode significar várias coisas:
 
@@ -288,7 +159,7 @@ Esse erro pode significar várias coisas:
 
 - Memória disponível é insuficiente para processar a tarefa de R. Esse erro geralmente ocorre em um ambiente padrão, onde os SQL Server pode estar usando até 70% dos recursos do computador. Para obter informações sobre como modificar a configuração do servidor para dar suporte à maior uso de recursos por R, consulte [operacionalização do código R](r/operationalizing-your-r-code.md).
 
-### <a name="error-cant-find-package"></a>Erro: *não é possível localizar o pacote*
+## <a name="cant-find-package"></a>"Não é possível localizar o pacote"
 
 Se você executa o código R no SQL Server e receber essa mensagem, mas não obteve a mensagem quando você executou o mesmo código fora do SQL Server, isso significa que o pacote não foi instalado no local padrão de biblioteca usado pelo SQL Server.
 
@@ -317,6 +188,46 @@ Para resolver o problema, você deverá reinstalar o pacote para a biblioteca de
 
 >[!NOTE]
 >Se você tiver atualizado uma instância do SQL Server 2016 para usar a versão mais recente do Microsoft R, o local padrão da biblioteca é diferente. Para obter mais informações, consulte [SqlBindR de uso para atualizar uma instância dos serviços do R](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Barra inicial é desligado devido a DLLs incompatíveis
+
+Se você instala o mecanismo de banco de dados com outros recursos, o servidor de patch e, em seguida, adicionar o recurso de aprendizado de máquina posteriormente usando a mídia original, a versão incorreta dos componentes de aprendizado de máquina pode ser instalada. Quando a barra inicial detecta uma incompatibilidade de versão, ele é desligado e cria um arquivo de despejo.
+
+Para evitar esse problema, certifique-se de instalar os novos recursos no mesmo nível de patch como a instância do servidor.
+
+**A maneira errada de atualização:**
+
+1. Instale o SQL Server 2016 sem os serviços de R.
+2. Atualize a atualização cumulativa do SQL Server 2016 2.
+3. Instale o R Services (no banco de dados) usando a mídia do RTM.
+
+**A maneira correta de atualização:**
+
+1. Instale o SQL Server 2016 sem os serviços de R.
+2. Atualize o SQL Server 2016 para o nível de patch desejado. Por exemplo, instale o Service Pack 1 e, em seguida, a atualização cumulativa 2.
+3. Para adicionar o recurso no nível do patch correto, execute novamente a instalação do SP1 e CU2 e, em seguida, escolha o R Services (no banco de dados). 
+
+## <a name="launchpad-fails-to-start-if-8dot3-notation-is-required"></a>Barra inicial não será iniciado se notação 8ponto3 é necessária
+
+> [!NOTE] 
+> Em sistemas mais antigos, barra inicial pode falhar ao iniciar se há um requisito de notação 8ponto3. Esse requisito foi removido em versões posteriores. Clientes de serviços do SQL Server 2016 R devem instalar um dos seguintes:
+> * SQL Server 2016 SP1 e CU1: [atualização cumulativa 1 para SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
+> * SQL Server 2016 RTM, a atualização cumulativa 3 e isso [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), que está disponível sob demanda.
+
+Para compatibilidade com R, SQL Server 2016 R Services (no banco de dados) necessária a unidade em que o recurso está instalado para dar suporte a criação de nomes de arquivos curtos usando *8ponto3 notação*. Também é chamado de um nome de 8.3 arquivo um *nome curto de arquivo*, e ele é usado para compatibilidade com versões anteriores do Microsoft Windows ou como uma alternativa para nomes de arquivo longos.
+
+Se o volume em que você está instalando o R não oferece suporte a nomes de arquivos curtos, os processos que inicie R do SQL Server não podem ser capazes de localizar o executável correto e barra inicial não será iniciado.
+
+Como alternativa, você pode habilitar a notação de 8ponto3 no volume em que o SQL Server está instalado e onde R Services está instalado. Em seguida, será necessário fornecer o nome curto para o diretório de trabalho no arquivo de configuração do R Services.
+
+1. Para habilitar a notação 8ponto3, execute o utilitário fsutil com a *8dot3name* argumento conforme descrito aqui: [8dot3name fsutil](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+
+2. Depois que a notação 8ponto3 estiver habilitada, abra o arquivo RLauncher.config e anote a propriedade de `WORKING_DIRECTORY`. Para obter informações sobre como encontrar esse arquivo, consulte [coleta de dados para a solução de problemas de aprendizado de máquina](data-collection-ml-troubleshooting-process.md).
+
+3. Use o utilitário fsutil com a *arquivo* argumento para especificar um caminho de arquivo curto para a pasta especificada no WORKING_DIRECTORY.
+
+4. Edite o arquivo de configuração para especificar a mesma pasta de trabalho que você inseriu na propriedade WORKING_DIRECTORY. Como alternativa, você pode especificar um diretório de trabalho diferentes e escolha um caminho existente que já é compatível com a notação de 8ponto3.
+
 
 ## <a name="next-steps"></a>Próximas etapas
 

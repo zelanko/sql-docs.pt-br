@@ -17,18 +17,19 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 16550b6c195f426d914f5a4b4d521cbd739765ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707964"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Visão geral do Assistente de migração de dados
 
 O Assistente de migração do dados (DMA) permite que você faça a atualização para uma plataforma de dados modernos detectando problemas de compatibilidade que podem afetar a funcionalidade de banco de dados em sua nova versão do SQL Server e banco de dados do SQL Azure. DMA recomenda melhorias de desempenho e confiabilidade para seu ambiente de destino e permite que você mova seu esquema, dados e objetos dependentes do servidor de origem para o servidor de destino.
 
 > [!NOTE] 
-> Para grandes (em termos de número e tamanho dos bancos de dados) migrações, é recomendável usar o [serviço de migração de banco de dados do Azure](https://docs.microsoft.com/en-us/azure/dms/dms-overview), que pode migrar bancos de dados em grande escala.
+> Para grandes (em termos de número e tamanho dos bancos de dados) migrações, é recomendável usar o [serviço de migração de banco de dados do Azure](https://docs.microsoft.com/azure/dms/dms-overview), que pode migrar bancos de dados em grande escala.
   
 ## <a name="capabilities"></a>Recursos
 
@@ -77,7 +78,7 @@ DMA substitui todas as versões anteriores do Supervisor de atualização do SQL
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 no Windows e Linux
-- Azure SQL Database
+- Banco de dados SQL do Azure
 
 > [!NOTE] 
 > DMA atualmente não dá suporte gerenciado instância do banco de dados do SQL Azure como um destino.
@@ -86,7 +87,7 @@ DMA substitui todas as versões anteriores do Supervisor de atualização do SQL
 
 Para instalar o DMA, baixe a versão mais recente da ferramenta do [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595)e, em seguida, execute o **DataMigrationAssistant.msi** arquivo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Avaliar sua migração do SQL Server](../dma/dma-assesssqlonprem.md)
 

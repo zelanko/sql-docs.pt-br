@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 814e0f8172e02d9b02be95888c8dab286429e533
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707954"
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Instalar componentes de aprendizado de máquina do SQL Server a partir da linha de comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -159,7 +160,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 Quando a instalação for concluída, você deve ter um servidor, pacotes da Microsoft, distribuições de código-fonte aberto do R e Python, ferramentas, exemplos e scripts que fazem parte da distribuição. 
 
-Para abrir uma janela de console de R, vá para \Program files\Microsoft Server\140 SQL (ou 130) \R_SERVER\bin\x64 e clique duas vezes em **RGui.exe**. Você é novo no R? Tente este tutorial: [comandos de R básicos e funções de RevoScaleR: 25 exemplos comuns](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler).
+Para abrir uma janela de console de R, vá para \Program files\Microsoft Server\140 SQL (ou 130) \R_SERVER\bin\x64 e clique duas vezes em **RGui.exe**. Você é novo no R? Tente este tutorial: [comandos de R básicos e funções de RevoScaleR: 25 exemplos comuns](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Para abrir um comando do Python, vá para \Program Server\140\PYTHON_SERVER\bin\x64 SQL e clique duas vezes em **python.exe**.
 

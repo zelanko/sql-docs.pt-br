@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707094"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no sistema de plataforma de análise
 
@@ -36,7 +37,7 @@ Gerenciamento de carga de trabalho
 Classe de recurso  
 No SQL Server PDW, um *classe de recurso* é uma função de servidor interna que tem pré-atribuídos limites de memória e simultaneidade. SQL Server PDW aloca recursos para solicitações de acordo com a associação de função de servidor de classe do recurso do logon que envia solicitações.  
   
-Em nós de computação, a implementação de classes de recurso usa o recurso administrador de recursos no SQL Server. Para obter mais informações sobre o administrador de recursos, consulte [Resource Governor](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) no MSDN.  
+Em nós de computação, a implementação de classes de recurso usa o recurso administrador de recursos no SQL Server. Para obter mais informações sobre o administrador de recursos, consulte [Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) no MSDN.  
   
 ### <a name="understand-current-resource-utilization"></a>Compreender a utilização de recursos atual  
 Para entender a utilização de recursos do sistema para as solicitações em execução no momento, use as exibições de gerenciamento dinâmico do SQL Server PDW. Por exemplo, você pode usar DMVs para entender se uma junção de hash grande com execução lenta pode se beneficiar de mais memória.  
@@ -130,7 +131,7 @@ Instruções SQL e operações regidas pelas classes de recursos:
   
 -   UPDATE  
   
--   DELETE  
+-   Delete (excluir)  
   
 -   RESTAURAR banco de dados ao restaurar em um dispositivo com mais nós de computação.  
   

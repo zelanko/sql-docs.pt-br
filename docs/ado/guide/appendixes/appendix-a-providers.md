@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e26659de53d43f14863e0bf83d70f5f6d3dbcfd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707504"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apêndice a: dados e provedores de serviços
 Esta seção aborda os três tipos de provedores: provedores de dados, provedores de serviços e componentes de serviço. Provedores se enquadram em duas categorias: aqueles fornecendo dados e aqueles fornecendo serviços. Um *provedor de dados* possui seus próprios dados e expõe em formato tabular para seu aplicativo. Um *provedor* encapsula um serviço, produzindo e consumo de dados, aumentando os recursos em seus aplicativos do ADO. Um provedor de serviços também pode ser definido posteriormente como um *componente de serviço*, que devem trabalhar junto com outros provedores de serviços ou componentes.
@@ -57,7 +58,7 @@ Esta seção aborda os três tipos de provedores: provedores de dados, provedore
 ## <a name="provider-specific-dynamic-properties"></a>Propriedades dinâmicas específicos do provedor
  O [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleções do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), e [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos incluem propriedades dinâmicas específicas para o provedor. Essas propriedades fornecem informações sobre a funcionalidade específica ao provedor além das propriedades internas que dá suporte ao ADO.
 
- Depois de estabelecer a conexão e criar esses objetos, use o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método o **propriedades** coleção do objeto para obter as propriedades específicas do provedor. Consulte a documentação do provedor e o [guia do programador do DB OLE](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) para obter informações detalhadas sobre essas propriedades dinâmicas.
+ Depois de estabelecer a conexão e criar esses objetos, use o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método o **propriedades** coleção do objeto para obter as propriedades específicas do provedor. Consulte a documentação do provedor e o [guia do programador do DB OLE](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) para obter informações detalhadas sobre essas propriedades dinâmicas.
 
 ## <a name="service-providers"></a>Provedores de serviços
  Para usar um provedor de serviços, você deve fornecer uma palavra-chave. Você também deve estar ciente das propriedades dinâmicas específicos do provedor associadas a cada provedor de serviços. Detalhes específicos do provedor são listadas para cada provedor de serviço que está disponível no momento da Microsoft:
