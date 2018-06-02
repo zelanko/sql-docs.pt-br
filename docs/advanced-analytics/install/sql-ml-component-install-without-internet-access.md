@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a0ec6834bf3aee8a7f8176bc5fd6d6d66d367b62
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 289f304cf445882981fb110e9c00a395cac90e5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585608"
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>Instalar componentes sem acesso à internet de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,6 +72,12 @@ Microsoft R Open     |Nenhuma alteração; uso anterior|
 Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
 Abrir Microsoft Python     |Nenhuma alteração; uso anterior|
 Microsoft Python Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
+**SQL Server 2017 CU7** |
+Microsoft R Open     |Nenhuma alteração; uso anterior|
+Microsoft R Server      |alterar o; uso anterior|
+Abrir Microsoft Python     |Nenhuma alteração; uso anterior|
+Microsoft Python Server    |Nenhuma alteração; uso anterior|
+
 
 ### <a name="bkmk_2016Installers"></a>Downloads do SQL Server 2016
 

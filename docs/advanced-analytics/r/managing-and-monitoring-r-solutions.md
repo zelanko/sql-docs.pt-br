@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1f390f6f8b33e9dbf316fa98eb35574a5daebeed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585698"
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Gerenciando e monitorando soluções de aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +39,7 @@ Para obter mais informações, consulte estes recursos:
 
 + [Visão geral de segurança do Python](../python/security-overview-sql-server-python-services.md)
 
-+ [Instalar e gerenciar pacotes do R](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)
++ [Pacotes R padrão e Python no SQL Server](installing-and-managing-r-packages.md)
 
 ## <a name="configuration-and-management"></a>Configuração e gerenciamento
 

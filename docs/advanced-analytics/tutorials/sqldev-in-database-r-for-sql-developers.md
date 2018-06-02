@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585268"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Análise de R no banco de dados para desenvolvedores do SQL (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +61,7 @@ Este tutorial usa um dataset público bem conhecido, com base em viagens em táx
 
 ### <a name="requirements"></a>Requisitos
 
-Este tutorial é destinado a usuários que já estão familiarizados com operações fundamentais de banco de dados, como criação de tabelas e bancos de dados, importar dados em tabelas e criar consultas SQL. Todo o código do R é fornecido e, portanto, não é necessário nenhum ambiente de desenvolvimento do R. Um programador experiente do SQL deve ser capaz de executar este exemplo usando [!INCLUDE[tsql](../../includes/tsql-md.md)] em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e executar scripts do PowerShell fornecidos.
+Este tutorial destina-se a usuários que estão familiarizados com operações de banco de dados básicos, como criação de tabelas e bancos de dados, importar dados em tabelas e escrever consultas SQL. Todo o código do R é fornecido e, portanto, não é necessário nenhum ambiente de desenvolvimento do R. Pode usar um programador SQL experiente [! INCLUIR [tsql] (... /.. / inclui/md.md tsql)] em [! INCLUIR [ssManStudioFull] (... /.. / inclui / ssmanstudiofull md.md) e execute o script do PowerShell fornecido para concluir este exemplo. No entanto, antes de iniciar este tutorial, você deve concluir as seguintes preparações:
 
 No entanto, antes de iniciar o tutorial, você deve concluir esses preparativos:
 

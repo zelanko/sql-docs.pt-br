@@ -1,33 +1,20 @@
 ---
 title: Usando o cubo e subcubo expressões | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- subcubes [MDX]
-- cubes [Analysis Services], MDX
-- CURRENTCUBE keyword
-- expressions [MDX], subcubes
-- expressions [MDX], cubes
-ms.assetid: 95ae034d-8f88-4820-91c6-205ec424e119
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6a315594676ee7439c1875675ffcd2ed95b6e03d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 45ead923cd69361e49b3da43c52aa8941781afe3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582268"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Usando expressões de cubo e subcubo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,10 +70,10 @@ ms.lasthandoff: 05/03/2018
  Um identificador de subcubo aparece como *Subcube_Name*. em descrições de notação BNF de instruções MDX.  
   
 ## <a name="see-also"></a>Consulte também  
- [A consulta MDX básica & #40; MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [A consulta MDX básica &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [Criando subcubos em MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [Instrução CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Instrução SCOPE & #40; MDX & #41;](../mdx/mdx-scripting-scope.md)  
+ [Instrução SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

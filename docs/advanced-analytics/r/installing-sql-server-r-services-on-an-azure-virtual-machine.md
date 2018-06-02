@@ -7,16 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d2b7aefa675bc4cfe8ea6fab463053395d5f45d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a0780d4f974761af563ff2ed6e20e444b2d85ef9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563674"
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Instalar recursos em uma máquina virtual do Azure de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-É recomendável usar o [máquina virtual de ciência de dados](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), mas se você quiser uma VM que tenha apenas serviços de aprendizado de máquina do SQL Server 2017 ou SQL Server 2016 R Services, este artigo o orienta através das etapas.
+É recomendável usar o [máquina virtual de ciência de dados](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), mas se você quiser uma VM que tenha apenas serviços de aprendizado de máquina do SQL Server 2017 ou SQL Server 2016 R Services, este artigo o orienta através das etapas.
 
 ## <a name="create-a-virtual-machine-on-azure"></a>Criar uma máquina virtual no Azure
 
