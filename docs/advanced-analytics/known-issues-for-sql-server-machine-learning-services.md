@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563854"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conhecidos nos serviços de aprendizado de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -96,7 +97,7 @@ Esta mensagem é exibida se qualquer uma das duas instruções a seguir for verd
 + Você instalou o R Server (autônomo) em um computador cliente usando o Assistente para instalação [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + Você instalou o Microsoft R Server usando o [separadas do Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-Para assegurar que o servidor e o cliente usam a mesma versão que você talvez precise usar _associação_, com suporte para o Microsoft R Server 9.0 e versões posteriores, para atualizar os componentes de R em instâncias do SQL Server 2016. Para determinar se há suporte para atualizações disponíveis para sua versão dos serviços do R, consulte [atualizar uma instância dos serviços do R usando SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Para assegurar que o servidor e o cliente usam a mesma versão que você talvez precise usar _associação_, com suporte para o Microsoft R Server 9.0 e versões posteriores, para atualizar os componentes de R em instâncias do SQL Server 2016. Para determinar se há suporte para atualizações disponíveis para sua versão dos serviços do R, consulte [atualizar uma instância dos serviços do R usando SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 **Aplica-se a:** SQL Server 2016 R Services, com R Server versão 9.0.0 ou anterior
 
@@ -452,7 +453,7 @@ Para compatibilidade com [!INCLUDE[rsql_productname](../includes/rsql-productnam
 
 Revisão 0.92 do driver ODBC do SQLite é incompatível com o RevoScaleR. Revisões de 0.88 a 0.91 e 0.93 e posteriores são compatíveis.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
 

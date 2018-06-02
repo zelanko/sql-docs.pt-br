@@ -9,17 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 982e589b7337297c84b8909499eba244638a7df3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 68366f03168b7c7c434f05e88f512401248c1124
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576058"
 ---
 # <a name="parameters-element-xmla"></a>Elemento Parameters (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contém uma coleção de [parâmetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elementos usados pelo [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
   
- **Namespace:**`urn:schemas-microsoft-com:xml-analysis`  
+ **Namespace:** `urn:schemas-microsoft-com:xml-analysis`  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +37,17 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Execute (executar)](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|Elementos pai|[Executar](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Elementos filho|[Parâmetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
  Se o comando XMLA não usar o **parâmetros** elemento, o elemento pode ser omitido ao chamar o **Execute** método.  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Confira também
+ [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

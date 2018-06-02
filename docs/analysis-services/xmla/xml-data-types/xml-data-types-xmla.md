@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07bb4d7212d586ed533afc129ac9e1643a7c7dc1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c52717a6f061f4708b2d3e46c6d34f837b2039af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573778"
 ---
 # <a name="xml-data-types-xmla"></a>Tipos de dados XML (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/10/2018
 |----------------|-----------------|  
 |Booliano|O tipo de dados **boolean** XML padrão.|  
 |Decimal|O tipo de dados **decimal** XML padrão.|  
-|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|Um namespace no elemento **root** . Esse namespace é retornado quando um comando XMLA não retorna um resultado porque o comando XMLA não retorna um resultado ou porque ocorreu um erro no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância ao executar o comando XMLA.|  
+|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|Um namespace no elemento **root** . Esse namespace é retornado quando um comando XMLA não retorna um resultado porque o comando XMLA não retorna um resultado ou porque ocorreu um erro na instância do Analysis Services ao executar o comando XMLA.|  
 |[EnumString](../../../analysis-services/xmla/xml-data-types/enumstring-data-type-xmla.md)|Um conjunto de constantes de cadeia de caracteres nomeadas para um determinado enumerador.|  
 |Integer|O tipo de dados **int** XML padrão.|  
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Dados multidimensionais retornados pelo *resultados* parâmetro o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.|  
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/10/2018
   
  Para obter descrições completas dos tipos de dados de XML padrão, consulte a recomendação candidata do World Wide Web Consortium (WC3).  
   
-## <a name="see-also"></a>Consulte também  
- [Elementos XML & #40; XMLA & #41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
- [XML for Analysis & #40; XMLA & #41; Referência](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+## <a name="see-also"></a>Confira também
+ [Elementos XML &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [XML for Analysis &#40;XMLA&#41; referência](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   

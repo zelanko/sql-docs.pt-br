@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91350ba6e82e070707d17b58c82bf305c1e87660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3e542534b85d0f87b689b196001e9a00fe49b15
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578228"
 ---
 # <a name="exception-element-xmla"></a>Elemento Exception (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,24 +35,24 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos pai|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
  Se ocorrer um erro durante a execução de uma chamada do método **Discover** ou de um único comando XMLA em uma chamada do método **Execute** que impede a conclusão do método ou comando, o elemento **root** do método ou comando em questão conterá um elemento **Exception** e um elemento **Messages** . O elemento **Exception** indica que ocorreu um erro que impediu a execução com êxito do método ou comando e o elemento **Messages** contém a lista de erros ou mensagens de aviso relacionados ao erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também
  [Mensagens de elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)   
- [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

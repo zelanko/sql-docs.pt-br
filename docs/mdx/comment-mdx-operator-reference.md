@@ -1,32 +1,20 @@
 ---
 title: -(Comentário) (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- --
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- commenting characters
-- -- (comment character)
-ms.assetid: 02aec133-6809-4829-b9a2-102c376e21da
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2d988fe442b0bc7c00e56aa08e8a9a421f214c6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 564327619cabc00684b064585aa323c9426597c2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577368"
 ---
 # <a name="comment---mdx-operator-reference"></a>Comentário - referência de operador MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +56,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Comentário & #40; MDX & #41;](../mdx/comment-mdx.md)   
+ [Comentário &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [&#40;Comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

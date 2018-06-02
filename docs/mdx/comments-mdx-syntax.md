@@ -1,35 +1,20 @@
 ---
 title: Comentários (sintaxe MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- remarks [MDX]
-- MDX [Analysis Services], comments
-- commenting characters
-- nonexecuting text strings [MDX]
-- Multidimensional Expressions [Analysis Services], comments
-- comments [MDX]
-ms.assetid: 9c00b30c-28f6-4f23-b812-ccc0e900daa5
-caps.latest.revision: 25
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4d3a333b2a8fdbb89f718d67a849c08142da8f79
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578448"
 ---
 # <a name="comments-mdx-syntax"></a>Comments (sintaxe MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
