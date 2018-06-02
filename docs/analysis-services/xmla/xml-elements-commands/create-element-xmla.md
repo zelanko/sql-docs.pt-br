@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb6a4e848b35a31feeef31bb8e304ba43a8577f3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 78cdf8b38828e8b9f96a89ffc026ec39ae40366b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574568"
 ---
 # <a name="create-element-xmla"></a>Elemento Create (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contém elementos do Analysis Services Scripting Language (ASSL) usados pelo **Execute** método para criar objetos em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
+  Contém elementos do Analysis Services Scripting Language (ASSL) usados pelo **Execute** método para criar objetos em uma instância do Analysis Services.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,10 +34,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -48,13 +49,13 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descrição|  
+|attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|Atributo **Boolean** opcional. Se definido como True, os objetos definidos no **ObjectDefinition** elemento pode substituir objetos existentes na [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância. Se esse atributo for omitido ou definido como False, a presença de um objeto existente gerará um erro.|  
 |Escopo|Atributo **Enum** opcional. Define a duração de objetos definida no elemento **ObjectDefinition** . Se esse atributo for omitido, os objetos definidos no **ObjectDefinition** elemento são mantidos no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância. O valor a seguir está disponível:<br /><br /> *Sessão*: os objetos definidos no **ObjectDefinition** elemento existe apenas para a duração do XML para a sessão de análise (XMLA).<br />                  Observe que ao usar o *sessão* configuração, o **ObjectDefinition** elemento só pode conter [dimensão](../../../analysis-services/scripting/objects/dimension-element-assl.md), [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md), ou [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elementos ASSL.|  
   
 ## <a name="remarks"></a>Remarks  
- Cada operação **Create** cria um objeto principal sob um pai fornecido pelo elemento **ParentObject** . Se o objeto pai for omitido, será considerada a instância de destino [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Isso gerará um erro se o pai de um objeto principal não for a instância de destino.  
+ Cada operação **Create** cria um objeto principal sob um pai fornecido pelo elemento **ParentObject** . Se o objeto pai for omitido, será considerada a instância de destino [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Isso gerará um erro se o pai de um objeto principal não for a instância de destino.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um banco de dados vazio chamado **banco de dados de teste** em um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Comandos & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>Confira também
+ [Comandos &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

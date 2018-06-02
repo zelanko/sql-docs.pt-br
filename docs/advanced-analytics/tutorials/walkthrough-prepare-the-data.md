@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af8c03d33fe0e0b42fe09fbe1b900166d50e25cd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585928"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar os dados usando o PowerShell (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +84,7 @@ O script do R baixado inclui os comandos para baixar e instalar esses pacotes.
 
 ### <a name="install-required-packages-on-the-server"></a>Instalar os pacotes necessários no servidor
 
-Há várias maneiras diferentes que você pode instalar pacotes no SQL Server. Por exemplo, o SQL Server fornece um [pacote de gerenciamento](../r/installing-and-managing-r-packages.md) recurso que permite que os administradores de banco de dados cria um repositório de pacote e atribuir os direitos para instalar seus próprios pacotes de usuário. No entanto, se você for um administrador no computador, você pode instalar novos pacotes usando o R, contanto que você instale a biblioteca correta.
+Há várias maneiras diferentes que você pode instalar pacotes no SQL Server. Por exemplo, o SQL Server fornece [gerenciamento de pacotes de R](../r/install-additional-r-packages-on-sql-server.md) recurso que permite que os administradores de banco de dados cria um repositório de pacote e atribuir os direitos para instalar seus próprios pacotes de usuário. No entanto, se você for um administrador no computador, você pode instalar novos pacotes usando o R, contanto que você instale a biblioteca correta.
 
 > [!NOTE]
 > No servidor, **não** instalar em uma biblioteca do usuário, mesmo se for solicitado. Se você instalar uma biblioteca de usuário, a instância do SQL Server não pode localizar ou executar os pacotes. Para saber mais, veja [Instalando novos pacotes de R no SQL Server](../r/install-additional-r-packages-on-sql-server.md).
@@ -162,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-Clique neste link para ir para a próxima lição: [exibir e explorar os dados usando SQL](/walkthrough-view-and-explore-the-data.md)
+Clique neste link para ir para a próxima lição: [exibir e explorar os dados usando SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>Solução de problemas
 
@@ -296,10 +297,10 @@ As consultas T-SQL usadas neste passo a passo foram testadas em podem ser execut
 
 ## <a name="next-lesson"></a>Próxima lição
 
-[Exibir e explorar os dados usando R e SQL](/walkthrough-view-and-explore-the-data.md)
+[Exibir e explorar os dados usando R e SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Passo a passo de ciência de dados de ponta a ponta para R e SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
+[Passo a passo de ciência de dados de ponta a ponta para R e SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [Pré-requisitos para o passo a passo de ciência de dados](walkthrough-prerequisites-for-data-science-walkthroughs.md)

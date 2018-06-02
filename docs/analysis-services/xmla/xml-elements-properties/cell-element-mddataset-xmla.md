@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576268"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Elemento Cell (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descrição|  
+|attribute|Description|  
 |---------------|-----------------|  
 |CellOrdinal|Necessário **unsignedInt** atributo. A posição ordinal da célula dentro do conjunto de dados multidimensional.|  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  O tipo de dados de um valor de propriedade de célula só é especificado para a propriedade de célula de VALUE. Os tipos de dados de outras propriedades de célula são determinados pela definição de propriedade de célula incluída no **CellInfo** elemento. Um elemento de valor de propriedade de célula poderá ser excluído se foi especificado um valor padrão (incluindo um **padrão** elemento para uma definição de propriedade de célula contido no **CellInfo** elemento) para uma propriedade de célula ou, se nenhum valor padrão foi especificado e o valor da propriedade de célula é nulo.  
   
 ## <a name="cell-property-errors"></a>Erros de propriedade de célula  
- Se uma propriedade de célula não pode ser retornada devido a um erro que ocorre na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], como um erro de cálculo que impede que o valor retornado para uma determinada célula, um **erro** elemento substitui o conteúdo da propriedade de célula em questão. O exemplo de XML a seguir descreve um erro de propriedade de célula:  
+ Se uma propriedade de célula não pode ser retornada devido a um erro que ocorre na instância do Analysis Services, como um erro de cálculo que impede que o valor retornado para uma determinada célula, um **erro** elemento substitui o conteúdo das propriedade de célula em questão. O exemplo de XML a seguir descreve um erro de propriedade de célula:  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tipo de dados MDDataSet & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Confira também
+ [Tipo de dados MDDataSet &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

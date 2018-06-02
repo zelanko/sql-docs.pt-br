@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586058"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carregar dados com serviços de integração Parallel Data Warehouse
 Fornece informações de referência e de implantação para carregar dados no SQL Server Parallel Data Warehouse usando pacotes do SQL Server Integration Services (SSIS).  
@@ -28,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -83,7 +84,7 @@ Em seguida, os dados são mapeados do Integration Services para tipos de dados d
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -247,16 +248,16 @@ Execute o pacote no computador do Integration Services.
   
 ## <a name="see-also"></a>Consulte também  
 [Criar uma tarefa de script que usa o adaptador de destino do SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[Projetando e implementando pacotes (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[Tutorial: Criando um pacote básico usando um assistente](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[Projetando e implementando pacotes (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Tutorial: Criando um pacote básico usando um assistente](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Guia de Introdução (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [Exemplo de geração de pacote dinâmico](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Projetando seus pacotes SSIS para o paralelismo (vídeo do SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server Community exemplos: Serviços de integração](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Melhorando cargas incrementais com o Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[Transformação Dimensão de Alteração Lenta](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[Tarefa Inserção em Massa](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[Melhorando cargas incrementais com o Change Data Capture](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[Transformação Dimensão de Alteração Lenta](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[Tarefa Inserção em Massa](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  
