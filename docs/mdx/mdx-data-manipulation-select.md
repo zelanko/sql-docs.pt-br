@@ -1,32 +1,20 @@
 ---
 title: Instrução SELECT (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 93a58d6453300d79f07fa19874cc2db8c21cfb11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 787bd07976f7472ae5f86c347c5ba06493414d7a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579978"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX - SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +119,7 @@ FROM
   
  Membros calculados podem ser incluídos em \<cláusula de eixo de consulta SELECT > sempre que a conexão foi aberta usando o parâmetro de cadeia de caracteres de conexão *subconsultas = 1*; consulte [propriedades com suporte do XMLA &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
   
-## <a name="autoexists"></a>Autoexists  
+## <a name="autoexists"></a>autoexists  
  Quando dois ou mais atributos da dimensão são usados em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para assegurar que os membros desses atributos sejam devidamente confinados para atender aos critérios de todos os outros atributos. Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo Cidade, e outra expressão que confine os membros do atributo País a todos os países na Europa, isso resultará no confinamento dos membros de Cidade apenas às cidades que pertencem a países na Europa. Essas característica do Analysis Services é denominada Autoexists e se aplica apenas aos atributos na mesma dimensão. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser entendido como a interseção resultante das diferentes expressões de atributo sobre os registros da dimensão. Consulte estes exemplos abaixo:  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
@@ -390,7 +378,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**Todos os Produtos**|**Acessórios**|**Bicicletas**|**Roupas**|**Componentes**|  
+||**Todos os Produtos**|**Acessórios**|**Bikes**|**Roupas**|**Componentes**|  
 |**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -476,9 +464,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Principais conceitos em MDX &#40;do Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Instruções de manipulação de dados MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restringindo a consulta com a consulta e os eixos de segmentação de dados & #40; MDX & #41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Restringindo a consulta com os eixos de consulta e Slicer &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 
