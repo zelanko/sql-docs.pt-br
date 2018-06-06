@@ -21,11 +21,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4a41d9238315719bc6e47fb3bc9c598222673a6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550767"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
   É possível definir a segurança de relatórios e recursos individuais para controlar o nível de acesso que os usuários têm a esses itens. Por padrão, somente os usuários que são membros do grupo interno de **Administradores** podem executar relatórios, exibir recursos, modificar propriedades e excluir os itens. Todos os outros usuários devem ter atribuições de função que permitam o acesso a um relatório ou recurso.  
@@ -79,7 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurar o acesso ao Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Proteger itens de fontes de dados compartilhadas](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Armazenar credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

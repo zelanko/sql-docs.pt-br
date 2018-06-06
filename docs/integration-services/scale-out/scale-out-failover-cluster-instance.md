@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470238"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Suporte do Scale Out para alta disponibilidade por meio da instância de cluster de failover do SQL Server
 
@@ -62,7 +63,7 @@ Coloque o serviço Mestre do Scale Out online.
 ![Colocar online](media/bring-online.PNG)
 
 > [!NOTE]
-> Se desejar fazer failover do SSISDB e do serviço Mestre do Scale Out separadamente, siga [7. Configurar a função de serviço Mestre do Scale Out do cluster de failover do Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> Se desejar fazer failover do SSISDB e do serviço Mestre do Scale Out separadamente, siga [7. Configurar a função de serviço Mestre do Scale Out do cluster de failover do Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## <a name="7-install-scale-out-workers"></a>7. Instalar Trabalhos do Scale Out
 Instale o Trabalho do Scale Out nos nós de trabalho. Durante a instalação, especifique https://[Sql Server network name]:[master port] para o ponto de extremidade mestre. 

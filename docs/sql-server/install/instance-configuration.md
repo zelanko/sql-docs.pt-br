@@ -3,12 +3,9 @@ title: Ajuda do Assistente de Instalação | Microsoft Docs
 ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +14,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772762"
 ---
 # <a name="installation-wizard-help"></a>Ajuda do Assistente de Instalação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +133,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vária
   
 ### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
   
-|Description|Diretório padrão|Recomendações|  
+|Descrição|Diretório padrão|Recomendações|  
 |-----------------|-----------------------|---------------------|  
 |Diretório raiz de dados|C:\Arquivos de Programas\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Assegure-se de que a pasta \Arquivos de programas\Microsoft SQL Server\ esteja protegida com permissões limitadas. O desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, em muitas configurações, do desempenho do armazenamento no qual o diretório de dados está localizado. Coloque esse diretório no armazenamento de melhor desempenho conectado ao sistema. Para instalações de cluster de failover, verifique se os diretórios de dados estão colocados no disco compartilhado.|  
 |Diretório do arquivo de log|C:\Arquivos de Programas\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |Este é o diretório de arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e inclui o log do FlightRecorder. Se você aumentar a duração do registrador de voo, atente para que o diretório de logs tenha espaço suficiente.|  
@@ -173,7 +171,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vária
   
 ### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
   
-|Description|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
+|Descrição|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Diretório raiz de dados|Disco local, servidor de arquivos SMB, armazenamento compartilhado* |C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A instalação configurará ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interromperá a herança como parte da configuração.|  
 |Diretório do banco de dados de usuário|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.|  
@@ -185,7 +183,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vária
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  A tabela a seguir lista os tipos de armazenamento compatíveis e os diretórios padrão para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são configuráveis pelo usuário durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Description|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
+|Descrição|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Diretório raiz de dados|Armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Dica: se o disco compartilhado tiver sido selecionado na página **Seleção de Disco de Cluster** , o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster** .|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A instalação configurará ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interromperá a herança como parte da configuração.|  
 |Diretório do banco de dados de usuário|Armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Dica: se o disco compartilhado tiver sido selecionado na página **Seleção de Disco de Cluster** , o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster** .|As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.|  
@@ -225,7 +223,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vária
   
 #### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
   
-|Description|Diretório padrão|Recomendações|  
+|Descrição|Diretório padrão|Recomendações|  
 |-----------------|-----------------------|---------------------|  
 |Diretório raiz de dados |C:\Arquivos de Programas\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Assegure-se de que a pasta \Arquivos de programas\Microsoft SQL Server\ esteja protegida com permissões limitadas. O desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, em muitas configurações, do desempenho do armazenamento no qual o diretório de dados está localizado. Coloque esse diretório no armazenamento de melhor desempenho conectado ao sistema. Para instalações de cluster de failover, verifique se os diretórios de dados estão colocados no disco compartilhado.|  
 |Diretório do arquivo de log|C:\Arquivos de Programas\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |Este é o diretório de arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e inclui o log do FlightRecorder. Se você aumentar a duração do registrador de voo, atente para que o diretório de logs tenha espaço suficiente.|  
@@ -369,7 +367,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vária
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Diretórios de dados e de log para uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  A tabela a seguir lista os tipos de armazenamento com suporte e os diretórios padrão para instâncias autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode definir durante a instalação.  
   
-|Description|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
+|Descrição|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Diretórios de dados**|Disco local, servidor de arquivos SMB, armazenamento compartilhado* |C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A instalação configurará ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interromperá a herança como parte da configuração.<br /><br /> As práticas recomendadas para diretórios **tempdb** dependem dos requisitos de carga de trabalho e desempenho. Especifique várias pastas/unidades para distribuir os arquivos de dados entre vários volumes.|  
 |**Diretório de log**|Disco local, servidor de arquivos SMB, armazenamento compartilhado*|C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Verifique se o diretório de log tem espaço suficiente.|  
@@ -379,7 +377,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vária
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Diretórios de dados e de log para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  A tabela a seguir lista os tipos de armazenamento compatíveis e os diretórios padrão para uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são configuráveis pelo usuário durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Description|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
+|Descrição|Tipo de armazenamento com suporte|Diretório padrão|Recomendações|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Diretório de dados**tempdb** |Disco local, armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:>\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> Dica: se o disco compartilhado tiver sido selecionado na página **Seleção de Disco de Cluster** , o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster** .|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A instalação configurará ACLs para diretórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interromperá a herança como parte da configuração.<br /><br /> Verifique se o diretório, ou diretórios, especificado (se vários arquivos forem especificados) é válido para todos os nós do cluster. Durante o failover, se os diretórios de **tempdb** não estiverem disponíveis no nó de destino de failover, o recurso do SQL Server não será exibido online.|  
 |Diretório de logs de**tempdb** |Disco local, armazenamento compartilhado, servidor de arquivos SMB|\<Unidade:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Dica: se o disco compartilhado tiver sido selecionado na página **Seleção de Disco de Cluster** , o padrão será o primeiro disco compartilhado. O padrão do campo será um espaço em branco se nenhuma seleção for feita na página **Seleção de Disco de Cluster** .|As práticas recomendadas para diretórios de dados de usuário dependem dos requisitos de carga de trabalho e desempenho.<br /><br /> Verifique se o diretório especificado é válido para todos os nós de cluster. Durante o failover, se os diretórios de **tempdb** não estiverem disponíveis no nó de destino de failover, o recurso do SQL Server não será exibido online.<br /><br /> Verifique se o diretório de log tem espaço suficiente.|  

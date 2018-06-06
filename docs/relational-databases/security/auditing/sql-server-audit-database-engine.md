@@ -23,10 +23,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708244"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -158,7 +159,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="dynamic-views-and-functions"></a>Exibições e funções dinâmicas  
  A tabela a seguir lista as exibições e funções dinâmicas que podem ser usadas na auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições e funções dinâmicas|Description|  
+|Exibições e funções dinâmicas|Descrição|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Retorna uma linha para cada ação de auditoria que pode ser reportada no log de auditoria e para cada grupo de ação de auditoria que pode ser configurado como parte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Fornece informações sobre o estado atual da auditoria.|  
@@ -168,7 +169,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="catalog-views"></a>Exibições do catálogo  
  A tabela a seguir lista as exibições do catálogo que podem ser usadas para auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições do catálogo|Description|  
+|Exibições do catálogo|Descrição|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contém informações sobre as especificações de auditoria de banco de dados em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor para todos os bancos de dados.|  

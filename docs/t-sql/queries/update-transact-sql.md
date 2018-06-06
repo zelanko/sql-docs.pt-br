@@ -43,11 +43,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b89e99a4ddc1848193d20cf9f49e591b4360a767
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 356a8a7e4e869d86d93b0654828b081d81c380ff
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582508"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,7 +144,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *schema_name*  
  É o nome do esquema ao qual a tabela ou exibição pertence.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  É o nome da tabela ou exibição na qual as linhas serão atualizadas. A exibição referenciada por *table_or_view_name* precisa ser atualizável e referenciar exatamente uma tabela base na cláusula FROM da exibição. Para obter mais informações sobre exibições atualizáveis, consulte [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  

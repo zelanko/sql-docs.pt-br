@@ -3,24 +3,21 @@ title: Desinstalar e remover o Master Data Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: 10
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dd16cf3ac03192ae5c0e65f831ea237e07c45f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c210840b717f5cc13fac3fe0ca2e9c9e7f763952
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772552"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Desinstalar e remover o Master Data Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +26,7 @@ ms.lasthandoff: 05/03/2018
   
  Para impedir a perda de dados e evitar que outros computadores no sistema sejam afetados, alguns itens não são removidos nem alterados pelo processo de desinstalação. Revise a tabela a seguir para determinar se os itens deverão permanecer ou ser removidos.  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |Pastas e arquivos|O processo de desinstalação remove a maioria das pastas e arquivos do caminho de instalação.<br /><br /> O processo de desinstalação não remove as pastas Master Data Services e MDSTempDir do local de instalação. Depois que o processo de desinstalação estiver concluído, você poderá excluir essas pastas manualmente do sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] assemblies|O processo de desinstalação remove os assemblies do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] do GAC (Cache Global de Assemblies).|  

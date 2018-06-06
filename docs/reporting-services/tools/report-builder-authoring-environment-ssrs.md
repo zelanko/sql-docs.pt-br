@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a8daf190f0fbd77bc36e2be7d079a2c7176db6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550067"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente de criação do Construtor de Relatórios (SSRS)
   O Construtor de Relatórios [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] é um ambiente de criação autônomo para a criação de relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fora do Visual Studio. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório. Você pode instalá-lo do portal da Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou do Centro de Download da Microsoft.  
@@ -51,7 +52,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Consulte Também  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [Configurar o acesso ao Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

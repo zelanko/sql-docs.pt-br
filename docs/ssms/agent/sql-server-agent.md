@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708934"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ Um *operador* define as informações de contato de um indivíduo responsável p
 > [!IMPORTANT]  
 > As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
-Para enviar notificações a operadores usando email ou pagers, configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para usar o Database Mail. Para obter mais informações, consulte [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+Para enviar notificações a operadores usando email ou pagers, configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para usar o Database Mail. Para obter mais informações, consulte [Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
   
 Você pode definir um operador como o alias de um grupo de indivíduos. Desse modo, todos os membros do alias serão notificados ao mesmo tempo. Para obter mais informações, consulte [Operadores](../../ssms/agent/operators.md).  
   
@@ -134,7 +135,7 @@ Um subsistema é um objeto predefinido que representa a funcionalidade disponív
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] define os subsistemas que estão listados nesta tabela:  
   
-|Nome do subsistema|Description|  
+|Nome do subsistema|Descrição|  
 |--------------|-----------|  
 |Script do Microsoft ActiveX|Execução de uma etapa de trabalho de script ActiveX.<br /><br />**Aviso** O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent em uma futura versão do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |Sistema Operacional (**CmdExec**)|Execução de um programa executável.|  
@@ -174,16 +175,16 @@ Se estiver executando várias instâncias do [!INCLUDE[ssNoVersion](../../includ
   
 Use as seguintes tarefas como introdução rápida ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent:  
   
-|Description|Tópico|  
+|Descrição|Tópico|  
 |-----------|-----|  
 |Descreve como configurar o SQL Server Agent.|[Configurar o SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |Descreve como iniciar, parar e pausar o serviço do SQL Server Agent.|[Iniciar, parar ou pausar o serviço do SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Descreve considerações para especificar uma conta para o serviço do SQL Server Agent.|[Selecionar uma conta para o Serviço do SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Descreve como usar o log de erros do SQL Server Agent.|[Log de erros do SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Descreve como usar objetos de desempenho.|[Usar objetos de desempenho](../../ssms/agent/use-performance-objects.md)|  
-|Descreve o Assistente de Plano de Manutenção, que é um utilitário a ser usado para ajudá-lo a criar trabalhos, alertas e operadores para automatizar a administração de uma instância do SQL Server.|[Usar o Assistente de Plano de Manutenção](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|Descreve o Assistente de Plano de Manutenção, que é um utilitário a ser usado para ajudá-lo a criar trabalhos, alertas e operadores para automatizar a administração de uma instância do SQL Server.|[Usar o Assistente de Plano de Manutenção](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |Descreve como automatizar tarefas administrativas usando o SQL Server Agent.|[Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
-[Configuração da Área de Superfície](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Configuração da Área de Superfície](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

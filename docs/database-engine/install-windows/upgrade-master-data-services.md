@@ -3,7 +3,6 @@ title: Fazer upgrade do Master Data Services | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -12,14 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 216ea0f5416dd45f428d9cda336e7b5c194195c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8f4c6cdf3c59d82f9fd61228de2410bdef23daa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771902"
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
 

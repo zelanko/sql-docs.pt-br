@@ -1,7 +1,7 @@
 ---
 title: Desenvolver com as APIs REST para o Reporting Services | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: developer
@@ -14,11 +14,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5a180e19628ad832b970026422e9b03e7373ecfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553827"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desenvolver com as APIs REST para o Reporting Services
 
@@ -27,6 +28,8 @@ ms.lasthandoff: 05/03/2018
 O Microsoft SQL Server 2017 Reporting Services dá suporte a APIs REST (Transferência de Estado Representacional). As APIs REST são pontos de extremidade de serviço que dão suporte a um conjunto de operações HTTP (métodos), que fornecem acesso de criação, recuperação, atualização ou exclusão para recursos em um servidor de relatório.
 
 A API REST fornece acesso programático aos objetos em um catálogo do servidor de relatório do SQL Server 2017 Reporting Services. Exemplos de objetos são pastas, relatórios, KPIs, fontes de dados, conjuntos de dados, planos de atualização, assinaturas e muito mais. Usando a API REST, você pode, por exemplo, navegar pela hierarquia de pastas, descobrir o conteúdo de uma pasta ou baixar uma definição de relatório. Você também pode criar, atualizar e excluir objetos. Exemplos de como trabalhar com objetos são carregar um relatório, executar um plano de atualização, excluir uma pasta e assim por diante.
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>Componentes de uma solicitação/resposta da API REST
 

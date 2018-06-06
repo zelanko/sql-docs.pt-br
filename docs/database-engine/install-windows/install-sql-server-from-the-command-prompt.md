@@ -3,7 +3,6 @@ title: Instalar o SQL Server por meio do prompt de comando | Microsoft Docs
 ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -86,14 +85,15 @@ helpviewer_keywords:
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 caps.latest.revision: 255
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac7f9dc22f86f5da53efaa0b348362e582045683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771502"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar o SQL Server do prompt de comando
 
@@ -192,11 +192,12 @@ Use as diretrizes a seguir para desenvolver comandos de instalação com a sinta
 ##  <a name="Install"></a> Parâmetros de instalação  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação.  
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação.<br /><br /> Valores com suporte: **Instalar**.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
-|Controle de Instalação R do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTROPENLICENSETERMS <br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas que incluem R Services (no banco de dados) ou Microsoft R Server.**|Necessário para confirmar a aceitação dos termos de licença.| 
+|Controle de Instalação R do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas que incluem o pacote Anaconda Python.**|Necessário para confirmar a aceitação dos termos de licença.| 
+|Controle de Instalação R do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTROPENLICENSETERMS <br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas que incluem o pacote Microsoft R Open.**|Necessário para confirmar a aceitação dos termos de licença.| 
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ENU<br /><br /> **Opcional**|Use esse parâmetro para instalar a versão em inglês do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um sistema operacional localizado quando a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional.|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UpdateEnabled<br /><br /> **Opcional**|Especifique se a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve descobrir e incluir atualizações de produto. Os valores válidos são True e False ou 1 e 0. Por padrão, a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluirá as atualizações localizadas.|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UpdateSource<br /><br /> **Opcional**|Especifique o local em que a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obterá as atualizações de produto. Os valores válidos são “MU” para pesquisar a Atualização [!INCLUDE[msCoName](../../includes/msconame-md.md)], um caminho de pasta válido, um caminho relativo, como `.\MyUpdates` ou um compartilhamento UNC. Por padrão, a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update ou um serviço Windows Update por meio do Windows Server Update Services.|  
@@ -275,7 +276,8 @@ Use as diretrizes a seguir para desenvolver comandos de instalação com a sinta
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta de inicialização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta de inicialização do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|R Services (no Banco de Dados)|MRCACHEDIRECTORY|Use este parâmetro para especificar o diretório de Cache para componentes do Microsoft R Open e do Microsoft R Server ou Machine Learning Server, conforme descrito [neste artigo](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access). Essa configuração é normalmente usada ao instalar aprendizado de máquina do SQL Server por meio da linha de comando em um computador sem acesso à Internet.|  
+|Serviços de Machine Learning/Python (no banco de dados)|MPYCACHEDIRECTORY|Use esse parâmetro para especificar o diretório de Cache para suporte a recurso Python em Serviços de Machine Learning do SQL Server 2017 ou Machine Learning Server (Autônomo). Essa configuração normalmente é usada ao instalar componentes do Python da [linha de comando em um computador sem acesso à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|Serviços de Machine Learning/R (no banco de dados)|MRCACHEDIRECTORY|Use esse parâmetro para especificar o diretório de Cache para suporte a recurso Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Autônomo) ou R em Serviços de Machine Learning do SQL Server 2017 ou Machine Learning Server (Autônomo). Essa configuração normalmente é usada ao instalar componentes do R da [linha de comando em um computador sem acesso à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
  Para instalar uma nova instância autônoma com os componentes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replicação e Pesquisa de Texto Completo, e ainda habilitar a inicialização instantânea de arquivo para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
@@ -292,7 +294,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>Parâmetros de preparação de imagem  
  Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para preparar uma instância do SQL Server sem configurá-la. 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação.<br /><br /> Valores com suporte: **PrepareImage**|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -325,7 +327,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>Parâmetros de conclusão de imagem  
  Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para concluir e configurar uma instância preparada do SQL Server. 
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação.<br /><br /> Valores com suporte: **CompleteImage**|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -390,7 +392,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> Parâmetros de atualização  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para atualização. 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação. Valores com suporte:<br /><br /> **Atualizar**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> O valor **EditionUpgrade** é usado para atualizar uma edição existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para outra edição. Para obter mais informações sobre a versão e as atualizações de edição com suporte, consulte [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -428,7 +430,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> Parâmetros de reparo  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para reparação. 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de reparo.<br /><br /> Valores com suporte: **Repair**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Opcional**|Use esse parâmetro para instalar a versão em inglês do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] em um sistema operacional localizado quando a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional.|  
@@ -452,7 +454,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> Parâmetros de recompilação do banco de dados do sistema  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para recompilar os bancos de dados do sistema mestre, modelo, msdb e tempdb. Para obter mais informações, consulte [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md). 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de reconstrução do banco de dados.<br /><br /> Valores com suporte: **Rebuilddatabase**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome de instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].<br /><br /> Para obter mais informações, consulte [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
@@ -471,7 +473,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> Parâmetros de desinstalação  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para desinstalação. 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da desinstalação.<br /><br /> Valores com suporte: **Uninstall**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Opcional**|Especifica o [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) a ser usado.|  
@@ -601,7 +603,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>Parâmetros de preparação de cluster de failover  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a preparação do cluster de failover. Essa é a primeira etapa da instalação avançada de cluster, na qual você deve preparar as instâncias de cluster de failover em todos os nós do cluster de failover. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da preparação do cluster de failover.<br /><br /> Valor com suporte: **PrepareFailoverCluster**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -666,7 +668,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>Parâmetros de conclusão de cluster de failover  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a conclusão do cluster de failover. Esta é a segunda etapa na opção de instalação avançada de cluster de failover. Depois de executar a preparação em todos os nós de cluster de failover, execute esse comando no nó que possui os discos compartilhados. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da conclusão do cluster de failover.<br /><br /> Valor com suporte: **CompleteFailoverCluster**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Opcional**|Use esse parâmetro para instalar a versão em inglês do SQL Server em um sistema operacional localizado quando a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional.|  
@@ -729,7 +731,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>Parâmetros de atualização de cluster de failover  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a atualização de cluster de failover. Para obter mais informações, consulte [Atualizar uma instância de cluster de failover do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] &#40;Instalação&#41; ](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) e [Instâncias de cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação.<br /><br /> Valor com suporte: **Upgrade**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -759,7 +761,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a> Parâmetros de adição de nó  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para AddNode. 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de AddNode.<br /><br /> Valor com suporte: **AddNode**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -804,7 +806,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>Parâmetros de remoção de nó  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para RemoveNode. Para desinstalar um cluster de failover, execute RemoveNode em cada nó de cluster de failover. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Description|  
+|componente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de RemoveNode.<br /><br /> Valor com suporte: **RemoveNode**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Opcional**|Especifica o [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) a ser usado.|  
@@ -842,7 +844,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> Parâmetros de funcionalidades  
  Para instalar recursos específicos, use o parâmetro /FEATURES e especifique o recurso pai ou os valores de recursos listados na tabela a seguir. Para obter uma lista de recursos com suporte nas edições do SQL Server, consulte [Edições e recursos com suporte no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
-|Parâmetro de recurso pai|Parâmetro de recurso|Description|  
+|Parâmetro de recurso pai|Parâmetro de recurso|Descrição|  
 |:---|:---|:---|  
 |SQL||Instala o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], a Replicação, o Texto Completo e o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].|  
 ||SQLEngine|Instala apenas o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
@@ -850,7 +852,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||FullText|Instala o componente FullText com o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||DQ|Copia os arquivos necessários para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Depois de concluir a instalação do SQL Server, execute o arquivo DQSInstaller.exe para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Para obter mais informações, consulte [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md). O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]também é instalado.|  
 ||PolyBase|Instala componentes do PolyBase.|  
-||AdvancedAnalytics|Instala o R Services (no banco de dados).|  
+||AdvancedAnalytics|Instala [Serviços de Machine Learning do SQL Server de 2017](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) ou [R Services do SQL Server 2016 (no Banco de Dados)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install).|  
+||SQL_INST_MR |Aplica-se aos [Serviços de Machine Learning do SQL Server 2017](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install). Emparelhe com **AdvancedAnalytics** para instalar pacotes R Open e R proprietários.|  
+||SQL_INST_MPY|Aplica-se aos [Serviços de Machine Learning do SQL Server 2017](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install). Emparelhe com **AdvancedAnalytics** para instalar pacotes Python e Anaconda proprietários.|  
 |AS||Instala todos os componentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |RS||Instala todos os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |RS_SHP||Instala os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o SharePoint.|  
@@ -858,7 +862,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |DQC||Instala o [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Instala todos os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |MDS||Instala o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
-|SQL_SHARED_MR||Instala o Microsoft R Server.|  
+|SQL_SHARED_MPY||Instala os pacotes Python para o [Machine Learning Server do SQL Server 2017 (Autônomo)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install) |  
+|SQL_SHARED_MR||Instala os pacotes R para o [R Server do SQL Server 2016 (Autônomo)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) ou o Machine Learning Server do SQL Server 2017 (Autônomo) |  
 |Ferramentas*||Instala ferramentas de cliente e componentes dos Manuais Online do SQL Server.|  
 ||BC|Instala componentes de compatibilidade com versões anteriores.|  
 ||Conn|Instala os componentes de conectividade.|
@@ -874,7 +879,7 @@ O SSMS (*[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) agor
   
 ### <a name="feature-parameter-examples"></a>Exemplos de parâmetros de recursos:  
   
-|Parâmetro e valores|Description| 
+|Parâmetro e valores|Descrição| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] sem os componentes de replicação e texto completo.|  
 |/FEATURES=SQLEngine, FullText|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o texto completo.|  
@@ -887,7 +892,7 @@ O SSMS (*[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) agor
   
  A função AllFeatures_WithDefaults é o comportamento padrão de edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e reduz o número de caixas de diálogo apresentadas ao usuário. Ela pode ser especificada na linha de comando ao instalar uma edição do SQL Server que não seja o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   
-|Role|Description|Instala…|  
+|Role|Descrição|Instala…|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm existente do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo.|Mecanismo de cálculo do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> Programa instalador do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> Manuais Online do SQL Server|  
 |SPI_AS_NewFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssDE](../../includes/ssde-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um novo farm não configurado do Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo. A Instalação do SQL Server configurará o farm durante a instalação da função de recurso.|Mecanismo de cálculo do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> Manuais Online do SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Ferramentas de configuração<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

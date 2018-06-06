@@ -18,11 +18,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3418f30e95cfab213496dc5b1fbbc3b8a1dd35f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b7daa257b6a6afca3bd3aa8a1c09b08e0fb5778
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582118"
 ---
 # <a name="transact-sql-statements"></a>instruções Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -49,6 +50,7 @@ A DML (linguagem de manipulação de dados) afeta as informações armazenadas n
 - BULK INSERT
 - Delete (excluir)
 - INSERT
+- UPDATE
 - MERGE
 - TRUNCATE TABLE
 

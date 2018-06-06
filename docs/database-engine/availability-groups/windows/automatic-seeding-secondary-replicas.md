@@ -5,7 +5,6 @@ services: data-lake-analytics
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a9c3487822eec82ebf294c01650a2296dcec5ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6576f0430a45300d76f675730f14b2a257441ffd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769692"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Propagação automática para réplicas secundárias
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,7 +245,7 @@ GO
 
 A tabela a seguir lista os eventos estendidos relacionados à propagação automática.
 
-|Nome|Description|
+|Nome|Descrição|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Mensagem de solicitação de propagação.|
 |hadr_physical_seeding_backup_state_change|Alteração de estado lateral de backup da propagação física.|

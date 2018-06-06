@@ -3,7 +3,6 @@ title: Política de failover para instâncias de cluster de failover | Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -12,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4b63755975f79e5dc601b952cc09eb5ab144116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772562"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
  Examine [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), pois esse procedimento armazenado de sistema desempenha uma função importante nos níveis de condição de falha.  
   
-|Nível|Condição|Description|  
+|Nível|Condição|Descrição|  
 |-----------|---------------|-----------------|  
 |0|Nenhum failover ou reinicialização automática|Indica que nenhum failover ou reinicialização será disparado automaticamente em nenhuma condição de falha. Esse nível destina-se apenas a fins de manutenção do sistema.|  
 |1|Failover ou reinicialização quando o servidor estiver inativo|Indica que uma reinicialização ou failover de servidor será disparado se a seguinte condição for gerada:<br /><br /> O serviço SQL Server está inativo.|  

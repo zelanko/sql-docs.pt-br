@@ -15,11 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0b16ad6c18bec1954d9c52ada5fd22202e3ff9da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fed2dac0cb435e906a3c880022f53fdc35880754
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34581978"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Girar chaves Always Encrypted usando o PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -312,7 +313,7 @@ Você pode girar uma chave de criptografia de coluna usando uma abordagem offlin
 |Etapa 3. Autentique no Azure se a chave mestra de coluna (que protege a chave de criptografia de coluna a ser girada) estiver armazenada no Cofre de Chaves do Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sim | não
 |Etapa 4. Gere uma nova chave de criptografia de coluna, criptografe-a com a chave mestra de coluna e crie metadados de chave de criptografia de coluna no banco de dados.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Observação:** use uma variação do cmdlet que gera e criptografa internamente uma chave de criptografia de coluna.<br>Nos bastidores, esse cmdlet emite a instrução [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para criar metadados de chave. | Sim | Sim
 |Etapa 5. Localize todas as colunas criptografadas com a chave de criptografia de coluna antiga. | [Guia de Programação do SQL Server Management Objects (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | não | Sim
-|Etapa 6. Crie um objeto *SqlColumnEncryptionSettings* para cada coluna afetada.  SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Especifica o esquema de criptografia de destino para uma coluna. Nesse caso, o objeto deve especificar que a coluna afetada deve ser criptografada usando a nova chave de criptografia de coluna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeysettings) | não | não
+|Etapa 6. Crie um objeto *SqlColumnEncryptionSettings* para cada coluna afetada.  SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Especifica o esquema de criptografia de destino para uma coluna. Nesse caso, o objeto deve especificar que a coluna afetada deve ser criptografada usando a nova chave de criptografia de coluna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | não | não
 |Etapa 7. Criptografe novamente as colunas identificadas na etapa 5 usando a nova chave de criptografia de coluna. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Observação:** esta etapa pode levar muito tempo. Seus aplicativos não poderão acessar as tabelas por meio da operação inteira ou parte dela, dependendo da abordagem (online versus offline) que você seleciona. | Sim | Sim
 |Etapa 8. Remova os metadados da chave de criptografia de coluna antiga. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | não | Sim
 

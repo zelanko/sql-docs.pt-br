@@ -3,8 +3,6 @@ title: Tabelas de envio de logs e procedimentos armazenados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +16,15 @@ helpviewer_keywords:
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e306bcc54708e0548baa4052a2b657b3fd47228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc9e2c3aadf5bb153d40536a5145b259e2163a17
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771832"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="primary-server-tables"></a>Tabelas de servidor primário  
   
-|Table|Description|  
+|Table|Descrição|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Armazena ID de trabalho de alerta. Esta tabela só será usada no servidor primário se um servidor monitor remoto não tiver sido configurado.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Armazena detalhe de erro para trabalhos de envio de logs associados a este servidor primário.|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="primary-server-stored-procedures"></a>Procedimentos armazenados em servidor primário  
   
-|Procedimento armazenado|Description|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|Instala o banco de dados primário para uma configuração de envio de log, incluindo o trabalho de backup, registro de monitor local e registro de monitor remoto.|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|Adiciona um nome de banco de dados secundário a um banco de dados primário existente.|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="secondary-server-tables"></a>Tabelas de servidor secundário  
   
-|Table|Description|  
+|Table|Descrição|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Armazena ID de trabalho de alerta. Essa tabela só será usada no servidor secundário se um servidor monitor remoto não tiver sido configurado.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Armazena detalhe de erro para trabalhos de envio de logs associados a este servidor secundário.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="secondary-server-stored-procedures"></a>Procedimentos armazenados em servidor secundário  
   
-|Procedimento armazenado|Description|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|Define um banco de dados secundário para envio de logs.|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|Configura as informações primárias, adiciona links de monitor local e remoto e cria trabalhos de cópia e restauração no servidor secundário para o banco de dados primário especificado.|  
@@ -87,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="monitor-server-tables"></a>Tabelas de Servidor Monitor  
   
-|Table|Description|  
+|Table|Descrição|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Armazena ID de trabalho de alerta.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Armazena detalhes de erros para trabalhos de envio de logs.|  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="monitor-server-stored-procedures"></a>Procedimentos armazenados em Servidor Monitor  
   
-|Procedimento armazenado|Description|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Criará um trabalho de alerta de envio de logs se já não foi criado um.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Removerá um trabalho de alerta de envio de logs se não houver nenhum banco de dados primário associado.|  

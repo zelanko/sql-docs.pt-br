@@ -3,7 +3,6 @@ title: Instalar o SQL Server 2016 no Server Core | Microsoft Docs
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af0c145508b13907716bd95d9b54a1063f325e9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 979cb0b59ba0528ef7450de0fc4a7b96dd9d4338
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770912"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
 
@@ -92,7 +92,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
 ### <a name="feature-parameters"></a>Parâmetros de recursos  
   
-|Parâmetro de recurso|Description|  
+|Parâmetro de recurso|Descrição|  
 |-----------------------|-----------------|  
 |SQLENGINE|Instala apenas o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |Replicação|Instala o componente Replicação juntamente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
@@ -105,7 +105,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 
  Veja os exemplos a seguir do uso de parâmetros de recurso:  
   
-|Parâmetro e valores|Description|  
+|Parâmetro e valores|Descrição|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Instala apenas o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o texto completo.|  

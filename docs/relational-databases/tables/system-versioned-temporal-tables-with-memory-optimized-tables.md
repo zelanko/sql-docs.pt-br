@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4454cfd34cf23c1fb22417acf275d7172c16063b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563714"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   A tabela de histórico para a tabela com controle da versão do sistema com otimização de memória deve ter base em disco, independentemente de ter sido criada pelo usuário final ou o sistema.  
   
--   Consultas que afetam apenas a tabela atual (na memória) podem ser usadas em [módulos T-SQL compilados nativamente](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx). Não há suporte para consultas temporais usando a cláusula FOR SYSTEM TIME em módulos compilados nativamente. O uso da cláusula FOR SYSTEM TIME com tabelas com otimização de memória em consultas ad hoc e módulos não nativos tem suporte.  
+-   Consultas que afetam apenas a tabela atual (na memória) podem ser usadas em [módulos T-SQL compilados nativamente](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Não há suporte para consultas temporais usando a cláusula FOR SYSTEM TIME em módulos compilados nativamente. O uso da cláusula FOR SYSTEM TIME com tabelas com otimização de memória em consultas ad hoc e módulos não nativos tem suporte.  
   
 -   Quando **SYSTEM_VERSIONING = ON**, uma tabela interna de preparo com otimização de memória é criada automaticamente para aceitar as alterações de versão do sistema mais recentes resultantes de operações de atualização e exclusão na tabela atual com otimização de memória.  
   

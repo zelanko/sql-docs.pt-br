@@ -3,7 +3,6 @@ title: Usar o Assistente para Fazer Failover de Grupo de Disponibilidade (SQL Se
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -21,14 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 26
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60787866e1f26cb577c210c2c8b1a67e996ca871
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756f260b8e2b3459f2ac2bf4368a3e4bdafa74e7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771132"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **Status do Quorum**  
  Para o tipo de cluster WSFC, exibe o status do quorum da réplica de disponibilidade:  
   
-   |Valor|Description|  
+   |Valor|Descrição|  
    |-----------|-----------------|  
    |**Quorum normal**|O cluster foi iniciado com quorum normal.|  
    |**Quorum forçado**|O cluster foi iniciado com quorum forçado.|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de Disponibilidade**  
  Exibe o modo de disponibilidade da instância de servidor:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Confirmação síncrona**|No modo de confirmação síncrona, antes de confirmar transações, uma réplica primária de confirmação síncrona espera que uma réplica secundária de confirmação síncrona confirme que concluiu a proteção do log. O modo de confirmação síncrona garante que, quando um determinado banco de dados secundário é sincronizado com o banco de dados primário, as transações confirmadas sejam totalmente protegidas.|  
 |**Confirmação assíncrona**|No modo de confirmação assíncrona, a réplica primária confirma as transações sem esperar a confirmação de que uma réplica secundária de confirmação assíncrona protegeu o log. O modo de confirmação assíncrona minimiza a latência de transações nos bancos de dados secundários, mas permite que elas atrasem os bancos de dados primários, possibilitando a perda de dados.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de Failover**  
  Exibe o modo de failover da instância de servidor:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Automatic**|Uma réplica secundária configurada para failover automático também oferece suporte a failover manual planejado sempre que a réplica secundária é sincronizada com a réplica primária.|  
 |**Manual**|Existem dois tipos de failover manual: planejado (sem perda de dados) e forçado (com possível perda de dados). Em uma réplica secundária específica, há suporte para somente um desses tipos, dependendo do modo de disponibilidade e, no modo de confirmação síncrono, o estado de sincronização da réplica secundária. Para determinar qual forma de failover manual tem suporte em uma determinada réplica secundária, consulte a coluna **Prontidão de Failover** desta grade.|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 05/03/2018
  **Prontidão de Failover**  
  Exibe a prontidão de failover da réplica secundária:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Sem perda de dados**|Há suporte para esta réplica secundária no failover planejado. Este valor só ocorre quando uma réplica secundária no modo de confirmação síncrona está sincronizada com a réplica primária.|  
 |**Perda de dados, Avisos (** *#* **)**|Há suporte para esta réplica secundária no failover forçado (com possível perda de dados). Este valor ocorre sempre que a réplica secundária não está sincronizada com a réplica primária. Clique no link de avisos de perda de dados referente às informações sobre a possível perda de dados.|  

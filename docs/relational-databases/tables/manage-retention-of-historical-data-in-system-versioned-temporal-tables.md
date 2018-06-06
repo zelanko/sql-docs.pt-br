@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e612894249f42ef081f989eda29b3d2f8900cc80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 924fa0d289c7225587962c9551d445d348f73939
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563804"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 > **OBSERVAÇÃO:**  o uso da abordagem do Stretch Database só se aplica ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e não se aplica ao [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md) em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra os dados históricos de forma transparente para o Azure. Para mais segurança, é possível criptografar dados em movimento usando o recurso [Sempre Criptografado](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) do SQL Server. Além disso, você pode usar a [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) e outros recursos de segurança avançados do SQL Server com o Stretch Database e o Temporal para proteger seus dados.  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md) em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra os dados históricos de forma transparente para o Azure. Para mais segurança, é possível criptografar dados em movimento usando o recurso [Sempre Criptografado](https://msdn.microsoft.com/library/mt163865.aspx) do SQL Server. Além disso, você pode usar a [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) e outros recursos de segurança avançados do SQL Server com o Stretch Database e o Temporal para proteger seus dados.  
   
  Ao utilizar a abordagem do Stretch Database, você pode ampliar algumas ou todas as tabelas de histórico temporal para o Azure e, assim, o SQL Server moverá silenciosamente os dados históricos para o Azure. Habilitar a ampliação de uma tabela de histórico não altera a forma como você interage com a tabela temporal em termos de modificação de dados e consultas temporais.  
   

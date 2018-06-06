@@ -20,11 +20,12 @@ caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35cbe4b19fc8cab0f28f879e6a65d6149bf6822a
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 799f2b0df6a33d70006baf4b1389584cd7acf801
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34722316"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |Servidores remotos|\@\@remserver|Substitua servidores remotos usando servidores vinculados.|Nenhum|Nenhum|  
 |Servidores remotos|SET REMOTE_PROC_TRANSACTIONS|Substitua servidores remotos usando servidores vinculados.|SET REMOTE_PROC_TRANSACTIONS|110|  
-|Opções Set|**SET ROWCOUNT** para as instruções **INSERT**, **UPDATE**e **DELETE**|Palavra-chave TOP|SET ROWCOUNT|109|  
 |Dicas de tabela|Dica de tabela HOLDLOCK sem parênteses.|Use HOLDLOCK com parênteses.|Dica de tabela HOLDLOCK sem parênteses|167|  
   
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Recursos preteridos em uma versão futura do SQL Server  
@@ -170,7 +170,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Ferramentas|SQL Server Profiler para captura de rastreamento|Use o Extended Events Profiler inserido no SQL Server Management Studio.|SQL Server Profiler|Nenhum|  
 |Ferramentas|SQL Server Profiler para reprodução de rastreamento|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|Nenhum|  
 |Trace Management Objects|Namespace Microsoft.SqlServer.Management.Trace (contém as APIs para Rastreamento do SQL Server e objetos de reprodução)|Configuração de Rastreamento: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Leitura de Rastreamento: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Reprodução de rastreamento: nenhuma|||  
-|Procedimentos armazenados, funções e exibições de catálogo do Rastreamento do SQL|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Eventos estendidos](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
+|Procedimentos armazenados, funções e exibições de catálogo do Rastreamento do SQL|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Eventos estendidos](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
+|Opções Set|**SET ROWCOUNT** para as instruções **INSERT**, **UPDATE**e **DELETE**|Palavra-chave TOP|SET ROWCOUNT|109|  
+
   
 > [!NOTE]  
 > O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)**. Se os desenvolvedores alocaram **varbinary(50)** , o aplicativo poderá exigir alterações se o cookie retornar aumentos de tamanho em uma versão futura. Embora não seja um problema de substituição, isto é mencionado neste tópico porque os ajustes de aplicativo são semelhantes. Para obter mais informações, veja [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  

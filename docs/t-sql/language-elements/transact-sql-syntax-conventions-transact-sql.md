@@ -33,11 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a20affed4c50345d5b7d2d61a2f2666e456a5971
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3339a53c2569f6561caa4cefdb5e697610c71fdd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582108"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |UPPERCASE|Palavras-chave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*italic*|Parâmetros de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] fornecidos pelo usuário.|  
 |**bold**|Nomes de banco de dados, nomes de tabela, nomes de coluna, nomes de índice, procedimentos armazenados, utilitários, nomes de tipo de dados e texto que devem ser digitados exatamente como aparecem.|  
-|**underline**|Indica o valor padrão aplicado quando a cláusula que contém o valor sublinhado é omitida da instrução.|  
+|_underline_|Indica o valor padrão aplicado quando a cláusula que contém o valor sublinhado é omitida da instrução.|  
 |&#124; (barra vertical)|Separa itens de sintaxe que se encontram entre colchetes ou entre chaves. Você pode usar só um dos itens.|  
 |`[ ]` (colchetes)|Itens de sintaxe opcionais. Não digite os colchetes.|  
 |{ } (chaves)|Itens de sintaxe exigidos. Não digite as chaves.|  
@@ -88,7 +89,7 @@ Quando se refere a um objeto específico, nem sempre é preciso especificar o se
   
 Para omitir nós intermediários, use pontos para indicar essas posições. A tabela a seguir mostra os formatos válidos de nomes de objetos.  
   
-|Formato de referência de objeto|Description|  
+|Formato de referência de objeto|Descrição|  
 |-----------------------------|-----------------|  
 |*server* **.** *database* **.** *schema* **.** *object*|Nome de quatro partes.|  
 |*server* **.** *database* **..** *object*|O nome do esquema é omitido.|  

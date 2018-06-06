@@ -18,11 +18,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4cdc9091d8403e579f6f3e1f95c9d57c4ec68386
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edb44dbc848403814a68bfda6841f56df83b0418
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743985"
 ---
 # <a name="numeric-types"></a>Tipos numéricos
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -30,6 +31,8 @@ ms.lasthandoff: 05/03/2018
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos tipos **numeric** a seguir.
   
 ## <a name="in-this-section"></a>Nesta seção
+
+[bit &#40;Transact-SQL&#41;](../../t-sql/data-types/bit-transact-sql.md)  
 [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
 [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
 [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  

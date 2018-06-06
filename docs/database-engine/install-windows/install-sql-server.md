@@ -3,7 +3,6 @@ title: Instalar o SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 59
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a66992f974048b0fb24cfae124896c3f0ebc419e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ea964d0048b410dd5f555759c4a73f547837be9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771082"
 ---
 # <a name="install-sql-server"></a>Instalar o SQL Server
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>Como instalar o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  
-|Title|Description|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Instalar o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] no Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Examine este artigo para instalar o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] no Windows Server Core.|  
 |[Verificar parâmetros do Verificador de Configuração do Sistema](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Discute a função do Verificador de Configuração do Sistema (SCC).|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="how-to-install-individual-components"></a>Como instalar os componentes individuais  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Instalar o Mecanismo de Banco de Dados do SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Descreve como instalar e configurar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Instalar a Replicação do SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Descreve como instalar e configurar a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="how-to-configure-sql-server"></a>Como configurar o SQL Server  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Este artigo apresenta uma visão geral da configuração do firewall e de como configurar o Firewall do Windows.|  
 |[Configurar um computador multihomed para acesso ao SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Este artigo descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.|  

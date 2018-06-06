@@ -1,7 +1,7 @@
 ---
 title: Configurar o banco de dados de distribuição do SQL Server no grupo de disponibilidade | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2018
+ms.date: 05/23/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7253c3cc263d653c9e2d86e03da49ead9731e31
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 11574b8454c425c3f022ed1daf415e71ea317535
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473880"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On
 
@@ -76,7 +77,6 @@ Depois que um banco de dados de distribuição no AG for configurado com base na
 - Faça alterações nas propriedades do distribuidor ou do banco de dados de distribuição em todas as réplicas que participam do AG do banco de dados de distribuição.
 - Faça alterações nos trabalhos de replicação por meio de procedimentos armazenados do msdb ou do SQL Server Management Studio em todas as réplicas que participam do AG do banco de dados de distribuição.
 - A configuração do distribuidor no publicador precisa ser feita com scripts. O assistente de replicação não pode ser usado. Há suporte para assistentes de replicação e folhas de propriedade para outras finalidades.
-- A partir do SQL Server 2017 CU 6, não há suporte para o Replication Monitor e outras interfaces do usuário de replicação que se conectam usando o nome de ouvinte do AG. Para administrar os agentes de replicação associados ao banco de dados de distribuição em um AG, use a propriedade do trabalho e o histórico de trabalhos.
 - A configuração do AG para bancos de dados de distribuição só pode ser feita por meio de scripts.
 - A configuração de bancos de dados de distribuição em um AG precisa ser uma nova configuração de replicação. Não há suporte para a alternância de um banco de dados de distribuição existente para um AG. Também quando um banco de dados de distribuição é retirado de um AG, ele pode deixar de funcionar como um banco de dados de distribuição válido e deve ser removido.
 

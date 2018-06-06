@@ -21,11 +21,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 44f4992239c15b7382ede007b5da47ef13b03566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550527"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticação com o servidor de relatório
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="authentication-types"></a>Tipos de autenticação  
  Todos os usuários ou aplicativos que solicitam acesso a conteúdo ou operações do servidor de relatório devem ser autenticados com o tipo de autenticação configurado no servidor de relatório para que o acesso seja permitido. A tabela a seguir descreve os tipos de autenticação suportados pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Nome do tipo de autenticação|Valor da Camada de Autenticação HTTP|Usado por padrão|Description|  
+|Nome do tipo de autenticação|Valor da Camada de Autenticação HTTP|Usado por padrão|Descrição|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Sim|Tenta usar Kerberos para a Autenticação Integrada do Windows primeiro, mas reverterá para NTLM se o Active Directory não puder conceder um tíquete para a solicitação do cliente ao servidor de relatório. Negotiate só reverterá para NTLM se a permissão não estiver disponível. Se a primeira tentativa resultar em um erro que não seja de permissão ausente, o servidor de relatório não fará uma segunda tentativa.|  
 |RSWindowsNTLM|NTLM|Sim|Usa NLTM para Autenticação Integrada do Windows.<br /><br /> As credenciais não serão delegadas ou representadas em outras solicitações. As solicitações subsequentes seguirão uma nova sequência de desafio/resposta. Dependendo das configurações de segurança de rede, talvez o usuário precise informar credenciais ou a solicitação de autenticação poderá ser processada de maneira transparente.|  
@@ -89,7 +90,6 @@ ms.lasthandoff: 05/03/2018
 [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implementando uma extensão de segurança](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Configurar conexões SSL em um servidor de relatórios de modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Configurar o acesso ao Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Visão geral de extensões de segurança](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Autenticação no Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Autorização no Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
