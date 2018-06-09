@@ -13,7 +13,7 @@ ms.openlocfilehash: 8804e354966e98fd6f7142ab0f86ccd827dd7ecc
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575798"
 ---
 # <a name="name-element-parameter-xmla"></a>Elemento Name (Parâmetro) (XMLA)

@@ -1,35 +1,23 @@
 ---
 title: Extrair (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- EXTRACT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Extract function
-ms.assetid: c0d27d31-e36e-4b7f-bb86-1e4707351392
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 103bec97eab0c80b9306acd2452a21805c169e92
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740305"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna um conjunto de tuplas dos elementos de hierarquia extraídos.  
   
@@ -91,6 +79,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

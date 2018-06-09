@@ -1,35 +1,23 @@
 ---
 title: BottomCount (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- BOTTOMCOUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- BottomCount function
-ms.assetid: 1441dab3-7885-4e92-9d48-21d832286677
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4109e8241babdb49a53a233360092308b11c616b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 424c928f64b784070520f4cebe450dd5465fea41
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739775"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Classifica um conjunto na ordem crescente e retorna o número especificado de tuplas no conjunto especificado com os valores mais baixos.  
   
@@ -44,7 +32,7 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Count*  
+ *Contagem*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
  *Numeric_Expression*  
@@ -74,6 +62,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

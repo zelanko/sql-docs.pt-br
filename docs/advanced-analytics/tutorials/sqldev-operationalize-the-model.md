@@ -1,24 +1,26 @@
 ---
-title: Lição 6 colocar o modelo R | Microsoft Docs
+title: Lição 6 resultados potenciais de previsão usando modelos de R (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Tutorial mostra como inserir R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249849"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>Lição 6: Colocar o modelo R
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lição 6: Prever possíveis resultados usando um modelo de R em um procedimento armazenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores em SQL sobre como usar o R no SQL Server.
 
-Nesta etapa, você aprenderá a *operacionalizar* o modelo usando um procedimento armazenado. Esse procedimento armazenado pode ser chamado diretamente por outros aplicativos, para fazer previsões sobre novas observações. Passo a passo demonstra duas maneiras de executar pontuação usando um modelo de R em um procedimento armazenado:
+Nesta etapa, você aprenderá a usar o modelo no novo observações para prever resultados possíveis. O modelo é encapsulado em um procedimento armazenado que pode ser chamado diretamente por outros aplicativos. Passo a passo demonstra várias maneiras de executar pontuação:
 
 - **Modo de pontuação em lote**: usar uma consulta SELECT como uma entrada para o procedimento armazenado. O procedimento armazenado retorna uma tabela de observações correspondente aos casos de entrada.
 
@@ -28,7 +30,7 @@ Primeiro, vamos ver como a pontuação funciona em geral.
 
 ## <a name="basic-scoring"></a>A pontuação básica
 
-O procedimento armazenado _PredictTip_ ilustra a sintaxe básica para encapsular uma chamada de previsão em um procedimento armazenado.
+O procedimento armazenado **PredictTip** ilustra a sintaxe básica para encapsular uma chamada de previsão em um procedimento armazenado.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + A instrução SELECT obtém o modelo serializado do banco de dados e armazena o modelo na variável R `mod` para processamento adicional usando o R.
 
-+ Os novos casos de pontuação são obtidos de [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada no `@inquery`, o primeiro parâmetro para o procedimento armazenado. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`. Esse quadro de dados é passado para a função `rxPredict` no R, que gera as pontuações.
++ Os novos casos de pontuação são obtidos de [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada no `@inquery`, o primeiro parâmetro para o procedimento armazenado. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`. Este quadro de dados é passado para o [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funcionar em [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), que gera as pontuações.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ Agora vamos ver como funciona a pontuação de lote.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Essa consulta pode ser usada como entrada para o procedimento armazenado, _PredictTipBatchMode_, fornecido como parte do download.
+    Essa consulta pode ser usada como entrada para o procedimento armazenado, **PredictTipMode**, fornecido como parte do download.
 
-2. Reserve um minuto para examinar o código do procedimento armazenado _PredictTipBatchMode_ em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Reserve um minuto para examinar o código do procedimento armazenado **PredictTipMode** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ Agora vamos ver como funciona a pontuação de lote.
 
 Nesta seção, você aprenderá como criar previsões únicas usando um procedimento armazenado.
 
-1. Reserve um minuto para examinar o código do procedimento armazenado _PredictTipSingleMode_, incluído como parte do download.
+1. Reserve um minuto para examinar o código do procedimento armazenado **PredictTipSingleMode**, que é incluído como parte do download.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

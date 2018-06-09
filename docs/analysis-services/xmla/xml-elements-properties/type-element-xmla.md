@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca05cb4bc5ea8951db028ed4da53ee3bfd7131dc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576708"
 ---
 # <a name="type-element-xmla"></a>Elemento Type (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/10/2018
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Processar](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre como processar opções disponíveis para objetos em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [processando um modelo multidimensional &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Para obter mais informações sobre opções de processamento disponíveis para objetos em uma instância do Analysis Services, consulte [processando um modelo multidimensional &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  O valor de **tipo** elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*ProcessFull*|Descarta todos os dados do objeto afetado e processa o objeto afetado.|  
 |*ProcessAdd*|Adiciona novos dados ao objeto afetado.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/10/2018
 |*ProcessStructure*|Processa a estrutura somente do objeto afetado.|  
 |*ProcessClearStructureOnly*|Exclui os dados somente do objeto afetado.|  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Confira também
+ [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -13,7 +13,7 @@ ms.openlocfilehash: 15f930695e13d824e70da748dad20cf574e9bc38
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34579138"
 ---
 # <a name="xml-elements---methods"></a>Elementos XML - métodos

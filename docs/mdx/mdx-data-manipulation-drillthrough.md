@@ -1,6 +1,6 @@
 ---
 title: Instrução DRILLTHROUGH (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f5b56c03ec6e575b647ed7eecaf26d35bfae047
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580058"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742275"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulação de dados MDX - DETALHAMENTO
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Recupera as linhas da tabela subjacente que foram usadas para criar uma célula especificada em um cubo.  
   
@@ -43,7 +43,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Uma lista de atributos de dimensão e medidas separada por vírgulas.  
   
 ## <a name="remarks"></a>Remarks  
- Drillthrough é uma operação na qual o usuário final seleciona uma célula a partir de um cubo e recupera um conjunto de resultados a partir dos dados de origem dessa célula para obter informações mais detalhadas. Por padrão, um conjunto de resultados de drillthrough é derivado das linhas da tabela que foram avaliadas para calcular o valor da célula do cubo selecionado. Para que os usuário finais executem o drillthrough, seus aplicativos cliente devem oferecer suporte a esse recurso. Em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], os resultados são recuperados diretamente do armazenamento MOLAP, a menos que as partições ou dimensões ROLAP são consultados.  
+ Drillthrough é uma operação na qual o usuário final seleciona uma célula a partir de um cubo e recupera um conjunto de resultados a partir dos dados de origem dessa célula para obter informações mais detalhadas. Por padrão, um conjunto de resultados de drillthrough é derivado das linhas da tabela que foram avaliadas para calcular o valor da célula do cubo selecionado. Para que os usuário finais executem o drillthrough, seus aplicativos cliente devem oferecer suporte a esse recurso. Em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], os resultados são recuperados diretamente do armazenamento MOLAP, a menos que as partições ou dimensões ROLAP são consultados.  
   
 > [!IMPORTANT]  
 >  A segurança do drillthrough baseia-se nas opções de segurança gerais definidas no cubo. Caso um usuário não consiga alguns dados usando o MDX, o drillthrough também limitará o usuário exatamente da mesma maneira.  

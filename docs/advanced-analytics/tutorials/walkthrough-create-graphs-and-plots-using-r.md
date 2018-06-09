@@ -11,7 +11,7 @@ ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585468"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e gráficos usando SQL e R (passo a passo)

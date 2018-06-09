@@ -1,6 +1,6 @@
 ---
 title: Membros (conjunto) (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bc1cb1f1d6836bcedbad533beeed48266e774a3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3bd4fe92c064f4665a4b397e47a45ae5bde50f39
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580478"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742685"
 ---
 # <a name="members-set-mdx"></a>Members (Conjunto) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna o conjunto de membros em uma dimensão, nível ou hierarquia.  
   

@@ -1,6 +1,6 @@
 ---
 title: Função Aggregate (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578418"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740565"
 ---
 # <a name="aggregate-mdx"></a>Função Aggregate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna um número que é calculado com a agregação nas células retornadas pela expressão de conjunto. Se uma expressão numérica não for fornecida, essa função agregará cada medida no contexto atual de consulta usando o operador padrão de agregação especificado para cada medida. Se uma exressão numérica for fornecida, essa função primeiro avalia e, em seguida, soma a expressão numérica de cada célula no conjunto especificado.  
   

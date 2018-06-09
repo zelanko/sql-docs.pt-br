@@ -13,7 +13,7 @@ ms.openlocfilehash: eb80a091c9b9585a6efc29088d15139db7033efb
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575188"
 ---
 # <a name="file-element-xmla"></a>Elemento File (XMLA)

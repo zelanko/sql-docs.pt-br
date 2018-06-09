@@ -1,8 +1,6 @@
 ---
 title: Mapeamento de fonte e tipos de dados de destino (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,11 +22,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af10741f0041525b058341f398b86c5e62f7a7e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a93a2f9edad58faa234cc386c819ea9ba50252e6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773782"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapeamento de fonte e tipos de dados de destino (AccessToSQL)
 Os tipos de banco de dados do Access variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Ao converter objetos de banco de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nos procedimentos a seguir.  

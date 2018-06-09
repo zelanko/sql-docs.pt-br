@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541066ac00efc1b15f8cae838097cfd8ee49df3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 754140cbc1c2b35338794b6919076b99c3052562
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249729"
 ---
 # <a name="step-1-download-the-sample-data"></a>Etapa 1: Baixar os dados de exemplo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +47,7 @@ Os dados e os scripts para este tutorial são compartilhados no Github. Nesta et
 
 3. Dependendo de sua conexão de internet, o download pode levar algum tempo. 
 
-## <a name="view-the-results"></a>Exibir os resultados
+## <a name="view-results"></a>Exibir resultados
 
 Quando todos os arquivos forem baixados, o script do PowerShell será aberto na pasta especificada por  *DestDir*. 
 

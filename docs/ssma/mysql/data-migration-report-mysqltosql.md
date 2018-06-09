@@ -1,8 +1,6 @@
 ---
 title: Relatório de migração de dados (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9ffe3c71bca0ef6fbd439a4f29ae0e8703901fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db7d1b46e61ba2f658e08a29e4484b36c912d855
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775992"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Relatório de migração de dados (MySQLToSQL)
 O **relatório de migração de dados** caixa de diálogo é exibida depois de migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

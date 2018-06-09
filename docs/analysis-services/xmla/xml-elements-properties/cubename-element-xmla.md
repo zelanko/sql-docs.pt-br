@@ -13,7 +13,7 @@ ms.openlocfilehash: 8fb88589397458b3b124075033bdc1d9d4252dbb
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573968"
 ---
 # <a name="cubename-element-xmla"></a>Elemento CubeName (XMLA)

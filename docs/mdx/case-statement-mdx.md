@@ -1,6 +1,6 @@
 ---
 title: Instrução CASE (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c57276a75e8dd25f13a51c7bd0ea6c75a119a861
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: fb53db11e9c7ec816299d1541d27e962ab8650df
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577248"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740105"
 ---
 # <a name="case-statement-mdx"></a>Instrução CASE (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Permite retornar de modo condicional valores específicos de várias comparações. Há dois tipos de instruções CASE:  
   

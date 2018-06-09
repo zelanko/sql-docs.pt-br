@@ -13,7 +13,7 @@ ms.openlocfilehash: 883fa5df355874516ffd6f0cac01ff50d727d737
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573758"
 ---
 # <a name="datasourceid-element-xmla"></a>Elemento DataSourceID (XMLA)

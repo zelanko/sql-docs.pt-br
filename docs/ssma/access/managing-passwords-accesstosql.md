@@ -1,8 +1,6 @@
 ---
 title: Gerenciamento de senhas (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b147ba97ef56ad9fa944ec18a4d9859f02ef3105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aee540eecc4635dc699de9db217f417485a5a0ac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773852"
 ---
 # <a name="managing-passwords-accesstosql"></a>Gerenciamento de senhas (AccessToSQL)
 Esta seção é sobre como proteger senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  

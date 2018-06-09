@@ -1,34 +1,23 @@
 ---
 title: Função SUM (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SUM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Sum function [MDX]
-ms.assetid: 6c3db1e3-2c02-49f2-a0bf-cab0fb78c622
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 21b9c43749abc81180edc009f908a8b4b4f2febd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743265"
 ---
 # <a name="sum-mdx"></a>Função Sum (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna a soma de uma expressão numérica avaliada em um conjunto especificado.  
   
@@ -105,6 +94,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

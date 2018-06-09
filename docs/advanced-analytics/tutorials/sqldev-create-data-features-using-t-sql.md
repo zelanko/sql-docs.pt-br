@@ -1,19 +1,21 @@
 ---
-title: Lição 4 recursos de dados crie usando o T-SQL | Microsoft Docs
+title: Lição 4 recursos de dados crie usando funções de T-SQL (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Tutorial mostra como inserir R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249539"
 ---
-# <a name="lesson-4-create-data-features-using-t-sql"></a>Lição 4: Criar recursos de dados usando o T-SQL
+# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>Lição 4: Criar recursos de dados usando o T-SQL e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores em SQL sobre como usar o R no SQL Server.
@@ -125,4 +127,4 @@ Para adicionar os valores computados em uma tabela que pode ser usada para trein
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Lição 3: Explorar e visualizar os dados](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Lição 3: Explorar e visualizar os dados usando R e procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)

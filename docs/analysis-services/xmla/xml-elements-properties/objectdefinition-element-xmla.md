@@ -13,7 +13,7 @@ ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575888"
 ---
 # <a name="objectdefinition-element-xmla"></a>Elemento ObjectDefinition (XMLA)

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b480d896416350ec55317eea8a9cfc5db51a8c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8b6c50664cdce599128be9f0ad15a10e33b77ec6
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576628"
 ---
 # <a name="translation-element-xmla"></a>Elemento Translation (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,10 +36,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Remarks  
  Um elemento **Translation** define as informações necessárias para associar um membro de atributo a uma tradução definida para um determinado atributo durante um comando [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) ou [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) .  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Confira também
+ [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

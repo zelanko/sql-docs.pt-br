@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97d4ef0cb4c18f67a57c26fd02f25ed5ea230d11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cbd4dd56bedf53d4f0bc7374e9389221acb092d7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576748"
 ---
 # <a name="value-element-parameter-xmla"></a>Elemento Value (Parâmetro) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Any (qualquer)|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -43,12 +44,12 @@ ms.lasthandoff: 05/10/2018
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Parâmetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
  O **valor** elemento pode armazenar qualquer tipo de XML simples, bem como o XML for Analysis (XMLA) **linhas** tipo de dados, para os parâmetros usados pelos comandos XMLA no [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Confira também
+ [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

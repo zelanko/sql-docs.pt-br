@@ -13,7 +13,7 @@ ms.openlocfilehash: 769a07116e60fc080e0d9ea9dd5ad60a8ee53fb5
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574538"
 ---
 # <a name="customrollup-element-xmla"></a>Elemento CustomRollup (XMLA)

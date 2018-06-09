@@ -1,6 +1,6 @@
 ---
 title: Palavras reservadas para MDX | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18ca96f8788d8ecb9b8567af30ec67570e2b4dae
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579798"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742285"
 ---
 # <a name="mdx-reserved-words"></a>Palavras reservadas para MDX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   A tabela a seguir contém palavras reservadas para serem usadas pela linguagem MDX. Em MDX, não use essas palavras como parte de nenhum identificador, como o nome de um cubo ou o nome de uma função definida pelo usuário.  
   

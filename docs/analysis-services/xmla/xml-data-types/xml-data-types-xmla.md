@@ -13,7 +13,7 @@ ms.openlocfilehash: c52717a6f061f4708b2d3e46c6d34f837b2039af
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573778"
 ---
 # <a name="xml-data-types-xmla"></a>Tipos de dados XML (XMLA)

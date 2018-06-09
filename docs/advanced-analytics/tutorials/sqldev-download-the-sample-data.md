@@ -1,26 +1,28 @@
 ---
-title: Lição 1 para baixar os dados de exemplo | Microsoft Docs
+title: Dados de exemplo do Download lição 1 e os scripts para inseridos R (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Tutorial mostra como inserir R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a87d307dafa733e449c6ec893ece21645fe65640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249829"
 ---
-# <a name="lesson-1-download-the-sample-data"></a>Lição 1: Baixar os dados de exemplo
+# <a name="lesson-1-download-data-and-scripts"></a>Lição 1: Baixar dados e scripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores em SQL sobre como usar o R no SQL Server.
 
 Nesta etapa, você baixará o conjunto de dados de exemplo e o [!INCLUDE[tsql](../../includes/tsql-md.md)] script arquivos que são usados neste tutorial. Os dados e os arquivos de script são compartilhados no GitHub, mas o script do PowerShell baixará os arquivos de dados e o script para um diretório local de sua escolha.
 
-## <a name="download-the-data-and-scripts"></a>Baixar os dados e scripts
+## <a name="download-tutorial-files-from-github"></a>Baixe os arquivos do tutorial do Github
 
 1.  Abra um console de comando do Windows PowerShell.
   
@@ -64,4 +66,4 @@ Nesta etapa, você baixará o conjunto de dados de exemplo e o [!INCLUDE[tsql](.
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Análise de R no banco de dados para desenvolvedores em SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Análise de R inserido para desenvolvedores em SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)

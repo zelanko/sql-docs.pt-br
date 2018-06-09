@@ -1,6 +1,6 @@
 ---
 title: Usando expressões de dimensão | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f680c5478eb1ee03fd69506d669fbc49c91c0241
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582488"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743905"
 ---
 # <a name="using-dimension-expressions"></a>Usando expressões de dimensão
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Normalmente, expressões de dimensão e hierarquia são usadas ao passar parâmetros para funções em linguagem MDX para retornar membros, conjuntos ou tuplas a partir de uma hierarquia.  
   

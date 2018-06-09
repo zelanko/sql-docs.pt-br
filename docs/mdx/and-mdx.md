@@ -1,34 +1,23 @@
 ---
 title: E (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AND
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- AND, MDX
-ms.assetid: 398fd483-d010-4524-b115-0becad66f25c
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 870aac2a9eb1c799cf6d83ddbe119d91c1f11f8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739675"
 ---
 # <a name="and-mdx"></a>AND (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Realiza uma conjunção lógica em duas expressões numéricas.  
   
@@ -46,13 +35,13 @@ Expression1 AND Expression2
  *Expression2*  
  Uma expressão MDX válida que retorna um valor numérico.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um valor booliano que retorna true se ambos os parâmetros forem avaliados como **true**; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Remarks  
  O **AND** operador trata as duas expressões como valores boolianos (zero, 0, como **false**; caso contrário, **true**) antes do operador realiza a conjunção lógica. A tabela a seguir ilustra como o **AND** operador executa a conjunção lógica.  
   
-|*Expression1*|*Expression2*|Valor de retorno|  
+|*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
 |**true**|**false**|**false**|  

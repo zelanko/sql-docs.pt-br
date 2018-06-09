@@ -13,7 +13,7 @@ ms.openlocfilehash: 18b81434c2e863ef3fc4db6ce2458f236dafdd53
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573868"
 ---
 # <a name="unlock-element-xmla"></a>Elemento Unlock (XMLA)

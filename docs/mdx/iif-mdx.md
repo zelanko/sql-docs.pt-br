@@ -1,6 +1,6 @@
 ---
 title: IIf (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7551a19e5cbb58d5eab9b2da4dae1c17cf19e79c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581028"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740675"
 ---
 # <a name="iif-mdx"></a>IIF (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Avalia expressões diferentes da ramificação dependendo de a condição booliana ser verdadeira ou falsa.  
   

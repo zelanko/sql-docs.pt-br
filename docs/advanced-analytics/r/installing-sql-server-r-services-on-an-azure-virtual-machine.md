@@ -11,7 +11,7 @@ ms.openlocfilehash: a0780d4f974761af563ff2ed6e20e444b2d85ef9
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563674"
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Instalar recursos em uma máquina virtual do Azure de aprendizado de máquina do SQL Server

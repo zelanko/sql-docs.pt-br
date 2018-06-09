@@ -1,24 +1,34 @@
 ---
-title: Lição 3 explorar e visualizar os dados | Microsoft Docs
+title: Lição 3 explorar e visualizar dados usando R e T-SQL (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Tutorial mostra como inserir R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4be76ebbb8f082e84a00bfe93b36c9bd8c2c0a81
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250079"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lição 3: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores em SQL sobre como usar o R no SQL Server.
 
-Nesta lição, você vai examinar os dados de exemplo e, em seguida, gerar alguns gráficos usando funções de R. Essas funções de R já estão incluídas na [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Você pode chamar as funções R [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Nesta lição, você vai examinar os dados de exemplo e, em seguida, gerar alguns gráficos usando [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) e genérica [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) função em r base. Essas funções de R já estão incluídas na [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+
+Um objetivo de chave está mostrando como chamar funções R de [!INCLUDE[tsql](../../includes/tsql-md.md)] em procedimentos armazenados e salvar os resultados em formatos de arquivo do aplicativo:
+
++ Criar um procedimento armazenado usando **RxHistogram** para gerar um gráfico de R como dados varbinary. Use **bcp** para exportar o fluxo binário para um arquivo de imagem.
++ Criar um procedimento armazenado usando **Hist** para gerar um gráfico, salvar os resultados como saída JPG e PDF.
+
+> [!NOTE]
+> Como visualização é uma ferramenta poderosa para entender a distribuição e a forma de dados, R fornece uma variedade de funções e pacotes para a geração de histogramas, gráficos de dispersão, gráficos de caixa e outros gráficos de exploração de dados. R normalmente cria imagens usando um dispositivo de R para saída gráfica, o que você pode capturar e armazenar como um **varbinary** tipo de dados para renderização no aplicativo. Você também pode salvar as imagens em qualquer um dos formatos de arquivo de suporte (. JPG. PDF, etc.).
 
 ## <a name="review-the-data"></a>Revise os dados
 
@@ -38,7 +48,7 @@ No conjunto de dados original, os identificadores de táxi e os registros de cor
   
 -   Cada registro de tarifa inclui informações de pagamento, como a forma de pagamento, o valor total do pagamento e o valor da gorjeta.
   
--   As três últimas colunas podem ser usadas para várias tarefas de aprendizado de máquina.  O _dica\_quantidade_ coluna contém valores numéricos contínuos e pode ser usada como o **rótulo** coluna para análise de regressão. A coluna _tipped_ tem apenas valores sim/não e é usada para classificação binária. O _dica\_classe_ coluna tem vários **rótulos de classe** e, portanto, pode ser usado como o rótulo para tarefas de classificação multiclasse.
+-   As três últimas colunas podem ser usadas para várias tarefas de aprendizado de máquina. O _dica\_quantidade_ coluna contém valores numéricos contínuos e pode ser usada como o **rótulo** coluna para análise de regressão. A coluna _tipped_ tem apenas valores sim/não e é usada para classificação binária. O _dica\_classe_ coluna tem vários **rótulos de classe** e, portanto, pode ser usado como o rótulo para tarefas de classificação multiclasse.
   
     Este passo a passo demonstra apenas a tarefa de classificação binária; sinta-se à vontade para tentar criar modelos para as outras duas tarefas de aprendizado de máquina, regressão e classificação de várias classes.
   
@@ -49,30 +59,18 @@ No conjunto de dados original, os identificadores de táxi e os registros de cor
      |tipped|Se tip_amount > 0, tipped = 1; caso contrário, tipped = 0|
     |tip_class|Classe 0: tip_amount = $0<br /><br />Classe 1: tip_amount > US$ 0 e tip_amount <= US$ 5<br /><br />Classe 2: tip_amount > US$ 5 e tip_amount <= US$ 10<br /><br />Classe 3: tip_amount > US$ 10 e tip_amount <= US$ 20<br /><br />Classe 4: tip_amount > $20|
 
-## <a name="create-plots-using-r-in-t-sql"></a>Criar gráficos usando o R em T-SQL
+## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>Criar um procedimento armazenado usando rxHistogram para plotar os dados
 
-Como a visualização é uma ferramenta avançada para entender a distribuição dos dados e das exceções, o R fornece diversos pacotes para a visualização de dados. A distribuição de software livre padrão do R também inclui várias funções para a criação de histogramas, dispersões, gráficos de caixa e outros gráficos de exploração de dados.
+Para criar o gráfico, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), uma das funções de R aprimoradas fornecidas no [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Esta etapa plota um histograma com base em dados de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. Você pode encapsular esta função em um procedimento armazenado, **PlotHistogram**.
 
-Normalmente, o R cria imagens usando um dispositivo do R para a saída gráfica. Você pode capturar a saída desse dispositivo e armazenar a imagem em um tipo de dados **varbinary** para renderização no aplicativo ou salvar as imagens em um dos formatos de arquivo com suporte (.JPG, .PDF, etc.).
+1. Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, clique com botão direito do **TaxiNYC_Sample** de banco de dados, expanda **programação**e, em seguida, expanda **procedimentos armazenados** para exibir o procedimentos criados na lição 2.
 
-Nesta seção, você aprenderá a trabalhar com cada tipo de saída usando procedimentos armazenados. O processo geral é o seguinte:
+2. Clique com botão direito **PlotHistogram** e selecione **modificar** para exibir o código-fonte. Você pode executar esse procedimento para chamar **rxHistogram** nos dados contidos na coluna da tabela nyctaxi_sample oblíquo.
 
-- Criar um procedimento armazenado para gerar um gráfico de R como dados varbinary
-
-- Gerar a plotagem e salvá-lo em um arquivo de imagem
-
-- Use um procedimento armazenado para converter os binário plotar dados em um arquivo JPG ou PDF
-
-### <a name="create-the-stored-procedure-plothistogram"></a>Criar o procedimento armazenado PlotHistogram
-
-1. Para criar o gráfico, use `rxHistogram`, uma das funções de R aprimoradas fornecidas no [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]para plotar um histograma com base em dados de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. Para facilitar a chamada à função do R, você a encapsulará em um procedimento armazenado, _PlotHistogram_.
-
-    Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra uma nova **consulta** janela.
-
-2. No banco de dados que contém os dados do tutorial, crie o procedimento usando esta instrução:
+3. Opcionalmente, como um exercício de aprendizagem, crie sua própria cópia deste procedimento armazenado usando o exemplo a seguir. Abra uma nova janela de consulta e cole o script a seguir para criar um procedimento armazenado que plota o histograma. Este exemplo é denominada **PlotHistogram2** para evitar conflitos com o procedimento pré-existente de nomes.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram]
+    CREATE PROCEDURE [dbo].[PlotHistogram2]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -94,19 +92,17 @@ Nesta seção, você aprenderá a trabalhar com cada tipo de saída usando proce
     GO
     ```
 
-    Lembre-se de modificar o código para usar o nome de tabela correto, se necessário.
+O procedimento armazenado **PlotHistogram2** é idêntico a um procedimento armazenado pré-existente **PlotHistogram** criado pelo `RunSQL_SQL_Walkthrough.ps1` script. 
   
-    -   A variável `@query` define o texto da consulta (`'SELECT tipped FROM nyctaxi_sample'`), que é passado para o script do R como o argumento da variável de entrada de script, `@input_data_1`.
++ A variável `@query` define o texto da consulta (`'SELECT tipped FROM nyctaxi_sample'`), que é passado para o script do R como o argumento da variável de entrada de script, `@input_data_1`.
   
-    -   O script do R é bem simples: uma variável do R (`image_file`) é definido para armazenar a imagem e a função do `rxHistogram` é chamada para gerar a plotagem.
++ O script R é bem simple: uma variável de R (`image_file`) é definido para armazenar a imagem e, em seguida, o **rxHistogram** função é chamada para gerar o gráfico.
   
-    -   O dispositivo do R é definido como **desativado**.
++ O dispositivo de R é definido para **off** porque você está executando este comando como um script externo no SQL Server. Normalmente em R, quando você emitir um comando de plotagem de alto nível, R é aberta uma janela de gráficos, chamada um *dispositivo*. Você poderá alterar o tamanho e as cores e outros aspectos da janela ou desativar o dispositivo se estiver gravando em um arquivo ou tratando a saída de alguma outra forma.
   
-        No R, quando você emite um comando de plotagem de alto nível, o R abrirá uma janela de gráficos, chamada um *dispositivo*. Você poderá alterar o tamanho e as cores e outros aspectos da janela ou desativar o dispositivo se estiver gravando em um arquivo ou tratando a saída de alguma outra forma.
-  
-    -   O objeto gráfico do R é serializado para um data.frame do R para saída.
++ O objeto gráfico do R é serializado para um data.frame do R para saída.
 
-### <a name="generate-the-graphics-data-and-save-to-file"></a>Gerar os dados de gráficos e salvar arquivo
+### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>Execute o procedimento armazenado e usar o bcp para exportar os dados binários para um arquivo de imagem
 
 O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que obviamente não pode ser exibido de forma direta. No entanto, você pode usar o utilitário **bcp** para obter os dados varbinary e salvá-los como um arquivo de imagem em um computador cliente.
   
@@ -121,23 +117,23 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
     *plot*
     *0xFFD8FFE000104A4649...*
   
-2.  Abra um prompt de comando do PowerShell e execute o seguinte comando, fornecendo o nome da instância apropriada, o nome do banco de dados, o nome de usuário e as credenciais como argumentos:
+2.  Abra um prompt de comando do PowerShell e execute o seguinte comando, fornecendo o nome da instância apropriada, o nome do banco de dados, o nome de usuário e a credenciais como argumentos. Para aqueles usando identidades do Windows, você pode substituir **- U** e **-P** com **-T**.
   
-     ```
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  <database name>  -U <user name> -P <password>
+     ```text
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]
     > Opções de comando para bcp diferenciam maiusculas de minúsculas.
   
 3.  Se a conexão for bem-sucedida, será solicitado que você insira mais informações sobre o formato de arquivo gráfico. Pressione ENTER em cada prompt para aceitar os padrões, exceto para essas alterações:
-  
+    
     -   Em **comprimento do prefixo de plotagem do campo**, digite 0
   
     -   Digite **Y** se você desejar salvar os parâmetros de saída para reutilização posterior.
   
     ```
-    Enter the file storage type of field plot [varbinary(max)]:
+    Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
     Enter field terminator [none]:
@@ -162,18 +158,18 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
     ![viagens de táxi com e sem gorjetas](media/rsql-devtut-tippedornot.jpg "viagens de táxi com e sem gorjetas")  
   
-### <a name="export-the-plot-data-to-a-viewable-file"></a>Exportar os dados de plotagem para um arquivo visível
+## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Criar um procedimento armazenado usando Hist e vários formatos de saída
 
-Gerando um gráfico de R em um binário de dados tipo pode ser conveniente para consumo por aplicativos, mas não é muito útil para um cientista de dados que precisa de plotagem renderizada durante a fase de exploração de dados. Normalmente, o cientista de dados vai gerar várias visualizações de dados, para obter informações sobre os dados de diferentes perspectivas.
+Normalmente, os cientistas de dados geram várias visualizações de dados para obter informações sobre os dados de perspectivas diferentes. Neste exemplo, o procedimento armazenado usa a função Hist para criar o histograma, exportando os dados binários para formatos populares, como. JPG. PDF, e. PNG. 
 
-Para gerar gráficos para os usuários, você pode usar um procedimento armazenado que cria a saída de R em formatos populares, como. JPG. PDF, e. PNG. Depois que o procedimento armazenado criar o gráfico, basta abrir o arquivo para visualizar a plotagem.
+1. Use o procedimento armazenado existente, **PlotInOutputFiles**, gravar histogramas, scatterplots e outros gráficos de R para. JPG e. Formato PDF. O `RunSQL_SQL_Walkthrough.ps1` cria **PlotInOutputFiles** e adiciona o banco de dados. Use o botão direito do mouse **modificar** para exibir o código-fonte.
 
-1. Criar um novo procedimento armazenado, _PlotInOutputFiles_, que demonstra como gravar histogramas, scatterplots e outros gráficos de R para. JPG e. Formato PDF.
+2. Opcionalmente, como um exercício de aprendizagem, crie sua própria cópia do procedimento como **PlotInOutputFiles2**, com um nome exclusivo para evitar um conflito de nomeação.
 
     Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra uma nova **consulta** janela e cole o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles]  
+    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -236,44 +232,48 @@ Para gerar gráficos para os usuários, você pode usar um procedimento armazena
      END
     ```
   
-    -   A saída da consulta SELECT no procedimento armazenado é armazenada no quadro de dados padrão do R, `InputDataSet`. Várias funções de plotagem do R podem ser chamadas para gerar os arquivos gráficos reais.
++ A saída da consulta SELECT no procedimento armazenado é armazenada no quadro de dados padrão do R, `InputDataSet`. Várias funções de plotagem do R podem ser chamadas para gerar os arquivos gráficos reais. A maior parte do script do R inserido representa opções para essas funções gráficas, como `plot` ou `hist`.
   
-        A maior parte do script do R inserido representa opções para essas funções gráficas, como `plot` ou `hist`.
-  
-    -   Todos os arquivos são salvos na pasta local _C:\temp\Plots\\_. A pasta de destino é definida pelos argumentos fornecidos ao script do R como parte do procedimento armazenado.  Você pode alterar a pasta de destino alterando o valor da variável `mainDir`.
-  
-2.  Execute a instrução para criar o procedimento armazenado.
++ Todos os arquivos são salvos na pasta local _C:\temp\Plots\\_. A pasta de destino é definida pelos argumentos fornecidos ao script do R como parte do procedimento armazenado.  Você pode alterar a pasta de destino alterando o valor da variável `mainDir`.
 
-    ```SQL
-    EXEC PlotInOutputFiles
-    ```
++ Para gerar os arquivos em uma pasta diferente, altere o valor da variável `mainDir` no script do R inserido no procedimento armazenado. Você também pode modificar o script para gerar formatos diferentes, mais arquivos e assim por diante.
 
-    **Resultados**
+### <a name="execute-the-stored-procedure"></a>Executar o procedimento armazenado
+
+Execute a instrução a seguir para exportar dados de plotagem binário para formatos de arquivo JPEG e PDF.
+
+```SQL
+EXEC PlotInOutputFiles
+```
+
+**Resultados**
     
-    ```
-    STDOUT message(s) from external script:
-    [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+```
+STDOUT message(s) from external script:
+[1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+
+C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
+
+C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
+```
+
+Os números nos nomes de arquivo são gerados aleatoriamente para garantir que você não receber um erro ao tentar gravar em um arquivo existente.
+
+### <a name="view-output"></a>Exibir saída 
+
+Para exibir o gráfico, abra a pasta de destino e revise os arquivos que foram criados pelo código R no procedimento armazenado.
+
+1. Acesse a pasta indicada na mensagem STDOUT (no exemplo, isso é C:\temp\plots\)
+
+2. Abra `rHistogram_Tipped.jpg` para mostrar o número de viagens que tem uma dica versus as viagens que não obteve nenhuma dica. (Esse histograma é parecido com o gerado na etapa anterior.)
+
+3. Abra `rHistograms_Tip_and_Fare_Amount.pdf` para exibir a distribuição de valores de dica plotada em relação à quantidade de passagens.
     
-    C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
-    
-    C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
-    ```
+  ![histograma mostrando tip_amount e fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histograma mostrando tip_amount e fare_amount")
 
-    Os números nos nomes de arquivo são gerados aleatoriamente para garantir que você não receber um erro ao tentar gravar em um arquivo existente.
+4. Abra `rXYPlots_Tip_vs_Fare_Amount.pdf` para exibir um scatterplot com a quantidade de passagens no eixo x e a quantidade de dica no eixo y.
 
-3. Para exibir o gráfico, abra a pasta de destino e revise os arquivos que foram criados pelo código R no procedimento armazenado.
-
-    + O arquivo `rHistogram_Tipped.jpg` mostra o número de viagens que tem uma dica versus as viagens que não obteve nenhuma dica. (Esse histograma é parecido com o gerado na etapa anterior.)
-
-    + O arquivo `rHistograms_Tip_and_Fare_Amount.pdf` mostra a distribuição de valores de ponta, plotada em relação à quantidade de passagens.
-    
-    ![histograma mostrando tip_amount e fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histograma mostrando tip_amount e fare_amount")
-
-    + O arquivo `rXYPlots_Tip_vs_Fare_Amount.pdf` contém um scatterplot com a quantidade de passagens no eixo x e o valor de dica no eixo y.
-
-    ![quantidade de dica plotado durante o período de tarifa](media/rsql-devtut-tipamtbyfareamt.PNG "quantidade dica plotados pela quantidade de passagens")
-
-2.  Para gerar os arquivos em uma pasta diferente, altere o valor da variável `mainDir` no script do R inserido no procedimento armazenado. Você também pode modificar o script para gerar formatos diferentes, mais arquivos e assim por diante.
+   ![quantidade de dica plotado durante o período de tarifa](media/rsql-devtut-tipamtbyfareamt.PNG "quantidade dica plotados pela quantidade de passagens")
 
 ## <a name="next-lesson"></a>Próxima lição
 
@@ -281,4 +281,4 @@ Para gerar gráficos para os usuários, você pode usar um procedimento armazena
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Lição 2: Importar dados para o SQL Server usando o PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lição 2: Preparar o ambiente de tutorial usando o PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
