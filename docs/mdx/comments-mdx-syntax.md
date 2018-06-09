@@ -1,6 +1,6 @@
 ---
 title: Comentários (sintaxe MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578448"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740755"
 ---
 # <a name="comments-mdx-syntax"></a>Comments (sintaxe MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Comentários são cadeias de caracteres de texto não executáveis em código de programa. Os comentários também são conhecidos como observações. Use comentários para documentar códigos ou desabilitar temporariamente partes de instruções de linguagem MDX e scripts que estão sendo diagnosticados. Com a utilização de comentários para documentar códigos, fica mais fácil fazer a manutenção de códigos posterior. Frequentemente, os comentários são utilizados para registrar o nome do programa, o nome do autor e as datas de alterações de código principais. Use também os comentários para descrever cálculos complexos ou explicar um método de programação.  
   
  Os comentários em MDX seguem estas diretrizes:  
   
--   Todos os caracteres alfanuméricos ou símbolos podem ser usados com o comentário. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora todos os caracteres dentro de um comentário.  
+-   Todos os caracteres alfanuméricos ou símbolos podem ser usados com o comentário.  Todos os caracteres dentro de um comentário são ignorados.  
   
 -   Não há um comprimento máximo para um comentário dentro de um script ou instrução. O comentário pode ser composto por uma ou mais linhas.  
   

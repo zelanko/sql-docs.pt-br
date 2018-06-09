@@ -1,8 +1,6 @@
 ---
 title: Conecte-se ao DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09d4e69aefa89ed9930badc575be4fdc302d5f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 050c3e5755b86fc1928e6d44292e7e2fb82f5c0e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775122"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Conecte-se ao DB2 (DB2ToSQL)
 Use o **conectar ao DB2** caixa de diálogo para se conectar ao banco de dados DB2 que você deseja migrar.  

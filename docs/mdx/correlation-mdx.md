@@ -1,6 +1,6 @@
 ---
 title: Função Correlation (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e4b53ff01dc6cf0d62b334e95ac8a474f969f5f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0140cc76a47df26ee42701152794f2ef9ec0f51e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577448"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739735"
 ---
 # <a name="correlation-mdx"></a>Função Correlation (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna o coeficiente de correlação de pares x-y de valores avaliados em um conjunto.  
   

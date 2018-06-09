@@ -1,6 +1,6 @@
 ---
 title: UnknownMember (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b74454c00f48a36b963e6c7f5b7b1bdf4e2ea44e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582208"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743355"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna o membro desconhecido associado a um nível ou membro.  
   
@@ -40,7 +40,7 @@ Hierarchy_Expression.UnknownMember
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria um membro desconhecido para associar dados da tabela de fatos uma hierarquia quando a hierarquia não é conhecida. O membro desconhecido pode estar em um dos seguintes níveis:  
+ Analysis Services cria um membro desconhecido para associar dados da tabela de fatos uma hierarquia quando a hierarquia não é conhecida. O membro desconhecido pode estar em um dos seguintes níveis:  
   
 -   No nível superior para hierarquias de atributo que não são agregadas.  
   

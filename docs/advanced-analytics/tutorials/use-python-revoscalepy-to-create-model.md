@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d886466d7bf4f0c86c1cd9505480a3fadb6e66ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d549b06b9fe371dc2b1966c62776ec4e88c45726
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740825"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Usar o Python com revoscalepy para criar um modelo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -82,7 +83,6 @@ from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
 from revoscalepy import rx_lin_mod, rx_predict, rx_summary
 from revoscalepy import RxOptions, rx_import
 
-from pandas import Categorical
 import os
 
 def test_linmod_sql():
