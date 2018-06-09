@@ -1,6 +1,6 @@
 ---
 title: Instrução UPDATE MEMBER (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cd74ca9c5ebe5195dd65c88f657587583be55e92
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579838"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742705"
 ---
 # <a name="mdx-data-definition---update-member"></a>Definição de dados MDX - UPDATE MEMBER
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Atualiza um membro calculado existente.  
   
@@ -61,7 +61,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Identificador de propriedade|Significado|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Um [!INCLUDE[msCoName](../includes/msconame-md.md)] cadeia de formato de estilo do Office que o aplicativo cliente pode usar para exibir valores de célula.|  
+|FORMAT_STRING|Uma cadeia de formato de estilo do Office o aplicativo cliente pode usar para exibir valores de célula.|  
 |VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Calculados visíveis membros podem ser adicionados a um conjunto com o [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) função. Um valor diferente de zero indica que o membro calculado é visível. O valor padrão dessa propriedade é *visível*.<br /><br /> Em geral, membros calculados não visíveis são usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
 |NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado por MDX para determinar o comportamento de membros calculados ao resolver células vazias.|  
 |CAPTION|Um valor de cadeia de caracteres que especifica a legenda que o aplicativo cliente usa para exibir o membro.|  

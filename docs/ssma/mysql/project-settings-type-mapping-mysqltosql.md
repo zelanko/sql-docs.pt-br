@@ -1,8 +1,6 @@
 ---
 title: Configurações (mapeamento de tipo) do projeto (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1805c9536995ddbd3a661a50ef3c4804a720fd8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bf1d1c219b8673345d5f2074fe8885b5c58223f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776754"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configurações (mapeamento de tipo) do projeto (MySQLToSQL)
 As configurações de mapeamento de tipo de projeto permitem definir mapeamentos de tipo de padrão para o projeto SSMA.  
@@ -59,8 +58,8 @@ A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e d
 |||  
 |-|-|  
 |**Tipo de dados MySQL**|**Tipo de dados do SQL Server**|  
-|bigint|bigint|  
-|bigint [*... 255]|bigint|  
+|BIGINT|BIGINT|  
+|bigint [*... 255]|BIGINT|  
 |BINARY|binário [1]|  
 |binário [entre 0 e 1]|binário [1]|  
 |binário [2..255]|binary[*]|  
@@ -87,11 +86,11 @@ A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e d
 |char [2..255]|nchar [*]|  
 |character|nchar [1]|  
 |caractere variável [entre 0 e 1]|nvarchar [1]|  
-|caractere variável [2..255]|nvarchar|  
+|caractere variável [2..255]|NVARCHAR|  
 |caracteres [entre 0 e 1]|nchar [1]|  
 |caracteres [2..255]|nchar [*]|  
-|date|date|  
-|datetime|datetime2[0]|  
+|Data|Data|  
+|DATETIME|datetime2[0]|  
 |dec|Decimal|  
 |DEC [*... 65]|decimal[*][0]|  
 |DEC [*... 65][\*.. 30]|decimal[*][\*]|  
@@ -102,20 +101,20 @@ A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e d
 |precisão dupla|float [53]|  
 |precisão dupla [*... 255][\*.. 30]|numeric[*][\*]|  
 |Double [*... 255][\*.. 30]|numeric[*][\*]|  
-|fixo|numeric|  
+|fixo|NUMERIC|  
 |fixo [*... 65][\*.. 30]|numeric[*][\*]|  
-|float|float[24]|  
+|FLOAT|float[24]|  
 |float [*... 255][\*.. 30]|numeric[*][\*]|  
 |float [*... 53]|float [53]|  
-|int|int|  
-|int [*... 255]|int|  
-|inteiro|int|  
-|inteiro [*... 255]|int|  
+|INT|INT|  
+|int [*... 255]|INT|  
+|inteiro|INT|  
+|inteiro [*... 255]|INT|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint [*... 255]|int|  
+|mediumint|INT|  
+|mediumint [*... 255]|INT|  
 |mediumtext|nvarchar(max)|  
 |National char|nchar [1]|  
 |National char [entre 0 e 1]|nchar [1]|  
@@ -138,30 +137,30 @@ A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e d
 |nchar varchar [4001... *]|nvarchar(max)|  
 |nchar [entre 0 e 1]|nchar [1]|  
 |nchar [2..255]|nchar [*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numérico [*... 65]|numeric[*][0]|  
 |numérico [*... 65][\*.. 30]|numeric[*][\*]|  
-|nvarchar|nvarchar [1]|  
+|NVARCHAR|nvarchar [1]|  
 |nvarchar [entre 0 e 1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001... *]|nvarchar(max)|  
-|real|float [53]|  
+|REAL|float [53]|  
 |real [*... 255][\*.. 30]|numeric[*][\*]|  
-|serial|bigint|  
-|smallint|smallint|  
-|smallint [*... 255]|smallint|  
+|serial|BIGINT|  
+|SMALLINT|SMALLINT|  
+|smallint [*... 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |texto [entre 0 e 1]|nvarchar [1]|  
 |text[2..4000]|nvarchar [*]|  
 |texto [4001... *]|nvarchar(max)|  
 |time|time|  
-|timestamp|datetime|  
+|timestamp|DATETIME|  
 |tinyblob|varbinary[255]|  
-|tinyint|smallint|  
-|tinyint[*..255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint[*..255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|bigint não assinado|bigint|  
-|não assinado bigint [*... 255]|bigint|  
+|bigint não assinado|BIGINT|  
+|não assinado bigint [*... 255]|BIGINT|  
 |dec não assinado|Decimal|  
 |dec não assinado [*... 65]|decimal[*][0]|  
 |dec não assinado [*... 65][\*.. 30]|decimal[*][\*]|  
@@ -172,35 +171,35 @@ A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e d
 |sem sinal de precisão dupla|float [53]|  
 |não assinado de precisão dupla [*... 255][\*.. 30]|numeric[*][\*]|  
 |não assinado double [*... 255][\*.. 30]|numeric[*][\*]|  
-|não assinado fixa|numeric|  
+|não assinado fixa|NUMERIC|  
 |não assinado fixa [*... 65][\*.. 30]|numeric[*][\*]|  
 |float não assinado|float[24]|  
 |float não assinado [*... 255][\*.. 30]|numeric[*][\*]|  
 |float não assinado [*... 53]|float [53]|  
-|int não assinado|bigint|  
-|int não assinado [*... 255]|bigint|  
-|inteiro não assinado|bigint|  
-|inteiro sem sinal [*... 255]|bigint|  
-|mediumint não assinado|int|  
-|mediumint não assinado [*... 255]|int|  
-|numérico sem sinal|numeric|  
+|int não assinado|BIGINT|  
+|int não assinado [*... 255]|BIGINT|  
+|inteiro não assinado|BIGINT|  
+|inteiro sem sinal [*... 255]|BIGINT|  
+|mediumint não assinado|INT|  
+|mediumint não assinado [*... 255]|INT|  
+|numérico sem sinal|NUMERIC|  
 |sem sinal numérico [*... 65]|numeric[*][0]|  
 |sem sinal numérico [*... 65][\*.. 30]|numeric[*][\*]|  
 |sem sinal real|float [53]|  
 |sem sinal real [*... 255[[\*.. 30]|numeric[*][\*]|  
-|smallint não assinado|int|  
-|smallint não assinado [*... 255]|int|  
-|tinyint não assinado|tinyint|  
-|não assinado tinyint [*... 255]|tinyint|  
+|smallint não assinado|INT|  
+|smallint não assinado [*... 255]|INT|  
+|tinyint não assinado|TINYINT|  
+|não assinado tinyint [*... 255]|TINYINT|  
 |varbinary [entre 0 e 1]|varbinary[1]|  
 |varbinary [2..8000]|varbinary[*]|  
 |varbinary [8001... *]|varbinary(max)|  
 |varchar [entre 0 e 1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001... *]|nvarchar(max)|  
-|year|smallint|  
-|ano [2..2]|smallint|  
-|ano [4..4]|smallint|  
+|year|SMALLINT|  
+|ano [2..2]|SMALLINT|  
+|ano [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>Adicionar  
 Clique para adicionar um tipo de dados para a lista de mapeamento.  

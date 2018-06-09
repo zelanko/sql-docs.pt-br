@@ -1,35 +1,23 @@
 ---
 title: StdevP (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STDEVP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StdevP function [MDX]
-ms.assetid: cd8ae7c9-3cef-49f0-bb41-8f577c7b6f31
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 617cd92b6728aa19fbb6599f71fab5374a331857
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742925"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna o desvio padrão da população de uma expressão numérica avaliada em um conjunto, usando a fórmula de população polarizada (dividindo por *n*).  
   
@@ -65,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

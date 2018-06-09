@@ -1,5 +1,5 @@
 ---
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -8,18 +8,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0d6f3ef84c6df07abf30cef16102ef13277bff47
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238887"
 ---
 # <a name="log-properties"></a>Propriedades do log
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de log listadas nas tabelas a seguir. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+
+> [!NOTE]
+> Nem todas as propriedades se aplicam ao Azure Analysis Services.
   
 ## <a name="general"></a>Geral  
- **Arquivo**  
+ **File**  
  Uma propriedade de cadeia de caracteres que identifica o nome do arquivo de log do servidor. Esta propriedade só se aplicará quando um arquivo de disco for usado para log, em vez de uma tabela de banco de dados (o comportamento padrão).  
   
  O valor padrão desta propriedade é msmdsrv.log.  
@@ -155,7 +160,7 @@ ms.lasthandoff: 05/10/2018
 > [!NOTE]  
 >  Para obter mais informações sobre como configurar o log de consultas, consulte [Configurar o log de consultas do Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
-## <a name="trace"></a>Rastreamento  
+## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -188,6 +193,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -1,8 +1,6 @@
 ---
 title: Acessar os esquemas de estoque (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,15 +39,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773302"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventário de acesso (AccessToSQL)
 As seções a seguir descrevem as tabelas que são criadas por SSMA quando você exportar os esquemas de acesso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -67,17 +65,17 @@ Metadados de banco de dados são exportados para o **SSMA_Access_InventoryDataba
 |**FileOwner**|**nvarchar(4000)**|A conta do Windows que é especificada como o proprietário do banco de dados do Access.|  
 |**DateCreated**|**datetime**|A data e hora que o banco de dados foi criado.|  
 |**DateModified**|**datetime**|A data e hora que o banco de dados foi modificada pela última vez.|  
-|**TablesCount**|**Int**|O número de tabelas no banco de dados do Access.|  
-|**QueriesCount**|**Int**|O número de consultas no banco de dados do Access.|  
-|**FormsCount**|**Int**|O número de formulários no banco de dados do Access.|  
-|**ModulesCount**|**Int**|O número de módulos no banco de dados do Access.|  
-|**ReportsCount**|**Int**|O número de relatórios no banco de dados do Access.|  
-|**MacrosCount**|**Int**|O número de macros de banco de dados do Access.|  
+|**TablesCount**|**int**|O número de tabelas no banco de dados do Access.|  
+|**QueriesCount**|**int**|O número de consultas no banco de dados do Access.|  
+|**FormsCount**|**int**|O número de formulários no banco de dados do Access.|  
+|**ModulesCount**|**int**|O número de módulos no banco de dados do Access.|  
+|**ReportsCount**|**int**|O número de relatórios no banco de dados do Access.|  
+|**MacrosCount**|**int**|O número de macros de banco de dados do Access.|  
 |**AccessVersion**|**nvarchar(4000)**|A versão do banco de dados Access.|  
 |**Agrupamento**|**nvarchar(4000)**|O agrupamento do banco de dados do Access. Os agrupamentos determinam como um banco de dados classifica e compara cadeias de caracteres.|  
 |**JetVersion**|**nvarchar(4000)**|A versão do mecanismo de banco de dados Jet. Bancos de dados do Access usam o mecanismo de banco de dados Jet subjacente.|  
 |**IsUpdatable**|**bit**|Indica se o banco de dados pode ser atualizado. Se o valor for 1, o banco de dados é atualizável. Se o valor for 0, o banco de dados é somente leitura.|  
-|**QueryTimeout**|**Int**|O ODBC consulta tempo limite valor configurado para o banco de dados, em segundos. O padrão é 60 segundos.|  
+|**QueryTimeout**|**int**|O ODBC consulta tempo limite valor configurado para o banco de dados, em segundos. O padrão é 60 segundos.|  
   
 ## <a name="tables"></a>Tabelas  
 Os metadados da tabela é exportado para o **SSMA_Access_InventoryTables** tabela. Esta tabela contém as seguintes colunas:  
@@ -87,7 +85,7 @@ Os metadados da tabela é exportado para o **SSMA_Access_InventoryTables** tabel
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta tabela.|  
 |**TableId**|**uniqueidentifier**|Um GUID que identifica exclusivamente a tabela. Essa coluna também é a chave primária da tabela.|  
 |**TableName**|**nvarchar(4000)**|O nome da tabela.|  
-|**RowsCount**|**Int**|O número de linhas da tabela.|  
+|**RowsCount**|**int**|O número de linhas da tabela.|  
 |**ValidationRule**|**nvarchar(4000)**|A regra que define uma entrada válida para a tabela. Se nenhuma regra de validação existir, o campo conterá uma cadeia de caracteres vazia.|  
 |**LinkedTable**|**nvarchar(4000)**|Outra tabela, se houver, que está vinculada à tabela. Vinculando tabelas permite adições, exclusões e atualizações para a outra tabela usando essa tabela.|  
 |**ExternalSource**|**nvarchar(4000)**|A fonte de dados, se houver, que está associado com a tabela. Se uma tabela estiver vinculada, ele tem uma fonte de dados externa especificada neste campo.|  
@@ -99,7 +97,7 @@ Metadados de coluna é exportado para o **SSMA_Access_InventoryColumns** tabela.
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta coluna.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém esta coluna.|  
-|**ColumnId**|**Int**|Um inteiro de incremento que identifica a coluna. **ColumnId** é a chave primária da tabela.|  
+|**ColumnId**|**int**|Um inteiro de incremento que identifica a coluna. **ColumnId** é a chave primária da tabela.|  
 |**ColumnName**|**nvarchar(4000)**|O nome da coluna.|  
 |**IsNullable**|**bit**|Especifica se a coluna pode conter valores nulos. Se o valor for 1, a coluna pode conter valores nulos. Se o valor for 0, a coluna não pode conter valores nulos. Observe que a regra de validação também pode ser usada para impedir que valores nulos.|  
 |**DataType**|**nvarchar(4000)**|Um tipo de dados de acesso da coluna, como **texto** ou **longo**.|  
@@ -115,7 +113,7 @@ Os metadados do índice é exportado para o **SSMA_Access_InventoryIndexes** tab
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém o índice.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém o índice.|  
-|**IndexId**|**Int**|Um inteiro de incremento que identifica o índice. Essa coluna é a chave primária da tabela.|  
+|**IndexId**|**int**|Um inteiro de incremento que identifica o índice. Essa coluna é a chave primária da tabela.|  
 |**IndexName**|**nvarchar(4000)**|O nome do índice.|  
 |**ColumnsIncluded**|**nvarchar(4000)**|Lista as colunas que são incluídas no índice. Os nomes de coluna são separados por ponto e vírgula.|  
 |**IsUnique**|**bit**|Especifica se cada item no índice deve ser exclusivo. Em um índice de várias coluna, a combinação de valores deve ser exclusiva. Se o valor for 1, o índice impõe valores exclusivos.|  
@@ -129,7 +127,7 @@ Metadados de chave estrangeiro é exportado para o **SSMA_Access_InventoryForeig
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esse foreign key.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém esse foreign key.|  
-|**ForeignKeyId**|**Int**|Um inteiro de incremento que identifica a chave estrangeira. Essa coluna é a chave primária da tabela.|  
+|**ForeignKeyId**|**int**|Um inteiro de incremento que identifica a chave estrangeira. Essa coluna é a chave primária da tabela.|  
 |**ForeignKeyName**|**nvarchar(4000)**|O nome do índice.|  
 |**ReferencedTableId**|**uniqueidentifier**|Identifica a tabela que contém as colunas de origem.|  
 |**SourceColumns**|**nvarchar(4000)**|Lista de colunas ou coluna de chave estrangeira.|  
@@ -144,7 +142,7 @@ Metadados de consulta é exportado para o **SSMA_Access_InventoryQueries** tabel
 |Nome da coluna|Tipo de dados|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta consulta.|  
-|**QueryId**|**Int**|Um inteiro de incremento que identifica a consulta. Essa coluna é a chave primária da tabela.|  
+|**QueryId**|**int**|Um inteiro de incremento que identifica a consulta. Essa coluna é a chave primária da tabela.|  
 |**QueryName**|**nvarchar(4000)**|O nome da consulta.|  
 |**QueryText**|**nvarchar(4000)**|O código de consulta SQL, como uma instrução SELECT.|  
 |**IsUpdateable**|**bit**|Especifica se a consulta é atualizável ou somente leitura.|  
@@ -157,7 +155,7 @@ Metadados do formulário é exportado para o **SSMA_Access_InventoryForms** tabe
 |Nome da coluna|Tipo de dados|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esse formulário.|  
-|**FormId**|**Int**|Um inteiro de incremento que identifica o formulário. Essa coluna é a chave primária da tabela.|  
+|**FormId**|**int**|Um inteiro de incremento que identifica o formulário. Essa coluna é a chave primária da tabela.|  
 |**Nome do formulário**|**nvarchar(4000)**|O nome do formulário.|  
   
 ## <a name="macros"></a>Macros  
@@ -166,7 +164,7 @@ Macro metadados é exportado para o **SSMA_Access_InventoryMacros** tabela. Esta
 |Nome da coluna|Tipo de dados|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém a macro.|  
-|**MacroId**|**Int**|Um inteiro de incremento que identifica a macro. Essa coluna é a chave primária da tabela.|  
+|**MacroId**|**int**|Um inteiro de incremento que identifica a macro. Essa coluna é a chave primária da tabela.|  
 |**MacroName**|**nvarchar(4000)**|O nome da macro.|  
   
 ## <a name="reports"></a>Relatórios  
@@ -175,7 +173,7 @@ Os metadados do relatório é exportado para o **SSMA_Access_InventoryReports** 
 |Nome da coluna|Tipo de dados|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém o relatório.|  
-|**ReportId**|**Int**|Um inteiro de incremento que identifica o relatório. Essa coluna é a chave primária da tabela.|  
+|**ReportId**|**int**|Um inteiro de incremento que identifica o relatório. Essa coluna é a chave primária da tabela.|  
 |**ReportName**|**nvarchar(4000)**|O nome do relatório.|  
   
 ## <a name="modules"></a>Módulos  
@@ -184,7 +182,7 @@ Metadados do módulo são exportados para o **SSMA_Access_InventoryModules** tab
 |Nome da coluna|Tipo de dados|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém o módulo.|  
-|**ModuleId**|**Int**|Um inteiro de incremento que identifica o módulo. Essa coluna é a chave primária da tabela.|  
+|**ModuleId**|**int**|Um inteiro de incremento que identifica o módulo. Essa coluna é a chave primária da tabela.|  
 |**ModuleName**|**nvarchar(4000)**|O nome do módulo.|  
   
 ## <a name="see-also"></a>Consulte também  

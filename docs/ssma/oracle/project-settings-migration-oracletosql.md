@@ -1,8 +1,6 @@
 ---
 title: Configurações (migração) (OracleToSQL) do projeto | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: c18824f7e20c3969664860bd73c8857fc248c014
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5c4568708ddb4b19cd9b49d232746f0b1e7693f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777812"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Configurações de projeto (migração) (OracleToSQL)
 A página de migração do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA migra os dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

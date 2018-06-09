@@ -1,8 +1,6 @@
 ---
 title: Conectar ao MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2290b67ac66a1fa06d62b88390a538a3e06621ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4de2590221535410b5095494dd6f1801460f73
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775692"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectar ao MySQL (MySQLToSQL)
 Use o **conectar ao MySQL** caixa de diálogo para se conectar ao banco de dados MySQL que você deseja migrar.  

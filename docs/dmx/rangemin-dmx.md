@@ -1,32 +1,20 @@
 ---
 title: RangeMin (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- RangeMin
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMin function
-ms.assetid: 64159bbe-7016-4f67-91d9-5c5f6ceb6c25
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: fe0fbee1bb6bcb3ad9633bbb6699cb8368f9bcea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fe9ee0a5fc9c354d24668b828403e937f6d935f0
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841819"
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

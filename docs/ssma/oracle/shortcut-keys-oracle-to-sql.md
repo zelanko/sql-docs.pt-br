@@ -1,8 +1,6 @@
 ---
 title: Teclas de atalho (Oracle para o SQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 397b70d50882ed80714a1385cbd5d2e47d4a3966
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24d343beeb390cf12d4a09d7d8bef3fe556c4a23
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778132"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Teclas de atalho (Oracle para o SQL)
 Você pode usar atalhos de teclado para navegar pelo aplicativo do SSMA. Para obter mais informações, consulte os tópicos a seguir.  

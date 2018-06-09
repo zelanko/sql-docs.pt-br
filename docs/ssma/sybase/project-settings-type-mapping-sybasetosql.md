@@ -3,8 +3,6 @@ title: Configurações (mapeamento de tipo) do projeto (SybaseToSQL) | Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 93d23239f4dc60dc419dde62ab0a4923f286669d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779442"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configurações (mapeamento de tipo) do projeto (SybaseToSQL)
 A página mapeamento de tipo do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte tipos de dados do Sybase Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
@@ -89,8 +88,8 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**float [\*... 15]**|**float[24]**|  
 |**float [16 …\*]**|**float[53]**|  
 |**image**|**image**|  
-|**Int**|**Int**|  
-|**inteiro**|**Int**|  
+|**int**|**int**|  
+|**inteiro**|**int**|  
 |**longsysname**|**nvarchar[255]**|  
 |**money**|**money**|  
 |**National char**|**nchar**|  
@@ -142,7 +141,7 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
 |**bigint não assinado**|**numeric[20][0]**|  
 |**int não assinado**|**bigint**|  
-|**smallint não assinado**|**Int**|  
+|**smallint não assinado**|**int**|  
 |**tinyint não assinado**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary [\*... 8000]**|**varbinary[\*]**|  

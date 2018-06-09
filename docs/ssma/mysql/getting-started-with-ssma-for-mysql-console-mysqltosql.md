@@ -1,8 +1,6 @@
 ---
 title: Guia de Introdução com o SSMA para MySQL Console (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 30fe5fba0bd0b9321c16c72642f29a515320cb63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75e189d89c9a1bbc7207521b8156d0f4b56ca759
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776232"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Guia de Introdução com o SSMA para MySQL Console (MySQLToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do MySQL. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console SSMA típica.  

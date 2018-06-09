@@ -3,8 +3,6 @@ title: Guia de Introdução com o SSMA para Sybase Console (SybaseToSQL) | Micro
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -22,11 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9b401ea1efdfcececbb35a16d7d10b29915e1fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ae06be98a30b6c293ef3625f31ff2ac272c1d8e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778542"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Guia de Introdução com o SSMA para Sybase Console (SybaseToSQL)
 Esta seção descreve o procedimento para iniciar e guia de Introdução do SSMA para Sybase aplicativo de console. Também são listados aqui são as convenções usadas em uma janela de saída do Console SSMA típica.  
@@ -73,5 +72,5 @@ Interpretação de cor da saída do console é exibida na tabela a seguir:
 |Verde|Solicitar entrada do usuário|  
 |Ciano|Início, término e resultado de uma operação|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Instalando o SSMA para SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

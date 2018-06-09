@@ -1,31 +1,20 @@
 ---
 title: '- (Subtração) (DMX) | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- '- (subtract)'
-- subtract operator (-)
-ms.assetid: 9602e908-e80c-442a-a412-073e10d0abd4
-caps.latest.revision: 12
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 82f04d4e5603a7a25cee81d3a9a466523e152339
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e15eba5f642d0506e7c23f0e5790d6867224f9a2
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842039"
 ---
 # <a name="--subtract-dmx"></a>- (Subtrair) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Numeric_Expression - Numeric_Expression
  *Numeric_Expression*  
  Expressão DMX (Data Mining Extensions) válida que retorna um valor numérico.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Valor que possui o tipo de dados do parâmetro que tem prioridade alta.  
   
 ## <a name="remarks"></a>Remarks  

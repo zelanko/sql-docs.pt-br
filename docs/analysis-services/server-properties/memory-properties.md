@@ -1,6 +1,6 @@
 ---
 title: Propriedades de memória | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,29 +9,31 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c3542d8ffff4c5c8887c5c0f8f8747e4714dcd5c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 57a40130b9cf8ddf2b2f9d3c43d464436a0f4730
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239092"
 ---
 # <a name="memory-properties"></a>Propriedades de memória
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-aloca um volume modesto de memória na inicialização para que solicitações possam ser manipuladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates uma pequena quantidade de memória na inicialização para que as solicitações podem ser controladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
   
   Ao especificar definições de configuração, você pode controlar os limites nos quais a memória é liberada. Por exemplo, a configuração **HardMemoryLimit** especifica uma condição de falta de memória imposta automaticamente (por padrão, esse limite não é habilitado), em que novas solicitações são rejeitadas totalmente até que mais recursos estejam disponíveis.
 
 Para saber mais sobre memória máxima utilizada por instância do Analysis Services por edição, consulte [edições e os recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- As configurações a seguir se aplicam a ambos os modo de servidor multidimensional e tabular, a menos que indicado em contrário.  
+ As configurações a seguir se aplicam a ambos os modo de servidor de tabela e multidimensionais, a menos que indicado em contrário.  
  
 ## <a name="default-memory-configuration"></a>Configuração de memória padrão
 
-Na configuração padrão, cada instância do Analysis Services alocará um pequeno volume de RAM (40 a 50 MB) na inicialização, mesmo se a instância estiver ociosa. 
+Sob a configuração padrão, cada instância do Analysis Services aloca uma pequena quantidade de RAM (40MB a 50 MB) na inicialização, mesmo se a instância estiver ociosa. 
 
 Lembre-se de que as definições de configuração são por instância. Se você estiver executando várias instâncias do Analysis Services, como uma instância tabular e multidimensional no mesmo hardware, cada instância alocará sua própria memória independentemente de outras instâncias.
 
-A tabela a seguir descreve resumidamente as configurações de memória mais comumente usadas (com mais detalhes na seção de referência). Essas são as configurações que você deverá definir se o Analysis Services estiver competindo por memória com outros aplicativos no mesmo servidor:
+A tabela a seguir descreve resumidamente as configurações de memória mais comumente usadas (com mais detalhes na seção de referência). Você deve configurar essa configuração somente se o Analysis Services é competindo por memória com outros aplicativos no mesmo servidor:
 
 Configuração | Description
 --------|------------
@@ -47,14 +49,17 @@ As propriedades a seguir se aplicam aos modos tabulares e multidimensionais, a m
  Os valores entre 1 e 100 representam percentuais da **Memória Física Total** ou do **Espaço de Endereço Virtual**, o que for menor. Os valores acima de 100 representam limites de memória em bytes.
   
  **LowMemoryLimit**  
- Uma propriedade de número de ponto flutuante de precisão dupla de 64 bits assinada que define o primeiro limite em que o Analysis Services começa a liberar memória para objetos de baixa prioridade, como um cache usado com pouca frequência. Depois que a memória é alocada, o servidor não libera a memória abaixo desse limite. O valor padrão é 65; o que indica que o limite de memória baixo é 65% de memória física ou o espaço de endereço virtual, o que for menor.  
+ Uma assinado 64 bits de precisão dupla de ponto flutuante propriedade de número que define o primeiro limite no qual o Analysis Services começa a liberar a memória para objetos de baixa prioridade, como um cache usado raramente. Depois que a memória é alocada, o servidor não libera a memória abaixo desse limite. O valor padrão é 65; o que indica que o limite de memória baixo é 65% de memória física ou o espaço de endereço virtual, o que for menor.  
   
  **TotalMemoryLimit**  
- Define um limite que, quando alcançado, faz o servidor desalocar memória a fim de liberar espaço para outras solicitações. Quando este limite é atingido, a instância começa lentamente a limpar a memória de cache fechando sessões expiradas e descarregando cálculos não usados. O valor padrão de 80% de memória física ou o espaço de endereço virtual, o que for menor. Observe que **TotalMemoryLimit** deve ser sempre menor que **HardMemoryLimit**  
+ Define um limite que, quando alcançado, faz o servidor desalocar memória a fim de liberar espaço para outras solicitações. Quando este limite é atingido, a instância começa lentamente a limpar a memória de cache fechando sessões expiradas e descarregando cálculos não usados. O valor padrão de 80% de memória física ou o espaço de endereço virtual, o que for menor. **TotalMemoryLimit** sempre deve ser menor que **HardMemoryLimit**  
   
  **HardMemoryLimit**  
- Especifica um limite de memória depois do qual a instância finaliza sessões de usuário ativas agressivamente para reduzir o uso da memória. Todas as sessões terminadas receberão um erro sobre terem sido canceladas por pressão de memória. O valor padrão, 0 (zero), significa que **HardMemoryLimit** será definido como um valor entre **TotalMemoryLimit** e a memória física total do sistema; se a memória física do sistema for maior que o espaço de endereço virtual do processo, o espaço de endereço virtual será usado para calcular **HardMemoryLimit**.  
-  
+ Especifica um limite de memória depois do qual a instância finaliza sessões de usuário ativas agressivamente para reduzir o uso da memória. Todas as sessões terminadas receberão um erro sobre sendo canceladas por pressão de memória. O valor padrão, 0 (zero), significa que **HardMemoryLimit** será definido como um valor entre **TotalMemoryLimit** e a memória física total do sistema; se a memória física do sistema for maior que o espaço de endereço virtual do processo, o espaço de endereço virtual será usado para calcular **HardMemoryLimit**.  
+
+**QueryMemoryLimit**   
+Apenas serviços de análise do Azure. Uma propriedade avançada para controlar a quantidade de memória pode ser usado pelos resultados temporários durante uma consulta. Só se aplica a medidas DAX e consultas. Consultas MDX em servidores de modo Multidimensional não usam esse limite. Não importa para alocações de memória geral usadas pela consulta. Especificado em porcentagem. O valor padrão 0 indica que nenhum limite é especificado.
+
  **VirtualMemoryLimit**  
   Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -70,7 +75,7 @@ Configuração  |Description
   
 Quando definido como 1, o processamento apresenta menor probabilidade de falhar devido a restrições de memória, pois o servidor tentará paginar para o disco usando o método especificado por você. A definição da propriedade **VertiPaqPagingPolicy** não garante que erros de memória nunca ocorrerão. Erros de falta de memória ainda podem ocorrer sob as seguintes condições:  
   
--   Não há bastante memória para todos os dicionários. Durante o processamento, o Analysis Services bloqueia os dicionários para cada coluna na memória e todos eles juntos não podem ter mais do que o valor especificado para **VertiPaqMemoryLimit**.  
+-   Não há bastante memória para todos os dicionários. Durante o processamento, o servidor bloqueia os dicionários para cada coluna na memória e todos eles juntos não podem ter mais do que o valor especificado para **VertiPaqMemoryLimit**.  
   
 -   Não há espaço de endereço virtual insuficiente para acomodar o processo.  
   
@@ -127,4 +132,4 @@ Quando definido como 1, o processamento apresenta menor probabilidade de falhar 
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

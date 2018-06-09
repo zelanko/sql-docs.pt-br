@@ -1,8 +1,6 @@
 ---
 title: Mapeamento de origem e bancos de dados de destino (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,11 +24,12 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ade8c301a8cb519c22413a4db9a236f58f5dd870
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb290594fc878a2df4cd6345ce6f9cc8f86ff51d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773822"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mapeamento de origem e bancos de dados de destino (AccessToSQL)
 Quando você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, é necessário especificar um banco de dados de destino para migração. Se você tiver vários bancos de dados do Access mapeá-los a vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bancos de dados (ou esquemas) ou para vários esquemas no banco de dados do SQL Azure conectado.  

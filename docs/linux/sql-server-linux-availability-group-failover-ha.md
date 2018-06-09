@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799806"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover do grupo de disponibilidade AlwaysOn no Linux
 
@@ -71,7 +72,7 @@ Durante um failover manual, o `pcs` comando `move` ou `crm` comando `migrate` ad
 - **Exemplo RHEL/Ubuntu**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **Exemplo SLES**
@@ -80,35 +81,17 @@ Durante um failover manual, o `pcs` comando `move` ou `crm` comando `migrate` ad
    crm config show
    ```
 
-Remova a restrição de local para que futuras failovers (incluindo o failover automático) tenha êxito. 
-
-Para remover a restrição, execute o seguinte comando: 
-
-- **Exemplo RHEL/Ubuntu**
-
-   Neste exemplo `ag_cluster-master` é o nome do recurso que falhou. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **Exemplo SLES**
-
-   Neste exemplo `ag_cluster` é o nome do recurso que falhou. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-Alternativamente, você pode executar o comando a seguir para remover a restrição de local.  
+Um exemplo da restrição que é criada por causa de um failover manual. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **Exemplo RHEL/Ubuntu**
 
-   No comando a seguir, `cli-prefer-ag_cluster-master` é a ID da restrição que precisa ser removida. `sudo pcs constraint --full` retorna essa ID. 
-
+   No comando a seguir, `cli-prefer-ag_cluster-master` é a ID da restrição que precisa ser removida. `sudo pcs constraint list --full` retorna essa ID. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **Exemplo SLES**
 
    No comando a seguir `cli-prefer-ms-ag_cluster` é a ID da restrição. `crm config show` retorna essa ID. 

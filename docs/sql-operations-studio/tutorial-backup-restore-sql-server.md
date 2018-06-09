@@ -17,7 +17,7 @@ ms.openlocfilehash: 22a453caa9d29432381da6861a0f0c4e3e61d77e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34582448"
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Backup e restauração usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]

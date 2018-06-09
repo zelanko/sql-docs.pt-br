@@ -1,8 +1,6 @@
 ---
 title: Projeto Settings(Synchronization) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5df187de582e8200a0df4c08da5ed0ba7ae42ba8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd1b299df5f14b08cfb379aaa8b85c808923e786
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777772"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Projeto Settings(Synchronization) (OracleToSQL)
 A página de sincronização do **configurações de projeto** caixa de diálogo contém configurações que personalizam o SSMA carrega e atualizações de banco de dados objetos, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

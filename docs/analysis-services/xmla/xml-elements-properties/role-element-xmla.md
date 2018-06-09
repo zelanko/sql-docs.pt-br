@@ -13,7 +13,7 @@ ms.openlocfilehash: e313b014632f85800111d1a3c419e38b7caa1f19
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34579998"
 ---
 # <a name="role-element--xmla"></a>Elemento Role (XMLA)

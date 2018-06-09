@@ -1,8 +1,6 @@
 ---
 title: Referência da Interface de usuário (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 42a81d87eb391621f837a04025ec093fac6f3b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd67eb89a9efb22c38d7b9318e8ac562fa6d7264
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774212"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referência da Interface de usuário (AccessToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para acesso.  
@@ -57,7 +56,7 @@ Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes
 |[Configurações de projeto (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Use a página do SQL Azure do **configurações de projeto** caixa de diálogo para especificar o sufixo do banco de dados e também o intervalo de tempo limite de pulsação.|  
 |[Salvar metadados &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Introdução ao Assistente de migração do SQL Server para Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Preparar bancos de dados do Access para a migração](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  

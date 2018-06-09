@@ -1,41 +1,20 @@
 ---
 title: INSERIR (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- INSERT INTO
-- INSERT
-- INSERT_INTO
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SKIP (DMX)
-- mapped model columns element
-- source data query element
-- <mapped model columns> element
-- <source data query> element
-- INSERT INTO statement
-- mining models [Analysis Services], processing
-- training mining models
-- mining structures [DMX], processing
-ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f76a649664d5240d31b1fa5b69a5d3045a59de26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842649"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +65,7 @@ INSERT INTO [MINING MODEL] <model>
 ||A estrutura de mineração é não processada.|O modelo de mineração e a estrutura de mineração são processadas.|  
 ||A estrutura de mineração contém modelos de mineração adicionais.|Falha no processo. É preciso reprocessar a estrutura e os modelos de mineração associados.|  
 |INSERT INTO MINING STRUCTURE*\<estrutura >*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
-|INSERT INTO MINING MODEL*\<modelo >* que contém uma consulta de origem<br /><br /> ou<br /><br /> INSERT INTO MINING STRUCTURE*\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL*\<modelo >* que contém uma consulta de origem<br /><br /> ou em<br /><br /> INSERT INTO MINING STRUCTURE*\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Colunas de modelo mapeado  
  Usando o \<mapear colunas de modelo > elemento, você pode mapear as colunas da fonte de dados para as colunas no modelo de mineração. O \<mapear colunas de modelo > elemento tem o seguinte formato:  
@@ -144,6 +123,6 @@ AS [Models]
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados & #40; DMX & #41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -1,8 +1,6 @@
 ---
 title: Adicionando e removendo o acesso a arquivos (AccessToSQL) do banco de dados | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -37,11 +35,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e2fbd70bf6427b7f5dbe694f4abd2fed2f28b4b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f88f27de2202679147ad3b3f0b3e1a3765292d88
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773562"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Adicionando e removendo arquivos de banco de dados do Access (AccessToSQL)
 Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, você deve adicionar um ou mais bancos de dados do Access para o projeto SSMA. Esses bancos de dados devem ser Access 97 ou posterior. Se você tiver bancos de dados de uma versão anterior do Access, você deve converter os bancos de dados em uma versão mais recente. Você pode fazer isso abrindo e salvando os bancos de dados do Access 97 ou posterior antes de adicioná-los para o SSMA.  

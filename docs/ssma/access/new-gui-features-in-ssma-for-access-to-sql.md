@@ -1,8 +1,6 @@
 ---
 title: Novos recursos de interface gráfica do usuário do SSMA para Access para o SQL | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 30c80a6d78c3b9b2737c608c75299f90dd02c969
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c85cd4e2cade37e20549aeaf76e94efd3224fad1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774742"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Novos recursos de interface gráfica do usuário do SSMA para Access to SQL
 Este capítulo descreve novos recursos da Interface de usuário do SSMA  

@@ -1,35 +1,20 @@
 ---
 title: '&lt;consulta de fonte de dados&gt; | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- data sources [DMX]
-- predictions [DMX]
-- source data query element
-- queries [DMX], source data
-- external data access [DMX]
-- <source data query> element
-- training mining models
-ms.assetid: 9dce5e37-1354-4d28-87c2-f9c419cb5b09
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 25285a04adf2c8547f9a9a50d07e7c3ed9fce54b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842979"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de fonte de dados&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados & #40; DMX & #41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [Tabelas aninhadas &#40;Analysis Services – mineração de dados&#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
   

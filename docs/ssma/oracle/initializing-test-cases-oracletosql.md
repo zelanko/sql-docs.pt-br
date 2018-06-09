@@ -1,8 +1,6 @@
 ---
 title: Inicializando os casos de teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 20d8a3748c7f2f5f3dc66c088ef6ef5d5acc72e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dc31aba88922a961f8e399e4fd9c4187c2b5c0a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777572"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Inicializando os casos de teste (OracleToSQL)
 Nesta etapa, você especificar as informações iniciais para o novo caso de teste.  

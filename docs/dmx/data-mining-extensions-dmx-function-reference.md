@@ -1,31 +1,20 @@
 ---
 title: Referência de função de Data Mining Extensions (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DMX [Analysis Services], functions
-- functions [DMX]
-- Data Mining Extensions [Analysis Services], functions
-ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: fd2ec453b2f2cd3209bcd93d82f96efe2b040973
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842529"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referência de função de DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,23 +37,23 @@ ms.lasthandoff: 05/03/2018
 |[Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Retorna o cluster com maior probabilidade de conter o caso de entrada.|  
 |[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|Retorna a probabilidade de que o caso de entrada pertença ao cluster.|  
 |[Existe &#40;DMX&#41;](../dmx/exists-dmx.md)|Retornará true se o conjunto de resultados retornado pela instrução SELECT especificada contiver pelo menos uma linha.|  
-|[IsDescendant & #40; DMX & #41;](../dmx/isdescendant-dmx.md)|Indica se o nó atual descende do nó especificado.|  
-|[IsInNode & #40; DMX & #41;](../dmx/isinnode-dmx.md)|Indica se o nó especificado contém o caso.|  
+|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Indica se o nó atual descende do nó especificado.|  
+|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Indica se o nó especificado contém o caso.|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Indica se um caso pertence ao conjunto de casos de teste.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|Indica se um caso pertence ao conjunto de casos de treinamento.|  
-|[Latência & #40; DMX & #41;](../dmx/lag-dmx.md)|Retorna a fração de tempo entre a data do caso atual e a última data na data.|  
-|[Prever & #40; DMX & #41;](../dmx/predict-dmx.md)|Executa uma previsão em uma coluna especificada.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ajustada da coluna previsível especificada.|  
-|[PredictAssociation & #40; DMX & #41;](../dmx/predictassociation-dmx.md)|Prevê associação de membro em uma coluna.|  
+|[Latência &#40;DMX&#41;](../dmx/lag-dmx.md)|Retorna a fração de tempo entre a data do caso atual e a última data na data.|  
+|[Prever &#40;DMX&#41;](../dmx/predict-dmx.md)|Executa uma previsão em uma coluna especificada.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ajustada da coluna previsível especificada.|  
+|[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Prevê associação de membro em uma coluna.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Retorna a probabilidade de que um caso de entrada se ajuste dentro do modelo existente. Essa função só pode ser usada com modelos de clustering.|  
-|[PredictHistogram & #40; DMX & #41;](../dmx/predicthistogram-dmx.md)|Retorna uma tabela que representa o histograma para a coluna especificada.|  
-|[PredictNodeId & #40; DMX & #41;](../dmx/predictnodeid-dmx.md)|Retorna a Identificação do nó para o caso selecionado.|  
-|[PredictProbability & #40; DMX & #41;](../dmx/predictprobability-dmx.md)|Retorna a probabilidade da coluna especificada.|  
+|[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|Retorna uma tabela que representa o histograma para a coluna especificada.|  
+|[PredictNodeId &#40;DMX&#41;](../dmx/predictnodeid-dmx.md)|Retorna a Identificação do nó para o caso selecionado.|  
+|[PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|Retorna a probabilidade da coluna especificada.|  
 |[PredictSequence &#40;DMX&#41;](../dmx/predictsequence-dmx.md)|Prevê os próximos valores em uma sequência.|  
-|[PredictStdev & #40; DMX & #41;](../dmx/predictstdev-dmx.md)|Recupera o valor de desvio padrão para uma coluna especificada.|  
-|[PredictSupport & #40; DMX & #41;](../dmx/predictsupport-dmx.md)|Retorna o valor de suporte de uma coluna.|  
-|[PredictTimeSeries & #40; DMX & #41;](../dmx/predicttimeseries-dmx.md)|Prevê os valores futuros para uma série temporal.|  
-|[PredictVariance & #40; DMX & #41;](../dmx/predictvariance-dmx.md)|Retorna o valor de variação da coluna especificada.|  
+|[PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)|Recupera o valor de desvio padrão para uma coluna especificada.|  
+|[PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)|Retorna o valor de suporte de uma coluna.|  
+|[PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md)|Prevê os valores futuros para uma série temporal.|  
+|[PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)|Retorna o valor de variação da coluna especificada.|  
 |[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|Retorna o valor superior da partição prevista que é descoberto para a coluna diferenciada especificada.|  
 |[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)|Retorna o valor de ponto central da partição prevista que é descoberta para a coluna diferenciada especificada.|  
 |[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|Retorna o valor inferior da partição prevista que é descoberto para a coluna diferenciada especificada.|  
@@ -75,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensões de mineração de dados & #40; DMX & #41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

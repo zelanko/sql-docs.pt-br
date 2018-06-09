@@ -1,8 +1,6 @@
 ---
 title: Preparar bancos de dados do Access para a migração (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -29,11 +27,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1862e57551ccbc4a41c14c58b1fb0f9de43998d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eca76e8b1a585c4d97528792cef161ef68771f7e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774192"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Preparar bancos de dados do Access para a migração (AccessToSQL)
 Antes de migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve determinar quais bancos de dados para migrar e certifique-se de que esses bancos de dados estão prontos para a migração.  
@@ -82,6 +81,6 @@ Para obter informações sobre como fazer backup [!INCLUDE[ssNoVersion](../../in
 ### <a name="documenting-databases"></a>Documentando bancos de dados  
 Você também poderá documentar as propriedades, como listas de objetos de banco de dados, tamanhos de arquivos e permissões de seus bancos de dados do Access. Para gerar esta documentação no Access, o **ferramentas** , aponte para **analisar**e, em seguida, clique em **documentadas**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Vinculando a aplicativos de acesso ao SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)

@@ -1,8 +1,6 @@
 ---
 title: Migrar bancos de dados do Access para o SQL Server - banco de dados SQL do Azure | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -24,11 +22,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 9b17a4e565c27d501d2e515df195c84fb5116321
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7690a6962c27536ef8923b127dd2786db954a7b2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774052"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Migrando bancos de dados do Access para o SQL Server - banco de dados do SQL do Azure (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Assistente de migração (SSMA) é uma ferramenta que fornece um ambiente abrangente que ajuda a migrar rapidamente bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure. Usando o SSMA, você pode revisar o acesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure objetos de banco de dados, avaliar o banco de dados para a migração, converter objetos de banco de dados do Access, carregá-los em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure, e, em seguida, migrar dados.  
@@ -65,6 +64,6 @@ Para migrar com êxito os objetos e dados do Access para [!INCLUDE[ssNoVersion](
   
 Você também pode usar o Assistente de migração para orientar você durante esse processo. Para obter mais informações, consulte [Assistente de migração](http://msdn.microsoft.com/5bab5914-b2ae-4795-8cf5-83e42d64bef2).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Introdução ao Assistente de migração do SQL Server para Access](http://msdn.microsoft.com/462a731f-08f1-44e1-9eeb-4deac6d2f6c5)  
 [Preparar bancos de dados do Access para a migração](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)

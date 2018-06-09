@@ -15,11 +15,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 226bc8435480477a3d217e4e0a0008c496a6055d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2a5bbd2370839cf1483d251f87588743994b081
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239336"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,12 +39,12 @@ bool PDO::setAttribute ( $attribute, $value );
   
 *$value*: o valor (tipo misturado).  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Retorna true se for bem-sucedido; caso contrário, false.  
   
 ## <a name="remarks"></a>Remarks  
   
-|Atributo|Processado por|Valores com suporte|Description|  
+|attribute|Processado por|Valores com suporte|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica se serão usadas maiúsculas ou minúsculas nos nomes das colunas.<br /><br />PDO::CASE_LOWER faz com que os nomes das colunas sejam escritos em minúsculas.<br /><br />PDO::CASE_NATURAL (o padrão) exibe os nomes das colunas conforme são retornados pelo banco de dados.<br /><br />PDO::CASE_UPPER faz com que os nomes das colunas sejam escritos em maiúsculas.<br /><br />Esse atributo pode ser definido usando PDO::setAttribute.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|Consulte a documentação do PDO.|Consulte a documentação do PDO.|  
@@ -56,7 +57,7 @@ Retorna true se for bem-sucedido; caso contrário, false.
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Define a codificação do conjunto de caracteres usada pelo driver para se comunicar com o servidor.<br /><br />Não há suporte para PDO::SQLSRV_ENCODING_BINARY.<br /><br />O padrão é PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Manipula numéricas buscas de colunas com tipos numéricos do SQL (bit, inteiro, smallint, tinyint, float ou real).<br /><br />Quando o sinalizador de opção de conexão ATTR_STRINGIFY_FETCHES está ativado, o valor de retorno é uma cadeia de caracteres até mesmo quando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está ativado.<br /><br />Quando o tipo PDO retornado na coluna de associação for PDO_PARAM_INT, o valor de retorno de uma coluna de inteiros é um int, mesmo se SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está desativado.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tempo limite da consulta em segundos.<br /><br />O padrão é 0, o que significa que o driver aguardará resultados indefinidamente.<br /><br />Números negativos não são permitidos.|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tamanho do buffer de consulta.<br /><br />O padrão é 0, que indica um tamanho do buffer ilimitado.<br /><br />Números negativos não são permitidos.<br /><br />Para obter mais informações sobre consultas que criam um cursor do lado do cliente, consulte [tipos de Cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tamanho do buffer de consulta.<br /><br />O padrão é 10240 KB, se não for especificado no arquivo php.ini.<br /><br />Números negativos e zero não são permitidos.<br /><br />Para obter mais informações sobre consultas que criam um cursor do lado do cliente, consulte [tipos de Cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
   
 O PDO processa alguns atributos predefinidos e requer que o driver processe outros. Todos os atributos personalizados e opções de conexão são processados pelo driver. Um atributo sem suporte, opção de conexão ou valor sem suporte será relatado de acordo com a configuração de PDO:: attr_errmode.  
   

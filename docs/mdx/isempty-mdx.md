@@ -1,6 +1,6 @@
 ---
 title: IsEmpty (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab2f65bbc15aecec93294225435d3d2d38fff062
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578708"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740165"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retorna se a expressão avaliada for o valor de célula vazio.  
   
@@ -38,7 +38,7 @@ IsEmpty(Value_Expression)
 > [!NOTE]  
 >  A propriedade padrão para um membro é o valor do membro.  
   
- O **IsEmpty** função é a única maneira de testar confiavelmente uma célula vazia porque o valor de célula vazia tem um significado especial [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ O **IsEmpty** função é a única maneira de testar confiavelmente uma célula vazia porque o valor de célula vazia tem um significado especial [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Se a avaliação da expressão de valor retorna um erro, a função retornará **false**. Uma expressão de valor pode retornar um erro, por exemplo, se uma referência de propriedades se referir a uma propriedade inválida ou não existente.  

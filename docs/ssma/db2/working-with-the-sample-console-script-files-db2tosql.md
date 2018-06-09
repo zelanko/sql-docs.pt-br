@@ -1,8 +1,6 @@
 ---
 title: Trabalhando com os arquivos de Script do Console de exemplo (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a756a39a82a607eadd26601006f70dba36391c0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff200ae57ecbfe426b0ccdf7e9ed71af4cfc8bc2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775462"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabalhando com os arquivos de Script do Console de exemplo (DB2ToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência de usuário e uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para se adequar às necessidades do usuário final.  
@@ -77,7 +76,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
 5.  **ConversionAndDataMigrationSample.xml:** Este exemplo permite que o usuário executar uma migração de ponta a ponta de conversão de migração de dados. A lista de valores de atributo obrigatório que eles terão de alterar esteja listada abaixo:  
   
-    |Nome de comando|Description|Atributo|  
+    |Nome de comando|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Mapeamento de esquema de banco de dados de origem para o esquema de destino.|`source-schema:` Especifica o banco de dados de origem que requer a ser convertido.<br /><br />`sql-server-schema`: Especifica o banco de dados de destino que deve ser migrada para|  
     |`convert-schema`|Executa a conversão de esquema de origem para o esquema de destino.<br /><br />Se o usuário tem que avaliar a vários objetos de bancos de dados pode especificar vários `metabase-object` nós, conforme ilustrado a `convert-schema` exemplo 4 do comando do arquivo de script de console de exemplo.|`object-name`: Especifique o banco de dados de origem / object name que requer a ser convertido. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do `object-name`|  

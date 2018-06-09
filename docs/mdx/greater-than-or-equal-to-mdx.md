@@ -1,6 +1,6 @@
 ---
 title: '&gt;= (Maior ou igual a) (MDX) | Microsoft Docs'
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: db81285593b04a2b82c5eed87c3747a1f9450e42
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 14babb777aa4c5de85c0a0324621aebf91cb5367
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579118"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740795"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (Maior ou igual a) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Realiza uma operação de comparação que determina se o valor de uma expressão MDX (Multidimensional Expressions) fé maior ou igual ao valor de outra expressão MDX.  
   

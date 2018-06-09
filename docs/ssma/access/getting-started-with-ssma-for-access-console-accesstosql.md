@@ -1,8 +1,6 @@
 ---
 title: Guia de Introdução ao SSMA para Access Console (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 60c9a1775c1d5acf9f3c4b26d061d991941d07d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c37a486c560a5dc0cb6298f93b4486accc18354b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773912"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Guia de Introdução ao SSMA para Access Console (AccessToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console de acesso. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console SSMA típica.  

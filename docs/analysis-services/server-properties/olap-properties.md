@@ -1,6 +1,6 @@
 ---
 title: Propriedades OLAP | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239286"
 ---
 # <a name="olap-properties"></a>Propriedades OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor OLAP listadas nas seguintes tabelas. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Aplica-se a:** somente modo de servidor multidimensional  
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   Afeta todos os bancos de dados do servidor. **DimensionPropertyCachesize** é uma propriedade para todo o servidor. Alterar essa propriedade afeta todos os bancos de dados em execução na instância atual.  
   
- Abordagem para calcular os requisitos de cache de dimensão:  
+Abordagem para calcular os requisitos de cache de dimensão:  
   
 1.  Comece aumentando o tamanho bastante para determinar se é vantagem aumentar o tamanho do cache de dimensão. Por exemplo, talvez você queira dobrar o valor padrão como uma etapa inicial.  
   
 2.  Se uma melhoria de desempenho é evidente, reduza incrementalmente o valor até que você alcance um equilíbrio entre o bom desempenho e a utilização de memória.  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\ MemoryModel\ Tax**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>Trabalhos  
+## <a name="jobs"></a>trabalhos  
  **ProcessAggregation\ MemoryModel\ Income**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -393,6 +396,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

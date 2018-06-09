@@ -1,6 +1,6 @@
 ---
 title: Operadores (sintaxe MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580658"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742745"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxe MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Na linguagem MDX, os operadores permitem executar as seguintes ações:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580658"
  Ao usar vários operadores, a ordem em que o MDX avalia os operadores é importante. Similarmente, o usuário dos operadores pode exigir que apenas um tipo de dados seja convertido em outro tipo de dados antes que os operadores possam ser avaliados.  
   
 ## <a name="evaluating-complex-expressions"></a>Avaliando expressões complexas  
- Você pode criar uma expressão usando os operadores para combinar várias expressões menores. Nessas expressões complexas, o MDX avalia os operadores na ordem com base na definição de precedência do operador usada pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O MDX executa os operadores com prioridade mais alta antes de executar os operadores com prioridade mais baixa.  
+ Você pode criar uma expressão usando os operadores para combinar várias expressões menores. Nessas expressões complexas, o MDX avalia os operadores na ordem com base na definição de precedência do operador usada pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O MDX executa os operadores com prioridade mais alta antes de executar os operadores com prioridade mais baixa.  
   
 ### <a name="understanding-operator-precedence"></a>Entendendo a prioridade dos operadores  
  A lista a seguir mostra a prioridade dos operadores, da mais alta para a mais baixa. Os operadores que estão na mesma linha têm a mesma prioridade e são avaliados da esquerda para a direita, a não ser que seja definido de outro modo pelos parênteses:  

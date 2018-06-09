@@ -3,8 +3,6 @@ title: Executar o Console do SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbad5207581a713327112b9d319c69f706ad2f61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c208784d3399b0ab37a046b1452320544f143163
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778562"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o Console do SSMA (SybaseToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  
@@ -238,7 +237,7 @@ Falha ao se conectar ao servidor de banco de dados de origem durante a execuçã
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -303,7 +302,7 @@ Se a conexão de banco de dados de origem ou de destino não é executada antes 
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -359,7 +358,7 @@ Esse comando migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -438,7 +437,7 @@ fail-script>" (optional)
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -447,7 +446,7 @@ ou
   
   object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -499,7 +498,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -508,7 +507,7 @@ ou
   
   object-type="<object-category>" />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -553,7 +552,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  
@@ -627,7 +626,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 </convert-sql-statement>  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -652,7 +651,7 @@ ou
   
 />  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  

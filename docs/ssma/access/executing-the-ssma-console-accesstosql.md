@@ -1,8 +1,6 @@
 ---
 title: Executar o Console do SSMA (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630e58111b82485b0e7567b972f05227fc26921e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e871f2dd71c4c348067555e03c45a151f001d933
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773992"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Executar o Console do SSMA (AccessToSQL)
 Microsoft fornece um conjunto robusto de comandos do arquivo de script e opções de linha de comando para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  
@@ -165,7 +164,7 @@ carga-acesso-banco de dados: usada para carregar arquivos de banco de dados do a
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <load-access-database>  
@@ -199,7 +198,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <force-load>  
@@ -312,7 +311,7 @@ relatório gerar de avaliação
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -384,7 +383,7 @@ convert-schema
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -444,7 +443,7 @@ migrar dados
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -474,7 +473,7 @@ Vincular tabelas: este comando vincula a tabela de origem (acesso) para a tabela
   
 </link-tables>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <link-tables>  
@@ -500,7 +499,7 @@ tabelas desvincular: este comando desvincula a tabela de origem (acesso) da tabe
   
 </unlink-tables>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <unlink-tables>  
@@ -579,7 +578,7 @@ Sincronizar de destino
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -588,7 +587,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -644,7 +643,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -653,7 +652,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -703,7 +702,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  

@@ -1,8 +1,6 @@
 ---
 title: Guia de Introdução com o SSMA para MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +20,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 191ff0505de357b4a76579e2797ceaeb636faf1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3192db5033a9d20ca21d21d7b0d2c8f3d1550b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776532"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Guia de Introdução com o SSMA para MySQL (MySQLToSQL)
 Migration Assistant SSMA (SQL Server) para MySQL permite converter esquemas de banco de dados MySQL para esquemas SQL Server ou banco de dados do Azure SQL rapidamente, carregar os esquemas resultantes no SQL Server ou banco de dados de SQL do Azure e migrar dados do MySQL para o SQL Server ou banco de dados de SQL do Azure.  
@@ -116,7 +115,7 @@ A tabela a seguir mostra os menus do SSMA.
 |||  
 |-|-|  
 |**Menu**|**Descrição**|  
-|**Arquivo**|Contém comandos para trabalhar com projetos, conectando-se ao MySQL e no SQL Server ou banco de dados de SQL do Azure.|  
+|**File**|Contém comandos para trabalhar com projetos, conectando-se ao MySQL e no SQL Server ou banco de dados de SQL do Azure.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes. Para abrir **gerenciar indicadores** caixa de diálogo, no menu Editar clique em Gerenciar indicadores. Na caixa de diálogo, você verá uma lista de indicadores. Você pode usar os botões à direita da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados de pesquisadores** comando. Que sincroniza os objetos entre o Gerenciador de metadados do MySQL e SQL Server ou do Gerenciador de metadados de banco de dados de SQL do Azure. Também contém comandos para mostrar e ocultar o **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar com os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios, converter o esquema, de atualização do banco de dados, migrar objetos e dados e salve como Script. Também fornece acesso a **configurações globais, configurações de projeto padrão** e **configurações de projeto** caixas de diálogo.|  

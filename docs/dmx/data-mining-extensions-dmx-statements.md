@@ -1,35 +1,20 @@
 ---
 title: Referência Data Mining Extensions (DMX) instrução | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], statements
-- statements [DMX], reference
-- mining models [Analysis Services], training
-- mining structures [DMX]
-- mining models [Analysis Services], options
-- mining structures [DMX], options
-ms.assetid: 9cfa1db4-0f21-4fa3-8158-f94c48987e1b
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a3c9f5d7331077520bab68c951b792f744f927db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841489"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instruções Data Mining Extensions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

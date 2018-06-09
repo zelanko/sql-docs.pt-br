@@ -3,8 +3,6 @@ title: Assistente de migração do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778102"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -49,7 +48,7 @@ As seguintes versões de destino têm suporte para o SSMA.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Banco de dados SQL do Azure
 - SQL Server 2017 no Windows e Linux (visualização)
 - * * Do azure SQL Data Warehouse
 
@@ -104,4 +103,3 @@ Em alguns casos, determinado recurso pode não ser algo que os clientes devam us
 Os clientes não devem usar APIs não documentadas, incluindo, dentre outras, procedimentos armazenados, procedimentos armazenados estendidos, funções, exibições, tabelas, colunas, propriedades ou metadados. Suporte ao cliente Microsoft não oferece suporte a bancos de dados ou aplicativos que aproveitem ou usem pontos de entrada não documentados.  
   
 As atualizações de servidor e de banco de dados para versões futuras do SQL Server não estão garantidas para aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados. O uso de recursos e funcionalidades do SQL Server deve ser limitado àqueles que estão incluídos na documentação do Microsoft SQL Server. Se um recurso não está descrito na documentação do Microsoft SQL Server, ele não tem suporte do SQL Server.  
-  

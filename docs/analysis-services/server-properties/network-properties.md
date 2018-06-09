@@ -1,6 +1,6 @@
 ---
 title: Propriedades de rede | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 40399d8e40a3bf44a914c3f9783885a25db94384
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238846"
 ---
 # <a name="network-properties"></a>Propriedades de rede
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Aplica-se a:** modo de servidor multidimensional e tabular  
@@ -29,7 +31,7 @@ ms.lasthandoff: 05/10/2018
  **IPV4Support**  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv4. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*0*|IPv4 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv4 necessário; servidor não será iniciado se não puder escutar IPv4.|  
@@ -38,7 +40,7 @@ ms.lasthandoff: 05/10/2018
  **IPV6Support**  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv6. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*0*|IPv6 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv6 necessário; servidor não será iniciado se não for possível escutar IPv6|  
@@ -118,6 +120,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

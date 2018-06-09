@@ -1,6 +1,6 @@
 ---
 title: Se a instrução (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7426c609de80ab249cd71e4364979ff07165598
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4975c455b942f053287b344a956a0083c8ca4e1a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579858"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741655"
 ---
 # <a name="mdx-scripting---if"></a>Script MDX - se
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Executa uma instrução se a condição for verdadeira.  
   
