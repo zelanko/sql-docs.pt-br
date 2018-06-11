@@ -1,8 +1,6 @@
 ---
 title: Conectando ao SQL Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -30,11 +28,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5dcda82bcfbdd8c0120158025e9ba476df704c2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8130650ac55171207ab663b40a73a5940efc112b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773362"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conectando ao SQL Server (AccessToSQL)
 Para migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve se conectar à instância de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando você se conectar, o SSMA obtém metadados sobre os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e exibe os metadados de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados. O SSMA armazena informações sobre qual instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que você está conectado, mas não armazena as senhas.  
@@ -72,7 +71,7 @@ Quando você define as propriedades de conexão, você também especificar o ban
   
     -   Se você estiver se conectando a uma instância nomeada, digite o nome do computador, uma barra invertida e o nome da instância. Por exemplo: MyServer\MyInstance.  
   
-    -   Para se conectar a uma instância de usuário ativa do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se conectar usando pipes nomeados protocolo e especificar o nome do pipe, por exemplo, \\ \\\pipe\sql\query. Para obter mais informações, consulte a documentação do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Para se conectar a uma instância de usuário ativa do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se conectar usando pipes nomeados protocolo e especificar o nome do pipe, por exemplo, \\ \\.\pipe\sql\query. Para obter mais informações, consulte a documentação do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
 3.  Se sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está configurado para aceitar conexões em uma porta não padrão, insira o número da porta que é usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conexões a **porta do servidor** caixa. Para a instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o número da porta padrão é 1433. Para instâncias nomeadas, o SSMA tentará obter o número da porta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] serviço do navegador.  
   
