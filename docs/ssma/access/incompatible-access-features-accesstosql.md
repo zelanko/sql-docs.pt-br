@@ -1,8 +1,6 @@
 ---
 title: Recursos de acesso incompatível (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -36,11 +34,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbfcb395194371bf761f340cc74943791a649aaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6056a2d58d83f1b43cd3d9f92c9abc702eb6f61c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774202"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Recursos de acesso incompatível (AccessToSQL)
 Nem todos os recursos de banco de dados do Access são compatíveis com [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Por exemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e acesso têm conjuntos diferentes de palavras-chave reservadas. Problemas, como eles podem impedir uma migração bem-sucedida para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Use a tabela a seguir para saber mais sobre problemas de migração possíveis e que você pode fazer sobre eles.  
