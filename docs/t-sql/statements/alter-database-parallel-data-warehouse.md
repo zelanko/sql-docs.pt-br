@@ -16,16 +16,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d199b9822d591c10f1f4d9af232b9f74d7e8a81
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b17fcc15be4c8faf496c469bb1e46fe2c6d42012
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550487"
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Modifica as opções de tamanho máximo do banco de dados para tabelas replicadas, tabelas distribuídas e para o log de transações no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use esta instrução para gerenciar as alocações de espaço em disco para um banco de dados à medida que ele aumenta ou diminui de tamanho.  
+  Modifica as opções de tamanho máximo do banco de dados para tabelas replicadas, tabelas distribuídas e para o log de transações no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use esta instrução para gerenciar as alocações de espaço em disco para um banco de dados à medida que ele aumenta ou diminui de tamanho. O tópico também descreve a sintaxe relacionada à configuração das opções de banco de dados no Parallel Data Warehouse. 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -67,10 +71,33 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  Define o banco de dados a ser criptografado (ON) ou não criptografado (OFF). A criptografia poderá ser configurada para o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] somente quando [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) tiver sido definido como **1**. Uma chave de criptografia do banco de dados precisa ser criada para que a Transparent Data Encryption possa ser configurada. Para obter mais informações sobre a criptografia do banco de dados, confira [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF } Quando a opção de criação automática de estatísticas, AUTO_CREATE_STATISTICS, está ativada, o otimizador de consulta cria estatísticas em colunas individuais no predicado da consulta, conforme necessário, a fim de melhorar as estimativas de cardinalidade do plano de consulta. Essas estatísticas de coluna única são criadas em colunas que ainda não têm um histograma em um objeto de estatísticas existente.
+
+ O padrão é ATIVADO para novos bancos de dados criados após a atualização para o AU7. O padrão é DESATIVADO para bancos de dados criados antes da atualização. 
+
+ Para obter mais informações sobre estatísticas, consulte [Estatísticas](/sql/relational-databases/statistics/statistics)
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } Quando a opção de atualização automática de estatísticas, AUTO_UPDATE_STATISTICS, está ativada, o otimizador de consulta determina quando as estatísticas podem estar desatualizadas e as atualiza quando são usadas por uma consulta. As estatísticas ficam desatualizadas depois que operações de inserção, atualização, exclusão ou mesclagem alteram a distribuição dos dados na tabela ou na exibição indexada. O otimizador de consulta determina quando estatísticas podem estar desatualizadas contando o número de modificações de dados desde a última atualização das estatísticas e comparando o número de modificações a um limite. O limite se baseia no número de linhas na tabela ou na exibição indexada.
+
+ O padrão é ATIVADO para novos bancos de dados criados após a atualização para o AU7. O padrão é DESATIVADO para bancos de dados criados antes da atualização. 
+
+ Para obter mais informações sobre estatísticas, consulte [Estatísticas](/sql/relational-databases/statistics/statistics).
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } A opção de atualização de estatísticas assíncrona, AUTO_UPDATE_STATISTICS_ASYNC, determina se o Otimizador de consulta usa atualizações de estatísticas síncronas ou assíncronas. A opção AUTO_UPDATE_STATISTICS_ASYNC se aplica a objetos de estatísticas criados para índices, colunas únicas em predicados de consulta e estatísticas criadas com a instrução CREATE STATISTICS.
+
+ O padrão é ATIVADO para novos bancos de dados criados após a atualização para o AU7. O padrão é DESATIVADO para bancos de dados criados antes da atualização. 
+
+ Para obter mais informações sobre estatísticas, consulte [Estatísticas](/sql/relational-databases/statistics/statistics).
+
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER no banco de dados.  
   
+## <a name="error-messages"></a>Mensagens de erro
+Se as estatísticas automáticas estiverem habilitadas e você tentar alterar as configurações delas, o PDW apresentará o erro "Não há suporte para esta opção no PDW." O administrador do sistema pode habilitar estatísticas automáticas, permitindo a opção de recurso [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
+
 ## <a name="general-remarks"></a>Comentários gerais  
  Os valores de REPLICATED_SIZE, DISTRIBUTED_SIZE e LOG_SIZE podem ser maiores, iguais ou menores que os valores atuais do banco de dados.  
   
@@ -78,6 +105,8 @@ ALTER DATABASE database_name
  As operações de crescimento e redução são aproximadas. Os tamanhos reais resultantes podem variar em relação aos parâmetros de tamanho.  
   
  O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] não executa a instrução ALTER DATABASE como uma operação atômica. Se a instrução for anulada durante a execução, as alterações já feitas permanecerão.  
+
+As configurações de estatísticas só funcionarão se o administrador habilitar estatísticas automáticas.  Se você for administrador, use a opção de recurso [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) para habilitar ou desabilitar estatísticas automáticas. 
   
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
  Usa um bloqueio compartilhado no objeto DATABASE. Não é possível alterar um banco de dados que esteja sendo usado por outro usuário para leitura ou gravação. Isso inclui as sessões que emitiram uma instrução [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) no banco de dados.  
@@ -165,6 +194,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### <a name="e-check-for-current-statistics-values"></a>E. Verificar valores atuais de estatísticas
+
+A consulta a seguir retorna os valores atuais de estatísticas para todos os bancos de dados. O valor 1 significa que o recurso está ativado, e 0 significa o recurso está desativado.
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. Habilitar criação automática e atualização automática de estatísticas para um banco de dados
+Use a instrução a seguir para habilitar a criação e atualização de estatísticas automaticamente e de maneira assíncrona para o banco de dados, CustomerSales.  Isso cria e atualiza estatísticas de coluna única conforme necessário para criar planos de consulta de alta qualidade.
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   

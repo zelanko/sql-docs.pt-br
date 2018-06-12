@@ -1,7 +1,7 @@
 ---
 title: Tabela temporária e variável de tabela mais rápidas usando a otimização de memória | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2017
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
@@ -12,15 +12,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: MightyPen
-ms.author: genemi
+author: Jodebrui
+ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bce01856dd7652b824e8ef38e06fb75c5cc63be4
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1339dfbe173c656b1c0224f8f368d4f2a59ea2ba
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743995"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabela temporária e variável de tabela mais rápidas usando a otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,14 +72,13 @@ Substituir uma tabela temporária global por uma tabela com otimização memóri
 Suponha que você tenha a seguinte tabela temporária global.  
   
   
-  
-  
-    CREATE TABLE ##tempGlobalB  
+```sql
+CREATE TABLE ##tempGlobalB  
     (  
         Column1   INT   NOT NULL ,  
         Column2   NVARCHAR(4000)  
     );  
-  
+```
   
   
   
@@ -86,16 +86,16 @@ Considere substituir a tabela temporária global pela seguinte tabela com otimiz
   
   
   
-  
-    CREATE TABLE dbo.soGlobalB  
-    (  
-        Column1   INT   NOT NULL   INDEX ix1 NONCLUSTERED,  
-        Column2   NVARCHAR(4000)  
-    )  
-        WITH  
-            (MEMORY_OPTIMIZED = ON,  
-            DURABILITY        = SCHEMA_ONLY);  
-  
+```sql
+CREATE TABLE dbo.soGlobalB  
+(  
+    Column1   INT   NOT NULL   INDEX ix1 NONCLUSTERED,  
+    Column2   NVARCHAR(4000)  
+)  
+    WITH  
+        (MEMORY_OPTIMIZED = ON,  
+        DURABILITY        = SCHEMA_ONLY);  
+```  
   
   
   
@@ -119,13 +119,13 @@ Suponha que você tem a seguinte tabela temporária de sessão.
   
   
   
-  
-    CREATE TABLE #tempSessionC  
-    (  
-        Column1   INT   NOT NULL ,  
-        Column2   NVARCHAR(4000)  
-    );  
-  
+```sql  
+CREATE TABLE #tempSessionC  
+(  
+    Column1   INT   NOT NULL ,  
+    Column2   NVARCHAR(4000)  
+);  
+```
   
   
   
@@ -133,15 +133,15 @@ Primeiro, crie a seguinte função de valor de tabela para filtrar em **@@spid**
   
   
   
-  
-    CREATE FUNCTION dbo.fn_SpidFilter(@SpidFilter smallint)  
-        RETURNS TABLE  
-        WITH SCHEMABINDING , NATIVE_COMPILATION  
-    AS  
-        RETURN  
-            SELECT 1 AS fn_SpidFilter  
-                WHERE @SpidFilter = @@spid;  
-  
+```sql  
+CREATE FUNCTION dbo.fn_SpidFilter(@SpidFilter smallint)  
+    RETURNS TABLE  
+    WITH SCHEMABINDING , NATIVE_COMPILATION  
+AS  
+    RETURN  
+        SELECT 1 AS fn_SpidFilter  
+            WHERE @SpidFilter = @@spid;  
+```
   
   
   
@@ -154,33 +154,33 @@ Observe que cada tabela com otimização de memória deve ter pelo menos um índ
   
   
   
+```sql
+CREATE TABLE dbo.soSessionC  
+(  
+    Column1     INT         NOT NULL,  
+    Column2     NVARCHAR(4000)  NULL,  
+
+    SpidFilter  SMALLINT    NOT NULL   DEFAULT (@@spid),  
+
+    INDEX ix_SpidFiler NONCLUSTERED (SpidFilter),  
+    --INDEX ix_SpidFilter HASH  
+    --    (SpidFilter) WITH (BUCKET_COUNT = 64),  
+        
+    CONSTRAINT CHK_soSessionC_SpidFilter  
+        CHECK ( SpidFilter = @@spid ),  
+)  
+    WITH  
+        (MEMORY_OPTIMIZED = ON,  
+            DURABILITY = SCHEMA_ONLY);  
+go  
   
-    CREATE TABLE dbo.soSessionC  
-    (  
-        Column1     INT         NOT NULL,  
-        Column2     NVARCHAR(4000)  NULL,  
   
-        SpidFilter  SMALLINT    NOT NULL   DEFAULT (@@spid),  
-  
-        INDEX ix_SpidFiler NONCLUSTERED (SpidFilter),  
-        --INDEX ix_SpidFilter HASH  
-        --    (SpidFilter) WITH (BUCKET_COUNT = 64),  
-          
-        CONSTRAINT CHK_soSessionC_SpidFilter  
-            CHECK ( SpidFilter = @@spid ),  
-    )  
-        com  
-            (MEMORY_OPTIMIZED = ON,  
-             DURABILITY = SCHEMA_ONLY);  
-    GO  
-  
-  
-    CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
-        ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
-        ON dbo.soSessionC  
-        WITH (STATE = ON);  
-    GO  
-  
+CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
+    ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
+    ON dbo.soSessionC  
+    WITH (STATE = ON);  
+go  
+```  
   
   
   
@@ -204,11 +204,11 @@ Aqui está o T-SQL para uma variável de tabela tradicional. Seu escopo termina 
   
   
   
-  
-    DECLARE @tvTableD TABLE  
-        ( Column1   INT   NOT NULL ,  
-          Column2   CHAR(10) );  
-  
+```sql
+DECLARE @tvTableD TABLE  
+    ( Column1   INT   NOT NULL ,  
+      Column2   CHAR(10) );  
+```
   
   
   
@@ -220,23 +220,23 @@ A sintaxe anterior deve criar a variável de tabela *embutida*. A sintaxe embuti
   
   
   
-  
-    CREATE TYPE dbo.typeTableD  
-        AS TABLE  
-        (  
-            Column1  INT   NOT NULL ,  
-            Column2  CHAR(10)  
-        );  
-    go  
-          
-    SET NoCount ON;  
-    DECLARE @tvTableD dbo.typeTableD  
-    ;  
-    INSERT INTO @tvTableD (Column1) values (1), (2)  
-    ;  
-    SELECT * from @tvTableD;  
-    go  
-  
+```sql  
+CREATE TYPE dbo.typeTableD  
+    AS TABLE  
+    (  
+        Column1  INT   NOT NULL ,  
+        Column2  CHAR(10)  
+    );  
+go  
+        
+SET NoCount ON;  
+DECLARE @tvTableD dbo.typeTableD  
+;  
+INSERT INTO @tvTableD (Column1) values (1), (2)  
+;  
+SELECT * from @tvTableD;  
+go  
+```
   
   
   
@@ -251,16 +251,16 @@ A conversão para a otimização de memória é obtida em apenas uma etapa. Apri
   
   
   
-  
-    CREATE TYPE dbo.typeTableD  
-        AS TABLE  
-        (  
-            Column1  INT   NOT NULL   INDEX ix1,  
-            Column2  CHAR(10)  
-        )  
-        com  
-            (MEMORY_OPTIMIZED = ON);  
-  
+```sql
+CREATE TYPE dbo.typeTableD  
+    AS TABLE  
+    (  
+        Column1  INT   NOT NULL   INDEX ix1,  
+        Column2  CHAR(10)  
+    )  
+    WITH  
+        (MEMORY_OPTIMIZED = ON);  
+```  
   
   
   
@@ -286,22 +286,23 @@ No Microsoft SQL Server, para usar recursos de otimização de memória, o banco
   
   
  
-  
-    ALTER DATABASE InMemTest2  
-        ADD FILEGROUP FgMemOptim3  
-            CONTAINS MEMORY_OPTIMIZED_DATA;  
-    GO  
-    ALTER DATABASE InMemTest2  
-        ADD FILE  
-        (  
-            NAME = N'FileMemOptim3a',  
-            FILENAME = N'C:\DATA\FileMemOptim3a'  
-                     --  C:\DATA\    já existentes.  
-        )  
-        TO FILEGROUP FgMemOptim3;  
-    GO  
-  
-  
+```sql
+ALTER DATABASE InMemTest2  
+    ADD FILEGROUP FgMemOptim3  
+        CONTAINS MEMORY_OPTIMIZED_DATA;  
+go  
+ALTER DATABASE InMemTest2  
+    ADD FILE  
+    (  
+        NAME = N'FileMemOptim3a',  
+        FILENAME = N'C:\DATA\FileMemOptim3a'  
+                    --  C:\DATA\    preexisted.  
+    )  
+    TO FILEGROUP FgMemOptim3;  
+go  
+```  
+
+
 O script a seguir cria o grupo de arquivos para você e define as configurações de banco de dados recomendadas: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
   
 Para obter mais informações sobre `ALTER DATABASE ... ADD` para FILE e FILEGROUP, consulte:  
@@ -322,100 +323,100 @@ O teste de comparação dura cerca de 7 segundos. Para executar o exemplo:
   - Observe a instrução “Go 5001”, que reenvia os tempos de T-SQL 5001. Você pode ajustar o número e executar novamente.  
   
 Ao executar o script em um Banco de Dados SQL do Azure, execute de uma VM na mesma região.
+
   
-  
-    PRINT ' ';  
-    PRINT '---- Next, memory-optimized, faster. ----';  
-  
-    DROP TYPE IF EXISTS dbo.typeTableC_mem;  
-    go  
-    CREATE TYPE dbo.typeTableC_mem  -- !!  Memory-optimized.  
-         AS TABLE  
-         (  
-              Column1  INT NOT NULL INDEX ix1,  
-              Column2  CHAR(10)  
-         )  
-         WITH  
-              (MEMORY_OPTIMIZED = ON);  
-    go  
-    DECLARE @dateString_Begin nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_Begin, '  = Begin time, _mem.');  
-    go  
-    SET NoCount ON;  
-    DECLARE @tvTableC dbo.typeTableC_mem;  -- !!  
-  
-    INSERT INTO @tvTableC (Column1) values (1), (2);  
-    INSERT INTO @tvTableC (Column1) values (3), (4);  
-    DELETE @tvTableC;  
-  
-    GO 5001  
-  
-    DECLARE @dateString_End nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_End, '  = End time, _mem.');  
-    go  
-    DROP TYPE IF EXISTS dbo.typeTableC_mem;  
-    go  
-  
-    ---- End memory-optimized.  
-    -------------------------------------------------  
-    ---- Start traditional on-disk.  
-  
-    PRINT ' ';  
-    PRINT '---- Next, tempdb based, slower. ----';  
-  
-    DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
-    go  
-    CREATE TYPE dbo.typeTableC_tempdb  -- !!  Traditional tempdb.  
+```sql
+PRINT ' ';  
+PRINT '---- Next, memory-optimized, faster. ----';  
+
+DROP TYPE IF EXISTS dbo.typeTableC_mem;  
+go  
+CREATE TYPE dbo.typeTableC_mem  -- !!  Memory-optimized.  
         AS TABLE  
         (  
-            Column1  INT NOT NULL ,  
+            Column1  INT NOT NULL INDEX ix1,  
             Column2  CHAR(10)  
-        );  
-    go  
-    DECLARE @dateString_Begin nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_Begin, '  = Begin time, _tempdb.');  
-    go  
-    SET NoCount ON;  
-    DECLARE @tvTableC dbo.typeTableC_tempdb;  -- !!  
-  
-    INSERT INTO @tvTableC (Column1) values (1), (2);  
-    INSERT INTO @tvTableC (Column1) values (3), (4);  
-    DELETE @tvTableC;  
-  
-    GO 5001  
-  
-    DECLARE @dateString_End nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_End, '  = End time, _tempdb.');  
-    go  
-    DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
-    go  
-    ----  
-  
-    PRINT '---- Tests done. ----';  
-  
-    go  
-  
-    /*** Actual output, SQL Server 2016:  
-  
-    ---- Next, memory-optimized, faster. ----  
-    2016-04-20 00:26:58.033  = Begin time, _mem.  
-    Beginning execution loop  
-    Batch execution completed 5001 times.  
-    2016-04-20 00:26:58.733  = End time, _mem.  
-  
-    ---- Next, tempdb based, slower. ----  
-    2016-04-20 00:26:58.750  = Begin time, _tempdb.  
-    Beginning execution loop  
-    Batch execution completed 5001 times.  
-    2016-04-20 00:27:05.440  = End time, _tempdb.  
-    ---- Tests done. ----  
-    ***/  
-  
+        )  
+        WITH  
+            (MEMORY_OPTIMIZED = ON);  
+go  
+DECLARE @dateString_Begin nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_Begin, '  = Begin time, _mem.');  
+go  
+SET NoCount ON;  
+DECLARE @tvTableC dbo.typeTableC_mem;  -- !!  
 
+INSERT INTO @tvTableC (Column1) values (1), (2);  
+INSERT INTO @tvTableC (Column1) values (3), (4);  
+DELETE @tvTableC;  
+
+GO 5001  
+
+DECLARE @dateString_End nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_End, '  = End time, _mem.');  
+go  
+DROP TYPE IF EXISTS dbo.typeTableC_mem;  
+go  
+
+---- End memory-optimized.  
+-------------------------------------------------  
+---- Start traditional on-disk.  
+
+PRINT ' ';  
+PRINT '---- Next, tempdb based, slower. ----';  
+
+DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
+go  
+CREATE TYPE dbo.typeTableC_tempdb  -- !!  Traditional tempdb.  
+    AS TABLE  
+    (  
+        Column1  INT NOT NULL ,  
+        Column2  CHAR(10)  
+    );  
+go  
+DECLARE @dateString_Begin nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_Begin, '  = Begin time, _tempdb.');  
+go  
+SET NoCount ON;  
+DECLARE @tvTableC dbo.typeTableC_tempdb;  -- !!  
+
+INSERT INTO @tvTableC (Column1) values (1), (2);  
+INSERT INTO @tvTableC (Column1) values (3), (4);  
+DELETE @tvTableC;  
+
+GO 5001  
+
+DECLARE @dateString_End nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_End, '  = End time, _tempdb.');  
+go  
+DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
+go  
+----  
+
+PRINT '---- Tests done. ----';  
+
+go  
+
+/*** Actual output, SQL Server 2016:  
+
+---- Next, memory-optimized, faster. ----  
+2016-04-20 00:26:58.033  = Begin time, _mem.  
+Beginning execution loop  
+Batch execution completed 5001 times.  
+2016-04-20 00:26:58.733  = End time, _mem.  
+
+---- Next, tempdb based, slower. ----  
+2016-04-20 00:26:58.750  = Begin time, _tempdb.  
+Beginning execution loop  
+Batch execution completed 5001 times.  
+2016-04-20 00:27:05.440  = End time, _tempdb.  
+---- Tests done. ----  
+***/
+```
   
   
   
@@ -432,6 +433,11 @@ Se a variável de tabela com otimização de memória é acessada apenas com um 
   
 ## <a name="h-see-also"></a>H. Confira também  
   
-- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
-- [Definindo a durabilidade dos objetos com otimização de memória](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
-  
+- [Tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+
+- [Definindo a durabilidade de objetos com otimização de memória.](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
+
+- [Atualização cumulativa para eliminar a chance de erros de Falta de memória incorretos, anunciada no blog em setembro de 2017.](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
+    - As [versões de build do SQL Server 2016](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) fornecem detalhes completos de versões, service packs e atualizações cumulativas.
+    - Esses erros inadequados ocasionais não ocorriam na edição Enterprise do SQL Server.
+

@@ -1,7 +1,7 @@
 ---
 title: Implantar projetos e pacotes do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -24,11 +24,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772132"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a dois modelos de implantação, o modelo de implantação de projeto e o modelo de implantação de pacote herdado. O modelo de implantação de projeto permite que você implante seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,8 +37,13 @@ ms.lasthandoff: 05/03/2018
 Para obter mais informações sobre o modelo de implantação de pacote herdado, consulte [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Ao usar esse modelo, você não conseguia implantar um ou mais pacotes sem implantar o projeto inteiro. O [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o recurso de Implantação Incremental de Pacotes que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.  
-  
+>  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Com esse modelo de implantação, não era possível implantar um ou mais pacotes sem implantar todo o projeto. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o modelo de implantação de pacote, que permite implantar um ou mais pacotes sem implantar todo o projeto.  
+
+> [!NOTE]
+> Este artigo descreve como implantar pacotes do SSIS em geral e como implantar pacotes localmente. Também é possível implantar pacotes do SSIS para as seguintes plataformas:
+> - **A nuvem do Microsoft Azure**. Para obter mais informações, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+> - **Linux**. Para obter mais informações, consulte [Extrair, transformar e carregar dados no Linux com o SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Compare o modelo de implantação de projeto e o modelo de implantação de pacote herdado  
  O tipo de modelo de implantação que você escolhe para um projeto determina quais opções de desenvolvimento e administrativas estão disponíveis para aquele projeto. A tabela a seguir mostra as diferenças e as semelhanças entre o uso do modelo de implantação de projeto e o uso do modelo de implantação de pacote.  
   
@@ -60,7 +66,7 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
 ## <a name="features-of-project-deployment-model"></a>Recursos do modelo de implantação de projeto  
  A tabela a seguir lista os recursos que estão disponíveis para projetos desenvolvidos apenas para o modelo de implantação de projeto.  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |Parâmetros|Um parâmetro especifica os dados que serão usados por um pacote. Você pode definir o escopo dos parâmetros no nível do pacote ou do projeto com parâmetros de pacote e de projeto, respectivamente. Os parâmetros podem ser usados em expressões ou tarefas. Quando o projeto é implantado no catálogo, você pode atribuir um valor literal para cada parâmetro ou usar o valor padrão que foi atribuído em tempo de design. Em lugar de um valor literal, você também pode fazer referência a uma variável de ambiente. Os valores de variáveis de ambiente são resolvidos na hora da execução do pacote.|  
 |Ambientes|Um ambiente é um contêiner de variáveis que podem ser referenciadas por projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cada projeto pode ter várias referências de ambiente, mas uma única instância de execução de pacote pode fazer referência apenas a variáveis de um único ambiente. Os ambientes permitem organizar os valores que você atribui a um pacote. Por exemplo, você pode ter ambientes denominados "Desenvolvimento", "Teste" e "Produção".|  

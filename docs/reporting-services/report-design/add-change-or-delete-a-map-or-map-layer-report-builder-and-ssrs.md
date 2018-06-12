@@ -1,7 +1,7 @@
 ---
 title: Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -32,11 +32,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e627e570e310239c1973b8b24a44499b0bd47e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 459aa9dde1f5c148257323d80e9d26841ecb9a53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550667"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS)
   Um mapa é uma coleção de camadas. Quando você adiciona um mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , define a primeira camada. Você pode criar mais camadas usando o assistente de camada do mapa.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir exibe os ícones da barra de ferramentas do painel **Mapa** .  
   
-|Símbolo|Description|Quando usar|  
+|Símbolo|Descrição|Quando usar|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Assistente de Camada do Mapa|Para adicionar uma camada usando um assistente, clique em **Assistente de nova camada**.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Adicionar Camada|Para adicionar uma camada manualmente, clique em **Adicionar Camada**e clique no tipo de camada do mapa a ser adicionada.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 4.  Em **Nome do arquivo**, digite o local de um Arquivo de Forma ou clique em **Procurar** para selecionar um Arquivo de Forma ESRI.  
   
     > [!NOTE]  
-    >  Se o Arquivo de Forma estiver em seu computador local, os dados espaciais serão inseridos na definição de relatório. Para recuperar os dados dinamicamente quando o relatório for processado, carregue o arquivo ESRI .shp e seu arquivo de suporte .dbf no servidor de relatório. Para obter mais informações, consulte "Como carregar um arquivo ou relatório (Gerenciador de Relatórios)" na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+    >  Se o Arquivo de Forma estiver em seu computador local, os dados espaciais serão inseridos na definição de relatório. Para recuperar os dados dinamicamente quando o relatório for processado, carregue o arquivo ESRI .shp e seu arquivo de suporte .dbf no servidor de relatório. Para obter mais informações, consulte [Carregar um arquivo ou relatório](../reports/upload-a-file-or-report-report-manager.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

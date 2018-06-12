@@ -1,7 +1,7 @@
 ---
 title: Configurar uma implantação escalável do servidor de relatório no modo nativo | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -19,17 +19,22 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a03b53bdb5a53574524a3cabce0adedbe23bac2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550567"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar uma implantação em expansão do servidor de relatório em modo nativo.
 
-  O modo nativo do Reporting Services oferece suporte a um modelo de implantação em expansão que permite executar várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório. As implantações em expansão são usadas para aumentar a escalabilidade dos servidores de relatório para manipular mais usuários simultâneos e cargas maiores de execução de relatório. Elas também podem ser usadas para dedicar servidores específicos para processar relatórios interativos ou agendados  
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+O modo nativo do Reporting Services oferece suporte a um modelo de implantação em expansão que permite executar várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório. As implantações em expansão são usadas para aumentar a escalabilidade dos servidores de relatório para manipular mais usuários simultâneos e cargas maiores de execução de relatório. Elas também podem ser usadas para dedicar servidores específicos para processar relatórios interativos ou agendados.
+
+Para o Servidor de Relatórios do Microsoft Power BI, é necessário configurar a afinidade de cliente (às vezes chamada de sessões temporárias) no balanceador de carga para qualquer ambiente de expansão para garantir um desempenho adequado.  
   
- Servidores de relatório do modo do SharePoint utilizam a infraestrutura de produtos do SharePoint para expandir. A expansão do modo do SharePoint é executada acrescentando mais servidores de relatório de modo do SharePoint ao farm do SharePoint. Para obter informações sobre a expansão no modo do SharePoint, consulte [Adicionar outro servidor de relatório a um farm &#40;Expansão do SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Para o Reporting Services do SQL Server 2016, os servidores de relatório do modo do SharePoint utilizam a infraestrutura de produtos do SharePoint para expansão. A expansão do modo do SharePoint é executada acrescentando mais servidores de relatório de modo do SharePoint ao farm do SharePoint. Para obter informações sobre a expansão no modo do SharePoint, consulte [Adicionar outro servidor de relatório a um farm &#40;Expansão do SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Uma *implantação de expansão* é usada nos seguintes cenários:  
   

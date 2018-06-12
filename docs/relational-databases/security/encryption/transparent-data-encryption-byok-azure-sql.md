@@ -18,11 +18,12 @@ ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bffd6ec43cb298c652e8154ec28064bd9c891799
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476078"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption com suporte a Bring Your Own Key para Data Warehouse e Banco de Dados SQL do Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +141,7 @@ Etapas para uma nova implantação:
 - Selecione o painel TDE do servidor lógico e, para cada SQL Server lógico:  
    - Selecione o AKV na mesma região 
    - Selecione a chave a ser usada como o Protetor de TDE – cada servidor usará a cópia local do Protetor de TDE. 
-   - Fazer isso no Portal criará uma [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) para o SQL Server lógico, que será usada para atribuir as permissões do SQL Server lógico para acessar o cofre de chaves. Não exclua essa identidade.  O acesso pode ser revogado com a remoção das permissões no Azure Key Vault. para o SQL Server lógico, que é usado para atribuir as permissões do SQL Server lógico para acessar o cofre de chaves.
+   - Fazer isso no Portal criará uma [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) para o SQL Server lógico, que será usada para atribuir as permissões do SQL Server lógico para acessar o cofre de chaves. Não exclua essa identidade. O acesso pode ser revogado removendo as permissões no Azure Key Vault, em vez do servidor SQL lógico, usado para atribuir as permissões lógicas do SQL Server para acessar o cofre de chaves.
 - Crie o banco de dados primário. 
 - Siga a [diretriz para replicação geográfica ativa](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) para completar o cenário. Essa etapa criará o banco de dados secundário.
 

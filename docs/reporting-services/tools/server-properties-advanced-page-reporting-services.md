@@ -1,7 +1,7 @@
 ---
 title: Propriedades do servidor (página Avançado) – Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: tools
@@ -17,11 +17,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfbfe74439ecbf3db24f1a2a32bd5ab5d528fb72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550397"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
 
@@ -46,16 +47,16 @@ Determina se o controle ActiveX de RSClientPrint está disponível para download
 Indica se o log de execução de relatório está habilitado. O valor padrão é **true**. Para obter mais informações sobre o log de execução do servidor de relatório, consulte [ExecutionLog do Servidor de Relatório e a exibição do ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
 
 **ExecutionLogDaysKept**  
-O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1** , as entradas não serão excluídas da tabela Log de Execução. O valor padrão é **60**.  
+O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, as entradas não serão excluídas da tabela Log de Execução. O valor padrão é **60**.  
 
 > [!NOTE] 
-> Definir um valor de **0** *excluirá* todas as entradas do log de execução. Um valor de **-1** manterá as entradas do log de execução e não será excluído.
+> Definir um valor de **0** *exclui* todas as entradas do log de execução. Um valor de **-1** mantém as entradas do log de execução e não as exclui.
 
 **SessionTimeout**  
 A quantidade de tempo, em segundos, que uma sessão permanece ativa. O valor padrão é **600**.  
 
 **SharePointIntegratedMode**  
-Esta é uma propriedade somente leitura que indica o modo do servidor. Se este valor for Falso, o servidor de relatórios executará em modo nativo.  
+Essa propriedade somente leitura indica o modo do servidor. Se este valor for Falso, o servidor de relatórios executará em modo nativo.  
 
 **SiteName**  
 O nome do site de servidor de relatórios exibido no título da página do portal da Web. O valor padrão é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Essa propriedade pode ser uma cadeia de caracteres vazia. O tamanho máximo é de 8.000 caracteres.  
@@ -75,9 +76,9 @@ Determina a quantidade de tempo dentro do qual um arquivo de imagem externa deve
 **SnapshotCompression**  
 Define como os instantâneos são compactados. O valor padrão é **SQL**. Os valores válidos são os seguintes:
 
-|Valores|Description|
+|Valores|Descrição|
 |---------|---------|
-|**SQL**|Instantâneos são compactados quando armazenados no banco de dados do servidor de relatório. Esse é o comportamento atual.|
+|**SQL**|Instantâneos são compactados quando armazenados no banco de dados do servidor de relatório. Essa compactação é o comportamento atual.|
 |**Nenhuma**|Instantâneos não são compactados.|
 |**Todos**|Instantâneos são compactados para todas as opções de armazenamento, que incluem o banco de dados do servidor de relatório ou o sistema de arquivos.|
 
@@ -90,7 +91,7 @@ O número máximo de instantâneos que são armazenados para um relatório. Os v
 **EnableIntegratedSecurity**  
 Determina se a segurança integrada do Windows tem suporte para conexões de fonte de dados de relatório. O padrão é **True**. Os valores válidos são os seguintes:
 
-|Valores|Description|
+|Valores|Descrição|
 |---------|---------|
 |**Verdadeiro**|A segurança integrada do Windows está habilitada.|
 |**Falso**|A segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.|
@@ -98,7 +99,7 @@ Determina se a segurança integrada do Windows tem suporte para conexões de fon
 **EnableLoadReportDefinition**  
 Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. A definição dessa opção determina o valor da propriedade **EnableLoadReportDefinition** no servidor de relatórios.  
 
-Se você desmarcar esta opção, a propriedade será definida como False e o servidor de relatório não irá gerar relatórios de clickthrough de relatórios que usam um modelo como uma fonte de dados. Qualquer chamada ao método LoadReportDefinition será bloqueada.  
+Se desmarcar essa opção, a propriedade será definida como False. O servidor de relatório não gera relatórios de clickthrough para relatórios que usam um modelo de relatório como fonte de dados. Chamadas ao método LoadReportDefinition são bloqueadas.  
 
 A desativação dessa opção reduz uma ameaça de que um usuário mal-intencionado inicie um ataque de negação de serviço, carregando o servidor de relatórios com solicitações de LoadReportDefinition.  
 
@@ -106,13 +107,13 @@ A desativação dessa opção reduz uma ameaça de que um usuário mal-intencion
 Inclui informações de erro externo (por exemplo, informações de erros sobre fontes de dados de relatório) com as mensagens de erro retornadas aos usuários que solicitam relatórios de computadores remotos. Os valores válidos são **true** e **false**. O valor padrão é **false**. Para obter mais informações, consulte [Habilitar erros remotos &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 **EnableReportDesignClientDownload**  
-Especifica se o pacote de instalação do Construtor de Relatórios pode ser baixado no servidor de relatórios. Se você desmarcar essa configuração, a URL para o Construtor de Relatórios não funcionará. Para obter mais informações, consulte [Configurar o acesso do Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md).  
+Especifica se o pacote de instalação do Construtor de Relatórios pode ser baixado no servidor de relatórios. Se desmarcar essa configuração, a URL para o Construtor de Relatórios não funcionará. 
 
 **EditSessionCacheLimit**  
 Especifica o número de entradas de cache de dados que podem estar ativas em uma sessão de edição de relatório. O número padrão é 5.  
 
 **EditSessionTimeout**  
-Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (2 horas).  
+Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (duas horas).  
 
 **EnableCustomVisuals** ***(somente Servidor de Relatório do Power BI)***  
 Se o Servidor de Relatório do PowerBI permitir a exibição de visuais personalizados do Power BI. Os valores são True ou False.  O padrão é True.  
@@ -124,18 +125,18 @@ Se o Servidor de Relatório do PowerBI permitir a exportação de dados de visua
 Tempo limite de atualização de dados em minutos, para a atualização Agendada em relatórios do Power BI com modelos AS inseridos. O padrão é 120 minutos.
 
 **EnableTestConnectionDetailedErrors**  
-Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é **true**. Se a opção for definida como **false**, apenas as mensagens de erro genéricas serão enviadas.
+Indica se devem ser enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é **true**. Se a opção for definida como **false**, apenas as mensagens de erro genéricas serão enviadas.
 
 **AccessControlAllowCredentials**  
 Indica se a resposta à solicitação do cliente pode ser exposta quando o sinalizador “credentials” está definido como verdadeiro. O valor padrão é **false**.
 
-**AccessControlAllowHeaders** Uma lista de separada por vírgula de cabeçalhos que o servidor permitirá quando um cliente fizer uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia e especificar * permitirá todos os cabeçalhos.
+**AccessControlAllowHeaders** Uma lista de cabeçalhos separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia e especificar * permitirá todos os cabeçalhos.
 
-**AccessControlAllowMethods** Uma lista de separada por vírgula de métodos HTTP que o servidor permitirá quando um cliente fizer uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE) e especificar * permitirá todos os métodos.
+**AccessControlAllowMethods** Uma lista de métodos HTTP separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE) e especificar * permitirá todos os métodos.
 
-**AccessControlAllowOrigin** Uma lista de separada por vírgula de origens que o servidor permitirá quando um cliente fizer uma solicitação. O valor padrão é em branco, o que impede todas as solicitações e especificar * permitirá todas as origens quando as credenciais não estiverem definidas; se as credenciais forem especificadas, uma lista explícita de origens deverá ser especificada.
+**AccessControlAllowOrigin** Uma lista de origens separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. O valor padrão é em branco, o que impede todas as solicitações, e especificar * permitirá todas as origens quando as credenciais não estiverem definidas; se as credenciais forem especificadas, uma lista explícita de origens deverá ser especificada.
 
-**AccessControlExposeHeaders** Uma lista de separada por vírgula de cabeçalhos que o servidor exporá para os clientes. O valor padrão é vazio.
+**AccessControlExposeHeaders** Uma lista de cabeçalhos separada por vírgula que o servidor exporá para os clientes. O valor padrão é vazio.
 
 **AccessControlMaxAge** Especifica o número de segundos durante os quais os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
 

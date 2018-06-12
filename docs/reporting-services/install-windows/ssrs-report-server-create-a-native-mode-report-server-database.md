@@ -1,7 +1,7 @@
 ---
 title: Criar um banco de dados do servidor de relatório no modo nativo (Gerenciador de Configurações do SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,11 +18,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 507308300934270e9008f775b4da6221278c2d18
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550507"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Criar um banco de dados de servidor de relatório do modo nativo
 
@@ -118,7 +119,7 @@ Para criar um banco de dados de servidor de relatório ou alterar as credenciais
   
 7.  Examine as informações na página Resumo para verificar se as configurações estão corretas e selecione **Avançar**.  
   
-8.  Verifique a conexão selecionando uma URL na página URL do Servidor de Relatório ou na página URL do Gerenciador de Relatórios. As URLs devem estar definidas para que esse teste funcione. Se a conexão do banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório ou o Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Verifique a conexão selecionando uma URL na página URL do Servidor de Relatório. As URLs devem estar definidas para que esse teste funcione. Se a conexão de banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 ## <a name="change-database-credentials"></a>Alterar credenciais de banco de dados
 

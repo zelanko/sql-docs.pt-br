@@ -12,11 +12,12 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585628"
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>Implantar e executar um pacote SSIS no Azure
 Este tutorial mostra como implantar um projeto do SQL Server Integration Services no banco de dados de catálogo do SSISDB no Banco de Dados SQL do Azure, executar um pacote no Azure-SSIS Integration Runtime e monitorar o pacote em execução.
@@ -41,7 +42,7 @@ Para executar o pacote no Banco de Dados SQL do Azure, obtenha as informações 
 Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu servidor de Banco de Dados SQL do Azure. Para saber mais e ver capturas de tela, confira o artigo [Conectar-se ao Banco de dados do catálogo do SSISDB no Azure](ssis-azure-connect-to-catalog-database.md).
 
 Aqui estão as duas coisas mais importantes para lembrar. Essas etapas estão descritas no procedimento a seguir.
--   Insira o nome totalmente qualificado do servidor do Banco de Dados SQL do Microsoft Azure no formato **mysqldbserver.database.windows.net**.
+-   Insira o nome totalmente qualificado do servidor do Banco de Dados SQL do Azure no formato **mysqldbserver.database.windows.net**.
 -   Selecione o `SSISDB` como o banco de dados da conexão.
 
 > [!IMPORTANT]
@@ -101,7 +102,8 @@ Para saber mais sobre como implantar pacotes e conhecer o Assistente de Implanta
     -   Você pode alterar suas seleções selecionando **Anterior** ou selecionando qualquer uma das etapas no painel esquerdo.
     -   Selecione **Implantar** para começar o processo de implantação.
 
-    > ![OBSERVAÇÃO] Se você receber a mensagem de erro **Não há nenhum agente de trabalho ativo. (Provedor de dados do .Net SqlClient)** , verifique se o Azure-SSIS Integration Runtime está em execução. Esse erro ocorre se você tenta implantar enquanto o tempo de execução de integração do Azure-SSIS está em um estado parado.
+    > [!NOTE]
+    > Se você receber a mensagem de erro **Não há nenhum agente de trabalho ativo. (Provedor de dados do .Net SqlClient)**, verifique se o Azure-SSIS Integration Runtime está em execução. Esse erro ocorre se você tenta implantar enquanto o tempo de execução de integração do Azure-SSIS está em um estado parado.
 
 5.  Após a conclusão do processo de implantação, a página **Resultados** será aberta. Essa página exibe o êxito ou a falha de cada ação.
     -   Se a ação falhou, selecione **Com falha** na coluna **Resultado** para exibir uma explicação do erro.
@@ -190,9 +192,17 @@ Você também pode selecionar um pacote no Pesquisador de Objetos, clicar com o 
 
 Para obter mais informações sobre como monitorar pacotes em execução no SSMS, consulte [Monitorar pacotes em execução e outras operações](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>Monitorar a atividade Executar pacote do SSIS
+
+Se estiver executando um pacote como parte de um pipeline do Azure Data Factory com a atividade Executar pacote do SSIS, será possível monitorar as execuções do pipeline na interface do usuário do Data Factory. É possível obter a ID de execução do SSISDB da saída da execução da atividade e usar a ID para verificar mensagens de erro e logs de execução mais abrangentes no SSMS.
+
+![Obter a ID de execução do pacote no Data Factory](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Monitorar o Azure-SSIS Integration Runtime
 
-Para obter informações de status sobre o Azure-SSIS Integration Runtime em que os pacotes estão em execução, use os comandos do PowerShell a seguir. Para cada um dos comandos, forneça os nomes de Data Factory, o Azure-SSIS IR e o grupo de recursos. Para obter mais informações, consulte [Monitorar o Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Para obter informações de status sobre o Azure-SSIS Integration Runtime em que os pacotes estão em execução, use os comandos do PowerShell a seguir. Para cada um dos comandos, forneça os nomes de Data Factory, o Azure-SSIS IR e o grupo de recursos.
+
+Para obter mais informações, consulte [Monitorar o Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Obter metadados sobre o Azure-SSIS Integration Runtime
 

@@ -1,7 +1,7 @@
 ---
-title: Carregar um arquivo ou relatório (Gerenciador de Relatórios) | Microsoft Docs
+title: Carregar um arquivo ou relatório no Servidor de Relatório | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reports
@@ -21,30 +21,25 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d5485f3c29c394655371ff42b690ccbacdcdd53d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550097"
 ---
-# <a name="upload-a-file-or-report-report-manager"></a>Carregar um arquivo ou relatório (Gerenciador de Relatórios)
-  O Gerenciador de Relatórios fornece um recurso de carregamento que permite adicionar relatórios, modelos e outros arquivos a um servidor de relatório sem publicar esses itens a partir de um aplicativo cliente. Os arquivos carregados a partir do sistema de arquivos são armazenados como itens no servidor de relatório. O tipo de arquivo carregado determina o modo de armazenamento:  
+# <a name="upload-a-file-or-report-in-the-report-server"></a>Carregar um arquivo ou relatório no servidor de relatório
+O portal da Web do servidor de relatório fornece um recurso de upload que permite adicionar relatórios e outros arquivos a um servidor de relatório sem ter que publicar esses itens de um aplicativo cliente. Os arquivos carregados a partir do sistema de arquivos são armazenados como itens no servidor de relatório. O tipo de arquivo carregado determina o modo de armazenamento:  
   
--   Os arquivos .rdl são armazenados como relatórios.  
+-   Os arquivos .rdl são armazenados como relatórios paginados.  
   
--   Os arquivos .smdl são armazenados como modelos de relatório.  
-  
--   Todos os outros arquivos, incluindo os arquivos de fonte de dados compartilhada (.rds), são carregados como recursos. Os recursos não são processados por um servidor de relatório, mas podem ser exibidos no Gerenciador de Relatórios se o servidor de relatório oferecer suporte ao tipo MIME de arquivo.  
+-   Todos os outros arquivos, incluindo os arquivos de fonte de dados compartilhada (.rds), são carregados como recursos. Os recursos não serão processados por um servidor de relatório, mas poderão ser exibidos no portal da Web se o servidor de relatório for compatível com o tipo MIME de arquivo.  
   
 ### <a name="to-upload-a-file-or-report"></a>Para carregar um arquivo ou relatório  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  No portal da web, clique em **Carregar**.  
   
-2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** . Navegue até a pasta à qual deseja adicionar um item.  
-  
-3.  Clique em **Carregar Arquivo**.  
-  
-4.  Clique em **Procurar** para selecionar o arquivo a ser carregado. Você pode carregar um arquivo de definição de relatório, uma imagem, um documento ou qualquer arquivo que deseje disponibilizar no servidor de relatório.  
+4.  Navegue até o arquivo que você deseja carregar. Você pode carregar um arquivo de definição de relatório, uma imagem, um documento ou qualquer arquivo que deseje disponibilizar no servidor de relatório.  
   
 5.  Digite um nome para o novo item. Um nome de item pode incluir espaços, mas não pode incluir os caracteres reservados: ; ? : @ & = + , $ / * < > |.  
   
@@ -52,10 +47,8 @@ ms.lasthandoff: 05/03/2018
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte Também  
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Página Carregar Arquivo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
- [Carregar arquivos em uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
+## <a name="see-also"></a>Consulte Também   
+[Criar, modificar e excluir fontes de dados compartilhadas](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+[Carregar arquivos para uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   

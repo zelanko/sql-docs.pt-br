@@ -25,16 +25,17 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9e1e678fba7a2b2d24a85f4d57f1112b3d4cb8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779472"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Decifra dados usando uma chave simétrica.  
+Essa função usa uma chave simétrica para descriptografar dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +48,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ciphertext*  
- São os dados que foram criptografados com a chave. O *ciphertext* é **varbinary**.  
+*ciphertext*  
+Uma variável do tipo **varbinary** que contém dados criptografados com a chave.  
   
- **@ciphertext**  
- É uma variável do tipo **varbinary** que contém dados criptografados com a chave.  
+**@ciphertext**  
+Uma variável do tipo **varbinary** que contém dados criptografados com a chave.  
   
  *add_authenticator*  
- Indica se um autenticador foi criptografado junto com o texto não criptografado. Deve ser igual ao valor passado para EncryptByKey durante a criptografia dos dados. *add_authenticator* é **int**.  
+Indica se o processo de criptografia original incluía, e criptografava, um autenticador junto com o texto não criptografado. Deve corresponder ao valor passado para [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durante o processo de criptografia de dados. *add_authenticator* tem um tipo de dados **int**.  
   
  *authenticator*  
- São os dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey. O *authenticator* é **sysname**.  
-  
- **@authenticator**  
- É uma variável que contém dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey.  
-  
+Os dados usados como base para a geração do autenticador. Deve corresponder ao valor fornecido para [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* tem um tipo de dados **sysname**.  
+
+**@authenticator**  
+Uma variável que contém dados dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* tem um tipo de dados **sysname**.  
+
 ## <a name="return-types"></a>Tipos de retorno  
- **varbinary** com um tamanho máximo de 8.000 bytes.
- 
-Retorna NULL se a chave simétrica usada para criptografar os dados não está aberta ou o *ciphertext* é NULL.
+**varbinary**, com um tamanho máximo de 8.000 bytes. `DECRYPTBYKEY` retornará NULL se a chave simétrica usada para criptografia de dados não estiver aberta ou se *ciphertext* for NULL.  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKey usa uma chave simétrica. Essa chave simétrica já deve estar aberta no banco de dados. Podem haver várias chaves abertas ao mesmo tempo. Não é necessário abrir a chave imediatamente antes de descriptografar o texto de codificado.  
+`DECRYPTBYKEY` usa uma chave simétrica. O banco de dados deve ter essa chave simétrica já aberta. `DECRYPTBYKEY` permitirá várias chaves abertas ao mesmo tempo. Não é necessário abrir a chave imediatamente antes da descriptografia do texto cifrado.  
   
- A criptografia e a descriptografia simétricas são relativamente rápidas e adequadas para trabalhar com grandes quantidades de dados.  
+Normalmente a criptografia e descriptografia simétricas operam de maneira relativamente rápida e funciona bem para operações que envolvem grandes volumes de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Requer que a chave simétrica tenha sido aberta na sessão atual. Para obter mais informações, consulte [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+A chave simétrica já deve estar aberta na sessão atual. Consulte [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md) para obter mais informações.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Descriptografando com o uso de uma chave simétrica  
- O exemplo a seguir descriptografa texto codificado usando uma chave simétrica.  
+Este exemplo descriptografa o texto cifrado com uma chave simétrica.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. Descriptografando com o uso de uma chave simétrica e um hash de autenticação  
- O exemplo a seguir descriptografa dados que foram criptografados junto com um autenticador.  
+Este exemplo descriptografa dados originalmente criptografados juntamente com um autenticador.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

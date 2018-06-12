@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473900"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, objeto Memory Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="memory-manager-counters"></a>Contadores do Gerenciador de Memória  
  Essa tabela descreve os contadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gerenciador de Memória** .  
   
-|Contadores do Gerenciador de Memória do SQL Server|Description|  
+|Contadores do Gerenciador de Memória do SQL Server|Descrição|  
 |----------------------------------------|-----------------|  
 |**Memória de Conexão (KB)**|Especifica a quantidade total de memória dinâmica que o servidor está usando para manter conexões.|  
 |**Memória Cache de Banco de Dados (KB)**|Especifica a quantidade de memória que o servidor está usando atualmente para o cache de páginas de banco de dados.|  
-|**Benefício de memória externo**|O valor externo da memória, em ms por página/ms, multiplicado por 10 bilhões e truncado para um inteiro.| 
+|**Benefício de memória externo**| Uma estimativa interna do desempenho se beneficia da adição de memória a um cache específico. É usada pelo mecanismo para equilibrar o uso de memória entre o cache e é útil para dar suporte ao solucionar problemas de casos com crescimento inesperado do cache. O valor é apresentado como um inteiro baseado em um cálculo interno. | 
 |**Memória Livre (KB)**|Especifica a quantidade de memória comprometida que não está atualmente em uso pelo servidor.|  
 |**Memória de Espaço de Trabalho Concedida (KB)**|Especifica a quantidade total de memória concedida atualmente para a execução de processos, como hash, classificação, cópia em massa e operações de criação de índice.|  
 |**Blocos de Bloqueio**|Especifica o número atual de blocos de bloqueio em uso no servidor (atualizado periodicamente). Um bloco de bloqueio representa um recurso individual bloqueado, como uma tabela, página ou linha.|  

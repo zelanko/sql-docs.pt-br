@@ -2,7 +2,7 @@
 title: O que é o SQL Server Reporting Services (SSRS) | Microsoft Docs
 description: Saiba mais sobre as ferramentas e os serviços para relatórios móveis e paginados do Reporting Services no local.
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,17 +22,18 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24f4671203d4efecd58cfd9e613bf3dd9dbb8bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c594502d7a63ce437e680a4b9b6accd095a102d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550327"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>O que é o SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Procurando o Servidor de Relatórios do Power BI? Consulte [Introdução ao Servidor de Relatórios do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Procurando o Servidor de Relatórios do Power BI? Consulte [O que é o Servidor de Relatórios do Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
 Crie, implante e gerencie relatórios móveis e paginados do Reporting Services localmente com a variedade de ferramentas e serviços prontos para usar fornecidos pelo SSRS (SQL Server Reporting Services).
 

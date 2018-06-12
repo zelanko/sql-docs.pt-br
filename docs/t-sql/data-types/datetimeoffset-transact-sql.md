@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a86b7102b60c5485afe849f32d32cf8f369f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71483471c764f9af60208be2acd79bc77c89717b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550837"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +76,7 @@ Define a data combinada com uma hora de um dia que possui reconhecimento de fuso
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Formatos de literal de cadeia de caracteres compatíveis com datetimeoffset
 A tabela a seguir lista os formatos de literal de cadeia de caracteres ISO 8601 compatíveis com **datetimeoffset**. Para obter informações sobre os formatos alfabéticos, numéricos, não separados e de hora para as partes de data e hora de **datetimeoffset**, consulte [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) e [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|Description|  
+|ISO 8601|Descrição|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Esses dois formatos não são afetados pelas configurações de localidade de sessão SET LANGUAGE e SET DATEFORMAT. Não são permitidos espaços entre as partes **datetimeoffset** e **datetime**.|  
 |AAAA-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Esse formato, pela definição ISO, indica que a parte de **datetime** deve ser expressa em UTC (Tempo Universal Coordenado). Por exemplo, 1999-12-12 12:30:30.12345 -07:00 deve ser representado como 1999-12-12 19:30:30.12345Z.|  

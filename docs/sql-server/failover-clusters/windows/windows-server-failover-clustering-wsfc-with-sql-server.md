@@ -3,7 +3,6 @@ title: Clustering de Failover do Windows Server com o SQL Server | Microsoft Doc
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31c8079053cc729a5ca5445dc1aebd7ccf32e738
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43117124b43bf234f8d72c9e2974d6e42631d06c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772462"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clustering de Failover do Windows Server com o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  Uma entidade física ou lógica que pode ser de propriedade de um nó, colocada online e offline, movida entre nós e gerenciada como um objeto de cluster. Um recurso de cluster pode ser de propriedade de apenas um único nó em determinado momento.  
   
  Role  
- Uma coleção de recursos de cluster gerenciados como um único objeto de cluster para fornecer uma funcionalidade específica. Para o SQL Server, uma função será um AG (Grupo de Disponibilidade) Always On ou uma FCI (Instância de Cluster de Failover) Always On. Uma função contém todos os recursos de cluster necessários para um AG ou uma FCI. O failover e failback sempre atuam no contexto de funções. Para uma FCI, a função conterá um recurso de endereço IP, um recurso de nome de rede e os recursos do SQL Server. Uma função do AG conterá o recurso do AG e se um ouvinte for configurado, um nome de networm e um recurso de IP. 
+ Uma coleção de recursos de cluster gerenciados como um único objeto de cluster para fornecer uma funcionalidade específica. Para o SQL Server, uma função será um AG (Grupo de Disponibilidade) Always On ou uma FCI (Instância de Cluster de Failover) Always On. Uma função contém todos os recursos de cluster necessários para um AG ou uma FCI. O failover e failback sempre atuam no contexto de funções. Para uma FCI, a função conterá um recurso de endereço IP, um recurso de nome de rede e os recursos do SQL Server. Uma função do AG conterá o recurso do AG e se um ouvinte for configurado, um nome de rede e um recurso de IP. 
 
  Recurso de nome de rede  
  Um nome de servidor lógico que é gerenciado como um recurso de cluster. Um recurso de nome de rede deve ser usado com um recurso de endereço IP. Essas entradas podem exigir objetos no Active Directory Domain Services e/ou DNS. 

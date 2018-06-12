@@ -1,7 +1,7 @@
 ---
 title: Executar pacotes do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -27,14 +27,20 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e91aeecb953f97d51591947c258fb7860864b48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfe2420cace44b4bc83844ed61898008d4d8fffb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771852"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Executar pacotes do SSIS (Integration Services)
   Para executar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode usar uma de várias ferramentas dependendo de onde esses pacotes estão armazenados. As ferramentas estão listadas na tabela abaixo.  
+
+> [!NOTE]
+> Este artigo descreve como executar pacotes do SSIS em geral e como executar pacotes localmente. Também é possível executar pacotes do SSIS nas seguintes plataformas:
+> - **A nuvem do Microsoft Azure**. Para obter mais informações, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) e [Run an SSIS package in Azure](../lift-shift/ssis-azure-run-packages.md) (Executar um pacote do SSIS no Azure).
+> - **Linux**. Para obter mais informações, consulte [Extrair, transformar e carregar dados no Linux com o SSIS](../../linux/sql-server-linux-migrate-ssis.md).
   
  Para armazenar um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você usa o modelo de implantação do projeto para implantar o projeto no servidor. Para obter informações, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   

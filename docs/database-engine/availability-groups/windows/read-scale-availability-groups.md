@@ -3,7 +3,6 @@ title: Grupos de disponibilidade de escala de leitura | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,19 +10,20 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dca3919c6ec8b74342122a750da6d4b77e37d93c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee88654a69d926c2d467876d9e9e7c4f824d0b49
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769412"
 ---
 # <a name="read-scale-availability-groups"></a>Grupos de disponibilidade de escala de leitura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Um grupo de disponibilidade é uma solução abrangente que oferece funcionalidades de alta disponibilidade para o SQL Server, além de soluções integradas de dimensionamento. Em um aplicativo de banco de dados típico, vários clientes executam diversos tipos de cargas de trabalho. Às vezes, pode ocorrer o desenvolvimento de gargalos devido às restrições de recursos. Você pode liberar recursos e obter uma taxa de transferência maior para a carga de trabalho OLTP. Você também pode fornecer melhor desempenho e escala em cargas de trabalho somente leitura. Aproveite a tecnologia de replicação mais rápida para o SQL Server e crie um grupo de bancos de dados replicados para descarregar cargas de trabalho de relatórios e de análises para réplicas somente leitura. 
+Um grupo de disponibilidade é uma solução abrangente que oferece funcionalidades de alta disponibilidade para o SQL Server, além de soluções integradas de dimensionamento. Em um aplicativo de banco de dados típico, vários clientes executam diversos tipos de cargas de trabalho. Às vezes, pode ocorrer o desenvolvimento de gargalos devido às restrições de recursos. Você pode liberar recursos e obter uma taxa de transferência maior para a carga de trabalho OLTP. Você também pode fornecer melhor desempenho e escala em cargas de trabalho somente leitura. Aproveite a tecnologia de replicação mais rápida para o SQL Server e crie um grupo de bancos de dados replicados para descarregar cargas de trabalho de relatórios e de análises para réplicas somente leitura.
 
 Com os grupos de disponibilidade, uma ou mais réplicas secundárias podem ser configuradas para dar suporte ao acesso somente leitura aos bancos de dados secundários.
 
@@ -31,12 +31,12 @@ Os aplicativos cliente que executam cargas de trabalho de análises ou de relat�
 
 ## <a name="read-scale-availability-groups-without-cluster"></a>Grupos de disponibilidade de escala de leitura sem cluster
 
-No [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] e anteriores, todos os grupos de disponibilidade exigiam um cluster. O cluster fornecia continuidade dos negócios para HADR (alta disponibilidade e recuperação de desastre). Além disso, as réplicas secundárias eram configuradas para operações de leitura. Se a meta não fosse a alta disponibilidade, uma sobrecarga operacional considerável seria consumida para configurar e operar um cluster. O SQL Server 2017 introduz grupos de disponibilidade de escala de leitura sem um cluster. 
+No [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] e anteriores, todos os grupos de disponibilidade exigiam um cluster. O cluster fornecia continuidade dos negócios para HADR (alta disponibilidade e recuperação de desastre). Além disso, as réplicas secundárias eram configuradas para operações de leitura. Se a meta não fosse a alta disponibilidade, uma sobrecarga operacional considerável seria consumida para configurar e operar um cluster. O SQL Server 2017 introduz grupos de disponibilidade de escala de leitura sem um cluster. 
 
 Se seus requisitos de negócios estiverem relacionados a conservar recursos para cargas de trabalho críticas executadas na réplica primária, você poderá usar o roteamento somente leitura ou conectar-se diretamente a réplicas secundárias legíveis. Você não precisa depender da integração a nenhuma tecnologia de clustering. Essas novas funcionalidades estão disponíveis para o SQL Server 2017 em execução em plataformas Windows e Linux.
 
 >[!IMPORTANT]
->Essa não é uma configuração de alta disponibilidade. Não há nenhuma infraestrutura para monitorar e coordenar a detecção de falhas e o failover automático. Sem um cluster, o SQL Server não pode fornecer o RTO (objetivo de tempo de recuperação) baixo fornecido por uma solução de alta disponibilidade automatizada. Se você precisar de funcionalidades de alta disponibilidade, use um gerenciador de cluster (clustering de failover do Windows Server failover clustering no Windows ou Pacemaker no Linux). 
+>Essa não é uma configuração de alta disponibilidade. Não há nenhuma infraestrutura para monitorar e coordenar a detecção de falhas e o failover automático. Sem um cluster, o SQL Server não pode fornecer o RTO (objetivo de tempo de recuperação) baixo fornecido por uma solução de alta disponibilidade automatizada. Se você precisar de funcionalidades de alta disponibilidade, use um gerenciador de cluster (clustering de failover do Windows Server failover clustering no Windows ou Pacemaker no Linux).
 >
 >O grupo de disponibilidade de escala de leitura pode fornecer a funcionalidade de recuperação de desastre. Quando as réplicas somente leitura estão no modo de confirmação síncrona, elas fornecem um RPO (objetivo de ponto de recuperação) igual a zero. Para fazer failover em um grupo de disponibilidade de escala de leitura, veja [Fazer failover da réplica primária em um grupo de disponibilidade de escala de leitura](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly).
 
@@ -49,11 +49,11 @@ Um único grupo de disponibilidade distribuído pode ter até 17 réplicas secun
 
 
 
-## <a name="next-steps"></a>Próximas etapas 
+## <a name="next-steps"></a>Próximas etapas
 
 [Configurar um grupo de disponibilidade de escala de leitura no Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
+[Configurar um grupo de disponibilidade de escala de leitura no Windows](configure-read-scale-availability-groups.md)
 
-## <a name="see-also"></a>Confira também 
- [Visão geral de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
-  
-  
+## <a name="see-also"></a>Confira também
+
+ [Visão geral de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

@@ -2,7 +2,7 @@
 title: Opções ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Saiba mais sobre como definir opções de banco de dados, como criptografia e ajuste automáticos, repositório de consultas em um Banco de Dados SQL do Azure ou SQL Server
 ms.custom: ''
-ms.date: 12/20/2017
+ms.date: 6/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -33,16 +33,17 @@ caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ad590fd7efeddc9a7e086f1337b4e61a850fc1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744135"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Este tópico contém a sintaxe de ALTER DATABASE relacionada à configuração das opções de banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para outra sintaxe ALTER DATABASE, veja os tópicos a seguir.  
+  Este artigo contém a sintaxe de ALTER DATABASE relacionada à configuração das opções de banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para outra sintaxe ALTER DATABASE, veja os tópicos a seguir.  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -274,7 +275,7 @@ SET
   
  `CURRENT` executa a ação no banco de dados atual. `CURRENT` não é compatível com todas as opções em todos os contextos. Se `CURRENT` falhar, forneça o nome do banco de dados.  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  Controla opções automáticas.  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
@@ -438,7 +439,7 @@ SET
  OFF  
  Os cursores permanecem abertos quando uma transação é confirmada; uma transação revertida fechará todos os cursores, exceto aqueles definidos como INSENSITIVE ou STATIC.  
   
- As configurações no nível de conexão que são definidas com o uso da instrução SET substituem a configuração de banco de dados padrão por CURSOR_CLOSE_ON_COMMIT. Por padrão, clientes ODBC e OLE DB emitem uma configuração CURSOR_CLOSE_ON_COMMIT de instrução SET no nível de conexão como OFF para a sessão ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
+ As configurações no nível de conexão que são definidas com o uso da instrução SET substituem a configuração de banco de dados padrão por CURSOR_CLOSE_ON_COMMIT. Por padrão, clientes ODBC e OLE DB emitem uma configuração CURSOR_CLOSE_ON_COMMIT de instrução SET no nível de conexão como desativada para a sessão ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  O status dessa opção pode ser determinado examinando-se a coluna is_cursor_close_on_commit_on na exibição do catálogo sys.databases ou a propriedade IsCloseCursorsOnCommitEnabled da função DATABASEPROPERTYEX.  
   

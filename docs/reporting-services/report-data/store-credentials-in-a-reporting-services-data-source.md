@@ -1,7 +1,7 @@
 ---
 title: Armazenar credenciais em uma fonte de dados do Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2015
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -20,26 +20,19 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa7bc5471455e428fb680dbe0369bc1fd4888dbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8511d948e0e942451e4c304e6a381686c0023a08
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550677"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
   Você pode configurar credenciais armazenadas usadas por um servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para acessar dados externos de um relatório. As credenciais armazenadas serão usadas se o relatório for executado autônomo, por exemplo, uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que publica um relatório como um email. O servidor de relatórios recupera e usa as credenciais quando o processamento do relatório é agendado ou disparado. Este tópico explica como configurar credenciais armazenadas para servidores de relatórios tanto no modo nativo quanto no modo do SharePoint.  
   
-||  
-|-|  
+|| |
+|-|-|
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint|  
-  
--   [Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo nativo)](#bkmk_stored_credentials_data_source_native)  
-  
--   [Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo SharePoint)](#bkmk_stored_credentials_data_source_sharepoint)  
-  
--   [Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo nativo)](#bkmk_stored_credentials_shared_data_source_native)  
-  
--   [Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> Requisitos da política de segurança para credenciais armazenadas  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") é necessário que a conta usada para as credenciais armazenadas esteja configurada para uma das políticas de segurança a seguir no servidor de relatório. É recomendável escolher a política com o nível mínimo de permissões que você precisa para o ambiente.  
@@ -52,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo nativo)  
   
-1.  No Gerenciador de Relatórios no modo nativo, navegue até a pasta que contém o relatório. Clique no menu de contexto do item ![menu de contexto no Gerenciador de Relatórios para itens do SSRS](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "menu de contexto no Gerenciador de Relatórios para itens do SSRS").  
+1.  No portal da Web, procure a pasta que contém o relatório. Clique nas reticências (...) no canto superior direito do bloco de relatório.  
   
 2.  Clique em **Gerenciar** e clique em **Fontes de Dados**.  
   
@@ -108,11 +101,11 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo nativo)  
   
-1.  No Gerenciador de Relatórios no modo nativo, navegue até o item da fonte de dados compartilhada. ![Ícone Fonte de dados compartilhada](../../reporting-services/report-data/media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")  
+1.  No portal da Web, navegue até o item da fonte de dados compartilhada. 
   
-2.  Clique no menu de contexto ![menu de contexto no Gerenciador de Relatórios para itens do SSRS](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "menu de contexto no Gerenciador de Relatórios para itens do SSRS") e, em seguida, clique em **Gerenciar**.  
+2.  Clique nas reticências (...) no canto superior direito do bloco de relatório > **Gerenciar**. 
   
-3.  Na lista **Tipo de Fonte de Dados** , especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
+3.  Na lista **Tipo**, especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
   
 4.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda não especificar credenciais na cadeia de conexão.  
   
@@ -162,9 +155,4 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Consulte Também  
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Configurar as propriedades de fonte de dados de um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Página de propriedades Fontes de Dados &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Página Nova Fonte de Dados &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
-  
   

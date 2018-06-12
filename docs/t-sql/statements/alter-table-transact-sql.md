@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -64,11 +64,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b6b4aca07714a7153cc0b6920daca92667e0dff6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744125"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -260,7 +261,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       } 
     | { SPLIT | MERGE } RANGE (boundary_value)  
     | SWITCH [ PARTITION source_partition_number  
-        TO target_table_name [ PARTITION target_partition_number ]  
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
 }  
 [;]  
   
@@ -318,7 +319,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   Associada com uma definição padrão. Entretanto, o comprimento, a precisão e a escala de uma coluna podem ser alterados se o tipo de dados não for modificado.  
   
-O tipo de dados das colunas **text**, **ntext** e **image** pode ser alterado somente em das seguintes maneiras:  
+O tipo de dados das colunas **text**, **ntext e **image** pode ser alterado somente das seguintes maneiras:  
   
 -   **text** a **varchar(max)**, **nvarchar(max)** ou **xml**  
   
@@ -326,7 +327,7 @@ O tipo de dados das colunas **text**, **ntext** e **image** pode ser alterado so
   
 -   **image** a **varbinary(max)**  
   
-Algumas alterações de tipo de dados podem causar uma alteração nos dados. Por exemplo, alterar uma coluna **nchar** ou **nvarchar** para **char** ou **varchar** pode levar à conversão de caracteres estendidos. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reduzir a precisão ou escala de uma coluna pode causar o truncamento de dados.  
+Algumas alterações de tipo de dados podem causar uma alteração nos dados. Por exemplo, alterar uma coluna nchar** ou **nvarchar** para **char** ou **varchar** pode levar à conversão de caracteres estendidos. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reduzir a precisão ou escala de uma coluna pode causar o truncamento de dados.  
   
 > [!NOTE]
 > O tipo de dados de uma coluna em uma tabela particionada não pode ser alterado.  

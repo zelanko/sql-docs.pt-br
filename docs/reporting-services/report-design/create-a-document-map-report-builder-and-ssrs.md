@@ -1,7 +1,7 @@
 ---
 title: Criar um mapa do documento (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550407"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
 
@@ -83,7 +84,7 @@ O mapa do documento fornece um conjunto de links de navegação aos itens de rel
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Para ocultar o mapa do documento quando exibir um relatório  
   
-1.  No Gerenciador de Relatórios, navegue até o relatório que contém o mapa do documento.  
+1.  No portal da Web, navegue até o relatório que contém o mapa do documento.  
   
      Por exemplo, para os relatórios de exemplo em [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] , a URL a seguir especifica o relatório chamado Catálogo de Produtos.  
   
@@ -111,7 +112,7 @@ O mapa do documento fornece um conjunto de links de navegação aos itens de rel
   
      Para usar essa URL, copie-a e remova todas as quebras de linha.  
   
-4.  Cole a URL no Gerenciador de Relatórios e pressione ENTER. O relatório será executado e o mapa do documento será ocultado.  
+4.  Cole a URL no portal da Web e pressione ENTER. O relatório será executado e o mapa do documento será ocultado.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](http://go.microsoft.com/fwlink/?LinkId=198283).  

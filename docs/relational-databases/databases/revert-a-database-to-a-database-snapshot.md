@@ -19,11 +19,12 @@ caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6bdd055cc32d6f01ec017f72c7caa8f503754f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fdedcbb66bbf9c62a7001750c1dc149c4427cbb
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799826"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Restrictions"></a> Limitações e restrições  
  Não há suporte para a reversão nas seguintes condições:  
   
--   O banco de dados deve ter somente um instantâneo do banco de dados no momento, para o qual você planeja reverter.  
+-   Há vários instantâneos do banco de dados. Para reverter, deve haver apenas um instantâneo para o banco de dados para o qual você planeja reverter.  
   
 -   Grupos de arquivos somente leitura ou compactados existem no banco de dados.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Antes de reverter um banco de dados, considere as seguintes limitações:  
   
--   Reverter não é destinado à recuperação de mídia. para obter informações sobre a ferramenta de configuração e recursos adicionais. Um instantâneo do banco de dados é uma cópia incompleta dos arquivos de banco de dados. Assim, se o banco de dados ou o instantâneo do banco de dados estiver corrompido, reverter de um instantâneo será praticamente impossível. Além disso, mesmo quando isso é possível, é improvável que a reversão corrija o problema no caso de corrupção. Portanto, é essencial fazer backups e testar regularmente seu plano de restauração para proteger um banco de dados. Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Reverter não é destinado à recuperação de mídia. Um instantâneo do banco de dados é uma cópia incompleta dos arquivos de banco de dados. Assim, se o banco de dados ou o instantâneo do banco de dados estiver corrompido, reverter de um instantâneo será praticamente impossível. Além disso, mesmo quando isso é possível, é improvável que a reversão corrija o problema no caso de corrupção. Portanto, é essencial fazer backups e testar regularmente seu plano de restauração para proteger um banco de dados. Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Se você precisa ser capaz de restaurar o banco de dados de origem para o momento determinado em que o instantâneo do banco de dados foi criado, use um modelo de recuperação completo e implemente uma política de backup que permita fazer isso.  

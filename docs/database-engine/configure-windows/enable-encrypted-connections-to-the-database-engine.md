@@ -24,11 +24,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 761913c563b27ea0447b6b104d2d05b441aa70b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fea89d75e74db8f14eeedf692bf50c37469239f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585558"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  O cliente deve poder verificar a propriedade do certificado usado pelo servidor. Se o cliente tiver o certificado de chave pública da autoridade de certificação que assinou o certificado de servidor, nenhuma outra configuração será necessária. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows inclui os certificados de chave pública de muitas autoridades de certificação. Se o certificado do servidor foi assinado por uma autoridade de certificação pública ou privada para a qual o cliente não tem o certificado de chave pública, será necessário instalar o certificado de chave pública da autoridade de certificação que assinou o certificado do servidor.  
   
 > [!NOTE]  
->  Para usar critografia com um cluster de failover, você deve instalar o certificado de servidor com o nome DNS completamente qualificado do servidor virtual em todos os nós no cluster de failover. Por exemplo, se você tiver um cluster de dois nós, com os nós chamados test1.*\<your company>*.com e test2.*\<your company>*.com e um servidor virtual chamado virtsql, precisará instalar um certificado para virtsql.*\<your company>*.com em ambos os nós. Você pode definir o valor da opção **ForceEncryption**como **Sim**.  
+>  Para usar critografia com um cluster de failover, você deve instalar o certificado de servidor com o nome DNS completamente qualificado do servidor virtual em todos os nós no cluster de failover. Por exemplo, se você tiver um cluster de dois nós, com os nós chamados test1.*\<your company>*.com e test2.*\<your company>*.com e um servidor virtual chamado virtsql, precisará instalar um certificado para virtsql.*\<your company>*.com em ambos os nós. É possível definir o valor da opção **ForceEncryption** como **Sim**.  
 
 > [!NOTE]
 > Ao criar conexões criptografadas para um indexador do Azure Search para o SQL Server em uma VM do Azure, consulte [Configurar uma conexão de um indexador do Azure Search para SQL Server em uma VM do Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 

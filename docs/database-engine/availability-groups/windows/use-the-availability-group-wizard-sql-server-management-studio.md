@@ -3,7 +3,6 @@ title: Usar o Assistente de Grupo de Disponibilidade (SQL Server Management Stud
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ea8ef37daa8d723fab8fdf60f8b980e23c5cd63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bd200483a8d778fd0f6f35d3ff12aea9f90fca7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770742"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
   
          Se você selecionar **Total**, depois de criar o grupo de disponibilidade, o assistente fará backup de todos os bancos de dados primários e de seu log de transações em um compartilhamento de rede e restaurará os backups em todas as instâncias de servidor que hospedam uma réplica secundária. Em seguida, o assistente unirá cada banco de dados secundário ao grupo de disponibilidade.  
   
-         No campo **Especificar um local de rede compartilhado acessível por todas as réplicas:** , especifique um compartilhamento de backup ao qual todas as instâncias do servidor que hospedam réplicas de host têm acesso de leitura/gravação. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
+         No campo **Especificar um local de rede compartilhado acessível por todas as réplicas:** , especifique um compartilhamento de backup ao qual todas as instâncias do servidor que hospedam réplicas de host têm acesso de leitura/gravação. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  Na etapa de validação, o assistente executará um teste para garantir que o local de rede fornecido é válido, o teste criará um banco de dados na réplica primária denominada "BackupLocDb_" seguindo por um Guid e realizará backup no local de rede fornecido e, em seguida, o restaurará nas réplicas secundárias. É seguro excluir este banco de dados juntamente com seu histórico de backup e o arquivo de backup caso o assistente não pôde excluí-los.
   
     -   **Somente junção**  
   

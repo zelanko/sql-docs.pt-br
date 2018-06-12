@@ -1,7 +1,7 @@
 ---
 title: Controlando títulos de linha e coluna (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd1680801406071d501a299ed687453deb115935
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 696cb735a8ec9c596cc67f6b4c130f77e832e694
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550437"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlando títulos de linha e coluna (Construtor de Relatórios e SSRS)
-  Uma tabela, matriz ou região de dados de lista pode conter várias páginas no sentido horizontal ou vertical. Você pode especificar se deseja repetir cabeçalhos de linha ou coluna em cada página. Em um renderizador interativo, como o Gerenciador de Relatórios ou visualização de relatório, você pode especificar também se deseja congelar cabeçalhos de linha ou coluna para mantê-los na exibição quando você percorre um relatório. Em uma tabela ou matriz, a primeira linha contém normalmente cabeçalhos de coluna que rotulam dados em cada coluna; a primeira coluna normalmente contém cabeçalhos de linha que rotulam os dados em cada linha. Para grupos aninhados, talvez você queira repetir o conjunto inicial de cabeçalhos de linha e coluna que contêm rótulos de grupo. Por padrão, uma região de dados de lista não inclui cabeçalhos.  
+  Uma tabela, matriz ou região de dados de lista pode conter várias páginas no sentido horizontal ou vertical. Você pode especificar se deseja repetir cabeçalhos de linha ou coluna em cada página. Em um renderizador interativo, como o portal da Web ou visualização de relatório, também é possível especificar se deseja congelar cabeçalhos de linha ou de coluna para mantê-los na exibição quando você percorre um relatório. Em uma tabela ou matriz, a primeira linha contém normalmente cabeçalhos de coluna que rotulam dados em cada coluna; a primeira coluna normalmente contém cabeçalhos de linha que rotulam os dados em cada linha. Para grupos aninhados, talvez você queira repetir o conjunto inicial de cabeçalhos de linha e coluna que contêm rótulos de grupo. Por padrão, uma região de dados de lista não inclui cabeçalhos.  
   
  O modo como você controla se os cabeçalhos se repetem ou congelam depende do seguinte:  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Repetição de cabeçalhos de coluna quando uma região de dados tablix se expande verticalmente por várias páginas.  
   
- Além disso, os renderizadores que usam quebras de páginas flexíveis (Gerenciador de Relatórios, visualização de relatório ou controle de visualizador de relatório) oferece suporte aos seguintes recursos:  
+ Além disso, os renderizadores que usam quebras de páginas flexíveis (o portal da Web, visualização de relatório ou controle de visualizador de relatórios) são compatíveis com os seguintes recursos:  
   
 -   Mantenha cabeçalhos de linha na exibição quando você percorrer horizontalmente um relatório.  
   

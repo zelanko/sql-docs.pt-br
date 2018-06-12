@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aed0b8b2aa36b215f894ee4c032ff38e8a23f43f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550807"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +90,7 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer 
 |IsTornPageDetectionEnabled|O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta operações de E/S incompletas causadas por falhas de energia ou outros problemas no sistema.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada inválida<br /><br /> Tipo de dados base: **int**| 
 |IsVerifiedClone|O banco de dados é uma cópia somente de esquema e estatísticas de um banco de dados de usuário criado usando a opção WITH VERIFY_CLONEDB de DBCC CLONEDATABASE. Confira este [artigo do Suporte da Microsoft](http://support.microsoft.com/help/3177838) para obter mais informações.|**Aplica-se a:** começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada inválida<br /><br /> Tipo de dados base: **int**| 
 |IsXTPSupported|Indica se o banco de dados dá suporte a OLTP in-memory, ou seja, criação e uso de tabelas com otimização de memória e módulos compilados nativamente.<br /><br /> Específico ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported não depende da existência de um grupo de arquivos MEMORY_OPTIMIZED_DATA, que é necessário para a criação de objetos OLTP in-memory.|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada inválida, um erro ou não aplicável<br /><br /> Tipo de dados base: **int**|  
-|LastGoodCheckDbTime|A data e hora do último DBCC CHECKDB com êxito executado no banco de dados especificado.|**Aplica-se a:** começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Um valor datetime<br /><br /> NULL: entrada inválida<br /><br /> Tipo de dados base: **datetime**| 
+|LastGoodCheckDbTime|A data e hora do último DBCC CHECKDB bem-sucedido executado no banco de dados especificado.<sup>1</sup> Se DBCC CHECKDB não tiver sido executado em um banco de dados, 1900-01-01 00:00:00.000 será retornado.|**Aplica-se a:** começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Um valor datetime<br /><br /> NULL: entrada inválida<br /><br /> Tipo de dados base: **datetime**| 
 |LCID|O LCID (identificador de localidade) do Windows do agrupamento.|Valor LCID (em formato decimal).<br /><br /> Tipo de dados base: **int**|  
 |MaxSizeInBytes|Tamanho máximo do banco de dados, em bytes.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: banco de dados não foi iniciado<br /><br /> Tipo de dados base: **bigint**|  
 |Recuperação|Modelo de recuperação de banco de dados|FULL: modelo de recuperação completa<br /><br /> BULK_LOGGED: modelo de log de transações em massa<br /><br /> SIMPLE: modelo de recuperação simples<br /><br /> Tipo de dados base: **nvarchar(128)**|  
@@ -99,8 +100,12 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer 
 |Status|Status do banco de dados.|ONLINE: o banco de dados está disponível para consulta.<br /><br /> **Observação:** o status ONLINE pode ser retornado enquanto o banco de dados é aberto e ainda não foi recuperado. Para identificar quando um banco de dados pode aceitar conexões, consulte a propriedade **DATABASEPROPERTYEX**. O banco de dados pode aceitar conexões quando o agrupamento de banco de dados retorna um valor não nulo. Para bancos de dados Always On, consulte as colunas database_state ou database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: o banco de dados foi colocado em offline explicitamente.<br /><br /> RESTORING: a restauração do banco de dados foi iniciada.<br /><br /> RECOVERING: a recuperação do banco de dados foi iniciada e o banco de dados ainda não está pronto para consultas.<br /><br /> SUSPECT: o banco de dados não foi recuperado.<br /><br /> EMERGENCY: o banco de dados está em uma emergência, em estado somente leitura. O acesso está restrito a membros sysadmin<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |Updateability|Indica se os dados podem ser modificados.|READ_ONLY: o banco de dados dá suporte a leituras de dados, mas não a modificações de dados.<br /><br /> READ_WRITE: o banco de dados dá suporte a leituras e a modificações de dados.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |UserAccess|Indica quais usuários podem acessar o banco de dados.|SINGLE_USER: apenas um usuário db_owner, dbcreator ou sysadmin por vez<br /><br /> RESTRICTED_USER: apenas membros das funções db_owner, dbcreator ou sysadmin<br /><br /> MULTI_USER: todos os usuários<br /><br /> Tipo de dados base: **nvarchar(128)**|  
-|Versão|Número de versão interno do código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o banco de dados foi criado. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Número de versão: o banco de dados está aberto.<br /><br /> NULL: banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **int**|  
-  
+|Versão|Número de versão interno do código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o banco de dados foi criado. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Número de versão: o banco de dados está aberto.<br /><br /> NULL: banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> Para bancos de dados que fazem parte de um grupo de disponibilidade, `LastGoodCheckDbTime` retornará a data e hora do último DBCC CHECKDB bem-sucedido executado na réplica primária, independentemente da réplica da qual você está executando o comando. 
+
 ## <a name="return-types"></a>Tipos de retorno
 **sql_variant**
   

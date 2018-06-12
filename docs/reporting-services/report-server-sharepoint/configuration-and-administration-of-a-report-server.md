@@ -1,7 +1,7 @@
 ---
-title: Configuração e administração de um servidor de relatório do SQL Server Reporting Services | Microsoft Docs
+title: Configuração e administração de um servidor de relatório (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-server-sharepoint
@@ -13,13 +13,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bee75418d6c2ede62169ec1ef3b42770881499e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7959539dde52351bc9679b9b4629e2d1a4105562
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550517"
 ---
-# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>Configuração e administração de um servidor de relatório do SQL Server Reporting Services
+# <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>Configuração e administração de um servidor de relatório do SSRS (SQL Server Reporting Services)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -45,8 +46,6 @@ Use as seguintes seções para ajudá-lo a entender conceitos, cenários de impl
     -   [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
-  
-    -   [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
 -   [Recursos da coleção de sites do Reporting Services](../../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md)  
   

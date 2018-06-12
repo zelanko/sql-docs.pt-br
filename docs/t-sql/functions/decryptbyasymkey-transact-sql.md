@@ -24,16 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 98b08c914c0eb74e55d2d3c8a9e032432391a054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0ac0821494677a42766c340f4d1e75ff9661711
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779482"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Descriptografa dados com uma chave assimétrica.  
+Essa função usa uma chave simétrica para descriptografar dados criptografados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,28 +48,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Argumentos  
  *Asym_Key_ID*  
- É a ID de uma chave assimétrica no banco de dados. *Asym_Key_ID* é **int**.  
+A ID de uma chave assimétrica no banco de dados. *Asym_Key_ID* tem um tipo de dados **int**.  
   
  *ciphertext*  
- É uma cadeia de caracteres de dados que foi criptografada com a chave assimétrica.  
+A cadeia de caracteres de dados criptografados com a chave assimétrica.  
   
  @ciphertext  
- É uma variável do tipo **varbinary** que contém dados que foram criptografados com a chave assimétrica.  
+Uma variável do tipo **varbinary** que contém dados criptografados com a chave assimétrica.  
   
  *Asym_Key_Password*  
- É a senha que foi usada para criptografar a chave assimétrica no banco de dados.  
+A senha usada para criptografar a chave assimétrica no banco de dados.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **varbinary** com um tamanho máximo de 8.000 bytes.  
+**varbinary**, com um tamanho máximo de 8.000 bytes.  
   
 ## <a name="remarks"></a>Remarks  
- A criptografia/descriptografia com uma chave assimétrica é muito dispendiosa em comparação a criptografia/descriptografia com uma chave simétrica. Não recomendamos o uso de uma chave assimétrica ao trabalhar com grandes conjuntos de dados, como os dados de usuário em tabelas.  
+Compara com a criptografia/descriptografia simétrica, a criptografia/descriptografia de chave assimétrica tem um alto custo. Ao trabalhar com grandes conjuntos de dados, por exemplo, dados de usuário armazenados em tabelas, sugerimos que os desenvolvedores evitem a criptografia/descriptografia de chave assimétrica.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão CONTROL na chave assimétrica.  
+`DECRYPTBYASYMKEY` requer a permissão CONTROL na chave assimétrica.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir descriptografa o texto cifrado que foi criptografado com a chave assimétrica `JanainaAsymKey02`, que foi armazenada em `AdventureWorks2012.ProtectedData04`. Os dados retornados são descriptografados com a chave assimétrica `JanainaAsymKey02`, que foi descriptografada com a senha `pGFD4bb925DGvbd2439587y`. O texto sem formatação é convertido no tipo **nvarchar**.  
+Este exemplo descriptografa o texto cifrado originalmente criptografado com a chave assimétrica `JanainaAsymKey02`. `AdventureWorks2012.ProtectedData04` armazenava essa chave assimétrica. O exemplo descriptografou os dados retornados com a chave assimétrica `JanainaAsymKey02`. O exemplo usou a senha `pGFD4bb925DGvbd2439587y` para descriptografar a chave assimétrica. O exemplo converteu o texto não criptografado retornado no tipo **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470287"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  Habilita as estatísticas rápidas geradas automaticamente (aditamento de histograma) para qualquer coluna de índice inicial para a qual a estimativa de cardinalidade seja necessária. O histograma usado para estimar a cardinalidade será ajustado no tempo de compilação da consulta para considerar o valor máximo ou mínimo real dessa coluna. É equivalente ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- Faz com que o SQL Server gere um plano de consulta usando a suposição de confinamento simples em vez da suposição de confinamento de base padrão para junções, no modelo de [estimativa de cardinalidade](../../relational-databases/performance/cardinality-estimation-sql-server.md) do otimizador de consulta do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou mais recente. É equivalente ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ Faz o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerar um plano de consulta usando a suposição de Confinamento simples, em vez da suposição de Confinamento de base padrão para junções, no modelo de [Estimativa de cardinalidade](../../relational-databases/performance/cardinality-estimation-sql-server.md) do otimizador de consulta do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou mais recente. É equivalente ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Força o otimizador de consulta a usar o modelo de [estimativa de cardinalidade](../../relational-databases/performance/cardinality-estimation-sql-server.md) que corresponde ao nível de compatibilidade do banco de dados atual. Use essa dica para substituir a definição da [Configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON ou o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
-* "DISABLE_INTERLEAVED_EXECUTION_TVF" desabilita a execução intercalada para funções com valor de tabela de várias instruções.
-* "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK" desabilita comentários de concessão de memória em modo de lote.
-* "DISABLE_BATCH_MODE_ADAPTIVE_JOINS" desabilita junções adaptáveis em do modo de lote.
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+ Desabilita a execução intercalada para funções com valor de tabela de várias instruções. Para obter mais informações, consulte [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions) (Execução intercalada para funções com valor de tabela de várias instruções).
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+ Desabilita os comentários de concessão de memória do modo de lote. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
+ Desabilita junções adaptáveis do modo de lote. Para obter mais informações, consulte [Batch mode Adaptive Joins](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins) (Junções adaptáveis de modo de lote).
  
 > [!TIP]
 > Os nomes de dica diferenciam maiúsculas de minúsculas.
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   Exibições de gerenciamento dinâmico  
 -   Subconsultas nomeadas  
   
- As dicas de tabela INDEX, FORCESCAN e FORCESEEK podem ser especificadas como dicas de consulta para uma consulta que não tem dicas de tabela existentes ou podem ser usadas para substituir dicas INDEX, FORCESCAN ou FORCESEEK existentes na consulta, respectivamente. Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Nesse caso, será necessário especificar também uma dica correspondente como dica de consulta usando TABLE HIT na cláusula OPTION para preservar a semântica da consulta. Por exemplo, se a consulta contiver a dica de tabela NOLOCK, a cláusula OPTION no parâmetro **@hints** do guia de plano também precisará conter a dica NOLOCK. Consulte o exemplo K. Quando uma dica de tabela diferente de INDEX, FORCESCAN ou FORCESEEK é especificada usando TABLE HINT na cláusula OPTION sem uma dica de consulta correspondente ou vice-versa, o erro 8702 é gerado (indicando que a cláusula OPTION pode modificar a semântica da consulta) e a consulta falha.  
+As dicas de tabela INDEX, FORCESCAN e FORCESEEK podem ser especificadas como dicas de consulta para uma consulta que não tem dicas de tabela existentes ou podem ser usadas para substituir dicas INDEX, FORCESCAN ou FORCESEEK existentes na consulta, respectivamente. Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Nesse caso, será necessário especificar também uma dica correspondente como dica de consulta usando TABLE HIT na cláusula OPTION para preservar a semântica da consulta. Por exemplo, se a consulta contiver a dica de tabela NOLOCK, a cláusula OPTION no parâmetro **@hints** do guia de plano também precisará conter a dica NOLOCK. Consulte o exemplo K. Quando uma dica de tabela diferente de INDEX, FORCESCAN ou FORCESEEK é especificada usando TABLE HINT na cláusula OPTION sem uma dica de consulta correspondente ou vice-versa, o erro 8702 é gerado (indicando que a cláusula OPTION pode modificar a semântica da consulta) e a consulta falha.  
   
 ## <a name="examples"></a>Exemplos  
   

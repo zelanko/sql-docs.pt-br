@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e1a05133d905e6211cded5afc46dba8db75757f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe1bbff7ae50d44885c061eee1550adc78f1df11
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582558"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -66,7 +67,22 @@ SET ANSI_NULLS ON
  Quando SET ANSI_NULLS for OFF, os operadores de comparação Igual a (=) e Diferente de (<>) não seguem o padrão ISO. Uma instrução SELECT que usa WHERE *column_name* = **NULL** retorna as linhas que têm valores nulos em *column_name*. Uma instrução SELECT que usa WHERE *column_name* <> **NULL** retorna as linhas que têm valores não nulos na coluna. Além disso, uma instrução SELECT que usa WHERE *column_name* <> *XYZ_value* retorna todas as linhas que não são *XYZ_value* e que não são nulas.  
   
  Quando SET ANSI_NULLS for ON, todas as comparações em relação a um valor nulo serão avaliadas como UNKNOWN. Quando SET ANSI_NULLS for OFF, as comparações de todos os dados em relação a um valor nulo serão avaliadas como TRUE. Se SET ANSI_NULLS não for especificado, a configuração da opção ANSI_NULLS do banco de dados atual será aplicada. Para obter mais informações sobre a opção de banco de dados ANSI_NULLS, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+ A tabela a seguir mostra como a configuração de ANSI_NULLS afeta os resultados de um número de expressões boolianas usando valores nulos e não nulos.  
   
+|Expressão booliana|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  SET ANSI_NULLS ON afetará uma comparação somente se um dos operandos dessa comparação for uma variável NULL ou um NULL literal. Se os dois lados da comparação forem colunas ou expressões compostas, a configuração não afetará a comparação.  
   
  Para que um script funcione conforme pretendido, independentemente da opção de banco de dados ANSI_NULLS ou da configuração de SET ANSI_NULLS, use IS NULL e IS NOT NULL nas comparações que possam conter valores nulos.  

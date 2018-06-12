@@ -1,7 +1,7 @@
 ---
-title: Visão geral das extensões de segurança | Microsoft Docs
+title: Visão geral das extensões de segurança (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: extensions
@@ -19,13 +19,14 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0aa92c8538efae252aa205a38aa6f5eb2c542c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cd80296e13af18902d48b934bf26144d153c039
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550457"
 ---
-# <a name="security-extensions-overview"></a>Visão geral de extensões de segurança
+# <a name="security-extensions-overview---reporting-services-ssrs"></a>Visão geral das extensões de segurança – SSRS (Reporting Services)
   Uma extensão de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] habilita a autenticação e a autorização de usuários ou grupos; ou seja, ela permite que diferentes usuários façam logon em um servidor de relatório e, com base em suas identidades, executem diferentes tarefas ou operações. Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma extensão de autenticação baseada no Windows, que usa protocolos de contas do Windows para verificar as identidades de usuários que afirmam ter contas no sistema. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa um sistema de segurança baseado em função para autorizar usuários. O modelo de segurança baseada em função do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é semelhante aos modelos de segurança baseada em função de outras tecnologias.  
   
  Como extensões de segurança se baseiam em uma API aberta e extensível, você pode criar autenticação nova e extensões de autorização no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Este é um exemplo de implementação de extensão de segurança típica que usa a autenticação baseada em formulários e a autorização:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  Conforme mostrado na ilustração, a autenticação e a autorização ocorrem desta forma:  
   
-1.  Um usuário tenta acessar o Gerenciador de Relatórios usando uma URL e é redirecionado para um formulário que coleta credenciais de usuário para o aplicativo cliente.  
+1.  Um usuário tenta acessar o portal da Web usando uma URL e é redirecionado para um formulário que coleta credenciais de usuário para o aplicativo cliente.  
   
 2.  O usuário submete credenciais ao formulário.  
   
@@ -42,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
 4.  O serviço Web chama a extensão de segurança fornecida pelo cliente e verifica se há nome e senha do usuário na autoridade de segurança personalizada.  
   
-5.  Após a autenticação, o serviço Web cria um tíquete de autenticação (conhecido como "cookie"), gerencia o tíquete e verifica a função do usuário para a página inicial do Gerenciador de Relatórios.  
+5.  Após a autenticação, o serviço Web cria um tíquete de autenticação (conhecido como "cookie"), gerencia o tíquete e verifica a função do usuário para a Página inicial do portal da Web.  
   
-6.  O serviço Web devolve o cookie ao navegador e exibe a interface de usuário apropriada no Gerenciador de Relatórios.  
+6.  O serviço Web retorna o cookie ao navegador e exibe a interface do usuário apropriada no portal da Web.  
   
-7.  Depois da autenticação do usuário, o navegador faz solicitações ao Gerenciador de Relatórios enquanto transmite o cookie no cabeçalho HTTP. Essas solicitações são uma resposta a ações do usuário dentro do aplicativo Gerenciador de Relatórios.  
+7.  Depois da autenticação do usuário, o navegador fará solicitações ao portal da Web enquanto transmitirá o cookie no cabeçalho HTTP. Essas solicitações são uma resposta a ações do usuário dentro do portal da Web.  
   
 8.  O cookie é transmitido no cabeçalho HTTP para o serviço Web junto com a operação de usuário solicitada.  
   
@@ -69,6 +70,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de segurança](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   

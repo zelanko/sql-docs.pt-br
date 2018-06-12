@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689214"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
 Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensina os conceitos de assinaturas controladas por dados, apresentando um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivos. 
@@ -46,7 +47,7 @@ Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensi
 
  O diagrama a seguir ilustra o fluxo de trabalho básico do tutorial
 
-Etapa  |Description 
+Etapa  |Descrição 
 ---------|---------
 (1)     |  A configuração de assinatura anota o relatório de origem, o agendamento e o mapeamento de campo para o Banco de dados do assinante.        
 (2)     | A tabela OrderInfo contém quatro números de pedido a serem usados para filtragem, um por arquivo. A tabela também contém os formatos de arquivo para os relatórios gerados.

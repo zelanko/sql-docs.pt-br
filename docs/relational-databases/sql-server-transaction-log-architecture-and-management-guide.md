@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467972"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ Para obter mais informações sobre os argumentos `FILEGROWTH` e `SIZE` de `ALTE
   
  Para entender como o log write-ahead funciona, é importante saber como os dados modificados são gravados em disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantém um cache de buffer em que ele lê páginas de dados quando dados precisam ser recuperados. Quando uma página é modificada no cache do buffer, não é gravada imediatamente de volta no disco. Em vez disso, a página é marcada como *suja*. Uma página de dados pode ter mais de uma gravação lógica feita antes de ser gravada fisicamente no disco. Para cada gravação lógica, um registro de log de transações é inserido no cache de log que registra a modificação. Os registros de log devem ser gravados no disco antes de a página suja associada ser removida do cache do buffer e gravada no disco. O processo de ponto de verificação examina o cache do buffer periodicamente para buffers com páginas de um banco de dados especificado e grava todas as páginas sujas no disco. Os pontos de verificação economizam tempo durante uma recuperação posterior, pois criam um ponto em que todas as páginas sujas são gravadas no disco.  
   
- A gravação de uma página de dados modificada do cache do buffer no disco é chamada de liberação de página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma lógica que impede que uma página suja seja removida antes do registro de log associado ser gravado. Os registros de log são gravados no disco quando as transações são confirmadas.  
+ A gravação de uma página de dados modificada do cache do buffer no disco é chamada de liberação de página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma lógica que impede que uma página suja seja removida antes do registro de log associado ser gravado. Os registros de log são gravados em disco quando os buffers do log são liberados.  Isso ocorre sempre que uma transação é confirmada ou que os buffers de log ficam cheios.  
   
 ##  <a name="Backups"></a> Backups de log de transações  
  Esta seção apresenta conceitos sobre como fazer backup e restaurar (aplicar) logs de transações. Nos modelos de recuperação completa e de recuperação com log de operações em massa é necessário fazer backups de rotina de logs de transações (*backups de log*) para recuperar dados. É possível fazer backup do log enquanto qualquer backup completo está em execução. Para obter mais informações sobre os modelos de recuperação, consulte [Fazer backup e restaurar bancos de dados do SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

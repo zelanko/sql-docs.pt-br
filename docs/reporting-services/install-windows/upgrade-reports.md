@@ -1,7 +1,7 @@
 ---
-title: Atualizar Relatórios | Microsoft Docs
+title: Atualizar relatórios (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,27 +24,26 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3ae563ddf9c21fc0add692493504dd7ccbdd09fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771822"
 ---
-# <a name="upgrade-reports"></a>Upgrade Reports
+# <a name="upgrade-reports-ssrs"></a>Atualizar relatórios (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  Os arquivos de definição de relatório (.rdl) são automaticamente atualizados da seguinte forma:  
+Os arquivos de definição de relatório (.rdl) são automaticamente atualizados da seguinte forma:  
   
--   Quando você abre um relatório no Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a definição do relatório é atualizada para o esquema RDL com suporte no momento. Quando você especifica um servidor de relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] nas propriedades de projeto, a definição de relatório é salva em um esquema que é compatível com o servidor de destino.  
+-   Quando você abre um relatório paginado no Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a definição do relatório é atualizada para o esquema RDL com suporte no momento. Quando você especifica um servidor de relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] nas propriedades de projeto, a definição de relatório é salva em um esquema que é compatível com o servidor de destino.  
   
 -   Quando você atualiza uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para uma instalação do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , os relatórios e instantâneos existentes que foram publicados em um servidor de relatório são compilados e atualizados automaticamente para o novo esquema na primeira vez que são processados. Se não for possível atualizar um relatório automaticamente, o relatório será processado usando o modo da compatibilidade com versões anteriores. A definição de relatório permanece no esquema original.  
   
- Os relatórios não são atualizados quando você carrega um arquivo de definição de relatório diretamente no servidor de relatório ou no site do SharePoint. A atualização de uma definição de relatório no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] é a única maneira de atualizar o arquivo .rdl.  
-  
  Após a atualização de um relatório localmente ou no servidor de relatório, talvez você encontre erros, avisos e mensagens adicionais. Esse é o resultado das alterações no modelo de objeto de relatório interno e nos componentes de processamento, que fazem com que mensagens sejam exibidas quando forem detectados problemas subjacentes no relatório. Para obter mais informações, consulte [Compatibilidade com versões anteriores do Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md).  
   
- Para obter mais informações sobre novos recursos do [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Para obter mais informações sobre novos recursos para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consulte [What's new in SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md) (Novidades do SSRS [SQL Server Reporting Services]).  
 
 ##  <a name="bkmk_versionsupported"></a> Versões com suporte da atualização  
  Relatórios que foram criados em qualquer versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser atualizados. Isso inclui as seguintes versões:  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  Para obter informações sobre como identificar o namespace de RDL atual de um servidor de relatório, do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou de um relatório, consulte [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Atualizando relatórios em um servidor de relatório  
- Na primeira vez que um relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é executado em um servidor de relatório que foi atualizado para um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , ele é atualizado automaticamente para o namespace de definição de relatório atual suportado pelo servidor de relatório. O relatório poderia ter existido no servidor de relatório antes da atualização ou ter sido carregado por meio do Gerenciador de Relatórios ou publicado para o servidor de relatório do Designer de Relatórios no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ Na primeira vez que um relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é executado em um servidor de relatório que foi atualizado para um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , ele é atualizado automaticamente para o namespace de definição de relatório atual suportado pelo servidor de relatório. O relatório poderia ter existido no servidor de relatório antes da atualização ou ter sido carregado por meio do portal da Web ou publicado no servidor de relatório do Designer de Relatórios no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  A tabela seguinte lista a ação de atualização que é executada pelo servidor de relatório para tipos específicos de CRIs em um relatório.  
   

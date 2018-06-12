@@ -17,11 +17,12 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6da904a6bcc7f70ca5185c0e59a6075b651ce1b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550797"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
@@ -116,7 +117,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 ## <a name="bkmk_publishreport"></a>Para publicar o relatório no Servidor de Relatório (opcional)  
   
-1.  Uma etapa opcional é publicar o relatório concluído no servidor de relatório de modo nativo para que você possa exibir o relatório no Gerenciador de Relatórios.  
+1.  Uma etapa opcional é publicar o relatório concluído no servidor de relatório de modo nativo para poder exibi-lo no portal da Web.  
   
 2.  Clique no menu **Projeto** e em **Propriedades do tutorial...**  
   

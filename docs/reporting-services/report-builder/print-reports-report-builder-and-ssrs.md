@@ -1,7 +1,7 @@
 ---
-title: Imprimir relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
+title: Imprimir relatórios (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709044"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>Imprimir relatórios (Construtor de Relatórios e SSRS)
-  Depois de salvar um relatório em um servidor de relatório, você pode exibir e imprimir o relatório de um navegador, do Gerenciador de Relatórios ou qualquer aplicativo usado para exibir um relatório exportado. Antes de salvar um relatório, você pode imprimi-lo quando o visualiza.  
+# <a name="print-reports---reporting-services-ssrs"></a>Imprimir relatórios – SSRS (Reporting Services)
+  Após salvar um relatório em um servidor de relatório, será possível exibir e imprimir o relatório do portal da Web ou qualquer aplicativo que você usa para exibir um relatório exportado. Antes de salvar um relatório, você pode imprimi-lo quando o visualiza.  
   
  Todo o processamento de impressão é executado sob demanda e no computador cliente. Não existe funcionalidade de impressão no servidor que permita encaminhar um trabalho de impressão diretamente de um servidor de relatório para uma impressora conectada ao servidor Web. As impressoras e opções de impressão são selecionadas por usuários de relatórios individuais, usando uma caixa de diálogo **Imprimir** padrão.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Imprimir relatórios em um navegador com o controle de impressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- Descreve como usar a impressão do lado do cliente para imprimir relatórios de seu navegador da Web ou Gerenciador de Relatórios.  
+ Descreve como usar a impressão do lado do cliente para imprimir relatórios do portal da Web.  
   
  [Imprimir relatórios de outros aplicativos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Descreve como imprimir relatórios exportados para outro aplicativo.  

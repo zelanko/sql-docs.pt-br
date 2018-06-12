@@ -23,16 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: d221859035c02156005bdbf36d0a39ff79297f6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bd6f1e2c6b0e6163325e6e3c83a4cbc7d2ac2f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779362"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o valor do tipo de dados **timestamp** atual para o banco de dados atual. Este carimbo de data e hora é garantido como exclusivo no banco de dados.
+Esta função retorna o valor do tipo de dados **timestamp** atual para o banco de dados atual. O banco de dados atual terá um valor de carimbo do carimbo de data/hora exclusivo garantido.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,12 +47,12 @@ Retorna o valor do tipo de dados **timestamp** atual para o banco de dados atual
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-@@DBTS retorna o valor do carimbo de data/hora do banco de dados atual usado pela última vez. Um novo valor de carimbo de data e hora é gerado quando uma linha com uma coluna **timestamp** é inserida ou atualizada.
+@@DBTS retorna o valor do carimbo de data/hora do banco de dados atual usado pela última vez. Uma inserção ou atualização de uma linha com uma coluna **timestamp** gera um novo valor de carimbo de data/hora.
   
-A função @@DBTS não é afetada pelas alterações nos níveis de isolamento da transação.
+Alterações nos níveis de isolamento não afetam a função @@DBTS.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir retorna o **timestamp** atual do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+Este exemplo retorna o **timestamp** atual do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 USE AdventureWorks2012;  

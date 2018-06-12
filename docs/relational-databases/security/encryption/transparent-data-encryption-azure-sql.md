@@ -16,11 +16,12 @@ ms.topic: conceptual
 ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34462364"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparent Data Encryption para Data Warehouse e Banco de Dados SQL
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,7 +67,7 @@ Quando você exporta um banco de dados protegido por Transparent Data Encryption
 
 Por exemplo, se o arquivo BACPAC for exportado de uma instância local do SQL Server, o conteúdo importado do novo banco de dados não será criptografado automaticamente. Da mesma forma, se o arquivo BACPAC for exportado para uma instância local do SQL Server, o novo banco de dados também não será criptografado automaticamente.
 
-A única exceção é ao exportar de e para um Banco de Dados SQL. A Transparent Data Encryption está habilitada no novo banco de dados, mas o próprio arquivo PACPAC ainda não está criptografado.
+A única exceção é ao exportar de e para um Banco de Dados SQL. A Transparent Data Encryption está habilitada no novo banco de dados, mas o próprio arquivo BACPAC ainda não está criptografado.
 
 ## <a name="manage-transparent-data-encryption-in-the-azure-portal"></a>Gerenciar a Transparent Data Encryption no Portal do Azure
 

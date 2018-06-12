@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563744"
 ---
 # <a name="-equals-transact-sql"></a>= (É igual a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  Booliano  
   
 ## <a name="remarks"></a>Remarks  
- Quando você compara duas expressões NULL, o resultado depende da configuração de `ANSI_NULLS`:  
+ Quando você compara usando uma expressão NULL, o resultado depende da configuração `ANSI_NULLS`:  
   
--   Se `ANSI_NULLS` for definido como ON, o resultado será NULL, seguindo a convenção ANSI de que um valor NULL (ou desconhecido) não é igual a outro valor NULL ou desconhecido.  
+-   Se `ANSI_NULLS` for definido como ativado, o resultado de qualquer comparação com NULL será UNKNOWN, seguindo a convenção ANSI que NULL é um valor desconhecido e não pode ser comparado com nenhum outro valor, incluindo outros NULLs.  
   
--   Se `ANSI_NULLS` for definido como OFF, o resultado de NULL comparado a NULL será TRUE.  
+-   Se `ANSI_NULLS` for definido como desativado, o resultado da comparação de NULL com NULL será TRUE, e o resultado da comparação de NULL com qualquer outro valor será FALSE.  
 
 Para obter mais informações, veja [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Qualquer tipo de comparação de um valor NULL (desconhecido) com um valor não NULL sempre resulta em FALSE.  
+ Uma expressão booliana que resulta em UNKNOWN comporta-se de maneira semelhante a FALSE na maioria dos casos, mas não em todos. Consulte [NULL e UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) e [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md) para obter mais informações.  
   
   
 ## <a name="examples"></a>Exemplos  

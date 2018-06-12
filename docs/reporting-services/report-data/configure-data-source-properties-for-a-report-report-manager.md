@@ -1,7 +1,7 @@
 ---
-title: Configurar as propriedades de fonte de dados de um relatório (Gerenciador de Relatórios) | Microsoft Docs
+title: Configurar propriedades de fonte de dados para um relatório paginado – SSRS | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -17,24 +17,23 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 07c218a9117b4c8a8adb9985299ac6d08992dd6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7016de178bce501982e9c5bfa1eff030834c5d03
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34549997"
 ---
-# <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurar propriedades de fonte de dados para um relatório (Gerenciador de Relatórios)
-  Quando um relatório é executado, o servidor de relatório recupera informações de propriedade para determinar como conectar-se a uma fonte de dados. O tipo de fonte de dados, a cadeia de conexão e as informações de credenciais são especificados nas páginas de propriedade Fonte de Dados do relatório publicado. É possível definir as propriedades para variar as informações de conexão da fonte de dados com relação aos valores originais que foram especificados quando o relatório foi criado.  
+# <a name="configure-data-source-properties-for-a-paginated-report"></a>Configurar propriedades de fonte de dados para um relatório paginado
+  Quando um relatório paginado é executado, o servidor de relatório recupera informações de propriedade para determinar como conectar-se a uma fonte de dados. O tipo de fonte de dados, a cadeia de conexão e as informações de credenciais são especificados nas páginas de propriedade Fonte de Dados do relatório publicado. É possível definir as propriedades para variar as informações de conexão da fonte de dados com relação aos valores originais que foram especificados quando o relatório foi criado.  
   
  De maneira alternativa, se houver uma fonte de dados compartilhada predefinida que já especifica as informações de conexão que você deseja usar, você poderá especificar uma fonte de dados compartilhada. Para usar uma fonte de dados compartilhada, clique em **Fonte de Dados Compartilhada** na página de propriedades Fonte de Dados do relatório.  
   
-### <a name="to-configure-an-embedded-data-source"></a>Para configurar uma fonte de dados inserida  
+## <a name="to-configure-an-embedded-data-source"></a>Para configurar uma fonte de dados inserida  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  No portal da Web, navegue até o relatório para o qual deseja configurar uma fonte de dados específica do relatório.  
   
-2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** . Navegue até o relatório para o qual deseja configurar uma fonte de dados específica e abra o relatório.  
-  
-3.  Clique na guia **Propriedades** . A página de propriedades **Geral** será aberta.  
+3.  Selecione as reticências (**...**) no canto superior direito > **Gerenciar**.  
   
 4.  Clique na guia **Fontes de Dados** . A página de propriedades Fonte de Dados do relatório é exibida.  
   
@@ -63,11 +62,6 @@ ms.lasthandoff: 05/03/2018
  Para obter mais informações sobre como configurar as credenciais, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para obter mais informações sobre a conta de execução autônoma, consulte [Configurar a conta de execução autônoma &#40; 	Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Página Nova Fonte de Dados &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Página Propriedades de Fontes de Dados &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
-  
+[Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)
   

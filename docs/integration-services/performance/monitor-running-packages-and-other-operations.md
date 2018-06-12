@@ -1,7 +1,7 @@
 ---
 title: Monitorar pacotes em execução e outras operações | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: performance
@@ -19,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed3dff81ab07e210b9b239987fc2a7c9c2c52b2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b5a991661e3aa53de611a0cf78e04b2a6d23b5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772134"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
   Você pode monitorar execuções de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validações de projeto e outras operações usando uma ou mais das ferramentas a seguir. Algumas ferramentas, como toques de dados, estão disponíveis somente para os projetos que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -45,7 +46,12 @@ ms.lasthandoff: 05/03/2018
      Para obter mais informações, consulte [Performance Counters](../../integration-services/performance/performance-counters.md).  
   
 -   Toques de dados  
-  
+
+> [!NOTE]
+> Este artigo descreve como monitorar a execução de pacotes do SSIS em geral e como monitorar a execução de pacotes localmente. Também é possível executar e monitorar pacotes do SSIS no Banco de Dados SQL do Azure. Para obter mais informações, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Embora também seja possível executar pacotes do SSIS no Linux, nenhuma ferramenta de monitoramento é fornecida no Linux. Para obter mais informações, consulte [Extrair, transformar e carregar dados no Linux com o SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## <a name="operation-types"></a>Tipos de operação  
  São monitorados vários tipos diferentes de operações no catálogo **SSISDB** , no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cada operação pode ter várias mensagens associadas a ela. Cada mensagem pode ser classificada em um de vários tipos diferentes. Por exemplo, uma mensagem pode ser de tipo Informações, Aviso ou Erro. Para obter a lista completa dos tipos de mensagem, consulte a documentação da exibição [catalog.operation_messages &#40;Banco de Dados do SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) do Transact-SQL. Para ver uma lista completa dos tipos de operação, consulte [catalog.operations &#40;Banco de Dados do SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   
@@ -135,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |**Informações de Execução**|Mostra o número de execuções que estão em estados diferentes (com falha, executando, teve sucesso, outros) nas últimas 24 horas.|  
 |**Informações do Pacote**|Mostra o número total de pacotes que foram executados nas últimas 24 horas.|  
@@ -149,7 +155,7 @@ ms.lasthandoff: 05/03/2018
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |Filtro|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
 |Informações de Execução|Mostra a hora de início, a hora de término e a duração para cada execução do pacote. Você pode exibir uma lista de valores de parâmetros que foram usados com uma execução de pacote, como valores que foram transmitidos a um pacote filho usando a tarefa Executar Pacote. Para exibir a lista de parâmetros, clique em Visão Geral.|  
@@ -163,7 +169,7 @@ ms.lasthandoff: 05/03/2018
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como conexões com uma cadeia de caracteres especificada e o intervalo de **Hora da Última Falha** .<br /><br /> Você define o intervalo de **Hora da Última Falha** para exibir apenas as falhas de conexão que ocorreram durante um intervalo de datas. O intervalo pode abranger vários dias, meses ou anos.|  
 |Detalhes|Mostra a cadeia de conexão, o número de execuções em que uma conexão falhou, e a data da última falha na conexão.|  

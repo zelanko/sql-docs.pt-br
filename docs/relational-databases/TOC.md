@@ -14,6 +14,7 @@
 ## [Arquitetura de threads e tarefas](thread-and-task-architecture-guide.md)
 ## [Guia de gerenciamento e arquitetura do log de transações](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Guia de Controle de Versão de Linha e Bloqueio de Transações](sql-server-transaction-locking-and-row-versioning-guide.md)
+## [Processo de limpeza de registro fantasma](ghost-record-cleanup-process-guide.md)
 
 # [Backup e restauração](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)

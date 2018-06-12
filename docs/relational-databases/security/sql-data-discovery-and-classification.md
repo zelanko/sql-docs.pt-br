@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743965"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O recurso Descoberta e classificação de dados SQL apresenta uma nova ferramenta interna do SSMS (SQL Server Management Studio) para **descobrir**, **classificar**, **rotular** & **relatar** os dados confidenciais em seus bancos de dados.
-A descoberta e a classificação dos dados mais confidenciais (de negócios, financeiros, de serviços de saúde, PII, etc.) podem desempenhar um papel fundamental na dimensão da proteção de informações organizacionais. Esse recurso pode funcionar como a infraestrutura para:
-* Ajudar a atender aos padrões de privacidade de dados e aos requisitos de conformidade regulamentar, como o GDPR.
+A descoberta e a classificação dos dados mais confidenciais (de negócios, financeiros, de serviços de saúde, etc.) podem desempenhar um papel fundamental na dimensão da proteção de informações organizacionais. Esse recurso pode funcionar como a infraestrutura para:
+* Ajudar a atender aos padrões de privacidade de dados.
 * Controlar o acesso a e fortalecer a segurança de bancos de dados/colunas que contêm dados altamente confidenciais.
-
 
 > [!NOTE]
 > O recurso descoberta e classificação de dados é **compatível com o SQL Server 2008 e posteriores**. Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dados do Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?linkid=866265).
@@ -94,7 +94,57 @@ A classificação inclui dois atributos de metadados:
     ![Painel de navegação][10]
 
 
-## <a id="subheading-3"></a>Próximas etapas
+## <a id="subheading-3"></a>Acessando os metadados de classificação
+
+Os metadados de classificação para *Tipos de informação* e *Rótulos de confidencialidade* são armazenados nas seguintes Propriedades estendidas: 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+Os metadados podem ser acessados usando a exibição do catálogo das Propriedades estendidas [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+
+O exemplo de código a seguir retorna todas as colunas classificadas com suas classificações correspondentes:
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>Próximas etapas
 
 Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dados do Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -106,7 +156,8 @@ Considere proteger suas colunas confidenciais aplicando mecanismos de segurança
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

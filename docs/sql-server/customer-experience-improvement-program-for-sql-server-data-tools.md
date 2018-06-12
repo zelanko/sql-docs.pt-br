@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84313f1bedd406c39a862c57bdc94436eb0c7cbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563794"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,23 +60,25 @@ ms.lasthandoff: 05/03/2018
   
  Chave do Registro e configurações relevantes:  
   
- Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- RegEntry name = OptIn  
-  
- Tipo de entrada DWORD:  
-  
--   0 significa não usar  
-  
--   1 significa usar  
+- Sistema operacional de 64 bits, chave = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- Sistema operacional de 32 bits, chave = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+Quando a Política de Grupo está habilitada, chave = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+Entrada = OptIn
+
+Valor = (DWORD)
+- 0 é recusado (desligue o VSCEIP)
+- 1 é recusado (ative o VSCEIP)
+
   
 > [!CAUTION]  
 >  A edição incorreta do Registro poderá danificar seriamente o sistema. Antes de alterar o Registro, faça um backup dos dados importantes do computador. Você poderá também usar a opção de inicialização Última Configuração Válida se encontrar problemas depois de aplicar as alterações manualmente.  
   
  Para saber mais sobre os dados coletados, processados ou transmitidos pelo Programa de Aperfeiçoamento da Experiência do Usuário, confira a [Política de Privacidade do Programa de Aperfeiçoamento da Experiência do Usuário da Microsoft](http://go.microsoft.com/fwlink/?LinkId=52143).  
  
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Opção e controle do Programa de Aperfeiçoamento da Experiência do Usuário e o SQL Server Data Tools para Visual Studio 2015  
- O SSDT para Visual Studio 2015 é a ferramenta de modelagem de dados que acompanha o SQL Server 2016. Ele usa as opções do Programa de Aperfeiçoamento da Experiência do Usuário internas do Visual Studio 2015. Saiba mais sobre como enviar comentários por meio do Programa de Aperfeiçoamento da Experiência do Usuário no Visual Studio 2015 neste [documento da Ajuda do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
+### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Opções e controle do Programa de Aperfeiçoamento da Experiência do Usuário e do SQL Server Data Tools para Visual Studio 2015  
+ O SSDT para Visual Studio 2015 é a ferramenta de modelagem de dados que acompanha o SQL Server 2016. Ele usa as opções do Programa de Aperfeiçoamento da Experiência do Usuário internas do Visual Studio 2015. Saiba mais sobre como enviar comentários por meio do Programa de Aperfeiçoamento da Experiência do Usuário no Visual Studio 2015 neste [documento da ajuda do Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
   
  Para as versões anteriores ao SQL Server 2016, o Programa de Aperfeiçoamento da Experiência do Usuário é ativado por padrão. Para desativá-lo e ativá-lo novamente, siga as instruções abaixo.  
   

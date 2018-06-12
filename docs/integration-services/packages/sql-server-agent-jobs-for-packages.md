@@ -1,7 +1,7 @@
 ---
 title: Trabalhos do SQL Server Agent para pacotes | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -21,15 +21,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d262b623566f84b1ce5f8595560d4db6b646de97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772492"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabalhos do SQL Server Agent para pacotes
   Você pode automatizar e agendar a execução de pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Você pode agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos.  
-  
+ 
+> [!NOTE]
+> Este artigo descreve como agendar pacotes do SSIS em geral e como agendar pacotes localmente. Também é possível executar e agendar pacotes do SSIS nas seguintes plataformas:
+> - **A nuvem do Microsoft Azure**. Para obter mais informações, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) e [Agendar a execução de um pacote SSIS no Azure](../lift-shift/ssis-azure-schedule-packages.md).
+> - **Linux**. Para obter mais informações, consulte [Extrair, transformar e carregar dados em Linux com o SSIS](../../linux/sql-server-linux-migrate-ssis.md) e [Schedule SQL Server Integration Services package execution on Linux with cron](../../linux/sql-server-linux-schedule-ssis-packages.md) (Agendar a execução do pacote do SQL Server Integration Services no Linux com cron).
+
 ## <a name="sections-in-this-topic"></a>Seções neste tópico  
  Este tópico contém as seguintes seções:  
   
@@ -129,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
      **A seguinte tabela descreve as possíveis origens do pacote.**  
   
-    |Origem do Pacote|Description|  
+    |Origem do Pacote|Descrição|  
     |--------------------|-----------------|  
     |**Catálogo do SSIS**|Os pacotes armazenados no banco de dados SSISDB. Os pacotes são contidos em projetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que são implantados no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Os pacotes armazenados no banco de dados MSDB. Use o serviço de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para gerenciar esses pacotes.|  

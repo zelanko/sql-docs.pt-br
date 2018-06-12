@@ -19,11 +19,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550697"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografia Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  Uma CEK (chave de criptografia de coluna) é uma criptografia de conteúdo (isto é, uma chave usada para proteger dados) protegida por uma CMK.  
   
- Todos os provedores de repositórios de CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] criptografam CEKs usando RSA-OAEP (RSA com Preenchimento de Criptografia Assimétrica Ideal) com os parâmetros padrão especificados pela RFC 3447 na Seção A.2.1. Esses parâmetros padrão estão usando uma função de hash de SHA-1 e uma função de geração de máscara de MGF1 com SHA-1.  
+ Todos os provedores de repositórios de CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] criptografam CEKs usando RSA-OAEP (RSA com Preenchimento de Criptografia Assimétrica Ideal) com os parâmetros padrão especificados pela RFC 8017 na Seção A.2.1. Esses parâmetros padrão estão usando uma função de hash de SHA-1 e uma função de geração de máscara de MGF1 com SHA-1.  
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo de criptografia de dados  
  O Always Encrypted usa o algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para criptografar dados no banco de dados.  

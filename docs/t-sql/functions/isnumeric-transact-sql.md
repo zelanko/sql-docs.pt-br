@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e28633c4c373d37c4ba1d8cf18e4e1e9d0a385fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20567e713ac7a53cd506fb2447be51cd525877f3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582068"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,15 +56,15 @@ ISNUMERIC ( expression )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- ISNUMERIC retorna 1 quando a expressão de entrada é avaliada como um tipo de dados numérico válido; caso contrário, retorna 0. Os tipos de dados numéricos válidos incluem o seguinte:  
-  
-|||  
-|-|-|  
-|**int**|**numeric**|  
-|**bigint**|**money**|  
-|**smallint**|**smallmoney**|  
-|**tinyint**|**float**|  
-|**decimal**|**real**|  
+ ISNUMERIC retorna 1 quando a expressão de entrada é avaliada como um tipo de dados numérico válido; caso contrário, retorna 0. Os [tipos de dados numéricos](../../t-sql/data-types/numeric-types.md) válidos incluem os seguintes:  
+
+|||
+|-|-|
+| [Números exatos](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint**, **bit** |
+| [Precisão fixa](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**, **numeric** |
+| [Aproximado](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**, **real** |
+| [Valores monetários](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**, **smallmoney** |
+
   
 > [!NOTE]  
 >  ISNUMERIC retorna 1 para alguns caracteres que não são números, como mais (+), menos (-) e símbolos de moeda válidos como o cifrão ($). Para obter uma lista completa de símbolos de moeda, consulte [money e smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  

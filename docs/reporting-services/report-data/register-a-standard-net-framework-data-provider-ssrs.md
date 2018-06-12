@@ -1,7 +1,7 @@
 ---
 title: Registrar um provedor de dados .NET Framework padrão (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550427"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar um provedor de dados padrão do .NET Framework (SSRS)
   Para usar um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] terceirizado com o objetivo de recuperar dados para um conjunto de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é preciso implantar e registrar o assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em dois locais: no cliente que está criando o relatório e no servidor de relatório. No cliente que está criando o relatório, você deve registrar o provedor de dados como um tipo de fonte de dados e associá-lo a um designer de consulta. Você pode selecionar esse provedor de dados como um tipo de fonte de dados quando criar um conjunto de dados de relatório. O designer de consulta associado é aberto para ajudá-lo a criar consultas para esse tipo de fonte de dados. No servidor de relatório, é preciso registrar o provedor de dados como um tipo de fonte de dados. Você pode processar os relatórios publicados que recuperam dados a partir de uma fonte de dados usando este provedor de dados.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  Adicione uma entrada para o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |attribute|Description|  
+    |attribute|Descrição|  
     |---------------|-----------------|  
     |**Nome**|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |**Tipo**|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  A associação da URL é apenas uma das condições de associação que você pode selecionar para o provedor de dados.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Verificando a implantação e o registro  
- Você pode verificar se o provedor de dados foi implantado com sucesso no servidor de relatórios abrindo o Gerenciador de Relatórios e verificando se o provedor de dados está incluído na lista de fontes de dados disponíveis. Para obter mais informações sobre o Gerenciador de Relatórios e fontes de dados, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ É possível verificar se o provedor de dados foi implantado com sucesso no servidor de relatório abrindo o portal da Web e verificando se o provedor de dados está incluído na lista de fontes de dados disponíveis. Para obter mais informações sobre o portal da Web e fontes de dados, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Registrando um provedor de dados .NET Framework no Cliente do Designer de Relatórios  
  Para criar relatórios que usam esse provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em uma fonte de dados, é preciso instalar o assembly no computador cliente que estiver executando o Designer de Relatórios. Modifique dois arquivos de configuração. Modifique o arquivo RSReportDesigner.config para registrar o provedor de dados como uma fonte de dados e para usar o designer de consulta genérico. Modifique RSPreviewPolicy.config para conceder permissões de segurança de acesso do código para o assembly do provedor de dados.  
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  Adicione uma entrada para o provedor de dados.  
   
-    |attribute|Description|  
+    |attribute|Descrição|  
     |---------------|-----------------|  
     |**Nome**|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |**Tipo**|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  Antes de verificar a implantação, é preciso fechar todas as instâncias do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] no computador local. Depois de encerrar todas as sessões atuais, você poderá verificar se o provedor de dados foi implantado com êxito ao Designer de Relatórios criando um novo projeto de relatório no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. O provedor de dados deve ser incluído na lista de tipos de fontes de dados disponíveis quando você criar um novo conjunto de dados para o relatório.  
   
 ## <a name="platform-considerations"></a>Considerações sobre plataformas  
- Em uma plataforma de 64 bits (x64), o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é executado no modo WOW de 32 bits. Quando você cria relatórios em uma plataforma x64, é preciso que os provedores de dados de 32 bits estejam instalados no cliente que está criando o relatório para que seja possível visualizá-los. Ao publicar o relatório no mesmo sistema, é preciso que os provedores de dados de x64 estejam instalados para permitir a exibição do relatório com o Gerenciador de Relatórios.  
+ Em uma plataforma de 64 bits (x64), o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é executado no modo WOW de 32 bits. Quando você cria relatórios em uma plataforma x64, é preciso que os provedores de dados de 32 bits estejam instalados no cliente que está criando o relatório para que seja possível visualizá-los. Se publicar o relatório no mesmo sistema, será necessário provedores de dados x64 para exibir o relatório no portal da Web.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Não há suporte para plataformas com base em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   

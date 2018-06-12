@@ -1,7 +1,7 @@
 ---
 title: Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,17 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2817c4ee9726e4b58f38568f94cbfde2e0c45915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d5736a208d4eb0346c79008fc4e03c6bc26bbb9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773342"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 O SQL Server Data Tools (SSDT) fornece modelos de projeto e superfícies de design para a criação de tipos de conteúdo do SQL Server, como bancos de dados relacionais, modelos do Analysis Services, relatórios do Reporting Services e pacotes do Integration Services.  
-  
-Ele tem com base um shell do Visual Studio e é lançado junto com o SQL Server. Novas versões do SSDT integram os recursos mais recentes do SQL Server. As versões mais antigas incluem os modelos e o ambiente de design que eram atuais naquela versão.  
   
 O SSDT é compatível com versões anteriores, assim, sempre será possível usar o [SSDT mais recente](download-sql-server-data-tools-ssdt.md) para criar e implantar bancos de dados, modelos, relatórios e pacotes para execução em versões anteriores do SQL Server.  
   
@@ -37,23 +36,20 @@ O SSDT é compatível com versões anteriores, assim, sempre será possível usa
 
 Os últimos downloads são fornecidos no caso pouco provável de você enfrentar problemas com a [versão mais recente](download-sql-server-data-tools-ssdt.md). 
 
-|Versão| Visual Studio 2017|
+|Versão do SSDT| Visual Studio 2017|
 |:---|:---|
+|15.6.0|[SSDT para VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
 |15.5.2|[SSDT para VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
-|15.5.1|[SSDT para VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
 <br>
 
 
-|Versão| Visual Studio 2015|
+|Versão do SSDT| Visual Studio 2015|
 |:---|:---|
 |17.3|[SSDT para VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
-|17.2|[SSDT para VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| 
-|17.1|[SSDT para VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
-|17.0|[SSDT para VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
 |16.5|[SSDT para VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 
-|Versão| Visual Studio 2013|
+|Versão do SSDT| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT para VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
 <br>

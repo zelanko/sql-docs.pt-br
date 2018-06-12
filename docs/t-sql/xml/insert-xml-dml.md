@@ -22,11 +22,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c851283cd546038c11700ed111282a9aa1a039ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22bc1b365e04c5e06e6278974346b1626434a24b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744065"
 ---
 # <a name="insert-xml-dml"></a>inserir (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. Inserção de atributos em um documento  
- O exemplo a seguir ilustra como os atributos são inseridos em um documento. Primeiro, um documento é atribuído a uma variável de tipo **XML**. Em seguida, uma série de instruções XML DML **insert** é usada para inserir atributos no documento. Depois de cada inserção de atributo, a instrução SELECT exibe o resultado.  
+ O exemplo a seguir ilustra como são inseridos atributos em um documento. Primeiro, um documento é atribuído a uma variável do tipo **xml**. Em seguida, uma série de instruções XML DML **insert** é usada para inserir atributos no documento. Depois de cada inserção de atributo, a instrução SELECT exibe o resultado.  
   
 ```  
 USE AdventureWorks;  

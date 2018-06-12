@@ -1,7 +1,7 @@
 ---
 title: Ação de busca detalhada (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -45,14 +45,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1250e47366e8beab3cdee5f07e6d17e76827a597
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550707"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Ação de análise detalhada (Construtor de Relatórios e SSRS)
-  Ao fornecer ícones de sinal de adição ou de subtração em uma caixa de texto, você permitirá que os usuários ocultem ou exibam itens interativamente. Isso se chama *busca detalhada* . Para uma tabela ou matriz, você pode mostrar ou ocultar linhas e colunas estáticas ou linhas e colunas que estão associadas a grupos.  
+Ao fornecer ícones de sinal de adição ou de subtração em uma caixa de texto, você permite que os usuários ocultem ou exibam itens interativamente. Isso se chama *busca detalhada* . Para uma tabela ou matriz, você pode mostrar ou ocultar linhas e colunas estáticas ou linhas e colunas que estão associadas a grupos.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  Em um relatório de busca detalhada, um usuário clica em um botão de adição ou subtração para expandir ou recolher uma seção de um relatório para mostrar dados detalhados no local. Em um relatório detalhado, o usuário clica em um link para um valor resumido e isso abre um relatório relacionado separado para mostrar dados de detalhes. Os dados de detalhes só são recuperados quando o relatório de detalhes é executado. Normalmente, os relatórios detalhados exigem menos recursos do que os relatórios de busca detalhada. Para obter mais informações, consulte [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>Suporte à extensão de renderização para itens de relatório ocultos  
- Só há suporte para a alternância de mostrar e ocultar itens de relatório por extensões de renderização que dão suporte à interatividade de usuário, como a extensão de renderização HTML usada quando você executa um relatório no Construtor de Relatórios e no Gerenciador de Relatórios, por exemplo. Outras extensões de renderização exibem itens ocultos. A lista a seguir descreve suporte para itens de relatório com visibilidade condicional:  
+ Só há suporte para a alternância de mostrar e ocultar itens de relatório em extensões de renderização compatíveis com a interatividade de usuário, como a extensão de renderização HTML usada quando você executa um relatório no Construtor de Relatórios e no portal da Web, por exemplo. Outras extensões de renderização exibem itens ocultos. A lista a seguir descreve suporte para itens de relatório com visibilidade condicional:  
   
 -   Em HTML, se os itens estiverem ocultos, eles não serão visíveis no código-fonte HTML.  
   

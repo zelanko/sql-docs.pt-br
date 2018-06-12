@@ -26,19 +26,20 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7bace7aa0f07dd42230c7d626aa9b34adb5dfb1
+ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34758086"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Uma função que retorna o nome do aplicativo para a sessão atual, se o aplicativo define esse valor de nome.
+Esta função retornará o nome do aplicativo para a sessão atual, se o aplicativo definir esse valor de nome.
   
 > [!IMPORTANT]  
->  O cliente fornece o nome do aplicativo e o valor do nome de aplicativo não é verificado de nenhuma forma. Não use **APP_NAME** como parte de uma verificação de segurança.  
+>  O cliente fornece o nome do aplicativo, e `APP_NAME`não é verifica o valor do nome do aplicativo de nenhuma forma. Não use `APP_NAME` como parte de uma verificação de segurança.  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +54,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-Use a **APP_NAME** para distinguir entre diferentes aplicativos, como uma maneira de executar ações diferentes para esses aplicativos. Por exemplo, **APP_NAME** pode distinguir entre diferentes aplicativos para permitir um formato de data diferente para cada aplicativo. Ela também pode permitir o retorno de uma mensagem informativa para determinados aplicativos.
+Use a `APP_NAME` para distinguir entre diferentes aplicativos, como uma maneira de executar ações diferentes para esses aplicativos. Por exemplo, `APP_NAME` pode distinguir entre diferentes aplicativos, que permite um formato de data diferente para cada aplicativo. Ela também pode permitir o retorno de uma mensagem informativa para determinados aplicativos.
   
 Para definir um nome de aplicativo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique em **Opções** na caixa de diálogo **Conectar ao Mecanismo de Banco de Dados**. Na guia **Parâmetros de Conexão Adicionais**, forneça um atributo **app** no formato `;app='application_name'`
   
 ## <a name="example"></a>Exemplo  
-Esse exemplo verifica se o aplicativo cliente que iniciou esse processo é uma sessão do `SQL Server Management Studio` e fornece uma data no formato US ou ANSI.
+Este exemplo verifica se o aplicativo cliente que iniciou este processo é uma sessão do `SQL Server Management Studio`. Em seguida, ele fornece um valor de data no formato US ou ANSI.
   
 ```sql
 USE AdventureWorks2012;  

@@ -25,18 +25,19 @@ caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 6c0cfefde5609455f53d2afcb33659cd5c1d99bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ea16e8e80fd2b8febf8a95c848490b41f0408a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744095"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Retorna a contagem (inteiro grande com sinal) dos limites de *datepart* especificados cruzados entre a *startdate* e a *enddate* especificadas.
+Essa função retorna a contagem (como um grande valor inteiro com sinal) dos limites de *datepart* especificados cruzados entre os parâmetros especificados *startdate* e *enddate*.
   
-Para obter uma visão geral das funções e dos tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], confira [Funções e tipos de dados de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +50,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>Argumentos  
 *datepart*  
-É a parte da *startdate* e *enddate* que especifica o tipo de limite ultrapassado. A tabela a seguir lista todos os argumentos válidos de *datepart*. Equivalentes de variável definidos pelo usuário não são válidos.
+A parte de *startdate* e de *enddate* que especifica o tipo de limite ultrapassado. `DATEDIFF_BIG` não aceitarão equivalentes de variável definidos pelo usuário. Esta tabela lista todos os argumentos *datepart* válidos.
+
+> [!NOTE]
+> `DATEDIFF_BIG` não aceita os equivalentes de variável definidos pelo usuário para os argumentos *datepart*.
   
 |*datepart*|Abreviações|  
 |---|---|
@@ -67,34 +71,42 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**nanosecond**|**ns**|  
   
 *startdate*  
-É uma expressão que pode ser resolvida em um valor de **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. *date* pode ser uma expressão, uma expressão de coluna, uma variável definida pelo usuário ou um literal de cadeia de caracteres. *startdate* é subtraído de *enddate*.  
-Para evitar ambiguidade, use anos de quatro dígitos. Para obter mais informações sobre anos de dois dígitos, confira [Configurar a opção Corte de Ano de Dois Dígitos do servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Uma expressão que pode resolver um dos seguintes valores:
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+Para *date*, `DATEDIFF_BIG` aceitará uma variável de expressão de coluna, de expressão, de literal de cadeia de caracteres ou definida pelo usuário. Um valor literal de cadeia de caracteres deve resolver um **datetime**. Para evitar ambiguidade, use anos de quatro dígitos. `DATEDIFF_BIG` subtrai *enddate* de *startdate*. Para evitar ambiguidade, use anos de quatro dígitos. Consulte [Configurar a opção two digit year cutoff de configuração de servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obter informações sobre anos de dois dígitos.
   
 *enddate*  
 Consulte *startdate*.
   
 ## <a name="return-type"></a>Tipo de retorno  
- Com sinal   
-        **bigint**  
+
+**bigint** com sinal  
   
 ## <a name="return-value"></a>Valor retornado  
-Retorna a contagem (inteiro grande com sinal) dos limites de datepart especificados cruzados entre a startdate e a enddate especificadas.
--   Cada *datepart* e suas abreviações retornam o mesmo valor.  
+Retorna a contagem (como um valor bigint com sinal) dos limites de datepart especificados cruzados entre a startdate e a enddate especificadas.
+-   Cada *datepart* específico e as abreviações desse *datepart* retornarão o mesmo valor.  
   
-Se o valor retornado estiver fora do intervalo de **bigint** (-9,223,372,036,854,775,808 a 9,223,372,036,854,775,807), um erro será retornado. Para **millisecond**, a diferença máxima entre *startdate* e *enddate* é de 24 dias, 20 horas, 31 minutos e 23.647 segundos. Para **second**, a diferença máxima é de 68 anos.
+Para um valor retornado fora do intervalo para **bigint** (-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807), `DATEDIFF_BIG` retorna um erro. Para **millisecond**, a diferença máxima entre *startdate* e *enddate* é de 24 dias, 20 horas, 31 minutos e 23.647 segundos. Para **second**, a diferença máxima é de 68 anos.
   
-Se *startdate* e *enddate* recebem apenas um valor temporal e a *datepart* não é uma *datepart* de hora, será retornado 0.
+Se *startdate* e *enddate* receberem apenas um valor temporal e *datepart* não for um *datepart* de hora, `DATEDIFF_BIG` retornará 0.
   
-Um componente de deslocamento de fuso horário de *startdate* ou *enddate* não é usado no cálculo do valor retornado.
+`DATEDIFF_BIG` não usa um componente de deslocamento de fuso horário de *startdate* ou *enddate* para calcular o valor retornado.
   
-Como [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) tem precisão apenas quanto ao minuto, quando um valor **smalldatetime** é usado para *startdate* ou *enddate*, os segundos e milissegundos são sempre definidos como 0 no valor retornado.
+Para um valor **smalldatetime** usado para *startdate* ou para *enddate*, `DATEDIFF_BIG` sempre define segundos e milissegundos como 0 no valor retornado, porque [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) tem apenas a precisão do minuto.
   
-Se apenas um valor de hora for atribuído a uma variável de tipo de dados “data”, o valor da parte “data” faltante será definido como o valor padrão: 1900-01-01. Se apenas um valor de data for atribuído a uma variável de tipo de dados “hora” ou “data”, o valor da parte “hora” faltante será definido como o valor padrão: 00:00:00. Se *startdate* ou *enddate* tem apenas uma parte de hora e a outra apenas uma parte de data, as partes de hora e data ausentes são definidas com os valores padrão.
+Se apenas um valor temporal for atribuído a uma variável de tipo de dados de data, `DATEDIFF_BIG` definirá o valor da parte de data ausente como o valor padrão: 1900-01-01. Se apenas um valor de data for atribuído a uma variável de um tipo de dados de data ou hora, `DATEDIFF_BIG` definirá o valor da parte de hora ausente como o valor padrão: 00:00:00. Se *startdate* ou *enddate* tiver apenas uma parte de hora e a outra apenas uma parte de data, `DATEDIFF_BIG` definirá as partes de hora e data ausentes como os valores padrão.
   
-Se *startdate* e *enddate* forem de tipos de dados de data diferentes e um tiver mais partes de hora ou precisão de segundos fracionários do que o outro, as partes ausentes do outro serão definidas como 0.
+Se *startdate* e *enddate* tiverem diferentes tipos de dados de data e um tiver mais partes de hora ou precisão de segundos fracionários do que o outro, `DATEDIFF_BIG` definirá as partes ausentes do outro como 0.
   
 ## <a name="datepart-boundaries"></a>Limites de datepart
-As instruções a seguir têm as mesmas *startdate* e *endate*. Essas datas são adjacentes e diferem, quanto à hora, em 0,0000001 segundo. A diferença entre *startdate* e *endate* em cada instrução cruza um calendário ou limite de hora de seu *datepart*. Cada instrução retorna 1. Se anos diferentes forem usados neste exemplo e se *startdate* e *endate* estiverem na mesma semana de calendário, o valor retornado para **week** será 0.
+As instruções a seguir têm os mesmos valores de *startdate* e de *enddate*. Essas datas são adjacentes e diferem, quanto à hora, em 0,0000001 segundo. A diferença entre *startdate* e *enddate* em cada instrução cruza um calendário ou limite de hora de sua *datepart*. Cada instrução retorna 1. Se *startdate* e *enddate* tiverem diferentes valores de ano, mas os mesmos valores semanais de calendário, `DATEDIFF_BIG` retornará 0 para *datepart* **week**.
 
 ```sql
 SELECT DATEDIFF_BIG(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -110,17 +122,16 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Remarks  
-DATEDIFF_BIG pode ser usado na lista de seleção e nas cláusulas WHERE, HAVING, GROUP BY e ORDER BY.
+Use `DATEDIFF_BIG` nas cláusulas SELECT <list>, WHERE, HAVING, GROUP BY e ORDER BY.
   
-DATEDIFF_BIG converte implicitamente literais de cadeia de caracteres em um tipo **datetime2**. Isso significa que DATEDIFF_BIG não dá suporte ao formato YDM quando a data é passada como uma cadeia de caracteres. É necessário converter explicitamente a cadeia de caracteres em um tipo **datetime** ou **smalldatetime** para usar o formato YDM.
+`DATEDIFF_BIG` converte implicitamente literais de cadeias de caracteres como um tipo **datetime2**. Isso significa que `DATEDIFF_BIG` não é compatível com o formato YDM quando a data é transmitida como cadeia de caracteres. É necessário converter explicitamente a cadeia de caracteres em um tipo de **datetime** ou **smalldatetime** para usar o formato YDM.
   
-A especificação de SET DATEFIRST não tem nenhum efeito em DATEDIFF_BIG. DATEDIFF_BIG sempre usa Domingo como o primeiro dia da semana para garantir que a função seja determinística.
+A especificação SET DATEFIRST não tem efeito sobre `DATEDIFF_BIG`. `DATEDIFF_BIG` sempre usa domingo como o primeiro dia da semana para garantir que a função opere de maneira determinística.
   
-## <a name="examples"></a>Exemplos  
-Os exemplos a seguir usam diferentes tipos de expressões como argumentos para os parâmetros *startdate* e *enddate*.
+## <a name="examples"></a>Exemplos 
   
 ### <a name="specifying-columns-for-startdate-and-enddate"></a>Especificando colunas para startdate e enddate  
-O exemplo a seguir calcula o número de limites de dia que são cruzados entre as datas de duas colunas de uma tabela.
+Este exemplos usa diferentes tipos de expressões como argumentos para os parâmetros *startdate* e *enddate*. Ele calcula o número de limites de dia cruzados entre datas em duas colunas de uma tabela.
   
 ```sql
 CREATE TABLE dbo.Duration  
@@ -134,8 +145,8 @@ SELECT DATEDIFF_BIG(day,startDate,endDate) AS 'Duration'
 FROM dbo.Duration;  
 -- Returns: 1  
 ```  
-  
-Para obter muitos outros exemplos, consulte os exemplos relacionados em [DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md).
+
+Veja de perto exemplos relacionados em [DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md).
   
 ## <a name="see-also"></a>Confira também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
