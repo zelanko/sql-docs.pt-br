@@ -2,7 +2,6 @@
 title: Trabalhando com conjuntos de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b83fb8d5ad4e2e063ca840b7e8fb31bbf15fde14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6bcc69980dfc4e3be72221964d339bd37754207
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273485"
 ---
 # <a name="working-with-recordsets"></a>Trabalhando com conjuntos de registros
 O **registros** objeto possui recursos internos que permitem a você reorganizar a ordem dos dados no conjunto de resultados, para procurar um registro específico com base em critérios fornecidos por você e até mesmo para otimizar as operações de pesquisa usando os índices. Se esses recursos estão disponíveis para uso depende do provedor e, em alguns casos, como do [índice](../../../ado/reference/ado-api/index-property.md) propriedade — a estrutura da fonte de dados em si.  

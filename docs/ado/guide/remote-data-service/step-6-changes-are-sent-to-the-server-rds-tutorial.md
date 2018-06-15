@@ -2,7 +2,6 @@
 title: 'Etapa 6: As alterações são enviadas ao servidor (Tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0537d8d05553b4e50861bda664d2cdc53489cb82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd14dcfa918afc5bc252822ceacccfe10ddd7302
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274725"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Etapa 6: As alterações são enviadas ao servidor (Tutorial de RDS)
 Se o **registros** objeto é editado, qualquer alteração (isto é, linhas que são adicionadas, alteradas ou excluídas) pode ser enviadas para o servidor.  

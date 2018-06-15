@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2c2aa317f9d4ff810cba13fbb315ce090997583
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b504f924019c20a6203e18974d72e086e65f06c8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273565"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Fazer referência às bibliotecas do ADO em um aplicativo Visual Basic 6
 Para importar as bibliotecas do ADO para um aplicativo do Microsoft Visual Basic 6, você deve definir uma referência no projeto do Visual Basic.  
@@ -44,7 +44,7 @@ Para importar as bibliotecas do ADO para um aplicativo do Microsoft Visual Basic
   
 6.  Clique em **Okey** para terminar de definir as referências.  
   
-## <a name="backward-compatibility"></a>Compatibilidade com versões anteriores  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  Instalar o ADO também copia as seguintes bibliotecas de tipo de versões anteriores:  
   
 -   *msado27.tlb*, biblioteca de tipos 2.7 de ADO  

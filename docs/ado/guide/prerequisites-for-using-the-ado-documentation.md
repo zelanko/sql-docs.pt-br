@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1845ee99dc77a25c1afbd7257a6ba31f1fb6d6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 832df9084c737873b388631668afc4e1024a2d55
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273545"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Pré-requisitos para usar a documentação de ADO
 Para usar esta documentação, você deve ter, no mínimo, experiência de desenvolvimento de aplicativos com o Microsoft Visual Basic, porque a maioria dos exemplos no guia é gravada nesse idioma. Também há alguns exemplos escritos em Java, Microsoft Visual C++, Visual Basic Scripting Edition (VBScript) e Microsoft JScript.  

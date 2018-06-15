@@ -2,7 +2,6 @@
 title: Noções básicas sobre o arquivo de personalização | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99a565fe6ee25f1fb8d0911b80c0b629c02b3cdf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a80667371709c4035a4a45fa4e322d59f03f5bc7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274575"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização consiste em colchetes (**[]**) que contém um tipo e o parâmetro. Os tipos de quatro seção são indicados por cadeias de caracteres literais **conectar**, **sql**, **userlist**, ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador de usuário especificado ou nada.  

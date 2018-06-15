@@ -2,7 +2,6 @@
 title: Usando o RDS com Conexão ODBC Pooling | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38a0d41ae5cdf0c1f40db21420fd39edca72237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 416cbadf4d77ab9c7325c5f874f9818c4e05d8e5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274645"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Usando o RDS com Conexão ODBC Pooling
 Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no Internet Information Services (IIS) do pool de conexão para alcançar a manipulação de alto desempenho de carga do cliente. Pooling de Conexão é um Gerenciador de recursos para conexões, manter o estado aberto em conexões usadas com frequência.  
