@@ -2,7 +2,6 @@
 title: Propriedade ActualSize (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 697202ef2c88d5fa33657c74713d884f2cbe916c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f71de5881975eb9ba38b2d21ef8f1590aae95d90
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275095"
 ---
 # <a name="actualsize-property-ado"></a>Propriedade ActualSize (ADO)
 Indica o comprimento real do valor de um campo em bytes.  
