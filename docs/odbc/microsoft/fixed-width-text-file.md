@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897961"
 ---
 # <a name="fixed-width-text-file"></a>Arquivo de texto de largura fixa
 Quando o driver de texto é usado, a última coluna de um arquivo de texto de largura fixa pode ser de comprimento variável.

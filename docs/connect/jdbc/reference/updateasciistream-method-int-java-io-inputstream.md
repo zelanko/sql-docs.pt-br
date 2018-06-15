@@ -3,13 +3,10 @@ title: Método (Java.IO. InputStream) updateAsciiStream | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dcc3d4f-ae30-45c0-afad-a531358807af
@@ -17,11 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf2baa59069a535f4fa762f22b4c0b217d68b76a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: a98f78397a2bd9b86b788c696ad13c11f5e9dbe9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32850851"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream"></a>Método updateAsciiStream (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

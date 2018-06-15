@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903521"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entradas do registro (Driver ODBC do Visual FoxPro)
 Quando você instala o Driver de ODBC do Visual FoxPro, o programa de instalação atualiza o registro do sistema, na chave do registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, para adicionar uma nova chave chamada Microsoft Visual FoxPro Driver. Sob essa chave, valores descritos na tabela a seguir são adicionados.  
