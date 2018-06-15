@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915471"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transações em ODBC ODBC
 As transações em ODBC são concluídas no nível de conexão; ou seja, quando um aplicativo conclui uma transação, ele confirma ou reverte todo o trabalho feito por meio de todos os identificadores de instrução essa conexão.  

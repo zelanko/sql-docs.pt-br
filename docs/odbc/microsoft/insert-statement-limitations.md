@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904451"
 ---
 # <a name="insert-statement-limitations"></a>Limitações de instrução de inserção
 Dados inseridos são truncados à direita sem aviso se ele é muito longo para caber na coluna.  

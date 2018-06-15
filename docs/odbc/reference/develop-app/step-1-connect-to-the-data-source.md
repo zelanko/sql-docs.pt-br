@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915601"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>Etapa 1: Conectar-se à fonte de dados
 É a primeira etapa em qualquer aplicativo para se conectar à fonte de dados. Nesta fase, incluindo as funções requer, é mostrada na ilustração a seguir.  

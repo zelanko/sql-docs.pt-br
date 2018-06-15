@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914231"
 ---
 # <a name="what-the-driver-manager-does"></a>O que faz o Gerenciador de Driver
 A tabela a seguir resume como o ODBC 3 *. x* Gerenciador de Driver mapeia chamadas para ODBC 2. *x* e o ODBC 3 *. x* drivers.  

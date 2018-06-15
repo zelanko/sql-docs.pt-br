@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908671"
 ---
 # <a name="update---sql-command"></a>SQL de atualização - comando
 Atualiza os registros em uma tabela com novos valores.  

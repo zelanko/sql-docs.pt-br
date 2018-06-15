@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916031"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Usando SQLGetDiagRec e SQLGetDiagField
 Aplicativos chamam **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações de diagnóstico. Essas funções aceitam um identificador de ambiente, conexão, instrução ou descritor e retornam o diagnóstico da função que esse identificador usado pela última vez. O diagnóstico de logon de um identificador específico será descartado quando uma nova função é chamada usando esse identificador. Se a função retornou vários registros de diagnósticos, o aplicativo chama essas funções várias vezes; o número total de registros de status é recuperado pela chamada **SQLGetDiagField** para o registro de cabeçalho (record 0) com a opção SQL_DIAG_NUMBER.  

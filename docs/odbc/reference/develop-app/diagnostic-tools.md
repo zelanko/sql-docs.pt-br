@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909711"
 ---
 # <a name="diagnostic-tools"></a>Ferramentas de diagnóstico
 Dois recursos podem ajudar a diagnosticar problemas em aplicativos ODBC. Ambos estão disponíveis do administrador de ODBC e implementada pelo Gerenciador de Driver. *Rastreamento* fornece um meio para registrar um arquivo de log a sequência de chamadas de função. Analisador do Visual Studio permite a análise de informações sobre a interação de componentes em um ambiente distribuído.  

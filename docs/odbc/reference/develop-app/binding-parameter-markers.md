@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913321"
 ---
 # <a name="binding-parameter-markers"></a>Marcadores de parâmetro de associação
 O aplicativo associa parâmetros chamando **SQLBindParameter**. **SQLBindParameter** associa um parâmetro de cada vez. Com ele, o aplicativo especifica o seguinte:  

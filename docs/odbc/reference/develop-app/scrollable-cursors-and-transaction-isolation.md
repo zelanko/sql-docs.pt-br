@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913651"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursores roláveis e isolamento da transação
 A tabela a seguir lista os fatores que governam a visibilidade das alterações.  

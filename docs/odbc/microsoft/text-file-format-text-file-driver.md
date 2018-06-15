@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911071"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato de arquivo de texto (Driver de arquivo de texto)
 O driver ODBC texto dá suporte a ambos os arquivos de texto delimitados e de largura fixa. Um arquivo de texto consiste em uma linha de cabeçalho opcionais e zero ou mais linhas de texto.  

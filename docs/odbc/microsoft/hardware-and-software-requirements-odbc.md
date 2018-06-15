@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902831"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Requisitos de hardware e Software (ODBC)
 Este tópico lista os requisitos para usar os Drivers de banco de dados de área de trabalho do ODBC.  

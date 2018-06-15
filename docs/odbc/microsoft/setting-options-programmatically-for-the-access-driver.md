@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904751"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Opções de configuração por meio de programação para o Driver de acesso
 |Opção|Description|Método|  

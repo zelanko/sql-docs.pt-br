@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912351"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL para c: Timestamp
 O identificador para o tipo de dados SQL ODBC timestamp é:  

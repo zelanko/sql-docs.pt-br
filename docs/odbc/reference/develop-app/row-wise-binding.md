@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912053"
 ---
 # <a name="row-wise-binding"></a>A associação
 Ao usar a associação, um aplicativo define uma estrutura que contém um ou dois, ou em alguns casos, três elementos para cada coluna para o qual os dados são a ser retornado. O primeiro elemento contém o valor dos dados, e o segundo elemento contém o buffer de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separados, definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, a estrutura contém um elemento de terceiro. O aplicativo, em seguida, aloca uma matriz dessas estruturas, que contém elementos existem linhas no conjunto de linhas.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901681"
 ---
 # <a name="set-deleted-command"></a>Comando do conjunto excluído
 Especifica se os registros marcados para exclusão são processados e se eles estão disponíveis para uso em outros comandos.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915991"
 ---
 # <a name="translator-specification-subkeys"></a>Conversor especificação subchaves
 Tradutor listado na subchave conversor ODBC tem uma subchave de seu próprio. Essa subchave tem o mesmo nome que o valor correspondente na subchave conversor ODBC. Os valores sob essa subchave listam os caminhos completos do conversor e instalação de conversor DLLs e a contagem de uso. Os formatos dos valores são conforme mostrado na tabela a seguir.  

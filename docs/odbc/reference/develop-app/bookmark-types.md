@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909281"
 ---
 # <a name="bookmark-types"></a>Tipos de indicador
 Todos os indicadores em ODBC 3 *. x* são indicadores de comprimento variável. Isso permite que uma chave primária ou um índice exclusivo associado a uma tabela a ser usado como um indicador. O indicador também pode ser um valor de 32 bits, que foi usada no ODBC 2. *x*. Para especificar que um indicador é usado com um cursor, um ODBC 3 *. x* aplicativo define o atributo de instrução SQL_ATTR_USE_BOOKMARK para SQL_UB_VARIABLE. Um indicador de comprimento variável será usado automaticamente.  

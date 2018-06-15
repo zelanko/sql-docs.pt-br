@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915821"
 ---
 # <a name="odbc-reference"></a>Referência ODBC
 Os tópicos a seguir contêm a sintaxe e semânticas informações para todas as funções ODBC.  

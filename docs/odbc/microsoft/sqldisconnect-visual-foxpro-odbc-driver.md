@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901831"
 ---
 # <a name="sqldisconnect-visual-foxpro-odbc-driver"></a>SQLDisconnect (Driver ODBC do Visual FoxPro)
 > [!NOTE]  

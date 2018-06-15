@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911771"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>O Gerenciador de driver&#39;s função no processo de Conexão
 Lembre-se de que aplicativos não chamar funções de driver diretamente. Em vez disso, eles chamam funções do Gerenciador de Driver com o mesmo nome e o Gerenciador de Driver chama as funções de driver. Geralmente, isso acontece quase imediatamente. Por exemplo, o aplicativo chama **SQLExecute** no Gerenciador de Driver e depois de algumas verificações de erro, o Gerenciador de Driver chamará **SQLExecute** no driver.  

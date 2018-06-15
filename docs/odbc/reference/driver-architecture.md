@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916011"
 ---
 # <a name="driver-architecture"></a>Arquitetura do driver
 Arquitetura do driver se encaixa em duas categorias, dependendo de quais instruções SQL de processos de software:  

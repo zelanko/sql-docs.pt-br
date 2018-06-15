@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915511"
 ---
 # <a name="transaction-support"></a>Suporte a transações
 O grau de suporte para transações é definido pelo driver. ODBC foi projetado para ser implementada em um banco de dados usuário único ou de área de trabalho que não precisa gerenciar as várias atualizações para seus dados. Além disso, alguns bancos de dados que oferecem suporte a transações fazer apenas para as instruções de linguagem de manipulação de dados (DML) do SQL; há restrições ou semântica de transação especial em relação ao uso de Data Definition Language (DDL) quando uma transação está ativa. Ou seja, pode haver suporte a transações para várias atualizações simultâneas em tabelas, mas não para alterar o número e a definição das tabelas durante uma transação.  

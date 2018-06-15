@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913411"
 ---
 # <a name="programming-considerations"></a>Considerações sobre programação
 Esta seção aborda brevemente alguns tópicos relacionados ao escrever aplicativos ODBC e drivers.  

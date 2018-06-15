@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909891"
 ---
 # <a name="executing-batches"></a>Lotes em execução
 Antes de um aplicativo executa um lote de instruções, deve primeiro verificar se eles têm suporte. Para fazer isso, o aplicativo chama **SQLGetInfo** com as opções SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. A primeira opção retorna se geração de contagem de linha e o resultado da geração de conjunto de instruções têm suporte em lotes explícitas e procedimentos, enquanto as duas últimas opções define retornam informações sobre a disponibilidade de contagens de linhas e o resultado em parametrizados execução.  

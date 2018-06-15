@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911931"
 ---
 # <a name="data-type-conversions"></a>Conversões de tipo de dados
 Dados podem ser convertidos de um tipo para outro em um dos quatro vezes: quando dados são transferidos da variável de um aplicativo para outro (C para C), quando dados em uma variável de aplicativo são enviados para um parâmetro de instrução (C para SQL), quando os dados em uma coluna do conjunto de resultados são retornados no uma variável de aplicativo (SQL para C), e quando os dados são transferidos da coluna de origem de dados para outro (SQL para SQL).  

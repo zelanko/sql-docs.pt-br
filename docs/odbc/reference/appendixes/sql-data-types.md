@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914181"
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas os tipos de dados SQL que define o DBMS associado. Obter informações sobre como um driver mapeia tipos de DBMS SQL para os identificadores de tipo definidas pelo ODBC SQL e como um driver mapeia os tipos de DBMS SQL para seus próprio identificadores de tipo SQL específica do driver é retornado por uma chamada a **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados das colunas e parâmetros por meio de chamadas **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  

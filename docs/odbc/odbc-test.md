@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914501"
 ---
 # <a name="odbc-test"></a>Teste ODBC
 Teste do Microsoft® ODBC é um aplicativo habilitado para ODBC que você pode usar para testar o Gerenciador de Driver ODBC e drivers ODBC. ODBC 3.51 inclui ANSI e habilitado para Unicode versões de teste do ODBC. Os arquivos correspondentes são os seguintes:  

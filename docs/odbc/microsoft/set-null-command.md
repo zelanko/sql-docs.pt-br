@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901231"
 ---
 # <a name="set-null-command"></a>Comando de conjunto nulo
 Determina como os valores nulos são suportados pelo SQL ALTER TABLE - SQL, criar tabela - e inserir - comandos SQL.  

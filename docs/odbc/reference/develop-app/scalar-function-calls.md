@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913391"
 ---
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
 Funções escalares retornam um valor para cada linha. Por exemplo, a função escalar do valor absoluto considera uma coluna numérica como um argumento e retorna o valor absoluto de cada valor na coluna. É a sequência de escape para chamar uma função escalar  

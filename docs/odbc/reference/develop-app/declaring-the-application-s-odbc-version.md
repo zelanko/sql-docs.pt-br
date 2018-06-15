@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912181"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declarando o aplicativo&#39;s versão do ODBC
 Antes de um aplicativo aloca uma conexão, ele deve definir o atributo de ambiente SQL_ATTR_ODBC_VERSION. Esse atributo indica que o aplicativo segue o ODBC 2. *x* ou ODBC 3. *x* especificação ao usar os seguintes itens:  

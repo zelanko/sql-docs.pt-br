@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913961"
 ---
 # <a name="sending-long-data"></a>Enviando dados Long
 Definem DBMSs *dados long* como qualquer caractere ou dados binários em um determinado tamanho, como 254 caracteres. Pode não ser possível armazenar todo o item de dados longo na memória, como quando o item representa um documento de texto longo ou um bitmap. Como esses dados não podem ser armazenadas em um único buffer, a fonte de dados envia para o driver em partes com **SQLPutData** quando a instrução é executada. Parâmetros para o qual os dados são enviados em tempo de execução são conhecidos como *parâmetros de dados em execução*.  

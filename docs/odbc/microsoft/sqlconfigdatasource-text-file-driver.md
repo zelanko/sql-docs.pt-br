@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904111"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (Driver de arquivo de texto)
 > [!NOTE]  

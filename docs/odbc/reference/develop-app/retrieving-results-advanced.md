@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912191"
 ---
 # <a name="retrieving-results-advanced"></a>Recuperando resultados (avançados)
 Um aplicativo pode especificar que um deslocamento é adicionado ao associados a endereços de buffer de dados e o comprimento/indicador correspondente buffer endereços quando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, ou **SQLSetPos** é chamado. Os resultados dessas adições determinam os endereços usados nessas operações.  

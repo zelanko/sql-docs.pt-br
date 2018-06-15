@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899321"
 ---
 # <a name="setup-dll"></a>DLL de configuração
 O administrador ODBC chama a função **ConfigDSN** quando os usuários configurar fontes de dados.

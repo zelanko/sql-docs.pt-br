@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913161"
 ---
 # <a name="setting-parameter-values"></a>Definir valores de parâmetro
 Para definir o valor de um parâmetro, o aplicativo simplesmente define o valor da variável associada ao parâmetro. Não é importante quando esse valor for definido, desde que ele está definido antes da instrução é executada. O aplicativo pode definir o valor antes ou depois de associação da variável, e ele pode alterar o valor de quantas vezes desejar. Quando a instrução é executada, o driver simplesmente recupera o valor atual da variável. Isso é particularmente útil quando uma instrução preparada é executada mais de uma vez; o aplicativo define novos valores para algumas ou todas as variáveis de cada vez que a instrução é executada. Para obter um exemplo disso, consulte [execução preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md)anteriormente nesta seção.  

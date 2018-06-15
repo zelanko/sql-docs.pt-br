@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918181"
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>Migrar as Configurações de Backup Gerenciado do SQL Server 2014 para o SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

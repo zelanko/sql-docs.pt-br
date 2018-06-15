@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913121"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Posicionada instruções Update e Delete
 Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultados com uma atualização posicionada ou instrução delete. Posicionado update e delete instruções são suportadas por algumas fontes de dados, mas não todas. Para determinar se um suporte de fonte de dados posicionado instruções update e delete, um aplicativo chama **SQLGetInfo** com SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 *informação* (dependendo do tipo de cursor). Observe que a biblioteca de cursores ODBC simula posicionado instruções update e delete.  

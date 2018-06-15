@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913731"
 ---
 # <a name="attribute-conformance"></a>Conformidade de atributo
 A tabela a seguir indica o nível de conformidade de cada atributo de ambiente ODBC, que isso é bem definido.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910521"
 ---
 # <a name="sql-statements"></a>Instruções SQL
 Aplicativos ODBC realizam quase todo o acesso de banco de dados executando instruções SQL. A forma dessas instruções — embutido ou construída em tempo de execução, interoperável ou dados específicos do código-fonte e assim por diante — depende das necessidades do aplicativo.  

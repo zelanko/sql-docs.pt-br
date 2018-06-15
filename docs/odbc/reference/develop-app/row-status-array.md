@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912531"
 ---
 # <a name="row-status-array"></a>Matriz de Status de linha
 Além dos dados, **SQLFetch** e **SQLFetchScroll** pode retornar uma matriz que fornece o status de cada linha no conjunto de linhas. Esta matriz é especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR. Esta matriz é alocada pelo aplicativo e deve ter elementos são especificadas pelo atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE. Os valores na matriz são definidos **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, e **SQLSetPos.** Os valores descrevem o status da linha e se o status foi alterado desde a última busca.  

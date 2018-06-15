@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911301"
 ---
 # <a name="diagnostic-messages"></a>Mensagens de diagnóstico
 Uma mensagem de diagnóstico é retornada com cada SQLSTATE. O SQLSTATE mesmo geralmente é retornado com um número de mensagens diferentes. Por exemplo, o SQLSTATE 42000 (sintaxe ou violação de acesso) é retornado para a maioria dos erros de sintaxe SQL. No entanto, cada erro de sintaxe costuma ser descrita por uma mensagem diferente.  

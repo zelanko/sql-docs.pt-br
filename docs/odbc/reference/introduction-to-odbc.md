@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917121"
 ---
 # <a name="introduction-to-odbc"></a>Introdução ao ODBC
 Esta seção fornece um breve histórico da linguagem de consulta estruturada e ODBC e inclui informações conceituais sobre a interface do ODBC.  

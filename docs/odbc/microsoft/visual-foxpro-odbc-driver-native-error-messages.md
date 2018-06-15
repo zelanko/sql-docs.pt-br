@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914151"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensagens de erro nativo de Driver ODBC do Visual FoxPro
 As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do Visual FoxPro.  

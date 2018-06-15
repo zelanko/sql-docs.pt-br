@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912621"
 ---
 # <a name="descriptor-handles"></a>Identificadores de descritor
 Um *descritor* é uma coleção de metadados que descrevem os parâmetros de uma instrução SQL ou as colunas do conjunto de resultados, como visto pelo aplicativo ou driver (também conhecido como o *implementação*). Portanto, pode preencher um descritor de qualquer um dos quatro funções:  

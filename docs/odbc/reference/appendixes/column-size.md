@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914321"
 ---
 # <a name="column-size"></a>Tamanho da coluna
 O tamanho da coluna (ou parâmetro) dos tipos de dados numérico é definido como o número máximo de dígitos usado pelo tipo de dados da coluna ou parâmetro ou a precisão dos dados. Para tipos de caracteres, esse é o comprimento em caracteres de dados. para tipos de dados binários, o tamanho da coluna é definido como o comprimento em bytes dos dados. Para o tempo, timestamp e todos os tipos de dados de intervalo, este é o número de caracteres a representação de caracteres de dados. O tamanho da coluna definido para cada tipo de dados SQL conciso é mostrado na tabela a seguir.  

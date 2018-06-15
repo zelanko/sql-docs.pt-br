@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909752"
 ---
 # <a name="transfer-octet-length"></a>Comprimento do octeto transferência
 O comprimento de octetos de transferência de uma coluna é o número máximo de bytes retornados para o aplicativo quando os dados são transferidos para seu tipo de dados C padrão. Para dados de caracteres, o comprimento de octetos de transferência não inclui o espaço para o caractere null de terminação. O comprimento de octetos de transferência de uma coluna pode ser diferente do número de bytes necessários para armazenar os dados na fonte de dados.  

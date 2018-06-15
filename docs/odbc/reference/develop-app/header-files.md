@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912391"
 ---
 # <a name="header-files"></a>Arquivos de cabeçalho
 O arquivo de cabeçalho do SQL contém protótipos para as funções e recursos no nível de conformidade a principal Interface de ODBC. O arquivo de cabeçalho Sqlext.h contém protótipos para as funções e recursos no nível 1 e níveis de conformidade de API do nível 2. O arquivo de cabeçalho sqlext contém definições de tipo e indicadores para os tipos de dados SQL.  

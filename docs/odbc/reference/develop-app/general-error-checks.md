@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908691"
 ---
 # <a name="general-error-checks"></a>Verificações de erro geral
 O Gerenciador de Driver verifica um erro geral. Sempre retornará SQL_ERROR ao encontrar o seguinte erro: A função deve ser suportada pelo driver.

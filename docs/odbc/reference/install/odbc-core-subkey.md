@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916061"
 ---
 # <a name="odbc-core-subkey"></a>Subchave do núcleo ODBC
 O valor na subchave núcleo de ODBC fornece a contagem de uso para os componentes principais (Gerenciador de Driver, biblioteca de cursores, instalador DLL e assim por diante). O formato desse valor é mostrado na tabela a seguir.  

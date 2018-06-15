@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915235"
 ---
 # <a name="uses-of-catalog-data"></a>Usos de dados do catálogo
 Aplicativos usam dados de catálogo em uma variedade de maneiras. Aqui estão alguns usos comuns:  

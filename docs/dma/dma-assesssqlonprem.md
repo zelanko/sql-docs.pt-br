@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870721"
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>Realizar uma avaliação de migração do SQL Server
 As seguintes instruções passo a passo o ajudarão a realizar a primeira avaliação de migração para o SQL Server no local, em execução em uma VM do Azure, ou um banco de dados SQL Azure, usando o Assistente de migração de dados do SQL Server.

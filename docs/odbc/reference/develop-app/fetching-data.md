@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909101"
 ---
 # <a name="fetching-data"></a>Buscando dados
 O processo de recuperação de linhas do conjunto de resultados e retorná-los para o aplicativo é chamado *busca*. Esta seção descreve como buscar dados.  

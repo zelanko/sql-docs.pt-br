@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911182"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementando SQLGetDiagRec e SQLGetDiagField
 **SQLGetDiagRec** e **SQLGetDiagField** são implementados pelo Gerenciador de Driver e cada driver. O Gerenciador de Driver e cada driver mantenham registros de diagnóstico para cada ambiente, a conexão, a instrução e o identificador do descritor e liberará esses registros somente quando outra função seja chamada com que o identificador ou o identificador é liberado.  

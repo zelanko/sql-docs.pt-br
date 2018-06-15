@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913211"
 ---
 # <a name="return-codes-odbc"></a>Códigos de retorno ODBC
 Cada função em ODBC retorna um código, conhecido como seu *retornam o código,* que indica o êxito ou falha da função geral. Em geral, a lógica de programação se baseia em códigos de retorno.  

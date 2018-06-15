@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910351"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>Obtendo e definindo campos de descritor
 Esta seção descreve os métodos de que um aplicativo pode usar para recuperar ou definir os valores nos campos de descritor.  

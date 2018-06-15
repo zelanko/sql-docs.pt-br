@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912421"
 ---
 # <a name="statement-attributes"></a>Atributos de instrução
 Atributos de instrução são características da instrução. Por exemplo, se usar indicadores e o tipo de definição do cursor a ser usado com os resultados da instrução são atributos de instrução.  

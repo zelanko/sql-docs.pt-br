@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910731"
 ---
 # <a name="developing-applications"></a>Desenvolvimento de aplicativos
 Esta seção contém informações sobre como desenvolver aplicativos que usam a interface ODBC e drivers de implementação-la.  

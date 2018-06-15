@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913341"
 ---
 # <a name="new-features"></a>Novos recursos
 A nova funcionalidade a seguir foi introduzida em ODBC 3. *x*. ODBC 3. *x* aplicativo trabalhando com um ODBC 2 *. x* driver não poderão usar essa funcionalidade. O ODBC 3. *x* Gerenciador de Driver não mapear esses recursos quando estiver trabalhando com um ODBC 2 *. x* driver.  

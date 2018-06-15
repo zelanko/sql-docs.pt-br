@@ -3,13 +3,10 @@ title: A associação | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d0d69f644ae354c795bb8d7352c00be4fe995cf
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909771"
 ---
 # <a name="column-wise-binding"></a>A associação
 Ao usar a associação, um aplicativo associar um ou dois ou em alguns casos, três, matrizes para cada coluna para o qual os dados são a ser retornado. A primeira matriz contém os valores de dados, e a segunda matriz contém buffers de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separados, definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, está associada a uma matriz de terceira. Cada matriz contém elementos existem linhas no conjunto de linhas.  

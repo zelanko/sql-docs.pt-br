@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914861"
 ---
 # <a name="using-data-buffers"></a>Usando Buffers de dados
 Buffers de dados são descritos por três partes de informações: sua extensão de tipo, endereço e bytes. Sempre que uma função precisa de uma dessas partes de informações e não soubê-lo, ele tem um argumento com a qual o aplicativo passa.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909961"
 ---
 # <a name="sql-minimum-grammar"></a>Gramática SQL mínima
 Esta seção descreve a sintaxe SQL mínima que deve dar suporte a um driver ODBC. A sintaxe descrita nesta seção é um subconjunto da sintaxe de nível de entrada do SQL-92.  

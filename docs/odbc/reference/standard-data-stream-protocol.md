@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915221"
 ---
 # <a name="standard-data-stream-protocol"></a>Protocolo de fluxo de dados padrão
 Um protocolo de fluxo de dados padrão é uma maneira de acessar dados em DBMSs heterogêneos. Na verdade, protocolos de fluxo de dados padrão já existem: o padrão de acesso de banco de dados remoto (RDA) ANSI/ISO ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) e o IBM DRDA Distributed Relational Database Architecture () ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Embora ambos os sistemas mostram promessa, não é amplamente implementado hoje.

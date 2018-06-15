@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908111"
 ---
 # <a name="database-access-architecture"></a>Arquitetura de acesso de banco de dados
 Uma das perguntas no desenvolvimento de ODBC foi qual parte da arquitetura de acesso do banco de dados para padronizar. O SQL descritos na seção anterior de interfaces de programação — embedded SQL, SQL módulos e CLIs — são apenas uma parte dessa arquitetura. Na verdade, porque o ODBC foi usado principalmente para conectar-se a aplicativos baseados em PC minicomputador e mainframe DBMSs, também houve vários componentes de rede, alguns dos quais podem ser padronizados.  

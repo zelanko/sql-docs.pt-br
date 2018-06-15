@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902651"
 ---
 # <a name="string-limitations"></a>Limitações de cadeia de caracteres
 O comprimento máximo de uma cadeia de caracteres de instrução SQL é 65.000 caracteres.  

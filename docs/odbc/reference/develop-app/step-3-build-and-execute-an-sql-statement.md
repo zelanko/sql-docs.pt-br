@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915501"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Etapa 3: Criar e executar uma instrução SQL
 A terceira etapa é criar e executar uma instrução SQL, conforme mostrado na ilustração a seguir. Os métodos usados para executar essa etapa serão prováveis podem variar muito. O aplicativo pode solicitar que o usuário insira uma instrução SQL, crie uma instrução SQL com base na entrada do usuário, ou usar uma instrução SQL embutido. Para obter mais informações, consulte [construindo instruções de SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914701"
 ---
 # <a name="configuring-data-sources"></a>Configurando fontes de dados
 Informações sobre fontes de dados são armazenadas no registro do sistema. Os usuários modificar informações de fonte de dados através de um programa de administração. Isso pode ser o administrador ODBC, o dispositivo do painel de controle do ODBC ou um programa de administração escritos por um desenvolvedor de aplicativo ou driver.  

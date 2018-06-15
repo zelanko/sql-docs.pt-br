@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913461"
 ---
 # <a name="scrollable-cursors"></a>Cursores roláveis
 Aplicativos modernos em tela, o usuário rola para trás e frente os dados. Para esses aplicativos, retornando a uma linha anteriormente busca é um problema. Uma possibilidade é feche e reabra o cursor e, em seguida, buscar linhas até que o cursor atinge a linha necessária. Outra possibilidade é ler o conjunto de resultados, armazenar em cache localmente e implementar a rolagem no aplicativo. Ambas as possibilidades funcionam bem somente com conjuntos de resultados pequenos e a segunda possibilidade é difícil de implementar. Uma solução melhor é usar um *cursor rolável,* que pode retroceder e Avançar no conjunto de resultados.  

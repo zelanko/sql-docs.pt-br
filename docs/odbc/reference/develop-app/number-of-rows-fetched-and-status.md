@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914001"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Número de linhas buscadas e Status
 Se o atributo da instrução SQL_ATTR_ROWS_FETCHED_PTR tiver sido definido, ele especifica um buffer que retorna o número de linhas buscadas pela chamada para **SQLFetch** ou **SQLFetchScroll**e linhas de erro. (Esse número é uma contagem de todas as linhas que não têm o status SQL_ROW_NO_ROWS.) Após uma chamada para **SQLBulkOperations** ou **SQLSetPos**, o buffer contém o número de linhas que foram afetados por uma operação em massa executada pela função. Se o atributo da instrução SQL_ATTR_ROW_STATUS_PTR tiver sido definido, **SQLFetch** ou **SQLFetchScroll** retorna o *matriz de status de linha,* que fornece o status de cada linha retornada. Ambos os buffers apontados por esses campos são alocados pelo aplicativo e preenchidos pelo driver. Um aplicativo deve se certificar de que esses ponteiros permaneçam válidos até que o cursor seja fechado.  

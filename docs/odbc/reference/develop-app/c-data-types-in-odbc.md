@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911721"
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de dados C em ODBC
 ODBC define os tipos de dados de C que são usados por variáveis de aplicativo e seus identificadores de tipo correspondente. Eles são usados pelos buffers que estão associados a colunas do conjunto de resultados e parâmetros de instrução. Por exemplo, suponha que um aplicativo que deseja recuperar dados de uma coluna do conjunto de resultados em formato de caractere. Declara uma variável com o SQLCHAR * tipo de dados e liga a essa variável para a coluna do conjunto de resultados com um identificador de tipo de SQL_C_CHAR. Para obter uma lista completa de tipos de dados C e identificadores de tipo, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  

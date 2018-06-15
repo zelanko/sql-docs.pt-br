@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915951"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 A primeira técnica para enviar instruções SQL para o DBMS é inserida SQL. Como SQL não usam variáveis e instruções de controle de fluxo, ele geralmente é usado como um subidioma do banco de dados que pode ser adicionado a um programa gravado em uma linguagem de programação convencional, como C ou COBOL. Essa é uma ideia central do embedded SQL: colocar instruções SQL em um programa gravado em um host de linguagem de programação. Em resumo, as técnicas a seguir são usadas para inserir instruções SQL em um idioma do host:  

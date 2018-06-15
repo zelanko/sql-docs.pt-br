@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904061"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Consultar e atualizar dados do Visual FoxPro do Microsoft Access
 Você pode consultar e atualizar dados armazenados em um banco de dados do Visual FoxPro de um banco de dados do Microsoft Access, usando a opção de tabela do Link.  

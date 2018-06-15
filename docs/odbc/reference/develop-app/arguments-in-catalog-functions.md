@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911491"
 ---
 # <a name="arguments-in-catalog-functions"></a>Argumentos em funções de catálogo
 Todas as funções de catálogo aceitam argumentos com que um aplicativo pode restringir o escopo dos dados retornados. Por exemplo, as primeira e segunda chamadas para **SQLTables** no código a seguir retorna um conjunto de resultados contendo informações sobre todas as tabelas, enquanto a terceira chamada retorna informações sobre a tabela Orders:  

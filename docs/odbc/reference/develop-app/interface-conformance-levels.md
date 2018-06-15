@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912041"
 ---
 # <a name="interface-conformance-levels"></a>Níveis de conformidade de interface
 A finalidade de redistribuição é informar ao aplicativo de quais recursos estão disponíveis para ele no driver. Um esquema de redistribuição com base em funções não suficientemente atingi-lo. Em ODBC 3. *x*, drivers são classificados com base nos recursos que eles possuem. O recurso de suporte pode incluir suporte a função. Ele também pode incluir um campo de descrição, um atributo de instrução, um valor de "Y" de suporte para um tipo de informação retornado por **SQLGetInfo**, e assim por diante.  

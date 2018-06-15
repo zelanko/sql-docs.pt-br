@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915891"
 ---
 # <a name="updating-data-overview"></a>Visão geral sobre atualização de dados
 Aplicativos podem atualizar dados, executando instruções SQL ou chamando **SQLSetPos** ou **SQLBulkOperations**. **ATUALIZAÇÃO**, **excluir**, e **inserir** instruções atuar diretamente na fonte de dados e geralmente têm suporte pelos drivers. Pesquisado atualização e instruções delete contém uma especificação de linhas para alterar. Posicionado atualização e instruções delete e **SQLSetPos** agir na fonte de dados através de um cursor e têm menos amplamente suporte.  

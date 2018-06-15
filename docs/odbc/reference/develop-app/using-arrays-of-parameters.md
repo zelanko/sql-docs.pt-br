@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919291"
 ---
 # <a name="using-arrays-of-parameters"></a>Usando matrizes de parâmetros
 Para usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar o número de conjuntos de parâmetros. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar o endereço de uma variável na qual o driver pode retornar o número de conjuntos de parâmetros processados, incluindo conjuntos de erro. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para apontar para uma matriz no qual retornar informações de status para cada linha de valores de parâmetro. O driver armazena esses endereços na estrutura mantém para a instrução.  

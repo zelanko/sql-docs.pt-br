@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32935383"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Criar um banco de dados do gráfico e executar algumas consultas usando o T-SQL de correspondência de padrões
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

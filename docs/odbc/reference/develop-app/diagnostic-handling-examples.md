@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908191"
 ---
 # <a name="diagnostic-handling-examples"></a>Exemplos de manipulação de diagnóstico
 Os exemplos a seguir mostram como vários componentes em uma conexão ODBC podem gerar mensagens de diagnóstico e como vários drivers podem retornar o diagnóstico para o aplicativo com **SQLGetDiagRec**.  

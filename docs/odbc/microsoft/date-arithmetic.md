@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899151"
 ---
 # <a name="date-arithmetic"></a>Aritmética de data
 O driver dá suporte à adição e subtração de um número inteiro de uma coluna de data, hora ou carimbo de hora. Para uma coluna de data, o número inteiro Especifica o número de dias para adicionar ou subtrair. Para uma coluna de hora ou carimbo de hora, o inteiro que especifica o número de segundos para adicionar ou subtrair.

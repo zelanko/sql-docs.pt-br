@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911501"
 ---
 # <a name="hard-coded-sql-statements"></a>Instruções SQL embutidas
 Aplicativos que executam uma tarefa fixa geralmente contêm instruções de SQL embutido. Por exemplo, um sistema de entrada de pedidos pode usar a seguinte chamada a pedidos de vendas Abrir lista:  

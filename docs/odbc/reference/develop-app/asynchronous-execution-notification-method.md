@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914241"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)
 ODBC permite que a execução assíncrona de conexão e as operações de instrução. Um thread de aplicativo pode chamar uma função ODBC no modo assíncrono e a função pode retornar antes da operação for concluída, permitindo que o thread de aplicativo executar outras tarefas. No SDK do Windows 7, para operações de conexão, ou instrução assíncrona um aplicativo determinado que a operação assíncrona foi concluída usando o método de sondagem. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona é concluída usando o método de notificação.  

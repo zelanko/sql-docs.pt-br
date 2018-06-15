@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911481"
 ---
 # <a name="choosing-an-sql-grammar"></a>Escolhendo uma gramática SQL
 A primeira decisão a tomar quando construindo instruções SQL é qual gramática para usar. Além de gramáticas disponíveis de vários corpos de padrões, como Open Group, ANSI e ISO, praticamente todos os fornecedores DBMS define sua própria gramática, cada um deles varia do padrão.  

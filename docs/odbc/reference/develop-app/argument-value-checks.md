@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908341"
 ---
 # <a name="argument-value-checks"></a>Verificações de valor de argumento
 O Gerenciador de Driver verifica os seguintes tipos de argumentos. Salvo indicação em contrário, o Gerenciador de Driver retornará SQL_ERROR para erros em valores de argumento.  

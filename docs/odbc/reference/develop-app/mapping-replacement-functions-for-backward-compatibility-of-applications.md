@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913971"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapeamento de funções de substituição para compatibilidade com versões anteriores de aplicativos
 Um ODBC 3 *. x* aplicativo trabalhar com o ODBC 3 *. x* Gerenciador de Driver funcionam em um ODBC 2. *x* driver, desde que nenhum recurso novo é usado. Ambos duplicada funcionalidades e alterações de comportamento, no entanto, afetar a maneira que o ODBC 3. *x* aplicativo funciona em um ODBC 2. *x* driver. Ao trabalhar com um ODBC 2. *x* driver, o Gerenciador de Driver mapeia os seguintes ODBC 3. *x* funções, que a substituição de um ou mais ODBC 2. *x* funções, em correspondente ODBC 2. *x* funções.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908561"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Conectando a dados de um fonte ou Driver
 Um aplicativo pode ser conectado a qualquer número de drivers e fontes de dados. Eles podem ser uma variedade de drivers e fontes de dados, o mesmo driver e uma variedade de fontes de dados ou até mesmo várias conexões com o mesmo driver e a fonte de dados.  

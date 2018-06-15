@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911641"
 ---
 # <a name="ordinary-arguments"></a>Argumentos comuns
 Quando um argumento de cadeia de caracteres de função de catálogo é um argumento normal, ele é tratado como uma cadeia de caracteres literal. Um argumento comum aceita um padrão de pesquisa de cadeia de caracteres, nem uma lista de valores. No caso de um argumento comum é significativo e caracteres de aspas na cadeia de caracteres exibidos literalmente. Esses argumentos são tratados como argumentos comuns se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_FALSE; eles são tratados como argumentos de identificador em vez disso, se esse atributo é definido como SQL_TRUE.  

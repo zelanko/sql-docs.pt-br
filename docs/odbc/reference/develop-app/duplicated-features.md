@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913353"
 ---
 # <a name="duplicated-features"></a>Recursos duplicados
 A seguir ODBC 2. *x* funções foram duplicadas pelo ODBC 3. *x* funções. Como resultado, o ODBC 2. *x* funções são substituídas no ODBC 3. *x*. O ODBC 3. *x* funções são referidas como funções de substituição.  

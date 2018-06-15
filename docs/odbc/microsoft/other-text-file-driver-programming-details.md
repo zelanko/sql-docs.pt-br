@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902061"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Outros detalhes de programação de Driver de arquivo de texto
 > [!NOTE]  

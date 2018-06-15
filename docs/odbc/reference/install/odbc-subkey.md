@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916231"
 ---
 # <a name="odbc-subkey"></a>Subchave do ODBC
 Os valores na subchave ODBC especificam opções de rastreamento de ODBC. Essas opções são definidas por meio da guia de rastreamento da caixa de diálogo Administrador de fonte de dados ODBC exibida pelo **SQLManageDataSources**. A subchave ODBC em si é opcional. O formato desses valores é conforme mostrado na tabela a seguir.  

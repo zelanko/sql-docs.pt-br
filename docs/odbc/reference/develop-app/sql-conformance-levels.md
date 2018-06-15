@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913291"
 ---
 # <a name="sql-conformance-levels"></a>Níveis de conformidade do SQL
 O nível de suporte por um driver de gramática de SQL-92 é indicado pelo valor retornado por uma chamada para **SQLGetInfo** com o tipo de informação SQL_SQL_CONFORMANCE. Indica se o driver está de acordo com os níveis de entrada, transição de FIPS, intermediário ou completo definidos em SQL-92.  

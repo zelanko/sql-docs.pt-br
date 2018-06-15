@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911941"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinando os DBMSs de destino e os Drivers
 A próxima questão a considerar é, o que são o alvo DBMSs para o aplicativo e quais drivers estão disponíveis que dão suporte a esses DBMSs? Como aplicativos genéricos tendem a ser altamente interoperável, a questão de destino DBMSs é mais aplicável para aplicativos personalizados e verticais. No entanto, a questão de drivers de destino se aplica a todos os aplicativos, como drivers variam amplamente velocidade, qualidade, suporte a recursos e disponibilidade. Além disso, se os drivers devem ser redistribuídos com o aplicativo, o custo e a disponibilidade dos planos de licenciamento precisam ser considerado.  

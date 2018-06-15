@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912261"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Buscar linhas com SQLBulkOperations
 Dados podem ser refetched em um conjunto de linhas usando indicadores por uma chamada para **SQLBulkOperations.** As linhas a serem obtidos são identificadas por indicadores em uma coluna de indicador associado. Colunas com um valor de SQL_COLUMN_IGNORE não tiverem sido buscadas.  

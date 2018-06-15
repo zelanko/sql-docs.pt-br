@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910951"
 ---
 # <a name="cursors"></a>Cursores
 Um aplicativo busca dados com um *cursor*. Um cursor é diferente de um conjunto de resultados: um conjunto de resultados é o conjunto de linhas que corresponde aos critérios de pesquisa específica, enquanto um cursor é o software que retorna as linhas para o aplicativo. O nome *cursor,* como ele se aplica aos bancos de dados, provavelmente foi originado do cursor piscando em um computador com terminal. Assim como o cursor indica a posição atual na tela e onde as palavras digitadas aparecerá próximas, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados e quais linhas serão retornadas em seguida.  

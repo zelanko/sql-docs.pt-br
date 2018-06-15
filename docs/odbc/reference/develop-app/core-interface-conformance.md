@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913981"
 ---
 # <a name="core-interface-conformance"></a>Conformidade de Interface de núcleo
 Todos os drivers ODBC devem exibir pelo menos nível de núcleo conformidade de interface. Como os recursos no nível de núcleo são aqueles requeridos por aplicativos interoperáveis mais genéricos, o driver pode trabalhar com esses aplicativos. Os recursos no nível de núcleo também correspondem aos recursos definidos na especificação ISO CLI e para os recursos definidos na especificação Open CLI de grupo. Um driver ODBC do nível de núcleo interface – compatível permite que o aplicativo faça o seguinte:  

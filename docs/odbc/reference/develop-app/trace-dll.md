@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915771"
 ---
 # <a name="trace-dll"></a>DLL de rastreamento
 A DLL que executa o rastreamento é um dos componentes centrais do ODBC. O rastreamento da DLL no momento é fornecido como um exemplo de DLL no componente de ODBC do SDK do Windows e foi incluído anteriormente Microsoft Data Access Components (MDAC) SDK. Portanto, a entrada do registro, a interface e o código de exemplo para a DLL de rastreamento estão disponíveis. Essa DLL pode ser substituída por um rastreamento de DLL produzido por um usuário ODBC ou um fornecedor de terceiros. Uma DLL de rastreamento personalizado deve ser fornecido um nome diferente a DLL de rastreamento de exemplo original. DLLs de rastreamento devem ser instalados no diretório do sistema ou não carregarão. As cadeias de caracteres de conexão não serão passadas para o rastreamento de DLL pelo Gerenciador de Driver.  

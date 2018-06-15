@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916861"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e a CLI padrão
 ODBC de acordo com as seguintes especificações e padrões que lidam com a Interface de nível de chamada (CLI). (Os recursos de ODBC são um subconjunto de cada um desses padrões.)  

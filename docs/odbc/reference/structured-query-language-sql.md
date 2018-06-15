@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916623"
 ---
 # <a name="structured-query-language-sql"></a>SQL (Structured Query Language)
 Um DBMS típico permite aos usuários armazenar, acessar e modificar dados de uma maneira organizada e eficiente. Originalmente, os usuários de DBMSs foram programadores. Acessar os dados armazenados, é necessário escrever um programa em uma linguagem de programação como COBOL. Enquanto esses programas foram escritos com frequência para apresentar uma interface amigável para um usuário sem conhecimento técnico, o acesso aos dados em si necessário os serviços de um programador experiente. Casual acesso aos dados não era prático.  

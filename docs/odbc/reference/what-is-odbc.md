@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917395"
 ---
 # <a name="what-is-odbc"></a>O que é ODBC?
 Muitos erros de concepção sobre ODBC existem no mundo da computação. Para o usuário final, é um ícone no painel de controle do Microsoft® Windows®. Para o programador de aplicativo, é uma biblioteca que contém rotinas de acesso a dados. Para muitos outros, é a resposta para todos os problemas de acesso ao banco de dados nunca imaginado.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906351"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C para exemplos de conversão de dados SQL
 Os exemplos a seguir ilustram como o driver converte dados de C para dados do SQL:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912541"
 ---
 # <a name="setting-up-the-cursor"></a>Configurando o Cursor
 O aplicativo pode especificar o tipo de cursor antes de executar uma instrução que cria um resultado definido. Ele faz isso com o atributo SQL_ATTR_CURSOR_TYPE de instrução. Se o aplicativo não especificar explicitamente um tipo, será usado um cursor somente de avanço. Para obter um cursor misto, um aplicativo especifica um cursor controlado por mas declara um conjunto de chaves tamanho menor que o conjunto de resultados tamanho.  

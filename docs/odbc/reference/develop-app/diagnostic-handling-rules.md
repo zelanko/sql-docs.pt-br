@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911631"
 ---
 # <a name="diagnostic-handling-rules"></a>Regras de manipulação de diagnóstico
 As regras a seguir controlam a manipulação de diagnóstica no **SQLGetDiagRec** e **SQLGetDiagField**.  

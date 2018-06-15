@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915881"
 ---
 # <a name="writing-an-interoperable-application"></a>Escrevendo um aplicativo de interoperabilidade
 Sempre que um aplicativo usa o mesmo código com mais de um driver, esse código deve ser interoperável entre esses drivers. Na maioria dos casos, essa é uma tarefa fácil. Por exemplo, o código para buscar linhas com um cursor somente de avanço é o mesmo para todos os drivers. Em alguns casos, isso pode ser mais difícil. Por exemplo, o código para construir identificadores para uso em instruções SQL deve considerar o caso de identificador, cotar e convenções de nomenclatura de três partes, parte de uma e duas partes.  

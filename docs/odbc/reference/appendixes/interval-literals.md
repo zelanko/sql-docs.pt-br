@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914271"
 ---
 # <a name="interval-literals"></a>Literais de intervalo
 ODBC requer que todos os drivers de suporte à conversão do tipo de dados SQL_CHAR ou SQL_VARCHAR para todos os tipos de dados de intervalo de C. Se a fonte de dados subjacente não oferece suporte a tipos de dados de intervalo, no entanto, o driver precisa saber o formato correto do valor no campo SQL_CHAR para oferecer suporte a essas conversões. Da mesma forma, o ODBC requer que qualquer ODBC C tipo ser conversível em SQL_CHAR ou SQL_VARCHAR, portanto, um driver precisa saber qual formato de um intervalo armazenado no campo de caractere deve ter. Esta seção descreve a sintaxe de literais de intervalo, que o gravador de driver deve ser usado para validar os campos SQL_CHAR durante a conversão para ou de tipos de dados de intervalo de C.  

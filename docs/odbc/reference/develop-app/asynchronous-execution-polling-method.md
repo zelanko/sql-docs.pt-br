@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913821"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Execução assíncrona (método de pesquisa)
 Antes de ODBC 3.8 e SDK do Windows 7, operações assíncronas foram permitida apenas em funções de instrução. Para obter mais informações, consulte o **executar operações de instrução assincronamente**, mais adiante neste tópico.  

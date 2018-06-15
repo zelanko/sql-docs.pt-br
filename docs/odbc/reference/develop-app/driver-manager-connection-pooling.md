@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914281"
 ---
 # <a name="driver-manager-connection-pooling"></a>Pooling de Conexão de Gerenciador de driver
 O pool de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecida para cada uso. Depois que uma conexão foi criado e colocado em um pool, um aplicativo pode reutilizar essa conexão sem executar o processo de conexão completa.  

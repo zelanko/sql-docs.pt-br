@@ -37,6 +37,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904671"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Suporte para regras e procedimentos armazenados (do Visual FoxPro ODBC Driver), valores padrão e gatilhos
 Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou procedimentos armazenados usando o Driver de ODBC do Visual FoxPro. No entanto, seu aplicativo pode interagir com as regras existentes, gatilhos, valores padrão ou procedimentos armazenados que insere, atualiza ou exclui do Visual FoxPro dados armazenados em um banco de dados.  

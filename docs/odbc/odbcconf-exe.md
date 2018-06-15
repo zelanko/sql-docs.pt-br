@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914301"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF. EXE
 ODBCCONF.exe é uma ferramenta de linha de comando que permite que você configure os nomes de fonte de dados e drivers ODBC.  

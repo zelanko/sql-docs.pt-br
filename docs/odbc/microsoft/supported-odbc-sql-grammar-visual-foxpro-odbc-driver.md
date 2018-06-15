@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906911"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Gramática SQL ODBC com suporte (Driver ODBC do Visual FoxPro)
 O Driver ODBC do Microsoft Visual FoxPro suporta o seguinte:  

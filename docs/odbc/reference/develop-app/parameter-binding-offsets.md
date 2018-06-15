@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913511"
 ---
 # <a name="parameter-binding-offsets"></a>Deslocamentos de associação de parâmetros
 Um aplicativo pode especificar que um deslocamento é adicionado ao associados a endereços de buffer do parâmetro e o comprimento/indicador correspondente buffer endereços quando **SQLExecDirect** ou **SQLExecute** é chamado. O resultado dessas adições determina os endereços usados nessas operações.  

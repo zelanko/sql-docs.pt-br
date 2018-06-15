@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916871"
 ---
 # <a name="other-driver-architectures"></a>Outras arquiteturas de Driver
 Alguns drivers ODBC não estritamente de acordo com a arquitetura descrita anteriormente. Isso pode ser porque os drivers de executam tarefas que não sejam aqueles de um driver ODBC tradicional ou não são drivers no sentido normal.  

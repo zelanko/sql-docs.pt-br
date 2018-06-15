@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910911"
 ---
 # <a name="behavioral-changes"></a>Alterações de comportamento
 Alterações de comportamento são as alterações para o qual o *sintaxe* da interface permanece a mesma, mas o *semântica* foram alterados. Para que essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente do que a mesma funcionalidade em ODBC 3. *x*.  

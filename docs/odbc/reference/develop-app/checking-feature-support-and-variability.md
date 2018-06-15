@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909321"
 ---
 # <a name="checking-feature-support-and-variability"></a>Suporte ao recurso de verificação e variabilidade
 Para verificar o suporte ao recurso e a variabilidade, os aplicativos geralmente chamar **SQLGetInfo**, **SQLGetFunctions**, e **SQLGetTypeInfo**. Um bom ponto de partida é níveis de conformidade de gramática SQL e de API do driver. Eles descrevem amplo níveis de suporte ao recurso. O aplicativo pode chamar **SQLGetInfo** com outras opções para determinar o suporte ou variação dos recursos de que precisa, **SQLGetFunctions** para determinar se as funções ele precisa além retornado há suporte para o nível de conformidade, e **SQLGetTypeInfo** para determinar quais tipos de dados SQL têm suporte.  

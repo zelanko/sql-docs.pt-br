@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908991"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>Determinar o número de linhas afetadas
 Depois que um aplicativo atualiza, exclui ou insere linhas, ele pode chamar **SQLRowCount** para determinar quantas linhas foram afetadas. **SQLRowCount** retorna esse valor se ou não as linhas foram atualizadas, excluídas ou inseridas executando um **atualização**, **excluir**, ou **inserir** instrução, executando um posicionadas de atualização ou exclusão da instrução ou chamando **SQLSetPos**.  

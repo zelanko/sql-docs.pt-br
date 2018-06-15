@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904581"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Arquivo Schema (Driver de arquivo de texto)
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado por meio de um arquivo de informações de esquema. O arquivo de informações de esquema é sempre chamado Schema e sempre é mantido no mesmo diretório como a fonte de dados de texto. O arquivo de informações de esquema fornece IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema.ini é sempre necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema quando sua tabela de texto contém a data e hora, moeda, ou dados decimais ou sempre que quiser mais controle sobre a manipulação de dados na tabela.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910901"
 ---
 # <a name="odbc-static-cursors"></a>Cursores estáticos ODBC
 Um cursor estático é um no qual o conjunto de resultados parece ser estático. Ele geralmente não detectar alterações que foram feitas para a associação, ordem ou valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que um cursor estático busca uma linha e outro aplicativo, em seguida, atualiza a linha. Se o cursor estático refetches a linha, os valores que ele vê são inalterados, apesar das alterações feitas por outro aplicativo.  

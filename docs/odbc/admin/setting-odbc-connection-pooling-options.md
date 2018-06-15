@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901292"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Definindo opções de Pooling de Conexão de ODBC
 O pool de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecidas para cada uso. Você pode usar o **Pooling de Conexão** guia do **administrador de fonte de dados ODBC** caixa de diálogo para habilitar e desabilitar o monitoramento do desempenho. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  

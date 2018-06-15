@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911901"
 ---
 # <a name="considering-database-features-to-use"></a>Considerando os recursos de banco de dados de uso
 Depois que o nível básico de interoperabilidade for conhecido, os recursos de banco de dados usados pelo aplicativo devem ser considerados. Por exemplo, quais instruções SQL de aplicativo executará? O aplicativo irá usar cursores roláveis? Transações? Procedimentos? Dados Long? Para obter ideias sobre quais recursos talvez não tenha suporte por todos os DBMSs, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) edescriçõesdefunção[ Apêndice c: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Os recursos necessários para um aplicativo podem eliminar alguns DBMSs da lista de destino DBMSs. Eles também podem mostrar que o aplicativo pode direcionar facilmente DBMSs muitos.  

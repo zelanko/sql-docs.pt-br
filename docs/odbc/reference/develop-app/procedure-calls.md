@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912773"
 ---
 # <a name="procedure-calls"></a>Chamadas de procedimento
 Um *procedimento* é um objeto executável armazenado na fonte de dados. Em geral, é uma ou mais instruções SQL que foram pré-compiladas. É a sequência de escape para chamar um procedimento  

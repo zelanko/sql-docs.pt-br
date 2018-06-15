@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913041"
 ---
 # <a name="interoperability"></a>Interoperabilidade
 *Interoperabilidade* é a capacidade de um único aplicativo para operar com muitos DBMSs diferentes. A necessidade de escrever aplicativos interoperáveis genéricos foi um dos principais fatores que levam ao desenvolvimento de ODBC. No entanto, a interoperabilidade não é um caminho simple seguido de "não interoperável" para "completamente interoperável". O caminho tem muitas ramificações e cada requer que as variações de recursos, a velocidade, a complexidade de código e tempo de desenvolvimento.  
