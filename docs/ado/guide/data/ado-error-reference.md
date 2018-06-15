@@ -2,7 +2,6 @@
 title: Referência de erro de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf0631384cf390752d60e6465372558748880278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef03fa5fe9a3f7de71fea7ecdc14a315cb6b31c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271485"
 ---
 # <a name="ado-errors"></a>Erros de ADO
 O **ErrorValueEnum** constante descreve os valores de erro de ADO. Para obter uma lista completa das constantes enumeradas, incluindo valores, consulte [apêndice b: ADO erros](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Esta seção examinará alguns dos erros mais interessantes e explicar algumas situações específicas que podem gerá-los ou soluções para corrigir o problema. Ambos os **ErrorValueEnum** constante e o número de decimal positivo curto são listados.

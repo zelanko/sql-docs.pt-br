@@ -2,7 +2,6 @@
 title: Exemplo de formatação de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ead77ee3f08e2a4ffe9e385b32d289a77a55a92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32001c7f0a9ceff2fdccdf6d0bd0902b345f2a68
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271385"
 ---
 # <a name="data-shaping-example"></a>Exemplo de modelagem de dados
 Os seguintes dados de formatação comando demonstra como criar um hierárquica **registros** do **clientes** e **pedidos** tabelas no banco de dados Northwind.  

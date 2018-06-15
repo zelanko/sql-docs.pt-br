@@ -2,7 +2,6 @@
 title: Usando o ADO com linguagens de script | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271205"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usando o ADO com linguagens de script
 Em um ambiente de script, ADO permite expor dados por meio de scripts do lado do servidor. Nesse cenário, ADO, o provedor OLE DB subjacente que ele usa, e quaisquer outros componentes necessários para fazer referência a um repositório de dados são instalados em um servidor executando o Internet Information Services (IIS). Usando o Active Server Pages (ASP), o ADO é um componente referenciado em um script que pode gerar HTML, por exemplo. Este conteúdo HTML pode ser passado por meio de HTTP para um navegador da Web do cliente. Usando o script, a página da Web pode enviar ações de volta para o script do lado do servidor, permitindo que você atualizar, percorrer ou visualizar dados específicos.  
   
  Antes de usar um objeto ActiveX em uma página da Web, é importante saber se o objeto é seguro para script. Quando um objeto é considerado seguro para script, isso significa que o controle não pode executar qualquer ação prejudicial no computador do usuário e, portanto, pode ser executado sem solicitar a aprovação do usuário. A tabela a seguir lista os objetos do ADO e indica se eles são seguros para script.  
   
-|Objeto|É seguro para script?|  
+|Object|É seguro para script?|  
 |------------|-------------------------|  
 |Conexão do ADO|Sim|  
 |Comando ADO|não|  

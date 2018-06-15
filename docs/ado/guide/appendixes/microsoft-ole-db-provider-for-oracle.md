@@ -2,7 +2,6 @@
 title: Provedor Microsoft OLE DB para Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de312ff17a7d66bf58a5b8f1fb7a6c33aa27acec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271095"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provedor Microsoft OLE DB para visão geral do Oracle
 > [!IMPORTANT]

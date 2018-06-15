@@ -2,7 +2,6 @@
 title: Tratamento de erros no VBScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42883a2deef35935745e1cf081136d356c5fce70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b819e09976e71d0650e942bfa378de2ef58f5f39
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271935"
 ---
 # <a name="handling-errors-in-vbscript"></a>Tratamento de erros no VBScript
 Há pouca diferença entre os métodos usados no Visual Basic e os usados com o VBScript. A principal diferença é que o VBScript não suportam o conceito de continuar a execução em um rótulo de tratamento de erros. Em outras palavras, você não pode usar `On Error GoTo` no VBScript. Em vez disso, use `On Error Resume Next` e, em seguida, verifique se ambos **Err. Number** e **contagem** propriedade o **erros** coleção, conforme mostrado no exemplo a seguir:  

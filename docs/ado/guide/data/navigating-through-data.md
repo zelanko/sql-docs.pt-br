@@ -2,7 +2,6 @@
 title: Navegando pelos dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c58338aa4771ac936fd3eff1b01f4c90eeb996b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71f8c010f389929bc86e9d0f8569ffa8035b373a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272095"
 ---
 # <a name="navigating-through-data"></a>Navegar pelos dados
 **Conjunto de registros** oferece suporte a vários métodos e propriedades para navegar pelo conjunto de dados resultante. Podemos examinar essa funcionalidade por meio de alguns cenários com nosso exemplo **registros** objetos.  

@@ -2,7 +2,6 @@
 title: Chamando um procedimento armazenado como um método em um objeto de Conexão | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8ee4412d5eba44d324cd11432c2bbe33e3310b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270395"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Chamando um procedimento armazenado como um método em um objeto de Conexão
 Você pode chamar um procedimento armazenado como se fosse um método nativo em Abrir associado **Conexão** objeto. Isso é semelhante a chamar um comando nomeado o **Conexão** objeto.  

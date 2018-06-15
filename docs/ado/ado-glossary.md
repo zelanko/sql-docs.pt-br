@@ -2,7 +2,6 @@
 title: Glossário do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6ba068234cbede37eeb97f77da6305ae950b673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c5a423a72b173020a4e711cd2f6d1d2a7ba62fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271595"
 ---
 # <a name="ado-glossary-terms"></a>Glossário de termos de ADO
 Este tópico define condições relevantes para ADO.
 
-## <a name="a"></a>A
+## <a name="a"></a>Um
  absoluto URL uma URL totalmente qualificada que especifica o local de um recurso que reside na Internet ou intranet. Consulte também *URL* e *URL relativa*.
 
  Componente COM o registro automático, no processo que geralmente tem um elemento visual no tempo de design ou no tempo de execução de controles ActiveX. Controles ActiveX também têm a capacidade de se comunicar com um contêiner de documento ativo, como o Microsoft Internet Explorer.

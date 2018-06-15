@@ -2,7 +2,6 @@
 title: Microsoft Data Shaping Service para OLE DB (provedor de serviços de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271345"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping Service para visão geral do OLE DB
 > [!IMPORTANT]

@@ -2,7 +2,6 @@
 title: Visão geral de modelagem de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba1b8acd52c86c0bffa19ec22658008a3b8f5601
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68044aa5ef5eb6364157aa3251b8cc39da73ac78
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271535"
 ---
 # <a name="data-shaping-overview"></a>Visão geral de modelagem de dados
 *Modelagem de dados* significa criar relações hierárquicas entre dois ou mais entidades lógicas em uma consulta. A hierarquia pode ser vista em relações pai-filho entre um registro de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md)e um ou mais registros (também conhecido como um capítulo) de outro **registros**. Em uma relação pai-filho, o pai **registros** contém o filho **registros**. Um exemplo de tal relação hierárquica é customers e orders. Para cada cliente em um banco de dados, pode ser zero ou mais pedidos. A relação hierárquica pode ser recursivos, que significa que os registros de neto podem ser aninhados em um registro filho. Em princípio, um registro hierárquico pode ser aninhado para qualquer profundidade. Na prática, o ADO limita a recursão para um máximo de 512 **registros**s.  

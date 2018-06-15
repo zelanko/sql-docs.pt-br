@@ -2,7 +2,6 @@
 title: Provedor Microsoft OLE DB para o Microsoft Active Directory Service | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270645"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provedor Microsoft OLE DB para o serviço do Microsoft Active Directory
 O provedor do Active Directory Service Interfaces (ADSI) permite que o ADO conectar-se aos serviços de diretório heterogêneos por meio de ADSI. Isso fornece aplicativos ADO acesso somente leitura para os serviços de diretório do Microsoft Windows NT 4.0 e o Microsoft Windows 2000, além de qualquer serviço de diretório compatível com LDAP e serviços de diretório Novell. ADSI é baseado em um modelo de provedor, para que se houver um novo provedor fornecendo acesse outro diretório, o aplicativo ADO poderão acessá-lo diretamente. O provedor ADSI é free-thread e Unicode habilitado.  
@@ -63,10 +63,10 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*Root*|Indica o **ADsPath** objeto do qual iniciar a pesquisa (ou seja, a raiz da pesquisa).|  
-|*Filtro*|Indica o filtro de pesquisa no formato RFC 1960.|  
+|*Filter*|Indica o filtro de pesquisa no formato RFC 1960.|  
 |*Atributos*|Indica uma lista delimitada por vírgulas de atributos a serem retornados.|  
 |*Escopo*|Opcional. Um **cadeia de caracteres** que especifica o escopo da pesquisa. Pode ser uma destas opções:<br /><br /> -Base – Pesquisa somente o objeto base (raiz da pesquisa).<br />-OneLevel – Pesquisa apenas um nível.<br />-Subárvore, Pesquisa a subárvore inteira.|  
   
@@ -105,7 +105,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|  
-|[Filtro](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|leitura/gravação|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|não disponível|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|leitura/gravação|  
@@ -137,7 +137,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|  
 |[Repetir](../../../ado/reference/ado-api/requery-method.md)|Sim|  
 |[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Sim|  
-|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|  
+|[Dá suporte a](../../../ado/reference/ado-api/supports-method.md)|Sim|  
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|não|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|não|  
   

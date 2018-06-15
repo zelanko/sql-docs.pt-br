@@ -2,7 +2,6 @@
 title: Adicionando registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e870545c3ff62342ebf707619d0963d6421e6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a1d367e572a7839b6a5d54b1c6460716aa09160
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271055"
 ---
 # <a name="adding-records-to-a-recordset"></a>Adicionando registros para um conjunto de registros
 Use o **AddNew** método para criar e inicializar um novo registro em existente **registros**. Você pode usar o **dá suporte a** método com um **CursorOptionEnum** valor **adAddNew** para verificar se você pode adicionar registros a atual **doconjuntoderegistros** objeto.

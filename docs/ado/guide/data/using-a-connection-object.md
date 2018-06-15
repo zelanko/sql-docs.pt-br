@@ -2,7 +2,6 @@
 title: Usando um objeto de Conexão | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24dd06d812a1234fd9a7458600e71f77cccdcf63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07528c4434a7278566ba6a7f3659e64d2638dab9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273095"
 ---
 # <a name="using-a-connection-object"></a>Usando um objeto de Conexão
 Antes de abrir um **Conexão** do objeto, você deve definir certas informações sobre a fonte de dados e o tipo de conexão. A maioria dessas informações é mantido pelo *ConnectionString* parâmetro do [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) no **Conexão** objeto, ou o [ConnectionString propriedade](../../../ado/reference/ado-api/connectionstring-property-ado.md) no **Conexão** objeto. Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do argumento separados por ponto e vírgula, com os valores entre aspas simples. Por exemplo:  

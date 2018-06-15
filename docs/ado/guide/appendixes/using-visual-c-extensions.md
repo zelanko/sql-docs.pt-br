@@ -2,7 +2,6 @@
 title: Usando as extensões do Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271585"
 ---
 # <a name="visual-c-extensions"></a>Extensões do Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A Interface IADORecordBinding
@@ -116,9 +116,9 @@ Update(CADORecordBinding *binding)
 
 |Parâmetro|Description|
 |---------------|-----------------|
-|*Classe*|Classe na qual as entradas de associação e variáveis de C/C++ são definidos.|
+|*classe*|Classe na qual as entradas de associação e variáveis de C/C++ são definidos.|
 |*Ordinal*|Um número ordinal, contando a partir de um, do **registros** campo correspondente à sua variável de C/C++.|
-|*DataType*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor de **registros** campo será convertido para esse tipo de dados, se necessário.|
+|*Tipo de dados*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor de **registros** campo será convertido para esse tipo de dados, se necessário.|
 |*Buffer*|Nome da variável C/C++ em que o **registros** campo será armazenado.|
 |*Tamanho*|Tamanho máximo em bytes do *Buffer*. Se *Buffer* conterá uma cadeia de caracteres de comprimento variável, espaço para um encerramento zero.|
 |*Status*|Nome de uma variável que indica se o conteúdo de *Buffer* são válidos e se a conversão do campo a ser *DataType* foi bem-sucedida.<br /><br /> Os dois valores mais importantes para essa variável são **adFldOK**, que significa que a conversão foi bem sucedida; e **adFldNull**, que significa que o valor do campo deve ser uma VARIANTE do tipo VT_NULL e não simplesmente vazio.<br /><br /> Os valores possíveis para *Status* são listadas na tabela a seguir, "Valores de Status".|
@@ -132,7 +132,7 @@ Update(CADORecordBinding *binding)
 
  Ao definir os dados, *Status* pode ser definida como **adFldNull** para indicar o **registros** campo deve ser definido como null.
 
-|Constante|Value|Description|
+|Constante|Valor|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Um valor de campo não-nulo foi retornado.|
 |**adFldBadAccessor**|1|Associação era inválida.|

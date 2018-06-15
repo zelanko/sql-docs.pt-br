@@ -2,7 +2,6 @@
 title: Prevendo erros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5978768e515f4fc6cf6986dc23e7cec1379c69c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b171309accefd6586c90389574ae702632b8fae
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271495"
 ---
 # <a name="anticipating-errors"></a>Antecipando a erros
 Prevenção de erro é pelo menos tão importante quanto o tratamento de erros. Esta seção final contém uma lista curta de precauções que seu aplicativo pode fazer para ajudar a tornar menos prováveis de erros.  

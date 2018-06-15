@@ -2,7 +2,6 @@
 title: 'Instanciação de evento do ADO: Visual C++ | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9455000386b7bb64073fec6d07fe106b6ad819dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 699432fff2c849f4f89e7cadebe8dd4afabdd8ec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271075"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Instanciação de evento do ADO: Visual C++
 Esta é uma descrição de esquema de como criar uma instância de eventos de ADO no Microsoft® Visual C++. Consulte [exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) para obter uma descrição completa.  

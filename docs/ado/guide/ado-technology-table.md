@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f343cd75bed65062975f75e9560eabb43ee9212
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af9be3799708422734034f5ffe49d54bc1958037
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271565"
 ---
 # <a name="products-and-technologies-table"></a>Produtos e tecnologias de tabela
 A tabela a seguir lista os produtos Microsoft, ferramentas e tecnologias abordadas no guia do programador do ADO. Ele fornece links, sempre que possível, para tópicos relevantes no guia.

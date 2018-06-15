@@ -2,7 +2,6 @@
 title: Mais informações sobre o conjunto de registros persistência | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a5c0d8bda0d3d881dfcb1dfd99706b28e5fb733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4bf42cb3b915f66cd3c9249ada5fffa7f5da6d7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272145"
 ---
 # <a name="more-about-recordset-persistence"></a>Mais informações sobre a persistência de conjunto de registros
 O objeto de conjunto de registros ADO dá suporte ao armazenar o conteúdo de um **registros** objeto em um arquivo usando seu [salvar](../../../ado/reference/ado-api/save-method.md) método. O arquivo armazenado persistentemente pode existir em um local da unidade, server, ou como uma URL em uma Web sites. Posteriormente, o arquivo pode ser restaurado com o o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método do **registros** objeto ou o [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  

@@ -2,7 +2,6 @@
 title: Comunicação remota do Microsoft OLE DB Provider (provedor de serviços de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d168716351a8c3adda7b5ff10e6ef825e19cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271285"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Visão geral do provedor Microsoft OLE DB remotamente
 O Microsoft OLE DB provedor remoto permite que um usuário local em um computador cliente invocar os provedores de dados em um computador remoto. Especifique os parâmetros de provedor de dados para o computador remoto como se fosse um usuário local no computador remoto. Em seguida, especifique os parâmetros usados pelo provedor de comunicação remota para acessar o computador remoto. Em seguida, você pode acessar o computador remoto como se fosse um usuário local.

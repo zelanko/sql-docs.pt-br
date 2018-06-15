@@ -2,7 +2,6 @@
 title: Conjuntos de registros hierárquicos de fabricating | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e9301ec9204b5d2d6768f7487f279dd5f1eb0f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271525"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Conjuntos de registros hierárquicos fabricating
 O exemplo a seguir mostra como fabricar um conjunto de registros hierárquico sem uma fonte de dados subjacente usando dados de formatação gramática definir colunas pai, filho e neto **conjuntos de registros**.  

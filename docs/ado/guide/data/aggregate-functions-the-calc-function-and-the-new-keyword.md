@@ -2,7 +2,6 @@
 title: Agregar funções, a função de CÁLCULO e a nova palavra-chave | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3af3e37caacae09f4ee57bc251f7ebcabfb04e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271545"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funções de agregação, a função de CÁLCULO e a palavra-chave NEW
 Modelagem de dados oferece suporte a funções a seguir. O nome atribuído o capítulo que contém a coluna a ser operado é o *capítulo alias*.  

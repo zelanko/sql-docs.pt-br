@@ -2,7 +2,6 @@
 title: Cursores de somente avanço | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca588a5c7efa6f5fe7dc861e292cffa7d15bb1be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a309a34d8b5a897c62de6bdceb1db2eef4d46c2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271475"
 ---
 # <a name="forward-only-cursors"></a>Cursores de somente avanço
 O tipo de cursor padrão típica, chamado de um cursor somente de avanço (ou não rolável), pode avançar apenas o conjunto de resultados. Um cursor de somente avanço não dá suporte a rolagem (a capacidade de mover para a frente e para trás no conjunto de resultados); suporta apenas a busca de linhas do início ao final do conjunto de resultados. Com alguns cursores de somente avanço (como com a biblioteca de cursores do SQL Server), todas as instruções delete, update e insert feitas pelo usuário atual (ou confirmadas por outros usuários) que afetam as linhas no conjunto de resultados são visíveis como as linhas buscadas. No entanto, como o cursor não pode ser revertido, as alterações feitas às linhas no banco de dados depois que a linha foi buscada não são visíveis pelo cursor.  

@@ -2,7 +2,6 @@
 title: Registro atual e o tamanho do conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 47039bdba7fe5d5a867df4ac7ca8700a7a835b13
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 661201c1d62881d8b94f6e9815bc38c9442f69fe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271016"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Registro atual e o tamanho do conjunto de registros
 Esta seção descreve como localizar a posição atual do cursor no exemplo **registros** na [JScript exemplo de código para retornar um conjunto de registros](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  

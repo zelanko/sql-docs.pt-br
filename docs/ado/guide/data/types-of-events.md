@@ -2,7 +2,6 @@
 title: Tipos de eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d093fbea3d4c4c6410f19b842ba8907aaa2229e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2438d332e7276dcd06de0bf15984329d7c34469
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273105"
 ---
 # <a name="types-of-events"></a>Tipos de eventos
 Há dois tipos básicos de eventos. "Será eventos," que é chamado antes do início de uma operação, geralmente incluem "Será" em seus nomes — por exemplo, **WillChangeRecordset** ou **WillConnect**. Os eventos que são chamados após um evento foi concluído normalmente incluem "Completo" em seus nomes — por exemplo, **RecordChangeComplete** ou **ConnectComplete**. Existem exceções — como **InfoMessage** — mas elas ocorrem após a operação associada.  
