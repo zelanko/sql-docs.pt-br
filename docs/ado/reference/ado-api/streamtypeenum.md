@@ -2,7 +2,6 @@
 title: StreamTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 030f5f8d054e1ef1497c86f64910f4216ce729b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 652dde464014a758041cfb6dba56c68e41714713
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282555"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 Especifica o tipo de dados armazenados em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Indica os dados binários.|  
 |**adTypeText**|2|Padrão. Indica os dados de texto, que está no conjunto de caracteres especificado por [Charset](../../../ado/reference/ado-api/charset-property-ado.md).|  

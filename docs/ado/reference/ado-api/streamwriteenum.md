@@ -2,7 +2,6 @@
 title: StreamWriteEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b81765d125680bc52a8e95adcb3828df36bfc0a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62b5718d87d9c5117d10ad4ba55cdc783948778a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282705"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 Especifica se um separador de linha é acrescentado à cadeia de caracteres gravada em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|Padrão. Grava a cadeia de caracteres de texto especificado (especificado pelo *dados* parâmetro) para o **fluxo** objeto.|  
 |**adWriteLine**|1|Grava uma cadeia de caracteres de texto e um caractere de separador de linha para um **fluxo** objeto. Se o [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) propriedade não está definida e, em seguida, isso retornará um erro de tempo de execução.|  
