@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550037"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivírus para Analytics Platform System
 Se seu data center requer o software antivírus, use estas diretrizes para instalar o software antivírus no sistema de plataforma de análise. É recomendável não instalar um software antivírus, a menos que seja um requisito sólido de seu data center.  

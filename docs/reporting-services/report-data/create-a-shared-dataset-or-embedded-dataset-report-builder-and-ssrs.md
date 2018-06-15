@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022673"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (Construtor de Relatórios e SSRS)
 Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Os conjuntos de dados compartilhados em um servidor de relatório podem ser usados por vários relatórios, móveis e paginados. Para criar um conjunto de dados, é necessária uma fonte de dados inserida ou compartilhada.  

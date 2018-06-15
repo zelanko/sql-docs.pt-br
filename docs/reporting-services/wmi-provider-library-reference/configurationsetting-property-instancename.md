@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030163"
 ---
 # <a name="configurationsetting-property---instancename"></a>Propriedade de ConfigurationSetting – InstanceName
   Especifica o nome de uma instância do servidor de relatório em um computador específico. Somente leitura.  

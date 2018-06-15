@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022963"
 ---
 # <a name="report-model-connection-ssrs"></a>Conexão de modelo de relatório (SSRS)
   Para incluir dados de um modelo de relatório, é necessário ter um conjunto de dados baseado em um modelo de relatório como uma fonte de dados. Diferentemente de outras fontes de dados de relatório, não há nenhuma extensão de dados para um modelo de relatório. No Construtor de Relatórios, procure e selecione o modelo diretamente no servidor de relatório. Em Designer de Relatórios, você especifica a URL para o modelo de relatório.  
