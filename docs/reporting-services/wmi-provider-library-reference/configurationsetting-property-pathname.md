@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030213"
 ---
 # <a name="configurationsetting-property---pathname"></a>Propriedade de ConfigurationSetting – PathName
   Especifica o caminho de instalação de uma instância do servidor de relatório. Somente leitura.  
