@@ -2,7 +2,6 @@
 title: BOF, EOF e exemplo de propriedades do indicador (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d79be2676d2679fff103cfe9201e379e2d67033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275995"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Exemplo de propriedades do indicador (VB), BOF e EOF
 Este exemplo usa o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades para exibir uma mensagem se um usuário tenta mover após o primeiro ou último registro de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade para permitir que o usuário sinalize um registro em uma **registros** e retornar a ele mais tarde.  

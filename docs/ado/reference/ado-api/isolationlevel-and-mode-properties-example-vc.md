@@ -2,7 +2,6 @@
 title: Exemplo de propriedades de modo (VC + +) e IsolationLevel | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42663a71291a107bad179ad9ef3c614ed75b40be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279165"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Exemplo de propriedades de modo (VC + +) e IsolationLevel
 Este exemplo usa o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade para abrir uma conexão exclusiva e o [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriedade para abrir uma transação que é realizada em isolamento de outras transações.  

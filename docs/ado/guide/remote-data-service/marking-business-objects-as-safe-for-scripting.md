@@ -2,7 +2,6 @@
 title: Marcar objetos comerciais como seguros para script | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 821f52e440e30f076a25104da8d5c928ff744efb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61efa0b418932e18637f82aa80f74e40b07bdb04
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274105"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marcar objetos comerciais como seguros para script
 > [!IMPORTANT]

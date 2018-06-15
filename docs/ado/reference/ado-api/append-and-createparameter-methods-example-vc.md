@@ -2,7 +2,6 @@
 title: Anexar e exemplo dos métodos CreateParameter (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6113ebd87715c6de0baeae37ee707f82ae633b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb35881eda386d881c78d8359acf2cf20d6af60c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275765"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Anexar e exemplo dos métodos CreateParameter (VC + +)
 Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada.  

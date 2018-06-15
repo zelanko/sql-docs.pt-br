@@ -2,7 +2,6 @@
 title: Propriedade ActiveConnection (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b37e3e062bcc8239b2231db66052e9cdaf9e812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6988f743abe5a6a0bf875da0b7e52bed23f7500
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275155"
 ---
 # <a name="activeconnection-property-ado"></a>Propriedade ActiveConnection (ADO)
 Indica para qual [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto especificado [comando](../../../ado/reference/ado-api/command-object-ado.md), [registros](../../../ado/reference/ado-api/recordset-object-ado.md), ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto pertence no momento.  

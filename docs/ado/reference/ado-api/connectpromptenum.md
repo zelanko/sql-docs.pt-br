@@ -2,7 +2,6 @@
 title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f01de20cabf1ec5d7cefdb645fb1fc08b69d31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277235"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Especifica se deve ser exibida uma caixa de diálogo para solicitar parâmetros ausentes ao abrir uma conexão com uma fonte de dados.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Solicita sempre.|  
 |**adPromptComplete**|2|Avisa se são necessárias mais informações.|  

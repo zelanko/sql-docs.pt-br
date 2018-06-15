@@ -2,7 +2,6 @@
 title: Personalização do arquivo UserList seção | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f27f83f6b3753ad5298a869e5d8891af089e4ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcf8649af2695fa354659f13e891521eb14f39cb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273825"
 ---
 # <a name="customization-file-userlist-section"></a>Seção do arquivo UserList de personalização
 O **userlist** seção se refere ao **conectar** seção com a mesma seção *identificador* parâmetro.  

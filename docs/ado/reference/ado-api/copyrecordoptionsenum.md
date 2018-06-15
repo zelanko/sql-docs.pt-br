@@ -2,7 +2,6 @@
 title: CopyRecordOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da0a18b66bab06eaf96fe7d6052b0408b6ac14c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6314f9ab11e0704075b6a6cf8d0f9e529a3c0b69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277155"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 Especifica o comportamento do [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) método.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|Indica que o *fonte* provedor tenta simular a cópia usando o download e carregar operações se esse método falhar devido a *destino*sendo em um servidor diferente ou é atendida por um diferente provedor de *fonte*. Observe que os diferentes recursos do provedor podem degradar o desempenho ou perda de dados.|  
 |**adCopyNonRecursive**|2|Copia a pasta atual, mas nenhum de seus subdiretórios, o destino. A operação de cópia não é recursivos.|  

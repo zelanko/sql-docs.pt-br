@@ -2,7 +2,6 @@
 title: Referência da API ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12e206c96b9a4e8fedc61fac55fcc99089b952f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275305"
 ---
 # <a name="ado-api-reference"></a>Referência da API ADO
 Esta seção da documentação do ADO contém tópicos para cada ADO objeto, coleção, propriedade, propriedades dinâmicas, método, eventos e enumeração. Além disso, ele contém uma lista de índices de sintaxe de ADO a ser usado com o Microsoft Visual C++ e o Windows Foundation Classes (WFC).  

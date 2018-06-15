@@ -2,7 +2,6 @@
 title: Exemplo de propriedade de índice (VC + +) e método de busca | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f2561dfb1d7c934f909f894f4227b538232a8e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95bb888ad6bc57ec6fb29e94237953d86f6b0582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281575"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Exemplo de propriedade de índice (VC + +) e método de busca
 Este exemplo usa o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [busca](../../../ado/reference/ado-api/seek-method.md) método e [índice](../../../ado/reference/ado-api/index-property.md) propriedade em conjunto com um determinado ***ID de funcionário***, para localizar o nome do funcionário no ***funcionários*** tabela do banco de dados Nwind.  

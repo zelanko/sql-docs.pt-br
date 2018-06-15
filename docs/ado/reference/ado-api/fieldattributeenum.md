@@ -2,7 +2,6 @@
 title: FieldAttributeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8fcfaf0f67ae0b44a7bb99a457edc479587cf44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36f972b9fb1f9592c6a9809b415e5570990a9057
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278625"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Especifica um ou mais atributos de uma [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Indica que o provedor armazena em cache os valores de campo e terminar subsequentes leituras do cache.|  
 |**adFldFixed**|0x10|Indica que o campo contém dados de comprimento fixo.|  

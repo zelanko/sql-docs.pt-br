@@ -2,7 +2,6 @@
 title: Métodos de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275555"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 |||  
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Define a posição que é o final do fluxo.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignora uma linha inteira durante a leitura de um fluxo de texto.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Obtém informações estatísticas sobre um fluxo aberto.|  
-|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Determina se um especificado **registros** objeto oferece suporte a um determinado tipo de funcionalidade.|  
+|[Dá suporte a](../../../ado/reference/ado-api/supports-method.md)|Determina se um especificado **registros** objeto oferece suporte a um determinado tipo de funcionalidade.|  
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Salva as alterações feitas à linha atual de um **registros** objeto, ou o **campos** coleção de um **registro** objeto.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Grava todas as atualizações em lotes pendentes no disco.|  
 |[Gravação](../../../ado/reference/ado-api/write-method.md)|Grava dados binários em uma **fluxo** objeto.|  

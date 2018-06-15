@@ -2,7 +2,6 @@
 title: Abrir e fechar o exemplo de métodos (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1c87f8d225d8add1ff9a6ea9fbaba44f244c9f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d001611dc57ea90fe19fa83e794b4d9791a0399
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279915"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Exemplo dos métodos de abertura e fechamento (VC + +)
 Este exemplo usa o **abrir** e [fechar](../../../ado/reference/ado-api/close-method-ado.md) métodos em ambos os [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos que foram abertos.  

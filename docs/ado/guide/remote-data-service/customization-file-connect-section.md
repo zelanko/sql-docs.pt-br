@@ -2,7 +2,6 @@
 title: Arquivo de personalização de conectar-se a seção | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273845"
 ---
 # <a name="customization-file-connect-section"></a>Arquivo de personalização de conectar-se a seção
 O comportamento padrão do manipulador é negar todas as conexões. O **conectar** seção especifica exceções a esse comportamento. Por exemplo, se todos os **conectar** seções foram ausente ou vazia, em seguida, por padrão não foi possível estabelecer conexões.  
@@ -59,7 +59,7 @@ connectionString
   
 |Parte|Description|  
 |----------|-----------------|  
-|**Conectar**|Uma cadeia de caracteres literal que indica que isso é uma entrada de cadeia de caracteres de conexão.|  
+|**Connect**|Uma cadeia de caracteres literal que indica que isso é uma entrada de cadeia de caracteres de conexão.|  
 |***connectionString***|Uma cadeia de caracteres que substitui a cadeia de caracteres de conexão de cliente inteira.|  
 |**Acesso**|Uma cadeia de caracteres literal que indica que isso é uma entrada de acesso.|  
 |***accessRight***|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** — usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** — o usuário pode ler a fonte de dados.<br />-   **ReadWrite** — usuário pode ler ou gravar para a fonte de dados.|  

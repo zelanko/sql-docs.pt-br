@@ -2,7 +2,6 @@
 title: Exemplo de propriedade CacheSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d128a5b0eb9ace256ae87e8ab30505ff161c97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d388e259545c86dfa5ad700de1b192ec071d132f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276215"
 ---
 # <a name="cachesize-property-example-vc"></a>Exemplo de propriedade CacheSize (VC + +)
 Este exemplo usa o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença no desempenho de uma operação realizada com e sem um cache de registro de 30.  

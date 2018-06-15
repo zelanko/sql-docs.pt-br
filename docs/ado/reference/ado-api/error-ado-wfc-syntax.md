@@ -2,7 +2,6 @@
 title: Erro (ADO - sintaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80ebe2ac09f21f0d38b6cc592f40a94a781bfef1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cdfb291973fed5968c4eb75e18e40a5c212322e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278005"
 ---
 # <a name="error-ado---wfc-syntax"></a>Erro (ADO - WFC sintaxe)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  

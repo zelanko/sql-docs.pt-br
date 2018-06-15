@@ -2,7 +2,6 @@
 title: Método (ADO) append | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275895"
 ---
 # <a name="append-method-ado"></a>(ADO) do método append
 Anexa um objeto para uma coleção. Se a coleção é [campos](../../../ado/reference/ado-api/fields-collection-ado.md), um novo [campo](../../../ado/reference/ado-api/field-object.md) objeto pode ser criado antes que ele é adicionado à coleção.  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *fields*  
  Um **campos** coleção.  
   
- *objeto*  
+ *object*  
  Uma variável de objeto que representa o objeto a ser anexado.  
   
  *Nome*  

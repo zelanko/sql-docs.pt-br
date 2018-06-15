@@ -2,7 +2,6 @@
 title: Salve e abra o exemplo de métodos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6248fa2dd504e808f5ae2685ba70d46f373a6309
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281385"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Salve e abra o exemplo de métodos (VB)
 Esses três exemplos demonstram como o [salvar](../../../ado/reference/ado-api/save-method.md) e [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos podem ser usados juntos.  

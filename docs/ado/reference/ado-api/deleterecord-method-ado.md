@@ -2,7 +2,6 @@
 title: Método ExcluirRegistro (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 168b53d0ad68f55656e005f7523a0c09ba599004
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277635"
 ---
 # <a name="deleterecord-method-ado"></a>Método ExcluirRegistro (ADO)
 Exclui uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md).  

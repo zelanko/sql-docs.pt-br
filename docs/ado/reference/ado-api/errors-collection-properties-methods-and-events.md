@@ -2,7 +2,6 @@
 title: Propriedades de coleção de erros, métodos e eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05b5e0e9b8a636de88d2c459a33a7aeecaaca7d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fd36576791ff0636da77b2b1ace9448667369f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278065"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>Eventos, métodos e propriedades de coleção de erros
 ## <a name="properties"></a>Propriedades  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

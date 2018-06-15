@@ -2,7 +2,6 @@
 title: Método GetString (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 373ef70e69d528d41fc2631610a7f31f72c3eec7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278875"
 ---
 # <a name="getstring-method-ado"></a>Método GetString (ADO)
 Retorna o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) como uma cadeia de caracteres.  
@@ -37,7 +37,7 @@ Retorna o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) co
 Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimiter, NullExpr)  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna o **registros** como um valor de cadeia de caracteres **Variant** (BSTR).  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -47,7 +47,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NumRows*  
  Opcional. O número de linhas a ser convertido no **registros**. Se *NumRows* não for especificado, ou se for maior que o número total de linhas no **Recordset**, em seguida, todas as linhas a **Recordset** são convertidos.  
   
- *ColumnDelimiter*  
+ *columnDelimiter*  
  Opcional. Um delimitador usado entre colunas, se especificado, caso contrário, o caractere de tabulação.  
   
  *RowDelimiter*  

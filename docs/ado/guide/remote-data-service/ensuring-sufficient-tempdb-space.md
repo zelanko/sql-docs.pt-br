@@ -2,7 +2,6 @@
 title: Garantir espaço suficiente em TempDB | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c86196fdf0320b5f3cb5028cb7d5db484c4da846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09db3f588a5631b02c3ce112dd1b10935537c311
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274125"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantir espaço suficiente em TempDB
 Se ocorrerem erros durante o tratamento de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos que precisam de processamento de espaço no Microsoft SQL Server 6.5, talvez seja necessário aumentar o tamanho do TempDB. (Algumas consultas requerem espaço temporário processamento; por exemplo, uma consulta com uma cláusula ORDER BY requer uma classificação do **registros**, que requer espaço temporário.)  

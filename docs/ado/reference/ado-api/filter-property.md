@@ -2,7 +2,6 @@
 title: Propriedade Filter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72efa7b9a70bdfdf141c32d5487cc2a5b9776d16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278755"
 ---
 # <a name="filter-property"></a>Propriedade de filtro
 Indica um filtro de dados em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

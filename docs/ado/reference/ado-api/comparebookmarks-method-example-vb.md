@@ -2,7 +2,6 @@
 title: Exemplo do método CompareBookmarks (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54dbf0cd580557d3bdac6cd1b8a10f667c6b3b83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff4e2c8c1e66ac7240e188e06ede5bb1295814de
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276955"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Exemplo do método CompareBookmarks (VB)
 Este exemplo demonstra o [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. O valor relativo de indicadores raramente é necessário, a menos que um determinado indicador é alguma forma especial.  

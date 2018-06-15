@@ -6,8 +6,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275635"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - índice de sintaxe do WFC
 Referência de linguagem do ADO usa o Microsoft Visual Basic linguagem de programação para ilustrar a sintaxe de método e propriedade ADO. Esse índice é uma referência cruzada para os tópicos de referência de linguagem do ADO, com base em ADO para Windows Foundation Classes (ADO/WFC). Quando surgirem diferenças de sintaxe, use as assinaturas de função nesse índice, em vez de listagens de sintaxe no tópico de referência de linguagem.  

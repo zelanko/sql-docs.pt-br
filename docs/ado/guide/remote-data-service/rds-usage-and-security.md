@@ -2,7 +2,6 @@
 title: Uso RDS e segurança | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e149ec41722f22ce5b9c57592df39dd0d22b1fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc65be00af43f9ad891d01ad00e506fcd178872d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274235"
 ---
 # <a name="rds-usage-and-security"></a>Segurança e o uso RDS
 Use as informações nesta seção para configurar seu servidor e usar RDS rapidamente. Esta seção inclui etapas de configuração específicas que você pode precisar ser tomada quando implementar RDS, descreve algumas das relações entre RDS e outras tecnologias de chave, e ajuda a identificar soluções para problemas que você pode encontrar ao configurar um Solução RDS.  

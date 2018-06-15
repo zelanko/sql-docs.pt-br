@@ -2,7 +2,6 @@
 title: Exemplo do método GetRows (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad6b509232d807fc60b8d6a40587f6bfe3eeb16f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95799c397b5822b0169c9fcdca74c489880dbb0e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278825"
 ---
 # <a name="getrows-method-example-jscript"></a>Exemplo do método GetRows (JScript)
 Este exemplo usa o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar todas as linhas do *Custiomers* tabela um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O **GetRows** método retornará a menos que o número desejado de linhas em dois casos: ou se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) foi atingido, ou se **GetRows** tentou recuperar um registro que foi excluído por outro usuário. A função retorna **False** somente se o segundo caso ocorre. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **GetRowsJS.asp**.  

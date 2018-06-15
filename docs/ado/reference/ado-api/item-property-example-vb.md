@@ -2,7 +2,6 @@
 title: Item de exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3beaf6111b432427d2a40f9f0362c6a9084a5246
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdbddb4af085077b3aa86eec760253442dfefbd9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279255"
 ---
 # <a name="item-property-example-vb"></a>Exemplo da propriedade item (VB)
 Este exemplo demonstra como o [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade acessa os membros de uma coleção. O exemplo abre o ***autores*** tabela do ***Pubs*** banco de dados com um comando com parâmetros.  

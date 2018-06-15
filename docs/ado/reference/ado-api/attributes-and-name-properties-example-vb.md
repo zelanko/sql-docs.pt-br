@@ -2,7 +2,6 @@
 title: Atributos e exemplo de propriedades de nome (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4ea31a718fad93c01f32dab8dcbe5b7ea7e7f9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48d96c2afe1018b64933fb96ba8c36d08a93d4e1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275965"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Exemplo de propriedades de nome (VB) e de atributos
 Este exemplo exibe o valor da [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propriedade [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [campo](../../../ado/reference/ado-api/field-object.md), e [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objetos. Ele usa o [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade para exibir o nome de cada **campo** e **propriedade** objeto.  

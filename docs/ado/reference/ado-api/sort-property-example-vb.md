@@ -2,7 +2,6 @@
 title: Classificar o exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ce33e051391f787ca26d4b46cfaeddbd8bc3ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281869"
 ---
 # <a name="sort-property-example-vb"></a>Exemplo de propriedade de classificação (VB)
 Este exemplo usa o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [classificação](../../../ado/reference/ado-api/sort-property.md) propriedade para reordenar as linhas de um **registros** derivado a ***autores*** tabela de o ***Pubs*** banco de dados. Uma rotina de utilitários secundária imprime cada linha.  

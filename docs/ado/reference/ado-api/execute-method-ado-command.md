@@ -2,7 +2,6 @@
 title: Executar método (comando ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09ce33d4fa2f6ac63fc19ce711fe88fcf717d049
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278115"
 ---
 # <a name="execute-method-ado-command"></a>Executar método (comando ADO)
 Executa a consulta, a instrução SQL ou o procedimento armazenado especificado no [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriedade o [o objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -37,7 +37,7 @@ Executa a consulta, a instrução SQL ou o procedimento armazenado especificado 
 Set recordset = command.Execute( RecordsAffected, Parameters, Options )  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) referência de objeto, um fluxo ou **nada**.  
   
 #### <a name="parameters"></a>Parâmetros  

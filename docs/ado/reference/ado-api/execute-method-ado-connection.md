@@ -2,7 +2,6 @@
 title: Executar método (Conexão ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f99015571bd7abdad402dc0f779c04fd546a79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27d3f5318d093d18312dd531421f5c32755aeaf1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278135"
 ---
 # <a name="execute-method-ado-connection"></a>Executar método (Conexão ADO)
 Executa a consulta especificada, instrução SQL, procedimento armazenado ou texto específico do provedor.  
@@ -38,7 +38,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 Set recordset = connection.Execute (CommandText, RecordsAffected, Options)  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna um [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) referência de objeto.  
   
 #### <a name="parameters"></a>Parâmetros  

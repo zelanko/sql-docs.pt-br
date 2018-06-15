@@ -2,7 +2,6 @@
 title: Método CopyRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1af576e7aab76c6e505b2346a74924d8b2ec843e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7da84b8922306f5aa7c51fa10fe023eec06a5414
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277305"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
@@ -56,7 +56,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Async*  
  Opcional. Um **booliano** valor que, quando **True**, especifica que esta operação deve ser assíncrona.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um **cadeia de caracteres** valor que geralmente retorna o valor de *destino*. No entanto, o valor exato retornado depende do provedor.  
   
 ## <a name="remarks"></a>Remarks  

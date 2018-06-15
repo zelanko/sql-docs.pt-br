@@ -2,7 +2,6 @@
 title: Propriedade ParentURL (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a7a476352519f4756e4e8f19166aac3c84d7da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4a0217d4f2e79dc5876af9518a06d73d2ac924d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280650"
 ---
 # <a name="parenturl-property-ado"></a>Propriedade ParentURL (ADO)
 Indica uma cadeia de caracteres de URL absoluta que aponte para o pai [registro](../../../ado/reference/ado-api/record-object-ado.md) do atual **registro** objeto.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna um **cadeia de caracteres** valor que indica a URL do pai **registro**.  
   
 ## <a name="remarks"></a>Remarks  

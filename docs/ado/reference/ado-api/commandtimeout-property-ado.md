@@ -2,7 +2,6 @@
 title: Propriedade CommandTimeout (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bbd07b516902db0dc952761e7cc1e38fa6958ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1addc5de70e53087cdcbaa77fea87211958cbcdc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276865"
 ---
 # <a name="commandtimeout-property-ado"></a>Propriedade CommandTimeout (ADO)
 Indica por quanto tempo de espera durante a execução de um comando antes de encerrar a tentativa e gerar um erro.  

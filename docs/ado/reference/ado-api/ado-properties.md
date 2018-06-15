@@ -2,7 +2,6 @@
 title: Propriedades do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6f2c0bee80ae3f8b59a9b8241226facc89edb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d8df3fdea1c8e5666593dfa63666ed2c051c3b4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275575"
 ---
 # <a name="ado-properties"></a>Propriedades do ADO
 |||  
@@ -44,19 +44,19 @@ ms.lasthandoff: 05/03/2018
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indica o tipo de um **comando** objeto.|  
 |[Propriedade ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indica as informações usadas para estabelecer uma conexão com uma fonte de dados.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indica por quanto tempo a aguardar ao estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Contagem](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica o local do serviço de cursor.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica o tipo de cursor usado em uma **registros** objeto.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica o nome do membro de dados que será recuperado do objeto referenciado pelo **DataSource** propriedade.|  
 |[Fonte de dados](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica um objeto que contém dados a ser representado como um **registros** objeto.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Indica o banco de dados padrão para um **Conexão** objeto.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica a capacidade de dados de um **campo** objeto.|  
-|[Descrição](../../../ado/reference/ado-api/description-property.md)|Descreve um **erro** objeto.|  
+|[Description](../../../ado/reference/ado-api/description-property.md)|Descreve um **erro** objeto.|  
 |[Dialeto](../../../ado/reference/ado-api/dialect-property.md)|Indica a sintaxe e regras gerais que o provedor usará para analisar o **CommandText** ou **CommandStream** propriedades.|  
 |[Direção](../../../ado/reference/ado-api/direction-property.md)|Indica se o **parâmetro** representa um parâmetro de entrada, um parâmetro de saída ou ambos, ou se o parâmetro é o valor de retorno de um procedimento armazenado.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica o status de edição do registro atual.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indica se a posição atual está no final do fluxo.|  
-|[Filtro](../../../ado/reference/ado-api/filter-property.md)|Indica um filtro de dados em um **registros**.|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica um filtro de dados em um **registros**.|  
 |[HelpContext e HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica o arquivo de Ajuda e o tópico associado a um **erro** objeto.<br /><br /> **IdentificaçãoDoContextoDaAjuda** retorna uma ID de contexto, como um **longo** valor para um tópico em um arquivo de Ajuda.<br /><br /> **Arquivo de Ajuda** retorna um **cadeia de caracteres** valor que é avaliada para um caminho totalmente resolvido de um arquivo de Ajuda.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indica o nome do índice atualmente em vigor para um **registros** objeto.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica o nível de isolamento para um **Conexão** objeto.|  

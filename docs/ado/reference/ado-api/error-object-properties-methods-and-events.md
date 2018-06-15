@@ -2,7 +2,6 @@
 title: Eventos, métodos e propriedades do objeto de erro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab6625b93d0d58e8ab1fd823e69f5cbc77737851
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdfd2a117fea0d2bdf85f1fc54c3cd847ff93458
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277995"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de erro
 ## <a name="properties"></a>Propriedades  
@@ -38,10 +38,10 @@ ms.lasthandoff: 05/03/2018
  [Propriedade SQLState](../../../ado/reference/ado-api/sqlstate-property.md)  
   
 ## <a name="methods"></a>Métodos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Error](../../../ado/reference/ado-api/error-object.md)

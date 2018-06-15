@@ -2,7 +2,6 @@
 title: SchemaEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cdc032d770f587e8c78c4df0f195d9535688888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f10586341f780615c3955c32a9b02f9913ff2e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281555"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica o tipo de esquema **registros** que o [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera do método.  
@@ -38,7 +38,7 @@ Especifica o tipo de esquema **registros** que o [OpenSchema](../../../ado/refer
   
  ADO gera resultados semelhantes de esquema para as constantes, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. ADO cria um **registros**e, em seguida, preenche cada linha com os valores retornados respectivamente o **IDBInfo::GetKeywords** e **IDBInfo::GetLiteralInfo** métodos. Informações adicionais sobre esses métodos podem ser encontradas no [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) seção da referência do OLE DB do programador.  
   
-|Constante|Value|Description|Colunas de restrição|  
+|Constante|Valor|Description|Colunas de restrição|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Retorna as asserções definidas no catálogo que são de propriedade de um determinado usuário.<br /><br /> (Conjunto de linhas de ASSERÇÕES)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Retorna os atributos físicos associados a catálogos acessíveis a partir do DBMS.<br /><br /> (CATÁLOGOS do conjunto de linhas)|CATALOG_NAME|  

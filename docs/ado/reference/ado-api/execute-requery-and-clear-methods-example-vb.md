@@ -2,7 +2,6 @@
 title: Execute, repetir e limpar o exemplo de métodos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9a861132f3cabfbafe4b9ab8aff2242e5f97b23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9f877a63f05fd6fd8d31623b8e79aa1bac4464c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278105"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute, repetir e limpar o exemplo de métodos (VB)
 Este exemplo demonstra o **Execute** método quando executado tanto uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Ele também usa o [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar os dados atuais um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e o [limpar](../../../ado/reference/ado-api/clear-method-ado.md) método para limpar o conteúdo do [erros](../../../ado/reference/ado-api/errors-collection-ado.md)coleção. (O **erros** coleção é acessada por meio do **Conexão** objeto do [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade do [registros](../../../ado/reference/ado-api/recordset-object-ado.md).) Os procedimentos ExecuteCommand e PrintOutput são necessários executar este procedimento.  

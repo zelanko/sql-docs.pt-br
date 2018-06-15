@@ -2,7 +2,6 @@
 title: Localizar o método (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278715"
 ---
 # <a name="find-method-ado"></a>Localizar o método (ADO)
 Pesquisa um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, linha inicial e o deslocamento da linha inicial pode ser especificada. Se os critérios forem atendidos, a posição da linha atual é definida no registro encontrado; Caso contrário, a posição é definida ao final (ou início) da **registros**.  

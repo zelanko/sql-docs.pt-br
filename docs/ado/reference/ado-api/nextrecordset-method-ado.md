@@ -1,11 +1,8 @@
 ---
 title: Método NextRecordset (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -24,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e53a7911f907783ec171cdee3904490f39ca5e00
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: a1df02b14168a15f9bccc476b62583334b2f0c3f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279635"
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Limpa atual [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de objeto e retorna o próximo **registros** pelo adiantamento por meio de uma série de comandos.  
@@ -40,7 +38,7 @@ Limpa atual [registros](../../../ado/reference/ado-api/recordset-object-ado.md) 
 Set recordset2 = recordset1.NextRecordset(RecordsAffected )  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna um **registros** objeto. No modelo de sintaxe, *recordset1* e *recordset2* pode ser o mesmo **registros** objeto, ou você pode usar objetos separados. Ao usar separada **registros** objetos, redefinindo o **ActiveConnection** propriedade original **registros** (*recordset1*) Depois de **NextRecordset** foi chamado irá gerar um erro.  
   
 #### <a name="parameters"></a>Parâmetros  

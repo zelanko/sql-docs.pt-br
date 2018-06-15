@@ -2,7 +2,6 @@
 title: Exemplo de propriedades de DefaultDatabase (VC + +) e provedor | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dfa6d9521b403ae23cffbe8605072ed346bd5229
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6efcd2a571902cedaf065982490e2d593bd22ab6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280855"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Exemplo de propriedades de DefaultDatabase (VC + +) e o provedor
 Este exemplo demonstra o [provedor](../../../ado/reference/ado-api/provider-property-ado.md) propriedade abrindo três [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos usando provedores diferentes. Ele também usa o [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) propriedade para definir o banco de dados padrão para o provedor do Microsoft ODBC.  

@@ -2,7 +2,6 @@
 title: RDS retornará &quot;fluxo não leitura&quot; erro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05b6c571c96f2e5322e1dcfe8e57b8f12c29a7bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3c1c5b3bdb64b61d6a8b8483069701c89c53252
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274045"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS retornará &quot;fluxo não leitura&quot; erro
 "A objeto de fluxo não foi possível ler porque ele está vazio ou a posição atual está no final do fluxo. Para fluxos de não vazio, defina a posição atual com a propriedade de posição. Para determinar se um fluxo está vazio, verifique a propriedade de tamanho."  

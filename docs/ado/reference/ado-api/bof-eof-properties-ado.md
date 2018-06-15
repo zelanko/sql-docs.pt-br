@@ -2,7 +2,6 @@
 title: BOF, propriedades EOF (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,18 +21,19 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276145"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, propriedades EOF (ADO)
 -   **BOF** indica que a posição do registro atual é antes do primeiro registro em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
 -   **EOF** indica que a posição do registro atual é após o último registro de um **registros** objeto.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O **BOF** e **EOF** propriedades retorno **booliano** valores.  
   
 ## <a name="remarks"></a>Remarks  
