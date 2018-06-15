@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898011"
 ---
 # <a name="date-arithmetic-limitations"></a>Limitações de aritmética de data
 Não há suporte para aritmética de data para subtrair um tipo de dados de data de um tipo de dados de data.

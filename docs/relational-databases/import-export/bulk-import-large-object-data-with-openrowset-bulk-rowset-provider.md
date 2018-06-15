@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32935621"
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>Importando em massa dados de objeto grande com o provedor de conjunto de linhas em massa OPENROWSET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

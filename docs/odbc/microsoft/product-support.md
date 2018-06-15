@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900671"
 ---
 # <a name="product-support"></a>Suporte ao produto
 Suporte ao produto do ODBC é fornecido pelo Microsoft Product Support Services. Como muitos produtos da Microsoft usam o ODBC como um componente principal e também redistribuem drivers ODBC, o Microsoft Product Support Services considera ODBC uma parte de cada produto que incorpora o ODBC como um componente. Suporte de ODBC é fornecido de acordo com o contrato de suporte do produto. Consulte a documentação de produtos individuais para obter mais informações.

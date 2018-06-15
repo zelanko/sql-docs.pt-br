@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899401"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Listam de palavras reservadas do Jet 4.0 usa SQL-92 quando ExtendedAnsiSQL_Set
 Quando o sinalizador ExtendedAnsiSQL é ativado, o Jet 4.0 usa a lista de palavras reservadas de SQL-92. Tentando usar um SQL-92 palavra reservada do como um nome de objeto sem aspas resultará em um erro de sintaxe. Quando o sinalizador ExtendedAnsiSQL estiver desativado, novas palavras reservadas podem ser usadas como nomes de objeto como antes.

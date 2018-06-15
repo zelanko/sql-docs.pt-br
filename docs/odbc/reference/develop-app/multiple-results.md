@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913841"
 ---
 # <a name="multiple-results"></a>Vários resultados
 Um *resultados* é algo retornado pela fonte de dados depois que uma instrução é executada. ODBC tem dois tipos de resultados: conjuntos de resultados e contagens de linhas. *Contagens de linhas* são o número de linhas afetadas por uma atualização, excluir ou inserir a instrução. Lotes, descrito em [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), pode gerar vários resultados.  

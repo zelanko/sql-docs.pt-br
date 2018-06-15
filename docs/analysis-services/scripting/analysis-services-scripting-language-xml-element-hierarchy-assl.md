@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34036347"
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Hierarquia de elemento XML da ASSL (Analysis Services Scripting Language)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

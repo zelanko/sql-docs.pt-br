@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909081"
 ---
 # <a name="c-to-sql-date"></a>C para SQL: data
 O identificador para o tipo de dados do ODBC C data é:  

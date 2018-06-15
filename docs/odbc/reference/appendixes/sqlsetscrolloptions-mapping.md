@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911611"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Mapeamento de SQLSetScrollOptions
 Quando um aplicativo chama **SQLSetScrollOptions** por meio de um ODBC 3 *. x* driver e o driver não oferece suporte **SQLSetScrollOptions**, a chamada para  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900661"
 ---
 # <a name="select-statement-limitations"></a>Limitações da instrução SELECT
 Uma coluna de função de agregação não pode ser misturada a uma coluna de não agregação em uma instrução SELECT.  

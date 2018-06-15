@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898901"
 ---
 # <a name="jet-outer-joins"></a>Jet: Junções externas
 Uma instrução SELECT pode conter uma lista de cláusulas OUTER JOIN. Há suporte para junções externas aninhadas. Para obter mais informações sobre junções externas, consulte o *guia do programador do Microsoft Jet Database Engine*.

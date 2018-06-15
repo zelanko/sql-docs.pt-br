@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912271"
 ---
 # <a name="driver-specific-connection-information"></a>Informações de Conexão específicos de driver
 **SQLConnect** supõe que um nome de fonte de dados, ID de usuário e senha são suficientes para se conectar a uma fonte de dados e que todas as outras informações de conexão podem ser armazenadas no sistema. Isso frequentemente não for o caso. Por exemplo, um driver talvez seja necessário uma ID de usuário e senha para fazer logon um servidor e um ID de usuário diferente e uma senha para fazer logon um DBMS. Porque **SQLConnect** aceita um ID de usuário único e uma senha, isso significa que a ID de usuário e senha devem ser armazenados com as informações de fonte de dados do sistema se **SQLConnect** deve ser usado. Essa é uma possível violação de segurança e deve ser evitada, a menos que a senha é criptografada.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909791"
 ---
 # <a name="connecting-directly-to-drivers"></a>Conectando-se diretamente a Drivers
 Conforme abordado na [escolhendo uma fonte de dados ou Driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)anteriormente nesta seção, alguns aplicativos não quiser usar uma fonte de dados. Em vez disso, eles desejam se conectar diretamente a um driver. **SQLDriverConnect** fornece uma maneira para que o aplicativo se conectar diretamente a um driver sem especificar uma fonte de dados. Conceitualmente, uma fonte de dados temporário é criada em tempo de execução.  

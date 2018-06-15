@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902431"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (Drivers do banco de dados de área de trabalho)
 Os indicadores retornados por uma *fOption* de SQL_GETBOOKMARK são válidos somente enquanto a consulta é aberta e são invalidados quando a consulta seja enviado novamente. Não há suporte para indicadores persistentes.

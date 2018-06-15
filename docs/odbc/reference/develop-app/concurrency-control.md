@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910311"
 ---
 # <a name="concurrency-control"></a>Controle de simultaneidade
 *Simultaneidade* é a capacidade de duas transações para usar os mesmos dados ao mesmo tempo, e com a transação maior isolamento normalmente vem redução de simultaneidade. Isso ocorre porque o isolamento de transação geralmente é implementado pelo bloqueio de linhas, e que mais linhas são bloqueadas, poucas transações podem ser concluídas sem serem bloqueados pelo menos temporariamente por uma linha bloqueada. Enquanto a redução de simultaneidade é aceita normalmente como uma compensação para os níveis mais altos de isolamento de transação necessários para manter a integridade do banco de dados, ele pode se tornar um problema em aplicativos interativos com atividade de leitura/gravação alta que usar cursores.  
