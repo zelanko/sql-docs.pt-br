@@ -21,9 +21,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0c6e3ada8750251aa81663faaeb80d8cf8d0920
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33068273"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

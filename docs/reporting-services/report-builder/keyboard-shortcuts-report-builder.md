@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020623"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Atalhos de teclado (Construtor de Relatórios)
   Quando você cria e edita relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Construtor de Relatórios, tem acesso a todas as teclas de atalho para navegação fornecidas pelo ambiente do Windows. Você pode selecionar de vários esquemas de mapeamento de teclado padrão.  

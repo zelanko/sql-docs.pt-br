@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029643"
 ---
 # <a name="preview-view"></a>Modo Visualizar
 No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use a exibição **Visualização** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.

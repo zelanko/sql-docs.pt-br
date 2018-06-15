@@ -24,9 +24,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3bcd3dab5c08b7d8df8dec05004b7ee67bbb5a30
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33074253"
 ---
 # <a name="profiler-utility"></a>Utilitário Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022303"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios paginados de que você precisa. A superfície de design está no centro da janela, com a faixa de opções e os painéis em torno dela. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. Este artigo explica os painéis usados para adicionar, selecionar e organizar os recursos de relatório e alterar as propriedades de item de relatório.  

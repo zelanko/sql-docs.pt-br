@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014193"
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>Log de alterações do SQL Server Reporting Services
 

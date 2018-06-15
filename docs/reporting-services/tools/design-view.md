@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031473"
 ---
 # <a name="design-view"></a>Modo Design
 No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use o modo de exibição de Design para organizar itens no relatório. O modo Design também é chamado de superfície de design ou modo de layout.  

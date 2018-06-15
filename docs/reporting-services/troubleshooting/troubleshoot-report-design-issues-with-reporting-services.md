@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032373"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Solucionar problemas de Design de Relatório com o Reporting Services
 Os problemas de design de relatórios podem ocorrer quando você cria o layout do relatório na exibição Design em um aplicativo de criação de relatório. Use este tópico para ajudar a solucionar esses problemas.   

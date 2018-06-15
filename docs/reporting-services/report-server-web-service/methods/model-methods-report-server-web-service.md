@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025393"
 ---
 # <a name="model-methods---report-server-web-service"></a>Métodos de modelo – serviço Web Servidor de Relatórios
   Você pode usar estes métodos para gerenciar modelos.  

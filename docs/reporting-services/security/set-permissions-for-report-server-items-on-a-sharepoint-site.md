@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030103"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Definir permissões para itens do servidor de relatório em um site do SharePoint
   Se as configurações de segurança padrão não fornecerem o nível de acesso desejado, você poderá criar novos níveis de permissão para fornecer acesso a itens ou operações específicos do servidor de relatório. As configurações de segurança personalizadas podem ser úteis se você quiser restringir o acesso a um determinado relatório.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019063"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Pesquisando relatórios e outros itens (Construtor de Relatórios e SSRS)
   Você pode usar o Gerenciador de Relatórios para pesquisar um servidor de relatório à procura de itens específicos por nome ou descrição. Você pode procurar por relatórios publicados, modelos de relatório, pastas, fontes de dados compartilhadas e recursos. Você não pode procurar por agendas, proprietários, atribuições de função, instantâneos específicos no histórico de relatório ou assinaturas. A pesquisa é executada no banco de dados do servidor de relatórios no qual os itens estão armazenados.  

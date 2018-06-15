@@ -16,6 +16,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455450"
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade
 

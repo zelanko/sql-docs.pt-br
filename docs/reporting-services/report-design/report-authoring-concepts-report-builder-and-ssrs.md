@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023603"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceitos de criação de relatórios (Construtor de Relatórios e SSRS)
   Esta seção define brevemente alguns dos principais conceitos usados para descrever relatórios paginados na documentação do Construtor de Relatórios e do Designer de Relatórios. Para obter definições de palavras ou de termos específicos, consulte o [Glossário &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

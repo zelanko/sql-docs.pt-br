@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030723"
 ---
 # <a name="user-role-properties-management-studio"></a>Propriedades de Função do Usuário (Management Studio)
   Use essa página para exibir quais tarefas são incluídas em uma definição de função de nível de item. Essa página também pode ser usada para alterar a lista de tarefas ou modificar uma descrição de função.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020953"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidade interativa – extensões de renderização de relatório diferentes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos para interagir com um relatório paginado no tempo de execução. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Use a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  

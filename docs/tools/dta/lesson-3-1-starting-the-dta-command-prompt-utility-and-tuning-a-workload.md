@@ -21,9 +21,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b48b9a7798acb5ac602bbe8a867e48abb86ac2
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33072613"
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lição 3-1 – Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

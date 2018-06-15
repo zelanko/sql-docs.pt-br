@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019833"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas nos relatórios móveis do Reporting Services
 Os mapas são uma ótima maneira de visualizar dados geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] fornece três tipos diferentes de visualização do mapa e mapas internos para continentes e uma série de países individuais. Você também pode [carregar e usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   

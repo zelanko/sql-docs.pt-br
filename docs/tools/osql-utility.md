@@ -32,9 +32,10 @@ manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33074710"
 ---
 # <a name="osql-utility"></a>Utilitário osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +102,7 @@ C:\>osql
  Usa uma conexão confiável em vez de pedir uma senha.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifique *server_name***\\*** instance_name* para conectar-se a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifique *server_name***\\***instance_name* para conectar-se a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
   
  **-H** *wksta_name*  
  É um nome de estação de trabalho. O nome de estação de trabalho é armazenado em **sysprocesses.hostname** e exibido por **sp_who**. Se essa opção não for especificada, o nome do computador atual será presumido.  

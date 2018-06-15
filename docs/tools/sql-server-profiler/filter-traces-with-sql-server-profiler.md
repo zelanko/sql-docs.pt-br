@@ -23,9 +23,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0204e06854c66b11415c9dc210e5d1d714842ef
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33070783"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtrar rastreamentos com o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
