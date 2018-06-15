@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913271"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Rolando e buscando linhas (ODBC)
 Ao usar um cursor rolável, aplicativos chamam **SQLFetchScroll** para posicionar os cursor e busca linhas. **SQLFetchScroll** oferece suporte à rolagem relativo (próximo, anterior e relativo *n* linhas), rolando absoluto (, sobrenome e linha *n*) e o posicionamento do indicador. O *FetchOrientation* e *FetchOffset* argumentos **SQLFetchScroll** especificar qual conjunto de linhas para buscar, conforme mostrado nos diagramas a seguir.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912031"
 ---
 # <a name="direct-execution-odbc"></a>Execução direta ODBC
 Execução direta é a maneira mais simples para executar uma instrução. Quando a instrução é enviada para execução, a fonte de dados compila em um plano de acesso e, em seguida, executa esse plano de acesso.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912151"
 ---
 # <a name="block-cursors"></a>Cursores em bloco
 Muitos aplicativos gastam uma quantidade significativa de tempo para trazer os dados pela rede. Parte desse tempo é gasto na verdade trazer os dados pela rede e parte dele é gasto na sobrecarga de rede, como a chamada feita pelo driver para solicitar uma linha de dados. A última hora pode ser reduzida se o aplicativo faça uso eficiente de *bloco,* ou *fat,* *cursores,* que pode retornar mais de uma linha por vez.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907841"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Substituindo à esquerda do padrão e a precisão de segundos para tipos de dados de intervalo
 Quando o campo SQL_DESC_TYPE de um descartar é definido como um tipo datetime ou intervalo do C, chamando **SQLBindCol** ou **SQLSetDescField**, o campo SQL_DESC_PRECISION (que contém o intervalo em segundos precisão) é definida para os seguintes padrões:  

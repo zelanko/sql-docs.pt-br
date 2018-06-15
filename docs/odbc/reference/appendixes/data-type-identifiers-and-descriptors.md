@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908391"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Identificadores de tipo de dados e descritores
 Os tipos de dados listados no [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md) e [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seções anteriores neste apêndice são tipos de dados "concisa": cada identificador se refere a um único tipo de dados. Não há uma correspondência entre o identificador e o tipo de dados. Descritores de, no entanto, fazer não em todos os casos a usar um único valor para identificar os tipos de dados. Em alguns casos, eles usam um tipo de dados "detalhados" e um subcódigo de tipo. Para todos os tipos de dados, exceto os tipos de dados de data e hora e intervalo, o identificador de tipo detalhado é o mesmo que o identificador de tipo concisa e o valor em SQL_DESC_DATETIME_INTERVAL_CODE é igual a 0. Para tipos de dados de data e hora e intervalo, no entanto, um tipo detalhado (SQL_DATETIME ou SQL_INTERVAL) é armazenado em SQL_DESC_TYPE, um tipo conciso é armazenado em SQL_DESC_CONCISE_TYPE e um subcódigo para cada tipo conciso é armazenado em SQL_DESC_DATETIME_INTERVAL_CODE. A configuração de um desses campos afeta os outros. Para obter mais informações sobre esses campos, consulte o [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) descrição da função.  

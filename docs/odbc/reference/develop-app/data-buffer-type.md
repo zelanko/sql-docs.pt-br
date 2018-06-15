@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910471"
 ---
 # <a name="data-buffer-type"></a>Tipo de Buffer de dados
 O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única variável, isso ocorre quando o aplicativo aloca a variável. Com memória genérica — ou seja, memória aponta para um ponteiro de tipo void – isso ocorre quando o aplicativo converte a memória para um determinado tipo. O driver detecta esse tipo de duas maneiras:  

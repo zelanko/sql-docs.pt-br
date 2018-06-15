@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911521"
 ---
 # <a name="quoted-identifiers"></a>Identificadores entre aspas
 Em uma instrução SQL, os identificadores que contêm caracteres especiais ou correspondência de palavras-chave devem ser colocados entre *caracteres de aspas*; identificadores entre esses caracteres são conhecidos como *deidentificadoresentreaspas*(também conhecido como *identificadores delimitados* em SQL-92). Por exemplo, o identificador de contas a pagar é mencionado na tabela a seguir **selecione** instrução:  

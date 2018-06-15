@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913081"
 ---
 # <a name="level-1-interface-conformance"></a>Conformidade de Interface de nível 1
 O nível de conformidade de interface de nível 1 inclui a funcionalidade do nível de conformidade do interface principal mais recursos adicionais, como transações, que geralmente estão disponíveis em um DBMS relacional OLTP. Um driver de interface – em conformidade com o nível 1 permite que o aplicativo faça o seguinte, além dos recursos em nível de conformidade a principal interface:  

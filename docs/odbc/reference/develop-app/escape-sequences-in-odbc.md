@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911351"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape de ODBC
 Um número de recursos de idioma, como junções externas e chamadas de função escalar, geralmente é implementado por DBMSs. No entanto, sintaxes para esses recursos costumam ser DBMS específico, mesmo quando sintaxes padrão são definidos por vários corpos de padrões. Por isso, o ODBC define sequências de escape que contêm sintaxes padrão para os seguintes recursos de idioma:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912571"
 ---
 # <a name="descriptor-fields"></a>Campos de descritor
 Os descritores de contêm *cabeçalho* e *registro* campos que descrevem completamente colunas ou parâmetros.  

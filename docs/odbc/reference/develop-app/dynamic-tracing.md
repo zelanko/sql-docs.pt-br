@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909881"
 ---
 # <a name="dynamic-tracing"></a>Rastreamento dinâmico
 O rastreamento pode ser habilitado ou desabilitado em qualquer ponto em um aplicativo executado. Isso permite que um aplicativo rastrear qualquer número de chamadas de função.  

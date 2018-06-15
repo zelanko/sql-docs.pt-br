@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911091"
 ---
 # <a name="sequence-of-status-records"></a>Sequência de registros de Status
 Se dois ou mais registros de status são retornados, o Gerenciador de Driver e o driver classificação-las de acordo com as regras a seguir. O registro com a classificação mais alta é o primeiro registro. A fonte de um registro (Gerenciador de Driver, driver, gateway e assim por diante) não é considerada quando registros de classificação.  

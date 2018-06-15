@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911041"
 ---
 # <a name="mixed-cursors"></a>Cursores mistos
 Um cursor misto é uma combinação de um cursor controlado por conjunto de chaves e um cursor dinâmico. Ele é usado quando o conjunto de resultados for muito grande para ser razoavelmente salvar as chaves para o conjunto de resultados inteiro. Mistos cursores são implementados por meio da criação de um conjunto de chaves, mas menor do que o conjunto de resultados inteiro maior do que o conjunto de linhas.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907961"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Alocar e liberar Buffers
 Todos os buffers são alocados e liberados pelo aplicativo. Se um buffer não é adiado, ele precisa existir somente para a duração da chamada para uma função. Por exemplo, **SQLGetInfo** retorna o valor associado com uma opção específica no buffer apontado pelo *InfoValuePtr* argumento. Esse buffer pode ser liberado imediatamente após a chamada a **SQLGetInfo**, conforme mostrado no exemplo de código a seguir:  

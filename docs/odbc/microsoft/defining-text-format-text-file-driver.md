@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904871"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definir o formato de texto (Driver de arquivo de texto)
 Quando o driver de texto é usado, você pode usar o **definir formato de texto** caixa de diálogo para definir o formato das colunas em um arquivo selecionado. Essa caixa de diálogo permite que você especifique o esquema para cada tabela de dados. Essas informações são gravadas em um arquivo Schema.ini no diretório de origem de dados. Um arquivo Schema.ini separado é criado para cada diretório de fonte de dados de texto.  

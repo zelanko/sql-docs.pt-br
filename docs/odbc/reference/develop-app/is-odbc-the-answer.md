@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911671"
 ---
 # <a name="is-odbc-the-answer"></a>A resposta é ODBC?
 Antes de investigar a questão de interoperabilidade, considere a seguinte pergunta: o aplicativo deve usar ODBC em todos os? Isso pode parecer uma pergunta estranha em um guia para ODBC, mas é, na verdade, uma legítima. ODBC não foi projetado para substituir completamente o banco de dados nativo APIs nem foi projetado para fornecer acesso de banco de dados em todas as circunstâncias. Ele foi projetado para fornecer uma interface comum para bancos de dados e foi planejado para liberar os programadores de aplicativos de ter que conhecer e manter os vínculos para vários bancos de dados.  

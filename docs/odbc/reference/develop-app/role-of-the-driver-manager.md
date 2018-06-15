@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913191"
 ---
 # <a name="role-of-the-driver-manager"></a>Função do Gerenciador de Driver
 O Gerenciador de Driver determina a ordem final para retornar registros de status que ele gera. Em particular, ele determina qual registro tem a classificação mais alta e deve ser retornada pela primeira vez. O driver é responsável por ordenar registros de status que ele gera. Se os registros de status são lançados pelo Gerenciador de Driver e o driver, o Gerenciador de Driver é responsável por ordená-los. Para obter mais informações, consulte [sequência de registros de Status](../../../odbc/reference/develop-app/sequence-of-status-records.md).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905561"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Data, hora e sequências de Escape de carimbo de hora
 ODBC define sequências de escape para data, hora e literais de carimbo de hora. A sintaxe dessas sequências de escape é da seguinte maneira:  

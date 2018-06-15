@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906201"
 ---
 # <a name="appendix-d-data-types"></a>Apêndice d: tipos de dados
 ODBC define dois conjuntos de tipos de dados: SQL tipos de dados e tipos de dados C. Tipos de dados SQL indicam o tipo de dados dos dados armazenados na fonte de dados. Tipos de dados C indicam o tipo de dados dos dados armazenados em buffers do aplicativo.  

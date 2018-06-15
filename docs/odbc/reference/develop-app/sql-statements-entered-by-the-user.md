@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911391"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instruções SQL inseridas pelo usuário
 Aplicativos que executam a análise ad hoc também costuma permitem que o usuário insira as instruções SQL diretamente. Por exemplo:  

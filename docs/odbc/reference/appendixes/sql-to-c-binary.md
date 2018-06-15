@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907501"
 ---
 # <a name="sql-to-c-binary"></a>SQL em c: binário
 Os identificadores para os tipos de dados SQL ODBC binários são:  
