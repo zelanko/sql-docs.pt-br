@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611971"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/24/2018
 
 As notas de versão a seguir se aplicam a 2017 do SQL Server em execução no Linux. Este artigo é dividido em seções para cada versão. A versão GA tem detalhadas de suporte e problemas listados. Cada versão de atualização cumulativa (CU) tem um link para um artigo de suporte que descrevem alterações CU, bem como links para o download do pacote do Linux.
 
-## <a name="supported-platforms"></a>Plataformas com suporte
+## <a name="supported-platforms"></a>Plataformas compatíveis
 
 | Plataforma | Sistema de Arquivos | Guia de Instalação |
 |-----|-----|-----|
@@ -215,10 +216,11 @@ Os seguintes recursos e serviços não estão disponíveis no Linux no momento d
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Consulta distribuída com conexões 3ª parte |
+| &nbsp; | Servidores vinculados a fontes de dados diferente do SQL Server |
 | &nbsp; | Sistema os procedimentos armazenados estendidos (XP_CMDSHELL, etc.) |
 | &nbsp; | Tabela de arquivos, FILESTREAM |
 | &nbsp; | O conjunto de assemblies do CLR com o EXTERNAL_ACCESS ou UNSAFE permissão |
-| &nbsp; | Extensão do pool de buffers |
+| &nbsp; | Buffer Pool Extension |
 | **SQL Server Agent** |  Subsistemas: CmdExec, PowerShell, leitor de fila, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
 | &nbsp; | Agente de Leitor de Log |

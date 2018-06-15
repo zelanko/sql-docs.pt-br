@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619513"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Associando parâmetros por nome (parâmetros nomeados)
 Determinados DBMSs permitir que um aplicativo especificar os parâmetros para um procedimento armazenado por nome em vez de por posição na chamada de procedimento. Esses parâmetros são chamados *parâmetros nomeados*. ODBC oferece suporte ao uso de parâmetros nomeados. No ODBC, os parâmetros nomeados são usados somente em chamadas para procedimentos armazenados em não podem ser usados em outras instruções SQL.  
@@ -41,7 +42,7 @@ Determinados DBMSs permitir que um aplicativo especificar os parâmetros para um
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- Neste procedimento, o primeiro parâmetro, @title_id, tem um valor padrão de 1. Um aplicativo pode usar o seguinte código para chamar esse procedimento, de modo que ele especifica apenas um parâmetro dinâmico. Esse parâmetro é um parâmetro nomeado com o nome "@quote".  
+ Neste procedimento, o primeiro parâmetro, @title_id, tem um valor padrão de 1. Um aplicativo pode usar o seguinte código para chamar esse procedimento, de modo que ele especifica apenas um parâmetro dinâmico. Esse parâmetro é um parâmetro nomeado com o nome "\@aspas".  
   
 ```  
 // Prepare the procedure invocation statement.  

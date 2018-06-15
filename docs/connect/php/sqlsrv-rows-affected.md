@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f831a585310f0233faaecd77911bafc061ac9c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f416bf1633909e548572f8f90c7fac7e188ecf75
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309345"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_rows_affected( resource $stmt)
 #### <a name="parameters"></a>Parâmetros  
 *$stmt*: um recurso de instrução correspondente a uma instrução executada.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Um inteiro que indica o número de linhas modificadas pela última instrução executada. Se nenhuma linha for modificada, será retornado zero (0). Se nenhuma informação sobre o número de linhas modificadas estiver disponível, menos um (-1) será retornado. Se ocorrer um erro ao recuperar o número de linhas modificadas, **false** será retornado.  
   
 ## <a name="example"></a>Exemplo  

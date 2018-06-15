@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b753000c255d6c07777c94e8fb61c847ab10d0c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309145"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,7 +65,7 @@ Para obter mais informações sobre esses valores, consulte [Especificando um ti
   
 *deslocamento* [opcional]: usado com SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE para especificar a linha a ser recuperada. O primeiro registro no conjunto de resultados é 0.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Um objeto do PHP com propriedades que correspondem aos nomes de campo do conjunto de resultados. Os valores de propriedade são preenchidos com os valores de campo correspondentes do conjunto de resultados. Se a classe especificada com o parâmetro *$className* opcional não existir ou se não houver nenhum conjunto de resultados ativo associado à instrução especificada, **false** será retornado. Se não houver mais linhas para recuperar, **null** será retornado.  
   
 O tipo de dados de um valor no objeto retornado será o tipo de dados do PHP padrão. Para obter informações sobre tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  

@@ -3,7 +3,6 @@ title: Resiliência de Conexão ociosa
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307255"
 ---
 # <a name="idle-connection-resiliency"></a>Resiliência de Conexão ociosa
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

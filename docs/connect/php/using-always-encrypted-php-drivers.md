@@ -3,7 +3,6 @@ title: Use sempre criptografado com os Drivers PHP para SQL Server | Microsoft D
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 93b14d81411e3045d9d6f3a67ce03db281f41f68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f5035dc42b130afe7da8c27a1c6036e79e2fa0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309905"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Use sempre criptografado com os Drivers PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

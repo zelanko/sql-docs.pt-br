@@ -3,13 +3,10 @@ title: sqlsrv_commit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: php
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -24,11 +21,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c6329679861585ef30a13e4c2f0396420c814ae
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d543667f15e3fcb1bf049bb595140098f303837e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309035"
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +49,7 @@ sqlsrv_commit( resource $conn )
 #### <a name="parameters"></a>Parâmetros  
 *$conn*: a conexão em que a transação está ativa.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Um valor booliano: **true** se a transação foi confirmada com êxito. Caso contrário, **false**.  
   
 ## <a name="example"></a>Exemplo  

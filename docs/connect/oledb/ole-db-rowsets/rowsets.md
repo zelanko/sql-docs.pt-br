@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d3f187118cd273712ed8145bbfef3af712091028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e03aa5a887f25e9909ff2c755cfbfa598166475
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306695"
 ---
 # <a name="rowsets"></a>Conjuntos de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,11 +53,11 @@ ms.lasthandoff: 05/03/2018
   
 -   [Criando um conjunto de linhas com IOpenRowset](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [Criando conjuntos de linhas com ICommand:: execute](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [Criando conjuntos de linhas com ICommand::Execute](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
--   [Comportamentos e propriedades de conjunto de linhas](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
+-   [Propriedades e comportamentos do conjunto de linhas](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
--   [Conjuntos de linhas e cursores do SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
+-   [Conjuntos de linha e cursores do SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
 -   [Buscando linhas](../../oledb/ole-db-rowsets/fetching-rows.md)  
   

@@ -2,10 +2,10 @@
 title: Mapeamento de tipo de dados em ITableDefinition | Microsoft Docs
 description: Mapeamento de tipo de dados em ITableDefinition
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ade365add5b89069e86f67d82dfa84638bcb71f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d613fc7be394bbf16c86c5e217e3dfe83a4296a1
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666346"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mapeamento do tipo de dados em ITableDefinition
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Ao criar tabelas usando o **itabledefinition:: CreateTable** função, o Driver OLE DB para o consumidor do SQL Server pode especificar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados no *pwszTypeName* membro das Matriz DBCOLUMNDESC passada. Se o consumidor Especifica o tipo de dados de uma coluna por nome, de tipo de dados OLE DB mapeamento, representado pelo *wType* membro da estrutura DBCOLUMNDESC, é ignorado.  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
-|DBTYPE_I4|**Int**||  
+|DBTYPE_I4|**int**||  
 |DBTYPE_I8|**bigint**||
 |DBTYPE_NUMERIC|**numeric**|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bPrecision* e *bScale* membros para determinar a precisão e escala para o **numérico** coluna.|  
 |DBTYPE_R4|**real**||  
@@ -59,6 +62,6 @@ ms.lasthandoff: 05/03/2018
 >  Ao criar uma nova tabela, o Driver OLE DB para SQL Server mapeia apenas os OLE DB tipo enumeração valores de dados especificados na tabela anterior. Tentar criar uma tabela com uma coluna de qualquer outro tipo de dados OLE DB gera um erro.  
 
 ## <a name="see-also"></a>Consulte também  
- [Tipos de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

@@ -2,10 +2,10 @@
 title: Erros | Microsoft Docs
 description: Erros
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
+ms.component: oledb|ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3869f7cea6f193ebecc8c038faa27360561cefc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c94e2beaf56e6987bf49bb73e8629f33a775496
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665236"
 ---
 # <a name="errors"></a>Erros
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Os objetos OLE/COM informam erros através do código de retorno de HRESULT das funções de membro de objeto. Um HRESULT de OLE/COM é uma estrutura de bits compactados. A OLE fornece macros que eliminam a referência de membros de estrutura.  
   
@@ -43,13 +46,13 @@ ms.lasthandoff: 05/03/2018
   
 -   [Códigos de retorno](../../oledb/ole-db-errors/return-codes.md)  
   
--   [Informações em Interfaces de erro](../../oledb/ole-db-errors/information-in-error-interfaces.md)  
+-   [Informações em interfaces de erro](../../oledb/ole-db-errors/information-in-error-interfaces.md)  
   
--   [Detalhes de erro do SQL Server](../../oledb/ole-db-errors/sql-server-error-detail.md)  
+-   [Detalhes de erros do SQL Server](../../oledb/ole-db-errors/sql-server-error-detail.md)  
   
 -   [Recuperando informações de erro](../../oledb/ole-db-errors/retrieving-error-information.md)  
   
--   [Resultados de mensagem do SQL Server](../../oledb/ole-db-errors/sql-server-message-results.md)  
+-   [Resultados da mensagem do SQL Server](../../oledb/ole-db-errors/sql-server-message-results.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Programação no Driver do OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

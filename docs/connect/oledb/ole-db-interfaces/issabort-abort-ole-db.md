@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 444d51aeae49e9e626b0666904584bae8e2de6b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7d30e8132d245958e7ef6f7f09e642a2da960c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305375"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,10 +48,10 @@ HRESULT Abort(void);
  Depois de **issabort:: Abort** Retorna S_OK, associado **IMultipleResults** interface entra em um estado inutilizável e retornará DB_E_CANCELED para todas as chamadas de método (exceto os métodos definidos pelo **IUnknown** interface) até que ele seja liberado. Se um **IRowset** foi obtido de **IMultipleResults** antes de uma chamada para **Abort**, também entrará em um estado inutilizável e retornará DB_E_CANCELED para todas as chamadas de método (com exceção dos métodos definidos pela interface **IUnknown** e **IRowset::ReleaseRows**) até que seja liberado após uma chamada bem-sucedida para **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se o estado XACT_ABORT do servidor estiver ON, a execução de **ISSAbort::Abort** encerrará e reverterá qualquer transação implícita ou explícita atual quando conectada ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não anularão a transação atual.  
+>  Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se o estado XACT_ABORT do servidor está ativada, executando **issabort:: Abort** encerrará e reverter qualquer implícita ou explícita transação atual quando conectado a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não anularão a transação atual.  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  

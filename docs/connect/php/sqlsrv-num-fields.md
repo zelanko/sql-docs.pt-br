@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68a9ce3cc0bb156ac4969bec9714ee779ca5611d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309175"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_num_fields( resource $stmt)
 #### <a name="parameters"></a>Parâmetros  
 *$stmt*: a instrução na qual o conjunto de resultados de destino está ativo.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Um valor inteiro que representa o número de campos no conjunto de resultados ativo. Se ocorrer um erro, será retornado o valor booliano **false** .  
   
 ## <a name="example"></a>Exemplo  

@@ -2,15 +2,13 @@
 title: Suporte de tipo de dados de OLE DB data e hora melhorias | Microsoft Docs
 description: Suporte de tipo de dados para aprimoramentos de data e hora do OLE DB
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,25 +17,28 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 73695c6149b48b957475b1b9f779c3226db87691
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666386"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte de tipo de dados para aprimoramentos de hora e data do OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Este artigo fornece informações sobre o OLE DB (OLE DB Driver para SQL Server) tipos que oferecem suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados de data/hora.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros  
  O OLE DB fornece dois novos tipos de dados para dar suporte aos novos tipos de servidor: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. A seguinte tabela mostra o mapeamento de tipo do servidor completo:  
   
-|Tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo de dados OLE DB|Value|  
+|Tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo de dados OLE DB|Valor|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|date|DBTYPE_DBDATE|133 (OLEDB)|  
+|Data|DBTYPE_DBDATE|133 (OLEDB)|  
 |time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -46,9 +47,9 @@ ms.lasthandoff: 05/03/2018
   
 |Tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo de dados OLE DB|Formato de cadeia de caracteres para conversões do cliente|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a até três dígitos de fração de segundo para Datetime.|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a até três dígitos de fração de segundo para Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss'<br /><br /> Esse tipo de dados tem precisão de um minuto. O componente de segundos será zero na saída, sendo arredondado pelo servidor na entrada.|  
-|date|DBTYPE_DBDATE|'aaaa-mm-dd'|  
+|Data|DBTYPE_DBDATE|'aaaa-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.fffffff]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'aaaa-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 -   O intervalo de minutos é de 0 a 59.  
   
--   O intervalo de segundos é de 0 a 59. Isso permite até dois segundos intercalares para manter a sincronização com a hora sideral.  
+-   O intervalo de segundos é de 0 a 59. Isso permite até dois segundos intercalares para manter a sincronização com o tempo de sidereal.  
   
  Foram modificadas as implementações dos seguintes structs do OLE DB existentes para dar suporte aos novos tipos de data e hora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Porém, as definições não foram alteradas.  
   
@@ -179,7 +180,7 @@ enum SQLVARENUM {
   
 |Tipo de dados OLE DB (*wType*)|Tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Observações|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|date||  
+|DBTYPE_DBDATE|Data||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
 |DBTYPE_DBTIME2|**tempo**(p)|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
@@ -187,6 +188,6 @@ enum SQLVARENUM {
  Quando um aplicativo especifica DBTYPE_DBTIMESTAMP em *wType*, pode anular o mapeamento para **datetime2** fornecendo um nome de tipo em *pwszTypeName*. Se **datetime** for especificado, *bScale* deve ter 3. Se **smalldatetime** for especificado, *bScale* deve ser 0. Se *bScale* não é consistente com *wType* e *pwszTypeName*, DB_E_BADSCALE será retornado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Data e hora melhorias &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

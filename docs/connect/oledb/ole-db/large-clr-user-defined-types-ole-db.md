@@ -2,10 +2,10 @@
 title: Tipos definidos pelo usuário de CLR grandes (OLE DB) | Microsoft Docs
 description: Tipos definidos pelo usuário CLR grandes (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611981"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Este tópico aborda as alterações para OLE DB no OLE DB Driver para SQL Server dar suporte a grandes tipos common language runtime (CLR) definidos pelo usuário (UDTs).  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  A seguinte tabela mostra o mapeamento de tipo de dados em parâmetros e conjuntos de linhas:  
   
-|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Value|  
+|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Valor|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] (matriz de bytes\)|132 (OLEDB)|  
   
@@ -128,7 +131,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|Com suporte (2), (5)|N/A|Com suporte (3), (5)|N/A|  
 |DBTYPE_STR|Com suporte (2), (5)|N/A|Com suporte (3), (5)|N/A|  
 |DBTYPE_IUNKNOWN|Com suporte (6)|N/A|Com suporte (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Com suporte (5)|N/A|Com suporte (3), (5)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Com suporte (5)|N/A|Com suporte (3), (5)|N/A|  
 |DBTYPE_VARIANT (VT_BSTR)|Com suporte (2), (5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>Legenda dos símbolos  

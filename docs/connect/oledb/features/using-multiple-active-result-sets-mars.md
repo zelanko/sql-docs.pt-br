@@ -2,7 +2,7 @@
 title: Usando vários conjuntos de resultados ativos (MARS) | Microsoft Docs
 description: Usando MARS (vários conjuntos de resultados ativos)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612081"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Usando MARS (vários conjuntos de resultados ativos)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu o suporte para conjuntos de resultados ativos múltiplos (MARS) em aplicativos que acessam o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Em versões mais antigas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], os aplicativos de banco de dados não podiam manter várias instruções ativas em uma conexão. Ao usar os conjuntos de resultados padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o aplicativo tinha que processar ou cancelar todos os conjuntos de resultados de um lote antes de executar outro lote nessa conexão. O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um novo atributo de conexão que permite que os aplicativos tenham mais que uma solicitação pendente por conexão e, especificamente, tenham mais que um conjunto de resultados padrão ativo por conexão.  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB Driver para SQL Server não limita o número de instruções ativas em uma conexão.  
   
- Aplicativos típicos que não precisam ter mais de um lote de várias instruções ou de um procedimento armazenado em execução ao mesmo tempo se beneficiarão do MARS mesmo que não saibam como é feita sua implementação. Porém, aplicativos com requisitos mais complexos devem levar isso em conta.  
+ Aplicativos típicos que não precisam ter mais de um lote de várias instruções ou procedimento armazenado em execução ao mesmo tempo se beneficiarão MARS sem precisar entender como o MARS é implementado. Porém, aplicativos com requisitos mais complexos devem levar isso em conta.  
   
  O MARS habilita a execução intercalada de várias solicitações em uma única conexão. Isto é, ele permite que um lote seja executado e, dentro de sua execução, permite a execução de outras solicitações. Observe, porém, que o MARS é definido em termos de intercalação, e não em termos de execução paralela.  
   
- A infraestrutura do MARS permite que vários lotes sejam executados de uma maneira intercalada, embora a execução só possa ser alterada em pontos bem definidos. Além disso, a maioria das instruções deve ser executada atomicamente dentro de um lote. As instruções que retornam linhas para o cliente, que às vezes são chamados de *geram pontos*, têm permissão para intercalar execução antes da conclusão, enquanto as linhas estão sendo enviadas ao cliente, por exemplo:  
+ A infraestrutura do MARS permite que vários lotes sejam executados de uma maneira intercalada, embora a execução só pode ser alternada em pontos bem definidos. Além disso, a maioria das instruções deve ser executada atomicamente dentro de um lote. Instruções que retornam linhas para o cliente, que às vezes são chamados de *geram pontos*, têm permissão para intercalar execução antes da conclusão, enquanto as linhas estão sendo enviadas ao cliente, por exemplo:  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  Para obter um exemplo de como usar o MARS do ADO, consulte [usando o ADO com OLE DB para SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="in-memory-oltp"></a>OLTP na memória  
- OLTP na memória oferece suporte a MARS usando consultas e procedimentos armazenados compilados nativamente. MARS permite solicitantes dados de várias consultas sem a necessidade de recuperar completamente cada resultado definido antes de enviar uma solicitação para buscar linhas em um novo conjunto de resultados. Para ler com êxito de resultados abertos vários conjuntos, você deve usar um MARS ativado conexão.  
+ OLTP na memória oferece suporte a MARS usando consultas e procedimentos armazenados compilados nativamente. MARS permite solicitantes dados de várias consultas sem a necessidade de recuperar completamente cada resultado definido antes de enviar uma solicitação para buscar linhas em um novo conjunto de resultados. Para ler com êxito de vários conjuntos de resultados abertos, você deve usar uma conexão MARS ativado.  
   
  MARS está desabilitado por padrão, portanto você deve ativá-lo adicionando `MultipleActiveResultSets=True` para uma cadeia de caracteres de conexão. O exemplo a seguir demonstra como se conectar a uma instância do SQL Server e especificar que o MARS está habilitado:  
   

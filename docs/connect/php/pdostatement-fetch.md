@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fefb85430b6bf3b98d15a884130e1db1d2cdfa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308415"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ $*cursor_orientation*: um símbolo (inteiro) opcional que indica a linha a ser r
   
 $*cursor_offset*: um símbolo opcional (inteiro) especificando a linha a ser buscada $*cursor_orientation* é fetch_ori_abs ou fetch_ori_rel e PDO:: attr_cursor é PDO:: cursor_scroll.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Um valor misto que retorna uma linha ou false.  
   
 ## <a name="remarks"></a>Remarks  

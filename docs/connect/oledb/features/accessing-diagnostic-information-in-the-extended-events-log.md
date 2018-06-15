@@ -2,7 +2,7 @@
 title: Acessar informações de diagnóstico no Log de eventos estendidos | Microsoft Docs
 description: O rastreamento do Driver do OLE DB para SQL Server e acessar informações de diagnóstico no log de eventos estendidos
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 255daa268cb3b8aeaee0e371052ae8af01241f72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57103074c0dd9453678e115bafcdfabf2270d1ba
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611651"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico nos logs de eventos estendidos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], OLE DB Driver para SQL Server e os dados de rastreamento de acesso ([rastreamento de acesso a dados](http://go.microsoft.com/fwlink/?LinkId=125805)) foram atualizados para tornar mais fácil de obter informações de diagnóstico sobre falhas de conexão do buffer de anéis de conectividade e as informações de desempenho do aplicativo do log de eventos estendidos.  
   

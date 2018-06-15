@@ -2,7 +2,6 @@
 title: Bibliotecas de Conexão para bancos de dados do Microsoft SQL | Microsoft Docs
 description: Fornece links de download para os módulos que permitem a conexão ao Microsoft SQL Server e banco de dados SQL Azure, de uma variedade de linguagens de programação do cliente.
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,11 +10,12 @@ ms.custom: ''
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bb62d323ce3675a49dbd8abd11a19df2c82dcf9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310095"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de Conexão para bancos de dados do Microsoft SQL
 
@@ -49,7 +49,7 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-| Idioma | Baixar o driver do SQL |
+| Linguagem | Baixar o driver do SQL |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo do .NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo do .NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core para Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
@@ -68,7 +68,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 A tabela a seguir lista exemplos de estruturas de mapeamento relacional objeto (ORM) que aplicativos cliente usam para se conectar aos bancos de dados do Microsoft SQL.
 
 
-| Idioma | Download do driver ORM |
+| Linguagem | Download do driver ORM |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6. x ou posterior)](http://docs.microsoft.com/ef/) |
 | Java | [No modo de hibernação ORM](http://hibernate.org/orm)|

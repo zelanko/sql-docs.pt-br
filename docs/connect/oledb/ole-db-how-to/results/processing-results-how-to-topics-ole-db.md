@@ -2,9 +2,10 @@
 title: Processamento de tópicos de instruções de resultados (OLE DB) | Microsoft Docs
 description: Tópicos de instruções de processamento de resultados (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 52b06c5de00b370dc96db0cdcc43bef69f816376
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 1792785286c07535925c81194972e65d2f55fb9a
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305075"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666066"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   O processamento de resultados em um aplicativo OLE DB envolve primeiro a determinação das características do conjunto de resultados e depois a recuperação dos dados em variáveis do programa. Caso o comando execute um procedimento armazenado, você também deve saber como processar códigos de retorno e parâmetros de saída dos procedimentos armazenados.  
   

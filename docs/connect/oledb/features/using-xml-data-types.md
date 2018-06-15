@@ -2,7 +2,7 @@
 title: Usando tipos de dados XML | Microsoft Docs
 description: Usando tipos de dados XML com o Driver do OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -34,16 +34,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f36165da3be9c540166486059cdc0ee150532657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6ec0009a986e2abd56ac00c1e01826f3ed001f7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612171"
 ---
 # <a name="using-xml-data-types"></a>Usando tipos de dados XML
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introduziu um **xml** tipo de dados que permite armazenar documentos XML e fragmentos em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados. O **xml** tipo de dados é um tipo de dados internos em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e é em algumas semelhanças com outros tipos internos, como **int** e **varchar**. Como com outros tipos internos, você pode usar o **xml** tipo de dados como um tipo de coluna ao criar uma tabela; como um tipo de variável, um tipo de parâmetro ou um tipo de retorno de função; ou em funções CAST e CONVERT.  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um **xml** tipo de dados que permite armazenar documentos XML e fragmentos em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados. O **xml** tipo de dados é um tipo de dados internos em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e é em algumas semelhanças com outros tipos internos, como **int** e **varchar**. Como com outros tipos internos, você pode usar o **xml** tipo de dados como um tipo de coluna ao criar uma tabela; como um tipo de variável, um tipo de parâmetro ou um tipo de retorno de função; ou em funções CAST e CONVERT.  
   
 ## <a name="programming-considerations"></a>Considerações sobre programação  
  O XML pode ser autodescritivo no sentido de que pode opcionalmente incluir um cabeçalho de XML que especifica a codificação do documento, por exemplo:  
@@ -87,15 +90,15 @@ ms.lasthandoff: 05/03/2018
 |Tipo de dados|Para servidor<br /><br /> **XML**|Para servidor<br /><br /> **Não XML**|Do servidor<br /><br /> **XML**|Do servidor<br /><br /> **Não XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Passar<sup>6,7</sup>|Erro<sup>1</sup>|OKEY<sup>11, 6</sup>|Erro<sup>8</sup>|  
-|DBTYPE_BYTES|Passar<sup>6,7</sup>|N/A<sup>2</sup>|OKEY <sup>11, 6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OKEY<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|OKEY<sup>6, 9, 10</sup>|N/A <sup>2</sup>|OKEY<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Fluxo de bytes via **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Fluxo de bytes via **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Passar<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BYTES|Passar<sup>6,7</sup>|N/D<sup>2</sup>|OKEY <sup>11, 6</sup>|N/D <sup>2</sup>|  
+|DBTYPE_WSTR|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
+|DBTYPE_BSTR|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY <sup>3</sup>|N/D <sup>2</sup>|  
+|DBTYPE_STR|OKEY<sup>6, 9, 10</sup>|N/D <sup>2</sup>|OKEY<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Fluxo de bytes via **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Fluxo de bytes via **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Passar<sup>6,7</sup>|N/D <sup>2</sup>|N/A|N/D <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY<sup>3</sup>|N/D <sup>2</sup>|  
   
- <sup>1</sup>se o tipo de um servidor diferente de DBTYPE_XML for especificado com **ICommandWithParameters:: SetParameterInfo** e o tipo de acessador for DBTYPE_XML, ocorrerá um erro quando a instrução é executada (DB_E_ERRORSOCCURRED, o status do parâmetro é DBSTATUS_E_BADACCESSOR); caso contrário, os dados são enviados ao servidor, mas o servidor retornará um erro indicando que não há nenhuma conversão implícita de XML para o tipo de dados do parâmetro.  
+ <sup>1</sup>se o tipo de um servidor diferente de DBTYPE_XML for especificado com **ICommandWithParameters:: SetParameterInfo** e o tipo de acessador for DBTYPE_XML, ocorrerá um erro quando a instrução é executada (DB_E_ERRORSOCCURRED, o status do parâmetro é DBSTATUS_E_BADACCESSOR); Caso contrário, os dados são enviados ao servidor, mas o servidor retornará um erro indicando que não há nenhuma conversão implícita de XML para o tipo de dados do parâmetro.  
   
  <sup>2</sup>além do escopo deste artigo.  
   
@@ -232,6 +235,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Driver do OLE DB para recursos do SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

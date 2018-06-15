@@ -2,10 +2,10 @@
 title: Em massa copia alterações para aprimorados tipos de data e hora (OLE DB) | Microsoft Docs
 description: Alterações de cópia em massa para aprimorados tipos de data e hora (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 50917ad4c9d6184c32e8681c9b6bc455f5c61abc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f4ead57eb84257a4c57b345bd3a4857a85ded2e
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666396"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Alterações de cópia em massa para aprimorados tipos de data e hora (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Este artigo descreve os aprimoramentos de data/hora para dar suporte à funcionalidade de cópia em massa no Driver do OLE DB para SQL Server.  
   
@@ -32,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
 |tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta à solicitação: "digite o tipo de armazenamento de arquivo do campo < nome_do_campo > [\<padrão >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|Datetime|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Data|SQLDATE|de|  
+|data|SQLDATE|de|  
 |Hora|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -73,9 +76,9 @@ ms.lasthandoff: 05/03/2018
   
 |tipo de armazenamento de arquivo|Tamanho de armazenamento em bytes|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|Data|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -84,11 +87,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="bcp-types-in-msoledbsqlh"></a>Tipos BCP em msoledbsql.h  
  Os seguintes tipos são definidos no msoledbsql.h. Esses tipos são passados com o *eUserDataType* parâmetro ibcpsession:: BCPColFmt no OLE DB.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Digite msoledbsql.h para uso com ibcpsession:: BCPColFmt|Value|  
+|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Digite msoledbsql.h para uso com ibcpsession:: BCPColFmt|Valor|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
-|Data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Hora|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -98,12 +101,12 @@ ms.lasthandoff: 05/03/2018
   
  **Observação do OLE DB** as conversões a seguir são executadas por IBCPSession. IRowsetFastLoad usa conversões OLE DB conforme definido em [conversões executadas do cliente para servidor](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Observe que os valores datetime são arredondados para 1/300 de um segundo e os valores smalldatetime têm os segundos definidos como zero depois de concluídas as conversões de cliente descritas a seguir. O arredondamento de datetime se propaga para horas e minutos, mas não para a data.  
   
-|Para --><br /><br /> De|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|Para --><br /><br /> De|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Data|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
+|data|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Hora|N/A|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
 |Smalldatetime|1, 2|1, 4, 10|1|1|1, 10|1, 5, 10|1, 11|1, 11|  
-|Datetime|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
+|DATETIME|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
 |Datetime2|1, 2|1, 4, 10|1, 12|1, 10|1, 10|1, 5, 10|1, 3|1, 3|  
 |Datetimeoffset|1, 2, 8|1, 4, 8, 10|1, 8, 10|1, 8, 10|1, 8, 10|1, 10|1, 3|1, 3|  
 |Char/wchar (date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|N/A|N/A|  
@@ -131,6 +134,6 @@ ms.lasthandoff: 05/03/2018
 |N/A|O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] existente e o comportamento anterior é mantido.|  
   
 ## <a name="see-also"></a>Consulte também     
- [Data e hora melhorias & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Data e hora melhorias &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

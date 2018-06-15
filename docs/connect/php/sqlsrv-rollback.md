@@ -3,13 +3,10 @@ title: sqlsrv_rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: php
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -24,11 +21,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72b93ccb8e57042b7d8131f85b7cff8ffe41e470
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1c8be6ead0f7da39718ab77ec98af3bcfbcad041
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309465"
 ---
 # <a name="sqlsrvrollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +49,7 @@ sqlsrv_rollback( resource $conn)
 #### <a name="parameters"></a>Parâmetros  
 *$conn*: a conexão em que a transação está ativa.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Um valor booliano: **true** se a transação foi revertida com êxito. Caso contrário, **false**.  
   
 ## <a name="example"></a>Exemplo  

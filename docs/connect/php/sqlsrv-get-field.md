@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aea71596e1a977839fb7294df7324f48324e0c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1396662cc17d54899eb697694c452e663eaf533
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309265"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$getAsType* [opcional]: uma **SQLSRV** constante (**SQLSRV_PHPTYPE _\***) que determina o tipo de dados do PHP para os dados retornados. Para obter informações sobre tipos de dados com suporte, consulte [constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Se nenhum tipo de retorno for especificado, será retornado um tipo do PHP padrão. Para obter informações sobre tipos do PHP padrão, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre especificação de tipos de dados do PHP padrão, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Os dados do campo. Você pode especificar o tipo de dados  do PHP dos dados retornados usando o parâmetro *$getAsType* . Se nenhum tipo de dados de retorno for especificado, será retornado um tipo de dados do PHP padrão. Para obter informações sobre tipos do PHP padrão, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre especificação de tipos de dados do PHP padrão, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="remarks"></a>Remarks  
