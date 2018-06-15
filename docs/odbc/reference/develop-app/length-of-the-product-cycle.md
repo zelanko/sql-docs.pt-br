@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910061"
 ---
 # <a name="length-of-the-product-cycle"></a>Comprimento do ciclo do produto
 A pergunta final sobre interoperabilidade é o tempo. Desenvolvendo um aplicativo interoperável geralmente demora mais do que desenvolver um noninteroperable. O motivo é que o aplicativo deve verificar recursos do DBMS, executar as mesmas tarefas diferente para diferentes DBMSs, contornar a funcionalidade com suporte por alguns DBMSs, mas outros não e assim por diante.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904971"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Arquitetura de Drivers de banco de dados de área de trabalho
 Esses drivers são projetados para uso no Microsoft Windows 95 ou posterior, ou Windows NT 4.0 e Windows 2000. Aplicativos de 32 bits só têm suporte no Windows 95 ou posterior; aplicativos de 16 bits e 32 bits têm suporte no Windows NT 4.0 e Windows 2000.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914791"
 ---
 # <a name="value-list-arguments"></a>Argumentos de lista
 Um argumento de lista do valor consiste em uma lista de valores separados por vírgulas a ser usado para correspondência. Há argumento apenas um valor da lista nas funções de catálogo ODBC: o *TableType* argumento **SQLTables**. Configuração *TableType* para um ponteiro nulo é o mesmo que ele é definido como SQL_ALL_TABLE_TYPES, que enumera todos os membros possíveis da lista de valores. Esse argumento não é afetado pelo atributo de instrução SQL_ATTR_METADATA_ID. Para obter mais informações, consulte o [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) descrição da função.

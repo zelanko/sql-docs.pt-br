@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906891"
 ---
 # <a name="sqlinstalltranslator-mapping"></a>Mapeamento de SQLInstallTranslator
 Quando um ODBC 2. *x* aplicativo chama **SQLInstallTranslator** por meio de um ODBC 3 *. x* driver, o Gerenciador de Driver mapeia a chamada para **SQLInstallTranslatorEx**. Um aplicativo não deve chamar **SQLInstallTranslator** em ODBC 3 *. x* Gerenciador de Driver com o *lpszInfFile* argumento definido como um valor diferente de NULL. O ODBC. Arquivo INF usado no ODBC 2. *x* não é suportada em ODBC 3 *. x*, mesmo para compatibilidade com versões anteriores.

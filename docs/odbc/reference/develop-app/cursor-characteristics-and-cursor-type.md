@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912281"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Características de cursor e tipo de Cursor
 Um aplicativo pode especificar as características de um cursor em vez de especificar o tipo de cursor (somente avanço, estático, controlado por ou dinâmico). Para fazer isso, o aplicativo seleciona a rolagem do cursor (definindo o atributo de instrução SQL_ATTR_CURSOR_SCROLLABLE) e sensibilidade (definindo o atributo da instrução SQL_ATTR_CURSOR_SENSITIVITY) antes de abrir o cursor para a instrução identificador. O driver então escolhe o tipo de cursor que fornece com mais eficiência as características que o aplicativo solicitado.  

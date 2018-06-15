@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905752"
 ---
 # <a name="table-references-limitations"></a>Limitações de referências de tabela
 Um máximo de 16 referências de tabela pode ser incluído em qualquer instrução de consulta.

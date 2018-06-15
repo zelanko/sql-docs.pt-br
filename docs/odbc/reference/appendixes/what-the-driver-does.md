@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914091"
 ---
 # <a name="what-the-driver-does"></a>O que faz o Driver
 A tabela a seguir resume quais funções e um ODBC 3 de atributos de instrução *. x* driver deve implementar para bloquear e cursores roláveis.  

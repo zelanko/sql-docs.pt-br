@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915472"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Atualizando linhas por indicador com SQLBulkOperations
 Ao atualizar uma linha pelo indicador, **SQLBulkOperations** faz com que a fonte de dados atualizar uma ou mais linhas da tabela. As linhas são identificadas pelo indicador em uma coluna de indicador associado. A linha é atualizada usando dados em buffers do aplicativo para cada coluna associada (exceto quando o valor no buffer de comprimento/indicador para uma coluna é SQL_COLUMN_IGNORE). Colunas não associadas não serão atualizadas.  

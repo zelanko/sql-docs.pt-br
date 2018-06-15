@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906171"
 ---
 # <a name="interval-data-type-length"></a>Comprimento do tipo de dados de intervalo
 As regras a seguir são usadas para determinar o comprimento de um tipo de dados de intervalo em caracteres. Comprimento é expresso em número de caracteres. O número de bytes depende do conjunto de caracteres. O comprimento inclui os seguintes valores adicionados juntos:  

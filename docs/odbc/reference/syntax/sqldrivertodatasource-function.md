@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918481"
 ---
 # <a name="sqldrivertodatasource-function"></a>Função SQLDriverToDataSource
 **SQLDriverToDataSource** oferece suporte a conversões para drivers ODBC. Essa função não é chamada por aplicativos habilitados para ODBC. os aplicativos solicitam tradução por meio de **SQLSetConnectAttr**. O driver associado a *identificador da conexão* especificado em **SQLSetConnectAttr** chama o DLL especificado para realizar conversões de todos os dados que fluem do driver para a fonte de dados. Uma DLL de conversão padrão pode ser especificado no arquivo de inicialização de ODBC.  

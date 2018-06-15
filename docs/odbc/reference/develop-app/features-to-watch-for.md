@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911361"
 ---
 # <a name="features-to-watch-for"></a>Recursos para ver
 Esta seção descreve uma série de recursos que os desenvolvedores de aplicativos geralmente levam para concedidas. Na verdade, esses recursos variam muito em forma de suporte entre DBMSs; e suporte Falha ao código para eles é pode causar problemas em aplicativos interoperáveis.  

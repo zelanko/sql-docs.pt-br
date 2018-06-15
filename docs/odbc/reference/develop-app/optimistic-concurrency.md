@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914341"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 *Simultaneidade otimista* deriva seu nome a suposição otimista de que raramente ocorrerão conflitos entre transações; uma colisão é considerada ocorreram quando outra transação atualiza ou exclui uma linha de dados entre o momento em que ele seja lido a transação atual e a hora, ela é atualizada ou excluída. É o oposto do *simultaneidade pessimista,* ou bloqueio, em que o desenvolvedor do aplicativo acredita que tal colisões são comuns.  

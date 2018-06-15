@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906581"
 ---
 # <a name="interval-data-type-precision"></a>Precisão de tipo de dados de intervalo
 Precisão para um tipo de dados de intervalo inclui intervalo à esquerda a precisão, a precisão do intervalo e a precisão de segundos.  

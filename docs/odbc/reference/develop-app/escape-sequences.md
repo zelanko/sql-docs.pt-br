@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910421"
 ---
 # <a name="escape-sequences"></a>Sequências de escape
 ODBC define sequências de escape que contém a gramática padrão para data, hora, timestamp e literais de intervalo de data e hora, chamadas de função escalar, **como** predicado caracteres de escape, junções externas e chamadas de procedimento. Aplicativos interoperáveis devem usar essas sequências sempre que possível.  

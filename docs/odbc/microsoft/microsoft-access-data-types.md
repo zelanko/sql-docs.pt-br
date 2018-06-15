@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905121"
 ---
 # <a name="microsoft-access-data-types"></a>Tipos de dados do Microsoft Access
 A tabela a seguir mostra os tipos de dados do Microsoft Access, tipos de dados usados para criar tabelas e tipos de dados SQL ODBC.  

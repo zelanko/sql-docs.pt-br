@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913001"
 ---
 # <a name="retrieving-results-basic"></a>Recuperando resultados (Basic)
 Um *conjunto de resultados de* é um conjunto de linhas na fonte de dados que corresponda a determinados critérios. É uma tabela conceitual que os resultados de uma consulta e que está disponível para um aplicativo em formato tabular. **Selecione** instruções, funções de catálogo e alguns procedimentos criam conjuntos de resultados. No exemplo a seguir, a primeira instrução SQL cria um conjunto de resultados contendo todas as linhas e todas as colunas na tabela Orders e a segunda instrução SQL cria um conjunto de resultados contendo colunas OrderID, o vendedor e o Status das linhas na tabela Orders em que o Status é aberto:  

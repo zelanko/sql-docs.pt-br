@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915161"
 ---
 # <a name="machine-data-sources"></a>Fontes de dados de máquina
 *Fontes de dados de máquina* são armazenados no sistema com um nome definido pelo usuário. Associado com o nome da fonte de dados, todas as informações são a necessidade de Gerenciador de Driver e o driver para se conectar à fonte de dados. Para uma fonte de dados Xbase, isso pode ser o nome do driver Xbase, o caminho completo do diretório que contém os arquivos de Xbase e algumas opções que indicam o driver como usar esses arquivos, como o modo de usuário único ou somente leitura. Para uma fonte de dados Oracle, isso pode ser o nome do driver do Oracle, o servidor em que reside o DBMS do Oracle, o SQL * Net da cadeia de caracteres de conexão que identifica o SQL\*Net driver a ser usado e a ID de sistema do banco de dados no servidor.

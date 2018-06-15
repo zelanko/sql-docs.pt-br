@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908931"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilando um programa SQL inserido
 Como um programa SQL inserido contém uma mistura de instruções de linguagem SQL e host, não podem ser enviado diretamente a um compilador de idioma do host. Em vez disso, ele é compilado por meio de um processo de várias etapas. Embora esse processo é diferente para cada produto, as etapas são aproximadamente o mesmo para todos os produtos.  

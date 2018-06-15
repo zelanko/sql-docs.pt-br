@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909561"
 ---
 # <a name="interval-data-types"></a>Tipos de dados de intervalo
 Um intervalo é definido como a diferença entre duas datas e horas. Intervalos são expressos em uma das duas maneiras diferentes. Um é um *ano-mês* intervalo que expressa intervalos em termos de anos e um número integral de meses. A outra é um *dia hora* intervalo que expressa intervalos em termos de dias, minutos e segundos. Esses dois tipos de intervalos são diferentes e não podem ser misturados, como meses podem ter diferentes números de dias.  

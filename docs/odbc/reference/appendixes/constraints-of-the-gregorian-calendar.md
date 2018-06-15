@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905431"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Restrições do calendário gregoriano
 Tipos de dados de data e a data e hora e os campos à direita dos tipos de dados de intervalo, devem estar de acordo com as restrições do calendário gregoriano. Essas restrições são os seguintes:  

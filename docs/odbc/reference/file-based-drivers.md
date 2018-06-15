@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915041"
 ---
 # <a name="file-based-drivers"></a>Drivers baseados em arquivo
 Drivers baseados em arquivo são usadas com fontes de dados como dBASE que não fornecem um mecanismo de banco de dados independente para usar o driver. Esses drivers acessam os dados físicos diretamente e devem implementar um mecanismo de banco de dados para instruções SQL de processo. Como prática padrão, os mecanismos de banco de dados de drivers baseados em arquivo implementam o subconjunto de ODBC SQL definido pelo nível de conformidade SQL mínimo; Para obter uma lista das instruções SQL neste nível de conformidade, consulte [gramática de SQL do apêndice c:](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  

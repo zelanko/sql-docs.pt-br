@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907341"
 ---
 # <a name="interval-literal-syntax"></a>Sintaxe de literais de intervalo
 A sintaxe a seguir é usada para literais de intervalo no ODBC.  

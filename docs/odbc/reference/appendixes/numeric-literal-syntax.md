@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907261"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxe de literais numérico
 A sintaxe a seguir é usada para literais numéricos em ODBC:  

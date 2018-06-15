@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910601"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>Literal prefixos e sufixos
 Em uma instrução SQL, uma *literal* é uma representação de caracteres de um valor de dados reais. Por exemplo, a instrução a seguir, ABC, FFFF e 10 são literais:  

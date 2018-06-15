@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908541"
 ---
 # <a name="binding-columns"></a>Colunas de associação
 Dados buscados da fonte de dados são retornados para o aplicativo em variáveis que o aplicativo foi alocado para essa finalidade. Antes de fazer isso, o aplicativo deve associar, ou *associar*, definir essas variáveis para as colunas do resultado, conceitualmente, esse processo é a mesma associação de variáveis de aplicativo para parâmetros de instrução. Quando o aplicativo associa uma variável para um conjunto de resultados coluna, ele descreve essa variável, endereço, tipo de dados e assim por diante — para o driver. O driver armazena essas informações na estrutura, ele mantém para essa instrução e usa as informações para retornar o valor da coluna quando a linha é procurada.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907121"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Com suporte do conjunto de comandos (Driver ODBC do Visual FoxPro)
 O aplicativo pode enviar a seguir do Visual FoxPro **definir** comandos para uma fonte de dados:  

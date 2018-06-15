@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907011"
 ---
 # <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Programador do Visual FoxPro ODBC Driver&#39;s referência
 Esta seção da documentação do Visual FoxPro ODBC Driver contém os tópicos a seguir:  

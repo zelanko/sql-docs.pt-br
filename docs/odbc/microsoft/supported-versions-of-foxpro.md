@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905471"
 ---
 # <a name="supported-versions-of-foxpro"></a>Versões com suporte do FoxPro
 Você pode usar o Microsoft® Visual FoxPro® ODBC Driver para acessar dados armazenados nas tabelas do FoxPro. Há suporte para as seguintes versões de dados FoxPro:  

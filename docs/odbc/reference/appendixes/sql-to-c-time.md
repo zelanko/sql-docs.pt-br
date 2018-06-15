@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908591"
 ---
 # <a name="sql-to-c-time"></a>SQL para c: tempo
 O identificador para a hora em que o tipo de dados SQL ODBC é:  

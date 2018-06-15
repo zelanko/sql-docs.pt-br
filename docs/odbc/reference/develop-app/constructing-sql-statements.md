@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908741"
 ---
 # <a name="constructing-sql-statements"></a>Construindo instruções SQL
 Instruções SQL podem ser construídas em uma destas três maneiras: embutido durante o desenvolvimento, construída em tempo de execução, ou inserida diretamente pelo usuário.  

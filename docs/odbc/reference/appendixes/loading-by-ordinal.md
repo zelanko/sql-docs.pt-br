@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906241"
 ---
 # <a name="loading-by-ordinal"></a>Carregamento por Ordinal
 No ODBC 2. *x*, carregamento por ordinal pode ser realizado para melhorar o desempenho do processo de conexão. ODBC 2. *x* driver exporta uma função fictícia com o ordinal 199; quando o Gerenciador de Driver detecta a ele, ele resolve os endereços das funções ODBC por ordinal, não por nome. Ainda há suporte para essa funcionalidade do ODBC 2. *x* drivers, mas não há suporte para o ODBC 3 *. x* drivers.

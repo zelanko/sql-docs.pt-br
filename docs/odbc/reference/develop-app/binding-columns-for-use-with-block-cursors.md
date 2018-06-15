@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909641"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Colunas de associação para uso com cursores em bloco
 Como cursores em bloco retornam várias linhas, os aplicativos que utilizam devem vincular uma matriz de variáveis para cada coluna em vez de uma única variável. Essas matrizes são coletivamente conhecidos como o *buffers de conjunto de linhas*. Estes são os dois estilos de associação:  

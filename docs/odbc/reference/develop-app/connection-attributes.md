@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909811"
 ---
 # <a name="connection-attributes"></a>Atributos de conexão
 Atributos de Conexão são características da conexão. Por exemplo, pelo fato de as transações ocorrerem no nível da conexão, o nível de isolamento da transação é um atributo de conexão. Da mesma forma, o tempo limite de logon, ou o número de segundos de espera durante a tentativa de conexão antes do tempo limite, é um atributo de conexão.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910401"
 ---
 # <a name="batch-processing"></a>Processamento em lote
 Suporte a lotes de instruções SQL não é generalizado, para que aplicativos interoperáveis devem usá-los condicionalmente ou não. Para obter mais informações, consulte [executar lotes](../../../odbc/reference/develop-app/executing-batches.md).

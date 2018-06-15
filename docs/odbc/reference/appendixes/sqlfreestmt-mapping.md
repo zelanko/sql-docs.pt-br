@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906391"
 ---
 # <a name="sqlfreestmt-mapping"></a>Mapeamento de SQLFreeStmt
 Quando um aplicativo chama **SQLFreeStmt** com um *opção* argumento de SQL_DROP por meio de um ODBC 3 *. x* driver, a chamada para  

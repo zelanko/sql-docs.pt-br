@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907161"
 ---
 # <a name="cstring-class"></a>Classe de CString
 Como objetos do **CString** classe no Microsoft® Visual C++ são assinados e argumentos de cadeia de caracteres em funções ODBC são assinados, aplicativos que passam **CString** objetos para funções ODBC sem Converter-los, você receberá avisos do compilador.

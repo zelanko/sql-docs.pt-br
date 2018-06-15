@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905521"
 ---
 # <a name="literals-in-odbc"></a>Literais de ODBC
 A sintaxe nas seções a seguir é usada para o intervalo e literais numéricos no ODBC. Essa sintaxe é fornecida como um auxílio para gravadores de driver quando conversões são executadas a partir de um tipo de cadeia de caracteres do caractere em um tipo numérico ou intervalo ou um tipo numérico ou de intervalo para um tipo de cadeia de caracteres. Para obter mais informações, consulte [intervalo literais](../../../odbc/reference/appendixes/interval-literals.md) e [literais numéricos](../../../odbc/reference/appendixes/numeric-literals.md) no Apêndice d: os tipos de dados.  

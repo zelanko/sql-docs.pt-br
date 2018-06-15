@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912701"
 ---
 # <a name="rules-for-conversions"></a>Regras para conversões
 As regras nesta seção se aplicam para conversões que envolvem literais numéricos. Para a finalidade dessas regras, os termos a seguir são definidos:  

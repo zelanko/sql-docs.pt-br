@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912671"
 ---
 # <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver
 Pooling de conexão com reconhecimento de driver é um novo recurso do Gerenciador de Driver no Windows 8. Pooling de conexão com reconhecimento de driver permite que os autores de driver personalizar o comportamento no seu driver ODBC de pooling de conexão.  

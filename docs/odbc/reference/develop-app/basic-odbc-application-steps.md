@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908361"
 ---
 # <a name="basic-odbc-application-steps"></a>Etapas de aplicativo básico do ODBC
 Esta seção descreve o fluxo geral de aplicativos de ODBC. É improvável que qualquer aplicativo chama todas essas funções exatamente nessa ordem. No entanto, a maioria dos aplicativos usa algumas variações dessas etapas. As etapas básicas de aplicativo são mostradas na ilustração a seguir.  

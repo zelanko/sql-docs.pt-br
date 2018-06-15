@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906111"
 ---
 # <a name="c-to-sql-time"></a>C para SQL: tempo
 O identificador para o tipo de dados do ODBC C de tempo é:  

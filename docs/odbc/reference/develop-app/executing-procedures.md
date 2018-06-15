@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910771"
 ---
 # <a name="executing-procedures"></a>Executando procedimentos
 ODBC define uma sequência de escape padrão para a execução de procedimentos. Para obter a sintaxe dessa sequência e um exemplo de código que usa, consulte [chamadas de procedimento](../../../odbc/reference/develop-app/procedure-calls.md).  

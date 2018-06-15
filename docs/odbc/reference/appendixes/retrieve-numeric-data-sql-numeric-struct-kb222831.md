@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913221"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Recuperar dados numéricos com SQL\_NUMÉRICO\_STRUCT
 
