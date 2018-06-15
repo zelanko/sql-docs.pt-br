@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023183"
 ---
 # <a name="programming-amo-security-objects"></a>Programando objetos de segurança AMO
   No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a programação de objetos de segurança ou a execução de aplicativos que usam objetos de segurança AMO exigem a associação ao grupo Administrador de Servidor ou do grupo Administrador de Banco de Dados. Administrador do Servidor e Administrador do Banco de Dados são níveis de acesso fornecidos pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
