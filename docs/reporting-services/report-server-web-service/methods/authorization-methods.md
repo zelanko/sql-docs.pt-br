@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025193"
 ---
 # <a name="authorization-methods"></a>Métodos de autorização
   Você pode usar estes métodos para gerenciar tarefas, funções e políticas no servidor de relatório.  
