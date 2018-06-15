@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 12b9c497e0bfdf6b1d1ce2da270a04bc0f7ab396
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1999f3f9b3d516abab5cd7f94934e9cdb91c667c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306415"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  As seguintes propriedades de conjunto de linhas direcionam o Driver OLE DB para SQL Server para usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores. Algumas propriedades podem ser tranquilamente combinadas com outras. Por exemplo, um conjunto de linhas que exibe as propriedades DBPROP_IRowsetScroll e DBPROP_IRowsetChange será um conjunto de linhas indicador que exibe um comportamento de atualização imediato. Outras propriedades são mutuamente excludentes. Por exemplo, um conjunto de linhas que exibe DBPROP_OTHERINSERT não pode conter indicadores.  
   
-|ID da propriedade|Value|Comportamento do conjunto de linhas|  
+|ID da propriedade|Valor|Comportamento do conjunto de linhas|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas é sequencial, o que oferece suporte apenas ao roll-forward e à busca. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS ou DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY.|  

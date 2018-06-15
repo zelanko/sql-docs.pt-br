@@ -2,7 +2,6 @@
 title: Coleção de propriedades, métodos e eventos de chaves | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41770aad205b9c1a6fe245de1f1b8e8b76649fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8e95e41d13770e464c5cecf3922d784a75d968e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286565"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Propriedades de coleção de chaves, métodos e eventos
 ## <a name="properties"></a>Propriedades  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

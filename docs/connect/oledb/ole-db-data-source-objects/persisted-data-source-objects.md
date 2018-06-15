@@ -2,15 +2,13 @@
 title: Persistente de objetos de fonte de dados | Microsoft Docs
 description: Persistente de objetos de fonte de dados
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 18c70447782517688a4a7cd48a89b899ab0396fa
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665606"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   O Driver OLE DB para SQL Server dá suporte a objetos de fonte de dados persistente com o **IPersistFile** interface.  
   
@@ -235,6 +236,6 @@ HRESULT InitFromPersistedDS
  O **IPersistFile:: Save** método pode ser chamado antes ou depois de chamar **IDBInitialize:: Initialize**. Chamar o método após um retorno bem-sucedido de **IDBInitialize:: Initialize** garante uma especificação de fonte de dados válido é persistente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Objetos de fonte de dados & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

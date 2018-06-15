@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43cb1b1a028d645c6c1de6e89c292c475eb00dc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309385"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_field_metadata( resource $stmt)
 #### <a name="parameters"></a>Parâmetros  
 *$stmt*: um recurso de instrução para o qual os metadados de campo são pesquisados.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Uma **matriz** de matrizes ou **false**. A matriz consiste em uma matriz para cada campo no conjunto de resultados. Cada submatriz tem chaves, conforme descrito na tabela a seguir. Se ocorrer um erro na recuperação de metadados do campo, será retornado **false** .  
   
 |Chave|Description|  
@@ -58,33 +58,33 @@ A tabela a seguir fornece mais informações sobre as chaves para cada submatriz
   
 |Tipos de dados do SQL Server 2008|Tipo|Precisão mínima/máxima|Escala mínima/máxima|Tamanho|  
 |-----------------------------|--------|----------------------|------------------|--------|  
-|bigint|SQL_BIGINT (-5)|||8|  
+|BIGINT|SQL_BIGINT (-5)|||8|  
 |BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE (91)|10/10|0/0||  
-|datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
+|Data|SQL_TYPE_DATE (91)|10/10|0/0||  
+|DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
 |Decimal|SQL_DECIMAL (3)|1/38|0/valor da precisão||  
-|float|SQL_FLOAT (6)|4/8|||  
+|FLOAT|SQL_FLOAT (6)|4/8|||  
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
-|int|SQL_INTEGER (4)||||  
+|INT|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  
-|numeric|SQL_NUMERIC (2)|1/38|0/valor da precisão||  
-|nvarchar|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
-|real|SQL_REAL (7)|4/4|||  
+|NUMERIC|SQL_NUMERIC (2)|1/38|0/valor da precisão||  
+|NVARCHAR|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
+|REAL|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
-|smallint|SQL_SMALLINT (5)|||2 bytes|  
+|SMALLINT|SQL_SMALLINT (5)|||2 bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 bytes|  
 |tinyint|SQL_TINYINT (-6)|||1 byte|  
 |udt|SQL_SS_UDT (-151)|||variável|  
-|uniqueidentifier|SQL_GUID (-11)|||16|  
+|UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  
 |xml|SQL_SS_XML (-152)|||0|  

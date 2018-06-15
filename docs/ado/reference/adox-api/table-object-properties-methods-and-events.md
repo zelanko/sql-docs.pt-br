@@ -2,7 +2,6 @@
 title: Propriedades do objeto, métodos e eventos de tabela | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8927aa7dadf302985c4c06cf9daac2c966cfd7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 942bac61d249106ae80ed76e19c243926d3a12f8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287195"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de tabela
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -44,10 +44,10 @@ ms.lasthandoff: 05/03/2018
  [Propriedade Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
   
 ## <a name="methods"></a>Métodos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

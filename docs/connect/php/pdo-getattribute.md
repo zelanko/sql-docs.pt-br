@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56e0fc4e6cf98af6b688fe3752b7b57eda134341
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308145"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,13 +36,13 @@ mixed PDO::getAttribute ( $attribute )
 #### <a name="parameters"></a>Parâmetros  
 *$attribute*: um dos atributos com suporte. Consulte a seção Comentários para obter uma lista de atributos com suporte.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Em caso de êxito, retorna o valor de uma opção de conexão, um atributo de PDO predefinido ou um atributo de driver personalizado. Retorna null em caso de falha.  
   
 ## <a name="remarks"></a>Remarks  
 A tabela a seguir contém a lista dos atributos com suporte.  
   
-|Atributo|Processado por|Valores com suporte|Description|  
+|attribute|Processado por|Valores com suporte|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica se os nomes de coluna devem usar maiúsculas ou minúsculas. PDO::CASE_LOWER força nomes de coluna com letras minúsculas, PDO::CASE_NATURAL deixa o nome da coluna conforme retornado pelo banco de dados e PDO::CASE_UPPER força nomes de coluna com letras maiúsculas.<br /><br />O padrão é PDO::CASE_NATURAL.<br /><br />Esse atributo também pode ser definido usando PDO::setAttribute.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de cadeias de caracteres|Descreve as versões do driver e das bibliotecas relacionadas. Retorna uma matriz com os seguintes elementos: versão do ODBC (*MajorVer*. *MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client DLL nome e versão, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão (*MajorVer*. *MinorVer*. *BuildNumber*. *Revisão*)|  

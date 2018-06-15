@@ -2,7 +2,6 @@
 title: Exemplo de propriedade DeleteRule (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f42d9f926498e09b5dce0e4e4a0dcf2a4d4ed5d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14078d26c88384e8253bff8bd31c4aa01416b957
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285855"
 ---
 # <a name="deleterule-property-example-vc"></a>Exemplo de propriedade DeleteRule (VC + +)
 Este exemplo demonstra o [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propriedade de um [chave](../../../ado/reference/adox-api/key-object-adox.md) objeto. O código acrescenta um novo [tabela](../../../ado/reference/adox-api/table-object-adox.md) e, em seguida, define uma nova chave primária, definindo **DeleteRule** para **adRICascade**.  

@@ -2,10 +2,10 @@
 title: Nomes da entidade de serviço (SPNs) em conexões de cliente (OLE DB) | Microsoft Docs
 description: Nomes da entidade de serviço (SPNs) em conexões de cliente (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b03f6f44cd23679e3b60ce03410a9582020d84ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4afff2d6f742d1e11791963822d76f075104836b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611711"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
   Este tópico descreve as propriedades OLE DB e as funções de membro que dão suporte a SPNs (nomes da entidade de serviço) em aplicativos clientes. Para obter mais informações sobre SPNs em aplicativos cliente, consulte [Service Principal Name &#40;SPN&#41; suporte em conexões de cliente](../../oledb/features/service-principal-name-spn-support-in-client-connections.md). Para obter um exemplo, consulte [a autenticação Kerberos integrada &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
@@ -29,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="provider-initialization-string-keywords"></a>Palavras-chave da cadeia de caracteres de inicialização do provedor  
  As palavras-chave da cadeia de caracteres de inicialização de provedor a seguir dão suporte a SPNs em aplicativos OLE DB. Na tabela a seguir, os valores na coluna de palavra-chave são usados para a cadeia de caracteres do provedor de IDBInitialize:: Initialize. Os valores na coluna Descrição são usados em cadeias de caracteres de inicialização ao se conectar usando o ADO ou IDataInitialize:: Getdatasource.  
   
-|Palavra-chave|Description|Value|  
+|Palavra-chave|Description|Valor|  
 |-------------|-----------------|-----------|  
 |ServerSPN|SPN do servidor|O SPN do servidor. O valor padrão é uma cadeia de caracteres vazia, o que faz com que o OLE DB Driver para SQL Server usar o padrão, gerado pelo provedor SPN.|  
 |FailoverPartnerSPN|SPN do parceiro de failover:|O SPN do parceiro de failover. O valor padrão é uma cadeia de caracteres vazia, o que faz com que o OLE DB Driver para SQL Server usar o padrão, gerado pelo provedor SPN.|  

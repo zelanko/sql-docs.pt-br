@@ -3,13 +3,10 @@ title: PDO::prepare | Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: php
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
@@ -17,11 +14,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4bb96c535fb3962e5c92723bb67d6cd0827de03
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 717657cabc469488565985e3e37d111bb9d592b8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308155"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +38,7 @@ $*statement*: uma cadeia de caracteres contendo a instrução SQL.
   
 *key_pair*: uma matriz que contém um nome de atributo e valor. Para obter mais informações, consulte a seção Comentários.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Retorna um objeto PDOStatement em caso de êxito. Em caso de falha, retorna um objeto PDOException ou false, dependendo do valor de PDO::ATTR_ERRMODE.  
   
 ## <a name="remarks"></a>Remarks  
@@ -64,7 +62,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 A tabela a seguir mostra os valores possíveis para PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE.  
   
-|Value|Description|  
+|Valor|Description|  
 |---------|---------------|  
 |PDO::SQLSRV_CURSOR_BUFFERED|Cria um cursor estático (em buffer) do lado do cliente. Para obter mais informações sobre cursores do lado do cliente, consulte [tipos de Cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|Cria um cursor dinâmico (sem buffer) do lado do servidor que permite acessar linhas em qualquer ordem e que refletirá as alterações no banco de dados.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86bda1fa1b55800b39d0f116661f1ef52477e37f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b0da9ba4ee3aab602615bb4d495f737cacddf3d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307205"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Baixar os Drivers da Microsoft para PHP para SQL Server
 
@@ -39,7 +39,7 @@ Os drivers de PHP facilmente são baixados e instaladas usando PECL em Linux e m
 - [Drivers 5.2 da Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 - [Drivers da Microsoft 4.3 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](getting-started-with-the-php-sql-driver.md)
 

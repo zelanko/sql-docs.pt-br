@@ -2,15 +2,13 @@
 title: Suporte a FILESTREAM | Microsoft Docs
 description: Suporte FILESTREAM no Driver do OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c5de3b444ab28911875e65d581e836c16eadd528
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: ffb296ea9c64890293a924c135d2674f04e216a7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611568"
 ---
 # <a name="filestream-support"></a>Suporte a FILESTREAM
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 Começando com [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], OLE DB Driver para SQL Server dá suporte ao recurso FILESTREAM aprimorado. Para obter exemplos, consulte [Filestream e BD OLE](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
 

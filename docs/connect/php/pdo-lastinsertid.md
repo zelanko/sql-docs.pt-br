@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a84db386be38765d27565f461fadc39badc3ca2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308545"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ string PDO::lastInsertId ([ $name = NULL ] );
 #### <a name="parameters"></a>Parâmetros  
 $*nome*: uma cadeia de caracteres opcional que permite que você especifique um nome de sequência. 
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Se nenhum nome de sequência for fornecido, uma cadeia de caracteres do identificador para a linha adicionada mais recentemente.
 Se um nome de sequência for fornecido, uma cadeia de caracteres do identificador para a sequência adicionada mais recentemente.
 Se a chamada de método falhar, cadeia de caracteres vazia é retornada.

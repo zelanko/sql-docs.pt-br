@@ -2,7 +2,7 @@
 title: Criar aplicativos com o Driver do OLE DB para SQL Server | Microsoft Docs
 description: Criando aplicativos com o Driver do OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -19,14 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 48d5ea2a58b2a9466b5a32387143a4540c321355
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b768ec6810767e920650bc83e10f9ddece464a56
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612111"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Criando aplicativos com o Driver do OLE DB para SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
  [Atualização de um aplicativo do Driver do OLE DB para SQL Server no MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  Discute as diferenças entre o OLE DB Driver para SQL Server e o MDAC e problemas que devem ser considerados ao atualizar do MDAC para o Driver do OLE DB para SQL Server.  
 
- [Atualizando um aplicativo do SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [Atualizando um aplicativo no SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  Aborda problemas que devem ser considerados durante a atualização do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client OLE DB do driver para SQL Server.  
 
  [Uso do ADO com o Driver do OLE DB para SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  

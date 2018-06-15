@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a6df21ff42d0394b153aa97a0b5639fe47beec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308965"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [opcional]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
   
-|Value|Description|  
+|Valor|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|A próxima linha de dados é retornada como uma matriz numérica.|  
 |SQLSRV_FETCH_ASSOC|A próxima linha de dados é retornada como uma matriz associativa. As chaves da matriz são os nomes das colunas no conjunto de resultados.|  
@@ -64,7 +64,7 @@ Para obter mais informações sobre esses valores, consulte [Especificando um ti
   
 *deslocamento* [opcional]: usado com SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE para especificar a linha a ser recuperada. O primeiro registro no conjunto de resultados é 0.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
 Se uma linha de dados for recuperada, uma **matriz** será retornada. Se não houver mais linhas para recuperar, **null** será retornado. Se ocorrer um erro, **false** será retornado.  
   
 Com base no valor do parâmetro *$fetchType* retornado, a **matriz** retornada poderá ser uma **matriz**indexada numericamente, uma **matriz**associativa ou ambas. Por padrão, uma **matriz** com chaves numéricas e associativas é retornada. O tipo de dados de um valor na matriz retornada será o tipo de dados do PHP padrão. Para obter informações sobre os tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  

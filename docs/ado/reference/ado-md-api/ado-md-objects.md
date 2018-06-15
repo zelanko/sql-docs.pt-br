@@ -2,7 +2,6 @@
 title: Objetos do ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ae297d189b03af51c73a98e6f273601e805b25c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: b6e5358d5300c23c95ad2bea03d54f97b48b2578
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32807129"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283265"
 ---
 # <a name="ado-md-objects"></a>Objetos do ADO MD
 |||  

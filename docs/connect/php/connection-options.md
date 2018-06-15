@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1515d7e58580b7dd0b56b3e0e3f658e2aed132be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a176aaa76934c10c4b7cd3526b59d889d1533268
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307235"
 ---
 # <a name="connection-options"></a>Opções de conexão
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 Este tópico lista as opções que são permitidas na matriz associativa (ao usar [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) no driver SQLSRV) ou as palavras-chave que são permitidas no nome de fonte de dados (dsn) (ao usar [PDO::__construct ](../../connect/php/pdo-construct.md) no driver PDO_SQLSRV).  
 
 ## <a name="table-of-connection-options"></a>Opções de Conexão
-|Chave|Value|Description|Padrão|  
+|Chave|Valor|Description|Padrão|  
 |-------|---------|---------------|-----------|  
 |APP|Cadeia de caracteres|Especifica o nome do aplicativo usado no rastreamento.|Nenhum valor definido.|  
 |ApplicationIntent|Cadeia de caracteres|Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. Os valores possíveis são ReadOnly e ReadWrite.<br /><br />Para obter mais informações sobre [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] suporte para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [suporte para alta disponibilidade, recuperação de desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
@@ -52,8 +52,8 @@ Este tópico lista as opções que são permitidas na matriz associativa (ao usa
 |Servidor<br /><br />(sem suporte no driver SQLSRV)|Cadeia de caracteres|A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à qual se conectar.<br /><br />Você também pode especificar um nome de rede virtual, para se conectar a um grupo de disponibilidade AlwaysOn. Para obter mais informações sobre [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] suporte para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [suporte para alta disponibilidade, recuperação de desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Servidor é uma palavra-chave necessária (embora não precise ser a primeira palavra-chave na cadeia de conexão). Se um nome de servidor não é passado para a palavra-chave, é feita uma tentativa para conectar-se à instância local.<br /><br />O valor passado para o servidor pode ser o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou o endereço IP da instância. Opcionalmente, você pode especificar um número de porta (por exemplo, `sqlsrv:server=(local),1033`).<br /><br />A partir da versão 3.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , você também pode especificar uma instância LocalDB com `server=(localdb)\instancename`. Para obter mais informações, consulte [suporte para o LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
 |TraceFile|Cadeia de caracteres|Especifica o caminho do arquivo usado para dados de rastreamento.|Nenhum valor definido.|  
 |TraceOn|1 ou **true** para habilitar o rastreamento.<br /><br />0 ou **false** para desabilitar o rastreamento.|Especifica se o rastreamento ODBC está habilitado (1 ou **true**) ou desabilitado (0 ou **false**) para a conexão que está sendo estabelecida.|**False** (0)|  
-|TransactionIsolation|O driver SQLSRV usa os seguintes valores:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />O driver PDO_SQLSRV usa os seguintes valores:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Especifica o nível de isolamento da transação.<br /><br />Para obter mais informações sobre isolamento da transação, consulte [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) na documentação do SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />ou<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|TransparentNetworkIPResolution|**Habilitado** ou **desabilitado**|Afeta a sequência de conexão quando o primeiro resolvido IP do nome do host não responde e há vários IPs associados com o nome do host.<br /><br />Ele interage com MultiSubnetFailover para fornecer sequências de conexão diferente. Para obter mais informações, consulte [usando resolução de IP de rede transparente](https://docs.microsoft.com/en-us/sql/connect/odbc/using-transparent-network-ip-resolution).|Ativado|
+|TransactionIsolation|O driver SQLSRV usa os seguintes valores:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />O driver PDO_SQLSRV usa os seguintes valores:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Especifica o nível de isolamento da transação.<br /><br />Para obter mais informações sobre isolamento da transação, consulte [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) na documentação do SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />ou em<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
+|TransparentNetworkIPResolution|**Habilitado** ou **desabilitado**|Afeta a sequência de conexão quando o primeiro resolvido IP do nome do host não responde e há vários IPs associados com o nome do host.<br /><br />Ele interage com MultiSubnetFailover para fornecer sequências de conexão diferente. Para obter mais informações, consulte [usando resolução de IP de rede transparente](https://docs.microsoft.com/en-us/sql/connect/odbc/using-transparent-network-ip-resolution).|Habilitado|
 |TrustServerCertificate|1 ou **true** para confiar no certificado.<br /><br />0 ou **false** para não confiar no certificado.|Especifica se o cliente deve confiar (1 ou **true**) ou rejeitar (0 ou **false**) um certificado de servidor autoassinado.|**False** (0)|  
 |UID<br /><br />(sem suporte no driver PDO_SQLSRV)|Cadeia de caracteres|Especifica a ID de usuário a ser usado ao conectar-se com a autenticação do SQL Server<sup>4</sup>.|Nenhum valor definido.|  
 |WSID|Cadeia de caracteres|Especifica o nome do computador para rastreamento.|Nenhum valor definido.|  

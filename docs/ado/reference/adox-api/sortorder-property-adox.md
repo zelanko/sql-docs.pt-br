@@ -2,7 +2,6 @@
 title: Propriedade SortOrder (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60d4cbf5e3412a17e849313930992a2f3d8f30dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 896224841e3825c3713273122099855e3210f383
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286785"
 ---
 # <a name="sortorder-property-adox"></a>Propriedade SortOrder (ADOX)
 Indica a sequência de classificação da coluna (somente colunas de índice).  
