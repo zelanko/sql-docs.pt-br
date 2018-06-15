@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023443"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatando itens de relatório (Construtor de Relatórios e SSRS)
   A formatação dos itens do relatório torna-o mais atraente e legível. Você pode formatar as caixas de texto e itens específicos das caixas de texto, as imagens, as expressões e os dados no modo de design de relatório.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016273"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Usando um conjunto de dados externo com o Reporting Services
   O objeto **DataSet** é central para o suporte a cenários de dados desconectados e distribuídos com o [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. O objeto **DataSet** é uma representação residente na memória dos dados que fornece um modelo de programação relacional consistente, seja qual for a fonte de dados. Pode ser usado com várias fontes de dados diferentes, com dados XML ou para gerenciar dados locais ao aplicativo. O objeto **DataSet** representa um conjunto completo de dados, incluindo tabelas relacionadas, restrições e relacionamentos entre as tabelas. Por causa da versatilidade do objeto **DataSet** em armazenar e expor dados, com frequência, os dados poderão ser processados e transformados em um objeto **DataSet** antes da ocorrência de qualquer relatório sobre os dados.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016073"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Escolhendo ferramentas de BI (Business Intelligence) da Microsoft para análise e relatório
 Escolher a ferramenta de business intelligence correta pode ser muito complicado. Saiba mais sobre as diferentes ofertas da Microsoft e encontre a que atende melhor às suas necessidades.

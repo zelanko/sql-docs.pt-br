@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020583"
 ---
 # <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Adicionar pontos vazios a um gráfico (Construtor de Relatórios e SSRS)
 Valores nulos são mostrados no gráfico como espaços vazios ou lacunas entre os pontos de dados em uma série. Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , pontos vazios são pontos de dados que podem ser inseridos em um espaço vazio criado por valores nulos.  

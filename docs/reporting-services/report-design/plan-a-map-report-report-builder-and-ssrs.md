@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027763"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
 Bons relatórios apresentam informações que levam a ações ou ideias. Para apresentar dados analíticos como totais de vendas ou dados demográficos em relação a uma tela de fundo geográfica, você pode adicionar um mapa a seu relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Um mapa pode conter várias camadas, onde cada uma exibe elementos de mapas que são definidos por um tipo específico de dados espaciais: pontos que representam locais, linhas que representam rotas ou polígonos que representam áreas. Você pode associar seus dados analíticos a elementos de mapas em cada camada.  

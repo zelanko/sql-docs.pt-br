@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323667"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Use o PowerShell no Windows para gerenciar o SQL Server no Linux
 

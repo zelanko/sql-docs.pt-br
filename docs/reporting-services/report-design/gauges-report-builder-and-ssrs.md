@@ -168,6 +168,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027533"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
   Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , uma região de dados de medidor exibe um único valor para o conjunto de dados. Um medidor individual é sempre posicionado dentro de um painel de medidores, onde é possível adicionar medidores filho ou adjacentes. Dentro de um painel de medidor único, você pode criar vários medidores que compartilham funções comuns, como filtragem, agrupamento ou classificação.  

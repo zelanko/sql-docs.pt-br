@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032273"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de biblioteca do SharePoint no Reporting Services
   Um servidor de relatório configurado para integração com o SharePoint inclui uma extensão de entrega que você pode usar para enviar um relatório a uma biblioteca do SharePoint.  

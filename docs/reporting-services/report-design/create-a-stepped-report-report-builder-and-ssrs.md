@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021813"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
 Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  

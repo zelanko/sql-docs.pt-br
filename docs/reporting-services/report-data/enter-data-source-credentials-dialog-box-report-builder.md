@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018673"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Caixa de diálogo Inserir Credenciais da Fonte de Dados (Construtor de Relatórios)
   Use a caixa de diálogo **Inserir Credenciais da Fonte de Dados** para fornecer suas credenciais para que você possa recuperar dados da fonte de dados.  

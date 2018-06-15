@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021743"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Atualizar credenciais em fontes de dados de relatório de um site do SharePoint
   Este tópico descreve como atualizar as fontes de dados incorporadas nos relatórios e nas fontes de dados compartilhadas salvas em uma biblioteca de documentos do SharePoint.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028013"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar autenticação básica no Servidor de Relatório
   Por padrão, o Reporting Services aceita solicitações que especificam a autenticação Negotiate e NTLM. Se a sua implantação inclui aplicativos cliente ou navegadores que usam autenticação Básica, adicione a autenticação Básica à lista de tipos suportados. Além disso, para usar o Construtor de Relatórios, você deve habilitar o acesso Anônimo aos arquivos do Construtor de Relatórios.  

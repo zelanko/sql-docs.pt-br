@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025883"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Áreas da região de dados Tablix (Construtor de Relatórios e SSRS)
  Em um [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] relatório paginado, uma região de dados tablix tem quatro áreas que contêm células tablix:   

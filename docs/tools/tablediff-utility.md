@@ -27,9 +27,10 @@ manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077523"
 ---
 # <a name="tablediff-utility"></a>utilitário tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +87,7 @@ tablediff
  Retorna a lista de parâmetros com suporte.  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- É o nome do servidor de origem. Especifique *source_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *source_server_name***\\*** instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ É o nome do servidor de origem. Especifique *source_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *source_server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  É o nome do banco de dados de origem.  
@@ -110,7 +111,7 @@ tablediff
  A tabela de origem é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- É o nome do servidor de destino. Especifique *destination_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *destination_server_name***\\*** instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ É o nome do servidor de destino. Especifique *destination_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *destination_server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  É o nome do banco de dados de destino.  
