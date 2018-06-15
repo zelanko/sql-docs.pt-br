@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899053"
 ---
 # <a name="set-functions-limitations"></a>Definir limites de funções
 As funções de conjunto (AVG, MAX, MIN e SUM) não dão suporte a palavra-chave DISTINCT.

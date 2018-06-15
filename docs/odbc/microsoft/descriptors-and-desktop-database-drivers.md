@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903801"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descritores e Drivers de banco de dados de área de trabalho
 Um descritor é uma estrutura de dados que contém informações sobre os dados da coluna ou parâmetros dinâmicos. **SQLGetDescField** pode ser usado para recuperar os descritores com suporte listados abaixo. Descritores de parâmetro de implementação (IPD) não são preenchidos automaticamente porque **SQLDescribeParam** não tem suporte. Campos de descritor que não estão disponíveis por meio de Jet (como SQL_DESC_BASE_TABLE_NAME) também não são suportados.  

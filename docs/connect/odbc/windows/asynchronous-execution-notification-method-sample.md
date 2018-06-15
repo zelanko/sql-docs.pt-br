@@ -3,13 +3,10 @@ title: Exemplo de execução assíncrona (método de notificação) | Microsoft 
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
@@ -17,11 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7955665d40fcd92d913efb4f4dd98b91e92c5550
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1c0fb14245c5e3365389bb127ba735c4829f03e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852181"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Exemplo de execução assíncrona (método de notificação)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

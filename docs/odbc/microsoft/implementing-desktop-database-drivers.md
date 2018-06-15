@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901161"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementando os Drivers de banco de dados de área de trabalho
 Instruções e Observações técnicas sobre como implementar e configurar os Drivers de banco de dados de área de trabalho do Microsoft ODBC podem ser encontradas na Ajuda online do administrador de fonte de dados ODBC. Esse arquivo pode ser acessado durante rotinas de instalação do driver do [administrador de fonte de dados do Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  

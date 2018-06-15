@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899501"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Criar etiquetas de endereçamento no Microsoft Word usando dados do Visual FoxPro
 Você pode usar dados do Visual FoxPro em um Microsoft Word para documentos do Windows 95 ou Windows 98. Por exemplo, você talvez queira criar etiquetas de endereçamento a partir das informações de cliente armazenadas em uma tabela do Visual FoxPro.  

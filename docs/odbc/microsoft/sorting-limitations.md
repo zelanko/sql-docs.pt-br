@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901271"
 ---
 # <a name="sorting-limitations"></a>Limitações de classificação
 O comprimento máximo de uma chave de classificação em uma cláusula GROUP BY, a cláusula ORDER BY, a instrução SELECT DISTINCT ou a junção externa é 255 bytes. o comprimento máximo de todas as chaves de classificação em uma linha de classificação é 65.500 bytes.

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901291"
 ---
 # <a name="index-name-limitations"></a>Limitações do nome do índice
 Quando o driver do Paradox é usado, um índice primário deve ter o mesmo nome que a tabela na qual ele está definido. Outro índice exclusivo ou não exclusivo deve ter o mesmo nome que a tabela na qual eles são definidos.

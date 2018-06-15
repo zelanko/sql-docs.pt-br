@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901281"
 ---
 # <a name="dbase-data-types"></a>Tipos de dados do dBASE
 A tabela a seguir mostra como os tipos de dados do dBASE são mapeados para tipos de dados SQL ODBC. Observe que nem todos os tipos de dados SQL ODBC têm suporte.  

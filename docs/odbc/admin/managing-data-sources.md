@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901711"
 ---
 # <a name="managing-data-sources"></a>Gerenciar fontes de dados
 Depois de instalar um driver ODBC do programa de instalação do driver, você pode definir uma ou mais fontes de dados para ele. O nome da fonte de dados (DSN) deve fornecer uma descrição exclusiva dos dados. Por exemplo, *folha de pagamento* ou *contas a pagar*. As fontes de dados de usuário e do sistema que estão definidas para todos os drivers instalados no momento são listadas no **DSN do usuário** ou **DSN de sistema** guias do **administrador de fonte de dados ODBC**caixa de diálogo. As fontes de dados de arquivo em um diretório específico são listadas no **DSN de arquivo** guia; o diretório a ser mostrado é inserido no **examinar** caixa o **DSN de arquivo** guia.  

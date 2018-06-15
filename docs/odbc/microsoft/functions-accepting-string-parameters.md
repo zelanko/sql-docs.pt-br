@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900451"
 ---
 # <a name="functions-accepting-string-parameters"></a>Aceitar parâmetros de cadeia de caracteres de funções
 Todas as funções que usam parâmetros de cadeia de caracteres serão convertidas em Unicode. (O formato "M" da função será exportado.) Contagem de bytes é convertida para a contagem de caracteres para essas APIs ODBC aplicável. Isso se aplica às funções a seguir:  

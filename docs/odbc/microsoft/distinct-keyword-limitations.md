@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897571"
 ---
 # <a name="distinct-keyword-limitations"></a>Limitações de palavra-chave DISTINCT
 Não tem suporte para campos de texto longo (Microsoft Access) ou memorando (dBASE).

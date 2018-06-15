@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898451"
 ---
 # <a name="convert-function-limitations"></a>Converter limitações de função
 Falhas de conversão de tipo resultam na coluna afetada sendo definida como NULL.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025083"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Programando classes e métodos AMO complementares
   Este tópico contém as seguintes seções:  

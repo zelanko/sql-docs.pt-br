@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900191"
 ---
 # <a name="drop-table-command"></a>Remova o comando de tabela
 Remove uma tabela de banco de dados especificado com a fonte de dados e o exclui do disco.  

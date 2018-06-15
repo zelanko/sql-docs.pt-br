@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914141"
 ---
 # <a name="binding-arrays-of-parameters"></a>Matrizes de parâmetros de associação
 Aplicativos que usam matrizes de parâmetros de associar as matrizes de parâmetros na instrução SQL. Há dois estilos de associação:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897821"
 ---
 # <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>Criar e descartar exibições e procedimentos usando ExtendedAnsiSQL
 Quando o sinalizador ExtendedAnsiSQL é ativado, Jet 4.0 suporta a capacidade de criar e descartar exibições e procedimentos por meio do SQL. Essas exibições e procedimentos não estarão visíveis por meio de acesso.

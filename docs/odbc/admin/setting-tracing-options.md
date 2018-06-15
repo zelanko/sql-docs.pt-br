@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899971"
 ---
 # <a name="setting-tracing-options"></a>Definindo opções de rastreamento
 O **rastreamento** guia o **administrador de fonte de dados ODBC** caixa de diálogo permite que você configure a maneira como as chamadas de função ODBC são rastreadas.  

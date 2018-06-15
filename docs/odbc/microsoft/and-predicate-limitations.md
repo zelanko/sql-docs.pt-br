@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897131"
 ---
 # <a name="and-predicate-limitations"></a>E as limitações de predicado
 Há suporte para um máximo de 40.

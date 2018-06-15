@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898491"
 ---
 # <a name="group-by-expression-list"></a>Agrupar por lista de expressão
 GROUP BY dá suporte a uma lista de expressão, bem como um nome de coluna. Lista de seleção de uma instrução SELECT com uma cláusula GROUP BY somente pode incluir expressões da cláusula GROUP BY ou funções do conjunto.

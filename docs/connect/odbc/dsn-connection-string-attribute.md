@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853011"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN e palavras-chave de cadeia de caracteres de Conexão e atributos
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903581"
 ---
 # <a name="set-reprocess-command"></a>Comando de REPROCESSAMENTO do conjunto
 Especifica quantas vezes ou como longos para bloquear um arquivo ou um registro após uma tentativa malsucedida de bloqueio.  

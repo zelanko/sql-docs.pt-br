@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897291"
 ---
 # <a name="aggregate-function-limitations"></a>Limitações de função de agregação
 Uma função de agregação e uma referência de coluna de não agregação não podem ser usados como argumentos para uma única instrução SQL.

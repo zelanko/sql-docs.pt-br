@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914351"
 ---
 # <a name="outer-joins"></a>Junções externas
 ODBC oferece suporte a SQL-92 à esquerda, sintaxe de junção externa completa e à direita. É a sequência de escape de junções externas  

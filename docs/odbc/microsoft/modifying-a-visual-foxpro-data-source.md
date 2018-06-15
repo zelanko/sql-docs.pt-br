@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899931"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Modificando uma fonte de dados do Visual FoxPro
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Para modificar uma fonte de dados do Visual FoxPro  

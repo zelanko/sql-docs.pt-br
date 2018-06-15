@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911961"
 ---
 # <a name="gateways-diagnostic-example"></a>Exemplo de diagnóstico de gateways
 Em uma arquitetura de gateway, um driver envia solicitações para um gateway que ofereça suporte a ODBC. O gateway envia as solicitações para um DBMS. Porque é o componente que faz interface com o Gerenciador de Driver, o driver formata e retorna os argumentos para **SQLGetDiagRec**.  

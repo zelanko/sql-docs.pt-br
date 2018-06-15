@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901461"
 ---
 # <a name="microsoft-excel-data-types"></a>Tipos de dados do Microsoft Excel
 A tabela a seguir mostra como os tipos de dados de driver do Microsoft Excel são mapeados para tipos de dados SQL ODBC. O driver do Microsoft Excel atribui esses tipos de dados a colunas em tabelas do Microsoft Excel com base nos dados da coluna.  

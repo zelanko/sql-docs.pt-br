@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899761"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilidade de Driver do banco de dados de área de trabalho
 Unicode é um método de codificação de caracteres de software trata todos os caracteres como tendo uma largura fixa de dois bytes. Esse método é usado como uma alternativa para codificação de caracteres ANSI do Windows, que, pois ela representa caracteres em um byte, é limitada a 256 caracteres. Como Unicode pode representar mais de 65.000 caracteres, ele acomoda muitos idiomas cujos caracteres não são representados em codificação de ANSI.  
