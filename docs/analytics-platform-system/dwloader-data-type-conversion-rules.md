@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539706"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Regras de conversão para dwloader - Parallel Data Warehouse de tipo de dados
 Este tópico descreve os formatos de dados de entrada e conversões de tipo de dados implícitos que [dwloader carregador de linha de comando](dwloader.md) suporta quando ele carrega dados no PDW. As conversões de dados implícitas ocorrem quando os dados de entrada não corresponde ao tipo de dados na tabela de destino SQL Server PDW. Use essas informações quando criar o processo de carregamento para garantir que seus dados seja carregado com êxito no SQL Server PDW.  

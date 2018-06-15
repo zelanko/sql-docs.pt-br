@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32435477"
 ---
 # <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>Novos e atualizados recentemente: ActiveX Data Objects (ADO) para o SQL Server
 

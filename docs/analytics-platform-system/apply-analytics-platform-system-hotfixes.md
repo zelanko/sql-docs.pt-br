@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544868"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar hotfixes Analytics Platform System
 Este artigo descreve como aplicar hotfixes para o software do sistema de plataforma de análise.  

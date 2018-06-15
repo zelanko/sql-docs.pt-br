@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539456"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamento de bloqueio no Parallel Data Warehouse
 Saiba como Parallel Data Warehouse usa bloqueio para garantir a integridade de transações e manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.  

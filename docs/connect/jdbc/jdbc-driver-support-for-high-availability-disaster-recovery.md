@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32833461"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Suporte a JDBC driver para alta disponibilidade e recuperação de desastre
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

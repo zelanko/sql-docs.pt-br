@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32506274"
 ---
 # <a name="new-and-recently-updated-connect-to-sql-server"></a>Conteúdo novo e atualizado recentemente: conectar-se ao SQL Server
 

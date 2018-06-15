@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539376"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuração do firewall do Data Warehouse paralela no sistema de plataforma de análise
 O **Firewall** página do SQL Server PDW Configuration Manager permite que você habilite ou desabilite as regras de firewall que permitem ou impedem o acesso a portas específicas no dispositivo Analytics Platform System.  

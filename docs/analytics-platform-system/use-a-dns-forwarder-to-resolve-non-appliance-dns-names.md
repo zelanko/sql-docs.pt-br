@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544938"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Use um encaminhador DNS para resolver nomes DNS não seja de aplicação no sistema de plataforma de análise
 Um encaminhador DNS pode ser configurado em nós do Active Directory Domain Services (***appliance_domain *-AD01** e ***appliance_domain *-AD02**) do seu dispositivo Analytics Platform System para permitir scripts e aplicativos de software para acessar servidores externos.  

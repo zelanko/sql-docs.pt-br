@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544649"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Configuração de fuso horário do dispositivo - Analytics Platform System
 O **fuso horário** página permite que você defina o fuso horário para todos os nós no seu dispositivo Analytics Platform System (APS).  

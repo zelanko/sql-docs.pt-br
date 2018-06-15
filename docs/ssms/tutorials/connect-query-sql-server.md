@@ -17,6 +17,7 @@ ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988750"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
 Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-se à instância do SQL Server e executar alguns comandos T-SQL (Transact-SQL) básicos. O artigo demonstra como fazer o seguinte:

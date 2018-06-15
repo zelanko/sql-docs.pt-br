@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32831961"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurando como os valores de java.sql.Time são enviados ao servidor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

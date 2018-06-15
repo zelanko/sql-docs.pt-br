@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538986"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de carregamento para Parallel Data Warehouse
 Este artigo descreve como adquirir e configurar um servidor de carregamento como um sistema do Windows não seja de aplicação para o envio de cargas de dados para o Parallel Data Warehouse (PDW).  

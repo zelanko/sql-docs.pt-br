@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539076"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Carregando dados em Parallel Data Warehouse
 Você pode carregar ou inserir dados no SQL Server Parallel Data Warehouse (PDW) usando o Integration Services, [utilitário bcp](../tools/bcp-utility.md), **dwloader** carregador de linha de comando ou a instrução SQL INSERT.  

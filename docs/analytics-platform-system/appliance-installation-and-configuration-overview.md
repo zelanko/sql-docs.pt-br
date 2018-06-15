@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538616"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Instalação do dispositivo e configuração para Analytics Platform System
 Orienta os administradores appliance Analytics Platform System (APS) as etapas iniciais para configurar e começar a usar o novo dispositivo.  

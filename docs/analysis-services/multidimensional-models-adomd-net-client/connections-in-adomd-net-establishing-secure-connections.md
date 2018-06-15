@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020683"
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Conexões no ADOMD.NET - estabelecer conexões seguras
   Quando você usa uma conexão no ADOMD.NET, o método de segurança que é usado para a conexão depende do valor da **ProtectionLevel** propriedade da cadeia de caracteres de conexão usada ao chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538586"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar o pacote de gerenciamento do SCOM - Analytics Platform System
 Siga estas etapas para importar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o Analytics Platform System (APS). Os pacotes de gerenciamento necessários para monitorar o Parallel Data Warehouse do SCOM. 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539056"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Monitor de dispositivo com exibições do sistema - Analytics Platform System
 Este artigo lista as exibições do sistema que você pode usar para monitorar o SQL Server PDW.  

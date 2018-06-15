@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544808"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 Descreve como os dados de backup e restauração funciona para Parallel Data Warehouse (PDW). Operações de backup e restauração são usadas para recuperação de desastres. Backup e restauração também podem ser usados para copiar um banco de dados de um dispositivo para outro dispositivo.  

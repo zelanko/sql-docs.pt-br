@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539506"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no sistema de plataforma de análise
 Essas instruções orientam você durante as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual do VMM do dispositivo.  

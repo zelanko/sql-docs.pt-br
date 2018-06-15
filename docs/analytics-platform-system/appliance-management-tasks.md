@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538826"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Tarefas de gerenciamento de dispositivo para Analytics Platform System
 Este guia descreve como executar tarefas de administração do dispositivo para o Analytics Platform System (APS).  

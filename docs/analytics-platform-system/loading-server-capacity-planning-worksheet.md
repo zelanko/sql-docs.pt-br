@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539436"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Carregando a planilha de planejamento de capacidade do servidor para Analytics Platform System
 Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de carregamento para carregar dados no SQL Server PDW. Use isso para criar seu plano para compra ou provisionamento existentes ao carregar servidores.  

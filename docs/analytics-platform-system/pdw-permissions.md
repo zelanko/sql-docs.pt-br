@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544878"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gerenciando permissões no Parallel Data Warehouse
 Este artigo descreve os requisitos e opções de gerenciamento de permissões de banco de dados para SQL Server PDW.  

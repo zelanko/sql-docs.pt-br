@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32833071"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectar-se usando a autenticação do Active Directory do Azure
 

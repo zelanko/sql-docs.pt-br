@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539396"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurar o System Center Operations Manager (SCOM) para monitorar o Analytics Platform System
 Siga estas etapas para configurar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o sistema de plataforma de análise. Os pacotes de gerenciamento necessários para monitorar o Analytics Platform System do SCOM.  

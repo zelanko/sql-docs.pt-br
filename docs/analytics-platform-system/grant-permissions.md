@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539466"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Permissões Grant T-SQL para Parallel Data Warehouse
 Permissões Grant T-SQL para operações de banco de dados no Parallel Data Warehouse.

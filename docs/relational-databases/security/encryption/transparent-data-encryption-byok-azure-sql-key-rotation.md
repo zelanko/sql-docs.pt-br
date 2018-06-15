@@ -25,6 +25,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32619267"
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>Girar o Protetor de TDE (Transparent Data Encryption) usando o PowerShell 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

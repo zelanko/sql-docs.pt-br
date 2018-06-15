@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538536"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Banco de dados mestre - Parallel Data Warehouse
 O banco de dados mestre do SQL Server PDW armazena informações de logon de nível de dispositivo e o catálogo de banco de dados. É um SQL Server banco de dados mestre que reside no nó de controle. Como tal, ele oferece funcionalidade semelhante para o SQL Server PDW como mestre fornece para o SQL Server.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544728"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Backup e carregamento de visão geral de hardware – Parallel Data Warehouse
 Para implantar seu ponta a ponta solução do data warehouse em Analytics Platform System (APS) com o Parallel Data Warehouse (PDW), você precisa criar um plano de backup do data warehouse e o carregamento de dados. Use este guia para adquirir e configurar servidores de backup e carregar que atenda às suas necessidades de negócios.  

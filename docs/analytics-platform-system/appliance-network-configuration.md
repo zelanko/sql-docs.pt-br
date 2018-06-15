@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539306"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configuração de rede do dispositivo para Analytics Platform System
 O dispositivo Analytics Platform System (APS) é criado e configurado com um conjunto de correção de endereços IP em todos os servidores e dispositivos aplicáveis de Chão de fábrica do IHVS. Na entrega do aparelho, o IP externo (Ethernet) endereçado deve ser reconfigurado para atender aos requisitos de centro de dados do cliente específico.  

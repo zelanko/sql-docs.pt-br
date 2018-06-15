@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538756"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power dispositivo ativado ou desativado para Analytics Platform System
 Este tópico descreve como ligar ou desligar o Systemappliance de plataforma de análise que esteja executando o Parallel Data Warehouse e, opcionalmente, executando uma região de HDInsight. Use este tópico quando um dispositivo Analytics Platform System é movido ou a potência em um dispositivo após uma falha catastrófica de energia.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538546"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Desinstalar as atualizações da Microsoft Analytics Platform System
 Este artigo descreve como desinstalar uma atualização da Microsoft instalada anteriormente no dispositivo Analytics Platform System.  

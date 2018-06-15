@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538706"
 ---
 # <a name="pdw-topology"></a>Topologia do PDW
 Exibe o nome e a rede informações sobre os componentes do SQL Server PDW. Use o **configuração de rede de topologia do dispositivo** página para alterar a endereços IP de rede.  

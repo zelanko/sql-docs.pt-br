@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539046"
 ---
 # <a name="monitor-appliance-health-state"></a>Monitor de estado de integridade de dispositivo
 Este artigo explica como monitorar o estado de um dispositivo Analytics Platform System usando o Console do administrador ou ao consultar diretamente as exibições de gerenciamento dinâmico do Parallel Data Warehouse. 

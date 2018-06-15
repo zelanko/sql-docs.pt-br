@@ -3,13 +3,10 @@ title: Localizando informações sobre o Driver JDBC adicionais | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
@@ -17,11 +14,12 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82aacad575cfac7a56492259f9181deeb957b3cb
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 98894a9fc311f115eb0b7a9d3ccf9583b2037631
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32830531"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Localizando informações adicionais sobre o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

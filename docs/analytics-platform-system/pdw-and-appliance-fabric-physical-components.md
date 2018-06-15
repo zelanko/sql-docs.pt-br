@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538876"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Componentes físicos do dispositivo - Analytics Platform System
 Nomes e descrições para os componentes físicos de malha do PDW e dispositivo. 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539586"
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidade do sistema de plataforma de análise
 Saiba como Analytics Platform System (APS) foi projetado para alta disponibilidade.  

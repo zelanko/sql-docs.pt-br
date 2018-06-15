@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538666"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoramento de dispositivo para Analytics Platform System
 Este guia de monitoramento do dispositivo descreve as ferramentas e tarefas de monitoramento de dispositivo de sistema de plataforma de análise.  

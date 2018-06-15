@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538326"
 ---
 # <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Bancos de dados do sistema no Parallel Data Warehouse (PDW)
 Bancos de dados do sistema são bancos de dados PDW do SQL Server usa para gerenciar usuários, bancos de dados e os dados temporários. SQL Server PDW inclui os seguintes bancos de dados do sistema: mestre e tempdb.  

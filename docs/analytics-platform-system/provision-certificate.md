@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539486"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Provisionamento de certificados no sistema de plataforma de análise
 O **provisionamento de certificados do PDW** página do sistema de plataforma de análise de**do Configuration Manager** importa ou remove o certificado usado pelo PDW. 

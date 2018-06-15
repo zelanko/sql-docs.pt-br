@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539136"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Planilha de planejamento de capacidade do servidor de backup - Parallel Data Warehouse
 Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de backup para executar um backup de banco de dados do SQL Server PDW e operações de restauração. Use isso para criar seu plano para compras novos ou provisionamento backup servidores existentes.  

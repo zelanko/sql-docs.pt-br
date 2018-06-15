@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202318"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-and-r-deep-dive"></a>Criar nova tabela do SQL Server usando rxDataStep (SQL e R mergulho profundo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
