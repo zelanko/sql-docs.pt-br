@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033223"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório
   O SharePoint fornece recursos de segurança interna que você pode usar para acessar itens do servidor de relatório nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões de site e de lista aos usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o SharePoint e um servidor de relatório.  

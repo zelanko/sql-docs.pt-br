@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018013"
 ---
 # <a name="image-device-information-settings"></a>Configurações das informações do dispositivo do Image
   A tabela a seguir lista as configurações de informações de dispositivo para renderização no formato do IMAGE.  

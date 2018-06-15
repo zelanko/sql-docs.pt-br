@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033313"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solucionar problemas de renderização de relatório do Reporting Services
 Após a combinação dos dados do relatório e das informações de layout, o relatório compilado é enviado a um renderizador de relatório. Por exemplo, quando você visualiza um relatório localmente, está usando o renderizador HTML para exibir o relatório compilado. Use este tópico para ajudar a solucionar problemas específicos da renderização de relatório.   

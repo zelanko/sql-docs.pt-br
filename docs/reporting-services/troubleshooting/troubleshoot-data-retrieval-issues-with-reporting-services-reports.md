@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032323"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solucionar problemas de recuperação de dados com relatórios do Reporting Services
 A primeira etapa durante o processamento do relatório é recuperar seus dados para cada conjunto de dados executando a consulta de conjunto de dados. Quando você visualiza um relatório localmente, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados para o computador. Quando você executa um relatório no servidor de relatório, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados nesse servidor. Use este tópico para ajudar a solucionar problemas sobre a recuperação de dados do relatório.   

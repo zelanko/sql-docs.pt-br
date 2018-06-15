@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019483"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 Em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], adicione os *navegadores* para filtrar os dados nas visualizações por hora ou por seleção. 

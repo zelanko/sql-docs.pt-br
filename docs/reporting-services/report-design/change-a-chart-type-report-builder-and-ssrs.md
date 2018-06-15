@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019343"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Alterar um tipo de gráfico (Construtor de Relatórios e SSRS)
 Na primeira vez que você inserir um gráfico em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , a caixa de diálogo **Selecionar Tipo de Gráfico** aparecerá. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  

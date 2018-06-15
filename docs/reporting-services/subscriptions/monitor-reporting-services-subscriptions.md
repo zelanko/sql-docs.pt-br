@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035733"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024373"
 ---
 # <a name="report-builder-functions---countrows-function"></a>Funções do Construtor de Relatórios – Função CountRows
   Retorna o número de linhas no escopo especificado, inclusive as linhas com valores nulos.  

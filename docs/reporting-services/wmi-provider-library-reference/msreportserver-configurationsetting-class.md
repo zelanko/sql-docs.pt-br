@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031543"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>Classe MSReportServer_ConfigurationSetting
   Representa os parâmetros de instalação e de tempo de execução de uma instância de servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.  

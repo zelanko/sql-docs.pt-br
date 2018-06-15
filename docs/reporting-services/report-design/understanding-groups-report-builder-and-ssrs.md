@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028863"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Compreendendo grupos (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um grupo é um conjunto nomeado de dados do conjunto de dados de relatório associado a uma região de dados. Basicamente, um grupo organiza uma exibição de um conjunto de dados de relatório. Todos os grupos de uma região de dados especificam exibições diferentes do mesmo conjunto de dados de relatório.  

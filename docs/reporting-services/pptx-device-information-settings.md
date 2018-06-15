@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019874"
 ---
 # <a name="pptx-device-information-settings"></a>Configurações de informações do dispositivo PPTX
   A tabela a seguir lista as configurações de informações de dispositivo para a renderização de relatórios [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no formato PPTX.  

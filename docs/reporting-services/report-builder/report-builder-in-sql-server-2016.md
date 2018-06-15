@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022923"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Construtor de Relatórios no SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] é uma ferramenta para criação de relatórios paginados para usuários comerciais que preferem trabalhar em um ambiente autônomo em vez de usar o Designer de Relatórios no Visual Studio.  Quando você cria um relatório paginado, você está criando uma definição de relatório que especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e combina-os ao layout de relatório para gerar este relatório. Você pode visualizar o seu relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e publicá-lo em um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo nativo ou em modo integrado do SharePoint, onde outras pessoas poderão executá-lo.  

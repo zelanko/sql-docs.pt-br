@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030623"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>Propriedade de ConfigurationSetting – UnattendedExecutionAccount
   Retorna a conta do usuário que o servidor de relatório representa quando executa relatórios autônomos. Somente leitura.  

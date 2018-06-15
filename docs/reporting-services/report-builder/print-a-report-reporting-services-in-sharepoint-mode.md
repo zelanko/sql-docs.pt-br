@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020023"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir um relatório (Reporting Services no modo do SharePoint)
   Para um servidor de relatório que é executado no modo do SharePoint, há três maneiras de imprimir um relatório em um aplicativo Web do SharePoint:  

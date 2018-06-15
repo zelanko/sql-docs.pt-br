@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019423"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   Este tópico explica como resolver a limitação de linhas do Excel 2003 quando você exporta relatórios paginados para o Excel. A solução alternativa é para um relatório que contém apenas uma tabela.  

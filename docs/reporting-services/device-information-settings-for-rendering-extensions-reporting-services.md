@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015973"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configurações de informações de dispositivos para extensões de renderização (Reporting Services)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], as configurações de informações de dispositivo são usadas para passar parâmetros de renderização para uma extensão de renderização. Cada extensão de renderização aceita um conjunto específico de configurações.  

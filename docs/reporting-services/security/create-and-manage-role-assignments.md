@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027023"
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
   Uma *atribuição de função* é uma política de segurança que determina se um usuário ou grupo pode acessar um item de servidor de relatório específico ou executar uma operação. Uma atribuição de função consiste em um único nome de conta de usuário ou grupo e em uma ou mais definições de função.  

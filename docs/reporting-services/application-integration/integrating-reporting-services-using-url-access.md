@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014443"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrando o Reporting Services por meio do acesso à URL
   Com o acesso de URL, você acessa relatórios por uma URL do servidor de relatório. Uma solicitação de URL permite que você acesse um servidor de relatório específico bem como relatórios, recursos e outros itens no banco de dados do servidor de relatório. Você também pode personalizar a exibição de relatório e a experiência de navegação por seus usuários. A cadeia de caracteres da consulta do URL contém configurações de informações de dispositivo, como também parâmetros de relatório destinados a seu relatório e à saída de renderização escolhida. A forma que o servidor de relatório trata das solicitações de URL dependerá dos parâmetros, prefixos de parâmetro e tipo de item que você está acessando por meio da URL.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021423"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Personalizar o painel de parâmetros em um relatório (Construtor de Relatórios)
   Ao criar relatórios paginados com parâmetros no Construtor de Relatórios, você pode personalizar o painel Parâmetros. No modo de exibição de Design de relatório, você pode arrastar um parâmetro para uma coluna e linha específicas no painel Parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.  

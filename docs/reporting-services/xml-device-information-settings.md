@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033293"
 ---
 # <a name="xml-device-information-settings"></a>Configurações de informações do dispositivo XML
   A tabela a seguir lista as configurações de informações de dispositivo para renderização no formato XML.  

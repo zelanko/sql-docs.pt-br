@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018723"
 ---
 # <a name="set-default-options-for-report-builder"></a>Definir opções padrão para o Construtor de Relatórios
   No Construtor de Relatórios, você pode definir um número de padrões úteis para tornar a criação de relatórios mais rápida e fácil.  Por exemplo, se você puder definir ou alterar o servidor de relatório padrão, o Construtor de Relatórios salva seus relatórios no mesmo servidor de relatório automaticamente, a menos que você especifique o contrário.  

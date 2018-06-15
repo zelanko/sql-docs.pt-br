@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029263"
 ---
 # <a name="report-designer-f1-help"></a>Ajuda F1 do Designer de Relatórios
   Esta seção fornece Ajuda F1 para os assistentes, as exibições e as caixas de diálogo do Designer de Relatórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Como alternativa, você pode abrir a Ajuda F1 ao trabalhar na caixa de diálogo, com o pressionamento de F1 ou com um clique no botão Ajuda exibido na caixa de diálogo.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019463"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controlando quebras de páginas, títulos, colunas e linhas (Construtor de Relatórios e SSRS)
   Uma quebra de página divide um relatório em páginas separadas para exibição e impressão. As quebras de página determinam como o conteúdo é colocado em uma página de relatório para visualização ideal quando você visualiza um relatório ou exporta-o para outro formato de arquivo.  

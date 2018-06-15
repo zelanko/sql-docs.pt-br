@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33043173"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Instalar versões de idioma do SSMS (SQL Server Management Studio) que não estão em inglês 
 

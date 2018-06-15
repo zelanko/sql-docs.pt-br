@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015573"
 ---
 # <a name="implementing-a-security-extension"></a>Implementando uma extensão de segurança
   A Autenticação do Windows do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] é o principal sistema para proteger os relatórios no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Em determinados casos, entretanto, você pode precisar estender o sistema de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para acomodar a segurança personalizada em sua empresa. Você pode fazer isso usando a plataforma de desenvolvimento fornecida pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API. Esta seção apresentará uma visão geral de extensões de segurança no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

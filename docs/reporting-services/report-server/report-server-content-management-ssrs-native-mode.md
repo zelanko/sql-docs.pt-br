@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028353"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo. A partir do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, o portal da Web do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está disponível. Este artigo examinará o Gerenciador de Relatórios e a experiência do novo portal da Web.  

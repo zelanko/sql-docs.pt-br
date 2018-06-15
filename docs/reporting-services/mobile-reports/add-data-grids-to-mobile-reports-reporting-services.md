@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018973"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Adicionar grades de dados aos relatórios móveis | Reporting Services
 Às vezes, a melhor visualização são os próprios dados. Saiba mais sobre as três *grades de dados*, ou tabelas, para exibir dados em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

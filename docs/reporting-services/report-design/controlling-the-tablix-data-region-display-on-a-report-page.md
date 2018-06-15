@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022003"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controlando a exibição da região de dados Tablix em uma página do relatório
 Leia sobre as propriedades que você poderá definir em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para uma região de dados de tabela, matriz ou lista a fim de alterar sua aparência quando você vir o relatório.  

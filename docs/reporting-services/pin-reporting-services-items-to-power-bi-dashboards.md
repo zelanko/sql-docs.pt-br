@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022893"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Fixar itens do Reporting Services nos dashboards do Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permite que os usuários fixem itens de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] da barra de ferramentas do visualizador de relatórios em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] como um novo bloco.   Para fixar, o administrador precisa primeiro integrar o servidor de relatório ao Azure Active Directory e ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  

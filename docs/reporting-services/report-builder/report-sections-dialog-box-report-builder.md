@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018693"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Caixa de diálogo Seções do Relatório (Construtor de Relatórios)
   Quando você abre um relatório, o Construtor de Relatórios verifica se o relatório contém apenas um elemento **\<Section>** de linguagem RDL. Não há suporte para a abertura de um relatório com vários elementos **\<Section>**.  

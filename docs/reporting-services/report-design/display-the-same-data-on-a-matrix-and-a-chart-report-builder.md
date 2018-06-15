@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022083"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios)
   Quando quiser mostrar os mesmos dados em uma matriz e em um gráfico, defina propriedades em ambas as regiões de dados para especificar o mesmo conjunto de dados, além das mesmas expressões para filtros, grupos, classificações e dados.  

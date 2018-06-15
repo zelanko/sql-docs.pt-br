@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015543"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Declarando permissões em assemblies personalizados
   Por padrão, o código de assembly personalizado é executado com o conjunto de permissões limitado **Execução**. Em alguns casos, talvez você queira implementar um assembly personalizado que crie chamadas seguras para proteger recursos em seu sistema de segurança (como um arquivo ou o Registro). Para realizar isso, faça o seguinte:  

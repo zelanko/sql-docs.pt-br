@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029893"
 ---
 # <a name="configurationsetting-method---setdatabaselogontimeout"></a>Método de ConfigurationSetting – SetDatabaseLogonTimeout
   Especifica o valor de tempo limite padrão para as conexões do banco de dados do servidor de relatório.  

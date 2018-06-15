@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025723"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir e fechar um relatório (Gerenciador de Relatórios)
   Você pode usar o Gerenciador de Relatórios para exibir relatórios publicados em um servidor de relatório. Por padrão, todos os relatórios são abertos em HTML. Depois de abrir um relatório, é possível exportá-lo para exibi-lo em outros formatos de aplicativo. Se o relatório possuir recursos interativos ou se for um relatório do Construtor de Relatórios que contiver dados interativos, clique nos links para exibir relatórios ou dados adicionais.  

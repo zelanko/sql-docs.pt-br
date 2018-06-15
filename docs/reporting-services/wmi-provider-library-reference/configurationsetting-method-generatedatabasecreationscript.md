@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030923"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>Método de ConfigurationSetting – GenerateDatabaseCreationScript
   Gera um SQL Script que pode ser usado para criar um banco de dados do servidor de relatório.  

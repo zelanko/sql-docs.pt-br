@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018083"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usando o controle ReportViewer do WinForms
   Para exibir relatórios que foram implantados em um servidor de relatório ou relatórios existentes no sistema de arquivos local, você pode usar o controle ReportViewer do WinForms para renderizá-los em um aplicativo do Windows.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035523"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura
   Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste tópico abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com os dois modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As tabelas a seguir resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com suporte:  

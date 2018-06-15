@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027953"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domínios do aplicativo para aplicativos do Servidor de Relatório
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o servidor de relatório é implementado como um único serviço que contém um serviço Web Servidor de Relatórios, Gerenciador de Relatórios e um aplicativo executado em segundo plano. Cada aplicativo é executado em seu próprio domínio de aplicativo dentro do único processo de servidor de relatório. Para a maior parte, os domínios de aplicativo são criados, configurados e gerenciados internamente. Entretanto, saber como as operações de reciclagem ocorrem para os domínios de aplicativo para servidores de relatório poderá ser útil se você estiver investigando o desempenho ou problemas de memória ou solucionando problemas de interrupção de serviço.  
