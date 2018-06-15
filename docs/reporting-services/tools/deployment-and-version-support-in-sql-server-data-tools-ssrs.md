@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032343"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oferece suporte aos seguintes cenários:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028263"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Um servidor de relatório configurado para o modo nativo como um servidor de aplicativo que fornece todos os recursos de processamento e gerenciamento exclusivamente através de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

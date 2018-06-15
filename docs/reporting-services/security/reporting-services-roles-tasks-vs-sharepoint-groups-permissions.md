@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028373"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Funções-tarefas do Reporting Services versus Grupos-permissões do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  

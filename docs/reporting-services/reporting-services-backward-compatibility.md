@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025443"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Reporting Services
 Saiba mais sobre as alterações no comportamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Isso abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior.

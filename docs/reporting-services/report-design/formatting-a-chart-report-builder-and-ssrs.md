@@ -61,6 +61,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023473"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formatando um gráfico (Construtor de Relatórios e SSRS)
   Quando você tiver definido os dados do gráfico e estiver satisfeito com a sua aparência, poderá adicionar a formatação para melhorá-lo em geral e realçar os principais pontos de dados. As opções de formatação mais comuns podem ser modificadas na caixa de diálogo Propriedades que são encontradas quando você clica com o botão direito do mouse em um elemento do gráfico para exibir o menu de atalho correspondente. Cada elemento do gráfico possui sua própria caixa de diálogo. Para obter mais informações sobre elementos de gráfico, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037183"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado que atua como um boletim informativo. Cada página exibe um texto estático, visuais de resumo e dados de vendas de exemplo detalhados.

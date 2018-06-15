@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032966"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Criar, modificar e excluir assinaturas controladas por dados
   Uma assinatura controlada por dados é uma assinatura com base em consulta que obtém os valores de dados usados para processar a assinatura em tempo de execução. Quando a assinatura é acionada, uma consulta é processada para obter informações atualizadas sobre destinatários, opções de entrega de relatórios, formatos de renderização e configurações de parâmetro. Os resultados da consulta são combinados com a definição da assinatura para criar uma assinatura dinâmica que usa os dados já mantidos em um banco de dados de funcionários, de clientes ou que contenha informações que podem ser usadas como dados do assinante.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028944"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos e barras de dados (Construtor de Relatórios e SSRS)
   Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente embutidas com o texto.   

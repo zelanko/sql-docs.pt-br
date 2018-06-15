@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028253"
 ---
 # <a name="set-report-processing-properties"></a>Definir propriedades de processamento de relatórios
   Propriedades de execução de relatório controlam como um relatório é processado. É necessário definir propriedades de execução individualmente para cada relatório.  

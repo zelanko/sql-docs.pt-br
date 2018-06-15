@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019793"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Adicionar um parâmetro com vários valores a um relatório
   É possível adicionar um parâmetro a um relatório que permite ao usuário selecionar mais de um valor para o parâmetro.  

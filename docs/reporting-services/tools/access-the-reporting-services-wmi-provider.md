@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029763"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Acessar o provedor WMI do Reporting Services
   O provedor WMI do Reporting Services expõe duas classes WMI para administração de instâncias de servidor de relatório do modo nativo através de scripts:  

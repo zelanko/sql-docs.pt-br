@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026883"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar um servidor de relatório para administração remota
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode configurar instâncias de servidor de relatório local ou remotamente. Para configurar uma instância remota do servidor de relatório, é possível usar a ferramenta Configuração do Reporting Services ou gravar código personalizado que use o provedor WMI (Instrumentação de Gerenciamento do Windows) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A ferramenta Configuração do Reporting Services fornece uma interface gráfica para o provedor WMI, de maneira que você possa configurar um servidor de relatório sem precisar gravar código. Ao iniciar a ferramenta, você pode especificar um servidor remoto para se conectar.  

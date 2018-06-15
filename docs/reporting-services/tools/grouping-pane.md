@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033773"
 ---
 # <a name="grouping-pane"></a>Painel Agrupamento
 Ao projetar relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , o painel Agrupamento exibe os grupos de linhas e de colunas referentes à região de dados tablix selecionada no momento. O painel Agrupamento não está disponível para as regiões de dados Gráfico e Medidor. O painel Agrupamento consiste nos painéis Grupos de Linhas e Grupos de Colunas. Ele tem dois modos: padrão e Avançado. O modo padrão exibe uma exibição hierárquica dos membros dinâmicos dos grupos de linhas e de colunas. O modo Avançado exibe os membros dinâmicos e estáticos dos grupos de linhas e de colunas. Um grupo é um conjunto nomeado de dados de um conjunto de dados de relatório exibido em uma região de dados. Os grupos são organizados em hierarquias que incluem membros estáticos e dinâmicos. Para obter mais informações, consulte [Compreendendo grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

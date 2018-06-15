@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027363"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar e classificar dados (Construtor de Relatórios e SSRS)
   Em um relatório, as expressões são usadas para ajudar a controlar, organizar e classificar dados de relatório. Por padrão, quando você cria conjuntos de dados e cria o layout de relatório, as propriedades de itens de relatório são definidas automaticamente como expressões baseadas nos campos de conjuntos de dados, parâmetros e outros itens que aparecem no painel de dados do relatório. Também é possível adicionar um botão de classificação interativo a uma tabela ou célula de matriz para permitir que um usuário altere a ordem de classificação de linha interativamente para grupos ou linhas em grupos.  

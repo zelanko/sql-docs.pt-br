@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035423"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
   Este tópico fornece informações sobre erros e eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Os arquivos de log do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também contêm informações de erro. Para obter mais informações sobre os tipos de arquivos de log que estão disponíveis e como exibir os logs, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  

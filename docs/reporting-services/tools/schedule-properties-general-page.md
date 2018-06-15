@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031273"
 ---
 # <a name="schedule-properties-general-page"></a>Propriedades da Agenda (página Geral)
   Use a página do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para exibir ou modificar um agendamento compartilhado. As agendas compartilhadas podem ser usadas no lugar de agendas específicas de relatório ou de assinaturas. Alterações à agenda são aplicadas depois que você salva a agenda. A edição de uma agenda não tem nenhum efeito em trabalhos atualmente em andamento. Se você editar uma agenda enquanto ela estiver sendo usada, todos os relatórios e assinaturas atualmente em processamento disparados daquela agenda terão permissão para serem concluídos.  

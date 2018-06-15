@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029964"
 ---
 # <a name="msreportserverinstance-properties---version"></a>Propriedades de MSReportServer_Instance – Version
   Retorna a versão do servidor de relatório no formato Major.Minor.Build.Revision. Somente leitura.  

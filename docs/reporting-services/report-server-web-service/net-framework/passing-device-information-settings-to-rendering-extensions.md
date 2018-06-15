@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026014"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passando configurações de informações de dispositivos para extensões de renderização
   No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], as configurações de informações de dispositivo são usadas para passar parâmetros de renderização para uma extensão de renderização. As configurações do serviço Web Servidor de Relatórios são passadas como um elemento XML **DeviceInfo** e são processadas pelo servidor de relatório. Como configurações de informações de dispositivo têm valores padrão, elas são consideradas argumentos opcionais no processo de renderização. Porém, você pode usar configurações de informações de dispositivo para personalizar a renderização e substituir os valores padrão que são fornecidos pelo servidor.  

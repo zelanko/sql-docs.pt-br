@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026633"
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentação do desenvolvedor do Reporting Services
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece várias interfaces de programação que você pode usar em seus próprios aplicativos. Você pode usar os recursos e as capacidades existentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para criar relatório personalizado e ferramentas de gerenciamento nos sites da Web e nos aplicativos do Windows ou você poderá estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

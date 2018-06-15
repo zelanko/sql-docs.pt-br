@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027413"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
   Use as dicas a seguir para ajudar na criação de seus relatórios paginados no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022773"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, você pode procurar pastas em um servidor de relatório ou site do SharePoint para encontrar relatórios, fontes de dados compartilhadas, modelos e outros itens de relatório relacionados e navegar no computador para localizar relatórios locais. Para facilitar a localização de relatórios, o Construtor de Relatórios mantém uma lista de servidores e sites usados recentemente e fornece acesso direto às pastas Área de Trabalho, Meus Documentos e Meu Computador no sistema de arquivos do computador.  

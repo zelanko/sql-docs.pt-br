@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033723"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar-se a um servidor de relatório no Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece o Pesquisador de Objetos, que permite a conexão a qualquer servidor da família do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a navegação gráfica por seu conteúdo. Para o Reporting Services, você pode usar o Pesquisador de Objetos para fazer o seguinte:  

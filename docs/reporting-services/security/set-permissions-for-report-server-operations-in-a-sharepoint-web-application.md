@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035593"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint
   Para um servidor de relatório executado no modo integrado do SharePoint, as configurações de segurança no site do SharePoint determinam como exibir e gerenciar os relatórios, modelos de relatório e fontes de dados compartilhadas. Se você estiver usando os grupos, níveis de permissão e atribuições de permissão do SharePoint padrão, será possível trabalhar com relatórios e outros documentos usando as configurações de segurança atuais.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035085"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  

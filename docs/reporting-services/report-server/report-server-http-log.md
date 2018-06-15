@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028113"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  

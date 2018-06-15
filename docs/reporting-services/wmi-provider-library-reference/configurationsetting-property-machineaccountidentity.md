@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030123"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>Propriedade de ConfigurationSetting – MachineAccountIdentity
   Obtém a identidade da conta da máquina do computador em que o servidor de relatório está instalado.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024513"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Partes de relatório podem ser reutilizadas em relatórios paginados por vários usuários e em vários relatórios. Os usuários podem pesquisar partes de relatório no servidor e adicioná-las a um relatório.  Também podem ser informados de atualizações para a parte de relatório no servidor e republicar novas versões de uma parte de relatório. Essas ações de criação de relatório podem ser afetadas e controladas pelas permissões de segurança dos serviços de relatório.  Este tópico revisa as propriedades de parte de relatório e o comportamento depois que elas estão no servidor.  

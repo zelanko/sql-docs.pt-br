@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036453"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhados. 

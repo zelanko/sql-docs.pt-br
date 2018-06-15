@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030883"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>Propriedade de ConfigurationSetting – VirtualDirectoryReportServer
   Retorna o diretório virtual para o aplicativo do servidor de relatório. Somente leitura.  

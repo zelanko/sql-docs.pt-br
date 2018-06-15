@@ -20,6 +20,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34332827"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ajustando o banco de dados usando a carga de trabalho do repositório de consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

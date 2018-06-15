@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028173"
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para o modo nativo ou o modo de integração no SharePoint.  

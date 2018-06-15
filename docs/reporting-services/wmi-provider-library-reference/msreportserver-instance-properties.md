@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031203"
 ---
 # <a name="msreportserverinstance-properties"></a>Propriedades MSReportServer_Instance
   A classe MSReportServer_Instance fornece informações básicas necessárias para um cliente se conectar a um servidor de relatório instalado.  

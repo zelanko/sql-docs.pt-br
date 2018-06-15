@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036983"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemplos de URL para itens em um servidor de relatório – modo do SharePoint
   Para publicar relatórios e itens relacionados em uma biblioteca do SharePoint, você pode publicar o conteúdo por meio das ferramentas de criação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como o Designer de Relatórios ou carregar o conteúdo por meio das ações do site do SharePoint.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026473"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
   Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  

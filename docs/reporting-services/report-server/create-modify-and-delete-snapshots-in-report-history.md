@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026333"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Criar, modificar e excluir instantâneos no histórico de relatório
   O histórico de relatórios é uma coleção de instantâneos de relatório. Você pode manter o histórico de relatórios adicionando e excluindo instantâneos ou modificando propriedades que afetam o armazenamento do histórico de relatórios. O histórico de relatórios pode ser criado manualmente ou em uma agenda.  

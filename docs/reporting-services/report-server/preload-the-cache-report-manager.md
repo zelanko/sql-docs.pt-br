@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027723"
 ---
 # <a name="preload-the-cache-report-manager"></a>Pré-carregar o cache (Gerenciador de Relatórios)
   Você pode pré-carregar o cache para um conjunto de dados compartilhado criando um plano de atualização do cache para o conjunto de dados compartilhado.  
