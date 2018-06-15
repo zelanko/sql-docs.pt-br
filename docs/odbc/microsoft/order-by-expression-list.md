@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904621"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY-lista de expressões
 Expressões podem ser usadas na cláusula ORDER BY. Por exemplo, as seguintes cláusulas a tabela é ordenada por três expressões chave: a + b, c + d e e.  

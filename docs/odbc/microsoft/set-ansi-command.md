@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904321"
 ---
 # <a name="set-ansi-command"></a>Comando de ANSI SET
 Determina como as comparações entre cadeias de caracteres de comprimentos diferentes são feitas com o operador = em comandos do Visual FoxPro SQL.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913851"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Sem suporte do Visual FoxPro comandos e funções (Driver ODBC do Visual FoxPro)
 A tabela a seguir lista os comandos de FoxPro e funções que não são suportadas pelo Driver ODBC para Visual FoxPro, mas são suportadas pelo Microsoft® Visual FoxPro.  

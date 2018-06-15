@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913721"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Instruções de geração de resultado e liberar resultados
 Instruções SQL podem ser livremente divididas em cinco categorias a seguir:  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908581"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Alocando um identificador de Conexão ODBC
 Antes do aplicativo pode se conectar a uma fonte de dados ou driver, ele deve alocar um identificador de conexão, da seguinte maneira:  

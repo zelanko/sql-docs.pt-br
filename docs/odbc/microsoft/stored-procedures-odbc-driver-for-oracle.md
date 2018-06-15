@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903301"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>Procedimentos armazenados (ODBC Driver for Oracle)
 > [!IMPORTANT]  

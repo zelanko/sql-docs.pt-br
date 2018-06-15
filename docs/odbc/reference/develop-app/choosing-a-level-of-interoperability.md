@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909461"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Escolhendo um nível de interoperabilidade
 Supondo que o aplicativo irá usar o ODBC, a próxima etapa é determinar o nível de interoperabilidade é necessário. O nível básico de interoperabilidade geralmente é uma função do tipo de aplicativo: aplicativos personalizados tendem a não ser interoperáveis, aplicativos verticais tendem a interoperabilidade entre um número limitado de DBMSs e aplicativos genéricos tendem a interoperabilidade entre todos os DBMSs.  

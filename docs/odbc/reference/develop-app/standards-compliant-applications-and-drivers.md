@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913781"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Drivers e aplicativos compatíveis com padrões
 Um aplicativo compatível com os padrões ou o driver é aquele que está em conformidade com a especificação de CAE aberta do grupo "dados de gerenciamento: SQL nível de chamada CLI (Interface)" e ISO/IEC 9075-3:1995 Interface de nível de chamada (E) (SQL/CLI).  

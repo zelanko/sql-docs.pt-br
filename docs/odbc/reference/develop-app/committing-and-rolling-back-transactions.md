@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910041"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Confirmação e reversão de transações
 Para confirmar ou reverter uma transação em modo de confirmação manual, um aplicativo chama **SQLEndTran**. Drivers para os que oferecem suporte a transações normalmente implementam essa função executando um **confirmar** ou **REVERSÃO** instrução. O Gerenciador de Driver não chama **SQLEndTran** quando a conexão estiver no modo de confirmação automática; ele simplesmente retorna SQL_SUCCESS, mesmo se o aplicativo tentar reverter a transação. Como os drivers para os que não oferecem suporte a transações sempre estão no modo de confirmação automática, eles podem ou implementar **SQLEndTran** retorna SQL_SUCCESS sem fazer nada ou não implementá-la.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914481"
 ---
 # <a name="appendix-e-scalar-functions"></a>Apêndice e: funções escalares
 ODBC Especifica os seguintes tipos de funções escalares, com informações detalhadas sobre cada um desses tipos de função fornecidos nas seções correspondentes neste apêndice. As descrições de função incluem sintaxe associada.  

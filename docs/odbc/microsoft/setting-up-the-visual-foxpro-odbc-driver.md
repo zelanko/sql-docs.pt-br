@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903481"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Configurando o Driver ODBC do Visual FoxPro
 Para obter informações sobre como baixar e instalar o driver ODBC do Visual FoxPro, consulte [Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318) nos Downloads do MSDN.  

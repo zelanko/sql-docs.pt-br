@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904191"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (Drivers do banco de dados de área de trabalho)
 Uma instrução preparada com um número incorreto de colunas retornará um erro em tempo de execução, não na preparação da instrução.

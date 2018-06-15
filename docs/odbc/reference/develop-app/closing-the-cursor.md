@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907711"
 ---
 # <a name="closing-the-cursor"></a>Fechar o Cursor
 Quando um aplicativo terminar de usar um cursor, ele chama **SQLCloseCursor** para fechar o cursor. Por exemplo:  

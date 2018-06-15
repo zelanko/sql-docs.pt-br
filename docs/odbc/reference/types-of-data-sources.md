@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917221"
 ---
 # <a name="types-of-data-sources"></a>Tipos de fontes de dados
 Há dois tipos de fontes de dados: fontes de dados e fontes de dados de arquivos do computador. Embora ambos contêm informações semelhantes sobre a fonte de dados, elas diferem da forma que essas informações são armazenadas. Devido a essas diferenças, elas são usadas em um pouco diferentes maneiras.  

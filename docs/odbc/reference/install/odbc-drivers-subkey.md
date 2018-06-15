@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914951"
 ---
 # <a name="odbc-drivers-subkey"></a>Subchave de Drivers ODBC
 Os valores na subchave Drivers ODBC listam os drivers instalados. O formato desses valores é mostrado na tabela a seguir.  

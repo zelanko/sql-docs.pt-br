@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913351"
 ---
 # <a name="c-to-sql-character"></a>C para SQL: caractere
 Os identificadores para o caractere de tipo de dados ODBC C são:  

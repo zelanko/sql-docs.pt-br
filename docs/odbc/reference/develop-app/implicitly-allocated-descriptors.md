@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913871"
 ---
 # <a name="implicitly-allocated-descriptors"></a>Descritores implicitamente alocados
 Quando um identificador de instrução é alocado, o aplicativo aloca implicitamente um conjunto de descritores de quatro. O aplicativo pode obter os identificadores desses alocado implicitamente descritores como atributos do identificador da instrução. Quando o aplicativo libera o identificador de instrução, o driver libera todos os descritores de alocado implicitamente esse identificador.

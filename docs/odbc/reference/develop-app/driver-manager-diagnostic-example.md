@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909201"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Exemplo de diagnóstico do Gerenciador de driver
 O Gerenciador de Driver também pode gerar mensagens de diagnóstico. Por exemplo, se um aplicativo passada uma opção de direção inválida para **SQLDataSources**, o Gerenciador de Driver pode formatar e retornar os seguintes valores de **SQLGetDiagRec**:  

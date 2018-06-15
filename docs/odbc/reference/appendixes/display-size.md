@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907031"
 ---
 # <a name="display-size"></a>Tamanho de exibição
 O tamanho de exibição de uma coluna é o número máximo de caracteres necessários para exibir dados em formato de caractere. A tabela a seguir define o tamanho de exibição para cada tipo de dados SQL ODBC.  

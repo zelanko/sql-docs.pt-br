@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903141"
 ---
 # <a name="alter-table-statement"></a>Instrução ALTER TABLE
 Quando o Microsoft Access, dBASE ou Paradoxdriver for usado, a instrução ALTER TABLE é suportada com add e drop cláusulas de definição de restrição de tabela. (Instruções de ALTER TABLE não têm suporte para os drivers de texto ou do Microsoft Excel.)  

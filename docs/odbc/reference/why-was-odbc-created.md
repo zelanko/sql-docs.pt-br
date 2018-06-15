@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917311"
 ---
 # <a name="why-was-odbc-created"></a>Por que o ODBC foi criado?
 Historicamente, empresas usaram um DBMS único. Todo o acesso de banco de dados foi feito por meio de front-end de sistema ou aplicativos escritos para funcionar exclusivamente com este sistema. No entanto, como o uso de computadores cresceu e mais hardware e software tornou-se disponível, as empresas iniciado para adquirir DBMSs diferentes. Os motivos foram muitas: pessoas compradas o que era mais barato, o que mais rápido, o que eles já soubessem, o que foi mais recente no mercado, o que funcionou melhor para um único aplicativo. Outros motivos foram reorganizações e fusões, onde departamentos que anteriormente tinham um DBMS único agora tinham vários.  

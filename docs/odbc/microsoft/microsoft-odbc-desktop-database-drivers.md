@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903311"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Drivers de banco de dados de área de trabalho do Microsoft ODBC
 ODBC é uma API que usa SQL Structured Query Language () como o idioma de acesso de banco de dados. Você pode acessar uma ampla variedade de sistemas de gerenciamento de banco de dados (DBMSs) com o mesmo código de origem ODBC que esteja incorporado diretamente no código-fonte do aplicativo. Com os Drivers de banco de dados de área de trabalho do Microsoft ODBC, um usuário de um aplicativo habilitado para ODBC pode abrir a consulta e atualizar um banco de dados de área de trabalho por meio da interface do ODBC.  

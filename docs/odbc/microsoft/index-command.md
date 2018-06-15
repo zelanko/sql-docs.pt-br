@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904411"
 ---
 # <a name="index-command"></a>Comando de índice
 Cria um arquivo de índice para exibir e acessar os registros da tabela em uma ordem lógica.  

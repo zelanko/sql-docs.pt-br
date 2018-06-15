@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908951"
 ---
 # <a name="header-record"></a>Registro de cabeçalho
 Os campos no registro de cabeçalho contêm informações gerais sobre a execução de uma função, incluindo o código de retorno, contagem de linhas, número de registros de status e o tipo da instrução executada. O registro de cabeçalho sempre é criado, a menos que a função retorne SQL_INVALID_HANDLE. Para obter uma lista completa dos campos no registro de cabeçalho, consulte o [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrição da função.
