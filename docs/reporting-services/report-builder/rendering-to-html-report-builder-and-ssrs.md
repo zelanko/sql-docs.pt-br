@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021353"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
   A extensão de renderização HTML renderiza um relatório paginado no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.  

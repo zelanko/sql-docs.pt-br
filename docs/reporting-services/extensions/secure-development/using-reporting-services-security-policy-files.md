@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016733"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usando arquivos de política de segurança do Reporting Services
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança de componentes em três arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Os três arquivos de configuração correspondem a três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: o servidor de relatório e o serviço do Windows, o aplicativo Web do Gerenciador de Relatórios e a janela de exibição do Designer de Relatórios.  
