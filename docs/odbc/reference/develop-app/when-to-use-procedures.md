@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917371"
 ---
 # <a name="when-to-use-procedures"></a>Quando usar procedimentos
 Há inúmeras vantagens de usar os procedimentos, todos com base no fato de que usando procedimentos move instruções SQL do aplicativo para a fonte de dados. O restante do aplicativo é uma chamada de procedimento interoperável. Essas vantagens incluem:  

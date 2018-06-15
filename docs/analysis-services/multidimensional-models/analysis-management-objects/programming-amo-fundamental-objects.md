@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026213"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programando objetos AMO fundamentais
   Os objetos fundamentais são geralmente simples e diretos. Esses objetos são normalmente criados e instanciados e, quando não são mais necessários, o usuário se desconecta deles. As classes fundamentais incluem os seguintes objetos: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>. O único objeto complexo dos objetos fundamentais AMO é o <xref:Microsoft.AnalysisServices.DataSourceView>, que exige detalhes para a criação do modelo abstrato que representa a exibição da fonte de dados.  

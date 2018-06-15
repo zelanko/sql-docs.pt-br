@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917502"
 ---
 # <a name="default-subkey"></a>Subchave padrão
 O registro pode especificar uma fonte de dados padrão com a subchave padrão. Essa subchave é um caso especial de uma subchave de especificação de fonte de dados e tem os mesmos valores como qualquer outra subchave especificação da fonte dados. A única diferença é que ele não está listado como um valor na subchave fontes de dados ODBC.

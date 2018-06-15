@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917141"
 ---
 # <a name="testing-interoperable-applications"></a>Testando aplicativos interoperáveis
 Testando aplicativos interoperáveis na melhor das hipóteses é um demorado na pior das hipóteses impossível porque novos drivers continuamente aparecem no mercado e de negócios. No entanto, um nível razoável de testes é possível. Aplicativos com a interoperabilidade limitada ou baixa somente precisam ser testados em relação os drivers que eles têm garantia de suporte. No entanto, eles devem ser testados totalmente em relação a esses drivers.  
