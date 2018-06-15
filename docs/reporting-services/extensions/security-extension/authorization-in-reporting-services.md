@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016763"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorização no Reporting Services
   Autorização é o processo de determinar se uma identidade deve receber o tipo de acesso solicitado a um determinado recurso no banco de dados de servidor de relatório. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma arquitetura de autorização baseada em função que concede um acesso de usuário a um determinado recurso com base na atribuição de função do usuário para o aplicativo. As extensões de segurança para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contêm uma implementação de um componente de autorização usado para conceder acesso a usuários assim que eles se autenticam no servidor de relatório. A autorização é invocada quando um usuário tenta executar uma operação no sistema ou um item de servidor de relatório por meio da API SOAP e via acesso à URL. Isso é possível por meio da interface de extensão de segurança **IAuthorizationExtension2**. Como foi dito anteriormente, todas as extensões herdam de **IExtension** , a interface base para qualquer extensão que você implanta. **IExtension** e **IAuthorizationExtension2** são membros do namespace **Microsoft.ReportingServices.Interfaces**.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018513"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados nos relatórios móveis do Reporting Services
 Os mapas geográficos no Editor de Relatórios Móveis do SQL Server são definidos em um formato conhecido como *ESRI shapefiles*.  

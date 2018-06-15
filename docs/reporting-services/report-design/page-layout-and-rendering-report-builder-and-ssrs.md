@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028673"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
 Leia sobre as extensões de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para relatórios paginados se tiver certeza de que seu relatório tem a aparência desejada, incluindo o layout da página, quebras de página e tamanho do papel. 

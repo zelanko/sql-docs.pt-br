@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031423"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Processamento de solução de problemas dos relatórios do Reporting Services
 Após a recuperação dos dados do relatório, o processador de relatório combina esses dados e as informações de layout. Cada propriedade de item de relatório que tenha uma expressão é avaliada no contexto dos dados e do layout combinado. Use este tópico para ajudar a solucionar esses problemas.   

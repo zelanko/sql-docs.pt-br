@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028433"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS)
 

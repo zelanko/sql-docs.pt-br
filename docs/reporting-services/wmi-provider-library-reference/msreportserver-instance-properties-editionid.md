@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029683"
 ---
 # <a name="msreportserverinstance-properties---editionid"></a>Propriedades de MSReportServer_Instance – EditionID
   Retorna a edição do servidor de relatório. Somente leitura.  

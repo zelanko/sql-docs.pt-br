@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322937"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Dados de cópia em massa com bcp para o SQL Server no Linux
 

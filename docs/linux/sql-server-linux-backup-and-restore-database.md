@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322607"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e restauração de bancos de dados do SQL Server no Linux
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021533"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios paginados. Saiba como planejar ambientes de criação de relatório e de servidor de relatório que funcionam juntos.

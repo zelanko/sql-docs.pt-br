@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550887"
 ---
 #<a name="appliance-feature-switch"></a>Opção de recurso do dispositivo
 O **opção** página exibe informações sobre as opções de dois recursos que foram introduzidos no AU7 de sistema de plataforma de análise. Use esta página para atualizar ou habilitar/desabilitar recursos e configurações no sistema de plataforma de análise. Alterando os valores de chave de recurso requer uma reinicialização do serviço.

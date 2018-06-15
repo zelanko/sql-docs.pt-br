@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026963"
 ---
 # <a name="update-a-resource-report-manager"></a>Atualizar um recurso (Gerenciador de Relatórios)
   É possível atualizar um recurso substituindo-o por uma versão mais recente. Recursos são itens armazenados em um servidor de relatório com conteúdo de um arquivo carregado pelo usuário. Você pode substituir um recurso existente importando conteúdo de arquivo novo ou diferente no recurso existente. A atualização de um recurso fornece um modo de atualizar conteúdo e ao mesmo tempo preservar as propriedades e configurações de segurança já existentes no recurso.  

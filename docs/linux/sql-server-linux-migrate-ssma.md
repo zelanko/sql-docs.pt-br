@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34321907"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Automatizar a migração de banco de dados para o Linux com o SQL Server Migration Assistant
 

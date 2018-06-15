@@ -32,6 +32,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323897"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
 

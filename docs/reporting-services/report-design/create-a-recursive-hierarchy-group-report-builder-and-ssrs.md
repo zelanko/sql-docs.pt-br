@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020713"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Criar um grupo de hierarquia recursiva (Construtor de Relatórios e SSRS)
 Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um grupo de hierarquia recursiva organiza dados de um único conjunto de dados de relatório que contém vários níveis hierárquicos, como a estrutura de subordinação para relações gerente-funcionários em uma hierarquia organizacional.  

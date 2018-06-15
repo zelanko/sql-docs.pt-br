@@ -21,6 +21,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33145437"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Criar conjunto de coleta personalizado – Tipo de coletor de consultas T-SQL genérico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022873"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS)
 

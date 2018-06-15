@@ -20,9 +20,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26e3fcd0f7959f5b659468f943a321d30c75cce9
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33075363"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
