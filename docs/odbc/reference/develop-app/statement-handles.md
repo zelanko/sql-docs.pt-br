@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913911"
 ---
 # <a name="statement-handles"></a>Identificadores de instrução
 Um *instrução* é mais fácil pensar como uma instrução SQL, como **selecione \* do funcionário**. No entanto, uma instrução é mais do que apenas uma instrução SQL — consiste em todas as informações associadas a essa instrução SQL, como conjuntos de resultados criados pela instrução e os parâmetros usados na execução da instrução. Uma instrução não mesmo precisa ter uma instrução SQL definido pelo aplicativo. Por exemplo, quando uma função de catálogo como **SQLTables** é executado em uma instrução, ele executa uma instrução SQL predefinida que retorna uma lista de nomes de tabela.  

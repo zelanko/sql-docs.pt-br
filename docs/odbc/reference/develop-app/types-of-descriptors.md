@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914901"
 ---
 # <a name="types-of-descriptors"></a>Tipos de descritores
 Um descritor é usado para descrever um dos seguintes:  

@@ -16,9 +16,10 @@ manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bf49d6676b64386985a8af46676bab4e9c9c134d
 ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234691"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>ferramenta de linha de comando de consulta MSSQL-cli para o SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

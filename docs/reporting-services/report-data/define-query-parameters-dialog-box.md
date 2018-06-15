@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018793"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Caixa de diálogo Definir Parâmetros de Consulta
   Use a caixa de diálogo **Definir Parâmetros de Consulta** para especificar valores de parâmetros quando uma consulta é executada em um designer de consulta em tempo de design para visualizar dados de exemplo. Parâmetros de consulta filtram dados na fonte de dados e ajudam a limitar a quantidade de dados processada por um relatório. Esses valores não são salvos na definição do relatório.  

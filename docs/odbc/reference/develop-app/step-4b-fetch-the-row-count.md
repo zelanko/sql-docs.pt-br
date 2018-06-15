@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915247"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Etapa 4b: buscar a contagem de linhas
 A próxima etapa é obter a contagem de linhas, conforme mostrado na ilustração a seguir.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916371"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Referência de Interface (IDA) do provedor de serviço ODBC
 Tradicionalmente, o ODBC definidos uma interface de programação de aplicativo (API). As funções na API do podem ser chamadas por aplicativos e eles devem ser implementados dentro do Gerenciador de Driver e o driver.  

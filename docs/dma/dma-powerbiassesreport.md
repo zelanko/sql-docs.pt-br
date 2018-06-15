@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869001"
 ---
 # <a name="report-on-your-consolidated-assessments-by-using-power-bi-data-migration-assistant"></a>Relatório de avaliações consolidadas por usando o Power BI (Assistente de migração de dados)
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34074299"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurar o SQL Server para enviar comentários à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

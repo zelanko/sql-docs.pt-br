@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911241"
 ---
 # <a name="batches-of-sql-statements"></a>Lotes de instruções SQL
 Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma única instrução SQL que tem o mesmo efeito de um grupo de duas ou mais instruções SQL. Em algumas implementações, a instrução de lote inteiro é executada antes de todos os resultados estão disponíveis. Isso geralmente é mais eficiente que enviar instruções separadamente, pois o tráfego de rede geralmente pode ser reduzido e a fonte de dados, às vezes, pode otimizar a execução de um lote de instruções SQL. Em outras implementações, chamando **SQLMoreResults** dispara a execução da próxima instrução no lote. ODBC suporta os seguintes tipos de lotes:  

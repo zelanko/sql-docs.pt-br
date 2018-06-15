@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911911"
 ---
 # <a name="retrieving-bookmarks"></a>Recuperando indicadores
 Se o aplicativo usar indicadores, ele deve definir o atributo de instrução de SQL_ATTR_USE_BOOKMARKS para SQL_UB_VARIABLE antes de preparar ou executar a instrução. Isso é necessário porque a criação e manutenção de indicadores podem ser uma operação dispendiosa, portanto, indicadores devem ser habilitados somente quando um aplicativo pode ter uma boa utilizá-las.  
