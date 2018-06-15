@@ -2,7 +2,6 @@
 title: Lidando com atualizações com falha | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cd4088f20c949cd3a732b43cd5d9312c04387ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45e5a20e0527f8b30035aef7ff86a90378039b69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270185"
 ---
 # <a name="dealing-with-failed-updates"></a>Lidando com atualizações com falha
 Quando uma atualização é concluída com erros, como resolver os erros depende a natureza e a severidade dos erros e a lógica do seu aplicativo. No entanto, se o banco de dados for compartilhado com outros usuários, um erro comum é que outra pessoa modificar o campo antes de fazer. Esse tipo de erro é chamado de um conflito. ADO detectará essa situação e relata um erro.  

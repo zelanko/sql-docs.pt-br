@@ -2,7 +2,6 @@
 title: A forma de cláusula APPEND | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7c54daeed05260bd7e6abd804830ce8dac1807d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272575"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
 A cláusula de ACRÉSCIMO de comando de forma acrescenta uma coluna ou colunas para um **registros**. Com frequência, essas colunas são colunas de capítulo, o que fazer referência a um filho **registros**.  

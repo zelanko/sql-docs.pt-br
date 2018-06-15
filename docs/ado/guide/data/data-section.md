@@ -2,7 +2,6 @@
 title: Seção de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc7a8e66765d35d4c8a8a7f74f63720dec4d9429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b861ce91ec8b7007e168cbdb7d0dae3f0ce48e9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270095"
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas juntamente com quaisquer atualizações, inserções ou exclusões pendentes. A seção de dados pode conter zero ou mais linhas. Ele só pode conter dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, colunas sem dados podem ser omitidas. Se um atributo ou subelemento é usado na seção de dados e essa construção não foi definida na seção de esquema, ele será ignorado silenciosamente.  

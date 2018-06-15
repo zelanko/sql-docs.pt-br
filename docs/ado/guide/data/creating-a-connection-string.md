@@ -2,7 +2,6 @@
 title: Criando uma cadeia de caracteres de Conexão | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc700bdc0006a4591e61e15f2796b73c194dc5a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 106aacb0fbdda6e00d32b42a8bae49564ee1adbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270555"
 ---
 # <a name="creating-a-connection-string"></a>Criando uma cadeia de conexão
 Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do argumento (isto é, parâmetros), separada por ponto e vírgula. Por exemplo:  

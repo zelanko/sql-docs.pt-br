@@ -2,7 +2,6 @@
 title: Salvar o objeto XML DOM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3c53d65a0ff66c560f43361cb6de97a2bc36146
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82c9c8a04669d360362f68d8c1b0a524d954efa0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272525"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>Salvar o objeto XML DOM
 Você pode salvar um conjunto de registros em formato XML a uma instância de um objeto DOM MSXML, conforme mostrado no seguinte código do Visual Basic:  

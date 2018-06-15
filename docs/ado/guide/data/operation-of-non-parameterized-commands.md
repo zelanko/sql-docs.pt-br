@@ -2,7 +2,6 @@
 title: Operação de comandos sem parâmetros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b468d55f9085c5201c1720887087b3ace94a6069
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8aa3ed637aa9206921f6da91f0218f67faf0154a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272275"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Operação de comandos sem parâmetros
 Para comandos sem parâmetros, todos os comandos do provedor são executados e o **conjuntos de registros** são criados durante a execução do comando. Se o comando é executado de forma síncrona, todos os **conjuntos de registros** será totalmente preenchida. Se um modo de população assíncrona foi selecionado, o estado preenchido do **conjuntos de registros** dependerá do modo de preenchimento e o tamanho do **conjuntos de registros**.  
