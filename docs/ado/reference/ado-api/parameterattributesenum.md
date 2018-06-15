@@ -2,7 +2,6 @@
 title: ParameterAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d9e1da870fc405e3a7d59c554f01396ffaf2623
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 67473647635f9a6b89f767bcbaf1b4bde42cafef
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280715"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 Especifica os atributos de uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|Indica que o parâmetro aceita valores assinados.|  
 |**adParamNullable**|64|Indica que o parâmetro aceita valores nulos.|  

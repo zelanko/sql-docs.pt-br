@@ -1,11 +1,8 @@
 ---
 title: Propriedade Precision (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03d2c2a16ce4c1147673ec383922b43ab07fd086
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 630bae40ab9e473656abeb3fa8cdb79de89e258c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280628"
 ---
 # <a name="precision-property-ado"></a>Propriedade Precision (ADO)
 Indica o grau de precisão para valores numéricos em uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto ou para numérico [campo](../../../ado/reference/ado-api/field-object.md) objetos.  

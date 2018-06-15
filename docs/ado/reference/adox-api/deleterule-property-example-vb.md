@@ -2,7 +2,6 @@
 title: Exemplo de propriedade DeleteRule (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52fc30edffdfbad883f28c921e88df4154272154
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 388f98e0ae32c4b3fd139526da78b743466fbd58
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285885"
 ---
 # <a name="deleterule-property-example-vb"></a>Exemplo de propriedade DeleteRule (VB)
 Este exemplo demonstra o [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propriedade de um [chave](../../../ado/reference/adox-api/key-object-adox.md) objeto. O código acrescenta um novo [tabela](../../../ado/reference/adox-api/table-object-adox.md) e, em seguida, define uma nova chave primária, definindo **DeleteRule** para **adRICascade**.  

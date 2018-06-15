@@ -2,7 +2,6 @@
 title: InvokeService (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78c815f75b5e30713e0b7f9e5b7ec83c4c3eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92927a240c0501196c1b9bf0c1643f6cb0f708d4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288285"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Retorna um ponteiro para a interface solicitada em uma versão maior capacidade do objeto.  
@@ -50,7 +50,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  [out] O endereço da variável de ponteiro que recebe o ponteiro de interface solicitado na *riid*. No retorno bem-sucedido, o *ppunkMoreFunctionalInterface* parâmetro contém o ponteiro de interface solicitada para o objeto. Se o objeto não oferece suporte para a interface especificada em *riid*, *ppunkMoreFunctionalInterface* é definido como NULL.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um valor HRESULT que indica se a chamada para o **InvokeService** método foi bem-sucedida.  
   
 ## <a name="remarks"></a>Remarks  

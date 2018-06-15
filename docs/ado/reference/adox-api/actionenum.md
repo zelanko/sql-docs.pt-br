@@ -2,7 +2,6 @@
 title: ActionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 219b2b24041fa23f2ac51ed38144e97c86c5fe72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 100d889f8176038a85f162091c1773bc39fc7667
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284705"
 ---
 # <a name="actionenum"></a>ActionEnum
 Especifica o tipo de ação a ser executada quando [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) é chamado.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adAccessDeny**|3|O grupo ou usuário terá as permissões especificadas.|  
 |**adAccessGrant**|1|O grupo ou usuário terá pelo menos as permissões solicitadas.|  

@@ -2,7 +2,6 @@
 title: Oferece suporte ao método | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a24ac211293847ffbb068055826abca3514abb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282575"
 ---
 # <a name="supports-method"></a>Oferece suporte ao método
 Determina se um especificado [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto oferece suporte a um determinado tipo de funcionalidade.  
@@ -37,7 +37,7 @@ Determina se um especificado [registros](../../../ado/reference/ado-api/recordse
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna um **booliano** valor que indica se todos os recursos identificado pelo *CursorOptions* argumento são suportados pelo provedor.  
   
 #### <a name="parameters"></a>Parâmetros  

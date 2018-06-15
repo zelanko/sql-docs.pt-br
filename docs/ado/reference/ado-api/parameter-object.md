@@ -2,7 +2,6 @@
 title: Objeto de parâmetro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59474a000d3def675caf66085380c6a3791805c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280705"
 ---
 # <a name="parameter-object"></a>Objeto Parameter
 Representa um parâmetro ou um argumento associado com um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto com base em um procedimento armazenado ou uma consulta parametrizada.  

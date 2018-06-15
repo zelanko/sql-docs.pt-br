@@ -2,7 +2,6 @@
 title: Propriedades do objeto de usuário, métodos e eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de8855ddc063d40a0aef06fc17ffc95d7104e26f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d1024dc15b69cd233e88586371c3e9406c7be7a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287255"
 ---
 # <a name="user-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de usuário
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  [Método SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

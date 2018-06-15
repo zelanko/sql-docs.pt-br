@@ -2,7 +2,6 @@
 title: Propriedades do objeto de membro, métodos e eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0e96a5fd882e5a801ff8c4eccef29fe6e6f5299
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46166a62011e0ab27ba4f189b45a8b196be97b0a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284755"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de membro
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -52,10 +52,10 @@ ms.lasthandoff: 05/03/2018
  [Propriedade UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Métodos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

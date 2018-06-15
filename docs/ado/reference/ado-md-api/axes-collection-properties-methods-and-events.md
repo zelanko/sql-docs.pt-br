@@ -1,11 +1,8 @@
 ---
 title: Coleção de propriedades, métodos e eventos de eixos | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54068965088a1c2c7f1e9928138158a88248676a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1ba2cf3a6b69527f3dddbe74edb22cdaa6a1d2fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283435"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Propriedades de coleção de eixos, métodos e eventos
 ## <a name="properties"></a>Propriedades  
@@ -35,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)

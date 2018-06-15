@@ -2,7 +2,6 @@
 title: Estado de propriedade (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4e254a4d13f4a210c174e3ef5b8181dd24cefd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7224efc2976873ff0326aa23a18df1cccbce230
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282025"
 ---
 # <a name="state-property-ado"></a>Propriedade State (ADO)
 Indica para todos os objetos aplicáveis, se o estado do objeto está aberto ou fechado. Se o objeto estiver executando um método assíncrono, indica se o estado atual do objeto está se conectando, execução ou recuperar.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna um **longo** valor que pode ser um [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) valor. O valor padrão é **adStateClosed**.  
   
 ## <a name="remarks"></a>Remarks  

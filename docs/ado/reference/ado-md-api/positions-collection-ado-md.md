@@ -2,7 +2,6 @@
 title: Posiciona a coleção (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d2a2fd7cf48d408ccfd43637eea07da52130bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1a5d4d611487e74c94fda416fad2cd3aca7b300
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284515"
 ---
 # <a name="positions-collection-ado-md"></a>Coleção de posições (ADO MD)
 Contém o [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objetos que definem um ponto em um eixo.  

@@ -2,7 +2,6 @@
 title: PersistFormatEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 141590f2755323422f44aacb4617905191d3a154
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aa6ce5a4341c85f7763d407b0d39599b24d9441
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280605"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Especifica o formato no qual salvar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Value|Description|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Indica o formato do Microsoft Advanced dados TableGram (ADTG).|  
 |**adPersistADO**|1|Indica que o formato do Extensible Markup Language (XML) do ADO será usado. Esse valor é o mesmo que adPersistXML e é incluído para compatibilidade com versões anteriores.|  

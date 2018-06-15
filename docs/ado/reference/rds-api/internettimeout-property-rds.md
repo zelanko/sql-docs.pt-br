@@ -2,7 +2,6 @@
 title: Propriedade InternetTimeout (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 401410dee3c7968c1547e3efa70fe61521b29d6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a95ec64f7ed35ab3701fd0ad286829d9f87bec44
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288257"
 ---
 # <a name="internettimeout-property-rds"></a>Propriedade InternetTimeout (RDS)
 Indica o número de milissegundos de espera antes que uma solicitação expire.  

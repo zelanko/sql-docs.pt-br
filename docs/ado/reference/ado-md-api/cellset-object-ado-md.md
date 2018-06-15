@@ -2,7 +2,6 @@
 title: O objeto de conjunto de células (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f32af1f621f3470dc0a9175708719965eef5fc71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6437c17c80c85e535f6b1807f68c2755e1362d3c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283385"
 ---
 # <a name="cellset-object-ado-md"></a>Objeto de conjunto de células (ADO MD)
 Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros conjuntos de células.  

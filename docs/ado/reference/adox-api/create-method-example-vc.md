@@ -2,7 +2,6 @@
 title: Criar um exemplo de método (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccc2fec10db24bd1ca7d21c88a99b7cfe09136
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 410e35fd85e427f1552860e81f6e79412d395c85
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285595"
 ---
 # <a name="create-method-example-vc"></a>Criar um exemplo de método (VC + +)
 O código a seguir mostra como criar um novo banco de dados do Microsoft Jet com o [criar](../../../ado/reference/adox-api/create-method-adox.md) método.  

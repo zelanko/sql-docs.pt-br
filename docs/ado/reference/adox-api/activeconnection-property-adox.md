@@ -2,7 +2,6 @@
 title: Propriedade ActiveConnection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420b6b26c38582c20bbc224ebcc53551967f1c4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5afb815a3e4701dc769f600d3a8d014d5a5cd25
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284575"
 ---
 # <a name="activeconnection-property-adox"></a>Propriedade ActiveConnection (ADOX)
 Indica o ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto ao qual o [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) pertence.  

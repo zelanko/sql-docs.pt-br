@@ -1,11 +1,8 @@
 ---
 title: Propriedade FilterAxis (ADO MD) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 671a56b9117ea77b479d1a0fff78729ca9c3f5ab
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: f59eeff4dc01e2f881712ca2309a83e80d785b27
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283925"
 ---
 # <a name="filteraxis-property-ado-md"></a>Propriedade FilterAxis (ADO MD)
 Indica as informações de filtro sobre atual [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

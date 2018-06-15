@@ -2,7 +2,6 @@
 title: Modelo de objeto ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3ed90b40a5d069ef1b6d6911f74a4ef3c63e7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ca46f636c295b56de346889e672e439e2aab41a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284745"
 ---
 # <a name="adox-object-model"></a>Modelo de objeto ADOX
 O diagrama a seguir ilustra como os objetos são representados e ADOX relacionados. Para obter mais informações sobre um objeto específico ou uma coleção, consulte o tópico de referência específica, ou [ADOX objetos](../../../ado/reference/adox-api/adox-objects.md) e [ADOX coleções](../../../ado/reference/adox-api/adox-collections.md).  

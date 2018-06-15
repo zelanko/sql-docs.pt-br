@@ -2,7 +2,6 @@
 title: Propriedades do ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,22 +17,23 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c342d5f4b44c855ec729dfbb41341f337e14a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40916a54d3279b2a4afaee83fe56b4ef9c4d4199
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283345"
 ---
 # <a name="ado-md-properties"></a>Propriedades do ADO MD
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica para qual ADO **Conexão** o conjunto de células atual do objeto ou o catálogo ao qual pertence atualmente.|  
-|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica o texto da legenda a ser usado ao exibir um **nível** ou **membro** objeto.|  
+|[Legenda](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica o texto da legenda a ser usado ao exibir um **nível** ou **membro** objeto.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica o número de membros para os quais o atual **membro** objeto é o pai em uma hierarquia.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Retorna uma coleção de **membros** para o qual atual **membro** é o pai na hierarquia.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Contagem](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[Profundidade](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica o número de níveis entre o **nível** e a raiz do nível da hierarquia.|  
-|[Descrição](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Retorna uma explicação do texto do objeto atual.|  
+|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Retorna uma explicação do texto do objeto atual.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica o número de dimensões em um eixo.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica se há filhos logo após o membro do eixo.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indica as informações de filtro para o conjunto de células atual.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |[Nome](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Indica o nome de um objeto.|  
 |[Ordinal (célula)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Identifica exclusivamente uma célula por sua posição dentro de um conjunto de células.|  
 |[Ordinal (posição)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica uma posição de um eixo.|  
-|[Pai](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica o membro que é o pai do membro atual em uma hierarquia.|  
+|[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica o membro que é o pai do membro atual em uma hierarquia.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indica se o pai desse membro de posição é o mesmo que o pai do membro imediatamente anterior.|  
 |[Origem](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica a fonte de dados no conjunto de células.|  
 |[Estado](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica o estado atual do conjunto de células.|  

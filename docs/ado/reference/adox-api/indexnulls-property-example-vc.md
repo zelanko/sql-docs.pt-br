@@ -2,7 +2,6 @@
 title: Exemplo de propriedade IndexNulls (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23390e73b92f29cbaff19e2ec3a44db9aa5a2980
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a401cd927223e38a21ce496ed771cd0e56248635
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286575"
 ---
 # <a name="indexnulls-property-example-vc"></a>Exemplo de propriedade IndexNulls (VC + +)
 Este exemplo demonstra o [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) propriedade de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário. Em seguida, o **índice** é acrescentado ao **funcionários** [tabela](../../../ado/reference/adox-api/table-object-adox.md) no *Northwind* [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). O novo **índice** é aplicado a um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela e o **Recordset** é aberto. Um novo registro é adicionado para o **funcionários** tabela, com um **nulo** valor no campo indexado. Se esse novo registro é exibido depende da configuração do **IndexNulls** propriedade.  

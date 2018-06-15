@@ -2,7 +2,6 @@
 title: Item de propriedade (conjunto de células do ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f22f8195a082ffe1333efe46a270fb1e18057ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64de692b36cd2abda06402e5c0d55c250b9632f5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284075"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriedade item (conjunto de células do ADO MD)
 Recupera uma célula de uma [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando suas coordenadas.  

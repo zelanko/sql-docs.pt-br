@@ -2,7 +2,6 @@
 title: Propriedades de coleção de membros, métodos e eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 430632e8cf90f8437049488eb399ee3cee8d2182
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3237e8d03b697140e756e3c2ec668ab6dd49c67
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284765"
 ---
 # <a name="members-collection-properties-methods-and-events"></a>Eventos, métodos e propriedades de coleção de membros
 ## <a name="properties"></a>Propriedades  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

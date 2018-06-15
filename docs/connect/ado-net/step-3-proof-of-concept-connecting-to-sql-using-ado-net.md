@@ -3,13 +3,10 @@ title: 'Etapa 3: Prova de conceito da conexão ao SQL usando o ADO.NET | Microso
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado-net
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
@@ -17,11 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31c30cd37e9408528a415986da9ba4b73fb73aae
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 6933fb1690b11d373974892672b43fe8df218860
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288885"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o ADO.NET
 

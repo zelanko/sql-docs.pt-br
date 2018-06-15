@@ -1,11 +1,8 @@
 ---
 title: Método Write | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b04d4070c354fedfe92b5a5ec1fb0730f3c55391
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 62ab48632de559f56f034ca0db10a968a43be32a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283225"
 ---
 # <a name="write-method"></a>Método Write
 Grava dados binários em uma [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  

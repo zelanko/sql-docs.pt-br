@@ -2,7 +2,6 @@
 title: Fonte de exemplo da propriedade (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73fe0186d0683c0b68c9d7cf57d92d7e7d9d548a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43b601c336ba8b8fdc6c581bfb00bfb80f84f025
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281955"
 ---
 # <a name="source-property-example-vc"></a>Exemplo da propriedade Source (VC + +)
 Este exemplo demonstra o [fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriedade abrindo três [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos com base em diferentes fontes de dados.  

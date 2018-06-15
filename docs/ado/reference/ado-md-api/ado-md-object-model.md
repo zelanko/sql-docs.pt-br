@@ -2,7 +2,6 @@
 title: Modelo de objeto ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4461c8b6465ddf272830726898d29fbc9ff7c007
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0b7a7213732cc9d244cc59244def04e1f302861
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283215"
 ---
 # <a name="ado-md-object-model"></a>Modelo de objeto ADO MD
 Este tópico descreve como os objetos são representados e relacionados MD ADO.  

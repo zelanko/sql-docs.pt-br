@@ -2,7 +2,6 @@
 title: Propriedades ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,20 +17,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284585"
 ---
 # <a name="adox-properties"></a>Propriedades ADOX
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica o ADO **Conexão** do objeto ao qual pertence o catálogo.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Descreve as características da coluna.|  
-|[Clusterizado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se o índice é clusterizado.|  
+|[Em cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se o índice é clusterizado.|  
 |[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Especifica o ADO **comando** objeto que pode ser usado para criar ou executar o procedimento.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Contagem](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica a data em que o objeto foi criado.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica a data em que o objeto foi modificado pela última vez.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica o tamanho máximo indicado da coluna.|  

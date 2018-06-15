@@ -2,7 +2,6 @@
 title: Eventos, métodos e propriedades do objeto CubeDef | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e507bdba86baf0749322498011a6596c1f0a260d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5bdb66d5e7ca0cd35f6c205b10bf5d5b769aff9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283545"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto CubeDef
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  [Método GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

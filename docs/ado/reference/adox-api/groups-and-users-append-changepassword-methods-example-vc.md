@@ -2,7 +2,6 @@
 title: Adicionar usuários e grupos, exemplo dos métodos ChangePassword (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253662aaa0f429b6f545fe14007f89320cc3b4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c10ea386293fc3e1150e7e70e83d66502eeb574
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285925"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Adicionar usuários e grupos, exemplo dos métodos ChangePassword (VC + +)
 Este exemplo demonstra o [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) método [grupos](../../../ado/reference/adox-api/groups-collection-adox.md), bem como a [acrescentar](../../../ado/reference/adox-api/append-method-adox-users.md) método de [usuários](../../../ado/reference/adox-api/users-collection-adox.md) adicionando um novo [Grupo](../../../ado/reference/adox-api/group-object-adox.md) e um novo [usuário](../../../ado/reference/adox-api/user-object-adox.md) no sistema. O novo **grupo** é acrescentado ao **grupos** coleção do novo **usuário**. Consequentemente, o novo **usuário** é adicionada para o **grupo**. Além disso, o [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) método é usado para especificar o **usuário** senha.  

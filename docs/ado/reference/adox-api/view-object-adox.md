@@ -2,7 +2,6 @@
 title: Exibir objeto (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a55d77b7bb7f79ee5871445d5169a4dfd2de5f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2980c92b7980fe2fa6ec16f82bc4d8f7d3aff585
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287435"
 ---
 # <a name="view-object-adox"></a>Objeto de exibição (ADOX)
 Representa um conjunto de registros ou uma tabela virtual filtrado. Quando usado em conjunto com o ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto, o **exibição** objeto pode ser usado para adicionar, excluir ou modificar os modos de exibição.  

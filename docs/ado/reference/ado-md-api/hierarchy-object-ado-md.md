@@ -2,7 +2,6 @@
 title: Objeto de hierarquia (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee43d975b4f173d7cfb8fa819d6cd7e3635aab97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6853d2a3fcc0540f23a914e3e39c8720ce3a317
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284055"
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto de hierarquia (ADO MD)
 Representa uma forma em que os membros de um [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) podem ser agregados ou "acumulados". Uma dimensão pode ser agregada a uma ou mais hierarquias.  

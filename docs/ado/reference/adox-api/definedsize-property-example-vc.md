@@ -2,7 +2,6 @@
 title: Exemplo de propriedade DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 84e2978c63fb0021399d6f15818fcd5cde966309
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2492568dc6e9e62dc3db2ffb914495015e714880
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285575"
 ---
 # <a name="definedsize-property-example-vc"></a>Exemplo de propriedade DefinedSize (VC + +)
 Este exemplo demonstra o [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md). O código irá redefinir o tamanho da coluna de nome de **funcionários** tabela do *Northwind* banco de dados. Em seguida, a alteração nos valores do nome [campo](../../../ado/reference/ado-api/field-object.md) de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela é exibida. Observe que por padrão, o campo de nome se torna preenchido com espaços após você redefinir o **DefinedSize** propriedade.  

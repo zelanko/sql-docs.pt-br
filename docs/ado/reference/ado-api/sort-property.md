@@ -2,7 +2,6 @@
 title: Propriedade de classificação | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a42a5160c1e9e86f25c4547aef0e0ead5babe250
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281905"
 ---
 # <a name="sort-property"></a>Propriedade de classificação
 Indica um ou mais nomes de campo no qual o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é classificada, e se cada campo é classificado em ordem crescente ou decrescente.  

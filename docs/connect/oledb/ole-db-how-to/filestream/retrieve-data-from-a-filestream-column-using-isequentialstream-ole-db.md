@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: aefa55bf8da7b978e6371d91f0ca1a642a882cbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fcf1f47a220a818ec0280ad6c90b425f52cd53a7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304505"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperar dados de uma coluna FILESTREAM usando ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.lasthandoff: 05/03/2018
   
  Use um dos exemplos a seguir para criar a tabela a ser lida pelo exemplo:  
   
--   [Enviar dados para uma coluna FILESTREAM usando ISequentialStream associado ao parâmetro ICommandText & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Enviar dados para uma coluna FILESTREAM usando ISequentialStream associado ao parâmetro ICommandText &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copie a primeira listagem de código e cole-a em um arquivo denominado ISSHelper.h.  
   

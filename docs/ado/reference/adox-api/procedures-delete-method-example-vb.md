@@ -2,7 +2,6 @@
 title: Procedimentos excluir exemplo de método (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc58b4a6db0b1429561abd26803807128aa97fe5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3ff286753b12fa5e648d5d43bf8bb4c360a441a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286685"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedimentos de exemplo de método (VB)-excluir
 O código a seguir demonstra como excluir um procedimento usando o [excluir](../../../ado/reference/adox-api/delete-method-adox-collections.md) método o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção.  
