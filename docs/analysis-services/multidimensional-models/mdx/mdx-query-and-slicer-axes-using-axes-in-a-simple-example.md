@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022623"
 ---
 # <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>Eixo da segmentação de dados - usando eixos em um exemplo Simple e consulta MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

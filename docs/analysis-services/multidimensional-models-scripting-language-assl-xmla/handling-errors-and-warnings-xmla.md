@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021443"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Manipulando erros e avisos (XMLA)
   Tratamento de erros é necessário quando um XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método não é executado, é executado com êxito, mas gera erros ou avisos, ou seja executado com êxito mas retorna resultados que contêm erros.  

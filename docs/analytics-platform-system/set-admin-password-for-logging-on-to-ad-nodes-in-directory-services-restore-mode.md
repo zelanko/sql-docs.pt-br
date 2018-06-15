@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538376"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Definir senha de administrador para fazer logon no AD nós nos serviços de diretório restaurar modo (DSRM) - Analytics Platform System
 Modo de restauração de serviços de diretório (DSRM) é um modo de inicialização para reparo ou recuperação de serviços de domínio Active Directory (AD DS). Ele é usado para fazer logon em nós de dispositivo AD após a falha do AD DS ou quando o AD DS precisa ser restaurado. A senha do DSRM foi inicializada durante a configuração de dispositivo no site do fornecedor de hardware e deve ser alterada pelo administrador do dispositivo. Analytics Platform System tem dois AD DS (controladores de domínio); ***appliance_domain *-AD01** e ***appliance_domain *-AD02**. Para cada nó de dispositivo AD, altere a senha do DSRM usando as etapas a seguir.  

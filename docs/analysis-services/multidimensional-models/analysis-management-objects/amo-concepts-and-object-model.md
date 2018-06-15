@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024253"
 ---
 # <a name="amo-concepts-and-object-model"></a>Conceitos e modelo de objeto AMO
   Este tópico fornece uma definição de Analysis Management Objects (AMO), como ele se relaciona com outras ferramentas e bibliotecas da arquitetura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e uma explicação conceitual de todos os objetos principais AMO.  

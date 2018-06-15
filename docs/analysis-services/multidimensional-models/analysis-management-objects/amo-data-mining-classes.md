@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021593"
 ---
 # <a name="amo-data-mining-classes"></a>Classes de mineração de dados AMO
   As classes de mineração de dados ajudam você a criar, modificar, excluir e processar objetos de mineração de dados. O trabalho com objetos de mineração de dados inclui a criação de estruturas de mineração de dados, a criação de modelos de mineração de dados e o processamento dos modelos.  

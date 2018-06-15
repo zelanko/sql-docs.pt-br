@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026503"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Criar uma conexão de modelo semântico de BI para uma pasta de trabalho do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

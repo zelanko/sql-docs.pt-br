@@ -45,6 +45,7 @@ ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33989056"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

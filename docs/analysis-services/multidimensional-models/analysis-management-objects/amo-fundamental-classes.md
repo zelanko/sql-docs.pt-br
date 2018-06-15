@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022783"
 ---
 # <a name="amo-fundamental-classes"></a>Classes fundamentais AMO
   As classes fundamentais são o ponto de partida para o trabalho com o AMO (Objetos de Gerenciamento de Análise). Por meio dessas classes você estabelece o ambiente para o resto dos objetos que serão usados em seu aplicativo. As classes fundamentais incluem os seguintes objetos: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>.  

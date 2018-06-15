@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024753"
 ---
 # <a name="amo-olap-classes"></a>Classes OLAP AMO
   As classes OLAP AMO (Objetos de Gerenciamento de Análise) ajudam você a criar, a modificar, a excluir e a processar cubos, dimensões e objetos relacionados como KPIs (Indicadores Chave de Desempenho), ações e cache.  

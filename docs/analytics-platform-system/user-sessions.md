@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544708"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Sessões de usuário no sistema de plataforma de análise
 Um logon com as permissões adequadas pode gerenciar as sessões de todos os logons em um dispositivo de PDW do SQL Server, incluindo executar estas ações:  

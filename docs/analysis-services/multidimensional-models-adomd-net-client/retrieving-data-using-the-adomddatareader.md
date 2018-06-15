@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026363"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Recuperando dados usando o AdomdDataReader
   Na recuperação de dados analíticos, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece um bom equilíbrio entre sobrecarga e interatividade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera um fluxo dados somente leitura, somente encaminhamento, bidimensional a partir de uma fonte de dados analíticos. Esse fluxo de dados não armazenado permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados analíticos de forma sequencial. Isso faz do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> uma boa opção para a recuperação de grandes quantidades de dados para fins de exibição, uma vez que os dados não são armazenados em cache em memória.  

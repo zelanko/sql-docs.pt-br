@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918521"
 ---
 # <a name="the-driver-manager"></a>O Gerenciador de Driver
 O *Gerenciador de Driver* é uma biblioteca que gerencia a comunicação entre aplicativos e drivers. Por exemplo, em plataformas Microsoft® Windows®, o Gerenciador de Driver é uma biblioteca de vínculo dinâmico (DLL) que foi criada pela Microsoft e pode ser redistribuída por usuários do SDK do SP1 redistributable MDAC 2.8.  

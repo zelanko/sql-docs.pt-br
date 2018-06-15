@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917331"
 ---
 # <a name="translation-dll-api-reference"></a>Referência de API de DLL de conversão
 Esta seção descreve a sintaxe de conversão de API de DLL, que consiste em duas funções: **SQLDriverToDataSource** e **SQLDataSourceToDriver**. Essas funções devem ser incluídas na DLL que executa a conversão para o driver.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024173"
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
   Você pode usar o [lote](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) do XML for Analysis (XMLA) para executar vários comandos XMLA usando um único XMLA [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) método. Você pode executar vários comandos contidos no **lote** comando como uma única transação ou em transações individuais para cada comando, em série ou em paralelo. Você também pode especificar associações fora de linha e outras propriedades no **lote** comando para processar vários [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  

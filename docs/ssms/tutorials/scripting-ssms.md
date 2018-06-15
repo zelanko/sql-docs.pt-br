@@ -26,6 +26,7 @@ ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988804"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: gerar script de objetos no SQL Server Management Studio
 Este tutorial ensina a gerar scripts T-SQL (Transact-SQL) para vários objetos encontrados no SQL Server Management Studio (SSMS). Neste tutorial, você encontra exemplos de como gerar script para os seguintes objetos:

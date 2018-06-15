@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919141"
 ---
 # <a name="writing-odbc-3x-applications"></a>Gravação de ODBC 3. x aplicativos
 Quando um ODBC 2. *x* aplicativo é atualizado para o ODBC 3. *x*, ele deve ser escrito, de modo que ele funciona com os dois ODBC 2. *x* e 3. *x* drivers. O aplicativo deve incorporar o código condicional para aproveitar ao máximo o ODBC 3. *x* recursos.  
