@@ -2,7 +2,6 @@
 title: O objeto de campo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 872bb5e1ccede336f85b7bbcbdc7e91c89dd1688
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8df319455802bb16d5e828d1d79c6253643e7ead
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273005"
 ---
 # <a name="the-field-object"></a>O objeto de campo
 Cada **campo** objeto geralmente corresponde a uma coluna em uma tabela de banco de dados. No entanto, um **campo** também pode representar um ponteiro para outro **registros**, chamado um capítulo. Exceções, como colunas de capítulo serão abordadas posteriormente neste guia.  

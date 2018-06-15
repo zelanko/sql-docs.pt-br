@@ -2,7 +2,6 @@
 title: Visual Basic para funções de aplicativos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20d9f7f726ac705ebdf93484c5e7ecef5f3ad54d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273225"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic para funções de aplicativos
 Para funções de aplicativos do Visual Basic seguir podem ser usado em expressões de CÁLCULO de formatação de dados:  
@@ -34,7 +34,7 @@ Para funções de aplicativos do Visual Basic seguir podem ser usado em express�
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB$|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Data|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|data|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Erro|Error$|Exp|Fix|Formato|Format$|  
 |FV|Hex|Hex$|Hora|IIF|InStr|  

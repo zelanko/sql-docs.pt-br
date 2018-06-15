@@ -2,7 +2,6 @@
 title: Serviço Microsoft Cursor para OLE DB (componente do serviço de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d119e537cd400f2bfd69720f17485366c23b4582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271325"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Serviço de Cursor da Microsoft para visão geral do OLE DB
 O serviço de Cursor da Microsoft para OLE DB complementa as funções de suporte de cursor de provedores de dados. Como resultado, o usuário percebe funcionalidade relativamente uniforme de todos os provedores de dados.
@@ -90,7 +90,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa os tipos de cursores que estão disponíveis para um **registros**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa os tipos de bloqueios disponíveis para um **registros**. Permite o atualizações em lotes.|
-|[Classificação](../../../ado/reference/ado-api/sort-property.md)|Especifica o campo de um ou mais nomes que o **Recordset** é classificado e se cada campo é classificado em ordem crescente ou decrescente.|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|Especifica o campo de um ou mais nomes que o **Recordset** é classificado e se cada campo é classificado em ordem crescente ou decrescente.|
 
 ## <a name="method-behavior"></a>Comportamento do método
  O serviço de Cursor do OLE DB permite ou afeta o comportamento do [campo](../../../ado/reference/ado-api/field-object.md) do objeto [Append](../../../ado/reference/ado-api/append-method-ado.md) método; e o **registros** do objeto [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), e [salvar](../../../ado/reference/ado-api/save-method.md) métodos.

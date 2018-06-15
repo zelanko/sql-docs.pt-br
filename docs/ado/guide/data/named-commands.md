@@ -2,7 +2,6 @@
 title: Chamado comandos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 823ee61431555d978fb33aa0f9a58264af1ce2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271995"
 ---
 # <a name="named-commands"></a>Comandos nomeados
 [Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: torná-lo um comando nomeado e, em seguida, chamar essa chamada comando diretamente no **Conexão** objeto (atribuído para o **ActiveConnection** propriedade do **comando** objeto). Um comando de nomenclatura significa a atribuição de um nome para o **nome** propriedade de um **comando** objeto. Por exemplo,  

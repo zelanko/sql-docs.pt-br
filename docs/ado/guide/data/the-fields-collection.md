@@ -2,7 +2,6 @@
 title: A coleção de campos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb5d538f9c8cf8ae28f1397aac32555da1b33ecc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272865"
 ---
 # <a name="the-fields-collection"></a>A coleção de campos
 O **campos** coleção é uma das coleções intrínsecas do ADO. Uma coleção é um conjunto ordenado de itens que podem ser referenciados como uma unidade. Para obter mais informações sobre coleções de ADO, consulte [o modelo de objeto ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

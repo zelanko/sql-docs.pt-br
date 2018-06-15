@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa4791a78f2ec2aa8accb0f85897d24ffe5e5c76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e712ed9938037909f589243bf4d7f7ddd2a638e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270885"
 ---
 # <a name="ado-programming-task-table"></a>Tabela de tarefas de programação de ADO
 A tabela a seguir lista as tarefas de programação contidas no *guia do programador do ADO* e fornece referências para cada tarefa. Essas referências podem ser descrições ou exemplos de código no qual você pode encontrar informações sobre o recurso de ADO que executa a tarefa.

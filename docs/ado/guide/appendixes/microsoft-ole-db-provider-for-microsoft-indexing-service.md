@@ -2,7 +2,6 @@
 title: Provedor Microsoft OLE DB para Microsoft Indexing Service | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271305"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provedor Microsoft OLE DB para visão geral do serviço de indexação da Microsoft
 O Microsoft OLE DB Provider for Microsoft Indexing Service fornece acesso programático de somente leitura para o sistema de arquivos e dados da Web indexados pelo serviço de indexação da Microsoft. Aplicativos ADO podem emitir consultas SQL para recuperar informações de propriedade de conteúdo e o arquivo.
@@ -82,7 +82,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|
-|[Filtro](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|leitura/gravação|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|não disponível|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|leitura/gravação|
@@ -113,7 +113,7 @@ MSIDXS
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|
 |[Repetir](../../../ado/reference/ado-api/requery-method.md)|Sim|
 |[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Sim|
-|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|
+|[Dá suporte a](../../../ado/reference/ado-api/supports-method.md)|Sim|
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|não|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|não|
 

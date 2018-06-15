@@ -2,7 +2,6 @@
 title: Usando indicadores | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46ea739c431005f8409b2c2680f15e55b077c086
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 643d07d49e2e2ec0e31f9a677796f309fedd0d1d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273215"
 ---
 # <a name="using-bookmarks"></a>Usando indicadores
 Geralmente é útil retornar diretamente a um registro específico após ter movido **registros** sem a necessidade de percorrer cada registro e comparar valores. Por exemplo, se você tentar procurar um registro usando o **localizar** método, mas a pesquisa não retornou nenhum registro, são colocados automaticamente em ambas as extremidades do **registros**. Se o provedor oferece suporte a eles, indicadores podem ser usados para marcar o local antes de usar o **localizar** método para que você possa retornar para seu local. Um indicador é um **Variant** tipo de valor que identifica exclusivamente um registro em um **registros** objeto.  

@@ -2,7 +2,6 @@
 title: Dados persistentes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272195"
 ---
 # <a name="persisting-data"></a>Dados persistentes
 Computação portátil (por exemplo, usando laptops) gerou a necessidade de aplicativos que podem ser executados em um estado conectado ou desconectado. ADO adicionou suporte para isso fornecendo a capacidade de salvar um cursor do cliente para o desenvolvedor **registros** em disco e recarregá-lo mais tarde.  
