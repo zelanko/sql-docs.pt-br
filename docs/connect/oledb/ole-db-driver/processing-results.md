@@ -2,10 +2,10 @@
 title: Processando resultados | Microsoft Docs
 description: Processando resultados
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb-driver-for-sql-server
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 485e6303d2d27997f2ce6ee9c1b7619e8996dd04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a07bdd4181e85bdbeeea7e3751613a860bc5754
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665346"
 ---
 # <a name="processing-results"></a>Processando resultados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Caso um objeto de conjunto de linhas seja produzido pela execução de um comando ou pela geração direta de um objeto de conjunto de linhas no provedor, o consumidor precisa recuperar e acessar dados no conjunto de linhas.  
   
