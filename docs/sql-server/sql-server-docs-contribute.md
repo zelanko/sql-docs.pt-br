@@ -2,8 +2,6 @@
 title: Como contribuir para a documentação do SQL Server | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -14,11 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 508dd4a658810bb6c62c1b4cf7eb067d9ccc563d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288755"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
 
@@ -75,7 +74,7 @@ Para contribuir com esse método, consulte os seguintes artigos:
 - [Criar uma conta do GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Instalar as ferramentas de criação de conteúdo](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Configurar um repositório Git localmente](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Usar as ferramentas para colaborar](https://docs.microsoft.com/contribute/full-workflow)
+- [Usar as ferramentas para colaborar](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 Se enviar uma solicitação de pull com alterações significativas na documentação, você receberá um comentário no GitHub solicitando o envio de um **CLA (contrato de licença de contribuição)** online. É necessário preencher o formulário online para que sua solicitação de pull seja aceita.
 
@@ -94,7 +93,7 @@ Esta seção fornece algumas diretrizes adicionais sobre como trabalhar no repos
 
 O repositório [sql-docs](https://github.com/MicrosoftDocs/sql-docs) usa várias pastas padrão para organizar o conteúdo.
 
-| Pasta | Description |
+| Pasta | Descrição |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Contém todo o conteúdo publicado do SQL Server. As subpastas organizam logicamente as diferentes áreas do conteúdo. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Contém arquivos include. Esses arquivos são blocos de conteúdo que pode ser incluído em um ou mais tópicos. |
@@ -138,5 +137,3 @@ Explore o [repositório sql-docs](https://github.com/MicrosoftDocs/sql-docs) no 
 Localize um artigo, envie uma alteração e ajude a comunidade do SQL Server. 
 
 Obrigado.
-
-
