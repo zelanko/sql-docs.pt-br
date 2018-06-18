@@ -2,7 +2,6 @@
 title: 'HelloData: Um aplicativo ADO simples | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271695"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Um aplicativo ADO simples
 Este aplicativo simples percorre cada uma das quatro principais operações ADO: obtendo, examinando, editar e atualizar dados. Essas operações são executadas no banco de dados de exemplo Northwind incluído com o Microsoft® SQL Server. Para focalizar os conceitos básicos do ADO e evitar desordem de código, no exemplo de tratamento de erro é mínimo.  
@@ -46,7 +46,7 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
   
  ![Mostra Form1 para o aplicativo HelloData VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo de controle|Propriedade|Value|  
+|Tipo de controle|Propriedade|Valor|  
 |------------------|--------------|-----------|  
 |formulário|Nome|Form1|  
 ||Altura|6500|  
@@ -55,10 +55,10 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
 |TextBox|Nome|txtDisplay1|  
 ||Várias linhas|true|  
 |Botão de comando|Nome|cmdGetData|  
-||Caption|Get Data|  
+||Legenda|Get Data|  
 |Botão de comando|Nome|cmdExamineData|  
-||Caption|Examinar os dados|  
+||Legenda|Examinar os dados|  
 |Botão de comando|Nome|cmdEditData|  
-||Caption|Editar dados|  
+||Legenda|Editar dados|  
 |Botão de comando|Nome|cmdUpdateData|  
-||Caption|Atualizar dados|
+||Legenda|Atualizar dados|
