@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd409daab0e317cff3ad474bda2963115caa1c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f39b2ff34a821b00e8dd9cc2d003ad3b354df7d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405368"
 ---
 # <a name="error-handling"></a>Tratamento de erros
   Uma Instância do Oracle CDC mina as alterações de um único banco de dados de origem do Oracle (um cluster do Oracle RAC é considerado um banco de dados único) e grava as alterações confirmadas em tabelas de alteração em um banco de dados do CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve os vários códigos de status que a Instância Oracle CDC pode relatar em sua tabela de estado.  
   
-|Status|Código de status ativo|Código do estado de erro|Description|Substatus|  
+|Status|Código de status ativo|Código do estado de erro|Descrição|Substatus|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|A Instância do Oracle CDC não está sendo executada. O substatus ABORTED indica que a Instância Oracle CDC estava ACTIVE e foi parada inesperadamente.|O substatus ABORTED é estabelecido pela instância principal do Serviço Oracle CDC quando ela detectar que a Instância Oracle CDC não está sendo executada enquanto seu status estiver ACTIVE.|  
 |erro|0|1|A Instância do Oracle CDC não está sendo executada. O status de ERROR indica que a instância de CDC estava ACTIVE, mas encontrou um erro que não é recuperável e foi desabilitada.|MISCONFIGURED: um erro de configuração irrecuperável foi detectado.<br /><br /> PASSWORD-REQUIRED: não há nenhuma senha definida para o Designer da Captura de Dados de Alteração para Oracle da Attunity ou a senha configurada não é válida. Isto pode ocorrer devido a uma alteração na senha da chave assimétrica do serviço.|  

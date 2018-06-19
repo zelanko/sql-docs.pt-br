@@ -1,14 +1,12 @@
 ---
 title: Log do SSIS (Integration Services) | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -35,16 +33,17 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d24a5685db73a91be95a3a82b93e752877c8ad7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407638"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
   
- Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Habilitar o log para a execução do pacote no servidor SSIS](#server_logging).  
+ Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
   
  Você também pode incluir o log ao executar um pacote por meio do utilitário de prompt de comando **dtexec** . Para obter mais informações sobre os argumentos do prompt de comando que oferecem suporte para registros, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="log-schema"></a>Esquema de log  
  A tabela a seguir descreve os elementos no esquema de log.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |Computer|O nome do computador no qual o evento de log ocorreu.|  
 |Operador|A identidade do usuário que iniciou o pacote.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve três elementos adicionais no esquema de log que não estão disponíveis na guia **Detalhes** da caixa de diálogo **Configurar Logs de SSIS** .  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |StartTime|A hora em que o contêiner ou tarefa começa a ser executado.|  
 |EndTime|A hora em que a execução do contêiner ou tarefa para.|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve os eventos predefinidos que podem ser habilitados a gravar entradas de log quando eventos de tempo de execução ocorrem. Essas entradas de log se aplicam a executáveis, ao pacote e às tarefas e contêineres que o pacote inclui. O nome da entrada de log é igual ao nome do evento de tempo de execução que foi gerado e fez com que a entrada de log fosse gravada.  
   
-|Eventos|Description|  
+|Eventos|Descrição|  
 |------------|-----------------|  
 |**OnError**|Grava uma entrada de log quando ocorre um erro.|  
 |**OnExecStatusChanged**|Grava uma entrada no log quando uma tarefa (não um contêiner) é suspenso ou retomado durante a depuração.|  
@@ -181,7 +180,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="use-the-pipelinecomponenttime-event"></a>Usar o evento PipelineComponentTime  
  Talvez a entrada de log personalizada mais útil seja o evento PipelineComponentTime. Essa entrada de log reporta o número de milissegundos que cada componente do fluxo de dados leva em cada uma das cinco principais etapas de processamento. A tabela a seguir descreve essas etapas de processamento. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os desenvolvedores reconhecerão essas etapas como os principais métodos de um <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Etapa|Description|  
+|Etapa|Descrição|  
 |----------|-----------------|  
 |Validar|O componente verifica se há valores de propriedade válidos e os parâmetros de configuração.|  
 |PreExecute|O componente executa processamento único antes de começar a processar linhas de dados.|  
@@ -333,7 +332,7 @@ ms.lasthandoff: 05/03/2018
  **Avançado**  
  Marque ou desmarque os eventos para log e marque ou desmarque informações que serão usadas no log de cada evento. Clique em **Básico** para ocultar todos os detalhes de log, exceto a lista de eventos. As informações a seguir estão disponíveis para log:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Computer**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  
@@ -411,7 +410,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="select-a-logging-level"></a>Selecionar um nível de registro em log.  
  Os níveis de registro em log internos a seguir estão disponíveis. Você também pode selecionar um nível de registro em log existente personalizado. Este tópico contém uma descrição dos níveis de registro em log personalizados.  
   
-|Nível de log|Description|  
+|Nível de log|Descrição|  
 |-------------------|-----------------|  
 |Nenhum|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
 |Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão.|  
@@ -495,7 +494,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="Package"></a> Pacote  
  A tabela a seguir relaciona as entradas de log personalizadas para pacotes.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**PackageStart**|Indica que o pacote começou a ser executado. Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
 |**PackageEnd**|Indica que o pacote foi concluído. Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
@@ -504,7 +503,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="BulkInsert"></a> Tarefa Inserção em Massa  
  A seguinte tabela relaciona as entradas de log personalizadas para a tarefa inserção em massa .  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**DTSBulkInsertTaskBegin**|Indica que a inserção em massa iniciou.|  
 |**DTSBulkInsertTaskEnd**|Indica que a inserção em massa foi concluída.|  
@@ -513,7 +512,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="DataFlow"></a> Tarefa de Fluxo de Dados  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa de Fluxo de Dados.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica que a tarefa de Fluxo de Dados alterou o tamanho do buffer. A entrada de log descreve os motivos da mudança de tamanho e relaciona o novo tamanho do buffer temporário.|  
 |**OnPipelinePostEndOfRowset**|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do método **ProcessInput** . Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
@@ -529,7 +528,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="ExecuteDTS200"></a> Tarefa Executar DTS 2000  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar DTS 2000.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Indica que a tarefa começou a ser executada em um pacote DTS 2000.|  
 |**ExecuteDTS80PackageTaskEnd**|Indica que a tarefa foi concluída.<br /><br /> Observação: o pacote DTS 2000 pode continuar a ser executado após a conclusão da tarefa.|  
@@ -539,7 +538,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="ExecuteProcess"></a> Tarefa Executar Processo  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar Processo.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Fornece informações sobre o processo do executável que a tarefa está configurada para executar.<br /><br /> São gravadas duas entradas de log. Uma contém informações sobre o nome e o local do executável que a tarefa executa e o outro registra a saída do executável.|  
 |**ExecuteProcessVariableRouting**|Fornece informações sobre quais variáveis são encaminhadas para a entrada e as saídas do executável. As entradas de log são gravadas em stdin (a entrada), stdout (a saída) e stderr (a saída do erro).|  
@@ -547,21 +546,21 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="ExecuteSQL"></a> Tarefa Executar SQL  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Executar SQL.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
   
 ####  <a name="FileSystem"></a> Tarefa Sistema de Arquivos  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Sistema de Arquivos.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Informa a operação executada pela tarefa. A entrada de log é gravada quando a operação de sistema de arquivos é iniciada e inclui informações sobre a origem e o destino.|  
   
 ####  <a name="FTP"></a> Tarefa FTP  
  A tabela a seguir relaciona as entradas de log personalizadas da tarefa FTP.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Indica que a tarefa iniciou uma conexão com o servidor FTP.|  
 |**FTPOperation**|Informa o início e o tipo de operação de FTP que a tarefa executa.|  
@@ -569,7 +568,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="MessageQueue"></a> Tarefa Fila de Mensagens  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|Indica que a tarefa finalizou a abertura da fila de mensagens.|  
 |**MSMQBeforeOpen**|Indica que a tarefa começou a abrir a fila de mensagens.|  
@@ -583,14 +582,14 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="Script"></a> Tarefa Script  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Script.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Informa os resultados da implementação do registro em log no script. Uma entrada de log é gravada para cada chamada ao método **Log** do objeto **Dts** . A entrada é gravada quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ####  <a name="SendMail"></a> Tarefa Enviar Email  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Enviar Email.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|Indica que a tarefa começou a enviar uma mensagem de email.|  
 |**SendMailTaskEnd**|Indica que a tarefa terminou de enviar uma mensagem de email.|  
@@ -599,7 +598,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="TransferDatabase"></a> Tarefa Transferir Banco de Dados  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Banco de Dados.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**SourceDB**|Especifica o banco de dados que a tarefa copiou.|  
 |**SourceSQLServer**|Especifica o computador a partir do qual o banco de dados foi copiado.|  
@@ -607,7 +606,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="TransferErrorMessages"></a> Tarefa Transferir Mensagens de Erro  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Mensagens de Erro.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|Indica que a tarefa terminou de transferir mensagens de erro.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|Indica que a tarefa começou a transferir as mensagens de erro.|  
@@ -615,7 +614,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="TransferJobs"></a> Tarefa Transferir Trabalhos  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Trabalhos.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**TransferJobsTaskFinishedTransferringObjects**|Indica que a tarefa terminou a transferência dos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**TransferJobsTaskStartTransferringObjects**|Indica que a tarefa começou a transferência dos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
@@ -623,7 +622,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="TransferLogins"></a> Tarefa Transferir Logons  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Logons.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**TransferLoginsTaskFinishedTransferringObjects**|Indica que a tarefa terminou a transferência dos logons.|  
 |**TransferLoginsTaskStartTransferringObjects**|Indica que a tarefa começou a transferência dos logons.|  
@@ -631,7 +630,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="TransferMasterStoredProcedures"></a> Tarefa Transferir Procedimentos Armazenados Mestres  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Procedimentos Armazenados Mestres.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|Indica que a tarefa terminou de transferir procedimentos armazenados definidos pelo usuário armazenados no banco de dados **mestre** .|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|Indica que a tarefa começou a transferir procedimentos armazenados definidos pelo usuário armazenados no banco de dados **mestre** .|  
@@ -639,7 +638,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="TransferSQLServerObjects"></a> Tarefa Transferir Objetos do SQL Server  
  A tabela a seguir relaciona as entradas de log personalizadas da tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Indica que a tarefa terminou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|Indica que a tarefa começou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -647,7 +646,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="WebServices"></a> Tarefa Serviços Web  
  A tabela a seguir relaciona as entradas de log personalizadas que podem ser habilitadas para a tarefa Serviços Web.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**WSTaskBegin**|A tarefa começou a acessar um serviço Web.|  
 |**WSTaskEnd**|A tarefa completou um método de serviço Web.|  
@@ -656,7 +655,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="WMIDataReader"></a> Tarefa Leitor de Dados do WMI  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Leitor de Dados do WMI.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Indica que a tarefa começou a ser ler os dados do WMI.|  
 |**WMIDataReaderOperation**|Informa a consulta WQL executada pela tarefa.|  
@@ -664,7 +663,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="WMIEventWatcher"></a> Tarefa Detector de Eventos do WMI  
  A tabela a seguir relaciona as entradas de registro personalizadas da tarefa Detector de Eventos do WMI.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**WMIEventWatcherEventOccurred**|Mostra que o evento ocorrido era o que a tarefa estava monitorando.|  
 |**WMIEventWatcherTimedout**|Indica que o tempo limite da tarefa foi esgotado.|  
@@ -673,7 +672,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="XML"></a> XML Task  
  A tabela a seguir descreve a entrada de log personalizada da tarefa XML.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**XMLOperation**|Fornece informações sobre a operação executada pela tarefa|  
 

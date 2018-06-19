@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e0811b894e96c4ac7b11ef377765aa6b56cdbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3697fc9f7af68d681dbbc1295e520dd8d7f08f16
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403608"
 ---
 # <a name="connect-to-an-access-database"></a>Conectar-se a um banco de dados do Access
   Para conectar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma fonte de dados do Microsoft Office Access, um gerenciador de conexões OLE DB e um provedor de dados são necessários. O provedor de dados usado depende da versão do Access que criou a fonte de dados:  

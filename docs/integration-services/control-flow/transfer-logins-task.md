@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 748eecc0759365057c1dbb2c2610e6307faf6a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0846c8135c4b9095ab9c5a1f5549fc0884dd6703
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405238"
 ---
 # <a name="transfer-logins-task"></a>Tarefa Transferir Logons
   A tarefa Transferir Logons transfere um ou mais logons entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
  **LoginsToTransfer**  
  Selecione os logons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para copiar da fonte para o servidor de destino. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**AllLogins**|Todos os logons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor de origem serão copiados para o servidor de destino.|  
 |**SelectedLogins**|Apenas os logons especificados com **LoginsList** serão copiados para o servidor de destino.|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem logons com o mesmo nome no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir logons de mesmo nome no servidor de destino.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402608"
 ---
 # <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="filter-operators"></a>Operadores de filtro  
   
-|Nome do controle|Description|  
+|Nome do controle|Descrição|  
 |------------------|-----------------|  
 |**É igual a**|Retorna valores de atributo que são exatamente iguais aos critérios especificados. Por exemplo, para filtrar por **Mountain-100**, você deve digitar **Mountain-100**.|  
 |**Não é igual a**|Retorna valores de atributo que não são exatamente iguais aos critérios especificados. Os critérios de filtragem devem ser exatamente iguais ao valor do atributo que você deseja omitir dos resultados. Por exemplo, para omitir resultados que correspondam a **Mountain-100**, você deve digitar **Mountain-100**.<br /><br /> <br /><br /> Observação: quando você aplica uma condição de filtro com uma cláusula "Não é igual a" em um atributo, um membro para o qual o atributo é NULL transmitirá a condição de filtro e será retornado se SET ANSI_NULLS estiver definido como ON em suas configurações de banco de dados. Para interromper esse comportamento, defina SET ANSI_NULLS como OFF em suas configurações de banco de dados. Quando SET ANSI_NULLS é definido como OFF, as comparações de todos os dados com um valor nulo são avaliadas como TRUE se o valor dos dados for NULL, com o resultado de que o membro não transmite a cláusula "Não é igual a". Para obter mais informações, veja [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  

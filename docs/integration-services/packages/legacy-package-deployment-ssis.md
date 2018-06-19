@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -37,11 +35,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778901dae6c0504d84eb7cb93667d0ac4024e9ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408498"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui ferramentas e assistentes que simplificam a implantação de pacotes do computador de desenvolvimento para o servidor de produção ou para outros computadores.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="package-configuration-types"></a>Tipos de configuração de pacotes  
  A tabela a seguir descreve os tipos de configuração de pacotes.  
   
-|Tipo|Description|  
+|Tipo|Descrição|  
 |----------|-----------------|  
 |Arquivo de configuração XML|Um arquivo XML contém as configurações. O arquivo XML pode incluir várias configurações.|  
 |Variável de ambiente|Uma variável de ambiente contém a configuração.|  
@@ -220,7 +219,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Nome da Configuração**|O nome da configuração.|  
 |**Tipo de Configuração**|O tipo de configuração.|  
@@ -322,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo de configuração**  
  Selecione o tipo de fonte na qual deseja armazenar a configuração usando as seguintes opções:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Arquivo de configuração XML**|Armazene a configuração como um arquivo XML. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
 |**Variável de ambiente**|Armazene a configuração em uma das variáveis de ambiente. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
@@ -339,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nome do arquivo de configuração**|Digite o caminho do arquivo de configuração gerado pelo assistente.|  
 |**Procurar**|Use a caixa de diálogo **Selecionar Local do Arquivo de Configuração** para especificar o caminho do arquivo de configuração gerado pelo assistente. Se o arquivo não existir, ele será criado pelo assistente.|  
@@ -347,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual você deseja armazenar a configuração.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -359,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada de Registro**|Digite a chave do Registro que contém as informações de configuração. O formato é \<registry key>.<br /><br /> A chave do Registro já deve existir em HKEY_CURRENT_USER e deve ter um valor chamado Value (valor). O valor pode ser um DWORD ou uma cadeia de caracteres.<br /><br /> Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual deseja armazenar a configuração.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -374,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável pai**|Especifique a variável no pacote pai que contém as informações de configuração.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente que armazena a configuração.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -389,7 +388,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão**|Selecione uma conexão da lista ou clique em **Nova** para criar uma nova conexão.|  
 |**Tabela de configuração**|Selecione uma tabela existente ou clique em **Nova** para gravar uma instrução SQL que cria uma nova tabela.|  
@@ -398,7 +397,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente onde a configuração está armazenada.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -483,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  A tabela a seguir lista as propriedades do utilitário de implantação.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Um valor que especifica se as configurações podem ser atualizadas durante a implantação.|  
 |CreateDeploymentUtility|Um valor que especifica se um utilitário de implantação do pacote é criado quando o projeto é compilado. Essa propriedade deve ser **True** para criar um utilitário de implantação.|  

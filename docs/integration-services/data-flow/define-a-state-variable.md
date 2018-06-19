@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9ff7319403a724dcd1c2778a516114d6aef3e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 786d9b2e0d3a3f00d3f9e00496d8a11e9d2c18c1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402988"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
   Este procedimento descreve como definir uma variável de pacote onde o estado CDC é armazenado.  
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir fornece uma descrição de alto nível dos componentes do valor da variável de estado CDC.  
   
-|Componente|Description|  
+|Componente|Descrição|  
 |---------------|-----------------|  
 |**\<nome- do-estado>**|Este é o nome do estado CDC atual.|  
 |**CS**|Isso marca o ponto inicial do intervalo de processamento atual (Início atual).|  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve os valores de estado CDC possíveis.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |(INITIAL)|Esse é o estado inicial antes de qualquer pacote ter sido executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.|  
 |ILSTART (Initial Load Started)|Esse é o estado do início do pacote de carga inicial, depois da chamada da operação de **MarkInitialLoadStart** para a tarefa Controle CDC.|  

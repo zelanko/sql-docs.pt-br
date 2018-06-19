@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
@@ -16,18 +14,19 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c42400a8f9c455a390fad9caac5a5ff2f41d0a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5de2d2b10c1def40790e590ead2d9b7c0c0d2ef7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408178"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Exibe as propriedades do catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|O nome da propriedade do catálogo.|  
 |property_value|**nvarchar(256)**|O valor da propriedade do catálogo.|  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Remarks  
  Esta exibição mostra uma linha para cada propriedade do catálogo.
   
-|Nome da propriedade|Description|  
+|Nome da propriedade|Descrição|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|O modo de execução padrão de todo o servidor para pacotes – `Server` (0) ou `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|O tipo de algoritmo de criptografia usado para criptografar dados confidenciais. Os valores com suporte incluem: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` e `AES_256`. Observação: o banco de dados do catálogo deve estar em modo de usuário único para alterar essa propriedade.|

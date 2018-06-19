@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a159f57e4315cba3f9eb3ee2d27cfffb94fb6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d97d2aeabc624d2d13ed4ed6e6ae515b314bbb1e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409198"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Definir as propriedades de um componente de fluxo de dados
   Para definir as propriedades de componentes de fluxo de dados, que incluem origens, destinos e transformações, use um dos seguintes recursos:  
@@ -128,11 +127,11 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades dos componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|Description|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|Cadeia de caracteres|O CLSID do componente.|  
 |ContactInfo|Cadeia de caracteres|Informações de contato para o desenvolvedor de um componente.|  
-|Description|Cadeia de caracteres|Descrição do componente de fluxo de dados. O valor padrão dessa propriedade é o nome do componente de fluxo de dados.|  
+|Descrição|Cadeia de caracteres|Descrição do componente de fluxo de dados. O valor padrão dessa propriedade é o nome do componente de fluxo de dados.|  
 |ID|Integer|Valor que identifica essa instância do componente com exclusividade.|  
 |IdentificationString|Cadeia de caracteres|Identifica o componente.|  
 |IsDefaultLocale|Booliano|Indica se o componente usa a localidade da tarefa de Fluxo de Dados à qual pertence.|  
@@ -148,9 +147,9 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades das entradas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|Description|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|Description|Cadeia de caracteres|Descrição da entrada.|  
+|Descrição|Cadeia de caracteres|Descrição da entrada.|  
 |ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
 |HasSideEffects|Booliano|Indica se um componente pode ser removido do plano de execução do fluxo de dados quando não é anexado a um componente downstream e quando **RunInOptimizedMode** é **true**.|  
@@ -168,10 +167,10 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades das colunas de entrada de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|Description|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Description|Cadeia de caracteres|Descreve a coluna de entrada.|  
+|Descrição|Cadeia de caracteres|Descreve a coluna de entrada.|  
 |ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|ID da coluna de metadados externa atribuída a uma coluna de entrada.|  
@@ -192,10 +191,10 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades das saídas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|Description|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Booliano|Valor que determina se o mecanismo de fluxo de dados exclui a saída quando ela é desanexada de um caminho.|  
-|Description|Cadeia de caracteres|Descreve a saída.|  
+|Descrição|Cadeia de caracteres|Descreve a saída.|  
 |ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
 |ExclusionGroup|Integer|Valor que identifica um grupo de saídas mutuamente exclusivas.|  
@@ -213,10 +212,10 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades das colunas de saída de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|Description|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Description|Cadeia de caracteres|Descreve a coluna de saída.|  
+|Descrição|Cadeia de caracteres|Descreve a coluna de saída.|  
 |ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são **Fail component**, **Ignore failure**e **Redirect row**. O valor padrão é **Fail component**.|  
 |ExternalMetadataColumnID|Integer|ID da coluna de metadados externa atribuída a uma coluna de entrada.|  
@@ -236,9 +235,9 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades das colunas de metadados externas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|Description|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|Description|Cadeia de caracteres|Descreve a coluna externa.|  
+|Descrição|Cadeia de caracteres|Descreve a coluna externa.|  
 |ID|Integer|Valor que identifica a coluna com exclusividade.|  
 |IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a coluna.|  
 |Nome|Cadeia de caracteres|Nome da coluna externa.|  
@@ -250,7 +249,7 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades de tipo de dados de colunas de saída e de colunas de metadados externas.  
   
-|Propriedade|Tipo de Dados|Description|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Especifica a página de código para dados de cadeia de caracteres que não são Unicode.|  
 |DataType|Inteiro (enumeração)|Tipo de dados da coluna do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  

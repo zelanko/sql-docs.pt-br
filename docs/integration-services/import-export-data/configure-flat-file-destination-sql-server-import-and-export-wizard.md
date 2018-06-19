@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee1fcffe26a8f17d5a8c0fd4e547e98b95d30c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408518"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
   Se você tiver selecionado um destino de arquivo simples, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Configurar Destino do Arquivo Simples** depois que você especificar que deseja copiar uma tabela ou depois de fornecer uma consulta. Nessa página, especifique opções de formatação para o arquivo simples de destino. Outra opção é examinar o mapeamento de colunas individuais e visualizar dados de exemplo.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de linha**  
  Selecione da lista de delimitadores para separar linhas na saída. Não há nenhuma opção para especificar um delimitador de linha *personalizado*.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Delimite as linhas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite linhas com um retorno de carro.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de coluna**  
  Selecione da lista de delimitadores para separar colunas na saída. Não há nenhuma opção para especificar um delimitador de coluna *personalizado*.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Delimite as colunas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite colunas com um retorno de carro.|  

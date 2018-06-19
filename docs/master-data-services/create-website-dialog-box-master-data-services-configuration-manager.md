@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 940d6c966eb92ab9070f654298e7471fad2af791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a18d54250582490506bfe5222f8b4fab17563c5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410028"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar Site (Gerenciador de Configuração do Master Data Services)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="web-site"></a>Site  
   
-|Nome do controle|Description|  
+|Nome do controle|Descrição|  
 |------------------|-----------------|  
 |**Nome do site**|Digite um nome para o site ou use o nome padrão. Esse nome é um nome amigável que é usado apenas para identificar o site no IIS. Ele não é usado para acessar o site em um navegador da Web.<br /><br /> O nome deve ser exclusivo entre todos os sites do IIS no computador local.|  
 |**Protocolo**|Exibe **http**. Use o protocolo HTTP quando a comunicação entre cliente e servidor não precisar ocorrer em um canal criptografado.<br /><br /> **Observação**: não é possível criar um site HTTPS no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. HTTPS é o protocolo HTTP que usa o SSL (Secure Sockets Layer) e é útil ao trocar dados confidenciais ou pessoais ou quando você deseja que os usuários confirmem a identidade do servidor antes de transmitir informações pessoais. Se você precisar transferir informações entre o servidor e um cliente usando um canal criptografado, terá que usar uma ferramenta do IIS, como o Gerenciador do IIS, para configurar o site com uma associação HTTPS e vincular a associação do site a um certificado do servidor; isso é necessário para que o site seja aberto com êxito em um navegador da Web. Para obter mais informações sobre certificados do servidor, consulte [Configuring Server Certificates in IIS 7](http://go.microsoft.com/fwlink/?LinkId=163220) (em inglês) no [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="application-pool"></a>Pool de Aplicativos  
   
-|Nome do controle|Description|  
+|Nome do controle|Descrição|  
 |------------------|-----------------|  
 |**Nome**|Digite um nome amigável e exclusivo para um novo pool de aplicativos ou use o nome padrão que é fornecido. O aplicativo Web raiz desse site executa nesse pool de aplicativos.<br /><br /> Os pools de aplicativos fornecem limites que impedem que os aplicativos em um pool de aplicativos afetem aplicativos em outro pool de aplicativos.|  
 |**User name**|Digite um domínio e nome de usuário do Active Directory. Essa conta de serviço é a identidade do pool de aplicativos no qual o aplicativo Web é executado.<br /><br /> Essa conta é adicionada à função de banco de dados mds_exec no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para acesso ao banco de dados. Para obter mais informações, veja [Logons, usuários e funções de banco de dados &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md). Também é adicionada a um grupo do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] no Windows, **MDS_ServiceAccounts**, que recebe permissão para o diretório temporário de compilação, **MDSTempDir**, no sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).|  

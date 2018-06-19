@@ -1,25 +1,24 @@
 ---
 title: Implantar um projeto do SSIS com código .NET (C#) | Microsoft Docs
-ms.date: 09/25/2017
-ms.topic: conceptual
+ms.date: 05/21/2018
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0fc40c9db57dece328a8bcc205115c0570a167e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e1ef56dc0d535cde833f1267c681f9a33e14c98
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405498"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implantar um projeto do SSIS com o código C# em um aplicativo .NET
-Este tutorial de início rápido demonstra como gravar código C# para se conectar a um servidor de banco de dados e implantar um projeto do SSIS.
+Este guia de início rápido demonstra como gravar código C# para se conectar a um servidor de banco de dados e implantar um projeto do SSIS.
 
 Você pode usar o Visual Studio, o Visual Studio Code ou outra ferramenta de sua preferência para criar um aplicativo C#.
 
@@ -27,19 +26,28 @@ Você pode usar o Visual Studio, o Visual Studio Code ou outra ferramenta de sua
 
 Antes de começar, verifique se você tem o Visual Studio ou Visual Studio Code instalado. Baixe a Community Edition gratuita do Visual Studio ou o Visual Studio Code gratuito de [Downloads do Visual Studio](https://www.visualstudio.com/downloads/).
 
-> [!NOTE]
-> Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
+Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>Obter as informações de conexão se implantado no Banco de Dados SQL 
+## <a name="supported-platforms"></a>Plataformas compatíveis
 
-Se os pacotes são implantados em um Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
+Você pode usar as informações neste guia de início rápido para implantar um projeto do SSIS nas seguintes plataformas:
+
+-   SQL Server no Windows.
+
+-   Banco de Dados SQL do Azure. Para obter mais informações sobre como implantar e executar pacotes no Azure, veja [Remover e deslocar cargas de trabalho do SQL Server Integration Services para a nuvem](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Você não pode usar as informações neste guia de início rápido para implantar um pacote do SSIS no SQL Server em Linux. Para obter mais informações sobre como executar pacotes no Linux, veja [Extrair, transformar e carregar dados no Linux com o SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Para o Banco de Dados SQL do Azure, obtenha as informações de conexão
+
+Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
 1. Faça logon no [portal do Azure](https://portal.azure.com/).
-2. Selecione **Bancos de Dados SQL** no menu à esquerda e clique em banco de dados do SSISDB na página **Bancos de dados SQL**. 
-3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para mostrar a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
+2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
+3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 5. Clique em **Mostrar cadeias de conexão de banco de dados**.
-6. Examine a cadeia de conexão **ADO.NET** completa. O código de exemplo usa um `SqlConnectionStringBuilder` para recriar essa cadeia de conexão com os valores de parâmetro individuais que você fornece.
+6. Examine a cadeia de conexão **ADO.NET** completa. Opcionalmente, seu código pode usar um `SqlConnectionStringBuilder` para recriar essa cadeia de conexão com os valores de parâmetro individuais que você fornece.
 
 ## <a name="create-a-new-visual-studio-project"></a>Criar um novo projeto do Visual Studio
 
@@ -65,7 +73,7 @@ Se os pacotes são implantados em um Banco de Dados SQL do Azure, obtenha as inf
 2. Substitua o conteúdo de **Program.cs** pelo código a seguir. Adicione os valores apropriados para seu servidor, banco de dados, usuário e senha.
 
 > [!NOTE]
-> O exemplo a seguir usa a Autenticação do Windows. Para usar a autenticação do SQL Server, substitua o argumento `Integrated Security=SSPI;` com `User ID=<user name>;Password=<password>;`.
+> O exemplo a seguir usa a Autenticação do Windows. Para usar a autenticação do SQL Server, substitua o argumento `Integrated Security=SSPI;` com `User ID=<user name>;Password=<password>;`. Se você estiver se conectando a um servidor de Banco de Dados SQL do Azure, não poderá usar a autenticação do Windows.
 
 ```csharp
 using Microsoft.SqlServer.Management.IntegrationServices;

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,12 +27,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f7cf3212ac6e046e41f46d1d3d6232250182c1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 453d0e7158f19fd958eca3bd611a2670279fe946
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972071"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696377"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.locfileid: "32972071"
 ## <a name="fixed-server-level-roles"></a>Funções fixas de nível de servidor  
  A tabela a seguir mostra as funções fixas de nível de servidor e seus recursos.  
   
-|Função fixa de nível de servidor|Description|  
+|Função fixa de nível de servidor|Descrição|  
 |------------------------------|-----------------|  
 |**sysadmin**|Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no servidor.|  
 |**serveradmin**|Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.|  
@@ -83,7 +81,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Trabalhando com funções de nível de servidor  
  A tabela a seguir explica os comandos, exibições e funções que você pode usar para trabalhar com funções de nível de servidor.  
   
-|Recurso|Tipo|Description|  
+|Recurso|Tipo|Descrição|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadados|Retorna uma lista de funções de nível de servidor.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadados|Retorna informações sobre os membros de uma função de nível de servidor.|  

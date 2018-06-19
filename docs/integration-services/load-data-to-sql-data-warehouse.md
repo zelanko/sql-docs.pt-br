@@ -12,15 +12,16 @@ ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: e627fdad03bf3159a0ed9c730381fde53c86ee9f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e5b34e72447d74875e67a0f1a71fb749a8c3d416
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402528"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Carregar dados do SQL Server no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services)
 
-Crie um pacote do SSIS (SQL Server Integration Services) para carregar dados do SQL Server no [SQL Data Warehouse do Azure](/azure/sql-data-warehouse/index.md). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
+Crie um pacote do SSIS (SQL Server Integration Services) para carregar dados do SQL Server no [SQL Data Warehouse do Azure](/azure/sql-data-warehouse/index). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
 
 Neste tutorial, você vai:
 
