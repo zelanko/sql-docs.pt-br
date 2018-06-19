@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331220"
 ---
 # <a name="dtutil-utility"></a>utilitário dtutil
   O utilitário de prompt de comando **dtutil** é usado para gerenciar pacotes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O utilitário pode copiar, mover, excluir ou verificar a existência de um pacote. Essas ações podem ser desenvolvidas em qualquer pacote do [!INCLUDE[ssIS](../includes/ssis-md.md)] que esteja armazenado em um dos três locais: um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o Armazenamento de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] e o sistema de arquivos. Se o utilitário acessar um pacote armazenado em **msdb**, o prompt de comando poderá exigir um nome de usuário e uma senha. Se a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar Autenticação de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o prompt de comando solicitará um nome de usuário e uma senha. Se o nome de usuário estiver ausente, o **dtutil** tentará fazer logon no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do Windows. O tipo de armazenamento do pacote é identificado pelas opções **/SQL**, **/FILE**e **/DTS** .  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>Parâmetros  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |/?|Exibe as opções do prompt de comando.|  
 |/C[opy] *location;destinationPathandPackageName*|Especifica uma ação de cópia em um pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] . O uso desse parâmetro requer que você especifique primeiro o local do pacote usando a opção **/FI**, **/SQ**ou **/DT** . Em seguida, especifique o nome de pacote do destino local. O argumento *destinationPathandPackageName* especifica onde o pacote [!INCLUDE[ssIS](../includes/ssis-md.md)] é copiado. Se o *location* de destino for **SQL**, os argumentos *DestUser*, *DestPassword* e *DestServer* também deverão ser especificados no comando.<br /><br /> Quando a ação **Copy** encontra um pacote existente no destino, o **dtutil** solicita que o usuário confirme a exclusão do pacote. A resposta **Y** substitui o pacote e **N** encerra o programa. Quando o comando inclui o argumento *Quiet* , nenhum prompt aparece e todos os pacotes existentes são substituídos.|  
@@ -121,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Códigos de saída do dtutil  
  O utilitário**dtutil** define um código de saída que alerta quando forem detectados erros de sintaxe, quando forem usados argumentos incorretos ou quando forem especificadas combinações de opções inválidas. Caso contrário, o utilitário indicará "A operação foi concluída com êxito". A tabela a seguir lista os valores que o utilitário **dtutil** pode definir ao sair.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|O utilitário foi executado com êxito.|  
 |1|O utilitário falhou.|  

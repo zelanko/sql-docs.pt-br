@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2e3add4e4316cbf3568384ca5c1c356cbc7aba47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75df838645e9fa708d8baa27f3f35b07229044e7
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331550"
 ---
 # <a name="notifications-master-data-services"></a>Notificações (Master Data Services)
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="when-notifications-are-sent"></a>Quando as notificações são enviadas  
  Depois que as notificações são configuradas, notificações por email automatizadas podem ser enviadas nas instâncias a seguir.  
   
-|Instância|Description|  
+|Instância|Descrição|  
 |--------------|-----------------|  
 |Os dados falham na validação de regras de negócio.|Regras de negócio individuais devem ser configuradas para enviar email quando um valor de atributo é reprovado na validação da regra de negócio. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> Entidade<br /><br /> Código do Membro<br /><br /> Regra de negócio com falha<br /><br /> Link do membro para o qual o valor do atributo não atende à regra de negócio<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, consulte [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
 |O status da versão do modelo é alterado|Cada vez que o status de uma versão de modelo muda, os usuários que são administradores de modelo recebem notificações automaticamente. A notificação contém as seguintes informações.<br /><br /> Modelo<br /><br /> Versão<br /><br /> status atual e anterior da versão<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  

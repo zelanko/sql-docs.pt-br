@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 969c505870bf0354f9b183d940643c641453946f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39057237b4b62248cb3af260d0b4bb2cee1dff15
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322705"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxe de reserva de URL (Gerenciador de Configurações do SSRS)
   Este tópico descreve as partes da cadeia de caracteres da URL para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. A cadeia de caracteres da URL armazenada internamente tem uma estrutura diferente de uma URL digitada na barra de Endereço de uma janela do navegador. A cadeia de caracteres de reserva de URL aparece na janela Resultados da ferramenta Configuração do Reporting Services quando você configura uma URL e no arquivo RSReportServer.config. Poderá ser útil saber como a cadeia de caracteres da URL é definida se você estiver solucionando problemas de reserva de URL ou consultando HTTP.SYS para exibir as reservas de URL internas que estão definidas em seu servidor.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve cada propriedade e quais valores são válidos para cada uma.  
   
-|Propriedade|Valores válidos|Description|  
+|Propriedade|Valores válidos|Descrição|  
 |--------------|------------------|-----------------|  
 |Esquema|http ou https|Prefixos para conexões não SSL e SSL.|  
 |Nome_do_host|(+) Curinga forte, equipara-se ao valor **(Todos Atribuídos)** para o endereço IP.<br /><br /> (\*) Curinga fraco, equipara-se a um endereço IP **(Todos os Não Atribuídos)**.<br /><br /> Nome de domínio totalmente qualificado<br /><br /> Nome do computador<br /><br /> Endereço IP (IPV4)<br /><br /> Endereço IP (IPV6)|Identifica o servidor na rede.<br /><br /> (+) Curinga forte é o padrão. HTTP.SYS aceitará todas as solicitações em todos os adaptadores de rede para uma determinada combinação de porta e diretório virtual. O servidor de relatório aceitará qualquer solicitação na porta.<br /><br /> (\*) Curinga fraco. HTTP.SYS aceita todas as solicitações não tratadas por outras reservas de URL em todos os adaptadores de rede para uma determinada combinação de porta e diretório virtual.<br /><br /> Nome do computador é o nome NEBIOS do computador na rede.<br /><br /> O nome de domínio totalmente qualificado inclui o endereço do domínio e o nome do servidor, como registrado em um controlador de domínio ou em um servidor de nome de domínio público.<br /><br /> Endereço IP (IPV4) é o endereço IP de um adaptador de rede no computador no formato IPV4: *nnn.nnn.nnn.nnn*.<br /><br /> Endereço IP (IPV6) é o endereço IP de um adaptador de rede no computador no formato IPV6: \<header>:\<header>:*nnn.nnn.nnn.nnn*.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c89b9618547e26ad8b18e3bacf527ba9e084abf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5381abcf7104b579db7bdb6e0d64ee7f90864257
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310655"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
  Durante a exportação dos dados limpos na página **Exportar** no assistente de projeto de qualidade de dados de limpeza, especifique se deseja que os dados limpos sejam exportados no formato padronizado marcando a caixa de seleção **Padronizar Saída** . Por padrão, os dados limpos são exportados no formato unificado, ou seja, a caixa de seleção está marcada. Para obter mais informações sobre como exportar os dados limpos, consulte [Limpar dados usando o conhecimento do DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a> Tarefas Relacionadas  
+##  <a name="Related"></a> Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

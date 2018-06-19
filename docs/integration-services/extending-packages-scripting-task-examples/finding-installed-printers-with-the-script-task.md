@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +28,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc93afccb18193412047e30694ead989cdb666a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5dc5b28ede5347a0889023432fae12bbb03690a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329410"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Localizando impressoras instaladas com a tarefa Script
   Os dados que são transformados por pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] costumam ter um relatório impresso como seu destino final. O namespace **System.Drawing.Printing** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece classes para trabalhar com impressoras.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O exemplo a seguir localiza impressoras instaladas no servidor que oferece suporte a papel de tamanho válido (conforme usado nos Estados Unidos). O código para verificar tamanhos de papel suportados é encapsulado em uma função particular. Para permitir que você rastreie o progresso do script enquanto ele verifica as definições de cada impressora, o script usa o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para gerar uma mensagem informativa para impressoras com tamanho de papel válido e também para gerar um aviso para impressoras sem tamanho de papel válido. Essas mensagens aparecem na janela de **Saída** do VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE quando você executa o pacote no designer.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  

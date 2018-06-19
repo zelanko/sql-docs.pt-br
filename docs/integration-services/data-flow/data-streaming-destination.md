@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ecccceb9edd410f06fedeb53136d1fab200096e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc33ebe8c38299e8b3375cc6f19aec47d859c76f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332800"
 ---
 # <a name="data-streaming-destination"></a>Destino do Fluxo de Dados
   O **Destino do Fluxo de Dados** é um componente de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), que permite que o **Provedor OLE DB para SSIS** consuma a saída de um pacote SSIS como um conjunto de resultados de tabelas. Você pode criar um servidor vinculado que use o Provedor OLE DB para SSIS e então execute uma consulta SQL no servidor vinculado para exibir os dados retornados pelo pacote SSIS.  
@@ -72,7 +71,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>Guia Propriedades do Componente  
  Esta guia tem os seguintes campos editáveis:  
   
-|Campo|Description|  
+|Campo|Descrição|  
 |-----------|-----------------|  
 |Nome|Nome do componente de destino de streaming de dados no pacote.|  
 |ValidateExternalMetadata|Indica se o componente é validado usando fontes de dados externas no momento do design. Se definido como falso, a validação das fontes de dados externas é atrasada até o tempo de execução.|  

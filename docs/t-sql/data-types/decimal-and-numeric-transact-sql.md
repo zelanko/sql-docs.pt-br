@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db844700627b7eb1cbc9266a667d1dadad47d3e2
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249559"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ O número máximo total de dígitos decimais que poderão ser armazenados, à es
 >  Informatica é compatível apenas com 16 dígitos significativos, independentemente da precisão e da escala especificadas.  
   
 *s* (escala)  
-O número máximo de dígitos decimais que poderão ser armazenados à direita do ponto decimal. Esse número é subtraído de *p* para determinar o número máximo de dígitos à esquerda do separador decimal. O número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal. A escala deve ser um valor de 0 a *p*. A escala somente poderá ser especificada se precisão também o for. A escala padrão é 0; portanto, 0 <= *s* \<= *p*. Os tamanhos máximos de armazenamento variam, com base na precisão.
+O número máximo de dígitos decimais que poderão ser armazenados à direita do ponto decimal. Esse número é subtraído de *p* para determinar o número máximo de dígitos à esquerda do separador decimal. A escala deve ser um valor de 0 a *p*. A escala somente poderá ser especificada se precisão também o for. A escala padrão é 0; portanto, 0 <= *s* \<= *p*. Os tamanhos máximos de armazenamento variam, com base na precisão.
   
 |Precisão|Bytes de armazenamento|  
 |---|---|

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333270"
 ---
 # <a name="integration-services-containers"></a>Contêineres do Integration Services
   Contêineres são objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que fornecem estrutura a pacotes e serviços a tarefas. Eles fornecem suporte à repetição de fluxos de controle em pacotes e agrupam tarefas e contêineres em unidades de trabalho significativas. Os contêineres podem incluir outros contêineres, além de tarefas.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="container-types"></a>Tipos de contêineres  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece quatro tipos de contêineres para criar pacotes. A tabela a seguir lista os tipos de contêineres.  
   
-|Contêiner|Description|  
+|Contêiner|Descrição|  
 |---------------|-----------------|  
 |[Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)|Executa um fluxo de controle repetidamente usando um enumerador.|  
 |[Contêiner Loop For](../../integration-services/control-flow/for-loop-container.md)|Executa um fluxo de controle repetidamente testando uma condição.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="summary-of-container-properties"></a>Resumo das propriedades dos contêineres  
  Todos os tipos de contêineres têm um conjunto de propriedades em comum. Se você criar pacotes que usam as ferramentas gráficas fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , a janela Propriedades listará as propriedades a seguir dos contêineres Foreach Loop, Loop For e Sequence. As propriedades do contêiner host da tarefa são configuradas como parte da configuração da tarefa que o host da tarefa encapsula. Você define as propriedades Host da Tarefa quando configura a tarefa.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**DelayValidation**|Um valor booliano que indica se a validação do contêiner foi adiada até o tempo de execução. O valor padrão para essa propriedade é **False**.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |**Descrição**|É a descrição do contêiner. A propriedade contém uma cadeia de caracteres, mas pode estar em branco.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -21,11 +20,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a4de22aefed2d4602e5ca331355ae7588394672e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3747bdba5ef54790a600b976c930ceeecd789c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322275"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as assinaturas e os alertas de dados exigem o SQL Server Agent e a configuração de permissões para o SQL Server Agent. Se você visualizar mensagens de erro que indicam que um SQL Server Agent é necessário e tiver verificado que o SQL Server Agent está em execução; em seguida, atualize ou verifique as permissões. O escopo deste tópico é [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint e o tópico descreve três maneiras de atualizar as permissões do SQL Server Agent com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As credenciais que você usa para as etapas neste tópico precisam ter permissões suficientes para conceder permissões execute a RSExecRole para objetos nos bancos de dados de aplicativos de serviço, msdb e mestre.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  ![Permissões do SQL Agent para BDs do Aplicativo de Serviço](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Permissões do SQL Agent para BDs do Aplicativo de Serviço")  
   
-||Description|  
+||Descrição|  
 |------|-----------------|  
 |**1**|A instância do mecanismo de banco de dados do SQL Server que está hospedando os bancos de dados do aplicativo do serviço Reporting Services.|  
 |**2**|A instância do SQL Server Agent para a instância do mecanismo de banco de dados SQL.|  

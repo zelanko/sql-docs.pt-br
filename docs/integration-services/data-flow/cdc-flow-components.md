@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
@@ -16,11 +14,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a95bd32614faeb7cade10a701819b3109d72dca4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c453a98b91e001fbb15ec608513a8803981a26e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334910"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
   Os componentes Change Data Capture da Attunity para Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] Microsoft ajudam os desenvolvedores do SSIS a trabalharem com CDC e reduzir a complexidade de pacotes CDC.  
@@ -174,7 +173,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
 ## <a name="cdc-state"></a>Estado CDC  
  Cada grupo de CDC tem um estado associado a ele, que é representado por uma cadeia de caracteres com um formato específico. Para obter mais informações, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). A tabela a seguir mostra os valores possíveis de estado de CDC.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |0-(INITIAL)|O estado que existe antes que qualquer pacote seja executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Este é o estado que existe quando o pacote de carga inicial é iniciado. Isto ocorre depois da chamada da operação **MarkInitialLoadStart** para a tarefa Controle CDC.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a48f3114c4207d11dab84a1706af2f3e1971f9cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8f4a37d9d1ffc68c0887bf67921a3b32b097413
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333650"
 ---
 # <a name="partition-processing-destination"></a>Destino de processamento de partições
   O destino de Processamento de Partição carrega e processa uma partição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre partições, consulte [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
  **Método de processamento**  
  Selecione o método de processamento. O valor padrão desta opção é **Completo**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Adicionar (incremental)|Execute um processamento com incremento da partição.|  
 |Completo|Execute um processamento completo da partição.|  
@@ -119,7 +118,7 @@ ms.lasthandoff: 05/03/2018
  **Ação de erro de chave**  
  Especifique como manipular registros que possuem valores de chave inaceitáveis.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Converta o valor de chave inaceitável em um valor Desconhecido.|  
 |**DiscardRecord**|Descarte o registro.|  
@@ -136,7 +135,7 @@ ms.lasthandoff: 05/03/2018
  **Ação se houver erro**  
  Especifique a ação a ser tomada quando o limite de erros for atingido, caso tenha selecionado **Parar se houver erro**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**StopProcessing**|Pare o processamento.|  
 |**StopLogging**|Pare de registrar os erros.|  
@@ -144,7 +143,7 @@ ms.lasthandoff: 05/03/2018
  **Chave não encontrada**  
  Especifique a ação a ser tomada mediante erro de chave não encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
  **Chave duplicada**  
  Especifique a ação a ser tomada mediante erro de chave duplicada. Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
  **Chave nula convertida em desconhecida**  
  Especifique a ação a ser tomada quando uma chave nula foi convertida no valor Desconhecido. Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -171,7 +170,7 @@ ms.lasthandoff: 05/03/2018
  **Chave nula não permitida**  
  Especifique a ação a ser tomada quando chaves nulas não forem permitidas, e uma chave nula for encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,11 +18,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 613c588ff3807aa767b9702a56edabeb1001fa42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311945"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Visão geral do Monitor de Espelhamento de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  *\<Status>*  
  Os possíveis status e seus ícones associados são os seguintes:  
   
-|Ícone|Status|Description|  
+|Ícone|Status|Descrição|  
 |----------|------------|-----------------|  
 |Ícone de aviso:|**Desconhecido**|O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.|  
 |Ícone de aviso:|**Sincronizando**|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.|  
@@ -91,14 +91,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="action-menu"></a>Menu Ação  
  O menu **Ação** contém sempre os seguintes comandos:  
   
-|Comando|Description|  
+|Comando|Descrição|  
 |-------------|-----------------|  
 |**Registrar um Banco de Dados Espelho**|Abre a caixa de diálogo **Registrar Banco de Dados Espelho** . Use esta caixa de diálogo para registrar um ou mais bancos de dado espelhados em uma determinada instância do servidor, adicionando o banco de dados, ou bancos de dados, ao Monitor de Espelhamento de Banco de Dados. Quando um banco de dados é adicionado, o Monitor de Espelhamento de Banco de Dados armazena localmente em cache as informações do banco de dados, seus parceiros e como se conectar aos parceiros.|  
 |**Gerenciar Conexões das Instâncias do Servidor…**|Quando você seleciona este comando, a caixa de diálogo **Gerenciar Conexões do Servidor** é exibida. Nela, você pode escolher uma instância de servidor para a qual deseja especificar as credencias a serem usadas pelo monitor quando se conectar a um determinado parceiro de failover.<br /><br /> Para editar as credenciais para o parceiro, localize sua entrada na grade **Instância de servidor** , e clique em **Editar** naquela linha. Isto exibe a caixa de diálogo **Conectar ao Servidor** com o nome de instância de servidor e com os controles de credenciais inicializados com o valor atual em cache. Altere as informações de autenticação conforme necessário e clique em **Conectar**. Se as credenciais tiverem privilégios suficientes, a coluna **Conectar Usando** é atualizada com as novas credenciais.|  
   
  Se você selecionar o banco de dados, o menu **Ação** também conterá os seguintes comandos:  
   
-|Comando|Description|  
+|Comando|Descrição|  
 |-------------|-----------------|  
 |**Cancelar o Registro deste Banco de Dados.**|Remove o banco de dados selecionado do Monitor de Espelhamento de Banco de Dados.|  
 |**Definir Limites de Aviso…**|Abre a caixa de diálogo **Definir Limites de Aviso** . A partir deste ponto, o administrador pode habilitar ou desabilitar os avisos para o banco de dados em cada um dos parceiros e alterar o limite de cada aviso. Recomendamos definir o limite de um determinado aviso em ambos os parceiros a fim de garantir que o aviso continue se houver um failover no banco de dados. O limite adequado para cada parceiro depende das capacidades de desempenho o sistema daquele parceiro.<br /><br /> Um evento de desempenho é gravado no log de eventos somente se o seu valor estiver no seu limite ou acima dele quando a tabela de status for atualizada. Se um valor máximo alcançar temporariamente o limite entre as atualizações de status, este valor máximo é ignorado|  

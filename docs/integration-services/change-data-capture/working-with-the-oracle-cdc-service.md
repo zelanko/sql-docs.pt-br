@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
@@ -16,11 +14,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c62c28da819aa4293258784648b1af88a333e156
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 769ce099fc299900c93e11222f58389b2c43249b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332530"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
   Esta seção descreve alguns conceitos importantes do Serviço Oracle CDC. Os conceitos incluídos nesta seção são:  
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve os itens incluídos na tabela **dbo.xdbcdc_trace** .  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |timestamp|O carimbo de data/hora UTC exato quando o registro de rastreamento foi gravado.|  
 |tipo|Contém um dos seguintes valores.<br /><br /> erro<br /><br /> INFO<br /><br /> rastreamento|  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve os itens incluídos na tabela **dbo.xdbcdc_databases** .  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |NAME|O nome do banco de dados Oracle na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|O carimbo de data/hora (UTC) para a última alteração na tabela **xdbcdc_config** correspondente do banco de dados CDC ou o carimbo de data/hora (UTC) para a linha atual nesta tabela.<br /><br /> O gatilho UPDATE impõe um valor de GETUTCDATE() para este item. **config_version** deixa o serviço CDC identificar a instância CDC que precisa ser verificada para alteração de configuração ou para habilitar/desabilitar.|  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve os itens do estado de captura incluídos na tabela **dbo.xdbcdc_databases** .  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |cdc_service_name|O nome do Serviço Oracle CDC (o nome de serviço do Windows).|  
 |cdc_service_sql_login|O nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Serviço Oracle CDC para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um novo usuário de SQL chamado cdc_service é criado e associado com este nome de logon e é, em seguida, adicionado como membro das funções de banco de dados fixas db_ddladmin, db_datareader e db_datawriter para cada banco de dados CDC tratado pelo serviço.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2167b2baba2c1dd866808fc190690b862e9d9e04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 218958cb1cc21aeca393b44a337640e64d918a41
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332870"
 ---
 # <a name="destination-assistant"></a>Assistente de Destino
   O componente Assistente de Destino ajuda a criar um componente de destino e um gerenciador de conexões. O componente está localizado na seção **Favoritos** da Caixa de Ferramentas do SSIS.  
@@ -49,7 +48,7 @@ Este tópico fornece etapas para adicionar um novo destino por meio do Assistent
 ## <a name="add-new-destination-dialog-box"></a>Caixa de diálogo Adicionar Novo Destino
 A tabela a seguir lista as opções disponíveis na caixa de diálogo **Adicionar Novo Destino**.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Types|Selecione o tipo de destino ao qual você deseja conectar-se.|  
 |Gerenciadores de conexões|Selecione um gerenciador de conexões existente ou clique em **\<Novo>** para criar um novo gerenciador de conexões.|  

@@ -3,12 +3,10 @@ title: Gerenciador de Conexões OData | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
@@ -19,11 +17,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 124877025d9e01c7d00f8693093a4227680c145d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a6a3fbd4cc0f1865559f4f4b64987aa906b2839
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333500"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
  Conecte-se a uma fonte de dados OData com um gerenciador de conexões OData. Um Componente do OData Source usa um gerenciador de conexões OData para se conectar a uma fonte de dados OData e consumir dados do serviço. Para obter mais informações, consulte [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -64,7 +63,7 @@ Para se conectar ao Microsoft Dynamics AX Online ou ao Microsoft Dynamics CRM On
   
 |||  
 |-|-|  
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |Url|URL do documento de serviço.|  
 |UserName|O nome de usuário a ser usado para autenticação, se necessário.|  
 |Senha|A senha a ser usada para autenticação, se necessário.|  

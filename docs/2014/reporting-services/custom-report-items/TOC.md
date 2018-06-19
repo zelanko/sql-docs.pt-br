@@ -1,0 +1,7 @@
+# [Itens de relatório personalizados](custom-report-items.md)
+## [Arquitetura de item de relatório personalizado](custom-report-item-architecture.md)
+## [Requisitos de implementação de item de relatório personalizado](custom-report-item-implementation-requirements.md)
+## [Criar um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)
+## [Criar um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)
+## [Como implantar um item de relatório personalizado](how-to-deploy-a-custom-report-item.md)
+## [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)

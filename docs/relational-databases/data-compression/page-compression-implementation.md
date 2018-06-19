@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323128"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999892"
 ---
 # <a name="page-compression-implementation"></a>Implementação da compactação de página
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ ms.locfileid: "34323128"
   
  A ilustração a seguir mostra um exemplo de página de uma tabela antes da compactação de prefixo.  
   
- ![Página antes da compactação de prefixo](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "Página antes da compactação de prefixo")  
+ ![Página antes da compactação de prefixo](media/skt-tblcompression1c.gif "Página antes da compactação de prefixo")  
   
  A ilustração a seguir mostra a mesma página após a compactação de prefixo. O prefixo é movido para o cabeçalho e os valores da coluna são alterados para referências ao prefixo.  
   
- ![Página após a compactação de prefixo](../../relational-databases/data-compression/media/tblcompression2.gif "Página após a compactação de prefixo")  
+ ![Página após a compactação de prefixo](media/tblcompression2.gif "Página após a compactação de prefixo")  
   
  Na primeira coluna da primeira linha, o valor 4b indica que os primeiros quatro caracteres do prefixo (aaab) estão presentes para essa linha, além do caractere b. Isso gera o valor resultante aaabb, que é o valor original.  
   
 ## <a name="dictionary-compression"></a>Compactação de dicionário  
  Após a conclusão da compactação de prefixo, é aplicada a compactação de dicionário. A compactação de dicionário procura valores repetidos em qualquer lugar da página e os armazena na área de informações de compactação. Diferentemente da compactação de prefixo, a compactação de dicionário não é restrita a uma coluna. A compactação de dicionário pode substituir valores repetidos que ocorrem em qualquer lugar de uma página. A ilustração a seguir mostra a mesma página após a compactação de dicionário.  
   
- ![Página após a compactação de dicionário](../../relational-databases/data-compression/media/tblcompression3.gif "Página após a compactação de dicionário")  
+ ![Página após a compactação de dicionário](media/tblcompression3.gif "Página após a compactação de dicionário")  
   
  Observe que o valor 4b foi referenciado a partir de colunas diferentes da página.  
   

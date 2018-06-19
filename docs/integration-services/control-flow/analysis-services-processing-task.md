@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86a4674fff0795918fe89a26b62b5b15524d543e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333470"
 ---
 # <a name="analysis-services-processing-task"></a>Tarefa Processamento do Analysis Services
   A tarefa Processamento do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como modelos tabulares, cubos, dimensões e modelos de mineração.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **Tópicos relacionados:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Lista de objetos**  
- |Propriedade|Description|  
+ |Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Nome do Objeto**|Lista os nomes de objeto especificados.|  
 |**Tipo**|Lista os tipos dos objetos especificados.|  
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
  **Tópicos relacionados:** [Caixa de diálogo Análise de Impacto &#40;Analysis Services – Dados Multidimensionais&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Resumo de Configurações de Lote**  
- |Propriedade|Description|  
+ |Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Ordem de processamento**|Especifica se os objetos são processados em sequência ou em um lote; se for usado o processamento paralelo, especifica o número de objetos a serem processados simultaneamente.|  
 |**Modo de transação**|Especifica o modo da transação para processamento sequencial.|  

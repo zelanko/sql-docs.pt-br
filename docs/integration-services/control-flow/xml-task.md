@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfddb1861284e64267e310b98f0011e49284a8c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9726b86fd0d441b8e99a155b10abbd3804a7143
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331230"
 ---
 # <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-xml-operations"></a>Operações XML predefinidas  
  A tarefa XML inclui um conjunto predefinido de operações para trabalhar com documentos XML. A tabela a seguir descreve essas operações.  
   
-|Operação|Description|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Diff|Compara dois documentos XML. Usando o documento XML de origem como documento base, a operação Diff o compara a um segundo documento XML, detecta as suas diferenças e as grava em um documento Diffgram XML. Essa operação inclui propriedades para personalizar a comparação.|  
 |Mesclagem|Mescla dois documentos XML. Usando o documento XML de origem como o documento base, a operação Merge adiciona o conteúdo de um segundo documento ao documento base. A operação pode especificar um local de mesclagem dentro do documento base.|  
@@ -73,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
  A operação Diff inclui um conjunto de opções que personalizam a comparação XML. A tabela a seguir descreve as opções.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**IgnoreComments**|Um valor que especifica se os nós de comentários devem ser comparados.|  
 |**IgnoreNamespaces**|Um valor que especifica se o URI (uniform resource identifier) no namespace de um elemento e seus nomes de atributo devem ser comparados. Se essa opção for definida como **true**, dois elementos que têm o mesmo nome local, mas um namespace diferente, serão considerados idênticos.|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Mensagens de log personalizadas disponíveis na tarefa XML  
  A tabela a seguir descreve a entrada de log personalizada da tarefa XML. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**XMLOperation**|Fornece informações sobre a operação executada pela tarefa|  
   
@@ -150,7 +149,7 @@ ms.lasthandoff: 05/03/2018
  **OperationType**  
  Selecione o tipo de operação na lista. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Validar**|Valida o documento XML com base em um esquema de definição de tipo de documento (DTD) ou definição de esquema XML (XSD). Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Validar**.|  
 |**XSLT**|Executa transformações de XSL em documentos XML. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **XSLT**.|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
  **SourceType**  
  Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -198,7 +197,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -206,7 +205,7 @@ ms.lasthandoff: 05/03/2018
  **ValidationType**  
  Selecione o tipo de validação. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**DTD**|Use uma DTD.|  
 |**XSD**|Use um esquema XSD. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **ValidationType**.|  
@@ -223,7 +222,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -261,7 +260,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -269,7 +268,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -307,7 +306,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -315,7 +314,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -338,7 +337,7 @@ ms.lasthandoff: 05/03/2018
  **XPathOperation**  
  Selecione o tipo de resultado XPath. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Evaluation**|Retorna os resultados de uma função XPath.|  
 |**Lista de nós**|Retorna os nós selecionados como um fragmento XML.|  
@@ -350,7 +349,7 @@ ms.lasthandoff: 05/03/2018
  **XPathStringSourceType**  
  Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -387,7 +386,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -395,7 +394,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  Selecione o tipo de destino do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -418,7 +417,7 @@ ms.lasthandoff: 05/03/2018
  **DiffAlgorithm**  
  Selecione o algoritmo Diff para ser usado ao comparar documentos. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Auto**|Deixe a tarefa XML determinar se o algoritmo rápido ou preciso deve ser usado.|  
 |**Rápido**|Use um algoritmo Diff rápido, porém menos preciso.|  
@@ -427,7 +426,7 @@ ms.lasthandoff: 05/03/2018
  **Opções de Diff**  
  Defina as opções de Diff a serem aplicadas à operação Diff. As opções estão listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Especifique se a declaração XML deve ser comparada.|  
 |**IgnoreDTD**|Especifique se a DTD deve ser ignorada.|  
@@ -462,7 +461,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -470,7 +469,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -508,7 +507,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -516,7 +515,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  

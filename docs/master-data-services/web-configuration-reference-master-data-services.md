@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0debbd16d8f250d5ee59ef0120a19485d2d5e289
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdc430e3e74043896df8b25993dc78cf8d8ed70e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330090"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Referência de configuração da Web (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="webconfig-elements"></a>Elementos do Web.Config  
  O arquivo Web.config contém um elemento [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] personalizado, **\<masterDataServices>**, além dos elementos de configuração padrão IIS, .NET Framework, ASP.NET e WCF (Windows Communication Foundation). A tabela a seguir descreve os elementos incluídos no arquivo Web.config.  
   
-|Elemento de configuração|Description|  
+|Elemento de configuração|Descrição|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Elemento personalizado. Conecta o serviço Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**connectionStrings**|Elemento ASP.NET. Para obter mais informações, consulte [Elemento connectionStrings (Esquema de Configuração do ASP.NET)](http://go.microsoft.com/fwlink/?LinkId=178347) na Biblioteca MSDN.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="elements-and-attributes"></a>Elementos e atributos  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |**instância**|Elemento filho. Contém atributos que especificam informações para o serviço Web e a cadeia de conexão do banco de dados.|  
 |**virtualPath**|Atributo. Especifica o caminho virtual do aplicativo Web e serviço Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Isso corresponde ao atributo **path** do elemento **\<application>** sob o elemento **\<site>** no arquivo IIS ApplicationHost.config.|  

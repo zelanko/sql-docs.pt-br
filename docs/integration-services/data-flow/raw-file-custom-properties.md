@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66bcdd48830e2cf5b5311c34d4a8dc72b4f07ce2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebc381b7698340f1fa91e01d9b8520c01f9d3128
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329170"
 ---
 # <a name="raw-file-custom-properties"></a>Propriedades personalizadas de arquivo bruto
   **Propriedades personalizadas de fontes**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da fonte de Arquivo Bruto. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Description|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar os dados brutos. Os valores possíveis são **Nome do arquivo** (0) e **Nome do arquivo da variável** (1). O valor padrão é **Nome do arquivo** (0).|  
 |FileName|Cadeia de caracteres|O caminho e o nome do arquivo do arquivo de origem.|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas do destino Arquivo Bruto. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Description|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|Um valor que especifica se a propriedade FileName contém um nome de arquivo ou o nome de uma variável que contenha um nome de arquivo. As opções são **Nome do arquivo** (0) e **Nome do arquivo da variável** (1).|  
 |FileName|Cadeia de caracteres|O nome do arquivo no qual o destino Arquivo Bruto grava.|  
