@@ -69,13 +69,13 @@
 #### [Analisar dados no contexto de computação local](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Mover dados entre o SQL Server e o arquivo XDF](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Criar uma simulação simples](tutorials/deepdive-create-a-simple-simulation.md)
-### [R inserido em procedimentos armazenados e funções](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [1 - obtenha dados e scripts](tutorials/sqldev-download-the-sample-data.md)
-#### [2 - configurar o ambiente](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [3 - visualizar dados usando R em procedimentos armazenados](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [4 - criar recursos de dados usando R nas funções T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [5 - treinar e salvar em SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [6 - prever resultados](tutorials/sqldev-operationalize-the-model.md)
+### [Funções e procedimentos armazenados no R inserido](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1 – Obter dados e scripts](tutorials/sqldev-download-the-sample-data.md)
+#### [2 – Configurar o ambiente](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3 – Visualizar dados usando R em procedimentos armazenados](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4 – Criar recursos de dados usando o R em funções T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5 – Treinar e salvar em SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6 – Prever resultados](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: executar o Python usando o T-SQL](tutorials/run-python-using-t-sql.md)
@@ -134,7 +134,7 @@
 ### [Modificar o pool de contas de usuário para os serviços de Machine Learning do SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [Adicionar SQLRUserGroup como um usuário de banco de dados](r/add-sqlrusergroup-to-database.md)
 ### [Implantar e consumir modelos usando serviços Web](operationalization-with-mrsdeploy.md)
-### [Gerenciar e monitorar soluções](r/managing-and-monitoring-r-solutions.md
+### [Gerenciar e monitorar soluções](r/managing-and-monitoring-r-solutions.md)
 ### [Governança de recursos para serviços do Machine Learning](r/resource-governance-for-r-services.md)
 ### [Criar um pool de recursos para o aprendizado de máquina](r/how-to-create-a-resource-pool-for-r.md)
 ### [Eventos estendidos para serviços do Machine Learning](r/extended-events-for-sql-server-r-services.md)
@@ -159,9 +159,9 @@
 ## [Configurar uma máquina virtual](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ## [Solução de problemas](machine-learning-troubleshooting-faq.md)
 ### [Coleta de Dados](data-collection-ml-troubleshooting-process.md)
-### [Erros de atualização e instalação](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [Barra inicial e erros de execução de scripts externos](common-issues-external-script-execution.md)
-### [Erros de script R](r-script-execution-errors.md)
+### [Instalar e atualizar erros](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Launchpad e erros de execução de script externo](common-issues-external-script-execution.md)
+### [Erros de script de R](r-script-execution-errors.md)
 
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
@@ -170,4 +170,4 @@
 
 ## Fóruns
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Servidor de aprendizado de máquina](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
