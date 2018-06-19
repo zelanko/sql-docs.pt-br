@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582128"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, o utilitário sqlcmd não dará suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Secundárias ativas: Réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
  **-M** *multisubnet_failover*  
- Sempre especifique **-M** ao conectar-se ao ouvinte de um grupo de disponibilidade do SQL Server ou a uma instância de cluster de failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre [! INCLUIR[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspxe [ Secundárias ativas: réplicas secundárias legíveis (sempre em grupos de disponibilidade)] (https://msdn.microsoft.com/library/ff878253.aspx.  
+ Sempre especifique **-M** ao conectar-se ao ouvinte de um grupo de disponibilidade do SQL Server ou a uma instância de cluster de failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre [! INCLUIR[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), e [secundárias ativas: réplicas secundárias legíveis (sempre em grupos de disponibilidade)](https://msdn.microsoft.com/library/ff878253.aspx).  
   
  **-N**  
  Essa opção é usada pelo cliente para solicitar uma conexão criptografada.  
