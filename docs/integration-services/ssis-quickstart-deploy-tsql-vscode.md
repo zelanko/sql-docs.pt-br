@@ -1,28 +1,24 @@
 ---
 title: Implantar um projeto do SSIS com Transact-SQL (VSCode) | Microsoft Docs
-ms.date: 09/25/2017
-ms.topic: conceptual
+ms.date: 05/21/2018
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44d41b54ff2b422b66e0be2bfe42497fa1ff458e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329250"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Implantar um projeto do SSIS por meio do Visual Studio Code com o Transact-SQL
 Este guia de início rápido demonstra como usar o Visual Studio Code para se conectar ao banco de dados do Catálogo do SSIS e, em seguida, usar instruções do Transact-SQL para implantar um projeto do SSIS no Catálogo do SSIS.
-
-> [!NOTE]
-> O método descrito neste artigo não está disponível quando você se conecta a um servidor de Banco de Dados SQL do Azure com o VSCode. O procedimento armazenado `catalog.deploy_project` espera o caminho para o arquivo `.ispac` no sistema de arquivos local.
 
 O Visual Studio Code é um editor de código para Windows, macOS e Linux que dá suporte a extensões, incluindo a extensão `mssql` para se conectar ao Microsoft SQL Server, o Banco de Dados SQL do Azure ou o SQL Data Warehouse do Azure. Para obter mais informações sobre o VSCode, consulte [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -31,6 +27,16 @@ O Visual Studio Code é um editor de código para Windows, macOS e Linux que dá
 Antes de começar, verifique se você instalou a versão mais recente do Visual Studio Code e carregue a extensão `mssql`. Para baixar essas ferramentas, consulte as seguintes páginas:
 -   [Baixar o Visual Studio Code](https://code.visualstudio.com/Download)
 -   [extensão mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>Plataformas compatíveis
+
+Você pode usar as informações neste guia de início rápido para implantar um projeto do SSIS nas seguintes plataformas:
+
+-   SQL Server no Windows.
+
+Você não pode usar as informações neste guia de início rápido para implantar um pacote do SSIS para o Banco de Dados SQL do Azure. O procedimento armazenado `catalog.deploy_project` espera o caminho para o arquivo `.ispac` no sistema de arquivos local. Para obter mais informações sobre como implantar e executar pacotes no Azure, veja [Remover e deslocar cargas de trabalho do SQL Server Integration Services para a nuvem](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Você não pode usar as informações neste guia de início rápido para implantar um pacote do SSIS no SQL Server em Linux. Para obter mais informações sobre como executar pacotes no Linux, veja [Extrair, transformar e carregar dados no Linux com o SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Definir o modo de linguagem para SQL no VSCode
 
@@ -46,9 +52,6 @@ Para habilitar comandos do `mssql` e T-SQL IntelliSense, defina o modo de lingua
 
 Use o Visual Studio Code para estabelecer uma conexão com o Catálogo do SSIS.
 
-> [!IMPORTANT]
-> Antes de continuar, verifique se você tem suas informações de servidor, banco de dados e logon à disposição. Se você alterar o foco do Visual Studio Code depois de começar a inserir as informações de perfil de conexão, você precisará reiniciar a criação do perfil de conexão.
-
 1. No VSCode, pressione **CTRL + SHIFT + P** (ou **F1**) para abrir a paleta de comandos.
 
 2. Digite **sqlcon** e pressione **ENTER**.
@@ -61,7 +64,7 @@ Use o Visual Studio Code para estabelecer uma conexão com o Catálogo do SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | O nome do servidor totalmente qualificado |  |
    | **Nome do banco de dados** | **SSISDB** | O nome do banco de dados ao qual se conectar. |
-   | **Autenticação** | Logon do SQL| Este guia de início rápido usa a autenticação do SQL. |
+   | **Autenticação** | Logon do SQL | |
    | **User name** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
    | **Senha (logon do SQL)** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
    | **Salvar senha?** | Sim ou Não | Se você não deseja inserir a senha a cada vez, selecione Sim. |

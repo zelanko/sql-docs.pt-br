@@ -15,18 +15,16 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63f7f18921d856753162a22e8fbf079834105164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce0a1a62d294f510a9521ef38d178157244f1de2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021353"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703297"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
   A extensão de renderização HTML renderiza um relatório paginado no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.  
-  
- A extensão de renderização HTML é a extensão de renderização padrão para relatórios exibidos em um navegador, incluindo quando executados no portal da Web do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
-  
+
  A extensão de renderização HTML é a extensão de renderização padrão para relatórios exibidos em um navegador, incluindo quando executados no portal da Web do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . A extensão de renderização HTML pode renderizar HTML como um fragmento ou como um documento HTML completo. Se o HTML for um fragmento, as marcas **HEAD**, **HTML**e **BODY** do documento HTML serão removidas. Somente o conteúdo da marca **BODY** será renderizado. Isso é útil para inserir o HTML no HTML produzido por outro aplicativo.  
   
  Em alguns cenários, parâmetros de relatório podem ser usados para iniciar ataques de injeção de script durante a renderização de relatórios em HTML. Para obter mais informações sobre como proteger relatórios, consulte [Protegendo Relatórios e Recursos](../../reporting-services/security/secure-reports-and-resources.md).  

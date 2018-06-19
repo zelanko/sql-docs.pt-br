@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19f244d7febe15f03b5510ba484b985044ad3548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f4162789cf09c326b3b5d016e22bafed9fe790b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330130"
 ---
 # <a name="system-settings-master-data-services"></a>Configurações do sistema (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="General"></a> Configurações gerais  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |**Tempo limite da conexão de banco de dados**|**DatabaseConnectionTimeOut**|O número de segundos permitido pelo banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para que uma conexão seja concluída. Se a conexão não for concluída dentro desse período, ela será cancelada e um erro será retornado. O valor padrão é **60** segundos (1 minuto).|  
 |**Tempo limite do comando de banco de dados**|**DatabaseCommandTimeOut**|O número de segundos permitido pelo banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para que um comando seja concluído. Se o comando não for concluído dentro desse período, ele será cancelado e um erro será retornado. O valor padrão é **3600** segundos (60 minutos).|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Versions"></a> Configurações de gerenciamento de versão  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |**Copiar somente as versões confirmadas**|**CopyOnlyCommittedVersion**|No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], determina se os usuários podem copiar versões de modelos com um status **Confirmado**ou versões com qualquer status. O valor padrão é **Yes** ou **1**, indicando que os usuários podem copiar somente versões com status **Confirmado** . Altere para **No** ou **2** para permitir que os usuários copiem todas as versões.|  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Staging"></a> Configurações de preparação  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |**Registrar em log todas as transações de preparação**|**StagingTransactionLogging**|Aplica-se somente ao SQL Server 2008 R2. Determina se as transações serão registradas em log quando os registros de preparação forem carregados no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . O valor padrão é **Off** or **2**. Altere para **On** ou **1** para ativar o registro em log.|  
 |**Intervalo do lote de preparação**|**StagingBatchInterval**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número de segundos depois que você seleciona **Iniciar Lotes** para que seu lote seja processado. O valor padrão é **60** segundos (1 minuto).|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Explorer"></a> Configurações do Gerenciador  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |**Número de membros na hierarquia por padrão**|**HierarchyChildNodeLimit**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número máximo de membros exibidos em cada nó de hierarquia antes que **...mais...** seja exibido. Você pode clicar em **...mais...** para mostrar o próximo grupo de membros. O valor padrão é **50**.|  
 |**Mostrar nomes na hierarquia por padrão**|**ShowNamesInHierarchy**|Na área funcional do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , determina a configuração padrão que é selecionada quando você exibe hierarquias.<br /><br /> O valor padrão é **Yes** ou **1**, indicando que são exibidos o nome e o código de cada membro. Altere para **No** ou **2** para exibir somente o código.|  
@@ -94,14 +94,14 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="xls"></a> Configurações de Suplemento para Excel  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |Mostrar Suplemento para texto do Excel na página inicial do site|ShowAddInText|Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , mostre um link para usuários baixarem o [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|  
 |Caminho de instalação do Suplemento para Excel na página inicial do site|AddInURL|Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , se o link para o [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] for exibido, o local para onde os usuários se dirigem quando clicam no link.|  
   
 ##  <a name="BusinessRules"></a> Configurações de regra de negócio  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |**Número usado para incrementar novas regras de negócio**|**BusinessRuleDefaultPriorityIncrement**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número pelo qual a prioridade de cada nova regra de negócio é incrementada. O valor padrão é **10**.|  
 |**Número de membros para os quais aplicar as regras de negócio**|**BusinessRuleRealtimeMemberCount**|Na área funcional do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número máximo de membros na grade aos quais as regras de negócio serão aplicadas. No [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], o número máximo de membros na planilha ativa aos quais as regras de negócio serão aplicadas. O valor padrão é **10000**.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Notifications"></a> Configurações de notificação  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |**URL do Master Data Manager para notificações**|**MDMRootURL**|A URL do aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que é usada no link em notificações por email; por exemplo, `http://constoso/mds`.|  
 |**Intervalo de emails de notificação**|**NotificationInterval**|A frequência, em segundos, de envio de emails de notificação. O valor padrão é **120** segundos (2 minutos).|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Security"></a> Configurações de segurança  
   
-|Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , a frequência, em segundos, com que as permissões de usuário e grupo definidas na guia **Membros da Hierarquia** são aplicadas. O valor padrão é **3600** segundos (60 minutos).|  
   

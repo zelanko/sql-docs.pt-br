@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e8f5dbf87ec79db858d550636c542173cb66883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac66951374390b1d2b148295c1097dc5faee6a91
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403828"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Editor de Origem de SAP BW (página Avançado)
   Use a página **Avançado** do **Editor de Fonte SAP BW** para especificar a regra de conversão de cadeia de caracteres e o período de tempo limite, e também para redefinir o status de uma ID de Solicitação específica.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
  **Conversão da cadeia de caracteres**  
  Especifique a regra para aplicar à conversão de cadeia de caracteres.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Conversão automática de cadeia de caracteres**|Converta todas as cadeias de caracteres para **nvarchar** quando o sistema SAP Netweaver BW for um sistema Unicode. Caso contrário, converta todas as cadeias de caracteres para **varchar**.|  
 |**Converter cadeias de caracteres em varchar**|Converta todas as cadeias de caracteres para **varchar**.|  

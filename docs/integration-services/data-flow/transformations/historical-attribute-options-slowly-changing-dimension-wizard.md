@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcf6e290bf12600dee4b6483ca305507a5888973
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eacef877fe8cd803a06d3cce2b75f7eb445f8b3c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333210"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta)
   Use a caixa de diálogo **Opções de Atributo Histórico** para mostrar atributos históricos por datas de início e de término ou para registrar atributos históricos em uma coluna criada especialmente para este propósito.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  **Use uma única coluna para mostrar os registros atual e expirado**  
  Se você optar por usar uma única coluna para registrar o status de atributos históricos, estarão disponíveis as seguintes opções:  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Coluna para indicar o registro atual**|Selecione uma coluna na qual indicar o registro atual.|  
 |**Valor atual**|Use **Verdadeiro** ou **Atual** para mostrar se o registro é atual.|  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  **Use as datas de início e de término para identificar os registros atual e expirado**  
  A tabela de dimensão desta opção deve incluir uma coluna de data. Se você optar por mostrar atributos históricos por datas de início e de término, estarão disponíveis as seguintes opções:  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Coluna da data de início**|Selecione a coluna na tabela de dimensões que conterá a data de início.|  
 |**Coluna da data de término**|Selecione a coluna na tabela de dimensões que conterá a data de término.|  

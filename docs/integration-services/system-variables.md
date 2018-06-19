@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a154155683bff4521a088552e299d34f72c3632e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331630"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um conjunto de variáveis de sistema que armazena informações sobre o pacote em execução e seus objetos. Essas variáveis podem ser usadas em expressões e expressões de propriedade para personalizar pacotes, contêineres, tarefas e manipuladores de eventos.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-packages"></a>Variáveis do sistema para pacotes  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para pacotes.  
   
-|Variável do sistema|Tipo de dados|Description|  
+|Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|O manipulador de um objeto de Evento do Windows que a tarefa pode sinalizar para indicar que a execução da tarefa deve ser interrompida.|  
 |**ContainerStartTime**|DateTime|A hora de início do contêiner.|  
@@ -64,14 +63,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-containers"></a>Variáveis do sistema para contêineres  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para os contêineres Loop For, Loop Foreach e Sequência.  
   
-|Variável do sistema|Tipo de dados|Description|Contêiner|  
+|Variável do sistema|Tipo de dados|Descrição|Contêiner|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|A localidade que o contêiner usa.|Contêiner Loop For<br /><br /> Contêiner Loop Foreach<br /><br /> Contêiner de sequência|  
   
 ## <a name="system-variables-for-tasks"></a>Variáveis do sistema para tarefas  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para tarefas.  
   
-|Variável do sistema|Tipo de dados|Description|  
+|Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|Cadeia de caracteres|O nome da tarefa.|  
 |**LocaleId**|Int32|A localidade que a tarefa usa.|  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-event-handlers"></a>Variáveis do sistema para Manipuladores de Eventos  
  A tabela seguinte descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para manipuladores de eventos. Nem todas as variáveis estão disponíveis para todos os manipuladores de eventos.  
   
-|Variável do sistema|Tipo de dados|Description|Manipulador de eventos|  
+|Variável do sistema|Tipo de dados|Descrição|Manipulador de eventos|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Cancelar**|Booliano|Indica se a execução do manipulador de eventos é interrompida quando ocorre um erro, aviso ou cancelamento de consulta.|Manipulador de eventos OnError<br /><br /> Manipulador de eventos OnWarning<br /><br /> Manipulador de eventos OnQueryCancel|  
 |**ErrorCode**|Int32|O identificador do erro.|Manipulador de eventos OnError<br /><br /> Manipulador de eventos OnInformation<br /><br /> Manipulador de eventos OnWarning|  

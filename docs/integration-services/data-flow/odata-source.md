@@ -3,12 +3,10 @@ title: OData Source | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdf20d18d4397b0d8ed2f0598b287a88d03caf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401428"
 ---
 # <a name="odata-source"></a>Origem do OData
 Use o componente OData Source em um pacote do SSIS para consumir os dados do serviço do OData (Protocolo Open Data). O componente oferece suporte para os protocolos OData v3 e v4.  
@@ -37,7 +36,10 @@ Use o componente OData Source em um pacote do SSIS para consumir os dados do ser
 O OData Source inclui suporte para as seguintes fontes de dados:
 -   Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online
 -   Listas do SharePoint. Para ver todas as listas em um servidor do SharePoint, use a seguinte URL: http://\<server>/_vti_bin/ListData.svc. Para obter mais informações sobre as convenções de URL do SharePoint, consulte [Interface REST do SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
-  
+
+> [!NOTE]
+> O componente OData Source não é compatível com tipos complexos, como itens de múltipla escolha, nas listas do SharePoint.
+
 ## <a name="odata-format-and-performance"></a>Desempenho e Formato OData
  A maioria dos serviços do OData podem retornar resultados em vários formatos. Você pode especificar o formato do conjunto de resultados usando a opção de consulta `$format`. Os formatos como JSON e JSON Light são mais eficientes do que o ATOM ou XML, e podem oferecer um melhor desempenho ao transferir grandes quantidades de dados. A tabela a seguir fornece os resultados dos testes de exemplo. Como você pode ver, houve um ganho de desempenho de 30% a 53% ao trocar do ATOM para o JSON e um ganho de desempenho de 67% ao trocar do ATOM para o novo formato JSON Light (disponível nos Serviços de Dados do WCF 5.1).  
   
@@ -69,7 +71,7 @@ O OData Source inclui suporte para as seguintes fontes de dados:
  **Use o caminho de coleção ou de recurso**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Coleção|Recupere os dados da origem do OData usando um nome de coleção.|  
 |Caminho do recurso|Recupere os dados da origem do OData usando um caminho de recurso.|  

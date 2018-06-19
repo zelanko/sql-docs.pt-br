@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -47,11 +45,12 @@ caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64627ae61041de97eba4101cf149e5d073aa0d55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96c1a70d341160c4916fcfe2a067b4da79df2021
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332200"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos Data Flow no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muitos objetos Data Flow têm propriedades personalizadas específicas. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Agregação. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|Um valor entre 1 e 100 que especifica a porcentagem para a extensão da memória durante a agregação. O valor padrão dessa propriedade é **25**.|  
 |CountDistinctKeys|Integer|Um valor que especifica o número exato de contagens diferentes que a agregação pode gravar. Se um valor de CountDistinctScale for especificado, o valor em CountDistinctKeys terá precedência.|  
@@ -92,14 +91,14 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da saída da transformação Agregação. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |Chaves|Integer|Um valor que especifica o número exato de chaves Agrupar por que pode ser gravado pela agregação. Se um valor de KeyScale for especificado, o valor em Keys terá preferência.|  
 |KeyScale|Inteiro (enumeração)|Um valor que descreve aproximadamente quantos valores de chave Agrupar por podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) — indica até 500.000 valores de chave.<br /><br /> **Médio** (2) — indica até 5 milhões de valores de chave.<br /><br /> **Alto** (3) — indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) — indica que nenhum valor de KeyScale foi usado.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Agregação. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |AggregationColumnId|Integer|O **LineageID** de uma coluna que participa de GROUP BY ou funções de agregação.|  
 |AggregationComparisonFlags|Integer|Um valor que especifica como a transformação Agregação compara dados de cadeia de caracteres em uma coluna. Para obter mais informações, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
@@ -117,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Auditoria. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |LineageItemSelected|Inteiro (enumeração)|O item de auditoria selecionado para saída. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **GUID de instância de execução** (0)<br /><br /> **Hora de início de execução** (4)<br /><br /> **Nome do computador** (5)<br /><br /> **ID do Pacote** (1)<br /><br /> **Nome do pacote** (2)<br /><br /> **ID da Tarefa** (8)<br /><br /> **Nome da tarefa** (7)<br /><br /> **Nome de usuário** (6)<br /><br /> **ID da Versão** (3)|  
   
@@ -130,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades da transformação Cache. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ConnectionManager|Cadeia de caracteres|Especifica o nome do gerenciador de conexões.|  
 |ValidateExternalMetadata|Booliano|Indica se a transformação Cache é validada usando fontes de dados externas no momento de design. Se a propriedade for definida como **False**, a validação das fontes de dados externas acontecerá em tempo de execução.<br /><br /> O valor padrão é **True**.|  
@@ -143,7 +142,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Mapa de Caracteres. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Um valor que especifica o **LineageID** da coluna de entrada que é a fonte da coluna de saída.|  
 |MapFlags|Inteiro (enumeração)|Um valor que especifica as operações de cadeia de caracteres que a transformação Mapa de Caracteres executa na coluna. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Inversão de byte** (2)<br /><br /> **Largura inteira** (6)<br /><br /> **Meia largura** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Caixas linguísticas** (7)<br /><br /> **Minúsculas** (0)<br /><br /> **Chinês simplificado** (8)<br /><br /> **Chinês tradicional**(9)<br /><br /> **Letras maiúsculas** (1)|  
@@ -157,7 +156,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da saída da transformação Divisão Condicional. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |EvaluationOrder|Integer|Um valor que especifica a posição de uma condição, associado a uma saída, na lista de condições avaliada pela transformação Divisão Condicional. As condições são avaliadas do valor mais baixo para o valor mais alto.|  
 |Expression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas por identificadores de linhagem.|  
@@ -173,7 +172,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Copiar Coluna. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |copyColumnId|Integer|O **LineageID** da coluna de entrada da qual a coluna de saída é copiada.|  
   
@@ -186,7 +185,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Conversão de Dados. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é **False**. Para obter mais informações, consulte [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). para obter informações sobre a ferramenta de configuração e recursos adicionais.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Conversão de Dados**, mas pode ser definida usando o **Editor Avançado**.|  
 |SourceInputColumnLineageId|Integer|O **LineageID** da coluna de entrada que é fonte da coluna de saída.|  
@@ -200,7 +199,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Consulta de Mineração de Dados. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|Cadeia de caracteres|O identificador exclusivo do objeto de conexão.|  
 |ASConnectionString|Cadeia de caracteres|A cadeia de conexão com um projeto do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou com um banco de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
@@ -219,7 +218,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada e das colunas de saída da transformação Coluna Derivada. Quando você opta por adicionar a coluna derivada como uma coluna nova, essas propriedades personalizadas se aplicam à nova coluna de saída; quando você opta por substituir o conteúdo de uma coluna de entrada existente com os resultados derivados, essas propriedades personalizadas se aplicam à coluna de entrada existente. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |Expression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pela propriedade **LineageID** da coluna.|  
 |FriendlyExpression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pelos nomes.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
@@ -233,7 +232,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Exportar Coluna. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |AllowAppend|Booliano|Um valor que especifica se a transformação acrescenta dados a um arquivo existente. O valor padrão dessa propriedade é **False**.|  
 |ForceTruncate|Booliano|Um valor que especifica se a transformação trunca arquivos existentes antes de gravar dados. O valor padrão dessa propriedade é **False**.|  
@@ -249,7 +248,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Importar Coluna. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Booliano|Um valor que especifica se a transformação Importar Coluna deve esperar por uma marca de ordem de byte (BOM). Uma BOM só será esperada se os dados tiverem o tipo de dados de DT_NTEXT.|  
 |FileDataColumnID|Integer|Um valor que identifica a coluna que contém os dados inseridos pela transformação no fluxo de dados. Na coluna de dados a ser inserida, essa propriedade tem um valor de 0; na coluna que contém os caminhos de arquivo de origem, essa propriedade contém o **LineageID** da coluna de dados a ser inserida.|  
@@ -263,7 +262,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Agrupamento Difuso. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |Delimitadores|Cadeia de caracteres|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto-e-vírgula (;), dois-pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), barra vertical ou pipe (&#124;), número (#), asterisco (*), circunflexo (^) e porcentagem (%).|  
 |Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de **True** destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é **False**.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação do Agrupamento Difuso**, mas pode ser definida usando o **Editor Avançado**.|  
@@ -272,7 +271,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Agrupamento Difuso. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Inteiro (enumeração)|Um valor que especifica se a transformação executa uma correspondência difusa ou uma correspondência exata. Os valores válidos são **Exato** e **Difuso**. O valor padrão para esta propriedade é **Difuso**.|  
 |FuzzyComparisonFlags|Inteiro (enumeração)|Um valor que especifica como a transformação compara os dados de cadeia de caracteres em uma coluna. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Para obter mais informações, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
@@ -282,7 +281,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Agrupamento Difuso. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |ColumnType|Inteiro (enumeração)|Um valor que identifica o tipo de coluna de saída. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Undefined** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonica**l (6)|  
 |InputID|Integer|O **LineageID** da coluna de entrada correspondente.|  
@@ -296,7 +295,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa Difusa. Todas as propriedades, exceto **ReferenceMetadataXML** , são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Booliano|Especifica se uma cópia da tabela de referência deve ser feita para a criação do índice de pesquisa difusa e pesquisas subsequentes. O valor padrão dessa propriedade é **True**.|  
 |Delimitadores|Cadeia de caracteres|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto e vírgula (;), dois pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;). sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
@@ -313,7 +312,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Pesquisa Difusa. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Integer|Um valor que especifica como a transformação compara os dados de cadeia de caracteres em uma coluna. Para obter mais informações, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |FuzzyComparisonFlagsEx|Inteiro (enumeração)|Um valor que especifica quais sinalizadores de comparação estendida são usados pela transformação. Os valores podem incluir **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**e **NoMapping**. **NoMapping** não pode ser usado com outros sinalizadores.|  
@@ -326,7 +325,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Em colunas de saída que contêm valores de passagem das colunas de entrada correspondentes, CopyFromReferenceColumn fica vazio e SourceInputColumnLineageID contém o **LineageID** da coluna de entrada correspondente. Em colunas de saída que contêm resultados de pesquisa, CopyFromReferenceColumn contém o nome da coluna de pesquisa e SourceInputColumnLineageID fica vazio.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ColumnType|Inteiro (enumeração)|Um valor que identifica o tipo de coluna de saída para colunas que a transformação adiciona à saída. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Undefined** (0)<br /><br /> **Similarity** (1)<br /><br /> **Confiança** (2)<br /><br /> **ColumnSimilarity** (3)|  
 |CopyFromReferenceColumn|Cadeia de caracteres|Um valor que especifica o nome da coluna na tabela de referência que fornece o valor em uma coluna de saída.|  
@@ -341,7 +340,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa. Todas as propriedades, exceto **ReferenceMetadataXML** , são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |CacheType|Inteiro (enumeração)|O tipo de cache da tabela de pesquisa. Os valores são **Cheio** (0), **Parcial** (1) e **Nenhum** (2). O valor padrão dessa propriedade é **Cheio**.|  
 |DefaultCodePage|Integer|A página de código padrão a ser usada quando informações de página de código não estão disponíveis na fonte de dados.|  
@@ -355,14 +354,14 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Pesquisa. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |CopyFromReferenceColumn|Cadeia de caracteres|O nome da coluna na tabela de referência da qual uma coluna é copiada.|  
 |JoinToReferenceColumns|Cadeia de caracteres|O nome da coluna na tabela de referência à qual uma de coluna de origem é unida.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Pesquisa. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |CopyFromReferenceColumn|Cadeia de caracteres|O nome da coluna na tabela de referência da qual uma coluna é copiada.|  
   
@@ -375,7 +374,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Mesclar Junção.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |JoinType|Inteiro (enumeração)|Especifica se a junção é uma junção interna (2), esquerda externa (1) ou cheia (0).|  
 |MaxBuffersPerInput|Integer|Não é mais preciso configurar o valor da propriedade **MaxBuffersPerInput** , pois a Microsoft fez alterações que reduzem o risco de a transformação Junção de Mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.|  
@@ -384,7 +383,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Mesclar Junção. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |InputColumnID|Integer|O **LineageID** da coluna de entrada da qual são copiados dados para esta coluna de saída.|  
   
@@ -397,7 +396,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Comando OLE DB.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |CommandTimeOut|Integer|O número máximo de segundos em que o comando SQL pode ser executado antes que o tempo limite seja excedido. O valor **0** indica que não há limite de tempo. O valor padrão dessa propriedade é **0**.|  
 |DefaultCodePage|Integer|A página de código a ser usada quando informações de página de código não estão disponíveis na fonte de dados.|  
@@ -405,7 +404,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela seguinte descreve as propriedades personalizadas das colunas externas da transformação Comando OLE DB. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |DBParamInfoFlag|Integer (bitmask)|Um conjunto de sinalizadores que descrevem características de parâmetro. Para obter mais informações, consulte o DBPARAMFLAGSENUM na documentação de OLE DB na Biblioteca MSDN.|  
   
@@ -418,14 +417,14 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Amostragem Percentual.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|Integer|A semente usada pelo gerador aleatório de números. O valor padrão desta propriedade é **0**, indicando que a transformação usa uma contagem de tiques.|  
 |SamplingValue|Integer|O tamanho da amostra como uma porcentagem da fonte.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela a seguir descreve as propriedades personalizadas das saídas da transformação Amostragem Percentual. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |Selecionado|Booliano|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, Selecionado é definido como **True**, e na saída não selecionada, Selecionado é definido como **False**.|  
   
@@ -436,19 +435,19 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="pivot"></a> Propriedades personalizadas da transformação Dinâmica  
  A tabela a seguir descreve as propriedades personalizadas dos componentes da transformação Dinâmica.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |**PassThroughUnmatchedPivotKeyts**|Booliano|Defina como **True** para configurar a transformação Dinâmica para ignorar as linhas que contêm valores não reconhecidos na coluna Chave Dinâmica e gerar todos os valores de chave dinâmica para uma mensagem de log, quando o pacote é executado.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Dinâmica. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |PivotUsage|Inteiro (enumeração)|Um valor que especifica a função de uma coluna quando o conjunto de dados é dinamizado.<br /><br /> **0**:<br />                      A coluna não é dinamizada e os valores de coluna são passados para a saída de transformação.<br /><br /> **1**:<br />                      A coluna faz parte da chave definida que identifica uma ou mais linhas como parte de um conjunto. Todas as linhas de entrada com a mesma chave definida são combinadas em uma linha de saída.<br /><br /> **2**:<br />                      A coluna é dinâmica. Pelo menos uma coluna é criada a partir de cada valor da coluna.<br /><br /> **3**:<br />                      Os valores desta coluna são colocados em colunas, que são criadas como resultado da dinamização.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Dinâmica. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|Cadeia de caracteres|Um dos possíveis valores da coluna assinalada como a chave dinâmica pelo valor de sua propriedade PivotUsage.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
 |SourceColumn|Integer|O **LineageID** de uma coluna de entrada que contém um valor dinâmico ou -1. O valor de -1 indica que a coluna não é usada em uma operação dinâmica.|  
@@ -460,7 +459,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Contagem de Linhas. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |VariableName|Cadeia de caracteres|O nome da variável que contém a contagem de linhas.|  
   
@@ -473,20 +472,20 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Amostragem de Linhas. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|Integer|A semente usada pelo gerador aleatório de números. O valor padrão desta propriedade é **0**, indicando que a transformação usa uma contagem de tiques.|  
 |SamplingValue|Integer|A contagem de linhas da amostra.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela a seguir descreve as propriedades personalizadas das saídas da transformação Amostragem de Linhas. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |Selecionado|Booliano|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, Selecionado é definido como **True**, e na saída não selecionada, Selecionado é definido como **False**.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Amostragem de Linhas. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Um valor que especifica o **LineageID** da coluna de entrada que é a fonte da coluna de saída.|  
   
@@ -499,7 +498,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas do Componente de Script. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |ReadOnlyVariables|Cadeia de caracteres|Uma lista de variáveis separadas por vírgulas disponível para o Componente de Script para acesso em modo somente leitura.|  
 |ReadWriteVariables|Cadeia de caracteres|Uma lista de variáveis separadas por vírgulas disponível para o Componente de Script para acesso em modo leitura/gravação.|  
@@ -513,7 +512,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Dimensão de Alteração Lenta. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|Cadeia de caracteres|A cláusula WHERE na instrução SELECT que seleciona a linha atual entre linhas com a mesma chave de negócio.|  
 |EnableInferredMember|Booliano|Um valor que especifica se atualizações de membros inferidos foram detectadas. O valor padrão dessa propriedade é **True**.|  
@@ -526,7 +525,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Dimensão de Alteração Lenta. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ColumnType|Inteiro (enumeração)|O tipo de atualização da coluna. Os valores são: **Atributo de Alteração** (2), **Atributo Fixo** (4), **Atributo Histórico** (3), **Chave** (1) e **Outro** (0).|  
   
@@ -539,21 +538,21 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Classificar. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |EliminateDuplicates|Booliano|Especifica se a transformação remove linhas duplicadas da saída da transformação. O valor padrão dessa propriedade é **False**.|  
 |MaximumThreads|Integer|Contém o número máximo de threads que a transformação pode usar para classificar. Um valor **0** indica que não há limite de threads. O valor padrão dessa propriedade é **0**.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Classificar. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |NewComparisonFlags|Integer (bitmask)|Um valor que especifica como a transformação compara os dados de cadeia de caracteres em uma coluna. Para obter mais informações, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |NewSortKeyPosition|Integer|Um valor que especifica a ordem de classificação da coluna. Um valor de 0 indica que os dados não são classificados nesta coluna.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Classificar. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |SortColumnID|Integer|O **LineageID** de uma coluna de classificação.|  
   
@@ -566,7 +565,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Extração de Termos. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|Integer|Um valor numérico que indica o número de vezes que um termo deve ocorrer antes de ser extraído. O valor padrão dessa propriedade é **2**.|  
 |IsCaseSensitive|Booliano|Um valor que especifica se a diferenciação de maiúsculas e minúsculas é usada na extração de substantivos e frases nominais. O valor padrão dessa propriedade é **False**.|  
@@ -586,7 +585,7 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa de Termos. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Booliano|Um valor que especifica se uma comparação que faz distinção entre letras maiúsculas e minúsculas é aplicável à correspondência do texto da coluna de entrada e do termo da pesquisa. O valor padrão dessa propriedade é **False**.|  
 |RefTermColumn|Cadeia de caracteres|O nome da coluna que contém os termos da pesquisa.|  
@@ -594,13 +593,13 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Pesquisa de Termos. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |InputColumnType|Integer|Um valor que especifica o uso da coluna. Os valores válidos são 0 (coluna de passagem), 1 (coluna de pesquisa) e 2 (coluna de passagem e de pesquisa).|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Pesquisa de Termos. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |CustomLineageID|Integer|O **LineageID** da coluna de entrada correspondente se o **InputColumnType** dela for 0 ou 2.|  
   
@@ -616,14 +615,14 @@ ms.lasthandoff: 05/03/2018
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Não Dinâmica. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de dados|Description|  
+|Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|O **LineageID** da coluna de saída para a qual coluna de entrada é mapeada. Um valor de -1 indica que a coluna de entrada não é mapeada para uma coluna de saída.|  
 |PivotKeyValue|Cadeia de caracteres|Um valor que é copiado em uma coluna de saída de transformação.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> No cenário da transformação Não Dinâmica descrito em [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), os Valores Dinâmicos são os valores de texto Ham, Coke, Milk, Beer e Chips. Serão exibidos como valores de texto na nova coluna Produto designada pela opção **Nome da Coluna de Valores de Chaves Dinâmicas** .|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Não Dinâmica. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de dados|Description|  
+|Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |PivotKey|Booliano|Indica se os valores na propriedade **PivotKeyValue** de colunas de entrada são gravados nesta coluna de saída.<br /><br /> No cenário da transformação Não Dinâmica descrito em [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), o nome da coluna de Valores Dinâmicos é **Produto** e designa a nova coluna **Produto** , na qual as colunas Ham, Coke, Milk, Beer e Chips não são dinâmicos.|  
   

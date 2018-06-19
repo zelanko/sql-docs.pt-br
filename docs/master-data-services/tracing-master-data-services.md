@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fd7ff134e77d9260ff402c48087945af5fc1a86d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4ac3f71827d48a42953f5d1fc65ed1ec05c5a31
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334880"
 ---
 # <a name="tracing-master-data-services"></a>Rastreamento (Master Data Services)
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 -   O formato de log é CSV. A tabela a seguir descreve o formato de log.  
   
-    |Elemento|Description|  
+    |Elemento|Descrição|  
     |-------------|-----------------|  
     |Hora|Quando ocorre a entrada de rastreamento.|  
     |CorrelationID|Uma ID de correlação é atribuída a cada solicitação. Todos os rastreamentos disparados por esta solicitação compartilharão a mesma ID de correlação.<br /><br /> Quando ocorre um erro na interface do usuário, a ID de correlação aparece na mensagem de erro.|  
