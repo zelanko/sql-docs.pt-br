@@ -15,11 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619533"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -226,7 +227,7 @@ SMO:
 
 - Foi corrigido um problema em que o SMO não conseguia buscar as propriedades AvailabilityReplica quando o agrupamento do servidor diferenciava maiúsculas de minúsculas (como resultado, o SSMS podia exibir uma mensagem de erro como "O identificador de várias partes ‘a.delimited’ não pôde ser associado".
 - Foi corrigido um problema na classe DatabaseScopedConfigurationCollection, em que os agrupamentos eram tratados incorretamente (como resultado, um SSMS em execução em um computador com um código de idioma turco podia exibir um erro como "A estimativa de cardinalidade herdada não é uma configuração de escopo válida" ao clicar com o botão direito do mouse em um banco de dados em execução em um servidor com um agrupamento com diferenciação de maiúsculas e minúsculas).
-- Foi corrigido um problema na classe JobServer, no qual o SMO não conseguia buscar as propriedades do SQL Agent em um SQL Server 2005 (como resultado, o SSMS gerava um erro como, "Não é possível atribuir um valor padrão a uma variável local. É necessário declarar a variável escalar ‘@ServiceStartMode’”, e, por fim, o nó do SQL Agent não era exibido no Pesquisador de Objetos).
+- Foi corrigido um problema na classe JobServer, no qual o SMO não conseguia buscar as propriedades do SQL Agent em um SQL Server 2005 (como resultado, o SSMS gerava um erro como, "Não é possível atribuir um valor padrão a uma variável local. É necessário declarar a variável escalar "\@ServiceStartMode", e, por fim, o nó do SQL Agent não era exibido no Pesquisador de Objetos).
 
 Modelos: 
 

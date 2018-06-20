@@ -1,7 +1,7 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 06/13/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 20ede2e4e67c7d3d5e3925e041d0baceda5446e5
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612221"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -77,6 +78,7 @@ Pacote de atualização do SQL Server Management Studio 17.7 (atualiza o 17.x pa
 
 > [!NOTE]
 > O módulo do SQL Server PowerShell agora é uma instalação separada por meio da Galeria do PowerShell. Para obter mais informações, consulte [Baixar o Módulo SQL Server PowerShell](download-sql-server-ps-module.md).
+
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 
@@ -137,7 +139,8 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 
 A seguir estão os problemas e as limitações desta versão 17.7:
 
-Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com novas edições *Uso Geral* ou *Comercialmente Crítico* do Banco de Dados SQL do Azure.
+- Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com novas edições *Uso Geral* ou *Comercialmente Crítico* do Banco de Dados SQL do Azure.
+- Pode ser observada alguma latência no visualizador XEvents. Este é um [problema conhecido no .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere a atualização para o NetFx 4.7.2.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>Desinstalar e reinstalar o SSMS
