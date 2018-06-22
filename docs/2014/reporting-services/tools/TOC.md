@@ -53,6 +53,7 @@
 ### [Propriedades do Servidor (página Histórico)](server-properties-history-page.md)
 ### [Propriedades do Servidor (página Log)](server-properties-logging-page.md)
 ### [Propriedades do Servidor (página Segurança)](server-properties-security-page-reporting-services.md)
+### [Propriedades do Servidor (página Avançado)](server-properties-advanced-page-reporting-services.md)
 ### [Propriedades de Função do Sistema](system-role-properties-management-studio.md)
 ### [Propriedades de Função do Usuário](user-role-properties-management-studio.md)
 # [Construtor de Relatórios](report-builder-authoring-environment-ssrs.md)
