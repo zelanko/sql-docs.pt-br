@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -36,18 +35,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3d2cf487958f09af1825456f605a9f73a44e27e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59beafe13efd6d4dc9064d73e4ff9924fa571815
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957491"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695967"
 ---
 # <a name="using-xml-data-types"></a>Usando tipos de dados XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introduziu um **xml** tipo de dados que permite armazenar documentos XML e fragmentos em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados. O **xml** tipo de dados é um tipo de dados internos em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e é em algumas semelhanças com outros tipos internos, como **int** e **varchar**. Como com outros tipos internos, você pode usar o **xml** tipo de dados como um tipo de coluna ao criar uma tabela; como um tipo de variável, um tipo de parâmetro ou um tipo de retorno de função; ou em funções CAST e CONVERT.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um **xml** tipo de dados que permite armazenar documentos XML e fragmentos em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados. O **xml** tipo de dados é um tipo de dados internos em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e é em algumas semelhanças com outros tipos internos, como **int** e **varchar**. Como com outros tipos internos, você pode usar o **xml** tipo de dados como um tipo de coluna ao criar uma tabela; como um tipo de variável, um tipo de parâmetro ou um tipo de retorno de função; ou em funções CAST e CONVERT.  
   
 ## <a name="programming-considerations"></a>Considerações sobre programação  
  O XML pode ser autodescritivo no sentido de que pode opcionalmente incluir um cabeçalho de XML que especifica a codificação do documento, por exemplo:  
@@ -74,7 +73,7 @@ ms.locfileid: "32957491"
   
  **ISequentialStream** deve ser usado para recuperação de documentos XML extensos. As mesmas técnicas usadas para outros tipos de valor extenso também se aplicam ao XML. Para obter mais informações, consulte [usando tipos de valor grande](../../../relational-databases/native-client/features/using-large-value-types.md).  
   
- Dados armazenados em colunas do tipo XML em um conjunto de linhas também podem ser recuperados, inseridos ou atualizados por um aplicativo por meio das interfaces comuns como **IRow:: Getcolumns**, **irowchange::**, e **ICommand:: execute**. De maneira semelhante ao caso da recuperação, um programa aplicativo pode passar uma cadeia de caracteres do texto ou um **ISequentialStream** para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client.  
+ Dados armazenados em colunas do tipo XML em um conjunto de linhas também podem ser recuperados, inseridos ou atualizados por um aplicativo por meio das interfaces comuns como **IRow:: Getcolumns**, **irowchange::** e **ICommand:: execute**. De maneira semelhante ao caso da recuperação, um programa aplicativo pode passar uma cadeia de caracteres do texto ou um **ISequentialStream** para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client.  
   
 > [!NOTE]  
 >  Para enviar dados XML em formato de cadeia de caracteres por meio de **ISequentialStream** interface, você deve obter **ISequentialStream** especificando DBTYPE_IUNKNOWN e definir seu *pObject* argumento nulo na associação.  
@@ -91,15 +90,15 @@ ms.locfileid: "32957491"
 |Tipo de dados|Para servidor<br /><br /> **XML**|Para servidor<br /><br /> **Não XML**|Do servidor<br /><br /> **XML**|Do servidor<br /><br /> **Não XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Passar<sup>6,7</sup>|Erro<sup>1</sup>|OKEY<sup>11, 6</sup>|Erro<sup>8</sup>|  
-|DBTYPE_BYTES|Passar<sup>6,7</sup>|N/A<sup>2</sup>|OKEY <sup>11, 6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OKEY<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|OKEY<sup>6, 9, 10</sup>|N/A <sup>2</sup>|OKEY<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Fluxo de bytes via **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Fluxo de bytes via **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Passar<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BYTES|Passar<sup>6,7</sup>|N/D<sup>2</sup>|OKEY <sup>11, 6</sup>|N/D <sup>2</sup>|  
+|DBTYPE_WSTR|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
+|DBTYPE_BSTR|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY <sup>3</sup>|N/D <sup>2</sup>|  
+|DBTYPE_STR|OKEY<sup>6, 9, 10</sup>|N/D <sup>2</sup>|OKEY<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Fluxo de bytes via **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Fluxo de bytes via **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Passar<sup>6,7</sup>|N/D <sup>2</sup>|N/A|N/D <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY<sup>3</sup>|N/D <sup>2</sup>|  
   
- <sup>1</sup>se o tipo de um servidor diferente de DBTYPE_XML for especificado com **ICommandWithParameters:: SetParameterInfo** e o tipo de acessador for DBTYPE_XML, ocorrerá um erro quando a instrução é executada (DB_E_ERRORSOCCURRED, o status do parâmetro é DBSTATUS_E_BADACCESSOR); caso contrário, os dados são enviados ao servidor, mas o servidor retornará um erro indicando que não há nenhuma conversão implícita de XML para o tipo de dados do parâmetro.  
+ <sup>1</sup>se o tipo de um servidor diferente de DBTYPE_XML for especificado com **ICommandWithParameters:: SetParameterInfo** e o tipo de acessador for DBTYPE_XML, ocorrerá um erro quando a instrução é executada (DB_E_ERRORSOCCURRED, o status do parâmetro é DBSTATUS_E_BADACCESSOR); Caso contrário, os dados são enviados ao servidor, mas o servidor retornará um erro indicando que não há nenhuma conversão implícita de XML para o tipo de dados do parâmetro.  
   
  <sup>2</sup>além do escopo deste tópico.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "32957491"
  DBTYPE_IUNKNOWN é uma associação com suporte (conforme mostrado na tabela anterior), mas não há nenhuma conversão entre DBTYPE_XML e DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN não pode ser usado com DBTYPE_BYREF.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Adições e alterações do conjunto de linhas do OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client adiciona novos valores ou alterações a muitos dos principais conjuntos de linhas de esquema OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona novos valores ou alterações a muitos dos principais conjuntos de linhas de esquema OLE DB.  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Os conjuntos de linhas de esquema de COLUMNS e PROCEDURE_PARAMETERS  
  Entre as adições aos conjuntos de linhas de esquema de COLUMNS e PROCEDURE_PARAMETERS estão as colunas a seguir.  
@@ -171,7 +170,7 @@ ms.locfileid: "32957491"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Adições e alterações do conjunto de propriedades do OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client adiciona novos valores ou alterações a muitos dos principais propriedade OLE DB conjuntos.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona novos valores ou alterações a muitos dos principais propriedade OLE DB conjuntos.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>O conjunto de propriedades de DBPROPSET_SQLSERVERPARAMETER  
  Para oferecer suporte a **xml** tipo de dados por meio de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa o novo conjunto de propriedades DBPROPSET_SQLSERVERPARAMETER, que contém os seguintes valores.  
@@ -194,16 +193,16 @@ ms.locfileid: "32957491"
  Assim como os valores de SSPROP_PARAM, todas essas propriedades são opcionais e o padrão é vazio. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME e SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME só poderão ser especificados se SSPROP_COL_XML_SCHEMACOLLECTIONNAME for especificado. Na passagem do XML para o servidor, se esses valores forem incluídos, serão verificados quanto à existência (validade) com base no banco de dados atual, e os dados de instância serão verificados com base no esquema. Em todos os casos, para que sejam válidos eles ficam todos vazios ou todos preenchidos.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Adições e alterações de interface do OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client adiciona novos valores ou alterações a muitas das principais que interfaces OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona novos valores ou alterações a muitas das principais que interfaces OLE DB.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>A interface ISSCommandWithParameters  
- Para oferecer suporte a **xml** tipo de dados por meio de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa um número de alterações, incluindo a adição do [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) interface. Essa nova interface herda da interface OLE DB **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, e **SetParameterInfo**; **ISSCommandWithParameters** fornece o [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) e [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) métodos que são usados para identificar os tipos de dados específicos do servidor.  
+ Para oferecer suporte a **xml** tipo de dados por meio de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa um número de alterações, incluindo a adição do [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) interface. Essa nova interface herda da interface OLE DB **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, e **SetParameterInfo**; **ISSCommandWithParameters** fornece o [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) e [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) métodos que são usados para manipular específicas do servidor tipos de dados.  
   
 > [!NOTE]  
 >  O **ISSCommandWithParameters** interface também utiliza o SSPARAMPROPS nova estrutura.  
   
 #### <a name="the-icolumnsrowset-interface"></a>A interface IColumnsRowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client adiciona as seguintes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-colunas específicas ao conjunto de linhas retornado pelo **icolumnrowset:: Getcolumnsrowset** método. Estas colunas contêm o nome de três partes de uma coleção de esquemas XML. Para colunas não XML ou colunas de XML não digitadas, as três colunas assumem o valor padrão de NULL.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona as seguintes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-colunas específicas ao conjunto de linhas retornado pelo **icolumnrowset:: Getcolumnsrowset** método. Estas colunas contêm o nome de três partes de uma coleção de esquemas XML. Para colunas não XML ou colunas de XML não digitadas, as três colunas assumem o valor padrão de NULL.  
   
 |Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
@@ -214,7 +213,7 @@ ms.locfileid: "32957491"
 #### <a name="the-irowset-interface"></a>A interface IRowset  
  Uma instância XML em uma coluna XML é recuperada por meio de **IRowset:: GetData** método. Dependendo da associação especificada pelo cliente, uma instância de XML pode ser recuperada como DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML, DBTYPE_STR, DBTYPE_BYTES ou como uma interface via DBTYPE_IUNKNOWN. Se o consumidor especificar DBTYPE_BSTR, DBTYPE_WSTR ou DBTYPE_VARIANT, o provedor converterá a instância de XML para o tipo solicitado pelo usuário e a colocará no local especificado na associação correspondente.  
   
- Se o consumidor especificar DBTYPE_IUNKNOWN e define o *pObject* argumento nulo ou conjuntos de *pObject* argumento como IID_ISequentialStream, o provedor retorna um **ISequentialStream** interface para o consumidor para que o consumidor pode transmitir os dados XML da coluna. **ISequentialStream** , em seguida, retorna os dados XML como um fluxo de caracteres Unicode.  
+ Se o consumidor especificar DBTYPE_IUNKNOWN e define o *pObject* argumento nulo ou conjuntos de *pObject* argumento como IID_ISequentialStream, o provedor retorna um **ISequentialStream**  interface para o consumidor para que o consumidor pode transmitir os dados XML da coluna. **ISequentialStream** , em seguida, retorna os dados XML como um fluxo de caracteres Unicode.  
   
  Ao retornar um valor XML associado a DBTYPE_IUNKNOWN, o provedor informará um valor de tamanho de `sizeof (IUnknown *)`. Observe que esse procedimento é condizente com a abordagem adotada quando uma coluna é associada como DBTYPE_IUnknown ou DBTYPE_IDISPATCH e por DBTYPE_IUNKNOWN/ISequentialStream quando não é possível determinar o tamanho exato da coluna.  
   
@@ -225,7 +224,7 @@ ms.locfileid: "32957491"
   
  No caso de DBTYPE_BSTR, DBTYPE_WSTR ou DBTYPE_VARIANT, o provedor armazena a instância de XML que reside no buffer do consumidor na coluna adequada.  
   
- No caso de DBTYPE_IUNKNOWN/ISequentialStream, se o consumidor não especificar um objeto de armazenamento, o consumidor deve criar um **ISequentialStream** objeto com antecedência, associar o documento XML com o objeto e, em seguida, passar o objeto para o provedor por meio de **IRowsetChange:: SetData** método. O consumidor também pode criar um armazenamento de objeto, defina o argumento pObject como IID_ISequentialStream, criar um **ISequentialStream** de objeto e, em seguida, passar o **ISequentialStream** o objeto para o **IRowsetChange:: SetData** método. Em ambos os casos, o provedor pode recuperar o objeto XML por meio de **ISequentialStream** de objeto e inseri-lo em uma coluna adequada.  
+ No caso de DBTYPE_IUNKNOWN/ISequentialStream, se o consumidor não especificar um objeto de armazenamento, o consumidor deve criar um **ISequentialStream** objeto com antecedência, associar o documento XML com o objeto e, em seguida, passar o objeto para o provedor por meio de **IRowsetChange:: SetData** método. O consumidor também pode criar um armazenamento de objeto, defina o argumento pObject como IID_ISequentialStream, criar um **ISequentialStream** de objeto e, em seguida, passar o **ISequentialStream** objeto para o **IRowsetChange:: SetData** método. Em ambos os casos, o provedor pode recuperar o objeto XML por meio de **ISequentialStream** de objeto e inseri-lo em uma coluna adequada.  
   
 #### <a name="the-irowsetupdate-interface"></a>A interface IRowsetUpdate  
  **IRowsetUpdate** interface fornece funcionalidade para atualizações atrasadas. Os dados disponíveis para os conjuntos de linhas não estarão disponíveis para outras transações até que o consumidor chama o **IRowsetUpdate: Update** método.  
@@ -278,6 +277,6 @@ ms.locfileid: "32957491"
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   
