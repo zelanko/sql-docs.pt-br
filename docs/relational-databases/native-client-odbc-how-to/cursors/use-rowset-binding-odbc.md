@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d30a61728db808a41fb4cc0c5acbcb08b334e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ef6f3651cb1cb1c80247f5853b4d4bd05bc13fc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943774"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694437"
 ---
 # <a name="use-rowset-binding-odbc"></a>Usar associação de conjunto de linhas (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,8 +77,8 @@ ms.locfileid: "32943774"
 5.  Cada chamada para [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera linhas R e transfere os dados para as colunas associadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando os tópicos de instruções de cursores & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [Usando os tópicos de instruções de cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [Como os cursores são implementados](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [Usar cursores & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+ [Usar cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

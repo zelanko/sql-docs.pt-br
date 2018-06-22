@@ -2,9 +2,10 @@
 title: IDBProperties (OLE DB) | Microsoft Docs
 description: Interface IDBProperties (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -14,15 +15,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 870a331b7ae15c84c2dc9cfb4abaa14ed57d5a42
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d2b5fa37e7cacb6ae29a260ceb6e57089b85e817
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35304775"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689819"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A especificação OLE DB padrão permite que os provedores especifiquem VT_EMPTY para **DBPROPINFO::vValues**. No entanto, OLE DB Driver para OLE DB do SQL Server sempre retorna o VT_EMPTY ao chamar **idbproperties:: Getpropertyinfo** com **DBPROPSET_ROWSETALL** para recuperar as propriedades do conjunto de linhas.  
   

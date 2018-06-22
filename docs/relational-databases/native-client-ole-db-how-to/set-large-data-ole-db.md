@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fe1001f74b9f391fc7b256bd6eef1287ee906e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 613524d89e94bb13a44270fa9ad4ae76b3cc5f52
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947621"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694917"
 ---
 # <a name="set-large-data-ole-db"></a>Definir dados grandes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "32947621"
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Definir o **wType** elemento na estrutura DBBINDING como DBTYPE_IUNKNOWN e o **pObject** elemento para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento **wType** na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento **pObject** para apontar para a estrutura DBOBJECT que você criou.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "32947621"
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Description  
- Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
 ### <a name="code"></a>Código  
   
