@@ -1,0 +1,107 @@
+---
+title: Formar XML com consultas FOR XML aninhadas | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], nested FOR XML
+- XML [SQL Server], FOR XML queries
+ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
+caps.latest.revision: 11
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: af69cc7956717388f9a8f97a8220e7ffe02db76a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36120971"
+---
+# <a name="shape-xml-with-nested-for-xml-queries"></a>Formar XML com consultas FOR XML aninhadas
+  O exemplo a seguir consulta a tabela `Production.Product` para recuperar os valores de `ListPrice` e `StandardCost` de um produto específico. Para tornar a consulta interessante, os dois preços são retornados em um elemento <`Price`> e cada elemento <`Price`> tem um atributo `PriceType`.  
+  
+## <a name="example"></a>Exemplo  
+ Esta é a forma esperada do XML:  
+  
+```  
+<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
+  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+  <xsd:element name="Production.Product" type="xsd:anyType" />  
+</xsd:schema>  
+<Production.Product xmlns="urn:schemas-microsoft-com:sql:SqlRowSet2" ProductID="520">  
+  <Price xmlns="" PriceType="ListPrice">133.34</Price>  
+  <Price xmlns="" PriceType="StandardCost">98.77</Price>  
+</Production.Product>  
+```  
+  
+ Esta é a consulta FOR XML aninhada:  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Product.ProductID,   
+          (SELECT 'ListPrice' as PriceType,   
+                   CAST(CAST(ListPrice as NVARCHAR(40)) as XML)   
+           FROM    Production.Product Price   
+           WHERE   Price.ProductID=Product.ProductID   
+           FOR XML AUTO, TYPE),  
+          (SELECT  'StandardCost' as PriceType,   
+                   CAST(CAST(StandardCost as NVARCHAR(40)) as XML)   
+           FROM    Production.Product Price   
+           WHERE   Price.ProductID=Product.ProductID   
+           FOR XML AUTO, TYPE)  
+FROM Production.Product  
+WHERE ProductID=520  
+for XML AUTO, TYPE, XMLSCHEMA  
+```  
+  
+ Observe o seguinte na consulta anterior:  
+  
+-   A instrução SELECT externa constrói o elemento <`Product`> que tem um atributo **ProductID** e dois elementos filho <`Price`>.  
+  
+-   A instrução SELECT interna constrói dois elementos <`Price`>, cada um com um atributo **PriceType** e XML que retorna o preço do produto.  
+  
+-   A diretiva XMLSCHEMA na instrução SELECT externa gera o esquema XSD embutido que descreve a forma do XML resultante.  
+  
+ Para tornar a consulta interessante, é possível escrever a consulta FOR XML e, em seguida, escrever uma XQuery em relação ao resultado para reformatar o XML, conforme mostrado na seguinte consulta:  
+  
+```  
+SELECT ProductID,   
+ ( SELECT p2.ListPrice, p2.StandardCost  
+   FROM Production.Product p2   
+   WHERE Product.ProductID = p2.ProductID  
+   FOR XML AUTO, ELEMENTS XSINIL, type ).query('  
+                                   for $p in /p2/*  
+                                   return   
+                                    <Price PriceType = "{local-name($p)}">  
+                                     { data($p) }  
+                                    </Price>  
+                                  ')  
+FROM Production.Product  
+WHERE ProductID = 520  
+FOR XML AUTO, TYPE  
+```  
+  
+ O exemplo anterior usa o `query()` método o `xml` dados de tipo para consultar o XML retornado pela consulta FOR XML interna e construir o resultado esperado.  
+  
+ Este é o resultado:  
+  
+```  
+<Production.Product ProductID="520">  
+  <Price PriceType="ListPrice">133.3400</Price>  
+  <Price PriceType="StandardCost">98.7700</Price>  
+</Production.Product>  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Usar consultas FOR XML aninhadas](use-nested-for-xml-queries.md)  
+  
+  
