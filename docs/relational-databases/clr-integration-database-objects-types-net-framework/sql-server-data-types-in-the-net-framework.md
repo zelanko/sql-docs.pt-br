@@ -3,11 +3,9 @@ title: Tipos de dados do SQL Server no .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 58efbce895ad0e06521c59941dc49826629343b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917841"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702047"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipos de dados do SQL Server no .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +38,13 @@ ms.locfileid: "32917841"
  [Comparações de lógica de três valores e nulidade](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  Discute como são tratados os valores NULL com tipos de dados de integração CLR (Common Language Runtime).  
   
- [Tipos de dados de integração de CLR e agrupamento](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
+ [Tipos de dados de integração CLR e agrupamento](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  Descreve como são tratados os agrupamentos com integração CLR.  
   
- [Manipulação de objeto grande & #40; LOB & #41; Parâmetros do CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [Manipulação de objeto grande &#40;LOB&#41; parâmetros no CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Descreve como passar tipos LOB entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR.  
   
- [Mapeamento de dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
+ [Mapeando dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
  Mostra mapeamentos de tipo de dados entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a integração CLR e o .NET Framework.  
   
   
