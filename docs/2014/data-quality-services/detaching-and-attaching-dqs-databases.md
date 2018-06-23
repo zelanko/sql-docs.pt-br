@@ -1,0 +1,109 @@
+---
+title: Desanexando e anexando bancos de dados do DQS | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
+caps.latest.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 22f525a1eed94e3125dab5cdc3930dc6bc20ec91
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36013421"
+---
+# <a name="detaching-and-attaching-dqs-databases"></a>Desanexando e anexando bancos de dados do DQS
+  Este tópico descreve como desanexar e anexar os bancos de dados do DQS.  
+  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
+  
+###  <a name="Limitations"></a> Limitações e Restrições  
+ Para obter uma lista de limitações e restrições, veja [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+  
+###  <a name="Prerequisites"></a> Pré-requisitos  
+  
+-   Verifique se não há nenhuma atividade ou processo em execução no DQS. Isso pode ser verificado com o uso da tela **Monitoramento de atividade** . Para obter informações detalhadas sobre como trabalhar nessa tela, consulte [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
+  
+-   Verifique se não há usuários conectados no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
+  
+###  <a name="Security"></a> Segurança  
+  
+####  <a name="Permissions"></a> Permissões  
+  
+-   Sua conta de usuário do Windows deve ser um membro da função de servidor fixa db_owner na instância do SQL Server para desanexar bancos de dados DQS.  
+  
+-   Sua conta de usuário do Windows deve ter a permissão CREATE DATABASE, CREATE ANY DATABASE ou ALTER ANY DATABASE para anexar um banco de dados.  
+  
+-   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
+  
+##  <a name="Detach"></a> Desanexar bancos de dados DQS  
+ Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados DQS geralmente estão disponíveis no seguinte local no seu computador de serviços de qualidade de dados: Server \ mssql12 do C:\Program Files\Microsoft SQL. *< Nome_da_instância >* \MSSQL\DATA.  
+  
+1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
+  
+2.  No Pesquisador de Objetos, expanda o nó **Bancos de Dados** .  
+  
+3.  Clique com o botão direito do mouse no banco de dados **DQS_MAIN** , aponte para **Tarefas**e clique em **Desanexar**. A caixa de diálogo **Desanexar Banco de Dados** é exibida.  
+  
+4.  Marque a caixa de seleção na coluna **Descartar** e clique em **OK** para desanexar o banco de dados DQS_MAIN.  
+  
+5.  Repita as etapas 3 e 4 com os bancos de dados DQS_PROJECTS e DQS_STAGING_DATA para desanexá-los.  
+  
+ Você também pode desanexar bancos de dados DQS usando as instruções Transact-SQL usando o procedimento armazenado sp_detach_db. Para obter mais informações sobre como desanexar bancos de dados usando instruções Transact-SQL, consulte [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) em [Detach a Database](../relational-databases/databases/detach-a-database.md).  
+  
+##  <a name="Attach"></a> Anexar bancos de dados DQS  
+ Use as instruções a seguir para anexar um banco de dados DQS na mesma instância do SQL Server (de onde você desanexou) ou a uma instância diferente do SQL Server em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
+  
+1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
+  
+2.  No Pesquisador de Objetos, clique com o botão direito do mouse em **Bancos de Dados**e em **Anexar**. A caixa de diálogo **Anexar Bancos de Dados** é exibida.  
+  
+3.  Para especificar o banco de dados a ser anexado, clique em **Adicionar**. A caixa de diálogo **Localizar Arquivos de Banco de Dados** é exibida.  
+  
+4.  Selecione a unidade de disco onde o banco de dados reside e expanda a árvore do diretório para localizar e selecionar o arquivo .mdf do banco de dados. Por exemplo, para o banco de dados DQS_MAIN:  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
+    ```  
+  
+5.  O painel **detalhes do banco de dados** (inferior) exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (...).  
+  
+6.  Clique em **OK** para anexar o banco de dados DQS_MAIN.  
+  
+7.  Repita as etapas 2 a 6 para os bancos de dados DQS_PROJECTS e DQS_STAGING_DATA para anexá-los.  
+  
+8.  Você também deve executar as instruções Transact-SQL na próxima etapa depois de restaurar o banco de dados DQS_MAIN, caso contrário, uma mensagem de erro será exibida quando você tentar se conectar ao Data Quality Server usando o aplicativo Cliente Data Quality, e você não puder se conectar. Porém, você não precisa executar as etapas 9 e 10 se tiver acabado de anexar o banco de dados DQS_PROJECTS ou DQS_STAGING_DATA e não o DQS_MAIN.  
+  
+     Para executar as instruções Transact-SQL, no Pesquisador de Objetos, clique com o botão direito do mouse no servidor e clique em **Nova Consulta**.  
+  
+9. Na janela Editor de Consultas, copie as seguintes instruções SQL:  
+  
+    ```  
+    ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
+    EXEC sp_configure 'clr enabled', 1;  
+    RECONFIGURE WITH OVERRIDE  
+    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
+  
+    ```  
+  
+10. Pressione F5 para executar as instruções. Consulte o painel Resultados para verificar se as instruções foram executadas com êxito. Você verá a seguinte mensagem: `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  
+  
+11. Conecte-se ao Data Quality Server usando o Cliente Data Quality para verificar se é possível conectar-se com êxito.  
+  
+ Você também pode anexar bancos de dados DQS usando as instruções Transact-SQL. Para obter mais informações sobre como anexar bancos de dados usando instruções Transact-SQL, consulte [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) em [Attach a Database](../relational-databases/databases/attach-a-database.md).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Gerenciar bancos de dados do DQS](../../2014/data-quality-services/manage-dqs-databases.md)  
+  
+  
