@@ -1,0 +1,306 @@
+---
+title: bcp_setbulkmode | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- bcp_setbulkmode function
+ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
+caps.latest.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9d4fd20ddc1820c02c24ed79a8d38d416e284908
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36116128"
+---
+# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
+  bcp_setbulkmode permite que você especifique o formato de coluna em uma operação de cópia em massa, definindo todos os atributos de coluna em uma única chamada de função.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+  
+RETCODE bcp_setbulkmode (  
+   HDBC   
+hdbc  
+,  
+   INT   
+property  
+,  
+   void *   
+pField  
+,  
+   INT   
+cbField  
+,  
+   void *   
+pRow  
+,  
+   INT   
+cbRow  
+);  
+  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *HDBC*  
+ O identificador de conexão ODBC habilitado para cópia em massa.  
+  
+ *property*  
+ Uma constante do tipo BYTE. Consulte a tabela na seção Comentários para obter a lista das constantes.  
+  
+ *pField*  
+ O ponteiro para o valor de terminador de campo.  
+  
+ *cbField*  
+ O comprimento (em bytes) do valor de terminador de campo.  
+  
+ *pRow*  
+ O ponteiro para o valor de terminador de linha.  
+  
+ *cbRow*  
+ O comprimento (em bytes) do valor de terminador de linha.  
+  
+## <a name="returns"></a>Retorna  
+ SUCCEED ou FAIL  
+  
+## <a name="remarks"></a>Remarks  
+ bcp_setbulkmode pode ser usado para copiar fora de uma consulta ou uma tabela em massa. Quando bcp_setbulkmode é usado para copiar uma instrução de consulta em massa, ele deve ser chamado antes de chamar bcp_control com BCP_HINT.  
+  
+ bcp_setbulkmode é uma alternativa ao uso de [bcp_setcolfmt](bcp-setcolfmt.md) e [bcp_columns](bcp-columns.md), que só permitem que você especifique o formato de uma coluna por chamada de função.  
+  
+ A tabela a seguir lista as constantes do parâmetro *property* .  
+  
+|property|Description|  
+|--------------|-----------------|  
+|BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção – c no BCP. EXE e bcp_setcolfmt com `BCP_FMT_TYPE` propriedade definida como `SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção – w no BCP. EXE e bcp_setcolfmt com `BCP_FMT_TYPE` propriedade definida como `SQLNCHAR`.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Especifica tipos nativos para tipos de não caracteres e Unicode para tipos de caracteres.<br /><br /> Corresponde à opção – N no BCP. EXE e bcp_setcolfmt com `BCP_FMT_TYPE` propriedade definida como `SQLNCHAR` se o tipo de coluna for uma cadeia de caracteres (padrão se não for uma cadeia de caracteres).|  
+|BCP_OUT_NATIVE_MODE|Especifica tipos de bancos de dados nativos.<br /><br /> Corresponde à opção – n no BCP. EXE e bcp_setcolfmt com `BCP_FMT_TYPE` propriedade definida como o padrão.|  
+  
+ Você não deve usar bcp_setbulkmode com uma sequência de chamadas de função que inclui bcp_setcolfmt, bcp_control e bcp_readfmt. Por exemplo, você não deve chamar bcp_control(BCPTEXTFILE) e bcp_setbulkmode.  
+  
+ Você pode chamar bcp_control e bcp_setbulkmode bcp_control opções que não estão em conflito com bcp_setbulkmode. Por exemplo, você pode chamar bcp_control(BCPFIRST) e bcp_setbulkmode.  
+  
+ Se você tentar chamar bcp_setbulkmode com uma sequência de chamadas de função que inclui bcp_setcolfmt, bcp_control e bcp_readfmt, uma das chamadas de função retornará um erro de falha de sequência. Se você optar por corrigir a falha, chame bcp_init para redefinir todas as configurações e recomeçar.  
+  
+ A tabela a seguir apresenta alguns exemplos de chamadas de funções que resultam em um erro de sequência de função:  
+  
+ Sequência de chamada  
+  
+```  
+bcp_init(“table”, DB_IN);  
+bcp_setbulkmode();  
+```  
+  
+```  
+bcp_init(“table”, DB_OUT);  
+bcp_setbulkmode();  
+bcp_readfmt();  
+```  
+  
+```  
+bcp_init(NULL, DB_OUT);  
+bcp_control(BCPHINTS, “select …”);  
+bcp_setbulkmode();  
+```  
+  
+```  
+bcp_init(“table”, DB_OUT);  
+bcp_setbulkmode();  
+bcp_setcolfmt();  
+```  
+  
+```  
+bcp_init(“table”, DB_OUT);  
+bcp_control(BCPDELAYREADFMT, true);  
+bcp_readfmt();  
+bcp_setcolfmt();  
+```  
+  
+```  
+bcp_init(NULL, DB_OUT);  
+bcp_control(BCPDELAYREADFMT, true);  
+bcp_setbulkmode();  
+bcp_control(BCPHINTS, “select …”);  
+bcp_readfmt();  
+```  
+  
+```  
+bcp_init(“table”, DB_OUT);  
+bcp_control(BCPDELAYREADFMT, true);  
+bcp_columns();  
+```  
+  
+```  
+bcp_init(“table”, DB_OUT);  
+bcp_control(BCPDELAYREADFMT, true);  
+bcp_setcolfmt();  
+```  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir cria quatro arquivos usando diferentes configurações de bcp_setbulkmode.  
+  
+```  
+// compile with: sqlncli11.lib odbc32.lib  
+  
+#include <windows.h>  
+#include <stdio.h>  
+#include <tchar.h>  
+#include <sqlext.h>  
+#include "sqlncli.h"  
+  
+// Global variables  
+SQLHENV g_hEnv = NULL;  
+SQLHDBC g_hDbc = NULL;  
+  
+void ODBCCleanUp() {  
+   if (g_hDbc) {  
+      SQLDisconnect(g_hDbc);  
+      SQLFreeHandle(SQL_HANDLE_DBC, g_hDbc);  
+      g_hDbc = NULL;  
+   }  
+   if (g_hEnv) {  
+      SQLFreeHandle(SQL_HANDLE_ENV, g_hEnv);  
+      g_hEnv = NULL;  
+   }  
+}  
+  
+BOOL MakeODBCConnection(TCHAR * pszServer) {  
+   TCHAR szConnectionString[500];  
+   TCHAR szOutConnectionString[500];  
+   SQLSMALLINT iLen;  
+   SQLRETURN rc;  
+  
+   _sntprintf_s(szConnectionString, 500, TEXT("DRIVER={SQL Server Native Client 11.0};Server=%s;Trusted_connection=yes;"), pszServer);  
+   rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE,&g_hEnv);  
+   if (SQL_SUCCESS != rc && SQL_SUCCESS_WITH_INFO != rc) {  
+      printf("SQLAllocHandle(SQL_HANDLE_ENV...) failed\n");  
+      return false;  
+   }  
+   rc = SQLSetEnvAttr(g_hEnv,SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3, SQL_IS_UINTEGER);  
+   if (SQL_SUCCESS != rc && SQL_SUCCESS_WITH_INFO != rc) {  
+      printf("SQLSetEnvAttr failed\n");  
+      SQLFreeHandle(SQL_HANDLE_ENV, g_hEnv);  
+      return false;  
+   }  
+   rc = SQLAllocHandle( SQL_HANDLE_DBC, g_hEnv , &g_hDbc);  
+   if (SQL_SUCCESS != rc && SQL_SUCCESS_WITH_INFO != rc) {  
+      printf("SQLAllocHandle(SQL_HANDLE_DBC...) failed\n");  
+      SQLFreeHandle(SQL_HANDLE_ENV, g_hEnv);  
+      return false;  
+   }  
+   // Enable BCP  
+   rc = SQLSetConnectAttr(g_hDbc, SQL_COPT_SS_BCP, (SQLPOINTER)SQL_BCP_ON, SQL_IS_INTEGER);  
+   if (SQL_SUCCESS != rc && SQL_SUCCESS_WITH_INFO != rc) {  
+      printf("SQLSetConnectAttr(.. SQL_COPT_SS_BCP, (SQLPOINTER)SQL_BCP_ON ...) failed\n");  
+      ODBCCleanUp();  
+      return false;  
+   }  
+   // connecting ...  
+   rc = SQLDriverConnect(g_hDbc,NULL, (SQLTCHAR*)szConnectionString, SQL_NTS, (SQLTCHAR*)szOutConnectionString, 500, &iLen, SQL_DRIVER_NOPROMPT);  
+   if (SQL_SUCCESS != rc && SQL_SUCCESS_WITH_INFO != rc) {  
+      printf("SQLDriverConnect(SQL_HANDLE_DBC...) failed\n");  
+      ODBCCleanUp();  
+      return false;  
+   }  
+   return true;  
+}  
+  
+BOOL BCPSetBulkMode(TCHAR * pszServer, TCHAR * pszQureryOut, char BCPType, TCHAR * pszDataFile) {  
+   SQLRETURN rc;  
+  
+   if (!MakeODBCConnection(pszServer))  
+      return false;  
+   rc = bcp_init(g_hDbc, NULL, pszDataFile, NULL, DB_OUT);   // bcp init for queryout  
+   if (SUCCEED != rc) {  
+      printf("bcp_init failed\n");  
+      ODBCCleanUp();  
+      return false;  
+   }  
+   // setbulkmode  
+   char ColTerm[] = "\t";  
+   char RowTerm[] = "\r\n";  
+   wchar_t wColTerm[] = L"\t";  
+   wchar_t wRowTerm[] = L"\r\n";  
+   BYTE * pColTerm = NULL;  
+   int cbColTerm = NULL;  
+   BYTE * pRowTerm = 0;  
+   int cbRowTerm = 0;  
+   int bulkmode = -1;  
+  
+   if (BCPType == 'c') {   // bcp -c  
+      pColTerm = (BYTE*)ColTerm;  
+      pRowTerm = (BYTE*)RowTerm;  
+      cbColTerm = 1;  
+      cbRowTerm = 2;  
+      bulkmode = BCP_OUT_CHARACTER_MODE;  
+   }  
+   else  
+      if (BCPType == 'w') {   // bcp -w   
+         pColTerm = (BYTE*)wColTerm;  
+         pRowTerm = (BYTE*)wRowTerm;  
+         cbColTerm = 2;  
+         cbRowTerm = 4;  
+         bulkmode = BCP_OUT_WIDE_CHARACTER_MODE;  
+      }  
+      else  
+         if (BCPType == 'n')   // bcp -n  
+            bulkmode = BCP_OUT_NATIVE_MODE;  
+         else  
+            if (BCPType == 'N')   // bcp -n  
+               bulkmode = BCP_OUT_NATIVE_TEXT_MODE;  
+            else {  
+               printf("unknown bcp mode\n");  
+               ODBCCleanUp();  
+               return false;  
+            }  
+            rc = bcp_setbulkmode(g_hDbc, bulkmode, pColTerm, cbColTerm, pRowTerm, cbRowTerm);  
+            if (SUCCEED != rc) {  
+               printf("bcp_setbulkmode failed\n");  
+               ODBCCleanUp();  
+               return false;  
+            }  
+            // set queryout TSQL statement  
+            rc = bcp_control(g_hDbc, BCPHINTS , pszQureryOut);  
+            if (SUCCEED != rc) {  
+               printf("bcp_control(..BCP_OPTION_HINTS..) failed\n");  
+               ODBCCleanUp();  
+               return false;  
+            }  
+            // bcp copy  
+            DBINT nRowsInserted = 0;  
+            rc = bcp_exec(g_hDbc, &nRowsInserted);  
+            if (SUCCEED != rc) {  
+               printf("bcp_exec failed\n");  
+               ODBCCleanUp();  
+               return false;  
+            }  
+            printf("bcp done\n");  
+            ODBCCleanUp();  
+            return true;  
+}  
+  
+int main() {  
+   BCPSetBulkMode(TEXT("localhost"), TEXT("SELECT 'this is a bcp -c test', 1,2") , 'c', TEXT("bcpc.dat"));  
+   BCPSetBulkMode(TEXT("localhost"), TEXT("SELECT 'this is a bcp -w test', 1,2") , 'w', TEXT("bcpw.dat"));  
+   BCPSetBulkMode(TEXT("localhost"), TEXT("SELECT 'this is a bcp -c test', 1,2") , 'n', TEXT("bcpn.dat"));  
+   BCPSetBulkMode(TEXT("localhost"), TEXT("SELECT 'this is a bcp -w test', 1,2") , 'N', TEXT("bcp_N.dat"));  
+}  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Funções de cópia em massa](sql-server-driver-extensions-bulk-copy-functions.md)  
+  
+  
