@@ -1,0 +1,103 @@
+---
+title: Configurar a opção de configuração de servidor default language | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- default language option
+ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
+caps.latest.revision: 25
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 718d5064138f6e438e8b86787d45e422d0fc8023
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36009612"
+---
+# <a name="configure-the-default-language-server-configuration-option"></a>Configurar opção default language de configuração de servidor
+  Este tópico descreve como configurar a opção de configuração de servidor **default language** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **default language** especifica o idioma padrão para logons recém-criados. Para definir o idioma padrão, especifique o valor **langid** do idioma desejado. O valor **langid** pode ser obtido consultando a exibição de compatibilidade **sys.syslanguages** .  
+  
+ **Neste tópico**  
+  
+-   **Antes de começar:**  
+  
+     [Recomendações](#Recommendations)  
+  
+     [Segurança](#Security)  
+  
+-   **Para configurar a opção default language, usando:**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+-   **Acompanhamento:**  [depois de configurar a opção default language](#FollowUp)  
+  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
+  
+###  <a name="Recommendations"></a> Recomendações  
+  
+-   O idioma padrão de um logon pode ser substituído usando CREATE LOGIN ou ALTER LOGIN. O idioma padrão de uma sessão é o idioma do logon daquela sessão, a menos que substituído por uma sessão individual usando APIs ODBC (Conectividade Aberta de Banco de Dados) ou OLE DB. Observe que você só pode definir a opção **default language** como uma ID de idioma definida em [sys.syslanguages](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) (0-32). Ao usar bancos de dados independentes, você pode definir um idioma padrão para um banco de dados usando CREATE DATABASE ou ALTER DATABASE, e para usuários de bancos de dados independentes, usando CREATE USER ou ALTER USER. A definição dos idiomas padrão em um banco de dados independente aceita o valor **langid** , o nome do idioma ou um alias do idioma, conforme listado em **sys.syslanguages**.  
+  
+###  <a name="Security"></a> Segurança  
+  
+####  <a name="Permissions"></a> Permissões  
+ Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
+  
+##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+  
+#### <a name="to-configure-the-default-language-option"></a>Para configurar a opção default language  
+  
+1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
+  
+2.  Clique no nó **Configuração de servidores diversos** .  
+  
+3.  Na caixa **Idioma padrão para usuários** , escolha o idioma no qual o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve exibir as mensagens do sistema.  
+  
+     O idioma padrão é inglês.  
+  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+  
+#### <a name="to-configure-the-default-language-option"></a>Para configurar a opção default language  
+  
+1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
+  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para configurar a opção `default language` como francês (`2`).  
+  
+```tsql  
+USE AdventureWorks2012 ;  
+GO  
+EXEC sp_configure 'default language', 2 ;  
+GO  
+RECONFIGURE ;  
+GO  
+```  
+  
+ Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
+  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção default language  
+ A configuração entra em vigor imediatamente sem reiniciar o servidor.  
+  
+## <a name="see-also"></a>Consulte também  
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
+ [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
+ [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
+ [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+  
+  

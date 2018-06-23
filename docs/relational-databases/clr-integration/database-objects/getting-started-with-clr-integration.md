@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -30,12 +28,12 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d79bafbd781b34d3f6fa4908f998775f37548cd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33904494978b4a85377ef4d3bdb3cee4f176f2f2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930141"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702367"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introdução à integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +178,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Procedimentos armazenados CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensões específicas do SQL Server no processo para o ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Depuração de objetos de banco de dados CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
