@@ -25,12 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37c18633c5532079a92feae4dd06533dc50a5ee7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c73042d6e85c0682a94b83833c5ba00bfffbf10d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181832"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262370"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "33181832"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifica a classe na qual a propriedade existe.<br /><br /> 1 = Objeto ou coluna|  
-|**class_desc**|**nvarchar(60)**|Descrição da classe na qual a propriedade existe.<br /><br /> OBJECT_OR_COLUMN|  
-|**major_id**|**Int**|ID na qual a propriedade existe, interpretada de acordo com a classe.|  
+|**class**|**tinyint**|Identifica a classe na qual a propriedade existe.<br /><br /> 1 = Objeto ou coluna<br /> 5 = Assembly|  
+|**class_desc**|**nvarchar(60)**|Descrição da classe na qual a propriedade existe.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
+|**major_id**|**int**|ID na qual a propriedade existe, interpretada de acordo com a classe.|  
 |**Impressão digital**|**varbinary(32)**|Hash SHA-1 do certificado ou chave assimétrica usado.|  
 |**crypt_type**|**char(4)**|Tipo de criptografia.<br /><br /> SPVC = Criptografado pela chave privada de certificado<br /><br /> SPVA = Criptografado pela chave privada assimétrica<br /><br /> CPVC = Assinatura do contador pela chave privada de certificado<br /><br /> CPVA = Assinatura do contador pela chave assimétrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descrição do tipo de criptografia.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  

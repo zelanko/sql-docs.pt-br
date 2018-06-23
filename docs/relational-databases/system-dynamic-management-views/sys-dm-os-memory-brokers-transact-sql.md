@@ -22,12 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d32ef0b368c0e3c5a0de1cbb9c0a2f60110050
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9799cc3ed5f33e1260c6d4b1907329a9a01b3ffc
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466322"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262330"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "34466322"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|**Int**|ID do pool de recursos caso seja associado a um pool do Administrador de recursos.|  
-|**memory_broker_type**|**nvarchar(60)**|Tipo de agente de memória. Há três tipos de agentes de memória no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], listados abaixo e suas descrições.<br /><br /> **MEMORYBROKER_FOR_CACHE** : memória alocada para uso por objetos armazenados em cache.<br /><br /> **MEMORYBROKER_FOR_STEAL** : memória usada do pool de buffers. Essa memória não estará disponível para reutilização por outros componentes até ser liberada pelo proprietário atual.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : memória reservada para uso futuro por solicitações atualmente em execução.|  
+|**pool_id**|**int**|ID do pool de recursos caso seja associado a um pool do Administrador de recursos.|  
+|**memory_broker_type**|**nvarchar(60)**|Tipo de agente de memória. Há três tipos de agentes de memória no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], listados abaixo e suas descrições.<br /><br /> **MEMORYBROKER_FOR_CACHE** : objetos (cache do Pool de buffers não) do cache de memória alocada para uso.<br /><br /> **MEMORYBROKER_FOR_STEAL** : memória usada do pool de buffers. Essa memória não estará disponível para reutilização por outros componentes até ser liberada pelo proprietário atual.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : memória reservada para uso futuro por solicitações atualmente em execução.|  
 |**allocations_kb**|**bigint**|Quantidade de memória, em quilobytes (KB), alocada a este tipo de agente.|  
 |**allocations_kb_per_sec**|**bigint**|Taxa de alocações de memória em quilobytes (KB) por segundo. Esse valor pode ser negativo para desalocações de memória.|  
 |**predicted_allocations_kb**|**bigint**|Quantidade prevista de memória alocada pelo agente. Tem como base o padrão de uso da memória.|  
@@ -52,7 +52,7 @@ ms.locfileid: "34466322"
 |**future_allocations_kb**|**bigint**|Número projetado de alocações, em quilobytes (KB), que serão feitas nos próximos segundos.|  
 |**overall_limit_kb**|**bigint**|Quantidade máxima de memória, em quilobytes (KB), que o agente pode alocar.|  
 |**last_notification**|**nvarchar(60)**|Recomendação de uso de memória com base nas configurações atuais e no padrão de uso. Estes são os valores válidos:<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
-|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 

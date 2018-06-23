@@ -1,0 +1,55 @@
+---
+title: Especificando caminhos para itens externos (Construtor de Relatórios e SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
+caps.latest.revision: 8
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: 060d29fc3217c45c94a016c0b2a1eb8ac7bedc3e
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36013495"
+---
+# <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificando caminhos para itens externos (Construtor de Relatórios e SSRS)
+  Você especifica caminhos nas propriedades de item de relatório para referenciar itens, como relatórios detalhados, sub-relatórios e arquivos de imagem, que são externos ao arquivo de definição de relatório e armazenados em um servidor de relatório.  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+  
+> [!NOTE]  
+>  No Construtor de Relatórios, os caminhos para itens devem especificar itens em um servidor de relatório. Não há suporte para caminhos para itens em um sistema de arquivos. Você somente poderá visualizar um relatório que usa esses itens se estiver conectado ao servidor de relatório em que os itens estão localizados.  
+  
+ Quando você especifica um caminho para um item externo em uma caixa de diálogo para ações, sub-relatórios ou imagens, pode navegar diretamente até o servidor de relatório e selecionar esse item. Navegar até o item e selecioná-lo diretamente é a maneira recomendada de especificar um relatório detalhado ou sub-relatório. Dessa forma, os nomes de parâmetro corretos estarão disponíveis em uma lista suspensa quando você especificar parâmetros de relatório ou sub-relatório. Ao alterar o caminho de um item para apontar para um item diferente, você deverá atualizar manualmente os nomes de parâmetro corretos e valores conforme necessário.  
+  
+ Em um servidor de relatório configurado no modo nativo, especifique um nome de relatório detalhado sem a extensão de arquivo .rdl.  
+  
+ Em um servidor de relatório configurado no modo integrado do SharePoint, você deve incluir a extensão de arquivo .rdl. O caminho pode ser um dos seguintes:  
+  
+-   **Um caminho relativo para o item do relatório principal.** Por exemplo, ../AllSubreports/Subreport1. Neste exemplo, o **..** indica a pasta acima da pasta em que o relatório principal está localizado.  
+  
+    > [!NOTE]  
+    >  Caminhos relativos não são suportados quando o relatório é executado dentro de Construtor de Relatórios. Para exibir um relatório que use caminhos relativos a itens externos, salve o relatório no servidor de relatório e execute o relatório de lá  
+  
+-   **Um caminho completo para o item.**  
+  
+    -   **Em um servidor de relatório:** o caminho começa com **/**, a pasta Base. Por exemplo, ../Reports/AllSubreports/Subreport1.  
+  
+    -   **Em um site do SharePoint:** você deve especificar o nome do relatório em uma expressão, com a URL completa do item e a extensão de arquivo .rdl. Por exemplo, `="http://server/site/library/folder/Report1.rdl"`.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Adicionar uma imagem externa &#40;SSRS e construtor de relatórios&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Adicionar um sub-relatório e parâmetros &#40;Construtor de Relatórios e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Adicionar uma ação de detalhamento a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+  
+  

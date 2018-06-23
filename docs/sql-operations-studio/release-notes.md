@@ -2,7 +2,7 @@
 title: Notas de versão do Microsoft SQL operações Studio (visualização) | Microsoft Docs
 description: Notas de versão do Microsoft SQL operações Studio (visualização)
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34473820"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271007"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Studio de operações (visualização)
 
-**[Baixe a visualização pública pode](download.md)**
+**[Baixe a visualização pública de junho](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>De 2018 de junho (visualização pública de junho)
+
+Data de publicação: 20 de junho de 2018  
+versão: 0.30.6
+
+O *visualização pública junho* contém destaca a seguinte:  
+
+- **SQL Server Profiler para operações de SQL Studio *visualização***  versão inicial da extensão.
+- O novo **SQL Data Warehouse** extensão inclui widgets de painel personalizável avançados adicionar informações ao data warehouse. Isso desbloqueia os principais cenários de gerenciamento e ajuste o data warehouse para garantir que ele é otimizado para desempenho consistente.
+- **Editar dados "Filtrando e classificando"** suporte.
+- **SQL Server Agent para operações de SQL Studio *visualização***  aprimoramentos de extensão para trabalhos e o histórico do trabalho de modos de exibição.
+- Melhor **Assistente & estrutura do construtor de interface do usuário de caixa de diálogo** APIs de extensibilidade.
+- Atualizar a plataforma do VS código fonte código integrando [de 2018 de março (1.22)](https://code.visualstudio.com/updates/v1_22) e [de 2018 de abril (1.23)](https://code.visualstudio.com/updates/v1_23) versões.
+- Solucionar problemas do GitHub:
+  - Solicitação de recurso ([emitir 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)):, fazer os resultados da largura da coluna de ajuste automático de grade de dados e/ou lembre-se de alterações manuais se a mesma consulta é executada de novo.
+  - Corrigir [emitir 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): deve mostrar Adicionar mensagem e adicionar o botão de conta de conta quando a conta vinculada está vazia.
+  - Corrigir [emitir 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): guia Conta vinculada é interrompido quando a exibição é recolhida.
+  - Corrigir [emitir 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL ferramentas serviço falhar ao abrir o arquivo. SQL do disco.
+  - Corrigir [emitir 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): palavra-chave SQL ausente "Entre".
+  - Corrigir [emitir 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): palavra-chave de 'MATCH' falhas de serviço de ferramentas do SQL.
+  - Corrigir [emitir 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): opção de menu de contexto de "Novo Profiler" no Pesquisador de objetos não fará nada.
+  - Corrigir [emitir 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): plano de consulta de "Explicação" de editor de consulta foi interrompido.
+
+
+Para obter mais informações, consulte o [Log de alterações](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versões](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## <a name="may-2018-may-public-preview"></a>De 2018 de maio (maio de visualização pública)
@@ -47,8 +74,6 @@ O *visualização pública pode* se concentra na estabilização e correções d
    - Corrigir [emitir 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): extensão do SQL Agent e a barra de status
    - Corrigir [emitir 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent não redimensionar depois de alterar o tamanho do windows
 
-
-Para obter mais informações, consulte o [Log de alterações](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versões](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 

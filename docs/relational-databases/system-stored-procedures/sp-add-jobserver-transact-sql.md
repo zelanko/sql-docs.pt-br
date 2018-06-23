@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89ba03a88db9dd5977ace92cc498726da6b3e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237874"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262310"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
   
  [  **@server_name =** ] **'***server***'**  
- O nome do servidor no qual o trabalho será direcionado. *servidor* é **nvarchar (30)**, com um padrão n' (local) '. *servidor*podem ser **(LOCAL)** para um servidor local ou o nome de um servidor de destino existente.  
+ O nome do servidor no qual o trabalho será direcionado. *servidor* é **nvarchar (30)**, com um padrão n' (local) '. *servidor* podem ser **(LOCAL)** para um servidor local ou o nome de um servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="remarks"></a>Remarks  
  **@automatic_post** existe em **sp_add_jobserver**, mas não está listado em argumentos. **@automatic_post** é reservado para uso interno.  

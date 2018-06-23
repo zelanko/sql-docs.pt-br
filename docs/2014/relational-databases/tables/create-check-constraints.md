@@ -1,0 +1,116 @@
+---
+title: Criar restrições de verificação | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- table constraints [SQL Server]
+- attaching check constraints
+- columns [SQL Server], constraints
+- constraints [SQL Server], check
+- CHECK constraints, attaching
+ms.assetid: b8756304-9454-4d39-996a-64516831b7df
+caps.latest.revision: 16
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: e07ce6ea4ad1ae0bbe53119c253ae6282a4e1cb0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36120751"
+---
+# <a name="create-check-constraints"></a>Criar restrições de verificação
+  Você pode criar uma restrição de verificação em uma tabela para especificar quais valores de dados são aceitáveis em uma ou mais colunas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  
+ **Neste tópico**  
+  
+-   **Antes de começar:**  
+  
+     [Segurança](#Security)  
+  
+-   **Para criar uma nova restrição de verificação usando:**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
+  
+###  <a name="Security"></a> Segurança  
+  
+####  <a name="Permissions"></a> Permissões  
+ Requer a permissões ALTER na tabela.  
+  
+##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+  
+#### <a name="to-create-a-new-check-constraint"></a>Para criar uma nova restrição de verificação  
+  
+1.  No **Pesquisador de Objetos**, expanda a tabela à qual você deseja adicionar uma restrição de verificação, clique com o botão direito do mouse em **Restrições** e clique em **Nova Restrição**.  
+  
+2.  Na caixa de diálogo **Restrições de Verificação** , clique no campo **Expressão** e clique nas reticências **(…)**.  
+  
+3.  Na caixa de diálogo **Expressão de Restrição de Verificação** , digite as expressões SQL da restrição de verificação. Por exemplo, para limitar as entradas na coluna `SellEndDate` da tabela `Product` a um valor maior ou igual à data na coluna `SellStartDate` ou a um valor NULL, digite:  
+  
+    ```  
+    SellEndDate >= SellStartDate OR SellEndDate IS NULL  
+    ```  
+  
+     Ou, para solicitar que as entradas na coluna `zip` sejam de 5 algarismos, digite:  
+  
+    ```  
+    zip LIKE '[0-9][0-9][0-9][0-9][0-9]'  
+    ```  
+  
+    > [!NOTE]  
+    >  Certifique-se de colocar os valores de restrição não numéricos entre aspas simples (').  
+  
+4.  Clique em **OK**.  
+  
+5.  Na categoria **Identidade** , você pode alterar o nome da restrição de verificação e adicionar uma descrição (propriedade estendida) para a restrição.  
+  
+6.  Na categoria **Designer de Tabela** , você pode definir quando a restrição será imposta.  
+  
+    |**Para:**|**Selecione Sim nos seguintes campos:**|  
+    |-------------|---------------------------------------------|  
+    |Testar a restrição dos dados que existiam antes da criação da restrição|**Verificar Dados Existentes ao Criar ou Habilitar**|  
+    |Impor a restrição sempre que uma operação de replicação ocorrer nesta tabela|**Impor para Replicação**|  
+    |Impor a restrição sempre que uma linha desta tabela for inserida ou atualizada|**Impor para INSERTs e UPDATEs**|  
+  
+7.  Clique em **Fechar**.  
+  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+  
+#### <a name="to-create-a-new-check-constraint"></a>Para criar uma nova restrição de verificação  
+  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
+  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+  
+    ```  
+    ALTER TABLE dbo.DocExc   
+       ADD ColumnD int NULL   
+       CONSTRAINT CHK_ColumnD_DocExc   
+       CHECK (ColumnD > 10 AND ColumnD < 50);  
+    GO  
+    -- Adding values that will pass the check constraint  
+    INSERT INTO dbo.DocExc (ColumnD) VALUES (49);  
+    GO  
+    -- Adding values that will fail the check constraint  
+    INSERT INTO dbo.DocExc (ColumnD) VALUES (55);  
+    GO  
+  
+    ```  
+  
+ Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+  
+###  <a name="TsqlExample"></a>  

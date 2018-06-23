@@ -8,14 +8,14 @@ ms.prod_service: connectivity
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.topic: article
-ms.date: 04/10/2018
+ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 2bb62d323ce3675a49dbd8abd11a19df2c82dcf9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310095"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36246838"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de Conexão para bancos de dados do Microsoft SQL
 
@@ -52,7 +52,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Linguagem | Baixar o driver do SQL |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo do .NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo do .NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core para Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Driver do Node. js, instruções de instalação](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
