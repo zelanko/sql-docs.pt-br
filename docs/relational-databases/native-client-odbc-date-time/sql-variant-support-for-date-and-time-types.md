@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 66727e962bc0887b78ea177c6faed05c5cc2a8c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4738fc4bfa536d66137578b697778d62c1a8c016
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945851"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702447"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>Suporte para tipos de data e hora de sql_variant
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,23 +41,23 @@ ms.locfileid: "32945851"
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_WCHAR|nvarcar|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_TINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_STINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_SHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_SSHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_USHORT|int|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_LONG|int|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_SLONG|int|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_ULONG|bigint|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_SBIGINT|bigint|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_FLOAT|real|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_DOUBLE|float|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_TINYINT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_STINYINT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_SHORT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_SSHORT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_USHORT|INT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_LONG|INT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_SLONG|INT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_ULONG|BIGINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_SBIGINT|BIGINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_FLOAT|REAL|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_DOUBLE|FLOAT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_UTINYINT|tinyint|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_UTINYINT|TINYINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE não é definido.|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Escala é definida como SQL_DESC_PRECISION (o *DecimalDigits* parâmetro **SQLBindParameter**).|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Escala é definida como SQL_DESC_PRECISION (o *DecimalDigits* parâmetro **SQLBindParameter**).|  
-|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_TYPE_DATE|Data|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Escala é definida como SQL_DESC_PRECISION (o *DecimalDigits* parâmetro **SQLBindParameter**).|  
 |SQL_C_NUMERIC|Decimal|Precisão é definida como SQL_DESC_PRECISION (o *ColumnSize* parâmetro **SQLBindParameter**).<br /><br /> Escala é definida como SQL_DESC_SCALE (o *DecimalDigits* parâmetro de SQLBindParameter).|  
@@ -67,6 +65,6 @@ ms.locfileid: "32945851"
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado|  
   
 ## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Data e hora melhorias &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   
