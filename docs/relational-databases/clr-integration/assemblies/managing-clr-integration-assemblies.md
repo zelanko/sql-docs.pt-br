@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,12 +19,12 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4883867e93c1f8a9e782f1e0a70d8ca6f53160
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918791"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694187"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gerenciando assemblies de integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.locfileid: "32918791"
   
  Informações de assembly são armazenadas no **assembly_files** tabela no banco de dados onde o assembly foi instalado. O **assembly_files** tabela contém as seguintes colunas.  
   
-|Coluna|Description|  
+|coluna|Description|  
 |------------|-----------------|  
 |assembly_id|O identificador definido para o assembly. Este número é atribuído a todos os objetos relacionados ao mesmo assembly.|  
 |nome|O nome do objeto.|  
@@ -42,7 +40,7 @@ ms.locfileid: "32918791"
 |content|A representação hexadecimal do assembly ou arquivo.|  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criando um Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
  Discute a criação de assemblies SAFE, EXTERNAL_ACCESS e UNSAFE CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Alterando um assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  
