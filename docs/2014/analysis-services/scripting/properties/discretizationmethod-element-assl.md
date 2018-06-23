@@ -1,0 +1,82 @@
+---
+title: Elemento DiscretizationMethod (ASSL) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- DiscretizationMethod Element
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+f1_keywords:
+- DiscretizationMethod
+helpviewer_keywords:
+- DiscretizationMethod element
+ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
+caps.latest.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: c22387c74c49446c74b06125da02bda11acd0b7c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36009227"
+---
+# <a name="discretizationmethod-element-assl"></a>Elemento DiscretizationMethod (ASSL)
+  Define o método a ser usado para diferenciação.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```xml  
+  
+<DimensionAttribute> <!-- or ScalarMiningStructureColumn -->  
+   ...  
+   <DiscretizationMethod>...</DiscretizationMethod>  
+   ...  
+</DimensionAttribute>  
+```  
+  
+## <a name="element-characteristics"></a>Características do elemento  
+  
+|Característica|Description|  
+|--------------------|-----------------|  
+|Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
+|Valor padrão|*Nenhuma*|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
+  
+## <a name="element-relationships"></a>Relações do elemento  
+  
+|Relação|Elemento|  
+|------------------|-------------|  
+|Elementos pai|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|Elementos filho|Nenhum|  
+  
+## <a name="remarks"></a>Remarks  
+ O valor do elemento `DiscretizationMethod` determina como os valores de `DimensionAttribute` ou `ScalarMiningStructureColumn` são diferenciados ou organizados em um conjunto específico de grupos. Para obter mais informações sobre os métodos de diferenciação, consulte [os métodos de diferenciação &#40;mineração de dados&#41;](../../data-mining/discretization-methods-data-mining.md).  
+  
+ O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
+  
+|Valor|Description|  
+|-----------|-----------------|  
+|*Automático*|Equivalente ao método de diferenciação AUTOMATIC para colunas de estrutura de mineração.|  
+|*EqualAreas*|Equivalente ao método de diferenciação EQUAL_AREAS para colunas de estrutura de mineração.|  
+|*Clusters*|Equivalente ao método de diferenciação CLUSTERS para colunas de estrutura de mineração.|  
+|*Limites*|Equivalente ao método de diferenciação THRESHOLDS para colunas de estrutura de mineração.|  
+|*EqualRanges*|Equivalente ao método de diferenciação EQUAL_RANGES para colunas de estrutura de mineração.|  
+  
+ A enumeração que corresponde aos valores permitidos para `DiscretizationMethod` no modelo de objeto AMO (Objetos de Gerenciamento de Análise) é <xref:Microsoft.AnalysisServices.DiscretizationMethod>.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades &#40;ASSL&#41;](properties-assl.md)  
+  
+  
