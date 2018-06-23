@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 789445b46712ebfd832a5ccc28f078d8993d5901
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 17f5c8b6522053793c6ec8f21d01fee78f655603
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "34423503"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999932"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   Propriedade que especifica se uma determinada moldura de janela é visível. O método auxiliar é usado no código gerenciado.  

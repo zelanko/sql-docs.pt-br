@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -32,12 +30,12 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922471"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697507"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração de CLR - ambiente hospedado de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +131,7 @@ ms.locfileid: "32922471"
 |Segurança de Acesso do Código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
 |Restrições do modelo de programação|Sim|Sim|Sem restrições|  
 |Requisito de verificabilidade|Sim|Sim|não|  
-|Capacidade de chamar código nativo|não|Não|Sim|  
+|Capacidade de chamar código nativo|não|não|Sim|  
   
  SAFE é o modo mais confiável e seguro, com restrições associadas ao modelo de programação permitido. Assemblies SAFE recebem permissão suficiente para executar, realizar cálculos e ter acesso ao banco de dados local. Assemblies SAFE precisam ser seguros do tipo verificável e não têm permissão para chamar código não gerenciado.  
   
