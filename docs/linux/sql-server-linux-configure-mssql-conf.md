@@ -4,7 +4,7 @@ description: Este artigo descreve como usar a ferramenta mssql conf para definir
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 6369c3144a9ce641765358621027729ce235f69d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9506096746c0f93b147f8040bbd7066e99d69bad
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324047"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329481"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql conf
 
@@ -98,7 +98,10 @@ Para obter uma lista de agrupamentos com suporte, execute o [sys. fn_helpcollati
 
 ## <a id="customerfeedback"></a> Configurar comentários do cliente
 
-O **telemetry.customerfeedback** alterações de configuração, se o SQL Server envia comentários à Microsoft ou não. Por padrão, esse valor é definido como **true**. Para alterar o valor, execute os seguintes comandos:
+O **telemetry.customerfeedback** alterações de configuração, se o SQL Server envia comentários à Microsoft ou não. Por padrão, esse valor é definido como **true** para todas as edições. Para alterar o valor, execute os seguintes comandos:
+
+> [!IMPORTANT]
+> Você pode não desative a comentários dos clientes gratuitamente edições do SQL Server Express e desenvolvedor.
 
 1. Execute o script mssql conf como raiz com o **definir** comando **telemetry.customerfeedback**. O exemplo a seguir desativa os comentários dos clientes, especificando **false**.
 
@@ -112,7 +115,7 @@ O **telemetry.customerfeedback** alterações de configuração, se o SQL Server
    sudo systemctl restart mssql-server
    ```
 
-Para obter mais informações, consulte [comentários do cliente para o SQL Server no Linux](sql-server-linux-customer-feedback.md).
+Para obter mais informações, consulte [comentários do cliente para o SQL Server no Linux](sql-server-linux-customer-feedback.md) e [declaração de privacidade do SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Alterar o local padrão de diretório de dados ou de log
 

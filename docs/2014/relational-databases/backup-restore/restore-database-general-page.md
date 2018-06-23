@@ -1,0 +1,95 @@
+---
+title: Restaurar banco de dados (página Geral) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.swb.restoredb.general.f1
+ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
+caps.latest.revision: 85
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f310d762ca8a8d116b3accc618532b772eef8c26
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36119384"
+---
+# <a name="restore-database-general-page"></a>Restaurar banco de dados (página Geral)
+  Use a página **Geral** para especificar informações sobre os bancos de dados de origem e destino para uma operação de restauração de banco de dados.  
+  
+ **Para usar o SQL Server Management Studio para restaurar o backup de um banco de dados**  
+  
+-   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+  
+-   [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+  
+> [!NOTE]  
+>  Quando você especificar uma tarefa de restauração usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gerar correspondente [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTAURAR](/sql/t-sql/statements/restore-statements-transact-sql) script clicando **Script** e, em seguida, selecionando um destino para o script.  
+  
+## <a name="permissions"></a>Permissões  
+ Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE assumirão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** , e o proprietário (**dbo**) do banco de dados.  
+  
+ As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
+  
+ Restauração de um backup criptografado requer `VIEW DEFINITION` permissões para o certificado ou chave assimétrica usada para criptografia durante o backup.  
+  
+## <a name="options"></a>Opções  
+  
+### <a name="source"></a>Origem  
+ As opções do painel **Restaurar de**identificam o local dos conjuntos de backup no banco de dados e os conjuntos de backups que você deseja restaurar.  
+  
+|Termo|Definição|  
+|----------|----------------|  
+|**Backup de banco de dados**|Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .|  
+|**Dispositivo**|Selecione os dispositivos lógicos ou físicos de backup (fitas, URLs ou arquivos) que contêm o backup ou os backups a serem restaurados. Isso será necessário se o backup de banco de dados foi feito em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para selecionar um ou mais dispositivos de backup lógicos ou físicos, clique no botão Procurar que abre a caixa de diálogo **Selecione dispositivos de backup** . Nessa caixa de diálogo você poderá selecionar até 64 dispositivos que pertencem a um único conjunto de mídias. Os dispositivos de fita devem ser conectados fisicamente ao computador que executa a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um arquivo de backup pode estar em um dispositivo de disco local ou remoto. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md). Você também pode selecionar **URL** como o tipo de dispositivo para os arquivos de backup incluídos no armazenamento do Windows Azure.<br /><br /> Quando você fechar a caixa de diálogo **Selecione dispositivos de backup** , o dispositivo selecionado aparecerá como valores somente leitura na lista **Dispositivo** .|  
+|**Backup de banco de dados**|Selecione o nome do banco de dados a partir do qual os backups deverão ser restaurados na lista suspensa.<br /><br /> Observação: essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups nos dispositivos selecionados estarão disponíveis.|  
+  
+### <a name="destination"></a>Destino  
+ As opções do painel **Restaurar para** identificam o banco de dados e o ponto de restauração.  
+  
+|Termo|Definição|  
+|----------|----------------|  
+|**Backup de banco de dados**|Insira o banco de dados a ser restaurado na lista. Você pode digitar um novo banco de dados ou escolher um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, excluindo os bancos de dados do sistema **mestre** e **tempdb**.<br /><br /> Observação: para restaurar um backup protegido por senha, você deve usar a instrução [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) .|  
+|**Restaurar para**|A caixa **Restaurar para** será definida, por padrão, como "Para o último backup obtido". Você também pode clicar em **Linha do Tempo** para mostrar a caixa de diálogo **Linha do Tempo do Backup** que exibe o histórico de backup de banco de dados no formato de uma linha do tempo. Clique em **cronograma** para designar um determinado `datetime` ao qual você deseja restaurar o banco de dados. O banco de dados será restaurado então no estado em que estava naquele momento determinado especificado. Consulte [Backup Timeline](backup-timeline.md).|  
+  
+### <a name="restore-plan"></a>Plano de restauração  
+  
+|Termo|Definição|  
+|----------|----------------|  
+|**Conjuntos de backup a serem restaurados**|Exibe os conjuntos de backup disponíveis para o local especificado. Cada conjunto de backup, o resultado de uma operação de backup única, é distribuído por todos os dispositivos do conjunto de mídias. Por padrão, um plano de recuperação é sugerido para atingir a meta da operação de restauração que baseia-se na seleção dos conjuntos de backup necessários. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o histórico de backup no **msdb** para identificar quais backups são necessários para restaurar um banco de dados, e cria um plano de restauração. Por exemplo, para a restauração de um banco de dados, o plano de restauração seleciona o backup completo de banco de dados mais recente, seguido do backup de banco de dados mais recente, subsequente e diferencial, se houver. No modelo de recuperação completa, o plano de restauração, em seguida, seleciona todos os backups de log subsequentes.<br /><br /> Para substituir o plano de recuperação sugerido, você pode alterar as seguintes seleções na grade. Todos os backups que dependem de um backup não selecionado serão desmarcados automaticamente.<br /><br /> **Restaurar**:<br />                          As caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.<br />**Nome**: O nome do conjunto de backup.<br />**Componente**: O componente de backup: **banco de dados**, **arquivo**, ou  **\<em branco >** (para logs de transação).<br />**Tipo**: tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.<br />**Servidor**: o nome da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.<br />**Banco de dados**: O nome do banco de dados envolvido na operação de backup.<br />**Posição**: a posição do conjunto de backup no volume.<br />**Primeiro LSN**: O número de sequência de log da primeira transação no conjunto de backup. Em branco para backups de arquivo.<br />**LSN da última**: O número de sequência de log da última transação no conjunto de backup. Em branco para backups de arquivo.<br />**Ponto de verificação LSN**: O número de sequência de log (LSN) do ponto de verificação mais recente no momento em que o backup foi criado.<br />**LSN completo**: O número de sequência de log do backup de banco de dados completo mais recente.<br />**Data de início**: A data e hora de início de operação de backup, apresentadas na configuração regional do cliente.<br />**Data de término**: A data e hora de término da operação de backup, apresentadas na configuração regional do cliente.<br />**Tamanho**: definir o tamanho do backup em bytes.<br />**Nome de usuário**: O nome do usuário que realizou a operação de backup.<br /><br /> **Expiração**: A data e a hora de expiração do conjunto de backup.<br /><br /> As caixas de seleção serão habilitadas apenas quando a caixa de **Seleção Manual** estiver marcada. Isso permite selecionar os conjuntos de backup a serem restaurados.<br /><br /> Quando a caixa **Seleção Manual** estiver marcada, a exatidão da opção Restaurar Plano será verificada a cada vez que for modificada. Se a sequência de backups estiver incorreta, será exibida uma mensagem de erro.|  
+|**Verificar mídia de backup**|Chama uma instrução RESTORE VERIFY_ONLY nos conjuntos de backup selecionados.<br /><br /> Observação: essa é uma operação de execução longa e seu progresso pode ser acompanhado e cancelado por meio do Monitor de Progresso na Estrutura da Caixa de Diálogo.<br /><br /> Esse botão permite verificar a integridade dos arquivos de backup selecionados antes da restauração.<br /><br /> Ao verificar a integridade de conjuntos de backup, o status do progresso na parte inferior esquerda da caixa de diálogo dirá "Verificando" em vez de "Executando".|  
+  
+## <a name="compatibility-support"></a>Suporte de compatibilidade  
+ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível restaurar um banco de dados de usuário de um backup de banco de dados criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior. No entanto, os backups do **mestre**, **modelo** e **msdb** que foram criados no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] por meio do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não poderão ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Além disso, backups criados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser restaurados por nenhuma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usa um caminho padrão diferente das versões anteriores. Assim, para restaurar um banco de dados que foi criado no local padrão de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve usar a opção MOVE.  
+  
+ Depois de você restaurar um banco de dados da versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação poderá levar várias horas e a recriação poderá ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados.  
+  
+## <a name="restoring-from-an-encrypted-backup"></a>Restaurando a partir de um backup criptografado  
+ A restauração requer que o certificado ou a chave assimétrica usada originalmente para criar o backup esteja disponível na instância para a qual você está realizando a restauração. A conta que executa a restauração deve ter `VIEW DEFINITIONS` no certificado ou chave assimétrica. Os certificados usados para criptografar o backup não deverão ser renovados ou atualizados.  
+  
+## <a name="restoring-from-windows-azure-storage"></a>Restaurando a partir do armazenamento do Windows Azure  
+ Ao restaurar um backup que está no armazenamento do Windows Azure, a interface do usuário de restauração tem uma nova opção de dispositivo de backup. **URL** na caixa de diálogo **Selecione dispositivos de backup** . Quando você clica em **Adicionar**, a caixa de diálogo **Conectar-se ao Windows Azure** é exibida para que você possa especificar a Credencial SQL para realizar a autenticação na conta de armazenamento.  Depois que você estiver conectado à conta de armazenamento, os arquivos de backup serão exibidos na caixa de diálogo **Localizar o arquivo de backup no Windows Azure** , na qual você poderá selecionar o arquivo a ser usado na restauração.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md)   
+ [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
+ [Restaurar um banco de dados para uma transação marcada &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
+ [Restaurar um backup de log de transações &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
+ [Exibir o conteúdo de um arquivo ou fita de backup &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
+ [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
+ [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [Argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  
+  
+  

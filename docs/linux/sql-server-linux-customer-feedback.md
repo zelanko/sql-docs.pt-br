@@ -4,18 +4,18 @@ description: Descreve como os comentários do cliente do SQL Server são coletad
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 66275b164e1d6514d04e0c8a6f1a666de0a02425
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074289"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329501"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Comentários do cliente para o SQL Server no Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "34074289"
 
 Por padrão, o Microsoft SQL Server coleta informações sobre como os clientes estão usando o aplicativo. Especificamente, o SQL Server coleta informações sobre a experiência de instalação, uso e desempenho. Essas informações ajudam a Microsoft a melhorar o produto para melhor atender às necessidades do cliente. Por exemplo, a Microsoft coleta informações sobre quais tipos de códigos de erro os clientes costumam encontrar, para que possamos corrigir erros relacionados, melhorar nossa documentação sobre como usar o SQL Server e determinar se os recursos devem ser adicionados ao produto para melhor atender aos clientes.
 
-Este documento fornece detalhes sobre quais tipos de informações são coletados e como configurar o Microsoft SQL Server no Linux para enviar ou coletados informações à Microsoft. SQL Server 2017 inclui uma declaração de privacidade que explica quais informações fazemos e não coletar de usuários. Leia a declaração de privacidade.
+Este documento fornece detalhes sobre quais tipos de informações são coletados e como configurar o Microsoft SQL Server no Linux para enviar ou coletados informações à Microsoft. SQL Server 2017 inclui uma declaração de privacidade que explica quais informações fazemos e não coletar de usuários. Para obter mais informações, consulte o [privacidade](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 Especificamente, a Microsoft não envia nenhum dos seguintes tipos de informações por meio desse mecanismo:
 
@@ -39,6 +39,9 @@ O SQL Server 2017 sempre coleta e envia informações sobre a experiência de in
 ## <a name="disable-customer-feedback"></a>Desabilitar comentários do cliente
 
 Esta opção lhe permite alterar se o SQL Server envia comentários à Microsoft ou não. Por padrão, esse valor é definido como true. Para alterar o valor, execute os seguintes comandos:
+
+> [!IMPORTANT]
+> Você pode não desative a comentários dos clientes gratuitamente edições do SQL Server Express e desenvolvedor.
 
 ### <a name="on-red-hat-suse-and-ubuntu"></a>No Red Hat, SUSE e Ubuntu
 
