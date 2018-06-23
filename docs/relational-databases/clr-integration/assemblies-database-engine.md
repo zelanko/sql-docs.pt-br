@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
@@ -19,12 +17,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fbed0b759f3b05688ee51156a9092294fe0ceb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5429ae69dfabd8d978e3dff6a2a29ff3f4ba56fe
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921701"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697107"
 ---
 # <a name="assemblies-database-engine"></a>Assemblies (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +56,8 @@ ms.locfileid: "32921701"
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Criando Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)|Explica o que levar em consideração antes de criar um assembly. Inclui assemblies de empacotamento, permissões de acesso a código e outras restrições.|  
-|[Implementando Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)|Explica como criar e eliminar assemblies, como e quando modificar assemblies e como recuperar metadados sobre assemblies.|  
+|[Criação de Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)|Explica o que levar em consideração antes de criar um assembly. Inclui assemblies de empacotamento, permissões de acesso a código e outras restrições.|  
+|[Implementando assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)|Explica como criar e eliminar assemblies, como e quando modificar assemblies e como recuperar metadados sobre assemblies.|  
 |[Obtendo informações sobre assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)|Lista as exibições do catálogo e funções que podem ser consultadas para metadados sobre assemblies.|  
   
 ## <a name="see-also"></a>Consulte também  

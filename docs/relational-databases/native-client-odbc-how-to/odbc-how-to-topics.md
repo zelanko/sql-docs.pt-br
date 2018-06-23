@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a4888eaac053f8c0f6db09f0b9c6684bc0e6e78
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 457788ed712908413d5762fd4d31d399aa869c2c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707334"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700397"
 ---
 # <a name="odbc-how-to-topics"></a>Tópicos de instruções sobre ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.locfileid: "34707334"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Configurando os SQL Server ODBC Driver tópicos de instruções](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
+-   [Tópicos de instrução sobre a configuração do driver ODBC do SQL Server](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   
 -   [Alocar identificadores e conecte-se ao SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   

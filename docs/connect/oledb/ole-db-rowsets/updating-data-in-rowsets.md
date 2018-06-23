@@ -2,9 +2,10 @@
 title: Atualizando dados em conjuntos de linhas | Microsoft Docs
 description: Atualizando dados em conjuntos de linhas usando o Driver do OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6ae4adba438d1465a572971021c82dd004eca211
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306355"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689899"
 ---
 # <a name="updating-data-in-rowsets"></a>Atualizando dados em conjuntos de linhas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   O Driver OLE DB para SQL Server atualizações [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados quando um consumidor atualiza um conjunto de linhas modificável que contém os dados. Um conjunto de linhas modificável é criado quando o consumidor solicita suporte para o **IRowsetChange** ou **IRowsetUpdate** interface.  
   

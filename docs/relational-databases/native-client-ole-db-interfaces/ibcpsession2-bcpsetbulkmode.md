@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97f00c5d111401a44d576815b704b752f2788a6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2679487b9aa95685b7d57dafa3b3c8872419a20e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946781"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703357"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Ibcpsession2:: Bcpsetbulkmode fornece uma alternativa para [ibcpsession:: BCPColFmt & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar o formato de coluna. Ao contrário de ibcpsession:: BCPColFmt, que define os atributos de formato de coluna individual, ibcpsession2:: Bcpsetbulkmode define todos os atributos.  
+  Ibcpsession2:: Bcpsetbulkmode fornece uma alternativa para [ibcpsession:: BCPColFmt &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar o formato de coluna. Ao contrário de ibcpsession:: BCPColFmt, que define os atributos de formato de coluna individual, ibcpsession2:: Bcpsetbulkmode define todos os atributos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +44,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *propriedade*  
+ *property*  
  Uma constante do tipo BYTE. Consulte a tabela na seção Comentários para obter a lista das constantes.  
   
  *pField*  
@@ -72,14 +70,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|O argumento era inválido.|  
 |**E_OUTOFMEMORY**|Erro de memória insuficiente.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ibcpsession2:: Bcpsetbulkmode pode ser usado para copiar fora de uma consulta ou uma tabela em massa. Quando ibcpsession2:: Bcpsetbulkmode é usado para copiar fora de uma instrução de consulta em massa, ele deve ser chamado antes de chamar `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` para especificar a instrução de consulta.  
   
  Evite combinar a sintaxe de chamada RPC com a sintaxe de consulta em lotes (`{rpc func};SELECT * from Tbl`, por exemplo) no texto de um único comando.  Isso fará com que icommandprepare:: Prepare retornar um erro e impedirá de recuperar metadados. Use a sintaxe de ODBC CALL (`{call func}; SELECT * from Tbl`, por exemplo) se precisar combinar a execução de procedimentos armazenados e a consulta em lotes no texto de um único comando.  
   
  A tabela a seguir lista as constantes do parâmetro *property* .  
   
-|property|Descrição|  
+|property|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção – c no BCP. EXE e ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção – w no BCP. EXE e ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_SQLNCHAR**.|  
@@ -369,6 +367,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [IBCPSession2 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   
