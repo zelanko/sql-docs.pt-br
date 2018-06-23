@@ -1,0 +1,182 @@
+---
+title: Gerenciar a coleta de dados | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
+ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
+caps.latest.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36115123"
+---
+# <a name="manage-data-collection"></a>Gerenciar coleta de dados
+  Você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados e funções para gerenciar diferentes aspectos da coleta de dados, como habilitar ou desabilitar a coleta de dados, alterar uma coleção para definir a configuração, ou exibir dados no data warehouse de gerenciamento .  
+  
+## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Gerenciar a coleta de dados usando o SQL Server Management Studio  
+ Você pode executar as seguintes tarefas de relacionadas ao coletor de dados usando o Pesquisador de objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+  
+-   [Configurar o Data Warehouse de Gerenciamento &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
+  
+-   [Configurar propriedades de um coletor de dados](configure-properties-of-a-data-collector.md)  
+  
+-   [Habilitar ou desabilitar a coleta de dados](data-collection.md)  
+  
+-   [Iniciar ou interromper um conjunto de coleta](start-or-stop-a-collection-set.md)  
+  
+-   [Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL &#40;SQL Server Management Studio&#41;](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
+  
+-   [Exibir logs de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-collection-set-logs-sql-server-management-studio.md)  
+  
+-   [Exibir ou alterar agendas de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-or-change-collection-set-schedules-sql-server-management-studio.md)  
+  
+-   [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
+  
+## <a name="manage-data-collection-by-using-transact-sql"></a>Gerenciar coleta de dados usando Transact-SQL  
+ O coletor de dados fornece uma extensa coleção de procedimentos armazenados que você pode usar para executar qualquer tarefa relacionada ao coletor de dados. Por exemplo, usando o [!INCLUDE[tsql](../../includes/tsql-md.md)], é possível realizar as seguintes tarefas:  
+  
+-   [Configurar parâmetros de coleta de dados &#40;Transact-SQL&#41;](configure-data-collection-parameters-transact-sql.md)  
+  
+-   [Habilitar ou desabilitar a coleta de dados](data-collection.md)  
+  
+-   [Iniciar ou parar um conjunto de coleta](start-or-stop-a-collection-set.md)  
+  
+-   [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](create-custom-collection-set-generic-t-sql-query-collector-type.md)  
+  
+-   [Adicionar um item de coleta a um conjunto de coletas &#40;Transact-SQL&#41;](add-a-collection-item-to-a-collection-set-transact-sql.md)  
+  
+ Além disso, existem funções e exibições que podem ser utilizadas para obter dados de configuração dos bancos de dados msdb e do data warehouse de gerenciamento, dados do log de execução e dados armazenados no data warehouse de gerenciamento.  
+  
+ Você pode usar os procedimentos armazenados, funções e exibições fornecidos para criar seus próprios cenários de coleta de dados completos.  
+  
+> [!IMPORTANT]  
+>  Diferentemente de procedimentos armazenados regulares, os procedimentos armazenados do coletor de dados usam apenas parâmetros digitados e não oferecem suporte a conversão de tipo de dados automática. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+  
+ Você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar e executar os exemplos de código fornecido. Para obter mais informações, veja [Pesquisador de Objetos](../../ssms/object/object-explorer.md). Como alternativa, você pode criar a consulta em qualquer editor e salvá-la em um arquivo de texto com uma extensão de nome de arquivo .sql. Você pode executar a consulta a partir do prompt de comando do Windows usando o `sqlcmd` utilitário. Para obter mais informações, consulte [Usar o Utilitário sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+  
+### <a name="stored-procedures-and-views"></a>Stored Procedures and Views  
+ **Trabalhando com o coletor de dados**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com o coletor de dados.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)|Habilite o coletor de dados.|  
+|[sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)|Desabilita o coletor de dados.|  
+  
+ **Trabalhando com conjuntos de coleta**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com os conjuntos de coleta.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql)|Executar um conjunto de coleta sob demanda.|  
+|[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql)|Iniciar um conjunto de coleta.|  
+|[sp_syscollector_stop_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql)|Parar um conjunto de coleta.|  
+|[sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql)|Criar um conjunto de coleta.|  
+|[sp_syscollector_delete_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collection-set-transact-sql)|Excluir um conjunto de coleta.|  
+|[sp_syscollector_update_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-set-transact-sql)|Alterar a configuração de um conjunto de coleta.|  
+|[sp_syscollector_upload_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql)|Carregar dados de um conjunto de coleta no data warehouse de gerenciamento. Isso é efetivamente um carregamento sob demanda.|  
+  
+ **Trabalhando com itens de coleta**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com os itens de coleta.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql)|Criar um item de coleta.|  
+|[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql)|Excluir um item de coleta.|  
+|[sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql)|Atualizar um item de coleta.|  
+  
+ **Trabalhando com tipos de coletor**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com os tipos de coletor.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql)|Criar um tipo de coletor.|  
+|[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql)|Atualizar um tipo de coletor.|  
+|[sp_syscollector_delete_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collector-type-transact-sql)|Exclui um tipo de coletor.|  
+  
+ **Obtendo informações de configuração**  
+  
+ A tabela a seguir descreve as exibições que podem ser usadas para se obter informações de configuração e dados do log de execução.  
+  
+|Nome da exibição|Description|  
+|---------------|-----------------|  
+|[syscollector_config_store &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-config-store-transact-sql)|Obter configuração do coletor de dados.|  
+|[syscollector_collection_items &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collection-items-transact-sql)|Obter informações sobre o item de coleta.|  
+|[syscollector_collection_sets &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql)|Obter informações sobre o conjunto de coleta.|  
+|[syscollector_collector_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collector-types-transact-sql)|Obter informações sobre o tipo de coletor.|  
+|[syscollector_execution_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-log-transact-sql)|Obter informações sobre o conjunto de coleta e a execução do pacote.|  
+|[syscollector_execution_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql)|Obter informações sobre a execução de tarefa.|  
+|[syscollector_execution_log_full &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-log-full-transact-sql)|Obter informações quando o log de execução estiver completo.|  
+  
+ **Configurando o acesso ao data warehouse de gerenciamento**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para configurar o acesso ao data warehouse de gerenciamento.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql)|Especificar o nome de banco de dados definido na cadeia de caracteres de conexão para o data warehouse de gerenciamento.|  
+|[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql)|Especificar a instância definida na cadeia de caracteres de conexão para o data warehouse de gerenciamento.|  
+  
+ **Configurando o data warehouse de gerenciamento**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com a configuração do data warehouse de gerenciamento.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[core.sp_create_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql)|Criar um instantâneo de coleta no data warehouse de gerenciamento.|  
+|[core.sp_update_data_source &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql)|Atualizar a fonte de dados para coleta de dados.|  
+|[core.sp_add_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql)|Adicionar um tipo de coletor ao data warehouse de gerenciamento.|  
+|[core.sp_remove_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql)|Remover um tipo de coletor do data warehouse de gerenciamento.|  
+|[core.sp_purge_data &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql)|Excluir dados do data warehouse de gerenciamento.|  
+  
+ **Trabalhando com pacotes de carregamento**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com pacotes de carregamento.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql)|Configurar o número de repetições do carregamento de dados.|  
+|[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql)|Especificar o armazenamento temporário entre as repetições de carregamento.|  
+  
+ **Trabalhando com o log de execução de coleta de dados**  
+  
+ A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com o log de execução de coleta de dados.  
+  
+|Nome do procedimento|Description|  
+|--------------------|-----------------|  
+|[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql)|Excluir entradas do conjunto de coleta do log de execução.|  
+  
+### <a name="functions"></a>Funções  
+ A tabela a seguir descreve as funções que podem ser usadas para obter informações de execução e rastreamento.  
+  
+|Nome da função|Description|  
+|-------------------|-----------------|  
+|[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql)|Obter os dados de log de execução do [!INCLUDE[ssIS](../../includes/ssis-md.md)] para um pacote específico.|  
+|[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql)|Obter estatísticas de execução para um pacote ou conjunto de coleta. Estas informações incluem erros que estão registrados.|  
+|[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|Obter os eventos que são registrados quando o tipo de coletor de Rastreamento do SQL Genérico é usado para coletar dados.|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Executar um procedimento armazenado](../stored-procedures/execute-a-stored-procedure.md)   
+ [Usar o SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)   
+ [Coleta de Dados](data-collection.md)  
+  
+  
