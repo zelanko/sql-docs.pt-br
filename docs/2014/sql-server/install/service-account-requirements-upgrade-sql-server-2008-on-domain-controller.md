@@ -1,0 +1,42 @@
+---
+title: Requisitos para atualização para o SQL Server 2008 em um controlador de domínio da conta de serviço | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- domain controllers
+- service accounts
+- network service accounts
+- local service accounts
+ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
+caps.latest.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 06b1143fc205b7afc933369abeed32d9599c7d5b
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36116057"
+---
+# <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>Requisitos da conta de serviço para atualização para o SQL Server 2008 em um controlador de domínio
+  O Supervisor de atualização detectou uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado sob uma conta de serviço de rede ou serviço Local um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] controlador de domínio. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado em um controlador de domínio do [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem executar em privilégios de conta de Serviço Local ou Serviço de Rede.  
+  
+## <a name="component"></a>Componente  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+  
+## <a name="corrective-action"></a>Ação corretiva  
+ Certifique-se de que todas as contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão atribuídas a contas de Domínio ou Sistema Local. Caso essa alteração não seja feita antes da atualização, a Instalação será interrompida. As contas de serviço do Gravador do SQL, o Auxiliar do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os Serviços Auxiliares do Active Directory são exceções, pois eles são codificados para a conta de Serviço de Rede e não podem ser alterados.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+  
+  
