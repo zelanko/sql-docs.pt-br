@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017993"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700897"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidade e escalabilidade no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34017993"
 |Modelos multidimensionais usando o armazenamento MOLAP|Escolha uma configuração equilibrada que comporte E/S de disco para carregar os dados rapidamente e RAM suficiente para dados armazenados em cache.|  
 |Modelos multidimensionais usando o armazenamento ROLAP|Maximizar a E/S de disco e minimizar a latência de rede.|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>Alta disponibilidade e redundância por meio do WSFC  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>Alta disponibilidade e redundância por meio do WSFC  
  O Analysis Services pode ser instalado em um existente Cluster de Failover do Windows Server (WSFC) para obter alta disponibilidade que restaura o serviço no menor tempo possível.  
   
  Clusters de failover fornecem acesso total (leitura e gravação) ao banco de dados, mas somente um nó por vez. Bancos de dados secundários são executados em nós adicionais do cluster como servidores de substituição se o primeiro nó falhar.  

@@ -1,0 +1,77 @@
+---
+title: Administração de servidor do PowerPivot e a configuração na Administração Central | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
+caps.latest.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36122044"
+---
+# <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Administração e configuração de servidor do PowerPivot na Administração Central
+  A administração de servidor e a configuração do PowerPivot são realizadas por administradores de aplicativo de serviço do SharePoint, usando a Administração Central do SharePoint.  
+  
+ O PowerPivot para SharePoint deve ser configurado antes de ser usado. Após instalar o PowerPivot para SharePoint usando a Instalação do SQL Server, você poderá configurá-lo usando uma das seguintes abordagens:  
+  
+-   Ferramenta de Configuração do PowerPivot ou Ferramenta de Configuração do PowerPivot para SharePoint 2013  
+  
+-   Administração Central do SharePoint  
+  
+-   Cmdlets do PowerShell  
+  
+ Todas as três abordagens entregam um servidor completamente configurado.  
+  
+ Esta seção inclui tarefas para configurar o software usando a Administração Central. Execute pelo menos as três tarefas da configuração exigidas anotadas na lista abaixo.  
+  
+> [!IMPORTANT]  
+>  Para o SharePoint 2010, o SharePoint 2010 Service Pack 1 (SP1) deve ser instalado antes da configuração do PowerPivot para SharePoint ou de um farm do SharePoint que usa um servidor de banco de dados do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Se você ainda não instalou o service pack; faça isso agora, antes de começar a configurar o servidor.  
+  
+## <a name="benefits-of-configuring-powerpivot-for-sharepoint-using-central-administration"></a>Benefícios de configurar o PowerPivot para SharePoint usando a Administração Central  
+ A Administração Central do SharePoint é o aplicativo administrativo de um farm do SharePoint. Se você for administrador de farm, pode preferir usar uma ferramenta familiar ao adicionar uma instância do PowerPivot para SharePoint a seu farm.  
+  
+ Em contraste com as Ferramentas de Configuração do PowerPivot ou cmdlets PowerShell, a Administração Central fornece páginas que especificam completamente todas as opções que você pode definir ao configurar um aplicativo ou servidor. Outras abordagens condensam o fluxo de trabalho de configuração em um número menor de etapas ou exigem conhecimento prévio de como configurar um servidor do SharePoint usando PowerShell.  
+  
+## <a name="related-content"></a>Conteúdo relacionado  
+ [Configuração do PowerPivot usando o Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
+  
+ [Ferramentas de Configuração do PowerPivot](power-pivot-configuration-tools.md)  
+  
+## <a name="related-tasks"></a>Related Tasks  
+  
+|Link|Tipo|Descrição da tarefa|  
+|----------|----------|----------------------|  
+|[Implantar soluções do PowerPivot para SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Obrigatório|Esta etapa instala os arquivos da solução que adicionam arquivos de programa e páginas de aplicativo ao farm e às coleções de sites.|  
+|[Criar e configurar um aplicativo de serviço PowerPivot na Administração Central](create-and-configure-power-pivot-service-application-in-ca.md)|Obrigatório|Essa etapa provisiona o Serviço de Sistema PowerPivot.|  
+|[Ativar a integração de recursos do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md)|Obrigatório|Esta etapa ativa os recursos do PowerPivot no nível de coleção de sites.|  
+|[Adicionar MSOLAP.5 como um Provedor de Dados confiável em Serviços do Excel](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Obrigatório|Esta etapa adiciona o provedor OLE DB do Analysis Services como um provedor de confiança em Serviços do Excel.|  
+|[Atualização de dados PowerPivot com SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)|Recomendado|A atualização de dados é opcional, porém recomendada. Ela permite programar atualizações autônomas ao dados PowerPivot em pastas de trabalho do Excel publicadas.|  
+|[Configurar o PowerPivot conta de atualização de dados autônoma &#40;PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|Recomendado|Esta etapa provisiona uma conta com finalidade especial que pode ser usada para executar trabalhos de atualização de dados no servidor.|  
+|[Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Opcional|A coleta de dados de uso é configurada por padrão. Você pode usar essas etapas para modificar as configurações padrão.|  
+|[Configurar o processamento de somente consulta ou atualização de dados dedicado &#40;PowerPivot para SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Opcional|Uma instância do PowerPivot pode ser dedicada somente para trabalhos de atualização de dados ou consultas. Além disso, você pode modificar as configurações padrão para trabalhos de atualização de dados paralelos.|  
+|[Configurar contas de serviço PowerPivot](configure-power-pivot-service-accounts.md)|Opcional|Explica como atualizar senhas ou alterar contas de serviço.|  
+|[Conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na Administração Central](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Opcional|Explica como modificar associações de serviço.|  
+|[Criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Opcional|Explica como adicionar a Galeria PowerPivot como um local confiável.|  
+|[Configurar e exibir arquivos de Log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Opcional|O log de eventos está configurado por padrão. Você pode usar essas etapas para modificar as configurações padrão.|  
+|[Configurar regras de integridade do PowerPivot-](configure-power-pivot-health-rules.md)|Opcional|As regras de integridade do servidor são configuradas por padrão. Você pode usar essas etapas para modificar algumas das configurações padrão.|  
+|[Criar e personalizar uma galeria do PowerPivot](create-and-customize-power-pivot-gallery.md)|Opcional|Para instalações que você está configurando manualmente, este procedimento explica como criar uma biblioteca da Galeria PowerPivot que mostra miniaturas de imagem das pastas de trabalho PowerPivot que ela contém.|  
+|[Adicionar um tipo de conteúdo de Conexão de modelo semântico BI a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Opcional|Explica como estender uma biblioteca de documentos para dar suporte à criação de arquivos de conexão de modelo semântico de BI.|  
+  
+## <a name="see-also"></a>Consulte também  
+ [PowerPivot para SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
+ [Referência de parâmetro de configuração &#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [Recuperação de desastres para PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+  
+  

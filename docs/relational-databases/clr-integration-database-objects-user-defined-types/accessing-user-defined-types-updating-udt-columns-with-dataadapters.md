@@ -3,11 +3,9 @@ title: Atualizando colunas UDT com DataAdapters | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -28,12 +26,12 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 216f02f0d7abde7f2f2afc12bb1acc4b476de47b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab3e174062e3618d55f7cba5e715845e0c01327a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920881"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702037"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Acessando tipos definidos pelo usuário - Atualizando colunas UDT com DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

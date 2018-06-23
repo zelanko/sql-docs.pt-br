@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466582"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702227"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_ajuste\_recomendações (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34466582"
   
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.
 
-| **Nome da coluna** | **Tipo de dados** | **Descrição** |
+| **Nome da coluna** | **Data type** | **Descrição** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | Nome exclusivo da recomendação. |
 | **type** | **nvarchar(4000)** | O nome da opção de ajuste automático que gerou a recomendação, por exemplo, `FORCE_LAST_GOOD_PLAN` |
@@ -58,7 +58,7 @@ ms.locfileid: "34466582"
 | **revert\_action\_duration** | **time** | Duração da ação de reversão. |
 | **Reverter\_ação\_iniciada\_por** | **nvarchar(4000)** | `User` = Plano de recomendado manualmente unforced usuário. <br /> `System` = Sistema revertido automaticamente a recomendação. |
 | **Reverter\_ação\_iniciada\_tempo** | **datetime2** | Data em que a recomendação foi revertida. |
-| **score** | **Int** | Estimado valor/impacto para esta recomendação para o valor de 0 a 100 escala (quanto maior o melhor) |
+| **score** | **int** | Estimado valor/impacto para esta recomendação para o valor de 0 a 100 escala (quanto maior o melhor) |
 | **Detalhes** | **nvarchar(max)** | Documento JSON que contém mais detalhes sobre a recomendação. Campos a seguir estão disponíveis:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_id da consulta retornada.<br />-    `regressedPlanId` -plan_id do plano retornado.<br />-   `regressedPlanExecutionCount` -Número de execuções de consulta com retornadas plano antes da regressão é detectado.<br />-    `regressedPlanAbortedCount` -Número de erros detectados durante a execução do plano retornada.<br />-    `regressedPlanCpuTimeAverage` -Tempo de CPU médio consumido pela consulta retornada para a regressão é detectada.<br />-    `regressedPlanCpuTimeStddev` -Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br />-    `recommendedPlanId` -plan_id do plano que deve ser forçado.<br />-   `recommendedPlanExecutionCount`-Número de execuções de consulta com o plano deve ser forçado para a regressão é detectada.<br />-    `recommendedPlanAbortedCount` -Número de erros detectados durante a execução do plano que deve ser forçado.<br />-    `recommendedPlanCpuTimeAverage` -Tempo de CPU médio consumido pela consulta executada com o plano deve ser forçado (calculado antes da regressão é detectada).<br />-    `recommendedPlanCpuTimeStddev` Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br /><br />`implementationDetails`<br />-  `method` -O método que deve ser usado para corrigir a regressão. Valor é sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que deve ser executado para forçar o plano recomendado. |
   
 ## <a name="remarks"></a>Remarks  
@@ -92,9 +92,9 @@ Documento JSON em `state` coluna contém o motivo que descreve o motivo pelo qua
  Estatística da coluna de detalhes não mostrar estatísticas de plano de tempo de execução (por exemplo, tempo de CPU atual). Os detalhes de recomendação são realizados no momento da detecção de regressão e descrever porque [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificado regressão de desempenho. Use `regressedPlanId` e `recommendedPlanId` a consulta [exibições do catálogo de repositório de consultas](../../relational-databases/performance/how-query-store-collects-data.md) para localizar as estatísticas do plano exata do tempo de execução.
 
 ## <a name="using-tuning-recommendations-information"></a>Usando informações de recomendações de ajuste  
- Você pode usar a consulta a seguir para obter o script T-SQL que corrige o problema:  
+Você pode usar a consulta a seguir para obter o [!INCLUDE[tsql](../../includes/tsql-md.md)] script que corrige o problema:  
  
-```
+```sql
 SELECT name, reason, score,
         JSON_VALUE(details, '$.implementationDetails.script') as script,
         details.* 

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e0b8bdab13a6a937c6e97cec3ece700a685deb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5e54ef357214a3121c1a7ed964c9ee9bf5955b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946061"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703577"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ RETCODE bcp_setbulkmode (
  *HDBC*  
  O identificador de conexão ODBC habilitado para cópia em massa.  
   
- *propriedade*  
+ *property*  
  Uma constante do tipo BYTE. Consulte a tabela na seção Comentários para obter a lista das constantes.  
   
  *pField*  
@@ -68,14 +66,14 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  bcp_setbulkmode pode ser usado para copiar fora de uma consulta ou uma tabela em massa. Quando bcp_setbulkmode é usado para copiar uma instrução de consulta em massa, ele deve ser chamado antes de chamar bcp_control com BCP_HINT.  
   
  bcp_setbulkmode é uma alternativa ao uso de [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) e [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), que só permitem que você especifique o formato de uma coluna por chamada de função.  
   
  A tabela a seguir lista as constantes do parâmetro *property* .  
   
-|property|Descrição|  
+|property|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção – c no BCP. EXE e bcp_setcolfmt com **BCP_FMT_TYPE** propriedade definida como **SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção – w no BCP. EXE e bcp_setcolfmt com **BCP_FMT_TYPE** propriedade definida como **SQLNCHAR**.|  

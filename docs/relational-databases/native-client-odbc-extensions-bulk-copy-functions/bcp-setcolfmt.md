@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ad3993a22e0b2ec2091b0d37598f9cd6546d34aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69183e2c4b9343a822727dd2f56baf978a4d7de1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947781"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701477"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,10 +58,10 @@ RETCODE bcp_setcolfmt (
  *field*  
  É o número de coluna ordinal para o qual a propriedade está sendo definida.  
   
- *propriedade*  
+ *property*  
  É um das constantes de propriedade. As constantes de propriedade são definidas nesta tabela.  
   
-|propriedade|Value|Description|  
+|propriedade|Valor|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|É o tipo de dados desta coluna no arquivo de usuário. Se for diferente do tipo de dados da coluna correspondente na tabela do banco de dados, a cópia em massa converterá os dados se possível.<br /><br /> O parâmetro BCP_FMT_TYPE é enumerado pelos tokens de tipo de dados do SQL Server em sqlncli.h, e não nos enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, o tipo ODBC SQL_C_CHAR, usando o tipo SQLCHARACTER específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para especificar a representação de dados padrão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina esse parâmetro como 0.<br /><br /> Para obter uma cópia em massa do SQL Server em um arquivo, quando BCP_FMT_TYPE for SQLDECIMAL ou SQLNUMERIC, se a coluna de origem não for **decimal** ou **numérico**, a precisão e escala padrão são usados. Caso contrário, se a coluna de origem é **decimal** ou **numérico**, a precisão e escala da coluna de origem são usados.|  
 |BCP_FMT_INDICATOR_LEN|INT|É o comprimento em bytes do indicador (prefixo).<br /><br /> É o comprimento, em bytes, de um indicador de comprimento/nulo nos dados de coluna. Os valores de comprimento de indicador válidos são 0 (quando nenhum indicador é usado), 1, 2 ou 4.<br /><br /> Para especificar o uso do indicador de cópia em massa padrão, defina esse parâmetro como SQL_VARLEN_DATA.<br /><br /> Os indicadores aparecem na memória diretamente antes de quaisquer dados, e no arquivo de dados diretamente antes dos dados aos quais se aplicam.<br /><br /> Se for usada mais de uma maneira de especificar um comprimento de coluna de arquivo de dados (como um indicador e um comprimento de coluna máximo ou um indicador e uma sequência de terminador), a cópia em massa escolherá aquela que resultar na menor quantidade de dados sendo copiados.<br /><br /> Os arquivos de dados gerados pela cópia em massa quando nenhuma intervenção de usuário ajusta o formato dos dados contêm indicadores quando os dados de coluna podem variar em comprimento ou a coluna pode aceitar NULL como valor.|  
@@ -117,7 +115,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte do bcp_setcolfmt a recursos aprimorados de data e hora  
  Os tipos usados com a propriedade BCP_FMT_TYPE para tipos de data/hora são como especificados em [alterações de cópia em massa para tipos aprimorados de data e hora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obter mais informações, consulte [data e hora melhorias & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [data e hora melhorias &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

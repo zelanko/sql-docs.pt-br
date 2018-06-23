@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7feff8896d3fc8e29ff385e69b2ef021f6f2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ae1bfdadd360b41f451d7b0e7840af9e3f6ff94
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946791"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696897"
 ---
 # <a name="prepared-execution"></a>Execução preparada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +36,11 @@ ms.locfileid: "32946791"
   
  Para a maioria dos bancos de dados, a execução preparada é mais rápida que a direta para instruções executadas mais de três ou quatro vezes primariamente, pois a instrução é compilada somente uma vez, enquanto instruções executadas diretamente são compiladas sempre que ocorrem. A execução preparada também pode fornecer uma redução no tráfego de rede, pois o driver pode enviar um identificador do plano de execução e os valores de parâmetro, em vez de toda uma instrução SQL, para a fonte de dados sempre que a instrução for executada.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]reduz a diferença de desempenho entre a execução direta e preparada por meio de algoritmos aprimorados para detectar e reutilizar planos de execução de **SQLExecDirect**. Isso torna alguns dos benefícios de desempenho da execução preparada disponíveis para instruções executadas diretamente. Para obter mais informações, consulte [execução direta](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reduz a diferença de desempenho entre a execução direta e preparada por meio de algoritmos aprimorados para detectar e reutilizar planos de execução de **SQLExecDirect**. Isso torna alguns dos benefícios de desempenho da execução preparada disponíveis para instruções executadas diretamente. Para obter mais informações, consulte [execução direta](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também oferece suporte nativo para execução preparada. Um plano de execução se baseia no **SQLPrepare** e depois executado quando **SQLExecute** é chamado. Porque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é necessário para criar procedimentos armazenados temporários no **SQLPrepare**, não há nenhuma sobrecarga extra nas tabelas do sistema de **tempdb**.  
   
- Por motivos de desempenho, a preparação da instrução é adiada até o **SQLExecute** é chamado ou uma operação de metapropriedade (como [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) no ODBC) é executada. Esse é o comportamento padrão. Não são conhecidos erros na instrução que está sendo preparada até que ela seja executada ou uma operação de metapropriedade seja executada. Definir o atributo da instrução específica do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client SQL_SOPT_SS_DEFER_PREPARE como SQL_DP_OFF pode desativar esse comportamento padrão.  
+ Por motivos de desempenho, a preparação da instrução é adiada até o **SQLExecute** é chamado ou uma operação de metapropriedade (como [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)no ODBC) é executada. Esse é o comportamento padrão. Não são conhecidos erros na instrução que está sendo preparada até que ela seja executada ou uma operação de metapropriedade seja executada. Definir o atributo da instrução específica do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client SQL_SOPT_SS_DEFER_PREPARE como SQL_DP_OFF pode desativar esse comportamento padrão.  
   
  No caso de adiamento preparação, chamar **SQLDescribeCol** ou **SQLDescribeParam** antes de chamar **SQLExecute** gera uma ida e volta extra para o servidor. Em **SQLDescribeCol**, o driver remove a cláusula WHERE da consulta e o envia para o servidor com SET FMTONLY ON para obter a descrição das colunas no primeiro conjunto de resultados retornado pela consulta. Em **SQLDescribeParam**, o driver chama o servidor para obter uma descrição das expressões ou colunas referenciadas por qualquer marcador de parâmetro na consulta. Esse método também tem algumas restrições, como não poder resolver parâmetros em subconsultas.  
   
@@ -53,6 +51,6 @@ ms.locfileid: "32946791"
  Alguns aplicativos de ODBC anteriores usados **SQLPrepare** sempre [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) foi usado. **SQLBindParameter** não requerem o uso de **SQLPrepare**, ele pode ser usado com **SQLExecDirect**. Por exemplo, use **SQLExecDirect** com **SQLBindParameter** para recuperar o código de retorno ou parâmetros de saída de um procedimento armazenado é executado só uma vez. Não use **SQLPrepare** com **SQLBindParameter** , a menos que a mesma instrução será executada várias vezes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Executar instruções & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [Executar instruções &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

@@ -3,11 +3,9 @@ title: Registrando tipos definidos pelo usuário no SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -38,12 +36,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c008844b49d907eb03e2358327f0f71959495675
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 942f6c1fa0b6888aa936bfd4b557c570529e9894
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922837"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697817"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrando tipos definidos pelo usuário no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +63,14 @@ ms.locfileid: "32922837"
 5.  Do **criar** menu, selecione **implantar**. O assembly será registrado e o tipo será criado no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Usando o Transact-SQL para implantar UDTs  
- A sintaxe CREATE ASSEMBLY do [!INCLUDE[tsql](../../includes/tsql-md.md)] é usada para registrar o assembly no banco de dados no qual você deseja usar a UDT. Ele é armazenado internamente em tabelas do sistema do banco de dados, e não externamente, no sistema de arquivos. Se a UDT for dependente de assembly externos, eles também deverão ser carregados no banco de dados. A instrução CREATE TYPE é usada para criar a UDT no banco de dados no qual será usada. Para obter mais informações, consulte [CREATE ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/create-assembly-transact-sql.md) e [criar tipo de & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ A sintaxe CREATE ASSEMBLY do [!INCLUDE[tsql](../../includes/tsql-md.md)] é usada para registrar o assembly no banco de dados no qual você deseja usar a UDT. Ele é armazenado internamente em tabelas do sistema do banco de dados, e não externamente, no sistema de arquivos. Se a UDT for dependente de assembly externos, eles também deverão ser carregados no banco de dados. A instrução CREATE TYPE é usada para criar a UDT no banco de dados no qual será usada. Para obter mais informações, consulte [CREATE ASSEMBLY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) e [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 ### <a name="using-create-assembly"></a>Usando CREATE ASSEMBLY  
  A sintaxe CREATE ASSEMBLY registra o assembly no banco de dados no qual você deseja usar a UDT. Quando o assembly é registrado, não possui dependências.  
   
  Não é permitido criar várias versões do mesmo assembly em um determinado banco de dados. Entretanto, é possível criar várias versões do mesmo assembly com base em cultura em um determinado banco de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferencia várias versões de cultura de um assembly por nomes diferentes dos registrados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte “Criando e usando assemblies de nome forte”, no SDK do .NET Framework.  
   
- Quando CREATE ASSEMBLY for executada com o conjunto de permissões SAFE ou EXTERNAL_ACCESS, o assembly será marcado para garantir que seja verificável e fortemente tipado. Se você omitir a especificação de um conjunto de permissões, SAFE será considerado. Códigos com o conjunto de permissões UNSAFE não serão marcados. Para obter mais informações sobre conjuntos de permissões de assembly, consulte [projetar Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
+ Quando CREATE ASSEMBLY for executada com o conjunto de permissões SAFE ou EXTERNAL_ACCESS, o assembly será marcado para garantir que seja verificável e fortemente tipado. Se você omitir a especificação de um conjunto de permissões, SAFE será considerado. Códigos com o conjunto de permissões UNSAFE não serão marcados. Para obter mais informações sobre conjuntos de permissões de assembly, confira [Criando assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Exemplo  
  O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução registra o assembly Point no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **AdventureWorks** banco de dados, com o conjunto de permissões SAFE. Se a cláusula WITH PERMISSION_SET for omitida, o assembly será registrado com o conjunto de permissões SAFE.  
@@ -98,7 +96,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  A sintaxe de CREATE TYPE também é usada para criar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados de alias tipos e se destina a substituir **sp_addtype** como um meio de criação de tipos de dados de alias. Alguns argumentos opcionais da sintaxe CREATE TYPE se referem à criação de UDTs e não são aplicáveis à criação de tipos de dados de alias (como um tipo de base).  
   
- Para obter mais informações, consulte [CREATE TYPE & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ Para obter mais informações, consulte [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>Exemplo  
  O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução cria o **ponto** tipo. EXTERNAL NAME é especificado usando a sintaxe de nomenclatura de duas partes da *AssemblyName*. *UDTName*.  
@@ -153,7 +151,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  Não é possível modificar um UDT quando ele for criado em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], embora você possa alterar o assembly em que o tipo é baseado.  Na maioria dos casos, você deve remover a UDT do banco de dados com a instrução DROP TYPE do [!INCLUDE[tsql](../../includes/tsql-md.md)], fazer alterações no assembly subjacente e recarregar usando a instrução ALETER ASSEMBLY.  Em seguida, será necessário recriar a UDT e todos os objetos dependentes.  
   
 ### <a name="example"></a>Exemplo  
- A instrução ALTER ASSEMBLY é usada depois que você faz alterações no código-fonte no assembly do seu UDT e o recompila. Ele copia o arquivo .dll no servidor e o associa novamente ao novo assembly. Para obter a sintaxe completa, consulte [ALTER ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ A instrução ALTER ASSEMBLY é usada depois que você faz alterações no código-fonte no assembly do seu UDT e o recompila. Ele copia o arquivo .dll no servidor e o associa novamente ao novo assembly. Para obter a sintaxe completa, consulte [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  A instrução ALTER ASSEMBLY do [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir recarregar o assembly Point.dll do local especificado no disco.  
   
@@ -222,6 +220,6 @@ SELECT CAST(content AS varchar(8000))
  Observe que você não precisa realizar qualquer ação para usar UDTs quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cria tabelas de trabalho no **tempdb** banco de dados do sistema. Isso inclui a manipulação de cursores, variáveis de tabela, e funções definidas pelo usuário com valor de tabela que incluam UDTs e que de forma transparente o uso de **tempdb**. No entanto, se você criar explicitamente uma tabela temporária no **tempdb** que define uma coluna UDT, então o UDT deverá ser registrado em **tempdb** da mesma forma que um banco de dados do usuário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos definidos pelo usuário do CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   
