@@ -1,0 +1,56 @@
+---
+title: Consultando dados multidimensionais com MDX | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- multidimensional data [Analysis Services], querying
+ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
+caps.latest.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: f7519860407e5ae929a0e899ced0eea663a453f2
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36019234"
+---
+# <a name="querying-multidimensional-data-with-mdx"></a>Consultando dados multidimensionais com MDX
+  MDX (linguagem MDX) é a linguagem de consulta usada para trabalhar com dados multidimensionais e recuperá-los no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. O MDX é baseado na especificação XMLA (XML for Analysis), com extensões específicas para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. O MDX utiliza expressões compostas de identificadores, valores, instruções, funções e operadores que o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode avaliar para recuperar um objeto (por exemplo, um conjunto ou um membro) ou um valor escalar (por exemplo, uma cadeia de caracteres ou um número).  
+  
+ As consultas e expressões MDX no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] são usadas para fazer o seguinte:  
+  
+-   Retornar dados a um aplicativo cliente de um cubo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
+  
+-   Formatar resultados de consulta.  
+  
+-   Executar tarefas de design de cubo, incluindo a definição de membros calculados, conjuntos nomeados, tarefas de escopo e KPIs (indicadores chave de desempenho).  
+  
+-   Executar tarefas administrativas, incluindo dimensão e segurança da célula.  
+  
+ O MDX é superficialmente semelhante em muitas formas à sintaxe de SQL que normalmente é usada em bancos de dados relacionais. Porém, o MDX não é uma extensão da linguagem SQL e é diferente do SQL em muitas formas. Para criar expressões MDX usadas para desenhar ou proteger cubos, ou para criar consultas de MDX para retornar e formatar dados multidimensionais, você precisa entender os conceitos básicos de modelagem MDX e dimensional, elementos de sintaxe MDX, operadores MDX, instruções MDX e funções MDX.  
+  
+> [!NOTE]  
+>  Para obter mais informações, consulte a seção recursos adicionais sobre o [SQL Server 2005 – Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) página no site da Web do Microsoft TechNet. Para obter mais informações sobre questões de desempenho relacionadas a cálculos e consultas MDX, consulte a seção “Writing Efficient MDX” (Escrevendo um MDX eficiente) no [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621)(Guia de desempenho do SQL Server 2005 Analysis Services).  
+  
+## <a name="in-this-section"></a>Nesta seção  
+  
+|Tópico|Description|  
+|-----------|-----------------|  
+|[Principais conceitos em MDX &#40;do Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)|Você pode usar a linguagem MDX para consultar dados multidimensionais ou criar expressões MDX para uso em um cubo, mas primeiro você deve entender os conceitos e a terminologia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|[Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)|A linguagem MDX permite que você consulte objetos multidimensionais, como cubos, e retorna conjuntos de células multidimensionais que contêm dados do cubo. Este tópico e respectivos subtópicos fornecem uma visão geral das consultas MDX.|  
+|[Conceitos básicos de script MDX &#40;do Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)|No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], um script MDX é composto de uma ou mais linguagens ou instruções MDX que populam um cubo com cálculos.<br /><br /> Um script MDX define o processo de cálculo de um cubo. Um script MDX também é considerado parte do próprio cubo. Portanto, alterar um script MDX associado a um cubo altera imediatamente o processo de cálculo do cubo.<br /><br /> Para criar scripts MDX, você pode usar o Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Elementos de sintaxe MDX &#40;MDX&#41;](/sql/mdx/mdx-syntax-elements-mdx)   
+ [Referência de linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)  
+  
+  
