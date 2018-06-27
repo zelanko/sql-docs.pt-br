@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee88654a69d926c2d467876d9e9e7c4f824d0b49
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 649ff605e47f9a47ec68767b8654e0497fc0345c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769412"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999992"
 ---
 # <a name="read-scale-availability-groups"></a>Grupos de disponibilidade de escala de leitura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ Um único grupo de disponibilidade distribuído pode ter até 17 réplicas secun
 ## <a name="next-steps"></a>Próximas etapas
 
 [Configurar um grupo de disponibilidade de escala de leitura no Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
-[Configurar um grupo de disponibilidade de escala de leitura no Windows](configure-read-scale-availability-groups.md)
+
+[Configurar um grupo de disponibilidade de escala de leitura no Windows](../../../database-engine/availability-groups/windows/configure-read-scale-availability-groups.md)
 
 ## <a name="see-also"></a>Confira também
 

@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e5ab09ee3ae088382fee86a8add2aa112d9efa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 804b07e53f5aeecf6b3d0789effb2b227013b32e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239140"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna um valor de inteiro que indica a diferença entre os valores SOUNDEX de duas expressões de caractere.  
+Esta função retorna um valor inteiro que mede a diferença entre os valores [SOUNDEX()](./soundex-transact-sql.md) de duas expressões de caractere distintas.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +46,19 @@ DIFFERENCE ( character_expression , character_expression )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *character_expression*  
- É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) alfanumérica de dados de caractere. *character_expression* pode ser uma constante, variável ou coluna.  
+*character_expression*  
+Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) alfanumérica de dados de caractere. *character_expression* pode ser uma constante, variável ou coluna.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **int**  
-  
+**int**  
+ 
 ## <a name="remarks"></a>Remarks  
- O inteiro retornado é o número de caracteres nos valores SOUNDEX que são iguais. O valor de retorno varia de 0 a 4: 0 indica pouca ou nenhuma similaridade e 4 indica muita similaridade ou valores iguais.  
+`DIFFERENCE` compara dois diferentes valores `SOUNDEX` e retorna um valor inteiro. Esse valor mede o grau de correspondência entre os valores de `SOUNDEX`, em uma escala de 0 a 4. Um valor de 0 indica pouca ou nenhuma semelhança entre os valores SOUNDEX; 4 indica valores SOUNDEX com forte semelhança ou até mesmo idênticos, apresentando correspondência total.  
   
- DIFFERENCE e SOUNDEX diferenciam agrupamentos.  
+`DIFFERENCE` e `SOUNDEX` têm sensibilidade de agrupamento.  
   
 ## <a name="examples"></a>Exemplos  
- Na primeira parte do exemplo a seguir, os valores `SOUNDEX` de duas cadeias de caracteres muito similares são comparados. Para um agrupamento Latin1_General, `DIFFERENCE` retorna um valor igual a `4`. Na segunda parte do exemplo a seguir, os valores de `SOUNDEX` de duas cadeias de caracteres muito diferentes são comparados; para um agrupamento Latin1_General, `DIFFERENCE` retorna um valor igual a `0`.  
+A primeira parte deste exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito similares. Para um agrupamento Latin1_General, `DIFFERENCE` retorna um valor `4`. A segunda parte do exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito diferentes e, para um agrupamento Latin1_General, `DIFFERENCE` retorna um valor `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

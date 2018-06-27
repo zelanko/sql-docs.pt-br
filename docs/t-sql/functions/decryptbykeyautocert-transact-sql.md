@@ -22,17 +22,18 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3bf53e51d3896953e66e3360aaa810a5c13c51ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb50c5ae12329ef18d7169678d8cd413df419a41
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239087"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Descriptografa usando uma chave simétrica que é decifrada automaticamente com um certificado.  
-  
+Essa função descriptografa dados com uma chave simétrica. Essa chave simétrica descriptografa automaticamente com um certificado.  
+
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -47,40 +48,40 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>Argumentos  
  *cert_ID*  
- É a ID de certificado usada para proteger a chave simétrica. *cert_ID* é **int**.  
+A ID do certificado usado para proteger a chave simétrica. *cert_ID* tem um tipo de dados **int**.  
   
- *cert_password*  
- É a senha que protege a chave privada do certificado. Poderá ser NULL se a chave privada estiver protegida pela chave mestra do banco de dados. *cert_password* é **nvarchar**.  
+*cert_password*  
+A senha usada para criptografar a chave privada do certificado. Pode ter um valor `NULL` se a chave mestra do banco de dados protege a chave privada. *cert_password* tem um tipo de dados **nvarchar**.  
+
+'*ciphertext*'  
+A cadeia de caracteres de dados criptografados com a chave. *ciphertext* tem um tipo de dados **varbinary**.  
+
+@ciphertext  
+Uma variável do tipo **varbinary** que contém dados criptografados com a chave.  
+
+*add_authenticator*  
+Indica se o processo de criptografia original incluía, e criptografava, um autenticador junto com o texto não criptografado. Deve corresponder ao valor passado para [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durante o processo de criptografia de dados. *add_authenticator* teria um valor de 1, se o processo de criptografia usasse um autenticador. *add_authenticator* tem um tipo de dados **int**.  
   
- '*ciphertext*'  
- São os dados criptografados com a chave. O *ciphertext* é **varbinary**.  
+@add_authenticator  
+Uma variável que indica se o processo de criptografia original incluía, e criptografava, um autenticador junto com o texto não criptografado. Deve corresponder ao valor passado para [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durante o processo de criptografia de dados. *@add_authenticator* tem um tipo de dados **int**.  
   
- @ciphertext  
- É uma variável do tipo **varbinary** que contém dados que foram criptografados com a chave.  
+*authenticator*  
+Os dados usados como base para a geração do autenticador. Deve corresponder ao valor fornecido para [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* tem um tipo de dados **sysname**.  
   
- *add_authenticator*  
- Indica se um autenticador foi criptografado junto com o texto não criptografado. Deve ser igual ao valor passado para EncryptByKey ao criptografar os dados. Será **1** se um autenticador tiver sido usado. *add_authenticator* é **int**.  
-  
- @add_authenticator  
- Indica se um autenticador foi criptografado junto com o texto não criptografado. Deve ser igual ao valor que é passado para EncryptByKey ao criptografar os dados.  
-  
- *authenticator*  
- São os dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey. O *authenticator* é **sysname**.  
-  
- @authenticator  
- É uma variável que contém dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey.  
+@authenticator  
+Uma variável que contém dados dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* tem um tipo de dados **sysname**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **varbinary** com um tamanho máximo de 8.000 bytes.  
+**varbinary**, com um tamanho máximo de 8.000 bytes.  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKeyAutoCert combina a funcionalidade OPEN SYMMETRIC KEY e DecryptByKey. Em uma única operação, ele descriptografa uma chave simétrica e a usa para descriptografar texto codificado.  
+`DECRYPTBYKEYAUTOCERT` combina a funcionalidade de `OPEN SYMMETRIC KEY` e de `DECRYPTBYKEY`. Em uma única operação, ele primeiro descriptografa uma chave simétrica e depois descriptografa o texto cifrado com ela.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão VIEW DEFINITION na chave simétrica e a permissão CONTROL no certificado.  
+Requer a permissão `VIEW DEFINITION` na chave simétrica e a permissão `CONTROL` no certificado.   
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra como `DecryptByKeyAutoCert` pode ser usado para simplificar código que executa uma descriptografia. Esse código deve ser executado em um banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que ainda não tenha uma chave mestra de banco de dados.  
+Este exemplo mostra como `DECRYPTBYKEYAUTOCERT` pode simplificar o código de descriptografia. Esse código deve ser executado em um banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que ainda não tenha uma chave mestra de banco de dados.  
   
 ```  
 --Create the keys and certificate.  

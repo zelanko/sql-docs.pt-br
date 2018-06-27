@@ -1,26 +1,26 @@
 ---
 title: Agendar pacote SSIS no Azure | Microsoft Docs
+description: Fornece uma visão geral dos métodos disponíveis para agendar a execução de pacotes SSIS implantados para o Banco de Dados SQL do Azure.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585838"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411578"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Agendar a execução de um pacote SSIS no Azure
-É possível agendar a execução dos pacotes do SSIS implantados no banco de dados do Catálogo do SSISDB em um servidor de Banco de Dados SQL do Azure escolhendo uma das opções descritas neste artigo. É possível agendar um pacote direta ou indiretamente como parte de um pipeline do Azure Data Factory. Para obter uma visão geral sobre o SSIS no Azure, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](ssis-azure-lift-shift-ssis-packages-overview.md).
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Agendar a execução de pacotes SSIS (SQL Server Integration Services) implantados no Azure
+
+É possível agendar a execução dos pacotes do SSIS implantados no Catálogo do SSISDB em um servidor de Banco de Dados SQL do Azure escolhendo um dos métodos descritos neste artigo. É possível agendar um pacote direta ou indiretamente como parte de um pipeline do Azure Data Factory. Para obter uma visão geral sobre o SSIS no Azure, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Agendar um pacote indiretamente
 
@@ -35,7 +35,7 @@ ms.locfileid: "34585838"
 
 ## <a name="ssms"></a> Agendar um pacote com o SSMS
 
-No SSMS (SQL Server Management Studio), é possível clicar com o botão direito do mouse em um pacote implantado no banco de dados do Catálogo do SSIS, SSISDB, e selecionar **Agendar** para abrir a caixa de diálogo **Nova agenda**. Para saber mais, confira [Agendar a execução de um pacote SSIS no Azure com SSMS](ssis-azure-schedule-packages-ssms.md).
+No SSMS (SQL Server Management Studio), é possível clicar com o botão direito do mouse em um pacote implantado no banco de dados do Catálogo do SSIS, SSISDB, e selecionar **Agendar** para abrir a caixa de diálogo **Nova agenda**. Para obter mais informações, consulte [Agendar pacotes SSIS no Azure com o SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Esse recurso exige o SQL Server Management Studio versão 17.7 ou superior. Para obter a versão mais recente do SSMS, confira [Baixar o SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -177,4 +177,4 @@ Para executar um pacote do SSIS como parte de um pipeline do Data Factory, use u
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Revise as opções para executar pacotes do SSIS implantados no Azure. Para obter mais informações, consulte [Executar um pacote do SSIS no Azure](ssis-azure-run-packages.md).
+Revise as opções para executar pacotes do SSIS implantados no Azure. Para obter mais informações, consulte [Executar pacotes SSIS no Azure](ssis-azure-run-packages.md).

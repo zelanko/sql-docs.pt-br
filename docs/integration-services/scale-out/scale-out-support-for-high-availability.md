@@ -1,27 +1,25 @@
 ---
 title: Suporte do Scale Out para Alta Disponibilidade do SSIS (SQL Server Integration Services) | Microsoft Docs
-ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: ''
+description: Este artigo descreve como configurar o SSIS Scale Out para alta disponibilidade
+ms.custom: performance
 ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 25660b9e6b4edbdd8a2654d092990fef94313bed
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34476038"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411798"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
 

@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239046"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retorna um valor de **datetime** para a data e a hora especificadas.
+Essa função retorna um valor **datetime** para os argumentos de data e hora especificados.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,33 +45,33 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
   
 ## <a name="arguments"></a>Argumentos  
 *year*  
-Expressão de inteiro que especifica um ano.
+Uma expressão de inteiro que especifica um ano.
   
 *month*  
-Expressão de inteiro que especifica um mês.
+Uma expressão de inteiro que especifica um mês.
   
 *day*  
-Expressão de inteiro que especifica um dia.
+Uma expressão de inteiro que especifica um dia.
   
 *hour*  
-Expressão de inteiro que especifica horas.
+Uma expressão de inteiro que especifica horas.
   
 *minute*  
-Expressão de inteiro que especifica minutos.
+Uma expressão de inteiro que especifica minutos.
   
 *segundos*  
-Expressão de inteiro que especifica segundos.
+Uma expressão de inteiro que especifica segundos.
   
 *milliseconds*  
-Expressão de inteiro que especifica milissegundos.
+Uma expressão de inteiro que especifica milissegundos.
   
 ## <a name="return-types"></a>Tipos de retorno
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEFROMPARTS** retorna um valor **datetime** totalmente inicializado. Se os argumentos não forem válidos, um erro será gerado. Se os argumentos obrigatórios forem nulos, nulo será retornado.
+`DATETIMEFROMPARTS` retorna um valor **datetime** completamente inicializado. `DATETIMEFROMPARTS` gerará um erro se pelo menos um argumento necessário tiver um valor inválido. `DATETIMEFROMPARTS` retornará nulo se pelo menos um argumento necessário tiver um valor nulo.
   
-Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não será remota para servidores que têm uma versão anterior ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Essa função dá suporte à comunicação remota para servidores [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não dará suporte a comunicação remota para servidores que têm uma versão anterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Exemplos  
   

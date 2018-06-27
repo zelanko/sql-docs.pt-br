@@ -1,14 +1,11 @@
 ---
-title: Etapas de instalação para o gerenciamento extensível de chaves usando o Azure Key Vault | Microsoft Docs
+title: Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 06/11/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,26 +14,27 @@ helpviewer_keywords:
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1d49310aa2c1d178dfb47f05a72ccac73cd0882f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702977"
 ---
-# <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)
+# <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  As seguintes etapas dão um passo a passo da instalação e configuração do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]para o Cofre de Chaves do Azure.  
+  As etapas a seguir dão um passo a passo da instalação e configuração do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o Azure Key Vault.  
   
 ## <a name="before-you-start"></a>Antes de iniciar  
  Para usar o Cofre de Chaves do Azure com o SQL Server, há alguns pré-requisitos:  
   
 -   Você deve ter uma assinatura do Azure  
   
--   Instale a versão mais recente do [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) , (1.0.1 ou superior).  
+-   Instale a versão mais recente do [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/), (5.2.0 ou superior).  
 
 -   Criar um locatário do Azure Active Directory  
 
@@ -53,7 +51,7 @@ Versão do SQL Server  |Link de instalação redistribuível
 ## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Parte I: configurar uma entidade de serviço do Azure Active Directory  
  Para conceder permissões de acesso do SQL Server ao Cofre de Chaves do Azure, você precisará de uma conta de entidade de serviço no AAD (Azure Active Directory).  
   
-1.  Vá para o [portal clássico do Azure](https://manage.windowsazure.com)e entre.  
+1.  Vá para o [portal do Azure](https://ms.portal.azure.com/) e entre.  
   
 2.  Registre um aplicativo com o Azure Active Directory. Para obter instruções passo a passo detalhadas para registrar um aplicativo, veja a seção **Obter uma identidade para o aplicativo** da [postagem no blog do Cofre de Chaves do Azure](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).  
   
@@ -71,7 +69,7 @@ Versão do SQL Server  |Link de instalação redistribuível
   
 1.  **Abrir o PowerShell e Entrar**  
   
-     Instale e inicie a versão do [Azure PowerShell mais recente](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) , (1.0.1 ou superior). Entrar na conta do Azure com o seguinte comando:  
+     Instale e inicie a [versão mais recente do Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 ou superior). Entrar na conta do Azure com o seguinte comando:  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -171,25 +169,28 @@ Versão do SQL Server  |Link de instalação redistribuível
 5.  **Gerar uma chave assimétrica no cofre de chaves**  
   
      Há duas maneiras de gerar uma chave no Cofre de Chaves do Azure: 1) importar uma chave existente ou 2) criar uma nova chave.  
-
+                  
+      > [!NOTE]
+        >  O SQL Server dá suporte apenas a chaves RSA de 2.048 bits.
+        
     ### <a name="best-practice"></a>Prática recomendada:
     
     Para garantir a rápida recuperação da chave e poder acessar os seus dados fora do Azure, recomendamos a seguinte prática recomendada:
  
-    1. Crie sua chave de criptografia localmente em um dispositivo HSM local. (Certifique-se de que é uma chave RSA 2048 assimétrica para ela poder ser armazenada no Cofre de Chaves do Azure.)
+    1. Crie sua chave de criptografia localmente em um dispositivo HSM local. (Certifique-se de que ela é uma chave RSA 2048 assimétrica, para que ela seja compatível com o SQL Server.)
     2. Importe a chave de criptografia no Cofre de Chaves do Azure. Veja as etapas abaixo para saber como fazer isso.
     3. Antes de usar a chave no Cofre de Chaves do Azure pela primeira vez, faça um backup da chave do Cofre de Chaves do Azure. Saiba mais sobre o comando [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
-    4. Sempre que qualquer alteração for feita na chave (por exemplo, adicionar ACLs, adicionar marcas, adicionar atributos da chave), certifique-se de fazer outro backup da chave do Cofre de Chaves do Azure.
+    4. Sempre que qualquer alteração for feita na chave (por exemplo, adicionar ACLs, adicionar marcas, adicionar atributos da chave), certifique-se de fazer outro backup da chave do Azure Key Vault.
 
         > [!NOTE]  
-        >  Fazer backup de uma chave é uma operação de chave do Cofre de Chaves do Azure que retorna um arquivo que pode ser salvo em qualquer lugar."
+        >  Fazer backup de uma chave é uma operação de chave do Azure Key Vault que retorna um arquivo que pode ser salvo em qualquer lugar.
 
     ### <a name="types-of-keys"></a>Tipos de chaves:
-    Há dois tipos de chaves que você pode gerar no Cofre de Chaves do Azure. Ambas são chaves RSA de 2.048 bits assimétricas.  
+    Há dois tipos de chaves que você pode gerar no Azure Key Vault que funcionarão com o SQL Server. Ambas são chaves RSA de 2.048 bits assimétricas.  
   
     -   **Protegido por software:** processado no software e criptografado em repouso. Operações em chaves protegidas por software ocorrem nas Máquinas Virtuais do Azure. Recomendado para as chaves que não são usadas em uma implantação de produção.  
   
-    -   **Protegido por HSM:** criado e protegido por um HSM (módulo de segurança de hardware) para segurança adicional. Custa cerca de US$1 por versão de chave.  
+    -   **Protegido por HSM:** criado e protegido por um HSM (módulo de segurança de hardware) para segurança adicional. Custa cerca de US$ 1 por versão de chave.  
   
         > [!IMPORTANT]  
         >  O Conector do SQL Server exige que o nome da chave use somente os caracteres “a-z”, “A-Z”, “0-9” e “-”, com um limite de 26 caracteres.   
@@ -213,12 +214,11 @@ Versão do SQL Server  |Link de instalação redistribuível
     ```  
  
     > [!IMPORTANT]  
-    > Importar a chave assimétrica é altamente recomendável para cenários de produção, pois ela permite que o administrador garanta a chave em um sistema de caução de chaves. Se a chave assimétrica for criada no cofre, ela não pode ser mantida em garantia porque a chave privada nunca pode deixar o cofre. As chaves usadas para proteger dados críticos devem ser mantidas em garantia. A perda de uma chave assimétrica resultará em dados irrecuperáveis permanentemente.  
+    > Importar a chave assimétrica é altamente recomendável para cenários de produção, pois ela permite que o administrador garanta a chave em um sistema de caução de chaves. Se a chave assimétrica for criada no cofre, ela não pode ser mantida em garantia porque a chave privada nunca pode deixar o cofre. As chaves usadas para proteger dados críticos devem ser mantidas em garantia. A perda de uma chave assimétrica resultará em perda permanente de dados.  
 
     ### <a name="create-a-new-key"></a>Criar uma nova chave
-
-    ##### <a name="example"></a>Exemplo:  
-    Se desejar, você poderá criar uma nova chave de criptografia diretamente no Cofre de Chaves do Azure protegê-la por software ou por HSM. Neste exemplo, vamos criar uma chave protegida por software usando o `Add-AzureKeyVaultKey cmdlet`:  
+    #### <a name="example"></a>Exemplo:  
+    Alternativamente, você poderá criar uma nova chave de criptografia diretamente no Azure Key Vault e protegê-la por software ou por HSM.  Neste exemplo, vamos criar uma chave protegida por software usando o `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -237,8 +237,7 @@ Versão do SQL Server  |Link de instalação redistribuível
     Id         : https://contosodevkeyvault.vault.azure.net:443/  
                  keys/ContosoRSAKey0/<guid>  
     ```  
-
-    > [!IMPORTANT]  
+ > [!IMPORTANT]  
     >  O cofre de chaves dá suporte a várias versões da mesma chave nomeada, mas as chaves usadas pelo Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não devem estar com controle de versão ou revertidas. Se o administrador deseja distribuir a chave usada para criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , uma nova chave com um nome diferente deve ser criada no cofre e usada para criptografar DEK.  
    
   
@@ -290,7 +289,7 @@ Versão do SQL Server  |Link de instalação redistribuível
   
 3.  **Registre (crie) o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como um provedor EKM com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     – Criar um provedor criptográfico, usando o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que é um provedor EKM do Cofre de Chaves do Azure.    
+     – Crie um provedor criptográfico usando o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que é um provedor EKM do Azure Key Vault.    
     Este exemplo usa o nome `AzureKeyVault_EKM_Prov`.  
   
     ```sql  
@@ -316,7 +315,7 @@ Versão do SQL Server  |Link de instalação redistribuível
      Modificar o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] abaixo das seguintes maneiras:  
   
     -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para apontar para o Cofre de Chaves do Azure.
-        - Se você estiver usando o **Azure público**, substitua o argumento `IDENTITY` pelo nome do seu Cofre de Chaves do Azure da Parte II.
+        - Se você estiver usando o **Azure global**, substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
         - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.   
     -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -362,6 +361,4 @@ Agora que você concluiu a configuração básica, consulte [Use SQL Server Conn
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciamento extensível de chaves usando o Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
-  
+[Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

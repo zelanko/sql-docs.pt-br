@@ -1,32 +1,32 @@
 ---
-title: Conectar-se ao SSISDB (banco de dados do Catálogo do SSIS) no Azure | Microsoft Docs
+title: Conectar-se ao SSISDB (Catálogo do SSIS) no Azure | Microsoft Docs
+description: Encontre as informações de conexão necessárias para se conectar ao SSISDB (Catálogo do SSIS) hospedado em um servidor de Banco de Dados SQL do Azure.
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405668"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Conectar-se ao SSISDB (banco de dados do Catálogo do SSIS) no Azure
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Conectar-se ao SSISDB (Catálogo do SSIS) no Azure
 
-Obtenha as informações de conexão necessárias para se conectar ao banco de dados de catálogo SSISDB hospedado no servidor de Banco de Dados SQL do Azure. Você precisa dos seguintes itens para se conectar:
+Encontre as informações de conexão necessárias para se conectar ao SSISDB (Catálogo do SSIS) hospedado em um servidor de Banco de Dados SQL do Azure. Você precisa dos seguintes itens para se conectar:
 - nome do servidor totalmente qualificado
 - nome do banco de dados
 - informações de logon 
 
 > [!IMPORTANT]
-> No momento, não é possível criar o banco de dados do Catálogo do SSISDB no Banco de Dados SQL do Azure, independentemente da criação do Azure-SSIS Integration Runtime no Azure Data Factory versão 2. É o Azure-SSIS IR que executa pacotes do SSIS no Azure. Para obter mais informações, consulte [Implantar pacotes do SSIS para o Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> No momento, não é possível criar o banco de dados do Catálogo do SSISDB no Banco de Dados SQL do Azure, independentemente da criação do Azure-SSIS Integration Runtime no Azure Data Factory versão 2. O Azure-SSIS IR é o ambiente de tempo de execução que executa pacotes SSIS no Azure. Para obter uma explicação passo a passo do processo, consulte [Implantar e executar um pacote SSIS no Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
 Antes de começar, verifique se você tem a versão 17.2 ou posterior do SSMS (SQL Server Management Studio). Se o banco de dados de catálogo do SSISDB estiver hospedado na Instância Gerenciada do Banco de Dados SQL (versão prévia), verifique se você tem a versão 17.6 ou posterior do SSMS. Para baixar a versão mais recente do SSMS, veja [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -71,4 +71,4 @@ Antes de começar, verifique se você tem a versão 17.2 ou posterior do SSMS (S
 ## <a name="next-steps"></a>Próximas etapas
 - Implante um pacote. Para obter mais informações, consulte [Implantar um projeto do SSIS com o SSMS (SQL Server Management Studio)](../ssis-quickstart-deploy-ssms.md).
 - Execute um pacote. Para obter mais informações, consulte [Executar um pacote SSIS com o SSMS (SQL Server Management Studio)](../ssis-quickstart-run-ssms.md).
-- Agende um pacote. Para obter mais informações, consulte [Agendar execução de pacote SSIS no Azure](ssis-azure-schedule-packages.md)
+- Agende um pacote. Para obter mais informações, confira [Agendar pacotes SSIS no Azure](ssis-azure-schedule-packages.md).

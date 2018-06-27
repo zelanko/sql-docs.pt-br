@@ -14,21 +14,23 @@ helpviewer_keywords:
 - minimum query memory
 - queries [SQL Server], memory
 - min memory per query option
+- min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b81b6ada1e8be2c88d7956ff5f56ba904ea417a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e68c2617af6a2828e1183733ee53fdd142747f66
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811910"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar a opção min memory per query de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como configurar a opção de configuração de servidor **min memory per query** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **min memory per query** especifica a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Por exemplo, se **min memory per query** for definida como 2.048 KB, a consulta terá a garantia de obter no mínimo esse total de memória. O valor padrão é 1.024 KB. O valor mínimo é de 512 KB e o valor máximo é 2.147.483.647 KB (2 GB).  
+  Este tópico descreve como configurar a opção de configuração de servidor **min memory per query** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **min memory per query** especifica a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Isso também é conhecido como a concessão de memória mínima. Por exemplo, se **min memory per query** for definida como 2.048 KB, a consulta terá a garantia de obter no mínimo esse total de memória. O valor padrão é 1.024 KB. O valor mínimo é de 512 KB e o valor máximo é 2.147.483.647 KB (2 GB).  
   
  **Neste tópico**  
   
@@ -58,10 +60,12 @@ ms.lasthandoff: 05/03/2018
   
 -   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou por um profissional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] certificado.  
   
--   O processador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta determinar a quantidade ideal de memória a ser alocada para uma consulta. A opção min memory per query deixa o administrador especificar a quantia mínima de memória que qualquer consulta única recebe. As consultas geralmente receberão mais memória que isso, se tiverem operações hash e de classificação em um grande volume de dados. Aumentar o valor de min memory per query pode melhorar o desempenho para algumas consultas de tamanho pequeno a médio, mas fazer isso poderia conduzir a uma maior competição por recursos de memória. A opção min memory per query inclui a memória alocada para as operações de classificação.  
+-   O processador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta determinar a quantidade ideal de memória a ser alocada para uma consulta. A opção min memory per query deixa o administrador especificar a quantia mínima de memória que qualquer consulta única recebe. As consultas geralmente receberão mais memória que isso se tiverem operações hash e de classificação em um grande volume de dados. Aumentar o valor de min memory per query pode melhorar o desempenho para algumas consultas de tamanho pequeno a médio, mas fazer isso poderia conduzir a uma maior competição por recursos de memória. A opção min memory per query inclui a memória alocada para as operações de classificação.  
 
--    Não defina a opção de configuração do servidor min memory per query com um valor alto demais, especialmente em sistemas muito ativos, pois, nesse caso, a consulta teria que esperar até que possa assegurar a memória mínima solicitada ou até que o valor especificado na opção de configuração do servidor de espera da consulta seja excedido. Se houver mais memória disponível do que o valor mínimo necessário especificado para executar a consulta, será permitido que a consulta use a memória adicional, desde que essa memória possa ser usada com eficiência pela consulta. 
-  
+-    Não defina a opção de configuração do servidor min memory per query com um valor alto demais, especialmente em sistemas muito ativos, pois, nesse caso, a consulta tem que esperar<sup>1</sup> até que possa assegurar a memória mínima solicitada ou até que o valor especificado na opção de configuração do servidor query wait seja excedido. Se houver mais memória disponível do que o valor mínimo necessário especificado para executar a consulta, será permitido que a consulta use a memória adicional, desde que essa memória possa ser usada com eficiência pela consulta.     
+
+<sup>1</sup> Nesse cenário, o tipo de espera costuma ser RESOURCE_SEMAPHORE. Para obter mais informações, confira [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
+
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
@@ -107,6 +111,8 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Configurar a opção de configuração do servidor de memória de criação de índice](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
   
   

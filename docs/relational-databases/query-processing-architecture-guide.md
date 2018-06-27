@@ -1,7 +1,7 @@
 ---
 title: Guia de arquitetura de processamento de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842899"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processa consultas em diversas arquiteturas de armazenamento de dados, como tabelas locais, particionadas e distribuídas entre vários servidores. Os tópicos a seguir descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processa consultas e otimiza a reutilização de consultas por meio do cache de planos de execução.
 
+## <a name="execution-modes"></a>Modos de execução
+O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pode processar instruções SQL usando dois modos de processamento diferentes:
+- Execução em modo de linha
+- Execução em modo de lote
+
+### <a name="row-mode-execution"></a>Execução em modo de linha
+*A execução em modo de linha* é um método de processamento de consulta usado com tabelas RDMBS tradicionais, nas quais os dados são armazenados em formato de linha. Quando uma consulta é executada e acessa dados em tabelas com armazenamento em linha, os operadores de árvore de execução e operadores filho leem cada linha necessária, em todas as colunas especificadas no esquema de tabela. De cada linha que é lida, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recupera então as colunas que são necessárias para o conjunto de resultados, conforme referenciado por uma instrução SELECT, um predicado JOIN ou um predicado de filtro.
+
+> [!NOTE]
+> A execução em modo de linha é muito eficiente para cenários OLTP, mas pode ser menos eficiente na verificação de grandes quantidades de dados, por exemplo, em cenários de Data Warehouse.
+
+### <a name="batch-mode-execution"></a>Execução em modo de lote  
+A *execução em modo de lote* é um método de processamento de consulta usado para processar várias linhas simultaneamente (por isso o termo lote). Cada coluna em um lote é armazenada como um vetor em uma área separada da memória, de modo que o processamento em modo de lote é baseado em vetor. O processamento em modo de lote também usa algoritmos que são otimizados para CPUs de vários núcleos e maior taxa de transferência de memória, características encontradas no hardware moderno.      
+
+A execução em modo de lote é estreitamente integrada ao formato de armazenamento columnstore e otimizada com base nele. O processamento em modo de lote opera nos dados compactados quando possível e elimina o [operador de troca](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) usado pela execução em modo de linha. O resultado é um melhor paralelismo e um desempenho mais rápido.    
+
+Quando uma consulta é executada em modo de lote e acessa dados em índices columnstore, os operadores de árvore de execução e operadores filho leem várias linhas juntas em segmentos de coluna. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lê apenas as colunas necessárias para o resultado, conforme referenciado por uma instrução SELECT, predicado JOIN ou predicado de filtro.    
+Para obter mais informações sobre índices columnstore, consulte [Arquitetura de índice columnstore](../relational-databases/sql-server-index-design-guide.md#columnstore_index).  
+
+> [!NOTE]
+> A execução em modo de lote é muito eficiente em cenários de Data Warehouse, em que grandes quantidades de dados são lidas e agregadas.
+
 ## <a name="sql-statement-processing"></a>Processamento de instruções SQL
+O processamento de uma única instrução [!INCLUDE[tsql](../includes/tsql-md.md)] é o modo mais básico para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executar instruções SQL. As etapas usadas para processar uma única instrução `SELECT` que referencia apenas as tabelas base locais (nenhuma exibição ou tabelas remotas) ilustram o processo básico.
 
-O processamento de uma única instrução SQL é o modo mais básico para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executar instruções SQL. As etapas usadas para processar uma única instrução `SELECT` que referencia apenas as tabelas base locais (nenhuma exibição ou tabelas remotas) ilustram o processo básico.
-
-#### <a name="logical-operator-precedence"></a>Precedência de operador lógico
+### <a name="logical-operator-precedence"></a>Precedência de operador lógico
 
 Quando mais de um operador lógico é usado em uma instrução, `NOT` é avaliado primeiro, em seguida, `AND` e, finalmente, `OR`. Operadores aritméticos e bit a bit são tratados antes dos operadores lógicos. Para obter mais informações, confira [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md) (Precedência de operador).
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>Otimizando instruções SELECT
+### <a name="optimizing-select-statements"></a>Otimizando instruções SELECT
 
 Uma instrução `SELECT` não é de procedimento; ela não determina as etapas exatas que o servidor de banco de dados deve usar para recuperar os dados solicitados. Isso significa que o servidor de banco de dados deve analisar a instrução para determinar o modo mais eficiente para extrair os dados solicitados. Isso é conhecido como otimização da instrução `SELECT` . O componente que faz isso é chamado de Otimizador de Consulta. A entrada do Otimizador de Consulta consiste em uma consulta, o esquema de banco de dados (definições de tabela e de índice) e as estatísticas de banco de dados. A saída do Otimizador de Consulta é um plano de execução de consulta, às vezes chamado de plano de consulta ou apenas de plano. O conteúdo de um plano de consulta é descrito posteriormente com mais detalhe neste tópico.
 
@@ -104,7 +128,7 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é importante porque ele habilita o servidor de banco de dados a ajustar dinamicamente conforme as alterações das condições no banco de dados sem exigir a entrada de um programador ou administrador de banco de dados. Isso habilita os programadores a se concentrarem na descrição do resultado final da consulta. Eles podem confiar que o Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um plano de execução eficiente para o estado do banco de dados toda vez que a instrução for executada.
 
-#### <a name="processing-a-select-statement"></a>Processando uma instrução SELECT
+### <a name="processing-a-select-statement"></a>Processando uma instrução SELECT
 
 As etapas básicas usadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para processar uma única instrução SELECT incluem o seguinte: 
 
@@ -114,7 +138,7 @@ As etapas básicas usadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 4. O mecanismo relacional é iniciado com a execução do plano de execução. Como as etapas que exigem dados das tabelas base são processadas, o mecanismo relacional solicita que o mecanismo de armazenamento rejeite os dados dos conjuntos de linhas solicitados do mecanismo relacional.
 5. O mecanismo relacional processa os dados retornados do mecanismo de armazenamento no formato definido para o conjunto de resultados e retorna o conjunto de resultados ao cliente.
 
-#### <a name="processing-other-statements"></a>Processando outras instruções
+### <a name="processing-other-statements"></a>Processando outras instruções
 
 As etapas básicas descritas para o processamento de uma instrução `SELECT` se aplicam a outras instruções SQL, como `INSERT`, `UPDATE`e `DELETE`. As instruções`UPDATE` e `DELETE` devem ser direcionadas ao conjunto de linhas a ser modificado ou excluído. O processo de identificação dessas linhas é o mesmo processo usado para identificar as linhas de origem que contribuem para o conjunto de resultados de uma instrução `SELECT` . Ambas as instruções `UPDATE` e `INSERT` podem conter instruções SELECT inseridas que fornecem os valores de dados a serem atualizados ou inseridos.
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 O recurso Plano de Execução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio mostra que o mecanismo relacional cria o mesmo plano de execução para as duas instruções `SELECT`.
 
-#### <a name="using-hints-with-views"></a>Usando dicas com exibições
+### <a name="using-hints-with-views"></a>Usando dicas com exibições
 
 As dicas colocadas em exibições em uma consulta podem entrar em conflito com outras dicas descobertas quando a exibição é expandida para acessar suas tabelas base. Quando isso ocorre, a consulta retorna um erro. Por exemplo, considere a seguinte exibição que contém uma dica de tabela em sua definição:
 

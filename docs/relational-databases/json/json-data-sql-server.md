@@ -20,19 +20,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 86b80d4706adbbf298df34a74d6c923bb4f56161
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a83e36e7f62f9b8ca38c11e5113dae1c8fc4f5d3
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586018"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612211"
 ---
 # <a name="json-data-in-sql-server"></a>Dados JSON no SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON é um formato popular de dados textuais usado para troca de dados em aplicativos Web e móveis modernos. JSON também é usado para armazenar dados não estruturados em arquivos de log ou em bancos de dados NoSQL, como o Microsoft Azure Cosmos DB. Muitos serviços Web REST retornam resultados formatados como texto JSON ou aceitam dados formatados como JSON. Por exemplo, a maioria dos serviços do Azure, como o Azure Search, o Armazenamento do Azure e o Azure Cosmos DB, tem pontos de extremidade REST que retornam ou consomem JSON. JSON também é o principal formato para troca de dados entre páginas da Web e servidores Web usando chamadas AJAX. 
 
-As funções JSON no SQL Server permitem combinar NoSQL e conceitos relacionais no mesmo banco de dados. Agora você pode combinar colunas relacionais clássicas com colunas que contêm documentos formatados como texto JSON na mesma tabela, analisar e importar documentos JSON em estruturas relacionais ou formatar dados relacionais em texto JSON. No vídeo a seguir você verá como as funções JSON conectam conceitos relacionais e NoSQL no SQL Server no Banco de Dados SQL do Azure:
+As funções JSON no SQL Server permitem combinar NoSQL e conceitos relacionais no mesmo banco de dados. Agora você pode combinar colunas relacionais clássicas com colunas que contêm documentos formatados como texto JSON na mesma tabela, analisar e importar documentos JSON em estruturas relacionais ou formatar dados relacionais em texto JSON. No vídeo a seguir, você verá como as funções JSON conectam conceitos relacionais e NoSQL no SQL Server e no Banco de Dados SQL do Azure:
 
 *JSON é uma ponte entre o NoSQL e mundos relacionais*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]

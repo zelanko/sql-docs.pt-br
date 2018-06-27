@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c86b1de022402bf4802da644977cc0e07532c345
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96b9c897ddb8cb508d4ce95ee133a8060ec818e0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411098"
 ---
 # <a name="source-assistant"></a>Assistente de origem
   O componente Assistente de Origem ajuda a criar um componente de origem e um gerenciador de conexões. O componente está localizado na seção **Favoritos** da Caixa de Ferramentas do SSIS.  
@@ -49,7 +48,7 @@ Esta seção fornece etapas para adicionar uma nova origem por meio do Assistent
 ## <a name="add-new-source-dialog-box"></a>Caixa de diálogo Adicionar Nova Origem
 A tabela a seguir lista as opções disponíveis na caixa de diálogo **Adicionar Nova Origem**.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Types|Selecione o tipo de origem ao qual você deseja conectar-se.|  
 |Gerenciadores de conexões|Selecione um gerenciador de conexões existente ou clique em **\<Novo>** para criar um novo gerenciador de conexões.|  

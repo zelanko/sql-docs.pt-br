@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771452"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612251"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Exibir e ler arquivos de log da Instalação do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A Instalação do SQL Server cria arquivos de log em uma pasta de log com carimbo de data/hora em %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log por padrão. O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de logs são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
+A Instalação do SQL Server cria arquivos de log em uma pasta com carimbo de data/hora em **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** por padrão, em que *nnn* são números que correspondem à versão do SQL que está sendo instalada. O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de log são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
+
+   | Arquivo           | Caminho |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **Arquivos de log MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Para instalações autônomas** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ A Instalação do SQL Server cria arquivos de log em uma pasta de log com carimb
 3.  Ação solicitada pelo usuário: permite que o usuário selecione e personalize recursos
   
 
-Este fluxo de trabalho gera um único log de resumo e um único log detalhes para uma instalação de RTM ou dois logs de detalhes para quando a mídia é integrada.
+Este fluxo de trabalho gera um único log de resumo, bem como uma das seguintes alternativas: um log de detalhes para uma instalação básica do SQL Server ou dois logs de detalhes para quando uma atualização, assim como um service pack, é instalada junto com a instalação básica. 
   
-Os arquivos de armazenamento de dados contêm um instantâneo do estado de todos os objetos de configuração que estão sendo rastreados pelo processo de instalação e são úteis para solucionar erros de configuração. Arquivos de despejo XML são criados para cada fase de execução e são salvos na subpasta de log de armazenamento de dados na pasta de log com carimbo de hora. 
+Adicionalmente, há arquivos de armazenamento de dados que contêm um instantâneo do estado de todos os objetos de configuração que estão sendo rastreados pelo processo de instalação e são úteis para solucionar problemas de erros de configuração. Arquivos de despejo XML são criados para cada fase de execução e são salvos na subpasta de log de armazenamento de dados na pasta de log com carimbo de hora. 
 
 As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -130,6 +142,8 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
   
 ### <a name="location"></a>Local  
 O arquivo SystemConfigurationCheck_Report.htm está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>Confira também  
  [Instalar o SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

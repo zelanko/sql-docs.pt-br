@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3bd2f1d9050d0b83a918914246ecc2d51cbd997
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409158"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Os cinco perfis a seguir analisam colunas individuais.  
   
-|Perfis que analisam colunas individuais|Description|  
+|Perfis que analisam colunas individuais|Descrição|  
 |----------------------------------------------|-----------------|  
 |Perfil Distribuição de Comprimento de Coluna|Reporta todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como valores que não são válidos. Por exemplo, você cria o perfil de uma coluna com códigos de estados dos Estados Unidos que devem ter dois caracteres e descobre valores maiores que dois caracteres.|  
 |Perfil Razão Nula de Coluna|Informa a porcentagem de valores nulos na coluna selecionada.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como uma razão alta de valores nulos inesperada em uma coluna. Por exemplo, você cria um perfil de uma coluna de Zip/Código Postal e descobre uma porcentagem alta e inaceitável de códigos ausentes.|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
  Os três perfis a seguir analisam diversas colunas ou relações entre colunas e tabelas.  
   
-|Perfis que analisam diversas colunas|Description|  
+|Perfis que analisam diversas colunas|Descrição|  
 |--------------------------------------------|-----------------|  
 |Perfil-chave de candidato|Informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada.<br /><br /> Este perfil também o ajuda a identificar problemas em seus dados, como valores duplicados em uma possível coluna chave.|  
 |Perfil Dependência Funcional|Informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante).<br /><br /> Este perfil também o ajuda a identificar problemas em seus dados, como valores inválidos. Por exemplo, você cria o perfil da dependência entre uma coluna que contém CEPs dos Estados Unidos e uma coluna que contém estados dos Estados Unidos. O mesmo Código Postal sempre deve ter o mesmo estado, mas o perfil descobre violações desta dependência.|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Mensagens de log personalizadas disponíveis na tarefa Criação de Perfil de Dados  
  A tabela a seguir lista as entradas de log personalizadas para a tarefa Criação de Perfil de Dados. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Fornece informações descritivas sobre o status da tarefa. As mensagens incluem as seguintes informações:<br /><br /> Solicitações de processamento inicial<br /><br /> Início da consulta<br /><br /> Query End<br /><br /> Concluir solicitação de computação|  
   

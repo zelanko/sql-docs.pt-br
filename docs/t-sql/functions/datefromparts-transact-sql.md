@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d74e96029a7f28e6547c74c34bc5de9e0b656d8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45446ffcf04092574737640fd338a35f04497181
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239026"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retorna um valor de **date** para o ano, o mês e o dia especificados.
+Essa função retorna um valor **date** que é mapeado para os valores de dia, mês e ano especificados.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,24 +45,24 @@ DATEFROMPARTS ( year, month, day )
   
 ## <a name="arguments"></a>Argumentos  
 *year*  
-Expressão de inteiro que especifica um ano.
+Uma expressão de inteiro que especifica um ano.
   
 *month*  
-Expressão de inteiro que especifica um mês, de 1 a 12.
+Uma expressão de inteiro que especifica um mês, de 1 a 12.
   
 *day*  
-Expressão de inteiro que especifica um dia.
+Uma expressão de inteiro que especifica um dia.
   
 ## <a name="return-types"></a>Tipos de retorno
 **date**
   
 ## <a name="remarks"></a>Remarks  
-**DATEFROMPARTS** retorna um valor de **date** com a parte de data definida como o ano, o mês e o dia especificados e a parte de hora definida com o padrão. Se os argumentos não forem válidos, um erro será gerado. Se os argumentos necessários forem nulos, nulo será retornado.
+`DATEFROMPARTS` retorna um valor **date** com a parte de data definida como o ano, mês e dia especificados e a parte de hora definida como o padrão. Para argumentos inválidos, `DATEFROMPARTS` gerará um erro. `DATEFROMPARTS` retornará nulo se pelo menos um argumento necessário tiver um valor nulo.
   
-Essa função é capaz de ser remota para servidores do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e acima. Ela não será remota para servidores de versão anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+Essa função pode operar comunicação remota para servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores. Ela não pode operar comunicação remota para servidores com uma versão inferior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir demonstra a função **DATEFROMPARTS**.
+Este exemplo mostra a função `DATEFROMPARTS` em ação.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

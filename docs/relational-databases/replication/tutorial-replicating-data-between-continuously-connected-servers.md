@@ -22,12 +22,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e8b3b6eccf11b959ae04a4d0888bd1bf76bfe869
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550477"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452176"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,8 @@ Se o SQL Server Agent não estava em execução quando a publicação foi criada
 
 ![Botão "Iniciar" e a alteração na mensagem de status para mostrar que o Agente de Instantâneo foi executado](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Se encontrar um erro, veja [Solução de erros com o Agente de Instantâneo](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent). 
+Se encontrar um erro aqui, confira [Solução de problemas de erro com o Agente de Instantâneo](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent).
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Adicionar o logon Distribution Agent à PAL  
@@ -239,7 +240,7 @@ Nesta seção, você usará os tokens de rastreamento para verificar se as alter
 
 Para obter mais informações, consulte: 
 - [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [Solucionando problemas de erros de sincronização de replicação transacional](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [Localizar erros com os agentes de replicação transacional](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>Próximas etapas
@@ -249,5 +250,3 @@ O próximo artigo ensinará como configurar a replicação de mesclagem:
 
 > [!div class="nextstepaction"]
 > [Tutorial: Configurar a replicação entre um servidor e clientes móveis (mesclagem)](tutorial-replicating-data-with-mobile-clients.md)
-
-  

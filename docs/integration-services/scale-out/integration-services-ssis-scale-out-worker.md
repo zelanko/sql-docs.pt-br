@@ -1,26 +1,25 @@
 ---
 title: Trabalho do SSIS (SQL Server Integration Services) Scale Out | Microsoft Docs
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: Este artigo descreve o componente Scale Out Master do SSIS Scale Out
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5b19aee11489551b3f06fb58cb0242b495929213
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2949f0aabaf4f59d6d2fc6635991f8eb0a921ca6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408118"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabalho de Expansão de Integration Services (SSIS)
 
@@ -29,10 +28,10 @@ O Trabalho do Scale Out executa o serviço Trabalho do Scale Out para efetuar pu
 ## <a name="configure-the-scale-out-worker-service"></a>Configurar o serviço Trabalho do Scale Out
 Configure o serviço Trabalho do Scale Out usando o arquivo ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. É necessário reiniciar o serviço depois de atualizar o arquivo de configuração.
 
-Configuração  |Description  |Valor padrão  
+Configuração  |Descrição  |Valor padrão  
 ---------|---------|---------
 DisplayName|O nome de exibição do Trabalho de Expansão. **NÃO em uso no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nome do computador         
-Description|A descrição do Trabalho de Expansão. **NÃO em uso no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Empty (vazio)         
+Descrição|A descrição do Trabalho de Expansão. **NÃO em uso no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Empty (vazio)         
 MasterEndpoint|O ponto de extremidade para se conectar ao Mestre de Expansão.|O ponto de extremidade definido durante a instalação do Trabalho de Expansão         
 MasterHttpsCertThumbprint|A impressão digital do certificado SSL de cliente usada para autenticar o Mestre de Expansão|A impressão digital do certificado do cliente especificada durante a instalação do Trabalho de Expansão.          
 WorkerHttpsCertThumbprint|A impressão digital do certificado do Mestre de Expansão usada para autenticar o Trabalho de Expansão.|A impressão digital do certificado criado e instalado automaticamente durante a instalação do Trabalho de Expansão          

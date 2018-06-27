@@ -23,17 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5549f258e758cc91a228d5fee707120b57963d46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09e705fd426963018eadae7351df1046d3d1ef0c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053123"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698267"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retorna um valor de **datetimeoffset** para a data e hora especificadas e com deslocamentos e precisão especificados.
+Essa função retorna um valor **datetimeoffset** para os argumentos de data e hora especificados. O valor retornado tem uma precisão especificada pelo argumento precision, e compensações determinadas pelos argumentos de compensação de hora e minuto.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,48 +45,48 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## <a name="arguments"></a>Argumentos  
 *year*  
-Expressão de inteiro que especifica um ano.
+Uma expressão de inteiro que especifica um ano.
   
 *month*  
-Expressão de inteiro que especifica um mês.
+Uma expressão de inteiro que especifica um mês.
   
 *day*  
-Expressão de inteiro que especifica um dia.
+Uma expressão de inteiro que especifica um dia.
   
 *hour*  
-Expressão de inteiro que especifica horas.
+Uma expressão de inteiro que especifica horas.
   
 *minute*  
-Expressão de inteiro que especifica minutos.
+Uma expressão de inteiro que especifica minutos.
   
 *segundos*  
-Expressão de inteiro que especifica segundos.
+Uma expressão de inteiro que especifica segundos.
   
 *fractions*  
-Expressão de inteiro que especifica frações.
+Uma expressão de inteiro que especifica um valor fracionário.
   
 *hour_offset*  
-Expressão de inteiro que especifica a parte de hora do deslocamento de fuso horário.
+Uma expressão de inteiro que especifica a parte de hora da compensação de fuso horário.
   
 *minute_offset*  
-Expressão de inteiro que especifica a parte de minutos do deslocamento de fuso horário.
+Uma expressão de inteiro que especifica a parte de minuto da compensação de fuso horário.
   
 *precisão*  
-Literal de inteiro que especifica a precisão do valor de **datetimeoffset** a ser retornado.
+Uma expressão de inteiro que especifica a precisão do valor **datetimeoffset** que será retornado por `DATETIMEOFFSETFROMPARTS`.
   
 ## <a name="return-types"></a>Tipos de retorno
 **datetimeoffset(** *precision* **)**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEOFFSETFROMPARTS** retorna um tipo de dados **datetimeoffset** totalmente inicializado. Os argumentos de deslocamento são usados para representar o deslocamento de fuso horário. Se os argumentos de deslocamento forem omitidos, será assumido que o deslocamento de fuso horário é 00:00, ou seja, não há deslocamento de fuso horário. Se os argumentos de deslocamento forem especificados, ambos os argumentos devem estar presentes e ambos devem ser positivos ou negativos. Se *minute_offset* for especificado sem *hour_offset*, um erro será gerado. Se outros argumentos não forem válidos, um erro será lançado. Se os argumentos obrigatórios forem nulos, nulo será retornado. Porém, se o argumento *precision* for nulo, um erro será gerado.
+`DATETIMEOFFSETFROMPARTS` retorna um tipo de dados **datetimeoffset** totalmente inicializado. `DATETIMEOFFSETFROMPARTS` usa os argumentos de compensação para representar a compensação de fuso horário. Se os argumentos de compensação são omitidos, `DATETIMEOFFSETFROMPARTS` pressupõe uma compensação de fuso horário de 00:00 – em outras palavras, absolutamente nenhuma compensação de fuso horário. Para os argumentos de compensação especificados, `DATETIMEOFFSETFROMPARTS` espera valores para ambos os argumentos, e que ambos os valores sejam positivos ou negativos para esses argumentos. Para um determinado *minute_offset* sem um valor de *hour_offset* especificado, `DATETIMEOFFSETFROMPARTS` gerará um erro. Se outros argumentos têm valores inválidos, `DATETIMEOFFSETFROMPARTS` gera um erro. `DATETIMEOFFSETFROMPARTS` retornará nulo se pelo menos um argumento necessário tiver um valor nulo. No entanto, se o argumento *precision* tiver um valor nulo, `DATETIMEOFFSETFROMPARTS` gerará um erro.
   
-O argumento *fractions* depende do argumento *precision*. Por exemplo, se *precision* for 7, cada fração representará 100 nanosegundos; se *precision* for 3, cada fração representará um milissegundo. Se o valor de *precision* for zero, o valor de *fractions* também deverá ser zero; caso contrário, um erro será gerado.
-  
-Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não será remota para servidores que têm uma versão anterior ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+O argumento *fractions* depende do argumento *precision*. Por exemplo, para um valor de *precision* igual a 7, cada fração representará 100 nanossegundos; se *precision* for igual a 3, cada fração representará um milissegundo. Se o valor de *precision* for zero, o valor de *fractions* também deverá ser zero; caso contrário, `DATETIMEOFFSETFROMPARTS` gerará um erro.
+
+Essa função dá suporte à comunicação remota para servidores [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não dará suporte a comunicação remota para servidores que têm uma versão anterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. Exemplo simples sem frações de um segundo  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. Um exemplo sem frações de um segundo  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
@@ -103,7 +103,7 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Exemplo simples com frações de um segundo  
-O seguinte exemplo demonstra o uso dos parâmetros *fractions* e *precision*:
+Este exemplo demonstra o uso dos parâmetros *fractions* e *precision*:
 1.   Quando *fractions* tem um valor igual a 5 e *precision* tem um valor igual a 1, o valor de *fractions* representa 5/10 de um segundo.  
 1.   Quando *fractions* tem um valor igual a 50 e *precision* tem um valor igual a 2, o valor de *fractions* representa 50/100 de um segundo.  
 1.   Quando *fractions* tem um valor igual a 500 e *precision* tem um valor igual a 3, o valor de *fractions* representa 500/1.000 de um segundo.  

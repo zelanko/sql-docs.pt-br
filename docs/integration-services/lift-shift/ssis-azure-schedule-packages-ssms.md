@@ -5,25 +5,24 @@ ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b20d4d42517555449f639cee398db4363d5735
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 89874258c7c8dd12e08ea9a37c6375257ef52c61
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335820"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure-with-sql-server-management-studio-ssms"></a>Agendar a execução de um pacote SSIS no Azure com o SSMS (SQL Server Management Studio)
+# <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Agendar a execução de pacotes SSIS implantados no Azure com o SSMS (SQL Server Management Studio)
 
-O SSMS (SQL Server Management Studio) oferece um recurso de agendamento de pacotes SSIS implantado no Banco de Dados SQL do Azure. O SQL Server local e a Instância Gerenciada do Banco de Dados SQL do Azure (versão prévia) têm o SQL Server Agent e o agente de instância gerenciada respectivamente como um agendador de trabalhos do SSIS de primeira classe. Por outro lado, o Banco de Dados SQL não tem um agendador interno de trabalhos do SSIS de primeira classe. O recurso do SSMS descrito neste artigo oferece uma interface do usuário familiar que é semelhante ao SQL Server Agent para agendar pacotes implantados no Banco de Dados SQL.
+Você pode usar o SSMS (SQL Server Management Studio) para agendar pacotes SSIS implantados no Banco de Dados SQL do Azure. O SQL Server local e a Instância Gerenciada do Banco de Dados SQL do Azure (versão prévia) têm o SQL Server Agent e o Agente de Instância Gerenciada, respectivamente, como um agendador de trabalhos do SSIS de primeira classe. Por outro lado, o Banco de Dados SQL não tem um agendador interno de trabalhos do SSIS de primeira classe. O recurso do SSMS descrito neste artigo oferece uma interface do usuário familiar que é semelhante ao SQL Server Agent para agendar pacotes implantados no Banco de Dados SQL.
 
-Se você estiver usando o Banco de Dados SQL para hospedar o banco de dados de catálogo SSIS, o `SSISDB`, poderá usar esse recurso do SSMS para gerar os pipelines de data factory, as atividades e os gatilhos necessários para agendar pacotes do SSIS. Em seguida, você pode editar e estender esses objetos no data factory.
+Se estiver usando o Banco de Dados SQL para hospedar o Catálogo do SSIS, o `SSISDB`, você poderá usar esse recurso do SSMS para gerar os pipelines de Data Factory, as atividades e os gatilhos necessários para agendar pacotes SSIS. Posteriormente, você poderá opcionalmente editar e estender esses objetos no Data Factory.
 
 Quando você usa o SSMS para agendar um pacote, o SSIS cria automaticamente três novos objetos data factory, com nomes com base no nome do pacote selecionado e no carimbo de data/hora. Por exemplo, se o nome do pacote SSIS for **MyPackage**, o SSMS criará novos objetos data factory semelhantes ao seguinte:
 

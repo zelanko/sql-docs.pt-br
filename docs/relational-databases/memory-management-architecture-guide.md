@@ -1,7 +1,7 @@
 ---
 title: Guia de arquitetura de gerenciamento de memória | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -20,11 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239366"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +76,7 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 > Versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podiam ser executadas em um sistema operacional de 32 bits. O acesso a mais de 4 GB (gigabytes) de memória em um sistema operacional de 32 bits exigiu que o recurso AWE (Address Windowing Extensions) gerenciasse a memória. Isso não é necessário quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução em sistemas operacionais de 64 bits. Para saber mais sobre o AWE, consulte [Espaço de endereço de processo](http://msdn.microsoft.com/library/ms189334.aspx) e [Gerenciando memória para bancos de dados grandes](http://msdn.microsoft.com/library/ms191481.aspx) na documentação do [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Alterações no gerenciamento de memória a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
-Nas versões anteriores do SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), a alocação de memória era feita usando cinco mecanismos diferentes:
+Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), a alocação de memória era feita usando cinco mecanismos diferentes:
 -  O **SPA (alocador de página única)**, incluindo somente as alocações de memória que eram menores ou iguais a 8 KB no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As opções de configuração *max server memory (MB)* e *min server memory (MB)* determinavam os limites de memória física que o SPA consumia. O pool de buffers era simultaneamente o mecanismo do SPA e o maior consumidor de alocações de uma página.
 -  O **Alocador de várias páginas (MPA)**, para as alocações de memória que solicitam mais de 8 KB.
 -  O **Alocador de CLR**, incluindo os heaps SQL CLR e suas alocações globais que são criadas durante a inicialização do CLR.
@@ -109,7 +109,6 @@ Esse comportamento geralmente é observado durante as operações a seguir:
 -  Rastreamento de operações que precisam armazenar grandes parâmetros de entrada.
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Alterações em “memory_to_reserve” a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
 Nas versões anteriores do SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), o gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deixou de lado uma parte do espaço de endereço virtual do processo (VAS) para uso pelo **MPA (Alocador de Várias Páginas)** , pelo **Alocador de CLR**, pelas alocações de memória para as **pilhas de threads** no processo do SQL Server e pelas **DWA (Alocações Diretas do Windows)** . Esta parte do espaço de endereço virtual também é conhecida como região “Mem-To-Leave” ou como “Pool de buffers sem memória”.
 
 O espaço de endereço virtual reservado para essas alocações é determinado pela opção de configuração ***memory_to_reserve***. O valor padrão que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa é 256 MB. Para substituir o valor padrão, use o parâmetro de inicialização [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Consulte a página de documentação em [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md) para obter informações sobre o parâmetro de inicialização *-g*.
@@ -127,12 +126,11 @@ A tabela a seguir indica se um tipo específico de alocação de memória se enc
 |Alocações diretas do Windows|Sim|Sim|
 
 ## <a name="dynamic-memory-management"></a> Gerenciamento de Memória Dinâmica
-
-O comportamento de gerenciamento de memória padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] é adquirir a quantidade de memória necessária sem provocar escassez de memória no sistema. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] faz isto usando as APIs de notificação de memória no Microsoft Windows.
+O comportamento de gerenciamento de memória padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] é adquirir a quantidade de memória necessária sem provocar escassez de memória no sistema. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] faz isto usando as APIs de notificação de memória no Microsoft Windows.
 
 Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está usando memória dinamicamente, ele consulta o sistema periodicamente para determinar a quantidade de memória livre. Manter essa memória livre impede a paginação do SO (sistema operacional). Se menos memória estiver livre, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] liberará memória para o SO. Se houver mais memória livre, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá alocar mais memória. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adiciona memória apenas quando sua carga de trabalho exige mais. Um servidor em repouso não aumenta o tamanho de seu espaço de endereço virtual.  
   
-A opção **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controla a alocação de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a memória de compilação, todos os caches (incluindo o pool de buffers), as concessões de memória de execução de consulta, a memória de gerenciador de bloqueio e a memória do CLR<sup>1</sup> (basicamente qualquer administrador de memória encontrado em **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+A opção **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controla a alocação de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a memória de compilação, todos os caches (incluindo o pool de buffers), as [concessões de memória de execução de consulta](#effects-of-min-memory-per-query), a [memória de gerenciador de bloqueio](#memory-used-by-sql-server-objects-specifications) e a memória do CLR<sup>1</sup> (basicamente qualquer administrador de memória encontrado em **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
 
 <sup>1</sup> A memória do CLR é gerenciada em alocações de max_server_memory a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -170,13 +168,12 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a API de notificaç
 
 Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado, ele computa o tamanho do espaço de endereço virtual do pool de buffers baseado em vários parâmetros, como quantidade de memória física no sistema, número de threads de servidor e vários parâmetros de inicialização. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva a quantidade computada do seu espaço de endereço virtual de processo do pool de buffers, mas adquire (confirma) somente a quantidade exigida da memória física para a carga atual.
 
-A instância continua adquirindo memória conforme necessário para atender a carga de trabalho. Como mais usuários conectam e executam consultas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquire a memória física adicional por demanda. Uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] continua adquirindo memória física até alcançar o destino de alocação max server memory ou o Windows indicar que não há excesso de memória livre; ela libera memória quando tem mais que a configuração de min server memory e o Windows indicar que há uma escassez de memória livre.
+A instância continua adquirindo memória conforme necessário para atender a carga de trabalho. Como mais usuários conectam e executam consultas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquire a memória física adicional por demanda. Uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] continua adquirindo memória física até alcançar o destino de alocação max server memory ou o SO indicar que não há mais um excesso de memória livre; ela libera memória quando tem mais do que a configuração min server memory e o SO indica que há uma escassez de memória livre. 
 
 Conforme são iniciados outros aplicativos em um computador que está executando uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], eles consomem memória e a quantidade de memória física livre reduz o destino do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . A instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ajusta seu consumo de memória. Se outro aplicativo for interrompido e, com isso, houver mais memória disponível, a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aumentará o tamanho de sua alocação de memória. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode liberar e adquirir vários megabytes de memória por segundo, permitindo o ajuste rápido às mudanças na alocação de memória.
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Efeitos de memória mínima e máxima do servidor
-
-As opções de configuração min server memory e max server memory estabelecem limites superiores e inferiores à quantidade de memória usada pelo pool de buffers e por outros caches do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O pool de buffers não adquire imediatamente a quantidade de memória especificada na min server memory. O pool de buffers é iniciado apenas com a memória exigida para inicialização. Conforme a carga de trabalho do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] aumenta, ele continua adquirindo a memória exigida para oferecer suporte à carga de trabalho. O pool de buffers não libera a memória adquirida até atingir a quantidade especificada na min server memory. Quando a min server memory é atingida, o pool de buffers usa o algoritmo padrão para adquirir e liberar memória, conforme necessário. A única diferença é que o pool de buffers nunca cancela sua alocação de memória abaixo do nível especificado na min server memory, e nunca adquire mais memória que o nível especificado na max server memory.
+As opções de configuração *min server memory* e *max server memory* estabelecem limites superiores e inferiores à quantidade de memória usada pelo pool de buffers e por outros caches do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O pool de buffers não adquire imediatamente a quantidade de memória especificada na min server memory. O pool de buffers é iniciado apenas com a memória exigida para inicialização. Conforme a carga de trabalho do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] aumenta, ele continua adquirindo a memória exigida para oferecer suporte à carga de trabalho. O pool de buffers não libera a memória adquirida até atingir a quantidade especificada na min server memory. Quando a min server memory é atingida, o pool de buffers usa o algoritmo padrão para adquirir e liberar memória, conforme necessário. A única diferença é que o pool de buffers nunca cancela sua alocação de memória abaixo do nível especificado na min server memory, e nunca adquire mais memória que o nível especificado na max server memory.
 
 > [!NOTE]
 > Como um processo, o[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquire mais memória do que a especificada pela opção max server memory. Os componentes internos e externos podem alocar memória fora do pool de buffers, que consome memória adicional, mas a memória alocada ao pool de buffers, em geral, ainda representa a parte maior da memória consumida pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -187,8 +184,7 @@ Se o mesmo valor for especificado para as opções min server memory e max serve
 
 Se uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estiver sendo executada em um computador em que outros aplicativos são interrompidos ou iniciados com frequência, a alocação e a desalocação de memória pela instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderão reduzir as inicializações dos outros aplicativos. Além disso, se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for um dos vários aplicativos de servidor em execução em um único computador, os administradores de sistema poderão precisar controlar a quantidade de memória alocada ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nesses casos, você pode usar as opções min server memory e max server memory para controlar a quantidade de memória que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode usar. As opções **min server memory** e **max server memory** são especificadas em megabytes. Para saber mais, veja [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>Memória usada por especificações de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-
+## <a name="memory-used-by-sql-server-objects-specifications"></a>Memória usada por especificações de objetos do SQL Server
 A lista a seguir descreve a quantidade aproximada de memória usada por diferentes objetos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os valores listados são estimativas e podem variar dependendo do ambiente e de como os objetos são criados:
 
 * Bloquear (conforme mantido pelo Gerenciador de Bloqueios): 64 bytes + 32 bytes por proprietário   
@@ -198,12 +194,33 @@ O **tamanho do pacote de rede** é o tamanho dos pacotes de TDS (esquema de dado
 
 Quando vários conjuntos de resultados ativos estiverem habilitados, a conexão do usuário será de aproximadamente (3 + 3 \*número_de_conexões_lógicas) \* tamanho_do_pacote_de_rede + 94 KB
 
-## <a name="buffer-management"></a>Gerenciamento de buffer
+## <a name="effects-of-min-memory-per-query"></a>Efeitos de min memory per query
+A opção de configuração *min memory per query* estabelece a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Isso também é conhecido como a concessão de memória mínima. O início da execução de todas as consultas deve aguardar até que a memória mínima solicitada possa ser protegida ou então até que o valor especificado na opção de configuração de servidor query wait seja excedido. O tipo de espera é acumulado neste cenário é RESOURCE_SEMAPHORE.
 
+> [!IMPORTANT]
+> Não defina a opção de configuração de servidor min memory per query com um valor muito alto, especialmente em sistemas muito ocupados, porque isso poderia levar a:         
+> - Maior competição por recursos de memória.         
+> - Redução de simultaneidade, aumentando a quantidade de memória para cada consulta única mesmo se a memória necessária em tempo de execução é menor que essa configuração.    
+>    
+> Para obter recomendações sobre como usar essa configuração, consulte [Configurar a opção de configuração de servidor min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
+
+### <a name="memory-grant-considerations"></a>Considerações de concessão de memória
+Para **execução em modo de linha**, a concessão de memória inicial não pode ser excedida sob nenhuma condição. Se mais memória do que a concessão inicial for necessária para executar as operações **hash** ou de **classificação**, essas operações serão despejadas para o disco. Uma operação hash que é despejada tem o suporte de um arquivo de trabalho em TempDB, enquanto uma operação de classificação que é despejada tem o suporte de uma [tabela de trabalho](../relational-databases/query-processing-architecture-guide.md#worktables).   
+
+Um despejo que ocorre durante uma operação de classificação é conhecido como um [aviso de classificação](../relational-databases/event-classes/sort-warnings-event-class.md). Avisos de classificação indicam que operações de classificação não cabem na memória. Isso não inclui operações de classificação envolvendo a criação de índices, somente operações de classificação em uma consulta (como uma cláusula `ORDER BY` usada em uma instrução `SELECT`).
+
+Um despejo que ocorre durante uma operação de hash é conhecido como um [aviso de hash](../relational-databases/event-classes/hash-warning-event-class.md). Esses avisos ocorrem após uma recursão ou cessação de hash (esgotamento de hash ) ocorrer durante uma operação de hash.
+-  A recursão de hash ocorre quando a entrada de criação não cabe na memória disponível, ocasionando a divisão da entrada em várias partições que são processadas separadamente. Se qualquer uma dessas partições ainda não couber na memória disponível, ela será dividida em subpartições, que também serão processadas separadamente. Esse processo de divisão continuará até que cada partição caiba na memória disponível ou até que o nível máximo de recursão seja atingido.
+-  O esgotamento hash ocorre quando uma operação de hashing atinge o nível máximo de recursão e é deslocada para um plano alternativo, de forma a processar os dados particionados restantes. Esses eventos podem causar a redução do desempenho de seu servidor.
+
+Para **execução em modo de lote**, a concessão de memória inicial pode aumentar dinamicamente até um certo limite interno por padrão. Esse mecanismo de concessão de memória dinâmica é projetado para permitir a execução de operações de **hash** ou de **classificação** residentes na memória executadas em modo de lote. Se essas operações ainda não couberem na memória, elas serão despejadas para o disco.
+
+Para obter mais informações sobre modos de execução, consulte [Guia da Arquitetura de Processamento de Consultas](../relational-databases/query-processing-architecture-guide.md#execution-modes).
+
+## <a name="buffer-management"></a>Gerenciamento de buffer
 A principal finalidade de um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é armazenar e recuperar dados, de modo que a intensa E/S de disco é uma característica importante do Mecanismo de Banco de Dados. Como as operações de E/S de disco podem consumir muitos recursos e levar um tempo relativamente longo para terminar, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se concentra em tornar a E/S altamente eficiente. O gerenciamento de buffer é um componente fundamental para alcançar essa eficiência. O componente de gerenciamento de buffer consiste em dois mecanismos: o **gerenciador de buffer** para acessar e atualizar páginas de banco de dados e o **cache do buffer** (também chamado de **pool de buffers**) para reduzir a E/S do arquivo de banco de dados. 
 
 ### <a name="how-buffer-management-works"></a>Como funciona o gerenciamento de buffer
-
 Um buffer é uma página de 8 KB da memória, o mesmo tamanho de uma página de dados ou de índice. Portanto, o cache do buffer é dividido em páginas de 8 KB. O gerenciador de buffer gerencia as funções lendo páginas de dados ou de índice dos arquivos do disco de banco de dados no cache do buffer e gravando páginas modificadas de volta no disco. Uma página permanece no cache do buffer até que o gerenciador de buffer precise da área de buffer para ler mais dados. Os dados serão gravados no disco apenas se forem modificados. Os dados podem ser modificados no cache do buffer várias vezes antes de serem gravados no disco. Para saber mais, veja [Lendo Páginas](../relational-databases/reading-pages.md) e [Gravando Páginas](../relational-databases/writing-pages.md).
 
 Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado, ele computa o tamanho do espaço de endereço virtual do cache de buffers com base em vários parâmetros, como quantidade de memória física no sistema, número máximo de threads de servidor configurado e vários parâmetros de inicialização. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva essa quantidade computada de seu espaço de endereço virtual de processo (chamado de memória cache) do cache de buffers, mas adquire (confirma) somente a quantidade exigida da memória física para a carga atual. Você pode consultar as colunas **bpool_commit_target** e **bpool_committed columns** na exibição do catálogo [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) para retornar o número de páginas reservado como destino de memória e o número de páginas atualmente confirmado no cache do buffer, respectivamente.
@@ -217,7 +234,6 @@ Como o gerenciador de buffer usa a maior parte da memória no processo do [!INCL
 * Gerenciador de log para log write-ahead.  
 
 ### <a name="supported-features"></a>Recursos com suporte
-
 O gerenciador de buffer oferece suporte aos seguintes recursos:
 
 * O gerenciador de buffer reconhece o **NUMA (acesso não uniforme à memória por software)**. São distribuídas páginas de cache do buffer em nós NUMA de hardware, que permitem a um thread acessar uma página de buffer alocada no nó NUMA local em vez de memória externa. 
@@ -257,6 +273,30 @@ E/Ss demoradas também podem ser causadas por um componente no caminho de E/S (p
 
 E/Ss demoradas e isoladas que não aparecem relacionadas a quaisquer condições anteriores podem ser causadas por um problema de hardware ou driver. O log de eventos do sistema pode conter um evento relacionado que ajuda a diagnosticar o problema.
 
+### <a name="memory-pressure-detection"></a>Detecção de demanda de memória
+A demanda de memória é uma condição decorrente da falta de memória e pode resultar em:
+- E/S extra (por exemplo, um thread em segundo plano de gravador lento muito ativo)
+- Maior taxa de recompilação
+- Consultas de execução mais longa (se existirem esperas por concessão de memória)
+- Ciclos de CPU adicionais
+
+Essa situação pode ser gerada por causas externas ou internas. As causas externas incluem:
+- A RAM (memória física disponível) é insuficiente. Isso faz com que o sistema corte conjuntos de trabalho de processos atualmente em execução, o que pode resultar em um retardamento geral. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode reduzir o destino de confirmação de pool de buffers e passar a cortar caches internos com mais frequência. 
+- A memória de sistema geral disponível (que inclui o arquivo de paginação do sistema) está baixa. Isso pode causar falha em alocações de memória pelo sistema, já que ele não é capaz de realizar page-out da memória alocada atualmente.
+As causas internas incluem:
+- Resposta à demanda de memória externa, quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] define limites de uso de memória mais baixos.
+- As configurações de memória foram reduzidas manualmente reduzindo-se a configuração *max server memory*. 
+- Alterações na distribuição de memória de componentes internos entre os vários caches.
+
+O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implementa uma estrutura dedicada a detectar e manipular a demanda de memória, como parte do seu gerenciamento de memória dinâmica. Essa estrutura inclui a tarefa de fundo chamada **Monitor de Recursos**. A tarefa de Monitor de Recursos monitora o estado de indicadores de memória interna e externa. Depois que o status de um desses indicadores se altera, ele calcula a notificação correspondente e a difunde. Essas notificações são mensagens internas de cada um dos componentes do mecanismo e armazenadas em buffers de anéis. 
+
+Dois buffers de anéis mantêm informações relevantes para o gerenciamento de memória dinâmica: 
+- O buffer de anéis de Monitor de Recursos, que acompanha a atividade do Monitor de Recursos, por exemplo, se a demanda de memória foi sinalizada ou não. Esse buffer de anéis tem informações de status, dependendo da condição atual de *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* ou *RESOURCE_MEMVIRTUAL_LOW*.
+- O buffer de anéis do agente de memória, que contém registros de notificações de memória para cada pool de recursos do Resource Governor. Conforme a demanda de memória interna é detectada, a notificação de memória baixa é ativada para os componentes que alocam memória, de modo a disparar ações destinadas a equilibrar a memória entre caches. 
+
+Agentes de memória monitoram o consumo de demanda de memória por cada componente e então, com base nas informações coletadas, calculam o valor ideal de memória para cada um desses componentes. Há um conjunto de agentes para cada pool de recursos do Resource Governor. Essas informações são então difundidas para cada um dos componentes que aumentam ou diminuem seu uso conforme necessário.
+Para obter mais informações sobre agentes de memória, consulte [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
+
 ### <a name="error-detection"></a>Detecção de erro  
 As páginas de banco de dados podem usar um dentre dois mecanismos opcionais que ajudam a garantir a integridade da página do momento em que é gravada no disco até ser lida novamente: proteção de página interrompida e proteção de soma de verificação. Esses mecanismos permitem um método independente para verificar a exatidão não apenas do armazenamento de dados, mas de componentes de hardware, como controladores, drivers, cabos e até mesmo o sistema operacional. A proteção é adicionada à página um pouco antes da gravação no disco e verificada depois da leitura do disco.
 
@@ -278,7 +318,6 @@ A proteção de soma de verificação, apresentada no [!INCLUDE[ssVersion2005](.
 > TORN_PAGE_DETECTION pode usar menos recursos, mas fornece um subconjunto mínimo da proteção CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Compreendendo o Non-uniform Memory Access
-
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece o NUMA (Non-uniform Memory Access) e tem um bom desempenho em hardware de NUMA sem configuração especial. Devido ao aumento da velocidade de clock e do número de processadores, fica muito difícil reduzir a latência de memória exigida para usar este poder de processamento adicional. Para evitar isto, fornecedores de hardware fornecem caches de L3 grandes, mas esta é apenas uma solução limitada. A arquitetura NUMA oferece uma solução escalonável para esse problema. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi projetado para tirar proveito de computadores baseados em NUMA sem exigir nenhuma mudança de aplicativo. Para saber mais, veja [Como configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>Consulte Também

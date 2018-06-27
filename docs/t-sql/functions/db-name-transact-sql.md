@@ -27,16 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c2a2e92fdef5cae1b2404d18c2c5fb18b3de1ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5701576503c09275408389ae1f5259bcf7d06ce6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239296"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna o nome do banco de dados.
+Essa função retorna o nome de um banco de dados especificado.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,21 +49,23 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>Argumentos  
 *database_id*  
-É o número de identificação (ID) do banco de dados a ser retornado. *database_id* é **int**, sem padrão. Se  nenhuma ID for especificada, o nome do banco de dados atual será retornado.
+
+O número de identificação (ID) do banco de dados cujo nome `DB_NAME` será retornado. Se a chamada para `DB_NAME` omite *database_id*, `DB_NAME` retorna o nome do banco de dados atual.
   
 ## <a name="return-types"></a>Tipos de retorno
 **nvarchar(128)**
   
 ## <a name="permissions"></a>Permissões  
-Se o chamador de **DB_NAME** não for o proprietário do banco de dados e o banco de dados não for o **master** nem **tempdb**, as permissões mínimas necessárias para ver a linha correspondente serão as permissões no nível do servidor ALTER ANY DATABASE ou VIEW ANY DATABASE ou a permissão CREATE DATABASE no banco de dados **master**. O banco de dados ao qual o chamador está conectado sempre pode ser exibido em **sys.databases**.
+
+Se o chamador de `DB_NAME` não é proprietário de um banco de dados específico não **mestre** ou não **tempdb**, são necessárias no mínimo as permissões de nível de servidor `ALTER ANY DATABASE` ou `VIEW ANY DATABASE` para ver a linha `DB_ID` correspondente. Para o banco de dados **mestre**, `DB_ID` precisa, no mínimo, da permissão `CREATE DATABASE`. O banco de dados ao qual o chamador se conecta será sempre exibido em **sys.databases**.
   
 > [!IMPORTANT]  
->  Por padrão, a função pública tem a permissão VIEW ANY DATABASE, permitindo que todos os logons vejam informações do banco de dados. Para impedir que um logon tenha a capacidade de detectar um banco de dados, use REVOKE para a permissão VIEW ANY DATABASE da função pública ou DENY para a permissão VIEW ANY DATABASE para logons individuais.  
+>  Por padrão, a função pública tem a permissão `VIEW ANY DATABASE`, que permite que todos os logons vejam informações do banco de dados. Para impedir a detecção de um banco de dados por um logon, aplique `REVOKE` na permissão `VIEW ANY DATABASE` da função pública, ou aplique `DENY` na permissão `VIEW ANY DATABASE` para logons individuais.
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-returning-the-current-database-name"></a>A. Retornando o nome do banco de dados atual  
-O exemplo a seguir retorna o nome do banco de dados atual.
+Este exemplo retorna o nome do banco de dados atual.
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
@@ -70,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>B. Retornando o nome do banco de dados de uma ID de banco de dados especificada  
-O exemplo a seguir retorna o nome do banco de dados para a ID de banco de dados `3`.
+Este exemplo retorna o nome do banco de dados para a ID de banco de dados `3`.
   
 ```sql
 USE master;  
@@ -88,7 +91,7 @@ SELECT DB_NAME() AS [Current Database];
 ```  
   
 ### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. Retornar o nome de um banco de dados usando a ID de banco de dados  
-O exemplo a seguir retorna o nome do banco de dados e a database_id de cada banco de dados.
+Este exemplo retorna o nome do banco de dados e a database_id de cada banco de dados.
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  

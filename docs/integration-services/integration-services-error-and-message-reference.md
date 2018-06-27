@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619553"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgError"></a> Mensagens de erro  
  Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com **DTS_E_**.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Substituição do procedimento armazenado "%1" no destino.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|Não existe suporte para o tipo de dados "%1" encontrado na coluna "%2" para o %3. Essa coluna será convertida em DT_NTEXT.|  
@@ -1047,7 +1046,7 @@ ms.lasthandoff: 05/03/2018
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Esse buffer ficou órfão. O gerenciador de buffer foi desligado, deixando um buffer pendente, e nenhuma limpeza será feita no buffer. Existe possibilidade de vazamento de memória e outros problemas.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Falha na tentativa de encontrar a coluna de entrada denominada "%1" com o código de erro 0x%2!8.8X!. A coluna de entrada especificada não foi encontrada na coleção de colunas de entrada.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Falha na tentativa de encontrar a coluna de entrada com a ID de linhagem %1!d! com código de erro 0x%2!8.8X!. A coluna de entrada não foi encontrada na coleção de colunas de entrada.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|A expressão contém token "%1" não reconhecido. Se "%1" for uma variável, deve ser expressa como "@%1". O token especificado não é válido. Se a intenção é que o token seja um nome de variável, deve ter como prefixo o símbolo @.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|A expressão contém token "%1" não reconhecido. Se "%1" for uma variável, ela deverá ser expressa como "\@%1". O token especificado não é válido. Se a intenção é que o token seja um nome de variável, deve ter como prefixo o símbolo @.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|A expressão contém o token não reconhecido "#%1!d!".|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|A variável "%1" não foi encontrada na coleção Variables. A variável pode não existir no escopo correto.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Falha na tentativa de análise da expressão "%1". A expressão pode conter um token inválido, um token incompleto ou um elemento inválido. Ela pode não estar bem formada, ou pode estar faltando um elemento necessário, como um parêntese.|  
@@ -2025,7 +2024,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgWarning"></a> Mensagens de aviso  
  Os nomes simbólicos das mensagens de aviso do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com **DTS_W_**.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|Restam %1!lu! dias de avaliação. Quando ela expirar, os pacotes não poderão ser executados.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|Aviso(s) gerado(s). Deve haver mais avisos específicos precedentes a este que expliquem as especificidades do(s) aviso(s).|  
@@ -2081,8 +2080,8 @@ ms.lasthandoff: 05/03/2018
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|Falha na tarefa ao executar a operação "%1".|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|O arquivo/processo "%1" não está no caminho.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|O assunto está vazio.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|O endereço na linha "Para" está incorreto. Falta o símbolo "@" ou ele não é válido.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|O endereço na linha "De" está incorreto. Falta o símbolo "@" ou ele não é válido.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|O endereço na linha "Para" está incorreto. Ele é inválido ou o símbolo "\@" está ausente.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|O endereço na linha "De" está incorreto. Ele é inválido ou o símbolo "\@" está ausente.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Os dois documentos XML são diferentes.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|A validação DTD usará o arquivo DTD definido na linha DOCTYPE no documento XML. Não usará o que está atribuído à propriedade "%1".|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Falha na tarefa ao validar "%1".|  
@@ -2171,7 +2170,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgInfo"></a> Mensagens informativas  
  Os nomes simbólicos das mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com **DTS_I_**.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|Iniciando uma transação distribuída para esse contêiner.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|Confirmando a transação distribuída iniciada por esse contêiner.|  
@@ -2270,7 +2269,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgGeneral"></a> Mensagens de evento e gerais  
  Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com **DTS_MSG_**.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Função incorreta.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|O sistema não pôde localizar o arquivo especificado.|  
@@ -2309,7 +2308,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgSuccess"></a> Mensagens de êxito  
  Os nomes simbólicos das mensagens de êxito do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com **DTS_S_**.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|O valor é NULL.|  
 |0x40005|262149|DTS_S_TRUNCATED|O valor da cadeia de caracteres foi truncado. O buffer recebeu uma cadeia de caracteres muito longa para a coluna e a truncou.|  
@@ -2318,7 +2317,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgPipeline"></a> Mensagens de erro do componente de fluxo de dados  
  Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com **DTSBC_E_**, em que "BC" refere-se à classe base nativa da qual é derivada a maioria dos componentes de fluxo de dados da Microsoft.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|O número total de saídas e saídas de erro, %1!lu!, está incorreto. Deve haver exatamente %2!lu!.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Não é possível recuperar a saída com o índice %1!lu!.|  

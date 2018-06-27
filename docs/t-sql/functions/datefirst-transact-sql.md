@@ -37,18 +37,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c1af3730ecd3484728266ed7aecdfd975286461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 119b41488f7a357d3c59e78ce7c197c0825f3238
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239326"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna o valor atual, para uma sessão, de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Essa função retorna o valor atual de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md), para uma sessão específica.
   
-Para obter uma visão geral das funções e dos tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], confira [Funções e tipos de dados de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,9 +63,20 @@ Para obter uma visão geral das funções e dos tipos de dados de data e hora de
 **tinyint**
   
 ## <a name="remarks"></a>Remarks  
-SET DATEFIRST especifica o primeiro dia da semana. O padrão do inglês dos EUA é 7, domingo.
+SET DATEFIRST *n* Especifica o primeiro dia (DOMINGO, SEGUNDA-FEIRA, TERÇA-FEIRA, etc.) da semana. O valor de *n* varia de 1 a 7.
+
+```sql
+SET DATEFIRST 3;
+GO  
+SELECT @@DATEFIRST; -- 3 (Wednesday)
+GO
+```  
+
+Para um ambiente em inglês (Estados Unidos), @@DATEFIRST assume o valor 7 (domingo) por padrão.
   
-A configuração desse idioma afeta a interpretação das cadeias de caracteres ao longo da conversão em valores de data para armazenamento no banco de dados, e a exibição dos valores de data armazenados no banco de dados. Essa configuração não afeta o formato de armazenamento de dados de data. No exemplo a seguir, o idioma é definido primeiramente como `Italian`. A instrução `SELECT @@DATEFIRST;` retorna `1`. O idioma é definido como `us_english`. A instrução `SELECT @@DATEFIRST;` retorna `7`.
+Essa configuração de idioma afeta a interpretação de cadeia de caracteres, já que o SQL Server converte essas cadeias de caracteres em valores de data para armazenamento de banco de dados. Essa configuração também afeta a exibição de valores de data armazenados no banco de dados. Essa configuração não impacta o formato de armazenamento de dados de data.
+
+Este exemplo primeiro define o idioma para `Italian`. A instrução `SELECT @@DATEFIRST;` retorna `1`. A próxima instrução define o idioma para é então definido como `us_english`. A instrução final, `SELECT @@DATEFIRST;`, retorna `7`.
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +89,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir define o primeiro dia da semana como `5` (sexta-feira) e assume o dia atual, `Today`, como sendo sábado. A instrução `SELECT` retorna o valor `DATEFIRST` e o número do dia atual da semana.
+Este exemplo define o primeiro dia da semana como `5` (sexta-feira) e assume o dia atual, `Today`, como sendo sábado. A instrução `SELECT` retorna o valor `DATEFIRST` e o número do dia atual da semana.
   
 ```sql
 SET DATEFIRST 5;  
