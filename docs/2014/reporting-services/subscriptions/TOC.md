@@ -6,6 +6,7 @@
 ## [Criar, modificar e excluir uma assinatura controlada por dados](create-modify-and-delete-data-driven-subscriptions.md)
 ## [Usar uma fonte de dados externa para dados de assinantes](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [Criar, modificar e excluir assinaturas padrão](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [Usar Minhas Assinaturas](use-my-subscriptions-native-mode-report-server.md)
 ## [Pausar o processamento de relatório e assinatura](disable-or-pause-report-and-subscription-processing.md)
 ## [Controlar a distribuição de relatórios](../control-report-distribution.md)
