@@ -1,0 +1,63 @@
+---
+title: Referência técnica (SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, technical reference
+- technical reference [Reporting Services]
+- languages [Reporting Services]
+- tools [Reporting Services]
+- user interface reference [Reporting Services]
+ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
+caps.latest.revision: 22
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: 9f749612e65681ec7daf2f556ada02e9f84b5fd3
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36119830"
+---
+# <a name="technical-reference-ssrs"></a>Referência técnica (SSRS)
+  Localize as ferramentas e a documentação de referência do PowerShell para usar ou admnoistrar o [!INCLUDE[ssRSnoversion](../nocludes/ssrsnoversion-md.md)] no [!INCLUDE[msCoName](../nocludes/msconame-md.md)] [!INCLUDE[ssCurrent](../nocludes/sscurrent-md.md)].  
+  
+ ![Ícone da pasta de arquivos pequenos](../../2014/integration-services/media/filefolder-small.gif "Ícone da pasta de arquivos pequenos") **Erros e eventos**  
+ [Causa e resolução de erros do Reporting Services](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+  
+ ![Ícone da pasta de arquivos pequenos](../../2014/integration-services/media/filefolder-small.gif "Ícone da pasta de arquivos pequenos") **Referência do recurso**  
+ [Ajuda F1 do Designer de Relatórios](tools/report-designer-f1-help.md)  
+  
+ [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
+  
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+  
+ [Ajuda do Assistente de Relatório](../../2014/reporting-services/report-wizard-help.md)  
+  
+ [Visualizador de HTML e a barra de ferramentas de relatório](html-viewer-and-the-report-toolbar.md)  
+  
+ [Configurações de informações de dispositivos para extensões de renderização &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
+  
+ ![Ícone de pasta de arquivos pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") **Utilitários de prompt de comando do servidor de relatório**  
+ [Utilitário RS.exe &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
+  
+ [Utilitário rsconfig &#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
+  
+ [Utilitário rskeymgmt &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
+  
+ ![Ícone de pasta de arquivos pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") **Biblioteca de classes do provedor WMI do Reporting Services**  
+ [Referência da biblioteca do provedor WMI do Reporting Services &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
+  
+## <a name="see-also"></a>Consulte também  
+ [Artigos do wiki do TechNet sobre a solução de problemas do Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
+ [Wiki do TechNet sobre o modo do SharePoint para solução de problemas Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209158)  
+  
+  
