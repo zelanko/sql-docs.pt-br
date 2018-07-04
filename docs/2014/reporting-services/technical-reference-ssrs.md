@@ -28,7 +28,7 @@ ms.lasthandoff: 06/19/2018
 ms.locfileid: "36119830"
 ---
 # <a name="technical-reference-ssrs"></a>Referência técnica (SSRS)
-  Localize as ferramentas e a documentação de referência do PowerShell para usar ou admnoistrar o [!INCLUDE[ssRSnoversion](../nocludes/ssrsnoversion-md.md)] no [!INCLUDE[msCoName](../nocludes/msconame-md.md)] [!INCLUDE[ssCurrent](../nocludes/sscurrent-md.md)].  
+  Localize as ferramentas e a documentação de referência do PowerShell para usar ou administrar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  ![Ícone da pasta de arquivos pequenos](../../2014/integration-services/media/filefolder-small.gif "Ícone da pasta de arquivos pequenos") **Erros e eventos**  
  [Causa e resolução de erros do Reporting Services](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
