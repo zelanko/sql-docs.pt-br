@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionmaintable.f1
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1543e73d06d6adaf70f78a5c6c13fdcd748f467a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe54261f04a7e4064bca482c31149a558e1ea779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181023"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Especificar Informações sobre a Origem (Assistente de Dimensão)
   Use a página **Selecionar a Tabela de Dimensões Principal** para selecionar a exibição da fonte de dados, a tabela de dimensões principal, as colunas de chave e a coluna de nome de membro para a dimensão a ser criada.  
   
- **Para abrir o Assistente de dimensão**  
+ **Para abrir o Assistente para dimensões**  
   
 -   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Dimensões** de um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique em **Nova Dimensão**.  
   
 ## <a name="options"></a>Opções  
- **exibição da fonte de dados**  
+ **Exibição da fonte de dados**  
  Selecione uma exibição da fonte de dados.  
   
  **Tabela principal**  

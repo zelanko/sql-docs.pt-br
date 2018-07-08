@@ -1,5 +1,5 @@
 ---
-title: Implantar soluções modelo usando o Assistente de implantação | Microsoft Docs
+title: Implantar soluções de modelo usando o Assistente de implantação | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard
 - deploying [Analysis Services], Analysis Services Deployment Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Services Deployment Wizard, about Analysis Services Deployment Wizard
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c5540993d743282801a684c21520069a3fa4313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c8544aaa91cb9dcfcd248e70a4debd766eb1f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192456"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
   O Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa os arquivos de saída XML gerados de um projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como arquivos de entrada. Esses arquivos de entrada são facilmente modificáveis para personalizar a implantação de um projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O script de implantação gerado pode ser executado imediatamente ou pode ser salvo para implantação posterior.  
@@ -44,7 +44,7 @@ ms.locfileid: "36007142"
 |[Noções básicas sobre o script de implantação do Analysis Services](understanding-the-analysis-services-deployment-script.md)|Descreve o que o script de implantação contém e como o script é executado.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantar soluções modelo usando XMLA](deploy-model-solutions-using-xmla.md)   
+ [Implantar soluções de modelo usando XMLA](deploy-model-solutions-using-xmla.md)   
  [Sincronizar bancos de dados do Analysis Services](synchronize-analysis-services-databases.md)   
  [Noções básicas sobre os arquivos de entrada usados para criar o Script de implantação](deployment-script-files-input-used-to-create-deployment-script.md)   
  [Implantar soluções de modelo com o Utilitário de Implantação](deploy-model-solutions-with-the-deployment-utility.md)  

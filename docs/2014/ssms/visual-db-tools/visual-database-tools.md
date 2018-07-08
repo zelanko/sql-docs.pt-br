@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2cf66870299c74851788a10196ceb61f4194858
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9395e51a3fa76db6e2b03928171e515cb6c672fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161537"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclui os designers visuais para compilar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , tabelas e bancos de dados de diagramação.  

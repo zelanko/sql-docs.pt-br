@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235c76fb2b8cad1682fab97f36cb1867d7c82c38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165267"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>Elemento NullKeyNotAllowed (ASSL)
   Determina como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mecanismo de processamento manipula um erro de chave nula encontrado durante o processamento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36006919"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os erros de chave nula ocorrem quando um valor nulo é encontrado em uma coluna de chave na qual os valores nulos não são permitidos, forçando o descarte do registro durante o processamento. No entanto, esse erro ocorre apenas se o [NullProcessing](nullprocessing-element-assl.md) elemento para o `DataItem` ancestral do `ErrorConfiguration` elemento pai está definido como *erro*.  
+ Os erros de chave nula ocorrem quando um valor nulo é encontrado em uma coluna de chave na qual os valores nulos não são permitidos, forçando o descarte do registro durante o processamento. No entanto, esse erro ocorre somente se o [NullProcessing](nullprocessing-element-assl.md) elemento para o `DataItem` ancestral a `ErrorConfiguration` elemento pai é definido como *erro*.  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   

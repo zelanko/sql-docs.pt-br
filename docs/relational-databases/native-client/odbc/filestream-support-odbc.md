@@ -7,7 +7,7 @@ ms.prod_service: database-engine
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e6a0f57c9f04bfa6ee839a443d7b6601ac14801
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec1a926d09258a4c6ec02665ad0fd142e15a05fa
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950451"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408005"
 ---
 # <a name="filestream-support-odbc"></a>Suporte a FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "32950451"
 
   O ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao recurso FILESTREAM aprimorado. Para obter mais informações sobre esse recurso, consulte [suporte a FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Para obter um exemplo que demonstra o suporte para FILESTREAM de ODB, consulte [enviar e receber dados incrementalmente com FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Para enviar e receber **varbinary (max)** valores maiores que 2 GB, um aplicativo deve associar parâmetros usando SQLBindParameter com *ColumnSize* definida como **SQL_SS_LENGTH_UNLIMITED**e defina o conteúdo de *StrLen_or_IndPtr* para **SQL_DATA_AT_EXEC** antes SQLExecDirect ou SQLExecute.  
+ Para enviar e receber **varbinary (max)** valores maiores que 2 GB, um aplicativo deve associar parâmetros usando SQLBindParameter com *ColumnSize* definido como **SQL_SS_LENGTH_UNLIMITED**e definir o conteúdo de *StrLen_or_IndPtr* à **SQL_DATA_AT_EXEC** antes SQLExecDirect ou SQLExecute.  
   
  Como com qualquer parâmetro de dados em execução, os dados serão fornecidos com SQLParamData e SQLPutData.  
   
- Você pode chamar SQLGetData para buscar dados em partes para uma coluna FILESTREAM se a coluna não está associada com SQLBindCol.  
+ Você pode chamar SQLGetData para buscar dados em partes para uma coluna FILESTREAM se a coluna não estiver associada com SQLBindCol.  
   
  Você pode atualizar os dados FILESTREAM se eles estiverem associados com SQLBindCol.  
   
- Se você chamar SQLFetch em uma coluna associada, você receberá um aviso "dados truncados" se o buffer não é grande o suficiente para manter o valor inteiro. Ignorar este aviso e atualize os dados nesta coluna associada com chamadas SQLParamData e SQLPutData. Você pode atualizar dados FILESTREAM usando SQLSetPos se ele está associado com SQLBindCol.  
+ Se você chamar SQLFetch em uma coluna associada, você receberá um aviso "dados truncados" se o buffer não for grande o suficiente para manter o valor inteiro. Ignorar esse aviso e atualizar os dados nesta coluna associada com chamadas de SQLParamData e SQLPutData. Você pode atualizar dados de FILESTREAM usando SQLSetPos se eles estiverem associados com SQLBindCol.  
   
 ## <a name="example"></a>Exemplo  
  Colunas FILESTREAM se comportam exatamente como **varbinary (max)** colunas, mas sem um tamanho de limitam. Elas são associadas como SQL_VARBINARY. (SQL_LONGVARBINARY é usado com colunas de imagem e há restrições neste tipo. Por exemplo, SQL_LONGVARBINARY não pode ser usado como um parâmetro de saída.) Os exemplos a seguir mostram o acesso de NTFS direto para colunas FILESTREAM. Estes exemplos supõem que o seguinte código [!INCLUDE[tsql](../../../includes/tsql-md.md)] tenha sido executado no banco de dados:  
@@ -51,7 +51,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>Leitura  
+### <a name="read"></a>leitura  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  
@@ -107,7 +107,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert (inserir)  
+### <a name="insert"></a>Insert  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  

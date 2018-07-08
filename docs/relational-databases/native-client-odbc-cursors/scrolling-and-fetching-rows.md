@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0e1cf65e3fa8a145f48046bc8eb920509b152781
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a5377e0bd603d6233ba99ddacb53c8113e580fa8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702637"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421545"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Rolando e buscando linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,18 +44,18 @@ ms.locfileid: "35702637"
   
 -   Rolar e buscar linhas usando **SQLFetch** ou [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
- Ambos **SQLFetch** e **SQLFetchSroll** pode buscar blocos de linhas por vez. O número de linhas retornadas é especificado usando **SQLSetStmtAttr** para definir o parâmetro SQL_ATTR_ROW_ARRAY_SIZE.  
+ Ambos **SQLFetch** e **SQLFetchSroll** podem buscar blocos de linhas por vez. O número de linhas retornadas é especificado usando **SQLSetStmtAttr** para definir o parâmetro SQL_ATTR_ROW_ARRAY_SIZE.  
   
- Aplicativos ODBC podem usar **SQLFetch** para buscar por um cursor somente de avanço.  
+ Aplicativos ODBC podem usar **SQLFetch** para buscar por meio de um cursor de somente avanço.  
   
- **SQLFetchScroll** é usado para rolar ao redor de um cursor. **SQLFetchScroll** dá suporte à busca o próximo, anterior, primeiro e últimos conjuntos de linhas além da busca relativa (busque *n* linhas desde o início do conjunto de linhas atual) e busca absoluta (busca o conjunto de linhas começando na linha *n*). Se *n* é negativo em uma busca absoluta, as linhas são contadas do final do conjunto de resultados. Uma busca absoluta da linha -1 significa buscar o conjunto de linhas que inicia com a última linha no conjunto de resultados.  
+ **SQLFetchScroll** é usada para rolar ao redor de um cursor. **SQLFetchScroll** dá suporte à busca o próximo, anterior, primeiros e últimos conjuntos de linhas, além de busca relativa (Busque o conjunto de linhas *n* linhas desde o início do conjunto de linhas atual) e da busca absoluta (buscar o conjunto de linhas começando na linha *n*). Se *n* é negativo em uma busca absoluta, as linhas são contadas do final do conjunto de resultados. Uma busca absoluta da linha -1 significa buscar o conjunto de linhas que inicia com a última linha no conjunto de resultados.  
   
- Aplicativos que usam **SQLFetchScroll** apenas para seu bloco funcionalidades de cursor, como relatórios, provavelmente serão passar pelo conjunto de resultados de uma única vez, usando apenas a opção para buscar o próximo conjunto de linhas. Aplicativos baseados em tela, por outro lado, podem tirar proveito dos recursos do **SQLFetchScroll**. Se o aplicativo define o tamanho do conjunto de linhas para o número de linhas exibidas na tela e associa os buffers de tela ao conjunto de resultados, ele poderá converter operações da barra de rolagem diretamente em chamadas para **SQLFetchScroll**.  
+ Aplicativos que usam **SQLFetchScroll** somente para o seu bloco funcionalidades de cursor, como relatórios, provavelmente passarão pelo conjunto de resultados uma vez, usando apenas a opção para buscar o próximo conjunto de linhas. Aplicativos baseados em tela, por outro lado, podem tirar proveito de todos os recursos do **SQLFetchScroll**. Se o aplicativo define o tamanho do conjunto de linhas para o número de linhas exibidas na tela e associa os buffers de tela ao conjunto de resultados, ele poderá converter operações da barra de rolagem diretamente em chamadas para **SQLFetchScroll**.  
   
 |Operação de barra de rolagem|Opção de rolagem SQLFetchScroll|  
 |--------------------------|-------------------------------------|  
 |Uma página acima|SQL_FETCH_PRIOR|  
-|Página abaixo|SQL_FETCH_NEXT|  
+|Página para baixo|SQL_FETCH_NEXT|  
 |Uma linha acima|SQL_FETCH_RELATIVE com FetchOffset igual a -1|  
 |Uma linha abaixo|SQL_FETCH_RELATIVE com FetchOffset igual a 1|  
 |Caixa de rolagem no início|SQL_FETCH_FIRST|  
@@ -67,6 +67,6 @@ ms.locfileid: "35702637"
 -   [Indicando linhas em ODBC](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Usar cursores &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Uso de cursores &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

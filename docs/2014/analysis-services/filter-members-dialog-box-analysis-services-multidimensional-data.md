@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.filtermembers.f1
 helpviewer_keywords:
 - Filter Members dialog box
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd9ab683243b938ed50c6e71cb7e438974ac7097
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 567092a19f3bd8d45064059f805752c3f3d8823d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230056"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Filtrar Membros (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Filtrar Membros** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para filtrar membros de dimensão por legenda de membro, nome de membro, nome exclusivo de membro, valor de coluna de chave ou valor de coluna de valor para o nível atual ao procurar uma dimensão na guia **Navegador** do **Designer de Dimensão**.  
@@ -32,8 +32,8 @@ ms.locfileid: "36006012"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Expressão de filtro**|Exibe uma grade de propriedades, operadores e valores usados para construir uma expressão de filtro. Observe que depois que uma linha é adicionada, ela não pode ser removida. Você deve fechar e reabrir a caixa de diálogo para especificar uma nova expressão de filtro. A grade contém as seguintes colunas:<br /><br /> **Propriedade**: selecione a propriedade do membro a ser usada para a expressão de filtro.<br /><br /> **Operador**: selecione o operador a ser usado para a expressão de filtro.<br /><br /> **Valor**: digite o valor da propriedade selecionada em **propriedade** para avaliar usando o operador especificado em **operador**.|  
-|**Painel teste**|Quando **Teste** é clicado, este painel exibe os membros retornados pela expressão de filtro. Se nenhum membro que usa os critérios especificados em **Expressão de filtro**for retornado, será exibida uma advertência.|  
+|**Expressão de filtro**|Exibe uma grade de propriedades, operadores e valores usados para construir uma expressão de filtro. Observe que depois que uma linha é adicionada, ela não pode ser removida. Você deve fechar e reabrir a caixa de diálogo para especificar uma nova expressão de filtro. A grade contém as seguintes colunas:<br /><br /> **Propriedade**: selecione a propriedade do membro a ser usado para a expressão de filtro.<br /><br /> **Operador**: selecione o operador a ser usado para a expressão de filtro.<br /><br /> **Valor**: digite o valor da propriedade selecionada em **propriedade** avaliar usando o operador especificado em **operador**.|  
+|**Painel de teste**|Quando **Teste** é clicado, este painel exibe os membros retornados pela expressão de filtro. Se nenhum membro que usa os critérios especificados em **Expressão de filtro**for retornado, será exibida uma advertência.|  
 |**Testar**|Clique para testar os critérios especificados em **Expressão de filtro**.|  
   
 ## <a name="see-also"></a>Consulte também  

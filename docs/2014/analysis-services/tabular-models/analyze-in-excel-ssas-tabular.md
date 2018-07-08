@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 145b3d1fef33361317635676a79302b58e2eca04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25e4c20034408acf9413eeb24c4b74dbe5447345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163409"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analisar no Excel (SSAS tabular)
   O recurso Analisar no Excel, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fornece a autores de modelos de tabela um modo de analisar projetos de modelo rapidamente durante o desenvolvimento. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de espaço de trabalho (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  
@@ -61,7 +61,7 @@ ms.locfileid: "36006917"
   
 ## <a name="see-also"></a>Consulte também  
  [Analisar um modelo Tabular no Excel &#40;Tabular do SSAS&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [Funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
+ [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
  [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)  
   
   

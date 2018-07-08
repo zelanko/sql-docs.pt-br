@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56b23a290944994fba861f02e78cddbb3488cbab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 038a507b3a5fc67c80903fce3691755ad4aac1e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703277"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411045"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviando dados como um parâmetro com valor de tabela com todos os valores na memória (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para obter outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Pré-requisito  
  Esse procedimento supõe que o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] tenha sido executado no servidor:  
@@ -93,7 +93,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  O segundo estágio da associação de parâmetros é associar as colunas para o parâmetro com valor de tabela. O foco do parâmetro é definido primeiro para o ordinal do parâmetro com valor de tabela. Em seguida, colunas do valor da tabela são associadas usando SQLBindParameter da mesma maneira como eles seriam se elas fossem parâmetros do procedimento armazenado, mas com ordinais de coluna para ParameterNumber. Se houvesse mais parâmetros com valor de tabela, nós definiríamos o foco para cada um deles sucessivamente e associaríamos suas colunas. Finalmente, o foco de parâmetro é redefinido para 0.  
+3.  O segundo estágio da associação de parâmetros é associar as colunas para o parâmetro com valor de tabela. O foco do parâmetro é definido primeiro para o ordinal do parâmetro com valor de tabela. Em seguida, colunas do valor de tabela são associadas usando SQLBindParameter da mesma forma como seriam se elas fossem parâmetros do procedimento armazenado, mas com ordinais de coluna para ParameterNumber. Se houvesse mais parâmetros com valor de tabela, nós definiríamos o foco para cada um deles sucessivamente e associaríamos suas colunas. Finalmente, o foco de parâmetro é redefinido para 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

@@ -1,5 +1,5 @@
 ---
-title: Converter dados em outro tipo de dados usando a transformação de conversão de dados | Microsoft Docs
+title: Converter dados em outro tipo de dados por meio da transformação de conversão de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -17,13 +17,13 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bddfd8409bcca80a468638398270c7479e02d62f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6988fb5a0bde5201a5b9839ae86658ae693848f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164937"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>Converter dados em um tipo de dados diferente por meio da transformação Conversão de Dados
   Para adicionar e configurar uma transformação Conversão de Dados, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
@@ -58,7 +58,7 @@ ms.locfileid: "36007301"
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação de conversão de dados](data-conversion-transformation.md)   
+ [Transformação conversão de dados](data-conversion-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   
  [Tipos de dados do Integration Services](../integration-services-data-types.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d74cde2948772d1ad4efa45a0a0b0965a22b87e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb561ed65f629879f48aa8c47cf470dfecedff74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192367"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use o painel **Barra de Ferramentas** para executar operações comuns na guia **Navegador** do **Designer de Dimensão**.  

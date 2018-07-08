@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 457788ed712908413d5762fd4d31d399aa869c2c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ad7cbeb9f02e706da2d48348e71df7d577546e7d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700397"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430665"
 ---
 # <a name="odbc-how-to-topics"></a>Tópicos de instruções sobre ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, você deve ser capaz de criar fontes de dados ODBC e garantir que o servidor tem a versão correta dos procedimentos armazenados de catálogo. Para codificar um aplicativo do SQL Server, você deve saber como alocar identificadores ODBC, definir atributos, se conectar a uma instância do SQL Server, executar consultas e processar resultados.  
+  Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, você deve ser capaz de criar fontes de dados ODBC e garantir que o servidor tenha a versão correta dos procedimentos armazenados do catálogo. Para codificar um aplicativo do SQL Server, você deve saber como alocar identificadores ODBC, definir atributos, se conectar a uma instância do SQL Server, executar consultas e processar resultados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -33,19 +33,19 @@ ms.locfileid: "35700397"
   
 -   [Alocar identificadores e conecte-se ao SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   
--   [Executar consultas tópicos de instruções &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+-   [Executar consultas de tópicos de instruções &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Tópicos de instruções de resultados de processamento &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+-   [Tópicos explicativos de resultados de processamento &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
--   [Usando os tópicos de instruções de cursores &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+-   [Usando cursores tópicos de instruções &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
--   [Use o Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
+-   [Usar o Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [Tópicos de instruções de procedimentos armazenados de execução &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+-   [Executando procedimentos armazenados tópicos de instruções &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
 -   [Gerenciando tópicos de instruções de colunas de texto e imagem &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
--   [Tópicos de instruções do desempenho de Driver ODBC de criação de perfil &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+-   [Os tópicos de instruções de desempenho de Driver ODBC de criação de perfil &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
 -   [Processar erros ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
   

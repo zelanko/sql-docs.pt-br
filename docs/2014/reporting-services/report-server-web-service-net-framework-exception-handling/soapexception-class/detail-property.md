@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fa7a39ee74bcdd9399c6e06eff9ee6df4688653a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f7b2efb142573468b3231f28ea7ac7a337bda2a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151957"
 ---
 # <a name="detail-property"></a>Propriedade Detail
   A propriedade **Detail** da classe **SoapException** do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tem a seguinte estrutura XML:  

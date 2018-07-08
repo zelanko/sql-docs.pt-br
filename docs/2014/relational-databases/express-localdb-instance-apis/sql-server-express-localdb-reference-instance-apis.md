@@ -1,5 +1,5 @@
 ---
-title: Referência da API da instância do SQL Server Express LocalDB | Microsoft Docs
+title: Referência da API de instância do SQL Server Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ebafb4bf20d84d2a570af7225e26c09e9089825e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 211e7a076cae09b3fef7ef40a23cca9c60910e47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154298"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Referência de API da instância LocalDB do SQL Server Express
   No mundo do SQL Server tradicional baseado em serviço, as instâncias individuais do SQL Server instaladas em um único computador são separadas fisicamente; ou seja, cada instância deve ser instalada e removida separadamente, ter um conjunto separado de binários e ser executada em um processo de serviço separado. O nome da instância do SQL Server é usado para especificar a qual instância do SQL Server o usuário deseja se conectar.  
@@ -29,7 +29,7 @@ ms.locfileid: "36008464"
   
  Uma instância de LocalDB sempre pertence a um único usuário, e só pode ser vista e acessada no contexto desse usuário, a menos que o compartilhamento de instância seja habilitado.  
   
- Embora, tecnicamente, as instâncias de LocalDB não sejam iguais às instâncias tradicionais do SQL Server, seu uso pretendido é similar. Eles são chamados *instâncias* para enfatizar essa similaridade e torná-las mais intuitivas para usuários do SQL Server.  
+ Embora, tecnicamente, as instâncias de LocalDB não sejam iguais às instâncias tradicionais do SQL Server, seu uso pretendido é similar. Eles são chamados *instâncias* para enfatizar essa similaridade e torná-las mais intuitiva para usuários do SQL Server.  
   
  O LocalDB oferece suporte a dois tipos de instâncias: AI (instâncias automáticas) e NI (instâncias nomeadas). O identificador de uma instância de LocalDB é o nome da instância.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36008464"
 ### <a name="named-instance-naming-rules"></a>Regras de nomeação de instância nomeada  
  Um nome de instância de LocalDB pode ter até 128 caracteres (o limite é imposto pelo tipo de dados `sysname`). Essa é uma diferença significativa se comparada aos nomes de instância tradicionais do SQL Server, que são limitados aos nomes NetBIOS de 16 caracteres ASCII. O motivo dessa diferença é que o LocalDB trata os bancos de dados como arquivos. Isso sugere, portanto, uma semântica baseada em arquivos, o que leva os usuários a entender que eles terão mais liberdade para escolher os nomes de instância.  
   
- Um nome de instância de LocalDB pode conter qualquer caractere Unicode que seja legal no componente de nome de arquivo. Caracteres inválidos em um componente de nome de arquivo geralmente incluem os seguintes caracteres: caracteres ASCII/Unicode 1 31 por meio, bem como aspas ("), menor que (\<), maior que (>), barra vertical (|), backspace (\b), tabulação (\t), dois-pontos (:), asterisco (*) ponto de interrogação (?), barra invertida (\\) e a barra (/). Observe que o caractere nulo (\0) é permitido porque é usado na terminação de cadeias de caracteres; tudo o que aparecer após o primeiro caractere nulo será ignorado.  
+ Um nome de instância de LocalDB pode conter qualquer caractere Unicode que seja legal no componente de nome de arquivo. Caracteres ilegais em um componente de nome de arquivo geralmente incluem os seguintes caracteres: caracteres ASCII/Unicode 31 por meio de 1, bem como aspas ("), menor que (\<), maior que (>), barra vertical (|), backspace (\b), guia (\t), dois-pontos (:), asterisco (*) ponto de interrogação (?), barra invertida (\\) e a barra (/). Observe que o caractere nulo (\0) é permitido porque é usado na terminação de cadeias de caracteres; tudo o que aparecer após o primeiro caractere nulo será ignorado.  
   
 > [!NOTE]  
 >  A lista de caracteres ilegais possivelmente dependerá do sistema operacional e mudará nas versões futuras.  
   
  Os espaços em branco à esquerda e à direita nos nomes de instância serão ignorados e cortados.  
   
- Para evitar conflitos, denominados LocalDB de nomenclatura instâncias não podem ter um nome que segue o padrão de nomenclatura para as instâncias automáticas, conforme descrito anteriormente em "Regras de nomeação de instância automática". Uma tentativa de criar uma instância nomeada com um nome que segue o padrão de nomeação de instância automática efetivamente cria uma instância padrão.  
+ Para evitar conflitos, denominados LocalDB de nomenclatura instâncias não podem ter um nome que segue o padrão de nomenclatura para as instâncias automáticas, conforme descrito anteriormente em "Regras de nomenclatura de instância automática". Uma tentativa de criar uma instância nomeada com um nome que segue o padrão de nomeação de instância automática efetivamente cria uma instância padrão.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>Tópicos de referência de LocalDB do SQL Server Express  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  

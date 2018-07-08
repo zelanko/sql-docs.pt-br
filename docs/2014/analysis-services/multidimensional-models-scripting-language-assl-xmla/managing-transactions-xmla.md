@@ -22,27 +22,27 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84ec16569d7e4118c159b7a611cba9d711b9d761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fefda354d9f596c92a06673e7692bb840f582071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167607"
 ---
 # <a name="managing-transactions-xmla"></a>Gerenciando transações (XMLA)
-  Cada comando XML for Analysis (XMLA) enviado a uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado dentro do contexto de uma transação na sessão implícita ou explícita atual. Para gerenciar cada uma dessas transações, você deve usar o [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandos. Ao usar esses comandos, você poderá criar transações implícitas ou explícitas, alterar a contagem de referência de transação, além de iniciar, confirmar ou reverter transações.  
+  Cada comando XML for Analysis (XMLA) enviado a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado dentro do contexto de uma transação na sessão implícita ou explícita atual. Para gerenciar cada uma dessas transações, você deve usar o [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandos. Ao usar esses comandos, você poderá criar transações implícitas ou explícitas, alterar a contagem de referência de transação, além de iniciar, confirmar ou reverter transações.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Transações implícitas e explícitas  
  Uma transação é implícita ou explícita:  
   
  **Transação implícita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria um *implícita* transação para um XMLA comando se o `BeginTransaction` comando não especifica o início de uma transação. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre confirma uma transação implícita se o comando é bem-sucedido, e reverte uma transação implícita se o comando falha.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma *implícita* transação para um XMLA comando se o `BeginTransaction` comando não especifica o início de uma transação. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre confirma uma transação implícita se o comando é bem-sucedido, e reverte uma transação implícita se o comando falha.  
   
  **Transação explícita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria um *explícita* transação se o `BeginTransaction` comando inicia uma transação. No entanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também confirmará uma transação explícita se um comando `CommitTransaction` for enviado e reverterá uma transação explícita se um comando `RollbackTransaction` for enviado.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma *explícita* transação se a `BeginTransaction` comando inicia uma transação. No entanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também confirmará uma transação explícita se um comando `CommitTransaction` for enviado e reverterá uma transação explícita se um comando `RollbackTransaction` for enviado.  
   
  Além disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reverterá transações implícitas e explícitas se a sessão atual terminar antes da conclusão da transação ativa.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36005751"
   
  No entanto, o comando `RollbackTransaction` reverte a transação ativa a despeito do valor atual da contagem de referência de transação. Em outras palavras, um único comando `RollbackTransaction` reverte a transação ativa, não importando quantos comandos `BeginTransaction` ou comandos `CommitTransaction` tenham sido enviados e define a contagem de referência de transação como zero.  
   
-## <a name="beginning-a-transaction"></a>Iniciar uma transação  
+## <a name="beginning-a-transaction"></a>A partir de uma transação  
  O comando `BeginTransaction` inicia uma transação explícita na sessão atual e incrementa a contagem de referência de transação para a sessão atual em um. Todos os comandos subsequentes serão considerados como da transação ativa, até que comandos `CommitTransaction` suficientes sejam enviados para a confirmação da transação ativa ou até que um único comando `RollbackTransaction` seja enviado para reverter a transação ativa.  
   
 ## <a name="committing-a-transaction"></a>Confirmando uma transação  

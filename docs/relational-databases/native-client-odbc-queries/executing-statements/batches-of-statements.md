@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dba096f42bf5b13f500afcbbe830fb900cd9eb3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 54714f81cd4145174b82e255fde683d2cc9ef4d9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701167"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414915"
 ---
 # <a name="batches-of-statements"></a>Lotes de instruções
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Um lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções contém duas ou mais instruções, separadas por ponto e vírgula (;) criado em uma única cadeia de caracteres passada para **SQLExecDirect** ou [função SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360). Por exemplo:  
+  Um lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções contém duas ou mais instruções, separadas por ponto e vírgula (;), criado em uma única cadeia de caracteres passada para **SQLExecDirect** ou [função SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360). Por exemplo:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -44,7 +44,7 @@ SQLExecDirect(hstmt,
   
  Os lotes sempre podem ser usados quando os atributos de cursor ODBC são definidos como os padrões de um cursor de somente encaminhamento, somente leitura, com um tamanho do conjunto de linhas igual a 1.  
   
- Caso um lote seja executado durante o uso de cursores de servidor no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o cursor de servidor é convertido implicitamente em um conjunto de resultados padrão. **SQLExecDirect** ou **SQLExecute** retornar SQL_SUCCESS_WITH_INFO e uma chamada para **SQLGetDiagRec** retorna:  
+ Caso um lote seja executado durante o uso de cursores de servidor no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o cursor de servidor é convertido implicitamente em um conjunto de resultados padrão. **SQLExecDirect** ou **SQLExecute** retornar SQL_SUCCESS_WITH_INFO e uma chamada **SQLGetDiagRec** retorna:  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  

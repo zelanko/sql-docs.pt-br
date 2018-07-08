@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services) de configuração de pós-instalação | Microsoft Docs
+title: Pós-instalação de configuração (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df6b8362ed63e5b3ec2b339478b9398fd8a65db8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4f7dea428950957d267c929e36627f40e0b7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151647"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuração de pós-instalação (Analysis Services)
   Após a instalação do Analysis Services, será necessário definir uma configuração adicional para tornar o servidor totalmente operacional e disponível para uso geral. Esta seção apresenta as tarefas adicionais que concluem a instalação. Dependendo dos requisitos de conexão, talvez você também precise configurar a autenticação (consulte [Conectar-se ao Analysis Services](connect-to-analysis-services.md)).  
@@ -34,8 +34,8 @@ ms.locfileid: "36007398"
 |Link|Descrição da tarefa|  
 |----------|----------------------|  
 |[Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)|Crie uma regra de entrada no Firewall do Windows de modo que as solicitações possam ser roteadas através da porta TCP usada pela instância do Analysis Services. Esta tarefa é necessária. Ninguém pode acessar o Analysis Services em um computador remoto até que uma regra de entrada de firewall seja definida.|  
-|[Conceder permissões de administrador de servidor &#40;do Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Durante a instalação, você precisava adicionar pelo menos uma conta de usuário à função Administrador da instância do Analysis Services. As permissões administrativas são necessárias a várias operações rotineiras do servidor, como processar dados de bancos de dados relacionais externos. Use as informações deste tópico para adicionar ou modificar a associação da função Administrador.|  
-|[Configurar contas de serviço &#40;do Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Durante a instalação, a conta de serviço do Analysis Services foi fornecida, com permissões apropriadas para permitir o acesso controlado a programas executáveis e a arquivos de banco de dados. Como uma tarefa pós-instalação, agora você deve considerar se deve permitir o uso da conta de serviço ao executar tarefas adicionais. As cargas de trabalho de processamento e de consulta podem ser executadas na conta de serviço. Essas operações terão êxito somente quando a conta de serviço tiver as permissões apropriadas.|  
+|[Conceder permissões de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Durante a instalação, você precisava adicionar pelo menos uma conta de usuário à função Administrador da instância do Analysis Services. As permissões administrativas são necessárias a várias operações rotineiras do servidor, como processar dados de bancos de dados relacionais externos. Use as informações deste tópico para adicionar ou modificar a associação da função Administrador.|  
+|[Configurar contas de serviço &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Durante a instalação, a conta de serviço do Analysis Services foi fornecida, com permissões apropriadas para permitir o acesso controlado a programas executáveis e a arquivos de banco de dados. Como uma tarefa pós-instalação, agora você deve considerar se deve permitir o uso da conta de serviço ao executar tarefas adicionais. As cargas de trabalho de processamento e de consulta podem ser executadas na conta de serviço. Essas operações terão êxito somente quando a conta de serviço tiver as permissões apropriadas.|  
 |[Registrar uma instância do Analysis Services em um grupo de servidores](register-an-analysis-services-instance-in-a-server-group.md)|O SQL Server Management Studio (SSMS) permite criar grupos de servidores para organizar as instâncias do SQL Server. As implantações escalonáveis compostas de várias instâncias de servidor são mais fáceis de gerenciar em grupos de servidores. Use as informações deste tópico para organizar as instâncias do Analysis Services em grupos no SSMS.|  
 |[Determina o Modo de Servidor de uma instância do Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)|Durante a instalação, você escolhe um modo de servidor que determine o tipo de modelo (multidimensional ou de tabela) executado no servidor. Se você não tiver certeza do modo de servidor, use as informações deste tópico para determinar qual modo foi instalado.|  
 |[Renomear uma instância do Analysis Services](rename-an-analysis-services-instance.md)|Um nome descritivo pode ajudá-lo a fazer a distinção entre as várias instâncias que têm diferentes modos de servidor, ou entre as instâncias usadas principalmente por departamentos ou equipes da organização. Se você quiser alterar o nome da instância para uma que o ajude a gerenciar melhor as instalações, use as informações deste tópico para saber como fazer.|  

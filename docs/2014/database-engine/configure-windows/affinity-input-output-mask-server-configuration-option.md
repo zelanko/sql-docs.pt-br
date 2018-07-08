@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
 - processor affinity [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3581012106e10eeac623028f2785205838f5f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159037"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Opção de configuração do servidor de máscara de Entrada-Saída de afinidade
   Para realizar multitarefa, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 e o Windows Server 2003 às vezes movem threads de processos entre processadores diferentes. Embora seja eficiente de um ponto de vista de sistema operacional, essa atividade pode reduzir o desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob cargas de sistema pesadas, quando, à medida que cada cache de processador é recarregado repetidamente com dados. Atribuir processadores a threads específicos poderá melhorar o desempenho sob estas condições eliminando recargas de processador; tal associação entre um thread e um processador é chamada de afinidade de processador.  
@@ -62,7 +62,7 @@ ms.locfileid: "36005935"
   
 -   0 na opção **affinity I/O mask** e 1 na opção **affinity mask** .  
   
- **affinity I/O mask** é uma opção avançada. Se você estiver usando o `sp_configure` sistema de procedimento armazenado para alterar a configuração, você pode alterar **máscara de afinidade de e/s** somente quando **Mostrar opções avançadas** é definido como 1. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reconfigurar a opção **affinity I/O mask** exige uma reinicialização da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **affinity I/O mask** é uma opção avançada. Se você estiver usando o `sp_configure` procedimento para alterar a configuração armazenado do sistema, é possível alterar **máscara de afinidade de e/s** apenas quando **Mostrar opções avançadas** é definido como 1. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reconfigurar a opção **affinity I/O mask** exige uma reinicialização da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Não configure afinidade de CPU no sistema operacional Windows e também configure a máscara de afinidade em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas definições estão tentando alcançar o mesmo resultado e se as configurações forem inconsistentes, você poderá ter resultados imprevisíveis. A afinidade da CPU [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais bem configurada usando a opção `sp_configure` em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

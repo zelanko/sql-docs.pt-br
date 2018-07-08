@@ -1,5 +1,5 @@
 ---
-title: Interface de usuário do Designer de consulta de BI do SAP NetWeaver (construtor de relatórios) | Microsoft Docs
+title: Interface de usuário do Designer de consulta BI do SAP NetWeaver (construtor de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10014"
 helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 50339b7d95a2b997319a58ea56b8710dd7cb4851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a003655287bbed676620a85264fe6276b1d9a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230206"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interface do usuário do Designer de Consulta do SAP NetWeaver BI (Construtor de Relatórios)
   
@@ -61,7 +61,7 @@ ms.locfileid: "36008346"
 |![Adicionar membro calculado](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Adicionar membro calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
 |![Alternar para mostrar células vazias](../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](../analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
-|![Excluir](../analysis-services/media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
+|![Exclua](../analysis-services/media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
 |![Ícone da caixa de diálogo Parâmetros de Consulta](../analysis-services/media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Variáveis** . Esse botão é habilitado somente quando o cubo selecionado é um cubo de Consulta (porque somente os cubos de consulta oferecem suporte a variáveis). Quando você atribui um valor padrão a uma variável, um parâmetro de relatório correspondente é criado.|  
 |![Executar a consulta](../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
 |![Cancelar a consulta](../analysis-services/media/rsqdicon-cancel.gif "Cancelar a consulta")|Cancela a consulta.|  
@@ -101,7 +101,7 @@ ms.locfileid: "36008346"
   
 -   **Executar automaticamente** (![Executar a consulta automaticamente](../analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente"))  
   
--   **Excluir** (![excluir](../analysis-services/media/rsqdicon-delete.gif "excluir"))  
+-   **Exclua** (![exclua](../analysis-services/media/rsqdicon-delete.gif "excluir"))  
   
 ## <a name="see-also"></a>Consulte também  
  [Designers de Consultas &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

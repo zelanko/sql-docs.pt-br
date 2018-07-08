@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6222d9a5626bfe42663f3f7d4c969998156d87a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4cdd98f828a69965a3a610ad27aeb2196e747d0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696137"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424345"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,13 +42,13 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- O método **BCPReadFmt** é usado para ler dados de um arquivo de formato que especifica o formato de dados no arquivo de dados. Este método é capaz de detectar a versão correta do arquivo de formato. Ele pode detectar automaticamente se o arquivo de formato está em xml ou formato de texto de estilo antigo e se comporta adequadamente. As versões de arquivo de formato com suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BCP do provedor OLE DB Native Client são versão 6.0 ou mais recente.  
+ O método **BCPReadFmt** é usado para ler dados de um arquivo de formato que especifica o formato de dados no arquivo de dados. Este método é capaz de detectar a versão correta do arquivo de formato. Ele pode detectar automaticamente se o arquivo de formato está em xml ou formato de texto de estilo antigo e se comporta adequadamente. As versões de arquivo de formato com suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BCP do provedor OLE DB do Native Client são da versão 6.0 ou mais recente.  
   
  Após o **BCPReadFmt** método lê os valores de formato, fará as chamadas apropriadas para o [ibcpsession:: BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) métodos. Não há necessidade de o usuário analisar um arquivo de formato e fazer essas chamadas.  
   
  Para salvar um arquivo de formato, chame o [ibcpsession:: Bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) método. As chamadas ao método **BCPReadFmt** podem referenciar formatos salvos. Como alternativa, o utilitário de cópia em massa (**bcp**) pode salvar formatos de dados definidos pelo usuário em arquivos que podem ser referenciados pelo método **BCPReadFmt** .  
   
- O **BCP_OPTION_DELAYREADFMT** valor o *eOption* parâmetro [ibcpsession:: Bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) modifica o comportamento de ibcpsession:: Bcpreadfmt.  
+ O **BCP_OPTION_DELAYREADFMT** valor de *eOption* parâmetro do [ibcpsession:: Bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) modifica o comportamento de ibcpsession:: Bcpreadfmt.  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszFormatFile*[in]  

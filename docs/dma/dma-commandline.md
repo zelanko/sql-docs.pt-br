@@ -1,5 +1,6 @@
 ---
-title: Executar linha de comando (SQL Server Data Migration Assistant) | Microsoft Docs
+title: Executar o Assistente de migração de dados da linha de comando (SQL Server) | Microsoft Docs
+description: Saiba como executar o Assistente de migração de dados da linha de comando para avaliar os bancos de dados do SQL Server para a migração
 ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
@@ -17,18 +18,18 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: df58c273c67868e894b7cba38344dc43628962ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866521"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785457"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar o Assistente de migração de dados da linha de comando
-Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe em *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e gerar o resultado em um arquivo CSV ou JSON. Isso é especialmente útil quando a avaliação de vários bancos de dados ou bancos de dados grandes. 
+Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
 
 > [!NOTE]
-> Dmacmd.exe oferece suporte apenas a avaliações em execução. Não há suporte para migrações neste momento.
+> Dmacmd.exe dá suporte à execução apenas para avaliações. Não há suporte para migrações no momento.
 
 
 ## <a name="command-line-arguments"></a>Argumentos de linha de comando
@@ -43,18 +44,18 @@ DmaCmd.exe /AssessmentName="string"
 ```
 
 
-|Argumento  |Description  | Necessário (Y/N)
+|Argumento  |Description  | Obrigatório (S/N)
 |---------|---------|---------------|
 | `/help or /?`     | Como usar o texto de ajuda de dmacmd.exe        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
-|`/AssessmentDatabases`     | Lista de cadeias de caracteres de conexão delimitada por espaço. Nome do banco de dados (catálogo inicial) diferencia maiusculas de minúsculas. | S
-|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação de valores com suporte: SqlServer2012, SqlServer2014, SqlServer2016 e AzureSqlDatabaseV12. O padrão é SqlServer2016   | N
-|`/AssessmentEvaluateFeatureParity`  | Executar as regras de paridade de recursos  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Execute as regras de compatibilidade  | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations é necessário.)
-|`/AssessmentEvaluateRecommendations`     | Execute as recomendações do recurso        | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendationsis necessário)
+|`/AssessmentDatabases`     | Lista delimitada por espaço de cadeias de caracteres de conexão. Nome do banco de dados (catálogo inicial) diferencia maiusculas de minúsculas. | S
+|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação, os valores com suporte: SqlServer2012, lt;sqlserver2014, SqlServer2016 e AzureSqlDatabaseV12. O padrão é SqlServer2016   | N
+|`/AssessmentEvaluateFeatureParity`  | Executar regras de paridade de recurso  | N
+|`/AssessmentEvaluateCompatibilityIssues`     | Executar regras de compatibilidade  | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations é necessário.)
+|`/AssessmentEvaluateRecommendations`     | Execute as recomendações de recurso        | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendationsis necessária)
 |`/AssessmentOverwriteResult`     | Substituir o arquivo de resultado    | N
-|`/AssessmentResultJson`     | Caminho completo para o arquivo de resultado JSON     | S <br> (AssessmentResultJson ou AssessmentResultCsv é necessário)
-|`/AssessmentResultCsv`    | Caminho completo para o arquivo de resultado CSV   | S <br>(AssessmentResultJson ou AssessmentResultCsv é necessário)
+|`/AssessmentResultJson`     | Caminho completo para o arquivo de resultado JSON     | S <br> (AssessmentResultJson ou AssessmentResultCsv é necessária)
+|`/AssessmentResultCsv`    | Caminho completo para o arquivo de resultado CSV   | S <br>(AssessmentResultJson ou AssessmentResultCsv é necessária)
 
 
 
@@ -65,7 +66,7 @@ DmaCmd.exe /AssessmentName="string"
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Avaliação de banco de dados único com o uso de regras de compatibilidade de autenticação e a execução do Windows**
+**Avaliação de banco de dados único usando regras de compatibilidade de autenticação e a execução do Windows**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -77,7 +78,7 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 
 
 
-**Avaliação de banco de dados único com o uso de recomendação de recurso de autenticação e a execução do SQL Server**
+**Avaliação de banco de dados único usando a recomendação de recurso de autenticação e a execução do SQL Server**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -88,7 +89,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**Avaliação de banco de dados único para a plataforma de destino do SQL Server 2012 e salvar resultados em arquivo. JSON e. csv**
+**Avaliação do banco de dados único para a plataforma de destino SQL Server 2012, salvar resultados em arquivo. JSON e. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -101,7 +102,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**Avaliação de banco de dados único para a plataforma de destino do banco de dados do SQL Azure salvar resultados em arquivo. JSON e. csv**
+**Avaliação de banco de dados de único para a plataforma de destino de banco de dados do SQL Azure, salvar resultados em arquivo. JSON e. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -132,6 +133,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Download de Assistente de migração de dados](https://www.microsoft.com/download/details.aspx?id=53595)

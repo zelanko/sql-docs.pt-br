@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da78700e32c81dab11d6609ca4aa12efd2204bcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159327"
 ---
 # <a name="measure-element-assl"></a>Elemento Measure (ASSL)
   Define uma medida.  
@@ -90,7 +90,7 @@ ms.locfileid: "36006210"
   
 |Ancestral ou pai|Elementos filho|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Name](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [anotações](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [descrição](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [nome](../properties/name-element-assl.md), [fonte](../properties/source-element-measure-assl.md), [traduções](../collections/translations-element-assl.md), [Visíveis](../properties/visible-element-assl.md)|  
 |Todos os outros|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
@@ -102,7 +102,7 @@ ms.locfileid: "36006210"
   
 -   Conter um único nome de pasta, indicando que a medida deve ser processada como pertencente a uma pasta com o mesmo nome.  
   
--   Contém vários nomes de pasta separados por uma barra invertida (\\), indicando uma hierarquia de pasta inserido.  
+-   Conter vários nomes de pasta separados por uma barra invertida (\\), indicando uma hierarquia inserida na pasta.  
   
  A propriedade `DisplayFolder` também se aplica a medidas e hierarquias calculadas.  
   

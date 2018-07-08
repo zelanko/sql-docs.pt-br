@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99f7baef82824a4af4c9520825043523bb8255d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05784b220a590166b00605ff921508979e633f64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179533"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Adicionar um sub-relatório e parâmetros (Construtor de Relatórios e SSRS)
   Adicione sub-relatórios a um relatório quando quiser criar um relatório principal que seja um contêiner para vários relatórios relacionados. Um sub-relatório é uma referência a outro relatório. Para relacionar os relatórios por valores de dados (por exemplo, para que diversos relatórios exibam dados para o mesmo cliente), é preciso criar um relatório com parâmetros (por exemplo, um relatório que exiba os detalhes de um cliente específico) como o sub-relatório. Ao adicionar um sub-relatório ao relatório principal, você também pode especificar os parâmetros que serão passados para o sub-relatório.  
@@ -76,7 +76,7 @@ ms.locfileid: "36005463"
      A alteração da ordem de um parâmetro de sub-relatório não afeta o processamento do sub-relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Os sub-relatórios &#40;SSRS e construtor de relatórios&#41;](subreports-report-builder-and-ssrs.md)   
+ [Subrelatórios &#40;relatórios e SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - default field lengths
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e566678b849bc8a837ad2eb411b85b989bd1417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158567"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar tamanho do campo usando bcp (SQL Server)
   O tamanho do campo indica o número máximo de caracteres que são exigidos para representar dados em formato de caractere. O tamanho do campo já será conhecido se os dados forem armazenados no formato nativo; por exemplo, o tipo de dados `int` usa 4 bytes. Se você indicou 0 para o comprimento do prefixo, o **bcp** comando solicitará o comprimento de campo, os tamanhos de campo padrão e o impacto do tamanho do campo no armazenamento de dados em arquivos de dados que contêm `char` dados.  
@@ -51,10 +50,10 @@ ms.locfileid: "36007492"
 ## <a name="using-default-field-lengths"></a>Usando tamanhos de campo padrão  
  Geralmente, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você aceite os valores padrão sugeridos pelo **bcp**para o comprimento de campo. Quando um arquivo de dados de modo de caractere é criado, usar o tamanho do campo padrão assegura que os dados não serão truncados e que não ocorram erros de estouro numéricos.  
   
- Se você especificar um tamanho do campo incorreto, poderão ocorrer problemas. Por exemplo, se você copiar dados numéricos e especificar um tamanho do campo muito curto para obter os dados, o utilitário do **bcp** imprimirá uma mensagem de estouro e não copiará os dados. Além disso, se você exportar `datetime` dados e especificar um tamanho de campo menor que 26 bytes para a cadeia de caracteres, o **bcp** utilitário trunca os dados sem uma mensagem de erro.  
+ Se você especificar um tamanho do campo incorreto, poderão ocorrer problemas. Por exemplo, se você copiar dados numéricos e especificar um tamanho do campo muito curto para obter os dados, o utilitário do **bcp** imprimirá uma mensagem de estouro e não copiará os dados. Além disso, se você exportar `datetime` dados e especificar um tamanho do campo menor que 26 bytes para a cadeia de caracteres, o **bcp** utilitário truncará os dados sem uma mensagem de erro.  
   
 > [!IMPORTANT]  
->  Quando a opção de tamanho padrão é usada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espera ler uma cadeia de caracteres inteira. Em algumas situações, o uso de um tamanho do campo padrão pode conduzir a um erro "fim de arquivo inesperado". Normalmente, esse erro ocorre com o `money` e `datetime` tipos de dados quando apenas parte do campo esperado ocorre no arquivo de dados; por exemplo, quando um `datetime` valor *mm*/*dd*  / *AA* for especificado sem o componente de tempo e, portanto, menor do que o esperado 24 caracteres de comprimento de uma `datetime` valor em `char` formato. Para evitar esse tipo de erro, use terminadores de campos ou campos de dados de comprimento fixo ou altere o tamanho do campo padrão especificando outro valor.  
+>  Quando a opção de tamanho padrão é usada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espera ler uma cadeia de caracteres inteira. Em algumas situações, o uso de um tamanho do campo padrão pode conduzir a um erro "fim de arquivo inesperado". Normalmente, esse erro ocorre com o `money` e `datetime` tipos de dados quando apenas parte do campo esperado ocorre no arquivo de dados; por exemplo, quando um `datetime` valor de *mm*/*dd*  / *yy* é especificado sem o componente de tempo e é, portanto, menor do que o esperado 24 caracteres de comprimento de um `datetime` valor em `char` formato. Para evitar esse tipo de erro, use terminadores de campos ou campos de dados de comprimento fixo ou altere o tamanho do campo padrão especificando outro valor.  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>Tamanhos do campo padrão para armazenamento de arquivo de caractere  
  A tabela a seguir lista os tamanhos dos campos padrão para obter os dados a serem armazenados como armazenamento de arquivo de caractere. Dados anuláveis são do mesmo comprimento que dados de não anuláveis.  
@@ -120,7 +119,7 @@ ms.locfileid: "36007492"
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup> para obter mais informações sobre o `decimal` e `numeric` tipos de dados, consulte [decimais e numéricos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
+ <sup>1</sup> para obter mais informações sobre a `decimal` e `numeric` tipos de dados, consulte [decimal e numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
   
  Em todos os casos anteriores, para criar um arquivo de dados para recarregar posteriormente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mantenha o espaço de armazenamento em um mínimo, use um prefixo de comprimento com o tipo de armazenamento de arquivo padrão e o tamanho do campo padrão.  
   

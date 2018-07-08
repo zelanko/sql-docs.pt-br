@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b269484be4445888a662b2da2745ecb7a4e1002
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43a6d53dd099589db67765ecd7ae6027d0b532bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159977"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
   A escala de um medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrados em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  
@@ -89,7 +89,7 @@ ms.locfileid: "36006053"
 -   1% do valor menor da altura ou da largura do medidor em um medidor linear.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando intervalos de um medidor &#40;SSRS e construtor de relatórios&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatando intervalos de um medidor &#40;relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

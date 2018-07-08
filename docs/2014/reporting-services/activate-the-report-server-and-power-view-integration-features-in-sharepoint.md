@@ -1,5 +1,5 @@
 ---
-title: Ativar o servidor de relatório e recursos de integração do Power View no SharePoint | Microsoft Docs
+title: Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3f9d0adde23d8340bd5e10ed2a9c22c8aa425b52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45266427e7946e62a758ce994531126324dca39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155847"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
   Os recursos da coleção de sites [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] geralmente são ativados por padrão após a instalação do Suplemento [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para produtos SharePoint. Em algumas situações, você precisará ativar manualmente os recursos.  
   
- Se você instalar o suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para Produtos SharePoint 2010 depois da instalação do produto SharePoint, o recurso de integração de Servidor de relatório e o recurso de integração do Power View só será ativado para coleções de sites de raiz. Para outras coleções de sites, você precisará ativar manualmente os recursos. Por exemplo, se você tiver um conjunto de sites **http://[my o nome do servidor] /sites/ [nome de coleção do site]** você precisará ativar manualmente o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] recursos de coleção de sites.  
+ Se você instalar o suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para Produtos SharePoint 2010 depois da instalação do produto SharePoint, o recurso de integração de Servidor de relatório e o recurso de integração do Power View só será ativado para coleções de sites de raiz. Para outras coleções de sites, você precisará ativar manualmente os recursos. Por exemplo, se você tiver um conjunto de sites **http://[my o nome do servidor] /sites/ [nome de coleção de sites]** você precisará ativar manualmente o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] recursos da coleção de sites.  
   
- Quando não há nenhum conjunto de sites raiz, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] adicionar registrará em log uma mensagem semelhante à seguinte.  
+ Quando não há nenhum conjunto de sites raiz, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento registrará uma mensagem semelhante à seguinte.  
   
  "O aplicativo Web SharePoint 80 não tem a coleção de sites raiz"  
   
- A mensagem será localizada no log de instalação do suplemento, denominado "RS_SP_#.log", onde # é um número de incremento. O arquivo de log será localizado na pasta Temp de usuários atual, por exemplo C:\Users\\[nome de usuário]\AppData\Local\Temp. Para obter mais informações sobre opções de log com o suplemento, consulte [instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ A mensagem será localizada no log de instalação do suplemento, denominado "RS_SP_#.log", onde # é um número de incremento. O arquivo de log será localizado na pasta Temp de usuários atual, por exemplo C:\Users\\[nome de usuário]\AppData\Local\Temp. Para obter mais informações sobre as opções de registro em log com o suplemento, consulte [instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  Neste tópico:  
   
@@ -74,6 +74,6 @@ ms.locfileid: "36006305"
  Depois que o recurso for ativado, será possível continuar com a integração do servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

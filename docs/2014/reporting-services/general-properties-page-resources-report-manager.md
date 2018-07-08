@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: aff68336e0ca68a315d8b2cdab6bd783c87c5f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164167"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Página Propriedades Gerais, Recursos (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os recursos renomeiem, excluam, movam ou substituam um recurso. Informações sobre quem adicionou o recurso ou modificou as propriedades aparecem na parte superior da página.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5142c52b2a6a698e379957113d9540537282d80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183843"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concedendo permissões para itens do servidor de relatório em um site do SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece recursos de segurança internos que podem ser usados para conceder acesso a itens do servidor de relatório acessados nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões a usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e um servidor de relatório. Você pode usar permissões existentes para carregar definições de relatório e outros documentos, exibir relatórios, criar assinaturas e gerenciar itens.  
@@ -33,7 +33,7 @@ ms.locfileid: "36006526"
   
 1.  Na documentação do produto do [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], leia sobre as configurações de segurança padrão para os grupos padrão do SharePoint para que você saiba como gerenciar permissões e acesso de usuário.  
   
-2.  Analise a lista de permissões que afeta especificamente o acesso a operações e itens do servidor de relatório. Para obter mais informações, consulte [usar segurança interna no Windows SharePoint Services para itens do servidor de relatório](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+2.  Analise a lista de permissões que afeta especificamente o acesso a operações e itens do servidor de relatório. Para obter mais informações, consulte [usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
 3.  Atribua as contas do usuário e do grupo a grupos do SharePoint predefinidos.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36006526"
   
  Os grupos do SharePoint têm níveis de permissão que fornecem acesso imediato a muitas operações do servidor de relatório. Se você achar que as configurações de segurança internas não fornecem o nível de acesso necessário, você poderá criar níveis de permissão ou grupos personalizados.  
   
- Para obter mais informações sobre qual relatório de operações de servidor têm suporte por meio dos recursos de segurança padrão, consulte [usar segurança interna no Windows SharePoint Services para itens do servidor de relatório](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+ Para obter mais informações sobre qual relatório de operações de servidor têm suporte por meio dos recursos de segurança padrão, consulte [usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
  Para usar os recursos de segurança internos, você deve atribuir as contas do grupo ou usuário do Windows aos grupos do SharePoint. Com exceção do administrador do servidor e do proprietário do site do portal que têm acesso automático ao [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] quando o software é instalado, a todos os outros usuários devem ser concedidas permissões para acessar o servidor.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "36006526"
  [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Fornece um breve resumo de como os grupos do SharePoint são comparados com definições de função predefinidas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;Reporting Services no SharePoint modo integrado&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;modo integrado do Reporting Services no SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Fornece instruções para criar novos grupos do SharePoint que têm permissão para iniciar o Construtor de Relatórios e definir a segurança do item do modelo. Este tópico também contém diretrizes gerais sobre como definir permissões personalizadas para qualquer item do servidor de relatório ou operação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;Reporting Services no SharePoint modo integrado&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;modo integrado do Reporting Services no SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Segurança e proteção do Reporting Services](reporting-services-security-and-protection.md)  
   
   

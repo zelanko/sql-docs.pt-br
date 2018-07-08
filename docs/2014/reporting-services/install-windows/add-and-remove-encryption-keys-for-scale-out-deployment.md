@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - deleting encryption keys
@@ -20,13 +20,13 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8a8b5ef42a5a235080e229c1072ad03d8dc1d677
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d253287d8eb5b774794114003682151ecd00c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170255"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Adicionar e remover chaves de criptografia para implantação em expansão (Gerenciador de configurações do SSRS)
   É possível executar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um modelo de implantação de expansão com a configuração de vários servidores de relatório para usarem um banco de dados do servidor de relatório compartilhado. A associação em uma implantação de expansão tem como base o fato de o servidor de relatório armazenar uma chave de criptografia no banco de dados do servidor de relatório. Você pode controlar a associação de implantação de expansão pela adição ou remoção de chaves de criptografia para instâncias específicas do servidor de relatório. Se estiver removendo nós da implantação, você poderá os removê-los em qualquer ordem. Se estiver adicionando nós a uma implantação, você deverá unir quaisquer novas instâncias de um servidor de relatório que já faça parte da implantação.  
@@ -66,7 +66,7 @@ ms.locfileid: "36008114"
  Essas etapas removem o servidor de relatório de uma implantação em expansão, mas não desinstalam a instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no servidor de relatório. Depois de remover o servidor de relatório da implantação em expansão, você pode desinstalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do servidor de relatório se não precisar mais do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nesse servidor. Para obter informações, consulte [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) nos Manuais online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inicializar um servidor de relatório &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

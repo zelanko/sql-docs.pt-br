@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5d37385494fc4853f47ec8e1fe883d3ff00f0e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 38b92d05a119af10a3c6c2e464b745b8fb26b197
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229326"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Tabela de preparo de relações (Master Data Services)
   Use a tabela de preparo de relação (stg.name_Relationship) no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para alterar o local dos membros em uma hierarquia explícita, com base na relação que os membros têm entre si.  
@@ -47,6 +47,6 @@ ms.locfileid: "36005681"
  [Mover membros de hierarquia explícita por meio do processo de preparo &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [Importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Exibir erros que ocorrem durante o processo de preparo &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [Erros do processo de preparo &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  
+ [Erros de processo de preparo &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  
   
   

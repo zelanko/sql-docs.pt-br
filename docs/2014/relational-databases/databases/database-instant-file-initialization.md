@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing files [SQL Server]
 - instant file initializations [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0dc65b8fb0985be59fa22e7a5b4f650d5f779d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: da60e00ce0162a553d9ecf68368edd3dde193a08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180093"
 ---
 # <a name="database-instant-file-initialization"></a>Inicialização imediata de arquivo do banco de dados
   Arquivos de dados e de log são inicializados para substituir todos os dados existentes que foram deixados no disco por arquivos excluídos anteriormente. Primeiro, os arquivos de dados e de log são inicializados ao serem completados com zeros quando você executa uma das seguintes operações:  
@@ -59,7 +59,7 @@ ms.locfileid: "36007274"
   
 4.  Clique em **Adicionar Usuário ou Grupo** e adicione as contas de usuário que são usadas ​​para backups.  
   
-5.  Clique em **aplicar**e, em seguida, feche todas as `Local Security Policy` caixas de diálogo.  
+5.  Clique em **Apply**e, em seguida, feche todas as `Local Security Policy` caixas de diálogo.  
   
 ### <a name="security-considerations"></a>Considerações sobre segurança  
  Como o conteúdo excluído do disco é substituído somente à medida que novos dados são gravados nos arquivos, o conteúdo excluído poderá ser acessado por uma entidade de segurança não autorizada. Embora o arquivo de banco de dados esteja associado à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa ameaça de divulgação de informações é reduzida pela lista de controle de acesso discricionário (DACL) no arquivo. Essa DACL permite acesso de arquivo somente à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao administrador local. Porém, quando o arquivo é desassociado, ele pode ser acessado por um usuário ou serviço que não tenha SE_MANAGE_VOLUME_NAME. Existe uma ameaça semelhante ao se fazer backup do banco de dados. O conteúdo excluído pode ficar disponível para um usuário ou serviço não autorizado se o arquivo de backup não for protegido com uma DACL adequada.  

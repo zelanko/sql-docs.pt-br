@@ -1,5 +1,5 @@
 ---
-title: Implantação (servidor de relatório do modo nativo) de expansão | Microsoft Docs
+title: Escalar horizontalmente a implantação (servidor de relatório do modo nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151797"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implantação de expansão (modo nativo do Servidor de Relatório)
-  Use o **implantação de expansão** página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para exibir o status de inicialização para uma implantação de expansão ou para unir um servidor de relatório para uma implantação em expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
+  Use o **implantação escalável** página no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager para exibir o status de inicialização para uma implantação de expansão ou para unir um servidor de relatório a uma implantação de expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36005469"
   
  Para configurar uma implantação de expansão, inicie com duas ou mais instâncias do servidor de relatório que estejam conectadas ao mesmo banco de dados do servidor de relatório. Depois que todas as instâncias estiverem instaladas, conecte-se ao primeiro servidor de relatório e use a página Implantação de Expansão para associar cada instância adicional. Apenas um servidor de relatório que já esteja inicializado para usar um banco de dados pode inicializar nós adicionais.  
   
- Para abrir essa página, inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager e selecione **implantação de expansão** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selecione **implantação de expansão** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Nome do SQL Server**  
- Especifique o nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório.  
+ Especifique o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório.  
   
  **Database Name**  
  Especifica o nome do banco de dados ao qual a instância do servidor de relatório está atualmente conectada.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4c4c6980c32028858b70d9fd59d80448a692206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7669d5342ecfff26a81808b9a1969e1b367e60e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230626"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Executando o carregamento em massa de dados XML (SQLXML 4.0)
   XML Bulk Load é um objeto COM autônomo que lhe permite carregar dados XML semiestruturados em tabelas do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "36007236"
  [Exemplos de carregamento em massa XML &#40;SQLXML 4.0&#41;](xml-bulk-load-examples-sqlxml-4-0.md)  
  Fornece código de exemplo que usa o XML Bulk Load.  
   
- [Tipos de dados e o XML de comportamento de carregamento em massa &#40;SQLXML 4.0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
+ [Tipos de dados e XML de comportamento de carregamento em massa &#40;SQLXML 4.0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  Descreve o comportamento do XML Bulk Load com tipos diferentes no XSD e XDR.  
   
  [Diretrizes e limitações do XML de carregamento em massa &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99a665366fc9b5df9ff975d47cfa60dccaf4b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182813"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Mapeamento de SQL-DMO para SMO
   O SQL-DMO (SQL Distributed Management Objects) não faz mais parte do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]; os aplicativos do SQL-DMO devem ser convertidos para usar o SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). O modelo de objeto do SMO é semelhante ao do SQL-DMO, assim a maioria dos objetos do SQL-DMO é mapeada para um objeto com o mesmo nome no SMO. No entanto, alguns objetos do SQL-DMO foram alterados ou inseridos na transição para o SMO. Esta tabela lista a ação recomendada para usar os objetos do SQL-DMO que não foram convertidos diretamente em SMO.  
@@ -34,7 +34,7 @@ ms.locfileid: "36006414"
 |Objeto BackupDevice|Objetos <xref:Microsoft.SqlServer.Management.Smo.BackupDevice>|  
 |Objeto BulkCopy e Objeto BulkCopy2|Removido e substituído pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Transfer>.|  
 |Objeto Category|Movido para o namespace <xref:Microsoft.SqlServer.Management.Smo.Agent>. Substituir pelos objetos <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory> e <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory>.|  
-|Objeto Check|<xref:Microsoft.SqlServer.Management.Smo.Check> Objeto|  
+|Objeto Check|<xref:Microsoft.SqlServer.Management.Smo.Check> objeto|  
 |Objeto Column e Objeto Column2|<xref:Microsoft.SqlServer.Management.Smo.Column> objeto.|  
 |Objeto Configuration|Objetos <xref:Microsoft.SqlServer.Management.Smo.Configuration> e <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase>.|  
 |Objeto ConfigValue|<xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> objeto.|  
@@ -51,7 +51,7 @@ ms.locfileid: "36006414"
 |Objeto DRIDefault|Movido para <xref:Microsoft.SqlServer.Management.Smo.ScriptingOptions> objeto.|  
 |Objeto FileGroup e Objeto FileGroup2|<xref:Microsoft.SqlServer.Management.Smo.FileGroup> objeto.|  
 |Objeto FullTextCatalog e Objeto FullTextCatalog2|Objetos <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> e <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex>.|  
-|Objeto Index e Objeto Index2|<xref:Microsoft.SqlServer.Management.Smo.Index> Objeto|  
+|Objeto Index e Objeto Index2|<xref:Microsoft.SqlServer.Management.Smo.Index> objeto|  
 |Objeto IntegratedSecurity|Funcionalidade movida para o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> no namespace <xref:Microsoft.SqlServer.Management.Common>.|  
 |Objeto Job|<xref:Microsoft.SqlServer.Management.Smo.Agent.Job> objeto. Movido para <xref:Microsoft.SqlServer.Management.Smo.Agent> namespace.|  
 |Objeto JobFilter|<xref:Microsoft.SqlServer.Management.Smo.Agent.JobFilter> objeto. Movido para <xref:Microsoft.SqlServer.Management.Smo.Agent> namespace.|  
@@ -87,7 +87,7 @@ ms.locfileid: "36006414"
 |Objeto ReplicationStoredProcedure e Objeto ReplicationStoredProcedure2|<xref:Microsoft.SqlServer.Replication.ReplicationStoredProcedure> objeto. Movido para <xref:Microsoft.SqlServer.Replication> namespace.|  
 |Objeto ReplicationTable e Objeto ReplicationTable2|<xref:Microsoft.SqlServer.Replication.ReplicationTable> objeto. Movido para <xref:Microsoft.SqlServer.Replication> namespace.|  
 |Objeto Restore e Objeto Restore2|Objetos <xref:Microsoft.SqlServer.Management.Smo.Restore> e <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>.|  
-|Objeto Rule e Objeto Rule2|<xref:Microsoft.SqlServer.Management.Smo.Rule> Objeto|  
+|Objeto Rule e Objeto Rule2|<xref:Microsoft.SqlServer.Management.Smo.Rule> objeto|  
 |Objeto Schedule|Movido para <xref:Microsoft.SqlServer.Replication> namespace.|  
 |Objeto ServerGroup|Removido.|  
 |Objeto ServerRole|<xref:Microsoft.SqlServer.Management.Smo.ServerRole> objeto.|  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddd4affa954cf080cec3ad1ca37df82d494221e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192468"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Selecionar a dimensão do cubo de origem (Assistente de Mineração de Dados)
   Use a página **Selecionar a Dimensão do Cubo de Origem** para selecionar a dimensão do cubo que contém os casos a serem analisados. Por exemplo, se você estiver criando um modelo que analise o comportamento de compra dos clientes com base em dados demográficos, selecione a dimensão Cliente, que em geral contém um registro exclusivo para cada cliente e vários atributos que representam dados demográficos, como sexo, local ou renda. Posteriormente no assistente, você terá a oportunidade de adicionar uma tabela relacionada a essa tabela de casos: por exemplo, você pode adicionar uma tabela aninhada que mostre quais produtos o cliente comprou.  
@@ -43,7 +43,7 @@ ms.locfileid: "36005729"
  Se a dimensão escolhida não contiver todos os atributos relacionados necessários para criar o modelo de mineração de dados, talvez seja necessário modificá-la. Para obter mais informações, consulte [Definir as dimensões do banco de dados](multidimensional-models/define-database-dimensions.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Criar a estrutura de mineração de dados &#40;Assistente de mineração de dados&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Selecione a chave do caso &#40;Assistente de mineração de dados&#41;](select-the-case-key-data-mining-wizard.md)  
   

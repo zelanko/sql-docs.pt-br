@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e9d85e66cd3ccbfb4c3695f6d7485dbb1a8a9de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162027"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Classificação interativa (Construtor de Relatórios e SSRS)
   É possível adicionar botões de classificação interativos para permitir que um usuário alterne entres as ordens crescente e decrescente para linhas de uma tabela ou para linhas e colunas de uma matriz. O uso mais comum da classificação interativa é adicionar um botão de classificação a todos os cabeçalhos de coluna. Assim, o usuário pode escolher a coluna pela qual classificar.  
@@ -63,6 +63,6 @@ ms.locfileid: "36008113"
 ## <a name="see-also"></a>Consulte também  
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Adicionar classificação interativa a uma tabela ou matriz &#40;SSRS e construtor de relatórios&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Adicionar classificação interativa a uma tabela ou matriz &#40;relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

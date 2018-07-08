@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
 - server message blocks [SQL Server]
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 849fdd75ab2ad73c673ef0c4c0e70ec3ba25b8f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f8d17d471020a4b6960307c6718caf4624579da8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166097"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerações sobre segurança para uma instalação do SQL Server
   A segurança é importante para todo produto e todo negócio. Seguindo práticas recomendadas simples, você pode evitar muitas vulnerabilidades de segurança. Este tópico discute algumas práticas recomendadas de segurança que você deve considerar antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e depois de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Está incluída orientação de segurança para recursos específicos nos tópicos de referência para esses recursos.  
@@ -147,7 +147,7 @@ ms.locfileid: "36007839"
   
  **Senhas fortes**  
   
--   Sempre atribua uma senha forte para a `sa` conta.  
+-   Sempre atribua uma senha forte para o `sa` conta.  
   
 -   Sempre habilite a verificação de política de senha sobre nível de segurança e expiração de senhas.  
   

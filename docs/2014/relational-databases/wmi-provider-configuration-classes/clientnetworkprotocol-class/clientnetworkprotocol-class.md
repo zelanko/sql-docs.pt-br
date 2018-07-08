@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ClientNetworkProtocol class
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9916c17c2dece15e6a938bc4a0dccbfbf7ae8e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1452673041397a5af7d3274964e1221f448dbc1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164168"
 ---
 # <a name="clientnetworkprotocol-class"></a>Classe ClientNetworkProtocol
-  O [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) representa protocolos de rede instalados em uma instância de cliente que permite a comunicação com uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma rede.  
+  O [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) representa protocolos de rede instalados em uma instância de cliente que permite a comunicação com uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] através de uma rede.  
   
  Com o [classe ClientNetworkProtocol](clientnetworkprotocol-class.md), você pode executar as seguintes tarefas:  
   

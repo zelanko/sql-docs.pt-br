@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.accountintelligencetypemapping.f1
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 27c0a8d48ae1a4a69ea96c4c87cc7cf8d0f1f1d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6609c795afdf4f966e9a5375459975dccc54587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210316"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Definir Inteligência de Conta (Assistente de Business Intelligence)
   Use a página **Definir Inteligência de Conta** para mapear tipos de conta definidos na instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para tipos de conta definidos no atributo de dimensão associado ao atributo **Tipo de Conta** na dimensão.  
@@ -30,7 +30,7 @@ ms.locfileid: "36007154"
 >  Essa página será exibida apenas se você tiver selecionado **Dimensão padrão** na página **Selecionar o Tipo de Dimensão** e se tiver mapeado um atributo de dimensão para o tipo de atributo **Tipo de Conta** na página **Especificar Tipo de Dimensão** .  
   
 ## <a name="options"></a>Opções  
- **Tipos de conta da tabela de origem**  
+ **Tipos de conta de tabela de origem**  
  Exibe os valores contidos no atributo de dimensão atribuídos ao atributo **Tipo de Conta** na página **Especificar Chave e Tipo de Dimensão** .  
   
  **Tipos de conta interna**  

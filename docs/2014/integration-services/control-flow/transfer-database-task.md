@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cb5a9f08218a2533b4d1bcbcec2572b0b929dc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 931978bdad7e2e82d232af85ee253ca8cae7de91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239256"
 ---
 # <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados
   A tarefa Transferir Banco de Dados transfere um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao contrário das outras tarefas que transferem apenas objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de cópia, a tarefa Transferir Banco de Dados pode copiar ou mover um banco de dados. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor.  
@@ -42,7 +42,7 @@ ms.locfileid: "36006159"
 ## <a name="execution-value"></a>Valor de execução  
  O valor da execução, definido na propriedade `ExecutionValue` da tarefa, retorna o valor 1, porque em contraste com outras tarefas de transferência, a tarefa Transferir Banco de Dados pode transferir somente um banco de dados.  
   
- Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir banco de dados, informações sobre a transferência de mensagem de erro pode ser disponibilizada para outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
+ Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir banco de dados, as informações sobre a transferência de mensagem de erro pode se tornar disponível a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Banco de Dados inclui as seguintes entradas de log personalizadas:  
@@ -75,9 +75,9 @@ ms.locfileid: "36006159"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Banco de dados do Editor da tarefa transferir &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa de banco de dados transferir &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Banco de dados do Editor da tarefa transferir &#40;página de bancos de dados&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor da tarefa de banco de dados transferir &#40;página de bancos de dados&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

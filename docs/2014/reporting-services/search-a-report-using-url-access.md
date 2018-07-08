@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 - text searches [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95989e61ed3b5d77e6896ae9896b1db495ff0a32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 045c7b045048e625985e17d4a3bf836926bc1fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230186"
 ---
 # <a name="search-a-report-using-url-access"></a>Pesquisar um relatório com acesso à URL
   Você pode pesquisar um relatório para obter um conjunto específico de texto usando o acesso de URL. Para pesquisar um relatório, defina o valor do parâmetro *rc:FindString* na URL igual ao texto para o qual você deseja pesquisar. Além disso, use os parâmetros *rc:StartFind* e *rc:EndFind* para estreitar sua pesquisa a páginas específicas dentro do relatório.  

@@ -1,8 +1,8 @@
 ---
 title: Instalação autônoma do SQL Server no Red Hat Enterprise Linux | Microsoft Docs
 description: Exemplo de Script do SQL Server - instalação autônoma no Red Hat Enterprise Linux
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
@@ -11,30 +11,30 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f9eb7f2e8754a81650f167104d53150f0f0a4d90
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9412c7ed24bd37d96c1519ea30b96c42a7b53e0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322907"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407936"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemplo: De script de instalação autônoma do SQL Server para Red Hat Enterprise Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Esse exemplo de script de Bash instala 2017 do SQL Server no Red Hat Enterprise Linux (RHEL) sem entrada interativa. Ele fornece exemplos de instalação do mecanismo de banco de dados, ferramentas de linha de comando do SQL Server, SQL Server Agent e executa as etapas de pós-instalação. Opcionalmente, você pode instalar a pesquisa de texto completo e criar um usuário administrativo.
+Esse script de Bash de exemplo instala o SQL Server 2017 no Red Hat Enterprise Linux (RHEL) sem entrada interativa. Ele fornece exemplos de instalação do mecanismo de banco de dados, ferramentas de linha de comando do SQL Server, SQL Server Agent e executa as etapas de pós-instalação. Opcionalmente, você pode instalar a pesquisa de texto completo e criar um usuário administrativo.
 
 > [!TIP]
-> Se você não precisar de um script de instalação autônoma, a maneira mais rápida para instalar o SQL Server é seguir o [início rápido para Red Hat](quickstart-install-connect-red-hat.md). Para outras informações de configuração, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
+> Se você não precisa de um script de instalação autônoma, a maneira mais rápida para instalar o SQL Server é seguir a [guia de início rápido para Red Hat](quickstart-install-connect-red-hat.md). Para outras informações de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Prerequisites
 
 - Você precisa de pelo menos 2 GB de memória para executar o SQL Server no Linux.
 - O sistema de arquivos deve ser **XFS** ou **EXT4**. Outros sistemas de arquivos, como **BTRFS**, não têm suporte.
-- Para outros requisitos de sistema, consulte [requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
+- Para outros requisitos do sistema, consulte [requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Exemplo de script
-Salvar o script de exemplo em um arquivo e, em seguida, para personalizá-lo, substitua os valores das variáveis no script. Você também pode definir qualquer uma das variáveis de script como variáveis de ambiente, como você removê-los a partir do arquivo de script.
+Salve o script de exemplo em um arquivo e, em seguida, para personalizá-lo, substitua os valores das variáveis no script. Você também pode definir qualquer uma das variáveis de script como variáveis de ambiente, desde que você removê-los a partir do arquivo de script.
 
 ```bash
 #!/bin/bash -e
@@ -156,9 +156,9 @@ Para executar o script
 
 1. Cole o exemplo em seu editor de texto favorito e salvá-lo com um nome fácil de lembrar, como `install_sql.sh`.
 
-1. Personalizar `MSSQL_SA_PASSWORD`, `MSSQL_PID`e qualquer uma das outras variáveis com o qual você deseja alterar.
+1. Personalize `MSSQL_SA_PASSWORD`, `MSSQL_PID`e qualquer uma das outras variáveis que você deseja alterar.
 
-1. Marca o script como executável
+1. Marque o script como executável
 
    ```bash
    chmod +x install_sql.sh
@@ -172,39 +172,39 @@ Para executar o script
 
 ## <a name="understanding-the-script"></a>Noções básicas sobre o script
 
-A primeira coisa que o script Bash faz é definir algumas variáveis.  Eles podem ser variáveis de script, como o exemplo a, ou variáveis de ambiente.  A variável ``` MSSQL_SA_PASSWORD ``` é **necessária** pela instalação do SQL Server, os outros são variáveis personalizadas criadas para o script.  O exemplo de script executa as seguintes etapas:
+A primeira coisa que o script de Bash faz é definir algumas variáveis.  Eles podem ser variáveis de script, como o exemplo, ou variáveis de ambiente.  A variável ``` MSSQL_SA_PASSWORD ``` está **necessária** pela instalação do SQL Server, os outros são variáveis personalizadas criadas para o script.  O exemplo de script executa as seguintes etapas:
 
 1. Importe as chaves públicas do Microsoft GPG.
 
-1. Registre-se os repositórios do Microsoft SQL Server e as ferramentas de linha de comando.
+1. Registre os repositórios da Microsoft para SQL Server e as ferramentas de linha de comando.
 
 1. Atualizar os repositórios locais
 
 1. Instalar o SQL Server
 
-1. Configurar o SQL Server com o ```MSSQL_SA_PASSWORD``` e aceitar automaticamente o contrato de licença do usuário final.
+1. Configurar o SQL Server com o ```MSSQL_SA_PASSWORD``` e aceitar automaticamente o contrato de licença de usuário final.
 
-1. Automaticamente aceitar o contrato de licença de usuário final para ferramentas de linha de comando do SQL Server, instale-os e instale o pacote de desenvolvimento unixodbc.
+1. Aceite o contrato de licença do usuário final para as ferramentas de linha de comando do SQL Server, instalá-los e instalar o pacote de unixodbc-dev automaticamente.
 
-1. Adicione ferramentas de linha de comando do SQL Server para o caminho da facilidade de uso.
+1. Adicione ferramentas de linha de comando do SQL Server para o caminho para facilidade de uso.
 
-1. Instalar o SQL Server Agent, se a variável de script ```SQL_INSTALL_AGENT``` for definida, em por padrão.
+1. Instalar o SQL Server Agent se a variável de script ```SQL_INSTALL_AGENT``` for definido, em por padrão.
 
-1. Opcionalmente, instalar a pesquisa de texto completo do SQL Server, se a variável ```SQL_INSTALL_FULLTEXT``` é definida.
+1. Opcionalmente, instalar a pesquisa de texto completo do SQL Server, se a variável ```SQL_INSTALL_FULLTEXT``` é definido.
 
 1. Desbloquear a porta 1433 TCP no firewall do sistema, necessário para se conectar ao SQL Server de outro sistema.
 
-1. Opcionalmente, defina os sinalizadores de rastreamento para rastreamento de deadlock. (requer uncommenting as linhas)
+1. Opcionalmente, defina os sinalizadores de rastreamento para rastreamento de deadlock. (requer remover comentários das linhas)
 
-1. SQL Server agora está instalado, para tornar operacional, reiniciar o processo.
+1. SQL Server agora está instalado, para torná-lo operacional, reinicie o processo.
 
-1. Verifique se o SQL Server está instalado corretamente, ocultando as mensagens de erro.
+1. Verifique se o SQL Server está instalado corretamente, enquanto oculta todas as mensagens de erro.
 
-1. Criar um novo usuário de administrador do servidor se ```SQL_INSTALL_USER``` e ```SQL_INSTALL_USER_PASSWORD``` são definidas.
+1. Criar um novo usuário de administrador do servidor se ```SQL_INSTALL_USER``` e ```SQL_INSTALL_USER_PASSWORD``` estão definidos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Simplificar a várias instalações autônomas e criar um script de Bash autônomo que define as variáveis de ambiente apropriadas.  Você pode remover qualquer uma das variáveis de script de exemplo usa e colocá-los em seus próprios scripts de Bash.
+Simplifique a várias instalações autônomas e criar um script de Bash autônomo que define as variáveis de ambiente apropriadas.  Você pode remover qualquer uma das variáveis de script de exemplo usa e colocá-los em seu próprio script de Bash.
 
 ```bash
 #!/bin/bash
@@ -221,4 +221,4 @@ Em seguida, execute o script de Bash da seguinte maneira:
 . ./my_script_name.sh
 ```
 
-Para obter mais informações sobre o SQL Server no Linux, consulte [do SQL Server na visão geral do Linux](sql-server-linux-overview.md).
+Para obter mais informações sobre o SQL Server no Linux, consulte [SQL Server na visão geral do Linux](sql-server-linux-overview.md).

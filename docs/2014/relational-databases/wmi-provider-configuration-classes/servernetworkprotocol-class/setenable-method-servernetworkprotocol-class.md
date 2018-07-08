@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetEnable method
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b6a51b4432252ffaed1dd2cbc2c269551e8caf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f1a2127beb5e8427d4c95798a5e2c7ae0f88c373
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148387"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>Método SetEnable (classe ServerNetworkProtocol)
   Habilita o protocolo de rede do servidor.  

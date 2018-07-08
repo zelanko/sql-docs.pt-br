@@ -5,26 +5,25 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fefc4c7df12855615cba104bfb63d8547608c7f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155417"
 ---
 # Guia de criação de índice do SQL Server
   Os índices criados inadequadamente e a falta de índices são as principais fontes de gargalos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
   
-**Aplica-se a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] por meio de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado em contrário.  
+**Aplica-se ao**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] por meio de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado o contrário.  
   
  Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36006766"
 ### Tarefas de criação de índice  
  As seguintes tarefas compõem a estratégia recomendada para criação de índices:  
   
-1.  Entenda as características do banco de dados. Por exemplo, trata-se de um banco de dados OLTP (transação online) com modificações frequentes de dados, um DSS (sistema de apoio à decisão) ou um banco de dados OLAP de data warehouse que contém principalmente dados somente leitura e deve processar conjuntos de dados muito grandes rapidamente. No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o *columnstore xVelocity de memória otimizada* é especialmente apropriado para conjuntos de dados de data warehouse típicos. Os índices columnstore podem transformar a experiência com data warehouse para usuários proporcionando um desempenho mais rápido para consultas de data warehouse comuns, como filtragem, agregação, agrupamento ou consultas de junção em estrela. Para obter mais informações, consulte [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+1.  Entenda as características do banco de dados. Por exemplo, trata-se de um banco de dados OLTP (transação online) com modificações frequentes de dados, um DSS (sistema de apoio à decisão) ou um banco de dados OLAP de data warehouse que contém principalmente dados somente leitura e deve processar conjuntos de dados muito grandes rapidamente. No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o *columnstore xVelocity de memória otimizada* é especialmente apropriado para conjuntos de dados de data warehouse típicos. Os índices columnstore podem transformar a experiência com data warehouse para usuários proporcionando um desempenho mais rápido para consultas de data warehouse comuns, como filtragem, agregação, agrupamento ou consultas de junção em estrela. Para obter mais informações, consulte [índices Columnstore descritos](../relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Entenda as características das consultas mais usadas. Por exemplo, saber que uma consulta usada frequentemente associa duas ou mais tabelas o ajudará a determinar o melhor tipo de índice a ser usado.  
   
@@ -184,13 +183,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Depois que a consulta for novamente executada, o plano de execução a seguir mostra que o operador SORT foi eliminado e que o índice não clusterizado recentemente criado é utilizado.  
   
- ![Plano de execução mostra uma classificação operador não é usado](media/insertsort2.gif "plano de execução mostra uma classificação operador não é usado")  
+ ![Plano de execução mostra uma classificação de operador não é usado](media/insertsort2.gif "plano de execução mostra uma classificação de operador não é usado.")  
   
  O [!INCLUDE[ssDE](../includes/ssde-md.md)] pode se mover para qualquer direção de forma igualmente eficaz. Um índice definido como `(RejectedQty DESC, ProductID ASC)` ainda pode ser usado em uma consulta na qual a direção de classificação das colunas da cláusula ORDER BY é invertida. Por exemplo, uma consulta com a cláusula ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` pode utilizar o índice.  
   
  A ordem de classificação só pode ser especificada para colunas de chave. A exibição de catálogo [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) e a função INDEXKEY_PROPERTY relatam se a coluna de índice está armazenada em ordem crescente ou decrescente.  
   
- ![Ícone de seta usado com de volta para o link superior](media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
   
 ##  <a name="Clustered"></a> Diretrizes de design de índices clusterizados  
  Os índices clusterizados classificam e armazenam as linhas de dados da tabela com base em seus valores de chave. Pode haver apenas um índice clusterizado por tabela, porque as próprias linhas de dados podem ser classificadas apenas em uma única ordem. Com poucas exceções, toda tabela deveria ter um índice clusterizado definido na coluna ou colunas, o qual proporciona o seguinte:  
@@ -261,7 +260,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Chaves largas são uma combinação de várias colunas ou de várias colunas de tamanho grande. Os valores de chave do índice clusterizado são usados por todos os índices não clusterizados como chaves de pesquisa. Qualquer índice não clusterizado definido na mesma tabela será significativamente maior porque as entradas de índice não clusterizado contêm a chave de cluster e também as colunas de chave definidas para aquele índice não clusterizado.  
   
- ![Ícone de seta usado com de volta para o link superior](media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
   
 ##  <a name="Nonclustered"></a> Diretrizes de criação de índice não clusterizado  
  Um índice não clusterizado contém os valores de chave do índice e os localizadores de linha que apontam para o local de armazenamento dos dados da tabela. Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada. Em geral, os índices não clusterizados devem ser criados para aprimorar o desempenho de consultas utilizadas com frequência que não são cobertas pelo índice clusterizado.  
@@ -393,7 +392,7 @@ INCLUDE (FileName);
   
     -   Alterar a nulidade da coluna da coluna NOT NULL até NULL.  
   
-    -   Aumentar o tamanho de `varchar`, `nvarchar`, ou `varbinary` colunas.  
+    -   Aumente o tamanho das `varchar`, `nvarchar`, ou `varbinary` colunas.  
   
         > [!NOTE]  
         >  Estas restrições de modificação de coluna também se aplicam para indexar colunas de chave.  
@@ -430,7 +429,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Você terá que determinar se os ganhos no desempenho de consulta superam o efeito no desempenho durante a modificação de dados, e em requisitos adicionais de espaço em disco.  
   
- ![Ícone de seta usado com de volta para o link superior](media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
   
 ##  <a name="Unique"></a> Diretrizes de design de índice exclusivo  
  Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Especificar um índice exclusivo só faz sentido quando a exclusividade for uma característica dos próprios dados. Por exemplo, se você quiser garantir que os valores na coluna `NationalIDNumber` na tabela `HumanResources.Employee` sejam exclusivos, quando a chave primária for `EmployeeID`, crie uma restrição UNIQUE na coluna `NationalIDNumber` . Se o usuário tentar digitar o mesmo valor naquela coluna para mais de um empregado, será exibida uma mensagem de erro e o valor duplicado não é inserido.  
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Um índice não clusterizado exclusivo pode conter colunas não chave incluídas. Para obter mais informações, consulte [Índice com colunas incluídas](#Included_Columns).  
   
- ![Ícone de seta usado com de volta para o link superior](media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
   
 ##  <a name="Filtered"></a> Diretrizes de criação de índice filtrado  
  Um índice filtrado é um índice não clusterizado otimizado, criado especialmente para consultas que fazem seleções a partir de um subconjunto bem-definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta e reduzir os custos de manutenção e armazenamento do índice em comparação com os índices de tabela completa.  
@@ -596,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  A movimentação da conversão de dados da esquerda para a direita de um operador de comparação pode alterar o significado da conversão. No exemplo anterior, quando o operador CONVERT foi adicionado à direita, a comparação mudou de uma comparação de número inteiro para uma comparação `varbinary`.  
   
- ![Ícone de seta usado com de volta para o link superior](media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
   
 ##  <a name="Additional_Reading"></a> Leitura adicional  
  [Melhorando o desempenho com exibições indexadas do SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

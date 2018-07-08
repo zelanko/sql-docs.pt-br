@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLA, properties
 ms.assetid: 7aa5815f-d614-497b-a9eb-f6284772bda8
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0ea5de8bbd06f071c34d914a188dd1b63c1c98ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 708e386acae4a5370c4561c00c3942065c4ac7df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149877"
 ---
 # <a name="properties-xmla"></a>Função Properties (XMLA)
   O protocolo XMLA (XML for Analysis) usa elementos XML para representar informações de propriedade e valores para cabeçalhos, métodos, objetos, comandos e tipos de dados XMLA.  
@@ -39,15 +39,15 @@ ms.locfileid: "36006420"
 |-------------|-----------------|  
 |[Elemento AllowOverwrite &#40;XMLA&#41;](allowoverwrite-element-xmla.md)||  
 |[Elemento ApplyCompression &#40;XMLA&#41;](applycompression-element-xmla.md)||  
-|[Atributo de elemento &#40;XMLA&#41;](attribute-element-xmla.md)||  
+|[Atributo do elemento &#40;XMLA&#41;](attribute-element-xmla.md)||  
 |[Elemento AttributeName &#40;XMLA&#41;](name-element-xmla.md)||  
-|[Atributos de elemento &#40;XMLA&#41;](attributes-element-xmla.md)||  
-|[Elemento de eixos &#40;XMLA&#41;](axes-element-xmla.md)||  
+|[Atributos do elemento &#40;XMLA&#41;](attributes-element-xmla.md)||  
+|[Eixos do elemento &#40;XMLA&#41;](axes-element-xmla.md)||  
 |[Elemento AxesInfo &#40;XMLA&#41;](axesinfo-element-xmla.md)||  
 |[Elemento Axis &#40;XMLA&#41;](axis-element-xmla.md)||  
 |[Elemento AxisInfo &#40;XMLA&#41;](axisinfo-element-xmla.md)||  
 |[Elemento BackupRemotePartitions &#40;XMLA&#41;](backupremotepartitions-element-xmla.md)||  
-|[Elemento Binding &#40;XMLA&#41;](binding-element-xmla.md)||  
+|[Elemento de associação &#40;XMLA&#41;](binding-element-xmla.md)||  
 |[Elemento Bindings &#40;XMLA&#41;](bindings-element-xmla.md)||  
 |[Elemento CancelAssociated &#40;XMLA&#41;](cancelassociated-element-xmla.md)||  
 |[Elemento capability &#40;XMLA&#41;](capability-element-xmla.md)||  
@@ -56,7 +56,7 @@ ms.locfileid: "36006420"
 |[Elemento de célula &#40;MDDataSet&#41; &#40;XMLA&#41;](cell-element-mddataset-xmla.md)||  
 |[Elemento CellData &#40;XMLA&#41;](celldata-element-xmla.md)||  
 |[Elemento CellInfo &#40;XMLA&#41;](cellinfo-element-xmla.md)||  
-|[O elemento CellOrdinal &#40;XMLA&#41;](cellordinal-element-xmla.md)||  
+|[Elemento CellOrdinal &#40;XMLA&#41;](cellordinal-element-xmla.md)||  
 |[Elemento de comando &#40;XMLA&#41;](command-element-xmla.md)||  
 |[Elemento ConnectionID &#40;XMLA&#41;](id-element-xmla.md)||  
 |[Elemento ConnectionString &#40;XMLA&#41;](connectionstring-element-xmla.md)||  
@@ -71,7 +71,7 @@ ms.locfileid: "36006420"
 |[Elemento de banco de dados &#40;XMLA&#41;](database-element-xmla.md)||  
 |[Elemento DatabaseID &#40;XMLA&#41;](databaseid-element-xmla.md)||  
 |[Elemento DatabaseName &#40;XMLA&#41;](databasename-element-xmla.md)||  
-|[Elemento DataSource &#40;XMLA&#41;](source-element-xmla.md)||  
+|[Elemento de fonte de dados &#40;XMLA&#41;](source-element-xmla.md)||  
 |[Elemento DataSourceID &#40;XMLA&#41;](datasourceid-element-xmla.md)||  
 |[Elemento DataSourceType &#40;XMLA&#41;](type-element-xmla.md)||  
 |[Elemento DataSourceView &#40;XMLA&#41;](datasourceview-element-xmla.md)||  
@@ -81,7 +81,7 @@ ms.locfileid: "36006420"
 |[Elemento Description &#40;XMLA&#41;](description-element-xmla.md)||  
 |[Elemento de dimensão &#40;XMLA&#41;](dimension-element-xmla.md)||  
 |[Elemento DisplayInfo &#40;XMLA&#41;](displayinfo-element-xmla.md)||  
-|[Elemento Error &#40;XMLA&#41;](error-element-xmla.md)||  
+|[Erro de elemento &#40;XMLA&#41;](error-element-xmla.md)||  
 |[Elemento ErrorCode &#40;XMLA&#41;](errorcode-element-xmla.md)||  
 |[Elemento ErrorConfiguration &#40;XMLA&#41;](errorconfiguration-element-xmla.md)||  
 |[Elemento Exception &#40;XMLA&#41;](exception-element-xmla.md)||  
@@ -90,7 +90,7 @@ ms.locfileid: "36006420"
 |[Elemento Folders &#40;XMLA&#41;](folders-element-xmla.md)||  
 |[Elemento HelpFile &#40;XMLA&#41;](helpfile-element-xmla.md)||  
 |[Elemento HierarchyInfo &#40;XMLA&#41;](hierarchyinfo-element-xmla.md)||  
-|[Elemento ID &#40;XMLA&#41;](id-element-xmla.md)||  
+|[ID do elemento &#40;XMLA&#41;](id-element-xmla.md)||  
 |[Chaves de elemento &#40;XMLA&#41;](keys-element-xmla.md)||  
 |[Elemento de chave &#40;XMLA&#41;](key-element-xmla.md)||  
 |[Elemento de linguagem &#40;XMLA&#41;](language-element-xmla.md)||  
@@ -108,8 +108,8 @@ ms.locfileid: "36006420"
 |[Mensagens de elemento &#40;XMLA&#41;](messages-element-xmla.md)||  
 |[Elemento Mode &#40;XMLA&#41;](mode-element-xmla.md)||  
 |[Elemento MoveWithDescendants &#40;XMLA&#41;](movewithdescendants-element-xmla.md)||  
-|[Nome de elemento &#40;XMLA&#41;](name-element-xmla.md)||  
-|[Nome de elemento &#40;parâmetro&#41; &#40;XMLA&#41;](name-element-parameter-xmla.md)||  
+|[Nomeie o elemento &#40;XMLA&#41;](name-element-xmla.md)||  
+|[Nomeie o elemento &#40;parâmetro&#41; &#40;XMLA&#41;](name-element-parameter-xmla.md)||  
 |[Novo elemento &#40;XMLA&#41;](new-element-xmla.md)||  
 |[Elemento do objeto &#40;XMLA&#41;](object-element-xmla.md)||  
 |[Elemento do objeto &#40;dimensão&#41; &#40;XMLA&#41;](object-element-dimension-xmla.md)||  
@@ -117,7 +117,7 @@ ms.locfileid: "36006420"
 |[Elemento OlapInfo &#40;XMLA&#41;](olapinfo-element-xmla.md)||  
 |[Elemento Optimization &#40;XMLA&#41;](optimization-element-xmla.md)||  
 |[Elemento original &#40;XMLA&#41;](original-element-xmla.md)||  
-|[Paralelo elemento &#40;XMLA&#41;](parallel-element-xmla.md)||  
+|[Elemento em paralelo &#40;XMLA&#41;](parallel-element-xmla.md)||  
 |[Elemento Parameter &#40;XMLA&#41;](parameter-element-xmla.md)||  
 |[Elemento Parameters &#40;XMLA&#41;](parameters-element-xmla.md)||  
 |[Elemento ParentObject &#40;XMLA&#41;](parentobject-element-xmla.md)||  
@@ -125,13 +125,13 @@ ms.locfileid: "36006420"
 |[Elemento Password &#40;XMLA&#41;](password-element-xmla.md)||  
 |[Elemento Properties &#40;XMLA&#41;](properties-element-xmla.md)||  
 |[Elemento PropertyList &#40;XMLA&#41;](propertylist-element-xmla.md)||  
-|[Elemento de consulta &#40;XMLA&#41;](queries-element-xmla.md)||  
+|[Consulta o elemento &#40;XMLA&#41;](queries-element-xmla.md)||  
 |[Elemento de consulta &#40;XMLA&#41;](query-element-xmla.md)||  
 |[Elemento RequestType &#40;XMLA&#41;](requesttype-element-xmla.md)||  
 |[Elemento RestrictionList &#40;XMLA&#41;](restrictionlist-element-xmla.md)||  
 |[Elemento Restrictions &#40;XMLA&#41;](restrictions-element-xmla.md)||  
-|[resultados de elemento &#40;XMLA&#41;](results-element-xmla.md)||  
-|[Retorna o elemento &#40;XMLA&#41;](return-element-xmla.md)||  
+|[resultados do elemento &#40;XMLA&#41;](results-element-xmla.md)||  
+|[retornar um elemento &#40;XMLA&#41;](return-element-xmla.md)||  
 |[Elemento raiz &#40;XMLA&#41;](root-element-xmla.md)||  
 |[Elemento Row &#40;XMLA&#41;](row-element-xmla.md)||  
 |[Elemento de segurança &#40;XMLA&#41;](security-element-xmla.md)||  
@@ -148,18 +148,18 @@ ms.locfileid: "36006420"
 |[Elemento TableNotification &#40;XMLA&#41;](tablenotification-element-xmla.md)||  
 |[Elemento TableNotifications &#40;XMLA&#41;](tablenotifications-element-xmla.md)||  
 |[Elemento de destino &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)||  
-|[Elemento de hora &#40;XMLA&#41;](time-element-xmla.md)||  
+|[Elemento de tempo &#40;XMLA&#41;](time-element-xmla.md)||  
 |[Elemento Translation &#40;XMLA&#41;](translation-element-xmla.md)||  
 |[Elemento translations &#40;XMLA&#41;](translations-element-xmla.md)||  
-|[Elemento Tuple &#40;XMLA&#41;](tuple-element-xmla.md)||  
+|[Elemento de tupla &#40;XMLA&#41;](tuple-element-xmla.md)||  
 |[Elemento Tuples &#40;XMLA&#41;](tuples-element-xmla.md)||  
-|[Tipo de elemento &#40;XMLA&#41;](type-element-xmla.md)||  
+|[Elemento de tipo &#40;XMLA&#41;](type-element-xmla.md)||  
 |[Elemento UName &#40;XMLA&#41;](uname-element-xmla.md)||  
 |[Elemento UnaryOperator &#40;XMLA&#41;](unaryoperator-element-xmla.md)||  
 |[Valor do elemento &#40;XMLA&#41;](value-element-xmla.md)||  
 |[Valor do elemento &#40;parâmetro&#41; &#40;XMLA&#41;](value-element-parameter-xmla.md)||  
 |[Elemento Warning &#40;XMLA&#41;](warning-element-xmla.md)||  
-|[Onde elemento &#40;XMLA&#41;](where-element-xmla.md)||  
+|[Em que elemento de &#40;XMLA&#41;](where-element-xmla.md)||  
 |[Elemento WritebackTableCreation &#40;XMLA&#41;](writebacktablecreation-element-xmla.md)||  
   
 ## <a name="see-also"></a>Consulte também  

@@ -6,23 +6,22 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb1f9c51f6d21ea0684c33df33817003564d7d7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1c0c4b28542b6389608eb9272e21bc45ae178d88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703117"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408596"
 ---
 # <a name="filestream-support"></a>Suporte a FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "35703117"
   
  Funções de catálogo como SQLColumns no ODBC não relatarão se uma coluna é uma coluna FILESTREAM.  
   
- Para criar colunas FILESTREAM ou detectar quais colunas existentes são colunas FILESTREAM, você pode usar o **is_filestream** coluna o [Columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) exibição do catálogo.  
+ Para criar colunas FILESTREAM ou detectar quais colunas existentes são colunas FILESTREAM, você pode usar o **is_filestream** coluna o [sys. Columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) exibição do catálogo.  
   
  A seguir, é mostrado um exemplo:  
   
@@ -63,7 +62,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilidade com níveis inferiores  
- Se o cliente tiver sido compilado com a versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que estava incluída no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], e o aplicativo se conecta ao [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary (max)** comportamento será compatível com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Ou seja, o tamanho máximo de dados retornados será limitado a 2 GB. Para valores de resultados maiores que 2 GB, ocorrerá truncamento e um aviso de "truncamento à direita dados de cadeia de caracteres" será retornado.  
+ Se seu cliente tiver sido compilado usando a versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que foi incluído [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], e o aplicativo se conecta ao [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary (max)** comportamento serão compatível com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Ou seja, o tamanho máximo de dados retornados será limitado a 2 GB. Para valores de resultado maiores que 2 GB, ocorrerá truncamento e um aviso de "truncamento à direita da cadeia de caracteres dados" será retornado.  
   
  Quando a compatibilidade de tipo de dados estiver definida como 80, o comportamento do cliente será consistente com o comportamento de clientes de nível inferior.  
   

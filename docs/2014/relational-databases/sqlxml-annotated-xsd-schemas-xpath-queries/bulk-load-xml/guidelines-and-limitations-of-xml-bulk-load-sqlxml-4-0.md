@@ -1,5 +1,5 @@
 ---
-title: Diretrizes e limitações de XML em massa Load (SQLXML 4.0) | Microsoft Docs
+title: Diretrizes e limitações do XML em massa Load (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7499332a73117dc75137915f9023f08eb79a9d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 22ef1e64e2c8cf3dc1af65fde51c7b12107f1916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149357"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Diretrizes e limitações de Carregamento em Massa de XML (SQLXML 4.0)
   Ao usar o Carregamento em Massa de XML, você deve estar familiarizado com as diretrizes e limitações a seguir:  
@@ -40,9 +40,9 @@ ms.locfileid: "36006275"
   
 -   Quaisquer informações de prólogo XML são ignoradas.  
   
-     Carregamento em massa de XML ignora todas as informações antes e depois o \<raiz > elemento no documento XML. Por exemplo, o Carregamento em Massa de XML ignora qualquer declaração XML, definições de DTD internas, referências de DTD externas, comentários e assim por diante.  
+     O XML Bulk Load ignora todas as informações antes e depois o \<raiz > elemento no documento XML. Por exemplo, o Carregamento em Massa de XML ignora qualquer declaração XML, definições de DTD internas, referências de DTD externas, comentários e assim por diante.  
   
--   Se você tiver um esquema de mapeamento que define um relacionamento de chave primária/chave estrangeira entre duas tabelas (como entre Customer e CustOrder), a tabela com a chave primária deverá ser descrita primeiro no esquema. A tabela com a coluna de chave estrangeira deve aparecer depois no esquema. A razão para isso é que a ordem na qual as tabelas são identificadas no esquema é a ordem em que é usada para carregá-los no banco de dados. Por exemplo, o esquema XDR a seguir produzirá um erro quando ele é usado no carregamento em massa de XML porque a  **\<ordem >** elemento é descrito antes do  **\<cliente >** elemento. A coluna CustomerID em CustOrder é uma coluna de chave estrangeira que se refere à coluna de chave primária CustomerID na tabela Cust.  
+-   Se você tiver um esquema de mapeamento que define um relacionamento de chave primária/chave estrangeira entre duas tabelas (como entre Customer e CustOrder), a tabela com a chave primária deverá ser descrita primeiro no esquema. A tabela com a coluna de chave estrangeira deve aparecer depois no esquema. A razão para isso é que a ordem na qual as tabelas são identificadas no esquema é a ordem em que é usada para carregá-los no banco de dados. Por exemplo, o esquema XDR a seguir produzirá um erro quando ele é usado no carregamento em massa de XML porque o  **\<ordem >** elemento é descrito antes do  **\<cliente >** elemento. A coluna CustomerID em CustOrder é uma coluna de chave estrangeira que se refere à coluna de chave primária CustomerID na tabela Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -82,7 +82,7 @@ ms.locfileid: "36006275"
   
 -   Se o esquema não especificar colunas de estouro usando a anotação `sql:overflow-field`, o Carregamento em Massa de XML ignorará todos os dados presentes no documento XML porém não descritos no esquema de mapeamento.  
   
-     O Carregamento em Massa de XML aplica o esquema de mapeamento que você especifica sempre que encontra marcas conhecidas no fluxo de dados XML. Ele ignora dados presentes no documento XML mas não descritos no esquema. Por exemplo, suponha que você tem um esquema de mapeamento que descreve um  **\<cliente >** elemento. O arquivo de dados XML tem uma  **\<AllCustomers >** raiz marca (que não é descrita no esquema) que inclui todos os  **\<cliente >** elementos:  
+     O Carregamento em Massa de XML aplica o esquema de mapeamento que você especifica sempre que encontra marcas conhecidas no fluxo de dados XML. Ele ignora dados presentes no documento XML mas não descritos no esquema. Por exemplo, suponha que você tem um esquema de mapeamento que descreve uma  **\<cliente >** elemento. O arquivo de dados XML tem uma  **\<AllCustomers >** raiz marca (que não é descrita no esquema) que inclui todos os  **\<cliente >** elementos:  
   
     ```  
     <AllCustomers>  
@@ -92,7 +92,7 @@ ms.locfileid: "36006275"
     </AllCustomers>  
     ```  
   
-     Nesse caso, o XML Bulk Load ignora o  **\<AllCustomers >** elemento e começa o mapeamento no  **\<cliente >** elemento. O Carregamento em Massa de XML ignora os elementos não descritos no esquema mas presentes no documento XML.  
+     Nesse caso, o XML Bulk Load ignora a  **\<AllCustomers >** elemento e começa o mapeamento no  **\<cliente >** elemento. O Carregamento em Massa de XML ignora os elementos não descritos no esquema mas presentes no documento XML.  
   
      Considere outro arquivo XML de dados de origem que contém  **\<ordem >** elementos. Esses elementos não são descritos no esquema de mapeamento:  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36006275"
   
 -   As referências de entidade e seções CDATA são traduzidas para os respectivos equivalentes de cadeia de caracteres antes de serem armazenadas no banco de dados.  
   
-     Neste exemplo, uma seção CDATA envolve o valor para o  **\<cidade >** elemento. Carregamento em massa de XML extrai o valor de cadeia de caracteres ("NY") antes de ele insere o  **\<cidade >** elemento no banco de dados.  
+     Neste exemplo, uma seção CDATA envolve o valor para o  **\<cidade >** elemento. Carregamento em massa XML extrai o valor de cadeia de caracteres ("NY") antes de inserir o  **\<cidade >** elemento no banco de dados.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -147,7 +147,7 @@ ms.locfileid: "36006275"
     </Schema>  
     ```  
   
-     Em dados XML, o **HireDate** atributo está ausente na segunda  **\<clientes >** elemento. Quando o XML Bulk Load insere o segundo  **\<clientes >** elemento no banco de dados, ele usa o valor padrão especificado no esquema.  
+     Nesses dados XML, o **HireDate** atributo está ausente da segunda  **\<clientes >** elemento. Quando o XML Bulk Load insere a segunda  **\<clientes >** elemento no banco de dados, ele usa o valor padrão que é especificado no esquema.  
   
     ```  
     <ROOT>  
@@ -162,15 +162,15 @@ ms.locfileid: "36006275"
   
      São criadas as tabelas identificadas no esquema de mapeamento (o banco de dados precisa existir). Se já existir um ou mais das tabelas no banco de dados, a propriedade SGDropTables determina se essas tabelas preexistentes devem ser descartadas e recriadas.  
   
--   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true), são criadas as tabelas são identificadas no esquema de mapeamento. Mas SchemaGen não cria restrições (como as restrições PRIMARY KEY/FOREIGN KEY) nessas tabelas com uma exceção: se os nós XML que constituem a chave primária em uma relação são definidos como tendo um tipo XML de ID (ou seja, `type="xsd:ID"` para XSD) e a propriedade SGUseID está definida como True para SchemaGen, não apenas as chaves primárias criadas a partir de nós de digitado a ID, mas primárias/chave relações de chave estrangeira são criadas a partir de relacionamentos de esquema de mapeamento.  
+-   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true), são criadas as tabelas são identificadas no esquema de mapeamento. Mas SchemaGen não cria restrições (como as restrições PRIMARY KEY/FOREIGN KEY) nessas tabelas com uma exceção: se os nós XML que constituem a chave primária em uma relação são definidos como tendo um tipo XML de ID (ou seja, `type="xsd:ID"` para XSD) e a propriedade SGUseID é definida como True para SchemaGen, não apenas as chaves primárias são criadas de nós de digitado a ID, mas relações de chave estrangeira/chave primária são criadas a partir de relações de esquema de mapeamento.  
   
 -   SchemaGen não usa facetas de esquema XSD e extensões para gerar o relacional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esquema.  
   
--   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true) em carregamento em massa, somente tabelas (e não as exibições do nome compartilhado) especificadas são atualizados.  
+-   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true) em carregamento em massa, apenas tabelas (e não as exibições do nome compartilhado) especificadas são atualizados.  
   
--   SchemaGen só oferece funcionalidade básica para gerar o esquema relacional do XSD anotado. O usuário deve modificar as tabelas geradas manualmente, se necessário.  
+-   SchemaGen apenas fornece a funcionalidade básica para gerar o esquema relacional do XSD anotado. O usuário deve modificar as tabelas geradas manualmente, se necessário.  
   
--   Onde mais de um relacionamento existe entre as tabelas, SchemaGen tenta criar um único relacionamento que inclui todas as chaves envolvidas entre as duas tabelas. Essa limitação pode causar um erro [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+-   Onde mais de relação existe entre tabelas, SchemaGen tenta criar um único relacionamento que inclui todas as chaves envolvidas entre as duas tabelas. Essa limitação pode causar um erro [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 -   Quando você está carregando em massa os dados XML em um banco de dados, é necessário haver pelo menos um atributo ou elemento filho no esquema de mapeamento que esteja mapeado para uma coluna de banco de dados.  
   

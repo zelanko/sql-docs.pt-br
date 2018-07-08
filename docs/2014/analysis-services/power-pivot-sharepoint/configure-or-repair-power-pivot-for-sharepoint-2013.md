@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a71fabd06493b987c74abb7b8ed63fb3c0a74f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d5ae9e2ca42a4066aacf7793aade11808da386a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169687"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurar ou reparar o PowerPivot para SharePoint 2013 (Ferramenta de Configuração do PowerPivot)
   Para configurar ou reparar uma instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, use a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. A ferramenta de configuração começa examinando o sistema e retorna uma lista de ações necessárias para concluir ou reparar uma instalação. O Assistente de Configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, bem como a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Este tópico descreve a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Para obter mais informações sobre o SharePoint 2010, consulte [configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "36006007"
 ##  <a name="bkmk_before"></a> Antes de iniciar  
  A Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 examina arquivos de programas, configurações do Registro e portas disponíveis. Para aproveitar ao máximo as ferramentas, examine os requisitos a seguir.  
   
--   Requisitos gerais para executar a ferramenta de configuração [ferramentas de configuração do PowerPivot](power-pivot-configuration-tools.md).  
+-   Requisitos gerais para executar a ferramenta de configuração [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 prefere o aplicativo Web configurado para a autenticação baseada em declarações. Se a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 criar o aplicativo para você, ela o configurará para usar a autenticação do Windows baseada em declarações. Para obter mais informações sobre requisitos de autenticação, consulte [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36006007"
  A primeira página da ferramenta fornece um resumo dos valores de entrada usados para configurar o farm do SharePoint. Além dos valores de entrada que você fornece, são usados valores padrão para configurar o sistema. Os nomes padrão são usados para aplicativos de serviço, bancos de dados de aplicativo de serviço e propriedades de aplicativo de serviço.  
   
 > [!TIP]  
->  Se a ferramenta de configuração verificar o computador e retornar uma lista de tarefas em branco no painel esquerdo, nenhum recurso ou configuração que precise de definição foi detectado. Para modificar a configuração do SharePoint ou do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , use o Windows PowerShell ou páginas de gerenciamento na Administração Central do SharePoint. Para obter mais informações, consulte [configuração na Administração Central e administração de servidor do PowerPivot](power-pivot-server-administration-and-configuration-in-central-administration.md).  
+>  Se a ferramenta de configuração verificar o computador e retornar uma lista de tarefas em branco no painel esquerdo, nenhum recurso ou configuração que precise de definição foi detectado. Para modificar a configuração do SharePoint ou do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , use o Windows PowerShell ou páginas de gerenciamento na Administração Central do SharePoint. Para obter mais informações, consulte [administração de servidor do PowerPivot e a configuração na Administração Central](power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Os valores para contas de serviço são usados para vários serviços. Por exemplo, a ferramenta de configuração usa a conta padrão na primeira página para definir todas as identidades do pool de aplicativos. Você pode alterar estas contas posteriormente modificando as propriedades de aplicativo de serviço em Administração Central.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36006007"
   
  A ferramenta usa o Windows PowerShell para configurar o servidor. Você pode clicar na guia **Script** para revisar o script do Windows PowerShell que a ferramenta usa para configurar o servidor.  
   
- ![PowerPivot para a ferramenta de configuração do SharePoint 2013](../media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot para a ferramenta de configuração do SharePoint 2013")  
+ ![PowerPivot para SharePoint 2013](../media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot para SharePoint 2013")  
   
 ||Description|  
 |-|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "36006007"
 ##  <a name="bkmk_steps"></a> Etapas de configuração  
  O link para a ferramenta de configuração fica visível apenas quando o PowerPivot para SharePoint 2013 está instalado no servidor local.  
   
-1.  Sobre o **iniciar** , aponte para **todos os programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **ferramentas de configuração**e, em seguida, clique em **PowerPivot para SharePoint 2013 Configuração**.  
+1.  Sobre o **começar** , aponte para **todos os programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **ferramentas de configuração**e, em seguida, clique em **PowerPivot para SharePoint 2013 Configuração**.  
   
 2.  Clique em **Configurar ou Reparar o PowerPivot para SharePoint**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36006007"
     Cannot connect to the database server instance  
     ```  
   
-11. [Verifique se um PowerPivot para SharePoint](../instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
+11. [Verify a PowerPivot for SharePoint Installation](../instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
 ##  <a name="bkmk_input"></a> Valores de entrada usados para configurar o servidor  
  A Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usa uma combinação de valores de entrada que você digita e valores padrão que ele detecta ou usa automaticamente.  
@@ -117,9 +117,9 @@ ms.locfileid: "36006007"
 ||Servidor de Banco de Dados|Instância nomeada local do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , se estiver disponível.|Se uma instância de mecanismo de banco de dados for instalada como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a ferramenta populará o campo de servidor de banco de dados com este nome de instância. Se você não instalou o mecanismo de banco de dados, este campo estará vazio.<br /><br /> O**Servidor de Banco de Dados**  é um parâmetro obrigatório. Pode ser qualquer versão ou edição de SQL Server que tenha suporte para farms do SharePoint.|  
 ||Frase Secreta|Entradas de usuário|Se estiver criando um novo farm, a frase secreta que você inserir será usada como a frase secreta para o farm. Se você estiver adicionando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a um farm existente, digite a frase secreta de farm existente.|  
 ||Porta da Administração Central do SharePoint|Padrão, se necessário|Se o farm não estiver configurado, a ferramenta fornecerá opções para criar o farm, inclusive criar um ponto de extremidade de HTTP para a Administração Central. Ele escolhe um número de porta gerado aleatoriamente que não esteja em uso.|  
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Serviços do Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entradas de usuário|O [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server é necessário para serviços do Excel para habilitar os recursos principais do PowerPivot. O nome do servidor digitado nesta página também é adicionado à lista na página **Configurar Servidores do PowerPivot** .|  
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Serviços do Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entradas de usuário|O [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server é necessário para os serviços do Excel habilitar os recursos principais do PowerPivot. O nome do servidor digitado nesta página também é adicionado à lista na página **Configurar Servidores do PowerPivot** .|  
 |**Configurar Novo Farm**|Servidor de Banco de Dados<br /><br /> Conta do Farm<br /><br /> Frase Secreta<br /><br /> Porta da Administração Central do SharePoint|Padrão, se necessário|O padrão das configurações é o valor inserido na página principal.|  
-|**Criar aplicativo de serviço PowerPivot**|Nome do Aplicativo de Serviço|Padrão|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nome de aplicativo de serviço, o nome padrão é **aplicativo de serviço PowerPivot padrão**. Você pode substituir um valor diferente na ferramenta.|  
+|**Criar aplicativo de serviço PowerPivot**|Nome do Aplicativo de Serviço|Padrão|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O nome padrão é nome do aplicativo de serviço **aplicativo de serviço PowerPivot padrão**. Você pode substituir um valor diferente na ferramenta.|  
 ||Servidor de Banco de Dados|Padrão|O servidor de banco de dados que hospeda o banco de dados do aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome do servidor padrão é o mesmo servidor de banco de dados usado para o farm. Você pode substituir um valor diferente do nome de servidor padrão.|  
 ||Nome do Banco de Dados|Padrão|O nome do banco de dados a ser criado para o Banco de Dados de Aplicativo de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome de banco de dados padrão é baseado no nome de aplicativo de serviço, seguido por um GUID para garantir um nome exclusivo. Você pode substituir um valor diferente na ferramenta.|  
 |**Criar Aplicativo Web Padrão**|Nome do Aplicativo Web|Padrão, se necessário|Se nenhum aplicativo Web existir, a ferramenta criará um. O aplicativo Web será configurado para a autenticação de modo clássico e escutará na porta 80. O tamanho máximo de carregamento de arquivo é definido para 2047, o máximo permitido pelo SharePoint. O maior tamanho de carregamento de arquivo é para acomodar os arquivos grandes do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que serão carregados no servidor.|  
@@ -129,7 +129,7 @@ ms.locfileid: "36006007"
 ||Servidor de Banco de Dados|Padrão, se necessário|A instância de banco de dados padrão é pré-selecionada para armazenar o banco de dados de conteúdo do aplicativo, mas você pode especificar uma instância do SQL Server diferente na ferramenta.|  
 ||Nome do Banco de Dados|Padrão, se necessário|O nome do banco de dados do aplicativo. O nome de banco de dados é baseado nas convenções de nomenclatura de arquivo de SharePoint, mas você pode escolher um nome diferente.|  
 |**Implantar Solução de Aplicativo Web**|URL|Padrão, se necessário|A URL padrão é do aplicativo Web padrão.|  
-||Tamanho Máximo do Arquivo (em MB)|Padrão, se necessário|A configuração padrão é 2047. As bibliotecas de documentos do SharePoint também têm um tamanho máximo, e a configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não deve exceder a configuração da biblioteca de documentos. Para obter mais informações, consulte [configurar tamanho máximo do arquivo de carregamento &#40;PowerPivot para SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|  
+||Tamanho Máximo do Arquivo (em MB)|Padrão, se necessário|A configuração padrão é 2047. As bibliotecas de documentos do SharePoint também têm um tamanho máximo, e a configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não deve exceder a configuração da biblioteca de documentos. Para obter mais informações, consulte [configurar o tamanho máximo do arquivo de carregamento &#40;PowerPivot para SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|  
 |**Criar Coleção de Sites**|Administrador do Site|Padrão, se necessário|A ferramenta usa a conta padrão. Você pode anulá-la na página **Criar Coleção de Sites** .|  
 ||Contact Email|Padrão, se necessário|Se o Microsoft Outlook estiver configurado no servidor, a ferramenta usará o endereço de email do usuário atual. Caso contrário, um valor de espaço reservado será usado.|  
 ||URL de site|Padrão, se necessário|A ferramenta cria uma URL de site, usando as mesmas convenções de nomenclatura de URL que o SharePoint.|  
@@ -144,7 +144,7 @@ ms.locfileid: "36006007"
 ||Frase Secreta|Entradas de usuário|A chave mestra é usada para criptografia de dados. Por padrão, a frase secreta usada para gerar a chave é a mesma que é usada para provisionar novos servidores no farm. Você pode substituir a frase secreta padrão por uma frase secreta exclusiva.|  
 |**Criar Conta Autônoma para DataRefresh**|ID do Aplicativo de Destino|Padrão, se necessário|Crie um aplicativo de destino para armazenar as credenciais para a atualização de dados autônoma do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> A ID do aplicativo pode ser um texto descritivo.|  
 ||Nome Amigável para Aplicativo de Destino|Padrão, se necessário||  
-||Nome de Usuário e Senha da Conta Autônoma|Padrão, se necessário|Digite as credenciais de uma conta de usuário do Windows que é usada pelo aplicativo de destino para executar a atualização de dados autônoma. Para obter mais informações, consulte [de atualização de dados de configuração dos serviços Excel, usando a conta de serviço autônoma no SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/library/hh525344(office.15).aspx).|  
+||Nome de Usuário e Senha da Conta Autônoma|Padrão, se necessário|Digite as credenciais de uma conta de usuário do Windows que é usada pelo aplicativo de destino para executar a atualização de dados autônoma. Para obter mais informações, consulte [atualização de dados de configuração dos serviços Excel, usando a conta de serviço autônoma no SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/library/hh525344(office.15).aspx).|  
 ||URL de site|Padrão, se necessário|Digite a URL do site da coleção de sites associada ao aplicativo de destino. Para associar a coleções de sites adicionais, use a Administração Central do SharePoint.|  
 |**Criar Aplicativo de Serviço dos Serviços do Excel**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite um nome de aplicativo de serviço. Um banco de dados de aplicativos de serviço com o mesmo nome será criado no servidor de banco de dados do farm do SharePoint.|  
 |**Configurar Servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome do Aplicativo de Serviço|Padrão, se necessário|Nome do aplicativo de serviço que você digitou na página anterior.|  
@@ -157,7 +157,7 @@ ms.locfileid: "36006007"
  Se a ferramenta criar uma coleção de sites, criará um banco de dados de conteúdo no servidor de banco de dados, usando as mesmas convenções de nomenclatura de arquivo que o SharePoint. Não é possível alterar o nome do banco de dados do conteúdo.  
   
 ## <a name="verify-the-configuration"></a>Verificar a configuração  
- Consulte o "verificar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuração" seção [PowerPivot configurar e implantar soluções &#40;SharePoint 2013&#41;](../instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+ Consulte o "Verify [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuração" seção de [configurar o PowerPivot e implantar soluções &#40;SharePoint 2013&#41;](../instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
 ##  <a name="bkmk_nextsteps"></a> Próximas etapas  
  Depois de concluir a instalação do servidor, há várias tarefas pós-instalação que devem ser executadas:  
@@ -173,7 +173,7 @@ ms.locfileid: "36006007"
 ### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Conceder permissões do SharePoint a usuários de pastas de trabalho  
  Os usuários precisarão de permissões do SharePoint para publicar ou exibir pastas de trabalho. Conceda permissões de **Exibição** a usuários que precisam exibir pastas de trabalho publicadas e permissões de **Colaboração** a usuários que publicam ou gerenciam pastas de trabalho. Você deve ser um administrador do conjunto de sites para conceder permissões.  
   
-1.  Em um site do SharePoint 2013, clique no ícone configurações ![configurações SharePoint](../media/as-sharepoint2013-settings-gear.gif "configurações SharePoint") e, em seguida, clique em **configurações do Site**.  
+1.  Em um site do SharePoint 2013, clique no ícone de configurações ![SharePoint Settings](../media/as-sharepoint2013-settings-gear.gif "configurações do SharePoint") e, em seguida, clique em **configurações de Site**.  
   
 2.  Clique em **Permissões de Site** no grupo de **Usuários e Permissões** .  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36006007"
 4.  Insira o usuário de domínio do Windows ou as contas do grupo que devem ter associação nos grupos. Como anteriormente, não use endereços de email ou grupos de distribuição se o aplicativo estiver configurado para autenticação clássica.  
   
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>Instalar provedores de dados usados na atualização de dados e verificar permissões de usuário  
- A atualização de dados do servidor permite que os usuários reimportem dados atualizados para suas pastas de trabalho no modo autônomo. Para que a atualização de dados seja bem-sucedida, o servidor executando o Analysis Services no modo do SharePoint deverá ter os mesmos provedores de dados que foram usados originalmente para importar os dados. Além disso, a conta de usuário na qual a atualização de dados é executada frequentemente requer permissões de leitura nas fontes de dados externas. Verifique os requisitos para habilitar e configurar a atualização de dados para garantir êxito no resultado. Para obter mais informações, consulte [atualização de dados do PowerPivot com o SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md).  
+ A atualização de dados do servidor permite que os usuários reimportem dados atualizados para suas pastas de trabalho no modo autônomo. Para que a atualização de dados seja bem-sucedida, o servidor executando o Analysis Services no modo do SharePoint deverá ter os mesmos provedores de dados que foram usados originalmente para importar os dados. Além disso, a conta de usuário na qual a atualização de dados é executada frequentemente requer permissões de leitura nas fontes de dados externas. Verifique os requisitos para habilitar e configurar a atualização de dados para garantir êxito no resultado. Para obter mais informações, consulte [atualização de dados do PowerPivot com SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 > [!NOTE]  
 >  Para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, os provedores de dados são instalados quando você executa o instalador **spPowerPivot.msi** e a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Para obter mais informações, consulte [instalar ou desinstalar o PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
@@ -196,20 +196,20 @@ ms.locfileid: "36006007"
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>Criar uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  
  Depois de instalar os componentes do servidor em um farm, você poderá criar sua primeira pasta de trabalho do Excel 2013 que usa os dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inseridos e, em seguida, publicá-la em uma biblioteca do SharePoint. Opcionalmente, você pode carregar ou publicar uma pasta de trabalho de exemplo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para verificar o acesso a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint. Para obter mais informações, consulte o seguinte:  
   
--   [Novidades no PowerPivot no Excel 2013](http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1) (http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1).  
+-   [Quais são as novidades no PowerPivot no Excel 2013](http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1) (http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1).  
   
--   [Iniciar o PowerPivot no Excel 2013 em](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
+-   [Iniciar o PowerPivot no suplemento do Excel 2013](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>Adicionar mais servidores do Analysis Services no modo do SharePoint  
  Com o tempo, se você determinar a necessidade de armazenamento de dados e recursos de processamento adicionais, poderá adicionar mais servidores executando o Analysis Services no modo do SharePoint ao farm. Para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, instale novos servidores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo do SharePoint e configure os Serviços do Excel. Para obter mais informações, consulte a seção "Além da instalação de servidor único" de [PowerPivot para SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## <a name="additional-resources"></a>Recursos adicionais  
- ![Configurações do SharePoint](../media/as-sharepoint2013-settings-gear.gif "configurações SharePoint") [enviar comentários e informações de contato pelo Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Configurações do SharePoint](../media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [enviar comentários e informações de contato pelo Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar ou desinstalar o PowerPivot para SharePoint suplemento &#40;do SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Instalar ou desinstalar o PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Ferramentas de configuração do PowerPivot](power-pivot-configuration-tools.md)   
  [Administração de servidor do PowerPivot e a configuração na Administração Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Atualizar pastas de trabalho e atualização de dados agendada &#40;do SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [Atualizar pastas de trabalho e atualização de dados agendada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

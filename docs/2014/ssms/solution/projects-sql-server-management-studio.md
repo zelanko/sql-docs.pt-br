@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aab5b3302737c60b979bd8cc46cd69c0d388f47a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42bd9b05733ab097d09a9b9e7b8a6c18f2056c5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230036"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projetos (SQL Server Management Studio)
   Um projeto do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é uma coleção de scripts e arquivos logicamente relacionados que podem ser salvos em conjunto para administração e desenvolvimento de bancos de dados.  

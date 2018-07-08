@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys XML schema collections [SQL Server]
 - schema collections [SQL Server], predefined
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e9b4ce24b760a736443102adff7b8ee3647a69cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1e75d8335ebf5313b1f0df67144aaef6216eb445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160147"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Referenciar a coleção de esquemas XML interna (sys)
   Todo banco de dados que você cria tem uma coleção de esquema XML **sys** predefinido no esquema relacional **sys** . Ele reserva esses esquemas predefinidos que podem ser acessados de qualquer outra coleção de esquema XML criada pelo usuário. Os prefixos usados nesses esquemas predefinidos são significativos em XQuery. Apenas **xml** é um prefixo reservado.  

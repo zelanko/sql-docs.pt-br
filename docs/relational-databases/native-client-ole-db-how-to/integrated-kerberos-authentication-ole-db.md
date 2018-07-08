@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 425850106e421e3fb763e3285a44f2894f39ef91
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d0c722646c43b6b7016412540b00dbecdf667db8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694567"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409825"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticação integrada do Kerberos (BD OLE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "35694567"
 
   Este exemplo mostra como obter autenticação mútua do Kerberos usando o OLE DB em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
   
- Para obter mais informações sobre autenticação SPNs e Kerberos, consulte [Service Principal Name &#40;SPN&#41; suporte em conexões de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obter mais informações sobre autenticação SPNs e Kerberos, consulte [nome da entidade de serviço &#40;SPN&#41; suporte em conexões de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Exemplo  
  Você deve especificar um servidor. No arquivo .cpp, altere "MyServer" para um nome de máquina que tenha uma instância do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior).  

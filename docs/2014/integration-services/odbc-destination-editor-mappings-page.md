@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 643839367680f6c967610277f8abfb251513c2e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e97a2a74fdd0b764410340f87c5d10e02f06b20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156547"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de Destino ODBC (página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **ODBC Destination Editor (Editor de Destino ODBC)** para mapear colunas de entrada para colunas de destino.  
@@ -43,7 +43,7 @@ ms.locfileid: "36006871"
  Exiba todas as colunas de destino disponíveis, mapeadas e não mapeadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de destino ODBC &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [Editor de destino ODBC &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor de destino ODBC &#40;página de saída de erro&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

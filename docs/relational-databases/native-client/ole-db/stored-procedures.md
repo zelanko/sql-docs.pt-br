@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4737aad3f4a5bd7cd4807155321574f9f864d44d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bf328072f8719bc88dbee956b89399b92d987e5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950091"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409676"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Um procedimento armazenado ([procedimentos armazenados & #40; mecanismo de banco de dados & #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  
+  Um procedimento armazenado ([procedimentos armazenados &#40;mecanismo de banco de dados&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  
   
 -   Procedimentos armazenados  
   
@@ -44,9 +44,9 @@ ms.locfileid: "32950091"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Em execução procedimentos armazenados & #40; OLE DB & #41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
+-   [Executando procedimentos armazenados &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
--   [Chamar um procedimento armazenado & #40; OLE DB & #41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
+-   [Chamar um procedimento armazenado &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

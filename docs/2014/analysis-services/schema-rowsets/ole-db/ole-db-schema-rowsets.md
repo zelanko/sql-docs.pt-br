@@ -20,18 +20,18 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161187"
 ---
 # <a name="ole-db-schema-rowsets"></a>Conjuntos de linhas do esquema OLE DB
-  Os conjuntos de linhas do esquema OLE DB a seguir são suportados pelo provedor de XMLA (XML for Analysis) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Use o `DISCOVER_ENUMERATORS` conjunto de linhas com o [Discover](../../xmla/xml-elements-methods-discover.md) método para verificar se um provedor de fonte de dados específico oferece suporte a um conjunto de linhas.  
+  Os conjuntos de linhas do esquema OLE DB a seguir são suportados pelo provedor de XMLA (XML for Analysis) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Use o `DISCOVER_ENUMERATORS` conjunto de linhas com o [Discover](../../xmla/xml-elements-methods-discover.md) método para verificar se um provedor de fonte de dados específico dá suporte a um conjunto de linhas.  
   
  Você também poderá encontrar informações detalhadas sobre esses conjuntos de linhas pesquisando o tópico (Conjuntos de linhas do esquema" na parte de referência do programador de OLE DB da MSDN® Library, no site do [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36010112"
 |`DBSCHEMA_COLLATIONS`|Identifica os agrupamentos de caracteres definidos no catálogo e acessíveis para um determinado usuário.|  
 |`DBSCHEMA_COLUMN_DOMAIN_USAGE`|Identifica as colunas definidas no catálogo dependentes em um domínio definido no catálogo e que são propriedade de um determinado usuário.|  
 |`DBSCHEMA_COLUMN_PRIVILEGES`|Identifica os privilégios em colunas de tabelas definidas no catálogo e que estão disponíveis para um determinado usuário ou que foram concedidos por ele.|  
-|[Linhas de DBSCHEMA_COLUMNS](dbschema-columns-rowset.md) <sup>1</sup>|Oferece informações de coluna por todas as colunas que atendem aos critérios de restrição fornecidos.|  
+|[Conjunto de linhas DBSCHEMA_COLUMNS](dbschema-columns-rowset.md) <sup>1</sup>|Oferece informações de coluna por todas as colunas que atendem aos critérios de restrição fornecidos.|  
 |`DBSCHEMA_CONSTRAINT_COLUMN_USAGE`|Identifica as colunas usadas por restrições referenciais, restrições exclusivas, restrições de verificação e asserções definidas no catálogo e que são propriedade de um determinado usuário.|  
 |`DBSCHEMA_CONSTRAINT_TABLE_USAGE`|Identifica as tabelas usadas por restrições referenciais, restrições exclusivas, restrições de verificação e asserções definidas no catálogo e que são propriedade de um determinado usuário.|  
 |`DBSCHEMA_FOREIGN_KEYS`|Identifica as colunas de chave estrangeira definidas no catálogo por um determinado usuário. Esse conjunto de linhas do esquema é compilado em várias exibições do esquema ISO como uma conveniência ao programador de linguagens diferentes de SQL. Se suportado, esse conjunto de linhas do esquema deverá ser sincronizado com as exibições ISO relacionadas (`REFERENTIAL_CONSTRAINTS` e `CONSTRAINT_COLUMN_USAGE`).|  
@@ -65,7 +65,7 @@ ms.locfileid: "36010112"
 |`DBSCHEMA_TABLE_CONSTRAINTS`|Identifica as restrições de tabela definidas no catálogo e que são propriedade de um determinado usuário.|  
 |`DBSCHEMA_TABLE_PRIVILEGES`|Identifica os privilégios em tabelas definidas no catálogo e que estão disponíveis para um determinado usuário ou que foram concedidos por ele.|  
 |`DBSCHEMA_TABLE_STATISTICS`|Descreve o conjunto de estatísticas disponível em tabelas no provedor.<br /><br /> Esse conjunto de linhas não está relacionado ao conjunto de linhas `STATISTICS`.|  
-|[Conjunto de linhas DBSCHEMA_TABLES](dbschema-tables-rowset.md) <sup>1</sup>|Identifica os grupos de medidas e dimensões expostos como tabelas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Conjunto de linhas DBSCHEMA_TABLES](dbschema-tables-rowset.md) <sup>1</sup>|Identifica os grupos de medidas e dimensões expostas como tabelas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |`DBSCHEMA_TABLES_INFO` <sup>1</sup>|Identifica as tabelas (incluindo as exibições) definidas no catálogo e acessíveis a um determinado usuário.|  
 |`DBSCHEMA_TRANSLATIONS`|Identifica as traduções de caracteres definidas no catálogo e acessíveis para um determinado usuário.|  
 |`DBSCHEMA_TRUSTEE`|Enumera os objetos de confiança para uma fonte de dados.|  

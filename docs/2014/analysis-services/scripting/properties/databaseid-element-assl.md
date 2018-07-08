@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c74e39a1a5696576b77ff9a2eb74e062cb2f3475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161127"
 ---
 # <a name="databaseid-element-assl"></a>Elemento DatabaseID (ASSL)
   Identifica o [banco de dados](../objects/database-element-assl.md) elemento associado a uma limite de linha [associação](../data-type/binding-data-type-assl.md) elemento.  
@@ -60,7 +60,7 @@ ms.locfileid: "36006207"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

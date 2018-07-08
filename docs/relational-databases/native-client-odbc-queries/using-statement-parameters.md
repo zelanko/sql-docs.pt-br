@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7741fc9a8b4de583055a5afccb0bc31d54b50406
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698497"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418815"
 ---
 # <a name="using-statement-parameters"></a>Usando parâmetros de instrução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "35698497"
   
 -   Aprimorar a interação do usuário na construção dos critérios de consulta.  
   
--   Gerenciar **texto**, **ntext**, e **imagem** dados e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipos de dados C específicos.  
+-   Gerencie **texto**, **ntext**, e **imagem** dados e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipos de dados C específicos.  
   
- Por exemplo, um **partes** tabela com colunas nomeadas **PartID**, **descrição**, e **preço**. Adicionar uma parte sem parâmetros exige a criação de uma instrução SQL como, por exemplo:  
+ Por exemplo, uma **partes** tabela tem colunas nomeadas **PartID**, **descrição**, e **preço**. Adicionar uma parte sem parâmetros exige a criação de uma instrução SQL como, por exemplo:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

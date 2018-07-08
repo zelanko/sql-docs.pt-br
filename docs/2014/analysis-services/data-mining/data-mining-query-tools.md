@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159647"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de Consulta de Mineração de Dados
   Consultas de mineração de dados são baseadas na linguagem DMX. Você usa DMX para todas as tarefas de previsão e modelagem, inclusive classificação, análise de risco, geração de recomendações e regressão linear. Você também pode recuperar os padrões e as estatísticas que foram geradas quando processou o modelo.  
@@ -98,7 +98,7 @@ ms.locfileid: "36006244"
  [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Soluções de mineração de dados](data-mining-solutions.md)   
  [Noções básicas sobre a instrução DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
- [Estrutura e o uso de consultas de previsão DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [Estrutura e uso de consultas de previsão DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
  [Criar uma consulta de previsão usando o construtor de consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Criar uma consulta DMX no SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   

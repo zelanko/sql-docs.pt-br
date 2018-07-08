@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectvariables.f1
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f833d901a54770c2d4f52aad74a4138a0edb5b66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97bebe59b2f7a0f3487b9cd32f473bdbd63c1812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182933"
 ---
 # <a name="select-variables"></a>Selecionar variáveis
   Use a caixa de diálogo **Selecionar Variáveis** para especificar as variáveis a serem usadas em uma operação de envio de mensagem na tarefa Fila de Mensagens. A lista das **Variáveis Disponíveis** inclui variáveis do sistema e aquelas definidas por usuários que estão no escopo da tarefa Fila de Mensagens ou no seu contêiner pai. A tarefa usa as variáveis da lista de **Variáveis Selecionadas** .  

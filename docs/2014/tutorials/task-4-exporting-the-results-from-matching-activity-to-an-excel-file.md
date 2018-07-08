@@ -10,31 +10,31 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 440e8c0db00d5087334746f4094c61de52bf1bc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13fcd1b697be6ad7aeebd933da1059955dc0649f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178975"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarefa 4: Exportando os resultados da atividade de correspondência para um arquivo do Excel
   Nesta tarefa, você exportará os resultados da atividade de correspondência para um arquivo do Excel.  
   
 1.  No **exportar** página, selecione **arquivo do Excel** para o **tipo de destino**.  
   
-2.  Selecione **resultados de sobrevivência** opção. No processo de sobrevivência, o DQS determina o registro sobrevivente para cada cluster de acordo com o **regra de sobrevivência** selecionada.  
+2.  Selecione **resultados de sobrevivência** opção. No processo de sobrevivência, o DQS determina o registro sobrevivente para cada cluster de acordo com o **regra de sobrevivência** você selecionou.  
   
 3.  Clique em **procurar** e navegue até a pasta onde você deseja armazenar o arquivo de saída.  
   
-4.  Tipo **Cleansed and Matched Suppliers.xls** para o nome e clique em **abrir**.  
+4.  Tipo de **Cleansed and Matched Suppliers. xls** para o nome e clique **abrir**.  
   
-5.  Confirme se **registro dinâmico** é selecionado para o **regra de sobrevivência**. Quando você selecionar essa opção, o registro dinâmico de cada cluster será escolhido como a saída de um cluster. As outras opções para a Regra de Sobrevivência são:  
+5.  Confirme **registro dinâmico** está selecionado para o **regra de sobrevivência**. Quando você selecionar essa opção, o registro dinâmico de cada cluster será escolhido como a saída de um cluster. As outras opções para a Regra de Sobrevivência são:  
   
     1.  **Registro mais completo:** o registro sobrevivente é aquele com o maior número de campos populados.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "36007823"
   
 6.  Clique em **exportar** para exportar os resultados para um arquivo do Excel.  
   
-7.  Clique em **fechar** para fechar o **exportação de correspondência** caixa de diálogo.  
+7.  Clique em **feche** para fechar o **exportação de correspondência** caixa de diálogo.  
   
 8.  Clique em **concluir** para concluir a atividade de correspondência.  
   
-9. Abra o **Cleansed and Matched Suppliers.xlsx** de arquivo e confirme se você não vir nenhuma duplicata (SupplierID).  
+9. Abra o **Cleansed and Matched Suppliers** de arquivo e confirme que você não vir nenhuma duplicata (SupplierID).  
   
  Agora, você tem dados de fornecedor que foram limpos e correspondidos para remover duplicatas.  
   

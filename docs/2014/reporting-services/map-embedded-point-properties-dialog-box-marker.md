@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1
 - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 130f98da637b0064100639e5fb2cffbd785663a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b73e0a549d0bb0b4e97fbace001ea9f428e87425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168077"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Caixa de diálogo Mapear Propriedades de Ponto Inserido, Marcador
   Selecione **Marcador** na caixa de diálogo **Propriedades de Ponto Inserido** para alterar o tipo e as opções de tamanho de marcador dos seguintes elementos do mapa:  

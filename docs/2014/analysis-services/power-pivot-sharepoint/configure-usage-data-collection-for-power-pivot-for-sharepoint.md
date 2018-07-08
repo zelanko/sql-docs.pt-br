@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149747"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar a coleta de dados de uso para o PowerPivot para SharePoint
   A coleta de dados de uso é um recurso do SharePoint em nível de farm. O PowerPivot para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento PowerPivot que mostram como os dados e serviços PowerPivot são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento PowerPivot.  
   
- Para obter informações sobre os dados de uso no painel de gerenciamento do PowerPivot, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Para obter informações sobre o uso de dados no painel de gerenciamento PowerPivot, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Neste tópico:**  
   
@@ -62,8 +62,8 @@ ms.locfileid: "36007804"
     |-----------|-----------------|  
     |**Conexões do PowerPivot**|O evento Conexão do PowerPivot é usado para monitorar conexões de servidor do PowerPivot que são feitas em nome de um usuário.|  
     |**Uso de dados de carregamento do PowerPivot**|O Uso de Dados de Carregamento do PowerPivot é usado para monitorar solicitações que carregam dados PowerPivot na memória do servidor. Um evento de carregamento é gerado para arquivos de dados PowerPivot carregados de um banco de dados de conteúdo ou do cache.|  
-    |**Uso de dados de descarregamento do PowerPivot**|O Uso de Dados de Descarregamento do PowerPivot é usado para monitorar solicitações de descarregamento de uma fonte de dados PowerPivot após um período de inatividade. O armazenamento em cache de uma fonte de dados PowerPivot no disco será relatado como um evento de descarregamento.|  
-    |**Uso de consultas do PowerPivot**|O uso de consulta do PowerPivot é usado para monitorar os tempos de processamento dos dados carregados em um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância.|  
+    |**Uso de dados de descarregamentos do PowerPivot**|O Uso de Dados de Descarregamento do PowerPivot é usado para monitorar solicitações de descarregamento de uma fonte de dados PowerPivot após um período de inatividade. O armazenamento em cache de uma fonte de dados PowerPivot no disco será relatado como um evento de descarregamento.|  
+    |**Uso de consultas do PowerPivot**|Uso de consulta do PowerPivot é usado para monitorar os tempos de processamento dos dados que são carregados em um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância.|  
   
     > [!NOTE]  
     >  As operações de integridade do servidor e atualização de dados também geram dados de uso, mas não há evento associado com esses processos.  
@@ -72,7 +72,7 @@ ms.locfileid: "36007804"
   
 6.  Clique em **OK** para salvar as alterações.  
   
-7.  Opcionalmente, você pode especificar se todas as mensagens ou apenas erros são registrados em log. Para obter mais informações sobre como as mensagens de eventos de limitação, consulte [configurar e exibir arquivos de Log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
+7.  Opcionalmente, você pode especificar se todas as mensagens ou apenas erros são registrados em log. Para obter mais informações sobre como acelerar as mensagens de evento, consulte [configurar e exibir arquivos de Log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Definir local do arquivo de log  
  Os dados de uso do PowerPivot são armazenados inicialmente em arquivos de log de uso no servidor local e movidos em intervalos regulares para os bancos de dados de aplicativo de serviço PowerPivot. O local do arquivo de log é definido na Administração Central. O local padrão é:  
@@ -194,7 +194,7 @@ ms.locfileid: "36007804"
 |Limite Superior de Respostas Demoradas|10000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta demorada. Qualquer solicitação que exceda esse limite superior entrará na categoria Excedida, que não tem limite superior.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de parâmetro de configuração &#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [Referência de definição de configuração &#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Coleta de dados de uso do PowerPivot](power-pivot-usage-data-collection.md)  
   
   

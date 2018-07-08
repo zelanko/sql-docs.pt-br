@@ -1,12 +1,12 @@
 ---
-title: Atribuição de armazenamento | Microsoft Docs
+title: Atribuindo armazenamento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1c9a317e57367b43a59219b830acfd8f0276e8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: da602e1613a6fafa86f1f6a701731c232aadfceb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695777"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417835"
 ---
 # <a name="assigning-storage"></a>Atribuindo armazenamento
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35695777"
 
   Um aplicativo pode atribuir armazenamento para resultados antes ou depois de executar uma instrução SQL. Caso prepare ou execute a instrução SQL primeiro, um aplicativo pode consultar o conjunto de resultados antes de atribuir o armazenamento para resultados. Por exemplo, caso o conjunto de resultados seja desconhecido, o aplicativo deve recuperar o número de colunas antes de atribuir o armazenamento a eles.  
   
- Para associar o armazenamento para uma coluna de dados, um aplicativo chama [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)e passá-lo:  
+ Para associar o armazenamento para uma coluna de dados, um aplicativo chama [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)e passa-o:  
   
 -   O tipo de dados no qual os dados serão convertidos.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "35695777"
   
 -   A associação que reconhece a linha é concluída quando todos os parâmetros na instrução SQL são associados como uma unidade a uma matriz de estruturas que contêm as variáveis individuais dos parâmetros.  
   
-     A associação é especificada chamando **SQLSetStmtAttr** com *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como o tamanho reter a estrutura de colunas do conjunto de variáveis que receberão o resultado.  
+     A associação é especificada chamando **SQLSetStmtAttr** com *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como o tamanho do contendo a estrutura de colunas do conjunto de variáveis que receberão o resultado.  
   
  O aplicativo também define SQL_ATTR_ROW_ARRAY_SIZE como o número de elementos nas matrizes da coluna ou da linha e define SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   

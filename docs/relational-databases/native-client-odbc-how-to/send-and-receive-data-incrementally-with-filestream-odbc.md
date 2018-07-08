@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3267c075263601ab2ed5e799a341595cf390367
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 76a02beccc609c62267594e7f3512e8f0e395157
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694537"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428495"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Enviar e receber dados de forma incremental com FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "35694537"
  Para obter mais informações sobre o recurso FILESTREAM, consulte [suporte a FILESTREAM &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Exemplo  
- Antes de compilar e executar esse exemplo, habilitar o suporte a FILESTREAM ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Antes de compilar e executar esse exemplo, habilitar o suporte a FILESTREAM ([habilitar e configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria um banco de dados usado por este exemplo. Sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter acesso de gravação para executar este script (por exemplo, faça logon como uma conta de sistema local).  
   

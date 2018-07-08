@@ -1,12 +1,12 @@
 ---
-title: Propriedades do cursor | Microsoft Docs
+title: Propriedades de cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba666ea1e5d0bebf204f0c07e6bb5b61a71bbe1d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ea0781aedfc87094d23336a4c6c0fdfba6d6e1a8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694797"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418355"
 ---
 # <a name="cursor-properties"></a>Propriedades do cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "35694797"
 -   [Nível de isolamento da transação de cursor](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Usar cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Uso de cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

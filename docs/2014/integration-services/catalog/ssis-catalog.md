@@ -8,39 +8,39 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a4d66ee27fbd3482ab51f27753355a585c58def
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160907"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
   O `SSISDB` catálogo é o ponto central para trabalhar com [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projetos (SSIS) que você implantou o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Os objetos que são armazenados no `SSISDB` catálogo incluem projetos, pacotes, parâmetros, ambientes e histórico operacional.  
+ Os objetos que são armazenados em do `SSISDB` catálogo incluem projetos, pacotes, parâmetros, ambientes e histórico operacional.  
   
- Você inspeciona objetos, configurações e dados operacionais que são armazenados na `SSISDB` catálogo, consultando as exibições no `SSISDB` banco de dados. Gerenciar os objetos chamando procedimentos armazenados `SSISDB` de banco de dados ou usando a interface de usuário da `SSISDB` catálogo. Em muitos casos, a mesma tarefa pode ser executada na interface de usuário ou chamando um procedimento armazenado.  
+ Inspecionar objetos, configurações e dados operacionais que são armazenados em do `SSISDB` catálogo, consultando as exibições no `SSISDB` banco de dados. Gerenciar os objetos chamando procedimentos armazenados `SSISDB` do banco de dados ou, usando a interface do usuário a `SSISDB` catálogo. Em muitos casos, a mesma tarefa pode ser executada na interface de usuário ou chamando um procedimento armazenado.  
   
  Para manter o banco de dados `SSISDB`, é recomendado que você aplique políticas empresariais padrão para gerenciar os bancos de dados de usuários. Para obter informações sobre como criar planos de manutenção, consulte [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- O `SSISDB` catálogo e o `SSISDB` suporte de banco de dados do Windows PowerShell. Para obter mais informações sobre como usar o SQL Server com Windows PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Para obter exemplos de como usar o Windows PowerShell para concluir tarefas como implantar um projeto, consultar a entrada de blog, [SSIS e PowerShell no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)em blogs.msdn.com.  
+ O `SSISDB` catálogo e o `SSISDB` banco de dados dão suporte ao Windows PowerShell. Para obter mais informações sobre como usar o SQL Server com Windows PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Para obter exemplos de como usar o Windows PowerShell para concluir tarefas como implantar um projeto, consultar a entrada de blog, [SSIS e PowerShell no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)em blogs.msdn.com.  
   
- Para obter mais informações sobre como exibir dados de operações, consulte [monitorando execuções de pacotes e outras operações](../performance/monitor-running-packages-and-other-operations.md).  
+ Para obter mais informações sobre como exibir dados de operações, consulte [monitoramento para execuções de pacote e outras operações](../performance/monitor-running-packages-and-other-operations.md).  
   
- Você acessar o `SSISDB` catálogo em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conectando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados e, em seguida, o **catálogos do Integration Services** nó no Pesquisador de objetos. Você acessa o `SSISDB` banco de dados [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] expandindo o nó bancos de dados no Pesquisador de objetos.  
+ Você acessar o `SSISDB` do catálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conectando-se para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados e, em seguida, expandindo o **catálogos do Integration Services** nó no Pesquisador de objetos. Você acessa o `SSISDB` banco de dados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] expandindo o nó bancos de dados no Pesquisador de objetos.  
   
 > [!NOTE]  
 >  Não é possível renomear o `SSISDB` banco de dados.  
   
 > [!NOTE]  
->  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância em que o `SSISDB` banco de dados é anexado para ou não responder, o ISServerExec.exe termina de processar. Uma mensagem é gravada em um log de Eventos do Windows.  
+>  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da instância que o `SSISDB` banco de dados é anexado para ou não responder, o ISServerExec.exe processo terminar. Uma mensagem é gravada em um log de Eventos do Windows.  
 >   
 >  Se os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizarem failover como parte de um failover de cluster, os pacotes de execução não serão reiniciados. Você pode usar pontos de verificação para reiniciar pacotes. Para saber mais, confira [Reiniciar pacotes por meio de pontos de verificação](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -98,18 +98,18 @@ ms.locfileid: "36007340"
   
  Você pode atualizar ou reimplantar um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implantando-o com o mesmo nome na mesma pasta do catálogo. Por padrão, cada vez que você reimplanta um projeto, o `SSISDB` catálogo retém a versão anterior do projeto. Para manter o tamanho dos dados de operações, o **Trabalho de Manutenção do Servidor SSIS** é usado para remover versões antigas de projetos.  
   
- O seguinte `SSISDB` propriedades do catálogo definem como este [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente se comporta. Você pode exibir e modificar as propriedades usando a caixa de diálogo **Propriedades do Catálogo** ou usando [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) e [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ O seguinte `SSISDB` propriedades do catálogo definem como este [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho Agent se comporta. Você pode exibir e modificar as propriedades usando a caixa de diálogo **Propriedades do Catálogo** ou usando [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) e [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Limpar Logs Periodicamente**  
- A etapa de trabalho para limpeza de operações é executado quando esta propriedade é definida como `True`.  
+ A etapa de trabalho para limpeza de operações é executada quando esta propriedade é definida como `True`.  
   
  **Período de Retenção (dias)**  
  Define a idade máxima dos dados de operações permitidos (em dias). Os dados mais antigos são removidos.  
   
- O valor mínimo é um dia. O valor máximo é limitado somente pelo valor máximo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` dados. Para obter informações sobre esse tipo de dados, consulte [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
+ O valor mínimo é um dia. O valor máximo é limitado somente pelo valor máximo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` dados. Para obter informações sobre esse tipo de dados, consulte [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Remover Periodicamente Versões Antigas**  
- A etapa de trabalho de limpeza de versão do projeto é executado quando esta propriedade é definida como `True`.  
+ A etapa de trabalho para limpeza de versão do projeto é executado quando esta propriedade é definida como `True`.  
   
  **Número Máximo de Versões por Projeto**  
  Define quantas versões de um projeto são armazenadas no catálogo. As versões de projetos mais antigas são removidas.  
@@ -135,7 +135,7 @@ ms.locfileid: "36007340"
   
  Alterar o algoritmo de criptografia é uma operação demorada. Primeiro, o servidor tem que usar o algoritmo previamente especificado para descriptografar todos os valores de configuração. Em seguida, o servidor tem que usar o novo algoritmo para criptografar novamente os valores. Durante este momento, não pode haver outras operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor. Assim, para permitir que operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continuem ininterruptas, o algoritmo de criptografia deverá ser um valor somente leitura na caixa de diálogo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Para alterar o **algoritmo de criptografia** configuração de propriedade, defina o `SSISDB` do banco de dados para o modo de usuário único e, em seguida, chame o procedimento armazenado de Catalog. configure_catalog. Use ENCRYPTION_ALGORITHM para o argumento *property_name* . Para os valores de propriedade com suporte, consulte [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para obter mais informações sobre o procedimento armazenado, consulte [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Para alterar o **algoritmo de criptografia** configuração da propriedade, defina o `SSISDB` do banco de dados para o modo de usuário único e, em seguida, chamar o procedimento armazenado de Catalog. configure_catalog. Use ENCRYPTION_ALGORITHM para o argumento *property_name* . Para os valores de propriedade com suporte, consulte [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para obter mais informações sobre o procedimento armazenado, consulte [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Para obter mais informações sobre o modo de usuário único, veja [Definir um banco de dados como modo de usuário único](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Para obter informações sobre criptografia e algoritmos de criptografia no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte os tópicos na seção [Criptografia do SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36007340"
 |Nível de Log Padrão em Todo o Servidor|SERVER_LOGGING_LEVEL|  
   
 ## <a name="permissions"></a>Permissões  
- Os projetos, ambientes e pacotes são armazenados em pastas, que são objetos protegíveis. Você pode conceder permissões a uma pasta, incluindo a permissão MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS permite delegar a administração do conteúdo da pasta a um usuário sem precisar conceder a associação do usuário à função ssis_admin. Você também pode conceder permissões para projetos, ambientes e operações. Operações incluem a inicialização [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], implantação de projetos, criar e iniciar execuções, validar projetos e pacotes e configurar o `SSISDB` catálogo.  
+ Os projetos, ambientes e pacotes são armazenados em pastas, que são objetos protegíveis. Você pode conceder permissões a uma pasta, incluindo a permissão MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS permite delegar a administração do conteúdo da pasta a um usuário sem precisar conceder a associação do usuário à função ssis_admin. Você também pode conceder permissões para projetos, ambientes e operações. As operações incluem Inicializando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], implantação de projetos, criação e inicialização de execuções, validar projetos e pacotes e configurando o `SSISDB` catálogo.  
   
  Para obter mais informações sobre as funções de banco de dados, veja [Funções no nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36007340"
   
  Se a entidade de segurança tiver concedido ou negado permissões a outras entidades de segurança, revogue as permissões dadas pelo concessor, para que a entidade de segurança possa ser removida. Caso contrário, uma mensagem de erro será retornada quando o sistema tentar remover a entidade de segurança. O gatilho removerá todos os registros de permissão em que a entidade de segurança de banco de dados é um usuário autorizado.  
   
- É recomendável que o gatilho não está desabilitado porque ele assegura que não haverá nenhum registro de permissão órfão depois que um banco de dados principal é removida do `SSISDB` banco de dados.  
+ É recomendável que o gatilho não seja desabilitado porque ele assegura que não haverá nenhum registro de permissão órfão depois que uma entidade de banco de dados é removida do `SSISDB` banco de dados.  
   
 ### <a name="managing-permissions"></a>Gerenciando permissões  
  Você pode gerenciar permissões usando a interface do usuário do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , procedimentos armazenados e o namespace <xref:Microsoft.SqlServer.Management.IntegrationServices> .  

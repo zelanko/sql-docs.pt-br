@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b865e3a5d5471e1dc638c321c64636b72469f548
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: dd55cc02558987350e0a620ef0c48150465a0c47
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699477"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410285"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Buscando dados de BLOB usando IRow::Open e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Dados grandes podem ser associados ou recuperados por meio de **ISequentialStream** interface. No caso das colunas associadas, o sinalizador de status indicará se os dados estiverem truncados definindo DBSTATUS_S_TRUNCATED.  
+ Dados grandes podem ser associados ou recuperados usando o **ISequentialStream** interface. No caso das colunas associadas, o sinalizador de status indicará se os dados estiverem truncados definindo DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Consulte também  
  [Buscando dados BLOB usando IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  

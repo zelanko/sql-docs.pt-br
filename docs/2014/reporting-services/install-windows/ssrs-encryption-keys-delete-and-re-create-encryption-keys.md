@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
 - encryption keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4d13e42913481fa0470078a26615ab9139447b9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 710ccc6a332e040989142eb9e9252b660982b044
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192996"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Excluir e recriar chaves de criptografia (Gerenciador de configurações do SSRS)
   A exclusão e a recriação de chaves de criptografia são atividades que estão fora da manutenção rotineira da chave de criptografia. Você executa essas tarefas em resposta a uma ameaça específica ao seu servidor de relatórios ou como um último recurso quando não mais puder acessar um banco de dados de servidor de relatórios.  
@@ -113,14 +113,14 @@ ms.locfileid: "36008363"
   
 1.  Para cada fonte de dados compartilhada, você deve digitar novamente a cadeia de caracteres de conexão.  
   
-2.  Para cada relatório e fonte de dados compartilhada que use credenciais armazenadas, você deve digitar novamente o nome do usuário e a senha e depois salvar. Para obter mais informações, consulte [especificar credenciais e informações de Conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+2.  Para cada relatório e fonte de dados compartilhada que use credenciais armazenadas, você deve digitar novamente o nome do usuário e a senha e depois salvar. Para obter mais informações, consulte [especificar credenciais e informações de Conexão para fontes de dados do relatório](../../integration-services/connection-manager/data-sources.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 3.  Para cada assinatura controlada por dados, abra cada assinatura e digite novamente as credenciais do banco de dados de assinatura.  
   
 4.  Para assinaturas que usam dados criptografados (isso inclui a extensão de entrega Compartilhamento de Arquivos e qualquer extensão de entrega de terceiros que use criptografia), abra cada assinatura e digite novamente as credenciais. As assinaturas que usam a entrega de email do Servidor de Relatórios não usam dados criptografados e não são afetadas pela alteração da chave.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Armazenar dados de servidor de relatório criptografados &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Dados do servidor de relatório criptografado de Store &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

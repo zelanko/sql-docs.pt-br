@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ffb61c13b64b086a383b08d5903f0644310b37b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: aaca3a02e03a5ec73a0b37c7c8bebc1c1f850c09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701367"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416935"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Copiar em massa usando um arquivo de formato (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35701367"
   
 3.  Conecte ao Microsoft® SQL Server™.  
   
-4.  Chamar [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
+4.  Chame [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
     -   O nome da tabela ou da exibição da qual ou para a qual será feita a cópia em massa.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "35701367"
   
     -   A direção da cópia: DB_IN do arquivo para a tabela ou exibição.  
   
-5.  Chamar [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) para ler o arquivo de formato que descreve o arquivo de dados a ser usado pela operação de cópia em massa.  
+5.  Chame [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) para ler o arquivo de formato que descreve o arquivo de dados a ser usado pela operação de cópia em massa.  
   
-6.  Chamar [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
+6.  Chame [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo não tem suporte em IA64.  

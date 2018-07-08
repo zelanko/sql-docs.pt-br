@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35bbdd3905166d3814e418149de7cc7c43237721
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d718ca9e4bdc8e7ba9b04dc72653325985d9841b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697637"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424305"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Copiar em massa sem um arquivo de formato (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "35697637"
   
 3.  Conecte-se ao SQL Server.  
   
-4.  Chamar [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
+4.  Chame [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
     -   O nome da tabela ou da exibição da qual ou para a qual será feita a cópia em massa.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35697637"
   
     -   A direção da cópia: DB_IN do arquivo para a exibição ou tabela, ou DB_OUT para o arquivo da tabela ou exibição.  
   
-5.  Chamar [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
+5.  Chame [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
   
  Quando DB_OUT é definido com essas etapas, o arquivo é criado no formato nativo. O arquivo pode ser copiado em massa para um servidor seguindo essas mesmas etapas, a não ser que DB_OUT seja definido em vez de DB_IN. Isso só funcionará se ambas as tabelas (origem e destino) tiverem exatamente a mesma estrutura.  
   

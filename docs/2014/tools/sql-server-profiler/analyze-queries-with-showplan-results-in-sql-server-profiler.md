@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], Showplan
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6102c0284afce0c607f3b80473e654431b799309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ee7efd0626700b5503abd457e32ca5a2160645ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169847"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
   Você pode adicionar classes de eventos de Plano de Execução a uma definição de rastreamento para fazer com que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] reúna e exiba informações do plano de consulta no rastreamento. Também é possível extrair eventos de Plano de Execução de outros eventos coletados no rastreamento e salvá-los em um arquivo XML separado.  

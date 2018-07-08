@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: adf25cd2194e1a02877c38a15d81d8697427ad76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b3c9105d6649443d8ec2d3425f86d609dfe6a2b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151117"
 ---
 # <a name="active-operations-dialog-box"></a>Caixa de diálogo Operações Ativas
   Use a caixa de diálogo **Operações Ativas** para exibir o status de operações do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em execução no momento no servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , como implantação, validação e execução de pacotes. Esses dados são armazenados no catálogo SSISDB.  
@@ -47,7 +47,7 @@ ms.locfileid: "36007539"
   
 ### <a name="options"></a>Opções  
  **Tipo**  
- Especifica o tipo de operação. A seguir estão os possíveis valores para o **tipo** campo e os valores correspondentes na coluna operations_type do Transact-SQL `catalog.operations` exibição.  
+ Especifica o tipo de operação. A seguir estão os valores possíveis para o **tipo** campo e os valores correspondentes na coluna operations_type da Transact-SQL `catalog.operations` modo de exibição.  
   
 |||  
 |-|-|  

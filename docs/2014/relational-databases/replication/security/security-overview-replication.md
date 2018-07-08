@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - authorization [SQL Server replication]
 - cryptography [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3ca129d5dd03d788f639a51322ceb999a25e76a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 62567dbbb53db61780f002779abb825e19287578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148257"
 ---
 # <a name="security-overview-replication"></a>Visão geral de segurança (Replicação)
   Essencialmente, como ajudar a proteger seu ambiente de replicação é uma questão de compreender as opções de autorização e autenticação, compreender o uso apropriado dos recursos de filtragem de replicação e aprender medidas específicas de como ajudar a proteger cada parte do ambiente de replicação. O ambiente de replicação inclui o Distribuidor, o Publicador, os Assinantes e a pasta de instantâneos. Este capítulo aborda a segurança de replicação, mas a segurança de replicação é criada na segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e segurança do Windows. Portanto, você deve compreender esta base e as particularidades da segurança de replicação. Para obter mais informações, consulte [Considerações de segurança para uma instalação do SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Para obter mais informações sobre considerações de segurança para publicações Oracle, consulte a seção "Modelo de segurança de replicação" no tópico [Design Considerations and Limitations for Oracle Publishers](../non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  

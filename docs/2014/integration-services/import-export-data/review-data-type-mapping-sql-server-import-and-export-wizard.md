@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f49bc9a31fcf2cf348f7616a337b51a9b7e5229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbfaab44f1b7c40a912eec0c6c6cef8a6b00c51f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158907"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
-  Use o **revisar mapeamento de tipo de dados** página para examinar informações detalhadas sobre conversões de tipo de dados que o assistente tem de efetuar para que a fonte de dados compatíveis com o destino. As informações incluem dicas visuais para fazer distinção entre conversões que se espera sejam bem sucedidas de conversões que podem causar erros ou truncamentos. Para cada conversão, é possível decidir se deseja aceitar a conversão sugerida pelo assistente, além de especificar como manipular qualquer eventual erro.  
+  Use o **revisar mapeamento de tipo de dados** página para examinar informações detalhadas sobre conversões de tipo de dados que o assistente precisa executar para tornar a fonte de dados compatíveis com o destino. As informações incluem dicas visuais para fazer distinção entre conversões que se espera sejam bem sucedidas de conversões que podem causar erros ou truncamentos. Para cada conversão, é possível decidir se deseja aceitar a conversão sugerida pelo assistente, além de especificar como manipular qualquer eventual erro.  
   
  Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- A finalidade de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de importação e exportação é copiar dados de uma fonte para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ A finalidade de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opções  
  A página **Revisar Mapeamento de Tipo de Dados** consiste de uma lista **Tabela** , uma lista de **Mapeamento de tipo de dados** e opções de tratamento de erros.  
   
 ### <a name="table-list"></a>Lista Tabela  
- A parte superior do **revisar problemas de tipo de dados** página é uma **tabela** lista que lista as tabelas devem ser transferidos da origem para o destino. A tabela a seguir descreve as colunas nessa lista.  
+ A parte superior do **revisar problemas de tipo de dados** página é um **tabela** lista que lista as tabelas a serem transferidos da origem para o destino. A tabela a seguir descreve as colunas nessa lista.  
   
 |coluna|Description|  
 |------------|-----------------|  
@@ -43,10 +43,10 @@ ms.locfileid: "36006402"
 |Ícone de destino|Indica se o destino já existe ou será criado pelo assistente:<br /><br /> Um ícone de tabela indica que o destino é uma tabela existente.<br /><br /> Um ícone de tabela com um clarão de sol indica que o destino é uma tabela nova que será criada pelo assistente.|  
 |**Destino**|Exibe o nome da tabela de destino.|  
   
- Para exibir informações de conversão sobre uma tabela individual, selecione uma tabela na **tabela** grade. As informações de conversão da tabela selecionada são exibidas nas colunas na grade **Mapeamento de tipo de dados** localizada na parte inferior da página.  
+ Para exibir informações de conversão sobre uma tabela individual, selecione uma tabela nesse **tabela** grade. As informações de conversão da tabela selecionada são exibidas nas colunas na grade **Mapeamento de tipo de dados** localizada na parte inferior da página.  
   
 ### <a name="data-type-mapping-list"></a>Lista Mapeamento de tipo de dados  
- A parte inferior do **revisar problemas de tipo de dados** página é a **mapeamento de tipo de dados** lista. Esta grade fornece informações detalhadas de conversão sobre as colunas na tabela selecionada na lista **Tabela** . A tabela a seguir descreve as colunas nessa lista.  
+ A parte inferior a **revisar problemas de tipo de dados** página é a **mapeamento de tipo de dados** lista. Esta grade fornece informações detalhadas de conversão sobre as colunas na tabela selecionada na lista **Tabela** . A tabela a seguir descreve as colunas nessa lista.  
   
 |coluna|Description|  
 |------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "36006402"
 |**Coluna de Destino**|Exibe o nome da coluna de destino.|  
 |**Tipo de Destino**|Exibe o tipo de dados da coluna de destino.|  
 |**Converter**|Especifique se a conversão planejada deve prosseguir:<br /><br /> Marque a caixa de seleção para que o assistente continue com a conversão planejada.<br /><br /> Desmarque a caixa de seleção para cancelar a conversão de tipo de dados.|  
-|**Se Houver Erro**|Especifique como o assistente lida com erros:<br /><br /> Use o **On Error (global)** configuração.<br /><br /> Falha com um erro, e interrompe o processo de importação ou exportação.<br /><br /> Ignore o erro.|  
+|**Se Houver Erro**|Especifique como o assistente lida com erros:<br /><br /> Use o **houver erro (global)** configuração.<br /><br /> Falha com um erro, e interrompe o processo de importação ou exportação.<br /><br /> Ignore o erro.|  
 |**Se Houver Truncamento**|Especifique como o assistente controla truncamentos:<br /><br /> Use o **houver truncamento (global)** configuração.<br /><br /> Falha com um erro e parar a importação ou processo de exportação<br /><br /> Ignore o truncamento.|  
   
  Para exibir informações detalhadas sobre a conversão de uma coluna particular de dados, clique duas vezes em qualquer linha na lista. A caixa de diálogo **Detalhes da Conversão de Coluna** abre e exibe informações de conversão mais detalhadas da coluna.  

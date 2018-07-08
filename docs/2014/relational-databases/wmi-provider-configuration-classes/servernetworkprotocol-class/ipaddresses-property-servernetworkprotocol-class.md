@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IpAddresses property
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9f1d047004ae92ca587f48ad7ccf6319b420e01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 20979e9647d2d80f7498a5ec517d7403cd0ccf83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150617"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>Propriedade IpAddresses (classe ServerNetworkProtocol)
   Obtém os endereços IP associados com o protocolo de rede do servidor.  

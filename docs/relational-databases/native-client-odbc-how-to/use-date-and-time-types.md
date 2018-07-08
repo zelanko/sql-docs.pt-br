@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23cf3ddddd63bc5f3b3bc183fed34a6b83fb3911
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c356bf4502dbb102611a97e0237e698b898a09f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696367"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410625"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de data e hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Este exemplo mostra como inicializar as estruturas de dados de data/hora que foram adicionadas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Em seguida, prepara os valores de entrada, associa parâmetros e executa a consulta. Para obter mais informações sobre como usar esses tipos, consulte [data e hora melhorias &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  Este exemplo mostra como inicializar as estruturas de dados de data/hora que foram adicionadas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Em seguida, prepara os valores de entrada, associa parâmetros e executa a consulta. Para obter mais informações sobre como usar esses tipos, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Exemplo  
  Você precisará de uma fonte de dados ODBC chamada DateTime. O banco de dados padrão para DateTime deve ser tempdb. Essa fonte de dados deve ter como base o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

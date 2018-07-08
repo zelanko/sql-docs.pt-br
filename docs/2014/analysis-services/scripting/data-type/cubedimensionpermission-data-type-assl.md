@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimensionPermission data type
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d215ed3dde22c3d0e16df4cc4d937c9ee3cb0a34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17bd5df3cd2dad116384d28e1f427d14a86b6b72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180823"
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>Tipo de dados CubeDimensionPermission (ASSL)
   Define um tipo de dados primitivo que representa as permissões para uma única função em uma dimensão específica em um cubo.  

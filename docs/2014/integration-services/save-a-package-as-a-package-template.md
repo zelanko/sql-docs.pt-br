@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reusing packages
 - templates [Integration Services]
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9bf2bfd8cadad08243be765977b68115bf2ae6f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfd90b00e413f5a25de9770bf41b094bbdb9d808
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158497"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Salvar um pacote como um modelo de pacote
   Este tópico descreve como designar e usar pacotes personalizados como modelos para criar novos pacotes do Integration Services no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Por padrão, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa um modelo de pacote que cria um pacote vazio quando você adiciona um novo pacote a um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Você não pode substituir este modelo padrão, mas pode adicionar novos modelos.  

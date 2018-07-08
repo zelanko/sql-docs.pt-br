@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.deleteobjects.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - removing data sources
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6dbf7b309db50ec291ccc956c2dc75522786616e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7be5e8a95a340794e2754f272a223c31a27e8a58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169677"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>excluir uma exibição da fonte de dados no gerenciador de soluções (SSAS multidimensional)
   Você pode excluir um objeto de fonte de dados para removê-lo permanentemente de um projeto de modelo multidimensional do Analysis Services.  
@@ -49,6 +49,6 @@ ms.locfileid: "36005958"
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados em modelos multidimensionais](data-sources-in-multidimensional-models.md)   
- [Fontes de dados suportadas &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

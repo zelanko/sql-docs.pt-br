@@ -1,5 +1,5 @@
 ---
-title: Suporte a SQLXML 4.0 do .NET Framework | Microsoft Docs
+title: Suporte do SQLXML 4.0 do .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - .NET Framework [SQLXML]
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f760815c90aadd048553223b121b59ace4c8a722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aff4606952d56a95194dd5b6076ecb877fa1253f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229646"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>Suporte ao .NET Framework do SQLXML 4.0
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 suporta recursos que permitem escrever aplicativos para acessar dados XML de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], importar esses dados para o ambiente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, processá-los e enviar as atualizações de volta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta seção documenta os recursos de suporte ao .NET Framework e fornece exemplos de uso.  

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c914989c04226991f0df573b60bea0b69ff15802
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 02ca5ac7ea78f771e24fb13a97f125885bc0ce2a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703207"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417809"
 ---
-# <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurando o Driver ODBC do SQL Server - excluir uma fonte de dados
+# <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurando o Driver ODBC do SQL Server – excluir uma fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -34,9 +34,9 @@ ms.locfileid: "35703207"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para excluir uma fonte de dados usando o Administrador de ODBC  
   
-1.  Em **painel de controle**, abra **ferramentas administrativas**e, em seguida, clique duas vezes em **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
+1.  Na **painel de controle**, abra **ferramentas administrativas**e, em seguida, clique duas vezes em qualquer um **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
   
-2.  Clique o **DSN do usuário**, **DSN de sistema**, ou **DSN de arquivo** guia.  
+2.  Clique o **DSN de usuário**, **DSN de sistema**, ou **DSN de arquivo** guia.  
   
 3.  Selecione a fonte de dados para excluir.  
   

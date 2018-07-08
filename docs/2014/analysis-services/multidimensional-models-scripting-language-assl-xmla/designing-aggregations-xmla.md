@@ -1,5 +1,5 @@
 ---
-title: Projetando agregações (XMLA) | Microsoft Docs
+title: Criando agregações (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,30 +20,30 @@ helpviewer_keywords:
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2e2d5be45ba679cfa0c0ea39928e5b43d30c3a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 773187385538a70ed145e330eb60c648cf8f0511
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161327"
 ---
 # <a name="designing-aggregations-xmla"></a>Criando agregações (XMLA)
-  Designs de agregação estão associados a partições de um determinado grupo de medidas para garantir que as partições usem a mesma estrutura ao armazenarem agregações. Usar a mesma estrutura de armazenamento para partições permite que você defina com facilidade partições que podem ser mescladas posteriormente usando o [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obter mais informações sobre designs de agregação, consulte [agregações e Designs de agregação](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Designs de agregação estão associados a partições de um determinado grupo de medidas para garantir que as partições usem a mesma estrutura ao armazenarem agregações. Usando a mesma estrutura de armazenamento para partições permite que você defina com facilidade partições que podem ser mescladas posteriormente usando o [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obter mais informações sobre designs de agregação, consulte [agregações e Designs de agregação](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
- Para definir agregações para um design de agregação, você pode usar o [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) do XML for Analysis (XMLA). O comando `DesignAggregations` tem propriedades que identificam o design de agregação a ser usado como referência e mostram como controlar o processo de design com base nessa referência. Usando o comando `DesignAggregations` e suas propriedades, você pode criar agregações iterativamente ou em lote e depois exibir as estatísticas do design resultante para avaliar o processo de design.  
+ Para definir agregações para um design de agregação, você pode usar o [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) no XML for Analysis (XMLA). O comando `DesignAggregations` tem propriedades que identificam o design de agregação a ser usado como referência e mostram como controlar o processo de design com base nessa referência. Usando o comando `DesignAggregations` e suas propriedades, você pode criar agregações iterativamente ou em lote e depois exibir as estatísticas do design resultante para avaliar o processo de design.  
   
 ## <a name="specifying-an-aggregation-design"></a>Especificando um design de agregação  
- O [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propriedade o `DesignAggregations` comando deve conter uma referência de objeto para um design de agregação existente. A referência de objeto contém um identificador de banco de dados, um identificador de cubo, um identificador de grupo de medidas e um identificador de design de agregação. Se o design de agregação ainda não existir, ocorrerá um erro.  
+ O [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propriedade do `DesignAggregations` comando deve conter uma referência de objeto para um design de agregação existente. A referência de objeto contém um identificador de banco de dados, um identificador de cubo, um identificador de grupo de medidas e um identificador de design de agregação. Se o design de agregação ainda não existir, ocorrerá um erro.  
   
 ## <a name="controlling-the-design-process"></a>Controlando o processo de design  
  Você pode usar as seguintes propriedades do comando `DesignAggregations` para controlar o algoritmo usado na definição de agregações para o design de agregação:  
   
--   O [etapas](../xmla/xml-elements-properties/steps-element-xmla.md) propriedade determina quantas iterações de `DesignAggregations` comando deve executar antes de devolver o controle ao aplicativo cliente.  
+-   O [etapas](../xmla/xml-elements-properties/steps-element-xmla.md) propriedade determina quantas iterações o `DesignAggregations` comando deve executar antes de devolver o controle ao aplicativo cliente.  
   
--   O [tempo](../xmla/xml-elements-properties/time-element-xmla.md) propriedade determina quantos milissegundos a `DesignAggregations` comando deve executar antes de devolver o controle ao aplicativo cliente.  
+-   O [tempo](../xmla/xml-elements-properties/time-element-xmla.md) propriedade determina quantos milissegundos o `DesignAggregations` comando deve executar antes de devolver o controle ao aplicativo cliente.  
   
 -   O [otimização](../xmla/xml-elements-properties/optimization-element-xmla.md) propriedade determina a porcentagem estimada de aperfeiçoamento de desempenho de `DesignAggregations` comando deve tentar alcançar. Se você estiver criando agregações iterativamente, só terá de enviar essa propriedade no primeiro comando.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36008077"
 -   O [materializar](../xmla/xml-elements-properties/materialize-element-xmla.md) propriedade determina se o `DesignAggregations` comando deve criar as agregações definidas durante o processo de design. Se estiver criando agregações iterativamente, essa propriedade deve ser definida como falsa até que você esteja pronto para salvar as agregações criadas. Quando definida como verdadeira, o processo de design atual terminará e as agregações definidas serão adicionadas ao design de agregação especificado.  
   
 ## <a name="specifying-queries"></a>Especificando consultas  
- O comando DesignAggregations dá suporte a comandos de otimização baseada em uso, incluindo um ou mais `Query` elementos o [consultas](../xmla/xml-elements-properties/queries-element-xmla.md) propriedade. O `Queries` propriedade pode conter um ou mais [consulta](../xmla/xml-elements-properties/query-element-xmla.md) elementos. Se a propriedade `Queries` não contiver elementos de `Query`, o design de agregação especificado no elemento de `Object` usará uma estrutura padrão com um conjunto geral de agregações. Esse conjunto geral de agregações é criado para atender aos critérios especificados nas propriedades `Optimization` e `Storage` do comando `DesignAggregations`.  
+ O comando DesignAggregations dá suporte ao comando de otimização com base no uso, incluindo um ou mais `Query` elementos de [consultas](../xmla/xml-elements-properties/queries-element-xmla.md) propriedade. O `Queries` propriedade pode conter um ou mais [consulta](../xmla/xml-elements-properties/query-element-xmla.md) elementos. Se a propriedade `Queries` não contiver elementos de `Query`, o design de agregação especificado no elemento de `Object` usará uma estrutura padrão com um conjunto geral de agregações. Esse conjunto geral de agregações é criado para atender aos critérios especificados nas propriedades `Optimization` e `Storage` do comando `DesignAggregations`.  
   
- Cada `Query` elemento representa uma meta de consulta que usa o processo de design para definir agregações que se destinam às consultas usadas com mais frequência. Você pode especificar suas próprias consultas de meta, ou você pode usar as informações armazenadas por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no log de consultas para recuperar informações sobre com mais frequência as consultas usadas. O Assistente de Otimização com Base no Uso usa o log de consultas para recuperar consultas de meta com base no tempo, no uso ou em um usuário especificado quando envia um comando `DesignAggregations`. Para obter mais informações, consulte [ajuda de F1 do Assistente de otimização baseada em uso](../usage-based-optimization-wizard-f1-help.md).  
+ Cada `Query` elemento representa uma meta de consulta que usa o processo de design para definir agregações que se destinam às consultas usadas com mais frequência. Você pode especificar suas próprias consultas de meta ou você pode usar as informações armazenadas por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no log de consultas para recuperar informações sobre com mais frequência as consultas usadas. O Assistente de Otimização com Base no Uso usa o log de consultas para recuperar consultas de meta com base no tempo, no uso ou em um usuário especificado quando envia um comando `DesignAggregations`. Para obter mais informações, consulte [ajuda de F1 do Assistente de otimização com base no uso](../usage-based-optimization-wizard-f1-help.md).  
   
  Se você estiver criando agregações iterativamente, você só precisa transmitir as metas de consulta no primeiro `DesignAggregations` o comando porque o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância armazena essas metas e utiliza essas consultas durante subsequentes `DesignAggregations` comandos. Após transmitir as metas de consulta no primeiro comando `DesignAggregations` de um processo iterativo, qualquer comando `DesignAggregations` subsequente que contém metas de consulta na propriedade `Queries` gerará um erro.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36008077"
 > [!NOTE]  
 >  Alguns atributos não são considerados no conjunto de dados. Para obter mais informações sobre os atributos excluídos, consulte [elemento Query &#40;XMLA&#41;](../xmla/xml-elements-properties/query-element-xmla.md).  
   
- Cada dimensão no grupo de medidas que contém o design de agregação é representado por um *Dataset* valor o `Query` elemento. A ordem de valores *Dataset* deve coincidir com a ordem de dimensões incluída no grupo de medidas.  
+ Cada dimensão no grupo de medidas que contém o design de agregação é representado por um *conjunto de dados* o valor de `Query` elemento. A ordem de valores *Dataset* deve coincidir com a ordem de dimensões incluída no grupo de medidas.  
   
 ## <a name="designing-aggregations-using-iterative-or-batch-processes"></a>Criando agregações usando processos iterativos ou em lote  
  Você pode usar o comando `DesignAggregations` como parte de um processo iterativo ou de um processo em lote, dependendo da interatividade exigida pelo processo de design.  

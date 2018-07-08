@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.viewdetailsdialog.f1
 ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a3584a7bc59ab63bd80b54363281974ac00c796
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5df4b04c9fa956f7315a718d334f8314cbd1714a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183383"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Exibir Detalhes (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Exibir Detalhes** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para exibir detalhes adicionais sobre uma mensagem ou operação no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Você pode exibir a caixa de diálogo **Exibir Detalhes** das seguintes maneiras:  
@@ -36,7 +36,7 @@ ms.locfileid: "36008275"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Processar a caixa de diálogo de progresso &#40;Analysis Services - dados multidimensionais&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
+ [Processar caixa de diálogo de progresso &#40;Analysis Services - dados multidimensionais&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
  [Processamento de objetos de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

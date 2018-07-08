@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9d65de341b650966bb137bc347b9f4e03d872b46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 865a135e144dd93a60a8f74da6559637b2c566d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154237"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala e habilita uma versão dos separadores de palavras e lematizadores para todos os idiomas com suporte de Pesquisa de Texto Completo com a exceção de coreano. Este tópico descreve como alternar deste nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão.  
@@ -74,7 +73,7 @@ ms.locfileid: "36007498"
 |Indonésio|ind|1057|  
 |Islandês|isl|1039|  
 |Italiano|ita|1040|  
-|Kannada|kan|1099|  
+|canarim|kan|1099|  
 |Lituano|lth|1063|  
 |Letão|lvi|1062|  
 |Malaiala|mal|1100|  
