@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150277"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
   A região de dados do medidor é uma região de dados unidimensional que exibe um único valor em seu conjunto de dados. Um medidor individual é sempre posicionado dentro de um painel de medidores, onde é possível adicionar medidores filho ou adjacentes. Você pode usar o painel de medidores para criar em um mesmo painel de medidores vários medidores que compartilham funções comuns, como filtragem, agrupamento ou classificação.  
@@ -290,13 +290,13 @@ ms.locfileid: "36011077"
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista os procedimentos que mostram, passo a passo, como trabalhar com medidores nos relatórios; como obter dados para exibição efetivamente em medidores e como adicionar e configurar medidores e seus elementos.  
   
--   [Adicionar um medidor a um relatório &#40;SSRS e construtor de relatórios&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [Adicionar um medidor a um relatório &#40;relatórios e SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [Definir mínimo ou máximo em um medidor &#40;SSRS e construtor de relatórios&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Definir mínimo ou máximo em um medidor &#40;relatórios e SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Definir um intervalo de ajuste em um medidor &#40;SSRS e construtor de relatórios&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Definir um intervalo de ajuste em um medidor &#40;relatórios e SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Especificar uma imagem como um ponteiro em um medidor &#40;SSRS e construtor de relatórios&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Especificar uma imagem como um ponteiro em um medidor &#40;relatórios e SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> Nesta seção  
@@ -305,9 +305,9 @@ ms.locfileid: "36011077"
 |||  
 |-|-|  
 |Termo|Definição|  
-|[Formatando escalas em um medidor &#40;SSRS e construtor de relatórios&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre escalas de formatação em medidores e informações detalhadas sobre as opções de formatação para escalas em medidores radiais e lineares.|  
-|[Formatando ponteiros em um medidor &#40;SSRS e construtor de relatórios&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre ponteiros de formatação em medidores e informações detalhadas sobre as opções de formatação para estilos de ponteiros disponíveis para medidores radiais e lineares.|  
-|[Formatando intervalos de um medidor &#40;SSRS e construtor de relatórios&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações sobre intervalos de formatação em medidores para indicar uma subseção importante de valores no medidor ou indicar visualmente quando o valor do ponteiro entrar em uma certa faixa de valores.|  
+|[Formatando escalas em um medidor &#40;relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre escalas de formatação em medidores e informações detalhadas sobre as opções de formatação para escalas em medidores radiais e lineares.|  
+|[Formatando ponteiros em um medidor &#40;relatórios e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre ponteiros de formatação em medidores e informações detalhadas sobre as opções de formatação para estilos de ponteiros disponíveis para medidores radiais e lineares.|  
+|[Formatando intervalos de um medidor &#40;relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações sobre intervalos de formatação em medidores para indicar uma subseção importante de valores no medidor ou indicar visualmente quando o valor do ponteiro entrar em uma certa faixa de valores.|  
   
   
 ## <a name="see-also"></a>Consulte também  

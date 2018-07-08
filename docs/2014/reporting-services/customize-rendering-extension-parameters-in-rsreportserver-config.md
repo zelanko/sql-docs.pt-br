@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150237"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar parâmetros de extensão de renderização em RSReportServer.config
   Você pode especificar parâmetros de extensão de renderização no arquivo de configuração RSReportServer para substituir o comportamento de renderização de relatório padrão para os relatórios executados em um servidor de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Os parâmetros de extensão de renderização podem ser modificados com os seguintes objetivos:  
@@ -44,14 +44,14 @@ ms.locfileid: "36010627"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>Localizando e modificando RSReportServer.config  
  As configurações de formatos de saída de relatório são especificadas como parâmetros de extensão de renderização no arquivo RSReportServer.config. Para especificar parâmetros de extensão de renderização nos arquivos de configuração, você deve saber como definir estruturas XML que definem parâmetros de renderização. Há duas estruturas XML que podem ser modificadas:  
   
--   O `OverrideNames` elemento define o nome de exibição e a linguagem da extensão de renderização.  
+-   O `OverrideNames` elemento define o nome de exibição e o idioma da extensão de renderização.  
   
--   O `DeviceInfo` estrutura XML define as configurações de informações de dispositivo que são usadas por uma extensão de renderização. A maioria dos parâmetros de extensão de renderização é especificada como configurações de informações de dispositivo.  
+-   O `DeviceInfo` estrutura XML define as configurações de informações do dispositivo que são usadas por uma extensão de renderização. A maioria dos parâmetros de extensão de renderização é especificada como configurações de informações de dispositivo.  
   
  Você pode usar um editor de texto para modificar o arquivo. O arquivo RSReportServer.config pode ser localizado na pasta \Reporting Services\Report Server\Bin. Para obter mais informações sobre como modificar arquivos de configuração, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Alterando o nome para exibição  
- O nome para exibição de uma extensão de renderização aparece na lista Exportar da barra de ferramentas de relatório. Exemplos de nomes para exibição padrão incluem arquivos da Web, TIFF e Acrobat (PDF). Você pode substituir o nome padrão com um valor personalizado especificando o `OverrideNames` elemento nos arquivos de configuração. Além disso, se duas instâncias de uma única extensão de renderização forem definidas, use o elemento `OverrideNames` para diferenciar cada instância na lista Exportar.  
+ O nome para exibição de uma extensão de renderização aparece na lista Exportar da barra de ferramentas de relatório. Exemplos de nomes para exibição padrão incluem arquivos da Web, TIFF e Acrobat (PDF). Você pode substituir o nome de exibição padrão com um valor personalizado especificando o `OverrideNames` elemento nos arquivos de configuração. Além disso, se duas instâncias de uma única extensão de renderização forem definidas, use o elemento `OverrideNames` para diferenciar cada instância na lista Exportar.  
   
  Como os nomes de exibição são localizados, você deve definir o `Language` se você estiver substituindo o nome de exibição padrão com um valor personalizado do atributo. Caso contrário, qualquer nome especificado será ignorado. O valor de idioma definido deve ser válido para o computador do servidor de relatórios. Por exemplo, se o servidor de relatórios for executado em um sistema operacional francês, especifique "fr-FR" como o valor do atributo.  
   

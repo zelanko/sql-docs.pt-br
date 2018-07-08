@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d3f8e675ff62ec000b3b9dd3c7c692c63f7fc8b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce472be61a85aa1adfad529c38cd74c8dcd9d17a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148567"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)
   Estas dicas podem ajudar a trabalhar com partes de relatório.  
@@ -30,7 +30,7 @@ ms.locfileid: "36010609"
  Para ver quais permissões você e seu colaborador têm, pergunte ao administrador do servidor de relatório.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Quando eu procuro partes de relatório que eu carreguei em um servidor do SharePoint, eu não consigo vê-las. Por que não?  
- Partes de relatório que você carregou manualmente em uma biblioteca de documentos do SharePoint, em vez de publicar usando o Construtor de Relatórios, podem não aparecer na Galeria de Partes de Relatório. O servidor de relatório usado para a pesquisa de galeria pode precisar ser sincronizado com o conteúdo da biblioteca de documentos do SharePoint. Para obter mais informações, consulte [ativar o recurso de sincronização de arquivos de servidor de relatório na Administração Central do SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
+ Partes de relatório que você carregou manualmente em uma biblioteca de documentos do SharePoint, em vez de publicar usando o Construtor de Relatórios, podem não aparecer na Galeria de Partes de Relatório. O servidor de relatório usado para a pesquisa de galeria pode precisar ser sincronizado com o conteúdo da biblioteca de documentos do SharePoint. Para obter mais informações, consulte [ativar o recurso de sincronização de arquivos de servidor de relatório na Administração Central do SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>Por que outras pessoas não podem ver a imagem em seus relatórios?  
  Se você publicar uma parte de relatório que é um link para um arquivo de imagem, na realidade a parte de relatório será apenas um link. Se outras pessoas não puderem ver a imagem quando adicionarem a parte de relatório de imagem aos seus relatórios, talvez elas não tenham permissões para a imagem que você está vinculando.  
@@ -47,6 +47,6 @@ ms.locfileid: "36010609"
  Se os itens de relatório tiverem uma referência circular, você não poderá publicá-los como partes de relatório. Por exemplo, um item de relatório aponta para um conjunto de dados que aponta para um parâmetro. O parâmetro, por sua vez, também aponta para o conjunto de dados. Você precisará excluir uma das referências primeiro antes de publicar a parte de relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partes de relatório &#40;SSRS e construtor de relatórios&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Partes de relatório &#40;relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   
