@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fcd18d87599e214b27473d716b27f9c19df487c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9d8f1adbd4dee8194d0e91d9efd3a99a52b79988
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701847"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419655"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Especifica o formato de origem ou de destino dos dados em um arquivo de usuário. Quando usado como formato de origem, **bcp_colfmt** Especifica o formato de um arquivo de dados existente usado como a fonte de dados em uma cópia em massa para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. Quando usado como formato de destino, o arquivo de dados é criado usando os formatos de coluna especificados com **bcp_colfmt**.  
+  Especifica o formato de origem ou de destino dos dados em um arquivo de usuário. Quando usado como um formato de origem **bcp_colfmt** Especifica o formato de um arquivo de dados existente usado como a fonte de dados em uma cópia em massa para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. Quando usado como formato de destino, o arquivo de dados é criado usando os formatos de coluna especificados com **bcp_colfmt**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,13 +60,13 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  É o tipo de dados desta coluna no arquivo de usuário. Se diferente do tipo de dados da coluna correspondente na tabela do banco de dados (*idxServerColumn*), a cópia em massa converterá os dados, caso seja possível.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o suporte para tokens de tipo de dados SQLXML e SQLUDT no *eUserDataType* parâmetro.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o suporte para tokens de tipo de dados SQLXML e SQLUDT na *eUserDataType* parâmetro.  
   
- O *eUserDataType* parâmetro é enumerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de dados em SQLNCLI. h, não os enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, ODBC tipo SQL_C_CHAR, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SQLCHARACTER de tipo específico.  
+ O *eUserDataType* parâmetro é enumerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de dados em SQLNCLI. h, não os enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, ODBC tipo SQL_C_CHAR, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipo SQLCHARACTER específico.  
   
  Para especificar a representação de dados padrão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina esse parâmetro como 0.  
   
- Para obter uma cópia em massa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um arquivo, quando *eUserDataType* for SQLDECIMAL ou SQLNUMERIC:  
+ Para obter uma cópia em massa fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um arquivo, quando *eUserDataType* for SQLDECIMAL ou SQLNUMERIC:  
   
 -   Se a coluna de origem não for **decimal** ou **numeric**, serão usadas a precisão e escala padrão.  
   
@@ -90,7 +90,7 @@ RETCODE bcp_colfmt (
   
  A definição de *cbUserData* como SQL_VARLEN_DATA indica que o sistema deve determinar o comprimento dos dados em cada coluna. Para algumas colunas, isso poderia significar que um indicador de comprimento/nulo é gerado para anteceder os dados em uma cópia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou que o indicador é esperado nos dados copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres e tipos de dados binários, *cbUserData* pode ser SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou algum valor positivo. Se *cbUserData* for SQL_VARLEN_DATA, o sistema usará o indicador de comprimento, se houver, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se *cbUserData* for SQL_VARLEN_DATA, os dados de tipo é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractere ou tipo binário e um indicador de comprimento nem uma sequência de terminador forem especificada, o sistema retornará uma mensagem de erro.  
+ Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractere e tipos de dados binários *cbUserData* pode ser SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou algum valor positivo. Se *cbUserData* for SQL_VARLEN_DATA, o sistema usará o indicador de comprimento, se houver, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se *cbUserData* for SQL_VARLEN_DATA, os dados de tipo é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractere ou tipo binário e nem um indicador de comprimento nem uma sequência de terminador for especificada, o sistema retornará uma mensagem de erro.  
   
  Se *cbUserData* for 0 ou um valor positivo, o sistema usará *cbUserData* como o comprimento de dados máximo. Entretanto, se, além de um *cbUserData*positivo, for fornecido um indicador de comprimento ou uma sequência de terminador, o sistema determinará o comprimento dos dados usando o método que resulta na menor quantidade de dados sendo copiados.  
   
@@ -131,7 +131,7 @@ RETCODE bcp_colfmt (
   
 -   O comprimento da sequência de bytes de encerramento opcional.  
   
- Cada chamada de **bcp_colfmt** especifica o formato de uma coluna do arquivo de usuário. Por exemplo, para alterar as configurações padrão de três colunas em um arquivo de dados de usuário de cinco colunas, primeiro chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** e, em seguida, chame **bcp_colfmt** cinco vezes, com três dessas chamadas definindo o formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como 0 e defina *cbIndicator*, *cbUserData*e *cbUserDataTerm* respectivamente como 0, SQL_VARLEN_DATA e 0. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
+ Cada chamada de **bcp_colfmt** especifica o formato de uma coluna do arquivo de usuário. Por exemplo, para alterar as configurações padrão para três colunas em um arquivo de dados de usuário de cinco colunas, primeiro chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** e, em seguida, chame **bcp_colfmt** cinco vezes, com três dessas chamadas definindo o formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como 0 e defina *cbIndicator*, *cbUserData*e *cbUserDataTerm* respectivamente como 0, SQL_VARLEN_DATA e 0. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
   
  Para *cbIndicator*, um valor 8 indica que agora um tipo de valor grande é válido. Se o prefixo for especificado para um campo cuja coluna correspondente é um novo tipo max, ele poderá ser definido somente como 8. Para obter detalhes, consulte [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   
@@ -143,12 +143,12 @@ RETCODE bcp_colfmt (
   
  Você não precisa copiar todos os dados de um arquivo de usuário para a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para ignorar uma coluna, especifique o formato dos dados da coluna, definindo o parâmetro *idxServerCol* como 0. Se desejar ignorar uma coluna, especifique seu tipo.  
   
- O [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) função pode ser usada para manter a especificação de formato.  
+ O [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) função pode ser usada para persistir a especificação de formato.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte do bcp_colfmt a recursos aprimorados de data e hora  
- Para obter informações sobre os tipos usados com o *eUserDataType* parâmetro para tipos de data/hora, consulte [alterações de cópia em massa para tipos aprimorados de data e hora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Para obter informações sobre os tipos usados com o *eUserDataType* parâmetro para tipos de data/hora, consulte [alterações de cópia em massa para tipos aprimorada de data e hora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obter mais informações, consulte [data e hora melhorias &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

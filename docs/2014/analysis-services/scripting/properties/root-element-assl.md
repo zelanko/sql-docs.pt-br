@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Root element
 ms.assetid: ad3319d5-c3f0-49e3-b9c0-2fb77945c512
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b639ac3c0f6115bb0c17963d62e94eb0fa595f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6388b3ad61f8c9dc380e0f198b25c2aab46d56c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167497"
 ---
 # <a name="root-element-assl"></a>Elemento Root (ASSL)
   Contém os dados (conjunto de linhas) para uma fonte de dados.  

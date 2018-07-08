@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7a1674d843f9701cf9eb2b2c41dad3dd4cbf7a0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158867"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transações em tabelas com otimização de memória
   O controle de versão de linha em tabelas baseadas em disco (usando o isolamento SNAPSHOT ou READ_COMMITTED_SNAPSHOT) fornece um formulário de controle de simultaneidade otimista. Os leitores e gravadores não bloqueiam um ao outro. Com as tabelas com otimização de memória, gravadores não bloqueiam gravadores. Com o controle de versão de linha em tabelas baseadas em disco, uma transação bloqueia a linha e as transações simultâneas que tentassem atualizar a linha estariam bloqueadas. Não há bloqueio com tabelas com otimização de memória. Em vez disso, se duas transações tentassem atualizar a mesma linha, ocorreria um conflito de gravação/gravação (erro 41302).  

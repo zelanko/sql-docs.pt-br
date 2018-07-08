@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6199386c9e922e07a07acbd81399af3e55b83be0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6850055d9e9b2b941086e6ed0e4364f64b8e99b3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696397"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425625"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar dados em massa de variáveis de programa (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "35696397"
   
  Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
- **Observação de segurança** quando possível, use a autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você deve manter as credenciais, criptografe-as com [cryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
+ **Observação de segurança** quando possível, use a autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter credenciais, criptografe-as com [cryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>Para usar funções de cópia em massa diretamente em variáveis de programa  
   
@@ -43,7 +43,7 @@ ms.locfileid: "35696397"
   
 3.  Conecte-se ao SQL Server.  
   
-4.  Chamar [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
+4.  Chame [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
     -   O nome da tabela ou da exibição da qual ou para a qual será feita a cópia em massa.  
   
@@ -53,15 +53,15 @@ ms.locfileid: "35696397"
   
     -   A direção da cópia: DB_IN do aplicativo para a exibição ou tabela ou DB_OUT para o aplicativo da tabela ou exibição.  
   
-5.  Chamar [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada coluna na cópia em massa para associar a coluna a uma variável de programa.  
+5.  Chame [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada coluna na cópia em massa para associar a coluna a uma variável de programa.  
   
 6.  Preencha as variáveis de programa com dados e chame [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) para enviar uma linha de dados.  
   
-7.  Depois de várias linhas tiverem sido enviadas, chame [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) as linhas já enviadas do ponto de verificação. É prática recomendada para chamar [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) pelo menos uma vez a cada 1000 linhas.  
+7.  Depois que várias linhas foram enviadas, chame [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) as linhas já enviadas do ponto de verificação. Ele é uma boa prática chamar [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) pelo menos uma vez a cada 1.000 linhas.  
   
-8.  Depois que todas as linhas forem enviadas, chame [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) para concluir a operação.  
+8.  Depois que todas as linhas foram enviadas, chame [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) para concluir a operação.  
   
- Você pode variar o local e o comprimento de variáveis de programa durante uma operação de cópia em massa chamando [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Use [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para definir várias opções de cópia de massa. Use [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) para enviar **texto**, **ntext**, e **imagem** dados em segmentos para o servidor.  
+ Você pode variar o local e o comprimento de variáveis de programa durante uma operação de cópia em massa chamando [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Use [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para definir vários em massa de opções de cópia. Use [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) enviar **texto**, **ntext**, e **imagem** dados em segmentos para o servidor.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo não tem suporte em IA64.  

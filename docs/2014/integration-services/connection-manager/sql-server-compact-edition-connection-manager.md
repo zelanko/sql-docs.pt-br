@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Compact, connection manager
 - connections [Integration Services], SQL Server Compact
@@ -17,13 +17,13 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5bbc62a0511bd77c1a4ab1f11c536f9480435b49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebf1e6066ee7d5fed2fcd5f9702a6958f17c2ddb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156737"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gerenciador de Conexões do SQL Server Compact Edition
   Um gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact permite que um pacote se conecte a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. O destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui usa esse gerenciador de conexões para carregar dados em uma tabela no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -32,9 +32,9 @@ ms.locfileid: "36010938"
 >  Em um computador de 64 bits, você deve executar pacotes que se conectam a fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact no modo de 32 bits. O provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa para se conectar a fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, só está disponível na versão de 32 bits.  
   
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>Configuração do gerenciador de conexões do SQL Server Compact Edition  
- Quando você adiciona um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de conexão Compact a um pacote, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact conexão em tempo de execução, define a conexão propriedades do Gerenciador e adiciona o Gerenciador de conexão para o `Connections` coleção no pacote.  
+ Quando você adiciona um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de conexão Compact a um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolve um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão Compact em tempo de execução, define propriedades do Gerenciador da conexão e adiciona o Gerenciador de conexão para o `Connections` coleção do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `SQLMOBILE`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `SQLMOBILE`.  
   
  Você pode configurar um gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact das seguintes maneiras:  
   

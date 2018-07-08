@@ -6,7 +6,7 @@ ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Copyright
 - documentation [SQL Server], legal notice
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e230cebf441753ece79e3b2ff552d2bcd2b210c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7c08db5a6681dec8ef5928369a27bc53f31a4d7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167197"
 ---
 # <a name="legal-notice-for-documentation"></a>Aviso legal para documentação
   Este documento é fornecido "como está". As informações e opiniões expressas neste documento, inclusive URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio. Você assume o risco de usá-las.  
@@ -42,6 +42,6 @@ ms.locfileid: "36010090"
   
  Em alguns casos, um recursos específico do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] não foi suficientemente testado ou desenvolvido e não é destinado para seu uso. Tais recursos normalmente estão lá como espaços reservados. Portanto, determinados recursos incluídos no software não estão documentados. Os recursos que não estão documentados ou que estão incluídos como uma notação para uso interno da Microsoft não são destinados para seu uso e não é dado suporte pelos Serviços de Atendimento ao Cliente da Microsoft. A menos que a documentação do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] indique o contrário, o conteúdo de terceiros, incluindo problemas resultantes do uso de tal conteúdo de terceiros com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], não tem suporte dos Serviços de Atendimento ao Cliente da Microsoft e pode resultar em perda de dados. Os Serviços de Atendimento ao Cliente da Microsoft também não dão suporte a bancos de dados ou aplicativos que aproveitem ou usem pontos de entrada não documentados, como APIs não documentadas, incluindo, mas não se limitando a: procedimentos armazenados, procedimentos armazenados estendidos, funções, exibições, tabelas, colunas, propriedades ou metadados.  
   
- Atualizações de servidor e banco de dados para versões futuras do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] relativos a aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados também podem não funcionar e não têm suporte. O uso de recursos do SQL Server e a funcionalidade incluída no Microsoft SQL Server que não estão documentados a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] não há suporte para a documentação para seu uso, e tal uso pode causar perda de dados.  
+ Atualizações de servidor e banco de dados para versões futuras do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] relativos a aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados também podem não funcionar e não têm suporte. Uso de recursos do SQL Server e funcionalidades incluídos no Microsoft SQL Server que não estão documentados a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] não há suporte para a documentação para seu uso e tal uso pode causar perda de dados.  
   
   

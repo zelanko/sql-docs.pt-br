@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: 72
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1705586884d09aa847a6ba308ffb821faa1d6cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6edc4c9ce7f19a6b9771966e9547d0bf1fd5bffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230806"
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
   O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a assinaturas push para IBM DB2/AS 400, DB2/MVS e DB2/Universal Database por meio dos provedores OLE DB fornecidos com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -35,7 +35,7 @@ ms.locfileid: "36010194"
   
 1.  Instale a versão mais recente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider para DB2 no Distribuidor:  
   
-    -   Se você estiver usando [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], no [Downloads do SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) página da Web, no **Downloads relacionados** seção, clique no link para a versão mais recente do Microsoft SQL Server 2008 Feature Pack. Na página da Web do **Microsoft SQL Server 2008 Feature Pack** , pesquise por **Microsoft OLE DB Provider for DB2**.  
+    -   Se você estiver usando [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]diante a [Downloads do SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) página da Web, no **Downloads relacionados** seção, clique no link para a versão mais recente do Microsoft SQL Server 2008 Feature Pack. Na página da Web do **Microsoft SQL Server 2008 Feature Pack** , pesquise por **Microsoft OLE DB Provider for DB2**.  
   
     -   Se você estiver usando o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard, instale a versão mais recente do servidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), que inclui o provedor.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36010194"
   
      Isto permite que a tabela gerada seja criada com êxito no Assinante, desde que a restrição de tamanho da página DB2 seja ampla o suficiente para acomodar o tamanho máximo da linha. Assegure-se de que o logon usado para acessar o banco de dados do DB2 tenha permissões para acessar espaços de tabela de tamanho suficiente para as tabelas que estão sendo replicadas para DB2.  
   
--   O DB2 pode suportar colunas VARCHAR de até 32 KB (kilobytes); portanto, é possível que algumas colunas grandes de objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possam ser mapeadas apropriadamente para colunas DB2 VARCHAR. Porém, o provedor OLE DB que a replicação usa para DB2 não suporta mapear objetos grandes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para objetos grandes DB2. Por esse motivo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, e `nvarchar(max)` colunas são mapeadas para VARCHAR(0) em scripts de criação gerados. O valor de comprimento de 0 deve ser alterado para um valor apropriado antes de aplicar o script ao Assinante. Se o comprimento de tipo de dado não for alterado, o DB2 gerará o erro 604 quando a criação de tabela for tentada no Assinante DB2 (o erro 604 indica que o atributo de precisão ou comprimento de um tipo de dado não é válido).  
+-   O DB2 pode suportar colunas VARCHAR de até 32 KB (kilobytes); portanto, é possível que algumas colunas grandes de objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possam ser mapeadas apropriadamente para colunas DB2 VARCHAR. Porém, o provedor OLE DB que a replicação usa para DB2 não suporta mapear objetos grandes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para objetos grandes DB2. Por esse motivo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, e `nvarchar(max)` colunas são mapeadas para VARCHAR(0) nos scripts de criação gerados. O valor de comprimento de 0 deve ser alterado para um valor apropriado antes de aplicar o script ao Assinante. Se o comprimento de tipo de dado não for alterado, o DB2 gerará o erro 604 quando a criação de tabela for tentada no Assinante DB2 (o erro 604 indica que o atributo de precisão ou comprimento de um tipo de dado não é válido).  
   
      Baseado sobre seu conhecimento da tabela de origem que você está replicando, determine se é apropriado mapear um objeto grande [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um item DB2 de comprimento variável e especifique um comprimento máximo apropriado em um script de criação personalizado. Para obter informações sobre especificar um script de criação personalizado, consulte a etapa 5 na seção "Configurando um Assinante de IBM DB2" neste tópico.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36010194"
   
 -   Ao replicar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` e `nvarchar` para DB2 CHAR e VARCHAR, a replicação usa o mesmo especificador de comprimento para o tipo DB2 do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo. Porém, o comprimento de tipo de dados pode ser muito pequeno para a tabela DB2 gerada.  
   
-     Em alguns ambientes DB2, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` item de dados não está restrito a caracteres de byte único; o comprimento de um item CHAR ou VARCHAR deve levar isso em conta. Você deve levar também em conta o *mover para dentro* e *mover para fora* de caracteres se forem necessários. Se você estiver replicando tabelas com `nchar` e `nvarchar` colunas, você precisará especificar um comprimento máximo maior para o tipo de dados em um script de criação personalizado. Para obter informações sobre especificar um script de criação personalizado, consulte a etapa 5 na seção "Configurando um Assinante de IBM DB2" neste tópico.  
+     Em alguns ambientes DB2, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` item de dados não está restrito a caracteres de byte único; o comprimento de um item CHAR ou VARCHAR deve levar isso em conta. Você deve levar também em conta o *mover para dentro* e *mover para fora* de caracteres se forem necessários. Se você estiver replicando tabelas com `nchar` e `nvarchar` colunas, talvez seja necessário especificar um comprimento máximo maior para o tipo de dados em um script de criação personalizado. Para obter informações sobre especificar um script de criação personalizado, consulte a etapa 5 na seção "Configurando um Assinante de IBM DB2" neste tópico.  
   
 ## <a name="see-also"></a>Consulte também  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

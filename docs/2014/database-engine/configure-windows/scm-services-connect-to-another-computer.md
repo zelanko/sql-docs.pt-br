@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147e23e4b2c717d36bf2774f0e3e1d049a46f9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c0878b7cfa2ca6d77d5d43f6d0642d5ecaf42586
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167217"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Conectar-se a um outro computador (SQL Server Configuration Manager)
   Este tópico descreve como conectar-se a outro computador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Siga o primeiro procedimento para abrir o Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), conecte-se ao computador e expanda a árvore Serviços e Aplicativos. Siga o segundo procedimento para criar um arquivo com um link para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager em um computador remoto.  
@@ -49,7 +49,7 @@ ms.locfileid: "36009823"
   
 1.  No menu **Iniciar** , clique em **Executar**.  
   
-2.  No **abrir** , digite `mmc -a` para abrir o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console no modo de autor.  
+2.  No **abra** , digite `mmc -a` para abrir o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console de gerenciamento no modo de autor.  
   
 3.  No menu **Arquivo** , clique em **Adicionar/Remover Snap-in**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36009823"
   
 11. No menu **Janela** , clique em **Raiz do Console**, para retornar à primeira janela e excluir a janela.  
   
-12. Sobre o **arquivo** menu, clique em **Salvar como**e salve o arquivo na pasta desejada, com um nome apropriado com a `.msc` extensão de arquivo. Feche o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. Sobre o **arquivo** menu, clique em **Salvar como**e salve o arquivo na pasta desejada, com um nome apropriado com o `.msc` extensão de arquivo. Feche o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Para abrir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager no computador de destino, clique duas vezes no arquivo. Se desejar, salve um link no arquivo na área de trabalho ou no menu **Iniciar** .  
   

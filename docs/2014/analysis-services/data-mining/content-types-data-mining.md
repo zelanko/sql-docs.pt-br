@@ -1,5 +1,5 @@
 ---
-title: Tipos (mineração de dados) de conteúdo | Microsoft Docs
+title: (Mineração de dados) de tipos de conteúdo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163507"
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usada em um modelo.  
@@ -72,7 +72,7 @@ ms.locfileid: "36010126"
  O tipo de conteúdo `Discretized` é suportado pelos seguintes tipos de dados: `Date`, `Double`, `Long` e `Text`.  
   
 ## <a name="key"></a>Chave  
- O tipo de conteúdo *key* significa que a coluna identifica uma linha exclusivamente. Normalmente, em uma tabela de casos, a coluna de chave é um identificador numérico ou de texto. Defina o tipo de conteúdo `key` para indicar que a coluna não deve ser usada para análise, somente para rastrear registros.  
+ O tipo de conteúdo *key* significa que a coluna identifica uma linha exclusivamente. Normalmente, em uma tabela de casos, a coluna de chave é um identificador numérico ou de texto. Defina o tipo de conteúdo `key` para indicar que a coluna não deve ser usada para análise, somente para registros de acompanhamento.  
   
  Tabelas aninhadas também têm chaves, mas o uso da chave de tabela aninhada é um pouco diferente. Defina o tipo de conteúdo `key` em uma tabela aninhada se a coluna é o atributo que você deseja analisar. Os valores da chave da tabela aninhada devem ser exclusivos para cada caso, mas podem ser duplicados em todo um conjunto de casos.  
   

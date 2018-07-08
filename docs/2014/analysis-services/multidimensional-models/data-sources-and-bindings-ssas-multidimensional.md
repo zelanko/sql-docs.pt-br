@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
 - DSO, bindings
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5386a2a09928f8a7dbc04248df74e8112749f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230196"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
   Podem ser acoplados cubos, dimensões e outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
@@ -86,13 +86,13 @@ ms.locfileid: "36010119"
   
 -   O grupo de medidas está associado a uma tabela em um DSV (por exemplo, `MeasureGroup.Source`).  
   
--   Cada medida é associada a uma coluna de tabela (por exemplo, `Measure.ValueColumn.Source`).  
+-   Cada medida é associada a uma coluna nessa tabela (por exemplo, `Measure.ValueColumn.Source`).  
   
 -   Cada dimensão de grupo de medidas tem um conjunto de *atributos de granularidade* que define a granularidade do grupo de medidas. Cada um desses atributos deve ser associado à coluna ou colunas na tabela de fatos que contém a chave do atributo. (Para obter mais informações sobre atributos de granularidade, consulte Atributos de granularidade MeasureGroup, mais adiante neste tópico.)  
   
  Essas associações padrão podem ser substituídas seletivamente por partições. Cada partição pode especificar uma fonte de dados, uma tabela, um nome de consulta ou uma expressão de filtro diferente. A estratégia de particionamento mais comum é substituir a tabela por partição, usando a mesma fonte de dados. Dentre as alternativas estão a aplicação de um filtro diferente por partição ou a alteração da fonte de dados.  
   
- A fonte de dados padrão deve ser definida no DSV fornecendo as informações de esquema e incluindo os detalhes de relações. Quaisquer tabelas ou consultas adicionais especificadas no nível da partição não precisam ser listadas no DSV, mas elas têm o mesmo esquema da tabela padrão definida para o grupo de medidas ou, pelo menos, precisam conter todas as colunas usadas pelas medidas ou atributos de granularidade. As associações detalhadas por medida e atributo de granularidade não podem ser substituídas no nível da partição e supõe-se que elas estejam nas mesmas colunas que as definidas pelo grupo de medidas. Portanto, se a partição usa uma fonte de dados que de fato tem um esquema diferente, o `TableDefinition` consulta definida para a partição deve resultar no mesmo esquema usado pelo grupo de medidas.  
+ A fonte de dados padrão deve ser definida no DSV fornecendo as informações de esquema e incluindo os detalhes de relações. Quaisquer tabelas ou consultas adicionais especificadas no nível da partição não precisam ser listadas no DSV, mas elas têm o mesmo esquema da tabela padrão definida para o grupo de medidas ou, pelo menos, precisam conter todas as colunas usadas pelas medidas ou atributos de granularidade. As associações detalhadas por medida e atributo de granularidade não podem ser substituídas no nível da partição e supõe-se que elas estejam nas mesmas colunas que as definidas pelo grupo de medidas. Portanto, se a partição usa uma fonte de dados que de fato, tem um esquema diferente, o `TableDefinition` consulta definida para a partição deve resultar no mesmo esquema que o esquema usado pelo grupo de medidas.  
   
 ### <a name="measuregroup-granularity-attributes"></a>Atributos de granularidade MeasureGroup  
  Quando a granularidade de um grupo de medidas corresponde à granularidade conhecida no banco de dados e há uma relação direta entre a tabela de fatos e a tabela de dimensões, o atributo de granularidade deve ser associado apenas à coluna ou às colunas de chave estrangeira apropriadas na tabela de fatos. Por exemplo, considere as seguintes tabelas de fatos e de dimensões:  
@@ -159,14 +159,14 @@ ms.locfileid: "36010119"
   
  Em um modelo de mineração OLAP, as associações de dados seguem estas regras:  
   
--   Cada coluna de tabela não aninhada está associada a uma medida em um cubo, para um atributo em uma dimensão do cubo (especificando o `CubeDimension` para resolver a ambiguidade no caso das funções de dimensão), ou para um atributo em uma dimensão.  
+-   Cada coluna de tabela não aninhada está associada a uma medida no cubo, a um atributo em uma dimensão do cubo (especificando o `CubeDimension` para resolver a ambiguidade no caso das funções de dimensão), ou a um atributo em uma dimensão.  
   
 -   Cada coluna de tabela associada é associada a uma `CubeDimension`, ou seja, esse processo define como navegar de uma dimensão para um cubo relacionado ou (no caso menos comum de tabelas aninhadas) de um cubo para uma de suas dimensões.  
   
 ## <a name="out-of-line-bindings"></a>associações fora de linha  
  Associações fora de linhas permitem alterar as associações de dados existentes temporariamente para a duração de um comando. Associações fora de linha referem-se às associações incluídas em um comando e não persistentes. As associações fora de linha aplicam-se apenas enquanto o comando específico é executado. Por outro lado, as associações incorporadas estão contidas na definição de objeto ASSL e persistem com a definição de objeto dentro dos metadados do servidor.  
   
- ASSL permite associações fora de linha ser especificadas em uma `Process` de comando, se não estiver em um lote ou em um `Batch` comando. Se as associações incorporadas forem especificadas no comando `Batch`, todas as associações especificadas no comando `Batch` criarão um novo contexto de associação no qual todos os comandos `Process` do lote serão executados. Esse novo contexto de associação incluirá objetos processados indiretamente devido ao comando `Process`.  
+ ASSL permite que associações fora de linha sejam especificadas em uma `Process` comando, se ele não esteja em um lote ou em um `Batch` comando. Se as associações incorporadas forem especificadas no comando `Batch`, todas as associações especificadas no comando `Batch` criarão um novo contexto de associação no qual todos os comandos `Process` do lote serão executados. Esse novo contexto de associação incluirá objetos processados indiretamente devido ao comando `Process`.  
   
  Quando as associações incorporadas são especificadas em um comando, elas substituem as associações incorporadas contidas no DDL persistido para os objetos especificados. Esses objetos processados podem incluir o objeto diretamente nomeado no `Process` comando, ou eles podem incluir outros objetos cujo processamento é automaticamente iniciado como parte do processamento.  
   
@@ -181,9 +181,9 @@ ms.locfileid: "36010119"
  Todos os elementos relacionados a associações incorporadas são opcionais. Para qualquer elemento não especificado, o ASSL usa a especificação contida no DDL do objeto persistido. A especificação de `DataSource` ou `DataSourceView` no comando `Process` é opcional. Se `DataSource` ou `DataSourceView` for especificado, eles não serão instanciados e não persistirão depois que o comando `Process` for concluído.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definição do tipo de associação fora de linha  
- Dentro da coleção fora de linha `Bindings`, o ASSL permite uma coleção de associações de vários objetos, cada um deles uma `Binding`. Cada `Binding` possui uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do `Object` elemento `Process` comandos, exceto que o \< *objeto*>\<*/Object*> marcas não estão presentes.  
+ Dentro da coleção fora de linha `Bindings`, o ASSL permite uma coleção de associações de vários objetos, cada um deles uma `Binding`. Cada `Binding` possui uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do `Object` elemento no `Process` comandos, exceto que o \< *objeto*>\<*/objeto*> as marcas não estão presentes.  
   
- Cada objeto para o qual a associação é especificada é identificado por um elemento XML do formulário \< *objeto*> ID (por exemplo, `DimensionID`). Depois de identificar o objeto de maneira mais específica possível com o formulário \< *objeto*> ID, identifique o elemento para o qual a associação está sendo especificada, que geralmente é `Source`. Um caso comum a observar é que `Source` é uma propriedade no `DataItem`, que é o caso para associações de coluna em um atributo. Nesse caso, você não especifica a marca `DataItem`; em vez disso, você simplesmente especifica a propriedade `Source` como se estivesse diretamente na coluna a ser vinculada.  
+ Cada objeto para o qual a associação é especificada é identificado por um elemento XML do formulário \< *objeto*> ID (por exemplo, `DimensionID`). Depois de identificar o objeto de maneira mais específica possível com a forma \< *objeto*> ID, identifique o elemento para o qual a associação está sendo especificada, que geralmente é `Source`. Um caso comum a observar é que, na qual `Source` é uma propriedade no `DataItem`, que é o caso para associações de coluna em um atributo. Nesse caso, você não especifica a marca `DataItem`; em vez disso, você simplesmente especifica a propriedade `Source` como se estivesse diretamente na coluna a ser vinculada.  
   
  As `KeyColumns` são identificadas pela ordem na coleção `KeyColumns`. Não é possível especificar, por exemplo, apenas a primeira e a terceira colunas de um atributo, pois não há como indicar que a segunda coluna de chave deve ser ignorada. Todas as colunas de chave devem estar presentes na associação fora de linha de um atributo de dimensão.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 - event classes [Analysis Services], security audit
 - security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00b609451a5513e801acf41f4f0ac87ae0a932b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79141f6ed5c61e03b792875fbff2253f9e8bd0aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180903"
 ---
 # <a name="security-audit-event-category"></a>Categoria de evento de auditoria de segurança
   A categoria de evento de auditoria de segurança tem as classes de evento descritas na tabela a seguir.  

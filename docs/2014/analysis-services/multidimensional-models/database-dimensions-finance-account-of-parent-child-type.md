@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259592"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Criar uma Conta de Finanças de Dimensão de tipo pai-filho
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tipo de conta é aquela cujos atributos representam um plano de contas para uso em relatórios financeiros.  
   
  Uma dimensão de conta permite o gerenciamento seletivo do comportamento de agregação entre contas no decorrer do tempo. Uma dimensão de conta também possibilita o uso de mecanismos padrão para resolver a maioria das questões de agregação não padrão geralmente encontradas em soluções de business intelligence que lidam com dados financeiros. Sem esse tipo de mecanismo padrão, a resolução dessas questões de agregação não padrão requer fórmulas de acúmulo personalizado, membros calculados ou scripts de expressões multidimensionais (MDX).  
   
- Para identificar uma dimensão como uma dimensão de conta, defina o `Type` propriedade de dimensão para `Accounts`.  
+ Para identificar uma dimensão como uma dimensão de conta, defina as `Type` propriedade da dimensão como `Accounts`.  
   
 ## <a name="dimension-structure"></a>Estrutura da Dimensão  
  Uma dimensão de conta contém, no mínimo, dois atributos:  
@@ -40,7 +40,7 @@ ms.locfileid: "36005731"
   
 -   Um atributo de conta – um atributo pai que descreve como as contas são organizadas hierarquicamente na dimensão de conta.  
   
-     Para identificar um atributo como um atributo de conta, defina o `Type` propriedade do atributo `Account` e `Usage` propriedade `Parent`.  
+     Para identificar um atributo como um atributo de conta, defina as `Type` propriedade do atributo a ser `Account` e o `Usage` propriedade `Parent`.  
   
  Opcionalmente, as dimensões de conta podem conter os seguintes atributos:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36005731"
   
 -   Um atributo de nome de conta – um atributo usado nos relatórios. Para identificar um atributo de nome de conta, configure sua propriedade `Type` como `AccountName`.  
   
--   Um atributo de número de conta – um atributo usado nos relatórios. Identificar um atributo de número de conta, definindo o `Type` propriedade do atributo `AccountNumber`.  
+-   Um atributo de número de conta – um atributo usado nos relatórios. Identificar um atributo de número de conta, definindo o `Type` propriedade do atributo a ser `AccountNumber`.  
   
  Para obter mais informações sobre tipos de atributos, consulte [Configurar tipos de atributo](attribute-properties-configure-attribute-types.md).  
   

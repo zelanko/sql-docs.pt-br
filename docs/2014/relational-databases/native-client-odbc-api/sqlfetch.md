@@ -5,27 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLFetch function
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2319e09e04f5d2974cfe3edd1d11443c4d32499f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 02641dee791d063d4b32282fd2504e511c3cfe5f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006584"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409612"
 ---
 # <a name="sqlfetch"></a>SQLFetch
-  Suporte de SQLFetch aprimorado recursos de data e hora.  
+  Oferece suporte de SQLFetch a aprimorados recursos de data e hora.  
   
  Para obter informações sobre como os valores de coluna de resultado dos tipos de data/hora são convertidos, consulte [conversões de SQL para C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   

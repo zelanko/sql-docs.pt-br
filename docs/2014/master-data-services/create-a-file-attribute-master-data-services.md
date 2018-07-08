@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65a0bdab9722e8751700d90a7685d06979d17f98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 806de83ca98234134cbd2d23a9cc6e9a94c115e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180303"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Criar um atributo de arquivo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de arquivo para popular os valores de atributo com arquivos.  
@@ -62,7 +62,7 @@ ms.locfileid: "36010073"
   
 9. Na caixa **Exibir largura em pixels** , digite a largura da coluna de atributo a ser exibida na grade do **Gerenciador** .  
   
-10. Do **extensão de arquivo** lista, selecione um ou mais tipos de arquivos que um usuário pode carregar ou deixe o padrão (*.\*) para permitir que todos os tipos de arquivo.  
+10. Dos **extensão de arquivo** , selecione um ou mais tipos de arquivos que um usuário pode carregar ou deixe o padrão (*.\*) para permitir que todos os tipos de arquivo.  
   
 11. Opcionalmente, selecione **Habilitar controle de alterações** para controlar alterações de grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

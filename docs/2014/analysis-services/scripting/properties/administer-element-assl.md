@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Administer element
 ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 099e5b9283acf8da6268e8b5abaaad73049ca076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29b09b2f28512600496a4d461f34994dc1bf177e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229686"
 ---
 # <a name="administer-element-assl"></a>Elemento Administer (ASSL)
-  Indica se a permissão associada inclui o direito de administrar um [banco de dados](../objects/database-element-assl.md) elemento.  
+  Indica se a permissão associada inclui o direito para administrar uma [banco de dados](../objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36009839"
 ## <a name="remarks"></a>Remarks  
  O elemento `Administer` indica se um usuário só pode executar funções administrativas no banco de dados especificado. A função de administrador de servidor pode executar funções administrativas em todos os bancos de dados contidos pela instância.  
   
- O elemento que corresponde ao pai do `Administer` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DatabasePermission>.  
+ O elemento que corresponde ao pai de `Administer` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DatabasePermission>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipo de dados Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
- [Elemento Role &#40;ASSL&#41;](../objects/role-element-assl.md)   
+ [Elemento de função &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   
   

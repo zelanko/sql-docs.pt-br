@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades (Gerenciador de relatórios) da fonte de dados | Microsoft Docs
+title: Fontes de dados de página de propriedades (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 68279fffed6d42fd60ce6a3665eeaf3b0590aae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179553"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Página Propriedades de Fontes de Dados (Gerenciador de Relatórios)
   Use a página de propriedades de Fontes de Dados para definir como o relatório atual se conecta a uma fonte de dados externa. Você pode substituir as informações de conexão de fonte de dados publicadas originalmente com o relatório. Se várias fontes de dados forem usadas em um relatório, cada fonte de dados terá sua própria seção na página de propriedades. As fontes de dados são listadas na ordem em que foram definidas no relatório.  
@@ -46,13 +46,13 @@ ms.locfileid: "36008118"
  **Procurar**  
  Clique em **Procurar** para abrir a página Seleção de Fonte de Dados usada para selecionar uma fonte de dados compartilhada. Para obter mais informações, consulte [página de seleção de fonte de dados &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md).  
   
- **Uma fonte de dados personalizados**  
+ **Uma fonte de dados personalizada**  
  Especifique como o relatório se conecta à fonte de dados.  
   
  As opções a seguir são usadas para especificar uma conexão de fonte de dados personalizada.  
   
  **Tipo de fonte de dados**  
- Especifique a extensão de processamento de dados usada para processar dados da fonte de dados. Para obter a lista de extensões de dados internas, consulte [fontes de dados suportados pelo Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Extensões de processamento de dados adicionais podem estar disponíveis em fornecedores de terceiros.  
+ Especifique a extensão de processamento de dados usada para processar dados da fonte de dados. Para obter a lista de extensões de dados internas, consulte [dados de fontes com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Extensões de processamento de dados adicionais podem estar disponíveis em fornecedores de terceiros.  
   
  **Cadeia de conexão**  
  Especifique a cadeia de conexão que o servidor de relatório utiliza para conectar-se à fonte de dados. O tipo de conexão determina a sintaxe que você deve usar. Por exemplo, uma cadeia de caracteres de conexão da extensão do processamento de dados XML é uma URL para um documento XML. Na maioria dos casos, uma cadeia de caracteres de conexão típica especifica o servidor de banco de dados e um arquivo de dados. O exemplo a seguir ilustra uma cadeia de conexão usada para se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] chamado MyData:  
@@ -80,7 +80,7 @@ ms.locfileid: "36008118"
  Selecione **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados** para permitir delegação de credenciais de banco de dados, mas somente se uma fonte de dados oferecer suporte a representação. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados, essa opção define a função SETUSER.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]só oferece suporte a credenciais de conta do Windows. Portanto, selecione as opções "Usam as credenciais do Windows ao conectar-se à fonte de dados" e "representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados" para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonte de dados.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]suporta apenas credenciais de conta do Windows. Portanto, selecione ambas as opções "Usam as credenciais do Windows ao conectar-se à fonte de dados" e "representar o usuário autenticado depois que foi feita uma conexão à fonte de dados" para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonte de dados.  
   
  **Segurança integrada do Windows**  
  Use as credenciais do Windows do usuário atual para acessar a fonte de dados. Selecione essa opção quando as credenciais usadas para acessar a fonte de dados forem as mesmas que as usadas para fazer logon no domínio de rede. Essa opção funciona melhor quando a autenticação Kerberos está habilitada para seu domínio ou quando a fonte de dados está no mesmo computador que o servidor de relatórios. Se Kerberos não estiver habilitado, as credenciais do Windows poderão ser passadas para outro computador. Se forem necessárias conexões de computador adicionais, ocorrerá um erro em vez da exibição dos dados esperados.  
@@ -92,7 +92,7 @@ ms.locfileid: "36008118"
  **Não são necessárias credenciais**  
  Especifique que não são necessárias credenciais para acessar a fonte de dados. Observe que se uma fonte de dados necessitar de um logon de usuário, a escolha dessa opção não terá nenhum efeito. Você só deve escolher esta opção se a conexão de fonte de dados não requerer credenciais de usuário.  
   
- Para usar essa opção, a conta de execução autônoma deve estar previamente configurada para sua implantação de servidor de relatórios. A conta de execução autônoma é usada para conectar a fontes externas, quando outras fontes de credenciais não estiverem disponíveis. Se você especificar essa opção e a conta não estiver configurada, a conexão com a fonte de dados do relatório falhará e o processamento do relatório não ocorrerá.  Para obter mais informações sobre essa conta, consulte [configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Para usar essa opção, a conta de execução autônoma deve estar previamente configurada para sua implantação de servidor de relatórios. A conta de execução autônoma é usada para conectar a fontes externas, quando outras fontes de credenciais não estiverem disponíveis. Se você especificar essa opção e a conta não estiver configurada, a conexão com a fonte de dados do relatório falhará e o processamento do relatório não ocorrerá.  Para obter mais informações sobre essa conta, consulte [configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  **Aplicar**  
  Clique para salvar as alterações.  

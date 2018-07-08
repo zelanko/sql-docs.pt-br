@@ -17,18 +17,18 @@ helpviewer_keywords:
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9779ae9f6791443d06b97aaf9e56254ce1d7934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d7bf4529df77545cf2d0acf69af5d0b570ef750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165297"
 ---
 # <a name="establishing-connections-in-adomdnet"></a>Estabelecendo conexões no ADOMD.NET
-  No ADOMD.NET, você usa o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto para abrir conexões com fontes de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados. Quando a conexão não for mais necessária, feche-a explicitamente.  
+  No ADOMD.NET, você usa o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto abrir conexões com fontes de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados. Quando a conexão não for mais necessária, feche-a explicitamente.  
   
 ## <a name="opening-a-connection"></a>Abrindo uma conexão  
  Para abrir uma conexão no ADOMD.NET, primeiro especifique uma cadeia de conexão para uma fonte de dados analíticos e um banco de dados válidos. Em seguida, abra a conexão explicitamente para a fonte de dados.  
@@ -49,12 +49,12 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 ```  
   
 ### <a name="opening-a-connection-to-the-data-source"></a>Abrindo uma conexão à fonte de dados  
- Depois de especificar a cadeia de conexão, use o método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> para abrir a conexão. Quando você abre um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, pode definir vários níveis de segurança para a conexão. O nível de segurança usado para a conexão depende do valor da configuração da cadeia de conexão `ProtectionLevel`. Para obter mais informações sobre como abrir conexões seguras no ADOMD.NET, consulte [estabelecer conexões seguras no ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
+ Depois de especificar a cadeia de conexão, use o método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> para abrir a conexão. Quando você abre um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, pode definir vários níveis de segurança para a conexão. O nível de segurança usado para a conexão depende do valor da configuração da cadeia de conexão `ProtectionLevel`. Para obter mais informações sobre como abrir conexões seguras no ADOMD.NET, consulte [estabelecendo conexões seguras no ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
   
 ## <a name="working-with-a-connection"></a>Trabalhando com uma conexão  
- Cada conexão aberta existe em uma sessão, fornecendo suporte para operações de monitoração de estado. Uma sessão pode ser compartilhada por mais de uma conexão aberta. O compartilhamento de uma sessão permite que mais de um cliente use o mesmo contexto. Para obter mais informações, consulte [trabalhar com conexões e sessões no ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
+ Cada conexão aberta existe em uma sessão, fornecendo suporte para operações de monitoração de estado. Uma sessão pode ser compartilhada por mais de uma conexão aberta. O compartilhamento de uma sessão permite que mais de um cliente use o mesmo contexto. Para obter mais informações, consulte [trabalhando com conexões e sessões no ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
- Você pode usar uma conexão aberta para recuperar metadados, dados e executar comandos. Para obter mais informações, consulte [recuperar metadados de uma fonte de dados analíticos](retrieving-metadata-from-an-analytical-data-source.md), [recuperando dados de uma fonte de dados analíticos](retrieving-data-from-an-analytical-data-source.md), e [executar comandos em relação a um dados analíticos Origem](executing-commands-against-an-analytical-data-source.md).  
+ Você pode usar uma conexão aberta para recuperar metadados, dados e executar comandos. Para obter mais informações, consulte [recuperar metadados de uma fonte de dados analíticos](retrieving-metadata-from-an-analytical-data-source.md), [recuperando dados de uma fonte de dados analíticos](retrieving-data-from-an-analytical-data-source.md), e [executando comandos em relação a um dados analíticos Origem](executing-commands-against-an-analytical-data-source.md).  
   
  Enquanto a conexão estiver aberta, você poderá recuperar dados, recuperar metadados e executar comandos de uma transação confirmada por leitura, na qual bloqueios compartilhados são mantidos enquanto os dados são lidos para impedir leituras sujas. Os dados ainda podem ser alterados antes do término da transação, resultando em leituras não repetíveis ou em dados fantasma. Para obter mais informações, consulte [executando transações no ADOMD.NET](../../relational-databases/native-client-ole-db-transactions/transactions.md).  
   
@@ -63,7 +63,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
   
  Uma conexão que não foi explicitamente fechada, mas que pode sair do escopo, pode não liberar recursos do servidor rápido o suficiente para permitir que aplicativos clientes de alta simultaneidade do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] abram novas conexões com eficiência. Dependendo da forma como você criou a conexão, a sessão usada pelo objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> poderá permanecer ativa se a conexão não for fechada explicitamente.  
   
- Para obter mais informações sobre as sessões, consulte [trabalhar com conexões e sessões no ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
+ Para obter mais informações sobre as sessões, consulte [trabalhando com conexões e sessões no ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
 > [!IMPORTANT]  
 >  No método `Finalize` de qualquer classe implementada, não chame os métodos `Close` ou `Dispose` de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> ou de qualquer outro objeto gerenciado. Em um finalizador, só libere os recursos não gerenciados de propriedade direta da classe implementada. Se a classe implementada não possuir nenhum recurso não gerenciado, não inclua um método `Finalize` na definição da classe.  

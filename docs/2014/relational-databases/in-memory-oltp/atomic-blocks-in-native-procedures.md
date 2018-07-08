@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182303"
 ---
 # <a name="atomic-blocks"></a>Blocos atômicos
   `BEGIN ATOMIC` não faz parte do padrão ANSI SQL. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a blocos atômicos somente no nível superior dos procedimentos armazenados compilados nativamente.  
@@ -33,9 +33,9 @@ ms.locfileid: "36009987"
 ## <a name="transactions-and-error-handling"></a>Transações e tratamento de erros  
  Se uma transação já existir em uma sessão (porque um lote executou uma instrução `BEGIN TRANSACTION` e a transação permanece ativa), iniciar um bloco atômico criará um ponto de salvamento na transação. Se o bloco sair sem uma exceção, um novo ponto de salvamento criado para o bloco é confirmado, mas a transação não será confirmada até que isso ocorra no nível da sessão. Se o bloco lançar uma exceção, os efeitos do bloco serão revertidos, mas a transação no nível da sessão continuará, a menos que a exceção seja decretada por transação. Por exemplo, um conflito de gravação é decretado por transação, mas não um erro de conversão de tipo.  
   
- Se não houver transação ativa em uma sessão, `BEGIN ATOMIC` iniciará uma nova transação. Se nenhuma exceção for lançada fora do escopo do bloco, a transação será confirmada no fim do bloco. Se o bloco lançar uma exceção (ou seja, se a exceção não for capturada e tratada no bloco), a transação será revertida. Para transações que abrangem um único bloco atômico (um único procedimento armazenado nativamente compilado), você não precisa gravar explícita `BEGIN TRANSACTION` e `COMMIT` ou `ROLLBACK` instruções.  
+ Se não houver transação ativa em uma sessão, `BEGIN ATOMIC` iniciará uma nova transação. Se nenhuma exceção for lançada fora do escopo do bloco, a transação será confirmada no fim do bloco. Se o bloco lançar uma exceção (ou seja, se a exceção não for capturada e tratada no bloco), a transação será revertida. Para transações que abrangem um único bloco atômico (um único procedimento armazenado compilado nativamente), você não precisa escrever explícito `BEGIN TRANSACTION` e `COMMIT` ou `ROLLBACK` instruções.  
   
- Compilados nativamente suporte a procedimentos armazenados de `TRY`, `CATCH`, e `THROW` constrói para tratamento de erros. `RAISERROR` Não há suporte.  
+ Compilado nativamente suporte a procedimentos armazenados do `TRY`, `CATCH`, e `THROW` construções de tratamento de erros. `RAISERROR` Não há suporte.  
   
  O exemplo a seguir ilustra o comportamento de tratamento de erros com blocos atômicos e procedimentos armazenados compilados nativamente:  
   
@@ -143,7 +143,7 @@ GO
   
 |Configuração opcional|Description|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, `DATEFORMAT` substitui o formato de data padrão associado `LANGUAGE`.|  
+|`DATEFORMAT`|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, `DATEFORMAT` substitui o formato de data padrão associado com `LANGUAGE`.|  
 |`DATEFIRST`|Quando especificado, `DATEFIRST` substitui o padrão associado a `LANGUAGE`.|  
 |`DELAYED_DURABILITY`|Valores com suporte são `OFF` e `ON`.<br /><br /> Confirmações de transação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser completamente duráveis, o padrão ou duráveis atrasadas. Para obter mais informações, consulte [Controlar a durabilidade da transação](../logs/control-transaction-durability.md).|  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9655abda58057343b67ef16dd62fcb7a0faa048
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181063"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referência Técnica do Algoritmo de Regressão Linear da Microsoft
   O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma versão especial do algoritmo Árvores de decisão da Microsoft, otimizada para modelagem de pares de atributos contínuos. Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo e fornece links para informações adicionais sobre como consultar modelos.  
@@ -68,7 +68,7 @@ ms.locfileid: "36010122"
 ### <a name="regressors-in-linear-regression-models"></a>Regressor em modelos de regressão lineares  
  Os modelos de regressão lineares baseiam-se no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Entretanto, mesmo que você não use o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , todo modelo de árvore de decisão poderá conter uma árvore ou nós que representam uma regressão em um atributo contínuo.  
   
- Não é necessário especificar que uma coluna contínua representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] particionará o conjunto de dados em regiões com padrões significativos mesmo que você não defina o sinalizador REGRESSOR na coluna. A diferença é que, quando você define o sinalizador de modelagem, o algoritmo tenta encontrar equações de regressão de forma um * C1 + b\*C2 +... para ajustar os padrões em nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
+ Não é necessário especificar que uma coluna contínua representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] particionará o conjunto de dados em regiões com padrões significativos mesmo que você não defina o sinalizador REGRESSOR na coluna. A diferença é que, quando você define o sinalizador de modelagem, o algoritmo tenta encontrar equações de regressão do formulário um * C1 + b\*C2 +... de acordo com os padrões em nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
   
  Por exemplo, se você estiver prevendo o comportamento de compra dos clientes usando **Renda** como um atributo e definir o sinalizador de modelagem REGRESSOR na coluna, o algoritmo primeiro tentará adequar-se aos valores de **Renda** usando uma fórmula de regressão padrão. Se o desvio for muito grande, a fórmula de regressão será abandonada e a árvore será dividida em algum outro atributo. O algoritmo árvore de decisão tentará ajustar um regressor para renda em cada uma das ramificações após a divisão.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36010122"
 |Atributo previsível|Contínuo, cíclico e ordenado|  
   
 > [!NOTE]  
->  `Cyclical` e `Ordered` há suporte para tipos de conteúdo, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
+>  `Cyclical` e `Ordered` tipos de conteúdo têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de regressão Linear da Microsoft](microsoft-linear-regression-algorithm.md)   
+ [Algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm.md)   
  [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)   
- [Conteúdo do modelo de regressão Linear modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de regressão Linear &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: Parâmetro e metadados de resultado | Microsoft Docs
+title: Parameter and Result Metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb3dfe34259e73bddf1fae44fe831ea4cefdadec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: de1c9e3a1f0969cfe3e17f08c3e5242f73e27909
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695917"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423415"
 ---
-# <a name="metadata---parameter-and-result"></a>Metadados - parâmetro e resultado
+# <a name="metadata---parameter-and-result"></a>Metadados – parâmetro e resultado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -44,16 +44,16 @@ ms.locfileid: "35695917"
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_TYPE|SQL_TYPE_DATE|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime** em IRD, **datetime2** em IPD|**DateTime** em IRD, **datetime2** em IPD|**datetime2**|datetimeoffset|  
+|SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime** em IRD, **datetime2** em IPD|**Data e hora** em IRD, **datetime2** em IPD|**datetime2**|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
   
  Às vezes, há descontinuações em intervalos de valores. Por exemplo, 9 está ausente em 8,10.. 16. Isso se deve à adição de um ponto decimal quando a precisão fracionária é maior que zero.  
   
- **datetime2** é retornado como typename para **smalldatetime** e **datetime** porque o driver usa isso como um tipo comum para transmitir todos os **SQL_TYPE_TIMESTAMP** valores para o servidor.  
+ **datetime2** é retornado como typename para **smalldatetime** e **datetime** porque o driver usa esse tipo como um tipo comum para transmitir todos os **SQL_TYPE_TIMESTAMP** valores para o servidor.  
   
- SQL_CA_SS_VARIANT_SQL_TYPE é um novo campo descritor. Esse campo foi adicionado a IRD e IPD para permitir que aplicativos especificar o tipo de valor associado à **sqlvariant** (SQL_SSVARIANT) colunas e parâmetros  
+ SQL_CA_SS_VARIANT_SQL_TYPE é um novo campo descritor. Esse campo foi adicionado a IRD e IPD para permitir que os aplicativos especificar o tipo de valor associado **sqlvariant** (SQL_SSVARIANT) colunas e parâmetros  
   
  SQL_CA_SS_SERVER_TYPE é um novo campo somente IPD que permite aos aplicativos controlar como os valores de parâmetros associados como SQL_TYPE_TYPETIMESTAMP (ou como SQL_SS_VARIANT com um tipo C de SQL_C_TYPE_TIMESTAMP) são enviados para o servidor. Caso SQL_DESC_CONCISE_TYPE seja SQL_TYPE_TIMESTAMP (ou seja SQL_SS_VARIANT e o tipo C seja SQL_C_TYPE_TIMESTAMP) quando SQLExecute ou SQLExecDirect é chamado, o valor de SQL_CA_SS_SERVER_TYPE determina o tipo de (protocolo TDS) do valor do parâmetro de fluxo de dados tabulares , da seguinte maneira:  
   
@@ -69,11 +69,11 @@ ms.locfileid: "35695917"
   
 -   No momento da preparação ou da execução (quando SQLExecute, SQLExecDirect, SQLSetPos ou SQLBulkOperations é chamado).  
   
--   Quando uma força de aplicativo preparação não adiada chamando SQLPrepare com adiada preparar desabilitado ou chamando SQLNumResultCols, SQLDescribeCol ou SQLDescribeParam para uma instrução preparada mas não executada.  
+-   Quando uma força de aplicativo preparação não adiada chamando SQLPrepare com adiada preparar desabilitado ou chamando SQLNumResultCols, SQLDescribeCol ou SQLDescribeParam para uma instrução preparada, mas não executado.  
   
  Quando SQL_CA_SS_SERVER_TYPE é definido por uma chamada para SQLSetDescField, seu valor deve ser SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME ou SQL_SS_TYPE_DATETIME. Caso não seja esse o caso, SQL_ERROR é retornado, e um registro de diagnóstico é feito com SQLState HY092 e a mensagem "Identificador de atributo/opção inválido".  
   
- O atributo SQL_CA_SS_SERVER_TYPE pode ser usado por aplicativos que dependem da funcionalidade com suporte **datetime** e **smalldatetime**, mas não **datetime2**. Por exemplo, **datetime2** requer o uso do **dateadd** e **datediif** funções, enquanto **datetime** e  **smalldatetime** também permitem operadores aritméticos. A maioria dos aplicativos não precisará usar esse atributo, e seu uso deve ser evitado.  
+ O atributo SQL_CA_SS_SERVER_TYPE pode ser usado por aplicativos que dependem da funcionalidade com suporte pelo **datetime** e **smalldatetime**, mas não **datetime2**. Por exemplo, **datetime2** requer o uso das **dateadd** e **datediif** funções, enquanto que **datetime** e  **smalldatetime** também permitem operadores aritméticos. A maioria dos aplicativos não precisará usar esse atributo, e seu uso deve ser evitado.  
   
 ## <a name="information-returned-in-ird-fields"></a>Informações retornadas nos campos IRD  
  As seguintes informações são retornadas nos campos IRD:  

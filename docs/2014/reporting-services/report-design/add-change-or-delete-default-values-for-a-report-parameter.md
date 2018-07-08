@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10460"
 - sql12.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d5ccd789a763ed610df4c4782342253716119c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 448ae66acdfdbe4a0c90ff3f69e26be7cce56e12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192876"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir valores padrão de um parâmetro de relatório (Construtor de Relatórios e SSRS)
   Depois de criar um parâmetro de relatório, você poderá fornecer uma lista de valores padrão. Se todos os parâmetros tiverem um valor padrão válido, o relatório será executado automaticamente na primeira vez em que ele for exibido ou visualizado.  
@@ -68,12 +68,12 @@ ms.locfileid: "36009921"
   
 ## <a name="see-also"></a>Consulte também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Adicionar parâmetros em cascata a um relatório &#40;SSRS e construtor de relatórios&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Adicionar parâmetros em cascata a um relatório &#40;relatórios e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Referências de coleção de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [Alterar a ordem de um parâmetro de relatório &#40;SSRS e construtor de relatórios&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Adicionar, alterar ou excluir um parâmetro de relatório &#40;SSRS e construtor de relatórios&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Alterar a ordem de um parâmetro de relatório &#40;relatórios e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Adicionar, alterar ou excluir um parâmetro de relatório &#40;relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7e202fca2b7fbbf982ad1a28241f1ad4d6f985cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 84262598ecb49d69eae360b6de3b4e78369e7fc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260532"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Gráficos de área (Construtor de Relatórios e SSRS)
   Um gráfico de área exibe uma série como um conjunto de pontos conectados por uma linha, com toda a área preenchida abaixo da linha. Para obter mais informações sobre como adicionar dados a um gráfico de área, consulte [gráficos &#40;construtor de relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "36007442"
   
 -   Em um gráfico de áreas comum, se os valores em várias séries forem semelhantes, as séries serão sobrepostas, impedindo a exibição de valores de pontos de dados importantes. Esse problema pode ser solucionado alterando o tipo de gráfico para um gráfico de área empilhada, que foi desenvolvido para mostrar várias séries em um gráfico de áreas.  
   
--   Caso o gráfico de áreas empilhadas contenha lacunas, pode ser que seu conjunto de dados tenha valores vazios, que serão exibidos como uma seção vaga nesse tipo de gráfico. Se o seu conjunto de dados tiver valores vazios, insira pontos vazios no gráfico. Ao adicionar pontos vazios, as áreas vazias no gráfico serão preenchidas com uma cor diferente para indicar valores nulos ou zero. Para obter mais informações, consulte [adicionar pontos de vazios ao gráfico &#40;construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Caso o gráfico de áreas empilhadas contenha lacunas, pode ser que seu conjunto de dados tenha valores vazios, que serão exibidos como uma seção vaga nesse tipo de gráfico. Se o seu conjunto de dados tiver valores vazios, insira pontos vazios no gráfico. Ao adicionar pontos vazios, as áreas vazias no gráfico serão preenchidas com uma cor diferente para indicar valores nulos ou zero. Para obter mais informações, consulte [adicionar pontos vazios a gráfico de &#40;construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   O comportamento do gráfico de áreas é bem semelhante ao comportamento dos gráficos de colunas e linhas. Se você estiver fazendo uma comparação entre várias séries, use um gráfico de colunas. Se estiver analisando tendências durante um determinado período de tempo, use um gráfico de linhas.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "36007442"
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Gráficos de linhas &#40;Construtor de Relatórios e SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
  [Alterar um tipo de gráfico &#40;Construtor de Relatórios e SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
- [Pontos de dados em gráficos vazios e nulos &#40;SSRS e construtor de relatórios&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [Pontos de dados em gráficos vazios e nulos &#40;relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

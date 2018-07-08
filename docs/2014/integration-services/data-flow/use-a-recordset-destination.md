@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a513f196b0dc099f890225048e4e96adab51d285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277352"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
   O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados `Object`. Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  
@@ -41,7 +41,7 @@ ms.locfileid: "36007532"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], crie ou abra um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Crie uma variável que conterá o conjunto de registros salvo na memória pelo destino do conjunto de registros e defina o tipo de variável `Object`.  
+2.  Crie uma variável que conterá o conjunto de registros salvo na memória pelo destino do conjunto de registros e defina o tipo da variável `Object`.  
   
 3.  Crie mais variáveis dos tipos apropriados para conter os valores de cada coluna no conjunto de registros que você deseja usar.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36007532"
   
 2.  Abra o **Editor de Loop Foreach**e defina o contêiner com as seguintes configurações:  
   
-    1.  Sobre o **coleção** página, para **enumerador**, selecione **enumerador ADO Foreach**e para **variável de origem do objeto ADO**, selecione `User::BonusRecordset`.  
+    1.  Sobre o **coleta** página, para **enumerador**, selecione **enumerador ADO Foreach**e para **variável de origem do objeto ADO**, selecione `User::BonusRecordset`.  
   
     2.  Sobre o **mapeamentos de variáveis** página, mapeie `User::EmailAddress` para índice 0, `User::FirstName` para índice 1 e `User::Bonus` para índice 2.  
   

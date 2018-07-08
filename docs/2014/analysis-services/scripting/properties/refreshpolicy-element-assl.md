@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d2dc0549eb8151f93c817e9e59bc1a8990fac87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277612"
 ---
 # <a name="refreshpolicy-element-assl"></a>Elemento RefreshPolicy (ASSL)
-  Determina a frequência a parte dinâmica do grupo de medidas ou dimensões (conforme especificado pelo [persistência](persistence-element-assl.md) elemento) é verificada para alterações.  
+  Determina a frequência com que a parte dinâmica do grupo de medidas ou dimensões (conforme especificado pela [persistência](persistence-element-assl.md) elemento) é verificada quanto a alterações.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36005713"
 |Valor|Description|  
 |-----------|-----------------|  
 |*ByQuery*|Cada consulta verifica se os dados de origem foram alterados.|  
-|*ByInterval*|Fonte de dados é verificada apenas para as alterações no intervalo especificado por [RefreshInterval](refreshinterval-element-assl.md).|  
+|*ByInterval*|Fonte de dados é verificada apenas para que as alterações no intervalo especificado por [RefreshInterval](refreshinterval-element-assl.md).|  
   
  A enumeração que corresponde aos valores permitidos para `RefreshPolicy` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.RefreshPolicy>.  
   

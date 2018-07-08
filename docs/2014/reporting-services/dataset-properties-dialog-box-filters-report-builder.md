@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: beb0703212eb639483bbaa015b6fa89bba3a3068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe6bee60f4cee2ce99f5aadd1dc3cea14e85b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258162"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Filtros (Construtor de Relatórios)
   Selecione **Filtros** na caixa de diálogo **Propriedades do Conjunto de Dados** para criar filtros para o conjunto de dados.  
@@ -64,7 +64,7 @@ ms.locfileid: "36005639"
 ## <a name="see-also"></a>Consulte também  
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Adicionar um filtro a um conjunto de dados &#40;SSRS e construtor de relatórios&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Adicionar um filtro a um conjunto de dados &#40;relatórios e SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

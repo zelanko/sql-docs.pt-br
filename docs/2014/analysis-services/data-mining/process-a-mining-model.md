@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a7d57376025425946998410e5966ffa382cef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 649aa722e67e8cfaf9986c003a965c5aaf564684
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163467"
 ---
 # <a name="process-a-mining-model"></a>Processar um modelo de mineração
   Na guia Modelos de Mineração do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode processar um modelo de mineração específico que está associado a uma estrutura de mineração ou processar todos os modelos que estão associados com a estrutura.  
@@ -48,7 +48,7 @@ ms.locfileid: "36009668"
   
 4.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** , após o modelo completar seu processamento.  
   
-5.  Clique em **fechar** no **processando modelo de mineração - \<modelo >** caixa de diálogo.  
+5.  Clique em **feche** na **processando modelo de mineração - \<modelo >** caixa de diálogo.  
   
  Só foram processados a estrutura de mineração e o modelo de mineração selecionado.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36009668"
   
 5.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** , após os modelos completarem seu processamento.  
   
-6.  Clique em **fechar** no **processamento \<modelo >** caixa de diálogo.  
+6.  Clique em **feche** na **processamento \<modelo >** caixa de diálogo.  
   
  A estrutura de mineração e todos os modelos de mineração associados foram processados.  
   

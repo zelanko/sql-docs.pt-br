@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60f07885aff1d323cb2627e933330af3f35b8d45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180983"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Fontes de dados de objetos existentes (Assistente para Fonte de Dados) (Analysis Services)
   Use a página **Fontes de dados de objetos existentes** para especificar uma fonte de dados ou projeto existente no qual basear a nova fonte de dados.  
@@ -40,8 +40,8 @@ ms.locfileid: "36010127"
  Selecione o projeto que você quer referenciar na nova fonte de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de fonte de dados &#40;do Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+ [Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Fontes de dados em modelos multidimensionais](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Fontes de dados suportadas &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

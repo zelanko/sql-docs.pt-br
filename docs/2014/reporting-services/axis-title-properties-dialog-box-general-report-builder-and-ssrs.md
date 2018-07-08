@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10146"
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 58b94496471f567ece7ce5e313038e44aa6b7291
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbb5ad8e5b578cedf0aa9ac99839c4de0932b1df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179653"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Título do Eixo, Geral (Construtor de Relatórios e SSRS)
   Selecione **Geral** na caixa de diálogo **Propriedades do Título do Eixo** para definir o título do eixo. O título do eixo é exibido sob o eixo x ou próximo ao eixo y.  
@@ -46,7 +46,7 @@ ms.locfileid: "36009520"
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Plotar dados em um eixo secundário &#40;SSRS e construtor de relatórios&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Caixa de diálogo de propriedades do eixo, opções de eixo &#40;SSRS e construtor de relatórios&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [Plotar dados em um eixo secundário &#40;relatórios e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Caixa de diálogo de propriedades do eixo, opções de eixo &#40;relatórios e SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

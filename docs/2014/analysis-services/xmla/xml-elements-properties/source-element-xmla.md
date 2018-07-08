@@ -1,5 +1,5 @@
 ---
-title: Fonte do elemento (XMLA) | Microsoft Docs
+title: Fonte de elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481b5c755b24c6bb8ae03e58b43759b4dce4e39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182953"
 ---
 # <a name="source-element-xmla"></a>Elemento Source (XMLA)
   Representa uma partição de origem a ser mesclada durante um [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) comando.  
@@ -70,7 +70,7 @@ ms.locfileid: "36010098"
  O elemento `Source` é uma referência de objeto para uma única partição a ser mesclada em uma partição de destino especificada pelo elemento `Target` do elemento `MergePartitions`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir combina as quatro partições do grupo de medidas `Internet Sales` na partição de destino `Internet_Sales_2004` . O exemplo refere-se para o **Adventure Works** cubo do [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] exemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados.  
+ O exemplo a seguir combina as quatro partições do grupo de medidas `Internet Sales` na partição de destino `Internet_Sales_2004` . O exemplo refere-se para o **Adventure Works** cubo da [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] exemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

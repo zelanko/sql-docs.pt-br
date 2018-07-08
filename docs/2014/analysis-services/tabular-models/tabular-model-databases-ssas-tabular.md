@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0952d613290da279c5e044085ed79f415181bb9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259412"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bancos de dados modelo de tabela (SSAS tabular)
   Um banco de dados modelo de tabela é um banco de dados do Analysis Services que você cria no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o modelo de projeto modelo de tabela do Analysis Services, onde tabelas e relações são as estruturas primárias para representar dados.  
@@ -28,7 +28,7 @@ ms.locfileid: "36007127"
  Bancos de dados modelo de tabela são mais fáceis de criar do que bancos de dados multidimensionais, particularmente se você tem um plano de fundo de banco de dados relacional. Caso contrário, tarefas administrativas são semelhantes quando não são idênticas à administração de banco de dados de um banco de dados multidimensional. As mesmas ferramentas e abordagens se aplicam.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Soluções de modelo tabular &#40;Tabular do SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluções de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [Acesso a dados de modelo de tabela](tabular-model-data-access.md)  
   
@@ -37,11 +37,11 @@ ms.locfileid: "36007127"
   
  [Funções de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Partições de modelo tabular &#40;Tabular do SSAS&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [Partições de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Configure o Acesso Na Memória ou DirectQuery para um modelo de banco de dados tabular](enable-directquery-mode-in-ssms.md)  
   
- [Conecte-se a um banco de dados de modelo de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Conectar um banco de dados do modelo de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Restaurar do PowerPivot](restore-from-power-pivot.md)  
   
